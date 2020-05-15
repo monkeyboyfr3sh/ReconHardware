@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../testBuffers.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../testBuffers.srcs/sources_1/bd/design_1/ipshared/2d50/hdl" --include "C:/Xilinx/Vivado/2019.2/data/xilinx_vip/include" \
+"../../../../testBuffers.srcs/sources_1/new/FIFOBuffer.v" \
+"../../../../testBuffers.srcs/sources_1/new/Multiply.v" \
+"../../../../testBuffers.srcs/sources_1/new/MultiplyBlock.v" \
+"../../../../testBuffers.srcs/sources_1/new/parallelFIFO.v" \
+"../../../../testBuffers.srcs/sim_1/new/MultiplyBlock_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

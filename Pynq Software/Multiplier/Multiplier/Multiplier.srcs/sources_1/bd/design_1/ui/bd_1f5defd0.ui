@@ -1,0 +1,39 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.25",
+   "Default View_TopLeft":"-254,152",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0.21  2019-05-29 bk=1.5064 VDI=41 GEI=36 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 1 -x 160 -y 500 -defaultsOSRD
+preplace inst dataIn -pg 1 -lvl 2 -x 490 -y 310 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 4 -x 1070 -y 490 -defaultsOSRD
+preplace inst bufferRD -pg 1 -lvl 2 -x 490 -y 410 -defaultsOSRD
+preplace inst bufferSelect -pg 1 -lvl 2 -x 490 -y 510 -defaultsOSRD
+preplace inst bufferEN -pg 1 -lvl 2 -x 490 -y 620 -defaultsOSRD
+preplace inst mStart -pg 1 -lvl 2 -x 490 -y 720 -defaultsOSRD
+preplace inst chunkCount -pg 1 -lvl 2 -x 490 -y 820 -defaultsOSRD
+preplace inst proc_sys_reset_0 -pg 1 -lvl 1 -x 160 -y 720 -defaultsOSRD
+preplace inst fixedcomputeBlock_0 -pg 1 -lvl 3 -x 810 -y 500 -defaultsOSRD
+preplace netloc xlconcat_0_dout 1 1 4 350J 890 NJ 890 N 890 1170
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 3 -20 620 360 250 630
+preplace netloc processing_system7_0_GPIO_O 1 1 1 370 310n
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 2 -20 820 330
+preplace netloc dataIn_Dout 1 2 1 600 310n
+preplace netloc bufferRD_Dout 1 2 1 590 410n
+preplace netloc bufferSelect_Dout 1 2 1 590 490n
+preplace netloc bufferEN_Dout 1 2 1 600 510n
+preplace netloc mStart_Dout 1 2 1 610 530n
+preplace netloc chunkCount_Dout 1 2 1 630 570n
+preplace netloc proc_sys_reset_0_mb_reset 1 1 2 340 880 620J
+preplace netloc fixedcomputeBlock_0_mReady 1 3 1 940 460n
+preplace netloc fixedcomputeBlock_0_dataOut 1 3 1 940 480n
+preplace netloc fixedcomputeBlock_0_FULL0 1 3 1 940 500n
+preplace netloc fixedcomputeBlock_0_FULL1 1 3 1 940 520n
+levelinfo -pg 1 -40 160 490 810 1070 1190
+pagesize -pg 1 -db -bbox -sgen -40 -60 1190 960
+"
+}
+{
+   "da_ps7_cnt":"2"
+}

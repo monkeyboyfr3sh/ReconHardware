@@ -1,0 +1,12 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../Multiplier.srcs/sources_1/new" \
+"../../../../Multiplier.srcs/sources_1/new/FIFOBuffer.v" \
+"../../../../Multiplier.srcs/sources_1/new/multiplyCompute.v" \
+"../../../../Multiplier.srcs/sources_1/new/parallelFIFOBuffer.v" \
+"../../../../Multiplier.srcs/sources_1/new/multiplyBlock.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
