@@ -1,0 +1,12 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../Multiplier.srcs/sources_1/new" \
+"integercomputeBlock_tb_time_impl.v" \
+"../../../../../Multiplier.srcs/sources_1/new/FlipFlop.v" \
+"../../../../../Multiplier.srcs/sources_1/new/Parrallel Buffer.v" \
+"../../../../../Multiplier.srcs/sources_1/new/dataSplit.v" \
+"../../../../../Multiplier.srcs/sources_1/new/integercomputeBlock.v" \
+"../../../../../Multiplier.srcs/sources_1/new/multiplyCompute.v" \
+"../../../../../Multiplier.srcs/sim_1/new/computeBlock_tb.v" \
+
+# Do not sort compile order
+nosort

@@ -1,7 +1,7 @@
-Running: xsim.dir/integercomputeBlock_tb_behav/xsimk.exe -simmode gui -wdb integercomputeBlock_tb_behav.wdb -simrunnum 0 -socket 55058
+Running: xsim.dir/integercomputeBlock_tb_behav/xsimk.exe -simmode gui -wdb integercomputeBlock_tb_behav.wdb -simrunnum 0 -socket 54921
 Design successfully loaded
-Design Loading Memory Usage: 5288 KB (Peak: 5288 KB)
-Design Loading CPU Usage: 0 ms
+Design Loading Memory Usage: 5344 KB (Peak: 5344 KB)
+Design Loading CPU Usage: 15 ms
 Simulation completed
-Simulation Memory Usage: 5952 KB (Peak: 5952 KB)
-Simulation CPU Usage: 0 ms
+Simulation Memory Usage: 6008 KB (Peak: 6008 KB)
+Simulation CPU Usage: 15 ms

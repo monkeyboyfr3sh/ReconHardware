@@ -41,9 +41,8 @@ bufferSelect  = 1'b0;
 bufferEN = 1'b0;
 chunkCount = 1'b0;
 Rst  = 1'b1;
-#20;
+#5;
 Rst  = 1'b0;
-#20;
 /*################################################################################################*/
 
 //Initialize pbuffer to write.
@@ -53,41 +52,30 @@ bufferEN = 1'b1;
 
 //Load stuff into buffer1->bufferSelect = 0
 bufferSelect  = 1'b0;
-dataIn  = `inputIndex'h5;
-#20;
+dataIn  = `inputWidth'hfafafafa;
+#5;
 //Load stuff into buffer2->bufferSelect = 1
 bufferSelect  = 1'b1;
-dataIn  = `inputIndex'h2;
-#20;
+dataIn  = `inputWidth'ha925ff;
+#5;
 
-//Turn off WR, Turn off RD, start multiply.
+//Set output to highed order bits, then start multiply.
+chunkCount = 1'b1;
 bufferRD  = 1'b0;
 bufferEN = 1'b1;
 mStart = 1'b1;
-#20;
+#5;
 
-//Reset pbuffer/multiply to write.
-mStart = 1'b0;
-#20;
+//Set output to lower order bits
 chunkCount = 1'b0;
-bufferEN = 1'b1;
-bufferSelect = 1'b0;
+#5;
 
-//Load stuff into buffer1->bufferSelect = 0
+//Zeroing signals to make it easier to read
+chunkCount = 1'b0;
+bufferEN = 1'b0;
+mStart = 1'b0;
 bufferSelect  = 1'b0;
-dataIn  = `inputIndex'h29;
-#20;
-//Load stuff into buffer2->bufferSelect = 1
-bufferSelect  = 1'b1;
-dataIn  = `inputIndex'ha9;
-#20;
-
-//Turn off WR, Turn off RD, start multiply.
-bufferRD  = 1'b0;
-bufferEN = 1'b1;
-mStart = 1'b1;
-#20;
 
 end
-always #10 Clk = ~Clk;  
+always #2.5 Clk = ~Clk;  
 endmodule

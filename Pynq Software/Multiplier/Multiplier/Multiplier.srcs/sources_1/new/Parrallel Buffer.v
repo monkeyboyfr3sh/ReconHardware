@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 `include "definitions.h"
 
-module ParallelBuffer( Clk,
+module ParallelBuffer(  Clk,
                         dataIn, 
                         bufferSelect,
                         EN,

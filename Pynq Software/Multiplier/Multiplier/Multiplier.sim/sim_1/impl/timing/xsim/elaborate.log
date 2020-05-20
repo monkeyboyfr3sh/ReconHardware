@@ -1,0 +1,8 @@
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 44db8dc7ec384547a71c6e3fae890706 --incr --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot fixedcomputeBlock_tb_time_impl -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.fixedcomputeBlock_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-2063] Module <fixedcomputeBlock> not found while processing module instance <uut> [C:/Users/monke/OneDrive/Documents/School/Reconfigurable Hardware/Pynq Software/Multiplier/Multiplier/Multiplier.srcs/sim_1/new/fixedcomputeBlock_tb.v:49]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.

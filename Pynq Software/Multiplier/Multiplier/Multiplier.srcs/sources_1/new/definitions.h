@@ -1,16 +1,27 @@
-//General Definitions
-`define inputWidth 8
-`define inputIndex 7//(`inputWidth-1)
-`define multiplyIndex 15//((`inputWidth*2)-1)
+//User Set
+////////////////////////////////////////////////////////////////////////////////
+//General Definition
+`define inputWidth 32
 
+//Integer Multiply
+`define multiplyIndex 63 //((`inputWidth*2)-1)
+
+//Float Multiply
+`define mantissaIndex 2 //Float Multiply definitions = mantissa length-1
+`define expBias 0111 //Bias for floating point representation
+`define expWide 4
+
+//Fixed Multiply
+`define fracBitCount 16 //Fixed Multiply definitions = number of bits dedicated to fraction
+////////////////////////////////////////////////////////////////////////////////
+
+//Automated things
+////////////////////////////////////////////////////////////////////////////////
 //Set this to the desired size of the output chunks
-//This should be half the size of the multiplyIndex to work properly
-`define outputIndex 7
-
-//Float Multiply definitions
-`define mantissaIndex 2
-`define exponentIndex 6
-`define width (`exponentIndex-`mantissaIndex-1)
-
-//Fixed Multiply definitions
-`define fracBitCount 4
+//This should be half the size of the inputIndex to work properly
+`define inputIndex `inputWidth-1
+`define outputIndex `inputIndex
+//For floating point calculation
+`define exponentIndex (`inputIndex-1) 
+`define width (`exponentIndex-`mantissaIndex)-1
+////////////////////////////////////////////////////////////////////////////////

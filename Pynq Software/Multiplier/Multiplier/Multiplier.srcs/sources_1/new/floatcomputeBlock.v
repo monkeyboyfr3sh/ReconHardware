@@ -50,7 +50,7 @@ floatmultiplyCompute mCompute(
                     .reset(Rst)
                     );
                         
-dataSplit splitter(     Clk,
+dataSplit splitter( Clk,
                     Rst,
                     mReady,
                     product,
