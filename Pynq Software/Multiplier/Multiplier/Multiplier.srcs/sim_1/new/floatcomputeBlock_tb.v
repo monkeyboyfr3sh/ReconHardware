@@ -52,11 +52,11 @@ bufferEN = 1'b1;
 
 //Load stuff into buffer1->bufferSelect = 0
 bufferSelect  = 1'b0;
-dataIn  = `inputWidth'hfa;
+dataIn  = `inputWidth'hfafa;
 #5;
 //Load stuff into buffer2->bufferSelect = 1
 bufferSelect  = 1'b1;
-dataIn  = `inputWidth'h25;
+dataIn  = `inputWidth'h25ff;
 #5;
 
 //Set output to lowert order bits, then start multiply.
