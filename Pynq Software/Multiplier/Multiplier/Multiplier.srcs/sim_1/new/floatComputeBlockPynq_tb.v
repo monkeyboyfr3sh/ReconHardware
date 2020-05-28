@@ -18,7 +18,7 @@ reg mStart;
 wire mReady;
 wire [`outputIndex:0] dataOut;
 wire FULL0, FULL1;
-floatcomputeBlock uut (     Clk,
+floatcomputeBlockPynq uut (     Clk,
                             dataIn,
                             bufferRD,
                             bufferSelect,

@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date             : Wed May 27 23:44:28 2020
+| Date             : Thu May 28 16:04:28 2020
 | Host             : DESKTOP-9H19BOT running 64-bit major release  (build 9200)
 | Command          : report_power -file fixedcomputeBlock_power_routed.rpt -pb fixedcomputeBlock_power_summary_routed.pb -rpx fixedcomputeBlock_power_routed.rpx
 | Design           : fixedcomputeBlock
@@ -29,20 +29,20 @@ Table of Contents
 1. Summary
 ----------
 
-+--------------------------+--------------+
-| Total On-Chip Power (W)  | 2.098        |
-| Design Power Budget (W)  | Unspecified* |
-| Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.951        |
-| Device Static (W)        | 0.147        |
-| Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 60.8         |
-| Junction Temperature (C) | 49.2         |
-| Confidence Level         | Low          |
-| Setting File             | ---          |
-| Simulation Activity File | ---          |
-| Design Nets Matched      | NA           |
-+--------------------------+--------------+
++--------------------------+----------------------------------+
+| Total On-Chip Power (W)  | 15.373 (Junction temp exceeded!) |
+| Design Power Budget (W)  | Unspecified*                     |
+| Power Budget Margin (W)  | NA                               |
+| Dynamic (W)              | 14.334                           |
+| Device Static (W)        | 1.039                            |
+| Effective TJA (C/W)      | 11.5                             |
+| Max Ambient (C)          | 0.0                              |
+| Junction Temperature (C) | 125.0                            |
+| Confidence Level         | Low                              |
+| Setting File             | ---                              |
+| Simulation Activity File | ---                              |
+| Design Nets Matched      | NA                               |
++--------------------------+----------------------------------+
 * Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
 
 
@@ -52,16 +52,16 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.251 |      163 |       --- |             --- |
-|   LUT as Logic |     0.230 |       91 |     53200 |            0.17 |
-|   CARRY4       |     0.011 |       10 |     13300 |            0.08 |
+| Slice Logic    |     2.345 |     1773 |       --- |             --- |
+|   LUT as Logic |     2.200 |     1182 |     53200 |            2.22 |
+|   CARRY4       |     0.114 |      151 |     13300 |            1.14 |
+|   Register     |     0.024 |      127 |    106400 |            0.12 |
 |   BUFG         |     0.006 |        1 |        32 |            3.13 |
-|   Register     |     0.004 |       31 |    106400 |            0.03 |
 |   Others       |     0.000 |        2 |       --- |             --- |
-| Signals        |     0.268 |      153 |       --- |             --- |
-| I/O            |     1.433 |       26 |       125 |           20.80 |
-| Static Power   |     0.147 |          |           |                 |
-| Total          |     2.098 |          |           |                 |
+| Signals        |     2.600 |     1732 |       --- |             --- |
+| I/O            |     9.389 |       74 |       125 |           59.20 |
+| Static Power   |     1.039 |          |           |                 |
+| Total          |    15.373 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,20 +71,20 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.596 |       0.578 |      0.018 |
-| Vccaux    |       1.800 |     0.129 |       0.112 |      0.017 |
+| Vccint    |       1.000 |     5.399 |       5.101 |      0.299 |
+| Vccaux    |       1.800 |     0.856 |       0.756 |      0.100 |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
-| Vcco18    |       1.800 |     0.651 |       0.650 |      0.001 |
+| Vcco18    |       1.800 |     4.375 |       4.374 |      0.001 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.001 |       0.000 |      0.001 |
+| Vccbram   |       1.000 |     0.026 |       0.000 |      0.026 |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccpint   |       1.000 |     0.035 |       0.000 |      0.035 |
+| Vccpint   |       1.000 |     0.473 |       0.000 |      0.473 |
 | Vccpaux   |       1.800 |     0.010 |       0.000 |      0.010 |
 | Vccpll    |       1.800 |     0.003 |       0.000 |      0.003 |
 | Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -145,12 +145,12 @@ Table of Contents
 +-------------------+-----------+
 | Name              | Power (W) |
 +-------------------+-----------+
-| fixedcomputeBlock |     1.951 |
-|   mCompute        |     0.054 |
-|   pBuffer         |     0.341 |
-|     buff0         |     0.206 |
-|     buff1         |     0.135 |
-|   splitter        |     0.028 |
+| fixedcomputeBlock |    14.334 |
+|   mCompute        |     1.921 |
+|   pBuffer         |     2.404 |
+|     buff0         |     1.293 |
+|     buff1         |     1.111 |
+|   splitter        |     0.193 |
 +-------------------+-----------+
 
 

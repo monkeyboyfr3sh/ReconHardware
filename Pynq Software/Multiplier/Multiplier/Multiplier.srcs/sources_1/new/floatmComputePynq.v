@@ -42,7 +42,6 @@ assign multiplier_exp = multiplier[`exponentIndex:`mantissaIndex+1];
 assign multiplicand_sign = multiplicand[`inputIndex:`inputIndex];
 assign multiplier_sign = multiplier[`inputIndex:`inputIndex];
  
- 
 //Creating Exponent Bias for calculations
 wire [`width:0] expBias;
 assign expBias = `expWide'b`expBias;
@@ -63,14 +62,15 @@ always @(posedge clk)
             //Simply multipler two inputs
             product_man = multiplier_man*multiplicand_man;
             
-            //Shift decimal location
-            product_man = product_man >>(2*`mantissaIndex)-1;
+            //if(!man_check), adjust decimal for multiplication.
+            if(!man_check)begin
+                //Shift decimal location
+                product_man = product_man >>`mantissaIndex+1;
+                //man_check is a flag to detect whether data needs to be normalized yet or not.
+                man_check = 1'b1;
+            end
             
-            //man_check is a flag to detect whether data needs to be normalized yet or not.
-            man_check = 1'b1;
-               
             //if(man_check), normalize product.
-            //if(!man_check), leave product alone.
             if(man_check)begin
                 //Computing the exponent bits, the subtraction is to remove adding the bias to itself.
                 //This must happen before assigning product mantissa bits as this will normalize the

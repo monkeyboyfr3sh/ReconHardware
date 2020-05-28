@@ -1,4 +1,5 @@
-`timescale 1ns / 1ps
+`include "definitions.h"
+`timescale `myTimeScale
 
 module integercomputeBlock_tb;
 
@@ -17,21 +18,21 @@ reg mStart;
 wire mReady;
 wire [`outputIndex:0] dataOut;
 wire FULL0, FULL1;
-
-integercomputeBlock uut (      Clk,
-                        dataIn,
-                        bufferRD,
-                        bufferSelect,
-                        bufferEN,
-                        mStart,
-                        mReady,
-                        dataOut,
-                        Rst,
-                        FULL0,
-                        FULL1,
-                        chunkCount
-                        );
+integercomputeBlock uut (     Clk,
+                            dataIn,
+                            bufferRD,
+                            bufferSelect,
+                            bufferEN,
+                            mStart,
+                            mReady,
+                            dataOut,
+                            Rst,
+                            FULL0,
+                            FULL1,
+                            chunkCount
+                            );
 initial begin
+
 
 /*################################################################################################*/
 // Initialize Inputs
@@ -41,7 +42,7 @@ bufferSelect  = 1'b0;
 bufferEN = 1'b0;
 chunkCount = 1'b0;
 Rst  = 1'b1;
-#5;
+#`clkPeriod;
 Rst  = 1'b0;
 /*################################################################################################*/
 
@@ -52,24 +53,26 @@ bufferEN = 1'b1;
 
 //Load stuff into buffer1->bufferSelect = 0
 bufferSelect  = 1'b0;
-dataIn  = `inputWidth'hfafafafa;
-#5;
+dataIn  = `inputWidth'h`dataIn1;
+#`clkPeriod;
 //Load stuff into buffer2->bufferSelect = 1
 bufferSelect  = 1'b1;
-dataIn  = `inputWidth'ha925ff;
-#5;
+dataIn  = `inputWidth'h`dataIn2;
+#`clkPeriod;
 
-//Set output to highed order bits, then start multiply.
-chunkCount = 1'b1;
+//Set output to lowert order bits, then start multiply.
+chunkCount = 1'b0;
 bufferRD  = 1'b0;
 bufferEN = 1'b1;
 mStart = 1'b1;
-#5;
+#`clkPeriod;
 
-//Set output to lower order bits
+/*
+For floating point multiplication, higher order bits do no matter.
+//Set output to higher order bits
 chunkCount = 1'b0;
 #5;
-
+*/
 //Zeroing signals to make it easier to read
 chunkCount = 1'b0;
 bufferEN = 1'b0;
@@ -77,5 +80,5 @@ mStart = 1'b0;
 bufferSelect  = 1'b0;
 
 end
-always #2.5 Clk = ~Clk;  
+always #(`clkPeriod/2) Clk = ~Clk;  
 endmodule
