@@ -71,7 +71,7 @@ always @(posedge clk)
             exp_carry = 1'b0;
             if (product_man[`mantissaIndex+2]) begin
                 exp_carry = 1'b1;
-                product_man = product_man >>> 1;
+                product_man = product_man >> 1;
             end
             product[`exponentIndex:`mantissaIndex+1] = multiplicand_exp + multiplier_exp - expBias + exp_carry; 
             ready = 1'b1;

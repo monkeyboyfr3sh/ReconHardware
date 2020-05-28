@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1587076578">
-  <File Type="PA-TCL" Name="floatcomputeBlock.tcl"/>
-  <File Type="REPORTS-TCL" Name="floatcomputeBlock_reports.tcl"/>
-  <File Type="RDS-RDS" Name="floatcomputeBlock.vds"/>
-  <File Type="RDS-UTIL" Name="floatcomputeBlock_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="floatcomputeBlock_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="floatcomputeBlock.dcp"/>
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1590640982">
+  <File Type="PA-TCL" Name="fixedcomputeBlock.tcl"/>
+  <File Type="REPORTS-TCL" Name="fixedcomputeBlock_reports.tcl"/>
+  <File Type="RDS-RDS" Name="fixedcomputeBlock.vds"/>
+  <File Type="RDS-UTIL" Name="fixedcomputeBlock_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="fixedcomputeBlock_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="fixedcomputeBlock.dcp"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/definitions.h">
@@ -28,8 +28,30 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/floatmCompute.v">
+    <File Path="$PSRCDIR/sources_1/new/dataSplit.v">
       <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/fixedmultiplyCompute.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/fixedcomputeBlock.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/integercomputeBlock.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -37,12 +59,13 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/floatcomputeBlock.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/dataSplit.v">
+    <File Path="$PSRCDIR/sources_1/new/floatmCompute.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -58,7 +81,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/computeBlock.v">
+    <File Path="$PSRCDIR/sources_1/new/floatmComputePynq.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -68,7 +91,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="floatcomputeBlock"/>
+      <Option Name="TopModule" Val="fixedcomputeBlock"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">

@@ -1,61 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1587076578">
-  <File Type="BITSTR-BMM" Name="floatcomputeBlock_bd.bmm"/>
-  <File Type="ROUTE-PWR" Name="floatcomputeBlock_power_routed.rpt"/>
-  <File Type="PA-TCL" Name="floatcomputeBlock.tcl"/>
-  <File Type="OPT-DCP" Name="floatcomputeBlock_opt.dcp"/>
-  <File Type="ROUTE-PWR-SUM" Name="floatcomputeBlock_power_summary_routed.pb"/>
-  <File Type="REPORTS-TCL" Name="floatcomputeBlock_reports.tcl"/>
-  <File Type="OPT-DRC" Name="floatcomputeBlock_drc_opted.rpt"/>
-  <File Type="OPT-HWDEF" Name="floatcomputeBlock.hwdef"/>
-  <File Type="PWROPT-DCP" Name="floatcomputeBlock_pwropt.dcp"/>
-  <File Type="PLACE-DCP" Name="floatcomputeBlock_placed.dcp"/>
-  <File Type="PLACE-IO" Name="floatcomputeBlock_io_placed.rpt"/>
-  <File Type="PLACE-UTIL" Name="floatcomputeBlock_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="floatcomputeBlock_utilization_placed.pb"/>
-  <File Type="PLACE-CTRL" Name="floatcomputeBlock_control_sets_placed.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="floatcomputeBlock_incremental_reuse_pre_placed.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="floatcomputeBlock_postplace_pwropt.dcp"/>
-  <File Type="BG-BIN" Name="floatcomputeBlock.bin"/>
-  <File Type="PHYSOPT-DCP" Name="floatcomputeBlock_physopt.dcp"/>
-  <File Type="BITSTR-MSK" Name="floatcomputeBlock.msk"/>
-  <File Type="ROUTE-ERROR-DCP" Name="floatcomputeBlock_routed_error.dcp"/>
-  <File Type="ROUTE-DCP" Name="floatcomputeBlock_routed.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="floatcomputeBlock_routed_bb.dcp"/>
-  <File Type="ROUTE-DRC" Name="floatcomputeBlock_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-PB" Name="floatcomputeBlock_drc_routed.pb"/>
-  <File Type="BITSTR-LTX" Name="floatcomputeBlock.ltx"/>
-  <File Type="ROUTE-DRC-RPX" Name="floatcomputeBlock_drc_routed.rpx"/>
-  <File Type="BITSTR-MMI" Name="floatcomputeBlock.mmi"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="floatcomputeBlock_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="floatcomputeBlock_methodology_drc_routed.rpx"/>
-  <File Type="BITSTR-SYSDEF" Name="floatcomputeBlock.sysdef"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="floatcomputeBlock_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-PWR-RPX" Name="floatcomputeBlock_power_routed.rpx"/>
-  <File Type="ROUTE-STATUS" Name="floatcomputeBlock_route_status.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="floatcomputeBlock_route_status.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="floatcomputeBlock_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-TIMING-PB" Name="floatcomputeBlock_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMING-RPX" Name="floatcomputeBlock_timing_summary_routed.rpx"/>
-  <File Type="RDI-RDI" Name="floatcomputeBlock.vdi"/>
-  <File Type="ROUTE-CLK" Name="floatcomputeBlock_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW" Name="floatcomputeBlock_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="floatcomputeBlock_bus_skew_routed.pb"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="floatcomputeBlock_bus_skew_routed.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="floatcomputeBlock_postroute_physopt.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="floatcomputeBlock_postroute_physopt_bb.dcp"/>
-  <File Type="BG-BIT" Name="floatcomputeBlock.bit"/>
-  <File Type="BITSTR-RBT" Name="floatcomputeBlock.rbt"/>
-  <File Type="BITSTR-NKY" Name="floatcomputeBlock.nky"/>
-  <File Type="PDI-FILE" Name="floatcomputeBlock.pdi"/>
-  <File Type="RCFI_FILE" Name="floatcomputeBlock.rcfi"/>
+<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1590640982">
+  <File Type="ROUTE-PWR" Name="fixedcomputeBlock_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="fixedcomputeBlock.tcl"/>
+  <File Type="BITSTR-BMM" Name="fixedcomputeBlock_bd.bmm"/>
+  <File Type="ROUTE-PWR-SUM" Name="fixedcomputeBlock_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="fixedcomputeBlock_reports.tcl"/>
+  <File Type="OPT-DCP" Name="fixedcomputeBlock_opt.dcp"/>
+  <File Type="OPT-DRC" Name="fixedcomputeBlock_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="fixedcomputeBlock.hwdef"/>
+  <File Type="PWROPT-DCP" Name="fixedcomputeBlock_pwropt.dcp"/>
+  <File Type="PLACE-DCP" Name="fixedcomputeBlock_placed.dcp"/>
+  <File Type="PLACE-IO" Name="fixedcomputeBlock_io_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="fixedcomputeBlock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="fixedcomputeBlock_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="fixedcomputeBlock_control_sets_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="fixedcomputeBlock_incremental_reuse_pre_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="fixedcomputeBlock_postplace_pwropt.dcp"/>
+  <File Type="BG-BIN" Name="fixedcomputeBlock.bin"/>
+  <File Type="PHYSOPT-DCP" Name="fixedcomputeBlock_physopt.dcp"/>
+  <File Type="BITSTR-MSK" Name="fixedcomputeBlock.msk"/>
+  <File Type="ROUTE-ERROR-DCP" Name="fixedcomputeBlock_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="fixedcomputeBlock_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="fixedcomputeBlock_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="fixedcomputeBlock_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="fixedcomputeBlock_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="fixedcomputeBlock_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="fixedcomputeBlock_methodology_drc_routed.rpt"/>
+  <File Type="BITSTR-MMI" Name="fixedcomputeBlock.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="fixedcomputeBlock_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="fixedcomputeBlock_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="fixedcomputeBlock_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="fixedcomputeBlock_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="fixedcomputeBlock_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="fixedcomputeBlock_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="fixedcomputeBlock_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="fixedcomputeBlock_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-CLK" Name="fixedcomputeBlock_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="fixedcomputeBlock_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="fixedcomputeBlock_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="fixedcomputeBlock_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="fixedcomputeBlock_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="fixedcomputeBlock_postroute_physopt_bb.dcp"/>
+  <File Type="BG-BIT" Name="fixedcomputeBlock.bit"/>
+  <File Type="BITSTR-RBT" Name="fixedcomputeBlock.rbt"/>
+  <File Type="BITSTR-NKY" Name="fixedcomputeBlock.nky"/>
+  <File Type="PDI-FILE" Name="fixedcomputeBlock.pdi"/>
+  <File Type="RCFI_FILE" Name="fixedcomputeBlock.rcfi"/>
+  <File Type="CFI_FILE" Name="fixedcomputeBlock.cfi"/>
+  <File Type="RNPI_FILE" Name="fixedcomputeBlock.rnpi"/>
+  <File Type="NPI_FILE" Name="fixedcomputeBlock.npi"/>
+  <File Type="RBD_FILE" Name="fixedcomputeBlock.rbd"/>
+  <File Type="BITSTR-LTX" Name="fixedcomputeBlock.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="fixedcomputeBlock.sysdef"/>
+  <File Type="BG-BGN" Name="fixedcomputeBlock.bgn"/>
+  <File Type="BG-DRC" Name="fixedcomputeBlock.drc"/>
+  <File Type="RDI-RDI" Name="fixedcomputeBlock.vdi"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
-  <File Type="CFI_FILE" Name="floatcomputeBlock.cfi"/>
-  <File Type="RNPI_FILE" Name="floatcomputeBlock.rnpi"/>
-  <File Type="NPI_FILE" Name="floatcomputeBlock.npi"/>
-  <File Type="RBD_FILE" Name="floatcomputeBlock.rbd"/>
-  <File Type="BG-BGN" Name="floatcomputeBlock.bgn"/>
-  <File Type="BG-DRC" Name="floatcomputeBlock.drc"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/definitions.h">
@@ -78,8 +78,30 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/floatmCompute.v">
+    <File Path="$PSRCDIR/sources_1/new/dataSplit.v">
       <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/fixedmultiplyCompute.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/fixedcomputeBlock.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/integercomputeBlock.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -87,12 +109,13 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/floatcomputeBlock.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/dataSplit.v">
+    <File Path="$PSRCDIR/sources_1/new/floatmCompute.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -108,7 +131,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/computeBlock.v">
+    <File Path="$PSRCDIR/sources_1/new/floatmComputePynq.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -118,7 +141,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="floatcomputeBlock"/>
+      <Option Name="TopModule" Val="fixedcomputeBlock"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">

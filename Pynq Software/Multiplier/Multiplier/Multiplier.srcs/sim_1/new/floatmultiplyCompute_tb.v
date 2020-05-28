@@ -1,4 +1,5 @@
-`timescale 1ns / 1ps
+`include "definitions.h"
+`timescale `myTimeScale
 
 module floatMultiply_tb;
 
@@ -19,22 +20,20 @@ floatmultiplyCompute dut1(  product,
                             reset
                             );
 initial begin
+//Testbench Code
 clk = 1'b0;
-reset = 1'b1;
-#20;
+start = 1'b0;
+#`clkPeriod;
 
 reset = 1'b0;
-
-start = 1'b0;
-#20;
-multiplier =    `inputWidth'hfa;
-multiplicand =  `inputWidth'h25;
+multiplier =    `inputWidth'h`dataIn1;
+multiplicand =  `inputWidth'h`dataIn2;
 start = 1'b1;
-#20;
+#`clkPeriod;
 
 start = 1'b0;
-#20;
+#`clkPeriod;
 
 end 
-always #10 clk = ~clk;  
+always #(`clkPeriod/2) clk = ~clk;  
 endmodule

@@ -1,4 +1,5 @@
-`timescale 1ns / 1ps
+`include "definitions.h"
+`timescale `myTimeScale
 
 module floatcomputeBlock_tb;
 
@@ -41,7 +42,7 @@ bufferSelect  = 1'b0;
 bufferEN = 1'b0;
 chunkCount = 1'b0;
 Rst  = 1'b1;
-#5;
+#`clkPeriod;
 Rst  = 1'b0;
 /*################################################################################################*/
 
@@ -52,19 +53,19 @@ bufferEN = 1'b1;
 
 //Load stuff into buffer1->bufferSelect = 0
 bufferSelect  = 1'b0;
-dataIn  = `inputWidth'hfafa;
-#5;
+dataIn  = `inputWidth'h`dataIn1;
+#`clkPeriod;
 //Load stuff into buffer2->bufferSelect = 1
 bufferSelect  = 1'b1;
-dataIn  = `inputWidth'h25ff;
-#5;
+dataIn  = `inputWidth'h`dataIn2;
+#`clkPeriod;
 
 //Set output to lowert order bits, then start multiply.
 chunkCount = 1'b0;
 bufferRD  = 1'b0;
 bufferEN = 1'b1;
 mStart = 1'b1;
-#5;
+#`clkPeriod;
 
 /*
 For floating point multiplication, higher order bits do no matter.
@@ -79,5 +80,5 @@ mStart = 1'b0;
 bufferSelect  = 1'b0;
 
 end
-always #2.5 Clk = ~Clk;  
+always #(`clkPeriod/2) Clk = ~Clk;  
 endmodule
