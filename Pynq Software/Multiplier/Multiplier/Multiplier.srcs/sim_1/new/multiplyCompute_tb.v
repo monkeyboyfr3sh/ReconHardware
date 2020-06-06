@@ -9,7 +9,7 @@ wire ready;
 wire [`multiplyIndex:0] product;
 
 // device under test
-multiplyCompute dut(   product,
+multiplyComputePynq dut(   product,
                 multiplier,
                 multiplicand,
                 ready,

@@ -3,22 +3,8 @@ INFO: [VRFC 10-311] analyzing module ParallelBuffer
 INFO: [VRFC 10-311] analyzing module SingleBuffer
 INFO: [VRFC 10-311] analyzing module SingleBuffer_0
 INFO: [VRFC 10-311] analyzing module dataSplit
-INFO: [VRFC 10-311] analyzing module fixedcomputeBlock
-INFO: [VRFC 10-311] analyzing module fixedmultiplyCompute
-INFO: [VRFC 10-311] analyzing module glbl
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/monke/Documents/GitHub/ReconHardware/Pynq Software/Multiplier/Multiplier/Multiplier.srcs/sources_1/new/FlipFlop.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module SingleBuffer
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'SingleBuffer' [C:/Users/monke/Documents/GitHub/ReconHardware/Pynq Software/Multiplier/Multiplier/Multiplier.srcs/sources_1/new/FlipFlop.v:4]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/monke/Documents/GitHub/ReconHardware/Pynq Software/Multiplier/Multiplier/Multiplier.srcs/sources_1/new/Parrallel Buffer.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ParallelBuffer
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'ParallelBuffer' [C:/Users/monke/Documents/GitHub/ReconHardware/Pynq Software/Multiplier/Multiplier/Multiplier.srcs/sources_1/new/Parrallel Buffer.v:4]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/monke/Documents/GitHub/ReconHardware/Pynq Software/Multiplier/Multiplier/Multiplier.srcs/sources_1/new/dataSplit.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module dataSplit
-WARNING: [VRFC 10-3609] overwriting previous definition of module 'dataSplit' [C:/Users/monke/Documents/GitHub/ReconHardware/Pynq Software/Multiplier/Multiplier/Multiplier.srcs/sources_1/new/dataSplit.v:4]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/monke/Documents/GitHub/ReconHardware/Pynq Software/Multiplier/Multiplier/Multiplier.srcs/sources_1/new/floatcomputeBlockPynq.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module floatcomputeBlockPynq
-WARNING: [VRFC 10-2292] extra semicolon is not allowed here in this dialect. Use SystemVerilog mode [C:/Users/monke/Documents/GitHub/ReconHardware/Pynq Software/Multiplier/Multiplier/Multiplier.srcs/sources_1/new/floatcomputeBlockPynq.v:19]
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/monke/Documents/GitHub/ReconHardware/Pynq Software/Multiplier/Multiplier/Multiplier.srcs/sources_1/new/floatmComputePynq.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module floatmultiplyComputePynq
+INFO: [VRFC 10-311] analyzing module glbl
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/monke/Documents/GitHub/ReconHardware/Pynq Software/Multiplier/Multiplier/Multiplier.srcs/sim_1/new/floatComputeBlockPynq_tb.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module floatcomputeBlockPynq_tb

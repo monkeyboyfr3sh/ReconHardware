@@ -1,0 +1,14 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../Multiplier.srcs/sources_1/new" \
+"../../../../Multiplier.srcs/sources_1/new/FlipFlop.v" \
+"../../../../Multiplier.srcs/sources_1/new/Parrallel Buffer.v" \
+"../../../../Multiplier.srcs/sources_1/new/dataSplit.v" \
+"../../../../Multiplier.srcs/sources_1/new/integercomputeBlockPynq.v" \
+"../../../../Multiplier.srcs/sources_1/new/multiplyComputePynq.v" \
+"../../../../Multiplier.srcs/sim_1/new/integercomputeBlockPynq_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,5 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/monke/Documents/GitHub/ReconHardware/Pynq Software/Multiplier/Multiplier/Multiplier.sim/sim_1/synth/timing/xsim/floatMultiply_tb_time_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module floatmultiplyCompute
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/monke/Documents/GitHub/ReconHardware/Pynq Software/Multiplier/Multiplier/Multiplier.srcs/sim_1/new/floatmultiplyCompute_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module floatMultiply_tb

@@ -42,6 +42,6 @@ EAStep()
 
 # pre-commands:
 /bin/touch .init_design.begin.rst
-EAStep vivado -log fixedcomputeBlock.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source fixedcomputeBlock.tcl -notrace
+EAStep vivado -log floatcomputeBlockPynq.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source floatcomputeBlockPynq.tcl -notrace
 
 

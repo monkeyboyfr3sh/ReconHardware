@@ -7,7 +7,7 @@
 `define dataIn1 fafafafa
 `define dataIn2 00a925ff
 
-//Integer Multiply
+//Integer/Float Multiply
 `define multiplyIndex 63 //((`inputWidth*2)-1)
 
 //Float Multiply
@@ -16,7 +16,7 @@
 `define expWide 8
 
 //Fixed Multiply
-`define fracBitCount 4 //Fixed Multiply definitions = number of bits dedicated to fraction
+`define fracBitCount 8 //Fixed Multiply definitions = number of bits dedicated to fraction
 ////////////////////////////////////////////////////////////////////////////////
 
 //Automated things

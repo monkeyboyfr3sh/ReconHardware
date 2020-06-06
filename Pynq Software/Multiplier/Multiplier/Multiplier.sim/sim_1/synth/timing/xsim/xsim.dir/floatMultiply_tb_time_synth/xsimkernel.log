@@ -1,0 +1,7 @@
+Running: xsim.dir/floatMultiply_tb_time_synth/xsimk.exe -simmode gui -wdb floatMultiply_tb_time_synth.wdb -simrunnum 0 -socket 51729
+Design successfully loaded
+Design Loading Memory Usage: 13256 KB (Peak: 13256 KB)
+Design Loading CPU Usage: 15 ms
+Simulation completed
+Simulation Memory Usage: 16024 KB (Peak: 16024 KB)
+Simulation CPU Usage: 46 ms

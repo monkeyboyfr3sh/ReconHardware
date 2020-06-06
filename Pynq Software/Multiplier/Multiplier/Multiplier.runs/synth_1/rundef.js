@@ -23,7 +23,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log fixedcomputeBlock.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source fixedcomputeBlock.tcl" );
+         "-log floatcomputeBlockPynq.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source floatcomputeBlockPynq.tcl" );
 
 
 
