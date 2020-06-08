@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1591480901">
-  <File Type="PA-TCL" Name="floatcomputeBlockPynq.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="floatcomputeBlockPynq_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="floatcomputeBlockPynq_reports.tcl"/>
-  <File Type="RDS-RDS" Name="floatcomputeBlockPynq.vds"/>
-  <File Type="RDS-UTIL" Name="floatcomputeBlockPynq_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="floatcomputeBlockPynq_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="floatcomputeBlockPynq.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="floatcomputeBlockPynq_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="floatcomputeBlockPynq_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1591646265">
+  <File Type="PA-TCL" Name="integercomputeBlockPynq.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="integercomputeBlockPynq_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="integercomputeBlockPynq_reports.tcl"/>
+  <File Type="RDS-RDS" Name="integercomputeBlockPynq.vds"/>
+  <File Type="RDS-UTIL" Name="integercomputeBlockPynq_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="integercomputeBlockPynq_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="integercomputeBlockPynq.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="integercomputeBlockPynq_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="integercomputeBlockPynq_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/definitions.h">
@@ -38,8 +38,23 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/multiplyComputePynq.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/integercomputeBlockPynq.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/floatmComputePynq.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -47,6 +62,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/floatcomputeBlockPynq.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -68,15 +84,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/multiplyComputePynq.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/integercomputeBlockPynq.v">
+    <File Path="$PSRCDIR/sources_1/new/XBar.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -118,7 +126,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="floatcomputeBlockPynq"/>
+      <Option Name="TopModule" Val="integercomputeBlockPynq"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">

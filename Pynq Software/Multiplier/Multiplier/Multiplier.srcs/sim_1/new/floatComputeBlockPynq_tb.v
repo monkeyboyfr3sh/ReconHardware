@@ -18,7 +18,8 @@ reg mStart;
 wire mReady;
 wire [`outputIndex:0] dataOut;
 wire FULL0, FULL1;
-floatcomputeBlockPynq uut (     Clk,
+wire [`outputIndex:0] m1,m2;
+floatcomputeBlockPynq uut (    Clk,
                             dataIn,
                             bufferRD,
                             bufferSelect,
@@ -29,7 +30,9 @@ floatcomputeBlockPynq uut (     Clk,
                             Rst,
                             FULL0,
                             FULL1,
-                            chunkCount
+                            chunkCount,
+                            m1,
+                            m2
                             );
 initial begin
 
@@ -41,9 +44,6 @@ bufferRD  = 1'b0;
 bufferSelect  = 1'b0;
 bufferEN = 1'b0;
 chunkCount = 1'b0;
-Rst  = 1'b1;
-#`clkPeriod;
-Rst  = 1'b0;
 /*################################################################################################*/
 
 //Initialize pbuffer to write.

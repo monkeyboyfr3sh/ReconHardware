@@ -1,79 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1591480901">
-  <File Type="BITSTR-BMM" Name="floatcomputeBlockPynq_bd.bmm"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="floatcomputeBlockPynq_methodology_drc_opted.rpt"/>
-  <File Type="INIT-TIMING" Name="floatcomputeBlockPynq_timing_summary_init.rpt"/>
-  <File Type="ROUTE-PWR" Name="floatcomputeBlockPynq_power_routed.rpt"/>
-  <File Type="PA-TCL" Name="floatcomputeBlockPynq.tcl"/>
-  <File Type="OPT-TIMING" Name="floatcomputeBlockPynq_timing_summary_opted.rpt"/>
-  <File Type="OPT-DCP" Name="floatcomputeBlockPynq_opt.dcp"/>
-  <File Type="ROUTE-PWR-SUM" Name="floatcomputeBlockPynq_power_summary_routed.pb"/>
-  <File Type="REPORTS-TCL" Name="floatcomputeBlockPynq_reports.tcl"/>
-  <File Type="OPT-DRC" Name="floatcomputeBlockPynq_drc_opted.rpt"/>
-  <File Type="OPT-HWDEF" Name="floatcomputeBlockPynq.hwdef"/>
-  <File Type="PWROPT-DCP" Name="floatcomputeBlockPynq_pwropt.dcp"/>
-  <File Type="PWROPT-DRC" Name="floatcomputeBlockPynq_drc_pwropted.rpt"/>
-  <File Type="PWROPT-TIMING" Name="floatcomputeBlockPynq_timing_summary_pwropted.rpt"/>
-  <File Type="PLACE-DCP" Name="floatcomputeBlockPynq_placed.dcp"/>
-  <File Type="PLACE-IO" Name="floatcomputeBlockPynq_io_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="floatcomputeBlockPynq_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL" Name="floatcomputeBlockPynq_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="floatcomputeBlockPynq_utilization_placed.pb"/>
-  <File Type="PLACE-CTRL" Name="floatcomputeBlockPynq_control_sets_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="floatcomputeBlockPynq_incremental_reuse_placed.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="floatcomputeBlockPynq_incremental_reuse_pre_placed.rpt"/>
-  <File Type="PLACE-TIMING" Name="floatcomputeBlockPynq_timing_summary_placed.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="floatcomputeBlockPynq_postplace_pwropt.dcp"/>
-  <File Type="BG-BIN" Name="floatcomputeBlockPynq.bin"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="floatcomputeBlockPynq_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="PHYSOPT-DCP" Name="floatcomputeBlockPynq_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="floatcomputeBlockPynq_drc_physopted.rpt"/>
-  <File Type="BITSTR-MSK" Name="floatcomputeBlockPynq.msk"/>
-  <File Type="PHYSOPT-TIMING" Name="floatcomputeBlockPynq_timing_summary_physopted.rpt"/>
-  <File Type="ROUTE-ERROR-DCP" Name="floatcomputeBlockPynq_routed_error.dcp"/>
-  <File Type="ROUTE-DCP" Name="floatcomputeBlockPynq_routed.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="floatcomputeBlockPynq_routed_bb.dcp"/>
-  <File Type="ROUTE-DRC" Name="floatcomputeBlockPynq_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-PB" Name="floatcomputeBlockPynq_drc_routed.pb"/>
-  <File Type="ROUTE-DRC-RPX" Name="floatcomputeBlockPynq_drc_routed.rpx"/>
-  <File Type="BITSTR-MMI" Name="floatcomputeBlockPynq.mmi"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="floatcomputeBlockPynq_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="floatcomputeBlockPynq_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="floatcomputeBlockPynq_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-PWR-RPX" Name="floatcomputeBlockPynq_power_routed.rpx"/>
-  <File Type="ROUTE-STATUS" Name="floatcomputeBlockPynq_route_status.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="floatcomputeBlockPynq_route_status.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="floatcomputeBlockPynq_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-TIMING-PB" Name="floatcomputeBlockPynq_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMING-RPX" Name="floatcomputeBlockPynq_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-SIMILARITY" Name="floatcomputeBlockPynq_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="floatcomputeBlockPynq_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW" Name="floatcomputeBlockPynq_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="floatcomputeBlockPynq_bus_skew_routed.pb"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="floatcomputeBlockPynq_bus_skew_routed.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="floatcomputeBlockPynq_postroute_physopt.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="floatcomputeBlockPynq_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="floatcomputeBlockPynq_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="floatcomputeBlockPynq_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="floatcomputeBlockPynq_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="floatcomputeBlockPynq_bus_skew_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="floatcomputeBlockPynq_bus_skew_postroute_physopted.pb"/>
-  <File Type="BG-BIT" Name="floatcomputeBlockPynq.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="floatcomputeBlockPynq_bus_skew_postroute_physopted.rpx"/>
-  <File Type="BITSTR-RBT" Name="floatcomputeBlockPynq.rbt"/>
-  <File Type="BITSTR-NKY" Name="floatcomputeBlockPynq.nky"/>
-  <File Type="PDI-FILE" Name="floatcomputeBlockPynq.pdi"/>
-  <File Type="RCFI_FILE" Name="floatcomputeBlockPynq.rcfi"/>
-  <File Type="CFI_FILE" Name="floatcomputeBlockPynq.cfi"/>
-  <File Type="RNPI_FILE" Name="floatcomputeBlockPynq.rnpi"/>
-  <File Type="NPI_FILE" Name="floatcomputeBlockPynq.npi"/>
-  <File Type="RBD_FILE" Name="floatcomputeBlockPynq.rbd"/>
+<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1591646265">
+  <File Type="BITSTR-BMM" Name="integercomputeBlockPynq_bd.bmm"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="integercomputeBlockPynq_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="integercomputeBlockPynq_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR" Name="integercomputeBlockPynq_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="integercomputeBlockPynq.tcl"/>
+  <File Type="OPT-TIMING" Name="integercomputeBlockPynq_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="integercomputeBlockPynq_opt.dcp"/>
+  <File Type="ROUTE-PWR-SUM" Name="integercomputeBlockPynq_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="integercomputeBlockPynq_reports.tcl"/>
+  <File Type="OPT-DRC" Name="integercomputeBlockPynq_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="integercomputeBlockPynq.hwdef"/>
+  <File Type="PWROPT-DCP" Name="integercomputeBlockPynq_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="integercomputeBlockPynq_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="integercomputeBlockPynq_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="integercomputeBlockPynq_placed.dcp"/>
+  <File Type="PLACE-IO" Name="integercomputeBlockPynq_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="integercomputeBlockPynq_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="integercomputeBlockPynq_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="integercomputeBlockPynq_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="integercomputeBlockPynq_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="integercomputeBlockPynq_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="integercomputeBlockPynq_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="integercomputeBlockPynq_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="integercomputeBlockPynq_postplace_pwropt.dcp"/>
+  <File Type="BG-BIN" Name="integercomputeBlockPynq.bin"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="integercomputeBlockPynq_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="integercomputeBlockPynq_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="integercomputeBlockPynq_drc_physopted.rpt"/>
+  <File Type="BITSTR-MSK" Name="integercomputeBlockPynq.msk"/>
+  <File Type="PHYSOPT-TIMING" Name="integercomputeBlockPynq_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="integercomputeBlockPynq_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="integercomputeBlockPynq_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="integercomputeBlockPynq_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="integercomputeBlockPynq_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="integercomputeBlockPynq_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="integercomputeBlockPynq_drc_routed.rpx"/>
+  <File Type="BITSTR-MMI" Name="integercomputeBlockPynq.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="integercomputeBlockPynq_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="integercomputeBlockPynq_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="integercomputeBlockPynq_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="integercomputeBlockPynq_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="integercomputeBlockPynq_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="integercomputeBlockPynq_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="integercomputeBlockPynq_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="integercomputeBlockPynq_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="integercomputeBlockPynq_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="integercomputeBlockPynq_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="integercomputeBlockPynq_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="integercomputeBlockPynq_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="integercomputeBlockPynq_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="integercomputeBlockPynq_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="integercomputeBlockPynq_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="integercomputeBlockPynq_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="integercomputeBlockPynq_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="integercomputeBlockPynq_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="integercomputeBlockPynq_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="integercomputeBlockPynq_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="integercomputeBlockPynq_bus_skew_postroute_physopted.pb"/>
+  <File Type="BG-BIT" Name="integercomputeBlockPynq.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="integercomputeBlockPynq_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-RBT" Name="integercomputeBlockPynq.rbt"/>
+  <File Type="BITSTR-NKY" Name="integercomputeBlockPynq.nky"/>
+  <File Type="PDI-FILE" Name="integercomputeBlockPynq.pdi"/>
+  <File Type="RCFI_FILE" Name="integercomputeBlockPynq.rcfi"/>
+  <File Type="CFI_FILE" Name="integercomputeBlockPynq.cfi"/>
+  <File Type="RNPI_FILE" Name="integercomputeBlockPynq.rnpi"/>
+  <File Type="NPI_FILE" Name="integercomputeBlockPynq.npi"/>
+  <File Type="RBD_FILE" Name="integercomputeBlockPynq.rbd"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="floatcomputeBlockPynq.ltx"/>
-  <File Type="BITSTR-SYSDEF" Name="floatcomputeBlockPynq.sysdef"/>
-  <File Type="BG-BGN" Name="floatcomputeBlockPynq.bgn"/>
-  <File Type="BG-DRC" Name="floatcomputeBlockPynq.drc"/>
-  <File Type="RDI-RDI" Name="floatcomputeBlockPynq.vdi"/>
+  <File Type="BITSTR-LTX" Name="integercomputeBlockPynq.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="integercomputeBlockPynq.sysdef"/>
+  <File Type="BG-BGN" Name="integercomputeBlockPynq.bgn"/>
+  <File Type="BG-DRC" Name="integercomputeBlockPynq.drc"/>
+  <File Type="RDI-RDI" Name="integercomputeBlockPynq.vdi"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
@@ -104,8 +104,23 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/multiplyComputePynq.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/integercomputeBlockPynq.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/floatmComputePynq.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -113,6 +128,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/floatcomputeBlockPynq.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -134,15 +150,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/multiplyComputePynq.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/integercomputeBlockPynq.v">
+    <File Path="$PSRCDIR/sources_1/new/XBar.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -184,7 +192,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="floatcomputeBlockPynq"/>
+      <Option Name="TopModule" Val="integercomputeBlockPynq"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">

@@ -55,7 +55,7 @@ bufferEN = 1'b1;
 bufferSelect  = 1'b0;
 dataIn  = `inputWidth'h`dataIn1;
 #`clkPeriod;
-//Load stuff into buffer2->bufferSelect = 1
+//Load stuff into buffer2->bufferSelect = 1 
 bufferSelect  = 1'b1;
 dataIn  = `inputWidth'h`dataIn2;
 #`clkPeriod;

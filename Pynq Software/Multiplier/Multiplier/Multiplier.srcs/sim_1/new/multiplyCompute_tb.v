@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-module Multiply_tb;
+module MultiplyPynq_tb;
 
 // signals
 reg [`inputIndex:0] multiplier,multiplicand;

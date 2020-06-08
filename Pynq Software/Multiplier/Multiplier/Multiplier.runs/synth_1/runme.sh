@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log floatcomputeBlockPynq.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source floatcomputeBlockPynq.tcl
+EAStep vivado -log integercomputeBlockPynq.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source integercomputeBlockPynq.tcl

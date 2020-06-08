@@ -1,0 +1,9 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../Multiplier.srcs/sources_1/new" \
+"ParallelBuffer_tb_time_impl.v" \
+"../../../../../Multiplier.srcs/sources_1/new/FlipFlop.v" \
+"../../../../../Multiplier.srcs/sources_1/new/Parrallel Buffer.v" \
+"../../../../../Multiplier.srcs/sim_1/new/ParallelBuffer_tb.v" \
+
+# Do not sort compile order
+nosort
