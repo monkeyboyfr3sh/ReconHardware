@@ -1,7 +1,7 @@
-Running: xsim.dir/floatMultiplyPynq_tb_time_impl/xsimk.exe -simmode gui -wdb floatMultiplyPynq_tb_time_impl.wdb -simrunnum 0 -socket 50214
+Running: xsim.dir/floatMultiplyPynq_tb_time_impl/xsimk.exe -simmode gui -wdb floatMultiplyPynq_tb_time_impl.wdb -simrunnum 0 -socket 58238
 Design successfully loaded
 Design Loading Memory Usage: 5320 KB (Peak: 5320 KB)
-Design Loading CPU Usage: 62 ms
+Design Loading CPU Usage: 0 ms
 Simulation completed
-Simulation Memory Usage: 6008 KB (Peak: 6008 KB)
-Simulation CPU Usage: 77 ms
+Simulation Memory Usage: 6012 KB (Peak: 6012 KB)
+Simulation CPU Usage: 0 ms

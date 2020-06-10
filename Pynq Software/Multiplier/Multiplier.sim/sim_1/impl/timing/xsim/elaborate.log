@@ -34,3 +34,4 @@ Compiling module xil_defaultlib.dataSplit
 Compiling module xil_defaultlib.integercomputeBlockPynq
 Compiling module xil_defaultlib.integercomputeBlockPynq_tb
 Compiling module xil_defaultlib.glbl
+Built simulation snapshot integercomputeBlockPynq_tb_time_impl
