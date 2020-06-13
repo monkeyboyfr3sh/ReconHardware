@@ -15,32 +15,11 @@ XBar uut (  Clk,
 
 initial begin
 Clk = 0;
-flatInputPort = 32'h964523af;
 Rst = 1;
+flatInputPort = 32'h9920feca;
 #`clkPeriod;
 Rst = 0;
 
-//Toggle Ports On
-AddressSelect = 3;
-#`clkPeriod;
-AddressSelect = 6;
-#`clkPeriod;
-AddressSelect = 9;
-#`clkPeriod;
-AddressSelect = 12;
-#`clkPeriod;
-//Set an input
-flatInputPort = 32'h9920feca;
-
-//Toggle Ports Off
-AddressSelect = 3;
-#`clkPeriod;
-AddressSelect = 6;
-#`clkPeriod;
-AddressSelect = 9;
-#`clkPeriod;
-AddressSelect = 12;
-#`clkPeriod;
 //Toggle Ports On
 AddressSelect = 0;
 #`clkPeriod;
@@ -50,6 +29,40 @@ AddressSelect = 10;
 #`clkPeriod;
 AddressSelect = 15;
 #`clkPeriod;
+
+//Set some inputs to test
+flatInputPort = 32'hf2ca52e1;
+#(`clkPeriod+0.1);
+flatInputPort = 32'h9920feca;
+#(`clkPeriod+0.8);
+
+AddressSelect = 4;
+#(2*`clkPeriod);
+AddressSelect = 0;
+#`clkPeriod;
+AddressSelect = 4;
+#`clkPeriod;
+/*
+//Toggle Ports Off
+AddressSelect = 0;
+#`clkPeriod;
+AddressSelect = 5;
+#`clkPeriod;
+AddressSelect = 10;
+#`clkPeriod;
+AddressSelect = 15;
+#`clkPeriod;
+
+//Toggle Ports On
+AddressSelect = 0;
+#`clkPeriod;
+AddressSelect = 5;
+#`clkPeriod;
+AddressSelect = 10;
+#`clkPeriod;
+AddressSelect = 15;
+#`clkPeriod;
+*/
 end
 always #(`clkPeriod/2) Clk = ~Clk;
 endmodule

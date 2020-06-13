@@ -27,7 +27,6 @@ module XBar(
 
 input   Clk,Rst;
 input   [`addressLength-1:0]      AddressSelect;
-
 //Creates an array of inputs = inputportCount, with size bitLength
 input   [`inputPortCount*`bitLength-1:0]    flatInputPort;
 //Creates an array of outputs = outputportCount, with size bitLength
@@ -38,14 +37,18 @@ reg     [`outputPortCount-1:0]              AddressSave[`inputPortCount-1:0];
 reg     [`bitLength-1:0]                    OutputSave [`outputPortCount-1:0];
 
 //Needed vars
-integer     selectColomn, selectRow,i,j,k; 
+integer     selectColomn, selectRow,i,j,k;
+reg         rowCheck, rowSet; 
 
-assign flatOutputPort[7:0]      = OutputSave[0];
-assign flatOutputPort[15:8]     = OutputSave[1];
-assign flatOutputPort[23:16]    = OutputSave[2];
-assign flatOutputPort[31:24]    = OutputSave[3];
+generate
+    genvar n;
+    //Assigning Output port to corresponding saved outputs
+    for(n=0;n<`outputPortCount;n=n+1)begin
+        assign flatOutputPort[(n+1)*`bitLength-1:n*`bitLength] = OutputSave[n];
+    end
+endgenerate
 
-always @(posedge Clk)begin
+always @(negedge Clk)begin
     for(i=0;i<`inputPortCount;i=i+1)begin
         for(j=0;j<`outputPortCount;j=j+1)begin
             if(AddressSave[i][j])begin
@@ -55,29 +58,33 @@ always @(posedge Clk)begin
                                 (i==2)?flatInputPort[3*`bitLength-1:2*`bitLength]:
                                 flatInputPort[4*`bitLength-1:3*`bitLength];
             end
+            if(!AddressSave[i][j]) OutputSave[j] = 0;
         end
     end
 end
+
 always @(AddressSelect)begin
+    //Flags for checking if other rows are being used,
+    //Must toggle a row off before assigning a new one
+    rowCheck    = 0;
+    rowSet      = 0;
+    
     //Select row, i.e. select input
     selectRow       = AddressSelect/(`outputPortCount);
     //Select row, i.e. select output
     selectColomn    = AddressSelect%(`outputPortCount);
-    /*
-        Need to add logic that checks if any other rows in the colomn are being utilized
-    */
     
-    //Toggle active input/output connection
-    AddressSave[selectRow][selectColomn] = !AddressSave[selectRow][selectColomn];
-end
-
-always @(posedge Rst)begin
-    for(k=0;k<`inputPortCount;k=k+1)begin
-        AddressSave[k] = `outputPortCount'b0;
-    end
+    for(i=0;i<`inputPortCount;i=i+1)begin
+        //Already used row flag
+        if(AddressSave[i][selectColomn]&&(i!=selectRow)) rowSet=1'b1;
+        //Exit flag
+        if(i==`inputPortCount-1) rowCheck = 1'b1;
+    end 
     
-    for(k=0;k<`outputPortCount;k=k+1)begin
-        OutputSave[k] = `bitLength'b0;
+    if(rowCheck&&(!rowSet)) begin
+        //If all rows have been checked and none are set, toggle the connection
+        if(AddressSave[selectRow][selectColomn]) AddressSave[selectRow][selectColomn] = 1'b0;
+        else AddressSave[selectRow][selectColomn] = 1'b1;
     end
 end
 endmodule
