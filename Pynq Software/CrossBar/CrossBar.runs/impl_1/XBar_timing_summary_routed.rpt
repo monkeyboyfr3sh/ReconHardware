@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Sat Jun 13 13:43:06 2020
+| Date         : Sat Jun 13 14:34:02 2020
 | Host         : DESKTOP-9H19BOT running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file XBar_timing_summary_routed.rpt -pb XBar_timing_summary_routed.pb -rpx XBar_timing_summary_routed.rpx -warn_on_violation
 | Design       : XBar
@@ -62,8 +62,6 @@ Table of Contents
 
  There are 16 register/latch pins with no clock driven by root clock pin: AddressSelect[3] (HIGH)
 
- There are 32 register/latch pins with no clock driven by root clock pin: Clk (HIGH)
-
  There are 2 register/latch pins with no clock driven by root clock pin: AddressSave_reg[0][0]/Q (HIGH)
 
  There are 2 register/latch pins with no clock driven by root clock pin: AddressSave_reg[0][1]/Q (HIGH)
@@ -101,14 +99,14 @@ Table of Contents
 
 4. checking unconstrained_internal_endpoints
 --------------------------------------------
- There are 80 pins that are not constrained for maximum delay. (HIGH)
+ There are 16 pins that are not constrained for maximum delay. (HIGH)
 
- There are 0 pins that are not constrained for maximum delay due to constant clock.
+ There are 64 pins that are not constrained for maximum delay due to constant clock. (MEDIUM)
 
 
 5. checking no_input_delay
 --------------------------
- There are 12 input ports with no input delay specified. (HIGH)
+ There are 4 input ports with no input delay specified. (HIGH)
 
  There are 0 input ports with no input delay but user has a false path constraint.
 

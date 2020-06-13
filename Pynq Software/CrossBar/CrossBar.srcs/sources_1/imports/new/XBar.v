@@ -48,17 +48,13 @@ generate
     end
 endgenerate
 
-always @(negedge Clk)begin
-    for(i=0;i<`inputPortCount;i=i+1)begin
+always @(flatInputPort)begin
+    for(i=0;i<`inputPortCount*`bitLength;i=i+`bitLength)begin
         for(j=0;j<`outputPortCount;j=j+1)begin
-            if(AddressSave[i][j])begin
-                //Not the ideal way for this to be structured, but was having issues with variable truncation.
-                OutputSave[j] = (i==0)?flatInputPort[1*`bitLength-1:0*`bitLength]:
-                                (i==1)?flatInputPort[2*`bitLength-1:1*`bitLength]:
-                                (i==2)?flatInputPort[3*`bitLength-1:2*`bitLength]:
-                                flatInputPort[4*`bitLength-1:3*`bitLength];
+            if(AddressSave[i/`bitLength][j])begin
+                OutputSave[j] = flatInputPort[i+:`bitLength];
             end
-            if(!AddressSave[i][j]) OutputSave[j] = 0;
+            if(!AddressSave[i/`bitLength][j]) OutputSave[j] = 0;
         end
     end
 end

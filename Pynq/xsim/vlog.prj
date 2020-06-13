@@ -1,0 +1,7 @@
+verilog xil_defaultlib --include "../../Pynq Software/CrossBar/CrossBar.srcs/sources_1/imports/new" --include "../../Pynq Software/Multiplier/Multiplier.srcs/sources_1/new" \
+"../../Pynq Software/Multiplier/Multiplier.srcs/sources_1/new/XBar.v" \
+"../../Pynq Software/CrossBar/CrossBar.srcs/sim_1/new/XBar_tb.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

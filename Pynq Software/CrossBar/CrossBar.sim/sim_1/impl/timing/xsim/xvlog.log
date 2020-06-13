@@ -2,9 +2,4 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/monke/Documents/GitHub/Rec
 INFO: [VRFC 10-311] analyzing module XBar
 INFO: [VRFC 10-311] analyzing module glbl
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/monke/Documents/GitHub/ReconHardware/Pynq Software/CrossBar/CrossBar.srcs/sim_1/new/XBar_tb.v" into library xil_defaultlib
-ERROR: [VRFC 10-3805] use of undefined macro 'myTimeScale' [C:/Users/monke/Documents/GitHub/ReconHardware/Pynq Software/CrossBar/CrossBar.srcs/sim_1/new/XBar_tb.v:1]
-ERROR: [VRFC 10-4982] syntax error near 'module' [C:/Users/monke/Documents/GitHub/ReconHardware/Pynq Software/CrossBar/CrossBar.srcs/sim_1/new/XBar_tb.v:2]
-ERROR: [VRFC 10-1342] root scope declaration is not allowed in verilog 95/2K mode [C:/Users/monke/Documents/GitHub/ReconHardware/Pynq Software/CrossBar/CrossBar.srcs/sim_1/new/XBar_tb.v:2]
-ERROR: [VRFC 10-1342] root scope declaration is not allowed in verilog 95/2K mode [C:/Users/monke/Documents/GitHub/ReconHardware/Pynq Software/CrossBar/CrossBar.srcs/sim_1/new/XBar_tb.v:4]
-ERROR: [VRFC 10-3805] use of undefined macro 'inputPortCount' [C:/Users/monke/Documents/GitHub/ReconHardware/Pynq Software/CrossBar/CrossBar.srcs/sim_1/new/XBar_tb.v:5]
-ERROR: [VRFC 10-4982] syntax error near '*' [C:/Users/monke/Documents/GitHub/ReconHardware/Pynq Software/CrossBar/CrossBar.srcs/sim_1/new/XBar_tb.v:5]
+INFO: [VRFC 10-311] analyzing module XBar_tb

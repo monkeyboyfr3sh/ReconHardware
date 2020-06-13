@@ -16,7 +16,7 @@ module fixedcomputeBlock(   Clk,
                             );
                        
 //Inputs
-input Clk,Rst, bufferRD,bufferSelect,bufferEN,mStart,chunkCount;;
+input Clk,Rst, bufferRD,bufferSelect,bufferEN,mStart,chunkCount;
 input [`inputIndex:0] dataIn;
 
 //Outputs
