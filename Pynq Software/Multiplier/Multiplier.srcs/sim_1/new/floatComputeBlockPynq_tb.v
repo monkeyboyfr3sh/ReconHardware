@@ -18,7 +18,6 @@ reg mStart;
 wire mReady;
 wire [`outputIndex:0] dataOut;
 wire FULL0, FULL1;
-wire [`outputIndex:0] m1,m2;
 floatcomputeBlockPynq uut (    Clk,
                             dataIn,
                             bufferRD,
@@ -30,9 +29,7 @@ floatcomputeBlockPynq uut (    Clk,
                             Rst,
                             FULL0,
                             FULL1,
-                            chunkCount,
-                            m1,
-                            m2
+                            chunkCount
                             );
 initial begin
 

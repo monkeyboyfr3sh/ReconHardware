@@ -1,11 +1,3 @@
-`define myTimeScale 1ns / 1ps
-`define clkPeriod 2
-
-`define inputPortCount  4   //N
-`define outputPortCount 4   //M
-`define addressLength   4   //Eventually want to come up with a way to generate this on N and M
-`define bitLength       8   //Size of data input
-
 `timescale `myTimeScale
 module XBar_tb;
 
@@ -24,52 +16,49 @@ XBar uut (  Clk,
 initial begin
 Clk = 0;
 Rst = 1;
-flatInputPort = 32'h9920feca;
+flatInputPort = 8'hfe;
 #`clkPeriod;
 Rst = 0;
 
 //Toggle Ports On
 AddressSelect = 0;
+#`toggleTime;
+AddressSelect = 1;
+#`toggleTime;
+AddressSelect = `restAddress;
+
+/*
+Clk = 0;
+Rst = 1;
+flatInputPort = 32'h9920feca;
 #`clkPeriod;
-AddressSelect = 5;
-#`clkPeriod;
-AddressSelect = 10;
-#`clkPeriod;
-AddressSelect = 15;
-#`clkPeriod;
+Rst = 0;
+
+//Toggle Ports On
+AddressSelect = 7;
+#`toggleTime;
+AddressSelect = 2;
+#`toggleTime;
+AddressSelect = 13;
+#`toggleTime;
+AddressSelect = 8;
+#`toggleTime;
+//This is rest condition. To enter rest condition, set  AddressSelect = (# of Input Ports)*(# of Output Ports)
+                                            //i.e.      AddressSelect = (4in)*(4out) = 16
+AddressSelect = `inputPortCount*`outputPortCount;
 
 //Set some inputs to test
 flatInputPort = 32'hf2ca52e1;
-#(`clkPeriod+0.1);
+#`toggleTime;
 flatInputPort = 32'h9920feca;
-#(`clkPeriod+0.8);
+#`toggleTime;
 
-AddressSelect = 4;
-#(2*`clkPeriod);
-AddressSelect = 0;
-#`clkPeriod;
-AddressSelect = 4;
-#`clkPeriod;
-/*
 //Toggle Ports Off
-AddressSelect = 0;
-#`clkPeriod;
-AddressSelect = 5;
-#`clkPeriod;
-AddressSelect = 10;
-#`clkPeriod;
-AddressSelect = 15;
-#`clkPeriod;
-
-//Toggle Ports On
-AddressSelect = 0;
-#`clkPeriod;
-AddressSelect = 5;
-#`clkPeriod;
-AddressSelect = 10;
-#`clkPeriod;
-AddressSelect = 15;
-#`clkPeriod;
+AddressSelect = 13;
+#`toggleTime;
+AddressSelect = 8;
+#`toggleTime;
+AddressSelect = `inputPortCount*`outputPortCount;
 */
 end
 always #(`clkPeriod/2) Clk = ~Clk;

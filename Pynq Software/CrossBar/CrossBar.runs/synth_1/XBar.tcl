@@ -17,6 +17,8 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param chipscope.maxJobs 2
+set_msg_config -id {Common 17-41} -limit 10000000
 create_project -in_memory -part xc7z020clg400-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -29,8 +31,8 @@ set_property target_language Verilog [current_project]
 set_property board_part tul.com.tw:pynq-z2:part0:1.0 [current_project]
 set_property ip_output_repo {c:/Users/monke/Documents/GitHub/ReconHardware/Pynq Software/CrossBar/CrossBar.cache/ip} [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_verilog {{C:/Users/monke/Documents/GitHub/ReconHardware/Pynq Software/CrossBar/CrossBar.srcs/sources_1/imports/new/definitions.h}}
-set_property file_type "Verilog Header" [get_files {{C:/Users/monke/Documents/GitHub/ReconHardware/Pynq Software/CrossBar/CrossBar.srcs/sources_1/imports/new/definitions.h}}]
+read_verilog {{C:/Users/monke/Documents/GitHub/ReconHardware/Pynq Software/Multiplier/Multiplier.srcs/sources_1/new/definitions.h}}
+set_property file_type "Verilog Header" [get_files {{C:/Users/monke/Documents/GitHub/ReconHardware/Pynq Software/Multiplier/Multiplier.srcs/sources_1/new/definitions.h}}]
 read_verilog -library xil_defaultlib {{C:/Users/monke/Documents/GitHub/ReconHardware/Pynq Software/CrossBar/CrossBar.srcs/sources_1/imports/new/XBar.v}}
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

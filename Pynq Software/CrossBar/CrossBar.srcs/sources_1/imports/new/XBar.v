@@ -1,21 +1,20 @@
 `include "definitions.h"
 `timescale `myTimeScale
-/*2-D Array info
+
+/*
+Self Note: Useful to see this, i/o logic is based on traversing 2-D array
+
+2-D Array info:
 reg [7:0] a[0:2] will give you a 3x8 bit array
 You get the first byte out of this with a[0].
 The third bit of the 2nd byte is a[1][2]
 
-This is an example of  the layout for the previously mentioned "array" = a
-        out         out         out         out         out         out         out         out
+    out0            out1        out2        out3        out4        out5        out6        out7
     _______________________________________________________________________________________________
-in  |   a[0][0]     a[0][1]     a[0][2]     a[0][3]     a[0][4]     a[0][5]     a[0][6]     a[0][7]
-in  |   a[1][0]     a[1][1]     a[1][2]     a[1][3]     a[1][4]     a[1][5]     a[1][6]     a[1][7]
-in  |   a[2][0]     a[2][1]     a[2][2]     a[2][3]     a[2][4]     a[2][5]     a[2][6]     a[2][7]*/  
-
-`define inputPortCount  4   //N
-`define outputPortCount 4   //M
-`define addressLength   4   //Eventually want to come up with a way to generate this on N and M
-`define bitLength       8   //Size of data input
+in0 |   a[0][0]     a[0][1]     a[0][2]     a[0][3]     a[0][4]     a[0][5]     a[0][6]     a[0][7]
+in1 |   a[1][0]     a[1][1]     a[1][2]     a[1][3]     a[1][4]     a[1][5]     a[1][6]     a[1][7]
+in2 |   a[2][0]     a[2][1]     a[2][2]     a[2][3]     a[2][4]     a[2][5]     a[2][6]     a[2][7]
+*/
 
 module XBar(
     Clk,
@@ -48,13 +47,14 @@ generate
     end
 endgenerate
 
-always @(flatInputPort)begin
+always @(flatInputPort or AddressSelect)begin
     for(i=0;i<`inputPortCount*`bitLength;i=i+`bitLength)begin
         for(j=0;j<`outputPortCount;j=j+1)begin
-            if(AddressSave[i/`bitLength][j])begin
-                OutputSave[j] = flatInputPort[i+:`bitLength];
-            end
-            if(!AddressSave[i/`bitLength][j]) OutputSave[j] = 0;
+            //if(AddressSave) Save input for corresponding output
+            if(AddressSave[i/`bitLength][j])    OutputSave[j] = flatInputPort[i+:`bitLength];
+            
+            //if(!AddressSave) Set corresponding output to 0
+            if(!AddressSave[i/`bitLength][j])   OutputSave[j] = `bitLength'b0;
         end
     end
 end
@@ -64,7 +64,6 @@ always @(AddressSelect)begin
     //Must toggle a row off before assigning a new one
     rowCheck    = 0;
     rowSet      = 0;
-    
     //Select row, i.e. select input
     selectRow       = AddressSelect/(`outputPortCount);
     //Select row, i.e. select output
@@ -77,10 +76,17 @@ always @(AddressSelect)begin
         if(i==`inputPortCount-1) rowCheck = 1'b1;
     end 
     
-    if(rowCheck&&(!rowSet)) begin
-        //If all rows have been checked and none are set, toggle the connection
-        if(AddressSave[selectRow][selectColomn]) AddressSave[selectRow][selectColomn] = 1'b0;
-        else AddressSave[selectRow][selectColomn] = 1'b1;
+    //This is a rest condition for the address select due to IP responding to change in addressSelect
+    //This is to change AddressSelect but not toggle any postions
+    if(AddressSelect == `restAddress)/*NOP*/;
+    
+    //If fail rest condition
+    else begin
+        if(rowCheck&&(!rowSet)) begin
+            //If all rows have been checked and none are set, toggle the connection
+            if(AddressSave[selectRow][selectColomn]) AddressSave[selectRow][selectColomn] = 1'b0;
+            else AddressSave[selectRow][selectColomn] = 1'b1;
+        end
     end
 end
 endmodule
