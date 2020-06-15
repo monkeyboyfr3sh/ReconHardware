@@ -17,14 +17,13 @@ in2 |   a[2][0]     a[2][1]     a[2][2]     a[2][3]     a[2][4]     a[2][5]     
 */
 
 module XBar(
-    Clk,
     Rst,
     flatInputPort,
     flatOutputPort,
     AddressSelect
     );
 
-input   Clk,Rst;
+input   Rst;
 input   [`addressLength-1:0]      AddressSelect;
 //Creates an array of inputs = inputportCount, with size bitLength
 input   [`inputPortCount*`bitLength-1:0]    flatInputPort;
@@ -59,33 +58,38 @@ always @(flatInputPort or AddressSelect)begin
     end
 end
 
-always @(AddressSelect)begin
-    //Flags for checking if other rows are being used,
-    //Must toggle a row off before assigning a new one
-    rowCheck    = 0;
-    rowSet      = 0;
-    //Select row, i.e. select input
-    selectRow       = AddressSelect/(`outputPortCount);
-    //Select row, i.e. select output
-    selectColomn    = AddressSelect%(`outputPortCount);
-    
-    for(i=0;i<`inputPortCount;i=i+1)begin
-        //Already used row flag
-        if(AddressSave[i][selectColomn]&&(i!=selectRow)) rowSet=1'b1;
-        //Exit flag
-        if(i==`inputPortCount-1) rowCheck = 1'b1;
-    end 
-    
-    //This is a rest condition for the address select due to IP responding to change in addressSelect
-    //This is to change AddressSelect but not toggle any postions
-    if(AddressSelect == `restAddress)/*NOP*/;
-    
-    //If fail rest condition
+always @(AddressSelect or Rst)begin
+    if(Rst)begin
+        for(k=0;k<`inputPortCount;k=k+1) AddressSave[k] = 0;
+    end
     else begin
-        if(rowCheck&&(!rowSet)) begin
-            //If all rows have been checked and none are set, toggle the connection
-            if(AddressSave[selectRow][selectColomn]) AddressSave[selectRow][selectColomn] = 1'b0;
-            else AddressSave[selectRow][selectColomn] = 1'b1;
+        //Flags for checking if other rows are being used,
+        //Must toggle a row off before assigning a new one
+        rowCheck    = 0;
+        rowSet      = 0;
+        //Select row, i.e. select input
+        selectRow       = AddressSelect/(`outputPortCount);
+        //Select row, i.e. select output
+        selectColomn    = AddressSelect%(`outputPortCount);
+        
+        for(i=0;i<`inputPortCount;i=i+1)begin
+            //Already used row flag
+            if(AddressSave[i][selectColomn]&&(i!=selectRow)) rowSet=1'b1;
+            //Exit flag
+            if(i==`inputPortCount-1) rowCheck = 1'b1;
+        end 
+        
+        //This is a rest condition for the address select due to IP responding to change in addressSelect
+        //This is to change AddressSelect but not toggle any postions
+        if(AddressSelect == `restAddress)/*NOP*/;
+        
+        //If fail rest condition
+        else begin
+            if(rowCheck&&(!rowSet)) begin
+                //If all rows have been checked and none are set, toggle the connection
+                if(AddressSave[selectRow][selectColomn]) AddressSave[selectRow][selectColomn] = 1'b0;
+                else AddressSave[selectRow][selectColomn] = 1'b1;
+            end
         end
     end
 end

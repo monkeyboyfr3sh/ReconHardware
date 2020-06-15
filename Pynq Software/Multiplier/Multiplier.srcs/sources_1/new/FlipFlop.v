@@ -22,20 +22,17 @@ reg set;
 assign dataOut = EN?holdData:`inputWidth'b0;
 assign FULL = set;
 
-always @ (posedge Clk) 
-begin
-if(!EN);
-else begin
-    if(sel&&(!RD)) begin
-        holdData = dataIn;
-        set = 1;
+always @ (posedge Clk)begin
+    if(!EN);
+    else begin
+        if(sel&&(!RD)) begin
+            holdData = dataIn;
+            set = 1;
+        end
     end
-end
-
-if (Rst||CLR) begin 
-    holdData = `inputIndex'b0;
-    set = 0;
-end
-
+    if (Rst||CLR) begin 
+        holdData = `inputIndex'b0;
+        set = 0;
+    end
 end 
 endmodule

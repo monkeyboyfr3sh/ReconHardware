@@ -1,26 +1,26 @@
 `timescale `myTimeScale
 module XBar_tb;
 
-reg Clk,Rst;
-reg [`inputPortCount*`bitLength-1:0]    flatInputPort;
-wire [`outputPortCount*`bitLength-1:0]    flatOutputPort;
-reg [`addressLength-1:0] AddressSelect;
+reg     Rst;
+reg     [`inputPortCount*`bitLength-1:0]    flatInputPort;
+wire    [`outputPortCount*`bitLength-1:0]   flatOutputPort;
+reg     [`addressLength-1:0]                AddressSelect;
 
-XBar uut (  Clk,
-            Rst,
+XBar uut (  Rst,
             flatInputPort,
             flatOutputPort,
             AddressSelect
             );
 
 initial begin
-Clk = 0;
-Rst = 1;
-flatInputPort = 8'hfe;
-#`clkPeriod;
 Rst = 0;
+flatInputPort = 8'hfe;
+#`toggleTime;
+Rst = 1;
+#`toggleTime;
 
 //Toggle Ports On
+Rst = 0;
 AddressSelect = 0;
 #`toggleTime;
 AddressSelect = 1;
@@ -61,5 +61,4 @@ AddressSelect = 8;
 AddressSelect = `inputPortCount*`outputPortCount;
 */
 end
-always #(`clkPeriod/2) Clk = ~Clk;
 endmodule

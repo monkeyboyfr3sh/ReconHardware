@@ -31,14 +31,14 @@
 `define multiplyIndex       15                                  //((`inputWidth*2)-1)
 
 //Float Multiply
-`define mantissaIndex       9                                   //Float Multiply definitions = mantissa length-1
-`define expBias             01111                               //Bias for floating point representation
-`define expWide             5
+`define mantissaIndex       2                                   //Float Multiply definitions = mantissa length-1
+`define expBias             0111                               //Bias for floating point representation
+`define expWide             4
 
 //Fixed Multiply Definition
 `define fracBitCount        8                                   //Fixed Multiply definitions = number of bits dedicated to fraction
 
-//Testbench Definitions Definition, this will be truncated to lowest order bits of size `inputWidth
+//Testbench Definitions, this will be truncated to lowest order bits of size `inputWidth
 `define dataIn1             7
 `define dataIn2             2
 `define dataIn3             13

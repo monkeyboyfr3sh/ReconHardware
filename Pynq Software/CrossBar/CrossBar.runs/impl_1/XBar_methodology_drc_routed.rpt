@@ -1,0 +1,125 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Sun Jun 14 13:39:04 2020
+| Host         : DESKTOP-9H19BOT running 64-bit major release  (build 9200)
+| Command      : report_methodology -file XBar_methodology_drc_routed.rpt -pb XBar_methodology_drc_routed.pb -rpx XBar_methodology_drc_routed.rpx
+| Design       : XBar
+| Device       : xc7z020clg400-1
+| Speed File   : -1
+| Design State : Fully Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 18
++-----------+----------+-------------------+------------+
+| Rule      | Severity | Description       | Violations |
++-----------+----------+-------------------+------------+
+| TIMING-20 | Warning  | Non-clocked latch | 18         |
++-----------+----------+-------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-20#1 Warning
+Non-clocked latch  
+The latch AddressSave_reg[0][0] cannot be properly analyzed as its control pin AddressSave_reg[0][0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#2 Warning
+Non-clocked latch  
+The latch AddressSave_reg[0][1] cannot be properly analyzed as its control pin AddressSave_reg[0][1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#3 Warning
+Non-clocked latch  
+The latch OutputSave_reg[0][0] cannot be properly analyzed as its control pin OutputSave_reg[0][0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#4 Warning
+Non-clocked latch  
+The latch OutputSave_reg[0][1] cannot be properly analyzed as its control pin OutputSave_reg[0][1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#5 Warning
+Non-clocked latch  
+The latch OutputSave_reg[0][2] cannot be properly analyzed as its control pin OutputSave_reg[0][2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#6 Warning
+Non-clocked latch  
+The latch OutputSave_reg[0][3] cannot be properly analyzed as its control pin OutputSave_reg[0][3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#7 Warning
+Non-clocked latch  
+The latch OutputSave_reg[0][4] cannot be properly analyzed as its control pin OutputSave_reg[0][4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#8 Warning
+Non-clocked latch  
+The latch OutputSave_reg[0][5] cannot be properly analyzed as its control pin OutputSave_reg[0][5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#9 Warning
+Non-clocked latch  
+The latch OutputSave_reg[0][6] cannot be properly analyzed as its control pin OutputSave_reg[0][6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#10 Warning
+Non-clocked latch  
+The latch OutputSave_reg[0][7] cannot be properly analyzed as its control pin OutputSave_reg[0][7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#11 Warning
+Non-clocked latch  
+The latch OutputSave_reg[1][0] cannot be properly analyzed as its control pin OutputSave_reg[1][0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#12 Warning
+Non-clocked latch  
+The latch OutputSave_reg[1][1] cannot be properly analyzed as its control pin OutputSave_reg[1][1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#13 Warning
+Non-clocked latch  
+The latch OutputSave_reg[1][2] cannot be properly analyzed as its control pin OutputSave_reg[1][2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#14 Warning
+Non-clocked latch  
+The latch OutputSave_reg[1][3] cannot be properly analyzed as its control pin OutputSave_reg[1][3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#15 Warning
+Non-clocked latch  
+The latch OutputSave_reg[1][4] cannot be properly analyzed as its control pin OutputSave_reg[1][4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#16 Warning
+Non-clocked latch  
+The latch OutputSave_reg[1][5] cannot be properly analyzed as its control pin OutputSave_reg[1][5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#17 Warning
+Non-clocked latch  
+The latch OutputSave_reg[1][6] cannot be properly analyzed as its control pin OutputSave_reg[1][6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#18 Warning
+Non-clocked latch  
+The latch OutputSave_reg[1][7] cannot be properly analyzed as its control pin OutputSave_reg[1][7]/G is not reached by a timing clock
+Related violations: <none>
+
+
