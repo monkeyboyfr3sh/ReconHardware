@@ -31,7 +31,7 @@ always @ (posedge Clk)begin
         end
     end
     if (Rst||CLR) begin 
-        holdData = `inputIndex'b0;
+        holdData = `inputWidth'b0;
         set = 0;
     end
 end 
