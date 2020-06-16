@@ -18,17 +18,17 @@
 //START_User_Set
 /*#####################################################################################################################################################*/
 //Data/Device Definition
-`define inputWidth 8
+`define inputWidth 16
 `define myTimeScale 1ns / 1ps
 `define clkPeriod 2
 
 //Xbar Definitions
-`define inputPortCount      2                                   //N
-`define outputPortCount     2                                   //M
-`define addressLength       3                                   //Eventually want to come up with a way to generate this on N and M
+`define inputPortCount      4                                   //N
+`define outputPortCount     4                                   //M
+`define addressLength       5                                   //Eventually want to come up with a way to generate this on N and M
 
 //Integer/Float Multiply Definition
-`define multiplyIndex       15                                  //((`inputWidth*2)-1)
+`define multiplyIndex       31                                  //((`inputWidth*2)-1)
 
 //Float Multiply
 `define mantissaIndex       2                                   //Float Multiply definitions = mantissa length-1
@@ -43,8 +43,10 @@
 `define dataIn2             2
 `define dataIn3             13
 `define dataIn4             8
-`define dataIn5             00000000
-`define dataIn6             00000000
+`define dataIn5             16
+`define dataIn6             10
+`define dataIn7             64
+`define dataIn8             2
 `define toggleTime          0.1
 /*#####################################################################################################################################################*/
 //END_User_Set

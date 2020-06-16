@@ -14,18 +14,20 @@ XBar uut (  Rst,
 
 initial begin
 Rst = 0;
-flatInputPort = 8'hfe;
+flatInputPort[1*`bitLength-1:0*`bitLength] = 23;
+flatInputPort[2*`bitLength-1:1*`bitLength] = 10;
 #`toggleTime;
 Rst = 1;
 #`toggleTime;
 
 //Toggle Ports On
 Rst = 0;
-AddressSelect = 0;
-#`toggleTime;
 AddressSelect = 1;
 #`toggleTime;
+AddressSelect = 2;
+#`toggleTime;
 AddressSelect = `restAddress;
+#`toggleTime;
 
 /*
 Clk = 0;

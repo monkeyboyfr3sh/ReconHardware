@@ -6,12 +6,12 @@ module multiplyXBar(
                         dataOut,        //data output that currently is straight from xbar
                         AddressSelect,  //AddressSelect for xbar
                         bufferRD_in,    //Array of bufferRD control for multipliers that input to xbar. 0 = buffers will fill with dataIn value, 1 = buffers will hold data
+                        bufferRD_out,   //Array of bufferRD control for multipliers that xbar outputs to. 0 = buffers will fill with dataIn value, 1 = buffers will hold data
                         bufferSelect,
                         mStart_in,      //Signals for multiplication to start, will start mulipliers that input to xBar
-                        mReady_in,
-                        tempout
-                        //mStart_out,     //Signals for multiplication to start, will start multipliers that xbar outputs to
-                        //mReady_out,
+                        mStart_out,     //Signals for multiplication to start, will start multipliers that xbar outputs to
+                        mReady_in,      //Signals multiplication complete for multipers that input to xBar
+                        mReady_out,     //Signals multiplication complete for multipers that xBar outputs to
                         );
                         
 //########################################################################################################################################################################################
@@ -19,19 +19,22 @@ module multiplyXBar(
 
 //Inputs
 input Clk,Rst;
-input   [`inputPortCount-1:0]   bufferRD_in;                        //bufferRD for multipliers that input to the xbar
-input   bufferSelect;                                               //For all multipliers, select buffer0 or buffer1
-input   mStart_in;                                                  //Start multiplication for multipliers that input to the xbar
-//input   mStart_out;                                                 //Start multiplication for multipliers that xbar outputs to
-input   [`bitLength-1:0]        dataIn;                             //Input to multipliers on the left of xbar
+input   [`inputPortCount-1:0]   bufferRD_in;    //bufferRD for multipliers that input to the xbar
+input   [`outputPortCount-1:0]   bufferRD_out;  //bufferRD for multipliers that xbar outputs to
+input   bufferSelect;                           //For all multipliers, select buffer0 or buffer1
+input   mStart_in;                              //Start multiplication for multipliers that input to the xbar
+input   mStart_out;                             //Start multiplication for multipliers that xbar outputs to
+input   [`bitLength-1:0]        dataIn;         //Input to multipliers on the left of xbar
 
 //Outputs
-output    [`inputPortCount-1:0] mReady_in;                          //mReady bus
-//output    [`outputPortCount-1:0] mReady_out;                        //mReady bus
+output    [`inputPortCount-1:0] mReady_in;      //mReady bus
+output    [`outputPortCount-1:0] mReady_out;    //mReady bus
 
 //Internal Signals
-wire    [1:0]                   FULL_in     [`inputPortCount-1:0];  //FULL bus, 0th bit if for the 
-wire    [`outputIndex:0]        product_in  [`inputPortCount-1:0];  //Product input bus, the will be fed to the input of the crossbar
+wire    [1:0]                   FULL_in     [`inputPortCount-1:0];      //FULL bus, 0th bit if for the 
+wire    [1:0]                   FULL_out     [`outputPortCount-1:0];    //FULL bus, 0th bit if for the 
+wire    [`outputIndex:0]        product_in  [`inputPortCount-1:0];      //Product input bus, the will be fed to the input of the crossbar
+wire    [`outputIndex:0]        product_out [`outputPortCount-1:0];     //Product output bus, the will be fed to the output port
 
 //########################################################################################################################################################################################
 //Xbar vars
@@ -52,45 +55,53 @@ generate
     for(n=0;n<`inputPortCount;n=n+1)begin
         assign xbar_inputConnector[(n+1)*`bitLength-1:n*`bitLength] = product_in[n];
     end
+    
+    for(n=0;n<`outputPortCount;n=n+1)begin
+        assign dataOut[(n+1)*`bitLength-1:n*`bitLength] = product_out[n];
+    end
 endgenerate
 
 //########################################################################################################################################################################################
-//Temp stuff
-assign dataOut = xbar_outputConnector;
-output [1:0] tempout;
-assign tempout = FULL_in[1];
 
 XBar uut (  .Rst(Rst),
             .flatInputPort(xbar_inputConnector),
             .flatOutputPort(xbar_outputConnector),
             .AddressSelect(AddressSelect)
             );
-
-integercomputeBlockPynq multi0 (    .Clk(Clk),
-                                    .dataIn(dataIn),                
-                                    .bufferRD(bufferRD_in[0]),
-                                    .bufferSelect(bufferSelect),
-                                    .bufferEN(1),
-                                    .mStart(mStart_in),
-                                    .mReady(mReady_in[0]),
-                                    .dataOut(product_in[0]),
-                                    .Rst(Rst),
-                                    .FULL0(FULL_in[0][0]),
-                                    .FULL1(FULL_in[0][1]),
-                                    .chunkCount(0)
-                                    );
-integercomputeBlockPynq multi1 (    .Clk(Clk),
-                                    .dataIn(dataIn),                
-                                    .bufferRD(bufferRD_in[1]),  
-                                    .bufferSelect(bufferSelect),
-                                    .bufferEN(1),
-                                    .mStart(mStart_in),
-                                    .mReady(mReady_in[1]),
-                                    .dataOut(product_in[1]),
-                                    .Rst(Rst),
-                                    .FULL0(FULL_in[1][0]),
-                                    .FULL1(FULL_in[1][1]),
-                                    .chunkCount(0)
-                                    );
-
+generate
+    genvar m ;
+    for(m=0;m<`inputPortCount;m=m+1)begin
+        integercomputeBlockPynq m_computeBlock_in(
+            .Clk(Clk),
+            .dataIn(dataIn),                
+            .bufferRD(bufferRD_in[m]),  
+            .bufferSelect(bufferSelect),
+            .bufferEN(1),
+            .mStart(mStart_in),
+            .mReady(mReady_in[m]),
+            .dataOut(product_in[m]),
+            .Rst(Rst),
+            .FULL0(FULL_in[m][0]),
+            .FULL1(FULL_in[m][1]),
+            .chunkCount(0)
+        );
+    end
+    
+    for(m=0;m<`outputPortCount;m=m+1)begin
+        integercomputeBlockPynq m_computeBlock_out(
+            .Clk(Clk),
+            .dataIn(xbar_outputConnector[(m+1)*`bitLength-1:m*`bitLength]),                
+            .bufferRD(bufferRD_out[m]),  
+            .bufferSelect(bufferSelect),
+            .bufferEN(1),
+            .mStart(mStart_out),
+            .mReady(mReady_out[m]),
+            .dataOut(product_out[m]),
+            .Rst(Rst),
+            .FULL0(FULL_out[m][0]),
+            .FULL1(FULL_out[m][1]),
+            .chunkCount(0)
+        );
+    end
+endgenerate
 endmodule

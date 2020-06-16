@@ -36,7 +36,7 @@ reg     [`bitLength-1:0]                    OutputSave [`outputPortCount-1:0];
 
 //Needed vars
 integer     selectColomn, selectRow,i,j,k;
-reg         rowCheck, rowSet; 
+reg         rowCheck, rowSet, outUsed; 
 
 generate
     genvar n;
@@ -47,13 +47,18 @@ generate
 endgenerate
 
 always @(flatInputPort or AddressSelect)begin
-    for(i=0;i<`inputPortCount*`bitLength;i=i+`bitLength)begin
-        for(j=0;j<`outputPortCount;j=j+1)begin
+    for(j=0;j<`outputPortCount;j=j+1)begin
+        outUsed = 0;
+        for(i=0;i<`inputPortCount*`bitLength;i=i+`bitLength)begin
+            
             //if(AddressSave) Save input for corresponding output
-            if(AddressSave[i/`bitLength][j])    OutputSave[j] = flatInputPort[i+:`bitLength];
+            if(AddressSave[i/`bitLength][j])begin    
+                OutputSave[j] = flatInputPort[i+:`bitLength];
+                outUsed = 1;
+            end
             
             //if(!AddressSave) Set corresponding output to 0
-            if(!AddressSave[i/`bitLength][j])   OutputSave[j] = `bitLength'b0;
+            if(!(AddressSave[i/`bitLength][j]||outUsed))   OutputSave[j] = `bitLength'b0;
         end
     end
 end
