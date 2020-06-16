@@ -23,9 +23,9 @@
 `define clkPeriod 2
 
 //Xbar Definitions
-`define inputPortCount      1                                   //N
+`define inputPortCount      2                                   //N
 `define outputPortCount     2                                   //M
-`define addressLength       2                                   //Eventually want to come up with a way to generate this on N and M
+`define addressLength       3                                   //Eventually want to come up with a way to generate this on N and M
 
 //Integer/Float Multiply Definition
 `define multiplyIndex       15                                  //((`inputWidth*2)-1)
