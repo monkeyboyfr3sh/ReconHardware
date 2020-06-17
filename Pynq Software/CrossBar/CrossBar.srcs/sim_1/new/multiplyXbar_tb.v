@@ -1,4 +1,24 @@
 `timescale `myTimeScale
+/*
+*   Test bench explanation:
+*   xBar_in[0] = dataIn1*dataIn2
+*   xBar_in[1] = dataIn3*dataIn4
+*   xBar_in[2] = dataIn5*dataIn6
+*   xBar_in[3] = dataIn7*dataIn8
+*   
+*   xBar_out cant be selected using AddressSelect. View this diagram: https://imgur.com/a/LxEkM1p
+*   Currently implemented for a 4x4 xBar with addresses from (0-15).
+*
+*   Output is the output of each input multiplier squared. 
+*    i.e.   multi0_in output    = 4
+*           multi0_out output   = 4*4 = 16
+*   Output routing is then squared and assigned to corresponding flatoutput port.
+*   i.e.    dataOut[7:0]    = squaredValue0
+*           dataOut[15:8]   = squaredValue1
+*           dataOut[23:16]  = squaredValue2
+*           dataOut[31:24]  = squaredValue3
+*/
+
 module multiplyXBar_tb;
 reg Clk,Rst;
 reg [`bitLength-1:0]dataIn;
@@ -38,43 +58,38 @@ Rst = 1;
 #`clkPeriod;
 Rst = 0;
 
-//Multiplier Variables
-bufferRD_in[0]  = 1'b0;
-bufferRD_in[1]  = 1'b0;
-bufferSelect    = 1'b0;
-
 //Xbar Variables
 //Turn addresses on
 AddressSelect = 0;
 #`toggleTime;
-AddressSelect = 3;
-#`toggleTime;
-AddressSelect = 9;
-#`toggleTime;
-AddressSelect = 14;
-#`toggleTime;
-/*
-//Test for ghost inputs(Repeat output use)
 AddressSelect = 5;
+#`toggleTime;
+AddressSelect = 10;
+#`toggleTime;
+AddressSelect = 15;
+#`toggleTime;
+
+//Test for ghost inputs(Repeat output use, if IP is working properly, none of these addresses should be toggled)
+AddressSelect = 1;
+#`toggleTime;
+AddressSelect = 6;
 #`toggleTime;
 AddressSelect = 2;
 #`toggleTime;
-AddressSelect = 7;
+AddressSelect = 12;
 #`toggleTime;
-AddressSelect = 4;
-#`toggleTime;
-*/
+
 //Set address to rest position
 AddressSelect = `restAddress;
+mStart_in = 1'b0;
+mStart_out = 1'b0;
+
+//Disable out multi from reading
+bufferRD_out = `outputPortCount'b1111;
 /*################################################################################################*/
 
 //Initialize muli0.
-mStart_in = 1'b0;
-bufferRD_in[0] = 1'b0;
-bufferRD_in[1] = 1'b1;
-bufferRD_in[2] = 1'b1;
-bufferRD_in[3] = 1'b1;
-
+bufferRD_in = `inputPortCount'b1110;
 //Load stuff into buffer0->bufferSelect = 0
 bufferSelect  = 1'b0;
 dataIn  = `dataIn1;
@@ -85,12 +100,7 @@ dataIn  = `dataIn2;
 #`clkPeriod;
 
 //Initialize muli1.
-mStart_in = 1'b0;
-bufferRD_in[0] = 1'b1;
-bufferRD_in[1] = 1'b0;
-bufferRD_in[2] = 1'b1;
-bufferRD_in[3] = 1'b1;
-
+bufferRD_in = `inputPortCount'b1101;
 //Load stuff into buffer0->bufferSelect = 0
 bufferSelect  = 1'b0;
 dataIn  = `dataIn3;
@@ -101,12 +111,7 @@ dataIn  = `dataIn4;
 #`clkPeriod;
 
 //Initialize muli2.
-mStart_in = 1'b0;
-bufferRD_in[0] = 1'b1;
-bufferRD_in[1] = 1'b1;
-bufferRD_in[2] = 1'b0;
-bufferRD_in[3] = 1'b1;
-
+bufferRD_in = `inputPortCount'b1011;
 //Load stuff into buffer0->bufferSelect = 0
 bufferSelect  = 1'b0;
 dataIn  = `dataIn5;
@@ -117,12 +122,7 @@ dataIn  = `dataIn6;
 #`clkPeriod;
 
 //Initialize muli3.
-mStart_in = 1'b0;
-bufferRD_in[0] = 1'b1;
-bufferRD_in[1] = 1'b1;
-bufferRD_in[2] = 1'b1;
-bufferRD_in[3] = 1'b0;
-
+bufferRD_in = `inputPortCount'b0111;
 //Load stuff into buffer0->bufferSelect = 0
 bufferSelect  = 1'b0;
 dataIn  = `dataIn7;
@@ -136,8 +136,20 @@ dataIn  = `dataIn8;
 mStart_in = 1'b1;
 #`clkPeriod;
 mStart_in = 1'b0;
-bufferRD_in[0] = 1'b1;
-bufferRD_in[1] = 1'b1;
+bufferRD_in = `inputPortCount'b1111;
+#`clkPeriod;
+
+//Crossbar Output should now be readable for multi_out
+mStart_out = 1'b0;
+bufferRD_out = `outputPortCount'b0000;
+//Since output is directly fed to each multi, can load in parallel
+bufferSelect  = 1'b0;
+#`clkPeriod;
+bufferSelect  = 1'b1;
+#`clkPeriod;
+mStart_out = 1'b1;
+#`clkPeriod;
+mStart_out = 1'b0;
 #`clkPeriod;
 
 end
