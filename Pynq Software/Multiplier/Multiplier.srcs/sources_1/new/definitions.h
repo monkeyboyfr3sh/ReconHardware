@@ -1,5 +1,5 @@
 /*
-*   Definitions.h,
+*   "definitions.h",
 *   Created by David Cain for
 *   https://github.com/monkeyboyfr3sh/ReconHardware
 *
@@ -29,13 +29,13 @@
 
 //Float Multiply
 `define mantissaIndex       2                                   //Float Multiply definitions = mantissa length-1
-`define expBias             0111                               //Bias for floating point representation
+`define expBias             0111                                //Bias for floating point representation
 `define expWide             4
 
 //Fixed Multiply Definition
-`define fracBitCount        8                                   //Fixed Multiply definitions = number of bits dedicated to fraction
+`define fracBitCount        4                                   //Fixed Multiply definitions = number of bits dedicated to fraction
 
-//Testbench Definitions, this will be truncated to lowest order bits of size `inputWidth
+//Testbench Definitions, data will be truncated to lowest order bits of size `inputWidth
 `define dataIn1             1
 `define dataIn2             2
 `define dataIn3             3
