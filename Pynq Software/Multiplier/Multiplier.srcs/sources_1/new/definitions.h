@@ -18,7 +18,7 @@
 //START_User_Set
 /*#####################################################################################################################################################*/
 //Data/Device Definition
-`define inputWidth 8
+`define inputWidth 32
 `define myTimeScale 1ns / 1ps
 `define clkPeriod 2
 
@@ -26,6 +26,7 @@
 `define inputPortCount      4                                   //N
 `define outputPortCount     4                                   //M
 `define addressLength       5                                   //Eventually want to come up with a way to generate this on N and M
+`define selectorLength 2                                   //Eventually want to come up with a way to generate this on number of outputs
 
 //Float Multiply
 `define mantissaIndex       2                                   //Float Multiply definitions = mantissa length-1

@@ -6,6 +6,17 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/monke/Documents/GitHub/Rec
 INFO: [VRFC 10-311] analyzing module XBar
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/monke/Documents/GitHub/ReconHardware/Pynq Software/Multiplier/Multiplier.srcs/sources_1/new/dataSplit.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module dataSplit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/monke/Documents/GitHub/ReconHardware/Pynq Software/Multiplier/Multiplier.srcs/sources_1/new/fixedmultiplyCompute.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fixedmultiplyCompute
+INFO: [VRFC 10-2458] undeclared symbol multiplicand_sign, assumed default net type wire [C:/Users/monke/Documents/GitHub/ReconHardware/Pynq Software/Multiplier/Multiplier.srcs/sources_1/new/fixedmultiplyCompute.v:24]
+INFO: [VRFC 10-2458] undeclared symbol multiplier_sign, assumed default net type wire [C:/Users/monke/Documents/GitHub/ReconHardware/Pynq Software/Multiplier/Multiplier.srcs/sources_1/new/fixedmultiplyCompute.v:25]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/monke/Documents/GitHub/ReconHardware/Pynq Software/Multiplier/Multiplier.srcs/sim_1/new/fixedmultiply_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fixedcomputeBlock
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/monke/Documents/GitHub/ReconHardware/Pynq Software/Multiplier/Multiplier.srcs/sources_1/new/floatcomputeBlockPynq.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module floatcomputeBlockPynq
+WARNING: [VRFC 10-2292] extra semicolon is not allowed here in this dialect. Use SystemVerilog mode [C:/Users/monke/Documents/GitHub/ReconHardware/Pynq Software/Multiplier/Multiplier.srcs/sources_1/new/floatcomputeBlockPynq.v:19]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/monke/Documents/GitHub/ReconHardware/Pynq Software/Multiplier/Multiplier.srcs/sources_1/new/floatmComputePynq.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module floatmultiplyComputePynq
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/monke/Documents/GitHub/ReconHardware/Pynq Software/Multiplier/Multiplier.srcs/sources_1/new/integercomputeBlockPynq.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module integercomputeBlockPynq
 WARNING: [VRFC 10-2292] extra semicolon is not allowed here in this dialect. Use SystemVerilog mode [C:/Users/monke/Documents/GitHub/ReconHardware/Pynq Software/Multiplier/Multiplier.srcs/sources_1/new/integercomputeBlockPynq.v:19]
@@ -13,6 +24,8 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/monke/Documents/GitHub/Rec
 INFO: [VRFC 10-311] analyzing module multiplyComputePynq
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/monke/Documents/GitHub/ReconHardware/Pynq Software/CrossBar/CrossBar.srcs/sources_1/new/multiplyXBar.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module multiplyXBar
-WARNING: [VRFC 10-2379] empty port in module declaration [C:/Users/monke/Documents/GitHub/ReconHardware/Pynq Software/CrossBar/CrossBar.srcs/sources_1/new/multiplyXBar.v:15]
+WARNING: [VRFC 10-2379] empty port in module declaration [C:/Users/monke/Documents/GitHub/ReconHardware/Pynq Software/CrossBar/CrossBar.srcs/sources_1/new/multiplyXBar.v:20]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/monke/Documents/GitHub/ReconHardware/Pynq Software/CrossBar/CrossBar.srcs/sources_1/new/mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/monke/Documents/GitHub/ReconHardware/Pynq Software/CrossBar/CrossBar.srcs/sim_1/new/multiplyXbar_tb.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module multiplyXBar_tb

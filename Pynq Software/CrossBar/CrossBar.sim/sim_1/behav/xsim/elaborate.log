@@ -4,14 +4,15 @@ Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 445c04171b
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'bufferEN' [C:/Users/monke/Documents/GitHub/ReconHardware/Pynq Software/CrossBar/CrossBar.srcs/sources_1/new/multiplyXBar.v:79]
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'chunkCount' [C:/Users/monke/Documents/GitHub/ReconHardware/Pynq Software/CrossBar/CrossBar.srcs/sources_1/new/multiplyXBar.v:86]
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'bufferEN' [C:/Users/monke/Documents/GitHub/ReconHardware/Pynq Software/CrossBar/CrossBar.srcs/sources_1/new/multiplyXBar.v:96]
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'chunkCount' [C:/Users/monke/Documents/GitHub/ReconHardware/Pynq Software/CrossBar/CrossBar.srcs/sources_1/new/multiplyXBar.v:103]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'bufferEN' [C:/Users/monke/Documents/GitHub/ReconHardware/Pynq Software/CrossBar/CrossBar.srcs/sources_1/new/multiplyXBar.v:100]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'chunkCount' [C:/Users/monke/Documents/GitHub/ReconHardware/Pynq Software/CrossBar/CrossBar.srcs/sources_1/new/multiplyXBar.v:107]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'bufferEN' [C:/Users/monke/Documents/GitHub/ReconHardware/Pynq Software/CrossBar/CrossBar.srcs/sources_1/new/multiplyXBar.v:117]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'chunkCount' [C:/Users/monke/Documents/GitHub/ReconHardware/Pynq Software/CrossBar/CrossBar.srcs/sources_1/new/multiplyXBar.v:124]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mux
 Compiling module xil_defaultlib.XBar
 Compiling module xil_defaultlib.SingleBuffer
 Compiling module xil_defaultlib.ParallelBuffer

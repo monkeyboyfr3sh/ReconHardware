@@ -1,0 +1,79 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x0",
+      "device": "xc7z020clg400-1",
+      "name": "design_1",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2019.2"
+    },
+    "design_tree": {
+      "multiplyXBar_0": ""
+    },
+    "components": {
+      "multiplyXBar_0": {
+        "vlnv": "xilinx.com:module_ref:multiplyXBar:1.0",
+        "xci_name": "design_1_multiplyXBar_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "multiplyXBar",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "Clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "Rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "dataIn": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "dataOut": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "AddressSelect": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "bufferRD_in": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "bufferRD_out": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "bufferSelect": {
+            "direction": "I"
+          },
+          "mStart_in": {
+            "direction": "I"
+          },
+          "mStart_out": {
+            "direction": "I"
+          },
+          "mReady_in": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "mReady_out": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          }
+        }
+      }
+    }
+  }
+}

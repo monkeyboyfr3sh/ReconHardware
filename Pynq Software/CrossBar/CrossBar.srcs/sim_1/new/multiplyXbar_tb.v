@@ -1,3 +1,4 @@
+`include "definitions.h"
 `timescale `myTimeScale
 /*
 *   Test bench explanation:
@@ -13,10 +14,11 @@
 *    i.e.   multi0_in output    = 4
 *           multi0_out output   = 4*4 = 16
 *   Output routing is then squared and assigned to corresponding flatoutput port.
-*   i.e.    dataOut[7:0]    = squaredValue0
-*           dataOut[15:8]   = squaredValue1
-*           dataOut[23:16]  = squaredValue2
-*           dataOut[31:24]  = squaredValue3
+*   i.e.    dataOut[0]  = squaredValue0
+*           dataOut[1]  = squaredValue1
+*           dataOut[2]  = squaredValue2
+*           dataOut[3]  = squaredValue3
+*   The output is selected using the output multiplexer
 */
 
 module multiplyXBar_tb;
@@ -31,13 +33,15 @@ wire [`inputPortCount-1:0]mReady_in;
 reg mStart_out;
 wire [`outputPortCount-1:0]mReady_out;
 
-wire [`outputPortCount*`bitLength-1:0] dataOut;
+reg [`selectorLength-1:0] outputSelect;
+wire [`bitLength-1:0] dataOut;
 
 multiplyXBar uut(
                     Clk,Rst,
                     dataIn,         //data input to all multipliers that input to the xbar
                     dataOut,        //data output that currently is straight from xbar
                     AddressSelect,  //AddressSelect for xbar
+                    outputSelect,
                     bufferRD_in,    //Array of bufferRD control for multipliers that input to xbar. 0 = buffers will fill with dataIn value, 1 = buffers will hold data
                     bufferRD_out,   //Array of bufferRD control for multipliers that xbar outputs to. 0 = buffers will fill with dataIn value, 1 = buffers will hold data
                     bufferSelect,
@@ -53,6 +57,7 @@ initial begin
 // Initialize Inputs
 Clk = 1'b0;
 Rst = 0;
+outputSelect = 0;
 #`clkPeriod;
 Rst = 1;
 #`clkPeriod;
@@ -150,7 +155,16 @@ bufferSelect  = 1'b1;
 mStart_out = 1'b1;
 #`clkPeriod;
 mStart_out = 1'b0;
-#`clkPeriod;
+outputSelect = 0;
+#`toggleTime;
+outputSelect = 1;
+#`toggleTime;
+outputSelect = 2;
+#`toggleTime;
+outputSelect = 3;
+#`toggleTime;
+
+
 
 end
 always #(`clkPeriod/2) Clk = ~Clk;  

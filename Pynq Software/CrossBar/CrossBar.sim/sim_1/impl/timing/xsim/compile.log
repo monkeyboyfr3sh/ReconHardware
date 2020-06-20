@@ -1,10 +1,47 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/monke/Documents/GitHub/ReconHardware/Pynq Software/CrossBar/CrossBar.sim/sim_1/impl/timing/xsim/XBar_tb_time_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/monke/Documents/GitHub/ReconHardware/Pynq Software/CrossBar/CrossBar.sim/sim_1/impl/timing/xsim/multiplyXBar_tb_time_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ParallelBuffer
+INFO: [VRFC 10-311] analyzing module ParallelBuffer_13
+INFO: [VRFC 10-311] analyzing module ParallelBuffer_17
+INFO: [VRFC 10-311] analyzing module ParallelBuffer_21
+INFO: [VRFC 10-311] analyzing module ParallelBuffer_25
+INFO: [VRFC 10-311] analyzing module ParallelBuffer_29
+INFO: [VRFC 10-311] analyzing module ParallelBuffer_33
+INFO: [VRFC 10-311] analyzing module ParallelBuffer_9
+INFO: [VRFC 10-311] analyzing module SingleBuffer
+INFO: [VRFC 10-311] analyzing module SingleBuffer_10
+INFO: [VRFC 10-311] analyzing module SingleBuffer_11
+INFO: [VRFC 10-311] analyzing module SingleBuffer_14
+INFO: [VRFC 10-311] analyzing module SingleBuffer_15
+INFO: [VRFC 10-311] analyzing module SingleBuffer_18
+INFO: [VRFC 10-311] analyzing module SingleBuffer_19
+INFO: [VRFC 10-311] analyzing module SingleBuffer_22
+INFO: [VRFC 10-311] analyzing module SingleBuffer_23
+INFO: [VRFC 10-311] analyzing module SingleBuffer_26
+INFO: [VRFC 10-311] analyzing module SingleBuffer_27
+INFO: [VRFC 10-311] analyzing module SingleBuffer_30
+INFO: [VRFC 10-311] analyzing module SingleBuffer_31
+INFO: [VRFC 10-311] analyzing module SingleBuffer_34
+INFO: [VRFC 10-311] analyzing module SingleBuffer_35
+INFO: [VRFC 10-311] analyzing module SingleBuffer_7
 INFO: [VRFC 10-311] analyzing module XBar
+INFO: [VRFC 10-311] analyzing module integercomputeBlockPynq
+INFO: [VRFC 10-311] analyzing module integercomputeBlockPynq_0
+INFO: [VRFC 10-311] analyzing module integercomputeBlockPynq_1
+INFO: [VRFC 10-311] analyzing module integercomputeBlockPynq_2
+INFO: [VRFC 10-311] analyzing module integercomputeBlockPynq_3
+INFO: [VRFC 10-311] analyzing module integercomputeBlockPynq_4
+INFO: [VRFC 10-311] analyzing module integercomputeBlockPynq_5
+INFO: [VRFC 10-311] analyzing module integercomputeBlockPynq_6
+INFO: [VRFC 10-311] analyzing module multiplyComputePynq
+INFO: [VRFC 10-311] analyzing module multiplyComputePynq_12
+INFO: [VRFC 10-311] analyzing module multiplyComputePynq_16
+INFO: [VRFC 10-311] analyzing module multiplyComputePynq_20
+INFO: [VRFC 10-311] analyzing module multiplyComputePynq_24
+INFO: [VRFC 10-311] analyzing module multiplyComputePynq_28
+INFO: [VRFC 10-311] analyzing module multiplyComputePynq_32
+INFO: [VRFC 10-311] analyzing module multiplyComputePynq_8
+INFO: [VRFC 10-311] analyzing module multiplyXBar
+INFO: [VRFC 10-311] analyzing module mux
 INFO: [VRFC 10-311] analyzing module glbl
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/monke/Documents/GitHub/ReconHardware/Pynq Software/CrossBar/CrossBar.srcs/sim_1/new/XBar_tb.v" into library xil_defaultlib
-ERROR: [VRFC 10-3805] use of undefined macro 'myTimeScale' [C:/Users/monke/Documents/GitHub/ReconHardware/Pynq Software/CrossBar/CrossBar.srcs/sim_1/new/XBar_tb.v:1]
-ERROR: [VRFC 10-4982] syntax error near 'module' [C:/Users/monke/Documents/GitHub/ReconHardware/Pynq Software/CrossBar/CrossBar.srcs/sim_1/new/XBar_tb.v:2]
-ERROR: [VRFC 10-1342] root scope declaration is not allowed in verilog 95/2K mode [C:/Users/monke/Documents/GitHub/ReconHardware/Pynq Software/CrossBar/CrossBar.srcs/sim_1/new/XBar_tb.v:2]
-ERROR: [VRFC 10-1342] root scope declaration is not allowed in verilog 95/2K mode [C:/Users/monke/Documents/GitHub/ReconHardware/Pynq Software/CrossBar/CrossBar.srcs/sim_1/new/XBar_tb.v:4]
-ERROR: [VRFC 10-3805] use of undefined macro 'inputPortCount' [C:/Users/monke/Documents/GitHub/ReconHardware/Pynq Software/CrossBar/CrossBar.srcs/sim_1/new/XBar_tb.v:5]
-ERROR: [VRFC 10-4982] syntax error near '*' [C:/Users/monke/Documents/GitHub/ReconHardware/Pynq Software/CrossBar/CrossBar.srcs/sim_1/new/XBar_tb.v:5]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/monke/Documents/GitHub/ReconHardware/Pynq Software/CrossBar/CrossBar.srcs/sim_1/new/multiplyXbar_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplyXBar_tb
