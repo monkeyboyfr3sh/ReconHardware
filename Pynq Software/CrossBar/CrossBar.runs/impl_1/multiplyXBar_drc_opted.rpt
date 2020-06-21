@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Sat Jun 20 16:43:01 2020
+| Date         : Sun Jun 21 12:30:28 2020
 | Host         : DESKTOP-9H19BOT running 64-bit major release  (build 9200)
 | Command      : report_drc -file multiplyXBar_drc_opted.rpt -pb multiplyXBar_drc_opted.pb -rpx multiplyXBar_drc_opted.rpx
 | Design       : multiplyXBar
@@ -20,7 +20,7 @@ Table of Contents
 1. REPORT SUMMARY
 -----------------
             Netlist: netlist
-          Floorplan: design_1
+          Floorplan: checkpoint_multiplyXBar
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
@@ -210,162 +210,162 @@ Related violations: <none>
 
 IOSR-1#1 Warning
 IOB set reset sharing  
-IO dataIn[0] connects to flops which have these (null)[0].m_computeBlock_in/mCompute/p_0_in, (null)[3].m_computeBlock_in/mCompute/p_0_in, (null)[2].m_computeBlock_in/mCompute/p_0_in, (null)[1].m_computeBlock_in/mCompute/p_0_in set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+IO dataIn[0] connects to flops which have these (null)[2].m_computeBlock_in/mCompute/p_0_in, (null)[1].m_computeBlock_in/mCompute/p_0_in, (null)[3].m_computeBlock_in/mCompute/p_0_in, (null)[0].m_computeBlock_in/mCompute/p_0_in set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
 Related violations: <none>
 
 IOSR-1#2 Warning
 IOB set reset sharing  
-IO dataIn[10] connects to flops which have these (null)[0].m_computeBlock_in/mCompute/p_0_in, (null)[3].m_computeBlock_in/mCompute/p_0_in, (null)[2].m_computeBlock_in/mCompute/p_0_in, (null)[1].m_computeBlock_in/mCompute/p_0_in set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+IO dataIn[10] connects to flops which have these (null)[2].m_computeBlock_in/mCompute/p_0_in, (null)[1].m_computeBlock_in/mCompute/p_0_in, (null)[3].m_computeBlock_in/mCompute/p_0_in, (null)[0].m_computeBlock_in/mCompute/p_0_in set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
 Related violations: <none>
 
 IOSR-1#3 Warning
 IOB set reset sharing  
-IO dataIn[11] connects to flops which have these (null)[0].m_computeBlock_in/mCompute/p_0_in, (null)[3].m_computeBlock_in/mCompute/p_0_in, (null)[2].m_computeBlock_in/mCompute/p_0_in, (null)[1].m_computeBlock_in/mCompute/p_0_in set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+IO dataIn[11] connects to flops which have these (null)[2].m_computeBlock_in/mCompute/p_0_in, (null)[1].m_computeBlock_in/mCompute/p_0_in, (null)[3].m_computeBlock_in/mCompute/p_0_in, (null)[0].m_computeBlock_in/mCompute/p_0_in set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
 Related violations: <none>
 
 IOSR-1#4 Warning
 IOB set reset sharing  
-IO dataIn[12] connects to flops which have these (null)[0].m_computeBlock_in/mCompute/p_0_in, (null)[3].m_computeBlock_in/mCompute/p_0_in, (null)[2].m_computeBlock_in/mCompute/p_0_in, (null)[1].m_computeBlock_in/mCompute/p_0_in set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+IO dataIn[12] connects to flops which have these (null)[2].m_computeBlock_in/mCompute/p_0_in, (null)[1].m_computeBlock_in/mCompute/p_0_in, (null)[3].m_computeBlock_in/mCompute/p_0_in, (null)[0].m_computeBlock_in/mCompute/p_0_in set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
 Related violations: <none>
 
 IOSR-1#5 Warning
 IOB set reset sharing  
-IO dataIn[13] connects to flops which have these (null)[0].m_computeBlock_in/mCompute/p_0_in, (null)[3].m_computeBlock_in/mCompute/p_0_in, (null)[2].m_computeBlock_in/mCompute/p_0_in, (null)[1].m_computeBlock_in/mCompute/p_0_in set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+IO dataIn[13] connects to flops which have these (null)[2].m_computeBlock_in/mCompute/p_0_in, (null)[1].m_computeBlock_in/mCompute/p_0_in, (null)[3].m_computeBlock_in/mCompute/p_0_in, (null)[0].m_computeBlock_in/mCompute/p_0_in set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
 Related violations: <none>
 
 IOSR-1#6 Warning
 IOB set reset sharing  
-IO dataIn[14] connects to flops which have these (null)[0].m_computeBlock_in/mCompute/p_0_in, (null)[3].m_computeBlock_in/mCompute/p_0_in, (null)[2].m_computeBlock_in/mCompute/p_0_in, (null)[1].m_computeBlock_in/mCompute/p_0_in set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+IO dataIn[14] connects to flops which have these (null)[2].m_computeBlock_in/mCompute/p_0_in, (null)[1].m_computeBlock_in/mCompute/p_0_in, (null)[3].m_computeBlock_in/mCompute/p_0_in, (null)[0].m_computeBlock_in/mCompute/p_0_in set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
 Related violations: <none>
 
 IOSR-1#7 Warning
 IOB set reset sharing  
-IO dataIn[15] connects to flops which have these (null)[0].m_computeBlock_in/mCompute/p_0_in, (null)[3].m_computeBlock_in/mCompute/p_0_in, (null)[2].m_computeBlock_in/mCompute/p_0_in, (null)[1].m_computeBlock_in/mCompute/p_0_in set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+IO dataIn[15] connects to flops which have these (null)[2].m_computeBlock_in/mCompute/p_0_in, (null)[1].m_computeBlock_in/mCompute/p_0_in, (null)[3].m_computeBlock_in/mCompute/p_0_in, (null)[0].m_computeBlock_in/mCompute/p_0_in set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
 Related violations: <none>
 
 IOSR-1#8 Warning
 IOB set reset sharing  
-IO dataIn[16] connects to flops which have these (null)[0].m_computeBlock_in/mCompute/p_0_in, (null)[3].m_computeBlock_in/mCompute/p_0_in, (null)[2].m_computeBlock_in/mCompute/p_0_in, (null)[1].m_computeBlock_in/mCompute/p_0_in set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+IO dataIn[16] connects to flops which have these (null)[2].m_computeBlock_in/mCompute/p_0_in, (null)[1].m_computeBlock_in/mCompute/p_0_in, (null)[3].m_computeBlock_in/mCompute/p_0_in, (null)[0].m_computeBlock_in/mCompute/p_0_in set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
 Related violations: <none>
 
 IOSR-1#9 Warning
 IOB set reset sharing  
-IO dataIn[17] connects to flops which have these (null)[0].m_computeBlock_in/mCompute/p_0_in, (null)[3].m_computeBlock_in/mCompute/p_0_in, (null)[2].m_computeBlock_in/mCompute/p_0_in, (null)[1].m_computeBlock_in/mCompute/p_0_in set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+IO dataIn[17] connects to flops which have these (null)[2].m_computeBlock_in/mCompute/p_0_in, (null)[1].m_computeBlock_in/mCompute/p_0_in, (null)[3].m_computeBlock_in/mCompute/p_0_in, (null)[0].m_computeBlock_in/mCompute/p_0_in set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
 Related violations: <none>
 
 IOSR-1#10 Warning
 IOB set reset sharing  
-IO dataIn[18] connects to flops which have these (null)[0].m_computeBlock_in/mCompute/p_0_in, (null)[3].m_computeBlock_in/mCompute/p_0_in, (null)[2].m_computeBlock_in/mCompute/p_0_in, (null)[1].m_computeBlock_in/mCompute/p_0_in set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+IO dataIn[18] connects to flops which have these (null)[2].m_computeBlock_in/mCompute/p_0_in, (null)[1].m_computeBlock_in/mCompute/p_0_in, (null)[3].m_computeBlock_in/mCompute/p_0_in, (null)[0].m_computeBlock_in/mCompute/p_0_in set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
 Related violations: <none>
 
 IOSR-1#11 Warning
 IOB set reset sharing  
-IO dataIn[19] connects to flops which have these (null)[0].m_computeBlock_in/mCompute/p_0_in, (null)[3].m_computeBlock_in/mCompute/p_0_in, (null)[2].m_computeBlock_in/mCompute/p_0_in, (null)[1].m_computeBlock_in/mCompute/p_0_in set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+IO dataIn[19] connects to flops which have these (null)[2].m_computeBlock_in/mCompute/p_0_in, (null)[1].m_computeBlock_in/mCompute/p_0_in, (null)[3].m_computeBlock_in/mCompute/p_0_in, (null)[0].m_computeBlock_in/mCompute/p_0_in set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
 Related violations: <none>
 
 IOSR-1#12 Warning
 IOB set reset sharing  
-IO dataIn[1] connects to flops which have these (null)[0].m_computeBlock_in/mCompute/p_0_in, (null)[3].m_computeBlock_in/mCompute/p_0_in, (null)[2].m_computeBlock_in/mCompute/p_0_in, (null)[1].m_computeBlock_in/mCompute/p_0_in set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+IO dataIn[1] connects to flops which have these (null)[2].m_computeBlock_in/mCompute/p_0_in, (null)[1].m_computeBlock_in/mCompute/p_0_in, (null)[3].m_computeBlock_in/mCompute/p_0_in, (null)[0].m_computeBlock_in/mCompute/p_0_in set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
 Related violations: <none>
 
 IOSR-1#13 Warning
 IOB set reset sharing  
-IO dataIn[20] connects to flops which have these (null)[0].m_computeBlock_in/mCompute/p_0_in, (null)[3].m_computeBlock_in/mCompute/p_0_in, (null)[2].m_computeBlock_in/mCompute/p_0_in, (null)[1].m_computeBlock_in/mCompute/p_0_in set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+IO dataIn[20] connects to flops which have these (null)[2].m_computeBlock_in/mCompute/p_0_in, (null)[1].m_computeBlock_in/mCompute/p_0_in, (null)[3].m_computeBlock_in/mCompute/p_0_in, (null)[0].m_computeBlock_in/mCompute/p_0_in set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
 Related violations: <none>
 
 IOSR-1#14 Warning
 IOB set reset sharing  
-IO dataIn[21] connects to flops which have these (null)[0].m_computeBlock_in/mCompute/p_0_in, (null)[3].m_computeBlock_in/mCompute/p_0_in, (null)[2].m_computeBlock_in/mCompute/p_0_in, (null)[1].m_computeBlock_in/mCompute/p_0_in set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+IO dataIn[21] connects to flops which have these (null)[2].m_computeBlock_in/mCompute/p_0_in, (null)[1].m_computeBlock_in/mCompute/p_0_in, (null)[3].m_computeBlock_in/mCompute/p_0_in, (null)[0].m_computeBlock_in/mCompute/p_0_in set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
 Related violations: <none>
 
 IOSR-1#15 Warning
 IOB set reset sharing  
-IO dataIn[22] connects to flops which have these (null)[0].m_computeBlock_in/mCompute/p_0_in, (null)[3].m_computeBlock_in/mCompute/p_0_in, (null)[2].m_computeBlock_in/mCompute/p_0_in, (null)[1].m_computeBlock_in/mCompute/p_0_in set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+IO dataIn[22] connects to flops which have these (null)[2].m_computeBlock_in/mCompute/p_0_in, (null)[1].m_computeBlock_in/mCompute/p_0_in, (null)[3].m_computeBlock_in/mCompute/p_0_in, (null)[0].m_computeBlock_in/mCompute/p_0_in set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
 Related violations: <none>
 
 IOSR-1#16 Warning
 IOB set reset sharing  
-IO dataIn[23] connects to flops which have these (null)[0].m_computeBlock_in/mCompute/p_0_in, (null)[3].m_computeBlock_in/mCompute/p_0_in, (null)[2].m_computeBlock_in/mCompute/p_0_in, (null)[1].m_computeBlock_in/mCompute/p_0_in set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+IO dataIn[23] connects to flops which have these (null)[2].m_computeBlock_in/mCompute/p_0_in, (null)[1].m_computeBlock_in/mCompute/p_0_in, (null)[3].m_computeBlock_in/mCompute/p_0_in, (null)[0].m_computeBlock_in/mCompute/p_0_in set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
 Related violations: <none>
 
 IOSR-1#17 Warning
 IOB set reset sharing  
-IO dataIn[24] connects to flops which have these (null)[0].m_computeBlock_in/mCompute/p_0_in, (null)[3].m_computeBlock_in/mCompute/p_0_in, (null)[2].m_computeBlock_in/mCompute/p_0_in, (null)[1].m_computeBlock_in/mCompute/p_0_in set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+IO dataIn[24] connects to flops which have these (null)[2].m_computeBlock_in/mCompute/p_0_in, (null)[1].m_computeBlock_in/mCompute/p_0_in, (null)[3].m_computeBlock_in/mCompute/p_0_in, (null)[0].m_computeBlock_in/mCompute/p_0_in set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
 Related violations: <none>
 
 IOSR-1#18 Warning
 IOB set reset sharing  
-IO dataIn[25] connects to flops which have these (null)[0].m_computeBlock_in/mCompute/p_0_in, (null)[3].m_computeBlock_in/mCompute/p_0_in, (null)[2].m_computeBlock_in/mCompute/p_0_in, (null)[1].m_computeBlock_in/mCompute/p_0_in set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+IO dataIn[25] connects to flops which have these (null)[2].m_computeBlock_in/mCompute/p_0_in, (null)[1].m_computeBlock_in/mCompute/p_0_in, (null)[3].m_computeBlock_in/mCompute/p_0_in, (null)[0].m_computeBlock_in/mCompute/p_0_in set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
 Related violations: <none>
 
 IOSR-1#19 Warning
 IOB set reset sharing  
-IO dataIn[26] connects to flops which have these (null)[0].m_computeBlock_in/mCompute/p_0_in, (null)[3].m_computeBlock_in/mCompute/p_0_in, (null)[2].m_computeBlock_in/mCompute/p_0_in, (null)[1].m_computeBlock_in/mCompute/p_0_in set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+IO dataIn[26] connects to flops which have these (null)[2].m_computeBlock_in/mCompute/p_0_in, (null)[1].m_computeBlock_in/mCompute/p_0_in, (null)[3].m_computeBlock_in/mCompute/p_0_in, (null)[0].m_computeBlock_in/mCompute/p_0_in set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
 Related violations: <none>
 
 IOSR-1#20 Warning
 IOB set reset sharing  
-IO dataIn[27] connects to flops which have these (null)[0].m_computeBlock_in/mCompute/p_0_in, (null)[3].m_computeBlock_in/mCompute/p_0_in, (null)[2].m_computeBlock_in/mCompute/p_0_in, (null)[1].m_computeBlock_in/mCompute/p_0_in set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+IO dataIn[27] connects to flops which have these (null)[2].m_computeBlock_in/mCompute/p_0_in, (null)[1].m_computeBlock_in/mCompute/p_0_in, (null)[3].m_computeBlock_in/mCompute/p_0_in, (null)[0].m_computeBlock_in/mCompute/p_0_in set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
 Related violations: <none>
 
 IOSR-1#21 Warning
 IOB set reset sharing  
-IO dataIn[28] connects to flops which have these (null)[0].m_computeBlock_in/mCompute/p_0_in, (null)[3].m_computeBlock_in/mCompute/p_0_in, (null)[2].m_computeBlock_in/mCompute/p_0_in, (null)[1].m_computeBlock_in/mCompute/p_0_in set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+IO dataIn[28] connects to flops which have these (null)[2].m_computeBlock_in/mCompute/p_0_in, (null)[1].m_computeBlock_in/mCompute/p_0_in, (null)[3].m_computeBlock_in/mCompute/p_0_in, (null)[0].m_computeBlock_in/mCompute/p_0_in set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
 Related violations: <none>
 
 IOSR-1#22 Warning
 IOB set reset sharing  
-IO dataIn[29] connects to flops which have these (null)[0].m_computeBlock_in/mCompute/p_0_in, (null)[3].m_computeBlock_in/mCompute/p_0_in, (null)[2].m_computeBlock_in/mCompute/p_0_in, (null)[1].m_computeBlock_in/mCompute/p_0_in set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+IO dataIn[29] connects to flops which have these (null)[2].m_computeBlock_in/mCompute/p_0_in, (null)[1].m_computeBlock_in/mCompute/p_0_in, (null)[3].m_computeBlock_in/mCompute/p_0_in, (null)[0].m_computeBlock_in/mCompute/p_0_in set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
 Related violations: <none>
 
 IOSR-1#23 Warning
 IOB set reset sharing  
-IO dataIn[2] connects to flops which have these (null)[0].m_computeBlock_in/mCompute/p_0_in, (null)[3].m_computeBlock_in/mCompute/p_0_in, (null)[2].m_computeBlock_in/mCompute/p_0_in, (null)[1].m_computeBlock_in/mCompute/p_0_in set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+IO dataIn[2] connects to flops which have these (null)[2].m_computeBlock_in/mCompute/p_0_in, (null)[1].m_computeBlock_in/mCompute/p_0_in, (null)[3].m_computeBlock_in/mCompute/p_0_in, (null)[0].m_computeBlock_in/mCompute/p_0_in set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
 Related violations: <none>
 
 IOSR-1#24 Warning
 IOB set reset sharing  
-IO dataIn[30] connects to flops which have these (null)[0].m_computeBlock_in/mCompute/p_0_in, (null)[3].m_computeBlock_in/mCompute/p_0_in, (null)[2].m_computeBlock_in/mCompute/p_0_in, (null)[1].m_computeBlock_in/mCompute/p_0_in set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+IO dataIn[30] connects to flops which have these (null)[2].m_computeBlock_in/mCompute/p_0_in, (null)[1].m_computeBlock_in/mCompute/p_0_in, (null)[3].m_computeBlock_in/mCompute/p_0_in, (null)[0].m_computeBlock_in/mCompute/p_0_in set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
 Related violations: <none>
 
 IOSR-1#25 Warning
 IOB set reset sharing  
-IO dataIn[31] connects to flops which have these (null)[0].m_computeBlock_in/mCompute/p_0_in, (null)[3].m_computeBlock_in/mCompute/p_0_in, (null)[2].m_computeBlock_in/mCompute/p_0_in, (null)[1].m_computeBlock_in/mCompute/p_0_in set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+IO dataIn[31] connects to flops which have these (null)[2].m_computeBlock_in/mCompute/p_0_in, (null)[1].m_computeBlock_in/mCompute/p_0_in, (null)[3].m_computeBlock_in/mCompute/p_0_in, (null)[0].m_computeBlock_in/mCompute/p_0_in set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
 Related violations: <none>
 
 IOSR-1#26 Warning
 IOB set reset sharing  
-IO dataIn[3] connects to flops which have these (null)[0].m_computeBlock_in/mCompute/p_0_in, (null)[3].m_computeBlock_in/mCompute/p_0_in, (null)[2].m_computeBlock_in/mCompute/p_0_in, (null)[1].m_computeBlock_in/mCompute/p_0_in set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+IO dataIn[3] connects to flops which have these (null)[2].m_computeBlock_in/mCompute/p_0_in, (null)[1].m_computeBlock_in/mCompute/p_0_in, (null)[3].m_computeBlock_in/mCompute/p_0_in, (null)[0].m_computeBlock_in/mCompute/p_0_in set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
 Related violations: <none>
 
 IOSR-1#27 Warning
 IOB set reset sharing  
-IO dataIn[4] connects to flops which have these (null)[0].m_computeBlock_in/mCompute/p_0_in, (null)[3].m_computeBlock_in/mCompute/p_0_in, (null)[2].m_computeBlock_in/mCompute/p_0_in, (null)[1].m_computeBlock_in/mCompute/p_0_in set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+IO dataIn[4] connects to flops which have these (null)[2].m_computeBlock_in/mCompute/p_0_in, (null)[1].m_computeBlock_in/mCompute/p_0_in, (null)[3].m_computeBlock_in/mCompute/p_0_in, (null)[0].m_computeBlock_in/mCompute/p_0_in set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
 Related violations: <none>
 
 IOSR-1#28 Warning
 IOB set reset sharing  
-IO dataIn[5] connects to flops which have these (null)[0].m_computeBlock_in/mCompute/p_0_in, (null)[3].m_computeBlock_in/mCompute/p_0_in, (null)[2].m_computeBlock_in/mCompute/p_0_in, (null)[1].m_computeBlock_in/mCompute/p_0_in set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+IO dataIn[5] connects to flops which have these (null)[2].m_computeBlock_in/mCompute/p_0_in, (null)[1].m_computeBlock_in/mCompute/p_0_in, (null)[3].m_computeBlock_in/mCompute/p_0_in, (null)[0].m_computeBlock_in/mCompute/p_0_in set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
 Related violations: <none>
 
 IOSR-1#29 Warning
 IOB set reset sharing  
-IO dataIn[6] connects to flops which have these (null)[0].m_computeBlock_in/mCompute/p_0_in, (null)[3].m_computeBlock_in/mCompute/p_0_in, (null)[2].m_computeBlock_in/mCompute/p_0_in, (null)[1].m_computeBlock_in/mCompute/p_0_in set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+IO dataIn[6] connects to flops which have these (null)[2].m_computeBlock_in/mCompute/p_0_in, (null)[1].m_computeBlock_in/mCompute/p_0_in, (null)[3].m_computeBlock_in/mCompute/p_0_in, (null)[0].m_computeBlock_in/mCompute/p_0_in set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
 Related violations: <none>
 
 IOSR-1#30 Warning
 IOB set reset sharing  
-IO dataIn[7] connects to flops which have these (null)[0].m_computeBlock_in/mCompute/p_0_in, (null)[3].m_computeBlock_in/mCompute/p_0_in, (null)[2].m_computeBlock_in/mCompute/p_0_in, (null)[1].m_computeBlock_in/mCompute/p_0_in set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+IO dataIn[7] connects to flops which have these (null)[2].m_computeBlock_in/mCompute/p_0_in, (null)[1].m_computeBlock_in/mCompute/p_0_in, (null)[3].m_computeBlock_in/mCompute/p_0_in, (null)[0].m_computeBlock_in/mCompute/p_0_in set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
 Related violations: <none>
 
 IOSR-1#31 Warning
 IOB set reset sharing  
-IO dataIn[8] connects to flops which have these (null)[0].m_computeBlock_in/mCompute/p_0_in, (null)[3].m_computeBlock_in/mCompute/p_0_in, (null)[2].m_computeBlock_in/mCompute/p_0_in, (null)[1].m_computeBlock_in/mCompute/p_0_in set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+IO dataIn[8] connects to flops which have these (null)[2].m_computeBlock_in/mCompute/p_0_in, (null)[1].m_computeBlock_in/mCompute/p_0_in, (null)[3].m_computeBlock_in/mCompute/p_0_in, (null)[0].m_computeBlock_in/mCompute/p_0_in set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
 Related violations: <none>
 
 IOSR-1#32 Warning
 IOB set reset sharing  
-IO dataIn[9] connects to flops which have these (null)[0].m_computeBlock_in/mCompute/p_0_in, (null)[3].m_computeBlock_in/mCompute/p_0_in, (null)[2].m_computeBlock_in/mCompute/p_0_in, (null)[1].m_computeBlock_in/mCompute/p_0_in set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+IO dataIn[9] connects to flops which have these (null)[2].m_computeBlock_in/mCompute/p_0_in, (null)[1].m_computeBlock_in/mCompute/p_0_in, (null)[3].m_computeBlock_in/mCompute/p_0_in, (null)[0].m_computeBlock_in/mCompute/p_0_in set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
 Related violations: <none>
 
 ZPS7-1#1 Warning

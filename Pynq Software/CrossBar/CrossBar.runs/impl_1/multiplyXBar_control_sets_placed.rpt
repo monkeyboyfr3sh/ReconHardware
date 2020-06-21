@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Sat Jun 20 16:43:05 2020
+| Date         : Sun Jun 21 12:30:32 2020
 | Host         : DESKTOP-9H19BOT running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file multiplyXBar_control_sets_placed.rpt
 | Design       : multiplyXBar
@@ -73,51 +73,51 @@ Table of Contents
 +-------------------------------------+-------------------------------------------------+--------------------------------------------------+------------------+----------------+
 |             Clock Signal            |                  Enable Signal                  |                 Set/Reset Signal                 | Slice Load Count | Bel Load Count |
 +-------------------------------------+-------------------------------------------------+--------------------------------------------------+------------------+----------------+
+|  xbar/AddressSave_reg[1][1]_i_1_n_0 |                                                 | Rst_IBUF                                         |                1 |              1 |
+|  xbar/AddressSave_reg[0][3]_i_2_n_0 |                                                 | Rst_IBUF                                         |                1 |              1 |
+|  xbar/AddressSave_reg[0][0]_i_1_n_0 |                                                 | Rst_IBUF                                         |                1 |              1 |
+|  xbar/AddressSave_reg[3][0]_i_1_n_0 |                                                 | Rst_IBUF                                         |                1 |              1 |
 |  xbar/AddressSave_reg[0][1]_i_1_n_0 |                                                 | Rst_IBUF                                         |                1 |              1 |
 |  xbar/AddressSave_reg[2][0]_i_1_n_0 |                                                 | Rst_IBUF                                         |                1 |              1 |
-|  xbar/AddressSave_reg[3][0]_i_1_n_0 |                                                 | Rst_IBUF                                         |                1 |              1 |
 |  xbar/AddressSave_reg[3][2]_i_1_n_0 |                                                 | Rst_IBUF                                         |                1 |              1 |
-|  xbar/AddressSave_reg[1][0]_i_1_n_0 |                                                 | Rst_IBUF                                         |                1 |              1 |
-|  xbar/AddressSave_reg[3][3]_i_1_n_0 |                                                 | Rst_IBUF                                         |                1 |              1 |
 |  xbar/AddressSave_reg[1][2]_i_1_n_0 |                                                 | Rst_IBUF                                         |                1 |              1 |
-|  xbar/AddressSave_reg[1][3]_i_1_n_0 |                                                 | Rst_IBUF                                         |                1 |              1 |
-|  xbar/AddressSave_reg[2][3]_i_1_n_0 |                                                 | Rst_IBUF                                         |                1 |              1 |
-|  xbar/AddressSave_reg[0][0]_i_1_n_0 |                                                 | Rst_IBUF                                         |                1 |              1 |
 |  xbar/AddressSave_reg[3][1]_i_1_n_0 |                                                 | Rst_IBUF                                         |                1 |              1 |
-|  xbar/AddressSave_reg[2][2]_i_1_n_0 |                                                 | Rst_IBUF                                         |                1 |              1 |
-|  xbar/AddressSave_reg[0][3]_i_2_n_0 |                                                 | Rst_IBUF                                         |                1 |              1 |
-|  xbar/AddressSave_reg[1][1]_i_1_n_0 |                                                 | Rst_IBUF                                         |                1 |              1 |
+|  xbar/AddressSave_reg[1][3]_i_1_n_0 |                                                 | Rst_IBUF                                         |                1 |              1 |
+|  xbar/AddressSave_reg[3][3]_i_1_n_0 |                                                 | Rst_IBUF                                         |                1 |              1 |
 |  xbar/AddressSave_reg[2][1]_i_1_n_0 |                                                 | Rst_IBUF                                         |                1 |              1 |
+|  xbar/AddressSave_reg[1][0]_i_1_n_0 |                                                 | Rst_IBUF                                         |                1 |              1 |
+|  xbar/AddressSave_reg[2][2]_i_1_n_0 |                                                 | Rst_IBUF                                         |                1 |              1 |
+|  xbar/AddressSave_reg[2][3]_i_1_n_0 |                                                 | Rst_IBUF                                         |                1 |              1 |
 |  xbar/AddressSave_reg[0][2]_i_1_n_0 |                                                 | Rst_IBUF                                         |                1 |              1 |
 |  Clk_IBUF_BUFG                      |                                                 | Rst_IBUF                                         |                8 |              8 |
-|  Clk_IBUF_BUFG                      | mStart_in_IBUF                                  | (null)[3].m_computeBlock_in/pBuffer/buff0/SR[0]  |                7 |             17 |
-|  Clk_IBUF_BUFG                      | mStart_in_IBUF                                  | (null)[1].m_computeBlock_in/pBuffer/buff0/SR[0]  |                8 |             17 |
-|  Clk_IBUF_BUFG                      | mStart_out_IBUF                                 | (null)[1].m_computeBlock_out/pBuffer/buff0/SR[0] |                7 |             17 |
-|  Clk_IBUF_BUFG                      | mStart_out_IBUF                                 | (null)[3].m_computeBlock_out/pBuffer/buff0/SR[0] |                4 |             17 |
 |  Clk_IBUF_BUFG                      | mStart_out_IBUF                                 | (null)[2].m_computeBlock_out/pBuffer/buff0/SR[0] |                5 |             17 |
-|  Clk_IBUF_BUFG                      | mStart_out_IBUF                                 | (null)[0].m_computeBlock_out/pBuffer/buff0/SR[0] |                5 |             17 |
+|  Clk_IBUF_BUFG                      | mStart_in_IBUF                                  | (null)[3].m_computeBlock_in/pBuffer/buff0/SR[0]  |                7 |             17 |
 |  Clk_IBUF_BUFG                      | mStart_in_IBUF                                  | (null)[2].m_computeBlock_in/pBuffer/buff0/SR[0]  |                7 |             17 |
+|  Clk_IBUF_BUFG                      | mStart_in_IBUF                                  | (null)[1].m_computeBlock_in/pBuffer/buff0/SR[0]  |                8 |             17 |
 |  Clk_IBUF_BUFG                      | mStart_in_IBUF                                  | (null)[0].m_computeBlock_in/pBuffer/buff0/SR[0]  |                7 |             17 |
+|  Clk_IBUF_BUFG                      | mStart_out_IBUF                                 | (null)[3].m_computeBlock_out/pBuffer/buff0/SR[0] |                4 |             17 |
+|  Clk_IBUF_BUFG                      | mStart_out_IBUF                                 | (null)[1].m_computeBlock_out/pBuffer/buff0/SR[0] |                7 |             17 |
+|  Clk_IBUF_BUFG                      | mStart_out_IBUF                                 | (null)[0].m_computeBlock_out/pBuffer/buff0/SR[0] |                5 |             17 |
+|  Clk_IBUF_BUFG                      | (null)[3].m_computeBlock_in/pBuffer/buff1/E[0]  | (null)[3].m_computeBlock_in/mCompute/p_0_in      |                6 |             32 |
+|  Clk_IBUF_BUFG                      | (null)[2].m_computeBlock_out/pBuffer/buff0/E[0] | (null)[2].m_computeBlock_out/mCompute/p_0_in     |                6 |             32 |
+|  Clk_IBUF_BUFG                      | (null)[2].m_computeBlock_out/pBuffer/buff1/E[0] | (null)[2].m_computeBlock_out/mCompute/p_0_in     |                6 |             32 |
+|  Clk_IBUF_BUFG                      | (null)[3].m_computeBlock_in/pBuffer/buff0/E[0]  | (null)[3].m_computeBlock_in/mCompute/p_0_in      |                8 |             32 |
 |                                     |                                                 | xbar/OutputSave_reg[1][31]_i_2_n_0               |                9 |             32 |
 |                                     |                                                 | xbar/OutputSave_reg[2][31]_i_2_n_0               |                9 |             32 |
 |                                     |                                                 | xbar/OutputSave_reg[3][31]_i_2_n_0               |               13 |             32 |
-|                                     |                                                 | xbar/OutputSave_reg[0][31]_i_2_n_0               |               12 |             32 |
-|  Clk_IBUF_BUFG                      | (null)[1].m_computeBlock_out/pBuffer/buff0/E[0] | (null)[1].m_computeBlock_out/mCompute/p_0_in     |                7 |             32 |
+|  Clk_IBUF_BUFG                      | (null)[3].m_computeBlock_out/pBuffer/buff1/E[0] | (null)[3].m_computeBlock_out/mCompute/p_0_in     |                5 |             32 |
+|  Clk_IBUF_BUFG                      | (null)[3].m_computeBlock_out/pBuffer/buff0/E[0] | (null)[3].m_computeBlock_out/mCompute/p_0_in     |                6 |             32 |
 |  Clk_IBUF_BUFG                      | (null)[2].m_computeBlock_in/pBuffer/buff0/E[0]  | (null)[2].m_computeBlock_in/mCompute/p_0_in      |                7 |             32 |
 |  Clk_IBUF_BUFG                      | (null)[2].m_computeBlock_in/pBuffer/buff1/E[0]  | (null)[2].m_computeBlock_in/mCompute/p_0_in      |               10 |             32 |
-|  Clk_IBUF_BUFG                      | (null)[2].m_computeBlock_out/pBuffer/buff0/E[0] | (null)[2].m_computeBlock_out/mCompute/p_0_in     |                6 |             32 |
-|  Clk_IBUF_BUFG                      | (null)[1].m_computeBlock_in/pBuffer/buff0/E[0]  | (null)[1].m_computeBlock_in/mCompute/p_0_in      |                5 |             32 |
-|  Clk_IBUF_BUFG                      | (null)[0].m_computeBlock_in/pBuffer/buff1/E[0]  | (null)[0].m_computeBlock_in/mCompute/p_0_in      |                6 |             32 |
-|  Clk_IBUF_BUFG                      | (null)[0].m_computeBlock_out/pBuffer/buff0/E[0] | (null)[0].m_computeBlock_out/mCompute/p_0_in     |                6 |             32 |
-|  Clk_IBUF_BUFG                      | (null)[0].m_computeBlock_out/pBuffer/buff1/E[0] | (null)[0].m_computeBlock_out/mCompute/p_0_in     |                7 |             32 |
-|  Clk_IBUF_BUFG                      | (null)[2].m_computeBlock_out/pBuffer/buff1/E[0] | (null)[2].m_computeBlock_out/mCompute/p_0_in     |                6 |             32 |
-|  Clk_IBUF_BUFG                      | (null)[3].m_computeBlock_in/pBuffer/buff0/E[0]  | (null)[3].m_computeBlock_in/mCompute/p_0_in      |                8 |             32 |
-|  Clk_IBUF_BUFG                      | (null)[0].m_computeBlock_in/pBuffer/buff0/E[0]  | (null)[0].m_computeBlock_in/mCompute/p_0_in      |                6 |             32 |
-|  Clk_IBUF_BUFG                      | (null)[3].m_computeBlock_out/pBuffer/buff1/E[0] | (null)[3].m_computeBlock_out/mCompute/p_0_in     |                5 |             32 |
-|  Clk_IBUF_BUFG                      | (null)[3].m_computeBlock_in/pBuffer/buff1/E[0]  | (null)[3].m_computeBlock_in/mCompute/p_0_in      |                6 |             32 |
-|  Clk_IBUF_BUFG                      | (null)[3].m_computeBlock_out/pBuffer/buff0/E[0] | (null)[3].m_computeBlock_out/mCompute/p_0_in     |                6 |             32 |
+|  Clk_IBUF_BUFG                      | (null)[1].m_computeBlock_out/pBuffer/buff0/E[0] | (null)[1].m_computeBlock_out/mCompute/p_0_in     |                7 |             32 |
 |  Clk_IBUF_BUFG                      | (null)[1].m_computeBlock_out/pBuffer/buff1/E[0] | (null)[1].m_computeBlock_out/mCompute/p_0_in     |                6 |             32 |
 |  Clk_IBUF_BUFG                      | (null)[1].m_computeBlock_in/pBuffer/buff1/E[0]  | (null)[1].m_computeBlock_in/mCompute/p_0_in      |                8 |             32 |
+|  Clk_IBUF_BUFG                      | (null)[1].m_computeBlock_in/pBuffer/buff0/E[0]  | (null)[1].m_computeBlock_in/mCompute/p_0_in      |                5 |             32 |
+|  Clk_IBUF_BUFG                      | (null)[0].m_computeBlock_out/pBuffer/buff0/E[0] | (null)[0].m_computeBlock_out/mCompute/p_0_in     |                6 |             32 |
+|  Clk_IBUF_BUFG                      | (null)[0].m_computeBlock_out/pBuffer/buff1/E[0] | (null)[0].m_computeBlock_out/mCompute/p_0_in     |                7 |             32 |
+|                                     |                                                 | xbar/OutputSave_reg[0][31]_i_2_n_0               |               12 |             32 |
+|  Clk_IBUF_BUFG                      | (null)[0].m_computeBlock_in/pBuffer/buff1/E[0]  | (null)[0].m_computeBlock_in/mCompute/p_0_in      |                6 |             32 |
+|  Clk_IBUF_BUFG                      | (null)[0].m_computeBlock_in/pBuffer/buff0/E[0]  | (null)[0].m_computeBlock_in/mCompute/p_0_in      |                6 |             32 |
 +-------------------------------------+-------------------------------------------------+--------------------------------------------------+------------------+----------------+
 
 

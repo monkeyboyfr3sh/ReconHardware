@@ -41,14 +41,14 @@ multiplyXBar uut(
                     dataIn,         //data input to all multipliers that input to the xbar
                     dataOut,        //data output that currently is straight from xbar
                     AddressSelect,  //AddressSelect for xbar
-                    outputSelect,
+                    outputSelect,   
                     bufferRD_in,    //Array of bufferRD control for multipliers that input to xbar. 0 = buffers will fill with dataIn value, 1 = buffers will hold data
                     bufferRD_out,   //Array of bufferRD control for multipliers that xbar outputs to. 0 = buffers will fill with dataIn value, 1 = buffers will hold data
                     bufferSelect,
                     mStart_in,      //Signals for multiplication to start, will start mulipliers that input to xBar
                     mStart_out,     //Signals for multiplication to start, will start multipliers that xbar outputs to
                     mReady_in,      //Signals multiplication complete for multipers that input to xBar
-                    mReady_out,     //Signals multiplication complete for multipers that xBar outputs to
+                    mReady_out     //Signals multiplication complete for multipers that xBar outputs to
                     );
 
 initial begin

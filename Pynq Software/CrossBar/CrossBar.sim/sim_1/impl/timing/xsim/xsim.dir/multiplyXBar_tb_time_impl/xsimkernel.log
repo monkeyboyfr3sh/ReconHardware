@@ -1,7 +1,7 @@
-Running: xsim.dir/multiplyXBar_tb_time_impl/xsimk.exe -simmode gui -wdb multiplyXBar_tb_time_impl.wdb -simrunnum 0 -socket 49379
+Running: xsim.dir/multiplyXBar_tb_time_impl/xsimk.exe -simmode gui -wdb multiplyXBar_tb_time_impl.wdb -simrunnum 0 -socket 50894
 Design successfully loaded
-Design Loading Memory Usage: 8312 KB (Peak: 8312 KB)
-Design Loading CPU Usage: 15 ms
+Design Loading Memory Usage: 35732 KB (Peak: 35732 KB)
+Design Loading CPU Usage: 77 ms
 Simulation completed
-Simulation Memory Usage: 10072 KB (Peak: 10072 KB)
-Simulation CPU Usage: 30 ms
+Simulation Memory Usage: 45852 KB (Peak: 45852 KB)
+Simulation CPU Usage: 264 ms
