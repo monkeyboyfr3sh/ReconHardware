@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date             : Wed Jun 10 10:14:41 2020
+| Date             : Sun Jun 21 13:32:42 2020
 | Host             : DESKTOP-9H19BOT running 64-bit major release  (build 9200)
 | Command          : report_power -file integercomputeBlockPynq_power_routed.rpt -pb integercomputeBlockPynq_power_summary_routed.pb -rpx integercomputeBlockPynq_power_routed.rpx
 | Design           : integercomputeBlockPynq
@@ -29,20 +29,20 @@ Table of Contents
 1. Summary
 ----------
 
-+--------------------------+----------------------------------+
-| Total On-Chip Power (W)  | 22.837 (Junction temp exceeded!) |
-| Design Power Budget (W)  | Unspecified*                     |
-| Power Budget Margin (W)  | NA                               |
-| Dynamic (W)              | 21.797                           |
-| Device Static (W)        | 1.039                            |
-| Effective TJA (C/W)      | 11.5                             |
-| Max Ambient (C)          | 0.0                              |
-| Junction Temperature (C) | 125.0                            |
-| Confidence Level         | Low                              |
-| Setting File             | ---                              |
-| Simulation Activity File | ---                              |
-| Design Nets Matched      | NA                               |
-+--------------------------+----------------------------------+
++--------------------------+--------------+
+| Total On-Chip Power (W)  | 1.521        |
+| Design Power Budget (W)  | Unspecified* |
+| Power Budget Margin (W)  | NA           |
+| Dynamic (W)              | 1.390        |
+| Device Static (W)        | 0.131        |
+| Effective TJA (C/W)      | 11.5         |
+| Max Ambient (C)          | 67.5         |
+| Junction Temperature (C) | 42.5         |
+| Confidence Level         | Low          |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
 * Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
 
 
@@ -52,17 +52,16 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.532 |      285 |       --- |             --- |
-|   LUT as Logic |     0.444 |      140 |     53200 |            0.26 |
-|   CARRY4       |     0.062 |       12 |     13300 |            0.09 |
-|   Register     |     0.019 |      101 |    106400 |            0.09 |
+| Slice Logic    |     0.191 |      180 |       --- |             --- |
+|   LUT as Logic |     0.176 |       98 |     53200 |            0.18 |
 |   BUFG         |     0.006 |        1 |        32 |            3.13 |
-|   Others       |     0.000 |        4 |       --- |             --- |
-| Signals        |     1.332 |      556 |       --- |             --- |
-| DSPs           |     0.855 |        4 |       220 |            1.82 |
-| I/O            |    19.078 |       74 |       125 |           59.20 |
-| Static Power   |     1.039 |          |           |                 |
-| Total          |    22.837 |          |           |                 |
+|   CARRY4       |     0.005 |       10 |     13300 |            0.08 |
+|   Register     |     0.004 |       35 |    106400 |            0.03 |
+|   Others       |     0.000 |        2 |       --- |             --- |
+| Signals        |     0.219 |      169 |       --- |             --- |
+| I/O            |     0.980 |       26 |       125 |           20.80 |
+| Static Power   |     0.131 |          |           |                 |
+| Total          |     1.521 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,20 +71,20 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     3.170 |       2.871 |      0.299 |
-| Vccaux    |       1.800 |     1.649 |       1.549 |      0.100 |
+| Vccint    |       1.000 |     0.480 |       0.466 |      0.014 |
+| Vccaux    |       1.800 |     0.090 |       0.076 |      0.015 |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
-| Vcco18    |       1.800 |     8.966 |       8.965 |      0.001 |
+| Vcco18    |       1.800 |     0.439 |       0.438 |      0.001 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.026 |       0.000 |      0.026 |
+| Vccbram   |       1.000 |     0.001 |       0.000 |      0.001 |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccpint   |       1.000 |     0.473 |       0.000 |      0.473 |
+| Vccpint   |       1.000 |     0.028 |       0.000 |      0.028 |
 | Vccpaux   |       1.800 |     0.010 |       0.000 |      0.010 |
 | Vccpll    |       1.800 |     0.003 |       0.000 |      0.003 |
 | Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -146,12 +145,12 @@ Table of Contents
 +-------------------------+-----------+
 | Name                    | Power (W) |
 +-------------------------+-----------+
-| integercomputeBlockPynq |    21.797 |
-|   mCompute              |     1.497 |
-|   pBuffer               |     0.287 |
+| integercomputeBlockPynq |     1.390 |
+|   mCompute              |     0.044 |
+|   pBuffer               |     0.241 |
 |     buff0               |     0.147 |
-|     buff1               |     0.140 |
-|   splitter              |     0.675 |
+|     buff1               |     0.094 |
+|   splitter              |     0.025 |
 +-------------------------+-----------+
 
 

@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Sun Jun 21 12:30:58 2020
+| Date         : Sun Jun 21 12:45:33 2020
 | Host         : DESKTOP-9H19BOT running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file multiplyXBar_timing_summary_routed.rpt -pb multiplyXBar_timing_summary_routed.pb -rpx multiplyXBar_timing_summary_routed.rpx -warn_on_violation
 | Design       : multiplyXBar
@@ -64,9 +64,31 @@ Table of Contents
 
  There are 16 register/latch pins with no clock driven by root clock pin: AddressSelect[4] (HIGH)
 
- There are 680 register/latch pins with no clock driven by root clock pin: Clk (HIGH)
+ There are 200 register/latch pins with no clock driven by root clock pin: Clk (HIGH)
 
- There are 15 register/latch pins with no clock driven by root clock pin: xbar/AddressSave_reg[3][1]/Q (HIGH)
+ There is 1 register/latch pin with no clock driven by root clock pin: xbar/AddressSave_reg[0][0]/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: xbar/AddressSave_reg[0][1]/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: xbar/AddressSave_reg[0][2]/Q (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: xbar/AddressSave_reg[0][3]/Q (HIGH)
+
+ There are 2 register/latch pins with no clock driven by root clock pin: xbar/AddressSave_reg[1][0]/Q (HIGH)
+
+ There are 2 register/latch pins with no clock driven by root clock pin: xbar/AddressSave_reg[1][1]/Q (HIGH)
+
+ There are 2 register/latch pins with no clock driven by root clock pin: xbar/AddressSave_reg[1][2]/Q (HIGH)
+
+ There are 2 register/latch pins with no clock driven by root clock pin: xbar/AddressSave_reg[1][3]/Q (HIGH)
+
+ There are 3 register/latch pins with no clock driven by root clock pin: xbar/AddressSave_reg[2][1]/Q (HIGH)
+
+ There are 3 register/latch pins with no clock driven by root clock pin: xbar/AddressSave_reg[2][2]/Q (HIGH)
+
+ There are 3 register/latch pins with no clock driven by root clock pin: xbar/AddressSave_reg[2][3]/Q (HIGH)
+
+ There are 3 register/latch pins with no clock driven by root clock pin: xbar/AddressSave_reg[3][0]/Q (HIGH)
 
 
 2. checking constant_clock
@@ -81,21 +103,21 @@ Table of Contents
 
 4. checking unconstrained_internal_endpoints
 --------------------------------------------
- There are 3288 pins that are not constrained for maximum delay. (HIGH)
+ There are 624 pins that are not constrained for maximum delay. (HIGH)
 
- There are 256 pins that are not constrained for maximum delay due to constant clock. (MEDIUM)
+ There are 64 pins that are not constrained for maximum delay due to constant clock. (MEDIUM)
 
 
 5. checking no_input_delay
 --------------------------
- There are 48 input ports with no input delay specified. (HIGH)
+ There are 24 input ports with no input delay specified. (HIGH)
 
  There are 0 input ports with no input delay but user has a false path constraint.
 
 
 6. checking no_output_delay
 ---------------------------
- There are 40 ports with no output delay specified. (HIGH)
+ There are 16 ports with no output delay specified. (HIGH)
 
  There are 0 ports with no output delay but user has a false path constraint
 
@@ -129,7 +151,7 @@ Table of Contents
 
 12. checking latch_loops
 ------------------------
- There are 13 combinational latch loops in the design through latch input (HIGH)
+ There are 16 combinational latch loops in the design through latch input (HIGH)
 
 
 
