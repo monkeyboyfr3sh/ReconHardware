@@ -22,6 +22,7 @@
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
+    <Option Name="PRFlow" Val="TRUE"/>
     <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>
     <Option Name="IPCachePermission" Val="read"/>
     <Option Name="IPCachePermission" Val="write"/>
@@ -31,7 +32,7 @@
     <Option Name="IPStaticSourceDir" Val="$PIPUSERFILESDIR/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSABoardId" Val="pynq-z2"/>
-    <Option Name="WTXSimLaunchSim" Val="0"/>
+    <Option Name="WTXSimLaunchSim" Val="2"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -62,6 +63,7 @@
       <Filter Type="Srcs"/>
       <File Path="$PSRCDIR/sources_1/imports/new/definitions.h">
         <FileInfo>
+          <Attr Name="IsGlobalInclude" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../Multiplier/Multiplier.srcs/sources_1/new/definitions.h"/>
           <Attr Name="ImportTime" Val="1592851528"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -95,8 +97,38 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/imports/new/integercomputeBlock.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Multiplier/Multiplier.srcs/sources_1/new/integercomputeBlock.v"/>
+          <Attr Name="ImportTime" Val="1592851528"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/new/multiplyComputePynq.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Multiplier/Multiplier.srcs/sources_1/new/multiplyComputePynq.v"/>
+          <Attr Name="ImportTime" Val="1592851528"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/new/integercomputeBlockPynq.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Multiplier/Multiplier.srcs/sources_1/new/integercomputeBlockPynq.v"/>
+          <Attr Name="ImportTime" Val="1592851528"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/imports/new/fixedmultiplyCompute.v">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../Multiplier/Multiplier.srcs/sources_1/new/fixedmultiplyCompute.v"/>
           <Attr Name="ImportTime" Val="1592851528"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -106,6 +138,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/new/fixedcomputeBlock.v">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../Multiplier/Multiplier.srcs/sources_1/new/fixedcomputeBlock.v"/>
           <Attr Name="ImportTime" Val="1592851528"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -116,7 +149,6 @@
       <File Path="$PSRCDIR/sources_1/imports/new/computeBlock.v">
         <FileInfo>
           <Attr Name="UserDisabled" Val="1"/>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../Multiplier/Multiplier.srcs/sources_1/new/computeBlock.v"/>
           <Attr Name="ImportTime" Val="1592851528"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -127,7 +159,6 @@
       <File Path="$PSRCDIR/sources_1/imports/new/floatMultiplyCompute.v">
         <FileInfo>
           <Attr Name="UserDisabled" Val="1"/>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../Multiplier/Multiplier.srcs/sources_1/new/floatMultiplyCompute.v"/>
           <Attr Name="ImportTime" Val="1592851528"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -175,51 +206,10 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/new/integercomputeBlock.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../Multiplier/Multiplier.srcs/sources_1/new/integercomputeBlock.v"/>
-          <Attr Name="ImportTime" Val="1592851528"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/new/integercomputeBlockPynq.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../Multiplier/Multiplier.srcs/sources_1/new/integercomputeBlockPynq.v"/>
-          <Attr Name="ImportTime" Val="1592851528"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PSRCDIR/sources_1/imports/new/multiplyBlock.v">
         <FileInfo>
           <Attr Name="UserDisabled" Val="1"/>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../Multiplier/Multiplier.srcs/sources_1/new/multiplyBlock.v"/>
-          <Attr Name="ImportTime" Val="1592851528"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/new/multiplyCompute.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../Multiplier/Multiplier.srcs/sources_1/new/multiplyCompute.v"/>
-          <Attr Name="ImportTime" Val="1592851528"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/new/multiplyComputePynq.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../Multiplier/Multiplier.srcs/sources_1/new/multiplyComputePynq.v"/>
           <Attr Name="ImportTime" Val="1592851528"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -229,7 +219,6 @@
       <File Path="$PSRCDIR/sources_1/imports/new/FIFOBuffer.v">
         <FileInfo>
           <Attr Name="UserDisabled" Val="1"/>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../Multiplier/Multiplier.srcs/sources_1/new/FIFOBuffer.v"/>
           <Attr Name="ImportTime" Val="1592851528"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -240,7 +229,6 @@
       <File Path="$PSRCDIR/sources_1/imports/new/parallelFIFOBuffer.v">
         <FileInfo>
           <Attr Name="UserDisabled" Val="1"/>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../Multiplier/Multiplier.srcs/sources_1/new/parallelFIFOBuffer.v"/>
           <Attr Name="ImportTime" Val="1592851528"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -250,8 +238,7 @@
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="fixedcomputeBlock"/>
-        <Option Name="TopAutoSet" Val="TRUE"/>
+        <Option Name="TopModule" Val="integercomputeBlock"/>
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -265,10 +252,12 @@
         </FileInfo>
       </File>
       <Config>
+        <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc"/>
         <Option Name="ConstrsType" Val="XDC"/>
       </Config>
     </FileSet>
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
+      <Filter Type="Srcs"/>
       <File Path="$PSRCDIR/sim_1/imports/new/integercomputeBlockPynq_tb.v">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../Multiplier/Multiplier.srcs/sim_1/new/integercomputeBlockPynq_tb.v"/>
@@ -341,7 +330,6 @@
       <File Path="$PSRCDIR/sim_1/imports/new/floatMultiplyPynq_tb.v">
         <FileInfo>
           <Attr Name="UserDisabled" Val="1"/>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../Multiplier/Multiplier.srcs/sim_1/new/floatMultiplyPynq_tb.v"/>
           <Attr Name="ImportTime" Val="1592851528"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -352,7 +340,6 @@
       <File Path="$PSRCDIR/sim_1/imports/new/floatmultiplyCompute_tb.v">
         <FileInfo>
           <Attr Name="UserDisabled" Val="1"/>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../Multiplier/Multiplier.srcs/sim_1/new/floatmultiplyCompute_tb.v"/>
           <Attr Name="ImportTime" Val="1592851528"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -363,7 +350,6 @@
       <File Path="$PSRCDIR/sim_1/imports/new/ParallelBuffer_tb.v">
         <FileInfo>
           <Attr Name="UserDisabled" Val="1"/>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../Multiplier/Multiplier.srcs/sim_1/new/ParallelBuffer_tb.v"/>
           <Attr Name="ImportTime" Val="1592851528"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -374,7 +360,6 @@
       <File Path="$PSRCDIR/sim_1/imports/new/multiplierBlock_tb.v">
         <FileInfo>
           <Attr Name="UserDisabled" Val="1"/>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../Multiplier/Multiplier.srcs/sim_1/new/multiplierBlock_tb.v"/>
           <Attr Name="ImportTime" Val="1592851528"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -385,7 +370,6 @@
       <File Path="$PSRCDIR/sim_1/imports/new/dataSplit_tb.v">
         <FileInfo>
           <Attr Name="UserDisabled" Val="1"/>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../Multiplier/Multiplier.srcs/sim_1/new/dataSplit_tb.v"/>
           <Attr Name="ImportTime" Val="1592851528"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -396,7 +380,6 @@
       <File Path="$PSRCDIR/sim_1/imports/new/parallelFIFObuffer_tb.v">
         <FileInfo>
           <Attr Name="UserDisabled" Val="1"/>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../Multiplier/Multiplier.srcs/sim_1/new/parallelFIFObuffer_tb.v"/>
           <Attr Name="ImportTime" Val="1592851528"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -407,7 +390,6 @@
       <File Path="$PSRCDIR/sim_1/imports/new/SingleBuffer_tb.v">
         <FileInfo>
           <Attr Name="UserDisabled" Val="1"/>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../Multiplier/Multiplier.srcs/sim_1/new/SingleBuffer_tb.v"/>
           <Attr Name="ImportTime" Val="1592851528"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -418,7 +400,6 @@
       <File Path="$PSRCDIR/sim_1/imports/new/multiplyCompute_tb.v">
         <FileInfo>
           <Attr Name="UserDisabled" Val="1"/>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../Multiplier/Multiplier.srcs/sim_1/new/multiplyCompute_tb.v"/>
           <Attr Name="ImportTime" Val="1592851528"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -434,12 +415,45 @@
         <Option Name="TransportIntDelay" Val="0"/>
         <Option Name="SelectedSimModel" Val="rtl"/>
         <Option Name="SrcSet" Val="sources_1"/>
+        <Option Name="xsim.simulate.runtime" Val=""/>
       </Config>
     </FileSet>
     <FileSet Name="utils_1" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
       <Filter Type="Utils"/>
       <Config>
         <Option Name="TopAutoSet" Val="TRUE"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="multiplyCompute" Type="BlockSrcs" RelSrcDir="$PSRCDIR/multiplyCompute">
+      <File Path="$PSRCDIR/sources_1/imports/new/multiplyCompute.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Multiplier/Multiplier.srcs/sources_1/new/multiplyCompute.v"/>
+          <Attr Name="ImportTime" Val="1592851528"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="TopModule" Val="multiplyCompute"/>
+        <Option Name="TopRTLFile" Val="$PSRCDIR/sources_1/imports/new/multiplyCompute.v"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="multiplyComputePynq" Type="BlockSrcs" RelSrcDir="$PSRCDIR/multiplyComputePynq">
+      <File Path="$PSRCDIR/multiplyComputePynq/imports/new/multiplyComputePynq.v">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/imports/new/multiplyComputePynq.v"/>
+          <Attr Name="ImportTime" Val="1592851528"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <Config>
+        <Option Name="TopModule" Val="multiplyComputePynq"/>
+        <Option Name="TopAutoSet" Val="TRUE"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
   </FileSets>
@@ -462,22 +476,57 @@
     </Simulator>
   </Simulators>
   <Runs Version="1" Minor="11">
-    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7z020clg400-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" IncludeInArchive="true">
+    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7z020clg400-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
       </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" SynthRun="synth_1" IncludeInArchive="true" GenFullBitstream="true">
+    <Run Id="multiplyCompute_synth_1" Type="Ft3:Synth" SrcSet="multiplyCompute" Part="xc7z020clg400-1" ConstrsSet="multiplyCompute" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/multiplyCompute_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="multiplyComputePynq_synth_1" Type="Ft3:Synth" SrcSet="multiplyComputePynq" Part="xc7z020clg400-1" ConstrsSet="multiplyComputePynq" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/multiplyComputePynq_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true" PRConfiguration="config_1" ConfigurationChanged="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design" EnableStepBool="1"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="multiplyCompute_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="multiplyCompute" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="multiplyCompute_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -492,10 +541,61 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
+    <Run Id="multiplyComputePynq_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="multiplyComputePynq" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="multiplyComputePynq_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design" EnableStepBool="1"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="child_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/child_0_impl_1" SynthRun="impl_1" IncludeInArchive="true" PRConfiguration="config_2" ConfigurationChanged="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design" EnableStepBool="1"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
   </Runs>
   <Board>
     <Jumpers/>
   </Board>
+  <PRFlow Version="1" Minor="0">
+    <PartitionDefs>
+      <PartitionDef Name="reconfigureableCompute" DefaultRM="multiplyComputePynq" ModuleName="multiplyCompute" LibraryName="xil_defaultlib" Type="NONE">
+        <ReconfigModule Name="multiplyCompute" Top="multiplyCompute" SrcSet="multiplyCompute" SynthRun="multiplyCompute_synth_1" ImplRun="multiplyCompute_impl_1"/>
+        <ReconfigModule Name="multiplyComputePynq" Top="multiplyComputePynq" SrcSet="multiplyComputePynq" SynthRun="multiplyComputePynq_synth_1" ImplRun="multiplyComputePynq_impl_1"/>
+      </PartitionDef>
+    </PartitionDefs>
+    <PRConfigurations>
+      <PRConfiguration Name="config_1" Active="true">
+        <PartitionInstMap PartitionInst="mCompute" RM="multiplyCompute"/>
+      </PRConfiguration>
+      <PRConfiguration Name="config_2">
+        <PartitionInstMap PartitionInst="mCompute" RM="multiplyComputePynq"/>
+      </PRConfiguration>
+    </PRConfigurations>
+  </PRFlow>
   <DashboardSummary Version="1" Minor="0">
     <Dashboards>
       <Dashboard Name="default_dashboard">

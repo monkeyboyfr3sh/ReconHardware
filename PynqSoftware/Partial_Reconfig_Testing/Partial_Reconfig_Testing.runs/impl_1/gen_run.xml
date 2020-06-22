@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchConfig="config_1" LaunchTime="1592860131">
+  <File Type="BITSTR-BMM" Name="integercomputeBlock_bd.bmm"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="integercomputeBlock_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="integercomputeBlock_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR" Name="integercomputeBlock_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="integercomputeBlock.tcl"/>
+  <File Type="OPT-TIMING" Name="integercomputeBlock_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="integercomputeBlock_opt.dcp"/>
+  <File Type="ROUTE-PWR-SUM" Name="integercomputeBlock_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="integercomputeBlock_reports.tcl"/>
+  <File Type="OPT-DRC" Name="integercomputeBlock_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="integercomputeBlock.hwdef"/>
+  <File Type="PWROPT-DCP" Name="integercomputeBlock_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="integercomputeBlock_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="integercomputeBlock_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="integercomputeBlock_placed.dcp"/>
+  <File Type="PLACE-IO" Name="integercomputeBlock_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="integercomputeBlock_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="integercomputeBlock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="integercomputeBlock_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="integercomputeBlock_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="integercomputeBlock_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="integercomputeBlock_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="integercomputeBlock_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="integercomputeBlock_postplace_pwropt.dcp"/>
+  <File Type="BG-BIN" Name="integercomputeBlock.bin"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="integercomputeBlock_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="integercomputeBlock_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="integercomputeBlock_drc_physopted.rpt"/>
+  <File Type="BITSTR-MSK" Name="integercomputeBlock.msk"/>
+  <File Type="PHYSOPT-TIMING" Name="integercomputeBlock_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="integercomputeBlock_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="integercomputeBlock_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="integercomputeBlock_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="integercomputeBlock_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="integercomputeBlock_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="integercomputeBlock_drc_routed.rpx"/>
+  <File Type="BITSTR-MMI" Name="integercomputeBlock.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="integercomputeBlock_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="integercomputeBlock_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="integercomputeBlock_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="integercomputeBlock_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="integercomputeBlock_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="integercomputeBlock_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="integercomputeBlock_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="integercomputeBlock_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="integercomputeBlock_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="integercomputeBlock_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="integercomputeBlock_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="integercomputeBlock_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="integercomputeBlock_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="integercomputeBlock_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="integercomputeBlock_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="integercomputeBlock_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="integercomputeBlock_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="integercomputeBlock_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="integercomputeBlock_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="integercomputeBlock_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="integercomputeBlock_bus_skew_postroute_physopted.pb"/>
+  <File Type="BG-BIT" Name="integercomputeBlock.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="integercomputeBlock_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-RBT" Name="integercomputeBlock.rbt"/>
+  <File Type="BITSTR-NKY" Name="integercomputeBlock.nky"/>
+  <File Type="PDI-FILE" Name="integercomputeBlock.pdi"/>
+  <File Type="RCFI_FILE" Name="integercomputeBlock.rcfi"/>
+  <File Type="CFI_FILE" Name="integercomputeBlock.cfi"/>
+  <File Type="RNPI_FILE" Name="integercomputeBlock.rnpi"/>
+  <File Type="NPI_FILE" Name="integercomputeBlock.npi"/>
+  <File Type="RBD_FILE" Name="integercomputeBlock.rbd"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="integercomputeBlock.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="integercomputeBlock.sysdef"/>
+  <File Type="BG-BGN" Name="integercomputeBlock.bgn"/>
+  <File Type="BG-DRC" Name="integercomputeBlock.drc"/>
+  <File Type="RDI-RDI" Name="integercomputeBlock.vdi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="ROUTE-PARTITION-CELL-DCP" Name="mCompute_multiplyCompute_routed.dcp"/>
+  <File Type="BG-PARTITION-CELL-BIT" Name="mCompute_multiplyCompute_partial.bit"/>
+  <File Type="BG-PARTITION-LTX" Name="mCompute_multiplyCompute.ltx"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/new/definitions.h">
+      <FileInfo>
+        <Attr Name="IsGlobalInclude" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Multiplier/Multiplier.srcs/sources_1/new/definitions.h"/>
+        <Attr Name="ImportTime" Val="1592851528"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/FlipFlop.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Multiplier/Multiplier.srcs/sources_1/new/FlipFlop.v"/>
+        <Attr Name="ImportTime" Val="1592851528"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/Parrallel Buffer.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Multiplier/Multiplier.srcs/sources_1/new/Parrallel Buffer.v"/>
+        <Attr Name="ImportTime" Val="1592851528"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/dataSplit.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Multiplier/Multiplier.srcs/sources_1/new/dataSplit.v"/>
+        <Attr Name="ImportTime" Val="1592851528"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/integercomputeBlock.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Multiplier/Multiplier.srcs/sources_1/new/integercomputeBlock.v"/>
+        <Attr Name="ImportTime" Val="1592851528"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/multiplyComputePynq.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Multiplier/Multiplier.srcs/sources_1/new/multiplyComputePynq.v"/>
+        <Attr Name="ImportTime" Val="1592851528"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/integercomputeBlockPynq.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Multiplier/Multiplier.srcs/sources_1/new/integercomputeBlockPynq.v"/>
+        <Attr Name="ImportTime" Val="1592851528"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/fixedmultiplyCompute.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Multiplier/Multiplier.srcs/sources_1/new/fixedmultiplyCompute.v"/>
+        <Attr Name="ImportTime" Val="1592851528"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/fixedcomputeBlock.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Multiplier/Multiplier.srcs/sources_1/new/fixedcomputeBlock.v"/>
+        <Attr Name="ImportTime" Val="1592851528"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/computeBlock.v">
+      <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Multiplier/Multiplier.srcs/sources_1/new/computeBlock.v"/>
+        <Attr Name="ImportTime" Val="1592851528"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/floatMultiplyCompute.v">
+      <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Multiplier/Multiplier.srcs/sources_1/new/floatMultiplyCompute.v"/>
+        <Attr Name="ImportTime" Val="1592851528"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/floatcomputeBlock.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Multiplier/Multiplier.srcs/sources_1/new/floatcomputeBlock.v"/>
+        <Attr Name="ImportTime" Val="1592851528"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/floatcomputeBlockPynq.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Multiplier/Multiplier.srcs/sources_1/new/floatcomputeBlockPynq.v"/>
+        <Attr Name="ImportTime" Val="1592851528"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/floatmCompute.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Multiplier/Multiplier.srcs/sources_1/new/floatmCompute.v"/>
+        <Attr Name="ImportTime" Val="1592851528"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/floatmComputePynq.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Multiplier/Multiplier.srcs/sources_1/new/floatmComputePynq.v"/>
+        <Attr Name="ImportTime" Val="1592851528"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/multiplyBlock.v">
+      <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Multiplier/Multiplier.srcs/sources_1/new/multiplyBlock.v"/>
+        <Attr Name="ImportTime" Val="1592851528"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/FIFOBuffer.v">
+      <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Multiplier/Multiplier.srcs/sources_1/new/FIFOBuffer.v"/>
+        <Attr Name="ImportTime" Val="1592851528"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/parallelFIFOBuffer.v">
+      <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Multiplier/Multiplier.srcs/sources_1/new/parallelFIFOBuffer.v"/>
+        <Attr Name="ImportTime" Val="1592851528"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="integercomputeBlock"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../pynq-z2_v1.0.xdc"/>
+        <Attr Name="ImportTime" Val="1592853864"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc"/>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design" EnableStepBool="1"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="multiplyCompute"/>
+</GenRun>

@@ -1,0 +1,14 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../Partial_Reconfig_Testing.srcs/sources_1/imports/new" \
+"../../../../Partial_Reconfig_Testing.srcs/sources_1/imports/new/FlipFlop.v" \
+"../../../../Partial_Reconfig_Testing.srcs/sources_1/imports/new/Parrallel Buffer.v" \
+"../../../../Partial_Reconfig_Testing.srcs/sources_1/imports/new/dataSplit.v" \
+"../../../../Partial_Reconfig_Testing.srcs/sources_1/imports/new/integercomputeBlockPynq.v" \
+"../../../../Partial_Reconfig_Testing.srcs/sources_1/imports/new/multiplyComputePynq.v" \
+"../../../../Partial_Reconfig_Testing.srcs/sim_1/imports/new/integercomputeBlockPynq_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
