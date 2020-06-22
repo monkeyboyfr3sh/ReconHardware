@@ -1,0 +1,122 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Mon Jun 22 00:50:33 2020
+# Process ID: 32540
+# Current directory: C:/Users/monke/OneDrive/Documents/GitHub/ReconHardware/Pynq Software/CrossBar
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent32680 C:\Users\monke\OneDrive\Documents\GitHub\ReconHardware\Pynq Software\CrossBar\CrossBar.xpr
+# Log file: C:/Users/monke/OneDrive/Documents/GitHub/ReconHardware/Pynq Software/CrossBar/vivado.log
+# Journal file: C:/Users/monke/OneDrive/Documents/GitHub/ReconHardware/Pynq Software/CrossBar\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/monke/OneDrive/Documents/GitHub/ReconHardware/Pynq Software/CrossBar/CrossBar.xpr}
+update_compile_order -fileset sources_1
+launch_simulation
+source multiplyXBar_tb.tcl
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+run 10 us
+relaunch_sim
+run 31.2 ns
+launch_simulation -mode post-implementation -type timing
+source multiplyXBar_tb.tcl
+current_sim simulation_1
+run 31.2 ns
+relaunch_sim
+current_sim simulation_2
+close_sim
+close_sim
+launch_simulation -mode post-implementation -type timing
+source multiplyXBar_tb.tcl
+run 31.2 ns
+close_sim
+launch_simulation -mode post-implementation -type timing
+source multiplyXBar_tb.tcl
+run 31.2 ns
+launch_simulation
+close_sim
+launch_simulation -mode post-implementation -type timing
+source multiplyXBar_tb.tcl
+run 31.2 ns
+close_sim
+launch_simulation -mode post-implementation -type timing
+source multiplyXBar_tb.tcl
+run 31.2 ns
+relaunch_sim
+run 31.2 ns
+relaunch_sim
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+run all
+close_sim
