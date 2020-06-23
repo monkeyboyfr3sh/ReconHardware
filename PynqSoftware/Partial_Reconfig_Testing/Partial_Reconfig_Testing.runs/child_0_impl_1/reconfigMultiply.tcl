@@ -61,112 +61,27 @@ proc step_failed { step } {
 }
 
 
-start_step init_design
-set ACTIVE_STEP init_design
+start_step write_bitstream
+set ACTIVE_STEP write_bitstream
 set rc [catch {
-  create_msg_db init_design.pb
+  create_msg_db write_bitstream.pb
   set_param chipscope.maxJobs 2
-  create_project -in_memory -part xc7z020clg400-1
-  set_property board_part tul.com.tw:pynq-z2:part0:1.0 [current_project]
-  set_property design_mode GateLvl [current_fileset]
-  set_param project.singleFileAddWarning.threshold 0
+  pr_verify -full_check -initial C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Partial_Reconfig_Testing/Partial_Reconfig_Testing.runs/impl_1/reconfigMultiply_routed.dcp -additional C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Partial_Reconfig_Testing/Partial_Reconfig_Testing.runs/child_0_impl_1/reconfigMultiply_routed.dcp -file child_0_impl_1_pr_verify.log
+  open_checkpoint reconfigMultiply_routed.dcp
   set_property webtalk.parent_dir C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Partial_Reconfig_Testing/Partial_Reconfig_Testing.cache/wt [current_project]
-  set_property parent.project_path C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Partial_Reconfig_Testing/Partial_Reconfig_Testing.xpr [current_project]
-  set_property ip_output_repo C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Partial_Reconfig_Testing/Partial_Reconfig_Testing.cache/ip [current_project]
-  set_property ip_cache_permissions {read write} [current_project]
-  add_files -quiet C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Partial_Reconfig_Testing/Partial_Reconfig_Testing.runs/impl_1/reconfigMultiply_routed_bb.dcp
-  add_files -quiet C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Partial_Reconfig_Testing/Partial_Reconfig_Testing.runs/float_synth_1/floatmultiplyCompute.dcp
-  set_property SCOPED_TO_CELLS mCompute [get_files C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Partial_Reconfig_Testing/Partial_Reconfig_Testing.runs/float_synth_1/floatmultiplyCompute.dcp]
-  set_property netlist_only true [get_files C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Partial_Reconfig_Testing/Partial_Reconfig_Testing.runs/float_synth_1/floatmultiplyCompute.dcp]
-  link_design -top reconfigMultiply -part xc7z020clg400-1
-  close_msg_db -file init_design.pb
+  catch { write_mem_info -force reconfigMultiply.mmi }
+  write_bitstream -force -no_partial_bitfile reconfigMultiply.bit 
+  write_bitstream -force -cell mCompute mCompute_float_partial.bit 
+  catch {write_debug_probes -no_partial_ltxfile -quiet -force reconfigMultiply}
+  catch {file copy -force reconfigMultiply.ltx debug_nets.ltx}
+  catch {write_debug_probes -quiet -force -cell mCompute -file mCompute_float_partial.ltx}
+  close_msg_db -file write_bitstream.pb
 } RESULT]
 if {$rc} {
-  step_failed init_design
+  step_failed write_bitstream
   return -code error $RESULT
 } else {
-  end_step init_design
-  unset ACTIVE_STEP 
-}
-
-start_step opt_design
-set ACTIVE_STEP opt_design
-set rc [catch {
-  create_msg_db opt_design.pb
-  opt_design 
-  write_checkpoint -force reconfigMultiply_opt.dcp
-  create_report "child_0_impl_1_opt_report_drc_0" "report_drc -file reconfigMultiply_drc_opted.rpt -pb reconfigMultiply_drc_opted.pb -rpx reconfigMultiply_drc_opted.rpx"
-  close_msg_db -file opt_design.pb
-} RESULT]
-if {$rc} {
-  step_failed opt_design
-  return -code error $RESULT
-} else {
-  end_step opt_design
-  unset ACTIVE_STEP 
-}
-
-start_step place_design
-set ACTIVE_STEP place_design
-set rc [catch {
-  create_msg_db place_design.pb
-  if { [llength [get_debug_cores -quiet] ] > 0 }  { 
-    implement_debug_core 
-  } 
-  place_design 
-  write_checkpoint -force reconfigMultiply_placed.dcp
-  create_report "child_0_impl_1_place_report_io_0" "report_io -file reconfigMultiply_io_placed.rpt"
-  create_report "child_0_impl_1_place_report_utilization_0" "report_utilization -file reconfigMultiply_utilization_placed.rpt -pb reconfigMultiply_utilization_placed.pb"
-  create_report "child_0_impl_1_place_report_control_sets_0" "report_control_sets -verbose -file reconfigMultiply_control_sets_placed.rpt"
-  close_msg_db -file place_design.pb
-} RESULT]
-if {$rc} {
-  step_failed place_design
-  return -code error $RESULT
-} else {
-  end_step place_design
-  unset ACTIVE_STEP 
-}
-
-start_step phys_opt_design
-set ACTIVE_STEP phys_opt_design
-set rc [catch {
-  create_msg_db phys_opt_design.pb
-  phys_opt_design 
-  write_checkpoint -force reconfigMultiply_physopt.dcp
-  close_msg_db -file phys_opt_design.pb
-} RESULT]
-if {$rc} {
-  step_failed phys_opt_design
-  return -code error $RESULT
-} else {
-  end_step phys_opt_design
-  unset ACTIVE_STEP 
-}
-
-start_step route_design
-set ACTIVE_STEP route_design
-set rc [catch {
-  create_msg_db route_design.pb
-  route_design 
-  write_checkpoint -force reconfigMultiply_routed.dcp
-  create_report "child_0_impl_1_route_report_drc_0" "report_drc -file reconfigMultiply_drc_routed.rpt -pb reconfigMultiply_drc_routed.pb -rpx reconfigMultiply_drc_routed.rpx"
-  create_report "child_0_impl_1_route_report_methodology_0" "report_methodology -file reconfigMultiply_methodology_drc_routed.rpt -pb reconfigMultiply_methodology_drc_routed.pb -rpx reconfigMultiply_methodology_drc_routed.rpx"
-  create_report "child_0_impl_1_route_report_power_0" "report_power -file reconfigMultiply_power_routed.rpt -pb reconfigMultiply_power_summary_routed.pb -rpx reconfigMultiply_power_routed.rpx"
-  create_report "child_0_impl_1_route_report_route_status_0" "report_route_status -file reconfigMultiply_route_status.rpt -pb reconfigMultiply_route_status.pb"
-  create_report "child_0_impl_1_route_report_timing_summary_0" "report_timing_summary -max_paths 10 -file reconfigMultiply_timing_summary_routed.rpt -pb reconfigMultiply_timing_summary_routed.pb -rpx reconfigMultiply_timing_summary_routed.rpx -warn_on_violation "
-  create_report "child_0_impl_1_route_report_incremental_reuse_0" "report_incremental_reuse -file reconfigMultiply_incremental_reuse_routed.rpt"
-  create_report "child_0_impl_1_route_report_clock_utilization_0" "report_clock_utilization -file reconfigMultiply_clock_utilization_routed.rpt"
-  create_report "child_0_impl_1_route_report_bus_skew_0" "report_bus_skew -warn_on_violation -file reconfigMultiply_bus_skew_routed.rpt -pb reconfigMultiply_bus_skew_routed.pb -rpx reconfigMultiply_bus_skew_routed.rpx"
-  write_checkpoint -force -cell mCompute mCompute_float_routed.dcp
-  close_msg_db -file route_design.pb
-} RESULT]
-if {$rc} {
-  write_checkpoint -force reconfigMultiply_routed_error.dcp
-  step_failed route_design
-  return -code error $RESULT
-} else {
-  end_step route_design
+  end_step write_bitstream
   unset ACTIVE_STEP 
 }
 

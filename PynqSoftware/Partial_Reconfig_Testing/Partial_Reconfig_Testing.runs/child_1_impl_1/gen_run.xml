@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="child_1_impl_1" LaunchPart="xc7z020clg400-1" LaunchConfig="config_3" LaunchTime="1592870273">
+<GenRun Id="child_1_impl_1" LaunchPart="xc7z020clg400-1" LaunchConfig="config_3" LaunchTime="1592944167">
   <File Type="BITSTR-BMM" Name="reconfigMultiply_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="reconfigMultiply_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="reconfigMultiply_timing_summary_init.rpt"/>
@@ -125,40 +125,6 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/new/multiplyComputePynq.v">
-      <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../Multiplier/Multiplier.srcs/sources_1/new/multiplyComputePynq.v"/>
-        <Attr Name="ImportTime" Val="1592851528"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/imports/new/multiplyCompute.v">
-      <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../Multiplier/Multiplier.srcs/sources_1/new/multiplyCompute.v"/>
-        <Attr Name="ImportTime" Val="1592851528"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/imports/new/floatmComputePynq.v">
-      <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../Multiplier/Multiplier.srcs/sources_1/new/floatmComputePynq.v"/>
-        <Attr Name="ImportTime" Val="1592851528"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/imports/new/floatmCompute.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="reconfigMultiply"/>
@@ -186,9 +152,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-      <Desc>Default settings for Implementation.</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>

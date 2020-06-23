@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="fixed_synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1592870272">
   <File Type="PA-TCL" Name="fixedmultiplyCompute.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="fixedmultiplyCompute_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="fixedmultiplyCompute_reports.tcl"/>
   <File Type="RDS-RDS" Name="fixedmultiplyCompute.vds"/>
   <File Type="RDS-UTIL" Name="fixedmultiplyCompute_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="fixedmultiplyCompute_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="fixedmultiplyCompute.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="fixedmultiplyCompute_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="fixedmultiplyCompute_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/fixed">
     <File Path="$PSRCDIR/sources_1/imports/new/definitions.h">
       <FileInfo>
@@ -66,9 +63,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>
