@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log integercomputeBlock.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source integercomputeBlock.tcl
+EAStep vivado -log reconfigMultiply.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source reconfigMultiply.tcl

@@ -1,7 +1,7 @@
 `timescale `myTimeScale
 `include "definitions.h" 
 
-module floatcomputeBlockPynq(   Clk,
+module reconfigMultiply(   Clk,
                             dataIn,
                             bufferRD,
                             bufferSelect,
@@ -40,7 +40,7 @@ ParallelBuffer pBuffer (Clk,
                         FULL1
                         );
                                       
-floatmultiplyComputePynq mCompute(
+fixedmultiplyCompute mCompute(
                     .product(product),
                     .multiplier(bufferOutput0),
                     .multiplicand(bufferOutput1),
