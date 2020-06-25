@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"buffer_splitter_wrapper": {
+			"proto_instances": {
+			}
+		}
+	}
+}

@@ -42,6 +42,6 @@ EAStep()
 
 # pre-commands:
 /bin/touch .init_design.begin.rst
-EAStep vivado -log ParallelBuffer.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source ParallelBuffer.tcl -notrace
+EAStep vivado -log reconfigMultiplyBlock.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source reconfigMultiplyBlock.tcl -notrace
 
 

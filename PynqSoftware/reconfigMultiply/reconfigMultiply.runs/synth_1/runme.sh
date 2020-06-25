@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log ParallelBuffer.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ParallelBuffer.tcl
+EAStep vivado -log reconfigMultiplyBlock.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source reconfigMultiplyBlock.tcl

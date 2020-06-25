@@ -16,7 +16,7 @@ input   start,clk,reset;
 output  product;
 output  ready;
 reg ready;
-reg [`inputIndex:0] product;
+reg [`outputIndex:0] product;
 
 
 reg [`mantissaIndex+2:0] product_man;

@@ -18,23 +18,23 @@
 //START_User_Set
 /*#####################################################################################################################################################*/
 //Data/Device Definition
-`define inputWidth 8
-`define myTimeScale 1ns / 1ps
-`define clkPeriod 2
+`define inputWidth          4
+`define myTimeScale         1ns / 1ps
+`define clkPeriod           2
 
 //Xbar Definitions
 `define inputPortCount      4                                   //N
 `define outputPortCount     4                                   //M
 `define addressLength       5                                   //Eventually want to come up with a way to generate this on N and M
-`define selectorLength 2                                   //Eventually want to come up with a way to generate this on number of outputs
+`define selectorLength      2                                   //Eventually want to come up with a way to generate this on number of outputs
 
 //Float Multiply
-`define mantissaIndex       2                                   //Float Multiply definitions = mantissa length-1
-`define expBias             0111                                //Bias for floating point representation
-`define expWide             4
+`define mantissaIndex       0                                   //Float Multiply definitions = mantissa length-1
+`define expBias             01                                //Bias for floating point representation
+`define expWide             2
 
 //Fixed Multiply Definition
-`define fracBitCount        4                                   //Fixed Multiply definitions = number of bits dedicated to fraction
+`define fracBitCount        2                                   //Fixed Multiply definitions = number of bits dedicated to fraction
 
 //Testbench Definitions, data will be truncated to lowest order bits of size `inputWidth
 `define dataIn1             1

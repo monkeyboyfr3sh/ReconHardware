@@ -23,7 +23,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log ParallelBuffer.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source ParallelBuffer.tcl" );
+         "-log reconfigMultiplyBlock.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source reconfigMultiplyBlock.tcl" );
 
 
 

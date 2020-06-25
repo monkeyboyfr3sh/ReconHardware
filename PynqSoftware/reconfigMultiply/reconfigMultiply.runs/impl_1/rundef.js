@@ -25,7 +25,7 @@ eval( EAInclude(ISEJScriptLib) );
 // pre-commands:
 ISETouchFile( "init_design", "begin" );
 ISEStep( "vivado",
-         "-log ParallelBuffer.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source ParallelBuffer.tcl -notrace" );
+         "-log reconfigMultiplyBlock.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source reconfigMultiplyBlock.tcl -notrace" );
 
 
 

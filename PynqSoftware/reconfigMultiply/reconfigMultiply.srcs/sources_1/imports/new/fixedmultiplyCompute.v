@@ -17,7 +17,7 @@ output  product;
 output  ready;
 
 reg ready;
-reg [`multiplyIndex:0] product;
+reg [`outputIndex:0] product;
 
 integer       i; 
 //Chopping off the sign bit

@@ -1,0 +1,650 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Thu Jun 25 11:39:11 2020
+# Process ID: 44720
+# Current directory: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent43932 C:\Users\monke\Documents\GitHub\ReconHardware\PynqSoftware\reconfigMultiply\reconfigMultiply.xpr
+# Log file: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/vivado.log
+# Journal file: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'.
+open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:09 . Memory (MB): peak = 1190.066 ; gain = 518.523
+INFO: [IP_Flow 19-5107] Inferred bus interface 'Rst' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'Clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'Clk': Added interface parameter 'ASSOCIATED_RESET' with value 'Rst'.
+WARNING: [IP_Flow 19-3153] Bus Interface 'Clk': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/sources_1/bd/buffer_splitter_wrapper/buffer_splitter_wrapper.bd}
+Adding component instance block -- xilinx.com:module_ref:ParallelBuffer:1.0 - ParallelBuffer_0
+Adding component instance block -- xilinx.com:module_ref:dataSplit:1.0 - dataSplit_0
+Successfully read diagram <buffer_splitter_wrapper> from BD file <C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/sources_1/bd/buffer_splitter_wrapper/buffer_splitter_wrapper.bd>
+open_bd_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 1264.957 ; gain = 72.113
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+Wrote  : <C:\Users\monke\Documents\GitHub\ReconHardware\PynqSoftware\reconfigMultiply\reconfigMultiply.srcs\sources_1\bd\buffer_splitter_wrapper\buffer_splitter_wrapper.bd> 
+Wrote  : <C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/sources_1/bd/buffer_splitter_wrapper/ui/bd_992290da.ui> 
+VHDL Output written to : C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/sources_1/bd/buffer_splitter_wrapper/synth/buffer_splitter_wrapper.v
+VHDL Output written to : C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/sources_1/bd/buffer_splitter_wrapper/sim/buffer_splitter_wrapper.v
+VHDL Output written to : C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/sources_1/bd/buffer_splitter_wrapper/hdl/buffer_splitter_wrapper_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block dataSplit_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ParallelBuffer_0 .
+Exporting to file C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/sources_1/bd/buffer_splitter_wrapper/hw_handoff/buffer_splitter_wrapper.hwh
+Generated Block Design Tcl file C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/sources_1/bd/buffer_splitter_wrapper/hw_handoff/buffer_splitter_wrapper_bd.tcl
+Generated Hardware Definition File C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/sources_1/bd/buffer_splitter_wrapper/synth/buffer_splitter_wrapper.hwdef
+[Thu Jun 25 11:47:01 2020] Launched synth_1...
+Run output will be captured here: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Thu Jun 25 11:47:51 2020] Launched synth_1...
+Run output will be captured here: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.runs/synth_1/runme.log
+create_partition_def -name reconfigMultiply -module multiplyCompute
+create_reconfig_module -name multiplyCompute -partition_def [get_partition_defs reconfigMultiply ]  -define_from multiplyCompute
+INFO: [Vivado 12-2924] Copying file 'C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/sources_1/imports/new/definitions.h' from fileset 'sources_1' to fileset 'multiplyCompute'.
+INFO: [Vivado 12-2924] Copying file 'C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/sources_1/imports/new/definitions.h' from fileset 'sources_1' to fileset 'multiplyCompute'.
+INFO: [Vivado 12-2924] Moving file 'C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/sources_1/imports/new/multiplyCompute.v' from fileset 'sources_1' to fileset 'multiplyCompute'.
+INFO: [Vivado 12-2924] Copying file 'C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/sources_1/imports/new/definitions.h' from fileset 'sources_1' to fileset 'multiplyCompute'.
+CRITICAL WARNING: [filemgmt 20-937] The given source file is already part of the fileset 'multiplyCompute'. Requested source 'C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/sources_1/imports/new/definitions.h' will not be added.
+CRITICAL WARNING: [filemgmt 20-937] The given source file is already part of the fileset 'multiplyCompute'. Requested source 'C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/sources_1/imports/new/definitions.h' will not be added.
+create_reconfig_module: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1442.062 ; gain = 10.422
+update_compile_order -fileset multiplyCompute
+set_property name integerCompute [get_reconfig_modules multiplyCompute]
+create_reconfig_module -name integerComputePynq -partition_def [get_partition_defs reconfigMultiply ] 
+import_files -norecurse C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/sources_1/imports/new/definitions.h C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/sources_1/imports/new/multiplyComputePynq.v  -of_objects [get_reconfig_modules integerComputePynq]
+create_reconfig_module -name floatCompute -partition_def [get_partition_defs reconfigMultiply ] 
+import_files -norecurse C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/sources_1/imports/new/definitions.h C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/sources_1/imports/new/floatmCompute.v  -of_objects [get_reconfig_modules floatCompute]
+create_reconfig_module -name floatComputePynq -partition_def [get_partition_defs reconfigMultiply ] 
+import_files -norecurse C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/sources_1/imports/new/definitions.h C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/sources_1/imports/new/floatmComputePynq.v  -of_objects [get_reconfig_modules floatComputePynq]
+create_reconfig_module -name fixedCompute -partition_def [get_partition_defs reconfigMultiply ] 
+import_files -norecurse C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/sources_1/imports/new/definitions.h C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/sources_1/imports/new/fixedmultiplyCompute.v  -of_objects [get_reconfig_modules fixedCompute]
+create_pr_configuration -name config_1 -partitions [list mCompute:integerCompute ]
+create_pr_configuration -name config_2 -partitions [list mCompute:integerComputePynq ]
+create_pr_configuration -name config_3 -partitions [list mCompute:floatCompute ]
+create_pr_configuration -name config_4 -partitions [list mCompute:floatComputePynq ]
+create_pr_configuration -name config_5 -partitions [list mCompute:fixedCompute ]
+create_pr_configuration -name config_6 -partitions { }  -greyboxes [list mCompute ]
+set_property PR_CONFIGURATION config_1 [get_runs impl_1]
+create_run child_0_impl_1 -parent_run impl_1 -flow {Vivado Implementation 2019} -pr_config config_2
+Run is defaulting to parent run srcset: sources_1
+Run is defaulting to parent run constrset: constrs_1
+Run is defaulting to parent run part: xc7z020clg400-1
+create_run child_1_impl_1 -parent_run impl_1 -flow {Vivado Implementation 2019} -pr_config config_3
+Run is defaulting to parent run srcset: sources_1
+Run is defaulting to parent run constrset: constrs_1
+Run is defaulting to parent run part: xc7z020clg400-1
+create_run child_2_impl_1 -parent_run impl_1 -flow {Vivado Implementation 2019} -pr_config config_4
+Run is defaulting to parent run srcset: sources_1
+Run is defaulting to parent run constrset: constrs_1
+Run is defaulting to parent run part: xc7z020clg400-1
+create_run child_3_impl_1 -parent_run impl_1 -flow {Vivado Implementation 2019} -pr_config config_5
+Run is defaulting to parent run srcset: sources_1
+Run is defaulting to parent run constrset: constrs_1
+Run is defaulting to parent run part: xc7z020clg400-1
+create_run child_4_impl_1 -parent_run impl_1 -flow {Vivado Implementation 2019} -pr_config config_6
+Run is defaulting to parent run srcset: sources_1
+Run is defaulting to parent run constrset: constrs_1
+Run is defaulting to parent run part: xc7z020clg400-1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Thu Jun 25 11:53:16 2020] Launched integerCompute_synth_1, integerComputePynq_synth_1, floatCompute_synth_1, floatComputePynq_synth_1, fixedCompute_synth_1...
+Run output will be captured here:
+integerCompute_synth_1: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.runs/integerCompute_synth_1/runme.log
+integerComputePynq_synth_1: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.runs/integerComputePynq_synth_1/runme.log
+floatCompute_synth_1: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.runs/floatCompute_synth_1/runme.log
+floatComputePynq_synth_1: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.runs/floatComputePynq_synth_1/runme.log
+fixedCompute_synth_1: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.runs/fixedCompute_synth_1/runme.log
+[Thu Jun 25 11:53:16 2020] Launched synth_1...
+Run output will be captured here: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.runs/synth_1/runme.log
+open_run synth_1 -name synth_1 -pr_config [current_pr_configuration]
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z020clg400-1
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-454] Reading design checkpoint 'C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.runs/integerCompute_synth_1/multiplyCompute.dcp' for cell 'mCompute'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/sources_1/bd/buffer_splitter_wrapper/ip/buffer_splitter_wrapper_ParallelBuffer_0_0/buffer_splitter_wrapper_ParallelBuffer_0_0.dcp' for cell 'pbuffer_splitter/ParallelBuffer_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/sources_1/bd/buffer_splitter_wrapper/ip/buffer_splitter_wrapper_dataSplit_0_0/buffer_splitter_wrapper_dataSplit_0_0.dcp' for cell 'pbuffer_splitter/dataSplit_0'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1632.949 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 10 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-141] Inserted 1 OBUFs to IO ports without IO buffers.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1710.430 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 1880.562 ; gain = 410.344
+add_files -fileset constrs_1 -norecurse C:/Users/monke/Downloads/davidsThing.xpr/davidsThing/davidsThing.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc
+import_files -fileset constrs_1 C:/Users/monke/Downloads/davidsThing.xpr/davidsThing/davidsThing.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Thu Jun 25 11:58:01 2020] Launched synth_1...
+Run output will be captured here: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.runs/synth_1/runme.log
+close_design
+open_run synth_1 -name synth_1 -pr_config [current_pr_configuration]
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z020clg400-1
+INFO: [Project 1-454] Reading design checkpoint 'C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.runs/integerCompute_synth_1/multiplyCompute.dcp' for cell 'mCompute'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/sources_1/bd/buffer_splitter_wrapper/ip/buffer_splitter_wrapper_ParallelBuffer_0_0/buffer_splitter_wrapper_ParallelBuffer_0_0.dcp' for cell 'pbuffer_splitter/ParallelBuffer_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/sources_1/bd/buffer_splitter_wrapper/ip/buffer_splitter_wrapper_dataSplit_0_0/buffer_splitter_wrapper_dataSplit_0_0.dcp' for cell 'pbuffer_splitter/dataSplit_0'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2360.551 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 10 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-141] Inserted 1 OBUFs to IO ports without IO buffers.
+Parsing XDC File [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc]
+WARNING: [Vivado 12-584] No ports matched 'dataIn[3]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:224]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:224]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataIn[2]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:225]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:225]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataIn[1]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:226]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:226]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataIn[0]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:227]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:227]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataIn[3]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:243]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:243]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataIn[2]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:244]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:244]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataIn[1]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:245]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:245]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataIn[0]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:246]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:246]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataIn[3]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:259]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:259]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataIn[2]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:260]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:260]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataIn[1]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:261]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:261]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataIn[0]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:262]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:262]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2360.637 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+set_property IOSTANDARD LVCMOS33 [get_ports [list {dataOut[7]} {dataOut[6]} {dataOut[5]} {dataOut[4]} {dataOut[3]} {dataOut[2]} {dataOut[1]} {dataOut[0]}]]
+update_module_reference buffer_splitter_wrapper_ParallelBuffer_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'Rst' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'Clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'Clk': Added interface parameter 'ASSOCIATED_RESET' with value 'Rst'.
+WARNING: [IP_Flow 19-3153] Bus Interface 'Clk': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/sources_1/bd/buffer_splitter_wrapper/buffer_splitter_wrapper.bd'
+INFO: [IP_Flow 19-1972] Upgraded buffer_splitter_wrapper_ParallelBuffer_0_0 from ParallelBuffer_v1_0 1.0 to ParallelBuffer_v1_0 1.0
+WARNING: [IP_Flow 19-4706] Upgraded port 'dataIn' width 4 differs from original width 8
+WARNING: [IP_Flow 19-4706] Upgraded port 'dataOut0' width 4 differs from original width 8
+WARNING: [IP_Flow 19-4706] Upgraded port 'dataOut1' width 4 differs from original width 8
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'buffer_splitter_wrapper_ParallelBuffer_0_0'. These changes may impact your design.
+CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'buffer_splitter_wrapper_ParallelBuffer_0_0' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.
+Wrote  : <C:\Users\monke\Documents\GitHub\ReconHardware\PynqSoftware\reconfigMultiply\reconfigMultiply.srcs\sources_1\bd\buffer_splitter_wrapper\buffer_splitter_wrapper.bd> 
+Wrote  : <C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/sources_1/bd/buffer_splitter_wrapper/ui/bd_992290da.ui> 
+update_module_reference: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 2561.043 ; gain = 5.074
+update_module_reference buffer_splitter_wrapper_dataSplit_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'Rst' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'Clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'Clk': Added interface parameter 'ASSOCIATED_RESET' with value 'Rst'.
+WARNING: [IP_Flow 19-3153] Bus Interface 'Clk': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/sources_1/bd/buffer_splitter_wrapper/buffer_splitter_wrapper.bd'
+INFO: [IP_Flow 19-3420] Updated buffer_splitter_wrapper_dataSplit_0_0 to use current project options
+WARNING: [IP_Flow 19-4706] Upgraded port 'dataIn' width 8 differs from original width 16
+WARNING: [IP_Flow 19-4706] Upgraded port 'dataOut' width 4 differs from original width 8
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'buffer_splitter_wrapper_dataSplit_0_0'. These changes may impact your design.
+CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'buffer_splitter_wrapper_dataSplit_0_0' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.
+Wrote  : <C:\Users\monke\Documents\GitHub\ReconHardware\PynqSoftware\reconfigMultiply\reconfigMultiply.srcs\sources_1\bd\buffer_splitter_wrapper\buffer_splitter_wrapper.bd> 
+Wrote  : <C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/sources_1/bd/buffer_splitter_wrapper/ui/bd_992290da.ui> 
+reset_run integerCompute_synth_1
+set_property target_constrs_file C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc [current_fileset -constrset]
+save_constraints -force
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+Wrote  : <C:\Users\monke\Documents\GitHub\ReconHardware\PynqSoftware\reconfigMultiply\reconfigMultiply.srcs\sources_1\bd\buffer_splitter_wrapper\buffer_splitter_wrapper.bd> 
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/ParallelBuffer_0/dataIn'(4) to net 'dataIn_0_1'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/dataSplit_0/dataIn'(8) to net 'dataIn_0_2'(16) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/sources_1/bd/buffer_splitter_wrapper/synth/buffer_splitter_wrapper.v
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/ParallelBuffer_0/dataIn'(4) to net 'dataIn_0_1'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/dataSplit_0/dataIn'(8) to net 'dataIn_0_2'(16) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/sources_1/bd/buffer_splitter_wrapper/sim/buffer_splitter_wrapper.v
+VHDL Output written to : C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/sources_1/bd/buffer_splitter_wrapper/hdl/buffer_splitter_wrapper_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block dataSplit_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ParallelBuffer_0 .
+Exporting to file C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/sources_1/bd/buffer_splitter_wrapper/hw_handoff/buffer_splitter_wrapper.hwh
+Generated Block Design Tcl file C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/sources_1/bd/buffer_splitter_wrapper/hw_handoff/buffer_splitter_wrapper_bd.tcl
+Generated Hardware Definition File C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/sources_1/bd/buffer_splitter_wrapper/synth/buffer_splitter_wrapper.hwdef
+[Thu Jun 25 12:02:02 2020] Launched integerCompute_synth_1, buffer_splitter_wrapper_ParallelBuffer_0_0_synth_1, buffer_splitter_wrapper_dataSplit_0_0_synth_1...
+Run output will be captured here:
+integerCompute_synth_1: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.runs/integerCompute_synth_1/runme.log
+buffer_splitter_wrapper_ParallelBuffer_0_0_synth_1: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.runs/buffer_splitter_wrapper_ParallelBuffer_0_0_synth_1/runme.log
+buffer_splitter_wrapper_dataSplit_0_0_synth_1: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.runs/buffer_splitter_wrapper_dataSplit_0_0_synth_1/runme.log
+[Thu Jun 25 12:02:02 2020] Launched synth_1...
+Run output will be captured here: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.runs/synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 2561.797 ; gain = 0.000
+delete_bd_objs [get_bd_nets dataIn_0_2] [get_bd_ports product_LONG]
+reset_run synth_1
+startgroup
+make_bd_pins_external  [get_bd_pins dataSplit_0/dataIn]
+endgroup
+save_bd_design
+Wrote  : <C:\Users\monke\Documents\GitHub\ReconHardware\PynqSoftware\reconfigMultiply\reconfigMultiply.srcs\sources_1\bd\buffer_splitter_wrapper\buffer_splitter_wrapper.bd> 
+Wrote  : <C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/sources_1/bd/buffer_splitter_wrapper/ui/bd_992290da.ui> 
+set_property name product_LONG [get_bd_ports dataIn_0]
+save_bd_design
+Wrote  : <C:\Users\monke\Documents\GitHub\ReconHardware\PynqSoftware\reconfigMultiply\reconfigMultiply.srcs\sources_1\bd\buffer_splitter_wrapper\buffer_splitter_wrapper.bd> 
+Wrote  : <C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/sources_1/bd/buffer_splitter_wrapper/ui/bd_992290da.ui> 
+launch_runs synth_1 -jobs 4
+Wrote  : <C:\Users\monke\Documents\GitHub\ReconHardware\PynqSoftware\reconfigMultiply\reconfigMultiply.srcs\sources_1\bd\buffer_splitter_wrapper\buffer_splitter_wrapper.bd> 
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/ParallelBuffer_0/dataIn'(4) to net 'dataIn_0_1'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/sources_1/bd/buffer_splitter_wrapper/synth/buffer_splitter_wrapper.v
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/ParallelBuffer_0/dataIn'(4) to net 'dataIn_0_1'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/sources_1/bd/buffer_splitter_wrapper/sim/buffer_splitter_wrapper.v
+VHDL Output written to : C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/sources_1/bd/buffer_splitter_wrapper/hdl/buffer_splitter_wrapper_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block dataSplit_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ParallelBuffer_0 .
+Exporting to file C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/sources_1/bd/buffer_splitter_wrapper/hw_handoff/buffer_splitter_wrapper.hwh
+Generated Block Design Tcl file C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/sources_1/bd/buffer_splitter_wrapper/hw_handoff/buffer_splitter_wrapper_bd.tcl
+Generated Hardware Definition File C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/sources_1/bd/buffer_splitter_wrapper/synth/buffer_splitter_wrapper.hwdef
+[Thu Jun 25 12:03:25 2020] Launched synth_1...
+Run output will be captured here: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.runs/synth_1/runme.log
+set_msg_config -suppress -id {filemgmt 20-937} -string {{CRITICAL WARNING: [filemgmt 20-937] The given source file is already part of the fileset 'multiplyCompute'. Requested source 'C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/sources_1/imports/new/definitions.h' will not be added.} } 
+set_msg_config -suppress -id {Coretcl 2-1280} -string {{CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'buffer_splitter_wrapper_dataSplit_0_0' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.} } 
+set_msg_config -suppress -id {Coretcl 2-1280} -string {{CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'buffer_splitter_wrapper_ParallelBuffer_0_0' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.} } 
+close_design
+open_run synth_1 -name synth_1 -pr_config [current_pr_configuration]
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z020clg400-1
+INFO: [Project 1-454] Reading design checkpoint 'C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.runs/integerCompute_synth_1/multiplyCompute.dcp' for cell 'mCompute'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/sources_1/bd/buffer_splitter_wrapper/ip/buffer_splitter_wrapper_ParallelBuffer_0_0/buffer_splitter_wrapper_ParallelBuffer_0_0.dcp' for cell 'pbuffer_splitter/ParallelBuffer_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/sources_1/bd/buffer_splitter_wrapper/ip/buffer_splitter_wrapper_dataSplit_0_0/buffer_splitter_wrapper_dataSplit_0_0.dcp' for cell 'pbuffer_splitter/dataSplit_0'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2974.305 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-141] Inserted 1 OBUFs to IO ports without IO buffers.
+Parsing XDC File [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc]
+WARNING: [Vivado 12-584] No ports matched 'dataOut[7]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:202]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:202]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataOut[6]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:203]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:203]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataOut[5]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:204]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:204]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataOut[4]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:205]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:205]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataOut[7]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:210]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:210]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataOut[6]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:211]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:211]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataOut[5]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:212]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:212]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataOut[4]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:213]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:213]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataIn[3]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:220]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:220]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataIn[2]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:221]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:221]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataIn[1]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:222]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:222]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataIn[0]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:223]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:223]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataIn[3]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:239]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:239]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataIn[2]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:240]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:240]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataIn[1]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:241]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:241]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataIn[0]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:242]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:242]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataIn[3]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:251]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:251]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataIn[2]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:252]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:252]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataIn[1]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:253]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:253]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataIn[0]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:254]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:254]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataOut[7]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:268]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:268]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataOut[6]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:269]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:269]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataOut[5]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:270]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:270]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataOut[4]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:271]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:271]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataOut[7]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:276]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:276]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataOut[6]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:277]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:277]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataOut[5]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:278]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:278]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataOut[4]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:279]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:279]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2974.305 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+set_property IOSTANDARD LVCMOS33 [get_ports [list {dataInput[3]} {dataInput[2]} {dataInput[1]} {dataInput[0]}]]
+place_ports {dataInput[3]} T14
+place_ports {dataInput[2]} U12
+place_ports {dataInput[1]} U13
+place_ports {dataInput[0]} V13
+save_constraints
+startgroup
+set_property package_pin "" [get_ports [list  Rst]]
+place_ports Clk D19
+endgroup
+place_ports Clk U17
+set_property package_pin "" [get_ports [list  Rst]]
+place_ports Rst D19
+save_constraints
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Thu Jun 25 12:06:53 2020] Launched synth_1...
+Run output will be captured here: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.runs/synth_1/runme.log
+close_design
+reset_run synth_1
+delete_bd_objs [get_bd_nets dataIn_0_1] [get_bd_ports dataIn]
+startgroup
+make_bd_pins_external  [get_bd_pins ParallelBuffer_0/dataIn]
+endgroup
+set_property name dataIn [get_bd_ports dataIn_0]
+save_bd_design
+Wrote  : <C:\Users\monke\Documents\GitHub\ReconHardware\PynqSoftware\reconfigMultiply\reconfigMultiply.srcs\sources_1\bd\buffer_splitter_wrapper\buffer_splitter_wrapper.bd> 
+Wrote  : <C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/sources_1/bd/buffer_splitter_wrapper/ui/bd_992290da.ui> 
+launch_runs synth_1 -jobs 4
+Wrote  : <C:\Users\monke\Documents\GitHub\ReconHardware\PynqSoftware\reconfigMultiply\reconfigMultiply.srcs\sources_1\bd\buffer_splitter_wrapper\buffer_splitter_wrapper.bd> 
+VHDL Output written to : C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/sources_1/bd/buffer_splitter_wrapper/synth/buffer_splitter_wrapper.v
+VHDL Output written to : C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/sources_1/bd/buffer_splitter_wrapper/sim/buffer_splitter_wrapper.v
+VHDL Output written to : C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/sources_1/bd/buffer_splitter_wrapper/hdl/buffer_splitter_wrapper_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block dataSplit_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ParallelBuffer_0 .
+Exporting to file C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/sources_1/bd/buffer_splitter_wrapper/hw_handoff/buffer_splitter_wrapper.hwh
+Generated Block Design Tcl file C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/sources_1/bd/buffer_splitter_wrapper/hw_handoff/buffer_splitter_wrapper_bd.tcl
+Generated Hardware Definition File C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/sources_1/bd/buffer_splitter_wrapper/synth/buffer_splitter_wrapper.hwdef
+[Thu Jun 25 12:07:54 2020] Launched synth_1...
+Run output will be captured here: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.runs/synth_1/runme.log
+open_run synth_1 -name synth_1 -pr_config [current_pr_configuration]
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z020clg400-1
+INFO: [Project 1-454] Reading design checkpoint 'C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.runs/integerCompute_synth_1/multiplyCompute.dcp' for cell 'mCompute'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/sources_1/bd/buffer_splitter_wrapper/ip/buffer_splitter_wrapper_ParallelBuffer_0_0/buffer_splitter_wrapper_ParallelBuffer_0_0.dcp' for cell 'pbuffer_splitter/ParallelBuffer_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/sources_1/bd/buffer_splitter_wrapper/ip/buffer_splitter_wrapper_dataSplit_0_0/buffer_splitter_wrapper_dataSplit_0_0.dcp' for cell 'pbuffer_splitter/dataSplit_0'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2974.305 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-141] Inserted 1 OBUFs to IO ports without IO buffers.
+Parsing XDC File [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc]
+WARNING: [Vivado 12-584] No ports matched 'dataOut[7]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:202]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:202]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataOut[6]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:203]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:203]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataOut[5]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:204]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:204]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataOut[4]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:205]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:205]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataOut[7]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:210]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:210]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataOut[6]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:211]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:211]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataOut[5]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:212]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:212]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataOut[4]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:213]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:213]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataIn[3]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:220]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:220]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataIn[2]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:221]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:221]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataIn[1]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:222]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:222]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataIn[0]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:223]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:223]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataIn[3]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:238]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:238]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataIn[2]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:239]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:239]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataIn[1]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:240]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:240]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataIn[0]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:241]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:241]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataIn[3]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:250]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:250]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataIn[2]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:251]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:251]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataIn[1]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:252]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:252]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataIn[0]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:253]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:253]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataOut[7]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:267]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:267]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataOut[6]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:268]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:268]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataOut[5]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:269]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:269]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataOut[4]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:270]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:270]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataOut[7]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:271]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:271]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataOut[6]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:272]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:272]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataOut[5]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:273]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:273]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dataOut[4]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:274]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:274]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2974.305 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+set_msg_config -suppress -id {BD 41-1228} -string {{CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/ParallelBuffer_0/dataIn'(4) to net 'dataIn_0_1'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.} } 
+set_msg_config -suppress -id {BD 41-1228} -string {{CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/dataSplit_0/dataIn'(8) to net 'dataIn_0_2'(16) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.} } 
+set_msg_config -suppress -id {Common 17-55} -string {{CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:202]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.} } 
+set_msg_config -suppress -id {Common 17-55} 
+launch_runs impl_1 child_0_impl_1 child_1_impl_1 child_2_impl_1 child_3_impl_1 child_4_impl_1 -jobs 4
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2974.305 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 2974.305 ; gain = 0.000
+[Thu Jun 25 12:11:08 2020] Launched impl_1...
+Run output will be captured here: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.runs/impl_1/runme.log
+[Thu Jun 25 12:11:08 2020] Launched impl_1, child_0_impl_1, child_1_impl_1, child_2_impl_1, child_3_impl_1, child_4_impl_1...
+Run output will be captured here:
+impl_1: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.runs/impl_1/runme.log
+child_0_impl_1: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.runs/child_0_impl_1/runme.log
+child_1_impl_1: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.runs/child_1_impl_1/runme.log
+child_2_impl_1: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.runs/child_2_impl_1/runme.log
+child_3_impl_1: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.runs/child_3_impl_1/runme.log
+child_4_impl_1: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.runs/child_4_impl_1/runme.log
+reset_run integerCompute_synth_1
+reset_run integerComputePynq_synth_1
+reset_run impl_1
+launch_runs impl_1 child_0_impl_1 child_1_impl_1 child_2_impl_1 child_3_impl_1 child_4_impl_1 -jobs 4
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Thu Jun 25 12:15:17 2020] Launched integerCompute_synth_1, integerComputePynq_synth_1, impl_1...
+Run output will be captured here:
+integerCompute_synth_1: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.runs/integerCompute_synth_1/runme.log
+integerComputePynq_synth_1: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.runs/integerComputePynq_synth_1/runme.log
+impl_1: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.runs/impl_1/runme.log
+[Thu Jun 25 12:15:17 2020] Launched impl_1, child_0_impl_1, child_1_impl_1, child_2_impl_1, child_3_impl_1, child_4_impl_1...
+Run output will be captured here:
+impl_1: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.runs/impl_1/runme.log
+child_0_impl_1: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.runs/child_0_impl_1/runme.log
+child_1_impl_1: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.runs/child_1_impl_1/runme.log
+child_2_impl_1: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.runs/child_2_impl_1/runme.log
+child_3_impl_1: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.runs/child_3_impl_1/runme.log
+child_4_impl_1: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.runs/child_4_impl_1/runme.log
+report_utilization -name utilization_1
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/sources_1/bd/buffer_splitter_wrapper/buffer_splitter_wrapper.bd]
+refresh_design
+INFO: [Project 1-454] Reading design checkpoint 'C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.runs/integerCompute_synth_1/multiplyCompute.dcp' for cell 'mCompute'
+ERROR: [Netlist 29-77] Could not replace (cell 'multiplyCompute', library 'work', file 'NOFILE') with (cell 'multiplyCompute', library 'work', file 'multiplyCompute.edf') because of a port interface mismatch; these ports are missing on the replacing cell: 'product[7]' 'product[6]' 'product[5]' 'product[4]'.
+Resolution: Modify RTL to reference correct ports from the netlist
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/sources_1/bd/buffer_splitter_wrapper/buffer_splitter_wrapper.bd]
+refresh_design
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc]
+WARNING: [Vivado 12-584] No ports matched 'dataOut[7]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:202]
+WARNING: [Vivado 12-584] No ports matched 'dataOut[6]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:203]
+WARNING: [Vivado 12-584] No ports matched 'dataOut[5]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:204]
+WARNING: [Vivado 12-584] No ports matched 'dataOut[4]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:205]
+WARNING: [Vivado 12-584] No ports matched 'dataOut[7]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:210]
+WARNING: [Vivado 12-584] No ports matched 'dataOut[6]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:211]
+WARNING: [Vivado 12-584] No ports matched 'dataOut[5]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:212]
+WARNING: [Vivado 12-584] No ports matched 'dataOut[4]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:213]
+WARNING: [Vivado 12-584] No ports matched 'dataIn[3]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:220]
+WARNING: [Vivado 12-584] No ports matched 'dataIn[2]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:221]
+WARNING: [Vivado 12-584] No ports matched 'dataIn[1]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:222]
+WARNING: [Vivado 12-584] No ports matched 'dataIn[0]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:223]
+WARNING: [Vivado 12-584] No ports matched 'dataIn[3]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:238]
+WARNING: [Vivado 12-584] No ports matched 'dataIn[2]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:239]
+WARNING: [Vivado 12-584] No ports matched 'dataIn[1]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:240]
+WARNING: [Vivado 12-584] No ports matched 'dataIn[0]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:241]
+WARNING: [Vivado 12-584] No ports matched 'dataIn[3]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:250]
+WARNING: [Vivado 12-584] No ports matched 'dataIn[2]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:251]
+WARNING: [Vivado 12-584] No ports matched 'dataIn[1]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:252]
+WARNING: [Vivado 12-584] No ports matched 'dataIn[0]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:253]
+WARNING: [Vivado 12-584] No ports matched 'dataOut[7]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:267]
+WARNING: [Vivado 12-584] No ports matched 'dataOut[6]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:268]
+WARNING: [Vivado 12-584] No ports matched 'dataOut[5]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:269]
+WARNING: [Vivado 12-584] No ports matched 'dataOut[4]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:270]
+WARNING: [Vivado 12-584] No ports matched 'dataOut[7]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:271]
+WARNING: [Vivado 12-584] No ports matched 'dataOut[6]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:272]
+WARNING: [Vivado 12-584] No ports matched 'dataOut[5]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:273]
+WARNING: [Vivado 12-584] No ports matched 'dataOut[4]'. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:274]
+Finished Parsing XDC File [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+reset_run impl_1
+launch_runs impl_1 child_0_impl_1 child_1_impl_1 child_2_impl_1 child_3_impl_1 child_4_impl_1 -jobs 4
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3107.094 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 3107.094 ; gain = 0.000
+[Thu Jun 25 12:16:26 2020] Launched impl_1...
+Run output will be captured here: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.runs/impl_1/runme.log
+[Thu Jun 25 12:16:26 2020] Launched impl_1, child_0_impl_1, child_1_impl_1, child_2_impl_1, child_3_impl_1, child_4_impl_1...
+Run output will be captured here:
+impl_1: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.runs/impl_1/runme.log
+child_0_impl_1: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.runs/child_0_impl_1/runme.log
+child_1_impl_1: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.runs/child_1_impl_1/runme.log
+child_2_impl_1: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.runs/child_2_impl_1/runme.log
+child_3_impl_1: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.runs/child_3_impl_1/runme.log
+child_4_impl_1: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.runs/child_4_impl_1/runme.log
+delete_runs "child_0_impl_1 child_1_impl_1 child_2_impl_1 child_3_impl_1 child_4_impl_1"
+create_run child_0_impl_1 -parent_run impl_1 -flow {Vivado Implementation 2019} -pr_config config_2
+Run is defaulting to parent run srcset: sources_1
+Run is defaulting to parent run constrset: constrs_1
+Run is defaulting to parent run part: xc7z020clg400-1
+create_run child_1_impl_1 -parent_run impl_1 -flow {Vivado Implementation 2019} -pr_config config_3
+Run is defaulting to parent run srcset: sources_1
+Run is defaulting to parent run constrset: constrs_1
+Run is defaulting to parent run part: xc7z020clg400-1
+create_run child_2_impl_1 -parent_run impl_1 -flow {Vivado Implementation 2019} -pr_config config_4
+Run is defaulting to parent run srcset: sources_1
+Run is defaulting to parent run constrset: constrs_1
+Run is defaulting to parent run part: xc7z020clg400-1
+create_run child_3_impl_1 -parent_run impl_1 -flow {Vivado Implementation 2019} -pr_config config_5
+Run is defaulting to parent run srcset: sources_1
+Run is defaulting to parent run constrset: constrs_1
+Run is defaulting to parent run part: xc7z020clg400-1
+create_run child_4_impl_1 -parent_run impl_1 -flow {Vivado Implementation 2019} -pr_config config_6
+Run is defaulting to parent run srcset: sources_1
+Run is defaulting to parent run constrset: constrs_1
+Run is defaulting to parent run part: xc7z020clg400-1
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Jun 25 12:19:46 2020...
