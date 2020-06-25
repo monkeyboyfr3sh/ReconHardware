@@ -2,11 +2,13 @@
 
 module inputOutput(
     inputPort,
+    invert,
     outputPort
     );
 input   [3:0]   inputPort;
+input           invert;
 output  [3:0]   outputPort;
 
-assign outputPort = inputPort;
+assign outputPort = invert?inputPort:!inputPort;
     
 endmodule

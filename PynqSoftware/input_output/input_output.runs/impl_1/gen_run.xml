@@ -1,79 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1593043008">
-  <File Type="BITSTR-BMM" Name="inputOutput_bd.bmm"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="inputOutput_methodology_drc_opted.rpt"/>
-  <File Type="INIT-TIMING" Name="inputOutput_timing_summary_init.rpt"/>
-  <File Type="ROUTE-PWR" Name="inputOutput_power_routed.rpt"/>
-  <File Type="PA-TCL" Name="inputOutput.tcl"/>
-  <File Type="OPT-TIMING" Name="inputOutput_timing_summary_opted.rpt"/>
-  <File Type="OPT-DCP" Name="inputOutput_opt.dcp"/>
-  <File Type="ROUTE-PWR-SUM" Name="inputOutput_power_summary_routed.pb"/>
-  <File Type="REPORTS-TCL" Name="inputOutput_reports.tcl"/>
-  <File Type="OPT-DRC" Name="inputOutput_drc_opted.rpt"/>
-  <File Type="OPT-HWDEF" Name="inputOutput.hwdef"/>
-  <File Type="PWROPT-DCP" Name="inputOutput_pwropt.dcp"/>
-  <File Type="PWROPT-DRC" Name="inputOutput_drc_pwropted.rpt"/>
-  <File Type="PWROPT-TIMING" Name="inputOutput_timing_summary_pwropted.rpt"/>
-  <File Type="PLACE-DCP" Name="inputOutput_placed.dcp"/>
-  <File Type="PLACE-IO" Name="inputOutput_io_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="inputOutput_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL" Name="inputOutput_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="inputOutput_utilization_placed.pb"/>
-  <File Type="PLACE-CTRL" Name="inputOutput_control_sets_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="inputOutput_incremental_reuse_placed.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="inputOutput_incremental_reuse_pre_placed.rpt"/>
-  <File Type="PLACE-TIMING" Name="inputOutput_timing_summary_placed.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="inputOutput_postplace_pwropt.dcp"/>
-  <File Type="BG-BIN" Name="inputOutput.bin"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="inputOutput_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="PHYSOPT-DCP" Name="inputOutput_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="inputOutput_drc_physopted.rpt"/>
-  <File Type="BITSTR-MSK" Name="inputOutput.msk"/>
-  <File Type="PHYSOPT-TIMING" Name="inputOutput_timing_summary_physopted.rpt"/>
-  <File Type="ROUTE-ERROR-DCP" Name="inputOutput_routed_error.dcp"/>
-  <File Type="ROUTE-DCP" Name="inputOutput_routed.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="inputOutput_routed_bb.dcp"/>
-  <File Type="ROUTE-DRC" Name="inputOutput_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-PB" Name="inputOutput_drc_routed.pb"/>
-  <File Type="ROUTE-DRC-RPX" Name="inputOutput_drc_routed.rpx"/>
-  <File Type="BITSTR-MMI" Name="inputOutput.mmi"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="inputOutput_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="inputOutput_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="inputOutput_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-PWR-RPX" Name="inputOutput_power_routed.rpx"/>
-  <File Type="ROUTE-STATUS" Name="inputOutput_route_status.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="inputOutput_route_status.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="inputOutput_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-TIMING-PB" Name="inputOutput_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMING-RPX" Name="inputOutput_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-SIMILARITY" Name="inputOutput_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="inputOutput_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW" Name="inputOutput_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="inputOutput_bus_skew_routed.pb"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="inputOutput_bus_skew_routed.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="inputOutput_postroute_physopt.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="inputOutput_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="inputOutput_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="inputOutput_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="inputOutput_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="inputOutput_bus_skew_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="inputOutput_bus_skew_postroute_physopted.pb"/>
-  <File Type="BG-BIT" Name="inputOutput.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="inputOutput_bus_skew_postroute_physopted.rpx"/>
-  <File Type="BITSTR-RBT" Name="inputOutput.rbt"/>
-  <File Type="BITSTR-NKY" Name="inputOutput.nky"/>
-  <File Type="PDI-FILE" Name="inputOutput.pdi"/>
-  <File Type="RCFI_FILE" Name="inputOutput.rcfi"/>
-  <File Type="CFI_FILE" Name="inputOutput.cfi"/>
-  <File Type="RNPI_FILE" Name="inputOutput.rnpi"/>
-  <File Type="NPI_FILE" Name="inputOutput.npi"/>
-  <File Type="RBD_FILE" Name="inputOutput.rbd"/>
+<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1593062110">
+  <File Type="BITSTR-BMM" Name="io_switch_wrapper_bd.bmm"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="io_switch_wrapper_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="io_switch_wrapper_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR" Name="io_switch_wrapper_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="io_switch_wrapper.tcl"/>
+  <File Type="OPT-TIMING" Name="io_switch_wrapper_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="io_switch_wrapper_opt.dcp"/>
+  <File Type="ROUTE-PWR-SUM" Name="io_switch_wrapper_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="io_switch_wrapper_reports.tcl"/>
+  <File Type="OPT-DRC" Name="io_switch_wrapper_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="io_switch_wrapper.hwdef"/>
+  <File Type="PWROPT-DCP" Name="io_switch_wrapper_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="io_switch_wrapper_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="io_switch_wrapper_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="io_switch_wrapper_placed.dcp"/>
+  <File Type="PLACE-IO" Name="io_switch_wrapper_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="io_switch_wrapper_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="io_switch_wrapper_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="io_switch_wrapper_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="io_switch_wrapper_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="io_switch_wrapper_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="io_switch_wrapper_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="io_switch_wrapper_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="io_switch_wrapper_postplace_pwropt.dcp"/>
+  <File Type="BG-BIN" Name="io_switch_wrapper.bin"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="io_switch_wrapper_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="io_switch_wrapper_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="io_switch_wrapper_drc_physopted.rpt"/>
+  <File Type="BITSTR-MSK" Name="io_switch_wrapper.msk"/>
+  <File Type="PHYSOPT-TIMING" Name="io_switch_wrapper_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="io_switch_wrapper_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="io_switch_wrapper_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="io_switch_wrapper_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="io_switch_wrapper_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="io_switch_wrapper_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="io_switch_wrapper_drc_routed.rpx"/>
+  <File Type="BITSTR-MMI" Name="io_switch_wrapper.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="io_switch_wrapper_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="io_switch_wrapper_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="io_switch_wrapper_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="io_switch_wrapper_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="io_switch_wrapper_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="io_switch_wrapper_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="io_switch_wrapper_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="io_switch_wrapper_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="io_switch_wrapper_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="io_switch_wrapper_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="io_switch_wrapper_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="io_switch_wrapper_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="io_switch_wrapper_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="io_switch_wrapper_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="io_switch_wrapper_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="io_switch_wrapper_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="io_switch_wrapper_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="io_switch_wrapper_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="io_switch_wrapper_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="io_switch_wrapper_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="io_switch_wrapper_bus_skew_postroute_physopted.pb"/>
+  <File Type="BG-BIT" Name="io_switch_wrapper.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="io_switch_wrapper_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-RBT" Name="io_switch_wrapper.rbt"/>
+  <File Type="BITSTR-NKY" Name="io_switch_wrapper.nky"/>
+  <File Type="PDI-FILE" Name="io_switch_wrapper.pdi"/>
+  <File Type="RCFI_FILE" Name="io_switch_wrapper.rcfi"/>
+  <File Type="CFI_FILE" Name="io_switch_wrapper.cfi"/>
+  <File Type="RNPI_FILE" Name="io_switch_wrapper.rnpi"/>
+  <File Type="NPI_FILE" Name="io_switch_wrapper.npi"/>
+  <File Type="RBD_FILE" Name="io_switch_wrapper.rbd"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="inputOutput.ltx"/>
-  <File Type="BITSTR-SYSDEF" Name="inputOutput.sysdef"/>
-  <File Type="BG-BGN" Name="inputOutput.bgn"/>
-  <File Type="BG-DRC" Name="inputOutput.drc"/>
-  <File Type="RDI-RDI" Name="inputOutput.vdi"/>
+  <File Type="BITSTR-LTX" Name="io_switch_wrapper.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="io_switch_wrapper.sysdef"/>
+  <File Type="BG-BGN" Name="io_switch_wrapper.bgn"/>
+  <File Type="BG-DRC" Name="io_switch_wrapper.drc"/>
+  <File Type="RDI-RDI" Name="io_switch_wrapper.vdi"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
@@ -84,9 +84,23 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/bd/io_switch/io_switch.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/io_switch/hdl/io_switch_wrapper.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="inputOutput"/>
+      <Option Name="TopModule" Val="io_switch_wrapper"/>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
@@ -110,9 +124,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-      <Desc>Default settings for Implementation.</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>
@@ -123,4 +135,5 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="io_switch_inputOutput_0_0"/>
 </GenRun>

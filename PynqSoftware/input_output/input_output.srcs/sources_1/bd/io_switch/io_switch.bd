@@ -1,0 +1,76 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x4A71E3804A71E380",
+      "device": "xc7z020clg400-1",
+      "name": "io_switch",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2019.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "inputOutput_0": ""
+    },
+    "ports": {
+      "inputPort_0": {
+        "direction": "I",
+        "left": "3",
+        "right": "0"
+      },
+      "invert_0": {
+        "direction": "I"
+      },
+      "outputPort_0": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      }
+    },
+    "components": {
+      "inputOutput_0": {
+        "vlnv": "xilinx.com:module_ref:inputOutput:1.0",
+        "xci_name": "io_switch_inputOutput_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "inputOutput",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "inputPort": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "invert": {
+            "direction": "I"
+          },
+          "outputPort": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "nets": {
+      "inputPort_0_1": {
+        "ports": [
+          "inputPort_0",
+          "inputOutput_0/inputPort"
+        ]
+      },
+      "invert_0_1": {
+        "ports": [
+          "invert_0",
+          "inputOutput_0/invert"
+        ]
+      },
+      "inputOutput_0_outputPort": {
+        "ports": [
+          "inputOutput_0/outputPort",
+          "outputPort_0"
+        ]
+      }
+    }
+  }
+}

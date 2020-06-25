@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="44" Path="C:/Users/monke/Documents/GitHub/ReconHardware/Pynq Software/Multiplier/Multiplier.xpr">
+<Project Version="7" Minor="44" Path="C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Multiplier/Multiplier.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="44db8dc7ec384547a71c6e3fae890706"/>
@@ -72,7 +72,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/Parrallel Buffer.v">
+      <File Path="$PSRCDIR/sources_1/new/ParallelBuffer.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>

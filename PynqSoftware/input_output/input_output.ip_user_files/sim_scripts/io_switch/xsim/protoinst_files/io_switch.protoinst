@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"io_switch": {
+			"proto_instances": {
+			}
+		}
+	}
+}
