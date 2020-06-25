@@ -1,11 +1,12 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x0",
+      "boundary_crc": "0x9271823C61E0DA4",
       "device": "xc7z020clg400-1",
       "name": "pbuffer_splitter_wrapper",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2019.2"
+      "tool_version": "2019.2",
+      "validated": "true"
     },
     "design_tree": {
       "ParallelBuffer_0": "",
@@ -14,7 +15,29 @@
     "ports": {
       "Clk": {
         "type": "clk",
-        "direction": "I"
+        "direction": "I",
+        "parameters": {
+          "ASSOCIATED_RESET": {
+            "value": "Rst",
+            "value_src": "default"
+          },
+          "CLK_DOMAIN": {
+            "value": "pbuffer_splitter_wrapper_Clk",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          }
+        }
       },
       "bufferEN": {
         "direction": "I"
@@ -46,7 +69,17 @@
       },
       "Rst": {
         "type": "rst",
-        "direction": "I"
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
       },
       "FULL1": {
         "direction": "O"
@@ -79,7 +112,17 @@
         "ports": {
           "Clk": {
             "type": "clk",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "Rst",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "pbuffer_splitter_wrapper_Clk",
+                "value_src": "default_prop"
+              }
+            }
           },
           "dataIn": {
             "direction": "I",
@@ -131,7 +174,17 @@
         "ports": {
           "Clk": {
             "type": "clk",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "Rst",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "pbuffer_splitter_wrapper_Clk",
+                "value_src": "default_prop"
+              }
+            }
           },
           "Rst": {
             "type": "rst",

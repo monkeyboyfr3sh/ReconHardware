@@ -1,0 +1,662 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Thu Jun 25 13:27:15 2020
+# Process ID: 5724
+# Current directory: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.runs/child_2_impl_1
+# Command line: vivado.exe -log reconfigMultiplyBlock.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source reconfigMultiplyBlock.tcl -notrace
+# Log file: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.runs/child_2_impl_1/reconfigMultiplyBlock.vdi
+# Journal file: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.runs/child_2_impl_1\vivado.jou
+#-----------------------------------------------------------
+source reconfigMultiplyBlock.tcl -notrace
+Command: link_design -top reconfigMultiplyBlock -part xc7z020clg400-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-454] Reading design checkpoint 'C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.runs/floatComputePynq_synth_1/floatmultiplyComputePynq.dcp' for cell 'mCompute'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 767.965 ; gain = 0.000
+INFO: [Project 1-479] Netlist was created with Vivado 2019.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.runs/impl_1/reconfigMultiplyBlock_routed_bb/reconfigMultiplyBlock.xdc]
+Finished Parsing XDC File [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.runs/impl_1/reconfigMultiplyBlock_routed_bb/reconfigMultiplyBlock.xdc]
+Parsing XDC File [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.runs/impl_1/reconfigMultiplyBlock_routed_bb/reconfigMultiplyBlock_late.xdc]
+Finished Parsing XDC File [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.runs/impl_1/reconfigMultiplyBlock_routed_bb/reconfigMultiplyBlock_late.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.041 . Memory (MB): peak = 865.336 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.042 . Memory (MB): peak = 865.336 ; gain = 0.000
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 870.977 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+6 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 870.977 ; gain = 440.715
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.496 . Memory (MB): peak = 896.219 ; gain = 25.242
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 19f7f941c
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1441.492 ; gain = 545.273
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 19f7f941c
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 1660.434 ; gain = 24.902
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
+INFO: [Opt 31-1021] In phase Retarget, 33 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 19f7f941c
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 1660.434 ; gain = 24.902
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+INFO: [Opt 31-1021] In phase Constant propagation, 4 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 19f7f941c
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 1660.434 ; gain = 24.902
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
+INFO: [Opt 31-1021] In phase Sweep, 258 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 4 BUFG optimization
+INFO: [Opt 31-1112] Starts optimizing BUFG(s) with a common MMCM/DPLL/XPLL driver.
+INFO: [Opt 31-1112] Starts optimizing BUFG(s) with a common driver.
+INFO: [Opt 31-1092] Phase BUFG optimization transformed 0 BUFG(s) to MBUFG(s).
+Phase 4 BUFG optimization | Checksum: 19f7f941c
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 1660.434 ; gain = 24.902
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+INFO: [Opt 31-1021] In phase BUFG optimization, 1 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 5 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 5 Shift Register Optimization | Checksum: 19f7f941c
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.043 . Memory (MB): peak = 1660.434 ; gain = 24.902
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 19f7f941c
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.044 . Memory (MB): peak = 1660.434 ; gain = 24.902
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+INFO: [Opt 31-1021] In phase Post Processing Netlist, 4 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               0  |               0  |                                             33  |
+|  Constant propagation         |               0  |               0  |                                              4  |
+|  Sweep                        |               0  |               0  |                                            258  |
+|  BUFG optimization            |               0  |               0  |                                              1  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              4  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1660.434 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 19f7f941c
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 1660.434 ; gain = 24.902
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: 19f7f941c
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1660.434 ; gain = 0.000
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 19f7f941c
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1660.434 ; gain = 0.000
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1660.434 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 19f7f941c
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1660.434 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+31 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1660.434 ; gain = 789.457
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1660.434 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 1660.434 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.runs/child_2_impl_1/reconfigMultiplyBlock_opt.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file reconfigMultiplyBlock_drc_opted.rpt -pb reconfigMultiplyBlock_drc_opted.pb -rpx reconfigMultiplyBlock_drc_opted.rpx
+Command: report_drc -file reconfigMultiplyBlock_drc_opted.rpt -pb reconfigMultiplyBlock_drc_opted.pb -rpx reconfigMultiplyBlock_drc_opted.rpx
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.runs/child_2_impl_1/reconfigMultiplyBlock_drc_opted.rpt.
+report_drc completed successfully
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1660.434 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 14aa5b302
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1660.434 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1660.434 ; gain = 0.000
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: baa1b6c4
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.408 . Memory (MB): peak = 1660.434 ; gain = 0.000
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 10b11a956
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.421 . Memory (MB): peak = 1660.434 ; gain = 0.000
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 10b11a956
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.423 . Memory (MB): peak = 1660.434 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 10b11a956
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.426 . Memory (MB): peak = 1660.434 ; gain = 0.000
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: db65c54c
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.427 . Memory (MB): peak = 1660.434 ; gain = 0.000
+
+Phase 2.2 Global Placement Core
+WARNING: [Place 46-29] place_design is not in timing mode. Skip physical synthesis in placer
+Phase 2.2 Global Placement Core | Checksum: 118315ebb
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.716 . Memory (MB): peak = 1660.434 ; gain = 0.000
+Phase 2 Global Placement | Checksum: 118315ebb
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.721 . Memory (MB): peak = 1660.434 ; gain = 0.000
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 118315ebb
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.724 . Memory (MB): peak = 1660.434 ; gain = 0.000
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: eee9d1c1
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.733 . Memory (MB): peak = 1660.434 ; gain = 0.000
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 1a15a0066
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.744 . Memory (MB): peak = 1660.434 ; gain = 0.000
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 1a15a0066
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.745 . Memory (MB): peak = 1660.434 ; gain = 0.000
+
+Phase 3.5 Small Shape Detail Placement
+Phase 3.5 Small Shape Detail Placement | Checksum: a84e9180
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.819 . Memory (MB): peak = 1660.434 ; gain = 0.000
+
+Phase 3.6 Re-assign LUT pins
+Phase 3.6 Re-assign LUT pins | Checksum: a84e9180
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.821 . Memory (MB): peak = 1660.434 ; gain = 0.000
+
+Phase 3.7 Pipeline Register Optimization
+Phase 3.7 Pipeline Register Optimization | Checksum: a84e9180
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.821 . Memory (MB): peak = 1660.434 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: a84e9180
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.822 . Memory (MB): peak = 1660.434 ; gain = 0.000
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+Phase 4.1 Post Commit Optimization | Checksum: a84e9180
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.824 . Memory (MB): peak = 1660.434 ; gain = 0.000
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: a84e9180
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.828 . Memory (MB): peak = 1660.434 ; gain = 0.000
+
+Phase 4.3 Placer Reporting
+Phase 4.3 Placer Reporting | Checksum: ebda23e3
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.830 . Memory (MB): peak = 1660.434 ; gain = 0.000
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1660.434 ; gain = 0.000
+Phase 4.4 Final Placement Cleanup | Checksum: 17bde2021
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.831 . Memory (MB): peak = 1660.434 ; gain = 0.000
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 17bde2021
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.832 . Memory (MB): peak = 1660.434 ; gain = 0.000
+Ending Placer Task | Checksum: f9f1a74c
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.832 . Memory (MB): peak = 1660.434 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+49 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1660.434 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.046 . Memory (MB): peak = 1660.434 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.runs/child_2_impl_1/reconfigMultiplyBlock_placed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_io -file reconfigMultiplyBlock_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.044 . Memory (MB): peak = 1660.434 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_utilization -file reconfigMultiplyBlock_utilization_placed.rpt -pb reconfigMultiplyBlock_utilization_placed.pb
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file reconfigMultiplyBlock_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1660.434 ; gain = 0.000
+Command: phys_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Vivado_Tcl 4-235] No timing constraint found. The netlist was not modified.
+INFO: [Common 17-83] Releasing license: Implementation
+57 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1660.434 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.045 . Memory (MB): peak = 1673.156 ; gain = 12.723
+INFO: [Common 17-1381] The checkpoint 'C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.runs/child_2_impl_1/reconfigMultiplyBlock_physopt.dcp' has been generated.
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
+Checksum: PlaceDB: 118e1e5d ConstDB: 0 ShapeSum: a4d7f68c RouteDB: 438b9263
+
+Phase 1 Build RT Design
+Phase 1 Build RT Design | Checksum: 16ff890ec
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 1783.566 ; gain = 100.324
+Post Restoration Checksum: NetGraph: 2dfdc21e NumContArr: 8372bb2a Constraints: 8273cd72 Timing: 0
+
+Phase 2 Router Initialization
+INFO: [Route 35-64] No timing constraints were detected. The router will operate in resource-optimization mode.
+
+Phase 2.1 Fix Topology Constraints
+Phase 2.1 Fix Topology Constraints | Checksum: 133e44aba
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 1792.742 ; gain = 109.500
+
+Phase 2.2 Pre Route Cleanup
+Phase 2.2 Pre Route Cleanup | Checksum: 133e44aba
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 1792.742 ; gain = 109.500
+ Number of Nodes with overlaps = 0
+Phase 2 Router Initialization | Checksum: 18d437fd7
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 1796.461 ; gain = 113.219
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0 %
+  Global Horizontal Routing Utilization  = 0 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 25
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 22
+  Number of Partially Routed Nets     = 3
+  Number of Node Overlaps             = 0
+
+
+Phase 3 Initial Routing
+Phase 3 Initial Routing | Checksum: 1cb53e934
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 1799.508 ; gain = 116.266
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 0
+Phase 4.1 Global Iteration 0 | Checksum: 1ab0d2697
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 1799.508 ; gain = 116.266
+Phase 4 Rip-up And Reroute | Checksum: 1ab0d2697
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 1799.508 ; gain = 116.266
+
+Phase 5 Delay and Skew Optimization
+Phase 5 Delay and Skew Optimization | Checksum: 1ab0d2697
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 1799.508 ; gain = 116.266
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+Phase 6.1 Hold Fix Iter | Checksum: 1ab0d2697
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 1799.508 ; gain = 116.266
+Phase 6 Post Hold Fix | Checksum: 1ab0d2697
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 1799.508 ; gain = 116.266
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.00315833 %
+  Global Horizontal Routing Utilization  = 0.0020284 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Congestion Report
+North Dir 1x1 Area, Max Cong = 45%, No Congested Regions.
+South Dir 1x1 Area, Max Cong = 33.3333%, No Congested Regions.
+East Dir 1x1 Area, Max Cong = 33.3333%, No Congested Regions.
+West Dir 1x1 Area, Max Cong = 30.7692%, No Congested Regions.
+
+------------------------------
+Reporting congestion hotspots
+------------------------------
+Direction: North
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: South
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: East
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: West
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+
+Phase 7 Route finalize | Checksum: 1ab0d2697
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 1799.508 ; gain = 116.266
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 1ab0d2697
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 1801.578 ; gain = 118.336
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 1b8890a4a
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 1801.578 ; gain = 118.336
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 1801.578 ; gain = 118.336
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+67 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:22 . Memory (MB): peak = 1801.578 ; gain = 128.422
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1801.578 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.044 . Memory (MB): peak = 1811.430 ; gain = 9.852
+INFO: [Common 17-1381] The checkpoint 'C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.runs/child_2_impl_1/reconfigMultiplyBlock_routed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file reconfigMultiplyBlock_drc_routed.rpt -pb reconfigMultiplyBlock_drc_routed.pb -rpx reconfigMultiplyBlock_drc_routed.rpx
+Command: report_drc -file reconfigMultiplyBlock_drc_routed.rpt -pb reconfigMultiplyBlock_drc_routed.pb -rpx reconfigMultiplyBlock_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.runs/child_2_impl_1/reconfigMultiplyBlock_drc_routed.rpt.
+report_drc completed successfully
+INFO: [runtcl-4] Executing : report_methodology -file reconfigMultiplyBlock_methodology_drc_routed.rpt -pb reconfigMultiplyBlock_methodology_drc_routed.pb -rpx reconfigMultiplyBlock_methodology_drc_routed.rpx
+Command: report_methodology -file reconfigMultiplyBlock_methodology_drc_routed.rpt -pb reconfigMultiplyBlock_methodology_drc_routed.pb -rpx reconfigMultiplyBlock_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 2 threads
+INFO: [Coretcl 2-1520] The results of Report Methodology are in file C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.runs/child_2_impl_1/reconfigMultiplyBlock_methodology_drc_routed.rpt.
+report_methodology completed successfully
+INFO: [runtcl-4] Executing : report_power -file reconfigMultiplyBlock_power_routed.rpt -pb reconfigMultiplyBlock_power_summary_routed.pb -rpx reconfigMultiplyBlock_power_routed.rpx
+Command: report_power -file reconfigMultiplyBlock_power_routed.rpt -pb reconfigMultiplyBlock_power_summary_routed.pb -rpx reconfigMultiplyBlock_power_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+WARNING: [Power 33-232] No user defined clocks were found in the design! Power estimation will be inaccurate until this is corrected.
+Resolution: Please specify clocks using create_clock/create_generated_clock for sequential elements. For pure combinatorial circuits, please specify a virtual clock, otherwise the vectorless estimation might be inaccurate
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+79 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+INFO: [runtcl-4] Executing : report_route_status -file reconfigMultiplyBlock_route_status.rpt -pb reconfigMultiplyBlock_route_status.pb
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file reconfigMultiplyBlock_timing_summary_routed.rpt -pb reconfigMultiplyBlock_timing_summary_routed.pb -rpx reconfigMultiplyBlock_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+WARNING: [Timing 38-313] There are no user specified timing constraints. Timing constraints are needed for proper timing analysis.
+INFO: [runtcl-4] Executing : report_incremental_reuse -file reconfigMultiplyBlock_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [runtcl-4] Executing : report_clock_utilization -file reconfigMultiplyBlock_clock_utilization_routed.rpt
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file reconfigMultiplyBlock_bus_skew_routed.rpt -pb reconfigMultiplyBlock_bus_skew_routed.pb -rpx reconfigMultiplyBlock_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1842.582 ; gain = 0.000
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.058 . Memory (MB): peak = 1842.582 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.runs/child_2_impl_1/mCompute_floatComputePynq_routed.dcp' has been generated.
+INFO: [Common 17-206] Exiting Vivado at Thu Jun 25 13:28:05 2020...
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Thu Jun 25 13:29:31 2020
+# Process ID: 38196
+# Current directory: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.runs/child_2_impl_1
+# Command line: vivado.exe -log reconfigMultiplyBlock.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source reconfigMultiplyBlock.tcl -notrace
+# Log file: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.runs/child_2_impl_1/reconfigMultiplyBlock.vdi
+# Journal file: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.runs/child_2_impl_1\vivado.jou
+#-----------------------------------------------------------
+source reconfigMultiplyBlock.tcl -notrace
+Command: pr_verify -full_check -initial C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.runs/impl_1/reconfigMultiplyBlock_routed.dcp -additional C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.runs/child_2_impl_1/reconfigMultiplyBlock_routed.dcp -file child_2_impl_1_pr_verify.log
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 745.059 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.104 . Memory (MB): peak = 1417.457 ; gain = 15.539
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.104 . Memory (MB): peak = 1417.457 ; gain = 15.539
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1417.457 ; gain = 0.000
+INFO: [Project 1-604] Checkpoint was created with Vivado v2019.2 (64-bit) build 2708876
+INFO: [Vivado 12-3501] pr_verify C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.runs/impl_1/reconfigMultiplyBlock_routed.dcp C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.runs/child_2_impl_1/reconfigMultiplyBlock_routed.dcp
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1419.414 ; gain = 0.000
+INFO: [Project 1-479] Netlist was created with Vivado 2019.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.044 . Memory (MB): peak = 1617.699 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.044 . Memory (MB): peak = 1617.699 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1617.699 ; gain = 0.000
+INFO: [Project 1-604] Checkpoint was created with Vivado v2019.2 (64-bit) build 2708876
+INFO: [Constraints 18-1020] PR Verify Summary:
+DCP1: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.runs/impl_1/reconfigMultiplyBlock_routed.dcp
+  Number of reconfigurable modules compared = 1
+  Number of partition pins compared         = 20
+  Number of static tiles compared           = 24
+  Number of static sites compared           = 24
+  Number of static cells compared           = 45
+  Number of static routed nodes compared    = 605
+  Number of static routed pips compared     = 557
+
+DCP2: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.runs/child_2_impl_1/reconfigMultiplyBlock_routed.dcp
+  Number of reconfigurable modules compared = 1
+  Number of partition pins compared         = 20
+  Number of static tiles compared           = 24
+  Number of static sites compared           = 24
+  Number of static cells compared           = 45
+  Number of static routed nodes compared    = 605
+  Number of static routed pips compared     = 557
+INFO: [Vivado 12-3253] PR_VERIFY: check points C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.runs/impl_1/reconfigMultiplyBlock_routed.dcp and C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.runs/child_2_impl_1/reconfigMultiplyBlock_routed.dcp are compatible
+pr_verify: Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1633.211 ; gain = 1334.453
+Command: open_checkpoint reconfigMultiplyBlock_routed.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1633.211 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1633.211 ; gain = 0.000
+INFO: [Project 1-479] Netlist was created with Vivado 2019.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.044 . Memory (MB): peak = 1633.211 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.044 . Memory (MB): peak = 1633.211 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1633.211 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2019.2 (64-bit) build 2708876
+Command: write_bitstream -force -no_partial_bitfile reconfigMultiplyBlock.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'.
+INFO: [DRC 23-27] Running DRC with 2 threads
+WARNING: [DRC ZPS7-1] PS7 block required: The PS7 cell must be used in this Zynq design in order to enable correct default configuration.
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 1 Warnings
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+Partition "pblock_mCompute_1" Reconfigurable Module "mCompute"
+INFO: [Vivado 12-4752] Design contains reconfigurable partitions, but no partial bit files will be generated since -no_partial_bitfile option was specified.
+INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream ./reconfigMultiplyBlock.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
+INFO: [Common 17-186] 'C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.runs/child_2_impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Thu Jun 25 13:30:07 2020. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2019.2/doc/webtalk_introduction.html.
+INFO: [Common 17-83] Releasing license: Implementation
+41 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1914.742 ; gain = 281.531
+Command: write_bitstream -force -cell mCompute mCompute_floatComputePynq_partial.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+WARNING: [DRC ZPS7-1] PS7 block required: The PS7 cell must be used in this Zynq design in order to enable correct default configuration.
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 1 Warnings
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+Partition "pblock_mCompute_1" Reconfigurable Module "mCompute"
+INFO: [Vivado 12-4077] No full design bitstream will be created with the use of the -cell option.
+Process Partition "pblock_mCompute_1"
+INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Partial bitstream contains 474176 bits.
+Writing bitstream ./mCompute_floatComputePynq_partial.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
+INFO: [Common 17-186] 'C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.runs/child_2_impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Thu Jun 25 13:30:16 2020. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2019.2/doc/webtalk_introduction.html.
+INFO: [Common 17-83] Releasing license: Implementation
+52 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1914.742 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Jun 25 13:30:17 2020...
