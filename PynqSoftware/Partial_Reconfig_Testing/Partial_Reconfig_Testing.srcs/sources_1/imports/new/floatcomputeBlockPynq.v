@@ -1,7 +1,7 @@
 `timescale `myTimeScale
 `include "definitions.h" 
 
-module reconfigMultiply(   Clk,
+module reconfigMultiply(    Clk,
                             dataIn,
                             bufferRD,
                             bufferSelect,
@@ -16,7 +16,7 @@ module reconfigMultiply(   Clk,
                             );
                        
 //Inputs
-input Clk,Rst, bufferRD,bufferSelect,bufferEN,mStart,chunkCount;;
+input Clk,Rst, bufferRD,bufferSelect,bufferEN,mStart,chunkCount;
 input [`inputIndex:0] dataIn;
 
 //Outputs
@@ -27,18 +27,22 @@ output [`outputIndex:0] dataOut;
 wire [`inputIndex:0] bufferOutput0,bufferOutput1;
 wire [`multiplyIndex:0] product;
 
-ParallelBuffer pBuffer (Clk,
-                        dataIn, 
-                        bufferSelect,
-                        bufferEN,
-                        bufferRD,
-                        bufferOutput0,
-                        bufferOutput1, 
-                        Rst,
-                        mReady,
-                        FULL0,
-                        FULL1
-                        );
+buffer_spliiter_wrapper pbuffer_splitter(
+                            .Clk(Clk),
+                            .dataIn(dataIn),
+                            .bufferSelect(bufferSelect),
+                            .bufferEN(bufferEN),
+                            .bufferRD(bufferRD),
+                            .Rst(Rst),
+                            .product_SHORT(dataOut),
+                            .FULL0(FULL0),
+                            .FULL1(FULL1),
+                            .bufferOutput0(bufferOutput0),
+                            .bufferOutput1(bufferOutput1),
+                            .CLR(mReady),
+                            .product_LONG(product),
+                            .chunkCount(chunkCount)
+                            );
                                       
 fixedmultiplyCompute mCompute(
                     .product(product),
@@ -48,14 +52,6 @@ fixedmultiplyCompute mCompute(
                     .start(mStart),
                     .clk(Clk),
                     .reset(Rst)
-                    );
-                        
-dataSplit splitter( Clk,
-                    Rst,
-                    mReady,
-                    product,
-                    chunkCount,
-                    dataOut
                     );
 
 endmodule

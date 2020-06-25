@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Jun 24 18:09:34 2020" VIVADOVERSION="2019.2">
+
+  <SYSTEMINFO ARCH="zynq" BOARD="tul.com.tw:pynq-z2:part0:1.0" DEVICE="7z020" NAME="design_1" PACKAGE="clg400" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT DIR="O" LEFT="3" NAME="outputPort_0" RIGHT="0" SIGIS="undef" SIGNAME="inputOutput_0_outputPort">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="inputOutput_0" PORT="outputPort"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="3" NAME="inputPort_0" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_inputPort_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="inputOutput_0" PORT="inputPort"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE COREREVISION="1" FULLNAME="/inputOutput_0" HWVERSION="1.0" INSTANCE="inputOutput_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="inputOutput" VLNV="xilinx.com:module_ref:inputOutput:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_inputOutput_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="3" NAME="inputPort" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_inputPort_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="inputPort_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="outputPort" RIGHT="0" SIGIS="undef" SIGNAME="inputOutput_0_outputPort">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="outputPort_0"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

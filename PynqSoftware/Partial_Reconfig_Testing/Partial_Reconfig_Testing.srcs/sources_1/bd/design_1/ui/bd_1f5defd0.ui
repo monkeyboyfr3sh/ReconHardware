@@ -1,0 +1,26 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-1325,-332",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0.21  2019-05-29 bk=1.5064 VDI=41 GEI=36 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace port FULL0 -pg 1 -lvl 1 -x 40 -y 20 -defaultsOSRD
+preplace port FULL1 -pg 1 -lvl 1 -x 40 -y 40 -defaultsOSRD
+preplace port clk -pg 1 -lvl 0 -x 0 -y 120 -defaultsOSRD
+preplace port bufferSelect -pg 1 -lvl 0 -x 0 -y 80 -defaultsOSRD
+preplace port EN -pg 1 -lvl 0 -x 0 -y 20 -defaultsOSRD
+preplace port RD -pg 1 -lvl 0 -x 0 -y 40 -defaultsOSRD
+preplace port Rst -pg 1 -lvl 0 -x 0 -y 60 -defaultsOSRD
+preplace port data_clr -pg 1 -lvl 0 -x 0 -y 160 -defaultsOSRD
+preplace port chunkCount -pg 1 -lvl 0 -x 0 -y 100 -defaultsOSRD
+preplace portBus bufferOutput0 -pg 1 -lvl 1 -x 40 -y 60 -defaultsOSRD
+preplace portBus bufferOutput1 -pg 1 -lvl 1 -x 40 -y 80 -defaultsOSRD
+preplace portBus product_SHORT -pg 1 -lvl 1 -x 40 -y 100 -defaultsOSRD
+preplace portBus dataInput -pg 1 -lvl 0 -x 0 -y 140 -defaultsOSRD
+preplace portBus product_LONG -pg 1 -lvl 0 -x 0 -y 180 -defaultsOSRD
+levelinfo -pg 1 0 40
+pagesize -pg 1 -db -bbox -sgen -180 0 230 200
+"
+}
+0

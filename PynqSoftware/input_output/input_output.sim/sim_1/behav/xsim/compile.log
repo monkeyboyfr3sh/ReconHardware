@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/input_output/input_output.srcs/sources_1/new/inputOuput.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module inputOutput
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/input_output/input_output.srcs/sim_1/new/IO_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IO_tb
