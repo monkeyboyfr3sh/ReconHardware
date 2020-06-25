@@ -18,7 +18,6 @@ proc create_report { reportName command } {
   }
 }
 set_param chipscope.maxJobs 2
-set_msg_config -id {HDL-1065} -limit 10000
 set_msg_config  -id {filemgmt 20-937}  -string {{CRITICAL WARNING: [filemgmt 20-937] The given source file is already part of the fileset 'multiplyCompute'. Requested source 'C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/sources_1/imports/new/definitions.h' will not be added.}}  -suppress 
 set_msg_config  -id {Coretcl 2-1280}  -string {{CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'buffer_splitter_wrapper_dataSplit_0_0' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.}}  -suppress 
 set_msg_config  -id {Coretcl 2-1280}  -string {{CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'buffer_splitter_wrapper_ParallelBuffer_0_0' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.}}  -suppress 

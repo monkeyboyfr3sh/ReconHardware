@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Thu Jun 25 12:17:19 2020
+| Date         : Thu Jun 25 12:47:08 2020
 | Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 | Command      : report_methodology -file reconfigMultiplyBlock_methodology_drc_routed.rpt -pb reconfigMultiplyBlock_methodology_drc_routed.pb -rpx reconfigMultiplyBlock_methodology_drc_routed.rpx
 | Design       : reconfigMultiplyBlock
@@ -20,7 +20,7 @@ Table of Contents
 1. REPORT SUMMARY
 -----------------
             Netlist: netlist
-          Floorplan: checkpoint_reconfigMultiplyBlock
+          Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
              Violations found: 20
@@ -80,52 +80,52 @@ Related violations: <none>
 
 TIMING-17#10 Critical Warning
 Non-clocked sequential cell  
-The clock pin pbuffer_splitter/ParallelBuffer_0/inst/buff0/holdData_reg[0]/C is not reached by a timing clock
+The clock pin pbuffer_splitter/ParallelBuffer_1/inst/buff0/holdData_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#11 Critical Warning
 Non-clocked sequential cell  
-The clock pin pbuffer_splitter/ParallelBuffer_0/inst/buff0/holdData_reg[1]/C is not reached by a timing clock
+The clock pin pbuffer_splitter/ParallelBuffer_1/inst/buff0/holdData_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#12 Critical Warning
 Non-clocked sequential cell  
-The clock pin pbuffer_splitter/ParallelBuffer_0/inst/buff0/holdData_reg[2]/C is not reached by a timing clock
+The clock pin pbuffer_splitter/ParallelBuffer_1/inst/buff0/holdData_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#13 Critical Warning
 Non-clocked sequential cell  
-The clock pin pbuffer_splitter/ParallelBuffer_0/inst/buff0/holdData_reg[3]/C is not reached by a timing clock
+The clock pin pbuffer_splitter/ParallelBuffer_1/inst/buff0/holdData_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#14 Critical Warning
 Non-clocked sequential cell  
-The clock pin pbuffer_splitter/ParallelBuffer_0/inst/buff0/set_reg/C is not reached by a timing clock
+The clock pin pbuffer_splitter/ParallelBuffer_1/inst/buff0/set_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#15 Critical Warning
 Non-clocked sequential cell  
-The clock pin pbuffer_splitter/ParallelBuffer_0/inst/buff1/holdData_reg[0]/C is not reached by a timing clock
+The clock pin pbuffer_splitter/ParallelBuffer_1/inst/buff1/holdData_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#16 Critical Warning
 Non-clocked sequential cell  
-The clock pin pbuffer_splitter/ParallelBuffer_0/inst/buff1/holdData_reg[1]/C is not reached by a timing clock
+The clock pin pbuffer_splitter/ParallelBuffer_1/inst/buff1/holdData_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#17 Critical Warning
 Non-clocked sequential cell  
-The clock pin pbuffer_splitter/ParallelBuffer_0/inst/buff1/holdData_reg[2]/C is not reached by a timing clock
+The clock pin pbuffer_splitter/ParallelBuffer_1/inst/buff1/holdData_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#18 Critical Warning
 Non-clocked sequential cell  
-The clock pin pbuffer_splitter/ParallelBuffer_0/inst/buff1/holdData_reg[3]/C is not reached by a timing clock
+The clock pin pbuffer_splitter/ParallelBuffer_1/inst/buff1/holdData_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#19 Critical Warning
 Non-clocked sequential cell  
-The clock pin pbuffer_splitter/ParallelBuffer_0/inst/buff1/set_reg/C is not reached by a timing clock
+The clock pin pbuffer_splitter/ParallelBuffer_1/inst/buff1/set_reg/C is not reached by a timing clock
 Related violations: <none>
 
 CKLD-2#1 Warning

@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date             : Thu Jun 25 12:17:19 2020
+| Date             : Thu Jun 25 12:47:08 2020
 | Host             : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 | Command          : report_power -file reconfigMultiplyBlock_power_routed.rpt -pb reconfigMultiplyBlock_power_summary_routed.pb -rpx reconfigMultiplyBlock_power_routed.rpx
 | Design           : reconfigMultiplyBlock
@@ -147,7 +147,7 @@ Table of Contents
 | reconfigMultiplyBlock |     2.356 |
 |   mCompute            |     0.059 |
 |   pbuffer_splitter    |     0.089 |
-|     ParallelBuffer_0  |     0.067 |
+|     ParallelBuffer_1  |     0.067 |
 |       inst            |     0.067 |
 |     dataSplit_0       |     0.022 |
 |       inst            |     0.022 |

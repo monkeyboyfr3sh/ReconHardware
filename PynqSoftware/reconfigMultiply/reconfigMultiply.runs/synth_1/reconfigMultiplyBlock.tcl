@@ -17,10 +17,15 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_msg_config -id {HDL-1065} -limit 10000
+set_param chipscope.maxJobs 2
 set_msg_config  -id {filemgmt 20-937}  -string {{CRITICAL WARNING: [filemgmt 20-937] The given source file is already part of the fileset 'multiplyCompute'. Requested source 'C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/sources_1/imports/new/definitions.h' will not be added.}}  -suppress 
 set_msg_config  -id {Coretcl 2-1280}  -string {{CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'buffer_splitter_wrapper_dataSplit_0_0' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.}}  -suppress 
 set_msg_config  -id {Coretcl 2-1280}  -string {{CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'buffer_splitter_wrapper_ParallelBuffer_0_0' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.}}  -suppress 
+set_msg_config  -id {BD 41-1228}  -string {{CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/ParallelBuffer_0/dataIn'(4) to net 'dataIn_0_1'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.}}  -suppress 
+set_msg_config  -id {BD 41-1228}  -string {{CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/dataSplit_0/dataIn'(8) to net 'dataIn_0_2'(16) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.}}  -suppress 
+set_msg_config  -id {Common 17-55}  -string {{CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc:202]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.}}  -suppress 
+set_msg_config  -id {Common 17-55}  -suppress 
 create_project -in_memory -part xc7z020clg400-1
 
 set_param project.singleFileAddWarning.threshold 0

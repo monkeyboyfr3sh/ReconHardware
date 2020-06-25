@@ -1,40 +1,40 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Jun 25 12:07:50 2020" VIVADOVERSION="2019.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Jun 25 12:44:52 2020" VIVADOVERSION="2019.2">
 
   <SYSTEMINFO ARCH="zynq" BOARD="tul.com.tw:pynq-z2:part0:1.0" DEVICE="7z020" NAME="buffer_splitter_wrapper" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
   <EXTERNALPORTS>
     <PORT CLKFREQUENCY="100000000" DIR="I" NAME="Clk" SIGIS="clk" SIGNAME="External_Ports_Clk">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="ParallelBuffer_0" PORT="Clk"/>
         <CONNECTION INSTANCE="dataSplit_0" PORT="Clk"/>
+        <CONNECTION INSTANCE="ParallelBuffer_1" PORT="Clk"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="bufferSelect" SIGIS="undef" SIGNAME="External_Ports_bufferSelect">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="ParallelBuffer_0" PORT="bufferSelect"/>
+        <CONNECTION INSTANCE="ParallelBuffer_1" PORT="bufferSelect"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="bufferEN" SIGIS="undef" SIGNAME="External_Ports_bufferEN">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="ParallelBuffer_0" PORT="EN"/>
+        <CONNECTION INSTANCE="ParallelBuffer_1" PORT="EN"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="bufferRD" SIGIS="undef" SIGNAME="External_Ports_bufferRD">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="ParallelBuffer_0" PORT="RD"/>
+        <CONNECTION INSTANCE="ParallelBuffer_1" PORT="RD"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="Rst" SIGIS="rst" SIGNAME="External_Ports_Rst">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="ParallelBuffer_0" PORT="Rst"/>
         <CONNECTION INSTANCE="dataSplit_0" PORT="Rst"/>
+        <CONNECTION INSTANCE="ParallelBuffer_1" PORT="Rst"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="Clr" SIGIS="undef" SIGNAME="External_Ports_Clr">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="ParallelBuffer_0" PORT="CLR"/>
         <CONNECTION INSTANCE="dataSplit_0" PORT="RD"/>
+        <CONNECTION INSTANCE="ParallelBuffer_1" PORT="CLR"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" LEFT="3" NAME="product_SHORT" RIGHT="0" SIGIS="undef" SIGNAME="dataSplit_0_dataOut">
@@ -47,24 +47,24 @@
         <CONNECTION INSTANCE="dataSplit_0" PORT="chunkCount"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" NAME="FULL1" SIGIS="undef" SIGNAME="ParallelBuffer_0_FULL1">
+    <PORT DIR="O" NAME="FULL1" SIGIS="undef" SIGNAME="ParallelBuffer_1_FULL1">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="ParallelBuffer_0" PORT="FULL1"/>
+        <CONNECTION INSTANCE="ParallelBuffer_1" PORT="FULL1"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" NAME="FULL0" SIGIS="undef" SIGNAME="ParallelBuffer_0_FULL0">
+    <PORT DIR="O" NAME="FULL0" SIGIS="undef" SIGNAME="ParallelBuffer_1_FULL0">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="ParallelBuffer_0" PORT="FULL0"/>
+        <CONNECTION INSTANCE="ParallelBuffer_1" PORT="FULL0"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="3" NAME="bufferOutput1" RIGHT="0" SIGIS="undef" SIGNAME="ParallelBuffer_0_dataOut1">
+    <PORT DIR="O" LEFT="3" NAME="bufferOutput1" RIGHT="0" SIGIS="undef" SIGNAME="ParallelBuffer_1_dataOut1">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="ParallelBuffer_0" PORT="dataOut1"/>
+        <CONNECTION INSTANCE="ParallelBuffer_1" PORT="dataOut1"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="3" NAME="bufferOutput0" RIGHT="0" SIGIS="undef" SIGNAME="ParallelBuffer_0_dataOut0">
+    <PORT DIR="O" LEFT="3" NAME="bufferOutput0" RIGHT="0" SIGIS="undef" SIGNAME="ParallelBuffer_1_dataOut0">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="ParallelBuffer_0" PORT="dataOut0"/>
+        <CONNECTION INSTANCE="ParallelBuffer_1" PORT="dataOut0"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" LEFT="7" NAME="product_LONG" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_product_LONG">
@@ -74,7 +74,7 @@
     </PORT>
     <PORT DIR="I" LEFT="3" NAME="dataIn" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_dataIn">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="ParallelBuffer_0" PORT="dataIn"/>
+        <CONNECTION INSTANCE="ParallelBuffer_1" PORT="dataIn"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -82,10 +82,10 @@
   <EXTERNALINTERFACES/>
 
   <MODULES>
-    <MODULE COREREVISION="1" FULLNAME="/ParallelBuffer_0" HWVERSION="1.0" INSTANCE="ParallelBuffer_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ParallelBuffer" VLNV="xilinx.com:module_ref:ParallelBuffer:1.0">
+    <MODULE COREREVISION="1" FULLNAME="/ParallelBuffer_1" HWVERSION="1.0" INSTANCE="ParallelBuffer_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ParallelBuffer" VLNV="xilinx.com:module_ref:ParallelBuffer:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="buffer_splitter_wrapper_ParallelBuffer_0_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="buffer_splitter_wrapper_ParallelBuffer_1_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
@@ -114,12 +114,12 @@
             <CONNECTION INSTANCE="External_Ports" PORT="bufferRD"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="3" NAME="dataOut0" RIGHT="0" SIGIS="undef" SIGNAME="ParallelBuffer_0_dataOut0">
+        <PORT DIR="O" LEFT="3" NAME="dataOut0" RIGHT="0" SIGIS="undef" SIGNAME="ParallelBuffer_1_dataOut0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="bufferOutput0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="3" NAME="dataOut1" RIGHT="0" SIGIS="undef" SIGNAME="ParallelBuffer_0_dataOut1">
+        <PORT DIR="O" LEFT="3" NAME="dataOut1" RIGHT="0" SIGIS="undef" SIGNAME="ParallelBuffer_1_dataOut1">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="bufferOutput1"/>
           </CONNECTIONS>
@@ -134,12 +134,12 @@
             <CONNECTION INSTANCE="External_Ports" PORT="Clr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="FULL0" SIGIS="undef" SIGNAME="ParallelBuffer_0_FULL0">
+        <PORT DIR="O" NAME="FULL0" SIGIS="undef" SIGNAME="ParallelBuffer_1_FULL0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="FULL0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="FULL1" SIGIS="undef" SIGNAME="ParallelBuffer_0_FULL1">
+        <PORT DIR="O" NAME="FULL1" SIGIS="undef" SIGNAME="ParallelBuffer_1_FULL1">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="FULL1"/>
           </CONNECTIONS>

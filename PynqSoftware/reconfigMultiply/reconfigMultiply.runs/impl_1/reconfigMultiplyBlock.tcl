@@ -60,7 +60,6 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {HDL-1065} -limit 10000
 set_msg_config  -id {filemgmt 20-937}  -string {{CRITICAL WARNING: [filemgmt 20-937] The given source file is already part of the fileset 'multiplyCompute'. Requested source 'C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/sources_1/imports/new/definitions.h' will not be added.}}  -suppress 
 set_msg_config  -id {Coretcl 2-1280}  -string {{CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'buffer_splitter_wrapper_dataSplit_0_0' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.}}  -suppress 
 set_msg_config  -id {Coretcl 2-1280}  -string {{CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'buffer_splitter_wrapper_ParallelBuffer_0_0' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.}}  -suppress 
@@ -75,12 +74,27 @@ set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
   set_param chipscope.maxJobs 2
-  reset_param project.defaultXPMLibraries 
-  open_checkpoint C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.runs/impl_1/reconfigMultiplyBlock.dcp
+  create_project -in_memory -part xc7z020clg400-1
+  set_property board_part tul.com.tw:pynq-z2:part0:1.0 [current_project]
+  set_property design_mode GateLvl [current_fileset]
+  set_param project.singleFileAddWarning.threshold 0
   set_property webtalk.parent_dir C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.cache/wt [current_project]
   set_property parent.project_path C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.xpr [current_project]
   set_property ip_output_repo C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
+  add_files -quiet C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.runs/synth_1/reconfigMultiplyBlock.dcp
+  set_msg_config -source 4 -id {BD 41-1661} -limit 0
+  set_param project.isImplRun true
+  add_files C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/sources_1/bd/buffer_splitter_wrapper/buffer_splitter_wrapper.bd
+  set_param project.isImplRun false
+  add_files -quiet C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.runs/integerCompute_synth_1/multiplyCompute.dcp
+  set_property SCOPED_TO_CELLS mCompute [get_files C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.runs/integerCompute_synth_1/multiplyCompute.dcp]
+  set_property netlist_only true [get_files C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.runs/integerCompute_synth_1/multiplyCompute.dcp]
+  read_xdc C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiply/reconfigMultiply.srcs/constrs_1/imports/PynqSoftware/pynq-z2_v1.0.xdc
+  set_param project.isImplRun true
+  link_design -top reconfigMultiplyBlock -part xc7z020clg400-1 -reconfig_partitions mCompute
+  set_param project.isImplRun false
+  write_hwdef -force -file reconfigMultiplyBlock.hwdef
   close_msg_db -file init_design.pb
 } RESULT]
 if {$rc} {

@@ -9,7 +9,7 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==buffer_splitter
 # IP: bd/buffer_splitter_wrapper/ip/buffer_splitter_wrapper_dataSplit_0_0/buffer_splitter_wrapper_dataSplit_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==buffer_splitter_wrapper_dataSplit_0_0 || ORIG_REF_NAME==buffer_splitter_wrapper_dataSplit_0_0} -quiet] -quiet
 
-# IP: bd/buffer_splitter_wrapper/ip/buffer_splitter_wrapper_ParallelBuffer_0_0/buffer_splitter_wrapper_ParallelBuffer_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==buffer_splitter_wrapper_ParallelBuffer_0_0 || ORIG_REF_NAME==buffer_splitter_wrapper_ParallelBuffer_0_0} -quiet] -quiet
+# IP: bd/buffer_splitter_wrapper/ip/buffer_splitter_wrapper_ParallelBuffer_1_0/buffer_splitter_wrapper_ParallelBuffer_1_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==buffer_splitter_wrapper_ParallelBuffer_1_0 || ORIG_REF_NAME==buffer_splitter_wrapper_ParallelBuffer_1_0} -quiet] -quiet
 
 # XDC: bd/buffer_splitter_wrapper/buffer_splitter_wrapper_ooc.xdc

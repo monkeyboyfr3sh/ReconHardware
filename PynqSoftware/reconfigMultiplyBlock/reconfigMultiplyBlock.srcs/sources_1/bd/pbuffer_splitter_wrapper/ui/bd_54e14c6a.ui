@@ -1,0 +1,42 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-719,-231",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0.21  2019-05-29 bk=1.5064 VDI=41 GEI=36 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace port Clk -pg 1 -lvl 0 -x -30 -y -30 -defaultsOSRD
+preplace port bufferEN -pg 1 -lvl 0 -x -30 -y 30 -defaultsOSRD
+preplace port bufferSelect -pg 1 -lvl 0 -x -30 -y 10 -defaultsOSRD
+preplace port bufferRD -pg 1 -lvl 0 -x -30 -y 50 -defaultsOSRD
+preplace port FULL0 -pg 1 -lvl 2 -x 310 -y 40 -defaultsOSRD
+preplace port chunkCount -pg 1 -lvl 0 -x -30 -y 270 -defaultsOSRD
+preplace port Clr -pg 1 -lvl 0 -x -30 -y 90 -defaultsOSRD
+preplace port Rst -pg 1 -lvl 0 -x -30 -y 70 -defaultsOSRD
+preplace port FULL1 -pg 1 -lvl 2 -x 310 -y 60 -defaultsOSRD
+preplace portBus product_LONG -pg 1 -lvl 0 -x -30 -y 250 -defaultsOSRD
+preplace portBus dataIn -pg 1 -lvl 0 -x -30 -y -10 -defaultsOSRD
+preplace portBus product_SHORT -pg 1 -lvl 2 -x 310 -y 230 -defaultsOSRD
+preplace portBus bufferOutput1 -pg 1 -lvl 2 -x 310 -y 20 -defaultsOSRD
+preplace portBus bufferOutput0 -pg 1 -lvl 2 -x 310 -y 0 -defaultsOSRD
+preplace inst ParallelBuffer_0 -pg 1 -lvl 1 -x 150 -y 30 -defaultsOSRD
+preplace inst dataSplit_0 -pg 1 -lvl 1 -x 150 -y 230 -defaultsOSRD
+preplace netloc Clk_0_1 1 0 1 10J -30n
+preplace netloc EN_0_1 1 0 1 NJ 30
+preplace netloc dataIn_0_1 1 0 1 NJ 250
+preplace netloc bufferSelect_0_1 1 0 1 NJ 10
+preplace netloc dataIn_1_1 1 0 1 NJ -10
+preplace netloc RD_0_1 1 0 1 NJ 50
+preplace netloc ParallelBuffer_0_FULL0 1 1 1 NJ 40
+preplace netloc chunkCount_0_1 1 0 1 NJ 270
+preplace netloc CLR_0_1 1 0 1 -10J 90n
+preplace netloc Rst_0_1 1 0 1 0J 70n
+preplace netloc ParallelBuffer_0_FULL1 1 1 1 NJ 60
+preplace netloc dataSplit_0_dataOut 1 1 1 NJ 230
+preplace netloc ParallelBuffer_0_dataOut1 1 1 1 NJ 20
+preplace netloc ParallelBuffer_0_dataOut0 1 1 1 NJ 0
+levelinfo -pg 1 -30 150 310
+pagesize -pg 1 -db -bbox -sgen -210 -90 500 450
+"
+}
+

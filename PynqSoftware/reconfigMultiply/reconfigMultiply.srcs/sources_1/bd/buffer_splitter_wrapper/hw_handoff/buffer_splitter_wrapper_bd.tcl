@@ -180,13 +180,13 @@ proc create_root_design { parentCell } {
   set product_LONG [ create_bd_port -dir I -from 7 -to 0 product_LONG ]
   set product_SHORT [ create_bd_port -dir O -from 3 -to 0 product_SHORT ]
 
-  # Create instance: ParallelBuffer_0, and set properties
+  # Create instance: ParallelBuffer_1, and set properties
   set block_name ParallelBuffer
-  set block_cell_name ParallelBuffer_0
-  if { [catch {set ParallelBuffer_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+  set block_cell_name ParallelBuffer_1
+  if { [catch {set ParallelBuffer_1 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
      catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
-   } elseif { $ParallelBuffer_0 eq "" } {
+   } elseif { $ParallelBuffer_1 eq "" } {
      catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    }
@@ -203,19 +203,19 @@ proc create_root_design { parentCell } {
    }
   
   # Create port connections
-  connect_bd_net -net CLR_0_1 [get_bd_ports Clr] [get_bd_pins ParallelBuffer_0/CLR] [get_bd_pins dataSplit_0/RD]
-  connect_bd_net -net Clk_0_1 [get_bd_ports Clk] [get_bd_pins ParallelBuffer_0/Clk] [get_bd_pins dataSplit_0/Clk]
-  connect_bd_net -net EN_0_1 [get_bd_ports bufferEN] [get_bd_pins ParallelBuffer_0/EN]
-  connect_bd_net -net ParallelBuffer_0_FULL0 [get_bd_ports FULL0] [get_bd_pins ParallelBuffer_0/FULL0]
-  connect_bd_net -net ParallelBuffer_0_FULL1 [get_bd_ports FULL1] [get_bd_pins ParallelBuffer_0/FULL1]
-  connect_bd_net -net ParallelBuffer_0_dataOut0 [get_bd_ports bufferOutput0] [get_bd_pins ParallelBuffer_0/dataOut0]
-  connect_bd_net -net ParallelBuffer_0_dataOut1 [get_bd_ports bufferOutput1] [get_bd_pins ParallelBuffer_0/dataOut1]
-  connect_bd_net -net RD_0_1 [get_bd_ports bufferRD] [get_bd_pins ParallelBuffer_0/RD]
-  connect_bd_net -net Rst_0_1 [get_bd_ports Rst] [get_bd_pins ParallelBuffer_0/Rst] [get_bd_pins dataSplit_0/Rst]
-  connect_bd_net -net bufferSelect_0_1 [get_bd_ports bufferSelect] [get_bd_pins ParallelBuffer_0/bufferSelect]
+  connect_bd_net -net CLR_0_1 [get_bd_ports Clr] [get_bd_pins ParallelBuffer_1/CLR] [get_bd_pins dataSplit_0/RD]
+  connect_bd_net -net Clk_0_1 [get_bd_ports Clk] [get_bd_pins ParallelBuffer_1/Clk] [get_bd_pins dataSplit_0/Clk]
+  connect_bd_net -net ParallelBuffer_1_FULL0 [get_bd_ports FULL0] [get_bd_pins ParallelBuffer_1/FULL0]
+  connect_bd_net -net ParallelBuffer_1_FULL1 [get_bd_ports FULL1] [get_bd_pins ParallelBuffer_1/FULL1]
+  connect_bd_net -net ParallelBuffer_1_dataOut0 [get_bd_ports bufferOutput0] [get_bd_pins ParallelBuffer_1/dataOut0]
+  connect_bd_net -net ParallelBuffer_1_dataOut1 [get_bd_ports bufferOutput1] [get_bd_pins ParallelBuffer_1/dataOut1]
+  connect_bd_net -net Rst_0_1 [get_bd_ports Rst] [get_bd_pins ParallelBuffer_1/Rst] [get_bd_pins dataSplit_0/Rst]
+  connect_bd_net -net bufferEN_1 [get_bd_ports bufferEN] [get_bd_pins ParallelBuffer_1/EN]
+  connect_bd_net -net bufferRD_1 [get_bd_ports bufferRD] [get_bd_pins ParallelBuffer_1/RD]
+  connect_bd_net -net bufferSelect_1 [get_bd_ports bufferSelect] [get_bd_pins ParallelBuffer_1/bufferSelect]
   connect_bd_net -net chunkCount_0_1 [get_bd_ports chunkCount] [get_bd_pins dataSplit_0/chunkCount]
-  connect_bd_net -net dataIn_0_1 [get_bd_ports dataIn] [get_bd_pins ParallelBuffer_0/dataIn]
   connect_bd_net -net dataIn_0_2 [get_bd_ports product_LONG] [get_bd_pins dataSplit_0/dataIn]
+  connect_bd_net -net dataIn_1 [get_bd_ports dataIn] [get_bd_pins ParallelBuffer_1/dataIn]
   connect_bd_net -net dataSplit_0_dataOut [get_bd_ports product_SHORT] [get_bd_pins dataSplit_0/dataOut]
 
   # Create address segments
