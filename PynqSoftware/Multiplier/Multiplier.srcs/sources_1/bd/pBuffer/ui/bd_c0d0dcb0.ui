@@ -1,0 +1,48 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"2.63902",
+   "Default View_TopLeft":"-772,-80",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0.21  2019-05-29 bk=1.5064 VDI=41 GEI=36 GUI=JA:9.0 non-TLS-threadsafe
+#  -string -flagsOSRD
+preplace port DDR -pg 1 -lvl 5 -x 1310 -y 210 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 5 -x 1310 -y 230 -defaultsOSRD
+preplace port bufferSelect_0 -pg 1 -lvl 0 -x -620 -y 70 -defaultsOSRD
+preplace port EN_0 -pg 1 -lvl 0 -x -620 -y 200 -defaultsOSRD
+preplace port RD_0 -pg 1 -lvl 0 -x -620 -y 110 -defaultsOSRD
+preplace port Rst_0 -pg 1 -lvl 0 -x -620 -y 130 -defaultsOSRD
+preplace port FULL0_0 -pg 1 -lvl 5 -x 1310 -y 70 -defaultsOSRD
+preplace port FULL1_0 -pg 1 -lvl 5 -x 1310 -y 90 -defaultsOSRD
+preplace port chunkCount_0 -pg 1 -lvl 0 -x -620 -y 170 -defaultsOSRD
+preplace port RD_1 -pg 1 -lvl 0 -x -620 -y 150 -defaultsOSRD
+preplace port Clk_0 -pg 1 -lvl 0 -x -620 -y 30 -defaultsOSRD
+preplace portBus dataIn_0 -pg 1 -lvl 0 -x -620 -y 50 -defaultsOSRD
+preplace portBus dataOut_0 -pg 1 -lvl 5 -x 1310 -y 50 -defaultsOSRD
+preplace inst ParallelBuffer_0 -pg 1 -lvl 2 -x 640 -y 90 -defaultsOSRD
+preplace inst dataSplit_0 -pg 1 -lvl 4 -x 1150 -y 50 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 3 -x 910 -y 70 -defaultsOSRD -resize 141 93
+preplace inst processing_system7_0 -pg 1 -lvl 1 -x -140 -y 100 -defaultsOSRD
+preplace netloc bufferSelect_0_1 1 0 2 -570 260 120
+preplace netloc EN_0_1 1 0 2 -590 250 130
+preplace netloc RD_0_1 1 0 2 -550 210 70
+preplace netloc ParallelBuffer_0_FULL0 1 2 3 790 160 N 160 1280
+preplace netloc ParallelBuffer_0_FULL1 1 2 3 780 150 N 150 1290
+preplace netloc dataIn_0_1 1 0 2 -540 230 100
+preplace netloc ParallelBuffer_0_dataOut0 1 2 1 780 60n
+preplace netloc ParallelBuffer_0_dataOut1 1 2 1 780 77n
+preplace netloc xlconcat_0_dout 1 3 1 N 70
+preplace netloc chunkCount_0_1 1 0 4 -600J 280 N 280 810J 170 1020J
+preplace netloc RD_1_1 1 0 4 -580J 270 N 270 800J 140 1010J
+preplace netloc dataSplit_0_dataOut 1 4 1 N 50
+preplace netloc Rst_0_1 1 0 4 -560J 220 80 -30 N -30 1010
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 2 -530 240 60
+preplace netloc Clk_0_1 1 0 4 -530J -10 90J -40 N -40 1020
+preplace netloc processing_system7_0_DDR 1 1 4 90 210 NJ 210 NJ 210 NJ
+preplace netloc processing_system7_0_FIXED_IO 1 1 4 110 230 NJ 230 NJ 230 NJ
+levelinfo -pg 1 -620 -140 640 910 1150 1310
+pagesize -pg 1 -db -bbox -sgen -770 -310 1460 390
+"
+}
+{
+   "da_ps7_cnt":"1"
+}

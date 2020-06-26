@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1592764283">
-  <File Type="PA-TCL" Name="integercomputeBlockPynq.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="integercomputeBlockPynq_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="integercomputeBlockPynq_reports.tcl"/>
-  <File Type="RDS-RDS" Name="integercomputeBlockPynq.vds"/>
-  <File Type="RDS-UTIL" Name="integercomputeBlockPynq_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="integercomputeBlockPynq_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="integercomputeBlockPynq.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="integercomputeBlockPynq_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="integercomputeBlockPynq_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1593199484">
+  <File Type="PA-TCL" Name="pBuffer_wrapper.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="pBuffer_wrapper_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="pBuffer_wrapper_reports.tcl"/>
+  <File Type="RDS-RDS" Name="pBuffer_wrapper.vds"/>
+  <File Type="RDS-UTIL" Name="pBuffer_wrapper_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="pBuffer_wrapper_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="pBuffer_wrapper.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="pBuffer_wrapper_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="pBuffer_wrapper_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/definitions.h">
@@ -24,7 +24,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/Parrallel Buffer.v">
+    <File Path="$PSRCDIR/sources_1/new/ParallelBuffer.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -38,8 +38,23 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/bd/pBuffer/pBuffer.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/pBuffer/hdl/pBuffer_wrapper.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/multiplyComputePynq.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -47,6 +62,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/integercomputeBlockPynq.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -118,12 +134,19 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="integercomputeBlockPynq"/>
+      <Option Name="TopModule" Val="pBuffer_wrapper"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
     <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/ESP32_Testing_Simple.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
     <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/ESP32_Testing_Simple.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>
@@ -137,4 +160,7 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
     <Step Id="synth_design"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="pBuffer_ParallelBuffer_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="pBuffer_dataSplit_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="pBuffer_processing_system7_0_0"/>
 </GenRun>

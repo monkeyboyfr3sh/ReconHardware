@@ -2,11 +2,11 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Sun Jun 21 13:31:26 2020
-# Process ID: 17800
-# Current directory: C:/Users/monke/Documents/GitHub/ReconHardware/Pynq Software/Multiplier/Multiplier.runs/synth_1
-# Command line: vivado.exe -log integercomputeBlockPynq.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source integercomputeBlockPynq.tcl
-# Log file: C:/Users/monke/Documents/GitHub/ReconHardware/Pynq Software/Multiplier/Multiplier.runs/synth_1/integercomputeBlockPynq.vds
-# Journal file: C:/Users/monke/Documents/GitHub/ReconHardware/Pynq Software/Multiplier/Multiplier.runs/synth_1\vivado.jou
+# Start of session at: Fri Jun 26 14:24:46 2020
+# Process ID: 25916
+# Current directory: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Multiplier/Multiplier.runs/synth_1
+# Command line: vivado.exe -log pBuffer_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source pBuffer_wrapper.tcl
+# Log file: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Multiplier/Multiplier.runs/synth_1/pBuffer_wrapper.vds
+# Journal file: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Multiplier/Multiplier.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
-source integercomputeBlockPynq.tcl -notrace
+source pBuffer_wrapper.tcl -notrace

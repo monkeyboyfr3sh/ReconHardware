@@ -18,7 +18,7 @@
 //START_User_Set
 /*#####################################################################################################################################################*/
 //Data/Device Definition
-`define inputWidth 8
+`define inputWidth 4
 `define myTimeScale 1ns / 1ps
 `define clkPeriod 2
 

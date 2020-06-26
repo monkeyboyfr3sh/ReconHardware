@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/monke/Documents/GitHub/ReconHardware/Pynq Software/Multiplier/Multiplier.runs/synth_1'
+HD_PWD='C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Multiplier/Multiplier.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log integercomputeBlockPynq.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source integercomputeBlockPynq.tcl
+EAStep vivado -log pBuffer_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source pBuffer_wrapper.tcl
