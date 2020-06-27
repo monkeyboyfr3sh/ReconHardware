@@ -1,7 +1,7 @@
 set_property IOSTANDARD LVCMOS33 [get_ports Clk_0]
 set_property PACKAGE_PIN U17 [get_ports Clk_0]
 set_property IOSTANDARD LVCMOS33 [get_ports Rst_0]
-set_property PACKAGE_PIN D19 [get_ports Rst_0]
+set_property PACKAGE_PIN P18 [get_ports Rst_0]
 set_property PACKAGE_PIN T14 [get_ports {dataIn_0[3]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {dataIn_0[3]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {dataIn_0[2]}]

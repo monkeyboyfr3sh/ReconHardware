@@ -1,0 +1,50 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Fri Jun 26 17:30:39 2020
+| Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
+| Command      : report_drc -file reconfigMultiplyBlock_drc_opted.rpt -pb reconfigMultiplyBlock_drc_opted.pb -rpx reconfigMultiplyBlock_drc_opted.rpx
+| Design       : reconfigMultiplyBlock
+| Device       : xc7z020clg400-1
+| Speed File   : -1
+| Design State : Synthesized
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 2
++-----------+------------------+---------------------------------+------------+
+| Rule      | Severity         | Description                     | Violations |
++-----------+------------------+---------------------------------+------------+
+| RTSTAT-13 | Critical Warning | Insufficient Routing            | 1          |
+| HDPR-26   | Warning          | Improper Pblock column boundary | 1          |
++-----------+------------------+---------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+RTSTAT-13#1 Critical Warning
+Insufficient Routing  
+A signficant portion of the design is not routed. Routed nets status (RTSTAT-*) DRC checks will not be run.  For routing information, run report_route_status.  Please run implementation on your design.
+Related violations: <none>
+
+HDPR-26#1 Warning
+Improper Pblock column boundary  
+The Reconfigurable Pblock 'pblock_mCompute' has a 'left' edge that terminates on an improper column boundary at tile 'CLBLM_R_X19Y52' (SLICE_X26Y52 SLICE_X27Y52).
+Resolution: Set the Pblock property SNAPPING_MODE to value of ON using the following constraint, or modify the X specification of the pblock to avoid this edge.
+Example: set_property SNAPPING_MODE ON [get_pblocks 'pblock_mCompute']
+Please refer to the Xilinx Partial Reconfiguration User Guide.
+Related violations: <none>
+
+

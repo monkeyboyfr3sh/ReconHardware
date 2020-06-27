@@ -9,10 +9,6 @@
 #define bufferEN_pin      16
 #define bufferRD_pin      4
 #define bufferSelect_pin  19
-#define FULL0_pin         5
-#define FULL1_pin         23
-
-#define mReady_pin        21
 #define mStart_pin        22
 
 #define halfclk           10
@@ -36,58 +32,51 @@ void initGPIO(){
   pinMode(bufferRD_pin,OUTPUT);
   pinMode(bufferSelect_pin,OUTPUT);
   pinMode(mStart_pin,OUTPUT);
-  
-  pinMode(FULL0_pin,INPUT);
-  pinMode(FULL1_pin,INPUT);
-  pinMode(mReady_pin,INPUT);
 }
 void runTB(){
-  Serial.println("Initializing multiplier");
+  //Setup Clk
   digitalWrite(Clk_pin, LOW);
   clkSet = false;
+  
   digitalWrite(bufferRD_pin, LOW);
-  digitalWrite(bufferEN_pin, LOW);
   digitalWrite(bufferSelect_pin, LOW);
+  digitalWrite(bufferEN_pin, LOW);
   digitalWrite(Rst_pin, HIGH);
-  clk();
-  clk();
+  
+  clk();clk();
+  
   digitalWrite(Rst_pin, LOW);
-  Serial.println("Multiplier initialized");  
-
-  Serial.println("Initializing pbuffer to write");
+  
+  //Initing buffer to read
   digitalWrite(mStart_pin, LOW);
   digitalWrite(bufferRD_pin, LOW);
-  digitalWrite(bufferEN_pin, LOW);
-
-  Serial.println("Loading data into buffer 0");
+  digitalWrite(bufferEN_pin, HIGH);
+  
+  //buffer0: 3
   digitalWrite(bufferSelect_pin, LOW);
-  //0101
-  digitalWrite(dataSend3_pin,LOW);digitalWrite(dataSend2_pin,HIGH);digitalWrite(dataSend1_pin,LOW);digitalWrite(dataSend0_pin,HIGH);
-  clk();
-  clk();
-  //Outputing Full0
-  Serial.print("Full0: ");Serial.println(digitalRead(FULL0_pin));
-
-  Serial.println("Loading data into buffer 1");
+  digitalWrite(dataSend3_pin,LOW);digitalWrite(dataSend2_pin,HIGH);digitalWrite(dataSend1_pin,HIGH);digitalWrite(dataSend0_pin,LOW);
+  
+  clk();clk();
+  
+  //buffer0: 4
   digitalWrite(bufferSelect_pin, HIGH);
-  //0001
-  digitalWrite(dataSend3_pin,LOW);digitalWrite(dataSend2_pin,LOW);digitalWrite(dataSend1_pin,LOW);digitalWrite(dataSend0_pin,HIGH);
-  clk();
-  clk();
-  //Outputing Full1
-  Serial.print("Full1: ");Serial.println(digitalRead(FULL1_pin));
+  digitalWrite(dataSend3_pin,LOW);digitalWrite(dataSend2_pin,HIGH);digitalWrite(dataSend1_pin,LOW);digitalWrite(dataSend0_pin,LOW);
+  
+  clk();clk();
 
-  Serial.println("Done loading inputs, now starting multiply");
+  //Start multiply
   digitalWrite(bufferRD_pin,LOW);
   digitalWrite(bufferEN_pin,HIGH);
   digitalWrite(mStart_pin,HIGH);
-  clk();
-  clk();
-  digitalWrite(mStart_pin,HIGH);
-  clk();
+  
+  clk();clk();
+  
+  digitalWrite(mStart_pin,LOW);
+  
+  clk();clk();
 }
 void outData(){
-  Serial.print("mReady: ");Serial.println(digitalRead(mReady_pin));
+  Serial.println("Read LD1-LD4 for multiplier output");
 }
 void setup() {
   Serial.begin(115200);
@@ -100,5 +89,5 @@ void setup() {
 }
 
 void loop() {
-    
+    clk();
 }

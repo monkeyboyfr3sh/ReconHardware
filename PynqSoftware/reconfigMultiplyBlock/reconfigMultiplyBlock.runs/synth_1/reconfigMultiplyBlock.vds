@@ -1,0 +1,337 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Fri Jun 26 17:26:12 2020
+# Process ID: 6008
+# Current directory: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.runs/synth_1
+# Command line: vivado.exe -log reconfigMultiplyBlock.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source reconfigMultiplyBlock.tcl
+# Log file: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.runs/synth_1/reconfigMultiplyBlock.vds
+# Journal file: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source reconfigMultiplyBlock.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'.
+Command: synth_design -top reconfigMultiplyBlock -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 40624 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 995.461 ; gain = 233.973
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'reconfigMultiplyBlock' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.srcs/sources_1/new/reconfigMultiplyBlock.v:4]
+INFO: [Synth 8-6157] synthesizing module 'ps_Wrap' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.srcs/sources_1/bd/ps_Wrap/synth/ps_Wrap.v:13]
+INFO: [Synth 8-6157] synthesizing module 'ps_Wrap_ParallelBuffer_0_0' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.runs/synth_1/.Xil/Vivado-6008-DESKTOP-D9F9TPQ/realtime/ps_Wrap_ParallelBuffer_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ps_Wrap_ParallelBuffer_0_0' (1#1) [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.runs/synth_1/.Xil/Vivado-6008-DESKTOP-D9F9TPQ/realtime/ps_Wrap_ParallelBuffer_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'ps_Wrap_dataSplit_0_0' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.runs/synth_1/.Xil/Vivado-6008-DESKTOP-D9F9TPQ/realtime/ps_Wrap_dataSplit_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ps_Wrap_dataSplit_0_0' (2#1) [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.runs/synth_1/.Xil/Vivado-6008-DESKTOP-D9F9TPQ/realtime/ps_Wrap_dataSplit_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'ps_Wrap_processing_system7_0_0' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.runs/synth_1/.Xil/Vivado-6008-DESKTOP-D9F9TPQ/realtime/ps_Wrap_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ps_Wrap_processing_system7_0_0' (3#1) [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.runs/synth_1/.Xil/Vivado-6008-DESKTOP-D9F9TPQ/realtime/ps_Wrap_processing_system7_0_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'ps_Wrap_processing_system7_0_0' has 65 connections declared, but only 35 given [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.srcs/sources_1/bd/ps_Wrap/synth/ps_Wrap.v:155]
+INFO: [Synth 8-6155] done synthesizing module 'ps_Wrap' (4#1) [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.srcs/sources_1/bd/ps_Wrap/synth/ps_Wrap.v:13]
+WARNING: [Synth 8-7023] instance 'psWrap' of module 'ps_Wrap' has 35 connections declared, but only 14 given [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.srcs/sources_1/new/reconfigMultiplyBlock.v:30]
+INFO: [Synth 8-6157] synthesizing module 'multiplyCompute' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.runs/synth_1/.Xil/Vivado-6008-DESKTOP-D9F9TPQ/realtime/multiplyCompute_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'multiplyCompute' (5#1) [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.runs/synth_1/.Xil/Vivado-6008-DESKTOP-D9F9TPQ/realtime/multiplyCompute_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'reconfigMultiplyBlock' (6#1) [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.srcs/sources_1/new/reconfigMultiplyBlock.v:4]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1068.156 ; gain = 306.668
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1068.156 ; gain = 306.668
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1068.156 ; gain = 306.668
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1068.156 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.runs/integerCompute_synth_1/multiplyCompute/multiplyCompute_in_context.xdc] for cell 'mCompute'
+Finished Parsing XDC File [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.runs/integerCompute_synth_1/multiplyCompute/multiplyCompute_in_context.xdc] for cell 'mCompute'
+Parsing XDC File [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.srcs/sources_1/bd/ps_Wrap/ip/ps_Wrap_ParallelBuffer_0_0/ps_Wrap_ParallelBuffer_0_0/ps_Wrap_ParallelBuffer_0_0_in_context.xdc] for cell 'psWrap/ParallelBuffer_0'
+Finished Parsing XDC File [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.srcs/sources_1/bd/ps_Wrap/ip/ps_Wrap_ParallelBuffer_0_0/ps_Wrap_ParallelBuffer_0_0/ps_Wrap_ParallelBuffer_0_0_in_context.xdc] for cell 'psWrap/ParallelBuffer_0'
+Parsing XDC File [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.srcs/sources_1/bd/ps_Wrap/ip/ps_Wrap_dataSplit_0_0/ps_Wrap_dataSplit_0_0/ps_Wrap_dataSplit_0_0_in_context.xdc] for cell 'psWrap/dataSplit_0'
+Finished Parsing XDC File [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.srcs/sources_1/bd/ps_Wrap/ip/ps_Wrap_dataSplit_0_0/ps_Wrap_dataSplit_0_0/ps_Wrap_dataSplit_0_0_in_context.xdc] for cell 'psWrap/dataSplit_0'
+Parsing XDC File [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.srcs/sources_1/bd/ps_Wrap/ip/ps_Wrap_processing_system7_0_0/ps_Wrap_processing_system7_0_0/ps_Wrap_processing_system7_0_0_in_context.xdc] for cell 'psWrap/processing_system7_0'
+Finished Parsing XDC File [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.srcs/sources_1/bd/ps_Wrap/ip/ps_Wrap_processing_system7_0_0/ps_Wrap_processing_system7_0_0/ps_Wrap_processing_system7_0_0_in_context.xdc] for cell 'psWrap/processing_system7_0'
+Parsing XDC File [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.runs/synth_1/hd_reconfig.xdc]
+Finished Parsing XDC File [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.runs/synth_1/hd_reconfig.xdc]
+Parsing XDC File [C:/Users/monke/Documents/GitHub/ReconHardware/MCUSoftware/reconfigMultiplyBlock/FPGA Files/reconfigMultiplyBlock.xdc]
+WARNING: [Vivado 12-584] No ports matched 'Clk_0'. [C:/Users/monke/Documents/GitHub/ReconHardware/MCUSoftware/reconfigMultiplyBlock/FPGA Files/reconfigMultiplyBlock.xdc:1]
+WARNING: [Vivado 12-584] No ports matched 'Clk_0'. [C:/Users/monke/Documents/GitHub/ReconHardware/MCUSoftware/reconfigMultiplyBlock/FPGA Files/reconfigMultiplyBlock.xdc:2]
+WARNING: [Vivado 12-584] No ports matched 'Rst_0'. [C:/Users/monke/Documents/GitHub/ReconHardware/MCUSoftware/reconfigMultiplyBlock/FPGA Files/reconfigMultiplyBlock.xdc:3]
+WARNING: [Vivado 12-584] No ports matched 'Rst_0'. [C:/Users/monke/Documents/GitHub/ReconHardware/MCUSoftware/reconfigMultiplyBlock/FPGA Files/reconfigMultiplyBlock.xdc:4]
+WARNING: [Vivado 12-584] No ports matched 'dataIn_0[3]'. [C:/Users/monke/Documents/GitHub/ReconHardware/MCUSoftware/reconfigMultiplyBlock/FPGA Files/reconfigMultiplyBlock.xdc:5]
+WARNING: [Vivado 12-584] No ports matched 'dataIn_0[3]'. [C:/Users/monke/Documents/GitHub/ReconHardware/MCUSoftware/reconfigMultiplyBlock/FPGA Files/reconfigMultiplyBlock.xdc:6]
+WARNING: [Vivado 12-584] No ports matched 'dataIn_0[2]'. [C:/Users/monke/Documents/GitHub/ReconHardware/MCUSoftware/reconfigMultiplyBlock/FPGA Files/reconfigMultiplyBlock.xdc:7]
+WARNING: [Vivado 12-584] No ports matched 'dataIn_0[1]'. [C:/Users/monke/Documents/GitHub/ReconHardware/MCUSoftware/reconfigMultiplyBlock/FPGA Files/reconfigMultiplyBlock.xdc:8]
+WARNING: [Vivado 12-584] No ports matched 'dataIn_0[0]'. [C:/Users/monke/Documents/GitHub/ReconHardware/MCUSoftware/reconfigMultiplyBlock/FPGA Files/reconfigMultiplyBlock.xdc:9]
+WARNING: [Vivado 12-584] No ports matched 'dataIn_0[2]'. [C:/Users/monke/Documents/GitHub/ReconHardware/MCUSoftware/reconfigMultiplyBlock/FPGA Files/reconfigMultiplyBlock.xdc:10]
+WARNING: [Vivado 12-584] No ports matched 'dataIn_0[1]'. [C:/Users/monke/Documents/GitHub/ReconHardware/MCUSoftware/reconfigMultiplyBlock/FPGA Files/reconfigMultiplyBlock.xdc:11]
+WARNING: [Vivado 12-584] No ports matched 'dataIn_0[0]'. [C:/Users/monke/Documents/GitHub/ReconHardware/MCUSoftware/reconfigMultiplyBlock/FPGA Files/reconfigMultiplyBlock.xdc:12]
+WARNING: [Vivado 12-584] No ports matched 'dataOut_0[3]'. [C:/Users/monke/Documents/GitHub/ReconHardware/MCUSoftware/reconfigMultiplyBlock/FPGA Files/reconfigMultiplyBlock.xdc:14]
+WARNING: [Vivado 12-584] No ports matched 'dataOut_0[2]'. [C:/Users/monke/Documents/GitHub/ReconHardware/MCUSoftware/reconfigMultiplyBlock/FPGA Files/reconfigMultiplyBlock.xdc:15]
+WARNING: [Vivado 12-584] No ports matched 'dataOut_0[1]'. [C:/Users/monke/Documents/GitHub/ReconHardware/MCUSoftware/reconfigMultiplyBlock/FPGA Files/reconfigMultiplyBlock.xdc:16]
+WARNING: [Vivado 12-584] No ports matched 'dataOut_0[0]'. [C:/Users/monke/Documents/GitHub/ReconHardware/MCUSoftware/reconfigMultiplyBlock/FPGA Files/reconfigMultiplyBlock.xdc:17]
+WARNING: [Vivado 12-584] No ports matched 'dataOut_0[3]'. [C:/Users/monke/Documents/GitHub/ReconHardware/MCUSoftware/reconfigMultiplyBlock/FPGA Files/reconfigMultiplyBlock.xdc:18]
+WARNING: [Vivado 12-584] No ports matched 'dataOut_0[2]'. [C:/Users/monke/Documents/GitHub/ReconHardware/MCUSoftware/reconfigMultiplyBlock/FPGA Files/reconfigMultiplyBlock.xdc:19]
+WARNING: [Vivado 12-584] No ports matched 'dataOut_0[1]'. [C:/Users/monke/Documents/GitHub/ReconHardware/MCUSoftware/reconfigMultiplyBlock/FPGA Files/reconfigMultiplyBlock.xdc:20]
+WARNING: [Vivado 12-584] No ports matched 'dataOut_0[0]'. [C:/Users/monke/Documents/GitHub/ReconHardware/MCUSoftware/reconfigMultiplyBlock/FPGA Files/reconfigMultiplyBlock.xdc:21]
+WARNING: [Vivado 12-584] No ports matched 'bufferSelect_0'. [C:/Users/monke/Documents/GitHub/ReconHardware/MCUSoftware/reconfigMultiplyBlock/FPGA Files/reconfigMultiplyBlock.xdc:22]
+WARNING: [Vivado 12-584] No ports matched 'chunkCount_0'. [C:/Users/monke/Documents/GitHub/ReconHardware/MCUSoftware/reconfigMultiplyBlock/FPGA Files/reconfigMultiplyBlock.xdc:23]
+WARNING: [Vivado 12-584] No ports matched 'CLR_0'. [C:/Users/monke/Documents/GitHub/ReconHardware/MCUSoftware/reconfigMultiplyBlock/FPGA Files/reconfigMultiplyBlock.xdc:24]
+WARNING: [Vivado 12-584] No ports matched 'EN_0'. [C:/Users/monke/Documents/GitHub/ReconHardware/MCUSoftware/reconfigMultiplyBlock/FPGA Files/reconfigMultiplyBlock.xdc:25]
+WARNING: [Vivado 12-584] No ports matched 'FULL0_0'. [C:/Users/monke/Documents/GitHub/ReconHardware/MCUSoftware/reconfigMultiplyBlock/FPGA Files/reconfigMultiplyBlock.xdc:26]
+WARNING: [Vivado 12-584] No ports matched 'FULL1_0'. [C:/Users/monke/Documents/GitHub/ReconHardware/MCUSoftware/reconfigMultiplyBlock/FPGA Files/reconfigMultiplyBlock.xdc:27]
+WARNING: [Vivado 12-584] No ports matched 'RD_0'. [C:/Users/monke/Documents/GitHub/ReconHardware/MCUSoftware/reconfigMultiplyBlock/FPGA Files/reconfigMultiplyBlock.xdc:28]
+WARNING: [Vivado 12-584] No ports matched 'RD_1'. [C:/Users/monke/Documents/GitHub/ReconHardware/MCUSoftware/reconfigMultiplyBlock/FPGA Files/reconfigMultiplyBlock.xdc:29]
+WARNING: [Vivado 12-584] No ports matched 'bufferSelect_0'. [C:/Users/monke/Documents/GitHub/ReconHardware/MCUSoftware/reconfigMultiplyBlock/FPGA Files/reconfigMultiplyBlock.xdc:30]
+WARNING: [Vivado 12-584] No ports matched 'chunkCount_0'. [C:/Users/monke/Documents/GitHub/ReconHardware/MCUSoftware/reconfigMultiplyBlock/FPGA Files/reconfigMultiplyBlock.xdc:31]
+WARNING: [Vivado 12-584] No ports matched 'EN_0'. [C:/Users/monke/Documents/GitHub/ReconHardware/MCUSoftware/reconfigMultiplyBlock/FPGA Files/reconfigMultiplyBlock.xdc:32]
+WARNING: [Vivado 12-584] No ports matched 'FULL0_0'. [C:/Users/monke/Documents/GitHub/ReconHardware/MCUSoftware/reconfigMultiplyBlock/FPGA Files/reconfigMultiplyBlock.xdc:33]
+WARNING: [Vivado 12-584] No ports matched 'FULL1_0'. [C:/Users/monke/Documents/GitHub/ReconHardware/MCUSoftware/reconfigMultiplyBlock/FPGA Files/reconfigMultiplyBlock.xdc:34]
+WARNING: [Vivado 12-584] No ports matched 'RD_0'. [C:/Users/monke/Documents/GitHub/ReconHardware/MCUSoftware/reconfigMultiplyBlock/FPGA Files/reconfigMultiplyBlock.xdc:35]
+WARNING: [Vivado 12-584] No ports matched 'RD_1'. [C:/Users/monke/Documents/GitHub/ReconHardware/MCUSoftware/reconfigMultiplyBlock/FPGA Files/reconfigMultiplyBlock.xdc:36]
+Finished Parsing XDC File [C:/Users/monke/Documents/GitHub/ReconHardware/MCUSoftware/reconfigMultiplyBlock/FPGA Files/reconfigMultiplyBlock.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/monke/Documents/GitHub/ReconHardware/MCUSoftware/reconfigMultiplyBlock/FPGA Files/reconfigMultiplyBlock.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/reconfigMultiplyBlock_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/monke/Documents/GitHub/ReconHardware/MCUSoftware/reconfigMultiplyBlock/FPGA Files/reconfigMultiplyBlock.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/reconfigMultiplyBlock_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/reconfigMultiplyBlock_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1106.426 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1106.426 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1106.426 ; gain = 344.938
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1106.426 ; gain = 344.938
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for mCompute. (constraint file  C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.runs/synth_1/hd_reconfig.xdc, line 4).
+Applied set_property HD.RECONFIGURABLE = true for mCompute. (constraint file  C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.runs/synth_1/hd_reconfig.xdc, line 4).
+Applied set_property DONT_TOUCH = true for psWrap. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for psWrap/ParallelBuffer_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for psWrap/dataSplit_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for psWrap/processing_system7_0. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1106.426 ; gain = 344.938
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1106.426 ; gain = 344.938
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1106.426 ; gain = 344.938
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1140.453 ; gain = 378.965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1140.527 ; gain = 379.039
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1150.613 ; gain = 389.125
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1166.477 ; gain = 404.988
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1166.477 ; gain = 404.988
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1166.477 ; gain = 404.988
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1166.477 ; gain = 404.988
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1166.477 ; gain = 404.988
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1166.477 ; gain = 404.988
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+-------------------------------+----------+
+|      |BlackBox name                  |Instances |
++------+-------------------------------+----------+
+|1     |ps_Wrap_ParallelBuffer_0_0     |         1|
+|2     |ps_Wrap_dataSplit_0_0          |         1|
+|3     |ps_Wrap_processing_system7_0_0 |         1|
+|4     |multiplyCompute                |         1|
++------+-------------------------------+----------+
+
+Report Cell Usage: 
++------+-------------------------------+------+
+|      |Cell                           |Count |
++------+-------------------------------+------+
+|1     |multiplyCompute                |     1|
+|2     |ps_Wrap_ParallelBuffer_0_0     |     1|
+|3     |ps_Wrap_dataSplit_0_0          |     1|
+|4     |ps_Wrap_processing_system7_0_0 |     1|
+|5     |IBUF                           |    10|
+|6     |OBUF                           |     6|
++------+-------------------------------+------+
+
+Report Instance Areas: 
++------+---------+--------+------+
+|      |Instance |Module  |Cells |
++------+---------+--------+------+
+|1     |top      |        |   230|
+|2     |  psWrap |ps_Wrap |   205|
++------+---------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1166.477 ; gain = 404.988
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 1166.477 ; gain = 366.719
+Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1166.477 ; gain = 404.988
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1175.070 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1184.109 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+25 Infos, 38 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1184.109 ; gain = 721.117
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1184.109 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.runs/synth_1/reconfigMultiplyBlock.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file reconfigMultiplyBlock_utilization_synth.rpt -pb reconfigMultiplyBlock_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Jun 26 17:26:45 2020...

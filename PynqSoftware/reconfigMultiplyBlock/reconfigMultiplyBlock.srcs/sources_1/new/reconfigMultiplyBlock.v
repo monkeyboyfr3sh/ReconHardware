@@ -27,22 +27,22 @@ output [`outputIndex:0] dataOut;
 wire [`inputIndex:0] bufferOutput0,bufferOutput1;
 wire [`multiplyIndex:0] product;
 
-pbuffer_splitter_wrapper pbuffer_splitter    (
-                                            .Clk(Clk),
-                                            .dataIn(dataInput),
-                                            .bufferSelect(bufferSelect),
-                                            .bufferEN(bufferEN),
-                                            .bufferRD(bufferRD),
-                                            .Rst(Rst),
-                                            .Clr(mReady),
-                                            .bufferOutput0(bufferOutput0),
-                                            .bufferOutput1(bufferOutput1),
-                                            .FULL0(FULL0),
-                                            .FULL1(FULL1),
-                                            .product_LONG(product),
-                                            .chunkCount(chunkCount),
-                                            .product_SHORT(dataOut)
-                                            );
+ps_Wrap psWrap  (
+                .Clk(Clk),
+                .dataIn(dataInput),
+                .bufferSelect(bufferSelect),
+                .bufferEN(bufferEN),
+                .bufferRD(bufferRD),
+                .Rst(Rst),
+                .Clr(mReady),
+                .bufferOutput0(bufferOutput0),
+                .bufferOutput1(bufferOutput1),
+                .FULL0(FULL0),
+                .FULL1(FULL1),
+                .product_LONG(product),
+                .chunkCount(chunkCount),
+                .product_SHORT(dataOut)
+                );
                                       
 multiplyCompute mCompute(
                     .product(product),
