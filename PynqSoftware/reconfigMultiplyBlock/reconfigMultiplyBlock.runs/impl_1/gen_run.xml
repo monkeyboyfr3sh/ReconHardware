@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchConfig="config_1" LaunchTime="1593210555">
-  <File Type="OPT-HWDEF" Name="reconfigMultiplyBlock.hwdef"/>
-  <File Type="ROUTE-BUS-SKEW" Name="reconfigMultiplyBlock_bus_skew_routed.rpt"/>
-  <File Type="PA-DCP" Name="reconfigMultiplyBlock.dcp"/>
+<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchConfig="config_1" LaunchTime="1593322175">
   <File Type="BITSTR-BMM" Name="reconfigMultiplyBlock_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="reconfigMultiplyBlock_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="reconfigMultiplyBlock_timing_summary_init.rpt"/>
@@ -13,6 +10,7 @@
   <File Type="ROUTE-PWR-SUM" Name="reconfigMultiplyBlock_power_summary_routed.pb"/>
   <File Type="REPORTS-TCL" Name="reconfigMultiplyBlock_reports.tcl"/>
   <File Type="OPT-DRC" Name="reconfigMultiplyBlock_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="reconfigMultiplyBlock.hwdef"/>
   <File Type="PWROPT-DCP" Name="reconfigMultiplyBlock_pwropt.dcp"/>
   <File Type="PWROPT-DRC" Name="reconfigMultiplyBlock_drc_pwropted.rpt"/>
   <File Type="PWROPT-TIMING" Name="reconfigMultiplyBlock_timing_summary_pwropted.rpt"/>
@@ -50,6 +48,7 @@
   <File Type="ROUTE-TIMING-RPX" Name="reconfigMultiplyBlock_timing_summary_routed.rpx"/>
   <File Type="ROUTE-SIMILARITY" Name="reconfigMultiplyBlock_incremental_reuse_routed.rpt"/>
   <File Type="ROUTE-CLK" Name="reconfigMultiplyBlock_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="reconfigMultiplyBlock_bus_skew_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW-PB" Name="reconfigMultiplyBlock_bus_skew_routed.pb"/>
   <File Type="ROUTE-BUS-SKEW-RPX" Name="reconfigMultiplyBlock_bus_skew_routed.rpx"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="reconfigMultiplyBlock_postroute_physopt.dcp"/>

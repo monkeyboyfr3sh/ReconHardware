@@ -54,7 +54,7 @@ void runTB(){
   
   //buffer0: 3
   digitalWrite(bufferSelect_pin, LOW);
-  digitalWrite(dataSend3_pin,LOW);digitalWrite(dataSend2_pin,HIGH);digitalWrite(dataSend1_pin,HIGH);digitalWrite(dataSend0_pin,LOW);
+  digitalWrite(dataSend3_pin,LOW);digitalWrite(dataSend2_pin,HIGH);digitalWrite(dataSend1_pin,LOW);digitalWrite(dataSend0_pin,LOW);
   
   clk();clk();
   

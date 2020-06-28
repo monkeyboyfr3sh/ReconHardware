@@ -2,8 +2,8 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Fri Jun 26 17:30:16 2020
-# Process ID: 42332
+# Start of session at: Sun Jun 28 00:21:24 2020
+# Process ID: 21936
 # Current directory: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.runs/child_0_impl_1
 # Command line: vivado.exe -log reconfigMultiplyBlock.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source reconfigMultiplyBlock.tcl -notrace
 # Log file: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.runs/child_0_impl_1/reconfigMultiplyBlock.vdi
