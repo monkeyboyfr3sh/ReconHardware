@@ -11,9 +11,17 @@
 #define bufferSelect_pin  19
 #define mStart_pin        22
 
-#define halfclk           10
+#define halfclk           100
 
 bool clkSet = false;
+
+const int sendPinArray[] = {
+  dataSend0_pin,
+  dataSend1_pin,
+  dataSend2_pin,
+  dataSend3_pin
+};
+
 void clk() {
   clkSet = !clkSet;
   digitalWrite(Clk_pin,clkSet);
@@ -33,6 +41,7 @@ void initGPIO(){
   pinMode(bufferSelect_pin,OUTPUT);
   pinMode(mStart_pin,OUTPUT);
 }
+
 void runTB(){
   //Setup Clk
   digitalWrite(Clk_pin, LOW);
@@ -52,15 +61,15 @@ void runTB(){
   digitalWrite(bufferRD_pin, LOW);
   digitalWrite(bufferEN_pin, HIGH);
   
-  //buffer0: 3
+  //buffer0: 6
   digitalWrite(bufferSelect_pin, LOW);
-  digitalWrite(dataSend3_pin,LOW);digitalWrite(dataSend2_pin,HIGH);digitalWrite(dataSend1_pin,LOW);digitalWrite(dataSend0_pin,LOW);
+  digitalWrite(dataSend3_pin,LOW);digitalWrite(dataSend2_pin,LOW);digitalWrite(dataSend1_pin,HIGH);digitalWrite(dataSend0_pin,LOW);
   
   clk();clk();
   
   //buffer0: 4
   digitalWrite(bufferSelect_pin, HIGH);
-  digitalWrite(dataSend3_pin,LOW);digitalWrite(dataSend2_pin,HIGH);digitalWrite(dataSend1_pin,LOW);digitalWrite(dataSend0_pin,LOW);
+  digitalWrite(dataSend3_pin,HIGH);digitalWrite(dataSend2_pin,HIGH);digitalWrite(dataSend1_pin,LOW);digitalWrite(dataSend0_pin,HIGH);
   
   clk();clk();
 
@@ -69,11 +78,11 @@ void runTB(){
   digitalWrite(bufferEN_pin,HIGH);
   digitalWrite(mStart_pin,HIGH);
   
-  clk();clk();
+  clk();
   
   digitalWrite(mStart_pin,LOW);
-  
-  clk();clk();
+
+  clk();
 }
 void outData(){
   Serial.println("Read LD1-LD4 for multiplier output");
@@ -89,5 +98,4 @@ void setup() {
 }
 
 void loop() {
-    clk();
 }

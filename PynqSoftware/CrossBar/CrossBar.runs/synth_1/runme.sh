@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/monke/OneDrive/Documents/GitHub/ReconHardware/PynqSoftware/CrossBar/CrossBar.runs/synth_1'
+HD_PWD='C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/CrossBar/CrossBar.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log multiplyXBar.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source multiplyXBar.tcl
+EAStep vivado -log XBar.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source XBar.tcl

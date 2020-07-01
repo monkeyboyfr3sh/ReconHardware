@@ -39,7 +39,6 @@ set_property file_type "Verilog Header" [get_files C:/Users/monke/Documents/GitH
 set_property is_global_include true [get_files C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.srcs/sources_1/imports/new/definitions.h]
 read_verilog -library xil_defaultlib C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.srcs/sources_1/new/reconfigMultiplyBlock.v
 add_files C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.srcs/sources_1/bd/ps_Wrap/ps_Wrap.bd
-set_property used_in_implementation false [get_files -all c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.srcs/sources_1/bd/ps_Wrap/ip/ps_Wrap_processing_system7_0_0/ps_Wrap_processing_system7_0_0.xdc]
 set_property used_in_implementation false [get_files -all C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.srcs/sources_1/bd/ps_Wrap/ps_Wrap_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being

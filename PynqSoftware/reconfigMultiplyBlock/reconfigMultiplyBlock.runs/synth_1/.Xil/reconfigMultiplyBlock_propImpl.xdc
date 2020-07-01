@@ -105,3 +105,7 @@ set_property src_info {type:XDC file:1 line:63 export:INPUT save:INPUT read:READ
 set_property PACKAGE_PIN R17 [get_ports mStart]
 set_property src_info {type:XDC file:1 line:64 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN G17 [get_ports mReady]
+set_property src_info {type:XDC file:1 line:75 export:INPUT save:INPUT read:READ} [current_design]
+create_pblock pblock_mCompute
+add_cells_to_pblock [get_pblocks pblock_mCompute] [get_cells -quiet [list mCompute]]
+resize_pblock [get_pblocks pblock_mCompute] -add {SLICE_X26Y50:SLICE_X31Y52}

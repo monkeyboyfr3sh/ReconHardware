@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/monke/OneDrive/Documents/GitHub/ReconHardware/PynqSoftware/CrossBar/CrossBar.runs/impl_1'
+HD_PWD='C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/CrossBar/CrossBar.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -42,6 +42,6 @@ EAStep()
 
 # pre-commands:
 /bin/touch .init_design.begin.rst
-EAStep vivado -log multiplyXBar.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source multiplyXBar.tcl -notrace
+EAStep vivado -log XBar.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source XBar.tcl -notrace
 
 

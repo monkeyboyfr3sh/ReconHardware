@@ -12,7 +12,4 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==ps_Wrap_Paralle
 # IP: bd/ps_Wrap/ip/ps_Wrap_dataSplit_0_0/ps_Wrap_dataSplit_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==ps_Wrap_dataSplit_0_0 || ORIG_REF_NAME==ps_Wrap_dataSplit_0_0} -quiet] -quiet
 
-# IP: bd/ps_Wrap/ip/ps_Wrap_processing_system7_0_0/ps_Wrap_processing_system7_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==ps_Wrap_processing_system7_0_0 || ORIG_REF_NAME==ps_Wrap_processing_system7_0_0} -quiet] -quiet
-
 # XDC: bd/ps_Wrap/ps_Wrap_ooc.xdc

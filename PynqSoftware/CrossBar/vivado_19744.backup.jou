@@ -1,0 +1,16 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Wed Jul  1 17:26:29 2020
+# Process ID: 19744
+# Current directory: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/CrossBar
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9372 C:\Users\monke\Documents\GitHub\ReconHardware\PynqSoftware\CrossBar\CrossBar.xpr
+# Log file: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/CrossBar/vivado.log
+# Journal file: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/CrossBar\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/CrossBar/CrossBar.xpr
+update_compile_order -fileset sources_1
+save_project_as reconfigCrossbarMultiplier C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigCrossbarMultiplier -force
+import_files

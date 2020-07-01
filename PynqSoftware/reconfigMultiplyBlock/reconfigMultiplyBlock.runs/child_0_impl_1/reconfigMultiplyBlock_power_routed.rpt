@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date             : Sun Jun 28 00:31:37 2020
+| Date             : Wed Jul  1 18:23:52 2020
 | Host             : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 | Command          : report_power -file reconfigMultiplyBlock_power_routed.rpt -pb reconfigMultiplyBlock_power_summary_routed.pb -rpx reconfigMultiplyBlock_power_routed.rpx
 | Design           : reconfigMultiplyBlock
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.395        |
+| Total On-Chip Power (W)  | 1.267        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.257        |
-| Device Static (W)        | 0.137        |
+| Dynamic (W)              | 1.140        |
+| Device Static (W)        | 0.127        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 68.9         |
-| Junction Temperature (C) | 41.1         |
+| Max Ambient (C)          | 70.4         |
+| Junction Temperature (C) | 39.6         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,17 +52,15 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |    <0.001 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |      203 |       --- |             --- |
-|   LUT as Logic |    <0.001 |       32 |     53176 |            0.06 |
-|   Register     |    <0.001 |       19 |    106352 |            0.02 |
+| Slice Logic    |     0.053 |       69 |       --- |             --- |
+|   LUT as Logic |     0.051 |       32 |     53176 |            0.06 |
+|   Register     |     0.001 |       19 |    106352 |            0.02 |
 |   CARRY4       |    <0.001 |        2 |     13294 |            0.02 |
-|   Others       |     0.000 |      140 |       --- |             --- |
-| Signals        |    <0.001 |       62 |       --- |             --- |
-| I/O            |    <0.001 |       18 |       125 |           14.40 |
-| PS7            |     1.256 |        1 |       --- |             --- |
-| Static Power   |     0.137 |          |           |                 |
-| Total          |     1.395 |          |           |                 |
+|   Others       |     0.000 |        6 |       --- |             --- |
+| Signals        |     0.194 |       62 |       --- |             --- |
+| I/O            |     0.893 |       18 |       125 |           14.40 |
+| Static Power   |     0.127 |          |           |                 |
+| Total          |     1.267 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,9 +70,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.014 |       0.001 |      0.013 |
-| Vccaux    |       1.800 |     0.014 |       0.000 |      0.014 |
-| Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
+| Vccint    |       1.000 |     0.299 |       0.287 |      0.012 |
+| Vccaux    |       1.800 |     0.045 |       0.031 |      0.014 |
+| Vcco33    |       3.300 |     0.242 |       0.241 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -85,12 +83,12 @@ Table of Contents
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccpint   |       1.000 |     0.674 |       0.647 |      0.027 |
-| Vccpaux   |       1.800 |     0.036 |       0.026 |      0.010 |
-| Vccpll    |       1.800 |     0.017 |       0.014 |      0.003 |
-| Vcco_ddr  |       1.500 |     0.354 |       0.352 |      0.002 |
-| Vcco_mio0 |       3.300 |     0.003 |       0.002 |      0.001 |
-| Vcco_mio1 |       1.800 |     0.003 |       0.002 |      0.001 |
+| Vccpint   |       1.000 |     0.026 |       0.000 |      0.026 |
+| Vccpaux   |       1.800 |     0.010 |       0.000 |      0.010 |
+| Vccpll    |       1.800 |     0.003 |       0.000 |      0.003 |
+| Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio0 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio1 |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
 +-----------+-------------+-----------+-------------+------------+
 
@@ -132,11 +130,9 @@ Table of Contents
 2.2 Clock Constraints
 ---------------------
 
-+------------+---------------------------------------------------------+-----------------+
-| Clock      | Domain                                                  | Constraint (ns) |
-+------------+---------------------------------------------------------+-----------------+
-| clk_fpga_0 | psWrap/processing_system7_0/inst/FCLK_CLK_unbuffered[0] |            10.0 |
-+------------+---------------------------------------------------------+-----------------+
++-------+--------+-----------------+
+| Clock | Domain | Constraint (ns) |
++-------+--------+-----------------+
 
 
 3. Detailed Reports
@@ -145,13 +141,16 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+--------------------------+-----------+
-| Name                     | Power (W) |
-+--------------------------+-----------+
-| reconfigMultiplyBlock    |     1.257 |
-|   psWrap                 |     1.256 |
-|     processing_system7_0 |     1.256 |
-|       inst               |     1.256 |
-+--------------------------+-----------+
++-----------------------+-----------+
+| Name                  | Power (W) |
++-----------------------+-----------+
+| reconfigMultiplyBlock |     1.140 |
+|   mCompute            |     0.043 |
+|   psWrap              |     0.078 |
+|     ParallelBuffer_0  |     0.065 |
+|       inst            |     0.065 |
+|     dataSplit_0       |     0.014 |
+|       inst            |     0.014 |
++-----------------------+-----------+
 
 
