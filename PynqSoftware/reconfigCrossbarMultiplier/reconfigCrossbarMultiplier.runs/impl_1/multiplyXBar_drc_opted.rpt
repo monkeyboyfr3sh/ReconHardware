@@ -1,0 +1,122 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Wed Jul  1 20:16:36 2020
+| Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
+| Command      : report_drc -file multiplyXBar_drc_opted.rpt -pb multiplyXBar_drc_opted.pb -rpx multiplyXBar_drc_opted.rpx
+| Design       : multiplyXBar
+| Device       : xc7z020clg400-1
+| Speed File   : -1
+| Design State : Synthesized
+---------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: checkpoint_multiplyXBar
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 12
++---------+------------------+---------------------------------+------------+
+| Rule    | Severity         | Description                     | Violations |
++---------+------------------+---------------------------------+------------+
+| PLCK-12 | Error            | Clock Placer Checks             | 1          |
+| UCIO-1  | Critical Warning | Unconstrained Logical Port      | 1          |
+| HDPR-26 | Warning          | Improper Pblock column boundary | 5          |
+| IOSR-1  | Warning          | IOB set reset sharing           | 4          |
+| ZPS7-1  | Warning          | PS7 block required              | 1          |
++---------+------------------+---------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+PLCK-12#1 Error
+Clock Placer Checks  
+Poor placement for routing between an IO pin and BUFG. 
+Resolution: Poor placement of an IO pin and a BUFG has resulted in the router using a non-dedicated path between the two.  There are several things that could trigger this DRC, each of which can cause unpredictable clock insertion delays that result in poor timing.  This DRC could be caused by any of the following: (a) a clock port was placed on a pin that is not a CCIO-pin (b)the BUFG has not been placed in the same half of the device or SLR as the CCIO-pin (c) a single ended clock has been placed on the N-Side of a differential pair CCIO-pin.
+ If this sub optimal condition is acceptable for this design, you may use the CLOCK_DEDICATED_ROUTE constraint in the .xdc file to demote this message to a WARNING. However, the use of this override is highly discouraged. These examples can be used directly in the .xdc file to override this clock rule.
+	< set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets Clk_IBUF] >
+
+	Clk_IBUF_inst (IBUF.O) is locked to U17
+	Clk_IBUF_BUFG_inst (BUFG.I) cannot be placed
+
+Related violations: <none>
+
+UCIO-1#1 Critical Warning
+Unconstrained Logical Port  
+24 out of 36 logical ports have no user assigned specific location constraint (LOC). This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all pin locations. This design will fail to generate a bitstream unless all logical ports have a user specified site LOC constraint defined.  To allow bitstream creation with unspecified pin locations (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks UCIO-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run.  Problem ports: AddressSelect[4:0], bufferRD_in[3:0], bufferRD_out[3:0], mReady_in[3:0], mReady_out[3:0], outputSelect[1:0], mStart_out.
+Related violations: <none>
+
+HDPR-26#1 Warning
+Improper Pblock column boundary  
+The Reconfigurable Pblock 'pblock_mCompute' has a 'left' edge that terminates on an improper column boundary at tile 'CLBLM_R_X37Y55' (SLICE_X54Y55 SLICE_X55Y55).
+Resolution: Set the Pblock property SNAPPING_MODE to value of ON using the following constraint, or modify the X specification of the pblock to avoid this edge.
+Example: set_property SNAPPING_MODE ON [get_pblocks 'pblock_mCompute']
+Please refer to the Xilinx Partial Reconfiguration User Guide.
+Related violations: <none>
+
+HDPR-26#2 Warning
+Improper Pblock column boundary  
+The Reconfigurable Pblock 'pblock_mCompute_1' has a 'right' edge that terminates on an improper column boundary at tile 'CLBLL_L_X38Y55' (SLICE_X57Y55 SLICE_X56Y55).
+Resolution: Set the Pblock property SNAPPING_MODE to value of ON using the following constraint, or modify the X specification of the pblock to avoid this edge.
+Example: set_property SNAPPING_MODE ON [get_pblocks 'pblock_mCompute_1']
+Please refer to the Xilinx Partial Reconfiguration User Guide.
+Related violations: <none>
+
+HDPR-26#3 Warning
+Improper Pblock column boundary  
+The Reconfigurable Pblock 'pblock_mCompute_3' has a 'right' edge that terminates on an improper column boundary at tile 'CLBLL_L_X40Y55' (SLICE_X61Y55 SLICE_X60Y55).
+Resolution: Set the Pblock property SNAPPING_MODE to value of ON using the following constraint, or modify the X specification of the pblock to avoid this edge.
+Example: set_property SNAPPING_MODE ON [get_pblocks 'pblock_mCompute_3']
+Please refer to the Xilinx Partial Reconfiguration User Guide.
+Related violations: <none>
+
+HDPR-26#4 Warning
+Improper Pblock column boundary  
+The Reconfigurable Pblock 'pblock_mCompute_5' has a 'right' edge that terminates on an improper column boundary at tile 'CLBLL_L_X42Y55' (SLICE_X65Y55 SLICE_X64Y55).
+Resolution: Set the Pblock property SNAPPING_MODE to value of ON using the following constraint, or modify the X specification of the pblock to avoid this edge.
+Example: set_property SNAPPING_MODE ON [get_pblocks 'pblock_mCompute_5']
+Please refer to the Xilinx Partial Reconfiguration User Guide.
+Related violations: <none>
+
+HDPR-26#5 Warning
+Improper Pblock column boundary  
+The Reconfigurable Pblock 'pblock_mCompute_7' has a 'left' edge that terminates on an improper column boundary at tile 'CLBLL_R_X51Y55' (SLICE_X80Y55 SLICE_X81Y55).
+Resolution: Set the Pblock property SNAPPING_MODE to value of ON using the following constraint, or modify the X specification of the pblock to avoid this edge.
+Example: set_property SNAPPING_MODE ON [get_pblocks 'pblock_mCompute_7']
+Please refer to the Xilinx Partial Reconfiguration User Guide.
+Related violations: <none>
+
+IOSR-1#1 Warning
+IOB set reset sharing  
+IO dataIn[0] connects to flops which have these genblk3[1].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff1/SR[0], genblk3[2].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff1/SR[0], genblk3[3].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff1/SR[0], genblk3[0].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff1/SR[0] set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+Related violations: <none>
+
+IOSR-1#2 Warning
+IOB set reset sharing  
+IO dataIn[1] connects to flops which have these genblk3[1].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff1/SR[0], genblk3[2].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff1/SR[0], genblk3[3].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff1/SR[0], genblk3[0].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff1/SR[0] set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+Related violations: <none>
+
+IOSR-1#3 Warning
+IOB set reset sharing  
+IO dataIn[2] connects to flops which have these genblk3[1].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff1/SR[0], genblk3[2].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff1/SR[0], genblk3[3].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff1/SR[0], genblk3[0].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff1/SR[0] set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+Related violations: <none>
+
+IOSR-1#4 Warning
+IOB set reset sharing  
+IO dataIn[3] connects to flops which have these genblk3[1].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff1/SR[0], genblk3[2].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff1/SR[0], genblk3[3].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff1/SR[0], genblk3[0].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff1/SR[0] set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+Related violations: <none>
+
+ZPS7-1#1 Warning
+PS7 block required  
+The PS7 cell must be used in this Zynq design in order to enable correct default configuration.
+Related violations: <none>
+
+

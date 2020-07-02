@@ -99,6 +99,13 @@
           <Proxy FileSetName="ps_Wrap_ParallelBuffer_0_0"/>
         </CompFileExtendedInfo>
       </File>
+      <File Path="$PPRDIR/../CrossBar/CrossBar.srcs/sources_1/new/XBar.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/new/mux.v">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../CrossBar/CrossBar.srcs/sources_1/new/mux.v"/>
@@ -124,13 +131,6 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../CrossBar/CrossBar.srcs/sources_1/new/XBar.v">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="multiplyXBar"/>
@@ -139,7 +139,14 @@
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
       <Filter Type="Constrs"/>
+      <File Path="$PPRDIR/../../MCUSoftware/xBarMultiplier/FPGA Files/xBarMultiplier.xdc">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+        </FileInfo>
+      </File>
       <Config>
+        <Option Name="TargetConstrsFile" Val="$PPRDIR/../../MCUSoftware/xBarMultiplier/FPGA Files/xBarMultiplier.xdc"/>
         <Option Name="ConstrsType" Val="XDC"/>
       </Config>
     </FileSet>
@@ -239,10 +246,18 @@
         </FileInfo>
       </File>
       <Config>
+        <Option Name="TopModule" Val="floatmultiplyCompute"/>
+        <Option Name="TopAutoSet" Val="TRUE"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
     <FileSet Name="floatPynq" Type="BlockSrcs" RelSrcDir="$PSRCDIR/floatPynq">
+      <File Path="$PPRDIR/../reconfigMultiplyBlock/reconfigMultiplyBlock.srcs/sources_1/imports/new/definitions.h">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PPRDIR/../reconfigMultiplyBlock/reconfigMultiplyBlock.srcs/sources_1/imports/new/floatmComputePynq.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -250,13 +265,9 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../reconfigMultiplyBlock/reconfigMultiplyBlock.srcs/sources_1/imports/new/definitions.h">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <Config>
+        <Option Name="TopModule" Val="floatmultiplyComputePynq"/>
+        <Option Name="TopAutoSet" Val="TRUE"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -275,6 +286,8 @@
         </FileInfo>
       </File>
       <Config>
+        <Option Name="TopModule" Val="fixedmultiplyCompute"/>
+        <Option Name="TopAutoSet" Val="TRUE"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -310,9 +323,7 @@
     </Run>
     <Run Id="integer_synth_1" Type="Ft3:Synth" SrcSet="integer" Part="xc7z020clg400-1" ConstrsSet="integer" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/multiplyCompute_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -322,9 +333,7 @@
     </Run>
     <Run Id="ps_Wrap_ParallelBuffer_0_0_synth_1" Type="Ft3:Synth" SrcSet="ps_Wrap_ParallelBuffer_0_0" Part="xc7z020clg400-1" ConstrsSet="ps_Wrap_ParallelBuffer_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/ps_Wrap_ParallelBuffer_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -332,51 +341,65 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="integerPynq_synth_1" Type="Ft3:Synth" SrcSet="integerPynq" Part="xc7z020clg400-1" ConstrsSet="integerPynq" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true">
+    <Run Id="integerPynq_synth_1" Type="Ft3:Synth" SrcSet="integerPynq" Part="xc7z020clg400-1" ConstrsSet="integerPynq" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/integerPynq_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
       </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="float_synth_1" Type="Ft3:Synth" SrcSet="float" Part="xc7z020clg400-1" ConstrsSet="float" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true">
+    <Run Id="float_synth_1" Type="Ft3:Synth" SrcSet="float" Part="xc7z020clg400-1" ConstrsSet="float" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/float_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
       </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="floatPynq_synth_1" Type="Ft3:Synth" SrcSet="floatPynq" Part="xc7z020clg400-1" ConstrsSet="floatPynq" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true">
+    <Run Id="floatPynq_synth_1" Type="Ft3:Synth" SrcSet="floatPynq" Part="xc7z020clg400-1" ConstrsSet="floatPynq" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/floatPynq_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
       </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="fixed_synth_1" Type="Ft3:Synth" SrcSet="fixed" Part="xc7z020clg400-1" ConstrsSet="fixed" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true">
+    <Run Id="fixed_synth_1" Type="Ft3:Synth" SrcSet="fixed" Part="xc7z020clg400-1" ConstrsSet="fixed" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/fixed_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
       </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" SynthRun="synth_1" IncludeInArchive="true" PRConfiguration="config_1" ConfigurationChanged="false" GenFullBitstream="true">
+    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true" PRConfiguration="config_1" ConfigurationChanged="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design" EnableStepBool="1"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="integer_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="integer" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="integer_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
@@ -393,30 +416,9 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="integer_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="integer" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="integer_synth_1" IncludeInArchive="false" GenFullBitstream="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design" EnableStepBool="1"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
     <Run Id="ps_Wrap_ParallelBuffer_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="ps_Wrap_ParallelBuffer_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="ps_Wrap_ParallelBuffer_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -433,28 +435,7 @@
     </Run>
     <Run Id="integerPynq_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="integerPynq" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="integerPynq_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design" EnableStepBool="1"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="child_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="impl_1" IncludeInArchive="true" PRConfiguration="config_2" ConfigurationChanged="false" GenFullBitstream="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -471,9 +452,7 @@
     </Run>
     <Run Id="float_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="float" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="float_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -490,9 +469,7 @@
     </Run>
     <Run Id="floatPynq_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="floatPynq" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="floatPynq_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -509,9 +486,7 @@
     </Run>
     <Run Id="fixed_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="fixed" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="fixed_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -526,16 +501,88 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
+    <Run Id="child_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/child_0_impl_1" SynthRun="impl_1" IncludeInArchive="true" PRConfiguration="config_2" ConfigurationChanged="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design" EnableStepBool="1"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="child_1_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/child_1_impl_1" SynthRun="impl_1" IncludeInArchive="true" PRConfiguration="config_3" ConfigurationChanged="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design" EnableStepBool="1"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="child_2_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/child_2_impl_1" SynthRun="impl_1" IncludeInArchive="true" PRConfiguration="config_4" ConfigurationChanged="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design" EnableStepBool="1"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="child_3_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/child_3_impl_1" SynthRun="impl_1" IncludeInArchive="true" PRConfiguration="config_5" ConfigurationChanged="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design" EnableStepBool="1"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
   </Runs>
   <Board>
     <Jumpers/>
   </Board>
   <PRFlow Version="1" Minor="0">
     <PartitionDefs>
-      <PartitionDef Name="multiplier0" DefaultRM="integer" ModuleName="multiplyCompute" LibraryName="xil_defaultlib" Type="NONE">
-        <ReconfigModule Name="fixed" Top="" SrcSet="fixed" SynthRun="fixed_synth_1" ImplRun="fixed_impl_1"/>
-        <ReconfigModule Name="float" Top="" SrcSet="float" SynthRun="float_synth_1" ImplRun="float_impl_1"/>
-        <ReconfigModule Name="floatPynq" Top="" SrcSet="floatPynq" SynthRun="floatPynq_synth_1" ImplRun="floatPynq_impl_1"/>
+      <PartitionDef Name="multiplier" DefaultRM="integer" ModuleName="multiplyCompute" LibraryName="xil_defaultlib" Type="NONE">
+        <ReconfigModule Name="fixed" Top="fixedmultiplyCompute" SrcSet="fixed" SynthRun="fixed_synth_1" ImplRun="fixed_impl_1"/>
+        <ReconfigModule Name="float" Top="floatmultiplyCompute" SrcSet="float" SynthRun="float_synth_1" ImplRun="float_impl_1"/>
+        <ReconfigModule Name="floatPynq" Top="floatmultiplyComputePynq" SrcSet="floatPynq" SynthRun="floatPynq_synth_1" ImplRun="floatPynq_impl_1"/>
         <ReconfigModule Name="integer" Top="multiplyCompute" SrcSet="integer" SynthRun="integer_synth_1" ImplRun="integer_impl_1"/>
         <ReconfigModule Name="integerPynq" Top="multiplyComputePynq" SrcSet="integerPynq" SynthRun="integerPynq_synth_1" ImplRun="integerPynq_impl_1"/>
       </PartitionDef>
@@ -552,6 +599,36 @@
         <PartitionInstMap PartitionInst="genblk4[3].m_computeBlock_out/mCompute" RM="integer"/>
       </PRConfiguration>
       <PRConfiguration Name="config_2">
+        <PartitionInstMap PartitionInst="genblk3[0].m_computeBlock_in/mCompute" RM="fixed"/>
+        <PartitionInstMap PartitionInst="genblk3[1].m_computeBlock_in/mCompute" RM="fixed"/>
+        <PartitionInstMap PartitionInst="genblk3[2].m_computeBlock_in/mCompute" RM="fixed"/>
+        <PartitionInstMap PartitionInst="genblk3[3].m_computeBlock_in/mCompute" RM="fixed"/>
+        <PartitionInstMap PartitionInst="genblk4[0].m_computeBlock_out/mCompute" RM="fixed"/>
+        <PartitionInstMap PartitionInst="genblk4[1].m_computeBlock_out/mCompute" RM="fixed"/>
+        <PartitionInstMap PartitionInst="genblk4[2].m_computeBlock_out/mCompute" RM="fixed"/>
+        <PartitionInstMap PartitionInst="genblk4[3].m_computeBlock_out/mCompute" RM="fixed"/>
+      </PRConfiguration>
+      <PRConfiguration Name="config_3">
+        <PartitionInstMap PartitionInst="genblk3[0].m_computeBlock_in/mCompute" RM="float"/>
+        <PartitionInstMap PartitionInst="genblk3[1].m_computeBlock_in/mCompute" RM="float"/>
+        <PartitionInstMap PartitionInst="genblk3[2].m_computeBlock_in/mCompute" RM="float"/>
+        <PartitionInstMap PartitionInst="genblk3[3].m_computeBlock_in/mCompute" RM="float"/>
+        <PartitionInstMap PartitionInst="genblk4[0].m_computeBlock_out/mCompute" RM="float"/>
+        <PartitionInstMap PartitionInst="genblk4[1].m_computeBlock_out/mCompute" RM="float"/>
+        <PartitionInstMap PartitionInst="genblk4[2].m_computeBlock_out/mCompute" RM="float"/>
+        <PartitionInstMap PartitionInst="genblk4[3].m_computeBlock_out/mCompute" RM="float"/>
+      </PRConfiguration>
+      <PRConfiguration Name="config_4">
+        <PartitionInstMap PartitionInst="genblk3[0].m_computeBlock_in/mCompute" RM="floatPynq"/>
+        <PartitionInstMap PartitionInst="genblk3[1].m_computeBlock_in/mCompute" RM="floatPynq"/>
+        <PartitionInstMap PartitionInst="genblk3[2].m_computeBlock_in/mCompute" RM="floatPynq"/>
+        <PartitionInstMap PartitionInst="genblk3[3].m_computeBlock_in/mCompute" RM="floatPynq"/>
+        <PartitionInstMap PartitionInst="genblk4[0].m_computeBlock_out/mCompute" RM="floatPynq"/>
+        <PartitionInstMap PartitionInst="genblk4[1].m_computeBlock_out/mCompute" RM="floatPynq"/>
+        <PartitionInstMap PartitionInst="genblk4[2].m_computeBlock_out/mCompute" RM="floatPynq"/>
+        <PartitionInstMap PartitionInst="genblk4[3].m_computeBlock_out/mCompute" RM="floatPynq"/>
+      </PRConfiguration>
+      <PRConfiguration Name="config_5">
         <PartitionInstMap PartitionInst="genblk3[0].m_computeBlock_in/mCompute" RM="integerPynq"/>
         <PartitionInstMap PartitionInst="genblk3[1].m_computeBlock_in/mCompute" RM="integerPynq"/>
         <PartitionInstMap PartitionInst="genblk3[2].m_computeBlock_in/mCompute" RM="integerPynq"/>

@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1593645659">
   <File Type="PA-TCL" Name="reconfigMultiplyBlock.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="reconfigMultiplyBlock_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="reconfigMultiplyBlock_reports.tcl"/>
   <File Type="RDS-RDS" Name="reconfigMultiplyBlock.vds"/>
   <File Type="RDS-UTIL" Name="reconfigMultiplyBlock_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="reconfigMultiplyBlock_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="reconfigMultiplyBlock.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="reconfigMultiplyBlock_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="reconfigMultiplyBlock_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/imports/new/definitions.h">

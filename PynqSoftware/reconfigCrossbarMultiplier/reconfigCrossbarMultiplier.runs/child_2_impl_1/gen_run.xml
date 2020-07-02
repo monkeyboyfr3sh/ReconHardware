@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="child_2_impl_1" LaunchPart="xc7z020clg400-1" LaunchConfig="config_4" LaunchTime="1593652568">
+  <File Type="BITSTR-BMM" Name="multiplyXBar_bd.bmm"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="multiplyXBar_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="multiplyXBar_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR" Name="multiplyXBar_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="multiplyXBar.tcl"/>
+  <File Type="OPT-TIMING" Name="multiplyXBar_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="multiplyXBar_opt.dcp"/>
+  <File Type="ROUTE-PWR-SUM" Name="multiplyXBar_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="multiplyXBar_reports.tcl"/>
+  <File Type="OPT-DRC" Name="multiplyXBar_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="multiplyXBar.hwdef"/>
+  <File Type="PWROPT-DCP" Name="multiplyXBar_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="multiplyXBar_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="multiplyXBar_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="multiplyXBar_placed.dcp"/>
+  <File Type="PLACE-IO" Name="multiplyXBar_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="multiplyXBar_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="multiplyXBar_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="multiplyXBar_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="multiplyXBar_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="multiplyXBar_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="multiplyXBar_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="multiplyXBar_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="multiplyXBar_postplace_pwropt.dcp"/>
+  <File Type="BG-BIN" Name="multiplyXBar.bin"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="multiplyXBar_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="multiplyXBar_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="multiplyXBar_drc_physopted.rpt"/>
+  <File Type="BITSTR-MSK" Name="multiplyXBar.msk"/>
+  <File Type="PHYSOPT-TIMING" Name="multiplyXBar_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="multiplyXBar_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="multiplyXBar_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="multiplyXBar_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="multiplyXBar_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="multiplyXBar_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="multiplyXBar_drc_routed.rpx"/>
+  <File Type="BITSTR-MMI" Name="multiplyXBar.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="multiplyXBar_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="multiplyXBar_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="multiplyXBar_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="multiplyXBar_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="multiplyXBar_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="multiplyXBar_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="multiplyXBar_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="multiplyXBar_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="multiplyXBar_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="multiplyXBar_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="multiplyXBar_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="multiplyXBar_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="multiplyXBar_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="multiplyXBar_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="multiplyXBar_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="multiplyXBar_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="multiplyXBar_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="multiplyXBar_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="multiplyXBar_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="multiplyXBar_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="multiplyXBar_bus_skew_postroute_physopted.pb"/>
+  <File Type="BG-BIT" Name="multiplyXBar.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="multiplyXBar_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-RBT" Name="multiplyXBar.rbt"/>
+  <File Type="BITSTR-NKY" Name="multiplyXBar.nky"/>
+  <File Type="PDI-FILE" Name="multiplyXBar.pdi"/>
+  <File Type="RCFI_FILE" Name="multiplyXBar.rcfi"/>
+  <File Type="CFI_FILE" Name="multiplyXBar.cfi"/>
+  <File Type="RNPI_FILE" Name="multiplyXBar.rnpi"/>
+  <File Type="NPI_FILE" Name="multiplyXBar.npi"/>
+  <File Type="RBD_FILE" Name="multiplyXBar.rbd"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="multiplyXBar.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="multiplyXBar.sysdef"/>
+  <File Type="BG-BGN" Name="multiplyXBar.bgn"/>
+  <File Type="BG-DRC" Name="multiplyXBar.drc"/>
+  <File Type="RDI-RDI" Name="multiplyXBar.vdi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="ROUTE-PARTITION-CELL-DCP" Name="genblk3_0_.m_computeBlock_in_mCompute_floatPynq_routed.dcp"/>
+  <File Type="ROUTE-PARTITION-CELL-DCP" Name="genblk3_1_.m_computeBlock_in_mCompute_floatPynq_routed.dcp"/>
+  <File Type="ROUTE-PARTITION-CELL-DCP" Name="genblk3_2_.m_computeBlock_in_mCompute_floatPynq_routed.dcp"/>
+  <File Type="ROUTE-PARTITION-CELL-DCP" Name="genblk3_3_.m_computeBlock_in_mCompute_floatPynq_routed.dcp"/>
+  <File Type="ROUTE-PARTITION-CELL-DCP" Name="genblk4_0_.m_computeBlock_out_mCompute_floatPynq_routed.dcp"/>
+  <File Type="ROUTE-PARTITION-CELL-DCP" Name="genblk4_1_.m_computeBlock_out_mCompute_floatPynq_routed.dcp"/>
+  <File Type="ROUTE-PARTITION-CELL-DCP" Name="genblk4_2_.m_computeBlock_out_mCompute_floatPynq_routed.dcp"/>
+  <File Type="ROUTE-PARTITION-CELL-DCP" Name="genblk4_3_.m_computeBlock_out_mCompute_floatPynq_routed.dcp"/>
+  <File Type="BG-PARTITION-CELL-BIT" Name="genblk3_0_.m_computeBlock_in_mCompute_floatPynq_partial.bit"/>
+  <File Type="BG-PARTITION-CELL-BIT" Name="genblk3_1_.m_computeBlock_in_mCompute_floatPynq_partial.bit"/>
+  <File Type="BG-PARTITION-CELL-BIT" Name="genblk3_2_.m_computeBlock_in_mCompute_floatPynq_partial.bit"/>
+  <File Type="BG-PARTITION-CELL-BIT" Name="genblk3_3_.m_computeBlock_in_mCompute_floatPynq_partial.bit"/>
+  <File Type="BG-PARTITION-CELL-BIT" Name="genblk4_0_.m_computeBlock_out_mCompute_floatPynq_partial.bit"/>
+  <File Type="BG-PARTITION-CELL-BIT" Name="genblk4_1_.m_computeBlock_out_mCompute_floatPynq_partial.bit"/>
+  <File Type="BG-PARTITION-CELL-BIT" Name="genblk4_2_.m_computeBlock_out_mCompute_floatPynq_partial.bit"/>
+  <File Type="BG-PARTITION-CELL-BIT" Name="genblk4_3_.m_computeBlock_out_mCompute_floatPynq_partial.bit"/>
+  <File Type="BG-PARTITION-LTX" Name="genblk3_0_.m_computeBlock_in_mCompute_floatPynq.ltx"/>
+  <File Type="BG-PARTITION-LTX" Name="genblk3_1_.m_computeBlock_in_mCompute_floatPynq.ltx"/>
+  <File Type="BG-PARTITION-LTX" Name="genblk3_2_.m_computeBlock_in_mCompute_floatPynq.ltx"/>
+  <File Type="BG-PARTITION-LTX" Name="genblk3_3_.m_computeBlock_in_mCompute_floatPynq.ltx"/>
+  <File Type="BG-PARTITION-LTX" Name="genblk4_0_.m_computeBlock_out_mCompute_floatPynq.ltx"/>
+  <File Type="BG-PARTITION-LTX" Name="genblk4_1_.m_computeBlock_out_mCompute_floatPynq.ltx"/>
+  <File Type="BG-PARTITION-LTX" Name="genblk4_2_.m_computeBlock_out_mCompute_floatPynq.ltx"/>
+  <File Type="BG-PARTITION-LTX" Name="genblk4_3_.m_computeBlock_out_mCompute_floatPynq.ltx"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/../reconfigMultiplyBlock/reconfigMultiplyBlock.srcs/sources_1/imports/new/definitions.h">
+      <FileInfo>
+        <Attr Name="IsGlobalInclude" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../reconfigMultiplyBlock/reconfigMultiplyBlock.srcs/sources_1/imports/new/FlipFlop.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../reconfigMultiplyBlock/reconfigMultiplyBlock.srcs/sources_1/imports/new/ParallelBuffer.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../reconfigMultiplyBlock/reconfigMultiplyBlock.srcs/sources_1/imports/new/dataSplit.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../reconfigMultiplyBlock/reconfigMultiplyBlock.srcs/sources_1/bd/ps_Wrap/ps_Wrap.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../CrossBar/CrossBar.srcs/sources_1/new/XBar.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/mux.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CrossBar/CrossBar.srcs/sources_1/new/mux.v"/>
+        <Attr Name="ImportTime" Val="1593053990"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../reconfigMultiplyBlock/reconfigMultiplyBlock.srcs/sources_1/new/reconfigMultiplyBlock.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/multiplyXBar.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CrossBar/CrossBar.srcs/sources_1/new/multiplyXBar.v"/>
+        <Attr Name="ImportTime" Val="1593053990"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="multiplyXBar"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PPRDIR/../../MCUSoftware/xBarMultiplier/FPGA Files/xBarMultiplier.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TargetConstrsFile" Val="$PPRDIR/../../MCUSoftware/xBarMultiplier/FPGA Files/xBarMultiplier.xdc"/>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design" EnableStepBool="1"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="ps_Wrap_ParallelBuffer_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="floatPynq"/>
+</GenRun>

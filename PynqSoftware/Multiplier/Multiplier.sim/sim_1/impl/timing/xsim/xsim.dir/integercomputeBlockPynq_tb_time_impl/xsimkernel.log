@@ -1,7 +1,0 @@
-Running: xsim.dir/integercomputeBlockPynq_tb_time_impl/xsimk.exe -simmode gui -wdb integercomputeBlockPynq_tb_time_impl.wdb -simrunnum 0 -socket 58401
-Design successfully loaded
-Design Loading Memory Usage: 10824 KB (Peak: 10824 KB)
-Design Loading CPU Usage: 15 ms
-Simulation completed
-Simulation Memory Usage: 13632 KB (Peak: 13632 KB)
-Simulation CPU Usage: 124 ms

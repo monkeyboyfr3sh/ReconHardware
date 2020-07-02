@@ -17,7 +17,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_msg_config -id {HDL-1065} -limit 10000
+set_msg_config -id {Common 17-41} -limit 10000000
 create_project -in_memory -part xc7z020clg400-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -39,7 +39,7 @@ read_verilog C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfig
 set_property file_type "Verilog Header" [get_files C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.srcs/sources_1/imports/new/definitions.h]
 set_property is_global_include true [get_files C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.srcs/sources_1/imports/new/definitions.h]
 read_verilog -library xil_defaultlib {
-  C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigCrossbarMultiplier/reconfigCrossbarMultiplier.srcs/sources_1/imports/new/XBar.v
+  C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/CrossBar/CrossBar.srcs/sources_1/new/XBar.v
   C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigCrossbarMultiplier/reconfigCrossbarMultiplier.srcs/sources_1/new/mux.v
   C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.srcs/sources_1/new/reconfigMultiplyBlock.v
   C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigCrossbarMultiplier/reconfigCrossbarMultiplier.srcs/sources_1/new/multiplyXBar.v
@@ -55,6 +55,9 @@ set_property used_in_implementation false [get_files -all C:/Users/monke/Documen
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
+read_xdc {{C:/Users/monke/Documents/GitHub/ReconHardware/MCUSoftware/xBarMultiplier/FPGA Files/xBarMultiplier.xdc}}
+set_property used_in_implementation false [get_files {{C:/Users/monke/Documents/GitHub/ReconHardware/MCUSoftware/xBarMultiplier/FPGA Files/xBarMultiplier.xdc}}]
+
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1

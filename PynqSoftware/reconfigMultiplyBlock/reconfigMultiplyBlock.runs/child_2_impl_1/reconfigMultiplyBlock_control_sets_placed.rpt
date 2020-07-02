@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Wed Jul  1 18:23:28 2020
+| Date         : Wed Jul  1 18:27:55 2020
 | Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file reconfigMultiplyBlock_control_sets_placed.rpt
 | Design       : reconfigMultiplyBlock
@@ -74,9 +74,9 @@ Table of Contents
 | Clock Signal |                      Enable Signal                     |             Set/Reset Signal             | Slice Load Count | Bel Load Count |
 +--------------+--------------------------------------------------------+------------------------------------------+------------------+----------------+
 |  Clk_IBUF    |                                                        |                                          |                2 |              3 |
+|  Clk_IBUF    | mCompute/p_1_out[3]                                    | Rst_IBUF                                 |                1 |              4 |
 |  Clk_IBUF    | psWrap/ParallelBuffer_0/inst/buff0/holdData            | psWrap/ParallelBuffer_0/inst/buff1/SR[0] |                1 |              4 |
 |  Clk_IBUF    | psWrap/ParallelBuffer_0/inst/buff1/holdData[3]_i_1_n_0 | psWrap/ParallelBuffer_0/inst/buff1/SR[0] |                1 |              4 |
-|  Clk_IBUF    | mCompute/p_1_out[3]                                    | Rst_IBUF                                 |                1 |              4 |
 +--------------+--------------------------------------------------------+------------------------------------------+------------------+----------------+
 
 

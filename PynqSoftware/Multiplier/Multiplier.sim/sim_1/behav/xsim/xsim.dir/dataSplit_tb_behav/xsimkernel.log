@@ -1,7 +1,0 @@
-Running: xsim.dir/dataSplit_tb_behav/xsimk.exe -simmode gui -wdb dataSplit_tb_behav.wdb -simrunnum 0 -socket 61143
-Design successfully loaded
-Design Loading Memory Usage: 5336 KB (Peak: 5336 KB)
-Design Loading CPU Usage: 0 ms
-Simulation completed
-Simulation Memory Usage: 5968 KB (Peak: 5968 KB)
-Simulation CPU Usage: 0 ms

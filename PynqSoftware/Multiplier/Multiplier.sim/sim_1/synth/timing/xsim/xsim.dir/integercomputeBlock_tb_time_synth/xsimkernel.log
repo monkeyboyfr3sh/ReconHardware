@@ -1,7 +1,0 @@
-Running: xsim.dir/integercomputeBlock_tb_time_synth/xsimk.exe -simmode gui -wdb integercomputeBlock_tb_time_synth.wdb -simrunnum 0 -socket 51726
-Design successfully loaded
-Design Loading Memory Usage: 5788 KB (Peak: 5788 KB)
-Design Loading CPU Usage: 62 ms
-Simulation completed
-Simulation Memory Usage: 6500 KB (Peak: 6500 KB)
-Simulation CPU Usage: 77 ms

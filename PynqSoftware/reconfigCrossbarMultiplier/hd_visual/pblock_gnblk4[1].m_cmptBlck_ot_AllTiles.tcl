@@ -1,0 +1,19 @@
+ set mytiles [get_tiles { \
+ HCLK_R_X101Y78 \
+ HCLK_CLB_X102Y78 \
+ HCLK_CLB_X103Y78 \
+ HCLK_L_X104Y78 \
+ INT_R_X39Y55 \
+ CLBLM_R_X39Y55 \
+ CLBLL_L_X40Y55 \
+ INT_L_X40Y55 \
+ INT_R_X39Y54 \
+ CLBLM_R_X39Y54 \
+ CLBLL_L_X40Y54 \
+ INT_L_X40Y54 \
+ INT_R_X39Y53 \
+ CLBLM_R_X39Y53 \
+ CLBLL_L_X40Y53 \
+ INT_L_X40Y53 \
+}] 
+select_objects -add $mytiles 

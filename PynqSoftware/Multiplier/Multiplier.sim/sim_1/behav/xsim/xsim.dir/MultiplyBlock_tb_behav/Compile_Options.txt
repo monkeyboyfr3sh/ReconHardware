@@ -1,1 +1,0 @@
--wto "44db8dc7ec384547a71c6e3fae890706" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "unisims_ver" -L "unimacro_ver" -L "secureip" --snapshot "MultiplyBlock_tb_behav" "xil_defaultlib.MultiplyBlock_tb" "xil_defaultlib.glbl" -log "elaborate.log" 

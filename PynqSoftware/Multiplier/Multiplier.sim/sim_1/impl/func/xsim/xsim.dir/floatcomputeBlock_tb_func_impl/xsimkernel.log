@@ -1,7 +1,0 @@
-Running: xsim.dir/floatcomputeBlock_tb_func_impl/xsimk.exe -simmode gui -wdb floatcomputeBlock_tb_func_impl.wdb -simrunnum 0 -socket 50485
-Design successfully loaded
-Design Loading Memory Usage: 8828 KB (Peak: 8828 KB)
-Design Loading CPU Usage: 31 ms
-Simulation completed
-Simulation Memory Usage: 10248 KB (Peak: 10248 KB)
-Simulation CPU Usage: 31 ms

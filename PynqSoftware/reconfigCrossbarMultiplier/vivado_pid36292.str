@@ -1,0 +1,1929 @@
+/*
+
+Xilinx Vivado v2019.2 (64-bit) [Major: 2019, Minor: 2]
+SW Build: 2708876 on Wed Nov  6 21:40:23 MST 2019
+IP Build: 2700528 on Thu Nov  7 00:09:20 MST 2019
+
+Process ID (PID): 36292
+License: Customer
+
+Current time: 	Wed Jul 01 18:26:47 CDT 2020
+Time zone: 	Central Standard Time (America/Chicago)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 3440x1440
+Screen resolution (DPI): 100
+Available screens: 2
+Available disk space: 299 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	9.0.4 64-bit
+Java home: 	C:/Xilinx/Vivado/2019.2/tps/win64/jre9.0.4
+Java executable location: 	C:/Xilinx/Vivado/2019.2/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	monke
+User home directory: C:/Users/monke
+User working directory: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigCrossbarMultiplier
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2019.2
+RDI_DATADIR: C:/Xilinx/Vivado/2019.2/data
+RDI_BINDIR: C:/Xilinx/Vivado/2019.2/bin
+
+Vivado preferences file location: C:/Users/monke/AppData/Roaming/Xilinx/Vivado/2019.2/vivado.xml
+Vivado preferences directory: C:/Users/monke/AppData/Roaming/Xilinx/Vivado/2019.2/
+Vivado layouts directory: C:/Users/monke/AppData/Roaming/Xilinx/Vivado/2019.2/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2019.2/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigCrossbarMultiplier/vivado.log
+Vivado journal file location: 	C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigCrossbarMultiplier/vivado.jou
+Engine tmp dir: 	C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigCrossbarMultiplier/.Xil/Vivado-36292-DESKTOP-D9F9TPQ
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2019.2/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2019.2/ids_lite/ISE
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2019.2
+XILINX_VIVADO: C:/Xilinx/Vivado/2019.2
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2019.2
+
+
+GUI allocated memory:	193 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 789 MB
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 103 MB (+105566kb) [00:00:04]
+// [Engine Memory]: 622 MB (+500496kb) [00:00:04]
+// bB (cr):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\monke\Documents\GitHub\ReconHardware\PynqSoftware\reconfigCrossbarMultiplier\reconfigCrossbarMultiplier.xpr. Version: Vivado v2019.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigCrossbarMultiplier/reconfigCrossbarMultiplier.xpr 
+// Tcl Message: INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. Current project path is 'C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigCrossbarMultiplier' 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PR_PARTITION_RM_NEW
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 964 MB. GUI used memory: 59 MB. Current time: 7/1/20, 6:26:49 PM CDT
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 1,119 MB (+489123kb) [00:00:12]
+// [GUI Memory]: 111 MB (+3013kb) [00:00:12]
+// WARNING: HEventQueue.dispatchEvent() is taking  2398 ms.
+// Tcl Message: open_project C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigCrossbarMultiplier/reconfigCrossbarMultiplier.xpr 
+// Tcl Message: INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. Current project path is 'C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigCrossbarMultiplier' 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'. 
+// Tcl Message: open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:09 . Memory (MB): peak = 1201.922 ; gain = 520.852 
+// Project name: reconfigCrossbarMultiplier; location: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigCrossbarMultiplier; part: xc7z020clg400-1
+// [GUI Memory]: 119 MB (+2401kb) [00:00:14]
+dismissDialog("Open Project"); // bB (cr)
+// [Engine Memory]: 1,197 MB (+23093kb) [00:00:15]
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// [GUI Memory]: 130 MB (+5684kb) [00:00:19]
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset floatPynq 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 14 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, multiplyXBar (multiplyXBar.v)]", 3); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, multiplyXBar (multiplyXBar.v), genblk3[0].m_computeBlock_in : reconfigMultiplyBlock (reconfigMultiplyBlock.v)]", 6, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, multiplyXBar (multiplyXBar.v), xbar : XBar (XBar.v)]", 5, false); // B (F, cr)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, multiplyXBar (multiplyXBar.v), genblk3[0].m_computeBlock_in : reconfigMultiplyBlock (reconfigMultiplyBlock.v)]", 6); // B (F, cr)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, multiplyXBar (multiplyXBar.v), genblk3[0].m_computeBlock_in : reconfigMultiplyBlock (reconfigMultiplyBlock.v), psWrap : ps_Wrap (ps_Wrap.bd)]", 7); // B (F, cr)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, multiplyXBar (multiplyXBar.v), genblk3[0].m_computeBlock_in : reconfigMultiplyBlock (reconfigMultiplyBlock.v), psWrap : ps_Wrap (ps_Wrap.bd), ps_Wrap (ps_Wrap.v)]", 8); // B (F, cr)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, multiplyXBar (multiplyXBar.v), genblk3[0].m_computeBlock_in : reconfigMultiplyBlock (reconfigMultiplyBlock.v), psWrap : ps_Wrap (ps_Wrap.bd), ps_Wrap (ps_Wrap.v), ParallelBuffer_0 : ps_Wrap_ParallelBuffer_0_0 (Module Reference Wrapper)]", 9); // B (F, cr)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, multiplyXBar (multiplyXBar.v), genblk3[0].m_computeBlock_in : reconfigMultiplyBlock (reconfigMultiplyBlock.v), psWrap : ps_Wrap (ps_Wrap.bd), ps_Wrap (ps_Wrap.v), ParallelBuffer_0 : ps_Wrap_ParallelBuffer_0_0 (Module Reference Wrapper), ps_Wrap_ParallelBuffer_0_0 (ps_Wrap_ParallelBuffer_0_0.v)]", 10); // B (F, cr)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, multiplyXBar (multiplyXBar.v), genblk3[0].m_computeBlock_in : reconfigMultiplyBlock (reconfigMultiplyBlock.v), psWrap : ps_Wrap (ps_Wrap.bd), ps_Wrap (ps_Wrap.v), ParallelBuffer_0 : ps_Wrap_ParallelBuffer_0_0 (Module Reference Wrapper), ps_Wrap_ParallelBuffer_0_0 (ps_Wrap_ParallelBuffer_0_0.v)]", 10); // B (F, cr)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, multiplyXBar (multiplyXBar.v), genblk3[0].m_computeBlock_in : reconfigMultiplyBlock (reconfigMultiplyBlock.v), psWrap : ps_Wrap (ps_Wrap.bd), ps_Wrap (ps_Wrap.v), ParallelBuffer_0 : ps_Wrap_ParallelBuffer_0_0 (Module Reference Wrapper), ps_Wrap_ParallelBuffer_0_0 (ps_Wrap_ParallelBuffer_0_0.v), inst : ParallelBuffer (ParallelBuffer.v)]", 11); // B (F, cr)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, multiplyXBar (multiplyXBar.v), genblk3[0].m_computeBlock_in : reconfigMultiplyBlock (reconfigMultiplyBlock.v), psWrap : ps_Wrap (ps_Wrap.bd), ps_Wrap (ps_Wrap.v), dataSplit_0 : ps_Wrap_dataSplit_0_0 (Module Reference Wrapper)]", 14); // B (F, cr)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, multiplyXBar (multiplyXBar.v), genblk3[0].m_computeBlock_in : reconfigMultiplyBlock (reconfigMultiplyBlock.v)]", 6); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, multiplyXBar (multiplyXBar.v), genblk3[1].m_computeBlock_in : reconfigMultiplyBlock (reconfigMultiplyBlock.v)]", 7, true); // B (F, cr) - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, multiplyXBar (multiplyXBar.v), genblk3[1].m_computeBlock_in : reconfigMultiplyBlock (reconfigMultiplyBlock.v)]", 7); // B (F, cr)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, multiplyXBar (multiplyXBar.v), genblk3[0].m_computeBlock_in : reconfigMultiplyBlock (reconfigMultiplyBlock.v)]", 6); // B (F, cr)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, multiplyXBar (multiplyXBar.v), genblk3[0].m_computeBlock_in : reconfigMultiplyBlock (reconfigMultiplyBlock.v), psWrap : ps_Wrap (ps_Wrap.bd)]", 7); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, multiplyXBar (multiplyXBar.v), genblk3[0].m_computeBlock_in : reconfigMultiplyBlock (reconfigMultiplyBlock.v), mCompute : multiplyCompute]", 8, false); // B (F, cr)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, multiplyXBar (multiplyXBar.v), genblk3[2].m_computeBlock_in : reconfigMultiplyBlock (reconfigMultiplyBlock.v)]", 12); // B (F, cr)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, multiplyXBar (multiplyXBar.v), genblk3[3].m_computeBlock_in : reconfigMultiplyBlock (reconfigMultiplyBlock.v)]", 15); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, multiplyXBar (multiplyXBar.v), genblk4[0].m_computeBlock_out : reconfigMultiplyBlock (reconfigMultiplyBlock.v)]", 18, true); // B (F, cr) - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, multiplyXBar (multiplyXBar.v), genblk4[0].m_computeBlock_out : reconfigMultiplyBlock (reconfigMultiplyBlock.v)]", 18); // B (F, cr)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, multiplyXBar (multiplyXBar.v), genblk4[1].m_computeBlock_out : reconfigMultiplyBlock (reconfigMultiplyBlock.v)]", 21); // B (F, cr)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, multiplyXBar (multiplyXBar.v), genblk4[2].m_computeBlock_out : reconfigMultiplyBlock (reconfigMultiplyBlock.v)]", 24); // B (F, cr)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, multiplyXBar (multiplyXBar.v), genblk4[3].m_computeBlock_out : reconfigMultiplyBlock (reconfigMultiplyBlock.v)]", 27); // B (F, cr)
+// Elapsed time: 14 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // aa (q, cr)
+selectMenu(PAResourceItoN.MainMenuMgr_SETTINGS, "Settings"); // af (cr)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_BLOCK_DESIGN, "Open Block Design"); // af (cr)
+selectMenu(PAResourceCommand.PACommandNames_SIMULATION_RUN, "Run Simulation"); // aa (cr)
+selectMenu(PAResourceCommand.PACommandNames_SIMULATION_RUN, "Run Simulation"); // aa (cr)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_BLOCK_DESIGN, "Open Block Design"); // af (cr)
+selectMenu(PAResourceItoN.MainMenuMgr_SETTINGS, "Settings"); // af (cr)
+dismissMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // aa (q, cr)
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // aa (q, cr)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // aa (q, cr)
+selectMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // aa (q, cr)
+dismissMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // aa (q, cr)
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // aa (q, cr)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // aa (q, cr)
+selectMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // aa (q, cr)
+dismissMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // aa (q, cr)
+selectMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // aa (q, cr)
+selectMenu(PAResourceItoN.MainMenuMgr_SETTINGS, "Settings"); // af (cr)
+selectMenu(PAResourceCommand.PACommandNames_SIMULATION_RUN, "Run Simulation"); // aa (cr)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_BLOCK_DESIGN, "Open Block Design"); // af (cr)
+selectMenu(PAResourceItoN.MainMenuMgr_SETTINGS, "Settings"); // af (cr)
+dismissMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // aa (q, cr)
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // aa (q, cr)
+selectMenuItem(PAResourceCommand.PACommandNames_PARTIAL_RECONFIGURATION_WIZARD, "Partial Reconfiguration Wizard..."); // ai (cr)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // aa (q, cr)
+// Run Command: PAResourceCommand.PACommandNames_PARTIAL_RECONFIGURATION_WIZARD
+// bB (cr):  Initializing Partial Reconfiguration : addNotify
+// W (cr): Partial Reconfiguration Wizard: addNotify
+dismissDialog("Initializing Partial Reconfiguration"); // bB (cr)
+selectButton("NEXT", "Next >"); // JButton (j, W)
+selectTableHeader(PAResourceOtoP.PartitionDefModuleTablePanel_RECONFIGURABLE_MODULE_ASSOCIATIONS_WITH, "Reconfigurable Module", 0); // ax (O, W)
+selectTable(PAResourceOtoP.PartitionDefModuleTablePanel_RECONFIGURABLE_MODULE_ASSOCIATIONS_WITH, "fixed ; multiplier0", 0, "multiplier0", 1); // ax (O, W)
+selectButton(RDIResource.AbstractCombinedPanel_EDIT_SELECTED_ELEMENT, "Edit"); // E (f, W)
+// aE (cr): Edit Reconfigurable Module : addNotify
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (aE)
+dismissDialog("Edit Reconfigurable Module"); // aE (cr)
+selectTable(PAResourceOtoP.PartitionDefModuleTablePanel_RECONFIGURABLE_MODULE_ASSOCIATIONS_WITH, "float ; multiplier0", 1, "multiplier0", 1); // ax (O, W)
+selectButton("CANCEL", "Cancel"); // JButton (j, W)
+// 'j' command handler elapsed time: 10 seconds
+dismissDialog("Partial Reconfiguration Wizard"); // W (cr)
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Partition Definitions", 4); // i (N, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, multiplier0]", 0, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, multiplier0]", 0, true, false, false, false, true, false); // B (F, cr) - Popup Trigger - Node
+selectMenuItem(RDIResourceCommand.RDICommands_PROPERTIES, "Partition Definition Properties..."); // ai (ao, cr)
+// Run Command: RDIResourceCommand.RDICommands_PROPERTIES
+selectButton((HResource) null, "Properties_settings"); // x (f, cr): TRUE
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, multiplier0]", 0, true, false, false, false, true, false); // B (F, cr) - Popup Trigger - Node
+selectMenuItem(PAResourceCommand.PACommandNames_EDIT_CONSTRAINT_SETS, "Edit Constraints Sets..."); // ai (ao, cr)
+// Run Command: PAResourceCommand.PACommandNames_EDIT_CONSTRAINT_SETS
+// at (cr): Edit Constraints Sets: addNotify
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (at)
+dismissDialog("Edit Constraints Sets"); // at (cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, multiplier0]", 0, true, false, false, false, true, false); // B (F, cr) - Popup Trigger - Node
+selectMenuItem(PAResourceCommand.PACommandNames_EDIT_SIMULATION_SETS, "Edit Simulation Sets..."); // ai (ao, cr)
+// Run Command: PAResourceCommand.PACommandNames_EDIT_SIMULATION_SETS
+// ax (cr): Add Sources: addNotify
+selectButton("CANCEL", "Cancel"); // JButton (j, ax)
+dismissDialog("Add Sources"); // ax (cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, multiplier0]", 0, true, false, false, false, true, false); // B (F, cr) - Popup Trigger - Node
+selectMenuItem(RDIResourceCommand.RDICommands_PROPERTIES, "Partition Definition Properties..."); // ai (ao, cr)
+// Run Command: RDIResourceCommand.RDICommands_PROPERTIES
+selectTab(RDIResource.PropertiesView_TABBED_PANE, (HResource) null, "Properties", 1); // i (c, cr)
+selectTreeTable(PAResourceTtoZ.TclObjectTreeTable_TREETABLE, "CLASS ; partition_def", 0, "partition_def", 1, false); // l (C, cr)
+selectTreeTable(PAResourceTtoZ.TclObjectTreeTable_TREETABLE, "NAME ; multiplier0", 4, "multiplier0", 1, false); // l (C, cr)
+selectTreeTable(PAResourceTtoZ.TclObjectTreeTable_TREETABLE, "NAME ; multiplier0", 4, "multiplier0", 1, false); // l (C, cr)
+selectTreeTable(PAResourceTtoZ.TclObjectTreeTable_TREETABLE, "NAME ; multiplier0", 4, "multiplier0", 1, false); // l (C, cr)
+// TclEventType: PR_PARTITION_DEF_CHANGE
+// Tcl Message: set_property NAME multiplier [get_partition_defs multiplier0] 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,222 MB. GUI used memory: 75 MB. Current time: 7/1/20, 6:28:51 PM CDT
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Hierarchy", 0); // i (N, cr)
+selectMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // aa (q, cr)
+dismissMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // aa (q, cr)
+selectMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // aa (q, cr)
+dismissMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // aa (q, cr)
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // aa (q, cr)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // aa (q, cr)
+selectMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // aa (q, cr)
+dismissMenu(PAResourceItoN.MainMenuMgr_REPORTS, "Reports"); // aa (q, cr)
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Partition Definitions", 4); // i (N, cr)
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // aa (q, cr)
+selectMenuItem(PAResourceCommand.PACommandNames_PARTIAL_RECONFIGURATION_WIZARD, "Partial Reconfiguration Wizard..."); // ai (cr)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // aa (q, cr)
+// Run Command: PAResourceCommand.PACommandNames_PARTIAL_RECONFIGURATION_WIZARD
+// bB (cr):  Initializing Partial Reconfiguration : addNotify
+// W (cr): Partial Reconfiguration Wizard: addNotify
+dismissDialog("Initializing Partial Reconfiguration"); // bB (cr)
+selectButton("NEXT", "Next >"); // JButton (j, W)
+selectButton("NEXT", "Next >"); // JButton (j, W)
+selectTable(PAResourceOtoP.PRConfigurationsTablePanel_CONFIGURATIONS, "config_1 ; integer ; integer ; integer ; integer ; integer ; integer ; integer ; integer", 0, "config_1", 0); // L (O, W)
+selectButton(RDIResource.AbstractCombinedPanel_REMOVE_SELECTED_ELEMENTS, "Remove"); // E (f, W)
+selectTable(PAResourceOtoP.PRConfigurationsTablePanel_CONFIGURATIONS, "config_2 ; integerPynq ; integerPynq ; integerPynq ; integerPynq ; integerPynq ; integerPynq ; integerPynq ; integerPynq", 0, "config_2", 0); // L (O, W)
+selectButton(RDIResource.AbstractCombinedPanel_REMOVE_SELECTED_ELEMENTS, "Remove"); // E (f, W)
+selectButton(PAResourceOtoP.PRConfigurationsTablePanel_AUTOMATICALLY_CREATE_CONFIGURATIONS, "automatically create configurations"); // d (c, W)
+// Elapsed time: 24 seconds
+selectButton("NEXT", "Next >"); // JButton (j, W)
+selectTreeTable(PAResourceOtoP.PRConfigRunsTreeTablePanel_CONFIGURATION_RUNS, "impl_1 ; <none> ; synth_1 ; constrs_1 ; Vivado Implementation Defaults ; Vivado Implementation Default Reports", 0, "impl_1", 0, true); // l (O, W) - Node
+selectButton(RDIResource.AbstractCombinedPanel_REMOVE_SELECTED_ELEMENTS, "Remove"); // E (f, W)
+selectButton(PAResourceOtoP.PRConfigRunsTreeTablePanel_AUTOMATICALLY_CREATE_CONFIGURATION_RUN, "automatically create configuration run"); // d (c, W)
+selectButton("NEXT", "Next >"); // JButton (j, W)
+// bB (W):  Apply Configuration : addNotify
+// TclEventType: PR_PARTITION_CONFIG_DELETE
+// Tcl Message: delete_pr_configurations config_2 
+// TclEventType: PR_PARTITION_CONFIG_DELETE
+// Tcl Message: delete_pr_configurations config_1 
+// TclEventType: PR_PARTITION_CONFIG_CHANGE
+// Tcl Message: create_pr_configuration -name config_1 -partitions [list genblk3[0].m_computeBlock_in/mCompute:integer genblk3[1].m_computeBlock_in/mCompute:integer genblk3[2].m_computeBlock_in/mCompute:integer genblk3[3].m_computeBlock_in/mCompute:integer genblk4[0].m_computeBlock_out/mCompute:integer genblk4[1].m_computeBlock_out/mCompute:integer genblk4[2].m_computeBlock_out/mCompute:integer genblk4[3].m_computeBlock_out/mCompute:integer ] 
+// TclEventType: PR_PARTITION_CONFIG_CHANGE
+// Tcl Message: create_pr_configuration -name config_2 -partitions [list genblk3[0].m_computeBlock_in/mCompute:fixed genblk3[1].m_computeBlock_in/mCompute:fixed genblk3[2].m_computeBlock_in/mCompute:fixed genblk3[3].m_computeBlock_in/mCompute:fixed genblk4[0].m_computeBlock_out/mCompute:fixed genblk4[1].m_computeBlock_out/mCompute:fixed genblk4[2].m_computeBlock_out/mCompute:fixed genblk4[3].m_computeBlock_out/mCompute:fixed ] 
+// TclEventType: PR_PARTITION_CONFIG_CHANGE
+// Tcl Message: create_pr_configuration -name config_3 -partitions [list genblk3[0].m_computeBlock_in/mCompute:float genblk3[1].m_computeBlock_in/mCompute:float genblk3[2].m_computeBlock_in/mCompute:float genblk3[3].m_computeBlock_in/mCompute:float genblk4[0].m_computeBlock_out/mCompute:float genblk4[1].m_computeBlock_out/mCompute:float genblk4[2].m_computeBlock_out/mCompute:float genblk4[3].m_computeBlock_out/mCompute:float ] 
+// TclEventType: PR_PARTITION_CONFIG_CHANGE
+// Tcl Message: create_pr_configuration -name config_4 -partitions [list genblk3[0].m_computeBlock_in/mCompute:floatPynq genblk3[1].m_computeBlock_in/mCompute:floatPynq genblk3[2].m_computeBlock_in/mCompute:floatPynq genblk3[3].m_computeBlock_in/mCompute:floatPynq genblk4[0].m_computeBlock_out/mCompute:floatPynq genblk4[1].m_computeBlock_out/mCompute:floatPynq genblk4[2].m_computeBlock_out/mCompute:floatPynq genblk4[3].m_computeBlock_out/mCompute:floatPynq ] 
+// TclEventType: PR_PARTITION_CONFIG_CHANGE
+// Tcl Message: create_pr_configuration -name config_5 -partitions [list genblk3[0].m_computeBlock_in/mCompute:integerPynq genblk3[1].m_computeBlock_in/mCompute:integerPynq genblk3[2].m_computeBlock_in/mCompute:integerPynq genblk3[3].m_computeBlock_in/mCompute:integerPynq genblk4[0].m_computeBlock_out/mCompute:integerPynq genblk4[1].m_computeBlock_out/mCompute:integerPynq genblk4[2].m_computeBlock_out/mCompute:integerPynq genblk4[3].m_computeBlock_out/mCompute:integerPynq ] 
+// TclEventType: RUN_DELETE
+// Tcl Message: delete_runs "child_0_impl_1" 
+// TclEventType: RUN_ADD
+// Tcl Message: create_run child_0_impl_1 -parent_run impl_1 -flow {Vivado Implementation 2019} -pr_config config_2 
+// Tcl Message: Run is defaulting to parent run srcset: sources_1 Run is defaulting to parent run constrset: constrs_1 Run is defaulting to parent run part: xc7z020clg400-1 
+// TclEventType: RUN_ADD
+// Tcl Message: create_run child_1_impl_1 -parent_run impl_1 -flow {Vivado Implementation 2019} -pr_config config_3 
+// Tcl Message: Run is defaulting to parent run srcset: sources_1 Run is defaulting to parent run constrset: constrs_1 Run is defaulting to parent run part: xc7z020clg400-1 
+// TclEventType: RUN_ADD
+// Tcl Message: create_run child_2_impl_1 -parent_run impl_1 -flow {Vivado Implementation 2019} -pr_config config_4 
+// Tcl Message: Run is defaulting to parent run srcset: sources_1 Run is defaulting to parent run constrset: constrs_1 Run is defaulting to parent run part: xc7z020clg400-1 
+// TclEventType: RUN_ADD
+// Tcl Message: create_run child_3_impl_1 -parent_run impl_1 -flow {Vivado Implementation 2019} -pr_config config_5 
+// Tcl Message: Run is defaulting to parent run srcset: sources_1 Run is defaulting to parent run constrset: constrs_1 Run is defaulting to parent run part: xc7z020clg400-1 
+selectButton("FINISH", "Finish"); // JButton (j, W)
+// 'j' command handler elapsed time: 42 seconds
+dismissDialog("Apply Configuration"); // bB (W)
+dismissDialog("Partial Reconfiguration Wizard"); // W (cr)
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Hierarchy", 0); // i (N, cr)
+// [GUI Memory]: 137 MB (+111kb) [00:03:12]
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, multiplyXBar (multiplyXBar.v), genblk3[0].m_computeBlock_in : reconfigMultiplyBlock (reconfigMultiplyBlock.v)]", 6); // B (F, cr)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, multiplyXBar (multiplyXBar.v), genblk3[1].m_computeBlock_in : reconfigMultiplyBlock (reconfigMultiplyBlock.v)]", 7); // B (F, cr)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, multiplyXBar (multiplyXBar.v), genblk3[2].m_computeBlock_in : reconfigMultiplyBlock (reconfigMultiplyBlock.v)]", 8); // B (F, cr)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, multiplyXBar (multiplyXBar.v), genblk3[3].m_computeBlock_in : reconfigMultiplyBlock (reconfigMultiplyBlock.v)]", 9); // B (F, cr)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, multiplyXBar (multiplyXBar.v), genblk4[0].m_computeBlock_out : reconfigMultiplyBlock (reconfigMultiplyBlock.v)]", 10); // B (F, cr)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, multiplyXBar (multiplyXBar.v), genblk4[1].m_computeBlock_out : reconfigMultiplyBlock (reconfigMultiplyBlock.v)]", 11); // B (F, cr)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, multiplyXBar (multiplyXBar.v), genblk4[2].m_computeBlock_out : reconfigMultiplyBlock (reconfigMultiplyBlock.v)]", 12); // B (F, cr)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, multiplyXBar (multiplyXBar.v), genblk4[3].m_computeBlock_out : reconfigMultiplyBlock (reconfigMultiplyBlock.v)]", 13); // B (F, cr)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 15, false); // u (O, cr)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bB (cr):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// bB (cr):  Starting Design Runs : addNotify
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs synth_1 -jobs 4 
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+dismissDialog("Starting Design Runs"); // bB (cr)
+// Elapsed time: 10 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 15); // B (F, cr)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 16); // B (F, cr)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// [Engine Memory]: 1,275 MB (+18757kb) [00:03:56]
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// [GUI Memory]: 156 MB (+13091kb) [00:03:56]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,275 MB. GUI used memory: 97 MB. Current time: 7/1/20, 6:30:41 PM CDT
+// [GUI Memory]: 165 MB (+774kb) [00:04:21]
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// aj (cr): Synthesis Completed: addNotify
+// Elapsed time: 62 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aj)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// bB (cr):  Starting Design Runs : addNotify
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 child_0_impl_1 child_1_impl_1 child_2_impl_1 child_3_impl_1 -jobs 4 
+// TclEventType: RUN_LAUNCH
+selectButton(RDIResource.ProgressDialog_BACKGROUND, "Background"); // a (bB)
+// TclEventType: RUN_MODIFY
+dismissDialog("Starting Design Runs"); // bB (cr)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// aj (cr): Implementation Failed: addNotify
+// Elapsed time: 31 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aj)
+// TclEventType: RUN_STATUS_CHANGE
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+// TclEventType: RUN_STATUS_CHANGE
+dismissDialog("Implementation Failed"); // aj (cr)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, impl_1, Place Design, DRC, Partial Reconfiguration, Pblock, [DRC HDPR-30] Missing PBLOCK On Reconfigurable Cell: HD.RECONFIGURABLE cell 'genblk3[0].m_computeBlock_in/mCompute' must have PBLOCK assigned to itself or its descendant cells.. ]", 6, true); // ah (O, cr) - Node
+// Elapsed time: 55 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design]", 16, true); // u (O, cr) - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_NETLIST_DESIGN
+// bB (cr):  Open Synthesized Design : addNotify
+// Tcl Message: open_run synth_1 -name synth_1 -pr_config [current_pr_configuration] 
+// Tcl Message: Design is defaulting to impl run constrset: constrs_1 Design is defaulting to synth run part: xc7z020clg400-1 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,414 MB. GUI used memory: 98 MB. Current time: 7/1/20, 6:32:51 PM CDT
+// [Engine Memory]: 1,745 MB (+425995kb) [00:06:14]
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 1,745 MB. GUI used memory: 97 MB. Current time: 7/1/20, 6:32:56 PM CDT
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// TclEventType: DESIGN_NEW
+// Device: addNotify
+// DeviceView Instantiated
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1575.336 ; gain = 0.000 
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 19 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2019.2 INFO: [Project 1-570] Preparing netlist for logic optimization INFO: [Opt 31-141] Inserted 8 OBUFs to IO ports without IO buffers. INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1661.168 ; gain = 0.000 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// Tcl Message: open_run: Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 1822.535 ; gain = 536.496 
+// Device view-level: 0.0
+// 'dQ' command handler elapsed time: 9 seconds
+// [GUI Memory]: 191 MB (+18402kb) [00:06:18]
+dismissDialog("Open Synthesized Design"); // bB (cr)
+// Device view-level: 0.3
+// Device view-level: 0.6
+// Device view-level: 0.9
+// HMemoryUtils.trashcanNow. Engine heap size: 1,795 MB. GUI used memory: 164 MB. Current time: 7/1/20, 6:33:03 PM CDT
+// Device view-level: 1.2
+// Device view-level: 1.5
+// Device view-level: 1.2
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 199003, 333147); // D (I, cr)
+// Device view-level: 1.2
+// HMemoryUtils.trashcanNow. Engine heap size: 1,864 MB. GUI used memory: 161 MB. Current time: 7/1/20, 6:33:04 PM CDT
+// [Engine Memory]: 2,083 MB (+263017kb) [00:06:24]
+// RouteApi::initDelayMediator elapsed time: 7.4s
+// RouteApi: Init Delay Mediator Swing Worker Finished
+selectTab((HResource) null, (HResource) null, "Physical Constraints", 0); // aL (aI, cr)
+selectTab((HResource) null, (HResource) null, "Device Constraints", 1); // aL (aI, cr)
+// PAPropertyPanels.initPanels (genblk3[0].m_computeBlock_in (reconfigMultiplyBlock__xdcDup__1)) elapsed time: 0.3s
+// [GUI Memory]: 205 MB (+5117kb) [00:06:29]
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk3[0].m_computeBlock_in (reconfigMultiplyBlock__xdcDup__1)]", 3, false); // bD (O, cr)
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk3[1].m_computeBlock_in (reconfigMultiplyBlock__xdcDup__2)]", 4, false, false, true, false, false, false); // bD (O, cr) - Control Key
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk3[2].m_computeBlock_in (reconfigMultiplyBlock__xdcDup__3)]", 5, false, false, true, false, false, false); // bD (O, cr) - Control Key
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk3[3].m_computeBlock_in (reconfigMultiplyBlock__xdcDup__4)]", 6, false, false, true, false, false, false); // bD (O, cr) - Control Key
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk4[0].m_computeBlock_out (reconfigMultiplyBlock__xdcDup__5)]", 7, false, false, true, false, false, false); // bD (O, cr) - Control Key
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk4[1].m_computeBlock_out (reconfigMultiplyBlock__xdcDup__6)]", 8, false, false, true, false, false, false); // bD (O, cr) - Control Key
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk4[3].m_computeBlock_out (reconfigMultiplyBlock)]", 10, false, false, true, false, false, false); // bD (O, cr) - Control Key
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk4[2].m_computeBlock_out (reconfigMultiplyBlock__xdcDup__7)]", 9, false, false, true, false, false, false); // bD (O, cr) - Control Key
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk3[2].m_computeBlock_in (reconfigMultiplyBlock__xdcDup__3)]", 5, false, false, false, false, true, false); // bD (O, cr) - Popup Trigger
+selectMenu(PAResourceItoN.InstanceMenu_FLOORPLANNING, "Floorplanning"); // af (ao, cr)
+selectMenu(PAResourceOtoP.PrimitivesMenu_HIGHLIGHT_LEAF_CELLS, "Highlight Leaf Cells"); // af (ao, cr)
+selectMenu(PAResourceOtoP.PrimitivesMenu_HIGHLIGHT_LEAF_CELLS, "Highlight Leaf Cells"); // af (ao, cr)
+selectMenu(PAResourceItoN.InstanceMenu_FLOORPLANNING, "Floorplanning"); // af (ao, cr)
+// [Engine Memory]: 2,215 MB (+28587kb) [00:06:44]
+selectMenu(PAResourceItoN.InstanceMenu_FLOORPLANNING, "Floorplanning"); // af (ao, cr)
+selectMenu(PAResourceItoN.InstanceMenu_FLOORPLANNING, "Floorplanning"); // af (ao, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,215 MB. GUI used memory: 136 MB. Current time: 7/1/20, 6:33:26 PM CDT
+selectMenuItem(PAResourceCommand.PACommandNames_DRAW_PBLOCK_MODE, "Draw Pblock"); // ai (cr)
+// Run Command: PAResourceCommand.PACommandNames_DRAW_PBLOCK_MODE
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 245074, 321301); // D (I, cr)
+// Device view-level: 0.9
+// HMemoryUtils.trashcanNow. Engine heap size: 2,217 MB. GUI used memory: 136 MB. Current time: 7/1/20, 6:33:28 PM CDT
+// Device view-level: 1.2
+// Device view-level: 1.5
+// Device view-level: 1.8
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 272890, 348093); // D (I, cr)
+// Device view-level: 1.8
+// HMemoryUtils.trashcanNow. Engine heap size: 2,260 MB. GUI used memory: 160 MB. Current time: 7/1/20, 6:33:31 PM CDT
+// Device view-level: 1.5
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 280416, 347190); // D (I, cr)
+// Device view-level: 1.5
+// HMemoryUtils.trashcanNow. Engine heap size: 2,260 MB. GUI used memory: 136 MB. Current time: 7/1/20, 6:33:33 PM CDT
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 273875, 349185); // D (I, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,261 MB. GUI used memory: 137 MB. Current time: 7/1/20, 6:33:37 PM CDT
+// r (cr): New Pblock: addNotify
+// Elapsed time: 12 seconds
+setText("Name:", "multiplier_block"); // ac (Q, r)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (r)
+// TclEventType: PHY_BLOCK_NEW
+// TclEventType: PHY_RECT_SELECT
+// TclEventType: PHY_BLOCK_MODIFY
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: PHY_RECT_SELECT
+// TclEventType: PHY_BLOCK_ADD_INST
+// Tcl Message: startgroup 
+// Tcl Message: create_pblock multiplier_block 
+// Tcl Message: resize_pblock multiplier_block -add SLICE_X54Y50:SLICE_X67Y74 
+// Tcl Message: add_cells_to_pblock multiplier_block [get_cells [list {genblk3[0].m_computeBlock_in} {genblk3[1].m_computeBlock_in} {genblk3[2].m_computeBlock_in} {genblk3[3].m_computeBlock_in} {genblk4[0].m_computeBlock_out} {genblk4[1].m_computeBlock_out} {genblk4[3].m_computeBlock_out} {genblk4[2].m_computeBlock_out}]] -clear_locs 
+// Tcl Message: endgroup 
+dismissDialog("New Pblock"); // r (cr)
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 326289, 277305); // D (I, cr)
+// Device select: 'Clock Region - X1Y1'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 4090, 3476, 2575, 923); // U (i, cr)
+// DeviceOracle::getDeviceDataByteArray length(bytes): 129660
+// Device view-level: 1.2
+// Device view-level: 0.9
+// Device view-level: 0.6
+// HMemoryUtils.trashcanNow. Engine heap size: 2,271 MB. GUI used memory: 165 MB. Current time: 7/1/20, 6:33:53 PM CDT
+// Device view-level: 0.3
+// Device view-level: 0.0
+// Device view-level: 0.3
+// HMemoryUtils.trashcanNow. Engine heap size: 2,271 MB. GUI used memory: 142 MB. Current time: 7/1/20, 6:33:54 PM CDT
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 621935, 318653); // D (I, cr)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Run Implementation]", 30, false); // u (O, cr)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// i (cr): Reset and Re-run: addNotify
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (i)
+dismissDialog("Reset and Re-run"); // i (cr)
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "CLK.CLK_13464 (1) ; IN ;  ;  ;  ;  ;  ;  ; default (LVCMOS18) ; 1.8 ;  ;  ;  ; NONE ; NONE ; ", 1, "CLK.CLK_13464 (1)", 0, true); // z (O, cr) - Node
+// Elapsed time: 52 seconds
+selectTab((HResource) null, (HResource) null, "Physical Constraints", 0); // aL (aI, cr)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation]", 10, true); // u (O, cr) - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation]", 10, true, false, false, false, false, true); // u (O, cr) - Double Click - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager]", 0, true); // u (O, cr) - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_PROJECT_MANAGER
+// Elapsed time: 18 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator, Open Block Design]", 8, false); // u (O, cr)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_BLOCK_DESIGN
+// bB (cr):  Open Block Design : addNotify
+// TclEventType: LOAD_FEATURE
+// Tcl Message: open_bd_design {C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.srcs/sources_1/bd/ps_Wrap/ps_Wrap.bd} 
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// HMemoryUtils.trashcanNow. Engine heap size: 2,282 MB. GUI used memory: 142 MB. Current time: 7/1/20, 6:35:21 PM CDT
+// TclEventType: LOAD_FEATURE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_OPEN_DIAGRAM
+// Tcl Message: Adding component instance block -- xilinx.com:module_ref:dataSplit:1.0 - dataSplit_0 Adding component instance block -- xilinx.com:module_ref:ParallelBuffer:1.0 - ParallelBuffer_0 Successfully read diagram <ps_Wrap> from BD file <C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.srcs/sources_1/bd/ps_Wrap/ps_Wrap.bd> 
+// TclEventType: RSB_OPEN_DIAGRAM
+// [Engine Memory]: 2,334 MB (+9022kb) [00:08:45]
+// TclEventType: RSB_CONNECTION_CHANGE
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// TclEventType: RSB_LOCK_CHANGE
+// Tcl Message: open_bd_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2368.512 ; gain = 37.980 
+// 'bD' command handler elapsed time: 7 seconds
+dismissDialog("Open Block Design"); // bB (cr)
+selectTab((HResource) null, (HResource) null, "Sources", 0); // aL (aI, cr)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator, Create Block Design]", 7, false); // u (O, cr)
+// Run Command: PAResourceCommand.PACommandNames_CREATE_NEW_DIAGRAM
+// aF (cr): Create Block Design: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aF)
+// TclEventType: RSB_SAVE_DIAGRAM
+dismissDialog("Create Block Design"); // aF (cr)
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: RSB_OPEN_DIAGRAM
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// Tcl Message: create_bd_design "design_1" 
+// Tcl Message: Wrote  : <C:\Users\monke\Documents\GitHub\ReconHardware\PynqSoftware\reconfigCrossbarMultiplier\reconfigCrossbarMultiplier.srcs\sources_1\bd\design_1\design_1.bd>  
+// bB (cr):  Create Block Design : addNotify
+dismissDialog("Create Block Design"); // bB (cr)
+selectTab((HResource) null, (HResource) null, "Sources", 0); // aL (aI, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,371 MB. GUI used memory: 147 MB. Current time: 7/1/20, 6:35:41 PM CDT
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, multiplyXBar (multiplyXBar.v)]", 3, true); // B (F, cr) - Node
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, multiplyXBar (multiplyXBar.v)]", 3, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, multiplyXBar (multiplyXBar.v)]", 3, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, multiplyXBar (multiplyXBar.v)]", 3, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, multiplyXBar (multiplyXBar.v)]", 3, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1 (design_1.bd)]", 14, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_1 (design_1.bd)]", 14, false, false, false, false, true, false); // B (F, cr) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // ai (ao, cr)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// aE (cr): Remove Sources: addNotify
+selectCheckBox(PAResourceQtoS.RemoveSourcesDialog_ALSO_DELETE, "Also delete the project local file/directory from disk", true); // g (Q, aE): TRUE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aE)
+dismissDialog("Remove Sources"); // aE (cr)
+// Tcl Message: export_ip_user_files -of_objects  [get_files C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigCrossbarMultiplier/reconfigCrossbarMultiplier.srcs/sources_1/bd/design_1/design_1.bd] -no_script -reset -force -quiet 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_CLOSE_DIAGRAM
+// TclEventType: PROJ_DESIGN_MODE_SET
+// Tcl Message: remove_files  C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigCrossbarMultiplier/reconfigCrossbarMultiplier.srcs/sources_1/bd/design_1/design_1.bd 
+// Tcl Message: Wrote  : <C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigCrossbarMultiplier/reconfigCrossbarMultiplier.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui>  
+// TclEventType: PROJ_DESIGN_MODE_SET
+// aE (cr): Remove Sources: addNotify
+// bB (aE):  Remove Sources : addNotify
+// TclEventType: PROJ_DESIGN_MODE_SET
+// Tcl Message: file delete -force C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigCrossbarMultiplier/reconfigCrossbarMultiplier.srcs/sources_1/bd/design_1 
+dismissDialog("Remove Sources"); // bB (aE)
+// TclEventType: DG_GRAPH_STALE
+// Elapsed time: 84 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design]", 16, true); // u (O, cr) - Node
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation]", 2); // u (O, cr)
+// Run Command: PAResourceCommand.PACommandNames_GOTO_NETLIST_DESIGN
+// [GUI Memory]: 217 MB (+1869kb) [00:11:00]
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "CLK.CLK_13464 (1) ; IN ;  ;  ;  ;  ;  ;  ; default (LVCMOS18) ; 1.8 ;  ;  ;  ; NONE ; NONE ; ", 1, "default (LVCMOS18)", 8, true); // z (O, cr) - Node
+// TclEventType: SIGNAL_MODIFY
+// Tcl Message: set_property IOSTANDARD LVCMOS33 [get_ports [list Clk]] 
+expandTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "CLK.CLK_13464 (1) ; IN ;  ;  ;  ;  ;  ;  ; LVCMOS33 ; 3.3 ;  ;  ;  ; NONE ; NONE ; ", 1); // z (O, cr)
+expandTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "Scalar ports (1) ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; ", 2); // z (O, cr)
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "Clk ; IN ;  ;  ;  ;  ;  ;  ; LVCMOS33 ; 3.3 ;  ;  ;  ; NONE ; NONE ; ", 3, "Clk", 0, false); // z (O, cr)
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "Clk ; IN ;  ;  ;  ;  ;  ;  ; LVCMOS33 ; 3.3 ;  ;  ;  ; NONE ; NONE ; ", 3, (String) null, 5, false); // z (O, cr)
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// Tcl Message: place_ports Clk U17 
+collapseTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "CLK.CLK_13464 (1) ; IN ;  ;  ;  ;  ; true ; 34 ; LVCMOS33 ; 3.3 ;  ;  ;  ; NONE ; NONE ; ", 1); // z (O, cr)
+expandTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "RST.RST_13464 (1) ; IN ;  ;  ;  ;  ;  ;  ; default (LVCMOS18) ; 1.8 ;  ;  ;  ; NONE ; NONE ; ", 2); // z (O, cr)
+expandTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "Scalar ports (1) ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; ", 3); // z (O, cr)
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "Rst ; IN ;  ;  ;  ;  ;  ;  ; default (LVCMOS18) ; 1.8 ;  ;  ;  ; NONE ; NONE ; ", 4, (String) null, 5, false); // z (O, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,375 MB. GUI used memory: 181 MB. Current time: 7/1/20, 6:38:00 PM CDT
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// Tcl Message: place_ports Rst P18 
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "RST.RST_13464 (1) ; IN ;  ;  ;  ;  ; true ; 34 ; default (LVCMOS18) ; 1.8 ;  ;  ;  ; NONE ; NONE ; ", 2, "default (LVCMOS18)", 8, true); // z (O, cr) - Node
+// TclEventType: SIGNAL_MODIFY
+// Tcl Message: set_property IOSTANDARD LVCMOS33 [get_ports [list Rst]] 
+collapseTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "RST.RST_13464 (1) ; IN ;  ;  ;  ;  ; true ; 34 ; LVCMOS33 ; 3.3 ;  ;  ;  ; NONE ; NONE ; ", 2); // z (O, cr)
+expandTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "AddressSelect (5) ; IN ;  ;  ;  ;  ;  ;  ; default (LVCMOS18) ; 1.8 ;  ;  ;  ; NONE ; NONE ; ", 3); // z (O, cr)
+collapseTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "AddressSelect (5) ; IN ;  ;  ;  ;  ;  ;  ; default (LVCMOS18) ; 1.8 ;  ;  ;  ; NONE ; NONE ; ", 3); // z (O, cr)
+// Schematic: addNotify
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "bufferRD_in (4) ; IN ;  ;  ;  ;  ;  ;  ; default (LVCMOS18) ; 1.8 ;  ;  ;  ; NONE ; NONE ; ", 4, "bufferRD_in (4)", 0, true); // z (O, cr) - Node
+// HMemoryUtils.trashcanNow. Engine heap size: 2,375 MB. GUI used memory: 158 MB. Current time: 7/1/20, 6:38:22 PM CDT
+expandTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "bufferRD_in (4) ; IN ;  ;  ;  ;  ;  ;  ; default (LVCMOS18) ; 1.8 ;  ;  ;  ; NONE ; NONE ; ", 4); // z (O, cr)
+// Elapsed time: 21 seconds
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "bufferRD_in (4) ; IN ;  ;  ;  ;  ;  ;  ; default (LVCMOS18) ; 1.8 ;  ;  ;  ; NONE ; NONE ; ", 4, "default (LVCMOS18)", 8, true); // z (O, cr) - Node
+// TclEventType: SIGNAL_MODIFY
+// Tcl Message: set_property IOSTANDARD LVCMOS33 [get_ports [list {bufferRD_in[3]} {bufferRD_in[2]} {bufferRD_in[1]} {bufferRD_in[0]}]] 
+collapseTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "bufferRD_in (4) ; IN ;  ;  ;  ;  ;  ;  ; LVCMOS33 ; 3.3 ;  ;  ;  ; NONE ; NONE ; ", 4); // z (O, cr)
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "bufferRD_out (4) ; IN ;  ;  ;  ;  ;  ;  ; default (LVCMOS18) ; 1.8 ;  ;  ;  ; NONE ; NONE ; ", 5, "default (LVCMOS18)", 8, true); // z (O, cr) - Node
+// TclEventType: SIGNAL_MODIFY
+// Tcl Message: set_property IOSTANDARD LVCMOS33 [get_ports [list {bufferRD_out[3]} {bufferRD_out[2]} {bufferRD_out[1]} {bufferRD_out[0]}]] 
+expandTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "dataIn (4) ; IN ;  ;  ;  ;  ;  ;  ; default (LVCMOS18) ; 1.8 ;  ;  ;  ; NONE ; NONE ; ", 6); // z (O, cr)
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "dataIn[3] ; IN ;  ;  ;  ;  ;  ;  ; default (LVCMOS18) ; 1.8 ;  ;  ;  ; NONE ; NONE ; ", 7, "dataIn[3]", 0, false); // z (O, cr)
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "dataIn[3] ; IN ;  ;  ;  ;  ;  ;  ; default (LVCMOS18) ; 1.8 ;  ;  ;  ; NONE ; NONE ; ", 7, (String) null, 5, false); // z (O, cr)
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// Tcl Message: place_ports {dataIn[3]} T14 
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "dataIn (4) ; IN ;  ;  ;  ;  ; (Multiple) ; (Multiple) ; default (LVCMOS18) ; 1.8 ;  ;  ;  ; NONE ; NONE ; ", 6, "default (LVCMOS18)", 8, true); // z (O, cr) - Node
+// HMemoryUtils.trashcanNow. Engine heap size: 2,376 MB. GUI used memory: 159 MB. Current time: 7/1/20, 6:39:13 PM CDT
+// TclEventType: SIGNAL_MODIFY
+// Tcl Message: set_property IOSTANDARD LVCMOS33 [get_ports [list {dataIn[3]} {dataIn[2]} {dataIn[1]} {dataIn[0]}]] 
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "dataIn[2] ; IN ;  ;  ;  ;  ;  ;  ; LVCMOS33 ; 3.3 ;  ;  ;  ; NONE ; NONE ; ", 8, (String) null, 5, false); // z (O, cr)
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// Tcl Message: place_ports {dataIn[2]} U12 
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "dataIn[1] ; IN ;  ;  ;  ;  ;  ;  ; LVCMOS33 ; 3.3 ;  ;  ;  ; NONE ; NONE ; ", 9, (String) null, 5, false); // z (O, cr)
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// HMemoryUtils.trashcanNow. Engine heap size: 2,377 MB. GUI used memory: 159 MB. Current time: 7/1/20, 6:39:27 PM CDT
+// Tcl Message: place_ports {dataIn[1]} U13 
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "dataIn[0] ; IN ;  ;  ;  ;  ;  ;  ; LVCMOS33 ; 3.3 ;  ;  ;  ; NONE ; NONE ; ", 10, (String) null, 5, false); // z (O, cr)
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// Tcl Message: place_ports {dataIn[0]} V13 
+collapseTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "dataIn (4) ; IN ;  ;  ;  ;  ; true ; 34 ; LVCMOS33 ; 3.3 ;  ;  ;  ; NONE ; NONE ; ", 6); // z (O, cr)
+expandTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "dataOut (4) ; OUT ;  ;  ;  ;  ;  ;  ; default (LVCMOS18) ; 1.8 ;  ; 12 ; SLOW ; NONE ; FP_VTT_50 ; ", 7); // z (O, cr)
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "dataOut (4) ; OUT ;  ;  ;  ;  ;  ;  ; default (LVCMOS18) ; 1.8 ;  ; 12 ; SLOW ; NONE ; FP_VTT_50 ; ", 7, "default (LVCMOS18)", 8, true); // z (O, cr) - Node
+// TclEventType: SIGNAL_MODIFY
+// Tcl Message: set_property IOSTANDARD LVCMOS33 [get_ports [list {dataOut[3]} {dataOut[2]} {dataOut[1]} {dataOut[0]}]] 
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "dataOut[3] ; OUT ;  ;  ;  ;  ;  ;  ; LVCMOS33 ; 3.3 ;  ; 12 ; SLOW ; NONE ; FP_VTT_50 ; ", 8, (String) null, 5, false); // z (O, cr)
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// HMemoryUtils.trashcanNow. Engine heap size: 2,379 MB. GUI used memory: 190 MB. Current time: 7/1/20, 6:39:56 PM CDT
+// Tcl Message: place_ports {dataOut[3]} M14 
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "dataOut[2] ; OUT ;  ;  ;  ;  ;  ;  ; LVCMOS33 ; 3.3 ;  ; 12 ; SLOW ; NONE ; FP_VTT_50 ; ", 9, (String) null, 5, false); // z (O, cr)
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// Tcl Message: place_ports {dataOut[2]} N16 
+// Run Command: PAResourceCommand.PACommandNames_SAVE_DESIGN
+// A (cr): Out of Date Design: addNotify
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+// a (cr): Save Constraints: addNotify
+dismissDialog("Out of Date Design"); // A (cr)
+setText(PAResourceAtoD.CreateConstraintsFilePanel_FILE_NAME, (String) null); // ac (D, a)
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (a)
+dismissDialog("Save Constraints"); // a (cr)
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "dataOut[1] ; OUT ;  ;  ;  ;  ;  ;  ; LVCMOS33 ; 3.3 ;  ; 12 ; SLOW ; NONE ; FP_VTT_50 ; ", 10, (String) null, 5, false); // z (O, cr)
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// Tcl Message: place_ports {dataOut[1]} P14 
+// Elapsed time: 10 seconds
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "dataOut[0] ; OUT ;  ;  ;  ;  ;  ;  ; LVCMOS33 ; 3.3 ;  ; 12 ; SLOW ; NONE ; FP_VTT_50 ; ", 11, (String) null, 5, false); // z (O, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,379 MB. GUI used memory: 159 MB. Current time: 7/1/20, 6:40:18 PM CDT
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// Tcl Message: place_ports {dataOut[0]} R14 
+collapseTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "dataOut (4) ; OUT ;  ;  ;  ;  ; true ; (Multiple) ; LVCMOS33 ; 3.3 ;  ; 12 ; SLOW ; NONE ; FP_VTT_50 ; ", 7); // z (O, cr)
+expandTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "mReady_in (4) ; OUT ;  ;  ;  ;  ;  ;  ; default (LVCMOS18) ; 1.8 ;  ; 12 ; SLOW ; NONE ; FP_VTT_50 ; ", 8); // z (O, cr)
+// Elapsed time: 65 seconds
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "mReady_in[3] ; OUT ;  ;  ;  ;  ;  ;  ; default (LVCMOS18) ; 1.8 ;  ; 12 ; SLOW ; NONE ; FP_VTT_50 ; ", 9, "default (LVCMOS18)", 8, false); // z (O, cr)
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "mReady_in (4) ; OUT ;  ;  ;  ;  ;  ;  ; default (LVCMOS18) ; 1.8 ;  ; 12 ; SLOW ; NONE ; FP_VTT_50 ; ", 8, "default (LVCMOS18)", 8, true); // z (O, cr) - Node
+// TclEventType: SIGNAL_MODIFY
+// Tcl Message: set_property IOSTANDARD LVCMOS33 [get_ports [list {mReady_in[3]} {mReady_in[2]} {mReady_in[1]} {mReady_in[0]}]] 
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "outputSelect (2) ; IN ;  ;  ;  ;  ;  ;  ; default (LVCMOS18) ; 1.8 ;  ;  ;  ; NONE ; NONE ; ", 14, "default (LVCMOS18)", 8, true); // z (O, cr) - Node
+expandTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "outputSelect (2) ; IN ;  ;  ;  ;  ;  ;  ; default (LVCMOS18) ; 1.8 ;  ;  ;  ; NONE ; NONE ; ", 14); // z (O, cr)
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "outputSelect[1] ; IN ;  ;  ;  ;  ;  ;  ; default (LVCMOS18) ; 1.8 ;  ;  ;  ; NONE ; NONE ; ", 15, "default (LVCMOS18)", 8, false); // z (O, cr)
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "outputSelect (2) ; IN ;  ;  ;  ;  ;  ;  ; default (LVCMOS18) ; 1.8 ;  ;  ;  ; NONE ; NONE ; ", 14, "default (LVCMOS18)", 8, true); // z (O, cr) - Node
+// TclEventType: SIGNAL_MODIFY
+// Tcl Message: set_property IOSTANDARD LVCMOS33 [get_ports [list {outputSelect[1]} {outputSelect[0]}]] 
+// Elapsed time: 11 seconds
+collapseTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "outputSelect (2) ; IN ;  ;  ;  ;  ;  ;  ; LVCMOS33 ; 3.3 ;  ;  ;  ; NONE ; NONE ; ", 14); // z (O, cr)
+// Elapsed time: 44 seconds
+expandTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "Scalar ports (3) ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; ", 15); // z (O, cr)
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "bufferSelect ; IN ;  ;  ;  ;  ;  ;  ; default (LVCMOS18) ; 1.8 ;  ;  ;  ; NONE ; NONE ; ", 16, "bufferSelect", 0, false); // z (O, cr)
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "bufferSelect ; IN ;  ;  ;  ;  ;  ;  ; default (LVCMOS18) ; 1.8 ;  ;  ;  ; NONE ; NONE ; ", 16, "default (LVCMOS18)", 8, false); // z (O, cr)
+// TclEventType: SIGNAL_MODIFY
+// HMemoryUtils.trashcanNow. Engine heap size: 2,380 MB. GUI used memory: 177 MB. Current time: 7/1/20, 6:42:52 PM CDT
+// Tcl Message: set_property IOSTANDARD LVCMOS33 [get_ports [list bufferSelect]] 
+// Elapsed time: 18 seconds
+collapseTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "mReady_in (4) ; OUT ;  ;  ;  ;  ;  ;  ; LVCMOS33 ; 3.3 ;  ; 12 ; SLOW ; NONE ; FP_VTT_50 ; ", 8); // z (O, cr)
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "mStart_in ; IN ;  ;  ;  ;  ;  ;  ; default (LVCMOS18) ; 1.8 ;  ;  ;  ; NONE ; NONE ; ", 13, "default (LVCMOS18)", 8, false); // z (O, cr)
+// TclEventType: SIGNAL_MODIFY
+// Tcl Message: set_property IOSTANDARD LVCMOS33 [get_ports [list mStart_in]] 
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "mStart_out ; IN ;  ;  ;  ;  ;  ;  ; default (LVCMOS18) ; 1.8 ;  ;  ;  ; NONE ; NONE ; ", 14, "default (LVCMOS18)", 8, false); // z (O, cr)
+// TclEventType: SIGNAL_MODIFY
+// Tcl Message: set_property IOSTANDARD LVCMOS33 [get_ports [list mStart_out]] 
+// Elapsed time: 411 seconds
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "All ports (36) ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; ", 0, "All ports (36)", 0, true); // z (O, cr) - Node
+selectTreeTableHeader(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "Fixed", 6); // z (O, cr)
+// Elapsed time: 99 seconds
+expandTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "AddressSelect (5) ; IN ;  ;  ;  ;  ;  ;  ; default (LVCMOS18) ; 1.8 ;  ;  ;  ; NONE ; NONE ; ", 1); // z (O, cr)
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "AddressSelect (5) ; IN ;  ;  ;  ;  ;  ;  ; default (LVCMOS18) ; 1.8 ;  ;  ;  ; NONE ; NONE ; ", 1, "default (LVCMOS18)", 8, true); // z (O, cr) - Node
+// HMemoryUtils.trashcanNow. Engine heap size: 2,380 MB. GUI used memory: 160 MB. Current time: 7/1/20, 6:51:51 PM CDT
+// TclEventType: SIGNAL_MODIFY
+// Tcl Message: set_property IOSTANDARD LVCMOS33 [get_ports [list {AddressSelect[4]} {AddressSelect[3]} {AddressSelect[2]} {AddressSelect[1]} {AddressSelect[0]}]] 
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "mReady_out (4) ; OUT ;  ;  ;  ;  ;  ;  ; default (LVCMOS18) ; 1.8 ;  ; 12 ; SLOW ; NONE ; FP_VTT_50 ; ", 10, "default (LVCMOS18)", 8, true); // z (O, cr) - Node
+// TclEventType: SIGNAL_MODIFY
+// Tcl Message: set_property IOSTANDARD LVCMOS33 [get_ports [list {mReady_out[3]} {mReady_out[2]} {mReady_out[1]} {mReady_out[0]}]] 
+// Elapsed time: 147 seconds
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "Scalar ports (3) ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; ", 12, "Scalar ports (3)", 0, true); // z (O, cr) - Node
+collapseTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "Scalar ports (3) ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; ", 12); // z (O, cr)
+collapseTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "AddressSelect (5) ; IN ;  ;  ;  ;  ;  ;  ; LVCMOS33 ; 3.3 ;  ;  ;  ; NONE ; NONE ; ", 1); // z (O, cr)
+// Elapsed time: 47 seconds
+expandTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "bufferRD_in (4) ; IN ;  ;  ;  ;  ;  ;  ; LVCMOS33 ; 3.3 ;  ;  ;  ; NONE ; NONE ; ", 2); // z (O, cr)
+collapseTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "bufferRD_in (4) ; IN ;  ;  ;  ;  ;  ;  ; LVCMOS33 ; 3.3 ;  ;  ;  ; NONE ; NONE ; ", 2); // z (O, cr)
+// Elapsed time: 117 seconds
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "bufferRD_in (4) ; IN ;  ;  ;  ;  ;  ;  ; LVCMOS33 ; 3.3 ;  ;  ;  ; NONE ; NONE ; ", 2, "bufferRD_in (4)", 0, true); // z (O, cr) - Node
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "AddressSelect (5) ; IN ;  ;  ;  ;  ;  ;  ; LVCMOS33 ; 3.3 ;  ;  ;  ; NONE ; NONE ; ", 1, "AddressSelect (5)", 0, true); // z (O, cr) - Node
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "bufferRD_in (4) ; IN ;  ;  ;  ;  ;  ;  ; LVCMOS33 ; 3.3 ;  ;  ;  ; NONE ; NONE ; ", 2, "bufferRD_in (4)", 0, true); // z (O, cr) - Node
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "bufferRD_out (4) ; IN ;  ;  ;  ;  ;  ;  ; LVCMOS33 ; 3.3 ;  ;  ;  ; NONE ; NONE ; ", 3, "bufferRD_out (4)", 0, true); // z (O, cr) - Node
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "mReady_in (4) ; OUT ;  ;  ;  ;  ;  ;  ; LVCMOS33 ; 3.3 ;  ; 12 ; SLOW ; NONE ; FP_VTT_50 ; ", 4, "mReady_in (4)", 0, true); // z (O, cr) - Node
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "mReady_out (4) ; OUT ;  ;  ;  ;  ;  ;  ; LVCMOS33 ; 3.3 ;  ; 12 ; SLOW ; NONE ; FP_VTT_50 ; ", 5, "mReady_out (4)", 0, true); // z (O, cr) - Node
+// Elapsed time: 162 seconds
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "bufferRD_in (4) ; IN ;  ;  ;  ;  ;  ;  ; LVCMOS33 ; 3.3 ;  ;  ;  ; NONE ; NONE ; ", 2, "bufferRD_in (4)", 0, true); // z (O, cr) - Node
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "bufferRD_out (4) ; IN ;  ;  ;  ;  ;  ;  ; LVCMOS33 ; 3.3 ;  ;  ;  ; NONE ; NONE ; ", 3, "bufferRD_out (4)", 0, true); // z (O, cr) - Node
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "mReady_in (4) ; OUT ;  ;  ;  ;  ;  ;  ; LVCMOS33 ; 3.3 ;  ; 12 ; SLOW ; NONE ; FP_VTT_50 ; ", 4, "mReady_in (4)", 0, true); // z (O, cr) - Node
+// Elapsed time: 46 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Open Implemented Design]", 19, true); // u (O, cr) - Node
+// Elapsed time: 45 seconds
+expandTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "mReady_out (4) ; OUT ;  ;  ;  ;  ;  ;  ; LVCMOS33 ; 3.3 ;  ; 12 ; SLOW ; NONE ; FP_VTT_50 ; ", 5); // z (O, cr)
+collapseTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "mReady_out (4) ; OUT ;  ;  ;  ;  ;  ;  ; LVCMOS33 ; 3.3 ;  ; 12 ; SLOW ; NONE ; FP_VTT_50 ; ", 5); // z (O, cr)
+expandTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "Scalar ports (3) ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; ", 7); // z (O, cr)
+// Elapsed time: 14 seconds
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "mStart_in ; IN ;  ;  ;  ;  ;  ;  ; LVCMOS33 ; 3.3 ;  ;  ;  ; NONE ; NONE ; ", 9, (String) null, 5, true); // z (O, cr) - Node
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// Tcl Message: place_ports mStart_in R16 
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "mStart_in ; IN ;  ;  ;  ; R16 ; true ; 34 ; LVCMOS33 ; 3.3 ;  ;  ;  ; NONE ; NONE ; ", 10, "R16", 5, true); // z (O, cr) - Node
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_REMOVE
+// TclEventType: LOC_CONSTRAINT_ADD
+// HMemoryUtils.trashcanNow. Engine heap size: 2,380 MB. GUI used memory: 160 MB. Current time: 7/1/20, 7:02:14 PM CDT
+// Tcl Message: place_ports mStart_in R17 
+// Elapsed time: 11 seconds
+selectTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "bufferSelect ; IN ;  ;  ;  ;  ;  ;  ; LVCMOS33 ; 3.3 ;  ;  ;  ; NONE ; NONE ; ", 8, (String) null, 5, true); // z (O, cr) - Node
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// Tcl Message: place_ports bufferSelect R16 
+// Run Command: PAResourceCommand.PACommandNames_SAVE_DESIGN
+// A (cr): Out of Date Design: addNotify
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+// a (cr): Save Constraints: addNotify
+dismissDialog("Out of Date Design"); // A (cr)
+setText(PAResourceAtoD.CreateConstraintsFilePanel_FILE_NAME, (String) null); // ac (D, a)
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (a)
+dismissDialog("Save Constraints"); // a (cr)
+expandTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "CLK.CLK_13464 (1) ; IN ;  ;  ;  ;  ; true ; 34 ; LVCMOS33 ; 3.3 ;  ;  ;  ; NONE ; NONE ; ", 11); // z (O, cr)
+collapseTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "CLK.CLK_13464 (1) ; IN ;  ;  ;  ;  ; true ; 34 ; LVCMOS33 ; 3.3 ;  ;  ;  ; NONE ; NONE ; ", 11); // z (O, cr)
+collapseTreeTable(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "Scalar ports (3) ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; ", 7); // z (O, cr)
+// Elapsed time: 1689 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Run Implementation]", 18, false); // u (O, cr)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// A (cr): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bB (cr):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // A (cr)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// al (cr): Save Project: addNotify
+selectButton(PAResourceQtoS.SaveProjectUtils_CANCEL, "Cancel"); // a (al)
+dismissDialog("Save Project"); // al (cr)
+selectTreeTableHeader(PAResourceQtoS.SignalTreePanel_SIGNAL_TREE_TABLE, "Drive Strength", 11); // z (O, cr)
+// Run Command: PAResourceCommand.PACommandNames_SAVE_DESIGN
+// A (cr): Out of Date Design: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+// a (cr): Save Constraints: addNotify
+dismissDialog("Out of Date Design"); // A (cr)
+// Elapsed time: 15 seconds
+selectComboBox(PAResourceAtoD.CreateConstraintsFilePanel_FILE_LOCATION, "Choose Location...", 1); // e (D, a)
+// Elapsed time: 17 seconds
+setFolderChooser("C:/Users/monke/Documents/GitHub/ReconHardware/MCUSoftware/xBarMultiplier/FPGA Files");
+setText(PAResourceAtoD.CreateConstraintsFilePanel_FILE_NAME, "xBarMultiplier"); // ac (D, a)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (a)
+// HOptionPane Warning: 'Create constraints file'
+selectButton("OptionPane.button", "OK"); // JButton (A, H)
+// Elapsed time: 12 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (a)
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// bB (cr):  Save Constraints : addNotify
+// Tcl Message: close [ open {C:/Users/monke/Documents/GitHub/ReconHardware/MCUSoftware/xBarMultiplier/FPGA Files/xBarMultiplier.xdc} w ] 
+// Tcl Message: add_files -fileset constrs_1 {{C:/Users/monke/Documents/GitHub/ReconHardware/MCUSoftware/xBarMultiplier/FPGA Files/xBarMultiplier.xdc}} 
+// Tcl Message: set_property target_constrs_file {C:/Users/monke/Documents/GitHub/ReconHardware/MCUSoftware/xBarMultiplier/FPGA Files/xBarMultiplier.xdc} [current_fileset -constrset] 
+// TclEventType: DESIGN_SAVE
+dismissDialog("Save Constraints"); // a (cr)
+// Tcl Message: save_constraints -force 
+// 'h' command handler elapsed time: 58 seconds
+dismissDialog("Save Constraints"); // bB (cr)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 11, false); // u (O, cr)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Run Implementation]", 18, false); // u (O, cr)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// bB (cr):  Starting Design Runs : addNotify
+selectButton("OptionPane.button", "OK"); // JButton (A, G)
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 child_0_impl_1 child_1_impl_1 child_2_impl_1 child_3_impl_1 -jobs 4 
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+dismissDialog("Starting Design Runs"); // bB (cr)
+selectButton(PAResourceOtoP.ProjectTab_CLOSE_DESIGN, "Close Design"); // h (ds, cr)
+// TclEventType: DESIGN_CLOSE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,380 MB. GUI used memory: 126 MB. Current time: 7/1/20, 7:32:04 PM CDT
+// TclEventType: RUN_STATUS_CHANGE
+// Engine heap size: 2,380 MB. GUI used memory: 127 MB. Current time: 7/1/20, 7:32:04 PM CDT
+// TclEventType: CURR_DESIGN_SET
+// TclEventType: RUN_STATUS_CHANGE
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// Tcl Message: close_design 
+// bB (cr):  Closing : addNotify
+// TclEventType: DESIGN_CLOSE
+dismissDialog("Closing"); // bB (cr)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// aj (cr): Implementation Failed: addNotify
+// Elapsed time: 868 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aj)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Implementation Failed"); // aj (cr)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, impl_1, Place Design, DRC, Partial Reconfiguration, Pblock, [DRC HDPR-30] Missing PBLOCK On Reconfigurable Cell: HD.RECONFIGURABLE cell 'genblk3[0].m_computeBlock_in/mCompute' must have PBLOCK assigned to itself or its descendant cells.. ]", 6, true); // ah (O, cr) - Node
+// Elapsed time: 17 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design]", 16, true); // u (O, cr) - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_NETLIST_DESIGN
+// bB (cr):  Open Synthesized Design : addNotify
+// Tcl Message: open_run synth_1 -name synth_1 -pr_config [current_pr_configuration] 
+// Tcl Message: Design is defaulting to impl run constrset: constrs_1 Design is defaulting to synth run part: xc7z020clg400-1 
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: PHY_BLOCK_NEW
+// TclEventType: PHY_BLOCK_ADD_INST
+// TclEventType: PHY_RECT_SELECT
+// TclEventType: PHY_BLOCK_MODIFY
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: PHY_RECT_SELECT
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 2,380 MB. GUI used memory: 106 MB. Current time: 7/1/20, 7:46:54 PM CDT
+// TclEventType: DESIGN_NEW
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// Device: addNotify
+// DeviceView Instantiated
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2435.570 ; gain = 0.000 
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 19 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2019.2 INFO: [Project 1-570] Preparing netlist for logic optimization INFO: [Opt 31-141] Inserted 8 OBUFs to IO ports without IO buffers. 
+// Tcl Message: Parsing XDC File [C:/Users/monke/Documents/GitHub/ReconHardware/MCUSoftware/xBarMultiplier/FPGA Files/xBarMultiplier.xdc] Finished Parsing XDC File [C:/Users/monke/Documents/GitHub/ReconHardware/MCUSoftware/xBarMultiplier/FPGA Files/xBarMultiplier.xdc] 
+// Tcl Message: INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2435.570 ; gain = 0.000 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// Device view-level: 0.0
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// 'dQ' command handler elapsed time: 3 seconds
+dismissDialog("Open Synthesized Design"); // bB (cr)
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 301161, 321682); // D (I, cr)
+// Device select: 'Pblock - multiplier_block'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 1335, 531, 2575, 923); // U (i, cr)
+selectTab((HResource) null, (HResource) null, "Messages", 1); // aL (aI, cr)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, impl_1, Place Design, DRC, Partial Reconfiguration, Pblock, [DRC HDPR-30] Missing PBLOCK On Reconfigurable Cell: HD.RECONFIGURABLE cell 'genblk3[0].m_computeBlock_in/mCompute' must have PBLOCK assigned to itself or its descendant cells.. ]", 6, true); // ah (O, cr) - Node
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, impl_1, Place Design, DRC, Partial Reconfiguration, Pblock, [DRC HDPR-30] Missing PBLOCK On Reconfigurable Cell: HD.RECONFIGURABLE cell 'genblk3[0].m_computeBlock_in/mCompute' must have PBLOCK assigned to itself or its descendant cells.. ]", 6); // ah (O, cr)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, impl_1, Place Design, DRC, Partial Reconfiguration, Pblock, [DRC HDPR-30] Missing PBLOCK On Reconfigurable Cell: HD.RECONFIGURABLE cell 'genblk3[0].m_computeBlock_in/mCompute' must have PBLOCK assigned to itself or its descendant cells.. , [DRC HDPR-30] Missing PBLOCK On Reconfigurable Cell: HD.RECONFIGURABLE cell 'genblk3[1].m_computeBlock_in/mCompute' must have PBLOCK assigned to itself or its descendant cells.. ]", 7, false); // ah (O, cr)
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 308430, 330769); // D (I, cr)
+// Device select: 'Pblock - multiplier_block'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 1347, 546, 2575, 923); // U (i, cr)
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk3[0].m_computeBlock_in (reconfigMultiplyBlock__xdcDup__1)]", 3, false); // bD (O, cr)
+// PAPropertyPanels.initPanels (genblk3[0].m_computeBlock_in (reconfigMultiplyBlock__xdcDup__1)) elapsed time: 0.2s
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk3[1].m_computeBlock_in (reconfigMultiplyBlock__xdcDup__2)]", 4, false); // bD (O, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,380 MB. GUI used memory: 148 MB. Current time: 7/1/20, 7:47:39 PM CDT
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk3[2].m_computeBlock_in (reconfigMultiplyBlock__xdcDup__3)]", 5, false); // bD (O, cr)
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk3[3].m_computeBlock_in (reconfigMultiplyBlock__xdcDup__4)]", 6, false); // bD (O, cr)
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk4[0].m_computeBlock_out (reconfigMultiplyBlock__xdcDup__5)]", 7, false); // bD (O, cr)
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk4[1].m_computeBlock_out (reconfigMultiplyBlock__xdcDup__6)]", 8, false); // bD (O, cr)
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk4[2].m_computeBlock_out (reconfigMultiplyBlock__xdcDup__7)]", 9, false); // bD (O, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,380 MB. GUI used memory: 148 MB. Current time: 7/1/20, 7:47:41 PM CDT
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk4[3].m_computeBlock_out (reconfigMultiplyBlock)]", 10, false); // bD (O, cr)
+// Elapsed time: 11 seconds
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 296920, 299873); // D (I, cr)
+// Device select: 'Pblock - multiplier_block'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 1329, 496, 2575, 923); // U (i, cr)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Run Implementation]", 30, false); // u (O, cr)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// i (cr): Reset and Re-run: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Reset and Re-run"); // a (i)
+// bB (cr):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Reset and Re-run"); // i (cr)
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run impl_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// bB (cr):  Starting Design Runs : addNotify
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// Tcl Message: launch_runs impl_1 child_0_impl_1 child_1_impl_1 child_2_impl_1 child_3_impl_1 -jobs 4 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2690.859 ; gain = 0.000 
+// Tcl Message: INFO: [Timing 38-480] Writing timing data to binary archive. 
+// Tcl Message: Writing placer database... Writing XDEF routing. Writing XDEF routing logical nets. Writing XDEF routing special nets. 
+// Tcl Message: Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.046 . Memory (MB): peak = 2691.250 ; gain = 0.391 
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// 'c' command handler elapsed time: 4 seconds
+dismissDialog("Starting Design Runs"); // bB (cr)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// aj (cr): Implementation Failed: addNotify
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 39 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (aj)
+dismissDialog("Implementation Failed"); // aj (cr)
+// Device view-level: 0.3
+// Device view-level: 0.6
+// HMemoryUtils.trashcanNow. Engine heap size: 2,380 MB. GUI used memory: 150 MB. Current time: 7/1/20, 7:48:44 PM CDT
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 299714, 315018); // D (I, cr)
+// Device select: 'Pblock - multiplier_block'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 1382, 1170, 2575, 923); // U (i, cr)
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 302407, 300748); // D (I, cr)
+// Device select: 'Pblock - multiplier_block'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 1392, 1117, 2575, 923); // U (i, cr)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: PHY_BLOCK_DELETE
+// Tcl Message: delete_pblock [get_pblocks  multiplier_block] 
+// Device view-level: 0.9
+// HMemoryUtils.trashcanNow. Engine heap size: 2,380 MB. GUI used memory: 153 MB. Current time: 7/1/20, 7:48:50 PM CDT
+// Device view-level: 1.2
+// Device view-level: 1.5
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 298764, 332429); // D (I, cr)
+// Device view-level: 1.5
+// HMemoryUtils.trashcanNow. Engine heap size: 2,380 MB. GUI used memory: 151 MB. Current time: 7/1/20, 7:48:51 PM CDT
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk3[0].m_computeBlock_in (reconfigMultiplyBlock__xdcDup__1)]", 3, false); // bD (O, cr)
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk3[1].m_computeBlock_in (reconfigMultiplyBlock__xdcDup__2)]", 4, false, false, false, false, true, false); // bD (O, cr) - Popup Trigger
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk3[0].m_computeBlock_in (reconfigMultiplyBlock__xdcDup__1)]", 3, false); // bD (O, cr)
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk3[0].m_computeBlock_in (reconfigMultiplyBlock__xdcDup__1)]", 3, false, false, false, false, true, false); // bD (O, cr) - Popup Trigger
+selectMenu(PAResourceItoN.InstanceMenu_FLOORPLANNING, "Floorplanning"); // af (ao, cr)
+selectMenu(PAResourceOtoP.PrimitivesMenu_HIGHLIGHT_LEAF_CELLS, "Highlight Leaf Cells"); // af (ao, cr)
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // af (ao, cr)
+selectMenu(PAResourceQtoS.SelectMenu_MARK, "Mark"); // af (ao, cr)
+selectMenu(PAResourceQtoS.SelectMenu_MARK, "Mark"); // af (ao, cr)
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // af (ao, cr)
+selectMenu(PAResourceOtoP.PrimitivesMenu_HIGHLIGHT_LEAF_CELLS, "Highlight Leaf Cells"); // af (ao, cr)
+selectMenu(PAResourceItoN.InstanceMenu_FLOORPLANNING, "Floorplanning"); // af (ao, cr)
+selectMenu(PAResourceItoN.InstanceMenu_FLOORPLANNING, "Floorplanning"); // af (ao, cr)
+selectMenuItem(PAResourceCommand.PACommandNames_DRAW_PBLOCK_MODE, "Draw Pblock"); // ai (cr)
+// Run Command: PAResourceCommand.PACommandNames_DRAW_PBLOCK_MODE
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 274034, 348786); // D (I, cr)
+// r (cr): New Pblock: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (r)
+// TclEventType: PHY_BLOCK_NEW
+// TclEventType: PHY_RECT_SELECT
+// TclEventType: PHY_BLOCK_MODIFY
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: PHY_RECT_SELECT
+// TclEventType: PHY_BLOCK_ADD_INST
+// Tcl Message: startgroup 
+// Tcl Message: create_pblock {pblock_gnblk3[0].m_cmptBlck_in} 
+// Tcl Message: resize_pblock {pblock_gnblk3[0].m_cmptBlck_in} -add SLICE_X54Y50:SLICE_X57Y51 
+// Tcl Message: add_cells_to_pblock {pblock_gnblk3[0].m_cmptBlck_in} [get_cells [list {genblk3[0].m_computeBlock_in}]] -clear_locs 
+// Tcl Message: endgroup 
+dismissDialog("New Pblock"); // r (cr)
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 278422, 344717); // D (I, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,380 MB. GUI used memory: 151 MB. Current time: 7/1/20, 7:49:15 PM CDT
+// TclEventType: PHY_RECT_SELECT
+// TclEventType: PHY_BLOCK_MODIFY
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: PHY_RECT_SELECT
+// Tcl Message: resize_pblock {pblock_gnblk3[0].m_cmptBlck_in} -add SLICE_X54Y50:SLICE_X57Y52 -remove SLICE_X54Y50:SLICE_X57Y51 -locs keep_all 
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 288394, 349903); // D (I, cr)
+// Device select: 'Tile - CLBLM_R_X39Y50'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 3615, 4386, 2575, 923); // U (i, cr)
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk3[1].m_computeBlock_in (reconfigMultiplyBlock__xdcDup__2)]", 4, false); // bD (O, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,380 MB. GUI used memory: 181 MB. Current time: 7/1/20, 7:49:28 PM CDT
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk3[1].m_computeBlock_in (reconfigMultiplyBlock__xdcDup__2)]", 4, false, false, false, false, true, false); // bD (O, cr) - Popup Trigger
+selectMenu(PAResourceItoN.InstanceMenu_FLOORPLANNING, "Floorplanning"); // af (ao, cr)
+selectMenu(PAResourceItoN.InstanceMenu_FLOORPLANNING, "Floorplanning"); // af (ao, cr)
+selectMenu(PAResourceItoN.InstanceMenu_FLOORPLANNING, "Floorplanning"); // af (ao, cr)
+selectMenuItem(PAResourceCommand.PACommandNames_NEW_PBLOCK, "New Pblock..."); // ai (cr)
+// Run Command: PAResourceCommand.PACommandNames_NEW_PBLOCK
+// r (cr): New Pblock: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (r)
+// TclEventType: PHY_BLOCK_NEW
+// TclEventType: PHY_BLOCK_ADD_INST
+// Tcl Message: startgroup 
+// Tcl Message: create_pblock {pblock_gnblk3[1].m_cmptBlck_in} 
+// Tcl Message: add_cells_to_pblock {pblock_gnblk3[1].m_cmptBlck_in} [get_cells [list {genblk3[1].m_computeBlock_in}]] -clear_locs 
+// Tcl Message: endgroup 
+dismissDialog("New Pblock"); // r (cr)
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 272678, 338973); // D (I, cr)
+// Device view-level: 1.2
+// Run Command: RDIResourceCommand.RDICommands_UNDO
+typeControlKey(null, null, 'z');
+// TclEventType: LOC_CONSTRAINT_MODIFY
+// TclEventType: PHY_BLOCK_DELETE
+// Tcl Message: undo 
+// Tcl Message: INFO: [Common 17-17] undo 'endgroup' INFO: [Common 17-17] undo 'add_cells_to_pblock {pblock_gnblk3[1].m_cmptBlck_in} [get_cells [list {genblk3[1].m_computeBlock_in}]] -clear_locs' INFO: [Common 17-17] undo 'create_pblock {pblock_gnblk3[1].m_cmptBlck_in}' INFO: [Common 17-17] undo 'startgroup' 
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk3[1].m_computeBlock_in (reconfigMultiplyBlock__xdcDup__2)]", 4, false, false, false, false, true, false); // bD (O, cr) - Popup Trigger
+selectMenu(PAResourceItoN.InstanceMenu_FLOORPLANNING, "Floorplanning"); // af (ao, cr)
+selectMenu(PAResourceItoN.InstanceMenu_FLOORPLANNING, "Floorplanning"); // af (ao, cr)
+selectMenuItem(PAResourceCommand.PACommandNames_DRAW_PBLOCK_MODE, "Draw Pblock"); // ai (cr)
+// Run Command: PAResourceCommand.PACommandNames_DRAW_PBLOCK_MODE
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 274872, 339492); // D (I, cr)
+// r (cr): New Pblock: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (r)
+// TclEventType: PHY_BLOCK_NEW
+// TclEventType: PHY_RECT_SELECT
+// TclEventType: PHY_BLOCK_MODIFY
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: PHY_RECT_SELECT
+// TclEventType: PHY_BLOCK_ADD_INST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,380 MB. GUI used memory: 153 MB. Current time: 7/1/20, 7:49:49 PM CDT
+// Tcl Message: startgroup 
+// Tcl Message: create_pblock {pblock_gnblk3[1].m_cmptBlck_in} 
+// Tcl Message: resize_pblock {pblock_gnblk3[1].m_cmptBlck_in} -add SLICE_X54Y53:SLICE_X57Y55 
+// Tcl Message: add_cells_to_pblock {pblock_gnblk3[1].m_cmptBlck_in} [get_cells [list {genblk3[1].m_computeBlock_in}]] -clear_locs 
+// Tcl Message: endgroup 
+dismissDialog("New Pblock"); // r (cr)
+// Device view-level: 1.5
+// Device view-level: 1.8
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk3[2].m_computeBlock_in (reconfigMultiplyBlock__xdcDup__3)]", 5, false); // bD (O, cr)
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk3[2].m_computeBlock_in (reconfigMultiplyBlock__xdcDup__3)]", 5, false, false, false, false, true, false); // bD (O, cr) - Popup Trigger
+selectMenu(PAResourceItoN.InstanceMenu_FLOORPLANNING, "Floorplanning"); // af (ao, cr)
+selectMenu(PAResourceItoN.InstanceMenu_FLOORPLANNING, "Floorplanning"); // af (ao, cr)
+selectMenuItem(PAResourceCommand.PACommandNames_NEW_PBLOCK, "New Pblock..."); // ai (cr)
+// Run Command: PAResourceCommand.PACommandNames_NEW_PBLOCK
+// r (cr): New Pblock: addNotify
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (r)
+dismissDialog("New Pblock"); // r (cr)
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk3[2].m_computeBlock_in (reconfigMultiplyBlock__xdcDup__3)]", 5, false, false, false, false, true, false); // bD (O, cr) - Popup Trigger
+selectMenu(PAResourceItoN.InstanceMenu_FLOORPLANNING, "Floorplanning"); // af (ao, cr)
+selectMenuItem(PAResourceCommand.PACommandNames_DRAW_PBLOCK_MODE, "Draw Pblock"); // ai (cr)
+// Run Command: PAResourceCommand.PACommandNames_DRAW_PBLOCK_MODE
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 279592, 329586); // D (I, cr)
+// Device view-level: 1.8
+// [GUI Memory]: 239 MB (+11409kb) [01:23:19]
+// HMemoryUtils.trashcanNow. Engine heap size: 2,380 MB. GUI used memory: 152 MB. Current time: 7/1/20, 7:50:00 PM CDT
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 272202, 329854); // D (I, cr)
+// r (cr): New Pblock: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (r)
+// TclEventType: PHY_BLOCK_NEW
+// TclEventType: PHY_RECT_SELECT
+// TclEventType: PHY_BLOCK_MODIFY
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: PHY_RECT_SELECT
+// TclEventType: PHY_BLOCK_ADD_INST
+// Tcl Message: startgroup 
+// Tcl Message: create_pblock {pblock_gnblk3[2].m_cmptBlck_in} 
+// Tcl Message: resize_pblock {pblock_gnblk3[2].m_cmptBlck_in} -add SLICE_X54Y56:SLICE_X57Y58 
+// Tcl Message: add_cells_to_pblock {pblock_gnblk3[2].m_cmptBlck_in} [get_cells [list {genblk3[2].m_computeBlock_in}]] -clear_locs 
+// Tcl Message: endgroup 
+dismissDialog("New Pblock"); // r (cr)
+// Device view-level: 1.5
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 284009, 317914); // D (I, cr)
+// Device view-level: 1.5
+// Device view-level: 1.5
+// HMemoryUtils.trashcanNow. Engine heap size: 2,380 MB. GUI used memory: 153 MB. Current time: 7/1/20, 7:50:06 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,380 MB. GUI used memory: 153 MB. Current time: 7/1/20, 7:50:07 PM CDT
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk3[3].m_computeBlock_in (reconfigMultiplyBlock__xdcDup__4)]", 6, false); // bD (O, cr)
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk3[3].m_computeBlock_in (reconfigMultiplyBlock__xdcDup__4)]", 6, false, false, false, false, true, false); // bD (O, cr) - Popup Trigger
+// HMemoryUtils.trashcanNow. Engine heap size: 2,380 MB. GUI used memory: 153 MB. Current time: 7/1/20, 7:50:08 PM CDT
+selectMenu(PAResourceOtoP.PrimitivesMenu_HIGHLIGHT_LEAF_CELLS, "Highlight Leaf Cells"); // af (ao, cr)
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // af (ao, cr)
+selectMenu(PAResourceQtoS.SelectMenu_MARK, "Mark"); // af (ao, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,380 MB. GUI used memory: 152 MB. Current time: 7/1/20, 7:50:09 PM CDT
+selectMenu(PAResourceQtoS.SelectMenu_MARK, "Mark"); // af (ao, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,380 MB. GUI used memory: 152 MB. Current time: 7/1/20, 7:50:10 PM CDT
+selectMenu(PAResourceItoN.InstanceMenu_FLOORPLANNING, "Floorplanning"); // af (ao, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,380 MB. GUI used memory: 152 MB. Current time: 7/1/20, 7:50:11 PM CDT
+selectMenuItem(PAResourceCommand.PACommandNames_DRAW_PBLOCK_MODE, "Draw Pblock"); // ai (cr)
+// Run Command: PAResourceCommand.PACommandNames_DRAW_PBLOCK_MODE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,380 MB. GUI used memory: 201 MB. Current time: 7/1/20, 7:50:14 PM CDT
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 272762, 321347); // D (I, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,380 MB. GUI used memory: 153 MB. Current time: 7/1/20, 7:50:17 PM CDT
+// r (cr): New Pblock: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (r)
+// TclEventType: PHY_BLOCK_NEW
+// TclEventType: PHY_RECT_SELECT
+// TclEventType: PHY_BLOCK_MODIFY
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: PHY_RECT_SELECT
+// TclEventType: PHY_BLOCK_ADD_INST
+// Tcl Message: startgroup 
+// Tcl Message: create_pblock {pblock_gnblk3[3].m_cmptBlck_in} 
+// Tcl Message: resize_pblock {pblock_gnblk3[3].m_cmptBlck_in} -add SLICE_X54Y59:SLICE_X57Y61 
+// Tcl Message: add_cells_to_pblock {pblock_gnblk3[3].m_cmptBlck_in} [get_cells [list {genblk3[3].m_computeBlock_in}]] -clear_locs 
+// Tcl Message: endgroup 
+dismissDialog("New Pblock"); // r (cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,380 MB. GUI used memory: 153 MB. Current time: 7/1/20, 7:50:18 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,380 MB. GUI used memory: 152 MB. Current time: 7/1/20, 7:50:19 PM CDT
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 298291, 329724); // D (I, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,380 MB. GUI used memory: 153 MB. Current time: 7/1/20, 7:50:19 PM CDT
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk4[0].m_computeBlock_out (reconfigMultiplyBlock__xdcDup__5)]", 7, false); // bD (O, cr)
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk4[0].m_computeBlock_out (reconfigMultiplyBlock__xdcDup__5)]", 7, false, false, false, false, true, false); // bD (O, cr) - Popup Trigger
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk3[0].m_computeBlock_in (reconfigMultiplyBlock__xdcDup__1)]", 3, false); // bD (O, cr)
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk3[1].m_computeBlock_in (reconfigMultiplyBlock__xdcDup__2)]", 4, false); // bD (O, cr)
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk3[2].m_computeBlock_in (reconfigMultiplyBlock__xdcDup__3)]", 5, false); // bD (O, cr)
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk3[3].m_computeBlock_in (reconfigMultiplyBlock__xdcDup__4)]", 6, false); // bD (O, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,380 MB. GUI used memory: 152 MB. Current time: 7/1/20, 7:50:25 PM CDT
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk4[0].m_computeBlock_out (reconfigMultiplyBlock__xdcDup__5)]", 7, false); // bD (O, cr)
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk4[0].m_computeBlock_out (reconfigMultiplyBlock__xdcDup__5)]", 7, false, false, false, false, true, false); // bD (O, cr) - Popup Trigger
+selectMenu(PAResourceItoN.InstanceMenu_FLOORPLANNING, "Floorplanning"); // af (ao, cr)
+selectMenu(PAResourceItoN.InstanceMenu_FLOORPLANNING, "Floorplanning"); // af (ao, cr)
+selectMenu(PAResourceItoN.InstanceMenu_FLOORPLANNING, "Floorplanning"); // af (ao, cr)
+selectMenuItem(PAResourceCommand.PACommandNames_DRAW_PBLOCK_MODE, "Draw Pblock"); // ai (cr)
+// Run Command: PAResourceCommand.PACommandNames_DRAW_PBLOCK_MODE
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 289515, 349030); // D (I, cr)
+// r (cr): New Pblock: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (r)
+// TclEventType: PHY_BLOCK_NEW
+// TclEventType: PHY_RECT_SELECT
+// TclEventType: PHY_BLOCK_MODIFY
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: PHY_RECT_SELECT
+// TclEventType: PHY_BLOCK_ADD_INST
+// Tcl Message: startgroup 
+// Tcl Message: create_pblock {pblock_gnblk4[0].m_cmptBlck_ot} 
+// Tcl Message: resize_pblock {pblock_gnblk4[0].m_cmptBlck_ot} -add SLICE_X58Y50:SLICE_X61Y52 
+// Tcl Message: add_cells_to_pblock {pblock_gnblk4[0].m_cmptBlck_ot} [get_cells [list {genblk4[0].m_computeBlock_out}]] -clear_locs 
+// Tcl Message: endgroup 
+dismissDialog("New Pblock"); // r (cr)
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 303157, 355811); // D (I, cr)
+// Device select: 'Tile - CLBLM_R_X41Y48'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 3800, 4460, 2575, 923); // U (i, cr)
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk4[1].m_computeBlock_out (reconfigMultiplyBlock__xdcDup__6)]", 8, false); // bD (O, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,380 MB. GUI used memory: 186 MB. Current time: 7/1/20, 7:50:34 PM CDT
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk4[1].m_computeBlock_out (reconfigMultiplyBlock__xdcDup__6)]", 8, false, false, false, false, true, false); // bD (O, cr) - Popup Trigger
+selectMenu(PAResourceItoN.InstanceMenu_FLOORPLANNING, "Floorplanning"); // af (ao, cr)
+selectMenu(PAResourceItoN.InstanceMenu_FLOORPLANNING, "Floorplanning"); // af (ao, cr)
+selectMenu(PAResourceItoN.InstanceMenu_FLOORPLANNING, "Floorplanning"); // af (ao, cr)
+selectMenuItem(PAResourceCommand.PACommandNames_DRAW_PBLOCK_MODE, "Draw Pblock"); // ai (cr)
+// Run Command: PAResourceCommand.PACommandNames_DRAW_PBLOCK_MODE
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 287202, 340334); // D (I, cr)
+// r (cr): New Pblock: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (r)
+// TclEventType: PHY_BLOCK_NEW
+// TclEventType: PHY_RECT_SELECT
+// TclEventType: PHY_BLOCK_MODIFY
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: PHY_RECT_SELECT
+// TclEventType: PHY_BLOCK_ADD_INST
+// Tcl Message: startgroup 
+// Tcl Message: create_pblock {pblock_gnblk4[1].m_cmptBlck_ot} 
+// Tcl Message: resize_pblock {pblock_gnblk4[1].m_cmptBlck_ot} -add SLICE_X58Y53:SLICE_X61Y55 
+// Tcl Message: add_cells_to_pblock {pblock_gnblk4[1].m_cmptBlck_ot} [get_cells [list {genblk4[1].m_computeBlock_out}]] -clear_locs 
+// Tcl Message: endgroup 
+dismissDialog("New Pblock"); // r (cr)
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk4[2].m_computeBlock_out (reconfigMultiplyBlock__xdcDup__7)]", 9, false); // bD (O, cr)
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk4[2].m_computeBlock_out (reconfigMultiplyBlock__xdcDup__7)]", 9, false, false, false, false, true, false); // bD (O, cr) - Popup Trigger
+selectMenu(PAResourceItoN.InstanceMenu_FLOORPLANNING, "Floorplanning"); // af (ao, cr)
+selectMenu(PAResourceOtoP.PrimitivesMenu_HIGHLIGHT_LEAF_CELLS, "Highlight Leaf Cells"); // af (ao, cr)
+selectMenu(PAResourceOtoP.PrimitivesMenu_HIGHLIGHT_LEAF_CELLS, "Highlight Leaf Cells"); // af (ao, cr)
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // af (ao, cr)
+selectMenu(PAResourceQtoS.SelectMenu_MARK, "Mark"); // af (ao, cr)
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // af (ao, cr)
+selectMenu(PAResourceOtoP.PrimitivesMenu_HIGHLIGHT_LEAF_CELLS, "Highlight Leaf Cells"); // af (ao, cr)
+selectMenu(PAResourceItoN.InstanceMenu_FLOORPLANNING, "Floorplanning"); // af (ao, cr)
+selectMenuItem(PAResourceCommand.PACommandNames_DRAW_PBLOCK_MODE, "Draw Pblock"); // ai (cr)
+// Run Command: PAResourceCommand.PACommandNames_DRAW_PBLOCK_MODE
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 285925, 330920); // D (I, cr)
+// r (cr): New Pblock: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (r)
+// TclEventType: PHY_BLOCK_NEW
+// TclEventType: PHY_RECT_SELECT
+// TclEventType: PHY_BLOCK_MODIFY
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: PHY_RECT_SELECT
+// TclEventType: PHY_BLOCK_ADD_INST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,380 MB. GUI used memory: 156 MB. Current time: 7/1/20, 7:50:51 PM CDT
+// Tcl Message: startgroup 
+// Tcl Message: create_pblock {pblock_gnblk4[2].m_cmptBlck_ot} 
+// Tcl Message: resize_pblock {pblock_gnblk4[2].m_cmptBlck_ot} -add SLICE_X58Y56:SLICE_X61Y58 
+// Tcl Message: add_cells_to_pblock {pblock_gnblk4[2].m_cmptBlck_ot} [get_cells [list {genblk4[2].m_computeBlock_out}]] -clear_locs 
+// Tcl Message: endgroup 
+dismissDialog("New Pblock"); // r (cr)
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk4[3].m_computeBlock_out (reconfigMultiplyBlock)]", 10, false); // bD (O, cr)
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk4[3].m_computeBlock_out (reconfigMultiplyBlock)]", 10, false, false, false, false, true, false); // bD (O, cr) - Popup Trigger
+selectMenu(PAResourceItoN.InstanceMenu_FLOORPLANNING, "Floorplanning"); // af (ao, cr)
+selectMenu(PAResourceItoN.InstanceMenu_FLOORPLANNING, "Floorplanning"); // af (ao, cr)
+selectMenu(PAResourceItoN.InstanceMenu_FLOORPLANNING, "Floorplanning"); // af (ao, cr)
+selectMenuItem(PAResourceCommand.PACommandNames_UNPLACE, "Unplace"); // ai (ao, cr)
+selectMenu(PAResourceItoN.InstanceMenu_FLOORPLANNING, "Floorplanning"); // af (ao, cr)
+selectMenuItem(PAResourceCommand.PACommandNames_DRAW_PBLOCK_MODE, "Draw Pblock"); // ai (cr)
+// Run Command: PAResourceCommand.PACommandNames_DRAW_PBLOCK_MODE
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 286484, 321108); // D (I, cr)
+// r (cr): New Pblock: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (r)
+// TclEventType: PHY_BLOCK_NEW
+// TclEventType: PHY_RECT_SELECT
+// TclEventType: PHY_BLOCK_MODIFY
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: PHY_RECT_SELECT
+// TclEventType: PHY_BLOCK_ADD_INST
+// Tcl Message: startgroup 
+// Tcl Message: create_pblock {pblock_gnblk4[3].m_cmptBlck_ot} 
+// Tcl Message: resize_pblock {pblock_gnblk4[3].m_cmptBlck_ot} -add SLICE_X58Y59:SLICE_X61Y61 
+// Tcl Message: add_cells_to_pblock {pblock_gnblk4[3].m_cmptBlck_ot} [get_cells [list {genblk4[3].m_computeBlock_out}]] -clear_locs 
+// Tcl Message: endgroup 
+dismissDialog("New Pblock"); // r (cr)
+// Run Command: PAResourceCommand.PACommandNames_SAVE_DESIGN
+// A (cr): Out of Date Design: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+// bB (cr):  Save Constraints : addNotify
+dismissDialog("Out of Date Design"); // A (cr)
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DESIGN_SAVE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,380 MB. GUI used memory: 153 MB. Current time: 7/1/20, 7:51:02 PM CDT
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// Tcl Message: save_constraints 
+dismissDialog("Save Constraints"); // bB (cr)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 11, false); // u (O, cr)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 11, false, false, false, false, false, true); // u (O, cr) - Double Click
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation]", 10); // u (O, cr)
+collapseTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation]", 10); // u (O, cr)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // u (O, cr)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bB (cr):  Resetting Runs : addNotify
+selectButton("OptionPane.button", "OK"); // JButton (A, G)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// bB (cr):  Starting Design Runs : addNotify
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 -jobs 4 
+// Tcl Message: [Wed Jul  1 19:51:17 2020] Launched synth_1... Run output will be captured here: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigCrossbarMultiplier/reconfigCrossbarMultiplier.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bB (cr)
+// TclEventType: RUN_STATUS_CHANGE
+selectButton(PAResourceOtoP.ProjectTab_CLOSE_DESIGN, "Close Design"); // h (ds, cr)
+// TclEventType: DESIGN_CLOSE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,380 MB. GUI used memory: 139 MB. Current time: 7/1/20, 7:51:21 PM CDT
+// Engine heap size: 2,380 MB. GUI used memory: 140 MB. Current time: 7/1/20, 7:51:21 PM CDT
+// TclEventType: CURR_DESIGN_SET
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// Tcl Message: close_design 
+// bB (cr):  Closing : addNotify
+// TclEventType: DESIGN_CLOSE
+dismissDialog("Closing"); // bB (cr)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// aj (cr): Synthesis Completed: addNotify
+// Elapsed time: 37 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aj)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// bB (cr):  Starting Design Runs : addNotify
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// Tcl Message: launch_runs impl_1 child_0_impl_1 child_1_impl_1 child_2_impl_1 child_3_impl_1 -jobs 4 
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+dismissDialog("Starting Design Runs"); // bB (cr)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// aj (cr): Implementation Failed: addNotify
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 33 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aj)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Implementation Failed"); // aj (cr)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, impl_1, Place Design, DRC, Partial Reconfiguration, Pblock, [DRC HDPR-25] Reconfigurable Pblocks must not overlap same frame: Reconfigurable Pblocks cannot share a column within a Clock Region.  Reconfigurable cell '' in Pblock 'pblock_gnblk3[0].m_cmptBlck_in' and reconfigurable cell '' in Pblock 'pblock_gnblk3[2].m_cmptBlck_in' violate this rule.  The following are 10 of the tiles that are causing overlaps:.  INT_R_X37Y99.  CLBLM_R_X37Y99.  CLBLL_L_X38Y99.  INT_L_X38Y99.  INT_R_X37Y98.  CLBLM_R_X37Y98.  CLBLL_L_X38Y98.  INT_L_X38Y98.  INT_R_X37Y97.  CLBLM_R_X37Y97. For further analysis rerun this DRC with the following param:.  set_param hd.visual 2  . This will create a file named: hd_visual/pblock_gnblk3[0].m_cmptBlck_in_AND_pblock_gnblk3[2].m_cmptBlck_in_IllegalOverlapTiles.tcl, containing a list of the tiles found overlapping.  This .tcl file can also be sourced within the Vivado GUI to view the tiles visually.. ]", 7, true); // ah (O, cr) - Node
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, impl_1, Place Design, DRC, Partial Reconfiguration, Pblock, [DRC HDPR-4] Pblock must not mix hierarchical logic: Pblock 'pblock_gnblk3[0].m_cmptBlck_in' contains logic from multiple HD.RECONFIGURABLE cells or STATIC.  The Pblock has cell 'genblk3[0].m_computeBlock_in/mCompute/GND' which belongs to HD.RECONFIGURABLE cell 'mCompute'.  The Pblock also has cell 'genblk3[0].m_computeBlock_in/GND' which belongs to STATIC.  Resolve by directly associating a Pblock with the HD.RECONFIGURABLE cell.. ]", 6, true); // ah (O, cr) - Node
+// Elapsed time: 21 seconds
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, impl_1, Place Design, DRC, Partial Reconfiguration, Pblock, [DRC HDPR-4] Pblock must not mix hierarchical logic: Pblock 'pblock_gnblk3[0].m_cmptBlck_in' contains logic from multiple HD.RECONFIGURABLE cells or STATIC.  The Pblock has cell 'genblk3[0].m_computeBlock_in/mCompute/GND' which belongs to HD.RECONFIGURABLE cell 'mCompute'.  The Pblock also has cell 'genblk3[0].m_computeBlock_in/GND' which belongs to STATIC.  Resolve by directly associating a Pblock with the HD.RECONFIGURABLE cell.. ]", 6); // ah (O, cr)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design]", 15, true); // u (O, cr) - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_NETLIST_DESIGN
+// bB (cr):  Open Synthesized Design : addNotify
+// Tcl Message: open_run synth_1 -name synth_1 -pr_config [current_pr_configuration] 
+// Tcl Message: Design is defaulting to impl run constrset: constrs_1 Design is defaulting to synth run part: xc7z020clg400-1 
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: PHY_BLOCK_NEW
+// TclEventType: PHY_BLOCK_ADD_INST
+// TclEventType: PHY_RECT_SELECT
+// TclEventType: PHY_BLOCK_MODIFY
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: PHY_RECT_SELECT
+// TclEventType: PHY_BLOCK_NEW
+// TclEventType: PHY_BLOCK_ADD_INST
+// TclEventType: PHY_RECT_SELECT
+// TclEventType: PHY_BLOCK_MODIFY
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: PHY_RECT_SELECT
+// TclEventType: PHY_BLOCK_NEW
+// TclEventType: PHY_BLOCK_ADD_INST
+// TclEventType: PHY_RECT_SELECT
+// TclEventType: PHY_BLOCK_MODIFY
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: PHY_RECT_SELECT
+// TclEventType: PHY_BLOCK_NEW
+// TclEventType: PHY_BLOCK_ADD_INST
+// TclEventType: PHY_RECT_SELECT
+// TclEventType: PHY_BLOCK_MODIFY
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: PHY_RECT_SELECT
+// TclEventType: PHY_BLOCK_NEW
+// TclEventType: PHY_BLOCK_ADD_INST
+// TclEventType: PHY_RECT_SELECT
+// TclEventType: PHY_BLOCK_MODIFY
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: PHY_RECT_SELECT
+// TclEventType: PHY_BLOCK_NEW
+// TclEventType: PHY_BLOCK_ADD_INST
+// TclEventType: PHY_RECT_SELECT
+// TclEventType: PHY_BLOCK_MODIFY
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: PHY_RECT_SELECT
+// TclEventType: PHY_BLOCK_NEW
+// TclEventType: PHY_BLOCK_ADD_INST
+// TclEventType: PHY_RECT_SELECT
+// TclEventType: PHY_BLOCK_MODIFY
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: PHY_RECT_SELECT
+// TclEventType: PHY_BLOCK_NEW
+// TclEventType: PHY_BLOCK_ADD_INST
+// TclEventType: PHY_RECT_SELECT
+// TclEventType: PHY_BLOCK_MODIFY
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: PHY_RECT_SELECT
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 2,380 MB. GUI used memory: 112 MB. Current time: 7/1/20, 7:53:04 PM CDT
+// TclEventType: DESIGN_NEW
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// Device: addNotify
+// DeviceView Instantiated
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 3133.781 ; gain = 0.000 
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 19 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2019.2 INFO: [Project 1-570] Preparing netlist for logic optimization INFO: [Opt 31-141] Inserted 8 OBUFs to IO ports without IO buffers. 
+// Tcl Message: Parsing XDC File [C:/Users/monke/Documents/GitHub/ReconHardware/MCUSoftware/xBarMultiplier/FPGA Files/xBarMultiplier.xdc] Finished Parsing XDC File [C:/Users/monke/Documents/GitHub/ReconHardware/MCUSoftware/xBarMultiplier/FPGA Files/xBarMultiplier.xdc] 
+// Tcl Message: INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3140.484 ; gain = 0.000 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// Device view-level: 0.0
+dismissDialog("Open Synthesized Design"); // bB (cr)
+// PAPropertyPanels.initPanels (genblk3[0].m_computeBlock_in (reconfigMultiplyBlock__xdcDup__1)) elapsed time: 0.3s
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk3[0].m_computeBlock_in (reconfigMultiplyBlock__xdcDup__1)]", 3, false); // bD (O, cr)
+expandTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk3[0].m_computeBlock_in (reconfigMultiplyBlock__xdcDup__1)]", 3); // bD (O, cr)
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk3[0].m_computeBlock_in (reconfigMultiplyBlock__xdcDup__1), mCompute (multiplyCompute)]", 6, false); // bD (O, cr)
+// Device view-level: 0.3
+// Device view-level: 0.6
+// HMemoryUtils.trashcanNow. Engine heap size: 2,380 MB. GUI used memory: 151 MB. Current time: 7/1/20, 7:53:13 PM CDT
+// Device view-level: 1.5
+// Device view-level: 1.8
+// Device view-level: 1.5
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk3[0].m_computeBlock_in (reconfigMultiplyBlock__xdcDup__1)]", 3, true); // bD (O, cr) - Node
+// HMemoryUtils.trashcanNow. Engine heap size: 2,380 MB. GUI used memory: 151 MB. Current time: 7/1/20, 7:53:15 PM CDT
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk3[0].m_computeBlock_in (reconfigMultiplyBlock__xdcDup__1)]", 3, true, false, false, false, true, false); // bD (O, cr) - Popup Trigger - Node
+selectMenu(PAResourceItoN.InstanceMenu_FLOORPLANNING, "Floorplanning"); // af (ao, cr)
+selectMenu(PAResourceOtoP.PrimitivesMenu_HIGHLIGHT_LEAF_CELLS, "Highlight Leaf Cells"); // af (ao, cr)
+selectMenu(PAResourceItoN.InstanceMenu_FLOORPLANNING, "Floorplanning"); // af (ao, cr)
+selectMenu(PAResourceItoN.InstanceMenu_FLOORPLANNING, "Floorplanning"); // af (ao, cr)
+selectMenuItem(PAResourceItoN.InstanceMenu_UNASSIGN_FROM_PBLOCK, "Unassign from Pblock"); // ai (cr)
+// TclEventType: PHY_BLOCK_ADD_INST
+// Tcl Message: remove_cells_from_pblock {pblock_gnblk3[0].m_cmptBlck_in} [get_cells [list {genblk3[0].m_computeBlock_in}]] 
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk3[0].m_computeBlock_in (reconfigMultiplyBlock__xdcDup__1), psWrap (ps_Wrap__xdcDup__1)]", 7, false); // bD (O, cr)
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk3[0].m_computeBlock_in (reconfigMultiplyBlock__xdcDup__1), mCompute (multiplyCompute)]", 6, false); // bD (O, cr)
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk3[0].m_computeBlock_in (reconfigMultiplyBlock__xdcDup__1), mCompute (multiplyCompute)]", 6, false, false, false, false, true, false); // bD (O, cr) - Popup Trigger
+selectMenu(PAResourceItoN.InstanceMenu_FLOORPLANNING, "Floorplanning"); // af (ao, cr)
+selectMenu(PAResourceItoN.InstanceMenu_FLOORPLANNING, "Floorplanning"); // af (ao, cr)
+selectMenu(PAResourceItoN.InstanceMenu_FLOORPLANNING, "Floorplanning"); // af (ao, cr)
+selectMenuItem(PAResourceOtoP.PrimitivesMenu_ASSIGN_TO_PBLOCK, "Assign to Pblock..."); // ai (cr)
+// aH (cr): Select Pblock: addNotify
+selectTree(PAResourceQtoS.SelectPblockDialog_SELECT_PBLOCK_DIALOG_TREE, "[ROOT, pblock_gnblk3[0].m_cmptBlck_in]", 1, false); // i (O, aH)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aH)
+// TclEventType: PHY_BLOCK_ADD_INST
+// Tcl Message: add_cells_to_pblock {pblock_gnblk3[0].m_cmptBlck_in} [get_cells [list {genblk3[0].m_computeBlock_in/mCompute}]] -clear_locs 
+dismissDialog("Select Pblock"); // aH (cr)
+expandTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk3[1].m_computeBlock_in (reconfigMultiplyBlock__xdcDup__2)]", 8); // bD (O, cr)
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk3[1].m_computeBlock_in (reconfigMultiplyBlock__xdcDup__2)]", 8, true); // bD (O, cr) - Node
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk3[1].m_computeBlock_in (reconfigMultiplyBlock__xdcDup__2)]", 8, true, false, false, false, true, false); // bD (O, cr) - Popup Trigger - Node
+selectMenu(PAResourceItoN.InstanceMenu_FLOORPLANNING, "Floorplanning"); // af (ao, cr)
+selectMenu(PAResourceOtoP.PrimitivesMenu_HIGHLIGHT_LEAF_CELLS, "Highlight Leaf Cells"); // af (ao, cr)
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // af (ao, cr)
+selectMenu(PAResourceQtoS.SelectMenu_MARK, "Mark"); // af (ao, cr)
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // af (ao, cr)
+selectMenu(PAResourceOtoP.PrimitivesMenu_HIGHLIGHT_LEAF_CELLS, "Highlight Leaf Cells"); // af (ao, cr)
+selectMenu(PAResourceItoN.InstanceMenu_FLOORPLANNING, "Floorplanning"); // af (ao, cr)
+selectMenuItem(PAResourceItoN.InstanceMenu_UNASSIGN_FROM_PBLOCK, "Unassign from Pblock"); // ai (cr)
+// TclEventType: PHY_BLOCK_ADD_INST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,380 MB. GUI used memory: 196 MB. Current time: 7/1/20, 7:53:39 PM CDT
+// Tcl Message: remove_cells_from_pblock {pblock_gnblk3[1].m_cmptBlck_in} [get_cells [list {genblk3[1].m_computeBlock_in}]] 
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk3[1].m_computeBlock_in (reconfigMultiplyBlock__xdcDup__2), mCompute (multiplyCompute)]", 11, false); // bD (O, cr)
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk3[1].m_computeBlock_in (reconfigMultiplyBlock__xdcDup__2), mCompute (multiplyCompute)]", 11, false, false, false, false, true, false); // bD (O, cr) - Popup Trigger
+selectMenu(PAResourceItoN.InstanceMenu_FLOORPLANNING, "Floorplanning"); // af (ao, cr)
+selectMenu(PAResourceItoN.InstanceMenu_FLOORPLANNING, "Floorplanning"); // af (ao, cr)
+selectMenu(PAResourceItoN.InstanceMenu_FLOORPLANNING, "Floorplanning"); // af (ao, cr)
+selectMenu(PAResourceItoN.InstanceMenu_FLOORPLANNING, "Floorplanning"); // af (ao, cr)
+selectMenu(PAResourceItoN.InstanceMenu_FLOORPLANNING, "Floorplanning"); // af (ao, cr)
+selectMenuItem(PAResourceOtoP.PrimitivesMenu_ASSIGN_TO_PBLOCK, "Assign to Pblock..."); // ai (cr)
+// aH (cr): Select Pblock: addNotify
+selectTree(PAResourceQtoS.SelectPblockDialog_SELECT_PBLOCK_DIALOG_TREE, "[ROOT, pblock_gnblk3[1].m_cmptBlck_in]", 2, false); // i (O, aH)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aH)
+// TclEventType: PHY_BLOCK_ADD_INST
+// Tcl Message: add_cells_to_pblock {pblock_gnblk3[1].m_cmptBlck_in} [get_cells [list {genblk3[1].m_computeBlock_in/mCompute}]] -clear_locs 
+dismissDialog("Select Pblock"); // aH (cr)
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk3[2].m_computeBlock_in (reconfigMultiplyBlock__xdcDup__3)]", 13, false); // bD (O, cr)
+expandTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk3[2].m_computeBlock_in (reconfigMultiplyBlock__xdcDup__3)]", 13); // bD (O, cr)
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk3[2].m_computeBlock_in (reconfigMultiplyBlock__xdcDup__3)]", 13, true); // bD (O, cr) - Node
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk3[2].m_computeBlock_in (reconfigMultiplyBlock__xdcDup__3)]", 13, true, false, false, false, true, false); // bD (O, cr) - Popup Trigger - Node
+selectMenu(PAResourceItoN.InstanceMenu_FLOORPLANNING, "Floorplanning"); // af (ao, cr)
+selectMenu(PAResourceOtoP.PrimitivesMenu_HIGHLIGHT_LEAF_CELLS, "Highlight Leaf Cells"); // af (ao, cr)
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // af (ao, cr)
+selectMenu(PAResourceQtoS.SelectMenu_MARK, "Mark"); // af (ao, cr)
+selectMenu(PAResourceQtoS.SelectMenu_MARK, "Mark"); // af (ao, cr)
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // af (ao, cr)
+selectMenu(PAResourceOtoP.PrimitivesMenu_HIGHLIGHT_LEAF_CELLS, "Highlight Leaf Cells"); // af (ao, cr)
+selectMenu(PAResourceItoN.InstanceMenu_FLOORPLANNING, "Floorplanning"); // af (ao, cr)
+selectMenu(PAResourceItoN.InstanceMenu_FLOORPLANNING, "Floorplanning"); // af (ao, cr)
+selectMenuItem(PAResourceItoN.InstanceMenu_UNASSIGN_FROM_PBLOCK, "Unassign from Pblock"); // ai (cr)
+// TclEventType: PHY_BLOCK_ADD_INST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,380 MB. GUI used memory: 151 MB. Current time: 7/1/20, 7:54:00 PM CDT
+// Tcl Message: remove_cells_from_pblock {pblock_gnblk3[2].m_cmptBlck_in} [get_cells [list {genblk3[2].m_computeBlock_in}]] 
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk3[2].m_computeBlock_in (reconfigMultiplyBlock__xdcDup__3), mCompute (multiplyCompute)]", 16, false); // bD (O, cr)
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk3[2].m_computeBlock_in (reconfigMultiplyBlock__xdcDup__3), mCompute (multiplyCompute)]", 16, false, false, false, false, true, false); // bD (O, cr) - Popup Trigger
+selectMenu(PAResourceItoN.InstanceMenu_FLOORPLANNING, "Floorplanning"); // af (ao, cr)
+selectMenu(PAResourceItoN.InstanceMenu_FLOORPLANNING, "Floorplanning"); // af (ao, cr)
+selectMenuItem(PAResourceOtoP.PrimitivesMenu_ASSIGN_TO_PBLOCK, "Assign to Pblock..."); // ai (cr)
+// aH (cr): Select Pblock: addNotify
+selectTree(PAResourceQtoS.SelectPblockDialog_SELECT_PBLOCK_DIALOG_TREE, "[ROOT, pblock_gnblk3[2].m_cmptBlck_in]", 3, false); // i (O, aH)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aH)
+// TclEventType: PHY_BLOCK_ADD_INST
+// Tcl Message: add_cells_to_pblock {pblock_gnblk3[2].m_cmptBlck_in} [get_cells [list {genblk3[2].m_computeBlock_in/mCompute}]] -clear_locs 
+dismissDialog("Select Pblock"); // aH (cr)
+expandTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk3[3].m_computeBlock_in (reconfigMultiplyBlock__xdcDup__4)]", 18); // bD (O, cr)
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk3[3].m_computeBlock_in (reconfigMultiplyBlock__xdcDup__4)]", 18, true); // bD (O, cr) - Node
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk3[3].m_computeBlock_in (reconfigMultiplyBlock__xdcDup__4)]", 18, true, false, false, false, true, false); // bD (O, cr) - Popup Trigger - Node
+selectMenu(PAResourceItoN.InstanceMenu_FLOORPLANNING, "Floorplanning"); // af (ao, cr)
+selectMenu(PAResourceItoN.InstanceMenu_FLOORPLANNING, "Floorplanning"); // af (ao, cr)
+selectMenuItem(PAResourceItoN.InstanceMenu_UNASSIGN_FROM_PBLOCK, "Unassign from Pblock"); // ai (cr)
+// TclEventType: PHY_BLOCK_ADD_INST
+// Tcl Message: remove_cells_from_pblock {pblock_gnblk3[3].m_cmptBlck_in} [get_cells [list {genblk3[3].m_computeBlock_in}]] 
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk3[3].m_computeBlock_in (reconfigMultiplyBlock__xdcDup__4), mCompute (multiplyCompute)]", 21, false); // bD (O, cr)
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk3[3].m_computeBlock_in (reconfigMultiplyBlock__xdcDup__4), mCompute (multiplyCompute)]", 21, false, false, false, false, true, false); // bD (O, cr) - Popup Trigger
+selectMenu(PAResourceItoN.InstanceMenu_FLOORPLANNING, "Floorplanning"); // af (ao, cr)
+selectMenuItem(PAResourceOtoP.PrimitivesMenu_ASSIGN_TO_PBLOCK, "Assign to Pblock..."); // ai (cr)
+// aH (cr): Select Pblock: addNotify
+selectTree(PAResourceQtoS.SelectPblockDialog_SELECT_PBLOCK_DIALOG_TREE, "[ROOT, pblock_gnblk3[3].m_cmptBlck_in]", 4, false); // i (O, aH)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,380 MB. GUI used memory: 160 MB. Current time: 7/1/20, 7:54:16 PM CDT
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aH)
+// TclEventType: PHY_BLOCK_ADD_INST
+// Tcl Message: add_cells_to_pblock {pblock_gnblk3[3].m_cmptBlck_in} [get_cells [list {genblk3[3].m_computeBlock_in/mCompute}]] -clear_locs 
+dismissDialog("Select Pblock"); // aH (cr)
+expandTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk4[0].m_computeBlock_out (reconfigMultiplyBlock__xdcDup__5)]", 23); // bD (O, cr)
+collapseTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk3[3].m_computeBlock_in (reconfigMultiplyBlock__xdcDup__4)]", 18); // bD (O, cr)
+collapseTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk3[2].m_computeBlock_in (reconfigMultiplyBlock__xdcDup__3)]", 13); // bD (O, cr)
+collapseTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk3[1].m_computeBlock_in (reconfigMultiplyBlock__xdcDup__2)]", 8); // bD (O, cr)
+collapseTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk3[0].m_computeBlock_in (reconfigMultiplyBlock__xdcDup__1)]", 3); // bD (O, cr)
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk4[0].m_computeBlock_out (reconfigMultiplyBlock__xdcDup__5)]", 7, true); // bD (O, cr) - Node
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk4[0].m_computeBlock_out (reconfigMultiplyBlock__xdcDup__5)]", 7, true, false, false, false, true, false); // bD (O, cr) - Popup Trigger - Node
+selectMenu(PAResourceItoN.InstanceMenu_FLOORPLANNING, "Floorplanning"); // af (ao, cr)
+selectMenu(PAResourceOtoP.PrimitivesMenu_HIGHLIGHT_LEAF_CELLS, "Highlight Leaf Cells"); // af (ao, cr)
+selectMenu(PAResourceItoN.InstanceMenu_FLOORPLANNING, "Floorplanning"); // af (ao, cr)
+selectMenuItem(PAResourceItoN.InstanceMenu_UNASSIGN_FROM_PBLOCK, "Unassign from Pblock"); // ai (cr)
+// TclEventType: PHY_BLOCK_ADD_INST
+// Tcl Message: remove_cells_from_pblock {pblock_gnblk4[0].m_cmptBlck_ot} [get_cells [list {genblk4[0].m_computeBlock_out}]] 
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk4[0].m_computeBlock_out (reconfigMultiplyBlock__xdcDup__5), psWrap (ps_Wrap__xdcDup__5)]", 11, false); // bD (O, cr)
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk4[0].m_computeBlock_out (reconfigMultiplyBlock__xdcDup__5), mCompute (multiplyCompute)]", 10, false); // bD (O, cr)
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk4[0].m_computeBlock_out (reconfigMultiplyBlock__xdcDup__5), mCompute (multiplyCompute)]", 10, false, false, false, false, true, false); // bD (O, cr) - Popup Trigger
+selectMenu(PAResourceItoN.InstanceMenu_FLOORPLANNING, "Floorplanning"); // af (ao, cr)
+selectMenuItem(PAResourceOtoP.PrimitivesMenu_ASSIGN_TO_PBLOCK, "Assign to Pblock..."); // ai (cr)
+// aH (cr): Select Pblock: addNotify
+selectTree(PAResourceQtoS.SelectPblockDialog_SELECT_PBLOCK_DIALOG_TREE, "[ROOT, pblock_gnblk4[0].m_cmptBlck_ot]", 5, false); // i (O, aH)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aH)
+// TclEventType: PHY_BLOCK_ADD_INST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,380 MB. GUI used memory: 151 MB. Current time: 7/1/20, 7:54:34 PM CDT
+// Tcl Message: add_cells_to_pblock {pblock_gnblk4[0].m_cmptBlck_ot} [get_cells [list {genblk4[0].m_computeBlock_out/mCompute}]] -clear_locs 
+dismissDialog("Select Pblock"); // aH (cr)
+expandTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk4[1].m_computeBlock_out (reconfigMultiplyBlock__xdcDup__6)]", 12); // bD (O, cr)
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk4[1].m_computeBlock_out (reconfigMultiplyBlock__xdcDup__6), mCompute (multiplyCompute)]", 15, false); // bD (O, cr)
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk4[0].m_computeBlock_out (reconfigMultiplyBlock__xdcDup__5), psWrap (ps_Wrap__xdcDup__5)]", 11, false); // bD (O, cr)
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk4[1].m_computeBlock_out (reconfigMultiplyBlock__xdcDup__6)]", 12, true); // bD (O, cr) - Node
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk4[1].m_computeBlock_out (reconfigMultiplyBlock__xdcDup__6)]", 12, true, false, false, false, true, false); // bD (O, cr) - Popup Trigger - Node
+selectMenu(PAResourceItoN.InstanceMenu_FLOORPLANNING, "Floorplanning"); // af (ao, cr)
+selectMenu(PAResourceOtoP.PrimitivesMenu_HIGHLIGHT_LEAF_CELLS, "Highlight Leaf Cells"); // af (ao, cr)
+selectMenu(PAResourceOtoP.PrimitivesMenu_HIGHLIGHT_LEAF_CELLS, "Highlight Leaf Cells"); // af (ao, cr)
+selectMenu(PAResourceItoN.InstanceMenu_FLOORPLANNING, "Floorplanning"); // af (ao, cr)
+selectMenuItem(PAResourceItoN.InstanceMenu_UNASSIGN_FROM_PBLOCK, "Unassign from Pblock"); // ai (cr)
+// TclEventType: PHY_BLOCK_ADD_INST
+// Tcl Message: remove_cells_from_pblock {pblock_gnblk4[1].m_cmptBlck_ot} [get_cells [list {genblk4[1].m_computeBlock_out}]] 
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk4[1].m_computeBlock_out (reconfigMultiplyBlock__xdcDup__6), mCompute (multiplyCompute)]", 15, false); // bD (O, cr)
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk4[1].m_computeBlock_out (reconfigMultiplyBlock__xdcDup__6), mCompute (multiplyCompute)]", 15, false, false, false, false, true, false); // bD (O, cr) - Popup Trigger
+selectMenu(PAResourceItoN.InstanceMenu_FLOORPLANNING, "Floorplanning"); // af (ao, cr)
+selectMenuItem(PAResourceOtoP.PrimitivesMenu_ASSIGN_TO_PBLOCK, "Assign to Pblock..."); // ai (cr)
+// aH (cr): Select Pblock: addNotify
+selectTree(PAResourceQtoS.SelectPblockDialog_SELECT_PBLOCK_DIALOG_TREE, "[ROOT, pblock_gnblk4[1].m_cmptBlck_ot]", 6, false); // i (O, aH)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aH)
+// TclEventType: PHY_BLOCK_ADD_INST
+// HMemoryUtils.trashcanNow. Engine heap size: 2,380 MB. GUI used memory: 151 MB. Current time: 7/1/20, 7:54:45 PM CDT
+// Tcl Message: add_cells_to_pblock {pblock_gnblk4[1].m_cmptBlck_ot} [get_cells [list {genblk4[1].m_computeBlock_out/mCompute}]] -clear_locs 
+dismissDialog("Select Pblock"); // aH (cr)
+collapseTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk4[1].m_computeBlock_out (reconfigMultiplyBlock__xdcDup__6)]", 12); // bD (O, cr)
+expandTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk4[2].m_computeBlock_out (reconfigMultiplyBlock__xdcDup__7)]", 13); // bD (O, cr)
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk4[2].m_computeBlock_out (reconfigMultiplyBlock__xdcDup__7)]", 13, true); // bD (O, cr) - Node
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk4[2].m_computeBlock_out (reconfigMultiplyBlock__xdcDup__7)]", 13, true, false, false, false, true, false); // bD (O, cr) - Popup Trigger - Node
+selectMenu(PAResourceItoN.InstanceMenu_FLOORPLANNING, "Floorplanning"); // af (ao, cr)
+selectMenuItem(PAResourceItoN.InstanceMenu_UNASSIGN_FROM_PBLOCK, "Unassign from Pblock"); // ai (cr)
+// TclEventType: PHY_BLOCK_ADD_INST
+// Tcl Message: remove_cells_from_pblock {pblock_gnblk4[2].m_cmptBlck_ot} [get_cells [list {genblk4[2].m_computeBlock_out}]] 
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk4[2].m_computeBlock_out (reconfigMultiplyBlock__xdcDup__7), mCompute (multiplyCompute)]", 16, false); // bD (O, cr)
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk4[2].m_computeBlock_out (reconfigMultiplyBlock__xdcDup__7), mCompute (multiplyCompute)]", 16, false, false, false, false, true, false); // bD (O, cr) - Popup Trigger
+selectMenu(PAResourceItoN.InstanceMenu_FLOORPLANNING, "Floorplanning"); // af (ao, cr)
+selectMenuItem(PAResourceOtoP.PrimitivesMenu_ASSIGN_TO_PBLOCK, "Assign to Pblock..."); // ai (cr)
+// aH (cr): Select Pblock: addNotify
+selectTree(PAResourceQtoS.SelectPblockDialog_SELECT_PBLOCK_DIALOG_TREE, "[ROOT, pblock_gnblk4[2].m_cmptBlck_ot]", 7, false); // i (O, aH)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aH)
+// TclEventType: PHY_BLOCK_ADD_INST
+// Tcl Message: add_cells_to_pblock {pblock_gnblk4[2].m_cmptBlck_ot} [get_cells [list {genblk4[2].m_computeBlock_out/mCompute}]] -clear_locs 
+dismissDialog("Select Pblock"); // aH (cr)
+expandTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk4[3].m_computeBlock_out (reconfigMultiplyBlock)]", 18); // bD (O, cr)
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk4[2].m_computeBlock_out (reconfigMultiplyBlock__xdcDup__7), psWrap (ps_Wrap__xdcDup__7)]", 17, false); // bD (O, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,380 MB. GUI used memory: 151 MB. Current time: 7/1/20, 7:55:00 PM CDT
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk4[3].m_computeBlock_out (reconfigMultiplyBlock)]", 18, true); // bD (O, cr) - Node
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk4[3].m_computeBlock_out (reconfigMultiplyBlock)]", 18, true, false, false, false, true, false); // bD (O, cr) - Popup Trigger - Node
+selectMenu(PAResourceItoN.InstanceMenu_FLOORPLANNING, "Floorplanning"); // af (ao, cr)
+selectMenu(PAResourceItoN.InstanceMenu_FLOORPLANNING, "Floorplanning"); // af (ao, cr)
+selectMenuItem(PAResourceItoN.InstanceMenu_UNASSIGN_FROM_PBLOCK, "Unassign from Pblock"); // ai (cr)
+// TclEventType: PHY_BLOCK_ADD_INST
+// Tcl Message: remove_cells_from_pblock {pblock_gnblk4[3].m_cmptBlck_ot} [get_cells [list {genblk4[3].m_computeBlock_out}]] 
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk4[3].m_computeBlock_out (reconfigMultiplyBlock), mCompute (multiplyCompute)]", 21, false); // bD (O, cr)
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk4[3].m_computeBlock_out (reconfigMultiplyBlock), mCompute (multiplyCompute)]", 21, false, false, false, false, true, false); // bD (O, cr) - Popup Trigger
+selectMenu(PAResourceItoN.InstanceMenu_FLOORPLANNING, "Floorplanning"); // af (ao, cr)
+selectMenuItem(PAResourceOtoP.PrimitivesMenu_ASSIGN_TO_PBLOCK, "Assign to Pblock..."); // ai (cr)
+// aH (cr): Select Pblock: addNotify
+selectTree(PAResourceQtoS.SelectPblockDialog_SELECT_PBLOCK_DIALOG_TREE, "[ROOT, pblock_gnblk4[3].m_cmptBlck_ot]", 8, false); // i (O, aH)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aH)
+// TclEventType: PHY_BLOCK_ADD_INST
+// Tcl Message: add_cells_to_pblock {pblock_gnblk4[3].m_cmptBlck_ot} [get_cells [list {genblk4[3].m_computeBlock_out/mCompute}]] -clear_locs 
+dismissDialog("Select Pblock"); // aH (cr)
+// Run Command: PAResourceCommand.PACommandNames_SAVE_DESIGN
+// A (cr): Out of Date Design: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+// bB (cr):  Save Constraints : addNotify
+dismissDialog("Out of Date Design"); // A (cr)
+// TclEventType: DESIGN_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DESIGN_SAVE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,380 MB. GUI used memory: 152 MB. Current time: 7/1/20, 7:55:11 PM CDT
+// TclEventType: DESIGN_SAVE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// Tcl Message: save_constraints 
+dismissDialog("Save Constraints"); // bB (cr)
+expandTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk4[1].m_computeBlock_out (reconfigMultiplyBlock__xdcDup__6)]", 12); // bD (O, cr)
+expandTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk3[3].m_computeBlock_in (reconfigMultiplyBlock__xdcDup__4)]", 6); // bD (O, cr)
+expandTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk3[2].m_computeBlock_in (reconfigMultiplyBlock__xdcDup__3)]", 5); // bD (O, cr)
+expandTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk3[1].m_computeBlock_in (reconfigMultiplyBlock__xdcDup__2)]", 4); // bD (O, cr)
+expandTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk3[0].m_computeBlock_in (reconfigMultiplyBlock__xdcDup__1)]", 3); // bD (O, cr)
+collapseTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk3[0].m_computeBlock_in (reconfigMultiplyBlock__xdcDup__1)]", 3); // bD (O, cr)
+collapseTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk3[1].m_computeBlock_in (reconfigMultiplyBlock__xdcDup__2)]", 4); // bD (O, cr)
+collapseTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk3[2].m_computeBlock_in (reconfigMultiplyBlock__xdcDup__3)]", 5); // bD (O, cr)
+collapseTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk3[3].m_computeBlock_in (reconfigMultiplyBlock__xdcDup__4)]", 6); // bD (O, cr)
+collapseTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk4[0].m_computeBlock_out (reconfigMultiplyBlock__xdcDup__5)]", 7); // bD (O, cr)
+collapseTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk4[1].m_computeBlock_out (reconfigMultiplyBlock__xdcDup__6)]", 8); // bD (O, cr)
+collapseTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk4[2].m_computeBlock_out (reconfigMultiplyBlock__xdcDup__7)]", 9); // bD (O, cr)
+collapseTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk4[3].m_computeBlock_out (reconfigMultiplyBlock)]", 10); // bD (O, cr)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // u (O, cr)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bB (cr):  Resetting Runs : addNotify
+selectButton("OptionPane.button", "OK"); // JButton (A, G)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// bB (cr):  Starting Design Runs : addNotify
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: DESIGN_STALE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 -jobs 4 
+// Tcl Message: [Wed Jul  1 19:55:30 2020] Launched synth_1... Run output will be captured here: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigCrossbarMultiplier/reconfigCrossbarMultiplier.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bB (cr)
+selectButton(PAResourceOtoP.ProjectTab_CLOSE_DESIGN, "Close Design"); // h (ds, cr)
+// TclEventType: DESIGN_CLOSE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,380 MB. GUI used memory: 116 MB. Current time: 7/1/20, 7:55:32 PM CDT
+// Engine heap size: 2,380 MB. GUI used memory: 117 MB. Current time: 7/1/20, 7:55:32 PM CDT
+// TclEventType: CURR_DESIGN_SET
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: close_design 
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// bB (cr):  Closing : addNotify
+// TclEventType: DESIGN_CLOSE
+dismissDialog("Closing"); // bB (cr)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// aj (cr): Synthesis Completed: addNotify
+// Elapsed time: 54 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aj)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// bB (cr):  Starting Design Runs : addNotify
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// Tcl Message: launch_runs impl_1 child_0_impl_1 child_1_impl_1 child_2_impl_1 child_3_impl_1 -jobs 4 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+dismissDialog("Starting Design Runs"); // bB (cr)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 27 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design, Schematic]", 26, false); // u (O, cr)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager]", 0); // u (O, cr)
+// bB (cr):  Open Synthesized Design : addNotify
+// Tcl Message: open_run synth_1 -name synth_1 -pr_config [current_pr_configuration] 
+// Tcl Message: Design is defaulting to impl run constrset: constrs_1 Design is defaulting to synth run part: xc7z020clg400-1 
+// TclEventType: READ_XDC_FILE_START
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: SIGNAL_MODIFY
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: PLACEDB_MODIFIY_PRE
+// TclEventType: LOC_CONSTRAINT_ADD
+// TclEventType: PHY_BLOCK_NEW
+// TclEventType: PHY_BLOCK_ADD_INST
+// TclEventType: PHY_RECT_SELECT
+// TclEventType: PHY_BLOCK_MODIFY
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: PHY_RECT_SELECT
+// TclEventType: PHY_BLOCK_NEW
+// TclEventType: PHY_BLOCK_ADD_INST
+// TclEventType: PHY_RECT_SELECT
+// TclEventType: PHY_BLOCK_MODIFY
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: PHY_RECT_SELECT
+// TclEventType: PHY_BLOCK_NEW
+// TclEventType: PHY_BLOCK_ADD_INST
+// TclEventType: PHY_RECT_SELECT
+// TclEventType: PHY_BLOCK_MODIFY
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: PHY_RECT_SELECT
+// TclEventType: PHY_BLOCK_NEW
+// TclEventType: PHY_BLOCK_ADD_INST
+// TclEventType: PHY_RECT_SELECT
+// TclEventType: PHY_BLOCK_MODIFY
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: PHY_RECT_SELECT
+// TclEventType: PHY_BLOCK_NEW
+// TclEventType: PHY_BLOCK_ADD_INST
+// TclEventType: PHY_RECT_SELECT
+// TclEventType: PHY_BLOCK_MODIFY
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: PHY_RECT_SELECT
+// TclEventType: PHY_BLOCK_NEW
+// TclEventType: PHY_BLOCK_ADD_INST
+// TclEventType: PHY_RECT_SELECT
+// TclEventType: PHY_BLOCK_MODIFY
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: PHY_RECT_SELECT
+// TclEventType: PHY_BLOCK_NEW
+// TclEventType: PHY_BLOCK_ADD_INST
+// TclEventType: PHY_RECT_SELECT
+// TclEventType: PHY_BLOCK_MODIFY
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: PHY_RECT_SELECT
+// TclEventType: PHY_BLOCK_NEW
+// TclEventType: PHY_BLOCK_ADD_INST
+// TclEventType: PHY_RECT_SELECT
+// TclEventType: PHY_BLOCK_MODIFY
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: PHY_RECT_SELECT
+// TclEventType: READ_XDC_FILE_END
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 2,380 MB. GUI used memory: 113 MB. Current time: 7/1/20, 7:56:57 PM CDT
+// TclEventType: DESIGN_NEW
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// Device: addNotify
+// DeviceView Instantiated
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 3140.484 ; gain = 0.000 
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 19 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2019.2 INFO: [Project 1-570] Preparing netlist for logic optimization INFO: [Opt 31-141] Inserted 8 OBUFs to IO ports without IO buffers. 
+// Tcl Message: Parsing XDC File [C:/Users/monke/Documents/GitHub/ReconHardware/MCUSoftware/xBarMultiplier/FPGA Files/xBarMultiplier.xdc] Finished Parsing XDC File [C:/Users/monke/Documents/GitHub/ReconHardware/MCUSoftware/xBarMultiplier/FPGA Files/xBarMultiplier.xdc] 
+// Tcl Message: INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 3140.484 ; gain = 0.000 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+// Device view-level: 0.0
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// Run Command: PAResourceCommand.PACommandNames_SCHEMATIC
+// Schematic: addNotify
+dismissDialog("Open Synthesized Design"); // bB (cr)
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// aj (cr): Implementation Failed: addNotify
+// TclEventType: RUN_STATUS_CHANGE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aj)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Implementation Failed"); // aj (cr)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, (String) null, 6, true); // ah (O, cr) - Node
+// Elapsed time: 24 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // u (O, cr)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design]", 15, true); // u (O, cr) - Node
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar]", 0, true); // bD (O, cr) - Node
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // i (h, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Device", 1); // i (h, cr)
+// Device view-level: 0.3
+// Device view-level: 0.6
+// HMemoryUtils.trashcanNow. Engine heap size: 2,380 MB. GUI used memory: 198 MB. Current time: 7/1/20, 7:57:46 PM CDT
+// Device view-level: 0.9
+// Device view-level: 1.2
+// Device view-level: 1.5
+// Device view-level: 1.2
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 277623, 314480); // D (I, cr)
+// Device select: 'Pblock - pblock_gnblk3[3].m_cmptBlck_in'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 2320, 2628, 2575, 923); // U (i, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,380 MB. GUI used memory: 177 MB. Current time: 7/1/20, 7:57:47 PM CDT
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: PHY_BLOCK_DELETE
+// Tcl Message: delete_pblock [get_pblocks  {pblock_gnblk3[3].m_cmptBlck_in}] 
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 290906, 315796); // D (I, cr)
+// Device select: 'Pblock - pblock_gnblk4[3].m_cmptBlck_ot'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 2431, 2639, 2575, 923); // U (i, cr)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: PHY_BLOCK_DELETE
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 291025, 323215); // D (I, cr)
+// Tcl Message: delete_pblock [get_pblocks  {pblock_gnblk4[3].m_cmptBlck_ot}] 
+// HMemoryUtils.trashcanNow. Engine heap size: 2,380 MB. GUI used memory: 153 MB. Current time: 7/1/20, 7:57:50 PM CDT
+// Device select: 'Pblock - pblock_gnblk4[2].m_cmptBlck_ot'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 2432, 2701, 2575, 923); // U (i, cr)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: PHY_BLOCK_DELETE
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 278102, 324173); // D (I, cr)
+// Device select: 'Pblock - pblock_gnblk3[2].m_cmptBlck_in'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 2324, 2709, 2575, 923); // U (i, cr)
+// Tcl Message: delete_pblock [get_pblocks  {pblock_gnblk4[2].m_cmptBlck_ot}] 
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: PHY_BLOCK_DELETE
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 277144, 333387); // D (I, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,380 MB. GUI used memory: 156 MB. Current time: 7/1/20, 7:57:51 PM CDT
+// Tcl Message: delete_pblock [get_pblocks  {pblock_gnblk3[2].m_cmptBlck_in}] 
+// Device select: 'Pblock - pblock_gnblk3[1].m_cmptBlck_in'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 2316, 2786, 2575, 923); // U (i, cr)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: PHY_BLOCK_DELETE
+// Tcl Message: delete_pblock [get_pblocks  {pblock_gnblk3[1].m_cmptBlck_in}] 
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 294376, 336498); // D (I, cr)
+// Device select: 'Pblock - pblock_gnblk4[1].m_cmptBlck_ot'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 2460, 2812, 2575, 923); // U (i, cr)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,380 MB. GUI used memory: 154 MB. Current time: 7/1/20, 7:57:52 PM CDT
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 296650, 347986); // D (I, cr)
+// Device select: 'Pblock - pblock_gnblk4[0].m_cmptBlck_ot'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 2479, 2908, 2575, 923); // U (i, cr)
+// TclEventType: PHY_BLOCK_DELETE
+// bB (cr):  Confirm Delete : addNotify
+// Tcl Message: delete_pblock [get_pblocks  {pblock_gnblk4[1].m_cmptBlck_ot}] 
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+dismissDialog("Confirm Delete"); // bB (cr)
+// TclEventType: PHY_BLOCK_DELETE
+// Tcl Message: delete_pblock [get_pblocks  {pblock_gnblk4[0].m_cmptBlck_ot}] 
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 274871, 344396); // D (I, cr)
+// Device select: 'Pblock - pblock_gnblk3[0].m_cmptBlck_in'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 2297, 2878, 2575, 923); // U (i, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,380 MB. GUI used memory: 194 MB. Current time: 7/1/20, 7:57:53 PM CDT
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: PHY_BLOCK_DELETE
+// Tcl Message: delete_pblock [get_pblocks  {pblock_gnblk3[0].m_cmptBlck_in}] 
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 307659, 318548); // D (I, cr)
+// Device view-level: 1.2
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 292701, 271281); // D (I, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,380 MB. GUI used memory: 155 MB. Current time: 7/1/20, 7:57:56 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,380 MB. GUI used memory: 154 MB. Current time: 7/1/20, 7:57:57 PM CDT
+// HMemoryUtils.trashcanNow. Engine heap size: 2,380 MB. GUI used memory: 154 MB. Current time: 7/1/20, 7:57:58 PM CDT
+// PAPropertyPanels.initPanels (mCompute (multiplyCompute)) elapsed time: 0.3s
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk3[0].m_computeBlock_in (reconfigMultiplyBlock__xdcDup__1), mCompute (multiplyCompute)]", 6, false); // bD (O, cr)
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[multiplyXBar, genblk3[0].m_computeBlock_in (reconfigMultiplyBlock__xdcDup__1), mCompute (multiplyCompute)]", 6, false, false, false, false, true, false); // bD (O, cr) - Popup Trigger
+selectMenu(PAResourceItoN.InstanceMenu_FLOORPLANNING, "Floorplanning"); // af (ao, cr)
+selectMenuItem(PAResourceCommand.PACommandNames_NEW_PBLOCK, "New Pblock..."); // ai (cr)
+// Run Command: PAResourceCommand.PACommandNames_NEW_PBLOCK
+// r (cr): New Pblock: addNotify
