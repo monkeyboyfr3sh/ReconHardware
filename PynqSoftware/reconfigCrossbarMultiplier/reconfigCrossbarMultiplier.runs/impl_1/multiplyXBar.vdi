@@ -2,8 +2,8 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Wed Jul  1 20:16:15 2020
-# Process ID: 34392
+# Start of session at: Fri Jul  3 17:56:03 2020
+# Process ID: 12508
 # Current directory: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigCrossbarMultiplier/reconfigCrossbarMultiplier.runs/impl_1
 # Command line: vivado.exe -log multiplyXBar.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source multiplyXBar.tcl -notrace
 # Log file: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigCrossbarMultiplier/reconfigCrossbarMultiplier.runs/impl_1/multiplyXBar.vdi
@@ -14,9 +14,9 @@ Command: open_checkpoint C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftw
 
 Starting open_checkpoint Task
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 301.500 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 299.031 ; gain = 0.000
 INFO: [Device 21-403] Loading part xc7z020clg400-1
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 745.930 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 745.309 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 19 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2019.2
@@ -28,15 +28,15 @@ INFO: [Project 1-853] Binary constraint restore complete.
 Reading XDEF placement.
 Reading placer database...
 Reading XDEF routing.
-Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.084 . Memory (MB): peak = 1344.363 ; gain = 0.000
-Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.084 . Memory (MB): peak = 1344.363 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1344.363 ; gain = 0.000
+Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.085 . Memory (MB): peak = 1344.465 ; gain = 0.000
+Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.086 . Memory (MB): peak = 1344.465 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1344.465 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Project 1-604] Checkpoint was created with Vivado v2019.2 (64-bit) build 2708876
-open_checkpoint: Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1344.363 ; gain = 1042.863
+open_checkpoint: Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1344.465 ; gain = 1045.434
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
@@ -47,37 +47,37 @@ INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.398 . Memory (MB): peak = 1354.281 ; gain = 9.918
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.425 . Memory (MB): peak = 1355.559 ; gain = 11.094
 
 Starting Cache Timing Information Task
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 Ending Cache Timing Information Task | Checksum: ea1d564e
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 1442.223 ; gain = 87.941
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.037 . Memory (MB): peak = 1443.543 ; gain = 87.984
 
 Starting Logic Optimization Task
 
 Phase 1 Retarget
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 1 Retarget | Checksum: fe516bd4
+Phase 1 Retarget | Checksum: 14211a660
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.103 . Memory (MB): peak = 1624.309 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.107 . Memory (MB): peak = 1624.445 ; gain = 0.000
 INFO: [Opt 31-389] Phase Retarget created 16 cells and removed 16 cells
 INFO: [Opt 31-1021] In phase Retarget, 124 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 2 Constant propagation
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Phase 2 Constant propagation | Checksum: 113c73596
+Phase 2 Constant propagation | Checksum: 12a4b7b20
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.109 . Memory (MB): peak = 1624.309 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.114 . Memory (MB): peak = 1624.445 ; gain = 0.000
 INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
 INFO: [Opt 31-1021] In phase Constant propagation, 112 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 3 Sweep
-Phase 3 Sweep | Checksum: 11ffd081a
+Phase 3 Sweep | Checksum: 14e0ac6a8
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.123 . Memory (MB): peak = 1624.309 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.128 . Memory (MB): peak = 1624.445 ; gain = 0.000
 INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
 INFO: [Opt 31-1021] In phase Sweep, 204 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
@@ -87,22 +87,22 @@ INFO: [Opt 31-193] Inserted 1 BUFG(s) on clock nets
 INFO: [Opt 31-1112] Starts optimizing BUFG(s) with a common MMCM/DPLL/XPLL driver.
 INFO: [Opt 31-1112] Starts optimizing BUFG(s) with a common driver.
 INFO: [Opt 31-1092] Phase BUFG optimization transformed 0 BUFG(s) to MBUFG(s).
-Phase 4 BUFG optimization | Checksum: f0698fdd
+Phase 4 BUFG optimization | Checksum: 12ec03b6e
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.139 . Memory (MB): peak = 1624.309 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.144 . Memory (MB): peak = 1624.445 ; gain = 0.000
 INFO: [Opt 31-662] Phase BUFG optimization created 1 cells of which 1 are BUFGs and removed 0 cells.
 
 Phase 5 Shift Register Optimization
 INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
-Phase 5 Shift Register Optimization | Checksum: f0698fdd
+Phase 5 Shift Register Optimization | Checksum: 12ec03b6e
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.147 . Memory (MB): peak = 1624.309 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.152 . Memory (MB): peak = 1624.445 ; gain = 0.000
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Phase 6 Post Processing Netlist
-Phase 6 Post Processing Netlist | Checksum: f0698fdd
+Phase 6 Post Processing Netlist | Checksum: 12ec03b6e
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.149 . Memory (MB): peak = 1624.309 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.154 . Memory (MB): peak = 1624.445 ; gain = 0.000
 INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
 Opt_design Change Summary
 =========================
@@ -123,37 +123,37 @@ Opt_design Change Summary
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1624.309 ; gain = 0.000
-Ending Logic Optimization Task | Checksum: 1e7e17800
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1624.445 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 17cfd61c8
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.184 . Memory (MB): peak = 1624.309 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.188 . Memory (MB): peak = 1624.445 ; gain = 0.000
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
-Ending Power Optimization Task | Checksum: 1e7e17800
+Ending Power Optimization Task | Checksum: 17cfd61c8
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1624.309 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1624.445 ; gain = 0.000
 
 Starting Final Cleanup Task
-Ending Final Cleanup Task | Checksum: 1e7e17800
+Ending Final Cleanup Task | Checksum: 17cfd61c8
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1624.309 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1624.445 ; gain = 0.000
 
 Starting Netlist Obfuscation Task
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1624.309 ; gain = 0.000
-Ending Netlist Obfuscation Task | Checksum: 1e7e17800
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1624.445 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 17cfd61c8
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1624.309 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1624.445 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
 36 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1624.309 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1624.445 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 1624.309 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 1624.445 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigCrossbarMultiplier/reconfigCrossbarMultiplier.runs/impl_1/multiplyXBar_opt.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file multiplyXBar_drc_opted.rpt -pb multiplyXBar_drc_opted.pb -rpx multiplyXBar_drc_opted.rpx
 Command: report_drc -file multiplyXBar_drc_opted.rpt -pb multiplyXBar_drc_opted.pb -rpx multiplyXBar_drc_opted.rpx
@@ -171,204 +171,122 @@ INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
 INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
 Running DRC as a precondition to command place_design
 INFO: [DRC 23-27] Running DRC with 2 threads
-INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+ERROR: [DRC HDPR-12] A Partition Pblock cannot reference more than one partition: The Pblock 'pblock_1' references more than one partition instance. The Pblock references both partition instance 'genblk3[0].m_computeBlock_in/mCompute' and partition instance 'genblk3[1].m_computeBlock_in/mCompute'.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[0].m_computeBlock_in/mCompute/product[3]_i_2' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[0].m_computeBlock_in/mCompute/product[3]_i_3' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[0].m_computeBlock_in/mCompute/product[3]_i_4' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[0].m_computeBlock_in/mCompute/product[3]_i_5' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[0].m_computeBlock_in/mCompute/product[3]_i_6' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[0].m_computeBlock_in/mCompute/product[3]_i_7' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[0].m_computeBlock_in/mCompute/product[3]_i_8' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[0].m_computeBlock_in/mCompute/product[3]_i_9' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[0].m_computeBlock_in/mCompute/product[7]_i_1' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[0].m_computeBlock_in/mCompute/product[7]_i_10' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[0].m_computeBlock_in/mCompute/product[7]_i_11' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[0].m_computeBlock_in/mCompute/product[7]_i_12' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[0].m_computeBlock_in/mCompute/product[7]_i_13' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[0].m_computeBlock_in/mCompute/product[7]_i_14' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[0].m_computeBlock_in/mCompute/product[7]_i_15' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[0].m_computeBlock_in/mCompute/product[7]_i_3' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[0].m_computeBlock_in/mCompute/product[7]_i_4' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[0].m_computeBlock_in/mCompute/product[7]_i_5' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[0].m_computeBlock_in/mCompute/product[7]_i_6' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[0].m_computeBlock_in/mCompute/product[7]_i_7' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[0].m_computeBlock_in/mCompute/product[7]_i_8' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[0].m_computeBlock_in/mCompute/product[7]_i_9' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[0].m_computeBlock_in/mCompute/product_reg[0]' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[0].m_computeBlock_in/mCompute/product_reg[1]' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[0].m_computeBlock_in/mCompute/product_reg[2]' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[0].m_computeBlock_in/mCompute/product_reg[3]' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[0].m_computeBlock_in/mCompute/product_reg[3]_i_1' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[0].m_computeBlock_in/mCompute/product_reg[4]' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[0].m_computeBlock_in/mCompute/product_reg[5]' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[0].m_computeBlock_in/mCompute/product_reg[6]' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[0].m_computeBlock_in/mCompute/product_reg[7]' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[0].m_computeBlock_in/mCompute/product_reg[7]_i_2' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[0].m_computeBlock_in/mCompute/ready_i_1' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[0].m_computeBlock_in/mCompute/ready_i_2' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[0].m_computeBlock_in/mCompute/ready_reg' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product[3]_i_2' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product[3]_i_3' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product[3]_i_4' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product[3]_i_5' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product[3]_i_6' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product[3]_i_7' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product[3]_i_8' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product[3]_i_9' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product[7]_i_1' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product[7]_i_10' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product[7]_i_11' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product[7]_i_12' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product[7]_i_13' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product[7]_i_14' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product[7]_i_15' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product[7]_i_3' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product[7]_i_4' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product[7]_i_5' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product[7]_i_6' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product[7]_i_7' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product[7]_i_8' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product[7]_i_9' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product_reg[0]' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product_reg[1]' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product_reg[2]' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product_reg[3]' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product_reg[3]_i_1' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product_reg[4]' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product_reg[5]' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product_reg[6]' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product_reg[7]' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product_reg[7]_i_2' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/ready_i_1' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/ready_i_2' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/ready_reg' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product[3]_i_2' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product[3]_i_3' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product[3]_i_4' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product[3]_i_5' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product[3]_i_6' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product[3]_i_7' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product[3]_i_8' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product[3]_i_9' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product[7]_i_1' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product[7]_i_10' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product[7]_i_11' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product[7]_i_12' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product[7]_i_13' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product[7]_i_14' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product[7]_i_15' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product[7]_i_3' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product[7]_i_4' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product[7]_i_5' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product[7]_i_6' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product[7]_i_7' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product[7]_i_8' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product[7]_i_9' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product_reg[0]' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product_reg[1]' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product_reg[2]' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product_reg[3]' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product_reg[3]_i_1' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product_reg[4]' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product_reg[5]' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product_reg[6]' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+INFO: [Common 17-14] Message 'DRC HDPR-18' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+ERROR: [DRC HDPR-30] Missing PBLOCK On Reconfigurable Cell: HD.RECONFIGURABLE cell 'genblk3[0].m_computeBlock_in/mCompute' must have PBLOCK assigned to itself or its descendant cells.
+ERROR: [DRC HDPR-30] Missing PBLOCK On Reconfigurable Cell: HD.RECONFIGURABLE cell 'genblk3[1].m_computeBlock_in/mCompute' must have PBLOCK assigned to itself or its descendant cells.
+ERROR: [DRC HDPR-30] Missing PBLOCK On Reconfigurable Cell: HD.RECONFIGURABLE cell 'genblk3[2].m_computeBlock_in/mCompute' must have PBLOCK assigned to itself or its descendant cells.
+ERROR: [DRC HDPR-30] Missing PBLOCK On Reconfigurable Cell: HD.RECONFIGURABLE cell 'genblk3[3].m_computeBlock_in/mCompute' must have PBLOCK assigned to itself or its descendant cells.
+ERROR: [DRC HDPR-30] Missing PBLOCK On Reconfigurable Cell: HD.RECONFIGURABLE cell 'genblk4[0].m_computeBlock_out/mCompute' must have PBLOCK assigned to itself or its descendant cells.
+ERROR: [DRC HDPR-30] Missing PBLOCK On Reconfigurable Cell: HD.RECONFIGURABLE cell 'genblk4[1].m_computeBlock_out/mCompute' must have PBLOCK assigned to itself or its descendant cells.
+ERROR: [DRC HDPR-30] Missing PBLOCK On Reconfigurable Cell: HD.RECONFIGURABLE cell 'genblk4[2].m_computeBlock_out/mCompute' must have PBLOCK assigned to itself or its descendant cells.
+ERROR: [DRC HDPR-30] Missing PBLOCK On Reconfigurable Cell: HD.RECONFIGURABLE cell 'genblk4[3].m_computeBlock_out/mCompute' must have PBLOCK assigned to itself or its descendant cells.
+INFO: [Vivado_Tcl 4-198] DRC finished with 289 Errors
 INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
-
-Starting Placer Task
-INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
-
-Phase 1 Placer Initialization
-
-Phase 1.1 Placer Initialization Netlist Sorting
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1624.309 ; gain = 0.000
-Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 16d965cbb
-
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1624.309 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1624.309 ; gain = 0.000
-
-Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
-CRITICAL WARNING: [Constraints 18-993] The Pblock pblock_mCompute_3 has defined an area that causes the splitting of interconnect tile columns. Partial reconfiguration requires that the left and right paired interconnect tile columns cannot be split by a reconfigurable boundary.  This is caused by either the left or right edge of a Pblock boundary, or by the Pblock spanning over logic types not included in the Pblock ranges.  To avoid an unroutable situation, placement will be prohibited from both of these columns. To avoid placement restrictions, modify the Pblock to avoid splitting the two columns.
-The column of the split contains interconnect tile INT_L_X40Y55  (SLICE_X61Y55 SLICE_X60Y55).
-Please refer to the Xilinx document on Partial Reconfiguration.
-Resolution: Set the Pblock property SNAPPING_MODE to value of ON, or modify the column/X specification of the pblock to avoid this edge.
-CRITICAL WARNING: [Constraints 18-998] The split between the left and right columns occurs between two reconfigurable Pblocks. Adjust the Pblocks such that adjacent edges do not split interconnect tile pairs.  Failure to modify the Pblocks may lead to an unplaceable design if these prohibited sites are required by the design.  The other Pblock is pblock_mCompute_4 to the right.
-Resolution: Set the Pblock property SNAPPING_MODE to value of ON, or modify the column/X specification of the pblock to avoid this edge.
-CRITICAL WARNING: [Constraints 18-994] The following sites will be excluded from the left column in pblock_mCompute_3:
-CRITICAL WARNING: [Constraints 18-992]   Site Type: SLICEL excluded sites: 100
-CRITICAL WARNING: [Constraints 18-995] The following sites will be excluded from the right column in pblock_mCompute_4:
-CRITICAL WARNING: [Constraints 18-992]   Site Type: SLICEL excluded sites: 50
-CRITICAL WARNING: [Constraints 18-992]   Site Type: SLICEM excluded sites: 50
-CRITICAL WARNING: [Constraints 18-993] The Pblock pblock_mCompute_5 has defined an area that causes the splitting of interconnect tile columns. Partial reconfiguration requires that the left and right paired interconnect tile columns cannot be split by a reconfigurable boundary.  This is caused by either the left or right edge of a Pblock boundary, or by the Pblock spanning over logic types not included in the Pblock ranges.  To avoid an unroutable situation, placement will be prohibited from both of these columns. To avoid placement restrictions, modify the Pblock to avoid splitting the two columns.
-The column of the split contains interconnect tile INT_L_X42Y55  (SLICE_X65Y55 SLICE_X64Y55).
-Please refer to the Xilinx document on Partial Reconfiguration.
-Resolution: Set the Pblock property SNAPPING_MODE to value of ON, or modify the column/X specification of the pblock to avoid this edge.
-CRITICAL WARNING: [Constraints 18-998] The split between the left and right columns occurs between two reconfigurable Pblocks. Adjust the Pblocks such that adjacent edges do not split interconnect tile pairs.  Failure to modify the Pblocks may lead to an unplaceable design if these prohibited sites are required by the design.  The other Pblock is pblock_mCompute_6 to the right.
-Resolution: Set the Pblock property SNAPPING_MODE to value of ON, or modify the column/X specification of the pblock to avoid this edge.
-CRITICAL WARNING: [Constraints 18-994] The following sites will be excluded from the left column in pblock_mCompute_5:
-CRITICAL WARNING: [Constraints 18-992]   Site Type: SLICEL excluded sites: 100
-CRITICAL WARNING: [Constraints 18-995] The following sites will be excluded from the right column in pblock_mCompute_6:
-CRITICAL WARNING: [Constraints 18-992]   Site Type: SLICEL excluded sites: 50
-CRITICAL WARNING: [Constraints 18-992]   Site Type: SLICEM excluded sites: 50
-CRITICAL WARNING: [Constraints 18-993] The Pblock pblock_mCompute has defined an area that causes the splitting of interconnect tile columns. Partial reconfiguration requires that the left and right paired interconnect tile columns cannot be split by a reconfigurable boundary.  This is caused by either the left or right edge of a Pblock boundary, or by the Pblock spanning over logic types not included in the Pblock ranges.  To avoid an unroutable situation, placement will be prohibited from both of these columns. To avoid placement restrictions, modify the Pblock to avoid splitting the two columns.
-The column of the split contains interconnect tile INT_L_X36Y55  (SLICE_X54Y55 SLICE_X55Y55).
-Please refer to the Xilinx document on Partial Reconfiguration.
-Resolution: Set the Pblock property SNAPPING_MODE to value of ON, or modify the column/X specification of the pblock to avoid this edge.
-CRITICAL WARNING: [Constraints 18-997] The split between the left and right columns occurs between a reconfigurable Pblock and Static logic.  The static sites are reconfigurable.  The Pblock should either be extended to include the right column, or reduced to remove the left column.
-Resolution: Set the Pblock property SNAPPING_MODE to value of ON, or modify the column/X specification of the pblock to avoid this edge.
-CRITICAL WARNING: [Constraints 18-994] The following sites will be excluded from the left column in Static:
-CRITICAL WARNING: [Constraints 18-992]   Site Type: FIFO18E1 excluded sites: 10
-CRITICAL WARNING: [Constraints 18-992]   Site Type: RAMB18E1 excluded sites: 10
-CRITICAL WARNING: [Constraints 18-992]   Site Type: RAMBFIFO36E1 excluded sites: 10
-CRITICAL WARNING: [Constraints 18-995] The following sites will be excluded from the right column in pblock_mCompute:
-CRITICAL WARNING: [Constraints 18-992]   Site Type: SLICEL excluded sites: 50
-CRITICAL WARNING: [Constraints 18-992]   Site Type: SLICEM excluded sites: 50
-CRITICAL WARNING: [Constraints 18-993] The Pblock pblock_mCompute_7 has defined an area that causes the splitting of interconnect tile columns. Partial reconfiguration requires that the left and right paired interconnect tile columns cannot be split by a reconfigurable boundary.  This is caused by either the left or right edge of a Pblock boundary, or by the Pblock spanning over logic types not included in the Pblock ranges.  To avoid an unroutable situation, placement will be prohibited from both of these columns. To avoid placement restrictions, modify the Pblock to avoid splitting the two columns.
-The column of the split contains interconnect tile INT_L_X50Y55  (SLICE_X80Y55 SLICE_X81Y55).
-Please refer to the Xilinx document on Partial Reconfiguration.
-Resolution: Set the Pblock property SNAPPING_MODE to value of ON, or modify the column/X specification of the pblock to avoid this edge.
-CRITICAL WARNING: [Constraints 18-996] The split between the left and right columns occurs between a reconfigurable Pblock and Static logic.  The static sites are not reconfigurable.  The Pblock should be adjusted to remove the column from the Pblock, unless the excluded reconfigurable and static sites are not needed for the design.  Note that adjusting the Pblock will prevent prohibits and improve placement of the design, but may reduce the routability if the removed sites were needed to span across the static logic.  Failure to modify the Pblock may lead to an unplaceable design if these prohibited sites are required by the design.
-Resolution: Set the Pblock property SNAPPING_MODE to value of ON, or modify the column/X specification of the pblock to avoid this edge.
-CRITICAL WARNING: [Constraints 18-994] The following sites will be excluded from the left column in Static:
-CRITICAL WARNING: [Constraints 18-992]   Site Type: BSCAN excluded sites: 4
-CRITICAL WARNING: [Constraints 18-992]   Site Type: CAPTURE excluded sites: 1
-CRITICAL WARNING: [Constraints 18-992]   Site Type: DCIRESET excluded sites: 1
-CRITICAL WARNING: [Constraints 18-992]   Site Type: FRAME_ECC excluded sites: 1
-CRITICAL WARNING: [Constraints 18-992]   Site Type: ICAP excluded sites: 2
-CRITICAL WARNING: [Constraints 18-992]   Site Type: STARTUP excluded sites: 1
-CRITICAL WARNING: [Constraints 18-992]   Site Type: USR_ACCESS excluded sites: 1
-CRITICAL WARNING: [Constraints 18-995] The following sites will be excluded from the right column in pblock_mCompute_7:
-CRITICAL WARNING: [Constraints 18-992]   Site Type: SLICEL excluded sites: 100
-CRITICAL WARNING: [Constraints 18-993] The Pblock pblock_mCompute_1 has defined an area that causes the splitting of interconnect tile columns. Partial reconfiguration requires that the left and right paired interconnect tile columns cannot be split by a reconfigurable boundary.  This is caused by either the left or right edge of a Pblock boundary, or by the Pblock spanning over logic types not included in the Pblock ranges.  To avoid an unroutable situation, placement will be prohibited from both of these columns. To avoid placement restrictions, modify the Pblock to avoid splitting the two columns.
-The column of the split contains interconnect tile INT_L_X38Y55  (SLICE_X57Y55 SLICE_X56Y55).
-Please refer to the Xilinx document on Partial Reconfiguration.
-Resolution: Set the Pblock property SNAPPING_MODE to value of ON, or modify the column/X specification of the pblock to avoid this edge.
-CRITICAL WARNING: [Constraints 18-998] The split between the left and right columns occurs between two reconfigurable Pblocks. Adjust the Pblocks such that adjacent edges do not split interconnect tile pairs.  Failure to modify the Pblocks may lead to an unplaceable design if these prohibited sites are required by the design.  The other Pblock is pblock_mCompute_2 to the right.
-Resolution: Set the Pblock property SNAPPING_MODE to value of ON, or modify the column/X specification of the pblock to avoid this edge.
-CRITICAL WARNING: [Constraints 18-994] The following sites will be excluded from the left column in pblock_mCompute_1:
-CRITICAL WARNING: [Constraints 18-992]   Site Type: SLICEL excluded sites: 100
-CRITICAL WARNING: [Constraints 18-995] The following sites will be excluded from the right column in pblock_mCompute_2:
-CRITICAL WARNING: [Constraints 18-992]   Site Type: SLICEL excluded sites: 50
-CRITICAL WARNING: [Constraints 18-992]   Site Type: SLICEM excluded sites: 50
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more Register as Flip Flop cells than are available in Pblock 'pblock_mCompute'. This design requires 9 of such cell types but no compatible site is available in Pblock 'pblock_mCompute'. Please consider increasing the span of Pblock 'pblock_mCompute' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more Slice Registers cells than are available in Pblock 'pblock_mCompute'. This design requires 9 of such cell types but no compatible site is available in Pblock 'pblock_mCompute'. Please consider increasing the span of Pblock 'pblock_mCompute' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : Pblock pblock_mCompute has 20 Slice LUTs(s) assigned to it, but only 0 Slice LUTs(s) are available in the area range defined. The placer will attempt to combine Slice LUTs(s) to make the assigned Slice LUTs(s) fit in the Pblock range. This may cause increased runtime and negative performance. It is highly encouraged that either the Pblock slice range is increased or fewer Slice LUTs(s) are assigned to the Pblock.
-CRITICAL WARNING: [Place 30-640] Place Check : Pblock pblock_mCompute has 20 LUT as Logic(s) assigned to it, but only 0 LUT as Logic(s) are available in the area range defined. The placer will attempt to combine LUT as Logic(s) to make the assigned LUT as Logic(s) fit in the Pblock range. This may cause increased runtime and negative performance. It is highly encouraged that either the Pblock slice range is increased or fewer LUT as Logic(s) are assigned to the Pblock.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more CARRY4 cells than are available in Pblock 'pblock_mCompute'. This design requires 2 of such cell types but no compatible site is available in Pblock 'pblock_mCompute'. Please consider increasing the span of Pblock 'pblock_mCompute' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more FDRE cells than are available in Pblock 'pblock_mCompute'. This design requires 9 of such cell types but no compatible site is available in Pblock 'pblock_mCompute'. Please consider increasing the span of Pblock 'pblock_mCompute' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more LUT2 cells than are available in Pblock 'pblock_mCompute'. This design requires 5 of such cell types but no compatible site is available in Pblock 'pblock_mCompute'. Please consider increasing the span of Pblock 'pblock_mCompute' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more LUT4 cells than are available in Pblock 'pblock_mCompute'. This design requires 6 of such cell types but no compatible site is available in Pblock 'pblock_mCompute'. Please consider increasing the span of Pblock 'pblock_mCompute' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more LUT5 cells than are available in Pblock 'pblock_mCompute'. This design requires 1 of such cell types but no compatible site is available in Pblock 'pblock_mCompute'. Please consider increasing the span of Pblock 'pblock_mCompute' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more LUT6 cells than are available in Pblock 'pblock_mCompute'. This design requires 12 of such cell types but no compatible site is available in Pblock 'pblock_mCompute'. Please consider increasing the span of Pblock 'pblock_mCompute' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more LUT2 and LUT4 and LUT5 and LUT6 cells than are available in Pblock 'pblock_mCompute'. This design requires 24 of such cell types but no compatible site is available in Pblock 'pblock_mCompute'. Please consider increasing the span of Pblock 'pblock_mCompute' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more CARRY4 cells than are available in Pblock 'pblock_mCompute'. This design requires 2 of such cell types but no compatible site is available in Pblock 'pblock_mCompute'. Please consider increasing the span of Pblock 'pblock_mCompute' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more FDRE cells than are available in Pblock 'pblock_mCompute'. This design requires 9 of such cell types but no compatible site is available in Pblock 'pblock_mCompute'. Please consider increasing the span of Pblock 'pblock_mCompute' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more Register as Flip Flop cells than are available in Pblock 'pblock_mCompute_1'. This design requires 9 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_1'. Please consider increasing the span of Pblock 'pblock_mCompute_1' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more Slice Registers cells than are available in Pblock 'pblock_mCompute_1'. This design requires 9 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_1'. Please consider increasing the span of Pblock 'pblock_mCompute_1' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : Pblock pblock_mCompute_1 has 20 Slice LUTs(s) assigned to it, but only 0 Slice LUTs(s) are available in the area range defined. The placer will attempt to combine Slice LUTs(s) to make the assigned Slice LUTs(s) fit in the Pblock range. This may cause increased runtime and negative performance. It is highly encouraged that either the Pblock slice range is increased or fewer Slice LUTs(s) are assigned to the Pblock.
-CRITICAL WARNING: [Place 30-640] Place Check : Pblock pblock_mCompute_1 has 20 LUT as Logic(s) assigned to it, but only 0 LUT as Logic(s) are available in the area range defined. The placer will attempt to combine LUT as Logic(s) to make the assigned LUT as Logic(s) fit in the Pblock range. This may cause increased runtime and negative performance. It is highly encouraged that either the Pblock slice range is increased or fewer LUT as Logic(s) are assigned to the Pblock.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more CARRY4 cells than are available in Pblock 'pblock_mCompute_1'. This design requires 2 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_1'. Please consider increasing the span of Pblock 'pblock_mCompute_1' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more FDRE cells than are available in Pblock 'pblock_mCompute_1'. This design requires 9 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_1'. Please consider increasing the span of Pblock 'pblock_mCompute_1' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more LUT2 cells than are available in Pblock 'pblock_mCompute_1'. This design requires 5 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_1'. Please consider increasing the span of Pblock 'pblock_mCompute_1' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more LUT4 cells than are available in Pblock 'pblock_mCompute_1'. This design requires 6 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_1'. Please consider increasing the span of Pblock 'pblock_mCompute_1' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more LUT5 cells than are available in Pblock 'pblock_mCompute_1'. This design requires 1 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_1'. Please consider increasing the span of Pblock 'pblock_mCompute_1' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more LUT6 cells than are available in Pblock 'pblock_mCompute_1'. This design requires 12 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_1'. Please consider increasing the span of Pblock 'pblock_mCompute_1' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more LUT2 and LUT4 and LUT5 and LUT6 cells than are available in Pblock 'pblock_mCompute_1'. This design requires 24 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_1'. Please consider increasing the span of Pblock 'pblock_mCompute_1' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more CARRY4 cells than are available in Pblock 'pblock_mCompute_1'. This design requires 2 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_1'. Please consider increasing the span of Pblock 'pblock_mCompute_1' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more FDRE cells than are available in Pblock 'pblock_mCompute_1'. This design requires 9 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_1'. Please consider increasing the span of Pblock 'pblock_mCompute_1' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more Register as Flip Flop cells than are available in Pblock 'pblock_mCompute_2'. This design requires 9 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_2'. Please consider increasing the span of Pblock 'pblock_mCompute_2' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more Slice Registers cells than are available in Pblock 'pblock_mCompute_2'. This design requires 9 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_2'. Please consider increasing the span of Pblock 'pblock_mCompute_2' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : Pblock pblock_mCompute_2 has 20 Slice LUTs(s) assigned to it, but only 0 Slice LUTs(s) are available in the area range defined. The placer will attempt to combine Slice LUTs(s) to make the assigned Slice LUTs(s) fit in the Pblock range. This may cause increased runtime and negative performance. It is highly encouraged that either the Pblock slice range is increased or fewer Slice LUTs(s) are assigned to the Pblock.
-CRITICAL WARNING: [Place 30-640] Place Check : Pblock pblock_mCompute_2 has 20 LUT as Logic(s) assigned to it, but only 0 LUT as Logic(s) are available in the area range defined. The placer will attempt to combine LUT as Logic(s) to make the assigned LUT as Logic(s) fit in the Pblock range. This may cause increased runtime and negative performance. It is highly encouraged that either the Pblock slice range is increased or fewer LUT as Logic(s) are assigned to the Pblock.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more CARRY4 cells than are available in Pblock 'pblock_mCompute_2'. This design requires 2 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_2'. Please consider increasing the span of Pblock 'pblock_mCompute_2' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more FDRE cells than are available in Pblock 'pblock_mCompute_2'. This design requires 9 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_2'. Please consider increasing the span of Pblock 'pblock_mCompute_2' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more LUT2 cells than are available in Pblock 'pblock_mCompute_2'. This design requires 5 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_2'. Please consider increasing the span of Pblock 'pblock_mCompute_2' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more LUT4 cells than are available in Pblock 'pblock_mCompute_2'. This design requires 6 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_2'. Please consider increasing the span of Pblock 'pblock_mCompute_2' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more LUT5 cells than are available in Pblock 'pblock_mCompute_2'. This design requires 1 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_2'. Please consider increasing the span of Pblock 'pblock_mCompute_2' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more LUT6 cells than are available in Pblock 'pblock_mCompute_2'. This design requires 12 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_2'. Please consider increasing the span of Pblock 'pblock_mCompute_2' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more LUT2 and LUT4 and LUT5 and LUT6 cells than are available in Pblock 'pblock_mCompute_2'. This design requires 24 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_2'. Please consider increasing the span of Pblock 'pblock_mCompute_2' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more CARRY4 cells than are available in Pblock 'pblock_mCompute_2'. This design requires 2 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_2'. Please consider increasing the span of Pblock 'pblock_mCompute_2' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more FDRE cells than are available in Pblock 'pblock_mCompute_2'. This design requires 9 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_2'. Please consider increasing the span of Pblock 'pblock_mCompute_2' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more Register as Flip Flop cells than are available in Pblock 'pblock_mCompute_3'. This design requires 9 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_3'. Please consider increasing the span of Pblock 'pblock_mCompute_3' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more Slice Registers cells than are available in Pblock 'pblock_mCompute_3'. This design requires 9 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_3'. Please consider increasing the span of Pblock 'pblock_mCompute_3' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : Pblock pblock_mCompute_3 has 20 Slice LUTs(s) assigned to it, but only 0 Slice LUTs(s) are available in the area range defined. The placer will attempt to combine Slice LUTs(s) to make the assigned Slice LUTs(s) fit in the Pblock range. This may cause increased runtime and negative performance. It is highly encouraged that either the Pblock slice range is increased or fewer Slice LUTs(s) are assigned to the Pblock.
-CRITICAL WARNING: [Place 30-640] Place Check : Pblock pblock_mCompute_3 has 20 LUT as Logic(s) assigned to it, but only 0 LUT as Logic(s) are available in the area range defined. The placer will attempt to combine LUT as Logic(s) to make the assigned LUT as Logic(s) fit in the Pblock range. This may cause increased runtime and negative performance. It is highly encouraged that either the Pblock slice range is increased or fewer LUT as Logic(s) are assigned to the Pblock.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more CARRY4 cells than are available in Pblock 'pblock_mCompute_3'. This design requires 2 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_3'. Please consider increasing the span of Pblock 'pblock_mCompute_3' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more FDRE cells than are available in Pblock 'pblock_mCompute_3'. This design requires 9 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_3'. Please consider increasing the span of Pblock 'pblock_mCompute_3' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more LUT2 cells than are available in Pblock 'pblock_mCompute_3'. This design requires 5 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_3'. Please consider increasing the span of Pblock 'pblock_mCompute_3' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more LUT4 cells than are available in Pblock 'pblock_mCompute_3'. This design requires 6 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_3'. Please consider increasing the span of Pblock 'pblock_mCompute_3' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more LUT5 cells than are available in Pblock 'pblock_mCompute_3'. This design requires 1 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_3'. Please consider increasing the span of Pblock 'pblock_mCompute_3' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more LUT6 cells than are available in Pblock 'pblock_mCompute_3'. This design requires 12 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_3'. Please consider increasing the span of Pblock 'pblock_mCompute_3' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more LUT2 and LUT4 and LUT5 and LUT6 cells than are available in Pblock 'pblock_mCompute_3'. This design requires 24 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_3'. Please consider increasing the span of Pblock 'pblock_mCompute_3' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more CARRY4 cells than are available in Pblock 'pblock_mCompute_3'. This design requires 2 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_3'. Please consider increasing the span of Pblock 'pblock_mCompute_3' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more FDRE cells than are available in Pblock 'pblock_mCompute_3'. This design requires 9 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_3'. Please consider increasing the span of Pblock 'pblock_mCompute_3' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more Register as Flip Flop cells than are available in Pblock 'pblock_mCompute_4'. This design requires 9 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_4'. Please consider increasing the span of Pblock 'pblock_mCompute_4' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more Slice Registers cells than are available in Pblock 'pblock_mCompute_4'. This design requires 9 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_4'. Please consider increasing the span of Pblock 'pblock_mCompute_4' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : Pblock pblock_mCompute_4 has 20 Slice LUTs(s) assigned to it, but only 0 Slice LUTs(s) are available in the area range defined. The placer will attempt to combine Slice LUTs(s) to make the assigned Slice LUTs(s) fit in the Pblock range. This may cause increased runtime and negative performance. It is highly encouraged that either the Pblock slice range is increased or fewer Slice LUTs(s) are assigned to the Pblock.
-CRITICAL WARNING: [Place 30-640] Place Check : Pblock pblock_mCompute_4 has 20 LUT as Logic(s) assigned to it, but only 0 LUT as Logic(s) are available in the area range defined. The placer will attempt to combine LUT as Logic(s) to make the assigned LUT as Logic(s) fit in the Pblock range. This may cause increased runtime and negative performance. It is highly encouraged that either the Pblock slice range is increased or fewer LUT as Logic(s) are assigned to the Pblock.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more CARRY4 cells than are available in Pblock 'pblock_mCompute_4'. This design requires 2 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_4'. Please consider increasing the span of Pblock 'pblock_mCompute_4' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more FDRE cells than are available in Pblock 'pblock_mCompute_4'. This design requires 9 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_4'. Please consider increasing the span of Pblock 'pblock_mCompute_4' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more LUT2 cells than are available in Pblock 'pblock_mCompute_4'. This design requires 5 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_4'. Please consider increasing the span of Pblock 'pblock_mCompute_4' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more LUT4 cells than are available in Pblock 'pblock_mCompute_4'. This design requires 6 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_4'. Please consider increasing the span of Pblock 'pblock_mCompute_4' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more LUT5 cells than are available in Pblock 'pblock_mCompute_4'. This design requires 1 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_4'. Please consider increasing the span of Pblock 'pblock_mCompute_4' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more LUT6 cells than are available in Pblock 'pblock_mCompute_4'. This design requires 12 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_4'. Please consider increasing the span of Pblock 'pblock_mCompute_4' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more LUT2 and LUT4 and LUT5 and LUT6 cells than are available in Pblock 'pblock_mCompute_4'. This design requires 24 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_4'. Please consider increasing the span of Pblock 'pblock_mCompute_4' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more CARRY4 cells than are available in Pblock 'pblock_mCompute_4'. This design requires 2 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_4'. Please consider increasing the span of Pblock 'pblock_mCompute_4' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more FDRE cells than are available in Pblock 'pblock_mCompute_4'. This design requires 9 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_4'. Please consider increasing the span of Pblock 'pblock_mCompute_4' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more Register as Flip Flop cells than are available in Pblock 'pblock_mCompute_5'. This design requires 9 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_5'. Please consider increasing the span of Pblock 'pblock_mCompute_5' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more Slice Registers cells than are available in Pblock 'pblock_mCompute_5'. This design requires 9 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_5'. Please consider increasing the span of Pblock 'pblock_mCompute_5' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : Pblock pblock_mCompute_5 has 20 Slice LUTs(s) assigned to it, but only 0 Slice LUTs(s) are available in the area range defined. The placer will attempt to combine Slice LUTs(s) to make the assigned Slice LUTs(s) fit in the Pblock range. This may cause increased runtime and negative performance. It is highly encouraged that either the Pblock slice range is increased or fewer Slice LUTs(s) are assigned to the Pblock.
-CRITICAL WARNING: [Place 30-640] Place Check : Pblock pblock_mCompute_5 has 20 LUT as Logic(s) assigned to it, but only 0 LUT as Logic(s) are available in the area range defined. The placer will attempt to combine LUT as Logic(s) to make the assigned LUT as Logic(s) fit in the Pblock range. This may cause increased runtime and negative performance. It is highly encouraged that either the Pblock slice range is increased or fewer LUT as Logic(s) are assigned to the Pblock.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more CARRY4 cells than are available in Pblock 'pblock_mCompute_5'. This design requires 2 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_5'. Please consider increasing the span of Pblock 'pblock_mCompute_5' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more FDRE cells than are available in Pblock 'pblock_mCompute_5'. This design requires 9 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_5'. Please consider increasing the span of Pblock 'pblock_mCompute_5' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more LUT2 cells than are available in Pblock 'pblock_mCompute_5'. This design requires 5 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_5'. Please consider increasing the span of Pblock 'pblock_mCompute_5' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more LUT4 cells than are available in Pblock 'pblock_mCompute_5'. This design requires 6 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_5'. Please consider increasing the span of Pblock 'pblock_mCompute_5' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more LUT5 cells than are available in Pblock 'pblock_mCompute_5'. This design requires 1 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_5'. Please consider increasing the span of Pblock 'pblock_mCompute_5' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more LUT6 cells than are available in Pblock 'pblock_mCompute_5'. This design requires 12 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_5'. Please consider increasing the span of Pblock 'pblock_mCompute_5' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more LUT2 and LUT4 and LUT5 and LUT6 cells than are available in Pblock 'pblock_mCompute_5'. This design requires 24 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_5'. Please consider increasing the span of Pblock 'pblock_mCompute_5' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more CARRY4 cells than are available in Pblock 'pblock_mCompute_5'. This design requires 2 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_5'. Please consider increasing the span of Pblock 'pblock_mCompute_5' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more FDRE cells than are available in Pblock 'pblock_mCompute_5'. This design requires 9 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_5'. Please consider increasing the span of Pblock 'pblock_mCompute_5' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more Register as Flip Flop cells than are available in Pblock 'pblock_mCompute_6'. This design requires 9 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_6'. Please consider increasing the span of Pblock 'pblock_mCompute_6' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more Slice Registers cells than are available in Pblock 'pblock_mCompute_6'. This design requires 9 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_6'. Please consider increasing the span of Pblock 'pblock_mCompute_6' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : Pblock pblock_mCompute_6 has 20 Slice LUTs(s) assigned to it, but only 0 Slice LUTs(s) are available in the area range defined. The placer will attempt to combine Slice LUTs(s) to make the assigned Slice LUTs(s) fit in the Pblock range. This may cause increased runtime and negative performance. It is highly encouraged that either the Pblock slice range is increased or fewer Slice LUTs(s) are assigned to the Pblock.
-CRITICAL WARNING: [Place 30-640] Place Check : Pblock pblock_mCompute_6 has 20 LUT as Logic(s) assigned to it, but only 0 LUT as Logic(s) are available in the area range defined. The placer will attempt to combine LUT as Logic(s) to make the assigned LUT as Logic(s) fit in the Pblock range. This may cause increased runtime and negative performance. It is highly encouraged that either the Pblock slice range is increased or fewer LUT as Logic(s) are assigned to the Pblock.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more CARRY4 cells than are available in Pblock 'pblock_mCompute_6'. This design requires 2 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_6'. Please consider increasing the span of Pblock 'pblock_mCompute_6' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more FDRE cells than are available in Pblock 'pblock_mCompute_6'. This design requires 9 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_6'. Please consider increasing the span of Pblock 'pblock_mCompute_6' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more LUT2 cells than are available in Pblock 'pblock_mCompute_6'. This design requires 5 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_6'. Please consider increasing the span of Pblock 'pblock_mCompute_6' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more LUT4 cells than are available in Pblock 'pblock_mCompute_6'. This design requires 6 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_6'. Please consider increasing the span of Pblock 'pblock_mCompute_6' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more LUT5 cells than are available in Pblock 'pblock_mCompute_6'. This design requires 1 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_6'. Please consider increasing the span of Pblock 'pblock_mCompute_6' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more LUT6 cells than are available in Pblock 'pblock_mCompute_6'. This design requires 12 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_6'. Please consider increasing the span of Pblock 'pblock_mCompute_6' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more LUT2 and LUT4 and LUT5 and LUT6 cells than are available in Pblock 'pblock_mCompute_6'. This design requires 24 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_6'. Please consider increasing the span of Pblock 'pblock_mCompute_6' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more CARRY4 cells than are available in Pblock 'pblock_mCompute_6'. This design requires 2 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_6'. Please consider increasing the span of Pblock 'pblock_mCompute_6' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more FDRE cells than are available in Pblock 'pblock_mCompute_6'. This design requires 9 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_6'. Please consider increasing the span of Pblock 'pblock_mCompute_6' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more Register as Flip Flop cells than are available in Pblock 'pblock_mCompute_7'. This design requires 9 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_7'. Please consider increasing the span of Pblock 'pblock_mCompute_7' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more Slice Registers cells than are available in Pblock 'pblock_mCompute_7'. This design requires 9 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_7'. Please consider increasing the span of Pblock 'pblock_mCompute_7' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : Pblock pblock_mCompute_7 has 20 Slice LUTs(s) assigned to it, but only 0 Slice LUTs(s) are available in the area range defined. The placer will attempt to combine Slice LUTs(s) to make the assigned Slice LUTs(s) fit in the Pblock range. This may cause increased runtime and negative performance. It is highly encouraged that either the Pblock slice range is increased or fewer Slice LUTs(s) are assigned to the Pblock.
-CRITICAL WARNING: [Place 30-640] Place Check : Pblock pblock_mCompute_7 has 20 LUT as Logic(s) assigned to it, but only 0 LUT as Logic(s) are available in the area range defined. The placer will attempt to combine LUT as Logic(s) to make the assigned LUT as Logic(s) fit in the Pblock range. This may cause increased runtime and negative performance. It is highly encouraged that either the Pblock slice range is increased or fewer LUT as Logic(s) are assigned to the Pblock.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more CARRY4 cells than are available in Pblock 'pblock_mCompute_7'. This design requires 2 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_7'. Please consider increasing the span of Pblock 'pblock_mCompute_7' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more FDRE cells than are available in Pblock 'pblock_mCompute_7'. This design requires 9 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_7'. Please consider increasing the span of Pblock 'pblock_mCompute_7' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more LUT2 cells than are available in Pblock 'pblock_mCompute_7'. This design requires 5 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_7'. Please consider increasing the span of Pblock 'pblock_mCompute_7' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more LUT4 cells than are available in Pblock 'pblock_mCompute_7'. This design requires 6 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_7'. Please consider increasing the span of Pblock 'pblock_mCompute_7' or removing cells from it.
-CRITICAL WARNING: [Place 30-640] Place Check : This design requires more LUT5 cells than are available in Pblock 'pblock_mCompute_7'. This design requires 1 of such cell types but no compatible site is available in Pblock 'pblock_mCompute_7'. Please consider increasing the span of Pblock 'pblock_mCompute_7' or removing cells from it.
-INFO: [Common 17-14] Message 'Place 30-640' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-ERROR: [Place 30-642] Placement Validity Check : Failed to find legal placement.
-Reason: Could not place shape in pblock pblock_mCompute.
-The unplaced cells are: 
-  Cell genblk3[0].m_computeBlock_in/mCompute/product[3]_i_9 of type LUT4
-  Cell genblk3[0].m_computeBlock_in/mCompute/product[7]_i_15 of type LUT2
-Shape dimensions: Width = 1, Height = 1
-Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 132b8afd0
-
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.550 . Memory (MB): peak = 1624.309 ; gain = 0.000
-Phase 1 Placer Initialization | Checksum: 132b8afd0
-
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.550 . Memory (MB): peak = 1624.309 ; gain = 0.000
-ERROR: [Place 30-99] Placer failed with error: 'IO Clock Placer stopped due to earlier errors. Implementation Feasibility check failed, Please see the previously displayed individual error or warning messages for more details.'
-Please review all ERROR, CRITICAL WARNING, and WARNING messages during placement to understand the cause for failure.
-Ending Placer Task | Checksum: 132b8afd0
-
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.552 . Memory (MB): peak = 1624.309 ; gain = 0.000
+ERROR: [Vivado_Tcl 4-23] Error(s) found during DRC. Placer not run.
 INFO: [Common 17-83] Releasing license: Implementation
-54 Infos, 0 Warnings, 142 Critical Warnings and 3 Errors encountered.
+53 Infos, 0 Warnings, 0 Critical Warnings and 110 Errors encountered.
 place_design failed
-ERROR: [Common 17-69] Command failed: Placer could not place all instances
-INFO: [Common 17-206] Exiting Vivado at Wed Jul  1 20:16:37 2020...
+ERROR: [Common 17-39] 'place_design' failed due to earlier errors.
+
+INFO: [Common 17-206] Exiting Vivado at Fri Jul  3 17:56:25 2020...
