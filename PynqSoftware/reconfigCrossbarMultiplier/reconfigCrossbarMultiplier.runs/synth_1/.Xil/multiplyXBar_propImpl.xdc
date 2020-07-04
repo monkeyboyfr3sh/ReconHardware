@@ -23,43 +23,35 @@ set_property src_info {type:XDC file:1 line:47 export:INPUT save:INPUT read:READ
 set_property PACKAGE_PIN R17 [get_ports mStart_in]
 set_property src_info {type:XDC file:1 line:48 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN R16 [get_ports bufferSelect]
-set_property src_info {type:XDC file:1 line:59 export:INPUT save:INPUT read:READ} [current_design]
-create_pblock pblock_mCompute
-add_cells_to_pblock [get_pblocks pblock_mCompute] [get_cells -quiet [list {genblk3[0].m_computeBlock_in/mCompute}]]
-resize_pblock [get_pblocks pblock_mCompute] -add {SLICE_X54Y0:SLICE_X57Y8}
-set_property SNAPPING_MODE ON [get_pblocks pblock_mCompute]
-set_property src_info {type:XDC file:1 line:63 export:INPUT save:INPUT read:READ} [current_design]
-create_pblock pblock_mCompute_1
-add_cells_to_pblock [get_pblocks pblock_mCompute_1] [get_cells -quiet [list {genblk3[1].m_computeBlock_in/mCompute}]]
-resize_pblock [get_pblocks pblock_mCompute_1] -add {SLICE_X58Y0:SLICE_X61Y8}
-set_property SNAPPING_MODE ON [get_pblocks pblock_mCompute_1]
-set_property src_info {type:XDC file:1 line:67 export:INPUT save:INPUT read:READ} [current_design]
-create_pblock pblock_mCompute_2
-add_cells_to_pblock [get_pblocks pblock_mCompute_2] [get_cells -quiet [list {genblk3[2].m_computeBlock_in/mCompute}]]
-resize_pblock [get_pblocks pblock_mCompute_2] -add {SLICE_X62Y0:SLICE_X65Y8}
-set_property SNAPPING_MODE ON [get_pblocks pblock_mCompute_2]
-set_property src_info {type:XDC file:1 line:71 export:INPUT save:INPUT read:READ} [current_design]
-create_pblock pblock_mCompute_3
-add_cells_to_pblock [get_pblocks pblock_mCompute_3] [get_cells -quiet [list {genblk3[3].m_computeBlock_in/mCompute}]]
-resize_pblock [get_pblocks pblock_mCompute_3] -add {SLICE_X66Y0:SLICE_X69Y8}
-set_property SNAPPING_MODE ON [get_pblocks pblock_mCompute_3]
-set_property src_info {type:XDC file:1 line:75 export:INPUT save:INPUT read:READ} [current_design]
-create_pblock pblock_mCompute_4
-add_cells_to_pblock [get_pblocks pblock_mCompute_4] [get_cells -quiet [list {genblk4[0].m_computeBlock_out/mCompute}]]
-resize_pblock [get_pblocks pblock_mCompute_4] -add {SLICE_X70Y0:SLICE_X73Y8}
-set_property SNAPPING_MODE ON [get_pblocks pblock_mCompute_4]
-set_property src_info {type:XDC file:1 line:80 export:INPUT save:INPUT read:READ} [current_design]
-create_pblock pblock_mCompute_5
-add_cells_to_pblock [get_pblocks pblock_mCompute_5] [get_cells -quiet [list {genblk4[1].m_computeBlock_out/mCompute}]]
-resize_pblock [get_pblocks pblock_mCompute_5] -add {SLICE_X74Y0:SLICE_X77Y8}
-set_property SNAPPING_MODE ON [get_pblocks pblock_mCompute_5]
-set_property src_info {type:XDC file:1 line:84 export:INPUT save:INPUT read:READ} [current_design]
-create_pblock pblock_mCompute_6
-add_cells_to_pblock [get_pblocks pblock_mCompute_6] [get_cells -quiet [list {genblk4[2].m_computeBlock_out/mCompute}]]
-resize_pblock [get_pblocks pblock_mCompute_6] -add {SLICE_X78Y0:SLICE_X81Y8}
-set_property SNAPPING_MODE ON [get_pblocks pblock_mCompute_6]
-set_property src_info {type:XDC file:1 line:88 export:INPUT save:INPUT read:READ} [current_design]
-create_pblock pblock_mCompute_7
-add_cells_to_pblock [get_pblocks pblock_mCompute_7] [get_cells -quiet [list {genblk4[3].m_computeBlock_out/mCompute}]]
-resize_pblock [get_pblocks pblock_mCompute_7] -add {SLICE_X82Y0:SLICE_X85Y8}
-set_property SNAPPING_MODE ON [get_pblocks pblock_mCompute_7]
+set_property src_info {type:XDC file:1 line:50 export:INPUT save:INPUT read:READ} [current_design]
+create_pblock pblock_1
+add_cells_to_pblock [get_pblocks pblock_1] [get_cells -quiet [list {genblk3[0].m_computeBlock_in/mCompute}]]
+resize_pblock [get_pblocks pblock_1] -add {SLICE_X54Y25:SLICE_X57Y33}
+set_property src_info {type:XDC file:1 line:54 export:INPUT save:INPUT read:READ} [current_design]
+create_pblock pblock_2
+add_cells_to_pblock [get_pblocks pblock_2] [get_cells -quiet [list {genblk3[1].m_computeBlock_in/mCompute}]]
+resize_pblock [get_pblocks pblock_2] -add {SLICE_X58Y25:SLICE_X61Y33}
+set_property src_info {type:XDC file:1 line:58 export:INPUT save:INPUT read:READ} [current_design]
+create_pblock pblock_3
+add_cells_to_pblock [get_pblocks pblock_3] [get_cells -quiet [list {genblk3[2].m_computeBlock_in/mCompute}]]
+resize_pblock [get_pblocks pblock_3] -add {SLICE_X62Y25:SLICE_X65Y33}
+set_property src_info {type:XDC file:1 line:62 export:INPUT save:INPUT read:READ} [current_design]
+create_pblock pblock_4
+add_cells_to_pblock [get_pblocks pblock_4] [get_cells -quiet [list {genblk3[3].m_computeBlock_in/mCompute}]]
+resize_pblock [get_pblocks pblock_4] -add {SLICE_X66Y25:SLICE_X69Y33}
+set_property src_info {type:XDC file:1 line:66 export:INPUT save:INPUT read:READ} [current_design]
+create_pblock pblock_5
+add_cells_to_pblock [get_pblocks pblock_5] [get_cells -quiet [list {genblk4[0].m_computeBlock_out/mCompute}]]
+resize_pblock [get_pblocks pblock_5] -add {SLICE_X70Y25:SLICE_X73Y33}
+set_property src_info {type:XDC file:1 line:70 export:INPUT save:INPUT read:READ} [current_design]
+create_pblock pblock_6
+add_cells_to_pblock [get_pblocks pblock_6] [get_cells -quiet [list {genblk4[1].m_computeBlock_out/mCompute}]]
+resize_pblock [get_pblocks pblock_6] -add {SLICE_X74Y25:SLICE_X77Y33}
+set_property src_info {type:XDC file:1 line:74 export:INPUT save:INPUT read:READ} [current_design]
+create_pblock pblock_7
+add_cells_to_pblock [get_pblocks pblock_7] [get_cells -quiet [list {genblk4[2].m_computeBlock_out/mCompute}]]
+resize_pblock [get_pblocks pblock_7] -add {SLICE_X78Y25:SLICE_X81Y33}
+set_property src_info {type:XDC file:1 line:78 export:INPUT save:INPUT read:READ} [current_design]
+create_pblock pblock_8
+add_cells_to_pblock [get_pblocks pblock_8] [get_cells -quiet [list {genblk4[3].m_computeBlock_out/mCompute}]]
+resize_pblock [get_pblocks pblock_8] -add {SLICE_X82Y25:SLICE_X85Y33}

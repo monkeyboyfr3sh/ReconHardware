@@ -18,21 +18,21 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 23088 
+INFO: Helper process launched with PID 25016 
 WARNING: [Synth 8-1935] empty port in module declaration [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigCrossbarMultiplier/reconfigCrossbarMultiplier.srcs/sources_1/new/multiplyXBar.v:19]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 992.164 ; gain = 237.805
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 992.938 ; gain = 238.344
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'multiplyXBar' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigCrossbarMultiplier/reconfigCrossbarMultiplier.srcs/sources_1/new/multiplyXBar.v:7]
 INFO: [Synth 8-6157] synthesizing module 'reconfigMultiplyBlock' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.srcs/sources_1/new/reconfigMultiplyBlock.v:4]
 INFO: [Synth 8-6157] synthesizing module 'ps_Wrap' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.srcs/sources_1/bd/ps_Wrap/synth/ps_Wrap.v:13]
-INFO: [Synth 8-6157] synthesizing module 'ps_Wrap_ParallelBuffer_0_0' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigCrossbarMultiplier/reconfigCrossbarMultiplier.runs/synth_1/.Xil/Vivado-17844-DESKTOP-D9F9TPQ/realtime/ps_Wrap_ParallelBuffer_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'ps_Wrap_ParallelBuffer_0_0' (1#1) [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigCrossbarMultiplier/reconfigCrossbarMultiplier.runs/synth_1/.Xil/Vivado-17844-DESKTOP-D9F9TPQ/realtime/ps_Wrap_ParallelBuffer_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'ps_Wrap_dataSplit_0_0' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigCrossbarMultiplier/reconfigCrossbarMultiplier.runs/synth_1/.Xil/Vivado-17844-DESKTOP-D9F9TPQ/realtime/ps_Wrap_dataSplit_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'ps_Wrap_dataSplit_0_0' (2#1) [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigCrossbarMultiplier/reconfigCrossbarMultiplier.runs/synth_1/.Xil/Vivado-17844-DESKTOP-D9F9TPQ/realtime/ps_Wrap_dataSplit_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'ps_Wrap_ParallelBuffer_0_0' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigCrossbarMultiplier/reconfigCrossbarMultiplier.runs/synth_1/.Xil/Vivado-24724-DESKTOP-D9F9TPQ/realtime/ps_Wrap_ParallelBuffer_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ps_Wrap_ParallelBuffer_0_0' (1#1) [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigCrossbarMultiplier/reconfigCrossbarMultiplier.runs/synth_1/.Xil/Vivado-24724-DESKTOP-D9F9TPQ/realtime/ps_Wrap_ParallelBuffer_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'ps_Wrap_dataSplit_0_0' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigCrossbarMultiplier/reconfigCrossbarMultiplier.runs/synth_1/.Xil/Vivado-24724-DESKTOP-D9F9TPQ/realtime/ps_Wrap_dataSplit_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ps_Wrap_dataSplit_0_0' (2#1) [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigCrossbarMultiplier/reconfigCrossbarMultiplier.runs/synth_1/.Xil/Vivado-24724-DESKTOP-D9F9TPQ/realtime/ps_Wrap_dataSplit_0_0_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 'ps_Wrap' (3#1) [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.srcs/sources_1/bd/ps_Wrap/synth/ps_Wrap.v:13]
-INFO: [Synth 8-6157] synthesizing module 'multiplyCompute' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigCrossbarMultiplier/reconfigCrossbarMultiplier.runs/synth_1/.Xil/Vivado-17844-DESKTOP-D9F9TPQ/realtime/multiplyCompute_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'multiplyCompute' (4#1) [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigCrossbarMultiplier/reconfigCrossbarMultiplier.runs/synth_1/.Xil/Vivado-17844-DESKTOP-D9F9TPQ/realtime/multiplyCompute_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'multiplyCompute' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigCrossbarMultiplier/reconfigCrossbarMultiplier.runs/synth_1/.Xil/Vivado-24724-DESKTOP-D9F9TPQ/realtime/multiplyCompute_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'multiplyCompute' (4#1) [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigCrossbarMultiplier/reconfigCrossbarMultiplier.runs/synth_1/.Xil/Vivado-24724-DESKTOP-D9F9TPQ/realtime/multiplyCompute_stub.v:5]
 INFO: [Synth 8-6155] done synthesizing module 'reconfigMultiplyBlock' (5#1) [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigMultiplyBlock/reconfigMultiplyBlock.srcs/sources_1/new/reconfigMultiplyBlock.v:4]
 INFO: [Synth 8-6157] synthesizing module 'mux' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigCrossbarMultiplier/reconfigCrossbarMultiplier.srcs/sources_1/new/mux.v:4]
 INFO: [Synth 8-6155] done synthesizing module 'mux' (6#1) [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigCrossbarMultiplier/reconfigCrossbarMultiplier.srcs/sources_1/new/mux.v:4]
@@ -42,7 +42,7 @@ INFO: [Synth 8-6155] done synthesizing module 'XBar' (7#1) [C:/Users/monke/Docum
 WARNING: [Synth 8-308] ignoring empty port [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigCrossbarMultiplier/reconfigCrossbarMultiplier.srcs/sources_1/new/multiplyXBar.v:20]
 INFO: [Synth 8-6155] done synthesizing module 'multiplyXBar' (8#1) [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigCrossbarMultiplier/reconfigCrossbarMultiplier.srcs/sources_1/new/multiplyXBar.v:7]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1041.059 ; gain = 286.699
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1041.535 ; gain = 286.941
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -55,12 +55,12 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1041.059 ; gain = 286.699
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1041.535 ; gain = 286.941
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1041.059 ; gain = 286.699
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1041.535 ; gain = 286.941
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1041.059 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1041.535 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -123,20 +123,20 @@ Parsing XDC File [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/rec
 Finished Parsing XDC File [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigCrossbarMultiplier/reconfigCrossbarMultiplier.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1158.148 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1160.559 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1158.148 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1160.559 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1158.148 ; gain = 403.789
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1160.559 ; gain = 405.965
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1158.148 ; gain = 403.789
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1160.559 ; gain = 405.965
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -182,7 +182,7 @@ Applied set_property DONT_TOUCH = true for \genblk4[1].m_computeBlock_out /psWra
 Applied set_property DONT_TOUCH = true for \genblk4[2].m_computeBlock_out /psWrap/dataSplit_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for \genblk4[3].m_computeBlock_out /psWrap/dataSplit_0. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1158.148 ; gain = 403.789
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1160.559 ; gain = 405.965
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-327] inferring latch for variable 'OutputSave_reg[0]' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/CrossBar/CrossBar.srcs/sources_1/new/XBar.v:45]
 WARNING: [Synth 8-327] inferring latch for variable 'OutputSave_reg[1]' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/CrossBar/CrossBar.srcs/sources_1/new/XBar.v:45]
@@ -193,7 +193,7 @@ WARNING: [Synth 8-327] inferring latch for variable 'AddressSave_reg[1]' [C:/Use
 WARNING: [Synth 8-327] inferring latch for variable 'AddressSave_reg[2]' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/CrossBar/CrossBar.srcs/sources_1/new/XBar.v:68]
 WARNING: [Synth 8-327] inferring latch for variable 'AddressSave_reg[3]' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/CrossBar/CrossBar.srcs/sources_1/new/XBar.v:68]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1158.148 ; gain = 403.789
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1160.559 ; gain = 405.965
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -243,7 +243,7 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1158.148 ; gain = 403.789
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1160.559 ; gain = 405.965
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -255,13 +255,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1158.148 ; gain = 403.789
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1160.559 ; gain = 405.965
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1158.148 ; gain = 403.789
+Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1160.559 ; gain = 405.965
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -273,7 +273,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1158.148 ; gain = 403.789
+Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1160.559 ; gain = 405.965
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -297,13 +297,13 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1172.832 ; gain = 418.473
+Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1168.188 ; gain = 413.594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1172.832 ; gain = 418.473
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1168.188 ; gain = 413.594
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -322,25 +322,25 @@ Report Check Netlist:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1172.832 ; gain = 418.473
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1168.188 ; gain = 413.594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1172.832 ; gain = 418.473
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1168.188 ; gain = 413.594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1172.832 ; gain = 418.473
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1168.188 ; gain = 413.594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1172.832 ; gain = 418.473
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1168.188 ; gain = 413.594
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -418,18 +418,18 @@ Report Instance Areas:
 |19    |  xbar                            |XBar                             |   107|
 +------+----------------------------------+---------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1172.832 ; gain = 418.473
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1168.188 ; gain = 413.594
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 8 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:20 . Memory (MB): peak = 1172.832 ; gain = 301.383
-Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1172.832 ; gain = 418.473
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 1168.188 ; gain = 294.570
+Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1168.188 ; gain = 413.594
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1182.395 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1180.285 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 35 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1191.145 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1185.266 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 32 instances were transformed.
   LDC => LDCE: 32 instances
@@ -437,10 +437,10 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 31 Infos, 11 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1191.145 ; gain = 740.266
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1191.145 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1185.266 ; gain = 734.004
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1185.266 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigCrossbarMultiplier/reconfigCrossbarMultiplier.runs/synth_1/multiplyXBar.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file multiplyXBar_utilization_synth.rpt -pb multiplyXBar_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Jul  3 16:31:49 2020...
+INFO: [Common 17-206] Exiting Vivado at Sat Jul  4 16:25:01 2020...

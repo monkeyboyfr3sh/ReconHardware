@@ -13,9 +13,9 @@ Command: open_checkpoint C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftw
 
 Starting open_checkpoint Task
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 299.031 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 303.094 ; gain = 0.000
 INFO: [Device 21-403] Loading part xc7z020clg400-1
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 745.309 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 746.832 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 19 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2019.2
@@ -27,15 +27,15 @@ INFO: [Project 1-853] Binary constraint restore complete.
 Reading XDEF placement.
 Reading placer database...
 Reading XDEF routing.
-Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.085 . Memory (MB): peak = 1344.465 ; gain = 0.000
+Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.086 . Memory (MB): peak = 1344.316 ; gain = 0.000
 Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.086 . Memory (MB): peak = 1344.465 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1344.465 ; gain = 0.000
+Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.086 . Memory (MB): peak = 1344.316 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1344.316 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Project 1-604] Checkpoint was created with Vivado v2019.2 (64-bit) build 2708876
-open_checkpoint: Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1344.465 ; gain = 1045.434
+open_checkpoint: Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1344.316 ; gain = 1041.223
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
@@ -46,37 +46,37 @@ INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.425 . Memory (MB): peak = 1355.559 ; gain = 11.094
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.414 . Memory (MB): peak = 1355.422 ; gain = 11.105
 
 Starting Cache Timing Information Task
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 Ending Cache Timing Information Task | Checksum: ea1d564e
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.037 . Memory (MB): peak = 1443.543 ; gain = 87.984
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 1443.379 ; gain = 87.957
 
 Starting Logic Optimization Task
 
 Phase 1 Retarget
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 1 Retarget | Checksum: 14211a660
+Phase 1 Retarget | Checksum: a9a56444
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.107 . Memory (MB): peak = 1624.445 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.103 . Memory (MB): peak = 1626.129 ; gain = 0.000
 INFO: [Opt 31-389] Phase Retarget created 16 cells and removed 16 cells
 INFO: [Opt 31-1021] In phase Retarget, 124 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 2 Constant propagation
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Phase 2 Constant propagation | Checksum: 12a4b7b20
+Phase 2 Constant propagation | Checksum: adb12c2e
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.114 . Memory (MB): peak = 1624.445 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.109 . Memory (MB): peak = 1626.129 ; gain = 0.000
 INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
 INFO: [Opt 31-1021] In phase Constant propagation, 112 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 3 Sweep
-Phase 3 Sweep | Checksum: 14e0ac6a8
+Phase 3 Sweep | Checksum: 1238c5069
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.128 . Memory (MB): peak = 1624.445 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.123 . Memory (MB): peak = 1626.129 ; gain = 0.000
 INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
 INFO: [Opt 31-1021] In phase Sweep, 204 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
@@ -86,22 +86,22 @@ INFO: [Opt 31-193] Inserted 1 BUFG(s) on clock nets
 INFO: [Opt 31-1112] Starts optimizing BUFG(s) with a common MMCM/DPLL/XPLL driver.
 INFO: [Opt 31-1112] Starts optimizing BUFG(s) with a common driver.
 INFO: [Opt 31-1092] Phase BUFG optimization transformed 0 BUFG(s) to MBUFG(s).
-Phase 4 BUFG optimization | Checksum: 12ec03b6e
+Phase 4 BUFG optimization | Checksum: 1510d7531
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.144 . Memory (MB): peak = 1624.445 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.139 . Memory (MB): peak = 1626.129 ; gain = 0.000
 INFO: [Opt 31-662] Phase BUFG optimization created 1 cells of which 1 are BUFGs and removed 0 cells.
 
 Phase 5 Shift Register Optimization
 INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
-Phase 5 Shift Register Optimization | Checksum: 12ec03b6e
+Phase 5 Shift Register Optimization | Checksum: 1510d7531
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.152 . Memory (MB): peak = 1624.445 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.147 . Memory (MB): peak = 1626.129 ; gain = 0.000
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Phase 6 Post Processing Netlist
-Phase 6 Post Processing Netlist | Checksum: 12ec03b6e
+Phase 6 Post Processing Netlist | Checksum: 1510d7531
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.154 . Memory (MB): peak = 1624.445 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.149 . Memory (MB): peak = 1626.129 ; gain = 0.000
 INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
 Opt_design Change Summary
 =========================
@@ -122,37 +122,37 @@ Opt_design Change Summary
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1624.445 ; gain = 0.000
-Ending Logic Optimization Task | Checksum: 17cfd61c8
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1626.129 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 1bb44cd7c
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.188 . Memory (MB): peak = 1624.445 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.184 . Memory (MB): peak = 1626.129 ; gain = 0.000
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
-Ending Power Optimization Task | Checksum: 17cfd61c8
+Ending Power Optimization Task | Checksum: 1bb44cd7c
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1624.445 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1626.129 ; gain = 0.000
 
 Starting Final Cleanup Task
-Ending Final Cleanup Task | Checksum: 17cfd61c8
+Ending Final Cleanup Task | Checksum: 1bb44cd7c
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1624.445 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1626.129 ; gain = 0.000
 
 Starting Netlist Obfuscation Task
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1624.445 ; gain = 0.000
-Ending Netlist Obfuscation Task | Checksum: 17cfd61c8
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1626.129 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 1bb44cd7c
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1624.445 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1626.129 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
 36 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1624.445 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1626.129 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 1624.445 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 1626.129 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/reconfigCrossbarMultiplier/reconfigCrossbarMultiplier.runs/impl_1/multiplyXBar_opt.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file multiplyXBar_drc_opted.rpt -pb multiplyXBar_drc_opted.pb -rpx multiplyXBar_drc_opted.rpx
 Command: report_drc -file multiplyXBar_drc_opted.rpt -pb multiplyXBar_drc_opted.pb -rpx multiplyXBar_drc_opted.rpx
@@ -170,7 +170,13 @@ INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
 INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
 Running DRC as a precondition to command place_design
 INFO: [DRC 23-27] Running DRC with 2 threads
-ERROR: [DRC HDPR-12] A Partition Pblock cannot reference more than one partition: The Pblock 'pblock_1' references more than one partition instance. The Pblock references both partition instance 'genblk3[0].m_computeBlock_in/mCompute' and partition instance 'genblk3[1].m_computeBlock_in/mCompute'.
+ERROR: [DRC HDPR-3] Cells must have a Pblock range: HD.RECONFIGURABLE cell 'genblk3[0].m_computeBlock_in/mCompute' with its Pblock 'pblock_1' must have at least one range defined.
+ERROR: [DRC HDPR-3] Cells must have a Pblock range: HD.RECONFIGURABLE cell 'genblk3[1].m_computeBlock_in/mCompute' with its Pblock 'pblock_2' must have at least one range defined.
+ERROR: [DRC HDPR-3] Cells must have a Pblock range: HD.RECONFIGURABLE cell 'genblk3[2].m_computeBlock_in/mCompute' with its Pblock 'pblock_3' must have at least one range defined.
+ERROR: [DRC HDPR-3] Cells must have a Pblock range: HD.RECONFIGURABLE cell 'genblk3[3].m_computeBlock_in/mCompute' with its Pblock 'pblock_4' must have at least one range defined.
+ERROR: [DRC HDPR-3] Cells must have a Pblock range: HD.RECONFIGURABLE cell 'genblk4[0].m_computeBlock_out/mCompute' with its Pblock 'pblock_5' must have at least one range defined.
+ERROR: [DRC HDPR-3] Cells must have a Pblock range: HD.RECONFIGURABLE cell 'genblk4[1].m_computeBlock_out/mCompute' with its Pblock 'pblock_6' must have at least one range defined.
+ERROR: [DRC HDPR-3] Cells must have a Pblock range: HD.RECONFIGURABLE cell 'genblk4[2].m_computeBlock_out/mCompute' with its Pblock 'pblock_7' must have at least one range defined.
 ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[0].m_computeBlock_in/mCompute/product[3]_i_2' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
 ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[0].m_computeBlock_in/mCompute/product[3]_i_3' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
 ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[0].m_computeBlock_in/mCompute/product[3]_i_4' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
@@ -206,86 +212,78 @@ ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 
 ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[0].m_computeBlock_in/mCompute/ready_i_1' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
 ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[0].m_computeBlock_in/mCompute/ready_i_2' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
 ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[0].m_computeBlock_in/mCompute/ready_reg' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
-ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product[3]_i_2' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
-ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product[3]_i_3' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
-ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product[3]_i_4' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
-ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product[3]_i_5' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
-ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product[3]_i_6' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
-ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product[3]_i_7' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
-ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product[3]_i_8' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
-ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product[3]_i_9' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
-ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product[7]_i_1' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
-ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product[7]_i_10' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
-ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product[7]_i_11' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
-ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product[7]_i_12' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
-ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product[7]_i_13' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
-ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product[7]_i_14' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
-ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product[7]_i_15' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
-ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product[7]_i_3' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
-ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product[7]_i_4' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
-ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product[7]_i_5' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
-ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product[7]_i_6' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
-ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product[7]_i_7' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
-ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product[7]_i_8' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
-ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product[7]_i_9' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
-ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product_reg[0]' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
-ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product_reg[1]' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
-ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product_reg[2]' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
-ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product_reg[3]' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
-ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product_reg[3]_i_1' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
-ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product_reg[4]' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
-ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product_reg[5]' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
-ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product_reg[6]' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
-ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product_reg[7]' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
-ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product_reg[7]_i_2' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
-ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/ready_i_1' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
-ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/ready_i_2' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
-ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/ready_reg' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
-ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product[3]_i_2' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
-ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product[3]_i_3' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
-ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product[3]_i_4' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
-ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product[3]_i_5' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
-ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product[3]_i_6' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
-ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product[3]_i_7' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
-ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product[3]_i_8' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
-ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product[3]_i_9' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
-ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product[7]_i_1' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
-ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product[7]_i_10' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
-ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product[7]_i_11' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
-ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product[7]_i_12' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
-ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product[7]_i_13' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
-ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product[7]_i_14' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
-ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product[7]_i_15' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
-ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product[7]_i_3' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
-ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product[7]_i_4' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
-ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product[7]_i_5' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
-ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product[7]_i_6' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
-ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product[7]_i_7' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
-ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product[7]_i_8' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
-ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product[7]_i_9' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
-ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product_reg[0]' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
-ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product_reg[1]' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
-ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product_reg[2]' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
-ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product_reg[3]' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
-ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product_reg[3]_i_1' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
-ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product_reg[4]' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
-ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product_reg[5]' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
-ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product_reg[6]' is not ranged by Pblock 'pblock_1'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product[3]_i_2' is not ranged by Pblock 'pblock_2'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product[3]_i_3' is not ranged by Pblock 'pblock_2'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product[3]_i_4' is not ranged by Pblock 'pblock_2'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product[3]_i_5' is not ranged by Pblock 'pblock_2'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product[3]_i_6' is not ranged by Pblock 'pblock_2'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product[3]_i_7' is not ranged by Pblock 'pblock_2'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product[3]_i_8' is not ranged by Pblock 'pblock_2'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product[3]_i_9' is not ranged by Pblock 'pblock_2'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product[7]_i_1' is not ranged by Pblock 'pblock_2'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product[7]_i_10' is not ranged by Pblock 'pblock_2'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product[7]_i_11' is not ranged by Pblock 'pblock_2'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product[7]_i_12' is not ranged by Pblock 'pblock_2'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product[7]_i_13' is not ranged by Pblock 'pblock_2'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product[7]_i_14' is not ranged by Pblock 'pblock_2'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product[7]_i_15' is not ranged by Pblock 'pblock_2'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product[7]_i_3' is not ranged by Pblock 'pblock_2'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product[7]_i_4' is not ranged by Pblock 'pblock_2'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product[7]_i_5' is not ranged by Pblock 'pblock_2'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product[7]_i_6' is not ranged by Pblock 'pblock_2'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product[7]_i_7' is not ranged by Pblock 'pblock_2'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product[7]_i_8' is not ranged by Pblock 'pblock_2'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product[7]_i_9' is not ranged by Pblock 'pblock_2'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product_reg[0]' is not ranged by Pblock 'pblock_2'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product_reg[1]' is not ranged by Pblock 'pblock_2'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product_reg[2]' is not ranged by Pblock 'pblock_2'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product_reg[3]' is not ranged by Pblock 'pblock_2'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product_reg[3]_i_1' is not ranged by Pblock 'pblock_2'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product_reg[4]' is not ranged by Pblock 'pblock_2'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product_reg[5]' is not ranged by Pblock 'pblock_2'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product_reg[6]' is not ranged by Pblock 'pblock_2'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product_reg[7]' is not ranged by Pblock 'pblock_2'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/product_reg[7]_i_2' is not ranged by Pblock 'pblock_2'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/ready_i_1' is not ranged by Pblock 'pblock_2'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/ready_i_2' is not ranged by Pblock 'pblock_2'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[1].m_computeBlock_in/mCompute/ready_reg' is not ranged by Pblock 'pblock_2'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product[3]_i_2' is not ranged by Pblock 'pblock_3'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product[3]_i_3' is not ranged by Pblock 'pblock_3'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product[3]_i_4' is not ranged by Pblock 'pblock_3'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product[3]_i_5' is not ranged by Pblock 'pblock_3'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product[3]_i_6' is not ranged by Pblock 'pblock_3'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product[3]_i_7' is not ranged by Pblock 'pblock_3'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product[3]_i_8' is not ranged by Pblock 'pblock_3'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product[3]_i_9' is not ranged by Pblock 'pblock_3'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product[7]_i_1' is not ranged by Pblock 'pblock_3'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product[7]_i_10' is not ranged by Pblock 'pblock_3'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product[7]_i_11' is not ranged by Pblock 'pblock_3'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product[7]_i_12' is not ranged by Pblock 'pblock_3'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product[7]_i_13' is not ranged by Pblock 'pblock_3'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product[7]_i_14' is not ranged by Pblock 'pblock_3'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product[7]_i_15' is not ranged by Pblock 'pblock_3'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product[7]_i_3' is not ranged by Pblock 'pblock_3'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product[7]_i_4' is not ranged by Pblock 'pblock_3'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product[7]_i_5' is not ranged by Pblock 'pblock_3'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product[7]_i_6' is not ranged by Pblock 'pblock_3'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product[7]_i_7' is not ranged by Pblock 'pblock_3'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product[7]_i_8' is not ranged by Pblock 'pblock_3'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product[7]_i_9' is not ranged by Pblock 'pblock_3'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product_reg[0]' is not ranged by Pblock 'pblock_3'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product_reg[1]' is not ranged by Pblock 'pblock_3'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product_reg[2]' is not ranged by Pblock 'pblock_3'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product_reg[3]' is not ranged by Pblock 'pblock_3'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product_reg[3]_i_1' is not ranged by Pblock 'pblock_3'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product_reg[4]' is not ranged by Pblock 'pblock_3'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product_reg[5]' is not ranged by Pblock 'pblock_3'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
+ERROR: [DRC HDPR-18] No Pblock range for cell: HD.RECONFIGURABLE primitive cell 'genblk3[2].m_computeBlock_in/mCompute/product_reg[6]' is not ranged by Pblock 'pblock_3'.  A reconfigurable Pblock must range all of its cell primitive types. A 'SLICE' range needs to be added to the Pblock.
 INFO: [Common 17-14] Message 'DRC HDPR-18' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-ERROR: [DRC HDPR-30] Missing PBLOCK On Reconfigurable Cell: HD.RECONFIGURABLE cell 'genblk3[0].m_computeBlock_in/mCompute' must have PBLOCK assigned to itself or its descendant cells.
-ERROR: [DRC HDPR-30] Missing PBLOCK On Reconfigurable Cell: HD.RECONFIGURABLE cell 'genblk3[1].m_computeBlock_in/mCompute' must have PBLOCK assigned to itself or its descendant cells.
-ERROR: [DRC HDPR-30] Missing PBLOCK On Reconfigurable Cell: HD.RECONFIGURABLE cell 'genblk3[2].m_computeBlock_in/mCompute' must have PBLOCK assigned to itself or its descendant cells.
-ERROR: [DRC HDPR-30] Missing PBLOCK On Reconfigurable Cell: HD.RECONFIGURABLE cell 'genblk3[3].m_computeBlock_in/mCompute' must have PBLOCK assigned to itself or its descendant cells.
-ERROR: [DRC HDPR-30] Missing PBLOCK On Reconfigurable Cell: HD.RECONFIGURABLE cell 'genblk4[0].m_computeBlock_out/mCompute' must have PBLOCK assigned to itself or its descendant cells.
-ERROR: [DRC HDPR-30] Missing PBLOCK On Reconfigurable Cell: HD.RECONFIGURABLE cell 'genblk4[1].m_computeBlock_out/mCompute' must have PBLOCK assigned to itself or its descendant cells.
-ERROR: [DRC HDPR-30] Missing PBLOCK On Reconfigurable Cell: HD.RECONFIGURABLE cell 'genblk4[2].m_computeBlock_out/mCompute' must have PBLOCK assigned to itself or its descendant cells.
-ERROR: [DRC HDPR-30] Missing PBLOCK On Reconfigurable Cell: HD.RECONFIGURABLE cell 'genblk4[3].m_computeBlock_out/mCompute' must have PBLOCK assigned to itself or its descendant cells.
-INFO: [Vivado_Tcl 4-198] DRC finished with 289 Errors
+INFO: [Vivado_Tcl 4-198] DRC finished with 252 Errors
 INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
 ERROR: [Vivado_Tcl 4-23] Error(s) found during DRC. Placer not run.
 INFO: [Common 17-83] Releasing license: Implementation
-53 Infos, 0 Warnings, 0 Critical Warnings and 110 Errors encountered.
+53 Infos, 0 Warnings, 0 Critical Warnings and 108 Errors encountered.
 place_design failed
 ERROR: [Common 17-39] 'place_design' failed due to earlier errors.
 
-INFO: [Common 17-206] Exiting Vivado at Fri Jul  3 17:56:25 2020...
+INFO: [Common 17-206] Exiting Vivado at Sat Jul  4 16:27:56 2020...
