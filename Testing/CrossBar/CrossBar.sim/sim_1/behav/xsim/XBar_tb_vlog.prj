@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../Multiplier/Multiplier.srcs/sources_1/new" \
+"../../../../CrossBar.srcs/sources_1/imports/new/XBar.v" \
+"../../../../CrossBar.srcs/sim_1/new/XBar_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

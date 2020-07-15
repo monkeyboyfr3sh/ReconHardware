@@ -15,13 +15,6 @@
 
 bool clkSet = false;
 
-const int sendPinArray[] = {
-  dataSend0_pin,
-  dataSend1_pin,
-  dataSend2_pin,
-  dataSend3_pin
-};
-
 void clk() {
   clkSet = !clkSet;
   digitalWrite(Clk_pin,clkSet);

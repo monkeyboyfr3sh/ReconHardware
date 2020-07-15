@@ -1,0 +1,26 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/dynamicMulti/dynamicMulti.srcs/sources_1/imports/new/definitions.h" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/dynamicMulti/dynamicMulti.srcs/sources_1/imports/new/FlipFlop.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SingleBuffer
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/dynamicMulti/dynamicMulti.srcs/sources_1/imports/new/ParallelBuffer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ParallelBuffer
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/dynamicMulti/dynamicMulti.srcs/sources_1/imports/new/dataSplit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataSplit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/staticXBarMulti/staticXBarMulti.ip_user_files/bd/ps_Wrap/ip/ps_Wrap_ParallelBuffer_0_0/sim/ps_Wrap_ParallelBuffer_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ps_Wrap_ParallelBuffer_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/staticXBarMulti/staticXBarMulti.ip_user_files/bd/ps_Wrap/ip/ps_Wrap_dataSplit_0_0/sim/ps_Wrap_dataSplit_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ps_Wrap_dataSplit_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/staticXBarMulti/staticXBarMulti.ip_user_files/bd/ps_Wrap/sim/ps_Wrap.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ps_Wrap
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/staticXBarMulti/staticXBarMulti.srcs/sources_1/imports/PynqSoftware/XBar/XBar.srcs/sources_1/imports/new/XBar.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module XBar
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/dynamicMulti/dynamicMulti.srcs/sources_1/new/dynamicMulti.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dynamicMulti
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/dynamicMulti/dynamicMulti.srcs/sources_1/imports/new/multiplyCompute.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplyCompute
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/staticXBarMulti/staticXBarMulti.srcs/sources_1/imports/new/multiplyXBar.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplyXBar
+WARNING: [VRFC 10-2379] empty port in module declaration [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/staticXBarMulti/staticXBarMulti.srcs/sources_1/imports/new/multiplyXBar.v:20]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/staticXBarMulti/staticXBarMulti.srcs/sources_1/imports/PynqSoftware/dynamicXBarMulti/dynamicXBarMulti.srcs/sources_1/new/mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/staticXBarMulti/staticXBarMulti.srcs/sim_1/new/XBarMulti_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module XBarMulti_tb

@@ -1,0 +1,302 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x9271823C61E0DA4",
+      "device": "xc7z020clg400-1",
+      "name": "ps_Wrap",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2019.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "ParallelBuffer_0": "",
+      "dataSplit_0": ""
+    },
+    "ports": {
+      "Clk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "ASSOCIATED_RESET": {
+            "value": "Rst",
+            "value_src": "default"
+          },
+          "CLK_DOMAIN": {
+            "value": "ps_Wrap_Clk_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          }
+        }
+      },
+      "dataIn": {
+        "direction": "I",
+        "left": "3",
+        "right": "0"
+      },
+      "bufferSelect": {
+        "direction": "I"
+      },
+      "bufferEN": {
+        "direction": "I"
+      },
+      "bufferRD": {
+        "direction": "I"
+      },
+      "Rst": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
+      },
+      "Clr": {
+        "direction": "I"
+      },
+      "product_LONG": {
+        "direction": "I",
+        "left": "7",
+        "right": "0"
+      },
+      "chunkCount": {
+        "direction": "I"
+      },
+      "product_SHORT": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "bufferOutput0": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "bufferOutput1": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "FULL0": {
+        "direction": "O"
+      },
+      "FULL1": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "ParallelBuffer_0": {
+        "vlnv": "xilinx.com:module_ref:ParallelBuffer:1.0",
+        "xci_name": "ps_Wrap_ParallelBuffer_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ParallelBuffer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "Clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "Rst",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "ps_Wrap_Clk_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "dataIn": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "bufferSelect": {
+            "direction": "I"
+          },
+          "EN": {
+            "direction": "I"
+          },
+          "RD": {
+            "direction": "I"
+          },
+          "dataOut0": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "dataOut1": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "Rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "CLR": {
+            "direction": "I"
+          },
+          "FULL0": {
+            "direction": "O"
+          },
+          "FULL1": {
+            "direction": "O"
+          }
+        }
+      },
+      "dataSplit_0": {
+        "vlnv": "xilinx.com:module_ref:dataSplit:1.0",
+        "xci_name": "ps_Wrap_dataSplit_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "dataSplit",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "Clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "Rst",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "ps_Wrap_Clk_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "Rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "RD": {
+            "direction": "I"
+          },
+          "dataIn": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "chunkCount": {
+            "direction": "I"
+          },
+          "dataOut": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "nets": {
+      "Clk_0_1": {
+        "ports": [
+          "Clk",
+          "ParallelBuffer_0/Clk",
+          "dataSplit_0/Clk"
+        ]
+      },
+      "dataIn_0_1": {
+        "ports": [
+          "dataIn",
+          "ParallelBuffer_0/dataIn"
+        ]
+      },
+      "bufferSelect_0_1": {
+        "ports": [
+          "bufferSelect",
+          "ParallelBuffer_0/bufferSelect"
+        ]
+      },
+      "EN_0_1": {
+        "ports": [
+          "bufferEN",
+          "ParallelBuffer_0/EN"
+        ]
+      },
+      "RD_0_1": {
+        "ports": [
+          "bufferRD",
+          "ParallelBuffer_0/RD"
+        ]
+      },
+      "Rst_0_1": {
+        "ports": [
+          "Rst",
+          "ParallelBuffer_0/Rst",
+          "dataSplit_0/Rst"
+        ]
+      },
+      "CLR_0_1": {
+        "ports": [
+          "Clr",
+          "ParallelBuffer_0/CLR",
+          "dataSplit_0/RD"
+        ]
+      },
+      "dataIn_1_1": {
+        "ports": [
+          "product_LONG",
+          "dataSplit_0/dataIn"
+        ]
+      },
+      "chunkCount_0_1": {
+        "ports": [
+          "chunkCount",
+          "dataSplit_0/chunkCount"
+        ]
+      },
+      "dataSplit_0_dataOut": {
+        "ports": [
+          "dataSplit_0/dataOut",
+          "product_SHORT"
+        ]
+      },
+      "ParallelBuffer_0_dataOut0": {
+        "ports": [
+          "ParallelBuffer_0/dataOut0",
+          "bufferOutput0"
+        ]
+      },
+      "ParallelBuffer_0_dataOut1": {
+        "ports": [
+          "ParallelBuffer_0/dataOut1",
+          "bufferOutput1"
+        ]
+      },
+      "ParallelBuffer_0_FULL0": {
+        "ports": [
+          "ParallelBuffer_0/FULL0",
+          "FULL0"
+        ]
+      },
+      "ParallelBuffer_0_FULL1": {
+        "ports": [
+          "ParallelBuffer_0/FULL1",
+          "FULL1"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Sun Jul 12 13:42:52 2020
+| Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
+| Command      : report_drc -file dynamicMulti_drc_routed.rpt -pb dynamicMulti_drc_routed.pb -rpx dynamicMulti_drc_routed.rpx
+| Design       : dynamicMulti
+| Device       : xc7z020clg400-1
+| Speed File   : -1
+| Design State : Fully Routed
+------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: checkpoint_dynamicMulti
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 3
++---------+----------+---------------------------------+------------+
+| Rule    | Severity | Description                     | Violations |
++---------+----------+---------------------------------+------------+
+| HDPR-26 | Warning  | Improper Pblock column boundary | 2          |
+| ZPS7-1  | Warning  | PS7 block required              | 1          |
++---------+----------+---------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+HDPR-26#1 Warning
+Improper Pblock column boundary  
+The Reconfigurable Pblock 'pblock_mCompute' has a 'left' edge that terminates on an improper column boundary at tile 'CLBLM_R_X37Y62' (SLICE_X54Y62 SLICE_X55Y62).
+Resolution: Set the Pblock property SNAPPING_MODE to value of ON using the following constraint, or modify the X specification of the pblock to avoid this edge.
+Example: set_property SNAPPING_MODE ON [get_pblocks 'pblock_mCompute']
+Please refer to the Xilinx Partial Reconfiguration User Guide.
+Related violations: <none>
+
+HDPR-26#2 Warning
+Improper Pblock column boundary  
+The Reconfigurable Pblock 'pblock_mCompute' has a 'right' edge that terminates on an improper column boundary at tile 'CLBLL_L_X40Y62' (SLICE_X61Y62 SLICE_X60Y62).
+Resolution: Set the Pblock property SNAPPING_MODE to value of ON using the following constraint, or modify the X specification of the pblock to avoid this edge.
+Example: set_property SNAPPING_MODE ON [get_pblocks 'pblock_mCompute']
+Please refer to the Xilinx Partial Reconfiguration User Guide.
+Related violations: <none>
+
+ZPS7-1#1 Warning
+PS7 block required  
+The PS7 cell must be used in this Zynq design in order to enable correct default configuration.
+Related violations: <none>
+
+

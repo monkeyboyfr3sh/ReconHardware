@@ -1,0 +1,7 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../../Multiplier/Multiplier.srcs/sources_1/new" \
+"multiplyXBar_tb_time_impl.v" \
+"../../../../../CrossBar.srcs/sim_1/new/multiplyXbar_tb.v" \
+
+# Do not sort compile order
+nosort
