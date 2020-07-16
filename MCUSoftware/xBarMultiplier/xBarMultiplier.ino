@@ -1,23 +1,27 @@
+//Half Clk period
+#define halfclk             100
+
+//Pin definitions
 #define Clk_pin             18
 #define Rst_pin             32
 
-#define dataSend3_pin       0
-#define dataSend2_pin       2
-#define dataSend1_pin       15
-#define dataSend0_pin       17
-
 #define bufferSelect_pin    19
-#define bufferRDin0_pin     4
-#define bufferRDout0_pin    000000000000000000000000
 
 #define mStartin_pin        22
-#define mStartout_pin       000000000000000000000000
+#define mStartout_pin       21
 
-#define addressSelect4_pin  000000000000000000000000
-#define addressSelect0_pin  000000000000000000000000
+#define bufferRDin0_pin     4
+#define bufferRDout0_pin    34
 
-#define halfclk             100
+#define dataSend1_pin       15
+#define dataSend0_pin       17
+#define dataSend3_pin       0
+#define dataSend2_pin       2
 
+#define addressSelect4_pin  23
+#define addressSelect0_pin  16
+
+//clk(); var
 bool clkSet = false;
 
 void clk() {
@@ -42,7 +46,6 @@ void initGPIO(){
   pinMode(addressSelect4_pin,OUTPUT);
   pinMode(addressSelect0_pin,OUTPUT);
 }
-
 void runTB(){
   //Setup device
   digitalWrite(Clk_pin, LOW);
@@ -50,9 +53,10 @@ void runTB(){
   
   digitalWrite(bufferRDin0_pin, LOW);
   digitalWrite(bufferSelect_pin, LOW);
+  
   digitalWrite(Rst_pin, HIGH);
   
-  clk();clk();
+  clk();
   
   digitalWrite(Rst_pin, LOW);
 
@@ -69,6 +73,7 @@ void runTB(){
   //Initing buffer to read
   digitalWrite(mStartin_pin, LOW);
   digitalWrite(mStartout_pin, LOW);
+  
   //Turn input multi0 on,turn output multi0 off
   digitalWrite(bufferRDout0_pin, HIGH);
   digitalWrite(bufferRDin0_pin, LOW);
@@ -78,13 +83,13 @@ void runTB(){
   digitalWrite(bufferSelect_pin, LOW);
   digitalWrite(dataSend3_pin,LOW);digitalWrite(dataSend2_pin,LOW);digitalWrite(dataSend1_pin,LOW);digitalWrite(dataSend0_pin,HIGH);
   
-  clk();clk();
+  clk();
   
   //buffer0: 2
   digitalWrite(bufferSelect_pin, HIGH);
   digitalWrite(dataSend3_pin,LOW);digitalWrite(dataSend2_pin,LOW);digitalWrite(dataSend1_pin,HIGH);digitalWrite(dataSend0_pin,LOW);
   
-  clk();clk();
+  clk();
 
   //Start multiply
   digitalWrite(bufferRDin0_pin,HIGH);
@@ -112,6 +117,7 @@ void runTB(){
   clk();
   //Data should now be shown on LEDs.
   digitalWrite(mStartout_pin, LOW);
+  clk();
 }
 void outData(){
   Serial.println("Read LD1-LD4 for multiplier output");

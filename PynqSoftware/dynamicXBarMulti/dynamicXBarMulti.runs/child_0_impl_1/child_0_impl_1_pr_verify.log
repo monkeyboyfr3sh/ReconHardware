@@ -1,0 +1,22 @@
+Command: pr_verify -full_check -initial C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/dynamicXBarMulti/dynamicXBarMulti.runs/impl_1/multiplyXBar_routed.dcp -additional C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/dynamicXBarMulti/dynamicXBarMulti.runs/child_0_impl_1/multiplyXBar_routed.dcp -file child_0_impl_1_pr_verify.log
+Thu Jul 16 15:56:08 2020
+
+INFO: [Constraints 18-1020] PR Verify Summary:
+DCP1: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/dynamicXBarMulti/dynamicXBarMulti.runs/impl_1/multiplyXBar_routed.dcp
+  Number of reconfigurable modules compared = 8
+  Number of partition pins compared         = 160
+  Number of static tiles compared           = 800
+  Number of static sites compared           = 103
+  Number of static cells compared           = 364
+  Number of static routed nodes compared    = 4991
+  Number of static routed pips compared     = 4543
+
+DCP2: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/dynamicXBarMulti/dynamicXBarMulti.runs/child_0_impl_1/multiplyXBar_routed.dcp
+  Number of reconfigurable modules compared = 8
+  Number of partition pins compared         = 160
+  Number of static tiles compared           = 800
+  Number of static sites compared           = 103
+  Number of static cells compared           = 364
+  Number of static routed nodes compared    = 4991
+  Number of static routed pips compared     = 4543
+INFO: [Vivado 12-3253] PR_VERIFY: check points C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/dynamicXBarMulti/dynamicXBarMulti.runs/impl_1/multiplyXBar_routed.dcp and C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/dynamicXBarMulti/dynamicXBarMulti.runs/child_0_impl_1/multiplyXBar_routed.dcp are compatible

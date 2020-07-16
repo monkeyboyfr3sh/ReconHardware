@@ -17,6 +17,8 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param chipscope.maxJobs 2
+set_param xicom.use_bs_reader 1
 create_project -in_memory -part xc7z020clg400-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -54,8 +56,8 @@ set_property used_in_implementation false [get_files -all C:/Users/monke/Documen
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc {{C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/dynamicXBarMulti/dynamicXBarMulti.srcs/constrs_1/imports/FPGA Files/xBarMultiplier.xdc}}
-set_property used_in_implementation false [get_files {{C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/dynamicXBarMulti/dynamicXBarMulti.srcs/constrs_1/imports/FPGA Files/xBarMultiplier.xdc}}]
+read_xdc C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/dynamicXBarMulti/dynamicXBarMulti.srcs/constrs_1/imports/ConstraintFiles/XBarMulti.xdc
+set_property used_in_implementation false [get_files C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/dynamicXBarMulti/dynamicXBarMulti.srcs/constrs_1/imports/ConstraintFiles/XBarMulti.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]

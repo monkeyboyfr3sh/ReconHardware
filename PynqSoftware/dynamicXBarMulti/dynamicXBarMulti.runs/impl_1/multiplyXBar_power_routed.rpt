@@ -1,0 +1,189 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date             : Thu Jul 16 15:54:34 2020
+| Host             : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
+| Command          : report_power -file multiplyXBar_power_routed.rpt -pb multiplyXBar_power_summary_routed.pb -rpx multiplyXBar_power_routed.rpx
+| Design           : multiplyXBar
+| Device           : xc7z020clg400-1
+| Design State     : routed
+| Grade            : commercial
+| Process          : typical
+| Characterization : Production
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+---------------------------------+
+| Total On-Chip Power (W)  | 5.557 (Junction temp exceeded!) |
+| Design Power Budget (W)  | Unspecified*                    |
+| Power Budget Margin (W)  | NA                              |
+| Dynamic (W)              | 5.187                           |
+| Device Static (W)        | 0.370                           |
+| Effective TJA (C/W)      | 11.5                            |
+| Max Ambient (C)          | 20.9                            |
+| Junction Temperature (C) | 89.1                            |
+| Confidence Level         | Low                             |
+| Setting File             | ---                             |
+| Simulation Activity File | ---                             |
+| Design Nets Matched      | NA                              |
++--------------------------+---------------------------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++----------------+-----------+----------+-----------+-----------------+
+| On-Chip        | Power (W) | Used     | Available | Utilization (%) |
++----------------+-----------+----------+-----------+-----------------+
+| Slice Logic    |     0.798 |      674 |       --- |             --- |
+|   LUT as Logic |     0.758 |      310 |     53200 |            0.58 |
+|   Register     |     0.016 |      184 |    106400 |            0.17 |
+|   CARRY4       |     0.014 |       16 |     13300 |            0.12 |
+|   BUFG         |     0.006 |        1 |        32 |            3.13 |
+|   F7/F8 Muxes  |     0.004 |        3 |     53200 |           <0.01 |
+|   Others       |     0.000 |       66 |       --- |             --- |
+| Signals        |     1.473 |      530 |       --- |             --- |
+| I/O            |     2.916 |       36 |       125 |           28.80 |
+| Static Power   |     0.370 |          |           |                 |
+| Total          |     5.557 |          |           |                 |
++----------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       1.000 |     2.451 |       2.363 |      0.088 |
+| Vccaux    |       1.800 |     0.145 |       0.103 |      0.042 |
+| Vcco33    |       3.300 |     0.800 |       0.799 |      0.001 |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.006 |       0.000 |      0.006 |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
+| MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccpint   |       1.000 |     0.136 |       0.000 |      0.136 |
+| Vccpaux   |       1.800 |     0.010 |       0.000 |      0.010 |
+| Vccpll    |       1.800 |     0.003 |       0.000 |      0.003 |
+| Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio0 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio1 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                                | Action                                                                                                             |
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                       |                                                                                                                    |
+| Clock nodes activity        | Low        | User specified less than 75% of clocks                 | Provide missing clock activity with a constraint file, simulation results or by editing the "By Clock Domain" view |
+| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view           |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views         |
+| Device models               | High       | Device models are Production                           |                                                                                                                    |
+|                             |            |                                                        |                                                                                                                    |
+| Overall confidence level    | Low        |                                                        |                                                                                                                    |
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+------------------------+
+| Ambient Temp (C)      | 25.0                   |
+| ThetaJA (C/W)         | 11.5                   |
+| Airflow (LFM)         | 250                    |
+| Heat Sink             | none                   |
+| ThetaSA (C/W)         | 0.0                    |
+| Board Selection       | medium (10"x10")       |
+| # of Board Layers     | 8to11 (8 to 11 Layers) |
+| Board Temperature (C) | 25.0                   |
++-----------------------+------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-------+--------+-----------------+
+| Clock | Domain | Constraint (ns) |
++-------+--------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++---------------------------------+-----------+
+| Name                            | Power (W) |
++---------------------------------+-----------+
+| multiplyXBar                    |     5.187 |
+|   genblk3[0].m_computeBlock_in  |     0.185 |
+|     mCompute                    |     0.104 |
+|     psWrap                      |     0.081 |
+|       ParallelBuffer_0          |     0.066 |
+|       dataSplit_0               |     0.015 |
+|   genblk3[1].m_computeBlock_in  |     0.183 |
+|     mCompute                    |     0.103 |
+|     psWrap                      |     0.079 |
+|       ParallelBuffer_0          |     0.066 |
+|       dataSplit_0               |     0.014 |
+|   genblk3[2].m_computeBlock_in  |     0.184 |
+|     mCompute                    |     0.102 |
+|     psWrap                      |     0.082 |
+|       ParallelBuffer_0          |     0.070 |
+|       dataSplit_0               |     0.012 |
+|   genblk3[3].m_computeBlock_in  |     0.178 |
+|     mCompute                    |     0.106 |
+|     psWrap                      |     0.072 |
+|       ParallelBuffer_0          |     0.061 |
+|       dataSplit_0               |     0.011 |
+|   genblk4[0].m_computeBlock_out |     0.017 |
+|     mCompute                    |     0.002 |
+|     psWrap                      |     0.015 |
+|       ParallelBuffer_0          |     0.015 |
+|   genblk4[1].m_computeBlock_out |     0.013 |
+|     mCompute                    |     0.001 |
+|     psWrap                      |     0.012 |
+|       ParallelBuffer_0          |     0.012 |
+|   genblk4[2].m_computeBlock_out |     0.016 |
+|     psWrap                      |     0.015 |
+|       ParallelBuffer_0          |     0.015 |
+|   genblk4[3].m_computeBlock_out |     0.013 |
+|     mCompute                    |     0.001 |
+|     psWrap                      |     0.011 |
+|       ParallelBuffer_0          |     0.011 |
+|   outputMux                     |     0.005 |
+|   xbar                          |     0.972 |
++---------------------------------+-----------+
+
+

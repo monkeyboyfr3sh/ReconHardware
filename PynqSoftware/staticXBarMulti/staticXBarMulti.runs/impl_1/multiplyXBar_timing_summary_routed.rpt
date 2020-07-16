@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Wed Jul 15 17:57:45 2020
+| Date         : Thu Jul 16 16:54:56 2020
 | Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file multiplyXBar_timing_summary_routed.rpt -pb multiplyXBar_timing_summary_routed.pb -rpx multiplyXBar_timing_summary_routed.rpx -warn_on_violation
 | Design       : multiplyXBar

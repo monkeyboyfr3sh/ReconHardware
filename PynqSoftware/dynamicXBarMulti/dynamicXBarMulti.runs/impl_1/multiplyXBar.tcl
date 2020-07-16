@@ -61,122 +61,41 @@ proc step_failed { step } {
 }
 
 
-start_step init_design
-set ACTIVE_STEP init_design
+start_step write_bitstream
+set ACTIVE_STEP write_bitstream
 set rc [catch {
-  create_msg_db init_design.pb
+  create_msg_db write_bitstream.pb
   set_param chipscope.maxJobs 2
-  reset_param project.defaultXPMLibraries 
-  open_checkpoint C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/dynamicXBarMulti/dynamicXBarMulti.runs/impl_1/multiplyXBar.dcp
+  set_param xicom.use_bs_reader 1
+  open_checkpoint multiplyXBar_routed.dcp
   set_property webtalk.parent_dir C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/dynamicXBarMulti/dynamicXBarMulti.cache/wt [current_project]
-  set_property parent.project_path C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/dynamicXBarMulti/dynamicXBarMulti.xpr [current_project]
-  set_property ip_output_repo C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/dynamicXBarMulti/dynamicXBarMulti.cache/ip [current_project]
-  set_property ip_cache_permissions {read write} [current_project]
-  close_msg_db -file init_design.pb
+  catch { write_mem_info -force multiplyXBar.mmi }
+  write_bitstream -force -no_partial_bitfile multiplyXBar.bit 
+  write_bitstream -force -cell genblk3[0].m_computeBlock_in/mCompute genblk3_0_.m_computeBlock_in_mCompute_integer_partial.bit 
+  write_bitstream -force -cell genblk3[1].m_computeBlock_in/mCompute genblk3_1_.m_computeBlock_in_mCompute_integer_partial.bit 
+  write_bitstream -force -cell genblk3[2].m_computeBlock_in/mCompute genblk3_2_.m_computeBlock_in_mCompute_integer_partial.bit 
+  write_bitstream -force -cell genblk3[3].m_computeBlock_in/mCompute genblk3_3_.m_computeBlock_in_mCompute_integer_partial.bit 
+  write_bitstream -force -cell genblk4[0].m_computeBlock_out/mCompute genblk4_0_.m_computeBlock_out_mCompute_integer_partial.bit 
+  write_bitstream -force -cell genblk4[1].m_computeBlock_out/mCompute genblk4_1_.m_computeBlock_out_mCompute_integer_partial.bit 
+  write_bitstream -force -cell genblk4[2].m_computeBlock_out/mCompute genblk4_2_.m_computeBlock_out_mCompute_integer_partial.bit 
+  write_bitstream -force -cell genblk4[3].m_computeBlock_out/mCompute genblk4_3_.m_computeBlock_out_mCompute_integer_partial.bit 
+  catch {write_debug_probes -no_partial_ltxfile -quiet -force multiplyXBar}
+  catch {file copy -force multiplyXBar.ltx debug_nets.ltx}
+  catch {write_debug_probes -quiet -force -cell genblk3[0].m_computeBlock_in/mCompute -file genblk3_0_.m_computeBlock_in_mCompute_integer_partial.ltx}
+  catch {write_debug_probes -quiet -force -cell genblk3[1].m_computeBlock_in/mCompute -file genblk3_1_.m_computeBlock_in_mCompute_integer_partial.ltx}
+  catch {write_debug_probes -quiet -force -cell genblk3[2].m_computeBlock_in/mCompute -file genblk3_2_.m_computeBlock_in_mCompute_integer_partial.ltx}
+  catch {write_debug_probes -quiet -force -cell genblk3[3].m_computeBlock_in/mCompute -file genblk3_3_.m_computeBlock_in_mCompute_integer_partial.ltx}
+  catch {write_debug_probes -quiet -force -cell genblk4[0].m_computeBlock_out/mCompute -file genblk4_0_.m_computeBlock_out_mCompute_integer_partial.ltx}
+  catch {write_debug_probes -quiet -force -cell genblk4[1].m_computeBlock_out/mCompute -file genblk4_1_.m_computeBlock_out_mCompute_integer_partial.ltx}
+  catch {write_debug_probes -quiet -force -cell genblk4[2].m_computeBlock_out/mCompute -file genblk4_2_.m_computeBlock_out_mCompute_integer_partial.ltx}
+  catch {write_debug_probes -quiet -force -cell genblk4[3].m_computeBlock_out/mCompute -file genblk4_3_.m_computeBlock_out_mCompute_integer_partial.ltx}
+  close_msg_db -file write_bitstream.pb
 } RESULT]
 if {$rc} {
-  step_failed init_design
+  step_failed write_bitstream
   return -code error $RESULT
 } else {
-  end_step init_design
-  unset ACTIVE_STEP 
-}
-
-start_step opt_design
-set ACTIVE_STEP opt_design
-set rc [catch {
-  create_msg_db opt_design.pb
-  opt_design 
-  write_checkpoint -force multiplyXBar_opt.dcp
-  create_report "impl_1_opt_report_drc_0" "report_drc -file multiplyXBar_drc_opted.rpt -pb multiplyXBar_drc_opted.pb -rpx multiplyXBar_drc_opted.rpx"
-  close_msg_db -file opt_design.pb
-} RESULT]
-if {$rc} {
-  step_failed opt_design
-  return -code error $RESULT
-} else {
-  end_step opt_design
-  unset ACTIVE_STEP 
-}
-
-start_step place_design
-set ACTIVE_STEP place_design
-set rc [catch {
-  create_msg_db place_design.pb
-  if { [llength [get_debug_cores -quiet] ] > 0 }  { 
-    implement_debug_core 
-  } 
-  place_design 
-  write_checkpoint -force multiplyXBar_placed.dcp
-  create_report "impl_1_place_report_io_0" "report_io -file multiplyXBar_io_placed.rpt"
-  create_report "impl_1_place_report_utilization_0" "report_utilization -file multiplyXBar_utilization_placed.rpt -pb multiplyXBar_utilization_placed.pb"
-  create_report "impl_1_place_report_control_sets_0" "report_control_sets -verbose -file multiplyXBar_control_sets_placed.rpt"
-  close_msg_db -file place_design.pb
-} RESULT]
-if {$rc} {
-  step_failed place_design
-  return -code error $RESULT
-} else {
-  end_step place_design
-  unset ACTIVE_STEP 
-}
-
-start_step phys_opt_design
-set ACTIVE_STEP phys_opt_design
-set rc [catch {
-  create_msg_db phys_opt_design.pb
-  phys_opt_design 
-  write_checkpoint -force multiplyXBar_physopt.dcp
-  close_msg_db -file phys_opt_design.pb
-} RESULT]
-if {$rc} {
-  step_failed phys_opt_design
-  return -code error $RESULT
-} else {
-  end_step phys_opt_design
-  unset ACTIVE_STEP 
-}
-
-start_step route_design
-set ACTIVE_STEP route_design
-set rc [catch {
-  create_msg_db route_design.pb
-  route_design 
-  write_checkpoint -force multiplyXBar_routed.dcp
-  create_report "impl_1_route_report_drc_0" "report_drc -file multiplyXBar_drc_routed.rpt -pb multiplyXBar_drc_routed.pb -rpx multiplyXBar_drc_routed.rpx"
-  create_report "impl_1_route_report_methodology_0" "report_methodology -file multiplyXBar_methodology_drc_routed.rpt -pb multiplyXBar_methodology_drc_routed.pb -rpx multiplyXBar_methodology_drc_routed.rpx"
-  create_report "impl_1_route_report_power_0" "report_power -file multiplyXBar_power_routed.rpt -pb multiplyXBar_power_summary_routed.pb -rpx multiplyXBar_power_routed.rpx"
-  create_report "impl_1_route_report_route_status_0" "report_route_status -file multiplyXBar_route_status.rpt -pb multiplyXBar_route_status.pb"
-  create_report "impl_1_route_report_timing_summary_0" "report_timing_summary -max_paths 10 -file multiplyXBar_timing_summary_routed.rpt -pb multiplyXBar_timing_summary_routed.pb -rpx multiplyXBar_timing_summary_routed.rpx -warn_on_violation "
-  create_report "impl_1_route_report_incremental_reuse_0" "report_incremental_reuse -file multiplyXBar_incremental_reuse_routed.rpt"
-  create_report "impl_1_route_report_clock_utilization_0" "report_clock_utilization -file multiplyXBar_clock_utilization_routed.rpt"
-  create_report "impl_1_route_report_bus_skew_0" "report_bus_skew -warn_on_violation -file multiplyXBar_bus_skew_routed.rpt -pb multiplyXBar_bus_skew_routed.pb -rpx multiplyXBar_bus_skew_routed.rpx"
-  write_checkpoint -force -cell genblk3[0].m_computeBlock_in/mCompute genblk3_0_.m_computeBlock_in_mCompute_integer_routed.dcp
-  write_checkpoint -force -cell genblk3[1].m_computeBlock_in/mCompute genblk3_1_.m_computeBlock_in_mCompute_integer_routed.dcp
-  write_checkpoint -force -cell genblk3[2].m_computeBlock_in/mCompute genblk3_2_.m_computeBlock_in_mCompute_integer_routed.dcp
-  write_checkpoint -force -cell genblk3[3].m_computeBlock_in/mCompute genblk3_3_.m_computeBlock_in_mCompute_integer_routed.dcp
-  write_checkpoint -force -cell genblk4[0].m_computeBlock_out/mCompute genblk4_0_.m_computeBlock_out_mCompute_integer_routed.dcp
-  write_checkpoint -force -cell genblk4[1].m_computeBlock_out/mCompute genblk4_1_.m_computeBlock_out_mCompute_integer_routed.dcp
-  write_checkpoint -force -cell genblk4[2].m_computeBlock_out/mCompute genblk4_2_.m_computeBlock_out_mCompute_integer_routed.dcp
-  write_checkpoint -force -cell genblk4[3].m_computeBlock_out/mCompute genblk4_3_.m_computeBlock_out_mCompute_integer_routed.dcp
-  update_design -cell genblk3[0].m_computeBlock_in/mCompute -black_box
-  update_design -cell genblk3[1].m_computeBlock_in/mCompute -black_box
-  update_design -cell genblk3[2].m_computeBlock_in/mCompute -black_box
-  update_design -cell genblk3[3].m_computeBlock_in/mCompute -black_box
-  update_design -cell genblk4[0].m_computeBlock_out/mCompute -black_box
-  update_design -cell genblk4[1].m_computeBlock_out/mCompute -black_box
-  update_design -cell genblk4[2].m_computeBlock_out/mCompute -black_box
-  update_design -cell genblk4[3].m_computeBlock_out/mCompute -black_box
-  lock_design -level routing
-  write_checkpoint -force multiplyXBar_routed_bb.dcp
-  close_msg_db -file route_design.pb
-} RESULT]
-if {$rc} {
-  write_checkpoint -force multiplyXBar_routed_error.dcp
-  step_failed route_design
-  return -code error $RESULT
-} else {
-  end_step route_design
+  end_step write_bitstream
   unset ACTIVE_STEP 
 }
 

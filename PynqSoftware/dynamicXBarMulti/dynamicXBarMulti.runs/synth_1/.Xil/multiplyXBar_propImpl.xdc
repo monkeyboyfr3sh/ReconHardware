@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:{C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/dynamicXBarMulti/dynamicXBarMulti.srcs/constrs_1/imports/FPGA Files/xBarMultiplier.xdc} rfile:{../../../dynamicXBarMulti.srcs/constrs_1/imports/FPGA Files/xBarMultiplier.xdc} id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/dynamicXBarMulti/dynamicXBarMulti.srcs/constrs_1/imports/ConstraintFiles/XBarMulti.xdc rfile:../../../dynamicXBarMulti.srcs/constrs_1/imports/ConstraintFiles/XBarMulti.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:2 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN U17 [get_ports Clk]
 set_property src_info {type:XDC file:1 line:3 export:INPUT save:INPUT read:READ} [current_design]
@@ -20,46 +20,98 @@ set_property PACKAGE_PIN P14 [get_ports {dataOut[1]}]
 set_property src_info {type:XDC file:1 line:28 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN R14 [get_ports {dataOut[0]}]
 set_property src_info {type:XDC file:1 line:47 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN R17 [get_ports mStart_in]
+set_property PACKAGE_PIN T16 [get_ports mStart_in]
 set_property src_info {type:XDC file:1 line:48 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN R16 [get_ports bufferSelect]
+set_property src_info {type:XDC file:1 line:49 export:INPUT save:INPUT read:READ} [current_design]
+set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets Clk_IBUF_BUFG]
 set_property src_info {type:XDC file:1 line:50 export:INPUT save:INPUT read:READ} [current_design]
-create_pblock pblock_1
-add_cells_to_pblock [get_pblocks pblock_1] [get_cells -quiet [list {genblk3[0].m_computeBlock_in/mCompute}]]
-resize_pblock [get_pblocks pblock_1] -add {SLICE_X54Y25:SLICE_X57Y33}
-set_property SNAPPING_MODE ON [get_pblocks pblock_1]
-set_property src_info {type:XDC file:1 line:55 export:INPUT save:INPUT read:READ} [current_design]
-create_pblock pblock_2
-add_cells_to_pblock [get_pblocks pblock_2] [get_cells -quiet [list {genblk3[1].m_computeBlock_in/mCompute}]]
-resize_pblock [get_pblocks pblock_2] -add {SLICE_X58Y25:SLICE_X61Y33}
-set_property SNAPPING_MODE ON [get_pblocks pblock_2]
+set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets Clk_IBUF]
+set_property src_info {type:XDC file:1 line:52 export:INPUT save:INPUT read:READ} [current_design]
+create_pblock pblock_mCompute
+add_cells_to_pblock [get_pblocks pblock_mCompute] [get_cells -quiet [list {genblk3[0].m_computeBlock_in/mCompute}]]
+resize_pblock [get_pblocks pblock_mCompute] -add {SLICE_X50Y0:SLICE_X53Y23}
+set_property SNAPPING_MODE OFF [get_pblocks pblock_mCompute]
+set_property src_info {type:XDC file:1 line:56 export:INPUT save:INPUT read:READ} [current_design]
+create_pblock pblock_mCompute_2
+add_cells_to_pblock [get_pblocks pblock_mCompute_2] [get_cells -quiet [list {genblk3[2].m_computeBlock_in/mCompute}]]
+resize_pblock [get_pblocks pblock_mCompute_2] -add {SLICE_X60Y0:SLICE_X63Y23}
+set_property SNAPPING_MODE OFF [get_pblocks pblock_mCompute_2]
 set_property src_info {type:XDC file:1 line:60 export:INPUT save:INPUT read:READ} [current_design]
-create_pblock pblock_3
-add_cells_to_pblock [get_pblocks pblock_3] [get_cells -quiet [list {genblk3[2].m_computeBlock_in/mCompute}]]
-resize_pblock [get_pblocks pblock_3] -add {SLICE_X62Y25:SLICE_X65Y33}
-set_property SNAPPING_MODE ON [get_pblocks pblock_3]
+create_pblock pblock_mCompute_4
+add_cells_to_pblock [get_pblocks pblock_mCompute_4] [get_cells -quiet [list {genblk4[0].m_computeBlock_out/mCompute}]]
+resize_pblock [get_pblocks pblock_mCompute_4] -add {SLICE_X68Y0:SLICE_X71Y23}
+set_property SNAPPING_MODE OFF [get_pblocks pblock_mCompute_4]
 set_property src_info {type:XDC file:1 line:65 export:INPUT save:INPUT read:READ} [current_design]
-create_pblock pblock_4
-add_cells_to_pblock [get_pblocks pblock_4] [get_cells -quiet [list {genblk3[3].m_computeBlock_in/mCompute}]]
-resize_pblock [get_pblocks pblock_4] -add {SLICE_X66Y25:SLICE_X69Y33}
-set_property SNAPPING_MODE ON [get_pblocks pblock_4]
-set_property src_info {type:XDC file:1 line:70 export:INPUT save:INPUT read:READ} [current_design]
-create_pblock pblock_5
-add_cells_to_pblock [get_pblocks pblock_5] [get_cells -quiet [list {genblk4[0].m_computeBlock_out/mCompute}]]
-resize_pblock [get_pblocks pblock_5] -add {SLICE_X70Y25:SLICE_X73Y33}
-set_property SNAPPING_MODE ON [get_pblocks pblock_5]
-set_property src_info {type:XDC file:1 line:75 export:INPUT save:INPUT read:READ} [current_design]
-create_pblock pblock_6
-add_cells_to_pblock [get_pblocks pblock_6] [get_cells -quiet [list {genblk4[1].m_computeBlock_out/mCompute}]]
-resize_pblock [get_pblocks pblock_6] -add {SLICE_X74Y25:SLICE_X77Y33}
-set_property SNAPPING_MODE ON [get_pblocks pblock_6]
-set_property src_info {type:XDC file:1 line:80 export:INPUT save:INPUT read:READ} [current_design]
-create_pblock pblock_7
-add_cells_to_pblock [get_pblocks pblock_7] [get_cells -quiet [list {genblk4[2].m_computeBlock_out/mCompute}]]
-resize_pblock [get_pblocks pblock_7] -add {SLICE_X78Y25:SLICE_X81Y33}
-set_property SNAPPING_MODE ON [get_pblocks pblock_7]
-set_property src_info {type:XDC file:1 line:85 export:INPUT save:INPUT read:READ} [current_design]
-create_pblock pblock_8
-add_cells_to_pblock [get_pblocks pblock_8] [get_cells -quiet [list {genblk4[3].m_computeBlock_out/mCompute}]]
-resize_pblock [get_pblocks pblock_8] -add {SLICE_X82Y25:SLICE_X85Y33}
-set_property SNAPPING_MODE ON [get_pblocks pblock_8]
+create_pblock pblock_mCompute_1
+add_cells_to_pblock [get_pblocks pblock_mCompute_1] [get_cells -quiet [list {genblk3[1].m_computeBlock_in/mCompute}]]
+resize_pblock [get_pblocks pblock_mCompute_1] -add {SLICE_X56Y0:SLICE_X59Y23}
+set_property SNAPPING_MODE OFF [get_pblocks pblock_mCompute_1]
+set_property src_info {type:XDC file:1 line:69 export:INPUT save:INPUT read:READ} [current_design]
+create_pblock pblock_mCompute_3
+add_cells_to_pblock [get_pblocks pblock_mCompute_3] [get_cells -quiet [list {genblk3[3].m_computeBlock_in/mCompute}]]
+resize_pblock [get_pblocks pblock_mCompute_3] -add {SLICE_X64Y0:SLICE_X67Y23}
+set_property SNAPPING_MODE OFF [get_pblocks pblock_mCompute_3]
+set_property src_info {type:XDC file:1 line:73 export:INPUT save:INPUT read:READ} [current_design]
+create_pblock pblock_mCompute_5
+add_cells_to_pblock [get_pblocks pblock_mCompute_5] [get_cells -quiet [list {genblk4[1].m_computeBlock_out/mCompute}]]
+resize_pblock [get_pblocks pblock_mCompute_5] -add {SLICE_X72Y0:SLICE_X75Y23}
+set_property SNAPPING_MODE OFF [get_pblocks pblock_mCompute_5]
+set_property src_info {type:XDC file:1 line:77 export:INPUT save:INPUT read:READ} [current_design]
+create_pblock pblock_mCompute_6
+add_cells_to_pblock [get_pblocks pblock_mCompute_6] [get_cells -quiet [list {genblk4[2].m_computeBlock_out/mCompute}]]
+resize_pblock [get_pblocks pblock_mCompute_6] -add {SLICE_X76Y0:SLICE_X79Y23}
+set_property SNAPPING_MODE OFF [get_pblocks pblock_mCompute_6]
+set_property src_info {type:XDC file:1 line:82 export:INPUT save:INPUT read:READ} [current_design]
+create_pblock pblock_mCompute_7
+add_cells_to_pblock [get_pblocks pblock_mCompute_7] [get_cells -quiet [list {genblk4[3].m_computeBlock_out/mCompute}]]
+resize_pblock [get_pblocks pblock_mCompute_7] -add {SLICE_X82Y0:SLICE_X85Y23}
+set_property SNAPPING_MODE OFF [get_pblocks pblock_mCompute_7]
+set_property src_info {type:XDC file:1 line:87 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN V18 [get_ports {AddressSelect[4]}]
+set_property src_info {type:XDC file:1 line:88 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN V15 [get_ports {AddressSelect[0]}]
+set_property src_info {type:XDC file:1 line:95 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN N17 [get_ports {bufferRD_out[0]}]
+set_property src_info {type:XDC file:1 line:96 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN G14 [get_ports {mReady_in[0]}]
+set_property src_info {type:XDC file:1 line:97 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN L15 [get_ports {mReady_out[0]}]
+set_property src_info {type:XDC file:1 line:98 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN M19 [get_ports {outputSelect[1]}]
+set_property src_info {type:XDC file:1 line:99 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN M20 [get_ports {outputSelect[0]}]
+set_property src_info {type:XDC file:1 line:100 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN R17 [get_ports mStart_out]
+set_property src_info {type:XDC file:1 line:102 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN A20 [get_ports {mReady_in[3]}]
+set_property src_info {type:XDC file:1 line:107 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN B19 [get_ports {mReady_in[2]}]
+set_property src_info {type:XDC file:1 line:108 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN B20 [get_ports {mReady_in[1]}]
+set_property src_info {type:XDC file:1 line:109 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN C20 [get_ports {AddressSelect[3]}]
+set_property src_info {type:XDC file:1 line:110 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN D18 [get_ports {AddressSelect[2]}]
+set_property src_info {type:XDC file:1 line:111 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN D19 [get_ports {AddressSelect[1]}]
+set_property src_info {type:XDC file:1 line:116 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN T15 [get_ports {bufferRD_in[0]}]
+set_property src_info {type:XDC file:1 line:117 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN D20 [get_ports {bufferRD_in[3]}]
+set_property src_info {type:XDC file:1 line:118 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN E17 [get_ports {bufferRD_in[2]}]
+set_property src_info {type:XDC file:1 line:119 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN E18 [get_ports {bufferRD_in[1]}]
+set_property src_info {type:XDC file:1 line:124 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN E19 [get_ports {bufferRD_out[3]}]
+set_property src_info {type:XDC file:1 line:125 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN F16 [get_ports {bufferRD_out[2]}]
+set_property src_info {type:XDC file:1 line:126 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN F17 [get_ports {bufferRD_out[1]}]
+set_property src_info {type:XDC file:1 line:127 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN F19 [get_ports {mReady_out[3]}]
+set_property src_info {type:XDC file:1 line:128 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN F20 [get_ports {mReady_out[2]}]
+set_property src_info {type:XDC file:1 line:129 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN G15 [get_ports {mReady_out[1]}]

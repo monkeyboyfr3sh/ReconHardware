@@ -50,8 +50,8 @@ set_property used_in_implementation false [get_files -all C:/Users/monke/Documen
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc {{C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/dynamicMulti/dynamicMulti.srcs/constrs_1/imports/FPGA Files/reconfigMultiplyBlock.xdc}}
-set_property used_in_implementation false [get_files {{C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/dynamicMulti/dynamicMulti.srcs/constrs_1/imports/FPGA Files/reconfigMultiplyBlock.xdc}}]
+read_xdc C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/dynamicMulti/dynamicMulti.srcs/constrs_1/imports/ConstraintFiles/XBarMulti.xdc
+set_property used_in_implementation false [get_files C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/dynamicMulti/dynamicMulti.srcs/constrs_1/imports/ConstraintFiles/XBarMulti.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
