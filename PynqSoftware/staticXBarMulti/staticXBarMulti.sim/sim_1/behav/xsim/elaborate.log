@@ -9,20 +9,4 @@ WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 fo
 WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'bufferEN' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/staticXBarMulti/staticXBarMulti.srcs/sources_1/imports/new/multiplyXBar.v:116]
 WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'chunkCount' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/staticXBarMulti/staticXBarMulti.srcs/sources_1/imports/new/multiplyXBar.v:123]
 Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.mux
-Compiling module xil_defaultlib.XBar
-Compiling module xil_defaultlib.SingleBuffer
-Compiling module xil_defaultlib.ParallelBuffer
-Compiling module xil_defaultlib.ps_Wrap_ParallelBuffer_0_0
-Compiling module xil_defaultlib.dataSplit
-Compiling module xil_defaultlib.ps_Wrap_dataSplit_0_0
-Compiling module xil_defaultlib.ps_Wrap
-Compiling module xil_defaultlib.multiplyCompute
-Compiling module xil_defaultlib.dynamicMulti
-Compiling module xil_defaultlib.multiplyXBar_default
-Compiling module xil_defaultlib.XBarMulti_tb
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot XBarMulti_tb_behav
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel

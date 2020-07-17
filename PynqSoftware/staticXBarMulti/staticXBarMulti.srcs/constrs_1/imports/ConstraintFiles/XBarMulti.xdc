@@ -46,7 +46,6 @@ set_property IOSTANDARD LVCMOS33 [get_ports {mReady_out[1]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {mReady_out[0]}]
 set_property PACKAGE_PIN T16 [get_ports mStart_in]
 set_property PACKAGE_PIN R16 [get_ports bufferSelect]
-set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets Clk_IBUF_BUFG]
 set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets Clk_IBUF]
 
 set_property PACKAGE_PIN V18 [get_ports {AddressSelect[4]}]
