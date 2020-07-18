@@ -1,0 +1,8 @@
+0.6
+2019.2
+Nov  6 2019
+21:57:16
+C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/XBar/XBar.sim/sim_1/behav/xsim/glbl.v,1593053990,verilog,,,,glbl,,,,,,,,
+C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/XBar/XBar.srcs/sim_1/new/XBar_tb.v,1595018631,verilog,,,,XBar_tb,,,../../../../XBar.srcs/sources_1/imports/new,,,,,
+C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/XBar/XBar.srcs/sources_1/imports/new/XBar.v,1595019161,verilog,,C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/XBar/XBar.srcs/sim_1/new/XBar_tb.v,C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/XBar/XBar.srcs/sources_1/imports/new/definitions.h,XBar,,,../../../../XBar.srcs/sources_1/imports/new,,,,,
+C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/XBar/XBar.srcs/sources_1/imports/new/definitions.h,1595014495,verilog,,,,,,,,,,,,

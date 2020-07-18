@@ -17,13 +17,14 @@ in2 |   a[2][0]     a[2][1]     a[2][2]     a[2][3]     a[2][4]     a[2][5]     
 */
 
 module XBar(
+    Clk,
     Rst,
     flatInputPort,
     flatOutputPort,
     AddressSelect
     );
 
-input   Rst;
+input   Clk,Rst;
 input   [`addressLength-1:0]      AddressSelect;
 //Creates an array of inputs = inputportCount, with size bitLength
 input   [`inputPortCount*`bitLength-1:0]    flatInputPort;
@@ -46,7 +47,7 @@ generate
     end
 endgenerate
 
-always @(flatInputPort or AddressSelect)begin
+always @(flatInputPort or posedge Clk)begin
     for(j=0;j<`outputPortCount;j=j+1)begin
         outUsed = 0;
         for(i=0;i<`inputPortCount*`bitLength;i=i+`bitLength)begin
@@ -63,10 +64,8 @@ always @(flatInputPort or AddressSelect)begin
     end
 end
 
-always @(AddressSelect or Rst)begin
-    if(Rst)begin
-        for(k=0;k<`inputPortCount;k=k+1) AddressSave[k] = 0;
-    end
+always @(posedge Clk or posedge Rst)begin
+    if(Rst) for(k=0;k<`inputPortCount;k=k+1) AddressSave[k] = 0;
     else begin
         //Flags for checking if other rows are being used,
         //Must toggle a row off before assigning a new one

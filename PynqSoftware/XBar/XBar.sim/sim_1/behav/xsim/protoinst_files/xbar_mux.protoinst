@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"xbar_mux": {
+			"proto_instances": {
+			}
+		}
+	}
+}

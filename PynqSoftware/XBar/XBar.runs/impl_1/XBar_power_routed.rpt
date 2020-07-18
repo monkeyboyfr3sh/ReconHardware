@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date             : Sun Jul 12 13:51:31 2020
+| Date             : Fri Jul 17 16:34:07 2020
 | Host             : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 | Command          : report_power -file XBar_power_routed.rpt -pb XBar_power_summary_routed.pb -rpx XBar_power_routed.rpx
 | Design           : XBar
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.488        |
+| Total On-Chip Power (W)  | 0.408        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.360        |
-| Device Static (W)        | 0.128        |
+| Dynamic (W)              | 0.301        |
+| Device Static (W)        | 0.107        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 67.8         |
-| Junction Temperature (C) | 42.2         |
+| Max Ambient (C)          | 80.3         |
+| Junction Temperature (C) | 29.7         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,15 +52,16 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.536 |      109 |       --- |             --- |
-|   LUT as Logic |     0.532 |       58 |     53200 |            0.11 |
-|   F7/F8 Muxes  |     0.004 |        3 |     53200 |           <0.01 |
-|   Register     |     0.000 |       32 |    106400 |            0.03 |
+| Slice Logic    |     0.108 |       73 |       --- |             --- |
+|   LUT as Logic |     0.101 |       46 |     53200 |            0.09 |
+|   BUFG         |     0.006 |        1 |        32 |            3.13 |
+|   F7/F8 Muxes  |    <0.001 |        2 |     53200 |           <0.01 |
+|   Register     |    <0.001 |       20 |    106400 |            0.02 |
 |   Others       |     0.000 |        2 |       --- |             --- |
-| Signals        |     0.740 |      123 |       --- |             --- |
-| I/O            |     0.084 |       38 |       125 |           30.40 |
-| Static Power   |     0.128 |          |           |                 |
-| Total          |     1.488 |          |           |                 |
+| Signals        |     0.152 |       61 |       --- |             --- |
+| I/O            |     0.040 |       15 |       125 |           12.00 |
+| Static Power   |     0.107 |          |           |                 |
+| Total          |     0.408 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -70,8 +71,8 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     1.373 |       1.360 |      0.014 |
-| Vccaux    |       1.800 |     0.014 |       0.000 |      0.014 |
+| Vccint    |       1.000 |     0.309 |       0.301 |      0.008 |
+| Vccaux    |       1.800 |     0.011 |       0.000 |      0.011 |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
@@ -83,7 +84,7 @@ Table of Contents
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccpint   |       1.000 |     0.028 |       0.000 |      0.028 |
+| Vccpint   |       1.000 |     0.018 |       0.000 |      0.018 |
 | Vccpaux   |       1.800 |     0.010 |       0.000 |      0.010 |
 | Vccpll    |       1.800 |     0.003 |       0.000 |      0.003 |
 | Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -144,7 +145,7 @@ Table of Contents
 +------+-----------+
 | Name | Power (W) |
 +------+-----------+
-| XBar |     1.360 |
+| XBar |     0.301 |
 +------+-----------+
 
 
