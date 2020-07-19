@@ -83,7 +83,9 @@ mux outputMux(
             .selector(outputSelect)
             );
 
-XBar xbar (  .Rst(Rst),
+XBar xbar ( 
+            .Clk(Clk),
+            .Rst(Rst),
             .flatInputPort(xbar_inputConnector),
             .flatOutputPort(xbar_outputConnector),
             .AddressSelect(AddressSelect)

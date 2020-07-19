@@ -41,7 +41,8 @@ wire    [`inputPortCount-1:0]       mReady_in;      //mReady bus
 wire    [`outputPortCount-1:0]      mReady_out;     //mReady bus
 wire    [`bitLength-1:0]            dataOut;
 
-multiplyXBar uut(   Clk,Rst,
+multiplyXBar uut(   Clk,
+                    Rst,
                     dataIn,         //data input to all multipliers that input to the xbar
                     dataOut,        //data output that currently is straight from xbar
                     AddressSelect,  //AddressSelect for xbar
@@ -69,23 +70,23 @@ Rst = 0;
 //Xbar Variables
 //Turn addresses on
 AddressSelect = 0;
-#`toggleTime;
+#`clkPeriod;
 AddressSelect = 5;
-#`toggleTime;
+#`clkPeriod;
 AddressSelect = 10;
-#`toggleTime;
+#`clkPeriod;
 AddressSelect = 15;
-#`toggleTime;
+#`clkPeriod;
 
 //Test for ghost inputs(Repeat output use, if IP is working properly, none of these addresses should be toggled)
 AddressSelect = 1;
-#`toggleTime;
+#`clkPeriod;
 AddressSelect = 6;
-#`toggleTime;
+#`clkPeriod;
 AddressSelect = 2;
-#`toggleTime;
+#`clkPeriod;
 AddressSelect = 12;
-#`toggleTime;
+#`clkPeriod;
 
 //Set address to rest position
 AddressSelect = `restAddress;

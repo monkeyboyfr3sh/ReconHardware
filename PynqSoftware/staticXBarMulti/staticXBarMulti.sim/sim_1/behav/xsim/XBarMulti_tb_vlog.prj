@@ -6,7 +6,7 @@ verilog xil_defaultlib "C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftwa
 "../../../../staticXBarMulti.ip_user_files/bd/ps_Wrap/ip/ps_Wrap_ParallelBuffer_0_0/sim/ps_Wrap_ParallelBuffer_0_0.v" \
 "../../../../staticXBarMulti.ip_user_files/bd/ps_Wrap/ip/ps_Wrap_dataSplit_0_0/sim/ps_Wrap_dataSplit_0_0.v" \
 "../../../../staticXBarMulti.ip_user_files/bd/ps_Wrap/sim/ps_Wrap.v" \
-"../../../../staticXBarMulti.srcs/sources_1/imports/PynqSoftware/XBar/XBar.srcs/sources_1/imports/new/XBar.v" \
+"../../../../staticXBarMulti.srcs/sources_1/imports/new/XBar.v" \
 "../../../../../dynamicMulti/dynamicMulti.srcs/sources_1/new/dynamicMulti.v" \
 "../../../../../dynamicMulti/dynamicMulti.srcs/sources_1/imports/new/multiplyCompute.v" \
 "../../../../staticXBarMulti.srcs/sources_1/imports/new/multiplyXBar.v" \

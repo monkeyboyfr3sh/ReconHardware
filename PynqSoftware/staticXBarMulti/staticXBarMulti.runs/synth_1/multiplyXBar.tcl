@@ -17,6 +17,8 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param chipscope.maxJobs 2
+set_msg_config -id {Common 17-41} -limit 10000000
 create_project -in_memory -part xc7z020clg400-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -34,7 +36,7 @@ read_verilog C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/dynamicM
 set_property file_type "Verilog Header" [get_files C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/dynamicMulti/dynamicMulti.srcs/sources_1/imports/new/definitions.h]
 set_property is_global_include true [get_files C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/dynamicMulti/dynamicMulti.srcs/sources_1/imports/new/definitions.h]
 read_verilog -library xil_defaultlib {
-  C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/staticXBarMulti/staticXBarMulti.srcs/sources_1/imports/PynqSoftware/XBar/XBar.srcs/sources_1/imports/new/XBar.v
+  C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/staticXBarMulti/staticXBarMulti.srcs/sources_1/imports/new/XBar.v
   C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/dynamicMulti/dynamicMulti.srcs/sources_1/new/dynamicMulti.v
   C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/dynamicMulti/dynamicMulti.srcs/sources_1/imports/new/multiplyCompute.v
   C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/staticXBarMulti/staticXBarMulti.srcs/sources_1/imports/PynqSoftware/dynamicXBarMulti/dynamicXBarMulti.srcs/sources_1/new/mux.v

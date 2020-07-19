@@ -1,5 +1,5 @@
 //Half Clk period
-#define halfclk             100
+#define halfclk             300
 
 //Pin definitions
 #define Clk_pin             18
@@ -61,18 +61,13 @@ void runTB(){
   digitalWrite(Rst_pin, LOW);
 
   //Init XBar for a connection from input multi0 to output multi0
-  digitalWrite(addressSelect0_pin, HIGH);
-
-  clk();
-
-  digitalWrite(addressSelect0_pin, LOW); 
-  digitalWrite(addressSelect4_pin, HIGH); //Trigger "rest position" for xbar
+  digitalWrite(addressSelect4_pin, LOW);
+  digitalWrite(addressSelect0_pin, LOW);
 
   clk();
   
   //Initing buffer to read
   digitalWrite(mStartin_pin, LOW);
-  digitalWrite(mStartout_pin, LOW);
   
   //Turn input multi0 on,turn output multi0 off
   digitalWrite(bufferRDout0_pin, HIGH);
@@ -94,30 +89,8 @@ void runTB(){
   //Start multiply
   digitalWrite(bufferRDin0_pin,HIGH);
   digitalWrite(mStartin_pin,HIGH);
-  
-  clk();
 
-  //Now input multi0 shoud have data feeding to output multi0
-  digitalWrite(mStartin_pin,LOW);
-
-  clk();
-
-  digitalWrite(mStartout_pin, LOW);
-
-  //Since data should already be availible to output multi0, make sure it is in read state
-  digitalWrite(bufferRDout0_pin,LOW);
-
-  //Load value into buffer0
-  digitalWrite(bufferSelect_pin, LOW);
-  clk();
-  //Load value into buffer1
-  digitalWrite(bufferSelect_pin, HIGH);
-  clk();
-  digitalWrite(mStartout_pin, HIGH);
-  clk();
-  //Data should now be shown on LEDs.
-  digitalWrite(mStartout_pin, LOW);
-  clk();
+  clk();clk();
 }
 void outData(){
   Serial.println("Read LD1-LD4 for multiplier output");

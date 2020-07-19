@@ -2,8 +2,8 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Thu Jul 16 17:02:27 2020
-# Process ID: 35060
+# Start of session at: Sat Jul 18 14:08:02 2020
+# Process ID: 22688
 # Current directory: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/staticXBarMulti/staticXBarMulti.runs/synth_1
 # Command line: vivado.exe -log multiplyXBar.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source multiplyXBar.tcl
 # Log file: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/staticXBarMulti/staticXBarMulti.runs/synth_1/multiplyXBar.vds
@@ -19,31 +19,35 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 36432 
+INFO: Helper process launched with PID 22972 
 WARNING: [Synth 8-1935] empty port in module declaration [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/staticXBarMulti/staticXBarMulti.srcs/sources_1/imports/new/multiplyXBar.v:19]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 994.184 ; gain = 239.250
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 993.145 ; gain = 238.734
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'multiplyXBar' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/staticXBarMulti/staticXBarMulti.srcs/sources_1/imports/new/multiplyXBar.v:7]
 INFO: [Synth 8-6157] synthesizing module 'dynamicMulti' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/dynamicMulti/dynamicMulti.srcs/sources_1/new/dynamicMulti.v:4]
 INFO: [Synth 8-6157] synthesizing module 'ps_Wrap' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/dynamicMulti/dynamicMulti.srcs/sources_1/bd/ps_Wrap/synth/ps_Wrap.v:13]
-INFO: [Synth 8-6157] synthesizing module 'ps_Wrap_ParallelBuffer_0_0' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/staticXBarMulti/staticXBarMulti.runs/synth_1/.Xil/Vivado-35060-DESKTOP-D9F9TPQ/realtime/ps_Wrap_ParallelBuffer_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'ps_Wrap_ParallelBuffer_0_0' (1#1) [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/staticXBarMulti/staticXBarMulti.runs/synth_1/.Xil/Vivado-35060-DESKTOP-D9F9TPQ/realtime/ps_Wrap_ParallelBuffer_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'ps_Wrap_dataSplit_0_0' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/staticXBarMulti/staticXBarMulti.runs/synth_1/.Xil/Vivado-35060-DESKTOP-D9F9TPQ/realtime/ps_Wrap_dataSplit_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'ps_Wrap_dataSplit_0_0' (2#1) [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/staticXBarMulti/staticXBarMulti.runs/synth_1/.Xil/Vivado-35060-DESKTOP-D9F9TPQ/realtime/ps_Wrap_dataSplit_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'ps_Wrap_ParallelBuffer_0_0' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/staticXBarMulti/staticXBarMulti.runs/synth_1/.Xil/Vivado-22688-DESKTOP-D9F9TPQ/realtime/ps_Wrap_ParallelBuffer_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ps_Wrap_ParallelBuffer_0_0' (1#1) [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/staticXBarMulti/staticXBarMulti.runs/synth_1/.Xil/Vivado-22688-DESKTOP-D9F9TPQ/realtime/ps_Wrap_ParallelBuffer_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'ps_Wrap_dataSplit_0_0' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/staticXBarMulti/staticXBarMulti.runs/synth_1/.Xil/Vivado-22688-DESKTOP-D9F9TPQ/realtime/ps_Wrap_dataSplit_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ps_Wrap_dataSplit_0_0' (2#1) [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/staticXBarMulti/staticXBarMulti.runs/synth_1/.Xil/Vivado-22688-DESKTOP-D9F9TPQ/realtime/ps_Wrap_dataSplit_0_0_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 'ps_Wrap' (3#1) [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/dynamicMulti/dynamicMulti.srcs/sources_1/bd/ps_Wrap/synth/ps_Wrap.v:13]
 INFO: [Synth 8-6157] synthesizing module 'multiplyCompute' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/dynamicMulti/dynamicMulti.srcs/sources_1/imports/new/multiplyCompute.v:4]
 INFO: [Synth 8-6155] done synthesizing module 'multiplyCompute' (4#1) [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/dynamicMulti/dynamicMulti.srcs/sources_1/imports/new/multiplyCompute.v:4]
 INFO: [Synth 8-6155] done synthesizing module 'dynamicMulti' (5#1) [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/dynamicMulti/dynamicMulti.srcs/sources_1/new/dynamicMulti.v:4]
 INFO: [Synth 8-6157] synthesizing module 'mux' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/staticXBarMulti/staticXBarMulti.srcs/sources_1/imports/PynqSoftware/dynamicXBarMulti/dynamicXBarMulti.srcs/sources_1/new/mux.v:4]
 INFO: [Synth 8-6155] done synthesizing module 'mux' (6#1) [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/staticXBarMulti/staticXBarMulti.srcs/sources_1/imports/PynqSoftware/dynamicXBarMulti/dynamicXBarMulti.srcs/sources_1/new/mux.v:4]
-INFO: [Synth 8-6157] synthesizing module 'XBar' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/staticXBarMulti/staticXBarMulti.srcs/sources_1/imports/PynqSoftware/XBar/XBar.srcs/sources_1/imports/new/XBar.v:19]
-WARNING: [Synth 8-567] referenced signal 'AddressSave' should be on the sensitivity list [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/staticXBarMulti/staticXBarMulti.srcs/sources_1/imports/PynqSoftware/XBar/XBar.srcs/sources_1/imports/new/XBar.v:49]
-INFO: [Synth 8-6155] done synthesizing module 'XBar' (7#1) [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/staticXBarMulti/staticXBarMulti.srcs/sources_1/imports/PynqSoftware/XBar/XBar.srcs/sources_1/imports/new/XBar.v:19]
+INFO: [Synth 8-6157] synthesizing module 'XBar' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/staticXBarMulti/staticXBarMulti.srcs/sources_1/imports/new/XBar.v:19]
+WARNING: [Synth 8-567] referenced signal 'AddressSave' should be on the sensitivity list [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/staticXBarMulti/staticXBarMulti.srcs/sources_1/imports/new/XBar.v:50]
+WARNING: [Synth 8-6014] Unused sequential element rowCheck_reg was removed.  [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/staticXBarMulti/staticXBarMulti.srcs/sources_1/imports/new/XBar.v:72]
+WARNING: [Synth 8-6014] Unused sequential element rowSet_reg was removed.  [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/staticXBarMulti/staticXBarMulti.srcs/sources_1/imports/new/XBar.v:73]
+WARNING: [Synth 8-6014] Unused sequential element selectRow_reg was removed.  [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/staticXBarMulti/staticXBarMulti.srcs/sources_1/imports/new/XBar.v:75]
+WARNING: [Synth 8-6014] Unused sequential element selectColomn_reg was removed.  [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/staticXBarMulti/staticXBarMulti.srcs/sources_1/imports/new/XBar.v:77]
+INFO: [Synth 8-6155] done synthesizing module 'XBar' (7#1) [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/staticXBarMulti/staticXBarMulti.srcs/sources_1/imports/new/XBar.v:19]
 WARNING: [Synth 8-308] ignoring empty port [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/staticXBarMulti/staticXBarMulti.srcs/sources_1/imports/new/multiplyXBar.v:20]
 INFO: [Synth 8-6155] done synthesizing module 'multiplyXBar' (8#1) [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/staticXBarMulti/staticXBarMulti.srcs/sources_1/imports/new/multiplyXBar.v:7]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1042.273 ; gain = 287.340
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1042.180 ; gain = 287.770
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -56,12 +60,12 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1042.273 ; gain = 287.340
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1042.180 ; gain = 287.770
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1042.273 ; gain = 287.340
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1042.180 ; gain = 287.770
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1042.273 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1042.180 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -108,20 +112,20 @@ Parsing XDC File [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/sta
 Finished Parsing XDC File [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/staticXBarMulti/staticXBarMulti.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1160.023 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1159.227 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1160.023 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1159.227 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1160.023 ; gain = 405.090
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1159.227 ; gain = 404.816
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1160.023 ; gain = 405.090
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1159.227 ; gain = 404.816
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -151,18 +155,14 @@ Applied set_property DONT_TOUCH = true for \genblk4[1].m_computeBlock_out /psWra
 Applied set_property DONT_TOUCH = true for \genblk4[2].m_computeBlock_out /psWrap/dataSplit_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for \genblk4[3].m_computeBlock_out /psWrap/dataSplit_0. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1160.023 ; gain = 405.090
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1159.227 ; gain = 404.816
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-327] inferring latch for variable 'OutputSave_reg[0]' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/staticXBarMulti/staticXBarMulti.srcs/sources_1/imports/PynqSoftware/XBar/XBar.srcs/sources_1/imports/new/XBar.v:45]
-WARNING: [Synth 8-327] inferring latch for variable 'OutputSave_reg[1]' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/staticXBarMulti/staticXBarMulti.srcs/sources_1/imports/PynqSoftware/XBar/XBar.srcs/sources_1/imports/new/XBar.v:45]
-WARNING: [Synth 8-327] inferring latch for variable 'OutputSave_reg[2]' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/staticXBarMulti/staticXBarMulti.srcs/sources_1/imports/PynqSoftware/XBar/XBar.srcs/sources_1/imports/new/XBar.v:45]
-WARNING: [Synth 8-327] inferring latch for variable 'OutputSave_reg[3]' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/staticXBarMulti/staticXBarMulti.srcs/sources_1/imports/PynqSoftware/XBar/XBar.srcs/sources_1/imports/new/XBar.v:45]
-WARNING: [Synth 8-327] inferring latch for variable 'AddressSave_reg[0]' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/staticXBarMulti/staticXBarMulti.srcs/sources_1/imports/PynqSoftware/XBar/XBar.srcs/sources_1/imports/new/XBar.v:68]
-WARNING: [Synth 8-327] inferring latch for variable 'AddressSave_reg[1]' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/staticXBarMulti/staticXBarMulti.srcs/sources_1/imports/PynqSoftware/XBar/XBar.srcs/sources_1/imports/new/XBar.v:68]
-WARNING: [Synth 8-327] inferring latch for variable 'AddressSave_reg[2]' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/staticXBarMulti/staticXBarMulti.srcs/sources_1/imports/PynqSoftware/XBar/XBar.srcs/sources_1/imports/new/XBar.v:68]
-WARNING: [Synth 8-327] inferring latch for variable 'AddressSave_reg[3]' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/staticXBarMulti/staticXBarMulti.srcs/sources_1/imports/PynqSoftware/XBar/XBar.srcs/sources_1/imports/new/XBar.v:68]
+WARNING: [Synth 8-327] inferring latch for variable 'OutputSave_reg[0]' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/staticXBarMulti/staticXBarMulti.srcs/sources_1/imports/new/XBar.v:46]
+WARNING: [Synth 8-327] inferring latch for variable 'OutputSave_reg[1]' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/staticXBarMulti/staticXBarMulti.srcs/sources_1/imports/new/XBar.v:46]
+WARNING: [Synth 8-327] inferring latch for variable 'OutputSave_reg[2]' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/staticXBarMulti/staticXBarMulti.srcs/sources_1/imports/new/XBar.v:46]
+WARNING: [Synth 8-327] inferring latch for variable 'OutputSave_reg[3]' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/staticXBarMulti/staticXBarMulti.srcs/sources_1/imports/new/XBar.v:46]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1160.023 ; gain = 405.090
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1159.227 ; gain = 404.816
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -178,6 +178,7 @@ Detailed RTL Component Info :
 	   4 Input      8 Bit       Adders := 8     
 +---Registers : 
 	                8 Bit    Registers := 8     
+	                4 Bit    Registers := 4     
 	                1 Bit    Registers := 8     
 +---Muxes : 
 	   2 Input      7 Bit        Muxes := 8     
@@ -199,6 +200,8 @@ Detailed RTL Component Info :
 	   4 Input      4 Bit        Muxes := 1     
 Module XBar 
 Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 4     
 +---Muxes : 
 	   2 Input      4 Bit        Muxes := 37    
 	   4 Input      4 Bit        Muxes := 1     
@@ -232,7 +235,7 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1160.023 ; gain = 405.090
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1159.227 ; gain = 404.816
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -244,13 +247,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1160.023 ; gain = 405.090
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1159.227 ; gain = 404.816
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1160.023 ; gain = 405.090
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1159.227 ; gain = 404.816
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -262,7 +265,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1161.012 ; gain = 406.078
+Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1170.910 ; gain = 416.500
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -286,13 +289,13 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1176.816 ; gain = 421.883
+Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1176.723 ; gain = 422.312
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1176.816 ; gain = 421.883
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1176.723 ; gain = 422.312
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -311,25 +314,25 @@ Report Check Netlist:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1176.816 ; gain = 421.883
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1176.723 ; gain = 422.312
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1176.816 ; gain = 421.883
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1176.723 ; gain = 422.312
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1176.816 ; gain = 421.883
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1176.723 ; gain = 422.312
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1176.816 ; gain = 421.883
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1176.723 ; gain = 422.312
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -366,22 +369,23 @@ Report Cell Usage:
 |17    |BUFG                           |     1|
 |18    |CARRY4                         |    16|
 |19    |LUT2                           |    40|
-|20    |LUT3                           |    32|
+|20    |LUT3                           |    16|
 |21    |LUT4                           |    44|
-|22    |LUT6                           |   144|
-|23    |MUXF7                          |     2|
-|24    |MUXF8                          |     1|
-|25    |FDRE                           |    72|
-|26    |LDC                            |    32|
-|27    |IBUF                           |    24|
-|28    |OBUF                           |    12|
+|22    |LUT5                           |    16|
+|23    |LUT6                           |   144|
+|24    |MUXF7                          |     2|
+|25    |FDCE                           |    16|
+|26    |FDRE                           |    72|
+|27    |LDC                            |    16|
+|28    |IBUF                           |    24|
+|29    |OBUF                           |    12|
 +------+-------------------------------+------+
 
 Report Instance Areas: 
 +------+----------------------------------+------------------------+------+
 |      |Instance                          |Module                  |Cells |
 +------+----------------------------------+------------------------+------+
-|1     |top                               |                        |   532|
+|1     |top                               |                        |   531|
 |2     |  \genblk3[0].m_computeBlock_in   |dynamicMulti__xdcDup__1 |    48|
 |3     |    psWrap                        |ps_Wrap__xdcDup__1      |    14|
 |4     |    mCompute                      |multiplyCompute_6       |    34|
@@ -407,32 +411,32 @@ Report Instance Areas:
 |24    |    psWrap                        |ps_Wrap                 |    14|
 |25    |    mCompute                      |multiplyCompute         |    34|
 |26    |  outputMux                       |mux                     |     4|
-|27    |  xbar                            |XBar                    |   107|
+|27    |  xbar                            |XBar                    |   106|
 +------+----------------------------------+------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1176.816 ; gain = 421.883
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1176.723 ; gain = 422.312
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 8 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 1176.816 ; gain = 304.133
-Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1176.816 ; gain = 421.883
+Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 1176.723 ; gain = 305.266
+Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1176.723 ; gain = 422.312
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1186.422 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 51 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1184.562 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 34 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1190.328 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1190.777 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 32 instances were transformed.
-  LDC => LDCE: 32 instances
+  A total of 16 instances were transformed.
+  LDC => LDCE: 16 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
 31 Infos, 13 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1190.328 ; gain = 739.742
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1190.328 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1190.777 ; gain = 738.996
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1190.777 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/staticXBarMulti/staticXBarMulti.runs/synth_1/multiplyXBar.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file multiplyXBar_utilization_synth.rpt -pb multiplyXBar_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Jul 16 17:03:00 2020...
+INFO: [Common 17-206] Exiting Vivado at Sat Jul 18 14:08:36 2020...

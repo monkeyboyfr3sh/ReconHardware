@@ -1,0 +1,7 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../../dynamicMulti/dynamicMulti.srcs/sources_1/imports/new" \
+"XBarMulti_tb_time_synth.v" \
+"../../../../../staticXBarMulti.srcs/sim_1/new/XBarMulti_tb.v" \
+
+# Do not sort compile order
+nosort
