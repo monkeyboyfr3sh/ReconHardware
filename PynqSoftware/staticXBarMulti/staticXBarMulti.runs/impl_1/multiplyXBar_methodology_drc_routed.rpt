@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Mon Jul 20 12:44:33 2020
+| Date         : Mon Jul 20 13:16:27 2020
 | Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 | Command      : report_methodology -file multiplyXBar_methodology_drc_routed.rpt -pb multiplyXBar_methodology_drc_routed.pb -rpx multiplyXBar_methodology_drc_routed.rpx
 | Design       : multiplyXBar
@@ -20,7 +20,7 @@ Table of Contents
 1. REPORT SUMMARY
 -----------------
             Netlist: netlist
-          Floorplan: checkpoint_multiplyXBar
+          Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
              Violations found: 128

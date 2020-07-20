@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1595267020">
-  <File Type="OPT-HWDEF" Name="multiplyXBar.hwdef"/>
-  <File Type="ROUTE-BUS-SKEW" Name="multiplyXBar_bus_skew_routed.rpt"/>
-  <File Type="PA-DCP" Name="multiplyXBar.dcp"/>
+<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1595268931">
   <File Type="BITSTR-BMM" Name="multiplyXBar_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="multiplyXBar_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="multiplyXBar_timing_summary_init.rpt"/>
@@ -13,6 +10,7 @@
   <File Type="ROUTE-PWR-SUM" Name="multiplyXBar_power_summary_routed.pb"/>
   <File Type="REPORTS-TCL" Name="multiplyXBar_reports.tcl"/>
   <File Type="OPT-DRC" Name="multiplyXBar_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="multiplyXBar.hwdef"/>
   <File Type="PWROPT-DCP" Name="multiplyXBar_pwropt.dcp"/>
   <File Type="PWROPT-DRC" Name="multiplyXBar_drc_pwropted.rpt"/>
   <File Type="PWROPT-TIMING" Name="multiplyXBar_timing_summary_pwropted.rpt"/>
@@ -50,6 +48,7 @@
   <File Type="ROUTE-TIMING-RPX" Name="multiplyXBar_timing_summary_routed.rpx"/>
   <File Type="ROUTE-SIMILARITY" Name="multiplyXBar_incremental_reuse_routed.rpt"/>
   <File Type="ROUTE-CLK" Name="multiplyXBar_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="multiplyXBar_bus_skew_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW-PB" Name="multiplyXBar_bus_skew_routed.pb"/>
   <File Type="ROUTE-BUS-SKEW-RPX" Name="multiplyXBar_bus_skew_routed.rpx"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="multiplyXBar_postroute_physopt.dcp"/>

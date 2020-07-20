@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Mon Jul 20 12:44:10 2020
+| Date         : Mon Jul 20 13:16:04 2020
 | Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file multiplyXBar_control_sets_placed.rpt
 | Design       : multiplyXBar
@@ -73,43 +73,43 @@ Table of Contents
 +----------------+--------------------------------------------------------------------------------------+------------------------------------------------------------------------+------------------+----------------+
 |  Clock Signal  |                                     Enable Signal                                    |                            Set/Reset Signal                            | Slice Load Count | Bel Load Count |
 +----------------+--------------------------------------------------------------------------------------+------------------------------------------------------------------------+------------------+----------------+
-|  Clk_IBUF_BUFG | genblk3[3].m_computeBlock_in/mCompute/ready_i_1__2_n_0                               | Rst_IBUF                                                               |                1 |              1 |
-|  Clk_IBUF_BUFG | genblk4[2].m_computeBlock_out/mCompute/ready_i_1__5_n_0                              | Rst_IBUF                                                               |                1 |              1 |
-|  Clk_IBUF_BUFG | genblk4[0].m_computeBlock_out/mCompute/ready_i_1__3_n_0                              | Rst_IBUF                                                               |                1 |              1 |
-|  Clk_IBUF_BUFG | genblk3[1].m_computeBlock_in/mCompute/ready_i_1__0_n_0                               | Rst_IBUF                                                               |                1 |              1 |
-|  Clk_IBUF_BUFG | genblk4[1].m_computeBlock_out/mCompute/ready_i_1__4_n_0                              | Rst_IBUF                                                               |                1 |              1 |
-|  Clk_IBUF_BUFG | genblk4[3].m_computeBlock_out/mCompute/ready_i_1__6_n_0                              | Rst_IBUF                                                               |                1 |              1 |
 |  Clk_IBUF_BUFG | genblk3[0].m_computeBlock_in/mCompute/ready_i_1_n_0                                  | Rst_IBUF                                                               |                1 |              1 |
+|  Clk_IBUF_BUFG | genblk3[3].m_computeBlock_in/mCompute/ready_i_1__2_n_0                               | Rst_IBUF                                                               |                1 |              1 |
+|  Clk_IBUF_BUFG | genblk4[0].m_computeBlock_out/mCompute/ready_i_1__3_n_0                              | Rst_IBUF                                                               |                1 |              1 |
+|  Clk_IBUF_BUFG | genblk4[3].m_computeBlock_out/mCompute/ready_i_1__6_n_0                              | Rst_IBUF                                                               |                1 |              1 |
+|  Clk_IBUF_BUFG | genblk4[1].m_computeBlock_out/mCompute/ready_i_1__4_n_0                              | Rst_IBUF                                                               |                1 |              1 |
+|  Clk_IBUF_BUFG | genblk3[1].m_computeBlock_in/mCompute/ready_i_1__0_n_0                               | Rst_IBUF                                                               |                1 |              1 |
+|  Clk_IBUF_BUFG | genblk4[2].m_computeBlock_out/mCompute/ready_i_1__5_n_0                              | Rst_IBUF                                                               |                1 |              1 |
 |  Clk_IBUF_BUFG | genblk3[2].m_computeBlock_in/mCompute/ready_i_1__1_n_0                               | Rst_IBUF                                                               |                1 |              1 |
-|                |                                                                                      | xbar/OutputSave_reg[0][3]_i_2_n_0                                      |                1 |              4 |
-|                |                                                                                      | xbar/OutputSave_reg[1][3]_i_2_n_0                                      |                2 |              4 |
 |                |                                                                                      | xbar/OutputSave_reg[2][3]_i_2_n_0                                      |                2 |              4 |
 |                |                                                                                      | xbar/OutputSave_reg[3][3]_i_2_n_0                                      |                1 |              4 |
 |  Clk_IBUF_BUFG |                                                                                      |                                                                        |                2 |              4 |
-|  Clk_IBUF_BUFG | genblk3[2].m_computeBlock_in/mCompute/ready_i_2__0_n_0                               | Rst_IBUF                                                               |                1 |              4 |
+|  Clk_IBUF_BUFG | genblk4[2].m_computeBlock_out/mCompute/ready_i_2__3_n_0                              | Rst_IBUF                                                               |                1 |              4 |
+|  Clk_IBUF_BUFG | genblk4[3].m_computeBlock_out/psWrap/ParallelBuffer_0/inst/buff0/holdData            | genblk4[3].m_computeBlock_out/psWrap/ParallelBuffer_0/inst/buff1/SR[0] |                1 |              4 |
+|  Clk_IBUF_BUFG | genblk4[3].m_computeBlock_out/psWrap/ParallelBuffer_0/inst/buff1/holdData[3]_i_1_n_0 | genblk4[3].m_computeBlock_out/psWrap/ParallelBuffer_0/inst/buff1/SR[0] |                1 |              4 |
 |  Clk_IBUF_BUFG | genblk3[3].m_computeBlock_in/mCompute/ready_i_2__1_n_0                               | Rst_IBUF                                                               |                1 |              4 |
 |  Clk_IBUF_BUFG | genblk4[0].m_computeBlock_out/mCompute/product[7]_i_1__0_n_0                         | Rst_IBUF                                                               |                1 |              4 |
 |  Clk_IBUF_BUFG | genblk4[1].m_computeBlock_out/mCompute/ready_i_2__2_n_0                              | Rst_IBUF                                                               |                1 |              4 |
-|  Clk_IBUF_BUFG | genblk4[2].m_computeBlock_out/mCompute/ready_i_2__3_n_0                              | Rst_IBUF                                                               |                1 |              4 |
-|  Clk_IBUF_BUFG | genblk3[0].m_computeBlock_in/mCompute/product[7]_i_1_n_0                             | Rst_IBUF                                                               |                1 |              4 |
-|  Clk_IBUF_BUFG | genblk3[1].m_computeBlock_in/mCompute/ready_i_2_n_0                                  | Rst_IBUF                                                               |                1 |              4 |
 |  Clk_IBUF_BUFG | genblk4[3].m_computeBlock_out/mCompute/ready_i_2__4_n_0                              | Rst_IBUF                                                               |                1 |              4 |
-|  Clk_IBUF_BUFG | genblk4[3].m_computeBlock_out/psWrap/ParallelBuffer_0/inst/buff0/holdData            | genblk4[3].m_computeBlock_out/psWrap/ParallelBuffer_0/inst/buff1/SR[0] |                1 |              4 |
-|  Clk_IBUF_BUFG | genblk3[1].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff0/holdData             | genblk3[1].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff1/SR[0]  |                1 |              4 |
-|  Clk_IBUF_BUFG | genblk3[0].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff0/holdData             | genblk3[0].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff1/SR[0]  |                1 |              4 |
+|  Clk_IBUF_BUFG | genblk3[0].m_computeBlock_in/mCompute/product[7]_i_1_n_0                             | Rst_IBUF                                                               |                1 |              4 |
+|                |                                                                                      | xbar/OutputSave_reg[0][3]_i_2_n_0                                      |                1 |              4 |
+|  Clk_IBUF_BUFG | genblk3[1].m_computeBlock_in/mCompute/ready_i_2_n_0                                  | Rst_IBUF                                                               |                1 |              4 |
+|                |                                                                                      | xbar/OutputSave_reg[1][3]_i_2_n_0                                      |                2 |              4 |
+|  Clk_IBUF_BUFG | genblk3[2].m_computeBlock_in/mCompute/ready_i_2__0_n_0                               | Rst_IBUF                                                               |                1 |              4 |
 |  Clk_IBUF_BUFG | genblk3[2].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff0/holdData             | genblk3[2].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff1/SR[0]  |                2 |              4 |
-|  Clk_IBUF_BUFG | genblk3[3].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff0/holdData             | genblk3[3].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff1/SR[0]  |                1 |              4 |
-|  Clk_IBUF_BUFG | genblk4[0].m_computeBlock_out/psWrap/ParallelBuffer_0/inst/buff0/holdData            | genblk4[0].m_computeBlock_out/psWrap/ParallelBuffer_0/inst/buff1/SR[0] |                1 |              4 |
-|  Clk_IBUF_BUFG | genblk4[1].m_computeBlock_out/psWrap/ParallelBuffer_0/inst/buff0/holdData            | genblk4[1].m_computeBlock_out/psWrap/ParallelBuffer_0/inst/buff1/SR[0] |                1 |              4 |
-|  Clk_IBUF_BUFG | genblk4[3].m_computeBlock_out/psWrap/ParallelBuffer_0/inst/buff1/holdData[3]_i_1_n_0 | genblk4[3].m_computeBlock_out/psWrap/ParallelBuffer_0/inst/buff1/SR[0] |                1 |              4 |
-|  Clk_IBUF_BUFG | genblk4[2].m_computeBlock_out/psWrap/ParallelBuffer_0/inst/buff0/holdData            | genblk4[2].m_computeBlock_out/psWrap/ParallelBuffer_0/inst/buff1/SR[0] |                1 |              4 |
-|  Clk_IBUF_BUFG | genblk3[0].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff1/holdData[3]_i_1_n_0  | genblk3[0].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff1/SR[0]  |                1 |              4 |
 |  Clk_IBUF_BUFG | genblk3[2].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff1/holdData[3]_i_1_n_0  | genblk3[2].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff1/SR[0]  |                1 |              4 |
-|  Clk_IBUF_BUFG | genblk3[1].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff1/holdData[3]_i_1_n_0  | genblk3[1].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff1/SR[0]  |                1 |              4 |
+|  Clk_IBUF_BUFG | genblk3[3].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff0/holdData             | genblk3[3].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff1/SR[0]  |                1 |              4 |
 |  Clk_IBUF_BUFG | genblk3[3].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff1/holdData[3]_i_1_n_0  | genblk3[3].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff1/SR[0]  |                1 |              4 |
-|  Clk_IBUF_BUFG | genblk4[1].m_computeBlock_out/psWrap/ParallelBuffer_0/inst/buff1/holdData[3]_i_1_n_0 | genblk4[1].m_computeBlock_out/psWrap/ParallelBuffer_0/inst/buff1/SR[0] |                1 |              4 |
+|  Clk_IBUF_BUFG | genblk4[0].m_computeBlock_out/psWrap/ParallelBuffer_0/inst/buff0/holdData            | genblk4[0].m_computeBlock_out/psWrap/ParallelBuffer_0/inst/buff1/SR[0] |                1 |              4 |
 |  Clk_IBUF_BUFG | genblk4[0].m_computeBlock_out/psWrap/ParallelBuffer_0/inst/buff1/holdData[3]_i_1_n_0 | genblk4[0].m_computeBlock_out/psWrap/ParallelBuffer_0/inst/buff1/SR[0] |                1 |              4 |
+|  Clk_IBUF_BUFG | genblk4[1].m_computeBlock_out/psWrap/ParallelBuffer_0/inst/buff0/holdData            | genblk4[1].m_computeBlock_out/psWrap/ParallelBuffer_0/inst/buff1/SR[0] |                1 |              4 |
+|  Clk_IBUF_BUFG | genblk4[1].m_computeBlock_out/psWrap/ParallelBuffer_0/inst/buff1/holdData[3]_i_1_n_0 | genblk4[1].m_computeBlock_out/psWrap/ParallelBuffer_0/inst/buff1/SR[0] |                1 |              4 |
 |  Clk_IBUF_BUFG | genblk4[2].m_computeBlock_out/psWrap/ParallelBuffer_0/inst/buff1/holdData[3]_i_1_n_0 | genblk4[2].m_computeBlock_out/psWrap/ParallelBuffer_0/inst/buff1/SR[0] |                1 |              4 |
+|  Clk_IBUF_BUFG | genblk4[2].m_computeBlock_out/psWrap/ParallelBuffer_0/inst/buff0/holdData            | genblk4[2].m_computeBlock_out/psWrap/ParallelBuffer_0/inst/buff1/SR[0] |                1 |              4 |
+|  Clk_IBUF_BUFG | genblk3[0].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff0/holdData             | genblk3[0].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff1/SR[0]  |                1 |              4 |
+|  Clk_IBUF_BUFG | genblk3[0].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff1/holdData[3]_i_1_n_0  | genblk3[0].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff1/SR[0]  |                1 |              4 |
+|  Clk_IBUF_BUFG | genblk3[1].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff0/holdData             | genblk3[1].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff1/SR[0]  |                1 |              4 |
+|  Clk_IBUF_BUFG | genblk3[1].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff1/holdData[3]_i_1_n_0  | genblk3[1].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff1/SR[0]  |                1 |              4 |
 |  Clk_IBUF_BUFG |                                                                                      | Rst_IBUF                                                               |               10 |             16 |
 +----------------+--------------------------------------------------------------------------------------+------------------------------------------------------------------------+------------------+----------------+
 

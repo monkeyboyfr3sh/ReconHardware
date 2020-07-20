@@ -1,9 +1,9 @@
 //Half Clk period
-#define halfclk             50
+#define halfclk             100
 
 //Pin definitions
 #define Clk_pin             LED_BUILTIN
-#define Rst_pin             33
+#define Rst_pin             25
 
 #define dataOut3_pin        15
 #define dataOut2_pin        17
@@ -39,38 +39,85 @@ void initGPIO(){
   pinMode(dataOut1_pin,OUTPUT);
   pinMode(dataOut0_pin,OUTPUT);
 }
-void runTB(){
-  //Setup device
-  digitalWrite(Clk_pin, LOW);
-  clkSet = false;
-  digitalWrite(Rst_pin, HIGH);
-  clk();clk();
-  digitalWrite(Rst_pin, LOW);
-  
-  digitalWrite(addressSelect4_pin, LOW);
-  digitalWrite(addressSelect3_pin, LOW);
-  digitalWrite(addressSelect2_pin, LOW);
-  digitalWrite(addressSelect1_pin, HIGH);
-  digitalWrite(addressSelect0_pin, HIGH);
-  clk();clk();
-  digitalWrite(addressSelect4_pin, LOW);
-  digitalWrite(addressSelect3_pin, LOW);
-  digitalWrite(addressSelect2_pin, HIGH);
-  digitalWrite(addressSelect1_pin, LOW);
-  digitalWrite(addressSelect0_pin, HIGH);
-  clk();clk();
-  digitalWrite(addressSelect4_pin, LOW);
-  digitalWrite(addressSelect3_pin, HIGH);
-  digitalWrite(addressSelect2_pin, LOW);
-  digitalWrite(addressSelect1_pin, HIGH);
-  digitalWrite(addressSelect0_pin, LOW);
-  clk();clk();
-  digitalWrite(addressSelect4_pin, LOW);
-  digitalWrite(addressSelect3_pin, HIGH);
-  digitalWrite(addressSelect2_pin, HIGH);
-  digitalWrite(addressSelect1_pin, LOW);
-  digitalWrite(addressSelect0_pin, LOW);
-  clk();clk();
+void setXBar(int modeSel){
+  if(modeSel == 0){
+    digitalWrite(addressSelect4_pin, LOW);
+    digitalWrite(addressSelect3_pin, LOW);
+    digitalWrite(addressSelect2_pin, LOW);
+    digitalWrite(addressSelect1_pin, LOW);
+    digitalWrite(addressSelect0_pin, LOW);
+    clk();clk();
+    digitalWrite(addressSelect4_pin, LOW);
+    digitalWrite(addressSelect3_pin, LOW);
+    digitalWrite(addressSelect2_pin, HIGH);
+    digitalWrite(addressSelect1_pin, LOW);
+    digitalWrite(addressSelect0_pin, HIGH);
+    clk();clk();
+    digitalWrite(addressSelect4_pin, LOW);
+    digitalWrite(addressSelect3_pin, HIGH);
+    digitalWrite(addressSelect2_pin, LOW);
+    digitalWrite(addressSelect1_pin, HIGH);
+    digitalWrite(addressSelect0_pin, LOW);
+    clk();clk();
+    digitalWrite(addressSelect4_pin, LOW);
+    digitalWrite(addressSelect3_pin, HIGH);
+    digitalWrite(addressSelect2_pin, HIGH);
+    digitalWrite(addressSelect1_pin, HIGH);
+    digitalWrite(addressSelect0_pin, HIGH);
+    clk();clk();
+  }
+  if(modeSel == 1){
+    digitalWrite(addressSelect4_pin, LOW);
+    digitalWrite(addressSelect3_pin, LOW);
+    digitalWrite(addressSelect2_pin, LOW);
+    digitalWrite(addressSelect1_pin, HIGH);
+    digitalWrite(addressSelect0_pin, HIGH);
+    clk();clk();
+    digitalWrite(addressSelect4_pin, LOW);
+    digitalWrite(addressSelect3_pin, LOW);
+    digitalWrite(addressSelect2_pin, HIGH);
+    digitalWrite(addressSelect1_pin, HIGH);
+    digitalWrite(addressSelect0_pin, LOW);
+    clk();clk();
+    digitalWrite(addressSelect4_pin, LOW);
+    digitalWrite(addressSelect3_pin, HIGH);
+    digitalWrite(addressSelect2_pin, LOW);
+    digitalWrite(addressSelect1_pin, LOW);
+    digitalWrite(addressSelect0_pin, HIGH);
+    clk();clk();
+    digitalWrite(addressSelect4_pin, LOW);
+    digitalWrite(addressSelect3_pin, HIGH);
+    digitalWrite(addressSelect2_pin, HIGH);
+    digitalWrite(addressSelect1_pin, LOW);
+    digitalWrite(addressSelect0_pin, LOW);
+    clk();clk();
+  }
+  if(modeSel == 2){
+    digitalWrite(addressSelect4_pin, LOW);
+    digitalWrite(addressSelect3_pin, LOW);
+    digitalWrite(addressSelect2_pin, LOW);
+    digitalWrite(addressSelect1_pin, HIGH);
+    digitalWrite(addressSelect0_pin, HIGH);
+    clk();clk();
+    digitalWrite(addressSelect4_pin, LOW);
+    digitalWrite(addressSelect3_pin, LOW);
+    digitalWrite(addressSelect2_pin, HIGH);
+    digitalWrite(addressSelect1_pin, LOW);
+    digitalWrite(addressSelect0_pin, HIGH);
+    clk();clk();
+    digitalWrite(addressSelect4_pin, LOW);
+    digitalWrite(addressSelect3_pin, HIGH);
+    digitalWrite(addressSelect2_pin, LOW);
+    digitalWrite(addressSelect1_pin, HIGH);
+    digitalWrite(addressSelect0_pin, LOW);
+    clk();clk();
+    digitalWrite(addressSelect4_pin, LOW);
+    digitalWrite(addressSelect3_pin, HIGH);
+    digitalWrite(addressSelect2_pin, HIGH);
+    digitalWrite(addressSelect1_pin, LOW);
+    digitalWrite(addressSelect0_pin, LOW);
+    clk();clk();
+  }
   //Address:restAddress
   digitalWrite(addressSelect4_pin, HIGH);
   digitalWrite(addressSelect3_pin, LOW);
@@ -78,44 +125,85 @@ void runTB(){
   digitalWrite(addressSelect1_pin, LOW);
   digitalWrite(addressSelect0_pin, LOW);
   clk();clk();
-  //Testing a ghost input
-  digitalWrite(addressSelect4_pin, LOW);
-  digitalWrite(addressSelect3_pin, LOW);
-  digitalWrite(addressSelect2_pin, LOW);
-  digitalWrite(addressSelect1_pin, LOW);
-  digitalWrite(addressSelect0_pin, LOW);
-  clk();clk();
 }
-void ledInc(){
-  digitalWrite(dataOut3_pin,LOW);
-  digitalWrite(dataOut2_pin,LOW);
-  digitalWrite(dataOut1_pin,LOW);
-  digitalWrite(dataOut0_pin,HIGH);
-  clk();
-  digitalWrite(dataOut3_pin,LOW);
-  digitalWrite(dataOut2_pin,LOW);
-  digitalWrite(dataOut1_pin,HIGH);
-  digitalWrite(dataOut0_pin,LOW);
-  clk();
-  digitalWrite(dataOut3_pin,LOW);
-  digitalWrite(dataOut2_pin,HIGH);
-  digitalWrite(dataOut1_pin,LOW);
-  digitalWrite(dataOut0_pin,LOW);
-  clk();
-  digitalWrite(dataOut3_pin,HIGH);
-  digitalWrite(dataOut2_pin,LOW);
-  digitalWrite(dataOut1_pin,LOW);
-  digitalWrite(dataOut0_pin,LOW);
-  clk();
+void runTB(){
+  ledInc(false);
+  setXBar(0);
+  ledInc(true);
+
+  ledInc(false);
+  setXBar(1);
+  ledInc(true);
+
+  ledInc(false);
+  setXBar(2);
+  ledInc(true);
+}
+void ledInc(bool All){
+  if(All){
+    digitalWrite(dataOut3_pin,LOW);
+    digitalWrite(dataOut2_pin,LOW);
+    digitalWrite(dataOut1_pin,LOW);
+    digitalWrite(dataOut0_pin,HIGH);
+    clk();
+    digitalWrite(dataOut3_pin,LOW);
+    digitalWrite(dataOut2_pin,LOW);
+    digitalWrite(dataOut1_pin,HIGH);
+    digitalWrite(dataOut0_pin,LOW);
+    clk();
+    digitalWrite(dataOut3_pin,LOW);
+    digitalWrite(dataOut2_pin,HIGH);
+    digitalWrite(dataOut1_pin,LOW);
+    digitalWrite(dataOut0_pin,LOW);
+    clk();
+    digitalWrite(dataOut3_pin,HIGH);
+    digitalWrite(dataOut2_pin,LOW);
+    digitalWrite(dataOut1_pin,LOW);
+    digitalWrite(dataOut0_pin,LOW);
+    clk();
+    digitalWrite(dataOut3_pin,LOW);
+    digitalWrite(dataOut2_pin,LOW);
+    digitalWrite(dataOut1_pin,LOW);
+    digitalWrite(dataOut0_pin,LOW);
+    clk();clk();
+  }
+  else{
+    digitalWrite(dataOut3_pin,HIGH);
+    digitalWrite(dataOut2_pin,HIGH);
+    digitalWrite(dataOut1_pin,HIGH);
+    digitalWrite(dataOut0_pin,HIGH);
+    clk();
+    digitalWrite(dataOut3_pin,LOW);
+    digitalWrite(dataOut2_pin,LOW);
+    digitalWrite(dataOut1_pin,LOW);
+    digitalWrite(dataOut0_pin,LOW);
+    clk();
+    digitalWrite(dataOut3_pin,HIGH);
+    digitalWrite(dataOut2_pin,HIGH);
+    digitalWrite(dataOut1_pin,HIGH);
+    digitalWrite(dataOut0_pin,HIGH);
+    clk();
+    digitalWrite(dataOut3_pin,LOW);
+    digitalWrite(dataOut2_pin,LOW);
+    digitalWrite(dataOut1_pin,LOW);
+    digitalWrite(dataOut0_pin,LOW);
+    clk();
+  }
 }
 
 void setup() {
   Serial.begin(115200);
   delay(1000);
   initGPIO();
-  runTB();
+  
+  //Setup device
+  digitalWrite(Clk_pin, LOW);
+  clkSet = false;
+  digitalWrite(Rst_pin, HIGH);
+  clk();clk();
+  digitalWrite(Rst_pin, LOW);
 }
 
 void loop() {
-  ledInc();
+  runTB();
 }

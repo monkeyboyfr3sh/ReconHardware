@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date                      : Mon Jul 20 12:44:10 2020
+| Date                      : Mon Jul 20 13:16:04 2020
 | Host                      : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 | Command                   : report_io -file multiplyXBar_io_placed.rpt
 | Design                    : multiplyXBar
@@ -348,7 +348,7 @@ Table of Contents
 | T11        |                  | High Range | IO_L1P_T0_34            | User IO     |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | T12        |                  | High Range | IO_L2P_T0_34            | User IO     |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | T13        |                  |            | GND                     | GND         |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
-| T14        | Rst              | High Range | IO_L5P_T0_34            | INPUT       | LVCMOS33    |      34 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
+| T14        | Rst              | High Range | IO_L5P_T0_34            | INPUT       | LVCMOS33    |      34 |            |      |                     |                 NONE |         | FIXED      | PULLDOWN  |          |      | NONE             |              |                   |              |
 | T15        | bufferRD_in[0]   | High Range | IO_L5N_T0_34            | INPUT       | LVCMOS33    |      34 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | T16        | dataIn[2]        | High Range | IO_L9P_T1_DQS_34        | INPUT       | LVCMOS33    |      34 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | T17        |                  | High Range | IO_L20P_T3_34           | User IO     |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
