@@ -1,0 +1,151 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Sun Jul 19 13:40:13 2020
+# Process ID: 18580
+# Current directory: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/XBar
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent18256 C:\Users\monke\Documents\GitHub\ReconHardware\PynqSoftware\XBar\XBar.xpr
+# Log file: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/XBar/vivado.log
+# Journal file: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/XBar\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/XBar/XBar.xpr
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+place_ports {flatInputPort[3]} N17
+place_ports {flatInputPort[2]} V18
+place_ports {flatInputPort[1]} T15
+place_ports {flatInputPort[0]} R16
+save_constraints
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/XBar/XBar.runs/impl_1/XBar.bit} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/XBar/XBar.runs/impl_1/XBar.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+startgroup
+set_property package_pin "" [get_ports [list  {AddressSelect[2]}]]
+place_ports Clk U12
+endgroup
+place_ports {AddressSelect[2]} U17
+save_constraints
+reset_run impl_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/XBar/XBar.runs/impl_1/XBar.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/XBar/XBar.runs/impl_1/XBar.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+open_run impl_1
+current_design synth_1
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/XBar/XBar.runs/impl_1/XBar.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+startgroup
+set_property package_pin "" [get_ports [list  {flatInputPort[0]}]]
+place_ports {AddressSelect[4]} R16
+endgroup
+startgroup
+set_property package_pin "" [get_ports [list  {AddressSelect[2]}]]
+place_ports {AddressSelect[3]} U17
+endgroup
+place_ports {AddressSelect[2]} V17
+startgroup
+set_property package_pin "" [get_ports [list  {flatInputPort[2]}]]
+place_ports {AddressSelect[1]} V18
+endgroup
+place_ports {AddressSelect[0]} T16
+save_constraints
+place_ports {flatInputPort[3]} U13
+place_ports {flatInputPort[2]} V13
+place_ports {flatInputPort[1]} V15
+save_constraints
+place_ports {flatInputPort[0]} T15
+save_constraints
+place_ports Rst T14
+save_constraints
+save_constraints -force
+save_constraints_as constrs_2
+refresh_design
+set_property IOSTANDARD LVCMOS33 [get_ports [list {AddressSelect[4]} {AddressSelect[3]} {AddressSelect[2]} {AddressSelect[1]} {AddressSelect[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {flatInputPort[3]} {flatInputPort[2]} {flatInputPort[1]} {flatInputPort[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {flatOutputPort[3]} {flatOutputPort[2]} {flatOutputPort[1]} {flatOutputPort[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list Clk]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list Rst]]
+save_constraints
+place_ports Clk U12
+place_ports Rst T14
+place_ports {AddressSelect[4]} R16
+set_property package_pin "" [get_ports [list  {AddressSelect[2]}]]
+place_ports {AddressSelect[3]} U17
+place_ports {AddressSelect[2]} V17
+place_ports {AddressSelect[1]} V18
+place_ports {AddressSelect[0]} T16
+save_constraints
+place_ports {flatInputPort[3]} U13
+place_ports {flatInputPort[2]} V13
+place_ports {flatInputPort[1]} V15
+place_ports {flatInputPort[0]} T15
+save_constraints
+place_ports {flatOutputPort[3]} M14
+place_ports {flatOutputPort[2]} N16
+place_ports {flatOutputPort[1]} P14
+place_ports {flatOutputPort[0]} R14
+save_constraints
+reset_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+close_design
+close_design
+reset_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/XBar/XBar.runs/impl_1/XBar.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+open_run synth_1 -name synth_1
+place_ports {flatInputPort[3]} L19
+place_ports {flatInputPort[2]} L20
+place_ports {flatInputPort[1]} D20
+save_constraints
+place_ports {flatInputPort[0]} D19
+save_constraints
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/XBar/XBar.runs/impl_1/XBar.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+open_run impl_1
+launch_simulation
+source XBar_tb.tcl
+close_sim

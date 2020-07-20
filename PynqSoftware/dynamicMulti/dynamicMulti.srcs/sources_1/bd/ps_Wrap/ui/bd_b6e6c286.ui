@@ -19,8 +19,8 @@ preplace portBus product_LONG -pg 1 -lvl 0 -x -30 -y 160 -defaultsOSRD
 preplace portBus product_SHORT -pg 1 -lvl 2 -x 430 -y 140 -defaultsOSRD
 preplace portBus bufferOutput0 -pg 1 -lvl 2 -x 430 -y -90 -defaultsOSRD
 preplace portBus bufferOutput1 -pg 1 -lvl 2 -x 430 -y -70 -defaultsOSRD
-preplace inst ParallelBuffer_0 -pg 1 -lvl 1 -x 210 -y -60 -defaultsOSRD
 preplace inst dataSplit_0 -pg 1 -lvl 1 -x 210 -y 140 -defaultsOSRD
+preplace inst ParallelBuffer_0 -pg 1 -lvl 1 -x 210 -y -60 -defaultsOSRD
 preplace netloc Clk_0_1 1 0 1 10 -120n
 preplace netloc dataIn_0_1 1 0 1 N -100
 preplace netloc bufferSelect_0_1 1 0 1 N -80

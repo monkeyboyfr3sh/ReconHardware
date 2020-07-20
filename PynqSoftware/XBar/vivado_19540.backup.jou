@@ -1,0 +1,25 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Sat Jul 18 13:59:51 2020
+# Process ID: 19540
+# Current directory: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/XBar
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6220 C:\Users\monke\Documents\GitHub\ReconHardware\PynqSoftware\XBar\XBar.xpr
+# Log file: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/XBar/vivado.log
+# Journal file: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/XBar\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/XBar/XBar.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source XBar_tb.tcl
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+run 1 ns
+close_sim

@@ -17,6 +17,10 @@ module multiplyXBar(
                         mStart_out,     //Signals for multiplication to start, will start multipliers that xbar outputs to
                         mReady_in,      //Signals multiplication complete for multipers that input to xBar
                         mReady_out,     //Signals multiplication complete for multipers that xBar outputs to
+                        FULL0_in,
+                        FULL1_in,
+                        FULL0_out,
+                        FULL1_out
                         );
                         
 //########################################################################################################################################################################################
@@ -40,6 +44,13 @@ wire    [1:0]                   FULL_in     [`inputPortCount-1:0];      //FULL b
 wire    [1:0]                   FULL_out     [`outputPortCount-1:0];    //FULL bus, 0th bit if for the 
 wire    [`outputIndex:0]        product_in  [`inputPortCount-1:0];      //Product input bus, the will be fed to the input of the crossbar
 wire    [`outputIndex:0]        product_out [`outputPortCount-1:0];     //Product output bus, the will be fed to the output port
+
+//TEMP
+output FULL0_in,FULL1_in,FULL0_out,FULL1_out;
+assign FULL0_in = FULL_in[0][0];
+assign FULL1_in = FULL_in[0][1];
+assign FULL0_out = FULL_out[0][0];
+assign FULL1_out = FULL_out[0][1];
 
 //########################################################################################################################################################################################
 //Mux vars

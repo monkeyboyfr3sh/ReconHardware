@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date             : Sat Jul 18 14:10:13 2020
+| Date             : Mon Jul 20 12:44:34 2020
 | Host             : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 | Command          : report_power -file multiplyXBar_power_routed.rpt -pb multiplyXBar_power_summary_routed.pb -rpx multiplyXBar_power_routed.rpx
 | Design           : multiplyXBar
@@ -29,20 +29,20 @@ Table of Contents
 1. Summary
 ----------
 
-+--------------------------+--------------+
-| Total On-Chip Power (W)  | 4.343        |
-| Design Power Budget (W)  | Unspecified* |
-| Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 4.085        |
-| Device Static (W)        | 0.258        |
-| Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 34.9         |
-| Junction Temperature (C) | 75.1         |
-| Confidence Level         | Low          |
-| Setting File             | ---          |
-| Simulation Activity File | ---          |
-| Design Nets Matched      | NA           |
-+--------------------------+--------------+
++--------------------------+---------------------------------+
+| Total On-Chip Power (W)  | 5.474 (Junction temp exceeded!) |
+| Design Power Budget (W)  | Unspecified*                    |
+| Power Budget Margin (W)  | NA                              |
+| Dynamic (W)              | 5.114                           |
+| Device Static (W)        | 0.361                           |
+| Effective TJA (C/W)      | 11.5                            |
+| Max Ambient (C)          | 21.9                            |
+| Junction Temperature (C) | 88.1                            |
+| Confidence Level         | Low                             |
+| Setting File             | ---                             |
+| Simulation Activity File | ---                             |
+| Design Nets Matched      | NA                              |
++--------------------------+---------------------------------+
 * Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
 
 
@@ -52,17 +52,17 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.294 |      345 |       --- |             --- |
-|   LUT as Logic |     0.271 |      170 |     53200 |            0.32 |
-|   Register     |     0.011 |      136 |    106400 |            0.13 |
+| Slice Logic    |     0.298 |      361 |       --- |             --- |
+|   LUT as Logic |     0.274 |      174 |     53200 |            0.33 |
+|   Register     |     0.011 |      140 |    106400 |            0.13 |
 |   BUFG         |     0.006 |        1 |        32 |            3.13 |
 |   CARRY4       |     0.006 |        8 |     13300 |            0.06 |
 |   F7/F8 Muxes  |    <0.001 |        2 |     53200 |           <0.01 |
-|   Others       |     0.000 |       10 |       --- |             --- |
-| Signals        |     0.515 |      290 |       --- |             --- |
-| I/O            |     3.276 |       36 |       125 |           28.80 |
-| Static Power   |     0.258 |          |           |                 |
-| Total          |     4.343 |          |           |                 |
+|   Others       |     0.000 |       18 |       --- |             --- |
+| Signals        |     0.532 |      293 |       --- |             --- |
+| I/O            |     4.285 |       40 |       125 |           32.00 |
+| Static Power   |     0.361 |          |           |                 |
+| Total          |     5.474 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,20 +72,20 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.953 |       0.901 |      0.052 |
-| Vccaux    |       1.800 |     0.075 |       0.044 |      0.030 |
-| Vcco33    |       3.300 |     0.942 |       0.941 |      0.001 |
+| Vccint    |       1.000 |     1.006 |       0.921 |      0.085 |
+| Vccaux    |       1.800 |     0.122 |       0.081 |      0.041 |
+| Vcco33    |       3.300 |     1.227 |       1.226 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccbram   |       1.000 |     0.004 |       0.000 |      0.004 |
+| Vccbram   |       1.000 |     0.006 |       0.000 |      0.006 |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
-| Vccpint   |       1.000 |     0.085 |       0.000 |      0.085 |
+| Vccpint   |       1.000 |     0.132 |       0.000 |      0.132 |
 | Vccpaux   |       1.800 |     0.010 |       0.000 |      0.010 |
 | Vccpll    |       1.800 |     0.003 |       0.000 |      0.003 |
 | Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -146,41 +146,41 @@ Table of Contents
 +---------------------------------+-----------+
 | Name                            | Power (W) |
 +---------------------------------+-----------+
-| multiplyXBar                    |     4.085 |
-|   genblk3[0].m_computeBlock_in  |     0.080 |
-|     mCompute                    |     0.050 |
-|     psWrap                      |     0.030 |
-|       ParallelBuffer_0          |     0.030 |
-|   genblk3[1].m_computeBlock_in  |     0.081 |
-|     mCompute                    |     0.053 |
-|     psWrap                      |     0.029 |
-|       ParallelBuffer_0          |     0.029 |
-|   genblk3[2].m_computeBlock_in  |     0.077 |
-|     mCompute                    |     0.054 |
-|     psWrap                      |     0.024 |
-|       ParallelBuffer_0          |     0.024 |
-|   genblk3[3].m_computeBlock_in  |     0.078 |
-|     mCompute                    |     0.050 |
+| multiplyXBar                    |     5.114 |
+|   genblk3[0].m_computeBlock_in  |     0.089 |
+|     mCompute                    |     0.048 |
+|     psWrap                      |     0.042 |
+|       ParallelBuffer_0          |     0.042 |
+|   genblk3[1].m_computeBlock_in  |     0.079 |
+|     mCompute                    |     0.051 |
 |     psWrap                      |     0.028 |
 |       ParallelBuffer_0          |     0.028 |
+|   genblk3[2].m_computeBlock_in  |     0.081 |
+|     mCompute                    |     0.052 |
+|     psWrap                      |     0.030 |
+|       ParallelBuffer_0          |     0.030 |
+|   genblk3[3].m_computeBlock_in  |     0.077 |
+|     mCompute                    |     0.051 |
+|     psWrap                      |     0.026 |
+|       ParallelBuffer_0          |     0.026 |
 |   genblk4[0].m_computeBlock_out |     0.009 |
 |     mCompute                    |     0.002 |
+|     psWrap                      |     0.007 |
+|       ParallelBuffer_0          |     0.007 |
+|   genblk4[1].m_computeBlock_out |     0.010 |
+|     mCompute                    |     0.003 |
+|     psWrap                      |     0.007 |
+|       ParallelBuffer_0          |     0.007 |
+|   genblk4[2].m_computeBlock_out |     0.010 |
+|     mCompute                    |     0.004 |
 |     psWrap                      |     0.006 |
 |       ParallelBuffer_0          |     0.006 |
-|   genblk4[1].m_computeBlock_out |     0.009 |
+|   genblk4[3].m_computeBlock_out |     0.009 |
 |     mCompute                    |     0.003 |
 |     psWrap                      |     0.006 |
 |       ParallelBuffer_0          |     0.006 |
-|   genblk4[2].m_computeBlock_out |     0.008 |
-|     mCompute                    |     0.002 |
-|     psWrap                      |     0.006 |
-|       ParallelBuffer_0          |     0.006 |
-|   genblk4[3].m_computeBlock_out |     0.011 |
-|     mCompute                    |     0.004 |
-|     psWrap                      |     0.007 |
-|       ParallelBuffer_0          |     0.007 |
 |   outputMux                     |     0.005 |
-|   xbar                          |     0.191 |
+|   xbar                          |     0.186 |
 +---------------------------------+-----------+
 
 

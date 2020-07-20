@@ -9,8 +9,8 @@
       "validated": "true"
     },
     "design_tree": {
-      "ParallelBuffer_0": "",
-      "dataSplit_0": ""
+      "dataSplit_0": "",
+      "ParallelBuffer_0": ""
     },
     "ports": {
       "Clk": {
@@ -101,6 +101,51 @@
       }
     },
     "components": {
+      "dataSplit_0": {
+        "vlnv": "xilinx.com:module_ref:dataSplit:1.0",
+        "xci_name": "ps_Wrap_dataSplit_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "dataSplit",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "Clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "Rst",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "ps_Wrap_Clk_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "Rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "RD": {
+            "direction": "I"
+          },
+          "dataIn": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "chunkCount": {
+            "direction": "I"
+          },
+          "dataOut": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          }
+        }
+      },
       "ParallelBuffer_0": {
         "vlnv": "xilinx.com:module_ref:ParallelBuffer:1.0",
         "xci_name": "ps_Wrap_ParallelBuffer_0_0",
@@ -162,59 +207,14 @@
             "direction": "O"
           }
         }
-      },
-      "dataSplit_0": {
-        "vlnv": "xilinx.com:module_ref:dataSplit:1.0",
-        "xci_name": "ps_Wrap_dataSplit_0_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "dataSplit",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "Clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "ASSOCIATED_RESET": {
-                "value": "Rst",
-                "value_src": "constant"
-              },
-              "CLK_DOMAIN": {
-                "value": "ps_Wrap_Clk_0",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "Rst": {
-            "type": "rst",
-            "direction": "I"
-          },
-          "RD": {
-            "direction": "I"
-          },
-          "dataIn": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "chunkCount": {
-            "direction": "I"
-          },
-          "dataOut": {
-            "direction": "O",
-            "left": "3",
-            "right": "0"
-          }
-        }
       }
     },
     "nets": {
       "Clk_0_1": {
         "ports": [
           "Clk",
-          "ParallelBuffer_0/Clk",
-          "dataSplit_0/Clk"
+          "dataSplit_0/Clk",
+          "ParallelBuffer_0/Clk"
         ]
       },
       "dataIn_0_1": {
@@ -244,15 +244,15 @@
       "Rst_0_1": {
         "ports": [
           "Rst",
-          "ParallelBuffer_0/Rst",
-          "dataSplit_0/Rst"
+          "dataSplit_0/Rst",
+          "ParallelBuffer_0/Rst"
         ]
       },
       "CLR_0_1": {
         "ports": [
           "Clr",
-          "ParallelBuffer_0/CLR",
-          "dataSplit_0/RD"
+          "dataSplit_0/RD",
+          "ParallelBuffer_0/CLR"
         ]
       },
       "dataIn_1_1": {

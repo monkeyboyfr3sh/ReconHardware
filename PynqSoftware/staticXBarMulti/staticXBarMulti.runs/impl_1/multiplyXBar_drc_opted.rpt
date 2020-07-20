@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Sat Jul 18 14:09:48 2020
+| Date         : Mon Jul 20 12:44:08 2020
 | Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 | Command      : report_drc -file multiplyXBar_drc_opted.rpt -pb multiplyXBar_drc_opted.pb -rpx multiplyXBar_drc_opted.rpx
 | Design       : multiplyXBar
@@ -37,22 +37,22 @@ Table of Contents
 -----------------
 IOSR-1#1 Warning
 IOB set reset sharing  
-IO dataIn[0] connects to flops which have these genblk3[2].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff1/SR[0], genblk3[3].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff1/SR[0], genblk3[0].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff1/SR[0], genblk3[1].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff1/SR[0] set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+IO dataIn[0] connects to flops which have these genblk3[0].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff1/SR[0], genblk3[1].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff1/SR[0], genblk3[2].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff1/SR[0], genblk3[3].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff1/SR[0] set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
 Related violations: <none>
 
 IOSR-1#2 Warning
 IOB set reset sharing  
-IO dataIn[1] connects to flops which have these genblk3[2].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff1/SR[0], genblk3[3].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff1/SR[0], genblk3[0].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff1/SR[0], genblk3[1].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff1/SR[0] set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+IO dataIn[1] connects to flops which have these genblk3[0].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff1/SR[0], genblk3[1].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff1/SR[0], genblk3[2].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff1/SR[0], genblk3[3].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff1/SR[0] set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
 Related violations: <none>
 
 IOSR-1#3 Warning
 IOB set reset sharing  
-IO dataIn[2] connects to flops which have these genblk3[2].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff1/SR[0], genblk3[3].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff1/SR[0], genblk3[0].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff1/SR[0], genblk3[1].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff1/SR[0] set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+IO dataIn[2] connects to flops which have these genblk3[0].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff1/SR[0], genblk3[1].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff1/SR[0], genblk3[2].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff1/SR[0], genblk3[3].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff1/SR[0] set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
 Related violations: <none>
 
 IOSR-1#4 Warning
 IOB set reset sharing  
-IO dataIn[3] connects to flops which have these genblk3[2].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff1/SR[0], genblk3[3].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff1/SR[0], genblk3[0].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff1/SR[0], genblk3[1].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff1/SR[0] set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
+IO dataIn[3] connects to flops which have these genblk3[0].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff1/SR[0], genblk3[1].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff1/SR[0], genblk3[2].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff1/SR[0], genblk3[3].m_computeBlock_in/psWrap/ParallelBuffer_0/inst/buff1/SR[0] set/reset signals.  For optimal IOB flop packing there should be only one set/reset signal coming into the IOB.
 Related violations: <none>
 
 PLCK-12#1 Warning
@@ -61,7 +61,7 @@ Poor placement for routing between an IO pin and BUFG.
 Resolution: Poor placement of an IO pin and a BUFG has resulted in the router using a non-dedicated path between the two.  There are several things that could trigger this DRC, each of which can cause unpredictable clock insertion delays that result in poor timing.  This DRC could be caused by any of the following: (a) a clock port was placed on a pin that is not a CCIO-pin (b)the BUFG has not been placed in the same half of the device or SLR as the CCIO-pin (c) a single ended clock has been placed on the N-Side of a differential pair CCIO-pin.
  This is normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint is set to FALSE allowing your design to continue. The use of this override is highly discouraged as it may lead to very poor timing results. It is recommended that this error condition be corrected in the design.
 
-	Clk_IBUF_inst (IBUF.O) is locked to U17
+	Clk_IBUF_inst (IBUF.O) is locked to U12
 	Clk_IBUF_BUFG_inst (BUFG.I) cannot be placed
 
 Related violations: <none>
