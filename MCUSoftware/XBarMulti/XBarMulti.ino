@@ -14,10 +14,10 @@
 #define bufferRDin0_pin     4
 #define bufferRDout0_pin    19
 
-#define dataSend1_pin       33
-#define dataSend0_pin       22
-#define dataSend3_pin       21
-#define dataSend2_pin       32
+#define dataSend3_pin       23
+#define dataSend2_pin       22
+#define dataSend1_pin       21
+#define dataSend0_pin       32
 
 #define AddressSelect4_pin  18
 #define AddressSelect0_pin  5    
@@ -27,7 +27,7 @@ bool clkSet=false;
 
 void clk() {
   //Hold clk for btn input, debug purpose
-  //while(digitalRead(holdClk_pin));
+  while(digitalRead(holdClk_pin));
 
   //Invert clock state
   clkSet = !clkSet;
@@ -90,18 +90,18 @@ void runTB(){
   
   //buffer0: 4
   digitalWrite(bufferSelect_pin, HIGH);
-  digitalWrite(dataSend3_pin,HIGH);digitalWrite(dataSend2_pin,HIGH);digitalWrite(dataSend1_pin,LOW);digitalWrite(dataSend0_pin,HIGH);
+  digitalWrite(dataSend3_pin,LOW);digitalWrite(dataSend2_pin,LOW);digitalWrite(dataSend1_pin,HIGH);digitalWrite(dataSend0_pin,HIGH);
   
   clk();clk();Serial.println("Loaded data into input buffer1");
   
   //buffer0: 6
   digitalWrite(bufferSelect_pin, LOW);
-  digitalWrite(dataSend3_pin,LOW);digitalWrite(dataSend2_pin,LOW);digitalWrite(dataSend1_pin,HIGH);digitalWrite(dataSend0_pin,LOW);
+  digitalWrite(dataSend3_pin,LOW);digitalWrite(dataSend2_pin,HIGH);digitalWrite(dataSend1_pin,HIGH);digitalWrite(dataSend0_pin,LOW);
   
   clk();clk();Serial.println("Loaded data into input buffer0");
 
   //Start multiply
-  digitalWrite(bufferRDin0_pin,LOW);
+  digitalWrite(bufferRDin0_pin,HIGH);
   digitalWrite(mStartin_pin,HIGH);
   
   clk();Serial.println("Multi started");
@@ -123,7 +123,7 @@ void runTB(){
   
   clk();Serial.println("Multi started");
   
-  digitalWrite(mStartout_pin,LOW);
+  digitalWrite(mStartout_pin,HIGH);
   clk();
 }
 

@@ -20,7 +20,8 @@ module multiplyXBar(
                         FULL0_in,
                         FULL1_in,
                         FULL0_out,
-                        FULL1_out
+                        FULL1_out,
+                        temp_out
                         );
                         
 //########################################################################################################################################################################################
@@ -47,6 +48,9 @@ wire    [`outputIndex:0]        product_out [`outputPortCount-1:0];     //Produc
 
 //TEMP
 output FULL0_in,FULL1_in,FULL0_out,FULL1_out;
+output [3:0]    temp_out;
+assign temp_out = product_in[0];
+
 assign FULL0_in = FULL_in[0][0];
 assign FULL1_in = FULL_in[0][1];
 assign FULL0_out = FULL_out[0][0];

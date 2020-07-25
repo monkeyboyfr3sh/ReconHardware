@@ -128,14 +128,17 @@ void setXBar(int modeSel){
 }
 void runTB(){
   ledInc(false);
+  setXBar(2);
   setXBar(0);
   ledInc(true);
 
   ledInc(false);
+  setXBar(0);
   setXBar(1);
   ledInc(true);
 
   ledInc(false);
+  setXBar(1);
   setXBar(2);
   ledInc(true);
 }
@@ -202,6 +205,7 @@ void setup() {
   digitalWrite(Rst_pin, HIGH);
   clk();clk();
   digitalWrite(Rst_pin, LOW);
+  setXBar(2);
 }
 
 void loop() {
