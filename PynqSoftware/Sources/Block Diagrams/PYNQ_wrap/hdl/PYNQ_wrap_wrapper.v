@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-//Date        : Sun Jul 26 13:06:18 2020
+//Date        : Sun Jul 26 15:38:34 2020
 //Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 //Command     : generate_target PYNQ_wrap_wrapper.bd
 //Design      : PYNQ_wrap_wrapper
@@ -43,7 +43,9 @@ module PYNQ_wrap_wrapper
     mReady_out,
     mStart_in,
     mStart_out,
-    outputSelect);
+    outputSelect,
+    uart_rtl_rxd,
+    uart_rtl_txd);
   output [4:0]AddressSelect;
   output [0:0]Clk;
   inout [14:0]DDR_addr;
@@ -78,6 +80,8 @@ module PYNQ_wrap_wrapper
   output [0:0]mStart_in;
   output [0:0]mStart_out;
   output [1:0]outputSelect;
+  input uart_rtl_rxd;
+  output uart_rtl_txd;
 
   wire [4:0]AddressSelect;
   wire [0:0]Clk;
@@ -113,6 +117,8 @@ module PYNQ_wrap_wrapper
   wire [0:0]mStart_in;
   wire [0:0]mStart_out;
   wire [1:0]outputSelect;
+  wire uart_rtl_rxd;
+  wire uart_rtl_txd;
 
   PYNQ_wrap PYNQ_wrap_i
        (.AddressSelect(AddressSelect),
@@ -148,5 +154,7 @@ module PYNQ_wrap_wrapper
         .mReady_out(mReady_out),
         .mStart_in(mStart_in),
         .mStart_out(mStart_out),
-        .outputSelect(outputSelect));
+        .outputSelect(outputSelect),
+        .uart_rtl_rxd(uart_rtl_rxd),
+        .uart_rtl_txd(uart_rtl_txd));
 endmodule

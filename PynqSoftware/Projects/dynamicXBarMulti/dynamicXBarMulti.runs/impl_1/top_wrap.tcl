@@ -60,7 +60,6 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {HDL-1065} -limit 10000
 
 start_step init_design
 set ACTIVE_STEP init_design
@@ -75,6 +74,7 @@ set rc [catch {
   set_property parent.project_path C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/dynamicXBarMulti/dynamicXBarMulti.xpr [current_project]
   set_property ip_output_repo C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/dynamicXBarMulti/dynamicXBarMulti.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
+  set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
   add_files -quiet C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/dynamicXBarMulti/dynamicXBarMulti.runs/synth_1/top_wrap.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
@@ -176,6 +176,42 @@ set rc [catch {
   write_checkpoint -force -cell mxbar/genblk4[1].m_computeBlock_out/mCompute mxbar_genblk4_1_.m_computeBlock_out_mCompute_float_routed.dcp
   write_checkpoint -force -cell mxbar/genblk4[2].m_computeBlock_out/mCompute mxbar_genblk4_2_.m_computeBlock_out_mCompute_float_routed.dcp
   write_checkpoint -force -cell mxbar/genblk4[3].m_computeBlock_out/mCompute mxbar_genblk4_3_.m_computeBlock_out_mCompute_float_routed.dcp
+  close_msg_db -file route_design.pb
+} RESULT]
+if {$rc} {
+  write_checkpoint -force top_wrap_routed_error.dcp
+  step_failed route_design
+  return -code error $RESULT
+} else {
+  end_step route_design
+  unset ACTIVE_STEP 
+}
+
+start_step write_bitstream
+set ACTIVE_STEP write_bitstream
+set rc [catch {
+  create_msg_db write_bitstream.pb
+  set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
+  catch { write_mem_info -force top_wrap.mmi }
+  write_bitstream -force -no_partial_bitfile top_wrap.bit 
+  write_bitstream -force -cell mxbar/genblk3[0].m_computeBlock_in/mCompute mxbar_genblk3_0_.m_computeBlock_in_mCompute_float_partial.bit 
+  write_bitstream -force -cell mxbar/genblk3[1].m_computeBlock_in/mCompute mxbar_genblk3_1_.m_computeBlock_in_mCompute_float_partial.bit 
+  write_bitstream -force -cell mxbar/genblk3[2].m_computeBlock_in/mCompute mxbar_genblk3_2_.m_computeBlock_in_mCompute_float_partial.bit 
+  write_bitstream -force -cell mxbar/genblk3[3].m_computeBlock_in/mCompute mxbar_genblk3_3_.m_computeBlock_in_mCompute_float_partial.bit 
+  write_bitstream -force -cell mxbar/genblk4[0].m_computeBlock_out/mCompute mxbar_genblk4_0_.m_computeBlock_out_mCompute_float_partial.bit 
+  write_bitstream -force -cell mxbar/genblk4[1].m_computeBlock_out/mCompute mxbar_genblk4_1_.m_computeBlock_out_mCompute_float_partial.bit 
+  write_bitstream -force -cell mxbar/genblk4[2].m_computeBlock_out/mCompute mxbar_genblk4_2_.m_computeBlock_out_mCompute_float_partial.bit 
+  write_bitstream -force -cell mxbar/genblk4[3].m_computeBlock_out/mCompute mxbar_genblk4_3_.m_computeBlock_out_mCompute_float_partial.bit 
+  catch {write_debug_probes -no_partial_ltxfile -quiet -force top_wrap}
+  catch {file copy -force top_wrap.ltx debug_nets.ltx}
+  catch {write_debug_probes -quiet -force -cell mxbar/genblk3[0].m_computeBlock_in/mCompute -file mxbar_genblk3_0_.m_computeBlock_in_mCompute_float_partial.ltx}
+  catch {write_debug_probes -quiet -force -cell mxbar/genblk3[1].m_computeBlock_in/mCompute -file mxbar_genblk3_1_.m_computeBlock_in_mCompute_float_partial.ltx}
+  catch {write_debug_probes -quiet -force -cell mxbar/genblk3[2].m_computeBlock_in/mCompute -file mxbar_genblk3_2_.m_computeBlock_in_mCompute_float_partial.ltx}
+  catch {write_debug_probes -quiet -force -cell mxbar/genblk3[3].m_computeBlock_in/mCompute -file mxbar_genblk3_3_.m_computeBlock_in_mCompute_float_partial.ltx}
+  catch {write_debug_probes -quiet -force -cell mxbar/genblk4[0].m_computeBlock_out/mCompute -file mxbar_genblk4_0_.m_computeBlock_out_mCompute_float_partial.ltx}
+  catch {write_debug_probes -quiet -force -cell mxbar/genblk4[1].m_computeBlock_out/mCompute -file mxbar_genblk4_1_.m_computeBlock_out_mCompute_float_partial.ltx}
+  catch {write_debug_probes -quiet -force -cell mxbar/genblk4[2].m_computeBlock_out/mCompute -file mxbar_genblk4_2_.m_computeBlock_out_mCompute_float_partial.ltx}
+  catch {write_debug_probes -quiet -force -cell mxbar/genblk4[3].m_computeBlock_out/mCompute -file mxbar_genblk4_3_.m_computeBlock_out_mCompute_float_partial.ltx}
   update_design -cell mxbar/genblk3[0].m_computeBlock_in/mCompute -black_box
   update_design -cell mxbar/genblk3[1].m_computeBlock_in/mCompute -black_box
   update_design -cell mxbar/genblk3[2].m_computeBlock_in/mCompute -black_box
@@ -186,14 +222,13 @@ set rc [catch {
   update_design -cell mxbar/genblk4[3].m_computeBlock_out/mCompute -black_box
   lock_design -level routing
   write_checkpoint -force top_wrap_routed_bb.dcp
-  close_msg_db -file route_design.pb
+  close_msg_db -file write_bitstream.pb
 } RESULT]
 if {$rc} {
-  write_checkpoint -force top_wrap_routed_error.dcp
-  step_failed route_design
+  step_failed write_bitstream
   return -code error $RESULT
 } else {
-  end_step route_design
+  end_step write_bitstream
   unset ACTIVE_STEP 
 }
 

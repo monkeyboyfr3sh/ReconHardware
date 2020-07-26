@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Sun Jul 26 14:48:47 2020
+| Date         : Sun Jul 26 15:42:10 2020
 | Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 | Command      : report_utilization -file top_wrap_utilization_synth.rpt -pb top_wrap_utilization_synth.pb
 | Design       : top_wrap
@@ -165,7 +165,16 @@ Table of Contents
 | ps_Wrap_dataSplit_0_0            |    8 |
 | ps_Wrap_ParallelBuffer_0_0       |    8 |
 | multiplyCompute                  |    8 |
+| PYNQ_wrap_xbar_0                 |    1 |
+| PYNQ_wrap_rst_ps7_0_100M_0       |    1 |
 | PYNQ_wrap_processing_system7_0_0 |    1 |
+| PYNQ_wrap_axi_uartlite_0_0       |    1 |
+| PYNQ_wrap_axi_hwicap_4_0         |    1 |
+| PYNQ_wrap_axi_hwicap_3_0         |    1 |
+| PYNQ_wrap_axi_hwicap_2_0         |    1 |
+| PYNQ_wrap_axi_hwicap_1_0         |    1 |
+| PYNQ_wrap_axi_hwicap_0_0         |    1 |
+| PYNQ_wrap_auto_pc_0              |    1 |
 +----------------------------------+------+
 
 

@@ -51,6 +51,36 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==PYNQ_wrap_mStar
 # IP: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/ip/PYNQ_wrap_xlconcat_0_0/PYNQ_wrap_xlconcat_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==PYNQ_wrap_xlconcat_0_0 || ORIG_REF_NAME==PYNQ_wrap_xlconcat_0_0} -quiet] -quiet
 
+# IP: c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/ip/PYNQ_wrap_axi_hwicap_0_0/PYNQ_wrap_axi_hwicap_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==PYNQ_wrap_axi_hwicap_0_0 || ORIG_REF_NAME==PYNQ_wrap_axi_hwicap_0_0} -quiet] -quiet
+
+# IP: c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/ip/PYNQ_wrap_xbar_0/PYNQ_wrap_xbar_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==PYNQ_wrap_xbar_0 || ORIG_REF_NAME==PYNQ_wrap_xbar_0} -quiet] -quiet
+
+# IP: c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/ip/PYNQ_wrap_ps7_0_axi_periph_0/PYNQ_wrap_ps7_0_axi_periph_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==PYNQ_wrap_ps7_0_axi_periph_0 || ORIG_REF_NAME==PYNQ_wrap_ps7_0_axi_periph_0} -quiet] -quiet
+
+# IP: c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/ip/PYNQ_wrap_rst_ps7_0_100M_0/PYNQ_wrap_rst_ps7_0_100M_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==PYNQ_wrap_rst_ps7_0_100M_0 || ORIG_REF_NAME==PYNQ_wrap_rst_ps7_0_100M_0} -quiet] -quiet
+
+# IP: c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/ip/PYNQ_wrap_axi_hwicap_1_0/PYNQ_wrap_axi_hwicap_1_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==PYNQ_wrap_axi_hwicap_1_0 || ORIG_REF_NAME==PYNQ_wrap_axi_hwicap_1_0} -quiet] -quiet
+
+# IP: c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/ip/PYNQ_wrap_axi_hwicap_2_0/PYNQ_wrap_axi_hwicap_2_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==PYNQ_wrap_axi_hwicap_2_0 || ORIG_REF_NAME==PYNQ_wrap_axi_hwicap_2_0} -quiet] -quiet
+
+# IP: c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/ip/PYNQ_wrap_axi_hwicap_3_0/PYNQ_wrap_axi_hwicap_3_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==PYNQ_wrap_axi_hwicap_3_0 || ORIG_REF_NAME==PYNQ_wrap_axi_hwicap_3_0} -quiet] -quiet
+
+# IP: c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/ip/PYNQ_wrap_axi_hwicap_4_0/PYNQ_wrap_axi_hwicap_4_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==PYNQ_wrap_axi_hwicap_4_0 || ORIG_REF_NAME==PYNQ_wrap_axi_hwicap_4_0} -quiet] -quiet
+
+# IP: c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/ip/PYNQ_wrap_axi_uartlite_0_0/PYNQ_wrap_axi_uartlite_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==PYNQ_wrap_axi_uartlite_0_0 || ORIG_REF_NAME==PYNQ_wrap_axi_uartlite_0_0} -quiet] -quiet
+
+# IP: c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/ip/PYNQ_wrap_auto_pc_0/PYNQ_wrap_auto_pc_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==PYNQ_wrap_auto_pc_0 || ORIG_REF_NAME==PYNQ_wrap_auto_pc_0} -quiet] -quiet
+
 # XDC: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/ps_Wrap/ps_Wrap_ooc.xdc
 
 # XDC: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/PYNQ_wrap_ooc.xdc

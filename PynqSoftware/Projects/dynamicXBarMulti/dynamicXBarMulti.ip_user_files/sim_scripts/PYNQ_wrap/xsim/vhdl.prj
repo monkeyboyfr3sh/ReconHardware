@@ -1,0 +1,10 @@
+vhdl xil_defaultlib  \
+"../../../bd/PYNQ_wrap/ip/PYNQ_wrap_axi_hwicap_0_0/sim/PYNQ_wrap_axi_hwicap_0_0.vhd" \
+"../../../bd/PYNQ_wrap/ip/PYNQ_wrap_rst_ps7_0_100M_0/sim/PYNQ_wrap_rst_ps7_0_100M_0.vhd" \
+"../../../bd/PYNQ_wrap/ip/PYNQ_wrap_axi_hwicap_1_0/sim/PYNQ_wrap_axi_hwicap_1_0.vhd" \
+"../../../bd/PYNQ_wrap/ip/PYNQ_wrap_axi_hwicap_2_0/sim/PYNQ_wrap_axi_hwicap_2_0.vhd" \
+"../../../bd/PYNQ_wrap/ip/PYNQ_wrap_axi_hwicap_3_0/sim/PYNQ_wrap_axi_hwicap_3_0.vhd" \
+"../../../bd/PYNQ_wrap/ip/PYNQ_wrap_axi_hwicap_4_0/sim/PYNQ_wrap_axi_hwicap_4_0.vhd" \
+"../../../bd/PYNQ_wrap/ip/PYNQ_wrap_axi_uartlite_0_0/sim/PYNQ_wrap_axi_uartlite_0_0.vhd" \
+
+nosort
