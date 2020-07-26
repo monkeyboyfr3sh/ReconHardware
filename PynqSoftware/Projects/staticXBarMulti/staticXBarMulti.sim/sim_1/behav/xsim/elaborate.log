@@ -1,0 +1,28 @@
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto da7c72eeacf04e2dbc0663d74d9f54aa --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot XBarMulti1multiuse_tb_behav xil_defaultlib.XBarMulti1multiuse_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'bufferEN' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/multiplyXBar.v:101]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'chunkCount' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/multiplyXBar.v:108]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'bufferEN' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/multiplyXBar.v:118]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'chunkCount' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/multiplyXBar.v:125]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mux
+Compiling module xil_defaultlib.XBar
+Compiling module xil_defaultlib.SingleBuffer
+Compiling module xil_defaultlib.ParallelBuffer
+Compiling module xil_defaultlib.ps_Wrap_ParallelBuffer_0_0
+Compiling module xil_defaultlib.dataSplit
+Compiling module xil_defaultlib.ps_Wrap_dataSplit_0_0
+Compiling module xil_defaultlib.ps_Wrap
+Compiling module xil_defaultlib.multiplyCompute
+Compiling module xil_defaultlib.dynamicMulti
+Compiling module xil_defaultlib.multiplyXBar_default
+Compiling module xil_defaultlib.XBarMulti1multiuse_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot XBarMulti1multiuse_tb_behav

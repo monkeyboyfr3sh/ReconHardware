@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib "C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/definitions.h" --include "../../../../../../Sources" \
+"../../../../../../Sources/General/XBar.v" \
+"../../../../XBar.srcs/sim_1/new/XBar_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,688 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Sun Jul 26 14:21:48 2020
+# Process ID: 34008
+# Current directory: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/staticXBarMulti/staticXBarMulti.runs/synth_1
+# Command line: vivado.exe -log top_wrap.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_wrap.tcl
+# Log file: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/staticXBarMulti/staticXBarMulti.runs/synth_1/top_wrap.vds
+# Journal file: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/staticXBarMulti/staticXBarMulti.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source top_wrap.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'.
+Command: synth_design -top top_wrap -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 33540 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 995.789 ; gain = 234.672
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top_wrap' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/top_wrap.v:3]
+INFO: [Synth 8-6157] synthesizing module 'PYNQ_wrap' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/synth/PYNQ_wrap.v:13]
+INFO: [Synth 8-6157] synthesizing module 'PYNQ_wrap_xlslice_0_3' [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/ip/PYNQ_wrap_xlslice_0_3/synth/PYNQ_wrap_xlslice_0_3.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice' [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+	Parameter DIN_WIDTH bound to: 64 - type: integer 
+	Parameter DIN_FROM bound to: 30 - type: integer 
+	Parameter DIN_TO bound to: 26 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice' (1#1) [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'PYNQ_wrap_xlslice_0_3' (2#1) [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/ip/PYNQ_wrap_xlslice_0_3/synth/PYNQ_wrap_xlslice_0_3.v:57]
+INFO: [Synth 8-6157] synthesizing module 'PYNQ_wrap_xlslice_0_0' [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/ip/PYNQ_wrap_xlslice_0_0/synth/PYNQ_wrap_xlslice_0_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized0' [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+	Parameter DIN_WIDTH bound to: 64 - type: integer 
+	Parameter DIN_FROM bound to: 16 - type: integer 
+	Parameter DIN_TO bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized0' (2#1) [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'PYNQ_wrap_xlslice_0_0' (3#1) [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/ip/PYNQ_wrap_xlslice_0_0/synth/PYNQ_wrap_xlslice_0_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'PYNQ_wrap_xlslice_0_1' [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/ip/PYNQ_wrap_xlslice_0_1/synth/PYNQ_wrap_xlslice_0_1.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized1' [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+	Parameter DIN_WIDTH bound to: 64 - type: integer 
+	Parameter DIN_FROM bound to: 17 - type: integer 
+	Parameter DIN_TO bound to: 17 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized1' (3#1) [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'PYNQ_wrap_xlslice_0_1' (4#1) [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/ip/PYNQ_wrap_xlslice_0_1/synth/PYNQ_wrap_xlslice_0_1.v:57]
+INFO: [Synth 8-6157] synthesizing module 'PYNQ_wrap_AddressSelect_0' [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/ip/PYNQ_wrap_AddressSelect_0/synth/PYNQ_wrap_AddressSelect_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized2' [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+	Parameter DIN_WIDTH bound to: 64 - type: integer 
+	Parameter DIN_FROM bound to: 36 - type: integer 
+	Parameter DIN_TO bound to: 33 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized2' (4#1) [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'PYNQ_wrap_AddressSelect_0' (5#1) [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/ip/PYNQ_wrap_AddressSelect_0/synth/PYNQ_wrap_AddressSelect_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'PYNQ_wrap_bufferRD_in_0' [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/ip/PYNQ_wrap_bufferRD_in_0/synth/PYNQ_wrap_bufferRD_in_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized3' [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+	Parameter DIN_WIDTH bound to: 64 - type: integer 
+	Parameter DIN_FROM bound to: 40 - type: integer 
+	Parameter DIN_TO bound to: 37 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized3' (5#1) [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'PYNQ_wrap_bufferRD_in_0' (6#1) [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/ip/PYNQ_wrap_bufferRD_in_0/synth/PYNQ_wrap_bufferRD_in_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'PYNQ_wrap_bufferRD_in_1' [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/ip/PYNQ_wrap_bufferRD_in_1/synth/PYNQ_wrap_bufferRD_in_1.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized4' [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+	Parameter DIN_WIDTH bound to: 64 - type: integer 
+	Parameter DIN_FROM bound to: 41 - type: integer 
+	Parameter DIN_TO bound to: 41 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized4' (6#1) [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'PYNQ_wrap_bufferRD_in_1' (7#1) [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/ip/PYNQ_wrap_bufferRD_in_1/synth/PYNQ_wrap_bufferRD_in_1.v:57]
+INFO: [Synth 8-6157] synthesizing module 'PYNQ_wrap_xlslice_0_2' [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/ip/PYNQ_wrap_xlslice_0_2/synth/PYNQ_wrap_xlslice_0_2.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized5' [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+	Parameter DIN_WIDTH bound to: 64 - type: integer 
+	Parameter DIN_FROM bound to: 25 - type: integer 
+	Parameter DIN_TO bound to: 18 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized5' (7#1) [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'PYNQ_wrap_xlslice_0_2' (8#1) [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/ip/PYNQ_wrap_xlslice_0_2/synth/PYNQ_wrap_xlslice_0_2.v:57]
+INFO: [Synth 8-6157] synthesizing module 'PYNQ_wrap_bufferSelect_0' [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/ip/PYNQ_wrap_bufferSelect_0/synth/PYNQ_wrap_bufferSelect_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized6' [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+	Parameter DIN_WIDTH bound to: 64 - type: integer 
+	Parameter DIN_FROM bound to: 42 - type: integer 
+	Parameter DIN_TO bound to: 42 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized6' (8#1) [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'PYNQ_wrap_bufferSelect_0' (9#1) [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/ip/PYNQ_wrap_bufferSelect_0/synth/PYNQ_wrap_bufferSelect_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'PYNQ_wrap_mStart_in_0' [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/ip/PYNQ_wrap_mStart_in_0/synth/PYNQ_wrap_mStart_in_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized7' [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+	Parameter DIN_WIDTH bound to: 64 - type: integer 
+	Parameter DIN_FROM bound to: 43 - type: integer 
+	Parameter DIN_TO bound to: 43 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized7' (9#1) [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'PYNQ_wrap_mStart_in_0' (10#1) [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/ip/PYNQ_wrap_mStart_in_0/synth/PYNQ_wrap_mStart_in_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'PYNQ_wrap_xlslice_0_4' [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/ip/PYNQ_wrap_xlslice_0_4/synth/PYNQ_wrap_xlslice_0_4.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized8' [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+	Parameter DIN_WIDTH bound to: 64 - type: integer 
+	Parameter DIN_FROM bound to: 32 - type: integer 
+	Parameter DIN_TO bound to: 31 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized8' (10#1) [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'PYNQ_wrap_xlslice_0_4' (11#1) [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/ip/PYNQ_wrap_xlslice_0_4/synth/PYNQ_wrap_xlslice_0_4.v:57]
+INFO: [Synth 8-6157] synthesizing module 'PYNQ_wrap_processing_system7_0_0' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/staticXBarMulti/staticXBarMulti.runs/synth_1/.Xil/Vivado-34008-DESKTOP-D9F9TPQ/realtime/PYNQ_wrap_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'PYNQ_wrap_processing_system7_0_0' (12#1) [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/staticXBarMulti/staticXBarMulti.runs/synth_1/.Xil/Vivado-34008-DESKTOP-D9F9TPQ/realtime/PYNQ_wrap_processing_system7_0_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'PYNQ_wrap_processing_system7_0_0' has 68 connections declared, but only 37 given [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/synth/PYNQ_wrap.v:164]
+INFO: [Synth 8-6157] synthesizing module 'PYNQ_wrap_xlconcat_0_0' [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/ip/PYNQ_wrap_xlconcat_0_0/synth/PYNQ_wrap_xlconcat_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_3_xlconcat' [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/ipshared/442e/hdl/xlconcat_v2_1_vl_rfs.v:14]
+	Parameter IN0_WIDTH bound to: 8 - type: integer 
+	Parameter IN1_WIDTH bound to: 4 - type: integer 
+	Parameter IN2_WIDTH bound to: 4 - type: integer 
+	Parameter IN3_WIDTH bound to: 1 - type: integer 
+	Parameter IN4_WIDTH bound to: 1 - type: integer 
+	Parameter IN5_WIDTH bound to: 1 - type: integer 
+	Parameter IN6_WIDTH bound to: 1 - type: integer 
+	Parameter IN7_WIDTH bound to: 1 - type: integer 
+	Parameter IN8_WIDTH bound to: 1 - type: integer 
+	Parameter IN9_WIDTH bound to: 1 - type: integer 
+	Parameter IN10_WIDTH bound to: 1 - type: integer 
+	Parameter IN11_WIDTH bound to: 1 - type: integer 
+	Parameter IN12_WIDTH bound to: 1 - type: integer 
+	Parameter IN13_WIDTH bound to: 1 - type: integer 
+	Parameter IN14_WIDTH bound to: 1 - type: integer 
+	Parameter IN15_WIDTH bound to: 1 - type: integer 
+	Parameter IN16_WIDTH bound to: 1 - type: integer 
+	Parameter IN17_WIDTH bound to: 1 - type: integer 
+	Parameter IN18_WIDTH bound to: 1 - type: integer 
+	Parameter IN19_WIDTH bound to: 1 - type: integer 
+	Parameter IN20_WIDTH bound to: 1 - type: integer 
+	Parameter IN21_WIDTH bound to: 1 - type: integer 
+	Parameter IN22_WIDTH bound to: 1 - type: integer 
+	Parameter IN23_WIDTH bound to: 1 - type: integer 
+	Parameter IN24_WIDTH bound to: 1 - type: integer 
+	Parameter IN25_WIDTH bound to: 1 - type: integer 
+	Parameter IN26_WIDTH bound to: 1 - type: integer 
+	Parameter IN27_WIDTH bound to: 1 - type: integer 
+	Parameter IN28_WIDTH bound to: 1 - type: integer 
+	Parameter IN29_WIDTH bound to: 1 - type: integer 
+	Parameter IN30_WIDTH bound to: 1 - type: integer 
+	Parameter IN31_WIDTH bound to: 1 - type: integer 
+	Parameter dout_width bound to: 16 - type: integer 
+	Parameter NUM_PORTS bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_3_xlconcat' (13#1) [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/ipshared/442e/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'PYNQ_wrap_xlconcat_0_0' (14#1) [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/ip/PYNQ_wrap_xlconcat_0_0/synth/PYNQ_wrap_xlconcat_0_0.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'PYNQ_wrap' (15#1) [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/synth/PYNQ_wrap.v:13]
+WARNING: [Synth 8-7023] instance 'nolabel_line18' of module 'PYNQ_wrap' has 34 connections declared, but only 13 given [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/top_wrap.v:18]
+INFO: [Synth 8-6157] synthesizing module 'multiplyXBar' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/multiplyXBar.v:7]
+INFO: [Synth 8-6157] synthesizing module 'dynamicMulti' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Multiplier/dynamicMulti.v:4]
+INFO: [Synth 8-6157] synthesizing module 'ps_Wrap' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/ps_Wrap/synth/ps_Wrap.v:13]
+INFO: [Synth 8-6157] synthesizing module 'ps_Wrap_ParallelBuffer_0_0' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/staticXBarMulti/staticXBarMulti.runs/synth_1/.Xil/Vivado-34008-DESKTOP-D9F9TPQ/realtime/ps_Wrap_ParallelBuffer_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ps_Wrap_ParallelBuffer_0_0' (16#1) [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/staticXBarMulti/staticXBarMulti.runs/synth_1/.Xil/Vivado-34008-DESKTOP-D9F9TPQ/realtime/ps_Wrap_ParallelBuffer_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'ps_Wrap_dataSplit_0_0' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/staticXBarMulti/staticXBarMulti.runs/synth_1/.Xil/Vivado-34008-DESKTOP-D9F9TPQ/realtime/ps_Wrap_dataSplit_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ps_Wrap_dataSplit_0_0' (17#1) [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/staticXBarMulti/staticXBarMulti.runs/synth_1/.Xil/Vivado-34008-DESKTOP-D9F9TPQ/realtime/ps_Wrap_dataSplit_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ps_Wrap' (18#1) [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/ps_Wrap/synth/ps_Wrap.v:13]
+INFO: [Synth 8-6157] synthesizing module 'multiplyCompute' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Multiplier/multiplyCompute.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'multiplyCompute' (19#1) [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Multiplier/multiplyCompute.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'dynamicMulti' (20#1) [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Multiplier/dynamicMulti.v:4]
+INFO: [Synth 8-6157] synthesizing module 'mux' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/mux.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'mux' (21#1) [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/mux.v:4]
+INFO: [Synth 8-6157] synthesizing module 'XBar' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/XBar.v:19]
+WARNING: [Synth 8-567] referenced signal 'AddressSave' should be on the sensitivity list [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/XBar.v:50]
+WARNING: [Synth 8-6014] Unused sequential element rowCheck_reg was removed.  [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/XBar.v:72]
+WARNING: [Synth 8-6014] Unused sequential element rowSet_reg was removed.  [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/XBar.v:73]
+WARNING: [Synth 8-6014] Unused sequential element selectRow_reg was removed.  [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/XBar.v:75]
+WARNING: [Synth 8-6014] Unused sequential element selectColomn_reg was removed.  [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/XBar.v:77]
+INFO: [Synth 8-6155] done synthesizing module 'XBar' (22#1) [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/XBar.v:19]
+INFO: [Synth 8-6155] done synthesizing module 'multiplyXBar' (23#1) [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/multiplyXBar.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'top_wrap' (24#1) [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/top_wrap.v:3]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In3[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In4[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In5[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In6[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In7[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In8[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In9[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In10[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In11[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In12[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In13[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In14[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In15[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In16[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In17[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In18[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In19[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In20[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In21[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In22[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In23[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In24[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In25[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In26[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In27[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In28[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In29[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In30[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In31[0]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized8 has unconnected port Din[63]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized8 has unconnected port Din[62]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized8 has unconnected port Din[61]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized8 has unconnected port Din[60]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized8 has unconnected port Din[59]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized8 has unconnected port Din[58]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized8 has unconnected port Din[57]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized8 has unconnected port Din[56]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized8 has unconnected port Din[55]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized8 has unconnected port Din[54]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized8 has unconnected port Din[53]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized8 has unconnected port Din[52]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized8 has unconnected port Din[51]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized8 has unconnected port Din[50]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized8 has unconnected port Din[49]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized8 has unconnected port Din[48]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized8 has unconnected port Din[47]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized8 has unconnected port Din[46]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized8 has unconnected port Din[45]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized8 has unconnected port Din[44]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized8 has unconnected port Din[43]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized8 has unconnected port Din[42]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized8 has unconnected port Din[41]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized8 has unconnected port Din[40]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized8 has unconnected port Din[39]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized8 has unconnected port Din[38]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized8 has unconnected port Din[37]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized8 has unconnected port Din[36]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized8 has unconnected port Din[35]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized8 has unconnected port Din[34]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized8 has unconnected port Din[33]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized8 has unconnected port Din[30]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized8 has unconnected port Din[29]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized8 has unconnected port Din[28]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized8 has unconnected port Din[27]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized8 has unconnected port Din[26]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized8 has unconnected port Din[25]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized8 has unconnected port Din[24]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized8 has unconnected port Din[23]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized8 has unconnected port Din[22]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized8 has unconnected port Din[21]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized8 has unconnected port Din[20]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized8 has unconnected port Din[19]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized8 has unconnected port Din[18]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized8 has unconnected port Din[17]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized8 has unconnected port Din[16]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized8 has unconnected port Din[15]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized8 has unconnected port Din[14]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized8 has unconnected port Din[13]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized8 has unconnected port Din[12]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized8 has unconnected port Din[11]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized8 has unconnected port Din[10]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized8 has unconnected port Din[9]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized8 has unconnected port Din[8]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized8 has unconnected port Din[7]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized8 has unconnected port Din[6]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized8 has unconnected port Din[5]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized8 has unconnected port Din[4]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized8 has unconnected port Din[3]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized8 has unconnected port Din[2]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized8 has unconnected port Din[1]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized8 has unconnected port Din[0]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized7 has unconnected port Din[63]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized7 has unconnected port Din[62]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized7 has unconnected port Din[61]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized7 has unconnected port Din[60]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized7 has unconnected port Din[59]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized7 has unconnected port Din[58]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized7 has unconnected port Din[57]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized7 has unconnected port Din[56]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized7 has unconnected port Din[55]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1068.125 ; gain = 307.008
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1068.125 ; gain = 307.008
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1068.125 ; gain = 307.008
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 1068.125 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/ps_Wrap/ip/ps_Wrap_ParallelBuffer_0_0/ps_Wrap_ParallelBuffer_0_0/ps_Wrap_ParallelBuffer_0_0_in_context.xdc] for cell 'mxbar/genblk3[0].m_computeBlock_in/psWrap/ParallelBuffer_0'
+Finished Parsing XDC File [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/ps_Wrap/ip/ps_Wrap_ParallelBuffer_0_0/ps_Wrap_ParallelBuffer_0_0/ps_Wrap_ParallelBuffer_0_0_in_context.xdc] for cell 'mxbar/genblk3[0].m_computeBlock_in/psWrap/ParallelBuffer_0'
+Parsing XDC File [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/ps_Wrap/ip/ps_Wrap_ParallelBuffer_0_0/ps_Wrap_ParallelBuffer_0_0/ps_Wrap_ParallelBuffer_0_0_in_context.xdc] for cell 'mxbar/genblk3[1].m_computeBlock_in/psWrap/ParallelBuffer_0'
+Finished Parsing XDC File [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/ps_Wrap/ip/ps_Wrap_ParallelBuffer_0_0/ps_Wrap_ParallelBuffer_0_0/ps_Wrap_ParallelBuffer_0_0_in_context.xdc] for cell 'mxbar/genblk3[1].m_computeBlock_in/psWrap/ParallelBuffer_0'
+Parsing XDC File [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/ps_Wrap/ip/ps_Wrap_ParallelBuffer_0_0/ps_Wrap_ParallelBuffer_0_0/ps_Wrap_ParallelBuffer_0_0_in_context.xdc] for cell 'mxbar/genblk3[2].m_computeBlock_in/psWrap/ParallelBuffer_0'
+Finished Parsing XDC File [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/ps_Wrap/ip/ps_Wrap_ParallelBuffer_0_0/ps_Wrap_ParallelBuffer_0_0/ps_Wrap_ParallelBuffer_0_0_in_context.xdc] for cell 'mxbar/genblk3[2].m_computeBlock_in/psWrap/ParallelBuffer_0'
+Parsing XDC File [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/ps_Wrap/ip/ps_Wrap_ParallelBuffer_0_0/ps_Wrap_ParallelBuffer_0_0/ps_Wrap_ParallelBuffer_0_0_in_context.xdc] for cell 'mxbar/genblk3[3].m_computeBlock_in/psWrap/ParallelBuffer_0'
+Finished Parsing XDC File [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/ps_Wrap/ip/ps_Wrap_ParallelBuffer_0_0/ps_Wrap_ParallelBuffer_0_0/ps_Wrap_ParallelBuffer_0_0_in_context.xdc] for cell 'mxbar/genblk3[3].m_computeBlock_in/psWrap/ParallelBuffer_0'
+Parsing XDC File [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/ps_Wrap/ip/ps_Wrap_ParallelBuffer_0_0/ps_Wrap_ParallelBuffer_0_0/ps_Wrap_ParallelBuffer_0_0_in_context.xdc] for cell 'mxbar/genblk4[0].m_computeBlock_out/psWrap/ParallelBuffer_0'
+Finished Parsing XDC File [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/ps_Wrap/ip/ps_Wrap_ParallelBuffer_0_0/ps_Wrap_ParallelBuffer_0_0/ps_Wrap_ParallelBuffer_0_0_in_context.xdc] for cell 'mxbar/genblk4[0].m_computeBlock_out/psWrap/ParallelBuffer_0'
+Parsing XDC File [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/ps_Wrap/ip/ps_Wrap_ParallelBuffer_0_0/ps_Wrap_ParallelBuffer_0_0/ps_Wrap_ParallelBuffer_0_0_in_context.xdc] for cell 'mxbar/genblk4[1].m_computeBlock_out/psWrap/ParallelBuffer_0'
+Finished Parsing XDC File [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/ps_Wrap/ip/ps_Wrap_ParallelBuffer_0_0/ps_Wrap_ParallelBuffer_0_0/ps_Wrap_ParallelBuffer_0_0_in_context.xdc] for cell 'mxbar/genblk4[1].m_computeBlock_out/psWrap/ParallelBuffer_0'
+Parsing XDC File [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/ps_Wrap/ip/ps_Wrap_ParallelBuffer_0_0/ps_Wrap_ParallelBuffer_0_0/ps_Wrap_ParallelBuffer_0_0_in_context.xdc] for cell 'mxbar/genblk4[2].m_computeBlock_out/psWrap/ParallelBuffer_0'
+Finished Parsing XDC File [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/ps_Wrap/ip/ps_Wrap_ParallelBuffer_0_0/ps_Wrap_ParallelBuffer_0_0/ps_Wrap_ParallelBuffer_0_0_in_context.xdc] for cell 'mxbar/genblk4[2].m_computeBlock_out/psWrap/ParallelBuffer_0'
+Parsing XDC File [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/ps_Wrap/ip/ps_Wrap_ParallelBuffer_0_0/ps_Wrap_ParallelBuffer_0_0/ps_Wrap_ParallelBuffer_0_0_in_context.xdc] for cell 'mxbar/genblk4[3].m_computeBlock_out/psWrap/ParallelBuffer_0'
+Finished Parsing XDC File [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/ps_Wrap/ip/ps_Wrap_ParallelBuffer_0_0/ps_Wrap_ParallelBuffer_0_0/ps_Wrap_ParallelBuffer_0_0_in_context.xdc] for cell 'mxbar/genblk4[3].m_computeBlock_out/psWrap/ParallelBuffer_0'
+Parsing XDC File [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/ps_Wrap/ip/ps_Wrap_dataSplit_0_0/ps_Wrap_dataSplit_0_0/ps_Wrap_dataSplit_0_0_in_context.xdc] for cell 'mxbar/genblk3[0].m_computeBlock_in/psWrap/dataSplit_0'
+Finished Parsing XDC File [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/ps_Wrap/ip/ps_Wrap_dataSplit_0_0/ps_Wrap_dataSplit_0_0/ps_Wrap_dataSplit_0_0_in_context.xdc] for cell 'mxbar/genblk3[0].m_computeBlock_in/psWrap/dataSplit_0'
+Parsing XDC File [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/ps_Wrap/ip/ps_Wrap_dataSplit_0_0/ps_Wrap_dataSplit_0_0/ps_Wrap_dataSplit_0_0_in_context.xdc] for cell 'mxbar/genblk3[1].m_computeBlock_in/psWrap/dataSplit_0'
+Finished Parsing XDC File [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/ps_Wrap/ip/ps_Wrap_dataSplit_0_0/ps_Wrap_dataSplit_0_0/ps_Wrap_dataSplit_0_0_in_context.xdc] for cell 'mxbar/genblk3[1].m_computeBlock_in/psWrap/dataSplit_0'
+Parsing XDC File [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/ps_Wrap/ip/ps_Wrap_dataSplit_0_0/ps_Wrap_dataSplit_0_0/ps_Wrap_dataSplit_0_0_in_context.xdc] for cell 'mxbar/genblk3[2].m_computeBlock_in/psWrap/dataSplit_0'
+Finished Parsing XDC File [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/ps_Wrap/ip/ps_Wrap_dataSplit_0_0/ps_Wrap_dataSplit_0_0/ps_Wrap_dataSplit_0_0_in_context.xdc] for cell 'mxbar/genblk3[2].m_computeBlock_in/psWrap/dataSplit_0'
+Parsing XDC File [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/ps_Wrap/ip/ps_Wrap_dataSplit_0_0/ps_Wrap_dataSplit_0_0/ps_Wrap_dataSplit_0_0_in_context.xdc] for cell 'mxbar/genblk3[3].m_computeBlock_in/psWrap/dataSplit_0'
+Finished Parsing XDC File [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/ps_Wrap/ip/ps_Wrap_dataSplit_0_0/ps_Wrap_dataSplit_0_0/ps_Wrap_dataSplit_0_0_in_context.xdc] for cell 'mxbar/genblk3[3].m_computeBlock_in/psWrap/dataSplit_0'
+Parsing XDC File [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/ps_Wrap/ip/ps_Wrap_dataSplit_0_0/ps_Wrap_dataSplit_0_0/ps_Wrap_dataSplit_0_0_in_context.xdc] for cell 'mxbar/genblk4[0].m_computeBlock_out/psWrap/dataSplit_0'
+Finished Parsing XDC File [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/ps_Wrap/ip/ps_Wrap_dataSplit_0_0/ps_Wrap_dataSplit_0_0/ps_Wrap_dataSplit_0_0_in_context.xdc] for cell 'mxbar/genblk4[0].m_computeBlock_out/psWrap/dataSplit_0'
+Parsing XDC File [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/ps_Wrap/ip/ps_Wrap_dataSplit_0_0/ps_Wrap_dataSplit_0_0/ps_Wrap_dataSplit_0_0_in_context.xdc] for cell 'mxbar/genblk4[1].m_computeBlock_out/psWrap/dataSplit_0'
+Finished Parsing XDC File [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/ps_Wrap/ip/ps_Wrap_dataSplit_0_0/ps_Wrap_dataSplit_0_0/ps_Wrap_dataSplit_0_0_in_context.xdc] for cell 'mxbar/genblk4[1].m_computeBlock_out/psWrap/dataSplit_0'
+Parsing XDC File [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/ps_Wrap/ip/ps_Wrap_dataSplit_0_0/ps_Wrap_dataSplit_0_0/ps_Wrap_dataSplit_0_0_in_context.xdc] for cell 'mxbar/genblk4[2].m_computeBlock_out/psWrap/dataSplit_0'
+Finished Parsing XDC File [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/ps_Wrap/ip/ps_Wrap_dataSplit_0_0/ps_Wrap_dataSplit_0_0/ps_Wrap_dataSplit_0_0_in_context.xdc] for cell 'mxbar/genblk4[2].m_computeBlock_out/psWrap/dataSplit_0'
+Parsing XDC File [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/ps_Wrap/ip/ps_Wrap_dataSplit_0_0/ps_Wrap_dataSplit_0_0/ps_Wrap_dataSplit_0_0_in_context.xdc] for cell 'mxbar/genblk4[3].m_computeBlock_out/psWrap/dataSplit_0'
+Finished Parsing XDC File [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/ps_Wrap/ip/ps_Wrap_dataSplit_0_0/ps_Wrap_dataSplit_0_0/ps_Wrap_dataSplit_0_0_in_context.xdc] for cell 'mxbar/genblk4[3].m_computeBlock_out/psWrap/dataSplit_0'
+Parsing XDC File [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/ip/PYNQ_wrap_processing_system7_0_0/PYNQ_wrap_processing_system7_0_0/PYNQ_wrap_processing_system7_0_0_in_context.xdc] for cell 'nolabel_line18/processing_system7_0'
+Finished Parsing XDC File [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/ip/PYNQ_wrap_processing_system7_0_0/PYNQ_wrap_processing_system7_0_0/PYNQ_wrap_processing_system7_0_0_in_context.xdc] for cell 'nolabel_line18/processing_system7_0'
+Parsing XDC File [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/staticXBarMulti/staticXBarMulti.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/staticXBarMulti/staticXBarMulti.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1180.531 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1180.531 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1180.531 ; gain = 419.414
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1180.531 ; gain = 419.414
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for mxbar/\genblk3[0].m_computeBlock_in /psWrap. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for mxbar/\genblk3[1].m_computeBlock_in /psWrap. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for mxbar/\genblk3[2].m_computeBlock_in /psWrap. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for mxbar/\genblk3[3].m_computeBlock_in /psWrap. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for mxbar/\genblk4[0].m_computeBlock_out /psWrap. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for mxbar/\genblk4[1].m_computeBlock_out /psWrap. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for mxbar/\genblk4[2].m_computeBlock_out /psWrap. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for mxbar/\genblk4[3].m_computeBlock_out /psWrap. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for mxbar/\genblk3[0].m_computeBlock_in /psWrap/ParallelBuffer_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for mxbar/\genblk3[1].m_computeBlock_in /psWrap/ParallelBuffer_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for mxbar/\genblk3[2].m_computeBlock_in /psWrap/ParallelBuffer_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for mxbar/\genblk3[3].m_computeBlock_in /psWrap/ParallelBuffer_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for mxbar/\genblk4[0].m_computeBlock_out /psWrap/ParallelBuffer_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for mxbar/\genblk4[1].m_computeBlock_out /psWrap/ParallelBuffer_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for mxbar/\genblk4[2].m_computeBlock_out /psWrap/ParallelBuffer_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for mxbar/\genblk4[3].m_computeBlock_out /psWrap/ParallelBuffer_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for mxbar/\genblk3[0].m_computeBlock_in /psWrap/dataSplit_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for mxbar/\genblk3[1].m_computeBlock_in /psWrap/dataSplit_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for mxbar/\genblk3[2].m_computeBlock_in /psWrap/dataSplit_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for mxbar/\genblk3[3].m_computeBlock_in /psWrap/dataSplit_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for mxbar/\genblk4[0].m_computeBlock_out /psWrap/dataSplit_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for mxbar/\genblk4[1].m_computeBlock_out /psWrap/dataSplit_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for mxbar/\genblk4[2].m_computeBlock_out /psWrap/dataSplit_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for mxbar/\genblk4[3].m_computeBlock_out /psWrap/dataSplit_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for nolabel_line18. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for nolabel_line18/processing_system7_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for nolabel_line18/Clk_RnM. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for nolabel_line18/Rst_RnM. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for nolabel_line18/dataIn_RnM. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for nolabel_line18/AddressSelect_RnM. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for nolabel_line18/outputSelect_RnM. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for nolabel_line18/bufferRD_in_RnM. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for nolabel_line18/bufferRD_out_RnM. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for nolabel_line18/bufferSelect_RnM. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for nolabel_line18/mStart_in_RnM. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for nolabel_line18/mStart_out_RnM. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for nolabel_line18/xlconcat_0. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1180.531 ; gain = 419.414
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-327] inferring latch for variable 'OutputSave_reg[0]' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/XBar.v:46]
+WARNING: [Synth 8-327] inferring latch for variable 'OutputSave_reg[1]' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/XBar.v:46]
+WARNING: [Synth 8-327] inferring latch for variable 'OutputSave_reg[2]' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/XBar.v:46]
+WARNING: [Synth 8-327] inferring latch for variable 'OutputSave_reg[3]' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/XBar.v:46]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 1180.531 ; gain = 419.414
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   8 Input     16 Bit       Adders := 8     
++---Registers : 
+	               16 Bit    Registers := 8     
+	                4 Bit    Registers := 4     
+	                1 Bit    Registers := 8     
++---Muxes : 
+	   2 Input     15 Bit        Muxes := 8     
+	   2 Input     14 Bit        Muxes := 8     
+	   2 Input     13 Bit        Muxes := 8     
+	   2 Input     12 Bit        Muxes := 8     
+	   2 Input     11 Bit        Muxes := 8     
+	   2 Input     10 Bit        Muxes := 8     
+	   2 Input      9 Bit        Muxes := 8     
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 24    
+	   2 Input      4 Bit        Muxes := 13    
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 47    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module mux 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      8 Bit        Muxes := 1     
+Module XBar 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 4     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 24    
+	   2 Input      4 Bit        Muxes := 13    
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 39    
+Module multiplyCompute 
+Detailed RTL Component Info : 
++---Adders : 
+	   8 Input     16 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     15 Bit        Muxes := 1     
+	   2 Input     14 Bit        Muxes := 1     
+	   2 Input     13 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1180.531 ; gain = 419.414
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:17 . Memory (MB): peak = 1180.531 ; gain = 419.414
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:17 . Memory (MB): peak = 1180.531 ; gain = 419.414
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1180.531 ; gain = 419.414
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1193.215 ; gain = 432.098
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1193.215 ; gain = 432.098
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1193.215 ; gain = 432.098
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1193.215 ; gain = 432.098
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1193.215 ; gain = 432.098
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1193.215 ; gain = 432.098
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+---------------------------------+----------+
+|      |BlackBox name                    |Instances |
++------+---------------------------------+----------+
+|1     |PYNQ_wrap_processing_system7_0_0 |         1|
+|2     |ps_Wrap_ParallelBuffer_0_0       |         8|
+|3     |ps_Wrap_dataSplit_0_0            |         8|
++------+---------------------------------+----------+
+
+Report Cell Usage: 
++------+---------------------------------+------+
+|      |Cell                             |Count |
++------+---------------------------------+------+
+|1     |PYNQ_wrap_processing_system7_0_0 |     1|
+|2     |ps_Wrap_ParallelBuffer_0_0       |     1|
+|3     |ps_Wrap_ParallelBuffer_0_0__10   |     1|
+|4     |ps_Wrap_ParallelBuffer_0_0__11   |     1|
+|5     |ps_Wrap_ParallelBuffer_0_0__12   |     1|
+|6     |ps_Wrap_ParallelBuffer_0_0__13   |     1|
+|7     |ps_Wrap_ParallelBuffer_0_0__14   |     1|
+|8     |ps_Wrap_ParallelBuffer_0_0__8    |     1|
+|9     |ps_Wrap_ParallelBuffer_0_0__9    |     1|
+|10    |ps_Wrap_dataSplit_0_0            |     1|
+|11    |ps_Wrap_dataSplit_0_0__10        |     1|
+|12    |ps_Wrap_dataSplit_0_0__11        |     1|
+|13    |ps_Wrap_dataSplit_0_0__12        |     1|
+|14    |ps_Wrap_dataSplit_0_0__13        |     1|
+|15    |ps_Wrap_dataSplit_0_0__14        |     1|
+|16    |ps_Wrap_dataSplit_0_0__8         |     1|
+|17    |ps_Wrap_dataSplit_0_0__9         |     1|
+|18    |CARRY4                           |    80|
+|19    |LUT2                             |   160|
+|20    |LUT3                             |    52|
+|21    |LUT4                             |   228|
+|22    |LUT5                             |   105|
+|23    |LUT6                             |   334|
+|24    |FDCE                             |    16|
+|25    |FDRE                             |   136|
+|26    |LDC                              |    32|
++------+---------------------------------+------+
+
+Report Instance Areas: 
++------+------------------------------------+--------------------------+------+
+|      |Instance                            |Module                    |Cells |
++------+------------------------------------+--------------------------+------+
+|1     |top                                 |                          |  1670|
+|2     |  nolabel_line18                    |PYNQ_wrap                 |   319|
+|3     |    AddressSelect_RnM               |PYNQ_wrap_xlslice_0_3     |     0|
+|4     |    Clk_RnM                         |PYNQ_wrap_xlslice_0_0     |     0|
+|5     |    Rst_RnM                         |PYNQ_wrap_xlslice_0_1     |     0|
+|6     |    bufferRD_in_RnM                 |PYNQ_wrap_AddressSelect_0 |     0|
+|7     |    bufferRD_out_RnM                |PYNQ_wrap_bufferRD_in_0   |     0|
+|8     |    bufferSelect_RnM                |PYNQ_wrap_bufferRD_in_1   |     0|
+|9     |    dataIn_RnM                      |PYNQ_wrap_xlslice_0_2     |     0|
+|10    |    mStart_in_RnM                   |PYNQ_wrap_bufferSelect_0  |     0|
+|11    |    mStart_out_RnM                  |PYNQ_wrap_mStart_in_0     |     0|
+|12    |    outputSelect_RnM                |PYNQ_wrap_xlslice_0_4     |     0|
+|13    |    xlconcat_0                      |PYNQ_wrap_xlconcat_0_0    |     0|
+|14    |  mxbar                             |multiplyXBar              |  1351|
+|15    |    \genblk3[0].m_computeBlock_in   |dynamicMulti__xdcDup__1   |   150|
+|16    |      psWrap                        |ps_Wrap__xdcDup__1        |    26|
+|17    |      mCompute                      |multiplyCompute_6         |   124|
+|18    |    \genblk3[1].m_computeBlock_in   |dynamicMulti__xdcDup__2   |   150|
+|19    |      psWrap                        |ps_Wrap__xdcDup__2        |    26|
+|20    |      mCompute                      |multiplyCompute_5         |   124|
+|21    |    \genblk3[2].m_computeBlock_in   |dynamicMulti__xdcDup__3   |   150|
+|22    |      psWrap                        |ps_Wrap__xdcDup__3        |    26|
+|23    |      mCompute                      |multiplyCompute_4         |   124|
+|24    |    \genblk3[3].m_computeBlock_in   |dynamicMulti__xdcDup__4   |   150|
+|25    |      psWrap                        |ps_Wrap__xdcDup__4        |    26|
+|26    |      mCompute                      |multiplyCompute_3         |   124|
+|27    |    \genblk4[0].m_computeBlock_out  |dynamicMulti__xdcDup__5   |   150|
+|28    |      psWrap                        |ps_Wrap__xdcDup__5        |    26|
+|29    |      mCompute                      |multiplyCompute_2         |   124|
+|30    |    \genblk4[1].m_computeBlock_out  |dynamicMulti__xdcDup__6   |   150|
+|31    |      psWrap                        |ps_Wrap__xdcDup__6        |    26|
+|32    |      mCompute                      |multiplyCompute_1         |   124|
+|33    |    \genblk4[2].m_computeBlock_out  |dynamicMulti__xdcDup__7   |   150|
+|34    |      psWrap                        |ps_Wrap__xdcDup__7        |    26|
+|35    |      mCompute                      |multiplyCompute_0         |   124|
+|36    |    \genblk4[3].m_computeBlock_out  |dynamicMulti              |   150|
+|37    |      psWrap                        |ps_Wrap                   |    26|
+|38    |      mCompute                      |multiplyCompute           |   124|
+|39    |    outputMux                       |mux                       |     8|
+|40    |    xbar                            |XBar                      |   143|
++------+------------------------------------+--------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1193.215 ; gain = 432.098
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 616 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 1193.215 ; gain = 319.691
+Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1193.215 ; gain = 432.098
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 1193.215 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 112 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1193.215 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 32 instances were transformed.
+  LDC => LDCE: 32 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+81 Infos, 111 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1193.215 ; gain = 730.660
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1193.215 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/staticXBarMulti/staticXBarMulti.runs/synth_1/top_wrap.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_wrap_utilization_synth.rpt -pb top_wrap_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Jul 26 14:22:22 2020...

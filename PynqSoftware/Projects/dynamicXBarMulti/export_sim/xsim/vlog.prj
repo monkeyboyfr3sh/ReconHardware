@@ -1,0 +1,21 @@
+verilog xil_defaultlib --include "../../../../Sources" --include "../../../../Sources/Block Diagrams/PYNQ_wrap/ipshared/ec67/hdl" --include "../../../../Sources/Block Diagrams/PYNQ_wrap/ipshared/2d50/hdl" --include "../../dynamicXBarMulti.srcs/sources_1/imports/Sources" \
+"../../dynamicXBarMulti.ip_user_files/bd/ps_Wrap/ip/ps_Wrap_ParallelBuffer_0_0/sim/ps_Wrap_ParallelBuffer_0_0.v" \
+"../../dynamicXBarMulti.ip_user_files/bd/ps_Wrap/ip/ps_Wrap_dataSplit_0_0/sim/ps_Wrap_dataSplit_0_0.v" \
+"../../dynamicXBarMulti.ip_user_files/bd/ps_Wrap/sim/ps_Wrap.v" \
+"../../dynamicXBarMulti.ip_user_files/bd/PYNQ_wrap/ip/PYNQ_wrap_processing_system7_0_0/sim/PYNQ_wrap_processing_system7_0_0.v" \
+"../../dynamicXBarMulti.ip_user_files/bd/PYNQ_wrap/ip/PYNQ_wrap_xlslice_0_0/sim/PYNQ_wrap_xlslice_0_0.v" \
+"../../dynamicXBarMulti.ip_user_files/bd/PYNQ_wrap/ip/PYNQ_wrap_xlslice_0_1/sim/PYNQ_wrap_xlslice_0_1.v" \
+"../../dynamicXBarMulti.ip_user_files/bd/PYNQ_wrap/ip/PYNQ_wrap_xlslice_0_2/sim/PYNQ_wrap_xlslice_0_2.v" \
+"../../dynamicXBarMulti.ip_user_files/bd/PYNQ_wrap/ip/PYNQ_wrap_xlslice_0_3/sim/PYNQ_wrap_xlslice_0_3.v" \
+"../../dynamicXBarMulti.ip_user_files/bd/PYNQ_wrap/ip/PYNQ_wrap_xlslice_0_4/sim/PYNQ_wrap_xlslice_0_4.v" \
+"../../dynamicXBarMulti.ip_user_files/bd/PYNQ_wrap/ip/PYNQ_wrap_AddressSelect_0/sim/PYNQ_wrap_AddressSelect_0.v" \
+"../../dynamicXBarMulti.ip_user_files/bd/PYNQ_wrap/ip/PYNQ_wrap_bufferRD_in_0/sim/PYNQ_wrap_bufferRD_in_0.v" \
+"../../dynamicXBarMulti.ip_user_files/bd/PYNQ_wrap/ip/PYNQ_wrap_bufferRD_in_1/sim/PYNQ_wrap_bufferRD_in_1.v" \
+"../../dynamicXBarMulti.ip_user_files/bd/PYNQ_wrap/ip/PYNQ_wrap_bufferSelect_0/sim/PYNQ_wrap_bufferSelect_0.v" \
+"../../dynamicXBarMulti.ip_user_files/bd/PYNQ_wrap/ip/PYNQ_wrap_mStart_in_0/sim/PYNQ_wrap_mStart_in_0.v" \
+"../../dynamicXBarMulti.ip_user_files/bd/PYNQ_wrap/ip/PYNQ_wrap_xlconcat_0_0/sim/PYNQ_wrap_xlconcat_0_0.v" \
+"../../dynamicXBarMulti.ip_user_files/bd/PYNQ_wrap/sim/PYNQ_wrap.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort
