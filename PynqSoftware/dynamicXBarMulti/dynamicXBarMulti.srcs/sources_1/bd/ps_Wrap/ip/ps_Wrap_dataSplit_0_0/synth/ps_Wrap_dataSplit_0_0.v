@@ -71,9 +71,9 @@ input wire Clk;
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 Rst RST" *)
 input wire Rst;
 input wire RD;
-input wire [7 : 0] dataIn;
+input wire [15 : 0] dataIn;
 input wire chunkCount;
-output wire [3 : 0] dataOut;
+output wire [7 : 0] dataOut;
 
   dataSplit inst (
     .Clk(Clk),

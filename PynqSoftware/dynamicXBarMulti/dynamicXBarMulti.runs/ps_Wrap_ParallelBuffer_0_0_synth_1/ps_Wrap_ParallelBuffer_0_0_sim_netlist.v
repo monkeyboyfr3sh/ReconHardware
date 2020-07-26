@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-// Date        : Wed Jul  1 18:01:06 2020
+// Date        : Sun Jul 26 13:20:20 2020
 // Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ ps_Wrap_ParallelBuffer_0_0_sim_netlist.v
@@ -24,12 +24,12 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ParallelBuffer
     bufferSelect,
     CLR,
     Rst);
-  output [3:0]dataOut0;
-  output [3:0]dataOut1;
+  output [7:0]dataOut0;
+  output [7:0]dataOut1;
   output FULL1;
   output FULL0;
   input EN;
-  input [3:0]dataIn;
+  input [7:0]dataIn;
   input Clk;
   input RD;
   input bufferSelect;
@@ -44,9 +44,9 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ParallelBuffer
   wire RD;
   wire Rst;
   wire bufferSelect;
-  wire [3:0]dataIn;
-  wire [3:0]dataOut0;
-  wire [3:0]dataOut1;
+  wire [7:0]dataIn;
+  wire [7:0]dataOut0;
+  wire [7:0]dataOut1;
   wire p_0_in;
 
   decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_SingleBuffer buff0
@@ -85,7 +85,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_SingleBuffer
     SR,
     dataIn);
   output FULL0;
-  output [3:0]dataOut0;
+  output [7:0]dataOut0;
   input Clk;
   input EN;
   input RD;
@@ -93,7 +93,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_SingleBuffer
   input CLR;
   input Rst;
   input [0:0]SR;
-  input [3:0]dataIn;
+  input [7:0]dataIn;
 
   wire CLR;
   wire Clk;
@@ -103,13 +103,10 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_SingleBuffer
   wire Rst;
   wire [0:0]SR;
   wire bufferSelect;
-  wire [3:0]dataIn;
-  wire [3:0]dataOut0;
-  wire holdData;
-  wire \holdData_reg_n_0_[0] ;
-  wire \holdData_reg_n_0_[1] ;
-  wire \holdData_reg_n_0_[2] ;
-  wire \holdData_reg_n_0_[3] ;
+  wire [7:0]dataIn;
+  wire [7:0]dataOut0;
+  wire [7:0]holdData;
+  wire holdData_0;
   wire set_i_1__0_n_0;
 
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
@@ -117,59 +114,111 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_SingleBuffer
     .INIT(4'h8)) 
     \dataOut0[0]_INST_0 
        (.I0(EN),
-        .I1(\holdData_reg_n_0_[0] ),
+        .I1(holdData[0]),
         .O(dataOut0[0]));
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \dataOut0[1]_INST_0 
        (.I0(EN),
-        .I1(\holdData_reg_n_0_[1] ),
+        .I1(holdData[1]),
         .O(dataOut0[1]));
   (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \dataOut0[2]_INST_0 
        (.I0(EN),
-        .I1(\holdData_reg_n_0_[2] ),
+        .I1(holdData[2]),
         .O(dataOut0[2]));
   (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \dataOut0[3]_INST_0 
        (.I0(EN),
-        .I1(\holdData_reg_n_0_[3] ),
+        .I1(holdData[3]),
         .O(dataOut0[3]));
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
+    \dataOut0[4]_INST_0 
+       (.I0(EN),
+        .I1(holdData[4]),
+        .O(dataOut0[4]));
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
+    \dataOut0[5]_INST_0 
+       (.I0(EN),
+        .I1(holdData[5]),
+        .O(dataOut0[5]));
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
+    \dataOut0[6]_INST_0 
+       (.I0(EN),
+        .I1(holdData[6]),
+        .O(dataOut0[6]));
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
+    \dataOut0[7]_INST_0 
+       (.I0(EN),
+        .I1(holdData[7]),
+        .O(dataOut0[7]));
   LUT3 #(
     .INIT(8'h02)) 
-    \holdData[3]_i_2 
+    \holdData[7]_i_2 
        (.I0(EN),
         .I1(RD),
         .I2(bufferSelect),
-        .O(holdData));
+        .O(holdData_0));
   FDRE \holdData_reg[0] 
        (.C(Clk),
-        .CE(holdData),
+        .CE(holdData_0),
         .D(dataIn[0]),
-        .Q(\holdData_reg_n_0_[0] ),
+        .Q(holdData[0]),
         .R(SR));
   FDRE \holdData_reg[1] 
        (.C(Clk),
-        .CE(holdData),
+        .CE(holdData_0),
         .D(dataIn[1]),
-        .Q(\holdData_reg_n_0_[1] ),
+        .Q(holdData[1]),
         .R(SR));
   FDRE \holdData_reg[2] 
        (.C(Clk),
-        .CE(holdData),
+        .CE(holdData_0),
         .D(dataIn[2]),
-        .Q(\holdData_reg_n_0_[2] ),
+        .Q(holdData[2]),
         .R(SR));
   FDRE \holdData_reg[3] 
        (.C(Clk),
-        .CE(holdData),
+        .CE(holdData_0),
         .D(dataIn[3]),
-        .Q(\holdData_reg_n_0_[3] ),
+        .Q(holdData[3]),
+        .R(SR));
+  FDRE \holdData_reg[4] 
+       (.C(Clk),
+        .CE(holdData_0),
+        .D(dataIn[4]),
+        .Q(holdData[4]),
+        .R(SR));
+  FDRE \holdData_reg[5] 
+       (.C(Clk),
+        .CE(holdData_0),
+        .D(dataIn[5]),
+        .Q(holdData[5]),
+        .R(SR));
+  FDRE \holdData_reg[6] 
+       (.C(Clk),
+        .CE(holdData_0),
+        .D(dataIn[6]),
+        .Q(holdData[6]),
+        .R(SR));
+  FDRE \holdData_reg[7] 
+       (.C(Clk),
+        .CE(holdData_0),
+        .D(dataIn[7]),
+        .Q(holdData[7]),
         .R(SR));
   LUT6 #(
     .INIT(64'h000000000000AAAE)) 
@@ -202,7 +251,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_SingleBuffer_0
     Rst,
     dataIn);
   output FULL1;
-  output [3:0]dataOut1;
+  output [7:0]dataOut1;
   output [0:0]SR;
   input Clk;
   input EN;
@@ -210,7 +259,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_SingleBuffer_0
   input bufferSelect;
   input CLR;
   input Rst;
-  input [3:0]dataIn;
+  input [7:0]dataIn;
 
   wire CLR;
   wire Clk;
@@ -220,79 +269,135 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_SingleBuffer_0
   wire Rst;
   wire [0:0]SR;
   wire bufferSelect;
-  wire [3:0]dataIn;
-  wire [3:0]dataOut1;
-  wire \holdData[3]_i_1_n_0 ;
+  wire [7:0]dataIn;
+  wire [7:0]dataOut1;
+  wire \holdData[7]_i_1_n_0 ;
   wire \holdData_reg_n_0_[0] ;
   wire \holdData_reg_n_0_[1] ;
   wire \holdData_reg_n_0_[2] ;
   wire \holdData_reg_n_0_[3] ;
+  wire \holdData_reg_n_0_[4] ;
+  wire \holdData_reg_n_0_[5] ;
+  wire \holdData_reg_n_0_[6] ;
+  wire \holdData_reg_n_0_[7] ;
   wire set_i_1_n_0;
 
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \dataOut1[0]_INST_0 
        (.I0(EN),
         .I1(\holdData_reg_n_0_[0] ),
         .O(dataOut1[0]));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \dataOut1[1]_INST_0 
        (.I0(EN),
         .I1(\holdData_reg_n_0_[1] ),
         .O(dataOut1[1]));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \dataOut1[2]_INST_0 
        (.I0(EN),
         .I1(\holdData_reg_n_0_[2] ),
         .O(dataOut1[2]));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \dataOut1[3]_INST_0 
        (.I0(EN),
         .I1(\holdData_reg_n_0_[3] ),
         .O(dataOut1[3]));
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
+    \dataOut1[4]_INST_0 
+       (.I0(EN),
+        .I1(\holdData_reg_n_0_[4] ),
+        .O(dataOut1[4]));
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
+    \dataOut1[5]_INST_0 
+       (.I0(EN),
+        .I1(\holdData_reg_n_0_[5] ),
+        .O(dataOut1[5]));
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
+    \dataOut1[6]_INST_0 
+       (.I0(EN),
+        .I1(\holdData_reg_n_0_[6] ),
+        .O(dataOut1[6]));
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
+    \dataOut1[7]_INST_0 
+       (.I0(EN),
+        .I1(\holdData_reg_n_0_[7] ),
+        .O(dataOut1[7]));
   LUT3 #(
     .INIT(8'h20)) 
-    \holdData[3]_i_1 
+    \holdData[7]_i_1 
        (.I0(EN),
         .I1(RD),
         .I2(bufferSelect),
-        .O(\holdData[3]_i_1_n_0 ));
+        .O(\holdData[7]_i_1_n_0 ));
   LUT2 #(
     .INIT(4'hE)) 
-    \holdData[3]_i_1__0 
+    \holdData[7]_i_1__0 
        (.I0(Rst),
         .I1(CLR),
         .O(SR));
   FDRE \holdData_reg[0] 
        (.C(Clk),
-        .CE(\holdData[3]_i_1_n_0 ),
+        .CE(\holdData[7]_i_1_n_0 ),
         .D(dataIn[0]),
         .Q(\holdData_reg_n_0_[0] ),
         .R(SR));
   FDRE \holdData_reg[1] 
        (.C(Clk),
-        .CE(\holdData[3]_i_1_n_0 ),
+        .CE(\holdData[7]_i_1_n_0 ),
         .D(dataIn[1]),
         .Q(\holdData_reg_n_0_[1] ),
         .R(SR));
   FDRE \holdData_reg[2] 
        (.C(Clk),
-        .CE(\holdData[3]_i_1_n_0 ),
+        .CE(\holdData[7]_i_1_n_0 ),
         .D(dataIn[2]),
         .Q(\holdData_reg_n_0_[2] ),
         .R(SR));
   FDRE \holdData_reg[3] 
        (.C(Clk),
-        .CE(\holdData[3]_i_1_n_0 ),
+        .CE(\holdData[7]_i_1_n_0 ),
         .D(dataIn[3]),
         .Q(\holdData_reg_n_0_[3] ),
+        .R(SR));
+  FDRE \holdData_reg[4] 
+       (.C(Clk),
+        .CE(\holdData[7]_i_1_n_0 ),
+        .D(dataIn[4]),
+        .Q(\holdData_reg_n_0_[4] ),
+        .R(SR));
+  FDRE \holdData_reg[5] 
+       (.C(Clk),
+        .CE(\holdData[7]_i_1_n_0 ),
+        .D(dataIn[5]),
+        .Q(\holdData_reg_n_0_[5] ),
+        .R(SR));
+  FDRE \holdData_reg[6] 
+       (.C(Clk),
+        .CE(\holdData[7]_i_1_n_0 ),
+        .D(dataIn[6]),
+        .Q(\holdData_reg_n_0_[6] ),
+        .R(SR));
+  FDRE \holdData_reg[7] 
+       (.C(Clk),
+        .CE(\holdData[7]_i_1_n_0 ),
+        .D(dataIn[7]),
+        .Q(\holdData_reg_n_0_[7] ),
         .R(SR));
   LUT6 #(
     .INIT(64'h000000000000AEAA)) 
@@ -328,12 +433,12 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
     FULL0,
     FULL1);
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 Clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME Clk, ASSOCIATED_RESET Rst, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN ps_Wrap_Clk_0, INSERT_VIP 0" *) input Clk;
-  input [3:0]dataIn;
+  input [7:0]dataIn;
   input bufferSelect;
   input EN;
   input RD;
-  output [3:0]dataOut0;
-  output [3:0]dataOut1;
+  output [7:0]dataOut0;
+  output [7:0]dataOut1;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 Rst RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME Rst, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input Rst;
   input CLR;
   output FULL0;
@@ -347,9 +452,9 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
   wire RD;
   wire Rst;
   wire bufferSelect;
-  wire [3:0]dataIn;
-  wire [3:0]dataOut0;
-  wire [3:0]dataOut1;
+  wire [7:0]dataIn;
+  wire [7:0]dataOut0;
+  wire [7:0]dataOut1;
 
   decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ParallelBuffer inst
        (.CLR(CLR),

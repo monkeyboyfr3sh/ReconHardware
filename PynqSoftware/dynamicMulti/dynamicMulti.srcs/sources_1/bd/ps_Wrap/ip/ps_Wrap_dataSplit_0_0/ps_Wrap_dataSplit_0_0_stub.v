@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-// Date        : Thu Jul 16 16:28:34 2020
+// Date        : Sat Jul 25 18:51:10 2020
 // Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
 //               C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/dynamicMulti/dynamicMulti.srcs/sources_1/bd/ps_Wrap/ip/ps_Wrap_dataSplit_0_0/ps_Wrap_dataSplit_0_0_stub.v
@@ -15,11 +15,11 @@
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
 (* X_CORE_INFO = "dataSplit,Vivado 2019.2" *)
 module ps_Wrap_dataSplit_0_0(Clk, Rst, RD, dataIn, chunkCount, dataOut)
-/* synthesis syn_black_box black_box_pad_pin="Clk,Rst,RD,dataIn[7:0],chunkCount,dataOut[3:0]" */;
+/* synthesis syn_black_box black_box_pad_pin="Clk,Rst,RD,dataIn[15:0],chunkCount,dataOut[7:0]" */;
   input Clk;
   input Rst;
   input RD;
-  input [7:0]dataIn;
+  input [15:0]dataIn;
   input chunkCount;
-  output [3:0]dataOut;
+  output [7:0]dataOut;
 endmodule

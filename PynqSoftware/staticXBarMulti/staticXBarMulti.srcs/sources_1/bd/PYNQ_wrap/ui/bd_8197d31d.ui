@@ -1,0 +1,59 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.41421",
+   "Default View_TopLeft":"-251,-634",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0.21  2019-05-29 bk=1.5064 VDI=41 GEI=36 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace port DDR -pg 1 -lvl 3 -x 1060 -y -730 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 3 -x 1060 -y -700 -defaultsOSRD
+preplace portBus Clk -pg 1 -lvl 3 -x 1060 -y -660 -defaultsOSRD
+preplace portBus Rst -pg 1 -lvl 3 -x 1060 -y -560 -defaultsOSRD
+preplace portBus dataIn -pg 1 -lvl 3 -x 1060 -y -460 -defaultsOSRD
+preplace portBus AddressSelect -pg 1 -lvl 3 -x 1060 -y -360 -defaultsOSRD
+preplace portBus outputSelect -pg 1 -lvl 3 -x 1060 -y -260 -defaultsOSRD
+preplace portBus bufferRD_in -pg 1 -lvl 3 -x 1060 -y -160 -defaultsOSRD
+preplace portBus bufferRD_out -pg 1 -lvl 3 -x 1060 -y -60 -defaultsOSRD
+preplace portBus bufferSelect -pg 1 -lvl 3 -x 1060 -y 40 -defaultsOSRD
+preplace portBus mStart_in -pg 1 -lvl 3 -x 1060 -y 140 -defaultsOSRD
+preplace portBus mStart_out -pg 1 -lvl 3 -x 1060 -y 240 -defaultsOSRD
+preplace portBus dataOut -pg 1 -lvl 0 -x -10 -y -240 -defaultsOSRD
+preplace portBus mReady_in -pg 1 -lvl 0 -x -10 -y -220 -defaultsOSRD
+preplace portBus mReady_out -pg 1 -lvl 0 -x -10 -y -200 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 1 -x 390 -y -490 -defaultsOSRD
+preplace inst Clk -pg 1 -lvl 2 -x 730 -y -660 -defaultsOSRD
+preplace inst Rst -pg 1 -lvl 2 -x 730 -y -560 -defaultsOSRD
+preplace inst dataIn -pg 1 -lvl 2 -x 730 -y -460 -defaultsOSRD
+preplace inst AddressSelect -pg 1 -lvl 2 -x 730 -y -360 -defaultsOSRD
+preplace inst outputSelect -pg 1 -lvl 2 -x 730 -y -260 -defaultsOSRD
+preplace inst bufferRD_in -pg 1 -lvl 2 -x 730 -y -160 -defaultsOSRD
+preplace inst bufferRD_out -pg 1 -lvl 2 -x 730 -y -60 -defaultsOSRD
+preplace inst bufferSelect -pg 1 -lvl 2 -x 730 -y 40 -defaultsOSRD
+preplace inst mStart_in -pg 1 -lvl 2 -x 730 -y 140 -defaultsOSRD
+preplace inst mStart_out -pg 1 -lvl 2 -x 730 -y 240 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 1 -x 390 -y -220 -defaultsOSRD
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 2 10 -640 590
+preplace netloc processing_system7_0_GPIO_O 1 1 1 620 -660n
+preplace netloc Clk_Dout 1 2 1 N -660
+preplace netloc Rst_Dout 1 2 1 N -560
+preplace netloc dataIn_Dout 1 2 1 N -460
+preplace netloc AddressSelect_Dout 1 2 1 N -360
+preplace netloc outputSelect_Dout 1 2 1 N -260
+preplace netloc bufferRD_in_Dout 1 2 1 N -160
+preplace netloc bufferRD_out_Dout 1 2 1 N -60
+preplace netloc bufferSelect_Dout 1 2 1 N 40
+preplace netloc mStart_in_Dout 1 2 1 N 140
+preplace netloc mStart_out_Dout 1 2 1 N 240
+preplace netloc xlconcat_0_dout 1 1 1 580 -550n
+preplace netloc In0_0_1 1 0 1 N -240
+preplace netloc In1_0_1 1 0 1 N -220
+preplace netloc In2_0_1 1 0 1 N -200
+preplace netloc processing_system7_0_FIXED_IO 1 1 2 610J -720 840
+preplace netloc processing_system7_0_DDR 1 1 2 600J -730 N
+levelinfo -pg 1 -10 390 730 1060
+pagesize -pg 1 -db -bbox -sgen -170 -760 1240 570
+"
+}
+{
+   "da_ps7_cnt":"1"
+}

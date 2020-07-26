@@ -1,7 +1,7 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
--- Date        : Wed Jul  1 18:01:06 2020
+-- Date        : Sun Jul 26 13:20:20 2020
 -- Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 --               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ ps_Wrap_ParallelBuffer_0_0_stub.vhdl
@@ -15,12 +15,12 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
   Port ( 
     Clk : in STD_LOGIC;
-    dataIn : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    dataIn : in STD_LOGIC_VECTOR ( 7 downto 0 );
     bufferSelect : in STD_LOGIC;
     EN : in STD_LOGIC;
     RD : in STD_LOGIC;
-    dataOut0 : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    dataOut1 : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    dataOut0 : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    dataOut1 : out STD_LOGIC_VECTOR ( 7 downto 0 );
     Rst : in STD_LOGIC;
     CLR : in STD_LOGIC;
     FULL0 : out STD_LOGIC;
@@ -33,7 +33,7 @@ architecture stub of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
-attribute black_box_pad_pin of stub : architecture is "Clk,dataIn[3:0],bufferSelect,EN,RD,dataOut0[3:0],dataOut1[3:0],Rst,CLR,FULL0,FULL1";
+attribute black_box_pad_pin of stub : architecture is "Clk,dataIn[7:0],bufferSelect,EN,RD,dataOut0[7:0],dataOut1[7:0],Rst,CLR,FULL0,FULL1";
 attribute X_CORE_INFO : string;
 attribute X_CORE_INFO of stub : architecture is "ParallelBuffer,Vivado 2019.2";
 begin

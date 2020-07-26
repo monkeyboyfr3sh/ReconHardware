@@ -1,7 +1,7 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
--- Date        : Thu Jul 16 16:28:34 2020
+-- Date        : Sat Jul 25 18:51:10 2020
 -- Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 --               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ ps_Wrap_dataSplit_0_0_sim_netlist.vhdl
@@ -16,8 +16,8 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_dataSplit is
   port (
-    dataOut : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    dataIn : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    dataOut : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    dataIn : in STD_LOGIC_VECTOR ( 15 downto 0 );
     chunkCount : in STD_LOGIC
   );
 end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_dataSplit;
@@ -28,13 +28,17 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_dataSplit is
   attribute SOFT_HLUTNM of \dataOut[1]_INST_0\ : label is "soft_lutpair0";
   attribute SOFT_HLUTNM of \dataOut[2]_INST_0\ : label is "soft_lutpair1";
   attribute SOFT_HLUTNM of \dataOut[3]_INST_0\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \dataOut[4]_INST_0\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \dataOut[5]_INST_0\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \dataOut[6]_INST_0\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \dataOut[7]_INST_0\ : label is "soft_lutpair3";
 begin
 \dataOut[0]_INST_0\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"B8"
     )
         port map (
-      I0 => dataIn(4),
+      I0 => dataIn(8),
       I1 => chunkCount,
       I2 => dataIn(0),
       O => dataOut(0)
@@ -44,7 +48,7 @@ begin
       INIT => X"B8"
     )
         port map (
-      I0 => dataIn(5),
+      I0 => dataIn(9),
       I1 => chunkCount,
       I2 => dataIn(1),
       O => dataOut(1)
@@ -54,7 +58,7 @@ begin
       INIT => X"B8"
     )
         port map (
-      I0 => dataIn(6),
+      I0 => dataIn(10),
       I1 => chunkCount,
       I2 => dataIn(2),
       O => dataOut(2)
@@ -64,10 +68,50 @@ begin
       INIT => X"B8"
     )
         port map (
-      I0 => dataIn(7),
+      I0 => dataIn(11),
       I1 => chunkCount,
       I2 => dataIn(3),
       O => dataOut(3)
+    );
+\dataOut[4]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => dataIn(12),
+      I1 => chunkCount,
+      I2 => dataIn(4),
+      O => dataOut(4)
+    );
+\dataOut[5]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => dataIn(13),
+      I1 => chunkCount,
+      I2 => dataIn(5),
+      O => dataOut(5)
+    );
+\dataOut[6]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => dataIn(14),
+      I1 => chunkCount,
+      I2 => dataIn(6),
+      O => dataOut(6)
+    );
+\dataOut[7]_INST_0\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"B8"
+    )
+        port map (
+      I0 => dataIn(15),
+      I1 => chunkCount,
+      I2 => dataIn(7),
+      O => dataOut(7)
     );
 end STRUCTURE;
 library IEEE;
@@ -79,9 +123,9 @@ entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
     Clk : in STD_LOGIC;
     Rst : in STD_LOGIC;
     RD : in STD_LOGIC;
-    dataIn : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    dataIn : in STD_LOGIC_VECTOR ( 15 downto 0 );
     chunkCount : in STD_LOGIC;
-    dataOut : out STD_LOGIC_VECTOR ( 3 downto 0 )
+    dataOut : out STD_LOGIC_VECTOR ( 7 downto 0 )
   );
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix : entity is true;
@@ -106,7 +150,7 @@ begin
 inst: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_dataSplit
      port map (
       chunkCount => chunkCount,
-      dataIn(7 downto 0) => dataIn(7 downto 0),
-      dataOut(3 downto 0) => dataOut(3 downto 0)
+      dataIn(15 downto 0) => dataIn(15 downto 0),
+      dataOut(7 downto 0) => dataOut(7 downto 0)
     );
 end STRUCTURE;

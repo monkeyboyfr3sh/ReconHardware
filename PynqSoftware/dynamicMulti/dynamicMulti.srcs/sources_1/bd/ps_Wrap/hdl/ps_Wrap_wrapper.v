@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-//Date        : Sun Jul 19 15:55:10 2020
+//Date        : Sat Jul 25 18:50:15 2020
 //Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 //Command     : generate_target ps_Wrap_wrapper.bd
 //Design      : ps_Wrap_wrapper
@@ -30,14 +30,14 @@ module ps_Wrap_wrapper
   output FULL1;
   input Rst;
   input bufferEN;
-  output [3:0]bufferOutput0;
-  output [3:0]bufferOutput1;
+  output [7:0]bufferOutput0;
+  output [7:0]bufferOutput1;
   input bufferRD;
   input bufferSelect;
   input chunkCount;
-  input [3:0]dataIn;
-  input [7:0]product_LONG;
-  output [3:0]product_SHORT;
+  input [7:0]dataIn;
+  input [15:0]product_LONG;
+  output [7:0]product_SHORT;
 
   wire Clk;
   wire Clr;
@@ -45,14 +45,14 @@ module ps_Wrap_wrapper
   wire FULL1;
   wire Rst;
   wire bufferEN;
-  wire [3:0]bufferOutput0;
-  wire [3:0]bufferOutput1;
+  wire [7:0]bufferOutput0;
+  wire [7:0]bufferOutput1;
   wire bufferRD;
   wire bufferSelect;
   wire chunkCount;
-  wire [3:0]dataIn;
-  wire [7:0]product_LONG;
-  wire [3:0]product_SHORT;
+  wire [7:0]dataIn;
+  wire [15:0]product_LONG;
+  wire [7:0]product_SHORT;
 
   ps_Wrap ps_Wrap_i
        (.Clk(Clk),

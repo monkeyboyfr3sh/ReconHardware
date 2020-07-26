@@ -1,7 +1,7 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
--- Date        : Mon Jul 20 11:58:58 2020
+-- Date        : Sat Jul 25 18:51:10 2020
 -- Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/dynamicMulti/dynamicMulti.srcs/sources_1/bd/ps_Wrap/ip/ps_Wrap_ParallelBuffer_0_0/ps_Wrap_ParallelBuffer_0_0_sim_netlist.vhdl
@@ -17,7 +17,7 @@ use UNISIM.VCOMPONENTS.ALL;
 entity ps_Wrap_ParallelBuffer_0_0_SingleBuffer is
   port (
     FULL0 : out STD_LOGIC;
-    dataOut0 : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    dataOut0 : out STD_LOGIC_VECTOR ( 7 downto 0 );
     Clk : in STD_LOGIC;
     EN : in STD_LOGIC;
     RD : in STD_LOGIC;
@@ -25,7 +25,7 @@ entity ps_Wrap_ParallelBuffer_0_0_SingleBuffer is
     CLR : in STD_LOGIC;
     Rst : in STD_LOGIC;
     SR : in STD_LOGIC_VECTOR ( 0 to 0 );
-    dataIn : in STD_LOGIC_VECTOR ( 3 downto 0 )
+    dataIn : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of ps_Wrap_ParallelBuffer_0_0_SingleBuffer : entity is "SingleBuffer";
@@ -33,17 +33,18 @@ end ps_Wrap_ParallelBuffer_0_0_SingleBuffer;
 
 architecture STRUCTURE of ps_Wrap_ParallelBuffer_0_0_SingleBuffer is
   signal \^full0\ : STD_LOGIC;
-  signal holdData : STD_LOGIC;
-  signal \holdData_reg_n_0_[0]\ : STD_LOGIC;
-  signal \holdData_reg_n_0_[1]\ : STD_LOGIC;
-  signal \holdData_reg_n_0_[2]\ : STD_LOGIC;
-  signal \holdData_reg_n_0_[3]\ : STD_LOGIC;
+  signal holdData : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal holdData_0 : STD_LOGIC;
   signal \set_i_1__0_n_0\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
   attribute SOFT_HLUTNM of \dataOut0[0]_INST_0\ : label is "soft_lutpair0";
   attribute SOFT_HLUTNM of \dataOut0[1]_INST_0\ : label is "soft_lutpair0";
   attribute SOFT_HLUTNM of \dataOut0[2]_INST_0\ : label is "soft_lutpair1";
   attribute SOFT_HLUTNM of \dataOut0[3]_INST_0\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \dataOut0[4]_INST_0\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \dataOut0[5]_INST_0\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \dataOut0[6]_INST_0\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \dataOut0[7]_INST_0\ : label is "soft_lutpair3";
 begin
   FULL0 <= \^full0\;
 \dataOut0[0]_INST_0\: unisim.vcomponents.LUT2
@@ -52,7 +53,7 @@ begin
     )
         port map (
       I0 => EN,
-      I1 => \holdData_reg_n_0_[0]\,
+      I1 => holdData(0),
       O => dataOut0(0)
     );
 \dataOut0[1]_INST_0\: unisim.vcomponents.LUT2
@@ -61,7 +62,7 @@ begin
     )
         port map (
       I0 => EN,
-      I1 => \holdData_reg_n_0_[1]\,
+      I1 => holdData(1),
       O => dataOut0(1)
     );
 \dataOut0[2]_INST_0\: unisim.vcomponents.LUT2
@@ -70,7 +71,7 @@ begin
     )
         port map (
       I0 => EN,
-      I1 => \holdData_reg_n_0_[2]\,
+      I1 => holdData(2),
       O => dataOut0(2)
     );
 \dataOut0[3]_INST_0\: unisim.vcomponents.LUT2
@@ -79,10 +80,46 @@ begin
     )
         port map (
       I0 => EN,
-      I1 => \holdData_reg_n_0_[3]\,
+      I1 => holdData(3),
       O => dataOut0(3)
     );
-\holdData[3]_i_2\: unisim.vcomponents.LUT3
+\dataOut0[4]_INST_0\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"8"
+    )
+        port map (
+      I0 => EN,
+      I1 => holdData(4),
+      O => dataOut0(4)
+    );
+\dataOut0[5]_INST_0\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"8"
+    )
+        port map (
+      I0 => EN,
+      I1 => holdData(5),
+      O => dataOut0(5)
+    );
+\dataOut0[6]_INST_0\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"8"
+    )
+        port map (
+      I0 => EN,
+      I1 => holdData(6),
+      O => dataOut0(6)
+    );
+\dataOut0[7]_INST_0\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"8"
+    )
+        port map (
+      I0 => EN,
+      I1 => holdData(7),
+      O => dataOut0(7)
+    );
+\holdData[7]_i_2\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"02"
     )
@@ -90,38 +127,70 @@ begin
       I0 => EN,
       I1 => RD,
       I2 => bufferSelect,
-      O => holdData
+      O => holdData_0
     );
 \holdData_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => Clk,
-      CE => holdData,
+      CE => holdData_0,
       D => dataIn(0),
-      Q => \holdData_reg_n_0_[0]\,
+      Q => holdData(0),
       R => SR(0)
     );
 \holdData_reg[1]\: unisim.vcomponents.FDRE
      port map (
       C => Clk,
-      CE => holdData,
+      CE => holdData_0,
       D => dataIn(1),
-      Q => \holdData_reg_n_0_[1]\,
+      Q => holdData(1),
       R => SR(0)
     );
 \holdData_reg[2]\: unisim.vcomponents.FDRE
      port map (
       C => Clk,
-      CE => holdData,
+      CE => holdData_0,
       D => dataIn(2),
-      Q => \holdData_reg_n_0_[2]\,
+      Q => holdData(2),
       R => SR(0)
     );
 \holdData_reg[3]\: unisim.vcomponents.FDRE
      port map (
       C => Clk,
-      CE => holdData,
+      CE => holdData_0,
       D => dataIn(3),
-      Q => \holdData_reg_n_0_[3]\,
+      Q => holdData(3),
+      R => SR(0)
+    );
+\holdData_reg[4]\: unisim.vcomponents.FDRE
+     port map (
+      C => Clk,
+      CE => holdData_0,
+      D => dataIn(4),
+      Q => holdData(4),
+      R => SR(0)
+    );
+\holdData_reg[5]\: unisim.vcomponents.FDRE
+     port map (
+      C => Clk,
+      CE => holdData_0,
+      D => dataIn(5),
+      Q => holdData(5),
+      R => SR(0)
+    );
+\holdData_reg[6]\: unisim.vcomponents.FDRE
+     port map (
+      C => Clk,
+      CE => holdData_0,
+      D => dataIn(6),
+      Q => holdData(6),
+      R => SR(0)
+    );
+\holdData_reg[7]\: unisim.vcomponents.FDRE
+     port map (
+      C => Clk,
+      CE => holdData_0,
+      D => dataIn(7),
+      Q => holdData(7),
       R => SR(0)
     );
 \set_i_1__0\: unisim.vcomponents.LUT6
@@ -153,7 +222,7 @@ use UNISIM.VCOMPONENTS.ALL;
 entity ps_Wrap_ParallelBuffer_0_0_SingleBuffer_0 is
   port (
     FULL1 : out STD_LOGIC;
-    dataOut1 : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    dataOut1 : out STD_LOGIC_VECTOR ( 7 downto 0 );
     SR : out STD_LOGIC_VECTOR ( 0 to 0 );
     Clk : in STD_LOGIC;
     EN : in STD_LOGIC;
@@ -161,7 +230,7 @@ entity ps_Wrap_ParallelBuffer_0_0_SingleBuffer_0 is
     bufferSelect : in STD_LOGIC;
     CLR : in STD_LOGIC;
     Rst : in STD_LOGIC;
-    dataIn : in STD_LOGIC_VECTOR ( 3 downto 0 )
+    dataIn : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of ps_Wrap_ParallelBuffer_0_0_SingleBuffer_0 : entity is "SingleBuffer";
@@ -170,17 +239,25 @@ end ps_Wrap_ParallelBuffer_0_0_SingleBuffer_0;
 architecture STRUCTURE of ps_Wrap_ParallelBuffer_0_0_SingleBuffer_0 is
   signal \^full1\ : STD_LOGIC;
   signal \^sr\ : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal \holdData[3]_i_1_n_0\ : STD_LOGIC;
+  signal \holdData[7]_i_1_n_0\ : STD_LOGIC;
   signal \holdData_reg_n_0_[0]\ : STD_LOGIC;
   signal \holdData_reg_n_0_[1]\ : STD_LOGIC;
   signal \holdData_reg_n_0_[2]\ : STD_LOGIC;
   signal \holdData_reg_n_0_[3]\ : STD_LOGIC;
+  signal \holdData_reg_n_0_[4]\ : STD_LOGIC;
+  signal \holdData_reg_n_0_[5]\ : STD_LOGIC;
+  signal \holdData_reg_n_0_[6]\ : STD_LOGIC;
+  signal \holdData_reg_n_0_[7]\ : STD_LOGIC;
   signal set_i_1_n_0 : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \dataOut1[0]_INST_0\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \dataOut1[1]_INST_0\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \dataOut1[2]_INST_0\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \dataOut1[3]_INST_0\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \dataOut1[0]_INST_0\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \dataOut1[1]_INST_0\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \dataOut1[2]_INST_0\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \dataOut1[3]_INST_0\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \dataOut1[4]_INST_0\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \dataOut1[5]_INST_0\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \dataOut1[6]_INST_0\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \dataOut1[7]_INST_0\ : label is "soft_lutpair7";
 begin
   FULL1 <= \^full1\;
   SR(0) <= \^sr\(0);
@@ -220,7 +297,43 @@ begin
       I1 => \holdData_reg_n_0_[3]\,
       O => dataOut1(3)
     );
-\holdData[3]_i_1\: unisim.vcomponents.LUT3
+\dataOut1[4]_INST_0\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"8"
+    )
+        port map (
+      I0 => EN,
+      I1 => \holdData_reg_n_0_[4]\,
+      O => dataOut1(4)
+    );
+\dataOut1[5]_INST_0\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"8"
+    )
+        port map (
+      I0 => EN,
+      I1 => \holdData_reg_n_0_[5]\,
+      O => dataOut1(5)
+    );
+\dataOut1[6]_INST_0\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"8"
+    )
+        port map (
+      I0 => EN,
+      I1 => \holdData_reg_n_0_[6]\,
+      O => dataOut1(6)
+    );
+\dataOut1[7]_INST_0\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"8"
+    )
+        port map (
+      I0 => EN,
+      I1 => \holdData_reg_n_0_[7]\,
+      O => dataOut1(7)
+    );
+\holdData[7]_i_1\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"20"
     )
@@ -228,9 +341,9 @@ begin
       I0 => EN,
       I1 => RD,
       I2 => bufferSelect,
-      O => \holdData[3]_i_1_n_0\
+      O => \holdData[7]_i_1_n_0\
     );
-\holdData[3]_i_1__0\: unisim.vcomponents.LUT2
+\holdData[7]_i_1__0\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"E"
     )
@@ -242,7 +355,7 @@ begin
 \holdData_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => Clk,
-      CE => \holdData[3]_i_1_n_0\,
+      CE => \holdData[7]_i_1_n_0\,
       D => dataIn(0),
       Q => \holdData_reg_n_0_[0]\,
       R => \^sr\(0)
@@ -250,7 +363,7 @@ begin
 \holdData_reg[1]\: unisim.vcomponents.FDRE
      port map (
       C => Clk,
-      CE => \holdData[3]_i_1_n_0\,
+      CE => \holdData[7]_i_1_n_0\,
       D => dataIn(1),
       Q => \holdData_reg_n_0_[1]\,
       R => \^sr\(0)
@@ -258,7 +371,7 @@ begin
 \holdData_reg[2]\: unisim.vcomponents.FDRE
      port map (
       C => Clk,
-      CE => \holdData[3]_i_1_n_0\,
+      CE => \holdData[7]_i_1_n_0\,
       D => dataIn(2),
       Q => \holdData_reg_n_0_[2]\,
       R => \^sr\(0)
@@ -266,9 +379,41 @@ begin
 \holdData_reg[3]\: unisim.vcomponents.FDRE
      port map (
       C => Clk,
-      CE => \holdData[3]_i_1_n_0\,
+      CE => \holdData[7]_i_1_n_0\,
       D => dataIn(3),
       Q => \holdData_reg_n_0_[3]\,
+      R => \^sr\(0)
+    );
+\holdData_reg[4]\: unisim.vcomponents.FDRE
+     port map (
+      C => Clk,
+      CE => \holdData[7]_i_1_n_0\,
+      D => dataIn(4),
+      Q => \holdData_reg_n_0_[4]\,
+      R => \^sr\(0)
+    );
+\holdData_reg[5]\: unisim.vcomponents.FDRE
+     port map (
+      C => Clk,
+      CE => \holdData[7]_i_1_n_0\,
+      D => dataIn(5),
+      Q => \holdData_reg_n_0_[5]\,
+      R => \^sr\(0)
+    );
+\holdData_reg[6]\: unisim.vcomponents.FDRE
+     port map (
+      C => Clk,
+      CE => \holdData[7]_i_1_n_0\,
+      D => dataIn(6),
+      Q => \holdData_reg_n_0_[6]\,
+      R => \^sr\(0)
+    );
+\holdData_reg[7]\: unisim.vcomponents.FDRE
+     port map (
+      C => Clk,
+      CE => \holdData[7]_i_1_n_0\,
+      D => dataIn(7),
+      Q => \holdData_reg_n_0_[7]\,
       R => \^sr\(0)
     );
 set_i_1: unisim.vcomponents.LUT6
@@ -299,12 +444,12 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity ps_Wrap_ParallelBuffer_0_0_ParallelBuffer is
   port (
-    dataOut0 : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    dataOut1 : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    dataOut0 : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    dataOut1 : out STD_LOGIC_VECTOR ( 7 downto 0 );
     FULL1 : out STD_LOGIC;
     FULL0 : out STD_LOGIC;
     EN : in STD_LOGIC;
-    dataIn : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    dataIn : in STD_LOGIC_VECTOR ( 7 downto 0 );
     Clk : in STD_LOGIC;
     RD : in STD_LOGIC;
     bufferSelect : in STD_LOGIC;
@@ -328,8 +473,8 @@ buff0: entity work.ps_Wrap_ParallelBuffer_0_0_SingleBuffer
       Rst => Rst,
       SR(0) => p_0_in,
       bufferSelect => bufferSelect,
-      dataIn(3 downto 0) => dataIn(3 downto 0),
-      dataOut0(3 downto 0) => dataOut0(3 downto 0)
+      dataIn(7 downto 0) => dataIn(7 downto 0),
+      dataOut0(7 downto 0) => dataOut0(7 downto 0)
     );
 buff1: entity work.ps_Wrap_ParallelBuffer_0_0_SingleBuffer_0
      port map (
@@ -341,8 +486,8 @@ buff1: entity work.ps_Wrap_ParallelBuffer_0_0_SingleBuffer_0
       Rst => Rst,
       SR(0) => p_0_in,
       bufferSelect => bufferSelect,
-      dataIn(3 downto 0) => dataIn(3 downto 0),
-      dataOut1(3 downto 0) => dataOut1(3 downto 0)
+      dataIn(7 downto 0) => dataIn(7 downto 0),
+      dataOut1(7 downto 0) => dataOut1(7 downto 0)
     );
 end STRUCTURE;
 library IEEE;
@@ -352,12 +497,12 @@ use UNISIM.VCOMPONENTS.ALL;
 entity ps_Wrap_ParallelBuffer_0_0 is
   port (
     Clk : in STD_LOGIC;
-    dataIn : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    dataIn : in STD_LOGIC_VECTOR ( 7 downto 0 );
     bufferSelect : in STD_LOGIC;
     EN : in STD_LOGIC;
     RD : in STD_LOGIC;
-    dataOut0 : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    dataOut1 : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    dataOut0 : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    dataOut1 : out STD_LOGIC_VECTOR ( 7 downto 0 );
     Rst : in STD_LOGIC;
     CLR : in STD_LOGIC;
     FULL0 : out STD_LOGIC;
@@ -393,8 +538,8 @@ inst: entity work.ps_Wrap_ParallelBuffer_0_0_ParallelBuffer
       RD => RD,
       Rst => Rst,
       bufferSelect => bufferSelect,
-      dataIn(3 downto 0) => dataIn(3 downto 0),
-      dataOut0(3 downto 0) => dataOut0(3 downto 0),
-      dataOut1(3 downto 0) => dataOut1(3 downto 0)
+      dataIn(7 downto 0) => dataIn(7 downto 0),
+      dataOut0(7 downto 0) => dataOut0(7 downto 0),
+      dataOut1(7 downto 0) => dataOut1(7 downto 0)
     );
 end STRUCTURE;

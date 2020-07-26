@@ -1,4 +1,4 @@
-`include "definitions.h"
+`include "definitions.h" 
 `timescale `myTimeScale
 
 /*
@@ -46,8 +46,8 @@ generate
         assign flatOutputPort[(n+1)*`bitLength-1:n*`bitLength] = OutputSave[n];
     end
 endgenerate
-
-always @(flatInputPort or posedge Clk)begin
+//Update outputport
+always @(flatInputPort)begin
     for(j=0;j<`outputPortCount;j=j+1)begin
         outUsed = 0;
         for(i=0;i<`inputPortCount*`bitLength;i=i+`bitLength)begin
@@ -63,7 +63,7 @@ always @(flatInputPort or posedge Clk)begin
         end
     end
 end
-
+//Update chosen addresses
 always @(posedge Clk or posedge Rst)begin
     if(Rst) for(k=0;k<`inputPortCount;k=k+1) AddressSave[k] = 0;
     else begin

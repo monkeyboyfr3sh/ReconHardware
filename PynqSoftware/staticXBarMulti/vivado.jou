@@ -2,128 +2,13 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Sun Jul 19 15:52:56 2020
-# Process ID: 18216
+# Start of session at: Sun Jul 26 13:22:48 2020
+# Process ID: 15528
 # Current directory: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/staticXBarMulti
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent25560 C:\Users\monke\Documents\GitHub\ReconHardware\PynqSoftware\staticXBarMulti\staticXBarMulti.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14084 C:\Users\monke\Documents\GitHub\ReconHardware\PynqSoftware\staticXBarMulti\staticXBarMulti.xpr
 # Log file: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/staticXBarMulti/vivado.log
 # Journal file: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/staticXBarMulti\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/staticXBarMulti/staticXBarMulti.xpr
 update_compile_order -fileset sources_1
-update_module_reference ps_Wrap_ParallelBuffer_0_0
-reset_run synth_1
-launch_runs synth_1 -jobs 4
-wait_on_run synth_1
-open_run synth_1 -name synth_1
-startgroup
-set_property package_pin "" [get_ports [list  {dataIn[2]}]]
-place_ports Clk U12
-endgroup
-startgroup
-set_property package_pin "" [get_ports [list  {dataIn[3]}]]
-place_ports Rst T14
-endgroup
-place_ports {AddressSelect[4]} U17
-place_ports {AddressSelect[0]} V17
-save_constraints
-set_property PULLTYPE PULLDOWN [get_ports [list {AddressSelect[4]} {AddressSelect[3]} {AddressSelect[2]} {AddressSelect[1]} {AddressSelect[0]}]]
-save_constraints
-startgroup
-set_property package_pin "" [get_ports [list  bufferSelect]]
-place_ports {bufferRD_out[0]} R16
-endgroup
-place_ports {dataIn[3]} V18
-startgroup
-set_property package_pin "" [get_ports [list  mStart_in]]
-place_ports {dataIn[2]} T16
-endgroup
-startgroup
-set_property package_pin "" [get_ports [list  mStart_out]]
-place_ports {dataIn[1]} R17
-endgroup
-place_ports {dataIn[0]} P18
-set_property PULLTYPE PULLDOWN [get_ports [list {mReady_in[3]} {mReady_in[2]} {mReady_in[1]} {mReady_in[0]}]]
-save_constraints
-set_property PULLTYPE PULLDOWN [get_ports [list {mReady_out[3]} {mReady_out[2]} {mReady_out[1]} {mReady_out[0]}]]
-save_constraints
-place_ports bufferSelect U13
-place_ports mStart_in V13
-place_ports mStart_out V15
-save_constraints
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-wait_on_run impl_1
-open_hw_manager
-connect_hw_server -allow_non_jtag
-open_hw_target
-set_property PROGRAM.FILE {C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/staticXBarMulti/staticXBarMulti.runs/impl_1/multiplyXBar.bit} [get_hw_devices xc7z020_1]
-current_hw_device [get_hw_devices xc7z020_1]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
-set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
-set_property PROGRAM.FILE {C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/staticXBarMulti/staticXBarMulti.runs/impl_1/multiplyXBar.bit} [get_hw_devices xc7z020_1]
-program_hw_devices [get_hw_devices xc7z020_1]
-refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
-set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
-set_property PROGRAM.FILE {C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/staticXBarMulti/staticXBarMulti.runs/impl_1/multiplyXBar.bit} [get_hw_devices xc7z020_1]
-program_hw_devices [get_hw_devices xc7z020_1]
-refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
-set_property PULLTYPE NONE [get_ports [list {AddressSelect[4]} {AddressSelect[3]} {AddressSelect[2]} {AddressSelect[1]} {AddressSelect[0]}]]
-set_property PULLTYPE NONE [get_ports [list {mReady_in[3]} {mReady_in[2]} {mReady_in[1]} {mReady_in[0]}]]
-set_property PULLTYPE NONE [get_ports [list {mReady_out[3]} {mReady_out[2]} {mReady_out[1]} {mReady_out[0]}]]
-save_constraints
-reset_run impl_1
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-wait_on_run impl_1
-set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
-set_property PROGRAM.FILE {C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/staticXBarMulti/staticXBarMulti.runs/impl_1/multiplyXBar.bit} [get_hw_devices xc7z020_1]
-program_hw_devices [get_hw_devices xc7z020_1]
-refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
-set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
-set_property PROGRAM.FILE {C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/staticXBarMulti/staticXBarMulti.runs/impl_1/multiplyXBar.bit} [get_hw_devices xc7z020_1]
-program_hw_devices [get_hw_devices xc7z020_1]
-refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
-launch_simulation
-source XBarMulti_tb.tcl
-run 1 ns
-run 1 ns
-run 1 ns
-run 1 ns
-run 1 ns
-run 1 ns
-run 1 ns
-run 1 ns
-run 1 ns
-run 1 ns
-run 1 ns
-run 1 ns
-run 1 ns
-run 1 ns
-run 1 ns
-run 1 ns
-run 1 ns
-run 1 ns
-run 1 ns
-run 1 ns
-run 1 ns
-run 1 ns
-run 1 ns
-run 1 ns
-run 1 ns
-run 1 ns
-run 1 ns
-run 1 ns
-run 1 ns
-run 1 ns
-run 1 ns
-run 1 ns
-run 1 ns
-run 1 ns
-run 1 ns
-run 1 ns
-run 1 ns
-close_sim

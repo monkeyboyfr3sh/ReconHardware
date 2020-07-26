@@ -169,14 +169,14 @@ proc create_root_design { parentCell } {
   set FULL1 [ create_bd_port -dir O FULL1 ]
   set Rst [ create_bd_port -dir I -type rst Rst ]
   set bufferEN [ create_bd_port -dir I bufferEN ]
-  set bufferOutput0 [ create_bd_port -dir O -from 3 -to 0 bufferOutput0 ]
-  set bufferOutput1 [ create_bd_port -dir O -from 3 -to 0 bufferOutput1 ]
+  set bufferOutput0 [ create_bd_port -dir O -from 7 -to 0 bufferOutput0 ]
+  set bufferOutput1 [ create_bd_port -dir O -from 7 -to 0 bufferOutput1 ]
   set bufferRD [ create_bd_port -dir I bufferRD ]
   set bufferSelect [ create_bd_port -dir I bufferSelect ]
   set chunkCount [ create_bd_port -dir I chunkCount ]
-  set dataIn [ create_bd_port -dir I -from 3 -to 0 dataIn ]
-  set product_LONG [ create_bd_port -dir I -from 7 -to 0 product_LONG ]
-  set product_SHORT [ create_bd_port -dir O -from 3 -to 0 product_SHORT ]
+  set dataIn [ create_bd_port -dir I -from 7 -to 0 dataIn ]
+  set product_LONG [ create_bd_port -dir I -from 15 -to 0 product_LONG ]
+  set product_SHORT [ create_bd_port -dir O -from 7 -to 0 product_SHORT ]
 
   # Create instance: ParallelBuffer_0, and set properties
   set block_name ParallelBuffer
@@ -213,7 +213,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net bufferSelect_0_1 [get_bd_ports bufferSelect] [get_bd_pins ParallelBuffer_0/bufferSelect]
   connect_bd_net -net chunkCount_0_1 [get_bd_ports chunkCount] [get_bd_pins dataSplit_0/chunkCount]
   connect_bd_net -net dataIn_0_1 [get_bd_ports dataIn] [get_bd_pins ParallelBuffer_0/dataIn]
-  connect_bd_net -net dataIn_1_1 [get_bd_ports product_LONG] [get_bd_pins dataSplit_0/dataIn]
+  connect_bd_net -net dataIn_0_2 [get_bd_ports product_LONG] [get_bd_pins dataSplit_0/dataIn]
   connect_bd_net -net dataSplit_0_dataOut [get_bd_ports product_SHORT] [get_bd_pins dataSplit_0/dataOut]
 
   # Create address segments

@@ -1,18 +1,13 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Jul  1 18:00:31 2020" VIVADOVERSION="2019.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Jul 26 13:19:46 2020" VIVADOVERSION="2019.2">
 
   <SYSTEMINFO ARCH="zynq" BOARD="tul.com.tw:pynq-z2:part0:1.0" DEVICE="7z020" NAME="ps_Wrap" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
   <EXTERNALPORTS>
     <PORT CLKFREQUENCY="100000000" DIR="I" NAME="Clk" SIGIS="clk" SIGNAME="External_Ports_Clk">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="dataSplit_0" PORT="Clk"/>
         <CONNECTION INSTANCE="ParallelBuffer_0" PORT="Clk"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" LEFT="3" NAME="dataIn" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_dataIn">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="ParallelBuffer_0" PORT="dataIn"/>
+        <CONNECTION INSTANCE="dataSplit_0" PORT="Clk"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="bufferSelect" SIGIS="undef" SIGNAME="External_Ports_bufferSelect">
@@ -32,39 +27,19 @@
     </PORT>
     <PORT DIR="I" NAME="Rst" SIGIS="rst" SIGNAME="External_Ports_Rst">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="dataSplit_0" PORT="Rst"/>
         <CONNECTION INSTANCE="ParallelBuffer_0" PORT="Rst"/>
+        <CONNECTION INSTANCE="dataSplit_0" PORT="Rst"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="Clr" SIGIS="undef" SIGNAME="External_Ports_Clr">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="dataSplit_0" PORT="RD"/>
         <CONNECTION INSTANCE="ParallelBuffer_0" PORT="CLR"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" LEFT="7" NAME="product_LONG" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_product_LONG">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="dataSplit_0" PORT="dataIn"/>
+        <CONNECTION INSTANCE="dataSplit_0" PORT="RD"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="chunkCount" SIGIS="undef" SIGNAME="External_Ports_chunkCount">
       <CONNECTIONS>
         <CONNECTION INSTANCE="dataSplit_0" PORT="chunkCount"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" LEFT="3" NAME="product_SHORT" RIGHT="0" SIGIS="undef" SIGNAME="dataSplit_0_dataOut">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="dataSplit_0" PORT="dataOut"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" LEFT="3" NAME="bufferOutput0" RIGHT="0" SIGIS="undef" SIGNAME="ParallelBuffer_0_dataOut0">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="ParallelBuffer_0" PORT="dataOut0"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" LEFT="3" NAME="bufferOutput1" RIGHT="0" SIGIS="undef" SIGNAME="ParallelBuffer_0_dataOut1">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="ParallelBuffer_0" PORT="dataOut1"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" NAME="FULL0" SIGIS="undef" SIGNAME="ParallelBuffer_0_FULL0">
@@ -75,6 +50,31 @@
     <PORT DIR="O" NAME="FULL1" SIGIS="undef" SIGNAME="ParallelBuffer_0_FULL1">
       <CONNECTIONS>
         <CONNECTION INSTANCE="ParallelBuffer_0" PORT="FULL1"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="7" NAME="dataIn" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_dataIn">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="ParallelBuffer_0" PORT="dataIn"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="15" NAME="product_LONG" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_product_LONG">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="dataSplit_0" PORT="dataIn"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="7" NAME="product_SHORT" RIGHT="0" SIGIS="undef" SIGNAME="dataSplit_0_dataOut">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="dataSplit_0" PORT="dataOut"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="7" NAME="bufferOutput0" RIGHT="0" SIGIS="undef" SIGNAME="ParallelBuffer_0_dataOut0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="ParallelBuffer_0" PORT="dataOut0"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="7" NAME="bufferOutput1" RIGHT="0" SIGIS="undef" SIGNAME="ParallelBuffer_0_dataOut1">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="ParallelBuffer_0" PORT="dataOut1"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -94,7 +94,7 @@
             <CONNECTION INSTANCE="External_Ports" PORT="Clk"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="3" NAME="dataIn" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_dataIn">
+        <PORT DIR="I" LEFT="7" NAME="dataIn" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_dataIn">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="dataIn"/>
           </CONNECTIONS>
@@ -114,12 +114,12 @@
             <CONNECTION INSTANCE="External_Ports" PORT="bufferRD"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="3" NAME="dataOut0" RIGHT="0" SIGIS="undef" SIGNAME="ParallelBuffer_0_dataOut0">
+        <PORT DIR="O" LEFT="7" NAME="dataOut0" RIGHT="0" SIGIS="undef" SIGNAME="ParallelBuffer_0_dataOut0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="bufferOutput0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="3" NAME="dataOut1" RIGHT="0" SIGIS="undef" SIGNAME="ParallelBuffer_0_dataOut1">
+        <PORT DIR="O" LEFT="7" NAME="dataOut1" RIGHT="0" SIGIS="undef" SIGNAME="ParallelBuffer_0_dataOut1">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="bufferOutput1"/>
           </CONNECTIONS>
@@ -169,7 +169,7 @@
             <CONNECTION INSTANCE="External_Ports" PORT="Clr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="dataIn" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_product_LONG">
+        <PORT DIR="I" LEFT="15" NAME="dataIn" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_product_LONG">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="product_LONG"/>
           </CONNECTIONS>
@@ -179,7 +179,7 @@
             <CONNECTION INSTANCE="External_Ports" PORT="chunkCount"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="3" NAME="dataOut" RIGHT="0" SIGIS="undef" SIGNAME="dataSplit_0_dataOut">
+        <PORT DIR="O" LEFT="7" NAME="dataOut" RIGHT="0" SIGIS="undef" SIGNAME="dataSplit_0_dataOut">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="product_SHORT"/>
           </CONNECTIONS>

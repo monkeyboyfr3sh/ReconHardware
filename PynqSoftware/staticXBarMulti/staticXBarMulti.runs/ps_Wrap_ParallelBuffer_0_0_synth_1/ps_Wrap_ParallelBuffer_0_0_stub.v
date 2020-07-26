@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-// Date        : Sun Jul 19 15:55:45 2020
+// Date        : Sat Jul 25 18:51:10 2020
 // Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ ps_Wrap_ParallelBuffer_0_0_stub.v
@@ -16,14 +16,14 @@
 (* X_CORE_INFO = "ParallelBuffer,Vivado 2019.2" *)
 module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix(Clk, dataIn, bufferSelect, EN, RD, dataOut0, 
   dataOut1, Rst, CLR, FULL0, FULL1)
-/* synthesis syn_black_box black_box_pad_pin="Clk,dataIn[3:0],bufferSelect,EN,RD,dataOut0[3:0],dataOut1[3:0],Rst,CLR,FULL0,FULL1" */;
+/* synthesis syn_black_box black_box_pad_pin="Clk,dataIn[7:0],bufferSelect,EN,RD,dataOut0[7:0],dataOut1[7:0],Rst,CLR,FULL0,FULL1" */;
   input Clk;
-  input [3:0]dataIn;
+  input [7:0]dataIn;
   input bufferSelect;
   input EN;
   input RD;
-  output [3:0]dataOut0;
-  output [3:0]dataOut1;
+  output [7:0]dataOut0;
+  output [7:0]dataOut1;
   input Rst;
   input CLR;
   output FULL0;

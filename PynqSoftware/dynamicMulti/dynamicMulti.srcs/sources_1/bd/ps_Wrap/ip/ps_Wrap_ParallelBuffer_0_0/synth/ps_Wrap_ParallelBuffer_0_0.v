@@ -72,12 +72,12 @@ module ps_Wrap_ParallelBuffer_0_0 (
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME Clk, ASSOCIATED_RESET Rst, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN ps_Wrap_Clk_0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 Clk CLK" *)
 input wire Clk;
-input wire [3 : 0] dataIn;
+input wire [7 : 0] dataIn;
 input wire bufferSelect;
 input wire EN;
 input wire RD;
-output wire [3 : 0] dataOut0;
-output wire [3 : 0] dataOut1;
+output wire [7 : 0] dataOut0;
+output wire [7 : 0] dataOut1;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME Rst, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 Rst RST" *)
 input wire Rst;

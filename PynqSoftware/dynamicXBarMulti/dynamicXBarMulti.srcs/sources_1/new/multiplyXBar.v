@@ -16,7 +16,7 @@ module multiplyXBar(
                         mStart_in,      //Signals for multiplication to start, will start mulipliers that input to xBar
                         mStart_out,     //Signals for multiplication to start, will start multipliers that xbar outputs to
                         mReady_in,      //Signals multiplication complete for multipers that input to xBar
-                        mReady_out,     //Signals multiplication complete for multipers that xBar outputs to
+                        mReady_out     //Signals multiplication complete for multipers that xBar outputs to
                         );
                         
 //########################################################################################################################################################################################
@@ -83,7 +83,9 @@ mux outputMux(
             .selector(outputSelect)
             );
 
-XBar xbar (  .Rst(Rst),
+XBar xbar ( 
+            .Clk(Clk),
+            .Rst(Rst),
             .flatInputPort(xbar_inputConnector),
             .flatOutputPort(xbar_outputConnector),
             .AddressSelect(AddressSelect)
