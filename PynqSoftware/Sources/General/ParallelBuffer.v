@@ -20,26 +20,26 @@ input   [`inputIndex:0]  dataIn;
 output  FULL0, FULL1;
 output wire [`inputIndex:0] dataOut0,dataOut1;
 
-SingleBuffer buff0 (Clk,
-                    dataIn, 
-                    !bufferSelect, 
-                    EN, 
-                    RD,
-                    dataOut0, 
-                    Rst,
-                    CLR,
-                    FULL0
+SingleBuffer buff0 (.Clk(Clk),
+                    .dataIn(dataIn), 
+                    .sel(!bufferSelect), 
+                    .EN(EN), 
+                    .RD(RD),
+                    .dataOut(dataOut0), 
+                    .Rst(Rst),
+                    .CLR(CLR),
+                    .FULL(FULL0)
                     ); 
                     
-SingleBuffer buff1 (Clk,
-                    dataIn, 
-                    bufferSelect, 
-                    EN,
-                    RD, 
-                    dataOut1, 
-                    Rst,
-                    CLR,
-                    FULL1
-                    ); 
+SingleBuffer buff1 (.Clk(Clk),
+                    .dataIn(dataIn), 
+                    .sel(bufferSelect), 
+                    .EN(EN), 
+                    .RD(RD),
+                    .dataOut(dataOut1), 
+                    .Rst(Rst),
+                    .CLR(CLR),
+                    .FULL(FULL0)
+                    );
 
 endmodule

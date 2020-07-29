@@ -1,0 +1,3 @@
+FlipFlop.v,verilog,xil_defaultlib,../Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/FlipFlop.v,incdir="../../../../../Sources"
+ParallelBuffer.v,verilog,xil_defaultlib,../Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/ParallelBuffer.v,incdir="../../../../../Sources"
+glbl.v,Verilog,xil_defaultlib,glbl.v

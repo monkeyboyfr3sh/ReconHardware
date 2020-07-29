@@ -17,6 +17,9 @@
 *   Last updated:   7/26/2020 @ 1:17 P.M.
 */
 
+//`define VER1              1
+`define VER2                1
+
 //START_User_Set
 /*#####################################################################################################################################################*/
 //Data/Device Definition
@@ -51,6 +54,7 @@
 /*#####################################################################################################################################################*/
 //END_User_Set
 
+`ifdef VER1
 //START_Automated_Set
 /*#####################################################################################################################################################*/
 `define inputIndex          `inputWidth-1
@@ -68,3 +72,23 @@
 `define restAddress         `inputPortCount*`outputPortCount
 /*#####################################################################################################################################################*/
 //END_Automated_Set
+`endif
+
+`ifdef VER2
+//START_Automated_Set
+/*#####################################################################################################################################################*/
+`define inputIndex          `inputWidth-1
+
+//Integer/Float Multiply Definition
+`define multiplyIndex       2*`inputWidth-1
+
+//For floating point calculation
+`define exponentIndex       (`inputIndex-1) 
+`define width               (`exponentIndex-`mantissaIndex)-1
+
+//Xbar
+`define bitLength           `inputWidth                         //Size of each data input/outputport for Xbar
+`define restAddress         `inputPortCount*`outputPortCount
+/*#####################################################################################################################################################*/
+//END_Automated_Set
+`endif

@@ -1,7 +1,7 @@
-`timescale 1ns / 1ps
 `include "definitions.h"
+`timescale `myTimeScale
 
-module SingleBuffer(Clk,
+module SingleBuffer(Clk,                    
                     dataIn, 
                     sel, 
                     EN,
