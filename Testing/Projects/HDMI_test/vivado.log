@@ -1,0 +1,184 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Sat Aug  1 11:11:31 2020
+# Process ID: 21896
+# Current directory: C:/Users/monke/Documents/GitHub/ReconHardware/Testing/Projects/HDMI_test
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14048 C:\Users\monke\Documents\GitHub\ReconHardware\Testing\Projects\HDMI_test\HDMI_test.xpr
+# Log file: C:/Users/monke/Documents/GitHub/ReconHardware/Testing/Projects/HDMI_test/vivado.log
+# Journal file: C:/Users/monke/Documents/GitHub/ReconHardware/Testing/Projects/HDMI_test\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/monke/Documents/GitHub/ReconHardware/Testing/Projects/HDMI_test/HDMI_test.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/monke/Documents/GitHub/ReconHardware/Testing/HDMI_test' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [filemgmt 56-1] Board Part Repository Path: Directory not found as 'C:/Users/monke/Documents/AppData/Roaming/Xilinx/Vivado/2019.2/xhub/board_store'; using path 'C:/Users/monke/AppData/Roaming/Xilinx/Vivado/2019.2/xhub/board_store' instead.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'.
+open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 1149.176 ; gain = 458.176
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/monke/Documents/GitHub/ReconHardware/Testing/Projects/HDMI_test/HDMI_test.srcs/sources_1/bd/design_1/design_1.bd}
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_wr_socket' specified in the portmap, is not found on the block! 
+Adding component instance block -- xilinx.com:ip:v_tpg:8.0 - v_tpg_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_100M
+Adding component instance block -- xilinx.com:ip:v_tc:6.2 - v_tc_0
+Adding component instance block -- xilinx.com:ip:v_axi4s_vid_out:4.0 - v_axi4s_vid_out_0
+Successfully read diagram <design_1> from BD file <C:/Users/monke/Documents/GitHub/ReconHardware/Testing/Projects/HDMI_test/HDMI_test.srcs/sources_1/bd/design_1/design_1.bd>
+open_bd_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 1288.109 ; gain = 102.234
+set_property  ip_repo_paths  C:/Users/monke/Documents/GitHub/ReconHardware/Testing/Sources/vivado-library-master [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/monke/Documents/GitHub/ReconHardware/Testing/Sources/vivado-library-master'.
+startgroup
+create_bd_cell -type ip -vlnv digilentinc.com:ip:rgb2dvi:1.4 rgb2dvi_0
+endgroup
+set_property -dict [list CONFIG.kClkRange {3}] [get_bd_cells rgb2dvi_0]
+connect_bd_intf_net [get_bd_intf_pins rgb2dvi_0/RGB] [get_bd_intf_pins v_axi4s_vid_out_0/vid_io_out]
+set_property location {3 923 -596} [get_bd_cells rgb2dvi_0]
+set_property location {3 974 -681} [get_bd_cells rgb2dvi_0]
+connect_bd_net [get_bd_pins processing_system7_0/FCLK_CLK1] [get_bd_pins rgb2dvi_0/PixelClk]
+startgroup
+make_bd_pins_external  [get_bd_pins rgb2dvi_0/TMDS_Clk_p]
+WARNING: [BD 41-1306] The connection to interface pin /rgb2dvi_0/TMDS_Clk_p is being overridden by the user. This pin will not be connected as a part of interface connection TMDS
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins rgb2dvi_0/TMDS_Clk_n]
+WARNING: [BD 41-1306] The connection to interface pin /rgb2dvi_0/TMDS_Clk_n is being overridden by the user. This pin will not be connected as a part of interface connection TMDS
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins rgb2dvi_0/TMDS_Data_p]
+WARNING: [BD 41-1306] The connection to interface pin /rgb2dvi_0/TMDS_Data_p is being overridden by the user. This pin will not be connected as a part of interface connection TMDS
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins rgb2dvi_0/TMDS_Data_n]
+WARNING: [BD 41-1306] The connection to interface pin /rgb2dvi_0/TMDS_Data_n is being overridden by the user. This pin will not be connected as a part of interface connection TMDS
+endgroup
+validate_bd_design
+ERROR: [BD 41-758] The following clock pins are not connected to a valid clock source: 
+/v_tc_0/s_axi_aclk
+
+ERROR: [Common 17-39] 'validate_bd_design' failed due to earlier errors.
+validate_bd_design
+ERROR: [BD 41-758] The following clock pins are not connected to a valid clock source: 
+/v_tc_0/s_axi_aclk
+
+ERROR: [Common 17-39] 'validate_bd_design' failed due to earlier errors.
+connect_bd_net [get_bd_pins v_tc_0/s_axi_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0]
+validate_bd_design
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_M_AXI_GP0_FREQMHZ(10) on '/processing_system7_0' with propagated value(100). Command ignored
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+WARNING: [BD 41-927] Following properties on pin /rgb2dvi_0/PixelClk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	FREQ_HZ=40000000 
+delete_bd_objs [get_bd_nets processing_system7_0_FCLK_CLK0]
+undo
+INFO: [Common 17-17] undo 'delete_bd_objs [get_bd_nets processing_system7_0_FCLK_CLK0]'
+undo
+INFO: [Common 17-17] undo 'connect_bd_net [get_bd_pins v_tc_0/s_axi_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0]'
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/v_tc_0/ctrl} ddr_seg {Auto} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins v_tc_0/ctrl]
+Slave segment </v_tc_0/ctrl/Reg> is being mapped into address space </processing_system7_0/Data> at <0x43C1_0000 [ 64K ]>
+save_bd_design
+Wrote  : <C:\Users\monke\Documents\GitHub\ReconHardware\Testing\Projects\HDMI_test\HDMI_test.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <C:/Users/monke/Documents/GitHub/ReconHardware/Testing/Projects/HDMI_test/HDMI_test.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+generate_target all [get_files  C:/Users/monke/Documents/GitHub/ReconHardware/Testing/Projects/HDMI_test/HDMI_test.srcs/sources_1/bd/design_1/design_1.bd]
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_M_AXI_GP0_FREQMHZ(10) on '/processing_system7_0' with propagated value(100). Command ignored
+WARNING: [BD 41-927] Following properties on pin /rgb2dvi_0/PixelClk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	FREQ_HZ=40000000 
+Wrote  : <C:\Users\monke\Documents\GitHub\ReconHardware\Testing\Projects\HDMI_test\HDMI_test.srcs\sources_1\bd\design_1\design_1.bd> 
+VHDL Output written to : C:/Users/monke/Documents/GitHub/ReconHardware/Testing/Projects/HDMI_test/HDMI_test.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : C:/Users/monke/Documents/GitHub/ReconHardware/Testing/Projects/HDMI_test/HDMI_test.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : C:/Users/monke/Documents/GitHub/ReconHardware/Testing/Projects/HDMI_test/HDMI_test.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI_GP0'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+WARNING: [IP_Flow 19-1971] File named "sim/design_1_v_tpg_0_0.v" already exists in file group "xilinx_verilogsimulationwrapper", cannot add it again.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block v_tpg_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block v_tc_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block v_axi4s_vid_out_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rgb2dvi_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/monke/Documents/GitHub/ReconHardware/Testing/Projects/HDMI_test/HDMI_test.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/Users/monke/Documents/GitHub/ReconHardware/Testing/Projects/HDMI_test/HDMI_test.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file C:/Users/monke/Documents/GitHub/ReconHardware/Testing/Projects/HDMI_test/HDMI_test.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File C:/Users/monke/Documents/GitHub/ReconHardware/Testing/Projects/HDMI_test/HDMI_test.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+generate_target: Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1596.016 ; gain = 218.496
+catch { config_ip_cache -export [get_ips -all design_1_processing_system7_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_v_tpg_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_rst_ps7_0_100M_0] }
+catch { config_ip_cache -export [get_ips -all design_1_v_tc_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_v_axi4s_vid_out_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_xbar_0] }
+catch { config_ip_cache -export [get_ips -all design_1_rgb2dvi_0_0] }
+catch { config_ip_cache -export [get_ips -all design_1_auto_pc_0] }
+export_ip_user_files -of_objects [get_files C:/Users/monke/Documents/GitHub/ReconHardware/Testing/Projects/HDMI_test/HDMI_test.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/monke/Documents/GitHub/ReconHardware/Testing/Projects/HDMI_test/HDMI_test.srcs/sources_1/bd/design_1/design_1.bd]
+launch_runs -jobs 4 {design_1_processing_system7_0_0_synth_1 design_1_v_tpg_0_0_synth_1 design_1_rst_ps7_0_100M_0_synth_1 design_1_v_tc_0_0_synth_1 design_1_v_axi4s_vid_out_0_0_synth_1 design_1_xbar_0_synth_1 design_1_rgb2dvi_0_0_synth_1 design_1_auto_pc_0_synth_1}
+[Sat Aug  1 11:18:51 2020] Launched design_1_processing_system7_0_0_synth_1, design_1_v_tpg_0_0_synth_1, design_1_rst_ps7_0_100M_0_synth_1, design_1_v_tc_0_0_synth_1, design_1_v_axi4s_vid_out_0_0_synth_1, design_1_xbar_0_synth_1, design_1_rgb2dvi_0_0_synth_1, design_1_auto_pc_0_synth_1...
+Run output will be captured here:
+design_1_processing_system7_0_0_synth_1: C:/Users/monke/Documents/GitHub/ReconHardware/Testing/Projects/HDMI_test/HDMI_test.runs/design_1_processing_system7_0_0_synth_1/runme.log
+design_1_v_tpg_0_0_synth_1: C:/Users/monke/Documents/GitHub/ReconHardware/Testing/Projects/HDMI_test/HDMI_test.runs/design_1_v_tpg_0_0_synth_1/runme.log
+design_1_rst_ps7_0_100M_0_synth_1: C:/Users/monke/Documents/GitHub/ReconHardware/Testing/Projects/HDMI_test/HDMI_test.runs/design_1_rst_ps7_0_100M_0_synth_1/runme.log
+design_1_v_tc_0_0_synth_1: C:/Users/monke/Documents/GitHub/ReconHardware/Testing/Projects/HDMI_test/HDMI_test.runs/design_1_v_tc_0_0_synth_1/runme.log
+design_1_v_axi4s_vid_out_0_0_synth_1: C:/Users/monke/Documents/GitHub/ReconHardware/Testing/Projects/HDMI_test/HDMI_test.runs/design_1_v_axi4s_vid_out_0_0_synth_1/runme.log
+design_1_xbar_0_synth_1: C:/Users/monke/Documents/GitHub/ReconHardware/Testing/Projects/HDMI_test/HDMI_test.runs/design_1_xbar_0_synth_1/runme.log
+design_1_rgb2dvi_0_0_synth_1: C:/Users/monke/Documents/GitHub/ReconHardware/Testing/Projects/HDMI_test/HDMI_test.runs/design_1_rgb2dvi_0_0_synth_1/runme.log
+design_1_auto_pc_0_synth_1: C:/Users/monke/Documents/GitHub/ReconHardware/Testing/Projects/HDMI_test/HDMI_test.runs/design_1_auto_pc_0_synth_1/runme.log
+export_simulation -of_objects [get_files C:/Users/monke/Documents/GitHub/ReconHardware/Testing/Projects/HDMI_test/HDMI_test.srcs/sources_1/bd/design_1/design_1.bd] -directory C:/Users/monke/Documents/GitHub/ReconHardware/Testing/Projects/HDMI_test/HDMI_test.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/monke/Documents/GitHub/ReconHardware/Testing/Projects/HDMI_test/HDMI_test.ip_user_files -ipstatic_source_dir C:/Users/monke/Documents/GitHub/ReconHardware/Testing/Projects/HDMI_test/HDMI_test.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/monke/Documents/GitHub/ReconHardware/Testing/Projects/HDMI_test/HDMI_test.cache/compile_simlib/modelsim} {questa=C:/Users/monke/Documents/GitHub/ReconHardware/Testing/Projects/HDMI_test/HDMI_test.cache/compile_simlib/questa} {riviera=C:/Users/monke/Documents/GitHub/ReconHardware/Testing/Projects/HDMI_test/HDMI_test.cache/compile_simlib/riviera} {activehdl=C:/Users/monke/Documents/GitHub/ReconHardware/Testing/Projects/HDMI_test/HDMI_test.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+make_wrapper -files [get_files C:/Users/monke/Documents/GitHub/ReconHardware/Testing/Projects/HDMI_test/HDMI_test.srcs/sources_1/bd/design_1/design_1.bd] -top
+add_files -norecurse C:/Users/monke/Documents/GitHub/ReconHardware/Testing/Projects/HDMI_test/HDMI_test.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+add_files -fileset constrs_1 -norecurse C:/Users/monke/Downloads/XVES_0023/XVES_0023/src/proj/src/constr/pynq-z2_v1.0.xdc
+launch_runs impl_1 -jobs 4
+[Sat Aug  1 12:07:30 2020] Launched synth_1...
+Run output will be captured here: C:/Users/monke/Documents/GitHub/ReconHardware/Testing/Projects/HDMI_test/HDMI_test.runs/synth_1/runme.log
+[Sat Aug  1 12:07:30 2020] Launched impl_1...
+Run output will be captured here: C:/Users/monke/Documents/GitHub/ReconHardware/Testing/Projects/HDMI_test/HDMI_test.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Sat Aug  1 12:10:17 2020] Launched impl_1...
+Run output will be captured here: C:/Users/monke/Documents/GitHub/ReconHardware/Testing/Projects/HDMI_test/HDMI_test.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.2
+  **** Build date : Nov  6 2019 at 22:12:23
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+****** Xilinx cs_server v2019.2.0
+  **** Build date : Nov 06 2019-23:28:22
+    ** Copyright 2017-2019 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 1682.762 ; gain = 5.441
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+open_hw_target: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 2912.941 ; gain = 1230.180
+set_property PROGRAM.FILE {C:/Users/monke/Documents/GitHub/ReconHardware/Testing/Projects/HDMI_test/HDMI_test.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/monke/Documents/GitHub/ReconHardware/Testing/Projects/HDMI_test/HDMI_test.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
