@@ -15,8 +15,8 @@ module matrixAccelerator(
 //Inputs
 input   Clk,Rst,bufferRD,mStart,direct,Add;
 input   [`addressLength-1:0] AddressSelect;
-input   [`inputPortCount*(`bitLength*2)-1:0]    multiplier_input;
-input   [`inputPortCount*(`bitLength*2)-1:0]    multiplicand_input;
+input   [(`inputPortCount*`bitLength*2)-1:0]    multiplier_input;
+input   [(`inputPortCount*`bitLength*2)-1:0]    multiplicand_input;
 
 //Outputs
 output  [`outputPortCount*(`bitLength*2)-1:0]   flatsumout;
@@ -57,8 +57,8 @@ generate
         dynamicMulti2 inputMulti (
             .Clk(Clk),
             .Rst(Rst),
-            .dataIn0(multiplier_input[(m+1)*(`bitLength*2)-1:m*(`bitLength*2)]),
-            .dataIn1(multiplicand_input[(m+1)*(`bitLength*2)-1:m*(`bitLength*2)]),
+            .dataIn0(multiplier_input[(m+1)*`bitLength-1:m*`bitLength]),
+            .dataIn1(multiplicand_input[(m+1)*`bitLength-1:m*`bitLength]),
             .bufferRD(bufferRD),
             .bufferEN(1),
             .mStart(mStart),
