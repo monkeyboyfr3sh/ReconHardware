@@ -1,0 +1,27 @@
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+Stopped at time : 5 ns : File "C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/TB/adderFloat_tb.v" Line 38
+Stopped at time : 5 ns : File "C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/TB/adderFloat_tb.v" Line 38
+Stopped at time : 5 ns : File "C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Adder/adderFloat.v" Line 29
+Stopped at time : 5 ns : File "C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Adder/adderFloat.v" Line 31
+Stopped at time : 5 ns : File "C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Adder/adderFloat.v" Line 33
+Stopped at time : 5 ns : File "C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Adder/adderFloat.v" Line 58
+Stopped at time : 5 ns : File "C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Adder/adderFloat.v" Line 65
+Stopped at time : 5 ns : File "C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Adder/adderFloat.v" Line 68
+Stopped at time : 5 ns : File "C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Adder/adderFloat.v" Line 69
+Stopped at time : 5 ns : File "C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Adder/adderFloat.v" Line 74
+Stopped at time : 5 ns : File "C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Adder/adderFloat.v" Line 28
+Stopped at time : 6 ns : File "C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/TB/adderFloat_tb.v" Line 27
+Stopped at time : 6 ns : File "C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/TB/adderFloat_tb.v" Line 28
+Stopped at time : 6 ns : File "C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/TB/adderFloat_tb.v" Line 38
+Stopped at time : 6 ns : File "C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/TB/adderFloat_tb.v" Line 38
+Stopped at time : 7 ns : File "C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/TB/adderFloat_tb.v" Line 38
+Stopped at time : 7 ns : File "C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/TB/adderFloat_tb.v" Line 38
+Stopped at time : 7 ns : File "C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Adder/adderFloat.v" Line 29
+Stopped at time : 7 ns : File "C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Adder/adderFloat.v" Line 31
+Stopped at time : 7 ns : File "C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Adder/adderFloat.v" Line 33
+Stopped at time : 7 ns : File "C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Adder/adderFloat.v" Line 35
+Stopped at time : 7 ns : File "C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Adder/adderFloat.v" Line 37
+Stopped at time : 7 ns : File "C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Adder/adderFloat.v" Line 38
+Stopped at time : 7 ns : File "C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Adder/adderFloat.v" Line 45
+Stopped at time : 7 ns : File "C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Adder/adderFloat.v" Line 46

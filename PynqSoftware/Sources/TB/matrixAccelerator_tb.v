@@ -32,14 +32,14 @@ mStart = 0;
 bufferRD = 0;
 direct = 1;
 
-multiplier_input[1*`bitLength-1:0*`bitLength] = `bitLength'h00;
-multiplier_input[2*`bitLength-1:1*`bitLength] = `bitLength'h10;
-multiplier_input[3*`bitLength-1:2*`bitLength] = `bitLength'h01;
+multiplier_input[1*`bitLength-1:0*`bitLength] = `bitLength'h4000;
+multiplier_input[2*`bitLength-1:1*`bitLength] = `bitLength'h5a05;
+multiplier_input[3*`bitLength-1:2*`bitLength] = `bitLength'h5800;
 multiplier_input[4*`bitLength-1:3*`bitLength] = `bitLength'h03;
 
-multiplicand_input[1*`bitLength-1:0*`bitLength] = `bitLength'h01;
-multiplicand_input[2*`bitLength-1:1*`bitLength] = `bitLength'h01;
-multiplicand_input[3*`bitLength-1:2*`bitLength] = `bitLength'h01;
+multiplicand_input[1*`bitLength-1:0*`bitLength] = `bitLength'h4000;
+multiplicand_input[2*`bitLength-1:1*`bitLength] = `bitLength'h5027;
+multiplicand_input[3*`bitLength-1:2*`bitLength] = `bitLength'h4e68;
 multiplicand_input[4*`bitLength-1:3*`bitLength] = `bitLength'h01;
 
 #`clkPeriod;

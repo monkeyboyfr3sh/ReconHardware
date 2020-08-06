@@ -9,60 +9,69 @@ module adderFloat(   Clk,
                     sum
                     );
 input Clk,Rst,Add;
-input   [(`bitLength*2)-1:0] addend;
-reg     [(`bitLength*2)-1:0] accumulate;
-reg     [(`bitLength*2)-1:0] tempAcc;
-output  [(`bitLength*2)-1:0] sum;
+input   [(`bitLength*2)-1:0]    addend;
+reg     [(`bitLength*2)-1:0]    accumulate;
+reg     [(`bitLength*2)-1:0]    smallVal;
+reg     [`width:0]              tempExp;
+reg     [`width:0]              accumulateExp;
+reg     [`mantissaIndex+2:0]    tempMan;
+reg     [`mantissaIndex+1:0]    bigMan;
+reg     [`mantissaIndex+1:0]    smallMan;
+output  [(`bitLength*2)-1:0]    sum;
 assign sum = accumulate;
 
-integer expcount;
+wire                            addendSign =        addend[`exponentIndex+1];
+wire                            accumulateSign =    accumulate[`exponentIndex+1];
+
 integer i;
-
-//Bitsliceing sign bit
-wire                                    addendSign      = addend[`exponentIndex+1];
-wire                                    accumulateSign  = accumulate[`exponentIndex+1];
-
-//Bitslicing exponent values
-wire [`exponentIndex:`mantissaIndex+1]  addendExp       = addend[`exponentIndex:`mantissaIndex+1];
-wire [`exponentIndex:`mantissaIndex+1]  accumulateExp   = accumulate[`exponentIndex:`mantissaIndex+1];
-//Bitslicing mantissa values
-wire [`mantissaIndex+1:0]               addendMan       = addend[`mantissaIndex:0];
-wire [`mantissaIndex+1:0]               accumulateMan   = accumulate[`mantissaIndex:0];
 
 always@(posedge Clk)begin
     if(Rst)accumulate = 0;
     else begin
-        if(Add) begin
-            tempAcc = addendMan;
-            //First need to normalize addend
-            if(addendExp!=accumulateExp) begin
-                expcount = 0;
-                //Need to normalize addend that is bigger
-                while(addendExp > accumulateExp+expcount) begin
-                    tempAcc = tempAcc << 1;
-                    expcount = expcount + 1;
+        if(Add)begin 
+            //Determine if there is a magnitude difference
+            if(addend[`exponentIndex:`mantissaIndex+1] != accumulate[`exponentIndex:`mantissaIndex+1]) begin
+                //Determine small value
+                if(addend[`exponentIndex:`mantissaIndex+1] > accumulate[`exponentIndex:`mantissaIndex+1])begin
+                    //Addend is greater
+                    smallVal = accumulate;
+                    accumulate = addend;
+                end 
+                else begin     
+                    //Accumulate is greater 
+                    smallVal = addend;
                 end
                 
-                expcount = 0;
-                //Need to normalize addend that is smaller
-                while(addendExp+expcount < accumulateExp) begin
-                    tempAcc = tempAcc >> 1;
-                    expcount = expcount + 1;
+                tempExp = smallVal[`exponentIndex:`mantissaIndex+1];
+                smallMan = smallVal[`mantissaIndex:0];
+                smallMan[`mantissaIndex+1] = 1; 
+                bigMan =  accumulate[`mantissaIndex:0];
+                bigMan[`mantissaIndex+1] = 1;
+                accumulateExp = accumulate[`exponentIndex:`mantissaIndex+1];
+                for(i = 0;i<2**`width;i = i + 1)begin
+                    if((tempExp+i)<accumulateExp)
+                        smallMan = smallMan >> 1;
                 end
-            end else;
-            //addendMan is now in tempAcc and is normalized to accumulate.
-            tempAcc = (addendSign&&accumulateSign)?(accumulateMan + tempAcc):(accumulateMan - tempAcc);
-            
-            //Check for overflow
-            for(i = (`bitLength*2)-1;i > `mantissaIndex;i=i-1)begin
-                if(tempAcc[i]) begin
-                    //tempAcc = tempAcc >> 1;
-                    //Adding to exponent
-                    //accumulate[`exponentIndex:`mantissaIndex+1] = accumulate[`exponentIndex:`mantissaIndex+1]+1;     
-                end
-            accumulate[`mantissaIndex:0] =  tempAcc;
             end
-            
+            else begin
+                //Determine small value
+                if(addend[`mantissaIndex:0] > accumulate[`mantissaIndex:0])begin
+                    //Addend is greater    
+                    smallVal = accumulate;
+                    accumulate = addend;
+                end
+                else begin
+                    //Accumulate is greater
+                    smallVal = addend;
+                end
+            end
+            tempMan = smallMan + bigMan;
+            if(tempMan[`mantissaIndex+2])begin
+                accumulate[`exponentIndex:`mantissaIndex+1] = accumulate[`exponentIndex:`mantissaIndex+1]+1;
+                tempMan = tempMan >> 1;
+            end
+            //New comment
+            accumulate[`mantissaIndex:0] = tempMan;
         end
     end
 end

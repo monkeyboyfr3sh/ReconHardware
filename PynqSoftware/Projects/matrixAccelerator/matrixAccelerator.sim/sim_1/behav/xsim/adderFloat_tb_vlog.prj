@@ -1,12 +1,13 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib "C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/definitions.h" --include "../../../../../../Sources" \
 "../../../../../../Sources/General/FlipFlop.v" \
-"../../../../matrixAccelerator.srcs/sources_1/new/matrixAccelerator.v" \
 "../../../../../../Sources/Multiplier/multiplyCompute.v" \
 "../../../../matrixAccelerator.srcs/sources_1/imports/Multiplier/dynamicMulti2.v" \
 "../../../../../../Sources/General/XBar2.v" \
-"../../../../matrixAccelerator.srcs/sources_1/new/adder.v" \
 "../../../../../../Sources/Adder/adderFloat.v" \
+"../../../../../../Sources/General/matrixAccelerator.v" \
+"../../../../../../Sources/Adder/adder.v" \
+"../../../../../../Sources/Multiplier/floatmComputePynq.v" \
 "../../../../../../Sources/TB/dynamicMulti2_tb.v" \
 "../../../../../../Sources/TB/XBar2_tb.v" \
 "../../../../../../Sources/TB/adder_tb.v" \

@@ -70,7 +70,7 @@ generate
             );
     end
     for(m=0;m<`inputPortCount;m=m+1)begin
-        adder outputAdder (   
+        adderFloat outputAdder (   
             .Clk(Clk),
             .Rst(Rst),
             .addend(addarray_inputConnector[(m+1)*(`bitLength*2)-1:m*(`bitLength*2)]),

@@ -50,7 +50,7 @@ SingleBuffer buff1 (.Clk(Clk),
                     .FULL(FULL1)
                     );
                                       
-multiplyCompute mCompute(
+floatmultiplyComputePynq mCompute(
                     .product(product),
                     .multiplier(bufferOutput0),
                     .multiplicand(bufferOutput1),

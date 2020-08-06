@@ -20,10 +20,12 @@ Rst = 1;
 #`clkPeriod;
 Rst = 0;
 Add = 1;
-addend  = `bitLength'h4b;
+addend  = `bitLength'h4de8;
 #`clkPeriod;
-addend  = `bitLength'h51;
-#`clkPeriod;
+addend  = `bitLength'h4cf2;
+#`clkPeriod;//Should add up to 0x516D
+addend  = `bitLength'h5782;
+#`clkPeriod;//Should add up to 0x591C
 Rst = 1;
 #`clkPeriod;
 Rst = 0;
