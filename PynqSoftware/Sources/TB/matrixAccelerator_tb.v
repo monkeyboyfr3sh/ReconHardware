@@ -32,15 +32,23 @@ mStart = 0;
 bufferRD = 0;
 direct = 1;
 
-multiplier_input[1*`bitLength-1:0*`bitLength] = `bitLength'h4000;
-multiplier_input[2*`bitLength-1:1*`bitLength] = `bitLength'h5a05;
-multiplier_input[3*`bitLength-1:2*`bitLength] = `bitLength'h5800;
-multiplier_input[4*`bitLength-1:3*`bitLength] = `bitLength'h03;
+multiplier_input[1*`bitLength-1:0*`bitLength] = `bitLength'h5015;		//32.66
+multiplier_input[2*`bitLength-1:1*`bitLength] = `bitLength'h4958;		//10.69
+multiplier_input[3*`bitLength-1:2*`bitLength] = `bitLength'h2525;		//0.0201
+multiplier_input[4*`bitLength-1:3*`bitLength] = `bitLength'h03;			//
 
-multiplicand_input[1*`bitLength-1:0*`bitLength] = `bitLength'h4000;
-multiplicand_input[2*`bitLength-1:1*`bitLength] = `bitLength'h5027;
-multiplicand_input[3*`bitLength-1:2*`bitLength] = `bitLength'h4e68;
-multiplicand_input[4*`bitLength-1:3*`bitLength] = `bitLength'h01;
+multiplicand_input[1*`bitLength-1:0*`bitLength] = `bitLength'h4f72;		//29.78
+multiplicand_input[2*`bitLength-1:1*`bitLength] = `bitLength'h616a;		//693.0
+multiplicand_input[3*`bitLength-1:2*`bitLength] = `bitLength'h6ded;		//6068.0
+multiplicand_input[4*`bitLength-1:3*`bitLength] = `bitLength'h01;		//
+
+//(16bit)Return values should be:
+/*
+*	Multi0 	= 972.5 	= 0x6399
+*	Multi1	= 7408.0	= 0x6f3c
+*	Multi2	= 121.94	= 579f
+*	Multi3	= 
+*/
 
 #`clkPeriod;
 mStart = 1;

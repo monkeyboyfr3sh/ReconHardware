@@ -1,0 +1,11 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../../../Sources" \
+"adderFloat_tb_func_synth.v" \
+"../../../../../../../Sources/TB/dynamicMulti2_tb.v" \
+"../../../../../../../Sources/TB/XBar2_tb.v" \
+"../../../../../../../Sources/TB/adder_tb.v" \
+"../../../../../../../Sources/TB/matrixAccelerator_tb.v" \
+"../../../../../../../Sources/TB/adderFloat_tb.v" \
+
+# Do not sort compile order
+nosort

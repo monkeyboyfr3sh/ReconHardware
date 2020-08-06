@@ -17,6 +17,9 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_msg_config -id {Common 17-41} -limit 10000000
+set_msg_config  -id {VRFC 10-2989}  -string {{ERROR: [VRFC 10-2989] 'break' is not declared [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Adder/adderFloat.v:60]}}  -suppress 
+set_msg_config  -id {XSIM 43-3322}  -string {{ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.}}  -suppress 
 create_project -in_memory -part xc7z020clg400-1
 
 set_param project.singleFileAddWarning.threshold 0
