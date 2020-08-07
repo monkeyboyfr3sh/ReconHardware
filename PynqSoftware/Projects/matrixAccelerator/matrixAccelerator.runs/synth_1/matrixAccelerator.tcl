@@ -17,7 +17,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_msg_config -id {Common 17-41} -limit 10000000
+set_param chipscope.maxJobs 2
 set_msg_config  -id {VRFC 10-2989}  -string {{ERROR: [VRFC 10-2989] 'break' is not declared [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Adder/adderFloat.v:60]}}  -suppress 
 set_msg_config  -id {XSIM 43-3322}  -string {{ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.}}  -suppress 
 create_project -in_memory -part xc7z020clg400-1
@@ -38,12 +38,12 @@ set_property is_global_include true [get_files C:/Users/monke/Documents/GitHub/R
 read_verilog -library xil_defaultlib {
   C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/FlipFlop.v
   C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Multiplier/multiplyCompute.v
-  C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/imports/Multiplier/dynamicMulti2.v
   C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/XBar2.v
   C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Adder/adderFloat.v
   C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixAccelerator.v
   C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Adder/adder.v
   C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Multiplier/floatmComputePynq.v
+  C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Multiplier/dynamicMulti2.v
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

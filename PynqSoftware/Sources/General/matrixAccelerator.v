@@ -13,7 +13,8 @@ module matrixAccelerator(
                             flatsumout
                             );
 //Inputs
-input   Clk,Rst,bufferRD,mStart,direct,Add;
+input   Clk,Rst,bufferRD,mStart,direct;
+input   [`outputPortCount-1:0]                  Add;
 input   [`addressLength-1:0] AddressSelect;
 input   [(`inputPortCount*`bitLength*2)-1:0]    multiplier_input;
 input   [(`inputPortCount*`bitLength*2)-1:0]    multiplicand_input;
@@ -27,6 +28,7 @@ wire    [`inputPortCount*(`bitLength*2)-1:0]    xbar_inputConnector;
 wire    [`outputPortCount*(`bitLength*2)-1:0]   xbar_outputConnector;
 wire    [`outputPortCount*(`bitLength*2)-1:0]   addarray_inputConnector;
 wire    [(`bitLength*2)-1:0]                    sum_Connector               [`outputPortCount-1:0];
+wire    [`inputPortCount-1:0]                   mReady;
 
 XBar2 xbar2(
             .Clk(Clk),
@@ -62,19 +64,19 @@ generate
             .bufferRD(bufferRD),
             .bufferEN(1),
             .mStart(mStart),
-            .mReady(),
+            .mReady(mReady[m]),
             .dataOutMSB(product_in[m][`bitLength+:`bitLength]),
             .dataOutLSB(product_in[m][0+:`bitLength]),
             .FULL0(),
             .FULL1()
             );
     end
-    for(m=0;m<`inputPortCount;m=m+1)begin
-        adderFloat outputAdder (   
+    for(m=0;m<`outputPortCount;m=m+1)begin
+        adder outputAdder (   
             .Clk(Clk),
             .Rst(Rst),
             .addend(addarray_inputConnector[(m+1)*(`bitLength*2)-1:m*(`bitLength*2)]),
-            .Add(Add),
+            .Add(Add[m]),
             .sum(sum_Connector[m])
             );
     end

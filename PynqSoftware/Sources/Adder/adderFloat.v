@@ -55,14 +55,14 @@ always@(posedge Clk)begin
                 bigMan[`mantissaIndex+1] = 1;
                 
                 //Normalize smaller value
-                for(i = 0;i<(2**`width);i = i+1) begin
+                for(i = 0;i<(2**`expWide);i = i+1) begin
                     if(smallExp < accumulate[`exponentIndex:`mantissaIndex+1]) begin
                         smallExp = smallExp+1;
                         smallMan = smallMan >> 1;
 
                         if(smallExp > accumulate[`exponentIndex:`mantissaIndex+1])begin
                             smallExp = accumulate[`exponentIndex:`mantissaIndex+1];
-                            //i = (2**`width)-1;
+                            i = 2**`expWide;
                         end
                     end
                 end

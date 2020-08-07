@@ -1,24 +1,13 @@
 Vivado Simulator 2019.2
 Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto c9763829a085402ebf4f5ad6c83803e9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot matrixAccelerator_tb_behav xil_defaultlib.matrixAccelerator_tb xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto c9763829a085402ebf4f5ad6c83803e9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot convolve3x3_tb_behav xil_defaultlib.convolve3x3_tb xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 128 for port 'multiplier_input' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/TB/matrixAccelerator_tb.v:16]
-WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 128 for port 'multiplicand_input' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/TB/matrixAccelerator_tb.v:17]
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'bufferEN' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixAccelerator.v:63]
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'sel' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/imports/Multiplier/dynamicMulti2.v:33]
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'sel' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/imports/Multiplier/dynamicMulti2.v:44]
+WARNING: [VRFC 10-3091] actual bit length 48 differs from formal bit length 96 for port 'multiplier_input' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/TB/convolve3x3_tb.v:31]
+WARNING: [VRFC 10-3091] actual bit length 48 differs from formal bit length 96 for port 'multiplicand_input' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/TB/convolve3x3_tb.v:32]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'bufferEN' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixAccelerator.v:65]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'sel' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Multiplier/dynamicMulti2.v:33]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'sel' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Multiplier/dynamicMulti2.v:44]
 Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.XBar2
-Compiling module xil_defaultlib.SingleBuffer
-Compiling module xil_defaultlib.floatmultiplyComputePynq
-Compiling module xil_defaultlib.dynamicMulti2
-Compiling module xil_defaultlib.adderFloat
-Compiling module xil_defaultlib.matrixAccelerator_default
-Compiling module xil_defaultlib.matrixAccelerator_tb
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot matrixAccelerator_tb_behav
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel

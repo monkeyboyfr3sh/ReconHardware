@@ -17,9 +17,6 @@
 *   Last updated:   7/26/2020 @ 1:17 P.M.
 */
 
-//`define VER1              1
-`define VER2                1
-
 //START_User_Set
 /*#####################################################################################################################################################*/
 //Data/Device Definition
@@ -28,9 +25,9 @@
 `define clkPeriod           2
 
 //Xbar Definitions
-`define inputPortCount      4                                   //N
-`define outputPortCount     4                                   //M
-`define addressLength       5                                   //Eventually want to come up with a way to generate this on N and M
+`define inputPortCount      3                                   //N
+`define outputPortCount     1                                   //M
+`define addressLength       2                                   //Eventually want to come up with a way to generate this on N and M
 `define selectorLength      2                                   //Eventually want to come up with a way to generate this on number of outputs
 
 //Float Multiply
@@ -40,6 +37,9 @@
 
 //Fixed Multiply Definition
 `define fracBitCount        4                                   //Fixed Multiply definitions = number of bits dedicated to fraction
+
+//aFIFO
+`define bufferSize          4
 
 //Testbench Definitions, data will be truncated to lowest order bits of size `inputWidth
 `define dataIn1             1
@@ -54,7 +54,6 @@
 /*#####################################################################################################################################################*/
 //END_User_Set
 
-`ifdef VER1
 //START_Automated_Set
 /*#####################################################################################################################################################*/
 `define inputIndex          `inputWidth-1
@@ -72,23 +71,3 @@
 `define restAddress         `inputPortCount*`outputPortCount
 /*#####################################################################################################################################################*/
 //END_Automated_Set
-`endif
-
-`ifdef VER2
-//START_Automated_Set
-/*#####################################################################################################################################################*/
-`define inputIndex          `inputWidth-1
-
-//Integer/Float Multiply Definition
-`define multiplyIndex       2*`inputWidth-1
-
-//For floating point calculation
-`define exponentIndex       (`inputIndex-1) 
-`define width               (`exponentIndex-`mantissaIndex)-1
-
-//Xbar
-`define bitLength           `inputWidth                         //Size of each data input/outputport for Xbar
-`define restAddress         `inputPortCount*`outputPortCount
-/*#####################################################################################################################################################*/
-//END_Automated_Set
-`endif

@@ -54,7 +54,8 @@ always @(flatInputPort or direct)begin
     //Assign matching i/o
     if(direct)begin
         for(j=0;j<`outputPortCount;j=j+1)begin
-            OutputSave[j] = flatInputPort[j*(2*`bitLength)+:(2*`bitLength)];
+            if(j<`inputPortCount)
+                OutputSave[j] = flatInputPort[j*(2*`bitLength)+:(2*`bitLength)];
         end
     end
     //Assign output bassed on AddressSave array.
