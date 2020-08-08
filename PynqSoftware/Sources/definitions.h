@@ -38,9 +38,6 @@
 //Fixed Multiply Definition
 `define fracBitCount        4                                   //Fixed Multiply definitions = number of bits dedicated to fraction
 
-//aFIFO
-`define bufferSize          4
-
 //Testbench Definitions, data will be truncated to lowest order bits of size `inputWidth
 `define dataIn1             1
 `define dataIn2             2
@@ -69,5 +66,8 @@
 //Xbar
 `define bitLength           `inputWidth                         //Size of each data input/outputport for Xbar
 `define restAddress         `inputPortCount*`outputPortCount
+
+//aFIFO
+`define bufferSize          2
 /*#####################################################################################################################################################*/
 //END_Automated_Set
