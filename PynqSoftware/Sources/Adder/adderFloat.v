@@ -62,7 +62,7 @@ always@(posedge Clk)begin
 
                         if(smallExp > accumulate[`exponentIndex:`mantissaIndex+1])begin
                             smallExp = accumulate[`exponentIndex:`mantissaIndex+1];
-                            i = 2**`expWide;
+                            //i = 2**`expWide;
                         end
                     end
                 end

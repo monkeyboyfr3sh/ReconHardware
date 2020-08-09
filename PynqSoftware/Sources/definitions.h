@@ -26,8 +26,8 @@
 
 //Xbar Definitions
 `define inputPortCount      3                                   //N
-`define outputPortCount     1                                   //M
-`define addressLength       2                                   //Eventually want to come up with a way to generate this on N and M
+`define outputPortCount     3                                   //M
+`define addressLength       4                                   //Eventually want to come up with a way to generate this on N and M
 `define selectorLength      2                                   //Eventually want to come up with a way to generate this on number of outputs
 
 //Float Multiply
@@ -36,7 +36,7 @@
 `define expWide             5
 
 //Fixed Multiply Definition
-`define fracBitCount        4                                   //Fixed Multiply definitions = number of bits dedicated to fraction
+`define fracBitCount        8                                   //Fixed Multiply definitions = number of bits dedicated to fraction
 
 //Testbench Definitions, data will be truncated to lowest order bits of size `inputWidth
 `define dataIn1             1
@@ -68,6 +68,6 @@
 `define restAddress         `inputPortCount*`outputPortCount
 
 //aFIFO
-`define bufferSize          2
+`define bufferSize          18
 /*#####################################################################################################################################################*/
 //END_Automated_Set

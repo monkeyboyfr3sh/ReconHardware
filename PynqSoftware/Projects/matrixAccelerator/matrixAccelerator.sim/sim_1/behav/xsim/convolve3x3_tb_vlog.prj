@@ -1,18 +1,12 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib "C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/definitions.h" --include "../../../../../../Sources" \
-"../../../../../../Sources/General/FlipFlop.v" \
-"../../../../../../Sources/Multiplier/multiplyCompute.v" \
 "../../../../../../Sources/General/XBar2.v" \
+"../../../../../../Sources/General/aFIFO.v" \
 "../../../../../../Sources/Adder/adderFloat.v" \
-"../../../../../../Sources/General/matrixAccelerator.v" \
-"../../../../../../Sources/Adder/adder.v" \
 "../../../../../../Sources/Multiplier/floatmComputePynq.v" \
-"../../../../../../Sources/Multiplier/dynamicMulti2.v" \
-"../../../../../../Sources/TB/dynamicMulti2_tb.v" \
-"../../../../../../Sources/TB/XBar2_tb.v" \
-"../../../../../../Sources/TB/adder_tb.v" \
-"../../../../../../Sources/TB/matrixAccelerator_tb.v" \
-"../../../../../../Sources/TB/adderFloat_tb.v" \
+"../../../../../../Sources/General/matrixAccTopDevice.v" \
+"../../../../../../Sources/General/matrixAccelerator.v" \
+"../../../../../../Sources/General/matrixControl3x3.v" \
 "../../../../../../Sources/TB/convolve3x3_tb.v" \
 
 # compile glbl module

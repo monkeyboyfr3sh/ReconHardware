@@ -4,132 +4,137 @@
 module convolve3x3_tb;
 
 //Inputs
-reg		Clk,Rst,bufferRD,mStart,direct;
-reg 	[`outputPortCount-1:0] Add;
-reg		[`addressLength-1:0] AddressSelect;
-reg		[`inputPortCount*`bitLength-1:0]    multiplier_input;
-reg		[`inputPortCount*`bitLength-1:0]    multiplicand_input;
+reg 	Clk,Rst,cStart;
 
-reg  	[`bitLength-1:0] inputArray		[2:0][2:0];	//3x3 array that holds `bitLength values
-reg  	[`bitLength-1:0] filterArray	[2:0][2:0];	//3x3 array that holds `bitLength values
+reg     [`bitLength-1:0]    dataInput;
+reg   	[`bitLength-1:0]    FIFO_OUT_PORT;
+reg     wr_clk;
 
 //Outputs
-wire  	[`outputPortCount*(`bitLength*2)-1:0]   flatsumout;
-wire 	[`bitLength-1:0] outArray 		[2:0][2:0];
+wire    ready,FULL,EMPTY;
+wire    [2*`outputPortCount*`bitLength-1:0]       sum;
 
-matrixAccelerator uut ( Clk,Rst,
-						multiplier_input,
-						multiplicand_input,
-						AddressSelect,
-						bufferRD,
-						mStart,
-						direct,
-						Add,
-						flatsumout
-						);
+matrixAccTopDevice UUT(
+    Clk, Rst,
+    dataInput,
+    cStart,
+    sum,
+    ready,
+    wr_clk,
+    FULL,
+    EMPTY
+);
             
 initial begin
-inputArray[0][0] = 0;
-inputArray[0][1] = 1;
-inputArray[0][2] = 2;
-inputArray[1][0] = 1;
-inputArray[1][1] = 2;
-inputArray[1][2] = 3;
-inputArray[2][0] = 2;
-inputArray[2][1] = 3;
-inputArray[2][2] = 4;
+/*
+multiplier_input[1*`bitLength-1:0*`bitLength] = `bitLength'h5015;		//       20501/  32.66
+multiplier_input[2*`bitLength-1:1*`bitLength] = `bitLength'h4958;		//       18776/  10.69
+multiplier_input[3*`bitLength-1:2*`bitLength] = `bitLength'h2525;		//       9509/   0.0201
 
-filterArray[0][0] = 2;
-filterArray[0][1] = 2;
-filterArray[0][2] = 2;
-filterArray[1][0] = 1;
-filterArray[1][1] = 1;
-filterArray[1][2] = 1;
-filterArray[2][0] = 12;
-filterArray[2][1] = 12;
-filterArray[2][2] = 12;
+multiplicand_input[1*`bitLength-1:0*`bitLength] = `bitLength'h4f72;		//       20336/  29.78
+multiplicand_input[2*`bitLength-1:1*`bitLength] = `bitLength'h616a;		//       24938/  693.0
+multiplicand_input[3*`bitLength-1:2*`bitLength] = `bitLength'h6ded;		//       28141/  6068.0
+
+Multi0 	= 972.5 	= 0x6399
+Multi1	= 7408.0	= 0x6f3c
+Multi2	= 121.94	= 0x579f
+*/
 
 Clk = 0;
+wr_clk = 0;
 Rst = 1;
 #`clkPeriod;
 Rst = 0;
-mStart = 0;
-bufferRD = 0;
+cStart = 1;
+#`clkPeriod;
 
-AddressSelect = 0;
-#`clkPeriod;
-AddressSelect = 10;
-#`clkPeriod;
-AddressSelect = 20;
-#`clkPeriod;
-AddressSelect = `restAddress;
-bufferRD = 0;
+//Set one
+dataInput = `bitLength'h5015;
+wr_clk = 1;
+#`toggleTime;
+wr_clk = 0;
+#`toggleTime;
 
-multiplier_input[1*`bitLength-1:0*`bitLength] = inputArray[0][0];		
-multiplier_input[2*`bitLength-1:1*`bitLength] = inputArray[0][1];		
-multiplier_input[3*`bitLength-1:2*`bitLength] = inputArray[0][2];		
+dataInput = `bitLength'h4f72;
+wr_clk = 1;
+#`toggleTime;
+wr_clk = 0;
+#`toggleTime;
 
-multiplicand_input[1*`bitLength-1:0*`bitLength] = filterArray[0][0];	
-multiplicand_input[2*`bitLength-1:1*`bitLength] = filterArray[0][1];	
-multiplicand_input[3*`bitLength-1:2*`bitLength] = filterArray[0][2];
+dataInput = `bitLength'h4958;
+wr_clk = 1;
+#`toggleTime;
+wr_clk = 0;
+#`toggleTime;
 
-#`clkPeriod;
-mStart = 1;
-#`clkPeriod;
-Add = 7;
-mStart = 0;
-#`clkPeriod;
-Add = 0;
+dataInput = `bitLength'h616a;
+wr_clk = 1;
+#`toggleTime;
+wr_clk = 0;
+#`toggleTime;
 
-AddressSelect = 3;
-#`clkPeriod;
-AddressSelect = 13;
-#`clkPeriod;
-AddressSelect = 23;
-#`clkPeriod;
-AddressSelect = `restAddress;
-bufferRD = 0;
+dataInput = `bitLength'h2525;
+wr_clk = 1;
+#`toggleTime;
+wr_clk = 0;
+#`toggleTime;
 
-multiplier_input[1*`bitLength-1:0*`bitLength] = inputArray[1][0];		
-multiplier_input[2*`bitLength-1:1*`bitLength] = inputArray[1][1];		
-multiplier_input[3*`bitLength-1:2*`bitLength] = inputArray[1][2];		
+dataInput = `bitLength'h6ded;
+wr_clk = 1;
+#`toggleTime;
+wr_clk = 0;
+#`toggleTime;
 
-multiplicand_input[1*`bitLength-1:0*`bitLength] = filterArray[1][0];	
-multiplicand_input[2*`bitLength-1:1*`bitLength] = filterArray[1][1];	
-multiplicand_input[3*`bitLength-1:2*`bitLength] = filterArray[1][2];
+/*
+multiplier_input[1*`bitLength-1:0*`bitLength] = `bitLength'h5015;		//       20501/  32.66
+multiplier_input[2*`bitLength-1:1*`bitLength] = `bitLength'h4958;		//       18776/  10.69
+multiplier_input[3*`bitLength-1:2*`bitLength] = `bitLength'h2525;		//       9509/   0.0201
 
-#`clkPeriod;
-mStart = 1;
-#`clkPeriod;
-Add = 56;
-mStart = 0;
-#`clkPeriod;
-Add = 0;
+multiplicand_input[1*`bitLength-1:0*`bitLength] = `bitLength'h4f72;		//       20336/  29.78
+multiplicand_input[2*`bitLength-1:1*`bitLength] = `bitLength'h616a;		//       24938/  693.0
+multiplicand_input[3*`bitLength-1:2*`bitLength] = `bitLength'h6ded;		//       28141/  6068.0
 
-AddressSelect = 6;
-#`clkPeriod;
-AddressSelect = 16;
-#`clkPeriod;
-AddressSelect = 26;
-#`clkPeriod;
-AddressSelect = `restAddress;
-bufferRD = 0;
+Multi0 	= 972.5 	= 0x6399
+Multi1	= 7408.0	= 0x6f3c
+Multi2	= 121.94	= 0x579f
+*/
 
-multiplier_input[1*`bitLength-1:0*`bitLength] = inputArray[2][0];		
-multiplier_input[2*`bitLength-1:1*`bitLength] = inputArray[2][1];		
-multiplier_input[3*`bitLength-1:2*`bitLength] = inputArray[2][2];		
+//Set two
+dataInput = `bitLength'h4f72;
+wr_clk = 1;
+#`toggleTime;
+wr_clk = 0;
+#`toggleTime;
 
-multiplicand_input[1*`bitLength-1:0*`bitLength] = filterArray[2][0];	
-multiplicand_input[2*`bitLength-1:1*`bitLength] = filterArray[2][1];	
-multiplicand_input[3*`bitLength-1:2*`bitLength] = filterArray[2][2];
+dataInput = `bitLength'h5015;
+wr_clk = 1;
+#`toggleTime;
+wr_clk = 0;
+#`toggleTime;
 
-#`clkPeriod;
-mStart = 1;
-#`clkPeriod;
-Add = 448;
-mStart = 0;
-#`clkPeriod;
-Add = 0;
+dataInput = `bitLength'h616a;
+wr_clk = 1;
+#`toggleTime;
+wr_clk = 0;
+#`toggleTime;
+
+dataInput = `bitLength'h4958;
+wr_clk = 1;
+#`toggleTime;
+wr_clk = 0;
+#`toggleTime;
+
+dataInput = `bitLength'h6ded;
+wr_clk = 1;
+#`toggleTime;
+wr_clk = 0;
+#`toggleTime;
+
+dataInput = `bitLength'h2525;
+wr_clk = 1;
+#`toggleTime;
+wr_clk = 0;
+#`toggleTime;
 
 end
 always #(`clkPeriod/2) Clk = ~Clk;

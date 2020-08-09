@@ -17,7 +17,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param chipscope.maxJobs 2
 set_msg_config  -id {VRFC 10-2989}  -string {{ERROR: [VRFC 10-2989] 'break' is not declared [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Adder/adderFloat.v:60]}}  -suppress 
 set_msg_config  -id {XSIM 43-3322}  -string {{ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.}}  -suppress 
 create_project -in_memory -part xc7z020clg400-1
@@ -36,14 +35,13 @@ read_verilog C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/
 set_property file_type "Verilog Header" [get_files C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/definitions.h]
 set_property is_global_include true [get_files C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/definitions.h]
 read_verilog -library xil_defaultlib {
-  C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/FlipFlop.v
-  C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Multiplier/multiplyCompute.v
   C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/XBar2.v
+  C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/aFIFO.v
   C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Adder/adderFloat.v
-  C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixAccelerator.v
-  C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Adder/adder.v
   C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Multiplier/floatmComputePynq.v
-  C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Multiplier/dynamicMulti2.v
+  C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixAccelerator.v
+  C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v
+  C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixAccTopDevice.v
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -56,12 +54,12 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 
-synth_design -top matrixAccelerator -part xc7z020clg400-1
+synth_design -top matrixAccTopDevice -part xc7z020clg400-1
 
 
 # disable binary constraint mode for synth run checkpoints
 set_param constraints.enableBinaryConstraints false
-write_checkpoint -force -noxdef matrixAccelerator.dcp
-create_report "synth_1_synth_report_utilization_0" "report_utilization -file matrixAccelerator_utilization_synth.rpt -pb matrixAccelerator_utilization_synth.pb"
+write_checkpoint -force -noxdef matrixAccTopDevice.dcp
+create_report "synth_1_synth_report_utilization_0" "report_utilization -file matrixAccTopDevice_utilization_synth.rpt -pb matrixAccTopDevice_utilization_synth.pb"
 file delete __synthesis_is_running__
 close [open __synthesis_is_complete__ w]

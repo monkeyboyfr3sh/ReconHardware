@@ -23,17 +23,6 @@ Rst = 0;
 Add = 1;
 addend = 2;
 #`clkPeriod;
-addend = 4;
-#`clkPeriod;
-addend = 1024;
-#`clkPeriod;
-Rst = 1;
-#`clkPeriod;
-Rst = 0;
-addend = 1024;
-#`clkPeriod;
-addend = 600;
-#`clkPeriod;
 end
 always #(`clkPeriod/2) Clk = ~Clk;
 endmodule

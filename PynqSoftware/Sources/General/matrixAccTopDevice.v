@@ -8,7 +8,7 @@
 module matrixAccTopDevice(
     Clk, Rst,
     dataInput,
-    mStart,
+    cStart,
     sum,
     ready,
     wr_clk,
@@ -17,38 +17,58 @@ module matrixAccTopDevice(
 );
 
 //Inputs
-input   Clk, Rst, mStart, wr_clk;
+input   Clk, Rst, cStart, wr_clk;
 input   [`bitLength-1:0]    dataInput;
 
 //Outputs
 output  FULL,EMPTY;
-output  [`bitLength-1:0]    sum;
+output  [2*`outputPortCount*`bitLength-1:0]       sum;
 output                      ready;
 
-wire    [(`inputPortCount*`bitLength*2)-1:0]    multiplier_connector;
-wire    [(`inputPortCount*`bitLength*2)-1:0]    multiplicand_connector;
+wire    [`bitLength-1:0]                        FIFO_OUT_PORT;
 
-matrixAccelerator matrixAccel(
+wire    [`addressLength-1:0]                    AddressSelect;
+
+wire    [`inputPortCount-1:0]                   mStart_conncetor;
+wire    [`inputPortCount-1:0]                   mReady_connector;
+wire    [`inputPortCount*`bitLength-1:0]        multiplier_connector;
+wire    [`inputPortCount*`bitLength-1:0]        multiplicand_connector;
+
+matrixControl3x3 controller(
     .Clk(Clk),
     .Rst(Rst),
-    .multiplier_input(multiplier_connector),
-    .multiplicand_input(multiplicand_connector),
-    .AddressSelect(AddressSelect),
-    .bufferRD(bufferRD),
-    .mStart(mStart),
-    .direct(direct),
-    .Add(),
-    .flatsumout()
+    .cStart(cStart),                                //Convolution start
+    .FIFO_RD_CLK(FIFO_RD_CLK),                      //Clock to read FIFO. Switched off if not in a read state
+    .FIFO_OUT_PORT(FIFO_OUT_PORT),                  //Intake FIFO output data
+    .FULL(FULLL),                                   //Full signal for external device
+    .EMPTY(EMPTY),                                  //Empty signal for external device
+    .MULTIPLIER_INPUT(multiplier_connector),        //Data to be fed to multiplier input
+    .MULTIPLICAND_INPUT(multiplicand_connector),    //Data to be fed to multiplicand input
+    .MULTIPLY_START(mStart_conncetor)               //Signal to start the multiplication
 );
+
+ matrixAccelerator matrixAccel(   
+    .Clk(Clk),
+    .Rst(Rst),
+    .multiplier_input(multiplier_connector),        //Flat input connector. Has width of `bitLength*`inputPortcount
+    .multiplicand_input(multiplicand_connector),    //Flat input connector. Has width of `bitLength*`inputPortcount
+    .AddressSelect(AddressSelect),                  //Controls addressSelect for internal XBar                          
+    .mStart(mStart_conncetor),                      //Starts multiplication for all three multipliers
+    .mReady(mReady_connector),
+    .direct(1),                                     //Controll bit to direct connect XBar IO
+    .Add(mReady_connector),                         //Signals Adders to Add @posedge clk
+    .flatsumout(sum)                                //Flat Adder output
+);
+
 
 aFIFO inputBuffer(
-    .Clk(Clk),
+    .Clk(FIFO_RD_CLK),                              //RD Clock
     .Rst(Rst),
-    .dataIn(dataInput),
-    .dataOut(),//Buffer output. Needs to be sorted into multiplier
-    .wr_clk(wr_clk),
-    .FULL(FULL),
-    .EMPTY(EMPTY)
+    .dataIn(dataInput),                             //Buffer input from external device
+    .dataOut(FIFO_OUT_PORT),                        //Buffer output
+    .wr_clk(wr_clk),                                //Write clock from external device
+    .FULL(FULL),                                    //Signals buffer full
+    .EMPTY(EMPTY)                                   //Signals buffer is empty
 );
 
-end
+endmodule
