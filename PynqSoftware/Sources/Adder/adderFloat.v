@@ -79,7 +79,13 @@ always@(posedge Clk)begin
                     //Accumulate is greater
                     smallVal = addend;
                 end
+                
+                bigMan =  accumulate[`mantissaIndex:0];
+                bigMan[`mantissaIndex+1] = 1;
+                smallMan = smallVal[`mantissaIndex:0];
+                smallMan[`mantissaIndex+1] = 1; 
             end
+                        
             tempMan = smallMan + bigMan;
             if(tempMan[`mantissaIndex+2])begin
                 accumulate[`exponentIndex:`mantissaIndex+1] = accumulate[`exponentIndex:`mantissaIndex+1]+1;

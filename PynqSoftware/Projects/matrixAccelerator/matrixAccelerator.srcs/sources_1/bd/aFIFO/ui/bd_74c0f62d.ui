@@ -1,0 +1,20 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-382,-368",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0.21  2019-05-29 bk=1.5064 VDI=41 GEI=36 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace inst adderFloat_0 -pg 1 -lvl 2 -x 530 -y 70 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 1 -x 140 -y 120 -defaultsOSRD
+preplace inst rst_ps7_0_50M -pg 1 -lvl 1 -x 140 -y -130 -defaultsOSRD
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 2 -60 220 360
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 2 -70 -230 340
+preplace netloc rst_ps7_0_50M_peripheral_aresetn 1 1 1 350 -90n
+levelinfo -pg 1 -90 140 530 720
+pagesize -pg 1 -db -bbox -sgen -90 -240 720 320
+"
+}
+{
+   "da_clkrst_cnt":"1"
+}

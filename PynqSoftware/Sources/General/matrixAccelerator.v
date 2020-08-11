@@ -2,16 +2,16 @@
 `timescale `myTimeScale
 
 module matrixAccelerator(   
-                            Clk,Rst,
-                            multiplier_input,
-                            multiplicand_input,
-                            AddressSelect,
-                            mStart,
-                            mReady,
-                            direct,
-                            Add,
-                            flatsumout
-                            );
+    Clk,Rst,
+    multiplier_input,
+    multiplicand_input,
+    AddressSelect,
+    mStart,
+    mReady,
+    direct,
+    Add,
+    flatsumout
+);
 //Inputs
 input   Clk,Rst,direct;
 input   [`inputPortCount-1:0]                   mStart;

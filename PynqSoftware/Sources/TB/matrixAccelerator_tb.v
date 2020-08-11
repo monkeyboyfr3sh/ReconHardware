@@ -11,17 +11,20 @@ reg		[`inputPortCount*`bitLength-1:0]    multiplier_input;
 reg		[`inputPortCount*`bitLength-1:0]    multiplicand_input;
 
 //Outputs
-wire  [`outputPortCount*(`bitLength*2)-1:0]   flatsumout;
+wire    [`outputPortCount*(`bitLength*2)-1:0]   flatsumout;
+wire    [`inputPortCount-1:0]                   mReady;
 
-matrixAccelerator uut ( Clk,Rst,
-                        multiplier_input,
-                        multiplicand_input,
-                        AddressSelect,
-                        mStart,
-                        direct,
-                        Add,
-                        flatsumout
-                        );
+matrixAccelerator uut ( 
+    Clk,Rst,
+    multiplier_input,
+    multiplicand_input,
+    AddressSelect,
+    mStart,
+    mReady,
+    direct,
+    Add,
+    flatsumout
+);
             
 initial begin
 Clk = 0;
@@ -52,6 +55,8 @@ mStart = 1;
 Add = 7;
 mStart = 0;
 #`clkPeriod;
+
+/*
 Rst = 1;
 #`clkPeriod;
 Rst = 0;
@@ -84,6 +89,8 @@ mStart = 1;
 Add = 7;
 mStart = 0;
 #`clkPeriod;
+*/
+
 end
 always #(`clkPeriod/2) Clk = ~Clk;
 endmodule

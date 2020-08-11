@@ -2,8 +2,8 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Sat Aug  8 23:28:04 2020
-# Process ID: 22876
+# Start of session at: Tue Aug 11 18:24:27 2020
+# Process ID: 24460
 # Current directory: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1
 # Command line: vivado.exe -log matrixAccTopDevice.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source matrixAccTopDevice.tcl
 # Log file: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1/matrixAccTopDevice.vds
@@ -15,9 +15,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 15144 
+INFO: Helper process launched with PID 13184 
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 688.641 ; gain = 237.410
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 687.984 ; gain = 238.008
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'matrixAccTopDevice' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixAccTopDevice.v:8]
 INFO: [Synth 8-6157] synthesizing module 'matrixControl3x3' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v:4]
@@ -31,7 +31,9 @@ INFO: [Synth 8-6155] done synthesizing module 'floatmultiplyComputePynq' (2#1) [
 INFO: [Synth 8-6157] synthesizing module 'adderFloat' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Adder/adderFloat.v:5]
 WARNING: [Synth 8-6014] Unused sequential element smallVal_reg was removed.  [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Adder/adderFloat.v:30]
 WARNING: [Synth 8-6014] Unused sequential element smallExp_reg was removed.  [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Adder/adderFloat.v:31]
+WARNING: [Synth 8-6014] Unused sequential element smallMan_reg was removed.  [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Adder/adderFloat.v:32]
 WARNING: [Synth 8-6014] Unused sequential element tempMan_reg was removed.  [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Adder/adderFloat.v:33]
+WARNING: [Synth 8-6014] Unused sequential element bigMan_reg was removed.  [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Adder/adderFloat.v:34]
 INFO: [Synth 8-6155] done synthesizing module 'adderFloat' (3#1) [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Adder/adderFloat.v:5]
 INFO: [Synth 8-6157] synthesizing module 'XBar2' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/XBar2.v:19]
 WARNING: [Synth 8-567] referenced signal 'AddressSave' should be on the sensitivity list [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/XBar2.v:53]
@@ -48,31 +50,29 @@ Reason is one or more of the following :
 	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
 RAM "mem_reg" dissolved into registers
 INFO: [Synth 8-6155] done synthesizing module 'aFIFO' (6#1) [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/aFIFO.v:8]
-WARNING: [Synth 8-3848] Net ready in module/entity matrixAccTopDevice does not have driver. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixAccTopDevice.v:26]
-WARNING: [Synth 8-3848] Net AddressSelect in module/entity matrixAccTopDevice does not have driver. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixAccTopDevice.v:30]
-WARNING: [Synth 8-3848] Net FULLL in module/entity matrixAccTopDevice does not have driver. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixAccTopDevice.v:43]
+WARNING: [Synth 8-3848] Net FULLL in module/entity matrixAccTopDevice does not have driver. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixAccTopDevice.v:50]
+WARNING: [Synth 8-3848] Net AddressSelect in module/entity matrixAccTopDevice does not have driver. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixAccTopDevice.v:32]
 INFO: [Synth 8-6155] done synthesizing module 'matrixAccTopDevice' (7#1) [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixAccTopDevice.v:8]
 WARNING: [Synth 8-3331] design matrixControl3x3 has unconnected port FULL
-WARNING: [Synth 8-3331] design matrixAccTopDevice has unconnected port ready
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 760.883 ; gain = 309.652
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 760.895 ; gain = 310.918
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 760.883 ; gain = 309.652
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 760.895 ; gain = 310.918
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 760.883 ; gain = 309.652
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 760.895 ; gain = 310.918
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 WARNING: [Synth 8-327] inferring latch for variable 'OutputSave_reg[0]' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/XBar2.v:49]
 WARNING: [Synth 8-327] inferring latch for variable 'OutputSave_reg[1]' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/XBar2.v:49]
 WARNING: [Synth 8-327] inferring latch for variable 'OutputSave_reg[2]' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/XBar2.v:49]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 760.883 ; gain = 309.652
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 760.895 ; gain = 310.918
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -87,36 +87,35 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     18 Bit       Adders := 2     
-	   2 Input     12 Bit       Adders := 3     
-	   2 Input      7 Bit       Adders := 90    
-	   2 Input      6 Bit       Adders := 4     
-	   2 Input      5 Bit       Adders := 9     
+	   2 Input     12 Bit       Adders := 4     
+	   2 Input      7 Bit       Adders := 120   
+	   2 Input      6 Bit       Adders := 5     
+	   2 Input      5 Bit       Adders := 11    
 	   4 Input      5 Bit       Adders := 3     
 +---XORs : 
 	   2 Input      1 Bit         XORs := 3     
 +---Registers : 
 	               48 Bit    Registers := 2     
-	               32 Bit    Registers := 6     
+	               32 Bit    Registers := 8     
 	               18 Bit    Registers := 2     
 	               16 Bit    Registers := 18    
-	               11 Bit    Registers := 6     
-	                5 Bit    Registers := 4     
+	                5 Bit    Registers := 5     
 	                3 Bit    Registers := 4     
-	                1 Bit    Registers := 7     
+	                1 Bit    Registers := 10    
 +---Muxes : 
-	   2 Input     48 Bit        Muxes := 8     
-	   2 Input     32 Bit        Muxes := 27    
+	   2 Input     48 Bit        Muxes := 9     
+	   2 Input     32 Bit        Muxes := 30    
 	   2 Input     22 Bit        Muxes := 3     
 	   2 Input     16 Bit        Muxes := 4     
-	   2 Input     15 Bit        Muxes := 3     
-	   2 Input     11 Bit        Muxes := 111   
-	   2 Input     10 Bit        Muxes := 6     
-	   2 Input      7 Bit        Muxes := 180   
-	   2 Input      6 Bit        Muxes := 6     
-	   2 Input      5 Bit        Muxes := 7     
+	   2 Input     15 Bit        Muxes := 4     
+	   2 Input     11 Bit        Muxes := 136   
+	   2 Input     10 Bit        Muxes := 11    
+	   2 Input      7 Bit        Muxes := 240   
+	   2 Input      6 Bit        Muxes := 8     
+	   2 Input      5 Bit        Muxes := 8     
 	   2 Input      3 Bit        Muxes := 13    
 	   3 Input      3 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 57    
+	   2 Input      1 Bit        Muxes := 62    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -128,17 +127,18 @@ Module matrixControl3x3
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input      6 Bit       Adders := 1     
-	   2 Input      5 Bit       Adders := 6     
+	   2 Input      5 Bit       Adders := 7     
 +---Registers : 
 	               48 Bit    Registers := 2     
-	                5 Bit    Registers := 4     
+	               32 Bit    Registers := 1     
+	                5 Bit    Registers := 5     
 	                3 Bit    Registers := 1     
-	                1 Bit    Registers := 4     
+	                1 Bit    Registers := 7     
 +---Muxes : 
-	   2 Input     48 Bit        Muxes := 8     
+	   2 Input     48 Bit        Muxes := 9     
 	   2 Input      5 Bit        Muxes := 4     
 	   2 Input      3 Bit        Muxes := 3     
-	   2 Input      1 Bit        Muxes := 10    
+	   2 Input      1 Bit        Muxes := 15    
 Module XBar2 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -171,12 +171,11 @@ Detailed RTL Component Info :
 	   2 Input      5 Bit       Adders := 1     
 +---Registers : 
 	               32 Bit    Registers := 1     
-	               11 Bit    Registers := 2     
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 3     
 	   2 Input     15 Bit        Muxes := 1     
-	   2 Input     11 Bit        Muxes := 37    
-	   2 Input     10 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 34    
+	   2 Input     10 Bit        Muxes := 2     
 	   2 Input      7 Bit        Muxes := 60    
 	   2 Input      6 Bit        Muxes := 2     
 	   2 Input      5 Bit        Muxes := 1     
@@ -207,146 +206,72 @@ No constraint files found.
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-DSP Report: Generating DSP genblk3[0].inputMulti/product_man2, operation Mode is: A*B.
-DSP Report: operator genblk3[0].inputMulti/product_man2 is absorbed into DSP genblk3[0].inputMulti/product_man2.
-DSP Report: Generating DSP genblk3[1].inputMulti/product_man2, operation Mode is: A*B.
-DSP Report: operator genblk3[1].inputMulti/product_man2 is absorbed into DSP genblk3[1].inputMulti/product_man2.
-DSP Report: Generating DSP genblk3[2].inputMulti/product_man2, operation Mode is: A*B.
-DSP Report: operator genblk3[2].inputMulti/product_man2 is absorbed into DSP genblk3[2].inputMulti/product_man2.
+DSP Report: Generating DSP matrixAccel/genblk3[0].inputMulti/product_man2, operation Mode is: A*B.
+DSP Report: operator matrixAccel/genblk3[0].inputMulti/product_man2 is absorbed into DSP matrixAccel/genblk3[0].inputMulti/product_man2.
+DSP Report: Generating DSP matrixAccel/genblk3[1].inputMulti/product_man2, operation Mode is: A*B.
+DSP Report: operator matrixAccel/genblk3[1].inputMulti/product_man2 is absorbed into DSP matrixAccel/genblk3[1].inputMulti/product_man2.
+DSP Report: Generating DSP matrixAccel/genblk3[2].inputMulti/product_man2, operation Mode is: A*B.
+DSP Report: operator matrixAccel/genblk3[2].inputMulti/product_man2 is absorbed into DSP matrixAccel/genblk3[2].inputMulti/product_man2.
 WARNING: [Synth 8-3331] design matrixControl3x3 has unconnected port FULL
-WARNING: [Synth 8-3331] design matrixAccTopDevice has unconnected port ready
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\controller/ADDst_reg )
-INFO: [Synth 8-3886] merging instance 'matrixAccel/xbar2/AddressSave_reg[1][0]' (FDCE) to 'matrixAccel/xbar2/AddressSave_reg[2][1]'
-INFO: [Synth 8-3886] merging instance 'matrixAccel/xbar2/AddressSave_reg[2][0]' (FDCE) to 'matrixAccel/xbar2/AddressSave_reg[2][1]'
-INFO: [Synth 8-3886] merging instance 'matrixAccel/xbar2/AddressSave_reg[0][1]' (FDCE) to 'matrixAccel/xbar2/AddressSave_reg[2][1]'
-INFO: [Synth 8-3886] merging instance 'matrixAccel/xbar2/AddressSave_reg[1][1]' (FDCE) to 'matrixAccel/xbar2/AddressSave_reg[2][1]'
-INFO: [Synth 8-3886] merging instance 'matrixAccel/xbar2/AddressSave_reg[2][1]' (FDCE) to 'matrixAccel/xbar2/AddressSave_reg[1][2]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\genblk3[2].inputMulti/product_reg[16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\genblk3[1].inputMulti/product_reg[16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\genblk3[0].inputMulti/product_reg[16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\genblk3[2].inputMulti/product_reg[17] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\genblk3[1].inputMulti/product_reg[17] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\genblk3[0].inputMulti/product_reg[17] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\genblk3[2].inputMulti/product_reg[18] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\genblk3[1].inputMulti/product_reg[18] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\genblk3[0].inputMulti/product_reg[18] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\genblk3[2].inputMulti/product_reg[19] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\genblk3[1].inputMulti/product_reg[19] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\genblk3[0].inputMulti/product_reg[19] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\genblk3[2].inputMulti/product_reg[20] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\genblk3[1].inputMulti/product_reg[20] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\genblk3[0].inputMulti/product_reg[20] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\genblk3[2].inputMulti/product_reg[21] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\genblk3[1].inputMulti/product_reg[21] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\genblk3[0].inputMulti/product_reg[21] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\genblk3[2].inputMulti/product_reg[22] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\genblk3[1].inputMulti/product_reg[22] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\genblk3[0].inputMulti/product_reg[22] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\genblk3[2].inputMulti/product_reg[23] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\genblk3[1].inputMulti/product_reg[23] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\genblk3[0].inputMulti/product_reg[23] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\genblk3[2].inputMulti/product_reg[24] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\genblk3[1].inputMulti/product_reg[24] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\genblk3[0].inputMulti/product_reg[24] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\genblk3[2].inputMulti/product_reg[25] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\genblk3[1].inputMulti/product_reg[25] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\genblk3[0].inputMulti/product_reg[25] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\genblk3[2].inputMulti/product_reg[26] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\genblk3[1].inputMulti/product_reg[26] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\genblk3[0].inputMulti/product_reg[26] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\genblk3[2].inputMulti/product_reg[27] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\genblk3[1].inputMulti/product_reg[27] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\genblk3[0].inputMulti/product_reg[27] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\genblk3[2].inputMulti/product_reg[28] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\genblk3[1].inputMulti/product_reg[28] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\genblk3[0].inputMulti/product_reg[28] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\genblk3[2].inputMulti/product_reg[29] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\genblk3[1].inputMulti/product_reg[29] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\genblk3[0].inputMulti/product_reg[29] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\genblk3[2].inputMulti/product_reg[30] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\genblk3[1].inputMulti/product_reg[30] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\genblk3[0].inputMulti/product_reg[30] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\genblk3[2].inputMulti/product_reg[31] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\genblk3[1].inputMulti/product_reg[31] )
-INFO: [Synth 8-3886] merging instance 'matrixAccel/xbar2/AddressSave_reg[0][2]' (FDCE) to 'matrixAccel/xbar2/AddressSave_reg[1][2]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\genblk3[0].inputMulti/product_reg[31] )
-INFO: [Synth 8-3886] merging instance 'matrixAccel/xbar2/AddressSave_reg[1][2]' (FDCE) to 'matrixAccel/xbar2/AddressSave_reg[2][2]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\xbar2/AddressSave_reg[2][2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\controller/inputToggle_reg )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\controller/rdPointer_inferred /\controller/rdPointer_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\controller/rdPointer_inferred /\controller/rdPointer_reg[2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\controller/rdPointer_inferred /\controller/rdPointer_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\controller/rdPointer_inferred /\controller/rdPointer_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\controller/rdPointer_inferred /\controller/rdPointer_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inputBuffer/rd_pointer_reg[2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inputBuffer/rd_pointer_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inputBuffer/rd_pointer_reg[1] )
-INFO: [Synth 8-3886] merging instance 'controller/MULTIPLIER_INPUT_reg[0]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'controller/ADDst_reg' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'controller/MULTIPLIER_INPUT_reg[1]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'controller/MULTIPLIER_INPUT_reg[2]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'controller/MULTIPLIER_INPUT_reg[3]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'controller/MULTIPLIER_INPUT_reg[4]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'controller/MULTIPLIER_INPUT_reg[5]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'controller/MULTIPLIER_INPUT_reg[6]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'controller/MULTIPLIER_INPUT_reg[7]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'controller/MULTIPLIER_INPUT_reg[8]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'controller/MULTIPLIER_INPUT_reg[9]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'controller/MULTIPLIER_INPUT_reg[10]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'controller/MULTIPLIER_INPUT_reg[11]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'controller/MULTIPLIER_INPUT_reg[12]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'controller/MULTIPLIER_INPUT_reg[13]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'controller/MULTIPLIER_INPUT_reg[14]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'controller/MULTIPLIER_INPUT_reg[15]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'controller/MULTIPLICAND_INPUT_reg[0]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'controller/MULTIPLICAND_INPUT_reg[1]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'controller/MULTIPLICAND_INPUT_reg[2]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'controller/MULTIPLICAND_INPUT_reg[3]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'controller/MULTIPLICAND_INPUT_reg[4]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'controller/MULTIPLICAND_INPUT_reg[5]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'controller/MULTIPLICAND_INPUT_reg[6]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'controller/MULTIPLICAND_INPUT_reg[7]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'controller/MULTIPLICAND_INPUT_reg[8]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'controller/MULTIPLICAND_INPUT_reg[9]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'controller/MULTIPLICAND_INPUT_reg[10]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'controller/MULTIPLICAND_INPUT_reg[11]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'controller/MULTIPLICAND_INPUT_reg[12]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'controller/MULTIPLICAND_INPUT_reg[13]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'controller/MULTIPLICAND_INPUT_reg[14]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'controller/MULTIPLICAND_INPUT_reg[15]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'controller/MULTIPLIER_INPUT_reg[16]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'controller/MULTIPLIER_INPUT_reg[17]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'controller/MULTIPLIER_INPUT_reg[18]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'controller/MULTIPLIER_INPUT_reg[19]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'controller/MULTIPLIER_INPUT_reg[20]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'controller/MULTIPLIER_INPUT_reg[21]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'controller/MULTIPLIER_INPUT_reg[22]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'controller/MULTIPLIER_INPUT_reg[23]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'controller/MULTIPLIER_INPUT_reg[24]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'controller/MULTIPLIER_INPUT_reg[25]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'controller/MULTIPLIER_INPUT_reg[26]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'controller/MULTIPLIER_INPUT_reg[27]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'controller/MULTIPLIER_INPUT_reg[28]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'controller/MULTIPLIER_INPUT_reg[29]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'controller/MULTIPLIER_INPUT_reg[30]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'controller/MULTIPLIER_INPUT_reg[31]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'controller/MULTIPLICAND_INPUT_reg[16]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'controller/MULTIPLICAND_INPUT_reg[17]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'controller/MULTIPLICAND_INPUT_reg[18]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'controller/MULTIPLICAND_INPUT_reg[19]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'controller/MULTIPLICAND_INPUT_reg[20]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'controller/MULTIPLICAND_INPUT_reg[21]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'controller/MULTIPLICAND_INPUT_reg[22]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'controller/MULTIPLICAND_INPUT_reg[23]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'controller/MULTIPLICAND_INPUT_reg[24]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'controller/MULTIPLICAND_INPUT_reg[25]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'controller/MULTIPLICAND_INPUT_reg[26]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'controller/MULTIPLICAND_INPUT_reg[27]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'controller/MULTIPLICAND_INPUT_reg[28]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'controller/MULTIPLICAND_INPUT_reg[29]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'controller/MULTIPLICAND_INPUT_reg[30]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'controller/MULTIPLICAND_INPUT_reg[31]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (controller/holdFilter_reg)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/genblk3[2].inputMulti/product_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/genblk3[2].inputMulti/product_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/genblk3[2].inputMulti/product_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/genblk3[2].inputMulti/product_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/genblk3[2].inputMulti/product_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/genblk3[2].inputMulti/product_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/genblk3[2].inputMulti/product_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/genblk3[2].inputMulti/product_reg[23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/genblk3[2].inputMulti/product_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/genblk3[2].inputMulti/product_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/genblk3[2].inputMulti/product_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/genblk3[2].inputMulti/product_reg[27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/genblk3[2].inputMulti/product_reg[28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/genblk3[2].inputMulti/product_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/genblk3[2].inputMulti/product_reg[30] )
+INFO: [Synth 8-3886] merging instance 'matrixAccel/xbar2/AddressSave_reg[2][2]' (FDCE) to 'matrixAccel/xbar2/AddressSave_reg[2][1]'
+INFO: [Synth 8-3886] merging instance 'matrixAccel/xbar2/AddressSave_reg[1][2]' (FDCE) to 'matrixAccel/xbar2/AddressSave_reg[2][1]'
+INFO: [Synth 8-3886] merging instance 'matrixAccel/xbar2/AddressSave_reg[0][2]' (FDCE) to 'matrixAccel/xbar2/AddressSave_reg[2][1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/genblk3[2].inputMulti/product_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/genblk3[1].inputMulti/product_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/genblk3[1].inputMulti/product_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/genblk3[1].inputMulti/product_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/genblk3[1].inputMulti/product_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/genblk3[1].inputMulti/product_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/genblk3[1].inputMulti/product_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/genblk3[1].inputMulti/product_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/genblk3[1].inputMulti/product_reg[23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/genblk3[1].inputMulti/product_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/genblk3[1].inputMulti/product_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/genblk3[1].inputMulti/product_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/genblk3[1].inputMulti/product_reg[27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/genblk3[1].inputMulti/product_reg[28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/genblk3[1].inputMulti/product_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/genblk3[1].inputMulti/product_reg[30] )
+INFO: [Synth 8-3886] merging instance 'matrixAccel/xbar2/AddressSave_reg[2][1]' (FDCE) to 'matrixAccel/xbar2/AddressSave_reg[0][1]'
+INFO: [Synth 8-3886] merging instance 'matrixAccel/xbar2/AddressSave_reg[1][1]' (FDCE) to 'matrixAccel/xbar2/AddressSave_reg[0][1]'
+INFO: [Synth 8-3886] merging instance 'matrixAccel/xbar2/AddressSave_reg[0][1]' (FDCE) to 'matrixAccel/xbar2/AddressSave_reg[2][0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/genblk3[1].inputMulti/product_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/genblk3[0].inputMulti/product_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/genblk3[0].inputMulti/product_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/genblk3[0].inputMulti/product_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/genblk3[0].inputMulti/product_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/genblk3[0].inputMulti/product_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/genblk3[0].inputMulti/product_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/genblk3[0].inputMulti/product_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/genblk3[0].inputMulti/product_reg[23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/genblk3[0].inputMulti/product_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/genblk3[0].inputMulti/product_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/genblk3[0].inputMulti/product_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/genblk3[0].inputMulti/product_reg[27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/genblk3[0].inputMulti/product_reg[28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/genblk3[0].inputMulti/product_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/genblk3[0].inputMulti/product_reg[30] )
+INFO: [Synth 8-3886] merging instance 'matrixAccel/xbar2/AddressSave_reg[2][0]' (FDCE) to 'matrixAccel/xbar2/AddressSave_reg[1][0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/xbar2/AddressSave_reg[1][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/genblk3[0].inputMulti/product_reg[31] )
 INFO: [Synth 8-3886] merging instance 'controller/MULTIPLIER_INPUT_reg[32]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
+INFO: [Synth 8-3886] merging instance 'controller/holdFilter_reg' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
 INFO: [Synth 8-3886] merging instance 'controller/MULTIPLIER_INPUT_reg[33]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
 INFO: [Synth 8-3886] merging instance 'controller/MULTIPLIER_INPUT_reg[34]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
 INFO: [Synth 8-3886] merging instance 'controller/MULTIPLIER_INPUT_reg[35]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
@@ -374,150 +299,223 @@ INFO: [Synth 8-3886] merging instance 'controller/MULTIPLICAND_INPUT_reg[40]' (F
 INFO: [Synth 8-3886] merging instance 'controller/MULTIPLICAND_INPUT_reg[41]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
 INFO: [Synth 8-3886] merging instance 'controller/MULTIPLICAND_INPUT_reg[42]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
 INFO: [Synth 8-3886] merging instance 'controller/MULTIPLICAND_INPUT_reg[43]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
+INFO: [Synth 8-3886] merging instance 'controller/MULTIPLICAND_INPUT_reg[44]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
+INFO: [Synth 8-3886] merging instance 'controller/MULTIPLICAND_INPUT_reg[45]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
+INFO: [Synth 8-3886] merging instance 'controller/MULTIPLICAND_INPUT_reg[46]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[47]'
+INFO: [Synth 8-3886] merging instance 'controller/MULTIPLICAND_INPUT_reg[47]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[31]'
+INFO: [Synth 8-3886] merging instance 'controller/MULTIPLIER_INPUT_reg[16]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[31]'
+INFO: [Synth 8-3886] merging instance 'controller/MULTIPLIER_INPUT_reg[17]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[31]'
+INFO: [Synth 8-3886] merging instance 'controller/MULTIPLIER_INPUT_reg[18]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[31]'
+INFO: [Synth 8-3886] merging instance 'controller/MULTIPLIER_INPUT_reg[19]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[31]'
+INFO: [Synth 8-3886] merging instance 'controller/MULTIPLIER_INPUT_reg[20]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[31]'
+INFO: [Synth 8-3886] merging instance 'controller/MULTIPLIER_INPUT_reg[21]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[31]'
+INFO: [Synth 8-3886] merging instance 'controller/MULTIPLIER_INPUT_reg[22]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[31]'
+INFO: [Synth 8-3886] merging instance 'controller/MULTIPLIER_INPUT_reg[23]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[31]'
+INFO: [Synth 8-3886] merging instance 'controller/MULTIPLIER_INPUT_reg[24]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[31]'
+INFO: [Synth 8-3886] merging instance 'controller/MULTIPLIER_INPUT_reg[25]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[31]'
+INFO: [Synth 8-3886] merging instance 'controller/MULTIPLIER_INPUT_reg[26]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[31]'
+INFO: [Synth 8-3886] merging instance 'controller/MULTIPLIER_INPUT_reg[27]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[31]'
+INFO: [Synth 8-3886] merging instance 'controller/MULTIPLIER_INPUT_reg[28]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[31]'
+INFO: [Synth 8-3886] merging instance 'controller/MULTIPLIER_INPUT_reg[29]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[31]'
+INFO: [Synth 8-3886] merging instance 'controller/MULTIPLIER_INPUT_reg[30]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[31]'
+INFO: [Synth 8-3886] merging instance 'controller/MULTIPLIER_INPUT_reg[31]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[31]'
+INFO: [Synth 8-3886] merging instance 'controller/MULTIPLICAND_INPUT_reg[16]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[31]'
+INFO: [Synth 8-3886] merging instance 'controller/MULTIPLICAND_INPUT_reg[17]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[31]'
+INFO: [Synth 8-3886] merging instance 'controller/MULTIPLICAND_INPUT_reg[18]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[31]'
+INFO: [Synth 8-3886] merging instance 'controller/MULTIPLICAND_INPUT_reg[19]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[31]'
+INFO: [Synth 8-3886] merging instance 'controller/MULTIPLICAND_INPUT_reg[20]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[31]'
+INFO: [Synth 8-3886] merging instance 'controller/MULTIPLICAND_INPUT_reg[21]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[31]'
+INFO: [Synth 8-3886] merging instance 'controller/MULTIPLICAND_INPUT_reg[22]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[31]'
+INFO: [Synth 8-3886] merging instance 'controller/MULTIPLICAND_INPUT_reg[23]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[31]'
+INFO: [Synth 8-3886] merging instance 'controller/MULTIPLICAND_INPUT_reg[24]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[31]'
+INFO: [Synth 8-3886] merging instance 'controller/MULTIPLICAND_INPUT_reg[25]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[31]'
+INFO: [Synth 8-3886] merging instance 'controller/MULTIPLICAND_INPUT_reg[26]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[31]'
+INFO: [Synth 8-3886] merging instance 'controller/MULTIPLICAND_INPUT_reg[27]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[31]'
+INFO: [Synth 8-3886] merging instance 'controller/MULTIPLICAND_INPUT_reg[28]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[31]'
+INFO: [Synth 8-3886] merging instance 'controller/MULTIPLICAND_INPUT_reg[29]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[31]'
+INFO: [Synth 8-3886] merging instance 'controller/MULTIPLICAND_INPUT_reg[30]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[31]'
+INFO: [Synth 8-3886] merging instance 'controller/MULTIPLICAND_INPUT_reg[31]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[15]'
+INFO: [Synth 8-3886] merging instance 'controller/MULTIPLIER_INPUT_reg[0]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[15]'
+INFO: [Synth 8-3886] merging instance 'controller/MULTIPLIER_INPUT_reg[1]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[15]'
+INFO: [Synth 8-3886] merging instance 'controller/MULTIPLIER_INPUT_reg[2]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[15]'
+INFO: [Synth 8-3886] merging instance 'controller/MULTIPLIER_INPUT_reg[3]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[15]'
+INFO: [Synth 8-3886] merging instance 'controller/MULTIPLIER_INPUT_reg[4]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[15]'
+INFO: [Synth 8-3886] merging instance 'controller/MULTIPLIER_INPUT_reg[5]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[15]'
+INFO: [Synth 8-3886] merging instance 'controller/MULTIPLIER_INPUT_reg[6]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[15]'
+INFO: [Synth 8-3886] merging instance 'controller/MULTIPLIER_INPUT_reg[7]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[15]'
+INFO: [Synth 8-3886] merging instance 'controller/MULTIPLIER_INPUT_reg[8]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[15]'
+INFO: [Synth 8-3886] merging instance 'controller/MULTIPLIER_INPUT_reg[9]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[15]'
+INFO: [Synth 8-3886] merging instance 'controller/MULTIPLIER_INPUT_reg[10]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[15]'
+INFO: [Synth 8-3886] merging instance 'controller/MULTIPLIER_INPUT_reg[11]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[15]'
+INFO: [Synth 8-3886] merging instance 'controller/MULTIPLIER_INPUT_reg[12]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[15]'
+INFO: [Synth 8-3886] merging instance 'controller/MULTIPLIER_INPUT_reg[13]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[15]'
+INFO: [Synth 8-3886] merging instance 'controller/MULTIPLIER_INPUT_reg[14]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[15]'
+INFO: [Synth 8-3886] merging instance 'controller/MULTIPLIER_INPUT_reg[15]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[15]'
+INFO: [Synth 8-3886] merging instance 'controller/MULTIPLICAND_INPUT_reg[0]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[15]'
+INFO: [Synth 8-3886] merging instance 'controller/MULTIPLICAND_INPUT_reg[1]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[15]'
+INFO: [Synth 8-3886] merging instance 'controller/MULTIPLICAND_INPUT_reg[2]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[15]'
+INFO: [Synth 8-3886] merging instance 'controller/MULTIPLICAND_INPUT_reg[3]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[15]'
+INFO: [Synth 8-3886] merging instance 'controller/MULTIPLICAND_INPUT_reg[4]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[15]'
+INFO: [Synth 8-3886] merging instance 'controller/MULTIPLICAND_INPUT_reg[5]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[15]'
+INFO: [Synth 8-3886] merging instance 'controller/MULTIPLICAND_INPUT_reg[6]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[15]'
+INFO: [Synth 8-3886] merging instance 'controller/MULTIPLICAND_INPUT_reg[7]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[15]'
+INFO: [Synth 8-3886] merging instance 'controller/MULTIPLICAND_INPUT_reg[8]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[15]'
+INFO: [Synth 8-3886] merging instance 'controller/MULTIPLICAND_INPUT_reg[9]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[15]'
+INFO: [Synth 8-3886] merging instance 'controller/MULTIPLICAND_INPUT_reg[10]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[15]'
+INFO: [Synth 8-3886] merging instance 'controller/MULTIPLICAND_INPUT_reg[11]' (FDCE) to 'controller/MULTIPLICAND_INPUT_reg[15]'
 INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\controller/MULTIPLICAND_INPUT_reg[47] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inputBuffer/rd_pointer_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inputBuffer/rd_pointer_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inputBuffer/rd_pointer_reg[5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inputBuffer/rd_pointer_reg[6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inputBuffer/rd_pointer_reg[7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inputBuffer/rd_pointer_reg[8] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inputBuffer/rd_pointer_reg[9] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inputBuffer/rd_pointer_reg[10] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inputBuffer/rd_pointer_reg[11] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inputBuffer/rd_pointer_reg[12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inputBuffer/rd_pointer_reg[13] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inputBuffer/rd_pointer_reg[14] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inputBuffer/rd_pointer_reg[15] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inputBuffer/rd_pointer_reg[16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inputBuffer/rd_pointer_reg[17] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\xbar2/OutputSave_reg[0][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\xbar2/OutputSave_reg[0][17] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\xbar2/OutputSave_reg[0][18] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\xbar2/OutputSave_reg[0][19] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\xbar2/OutputSave_reg[0][20] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\xbar2/OutputSave_reg[0][21] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\xbar2/OutputSave_reg[0][22] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\xbar2/OutputSave_reg[0][23] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\xbar2/OutputSave_reg[0][24] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\xbar2/OutputSave_reg[0][25] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\xbar2/OutputSave_reg[0][26] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\xbar2/OutputSave_reg[0][27] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\xbar2/OutputSave_reg[0][28] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\xbar2/OutputSave_reg[0][29] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\xbar2/OutputSave_reg[0][30] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\xbar2/OutputSave_reg[0][31] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\xbar2/OutputSave_reg[1][16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\xbar2/OutputSave_reg[1][17] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\xbar2/OutputSave_reg[1][18] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\xbar2/OutputSave_reg[1][19] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\xbar2/OutputSave_reg[1][20] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\xbar2/OutputSave_reg[1][21] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\xbar2/OutputSave_reg[1][22] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\xbar2/OutputSave_reg[1][23] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (matrixAccel/\xbar2/OutputSave_reg[1][24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (controller/\MULTIPLICAND_INPUT_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/xbar2/OutputSave_reg[2][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/xbar2/OutputSave_reg[2][17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/xbar2/OutputSave_reg[2][18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/xbar2/OutputSave_reg[2][19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/xbar2/OutputSave_reg[2][20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/xbar2/OutputSave_reg[2][21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/xbar2/OutputSave_reg[2][22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/xbar2/OutputSave_reg[2][23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/xbar2/OutputSave_reg[2][24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/xbar2/OutputSave_reg[2][25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/xbar2/OutputSave_reg[2][26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/xbar2/OutputSave_reg[2][27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/xbar2/OutputSave_reg[2][28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/xbar2/OutputSave_reg[2][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/xbar2/OutputSave_reg[2][30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/xbar2/OutputSave_reg[2][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/xbar2/OutputSave_reg[1][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/xbar2/OutputSave_reg[1][17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/xbar2/OutputSave_reg[1][18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/xbar2/OutputSave_reg[1][19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/xbar2/OutputSave_reg[1][20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/xbar2/OutputSave_reg[1][21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/xbar2/OutputSave_reg[1][22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/xbar2/OutputSave_reg[1][23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/xbar2/OutputSave_reg[1][24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/xbar2/OutputSave_reg[1][25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/xbar2/OutputSave_reg[1][26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/xbar2/OutputSave_reg[1][27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/xbar2/OutputSave_reg[1][28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/xbar2/OutputSave_reg[1][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/xbar2/OutputSave_reg[1][30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/xbar2/OutputSave_reg[1][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/xbar2/OutputSave_reg[0][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/xbar2/OutputSave_reg[0][17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/xbar2/OutputSave_reg[0][18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/xbar2/OutputSave_reg[0][19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/xbar2/OutputSave_reg[0][20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/xbar2/OutputSave_reg[0][21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/xbar2/OutputSave_reg[0][22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/xbar2/OutputSave_reg[0][23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/xbar2/OutputSave_reg[0][24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/xbar2/OutputSave_reg[0][25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/xbar2/OutputSave_reg[0][26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/xbar2/OutputSave_reg[0][27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/xbar2/OutputSave_reg[0][28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/xbar2/OutputSave_reg[0][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/xbar2/OutputSave_reg[0][30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\matrixAccel/xbar2/OutputSave_reg[0][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (controller/rdPointer_inferred/\rdPointer_reg[3] )
 INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[0][31]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[0][30]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[0][29]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[0][28]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[0][27]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[0][26]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[0][25]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[0][24]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[0][23]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[0][22]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[0][21]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[0][20]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[0][19]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[0][18]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[0][17]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[0][16]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[0][15]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[0][14]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[0][13]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[0][12]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[0][11]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[0][10]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[0][9]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[0][8]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[0][7]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[0][6]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[0][5]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[0][4]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[0][3]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[0][2]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[0][1]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[0][0]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[1][31]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[1][30]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[1][29]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[1][28]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[1][27]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[1][26]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[1][25]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[1][24]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[1][23]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[1][22]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[1][21]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[1][20]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[1][19]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[1][18]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[1][17]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[1][16]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[1][15]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[1][14]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[1][13]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[1][12]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[1][11]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[1][10]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[1][9]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[1][8]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[1][7]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[1][6]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[1][5]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[1][4]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[1][3]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[1][2]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[1][1]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[1][0]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[2][31]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[2][30]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[2][29]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[2][28]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[2][27]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[2][26]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[2][25]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[2][24]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[2][23]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[2][22]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[2][21]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[2][20]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[2][19]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[2][18]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[2][17]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[2][16]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[2][15]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[2][14]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[2][13]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[2][12]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[2][11]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[2][10]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[2][9]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[2][8]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[2][7]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[2][6]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[2][5]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[2][4]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[2][3]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[2][2]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[2][1]) is unused and will be removed from module matrixAccelerator.
-WARNING: [Synth 8-3332] Sequential element (xbar2/OutputSave_reg[2][0]) is unused and will be removed from module matrixAccelerator.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[0][31]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[0][30]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[0][29]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[0][28]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[0][27]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[0][26]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[0][25]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[0][24]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[0][23]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[0][22]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[0][21]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[0][20]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[0][19]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[0][18]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[0][17]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[0][16]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[0][15]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[0][14]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[0][13]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[0][12]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[0][11]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[0][10]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[0][9]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[0][8]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[0][7]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[0][6]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[0][5]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[0][4]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[0][3]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[0][2]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[0][1]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[0][0]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[1][31]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[1][30]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[1][29]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[1][28]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[1][27]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[1][26]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[1][25]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[1][24]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[1][23]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[1][22]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[1][21]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[1][20]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[1][19]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[1][18]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[1][17]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[1][16]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[1][15]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[1][14]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[1][13]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[1][12]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[1][11]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[1][10]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[1][9]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[1][8]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[1][7]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[1][6]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[1][5]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[1][4]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[1][3]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[1][2]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[1][1]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[1][0]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[2][31]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[2][30]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[2][29]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[2][28]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[2][27]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[2][26]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[2][25]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[2][24]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[2][23]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[2][22]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[2][21]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[2][20]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[2][19]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[2][18]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[2][17]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[2][16]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[2][15]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[2][14]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[2][13]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[2][12]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[2][11]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[2][10]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[2][9]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[2][8]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[2][7]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[2][6]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[2][5]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[2][4]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[2][3]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[2][2]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[2][1]) is unused and will be removed from module matrixAccTopDevice.
+WARNING: [Synth 8-3332] Sequential element (matrixAccel/xbar2/OutputSave_reg[2][0]) is unused and will be removed from module matrixAccTopDevice.
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inputBuffer/EMPTYreg_reg/Q' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/aFIFO.v:54]
 CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/aFIFO.v:54]
 CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/aFIFO.v:54]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 942.832 ; gain = 491.602
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1078.852 ; gain = 628.875
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -547,7 +545,7 @@ No constraint files found.
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 948.590 ; gain = 497.359
+Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1078.852 ; gain = 628.875
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -560,7 +558,7 @@ Start Technology Mapping
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5966] Removing register instance (\inputBuffer/FULLreg_reg ) from module (matrixAccTopDevice) as it has self-loop and (\inputBuffer/FULLreg_reg__0 ) is actual driver [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/aFIFO.v:62]
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 948.590 ; gain = 497.359
+Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1078.852 ; gain = 628.875
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -584,13 +582,13 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 948.590 ; gain = 497.359
+Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1078.852 ; gain = 628.875
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 948.590 ; gain = 497.359
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1078.852 ; gain = 628.875
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -609,25 +607,25 @@ Report Check Netlist:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 948.590 ; gain = 497.359
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1078.852 ; gain = 628.875
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 948.590 ; gain = 497.359
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1078.852 ; gain = 628.875
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 948.590 ; gain = 497.359
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1078.852 ; gain = 628.875
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 948.590 ; gain = 497.359
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1078.852 ; gain = 628.875
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -643,48 +641,53 @@ Report Cell Usage:
 +------+-------+------+
 |      |Cell   |Count |
 +------+-------+------+
-|1     |BUFG   |     1|
-|2     |CARRY4 |     3|
-|3     |LUT1   |     1|
-|4     |LUT3   |     3|
-|5     |LUT5   |     2|
-|6     |LUT6   |     2|
-|7     |FDCE   |     6|
-|8     |IBUF   |     2|
-|9     |OBUF   |    98|
-|10    |OBUFT  |     1|
+|1     |BUFG   |     2|
+|2     |CARRY4 |    66|
+|3     |LUT1   |    28|
+|4     |LUT2   |    45|
+|5     |LUT3   |   152|
+|6     |LUT4   |   223|
+|7     |LUT5   |   229|
+|8     |LUT6   |   483|
+|9     |FDCE   |    14|
+|10    |FDRE   |    22|
+|11    |IBUF   |     4|
+|12    |OBUF   |    35|
 +------+-------+------+
 
 Report Instance Areas: 
-+------+--------------+-------+------+
-|      |Instance      |Module |Cells |
-+------+--------------+-------+------+
-|1     |top           |       |   119|
-|2     |  inputBuffer |aFIFO  |    17|
-+------+--------------+-------+------+
++------+--------------+-----------------+------+
+|      |Instance      |Module           |Cells |
++------+--------------+-----------------+------+
+|1     |top           |                 |  1303|
+|2     |  controller  |matrixControl3x3 |    19|
+|3     |  finalAdder  |adderFloat       |  1226|
+|4     |  inputBuffer |aFIFO            |    17|
++------+--------------+-----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 948.590 ; gain = 497.359
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1078.852 ; gain = 628.875
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 3 critical warnings and 119 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 948.590 ; gain = 497.359
-Synthesis Optimization Complete : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 948.590 ; gain = 497.359
+Synthesis finished with 0 errors, 3 critical warnings and 118 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1078.852 ; gain = 628.875
+Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1078.852 ; gain = 628.875
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 960.691 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1078.852 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 66 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'matrixAccTopDevice' is not ideal for floorplanning, since the cellview 'adderFloat' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1058.777 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1078.852 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
 226 Infos, 119 Warnings, 3 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1058.777 ; gain = 632.438
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1058.777 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1078.852 ; gain = 653.766
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1078.852 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1/matrixAccTopDevice.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file matrixAccTopDevice_utilization_synth.rpt -pb matrixAccTopDevice_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat Aug  8 23:28:27 2020...
+INFO: [Common 17-206] Exiting Vivado at Tue Aug 11 18:24:54 2020...
