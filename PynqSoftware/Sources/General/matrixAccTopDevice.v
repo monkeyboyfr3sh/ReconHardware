@@ -1,9 +1,5 @@
 `include "definitions.h"
 `timescale `myTimeScale
-/*
-*   Design is a ported version of:
-*   https://github.com/JonathanJing/Asynchronous-FIFO/blob/master/asy_fifo.v
-*/
 
 module matrixAccTopDevice(
     Clk, Rst,
@@ -22,10 +18,9 @@ input   [`bitLength-1:0]    dataInput;
 
 //Outputs
 output  FULL,EMPTY,cReady;
-output  [2*`bitLength-1:0]  finalsum;
+output  [`bitLength-1:0]  finalsum;
 
 //Internal Signals
-
 //FIFO signals
 wire    [`bitLength-1:0]                        FIFO_OUT_PORT;
 //Matrix Accelerator signals
@@ -39,6 +34,9 @@ wire    [2*`outputPortCount*`bitLength-1:0]     sum_connector;
 wire                                            addClk;
 wire                                            finalAdd;
 wire    [(`bitLength*2)-1:0]                    finalAddend;
+wire    [2*`bitLength-1:0]                      cSum;
+
+assign  finalsum = cReady?cSum[`bitLength-1:0]:0;
 
 matrixControl3x3 controller(
     .Clk(Clk),
@@ -86,7 +84,7 @@ adderFloat finalAdder(
     .Rst(Rst),                      
     .addend(finalAddend),                           //Addend from controller
     .Add(finalAdd),                                 //Add from controller
-    .sum(finalsum)                                  //Convolution sum
+    .sum(cSum)                                  //Convolution sum
 );
 
 endmodule

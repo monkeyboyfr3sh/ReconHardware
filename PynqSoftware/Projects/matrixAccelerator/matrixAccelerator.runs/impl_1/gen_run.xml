@@ -1,79 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1597188265">
-  <File Type="BITSTR-BMM" Name="matrixAccTopDevice_bd.bmm"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="matrixAccTopDevice_methodology_drc_opted.rpt"/>
-  <File Type="INIT-TIMING" Name="matrixAccTopDevice_timing_summary_init.rpt"/>
-  <File Type="ROUTE-PWR" Name="matrixAccTopDevice_power_routed.rpt"/>
-  <File Type="PA-TCL" Name="matrixAccTopDevice.tcl"/>
-  <File Type="OPT-TIMING" Name="matrixAccTopDevice_timing_summary_opted.rpt"/>
-  <File Type="OPT-DCP" Name="matrixAccTopDevice_opt.dcp"/>
-  <File Type="ROUTE-PWR-SUM" Name="matrixAccTopDevice_power_summary_routed.pb"/>
-  <File Type="REPORTS-TCL" Name="matrixAccTopDevice_reports.tcl"/>
-  <File Type="OPT-DRC" Name="matrixAccTopDevice_drc_opted.rpt"/>
-  <File Type="OPT-HWDEF" Name="matrixAccTopDevice.hwdef"/>
-  <File Type="PWROPT-DCP" Name="matrixAccTopDevice_pwropt.dcp"/>
-  <File Type="PWROPT-DRC" Name="matrixAccTopDevice_drc_pwropted.rpt"/>
-  <File Type="PWROPT-TIMING" Name="matrixAccTopDevice_timing_summary_pwropted.rpt"/>
-  <File Type="PLACE-DCP" Name="matrixAccTopDevice_placed.dcp"/>
-  <File Type="PLACE-IO" Name="matrixAccTopDevice_io_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="matrixAccTopDevice_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL" Name="matrixAccTopDevice_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="matrixAccTopDevice_utilization_placed.pb"/>
-  <File Type="PLACE-CTRL" Name="matrixAccTopDevice_control_sets_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="matrixAccTopDevice_incremental_reuse_placed.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="matrixAccTopDevice_incremental_reuse_pre_placed.rpt"/>
-  <File Type="PLACE-TIMING" Name="matrixAccTopDevice_timing_summary_placed.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="matrixAccTopDevice_postplace_pwropt.dcp"/>
-  <File Type="BG-BIN" Name="matrixAccTopDevice.bin"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="matrixAccTopDevice_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="PHYSOPT-DCP" Name="matrixAccTopDevice_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="matrixAccTopDevice_drc_physopted.rpt"/>
-  <File Type="BITSTR-MSK" Name="matrixAccTopDevice.msk"/>
-  <File Type="PHYSOPT-TIMING" Name="matrixAccTopDevice_timing_summary_physopted.rpt"/>
-  <File Type="ROUTE-ERROR-DCP" Name="matrixAccTopDevice_routed_error.dcp"/>
-  <File Type="ROUTE-DCP" Name="matrixAccTopDevice_routed.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="matrixAccTopDevice_routed_bb.dcp"/>
-  <File Type="ROUTE-DRC" Name="matrixAccTopDevice_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-PB" Name="matrixAccTopDevice_drc_routed.pb"/>
-  <File Type="ROUTE-DRC-RPX" Name="matrixAccTopDevice_drc_routed.rpx"/>
-  <File Type="BITSTR-MMI" Name="matrixAccTopDevice.mmi"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="matrixAccTopDevice_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="matrixAccTopDevice_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="matrixAccTopDevice_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-PWR-RPX" Name="matrixAccTopDevice_power_routed.rpx"/>
-  <File Type="ROUTE-STATUS" Name="matrixAccTopDevice_route_status.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="matrixAccTopDevice_route_status.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="matrixAccTopDevice_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-TIMING-PB" Name="matrixAccTopDevice_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMING-RPX" Name="matrixAccTopDevice_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-SIMILARITY" Name="matrixAccTopDevice_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="matrixAccTopDevice_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW" Name="matrixAccTopDevice_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="matrixAccTopDevice_bus_skew_routed.pb"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="matrixAccTopDevice_bus_skew_routed.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="matrixAccTopDevice_postroute_physopt.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="matrixAccTopDevice_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="matrixAccTopDevice_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="matrixAccTopDevice_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="matrixAccTopDevice_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="matrixAccTopDevice_bus_skew_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="matrixAccTopDevice_bus_skew_postroute_physopted.pb"/>
-  <File Type="BG-BIT" Name="matrixAccTopDevice.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="matrixAccTopDevice_bus_skew_postroute_physopted.rpx"/>
-  <File Type="BITSTR-RBT" Name="matrixAccTopDevice.rbt"/>
-  <File Type="BITSTR-NKY" Name="matrixAccTopDevice.nky"/>
-  <File Type="PDI-FILE" Name="matrixAccTopDevice.pdi"/>
-  <File Type="RCFI_FILE" Name="matrixAccTopDevice.rcfi"/>
-  <File Type="CFI_FILE" Name="matrixAccTopDevice.cfi"/>
-  <File Type="RNPI_FILE" Name="matrixAccTopDevice.rnpi"/>
-  <File Type="NPI_FILE" Name="matrixAccTopDevice.npi"/>
-  <File Type="RBD_FILE" Name="matrixAccTopDevice.rbd"/>
+<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1597267601">
+  <File Type="BITSTR-BMM" Name="Convolution_Accel_wrapper_bd.bmm"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="Convolution_Accel_wrapper_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="Convolution_Accel_wrapper_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR" Name="Convolution_Accel_wrapper_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="Convolution_Accel_wrapper.tcl"/>
+  <File Type="OPT-TIMING" Name="Convolution_Accel_wrapper_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="Convolution_Accel_wrapper_opt.dcp"/>
+  <File Type="ROUTE-PWR-SUM" Name="Convolution_Accel_wrapper_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="Convolution_Accel_wrapper_reports.tcl"/>
+  <File Type="OPT-DRC" Name="Convolution_Accel_wrapper_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="Convolution_Accel_wrapper.hwdef"/>
+  <File Type="PWROPT-DCP" Name="Convolution_Accel_wrapper_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="Convolution_Accel_wrapper_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="Convolution_Accel_wrapper_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="Convolution_Accel_wrapper_placed.dcp"/>
+  <File Type="PLACE-IO" Name="Convolution_Accel_wrapper_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="Convolution_Accel_wrapper_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="Convolution_Accel_wrapper_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="Convolution_Accel_wrapper_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="Convolution_Accel_wrapper_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="Convolution_Accel_wrapper_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="Convolution_Accel_wrapper_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="Convolution_Accel_wrapper_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="Convolution_Accel_wrapper_postplace_pwropt.dcp"/>
+  <File Type="BG-BIN" Name="Convolution_Accel_wrapper.bin"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="Convolution_Accel_wrapper_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="Convolution_Accel_wrapper_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="Convolution_Accel_wrapper_drc_physopted.rpt"/>
+  <File Type="BITSTR-MSK" Name="Convolution_Accel_wrapper.msk"/>
+  <File Type="PHYSOPT-TIMING" Name="Convolution_Accel_wrapper_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="Convolution_Accel_wrapper_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="Convolution_Accel_wrapper_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="Convolution_Accel_wrapper_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="Convolution_Accel_wrapper_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="Convolution_Accel_wrapper_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="Convolution_Accel_wrapper_drc_routed.rpx"/>
+  <File Type="BITSTR-MMI" Name="Convolution_Accel_wrapper.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="Convolution_Accel_wrapper_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="Convolution_Accel_wrapper_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="Convolution_Accel_wrapper_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="Convolution_Accel_wrapper_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="Convolution_Accel_wrapper_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="Convolution_Accel_wrapper_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="Convolution_Accel_wrapper_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="Convolution_Accel_wrapper_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="Convolution_Accel_wrapper_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="Convolution_Accel_wrapper_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="Convolution_Accel_wrapper_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="Convolution_Accel_wrapper_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="Convolution_Accel_wrapper_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="Convolution_Accel_wrapper_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="Convolution_Accel_wrapper_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="Convolution_Accel_wrapper_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="Convolution_Accel_wrapper_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="Convolution_Accel_wrapper_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="Convolution_Accel_wrapper_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="Convolution_Accel_wrapper_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="Convolution_Accel_wrapper_bus_skew_postroute_physopted.pb"/>
+  <File Type="BG-BIT" Name="Convolution_Accel_wrapper.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="Convolution_Accel_wrapper_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-RBT" Name="Convolution_Accel_wrapper.rbt"/>
+  <File Type="BITSTR-NKY" Name="Convolution_Accel_wrapper.nky"/>
+  <File Type="PDI-FILE" Name="Convolution_Accel_wrapper.pdi"/>
+  <File Type="RCFI_FILE" Name="Convolution_Accel_wrapper.rcfi"/>
+  <File Type="CFI_FILE" Name="Convolution_Accel_wrapper.cfi"/>
+  <File Type="RNPI_FILE" Name="Convolution_Accel_wrapper.rnpi"/>
+  <File Type="NPI_FILE" Name="Convolution_Accel_wrapper.npi"/>
+  <File Type="RBD_FILE" Name="Convolution_Accel_wrapper.rbd"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="matrixAccTopDevice.ltx"/>
-  <File Type="BITSTR-SYSDEF" Name="matrixAccTopDevice.sysdef"/>
-  <File Type="BG-BGN" Name="matrixAccTopDevice.bgn"/>
-  <File Type="BG-DRC" Name="matrixAccTopDevice.drc"/>
-  <File Type="RDI-RDI" Name="matrixAccTopDevice.vdi"/>
+  <File Type="BITSTR-LTX" Name="Convolution_Accel_wrapper.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="Convolution_Accel_wrapper.sysdef"/>
+  <File Type="BG-BGN" Name="Convolution_Accel_wrapper.bgn"/>
+  <File Type="BG-DRC" Name="Convolution_Accel_wrapper.drc"/>
+  <File Type="RDI-RDI" Name="Convolution_Accel_wrapper.vdi"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
@@ -133,6 +133,20 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/bd/Convolution_Accel/Convolution_Accel.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/Convolution_Accel/hdl/Convolution_Accel_wrapper.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PPRDIR/../../Sources/Adder/adder.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
@@ -151,8 +165,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="matrixAccTopDevice"/>
-      <Option Name="TopAutoSet" Val="TRUE"/>
+      <Option Name="TopModule" Val="Convolution_Accel_wrapper"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -179,4 +192,6 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="Convolution_Accel_matrixAccTopDevice_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Convolution_Accel_processing_system7_0_0"/>
 </GenRun>

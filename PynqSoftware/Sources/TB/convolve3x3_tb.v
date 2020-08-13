@@ -11,7 +11,7 @@ reg     wr_clk;
 
 //Outputs
 wire    FULL,EMPTY,cReady;
-wire    [2*`bitLength-1:0]       finalsum;
+wire    [`bitLength-1:0]       finalsum;
 
 matrixAccTopDevice UUT(
     Clk, Rst,

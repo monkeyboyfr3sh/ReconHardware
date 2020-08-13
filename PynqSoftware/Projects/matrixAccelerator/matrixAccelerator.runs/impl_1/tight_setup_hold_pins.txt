@@ -1,0 +1,9 @@
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+|       Launch Clock       |      Capture Clock       |                                                 Pin                                                      |
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+|               clk_fpga_0 |               clk_fpga_0 |                         Convolution_Accel_i/matrixAccTopDevice_0/inst/finalAdder/accumulate_reg[12]_rep/D|
+|               clk_fpga_0 |               clk_fpga_0 |                             Convolution_Accel_i/matrixAccTopDevice_0/inst/finalAdder/accumulate_reg[11]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                             Convolution_Accel_i/matrixAccTopDevice_0/inst/finalAdder/accumulate_reg[10]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                             Convolution_Accel_i/matrixAccTopDevice_0/inst/finalAdder/accumulate_reg[14]/D|
+|               clk_fpga_0 |               clk_fpga_0 |               Convolution_Accel_i/matrixAccTopDevice_0/inst/finalAdder/accumulate_reg[13]_rep_replica_1/D|
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+

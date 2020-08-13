@@ -41,7 +41,7 @@ EAStep()
 }
 
 # pre-commands:
-/bin/touch .init_design.begin.rst
-EAStep vivado -log matrixAccTopDevice.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source matrixAccTopDevice.tcl -notrace
+/bin/touch .write_bitstream.begin.rst
+EAStep vivado -log Convolution_Accel_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source Convolution_Accel_wrapper.tcl -notrace
 
 
