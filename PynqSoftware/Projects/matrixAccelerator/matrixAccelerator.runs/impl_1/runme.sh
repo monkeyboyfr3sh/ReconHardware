@@ -42,6 +42,6 @@ EAStep()
 
 # pre-commands:
 /bin/touch .write_bitstream.begin.rst
-EAStep vivado -log Convolution_Accel_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source Convolution_Accel_wrapper.tcl -notrace
+EAStep vivado -log fifo_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source fifo_wrapper.tcl -notrace
 
 

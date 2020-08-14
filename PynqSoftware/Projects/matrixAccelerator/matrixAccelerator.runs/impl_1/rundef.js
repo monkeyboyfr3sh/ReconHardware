@@ -25,7 +25,7 @@ eval( EAInclude(ISEJScriptLib) );
 // pre-commands:
 ISETouchFile( "write_bitstream", "begin" );
 ISEStep( "vivado",
-         "-log Convolution_Accel_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source Convolution_Accel_wrapper.tcl -notrace" );
+         "-log fifo_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source fifo_wrapper.tcl -notrace" );
 
 
 

@@ -1,0 +1,294 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Fri Aug 14 14:53:28 2020
+# Process ID: 15480
+# Current directory: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.runs/fifo_aFIFO_0_0_synth_1
+# Command line: vivado.exe -log fifo_aFIFO_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source fifo_aFIFO_0_0.tcl
+# Log file: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.runs/fifo_aFIFO_0_0_synth_1/fifo_aFIFO_0_0.vds
+# Journal file: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.runs/fifo_aFIFO_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source fifo_aFIFO_0_0.tcl -notrace
+Command: synth_design -top fifo_aFIFO_0_0 -part xc7z020clg400-1 -mode out_of_context
+Starting synth_design
+WARNING: [IP_Flow 19-3571] IP 'fifo_aFIFO_0_0' is restricted:
+* Module reference is stale and needs refreshing.
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 21868 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 697.770 ; gain = 241.004
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'fifo_aFIFO_0_0' [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/fifo/ip/fifo_aFIFO_0_0/synth/fifo_aFIFO_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'aFIFO' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/aFIFO.v:8]
+WARNING: [Synth 8-5788] Register mem_reg in module aFIFO is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-4767] Trying to implement RAM 'mem_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+RAM "mem_reg" dissolved into registers
+INFO: [Synth 8-6155] done synthesizing module 'aFIFO' (1#1) [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/aFIFO.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_aFIFO_0_0' (2#1) [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/fifo/ip/fifo_aFIFO_0_0/synth/fifo_aFIFO_0_0.v:58]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 769.816 ; gain = 313.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 769.816 ; gain = 313.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 769.816 ; gain = 313.051
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 769.816 ; gain = 313.051
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     18 Bit       Adders := 2     
++---Registers : 
+	               18 Bit    Registers := 2     
+	               16 Bit    Registers := 18    
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 18    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module aFIFO 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     18 Bit       Adders := 2     
++---Registers : 
+	               18 Bit    Registers := 2     
+	               16 Bit    Registers := 18    
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 18    
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/rd_pointer_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/rd_pointer_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/rd_pointer_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/rd_pointer_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/rd_pointer_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/rd_pointer_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/rd_pointer_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/rd_pointer_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/rd_pointer_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/rd_pointer_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/rd_pointer_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/rd_pointer_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/rd_pointer_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/rd_pointer_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/rd_pointer_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/rd_pointer_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/rd_pointer_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/rd_pointer_reg[4] )
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/EMPTYreg_reg/Q' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/aFIFO.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/aFIFO.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/aFIFO.v:54]
+INFO: [Synth 8-3886] merging instance 'inst/wr_pointer_reg[8]' (FDCE) to 'inst/wr_pointer_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/wr_pointer_reg[9]' (FDCE) to 'inst/wr_pointer_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/wr_pointer_reg[10]' (FDCE) to 'inst/wr_pointer_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/wr_pointer_reg[11]' (FDCE) to 'inst/wr_pointer_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/wr_pointer_reg[12]' (FDCE) to 'inst/wr_pointer_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/wr_pointer_reg[13]' (FDCE) to 'inst/wr_pointer_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/wr_pointer_reg[14]' (FDCE) to 'inst/wr_pointer_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/wr_pointer_reg[15]' (FDCE) to 'inst/wr_pointer_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/wr_pointer_reg[16]' (FDCE) to 'inst/wr_pointer_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/wr_pointer_reg[17]' (FDCE) to 'inst/wr_pointer_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/wr_pointer_reg[5]' (FDCE) to 'inst/wr_pointer_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/wr_pointer_reg[6]' (FDCE) to 'inst/wr_pointer_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/wr_pointer_reg[7] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 945.582 ; gain = 488.816
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 949.109 ; gain = 492.344
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5966] Removing register instance (\inst/FULLreg_reg ) from module (fifo_aFIFO_0_0) as it has self-loop and (\inst/FULLreg_reg__0 ) is actual driver [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/aFIFO.v:62]
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 949.109 ; gain = 492.344
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 949.156 ; gain = 492.391
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 949.156 ; gain = 492.391
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 949.156 ; gain = 492.391
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 949.156 ; gain = 492.391
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 949.156 ; gain = 492.391
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 949.156 ; gain = 492.391
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |     3|
+|2     |LUT1   |     1|
+|3     |LUT3   |     3|
+|4     |LUT5   |     2|
+|5     |LUT6   |     2|
+|6     |FDCE   |     6|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |    17|
+|2     |  inst   |aFIFO  |    17|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 949.156 ; gain = 492.391
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 3 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 949.156 ; gain = 492.391
+Synthesis Optimization Complete : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 949.156 ; gain = 492.391
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 961.309 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1063.328 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+45 Infos, 3 Warnings, 3 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1063.328 ; gain = 613.500
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1063.328 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.runs/fifo_aFIFO_0_0_synth_1/fifo_aFIFO_0_0.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1434.449 ; gain = 371.121
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1434.449 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.runs/fifo_aFIFO_0_0_synth_1/fifo_aFIFO_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file fifo_aFIFO_0_0_utilization_synth.rpt -pb fifo_aFIFO_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Aug 14 14:53:58 2020...
