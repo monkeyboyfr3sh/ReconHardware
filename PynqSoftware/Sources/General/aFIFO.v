@@ -6,7 +6,7 @@
 */
 
 module aFIFO(
-    Clk, Rst,
+    rd_clk, Rst,
     dataIn,
     dataOut,
     wr_clk,
@@ -14,7 +14,7 @@ module aFIFO(
     EMPTY
     );
 
-input   Clk, Rst,wr_clk;
+input   rd_clk, Rst,wr_clk;
 input   [`bitLength-1:0]	dataIn;
 
 output  FULL,EMPTY;
@@ -30,37 +30,35 @@ assign FULL = FULLreg;
 assign EMPTY = EMPTYreg;
 assign dataOut = EMPTYreg?0:mem[rd_pointer];
 
-//--write logic--//
-always @(posedge wr_clk or posedge Rst) begin
-	if (Rst) begin
-		// reset
-		FULLreg = 0;
-		wr_pointer = 0;
-	end
-	//Write condition
-	else if (!FULLreg) begin
-		mem[wr_pointer] = dataIn;
-		wr_pointer = wr_pointer+1;
-		if(wr_pointer >= `bufferSize) wr_pointer = 0;
-		EMPTYreg = 0;
-		if(wr_pointer == rd_pointer) FULLreg = 1;
-	end 
-end
-
-//--read logic--//
-always @(posedge Clk or posedge Rst) begin
-	if (Rst) begin
-		// reset
+always @(posedge rd_clk or posedge wr_clk or posedge Rst)begin
+    if(!Rst)begin
+        FULLreg = 0;
+        wr_pointer = 0;
 		EMPTYreg = 1;
 		rd_pointer = 0;
-	end
-//Read condition
-	else if (!EMPTYreg) begin
-	   rd_pointer = rd_pointer+1;
-			
-        if(rd_pointer >= `bufferSize) rd_pointer = 0;
-        FULLreg = 0;
-        if(rd_pointer == wr_pointer) EMPTYreg = 1;
-	end
+    end
+    else begin
+        //--write logic--//
+        if(wr_clk)begin
+            //Write condition
+            if (!FULLreg) begin
+                mem[wr_pointer] = dataIn;
+                wr_pointer = wr_pointer+1;
+                if(wr_pointer >= `bufferSize) wr_pointer = 0;
+                EMPTYreg = 0;
+                if(wr_pointer == rd_pointer) FULLreg = 1;
+            end 
+        end
+        //--read logic--//
+        if(rd_clk)begin
+           if (!EMPTYreg) begin
+               rd_pointer = rd_pointer+1;
+                
+                if(rd_pointer >= `bufferSize) rd_pointer = 0;
+                FULLreg = 0;
+                if(rd_pointer == wr_pointer) EMPTYreg = 1;
+            end
+        end
+    end
 end
 endmodule

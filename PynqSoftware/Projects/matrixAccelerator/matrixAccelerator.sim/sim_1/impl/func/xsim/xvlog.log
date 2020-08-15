@@ -1,0 +1,14 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.sim/sim_1/impl/func/xsim/aFIFO_tb_func_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo
+INFO: [VRFC 10-311] analyzing module fifo_aFIFO_0_0
+INFO: [VRFC 10-311] analyzing module fifo_aFIFO_0_0_aFIFO
+INFO: [VRFC 10-311] analyzing module fifo_processing_system7_0_0
+INFO: [VRFC 10-311] analyzing module fifo_processing_system7_0_0_processing_system7_v5_5_processing_system7
+INFO: [VRFC 10-311] analyzing module fifo_wrapper
+INFO: [VRFC 10-311] analyzing module fifo_xlconcat_0_0
+INFO: [VRFC 10-311] analyzing module fifo_xlslice_2_0
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/aFIFO.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aFIFO
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/TB/aFIFO_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aFIFO_tb

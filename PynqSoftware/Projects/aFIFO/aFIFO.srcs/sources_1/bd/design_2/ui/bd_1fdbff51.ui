@@ -1,0 +1,34 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-982,-382",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0.21  2019-05-29 bk=1.5064 VDI=41 GEI=36 GUI=JA:9.0 non-TLS-threadsafe
+#  -string -flagsOSRD
+preplace port DDR -pg 1 -lvl 3 -x 780 -y 80 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 3 -x 780 -y 100 -defaultsOSRD
+preplace portBus Dout_0 -pg 1 -lvl 3 -x 780 -y 30 -defaultsOSRD
+preplace portBus In0_0 -pg 1 -lvl 0 -x -10 -y -160 -defaultsOSRD
+preplace portBus In1_0 -pg 1 -lvl 0 -x -10 -y -140 -defaultsOSRD
+preplace portBus In2_0 -pg 1 -lvl 0 -x -10 -y -120 -defaultsOSRD
+preplace portBus In3_0 -pg 1 -lvl 0 -x -10 -y -100 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 1 -x 210 -y 160 -defaultsOSRD
+preplace inst xlslice_0 -pg 1 -lvl 2 -x 650 -y 30 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 1 -x 210 -y -130 -defaultsOSRD
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 2 10 310 410
+preplace netloc processing_system7_0_GPIO_O 1 1 1 420 30n
+preplace netloc xlslice_0_Dout 1 2 1 N 30
+preplace netloc xlconcat_0_dout 1 1 1 410 -130n
+preplace netloc In0_0_1 1 0 1 NJ -160
+preplace netloc In1_0_1 1 0 1 NJ -140
+preplace netloc In2_0_1 1 0 1 NJ -120
+preplace netloc In3_0_1 1 0 1 NJ -100
+preplace netloc processing_system7_0_DDR 1 1 2 NJ 150 750
+preplace netloc processing_system7_0_FIXED_IO 1 1 2 NJ 170 760
+levelinfo -pg 1 -10 210 650 780
+pagesize -pg 1 -db -bbox -sgen -130 -220 910 360
+"
+}
+{
+   "da_ps7_cnt":"1"
+}

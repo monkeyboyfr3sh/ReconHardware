@@ -28,37 +28,37 @@ Rst = 0;
 //Load 2
 dataIn = 2;
 wr_clk = 1;
-#(2.2*`clkPeriod);
+#`toggleTime;
 wr_clk = 0;
-#(2.2*`clkPeriod);
+#`toggleTime;
 
 //Load 6
 dataIn = 6;
 wr_clk = 1;
-#(2.2*`clkPeriod);
+#`toggleTime;
 wr_clk = 0;
-#(2.2*`clkPeriod);
+#`toggleTime;
 
 //Load 7
 dataIn = 7;
 wr_clk = 1;
-#(2.2*`clkPeriod);
+#`toggleTime;
 wr_clk = 0;
-#(2.2*`clkPeriod);
-
+#`toggleTime;
+#`clkPeriod;
 //Load 8
 dataIn = 8;
 wr_clk = 1;
-#(2.2*`clkPeriod);
+#`toggleTime;
 wr_clk = 0;
-#(2.2*`clkPeriod);
+#`toggleTime;
 
 //Load 10
 dataIn = 10;
 wr_clk = 1;
-#(2.2*`clkPeriod);
+#`toggleTime;
 wr_clk = 0;
-#(2.2*`clkPeriod);
+#`toggleTime;
 
 #`clkPeriod;
 #`clkPeriod;
@@ -70,15 +70,15 @@ wr_clk = 0;
 //Load 3
 dataIn = 3;
 wr_clk = 1;
-#(2.2*`clkPeriod);
+#`toggleTime;
 wr_clk = 0;
-#(2.2*`clkPeriod);
+#`toggleTime;
 //Load 63
 dataIn = 63;
 wr_clk = 1;
-#(2.2*`clkPeriod);
+#`toggleTime;
 wr_clk = 0;
-#(2.2*`clkPeriod);
+#`toggleTime;
 
 
 end
