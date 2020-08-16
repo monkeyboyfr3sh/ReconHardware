@@ -1,0 +1,301 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Sun Aug 16 12:42:05 2020
+# Process ID: 24364
+# Current directory: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/aFIFO/aFIFO.runs/design_1_aFIFO_0_0_synth_1
+# Command line: vivado.exe -log design_1_aFIFO_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_aFIFO_0_0.tcl
+# Log file: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/aFIFO/aFIFO.runs/design_1_aFIFO_0_0_synth_1/design_1_aFIFO_0_0.vds
+# Journal file: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/aFIFO/aFIFO.runs/design_1_aFIFO_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source design_1_aFIFO_0_0.tcl -notrace
+Command: synth_design -top design_1_aFIFO_0_0 -part xc7z020clg400-1 -mode out_of_context
+Starting synth_design
+WARNING: [IP_Flow 19-3571] IP 'design_1_aFIFO_0_0' is restricted:
+* Module reference is stale and needs refreshing.
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 1440 
+WARNING: [Synth 8-6901] identifier 'o_rdata' is used before its declaration [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/aFIFO.v:94]
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 702.332 ; gain = 246.594
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_aFIFO_0_0' [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_1/ip/design_1_aFIFO_0_0_1/synth/design_1_aFIFO_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'aFIFO' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/aFIFO.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'aFIFO' (1#1) [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/aFIFO.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_aFIFO_0_0' (2#1) [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_1/ip/design_1_aFIFO_0_0_1/synth/design_1_aFIFO_0_0.v:58]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 748.312 ; gain = 292.574
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 748.312 ; gain = 292.574
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 748.312 ; gain = 292.574
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 748.312 ; gain = 292.574
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 4     
++---XORs : 
+	   2 Input      6 Bit         XORs := 2     
++---Registers : 
+	                6 Bit    Registers := 8     
+	                1 Bit    Registers := 2     
++---RAMs : 
+	              512 Bit         RAMs := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module aFIFO 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 4     
++---XORs : 
+	   2 Input      6 Bit         XORs := 2     
++---Registers : 
+	                6 Bit    Registers := 8     
+	                1 Bit    Registers := 2     
++---RAMs : 
+	              512 Bit         RAMs := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 946.086 ; gain = 490.348
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping	Report (see note below)
++-------------------+--------------+-----------+----------------------+-------------+
+|Module Name        | RTL Object   | Inference | Size (Depth x Width) | Primitives  | 
++-------------------+--------------+-----------+----------------------+-------------+
+|design_1_aFIFO_0_0 | inst/mem_reg | Implied   | 32 x 16              | RAM32M x 3	 | 
++-------------------+--------------+-----------+----------------------+-------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 950.547 ; gain = 494.809
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping	Report
++-------------------+--------------+-----------+----------------------+-------------+
+|Module Name        | RTL Object   | Inference | Size (Depth x Width) | Primitives  | 
++-------------------+--------------+-----------+----------------------+-------------+
+|design_1_aFIFO_0_0 | inst/mem_reg | Implied   | 32 x 16              | RAM32M x 3	 | 
++-------------------+--------------+-----------+----------------------+-------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'inst/wgray_reg[5]' (FDC) to 'inst/wbin_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/rgray_reg[5]' (FDC) to 'inst/rbin_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/rbin_reg_rep[0]' (FDC) to 'inst/rbin_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/rbin_reg_rep[1]' (FDC) to 'inst/rbin_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/rbin_reg_rep[2]' (FDC) to 'inst/rbin_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/rbin_reg_rep[3]' (FDC) to 'inst/rbin_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/rbin_reg_rep[4]' (FDC) to 'inst/rbin_reg[4]'
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 950.547 ; gain = 494.809
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 950.547 ; gain = 494.809
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 950.547 ; gain = 494.809
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 950.547 ; gain = 494.809
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 950.547 ; gain = 494.809
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 950.547 ; gain = 494.809
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 950.547 ; gain = 494.809
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |LUT1   |     2|
+|2     |LUT2   |    18|
+|3     |LUT3   |     9|
+|4     |LUT4   |     4|
+|5     |LUT5   |     7|
+|6     |LUT6   |    12|
+|7     |RAM32M |     3|
+|8     |FDCE   |    47|
+|9     |FDPE   |     1|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |   103|
+|2     |  inst   |aFIFO  |   103|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 950.547 ; gain = 494.809
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 950.547 ; gain = 494.809
+Synthesis Optimization Complete : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 950.547 ; gain = 494.809
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 962.699 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1063.473 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 3 instances were transformed.
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 3 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+20 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1063.473 ; gain = 612.711
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1063.473 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/aFIFO/aFIFO.runs/design_1_aFIFO_0_0_synth_1/design_1_aFIFO_0_0.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1486.977 ; gain = 423.504
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1486.988 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/aFIFO/aFIFO.runs/design_1_aFIFO_0_0_synth_1/design_1_aFIFO_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_aFIFO_0_0_utilization_synth.rpt -pb design_1_aFIFO_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Aug 16 12:42:31 2020...

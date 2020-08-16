@@ -1,17 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1597438376">
-  <File Type="PA-TCL" Name="fifo_wrapper.tcl"/>
-  <File Type="REPORTS-TCL" Name="fifo_wrapper_reports.tcl"/>
-  <File Type="RDS-RDS" Name="fifo_wrapper.vds"/>
-  <File Type="RDS-UTIL" Name="fifo_wrapper_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="fifo_wrapper_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="fifo_wrapper.dcp"/>
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1597604998">
+  <File Type="PA-TCL" Name="Convolution_Accel_wrapper.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="Convolution_Accel_wrapper_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="Convolution_Accel_wrapper_reports.tcl"/>
+  <File Type="RDS-RDS" Name="Convolution_Accel_wrapper.vds"/>
+  <File Type="RDS-UTIL" Name="Convolution_Accel_wrapper_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="Convolution_Accel_wrapper_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="Convolution_Accel_wrapper.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="Convolution_Accel_wrapper_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="Convolution_Accel_wrapper_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/../../Sources/definitions.h">
       <FileInfo>
         <Attr Name="IsGlobalInclude" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Sources/General/XBar2.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
@@ -22,31 +32,8 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/bd/fifo/fifo.bd">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/bd/fifo/hdl/fifo_wrapper.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../../Sources/General/XBar2.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PPRDIR/../../Sources/Adder/adderFloat.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -54,7 +41,6 @@
     </File>
     <File Path="$PPRDIR/../../Sources/Multiplier/floatmComputePynq.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -62,7 +48,6 @@
     </File>
     <File Path="$PPRDIR/../../Sources/General/matrixAccelerator.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -70,7 +55,6 @@
     </File>
     <File Path="$PPRDIR/../../Sources/General/matrixControl3x3.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -78,7 +62,6 @@
     </File>
     <File Path="$PPRDIR/../../Sources/General/matrixAccTopDevice.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -86,7 +69,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/bd/Convolution_Accel/Convolution_Accel.bd">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -94,7 +76,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/bd/Convolution_Accel/hdl/Convolution_Accel_wrapper.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -118,7 +99,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="fifo_wrapper"/>
+      <Option Name="TopModule" Val="Convolution_Accel_wrapper"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -138,7 +119,4 @@
     <Step Id="synth_design"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="Convolution_Accel_matrixAccTopDevice_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="Convolution_Accel_processing_system7_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="fifo_aFIFO_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="fifo_processing_system7_0_0"/>
 </GenRun>

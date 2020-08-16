@@ -1,5 +1,7 @@
 //IP was pulled from:
 //https://github.com/ZipCPU/website/blob/master/examples/afifo.v
+//My notes:
+//Takes 3 rd cycles for a value to that has been written to be read;
 
 ////////////////////////////////////////////////////////////////////////////////
 //
@@ -651,3 +653,4 @@ assign	o_rdata = mem[raddr];
 		cover((o_rempty)&&(i_rd));
 `endif
 endmodule
+`default_nettype	wire

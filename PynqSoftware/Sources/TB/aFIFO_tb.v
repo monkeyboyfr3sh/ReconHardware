@@ -1,5 +1,6 @@
 `include "definitions.h"
 `timescale `myTimeScale
+`define wr_clk_scale    3.2
 
 module aFIFO_tb;
 
@@ -41,43 +42,56 @@ i_rrst_n = 0;
 i_wrst_n = 1;
 i_rrst_n = 1;
 
+i_wr = 0;
+
+i_wclk = 1;
 i_wr = 1;
-i_rd = 1;
-
-i_wdata = 2;
-i_wclk = 1;
-#`toggleTime;
-i_wclk = 0;
-#`toggleTime;
-
-i_wdata = 8;
-i_wclk = 1;
-#`toggleTime;
-i_wclk = 0;
-#`toggleTime;
-
 i_wdata = 10;
-i_wclk = 1;
 #`toggleTime;
 i_wclk = 0;
+i_wr = 0;
 #`toggleTime;
 
-i_wdata = 23;
 i_wclk = 1;
+i_wr = 1;
+i_wdata = 20;
 #`toggleTime;
 i_wclk = 0;
+i_wr = 0;
 #`toggleTime;
 
+#`clkPeriod;
+#`clkPeriod;
+#`clkPeriod;
+i_rd = 1;
+#`clkPeriod;
+
+i_wrst_n = 0;
+#`clkPeriod;
+i_wrst_n = 1;
+
+i_wclk = 1;
+i_wr = 1;
+i_wdata = 12;
+#`toggleTime;
+i_wclk = 0;
+i_wr = 0;
+#`toggleTime;
+
+i_wclk = 1;
+i_wr = 1;
+i_wdata = 16;
+#`toggleTime;
+i_wclk = 0;
+i_wr = 0;
+#`toggleTime;
+
+i_wclk = 1;
+i_wr = 1;
 i_wdata = 96;
-i_wclk = 1;
 #`toggleTime;
 i_wclk = 0;
-#`toggleTime;
-
-i_wdata = 15;
-i_wclk = 1;
-#`toggleTime;
-i_wclk = 0;
+i_wr = 0;
 #`toggleTime;
 
 end

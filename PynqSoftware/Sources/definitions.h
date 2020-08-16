@@ -66,6 +66,6 @@
 `define restAddress         `inputPortCount*`outputPortCount
 
 //aFIFO
-`define bufferSize          4
+`define bufferSize          5
 /*#####################################################################################################################################################*/
 //END_Automated_Set

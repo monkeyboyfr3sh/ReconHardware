@@ -22,6 +22,7 @@ output  [`bitLength-1:0]  finalsum;
 
 //Internal Signals
 //FIFO signals
+wire    FIFO_RD_CLK;
 wire    [`bitLength-1:0]                        FIFO_OUT_PORT;
 //Matrix Accelerator signals
 wire    [`addressLength-1:0]                    AddressSelect;
@@ -70,13 +71,17 @@ matrixControl3x3 controller(
 
 
 aFIFO inputBuffer(
-    .Clk(FIFO_RD_CLK),                              //RD Clock
-    .Rst(Rst),
-    .dataIn(dataInput),                             //Buffer input from external device
-    .dataOut(FIFO_OUT_PORT),                        //Buffer output
-    .wr_clk(wr_clk),                                //Write clock from external device
-    .FULL(FULL),                                    //Signals buffer full
-    .EMPTY(EMPTY)                                   //Signals buffer is empty
+    .i_wclk(wr_clk),            //Write clock
+    .i_wrst_n(~Rst),             //Asynchronous write reset
+    .i_wr(wr_clk),              //Write request
+    .i_wdata(dataInput),        //Write data
+    .o_wfull(FULL),             //Output full
+    
+    .i_rclk(Clk),               //Read clock
+    .i_rrst_n(~Rst),             //Asynchronous read reset
+    .i_rd(FIFO_RD_CLK),         //Read request
+    .dataOut(FIFO_OUT_PORT),    //Output data
+    .o_rempty(EMPTY)            //Output full
 );
 
 adderFloat finalAdder(

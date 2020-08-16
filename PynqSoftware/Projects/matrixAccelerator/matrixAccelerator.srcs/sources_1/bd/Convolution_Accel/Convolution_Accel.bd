@@ -9,12 +9,12 @@
       "validated": "true"
     },
     "design_tree": {
-      "matrixAccTopDevice_0": "",
       "processing_system7_0": "",
       "dataInput": "",
       "cStart": "",
       "wr_clk": "",
-      "xlconcat_0": ""
+      "xlconcat_0": "",
+      "matrixAccTopDevice_0": ""
     },
     "interface_ports": {
       "DDR": {
@@ -83,61 +83,6 @@
       }
     },
     "components": {
-      "matrixAccTopDevice_0": {
-        "vlnv": "xilinx.com:module_ref:matrixAccTopDevice:1.0",
-        "xci_name": "Convolution_Accel_matrixAccTopDevice_0_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "matrixAccTopDevice",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "Clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "Convolution_Accel_processing_system7_0_0_FCLK_CLK0",
-                "value_src": "default_prop"
-              },
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "user_prop"
-              }
-            }
-          },
-          "Rst": {
-            "type": "rst",
-            "direction": "I"
-          },
-          "dataInput": {
-            "direction": "I",
-            "left": "15",
-            "right": "0"
-          },
-          "cStart": {
-            "direction": "I"
-          },
-          "cReady": {
-            "direction": "O"
-          },
-          "finalsum": {
-            "direction": "O",
-            "left": "15",
-            "right": "0"
-          },
-          "wr_clk": {
-            "type": "clk",
-            "direction": "I"
-          },
-          "FULL": {
-            "direction": "O"
-          },
-          "EMPTY": {
-            "direction": "O"
-          }
-        }
-      },
       "processing_system7_0": {
         "vlnv": "xilinx.com:ip:processing_system7:5.5",
         "xci_name": "Convolution_Accel_processing_system7_0_0",
@@ -1799,6 +1744,61 @@
             "value": "4"
           }
         }
+      },
+      "matrixAccTopDevice_0": {
+        "vlnv": "xilinx.com:module_ref:matrixAccTopDevice:1.0",
+        "xci_name": "Convolution_Accel_matrixAccTopDevice_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "matrixAccTopDevice",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "Clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "Convolution_Accel_processing_system7_0_0_FCLK_CLK0",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "Rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "dataInput": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "cStart": {
+            "direction": "I"
+          },
+          "cReady": {
+            "direction": "O"
+          },
+          "finalsum": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "wr_clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "FULL": {
+            "direction": "O"
+          },
+          "EMPTY": {
+            "direction": "O"
+          }
+        }
       }
     },
     "interface_nets": {
@@ -1851,8 +1851,8 @@
       "processing_system7_0_FCLK_CLK0": {
         "ports": [
           "processing_system7_0/FCLK_CLK0",
-          "matrixAccTopDevice_0/Clk",
-          "processing_system7_0/M_AXI_GP0_ACLK"
+          "processing_system7_0/M_AXI_GP0_ACLK",
+          "matrixAccTopDevice_0/Clk"
         ]
       },
       "processing_system7_0_FCLK_RESET0_N": {

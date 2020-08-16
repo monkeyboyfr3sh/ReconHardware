@@ -2,8 +2,8 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Wed Aug 12 16:24:46 2020
-# Process ID: 27788
+# Start of session at: Sun Aug 16 14:07:44 2020
+# Process ID: 24456
 # Current directory: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.runs/Convolution_Accel_matrixAccTopDevice_0_0_synth_1
 # Command line: vivado.exe -log Convolution_Accel_matrixAccTopDevice_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Convolution_Accel_matrixAccTopDevice_0_0.tcl
 # Log file: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.runs/Convolution_Accel_matrixAccTopDevice_0_0_synth_1/Convolution_Accel_matrixAccTopDevice_0_0.vds
@@ -17,9 +17,10 @@ WARNING: [IP_Flow 19-3571] IP 'Convolution_Accel_matrixAccTopDevice_0_0' is rest
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 4444 
+INFO: Helper process launched with PID 11908 
+WARNING: [Synth 8-6901] identifier 'o_rdata' is used before its declaration [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/aFIFO.v:94]
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 697.516 ; gain = 241.191
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 701.402 ; gain = 244.680
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'Convolution_Accel_matrixAccTopDevice_0_0' [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/Convolution_Accel/ip/Convolution_Accel_matrixAccTopDevice_0_0/synth/Convolution_Accel_matrixAccTopDevice_0_0.v:58]
 INFO: [Synth 8-6157] synthesizing module 'matrixAccTopDevice' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixAccTopDevice.v:4]
@@ -46,37 +47,32 @@ WARNING: [Synth 8-6014] Unused sequential element selectRow_reg was removed.  [C
 WARNING: [Synth 8-6014] Unused sequential element selectColomn_reg was removed.  [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/XBar2.v:91]
 INFO: [Synth 8-6155] done synthesizing module 'XBar2' (4#1) [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/XBar2.v:19]
 INFO: [Synth 8-6155] done synthesizing module 'matrixAccelerator' (5#1) [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixAccelerator.v:4]
-INFO: [Synth 8-6157] synthesizing module 'aFIFO' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/aFIFO.v:8]
-WARNING: [Synth 8-5788] Register mem_reg in module aFIFO is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
-WARNING: [Synth 8-4767] Trying to implement RAM 'mem_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
-Reason is one or more of the following :
-	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
-RAM "mem_reg" dissolved into registers
-INFO: [Synth 8-6155] done synthesizing module 'aFIFO' (6#1) [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/aFIFO.v:8]
-WARNING: [Synth 8-3848] Net FULLL in module/entity matrixAccTopDevice does not have driver. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixAccTopDevice.v:48]
-WARNING: [Synth 8-3848] Net AddressSelect in module/entity matrixAccTopDevice does not have driver. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixAccTopDevice.v:27]
+INFO: [Synth 8-6157] synthesizing module 'aFIFO' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/aFIFO.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'aFIFO' (6#1) [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/aFIFO.v:68]
+WARNING: [Synth 8-3848] Net FULLL in module/entity matrixAccTopDevice does not have driver. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixAccTopDevice.v:49]
+WARNING: [Synth 8-3848] Net AddressSelect in module/entity matrixAccTopDevice does not have driver. [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixAccTopDevice.v:28]
 INFO: [Synth 8-6155] done synthesizing module 'matrixAccTopDevice' (7#1) [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixAccTopDevice.v:4]
 INFO: [Synth 8-6155] done synthesizing module 'Convolution_Accel_matrixAccTopDevice_0_0' (8#1) [c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/Convolution_Accel/ip/Convolution_Accel_matrixAccTopDevice_0_0/synth/Convolution_Accel_matrixAccTopDevice_0_0.v:58]
 WARNING: [Synth 8-3331] design matrixControl3x3 has unconnected port FULL
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 769.934 ; gain = 313.609
+Finished Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 755.578 ; gain = 298.855
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 769.934 ; gain = 313.609
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 755.578 ; gain = 298.855
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 769.934 ; gain = 313.609
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 755.578 ; gain = 298.855
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 WARNING: [Synth 8-327] inferring latch for variable 'OutputSave_reg[0]' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/XBar2.v:49]
 WARNING: [Synth 8-327] inferring latch for variable 'OutputSave_reg[1]' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/XBar2.v:49]
 WARNING: [Synth 8-327] inferring latch for variable 'OutputSave_reg[2]' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/XBar2.v:49]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 769.934 ; gain = 313.609
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 756.301 ; gain = 299.578
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -90,22 +86,23 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     18 Bit       Adders := 2     
 	   2 Input     12 Bit       Adders := 4     
 	   2 Input      7 Bit       Adders := 120   
-	   2 Input      6 Bit       Adders := 5     
+	   2 Input      6 Bit       Adders := 9     
 	   2 Input      5 Bit       Adders := 11    
 	   4 Input      5 Bit       Adders := 3     
 +---XORs : 
+	   2 Input      6 Bit         XORs := 2     
 	   2 Input      1 Bit         XORs := 3     
 +---Registers : 
 	               48 Bit    Registers := 2     
 	               32 Bit    Registers := 8     
-	               18 Bit    Registers := 2     
-	               16 Bit    Registers := 18    
+	                6 Bit    Registers := 8     
 	                5 Bit    Registers := 5     
 	                3 Bit    Registers := 4     
-	                1 Bit    Registers := 10    
+	                1 Bit    Registers := 12    
++---RAMs : 
+	              512 Bit         RAMs := 1     
 +---Muxes : 
 	   2 Input     48 Bit        Muxes := 9     
 	   2 Input     32 Bit        Muxes := 30    
@@ -119,7 +116,7 @@ Detailed RTL Component Info :
 	   2 Input      5 Bit        Muxes := 8     
 	   2 Input      3 Bit        Muxes := 13    
 	   3 Input      3 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 62    
+	   2 Input      1 Bit        Muxes := 44    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -186,13 +183,16 @@ Detailed RTL Component Info :
 Module aFIFO 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     18 Bit       Adders := 2     
+	   2 Input      6 Bit       Adders := 4     
++---XORs : 
+	   2 Input      6 Bit         XORs := 2     
 +---Registers : 
-	               18 Bit    Registers := 2     
-	               16 Bit    Registers := 18    
+	                6 Bit    Registers := 8     
+	                1 Bit    Registers := 2     
++---RAMs : 
+	              512 Bit         RAMs := 1     
 +---Muxes : 
 	   2 Input     16 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 18    
 Module matrixAccTopDevice 
 Detailed RTL Component Info : 
 +---Muxes : 
@@ -278,101 +278,6 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/mat
 INFO: [Synth 8-3886] merging instance 'inst/matrixAccel/xbar2/AddressSave_reg[2][0]' (FDCE) to 'inst/matrixAccel/xbar2/AddressSave_reg[1][0]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/matrixAccel/xbar2/AddressSave_reg[1][0] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/matrixAccel/genblk3[0].inputMulti/product_reg[31] )
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLIER_INPUT_reg[32]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/holdFilter_reg' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLIER_INPUT_reg[33]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLIER_INPUT_reg[34]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLIER_INPUT_reg[35]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLIER_INPUT_reg[36]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLIER_INPUT_reg[37]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLIER_INPUT_reg[38]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLIER_INPUT_reg[39]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLIER_INPUT_reg[40]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLIER_INPUT_reg[41]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLIER_INPUT_reg[42]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLIER_INPUT_reg[43]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLIER_INPUT_reg[44]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLIER_INPUT_reg[45]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLIER_INPUT_reg[46]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLIER_INPUT_reg[47]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLICAND_INPUT_reg[32]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLICAND_INPUT_reg[33]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLICAND_INPUT_reg[34]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLICAND_INPUT_reg[35]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLICAND_INPUT_reg[36]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLICAND_INPUT_reg[37]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLICAND_INPUT_reg[38]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLICAND_INPUT_reg[39]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLICAND_INPUT_reg[40]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLICAND_INPUT_reg[41]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLICAND_INPUT_reg[42]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLICAND_INPUT_reg[43]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLICAND_INPUT_reg[44]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLICAND_INPUT_reg[45]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLICAND_INPUT_reg[46]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[47]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLICAND_INPUT_reg[47]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLIER_INPUT_reg[16]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLIER_INPUT_reg[17]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLIER_INPUT_reg[18]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLIER_INPUT_reg[19]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLIER_INPUT_reg[20]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLIER_INPUT_reg[21]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLIER_INPUT_reg[22]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLIER_INPUT_reg[23]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLIER_INPUT_reg[24]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLIER_INPUT_reg[25]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLIER_INPUT_reg[26]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLIER_INPUT_reg[27]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLIER_INPUT_reg[28]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLIER_INPUT_reg[29]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLIER_INPUT_reg[30]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLIER_INPUT_reg[31]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLICAND_INPUT_reg[16]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLICAND_INPUT_reg[17]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLICAND_INPUT_reg[18]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLICAND_INPUT_reg[19]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLICAND_INPUT_reg[20]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLICAND_INPUT_reg[21]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLICAND_INPUT_reg[22]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLICAND_INPUT_reg[23]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLICAND_INPUT_reg[24]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLICAND_INPUT_reg[25]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLICAND_INPUT_reg[26]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLICAND_INPUT_reg[27]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLICAND_INPUT_reg[28]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLICAND_INPUT_reg[29]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLICAND_INPUT_reg[30]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLICAND_INPUT_reg[31]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[15]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLIER_INPUT_reg[0]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[15]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLIER_INPUT_reg[1]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[15]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLIER_INPUT_reg[2]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[15]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLIER_INPUT_reg[3]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[15]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLIER_INPUT_reg[4]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[15]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLIER_INPUT_reg[5]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[15]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLIER_INPUT_reg[6]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[15]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLIER_INPUT_reg[7]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[15]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLIER_INPUT_reg[8]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[15]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLIER_INPUT_reg[9]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[15]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLIER_INPUT_reg[10]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[15]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLIER_INPUT_reg[11]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[15]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLIER_INPUT_reg[12]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[15]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLIER_INPUT_reg[13]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[15]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLIER_INPUT_reg[14]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[15]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLIER_INPUT_reg[15]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[15]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLICAND_INPUT_reg[0]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[15]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLICAND_INPUT_reg[1]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[15]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLICAND_INPUT_reg[2]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[15]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLICAND_INPUT_reg[3]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[15]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLICAND_INPUT_reg[4]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[15]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLICAND_INPUT_reg[5]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[15]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLICAND_INPUT_reg[6]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[15]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLICAND_INPUT_reg[7]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[15]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLICAND_INPUT_reg[8]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[15]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLICAND_INPUT_reg[9]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[15]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLICAND_INPUT_reg[10]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[15]'
-INFO: [Synth 8-3886] merging instance 'inst/controller/MULTIPLICAND_INPUT_reg[11]' (FDCE) to 'inst/controller/MULTIPLICAND_INPUT_reg[15]'
-INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/controller /\MULTIPLICAND_INPUT_reg[15] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/matrixAccel/xbar2/OutputSave_reg[2][16] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/matrixAccel/xbar2/OutputSave_reg[2][17] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/matrixAccel/xbar2/OutputSave_reg[2][18] )
@@ -421,8 +326,6 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/mat
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/matrixAccel/xbar2/OutputSave_reg[0][29] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/matrixAccel/xbar2/OutputSave_reg[0][30] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/matrixAccel/xbar2/OutputSave_reg[0][31] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/controller /rdPointer_inferred/\rdPointer_reg[3] )
-INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-3332] Sequential element (inst/matrixAccel/xbar2/OutputSave_reg[0][31]) is unused and will be removed from module Convolution_Accel_matrixAccTopDevice_0_0.
 INFO: [Synth 8-3332] Sequential element (inst/matrixAccel/xbar2/OutputSave_reg[0][30]) is unused and will be removed from module Convolution_Accel_matrixAccTopDevice_0_0.
 INFO: [Synth 8-3332] Sequential element (inst/matrixAccel/xbar2/OutputSave_reg[0][29]) is unused and will be removed from module Convolution_Accel_matrixAccTopDevice_0_0.
@@ -519,15 +422,30 @@ INFO: [Synth 8-3332] Sequential element (inst/matrixAccel/xbar2/OutputSave_reg[2
 INFO: [Synth 8-3332] Sequential element (inst/matrixAccel/xbar2/OutputSave_reg[2][2]) is unused and will be removed from module Convolution_Accel_matrixAccTopDevice_0_0.
 INFO: [Synth 8-3332] Sequential element (inst/matrixAccel/xbar2/OutputSave_reg[2][1]) is unused and will be removed from module Convolution_Accel_matrixAccTopDevice_0_0.
 INFO: [Synth 8-3332] Sequential element (inst/matrixAccel/xbar2/OutputSave_reg[2][0]) is unused and will be removed from module Convolution_Accel_matrixAccTopDevice_0_0.
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/inputBuffer/EMPTYreg_reg/Q' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/aFIFO.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/aFIFO.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/aFIFO.v:54]
+INFO: [Synth 8-3886] merging instance 'inst/controller/i_4/rdPointer_reg[3]' (FDCE) to 'inst/controller/i_4/rdPointer_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/controller/i_4/rdPointer_reg[2]' (FDCE) to 'inst/controller/i_4/rdPointer_reg[4]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/controller /i_4/\rdPointer_reg[4] )
+INFO: [Synth 8-3886] merging instance 'inst/controller/i_4/RDloopcnt_reg[2]' (FDCE) to 'inst/controller/i_4/RDloopcnt_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/controller/i_4/multiPointer_reg[3]' (FDCE) to 'inst/controller/i_4/multiPointer_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/controller/i_4/multiPointer_reg[2]' (FDCE) to 'inst/controller/i_4/multiPointer_reg[4]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/controller /i_4/\multiPointer_reg[4] )
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3886] merging instance 'inst/controller/i_4/Mloopcnt_reg[2]' (FDCE) to 'inst/controller/i_4/Mloopcnt_reg[3]'
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1095.039 ; gain = 638.715
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 1155.137 ; gain = 698.414
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping	Report (see note below)
++-----------------------------------------+--------------------------+-----------+----------------------+-------------+
+|Module Name                              | RTL Object               | Inference | Size (Depth x Width) | Primitives  | 
++-----------------------------------------+--------------------------+-----------+----------------------+-------------+
+|Convolution_Accel_matrixAccTopDevice_0_0 | inst/inputBuffer/mem_reg | Implied   | 32 x 16              | RAM32M x 3	 | 
++-----------------------------------------+--------------------------+-----------+----------------------+-------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
 
 DSP: Preliminary Mapping	Report (see note below)
 +-------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
@@ -553,7 +471,21 @@ No constraint files found.
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:15 . Memory (MB): peak = 1098.449 ; gain = 642.125
+Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 1155.137 ; gain = 698.414
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping	Report
++-----------------------------------------+--------------------------+-----------+----------------------+-------------+
+|Module Name                              | RTL Object               | Inference | Size (Depth x Width) | Primitives  | 
++-----------------------------------------+--------------------------+-----------+----------------------+-------------+
+|Convolution_Accel_matrixAccTopDevice_0_0 | inst/inputBuffer/mem_reg | Implied   | 32 x 16              | RAM32M x 3	 | 
++-----------------------------------------+--------------------------+-----------+----------------------+-------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -564,9 +496,23 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5966] Removing register instance (\inst/inputBuffer/FULLreg_reg ) from module (Convolution_Accel_matrixAccTopDevice_0_0) as it has self-loop and (\inst/inputBuffer/FULLreg_reg__0 ) is actual driver [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/aFIFO.v:62]
+INFO: [Synth 8-3886] merging instance 'inst/inputBuffer/rbin_reg_rep[0]' (FDC) to 'inst/inputBuffer/rbin_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/inputBuffer/rbin_reg_rep[1]' (FDC) to 'inst/inputBuffer/rbin_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/inputBuffer/rbin_reg_rep[2]' (FDC) to 'inst/inputBuffer/rbin_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/inputBuffer/rbin_reg_rep[3]' (FDC) to 'inst/inputBuffer/rbin_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/inputBuffer/rbin_reg_rep[4]' (FDC) to 'inst/inputBuffer/rbin_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/inputBuffer/wgray_reg[5]' (FDC) to 'inst/inputBuffer/wbin_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/inputBuffer/rgray_reg[5]' (FDC) to 'inst/inputBuffer/rbin_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/controller/RDloopcnt_reg[4]' (FDCE) to 'inst/controller/RDloopcnt_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/controller/Mloopcnt_reg[4]' (FDCE) to 'inst/controller/Mloopcnt_reg[3]'
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v:66]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v:67]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v:66]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v:67]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v:66]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v:67]
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1098.594 ; gain = 642.270
+Finished Technology Mapping : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1539.863 ; gain = 1083.141
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -590,13 +536,13 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1098.594 ; gain = 642.270
+Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:00:37 . Memory (MB): peak = 1539.863 ; gain = 1083.141
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1098.594 ; gain = 642.270
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:00:37 . Memory (MB): peak = 1539.863 ; gain = 1083.141
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -615,25 +561,25 @@ Report Check Netlist:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1098.594 ; gain = 642.270
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:00:37 . Memory (MB): peak = 1539.863 ; gain = 1083.141
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1098.594 ; gain = 642.270
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:00:37 . Memory (MB): peak = 1539.863 ; gain = 1083.141
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1098.594 ; gain = 642.270
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:00:37 . Memory (MB): peak = 1539.863 ; gain = 1083.141
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1098.594 ; gain = 642.270
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:00:37 . Memory (MB): peak = 1539.863 ; gain = 1083.141
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -646,62 +592,72 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+-------+------+
-|      |Cell   |Count |
-+------+-------+------+
-|1     |CARRY4 |    66|
-|2     |LUT1   |    28|
-|3     |LUT2   |    60|
-|4     |LUT3   |   152|
-|5     |LUT4   |   223|
-|6     |LUT5   |   229|
-|7     |LUT6   |   483|
-|8     |FDCE   |    14|
-|9     |FDRE   |    22|
-+------+-------+------+
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |CARRY4  |   260|
+|2     |DSP48E1 |     3|
+|3     |LUT1    |    97|
+|4     |LUT2    |   223|
+|5     |LUT3    |   684|
+|6     |LUT4    |   923|
+|7     |LUT5    |  1077|
+|8     |LUT6    |  2435|
+|9     |RAM32M  |     3|
+|10    |FDCE    |   183|
+|11    |FDPE    |     1|
+|12    |FDRE    |   115|
++------+--------+------+
 
 Report Instance Areas: 
-+------+----------------+-------------------+------+
-|      |Instance        |Module             |Cells |
-+------+----------------+-------------------+------+
-|1     |top             |                   |  1277|
-|2     |  inst          |matrixAccTopDevice |  1277|
-|3     |    controller  |matrixControl3x3   |    32|
-|4     |    finalAdder  |adderFloat         |  1226|
-|5     |    inputBuffer |aFIFO              |    17|
-+------+----------------+-------------------+------+
++------+-------------------------------+---------------------------+------+
+|      |Instance                       |Module                     |Cells |
++------+-------------------------------+---------------------------+------+
+|1     |top                            |                           |  6004|
+|2     |  inst                         |matrixAccTopDevice         |  6004|
+|3     |    controller                 |matrixControl3x3           |  1595|
+|4     |    finalAdder                 |adderFloat                 |    35|
+|5     |    inputBuffer                |aFIFO                      |   134|
+|6     |    matrixAccel                |matrixAccelerator          |  4237|
+|7     |      \genblk3[0].inputMulti   |floatmultiplyComputePynq   |  1372|
+|8     |      \genblk3[1].inputMulti   |floatmultiplyComputePynq_0 |  1372|
+|9     |      \genblk3[2].inputMulti   |floatmultiplyComputePynq_1 |  1372|
+|10    |      \genblk4[0].outputAdder  |adderFloat_2               |    51|
+|11    |      \genblk4[1].outputAdder  |adderFloat_3               |    35|
+|12    |      \genblk4[2].outputAdder  |adderFloat_4               |    35|
++------+-------------------------------+---------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1098.594 ; gain = 642.270
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:00:37 . Memory (MB): peak = 1539.863 ; gain = 1083.141
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 3 critical warnings and 22 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1098.594 ; gain = 642.270
-Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1098.594 ; gain = 642.270
+Synthesis finished with 0 errors, 0 critical warnings and 21 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:37 ; elapsed = 00:00:37 . Memory (MB): peak = 1539.863 ; gain = 1083.141
+Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:00:37 . Memory (MB): peak = 1539.863 ; gain = 1083.141
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1110.590 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 66 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.054 . Memory (MB): peak = 1539.863 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 266 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-WARNING: [Netlist 29-101] Netlist 'Convolution_Accel_matrixAccTopDevice_0_0' is not ideal for floorplanning, since the cellview 'adderFloat' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1110.590 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1539.863 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
+  A total of 3 instances were transformed.
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 3 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-324 Infos, 24 Warnings, 3 Critical Warnings and 0 Errors encountered.
+250 Infos, 22 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1110.590 ; gain = 659.293
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1110.590 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 1539.863 ; gain = 1088.129
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1539.863 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.runs/Convolution_Accel_matrixAccTopDevice_0_0_synth_1/Convolution_Accel_matrixAccTopDevice_0_0.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1493.309 ; gain = 382.719
+write_checkpoint: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1539.863 ; gain = 0.000
 WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
-INFO: [Coretcl 2-1174] Renamed 4 cell refs.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1494.473 ; gain = 0.000
+INFO: [Coretcl 2-1174] Renamed 11 cell refs.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1539.863 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.runs/Convolution_Accel_matrixAccTopDevice_0_0_synth_1/Convolution_Accel_matrixAccTopDevice_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Convolution_Accel_matrixAccTopDevice_0_0_utilization_synth.rpt -pb Convolution_Accel_matrixAccTopDevice_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Aug 12 16:25:23 2020...
+INFO: [Common 17-206] Exiting Vivado at Sun Aug 16 14:08:40 2020...
