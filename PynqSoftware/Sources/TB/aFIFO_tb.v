@@ -3,84 +3,83 @@
 
 module aFIFO_tb;
 
-reg   Clk, Rst,wr_clk;
-reg   [`bitLength-1:0]  dataIn;
+reg i_rclk,i_rrst_n,i_rd;
+reg i_wclk,i_wrst_n,i_wr;
 
-wire  FULL,EMPTY;
-wire  [`bitLength-1:0]  dataOut;
+wire o_wfull,o_rempty;
+
+reg     [`bitLength-1:0]    i_wdata; 
+wire    [`bitLength-1:0]	o_rdata;
 
 aFIFO uut(
-    Clk, Rst,
-    dataIn,
-    dataOut,
-    wr_clk,
-    FULL,
-    EMPTY
-    );
+    i_wclk,     //Write clock
+    i_wrst_n,   //Asynchronous write reset
+    i_wr,       //Write request
+    i_wdata,    //Write data
+    o_wfull,    //Output full
+    
+    i_rclk,     //Read clock
+    i_rrst_n,   //Asynchronous read reset
+    i_rd,       //Read request
+    o_rdata,    //Output data
+    o_rempty    //Output full
+);
 
 initial begin
-Clk = 0;
-wr_clk = 0;
-Rst = 1;
+//Set clocks low
+i_rclk = 0;
+i_wclk = 0;
+
+//Set queue/dequeue low
+i_wr = 0;
+i_rd = 0;
+
+//Quick reset on both sides.
+i_wrst_n = 0;
+i_rrst_n = 0;
 #`clkPeriod;
-Rst = 0;
+i_wrst_n = 1;
+i_rrst_n = 1;
 
-//Load 2
-dataIn = 2;
-wr_clk = 1;
-#`toggleTime;
-wr_clk = 0;
-#`toggleTime;
+i_wr = 1;
+i_rd = 1;
 
-//Load 6
-dataIn = 6;
-wr_clk = 1;
+i_wdata = 2;
+i_wclk = 1;
 #`toggleTime;
-wr_clk = 0;
-#`toggleTime;
-
-//Load 7
-dataIn = 7;
-wr_clk = 1;
-#`toggleTime;
-wr_clk = 0;
-#`toggleTime;
-#`clkPeriod;
-//Load 8
-dataIn = 8;
-wr_clk = 1;
-#`toggleTime;
-wr_clk = 0;
+i_wclk = 0;
 #`toggleTime;
 
-//Load 10
-dataIn = 10;
-wr_clk = 1;
+i_wdata = 8;
+i_wclk = 1;
 #`toggleTime;
-wr_clk = 0;
-#`toggleTime;
-
-#`clkPeriod;
-#`clkPeriod;
-#`clkPeriod;
-#`clkPeriod;
-#`clkPeriod;
-#`clkPeriod;
-
-//Load 3
-dataIn = 3;
-wr_clk = 1;
-#`toggleTime;
-wr_clk = 0;
-#`toggleTime;
-//Load 63
-dataIn = 63;
-wr_clk = 1;
-#`toggleTime;
-wr_clk = 0;
+i_wclk = 0;
 #`toggleTime;
 
+i_wdata = 10;
+i_wclk = 1;
+#`toggleTime;
+i_wclk = 0;
+#`toggleTime;
+
+i_wdata = 23;
+i_wclk = 1;
+#`toggleTime;
+i_wclk = 0;
+#`toggleTime;
+
+i_wdata = 96;
+i_wclk = 1;
+#`toggleTime;
+i_wclk = 0;
+#`toggleTime;
+
+i_wdata = 15;
+i_wclk = 1;
+#`toggleTime;
+i_wclk = 0;
+#`toggleTime;
 
 end
-always #(`clkPeriod/2) Clk = ~Clk;
+always #(`clkPeriod/2) i_rclk = ~i_rclk;
 endmodule

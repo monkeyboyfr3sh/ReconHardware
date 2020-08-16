@@ -3,7 +3,8 @@ INFO: [VRFC 10-311] analyzing module design_1
 INFO: [VRFC 10-311] analyzing module design_1_aFIFO_0_0
 INFO: [VRFC 10-311] analyzing module design_1_aFIFO_0_0_aFIFO
 INFO: [VRFC 10-311] analyzing module design_1_processing_system7_0_0
-INFO: [VRFC 10-311] analyzing module design_1_processing_system7_0_0_processing_system7_v5_5_processing_system7
+INFO: [VRFC 10-311] analyzing module design_1_processing_system7_0_0__processing_system7_v5_5_processing_system7
+INFO: [VRFC 10-311] analyzing module design_1_rd_clk_0
 INFO: [VRFC 10-311] analyzing module design_1_wrapper
 INFO: [VRFC 10-311] analyzing module design_1_xlconcat_0_0
 INFO: [VRFC 10-311] analyzing module design_1_xlslice_0_0

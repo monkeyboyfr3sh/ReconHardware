@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-// Date        : Fri Aug 14 19:38:30 2020
+// Date        : Sat Aug 15 18:06:05 2020
 // Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 // Command     : write_verilog -mode timesim -nolib -sdf_anno true -force -file
 //               C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/aFIFO/aFIFO.sim/sim_1/impl/timing/xsim/aFIFO_tb_time_impl.v
@@ -82,14 +82,17 @@ module design_1
   wire aFIFO_0_EMPTY;
   wire aFIFO_0_FULL;
   wire [15:0]aFIFO_0_dataOut;
+  wire [3:0]aFIFO_0_rd_point;
+  wire [3:0]aFIFO_0_wr_point;
   wire processing_system7_0_FCLK_CLK0;
-  wire processing_system7_0_FCLK_RESET0_N;
-  wire [35:0]processing_system7_0_GPIO_O;
-  wire [17:0]xlconcat_0_dout;
+  wire [44:0]processing_system7_0_GPIO_O;
+  wire rd_clk1_Dout;
+  wire [25:0]xlconcat_0_dout;
   wire [15:0]xlslice_0_Dout;
   wire xlslice_1_Dout;
   wire xlslice_2_Dout;
-  wire [35:0]NLW_dataIn_Din_UNCONNECTED;
+  wire [44:0]NLW_dataIn_Din_UNCONNECTED;
+  wire NLW_processing_system7_0_FCLK_RESET0_N_UNCONNECTED;
   wire NLW_processing_system7_0_M_AXI_GP0_ARVALID_UNCONNECTED;
   wire NLW_processing_system7_0_M_AXI_GP0_AWVALID_UNCONNECTED;
   wire NLW_processing_system7_0_M_AXI_GP0_BREADY_UNCONNECTED;
@@ -97,8 +100,8 @@ module design_1
   wire NLW_processing_system7_0_M_AXI_GP0_WLAST_UNCONNECTED;
   wire NLW_processing_system7_0_M_AXI_GP0_WVALID_UNCONNECTED;
   wire NLW_processing_system7_0_USB0_VBUS_PWRSELECT_UNCONNECTED;
-  wire [17:0]NLW_processing_system7_0_GPIO_O_UNCONNECTED;
-  wire [35:0]NLW_processing_system7_0_GPIO_T_UNCONNECTED;
+  wire [25:0]NLW_processing_system7_0_GPIO_O_UNCONNECTED;
+  wire [44:0]NLW_processing_system7_0_GPIO_T_UNCONNECTED;
   wire [31:0]NLW_processing_system7_0_M_AXI_GP0_ARADDR_UNCONNECTED;
   wire [1:0]NLW_processing_system7_0_M_AXI_GP0_ARBURST_UNCONNECTED;
   wire [3:0]NLW_processing_system7_0_M_AXI_GP0_ARCACHE_UNCONNECTED;
@@ -121,8 +124,9 @@ module design_1
   wire [11:0]NLW_processing_system7_0_M_AXI_GP0_WID_UNCONNECTED;
   wire [3:0]NLW_processing_system7_0_M_AXI_GP0_WSTRB_UNCONNECTED;
   wire [1:0]NLW_processing_system7_0_USB0_PORT_INDCTL_UNCONNECTED;
-  wire [35:0]NLW_rd_clk_Din_UNCONNECTED;
-  wire [34:0]NLW_wr_clk_Din_UNCONNECTED;
+  wire [44:0]NLW_rd_clk_Din_UNCONNECTED;
+  wire [44:0]NLW_rst_Din_UNCONNECTED;
+  wire [43:0]NLW_wr_clk_Din_UNCONNECTED;
 
   (* IMPORTED_FROM = "c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_1/ip/design_1_aFIFO_0_0/design_1_aFIFO_0_0.dcp" *) 
   (* IMPORTED_TYPE = "CHECKPOINT" *) 
@@ -131,16 +135,18 @@ module design_1
   design_1_aFIFO_0_0 aFIFO_0
        (.EMPTY(aFIFO_0_EMPTY),
         .FULL(aFIFO_0_FULL),
-        .Rst(processing_system7_0_FCLK_RESET0_N),
+        .Rst(rd_clk1_Dout),
         .dataIn(xlslice_0_Dout),
         .dataOut(aFIFO_0_dataOut),
         .rd_clk(xlslice_2_Dout),
-        .wr_clk(xlslice_1_Dout));
+        .rd_point(aFIFO_0_rd_point),
+        .wr_clk(xlslice_1_Dout),
+        .wr_point(aFIFO_0_wr_point));
   (* CHECK_LICENSE_TYPE = "design_1_xlslice_0_0,xlslice_v1_0_2_xlslice,{}" *) 
   (* DowngradeIPIdentifiedWarnings = "yes" *) 
   (* X_CORE_INFO = "xlslice_v1_0_2_xlslice,Vivado 2019.2" *) 
   design_1_xlslice_0_0 dataIn
-       (.Din({NLW_dataIn_Din_UNCONNECTED[35],processing_system7_0_GPIO_O[34:19],NLW_dataIn_Din_UNCONNECTED[18:0]}),
+       (.Din({NLW_dataIn_Din_UNCONNECTED[44],processing_system7_0_GPIO_O[43:28],NLW_dataIn_Din_UNCONNECTED[27:0]}),
         .Dout(xlslice_0_Dout));
   (* IMPORTED_FROM = "c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.dcp" *) 
   (* IMPORTED_TYPE = "CHECKPOINT" *) 
@@ -165,10 +171,10 @@ module design_1
         .DDR_VRP(FIXED_IO_ddr_vrp),
         .DDR_WEB(DDR_we_n),
         .FCLK_CLK0(processing_system7_0_FCLK_CLK0),
-        .FCLK_RESET0_N(processing_system7_0_FCLK_RESET0_N),
-        .GPIO_I({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,xlconcat_0_dout}),
-        .GPIO_O({processing_system7_0_GPIO_O[35:18],NLW_processing_system7_0_GPIO_O_UNCONNECTED[17:0]}),
-        .GPIO_T(NLW_processing_system7_0_GPIO_T_UNCONNECTED[35:0]),
+        .FCLK_RESET0_N(NLW_processing_system7_0_FCLK_RESET0_N_UNCONNECTED),
+        .GPIO_I({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,xlconcat_0_dout}),
+        .GPIO_O({processing_system7_0_GPIO_O[44:26],NLW_processing_system7_0_GPIO_O_UNCONNECTED[25:0]}),
+        .GPIO_T(NLW_processing_system7_0_GPIO_T_UNCONNECTED[44:0]),
         .MIO(FIXED_IO_mio),
         .M_AXI_GP0_ACLK(processing_system7_0_FCLK_CLK0),
         .M_AXI_GP0_ARADDR(NLW_processing_system7_0_M_AXI_GP0_ARADDR_UNCONNECTED[31:0]),
@@ -219,13 +225,19 @@ module design_1
   (* DowngradeIPIdentifiedWarnings = "yes" *) 
   (* X_CORE_INFO = "xlslice_v1_0_2_xlslice,Vivado 2019.2" *) 
   design_1_xlslice_0_2 rd_clk
-       (.Din({NLW_rd_clk_Din_UNCONNECTED[35:19],processing_system7_0_GPIO_O[18],NLW_rd_clk_Din_UNCONNECTED[17:0]}),
+       (.Din({NLW_rd_clk_Din_UNCONNECTED[44:27],processing_system7_0_GPIO_O[26],NLW_rd_clk_Din_UNCONNECTED[25:0]}),
         .Dout(xlslice_2_Dout));
+  (* CHECK_LICENSE_TYPE = "design_1_rd_clk_0,xlslice_v1_0_2_xlslice,{}" *) 
+  (* DowngradeIPIdentifiedWarnings = "yes" *) 
+  (* X_CORE_INFO = "xlslice_v1_0_2_xlslice,Vivado 2019.2" *) 
+  design_1_rd_clk_0 rst
+       (.Din({NLW_rst_Din_UNCONNECTED[44:28],processing_system7_0_GPIO_O[27],NLW_rst_Din_UNCONNECTED[26:0]}),
+        .Dout(rd_clk1_Dout));
   (* CHECK_LICENSE_TYPE = "design_1_xlslice_0_1,xlslice_v1_0_2_xlslice,{}" *) 
   (* DowngradeIPIdentifiedWarnings = "yes" *) 
   (* X_CORE_INFO = "xlslice_v1_0_2_xlslice,Vivado 2019.2" *) 
   design_1_xlslice_0_1 wr_clk
-       (.Din({processing_system7_0_GPIO_O[35],NLW_wr_clk_Din_UNCONNECTED[34:0]}),
+       (.Din({processing_system7_0_GPIO_O[44],NLW_wr_clk_Din_UNCONNECTED[43:0]}),
         .Dout(xlslice_1_Dout));
   (* CHECK_LICENSE_TYPE = "design_1_xlconcat_0_0,xlconcat_v2_1_3_xlconcat,{}" *) 
   (* DowngradeIPIdentifiedWarnings = "yes" *) 
@@ -234,6 +246,8 @@ module design_1
        (.In0(aFIFO_0_dataOut),
         .In1(aFIFO_0_FULL),
         .In2(aFIFO_0_EMPTY),
+        .In3(aFIFO_0_rd_point),
+        .In4(aFIFO_0_wr_point),
         .dout(xlconcat_0_dout));
 endmodule
 
@@ -246,7 +260,9 @@ module design_1_aFIFO_0_0
     dataOut,
     wr_clk,
     FULL,
-    EMPTY);
+    EMPTY,
+    rd_point,
+    wr_point);
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 rd_clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rd_clk, FREQ_HZ 100000000, PHASE 0.000, INSERT_VIP 0" *) input rd_clk;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 Rst RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME Rst, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input Rst;
   input [15:0]dataIn;
@@ -254,248 +270,477 @@ module design_1_aFIFO_0_0
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 wr_clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME wr_clk, FREQ_HZ 100000000, PHASE 0.000, INSERT_VIP 0" *) input wr_clk;
   output FULL;
   output EMPTY;
+  output [3:0]rd_point;
+  output [3:0]wr_point;
 
+  wire \<const0> ;
   wire EMPTY;
   wire FULL;
   wire Rst;
   wire [15:0]dataIn;
   wire [15:0]dataOut;
   wire rd_clk;
+  wire [1:0]\^rd_point ;
   wire wr_clk;
+  wire [1:0]\^wr_point ;
 
+  assign rd_point[3] = \<const0> ;
+  assign rd_point[2] = \<const0> ;
+  assign rd_point[1:0] = \^rd_point [1:0];
+  assign wr_point[3] = \<const0> ;
+  assign wr_point[2] = \<const0> ;
+  assign wr_point[1:0] = \^wr_point [1:0];
+  GND GND
+       (.G(\<const0> ));
   design_1_aFIFO_0_0_aFIFO inst
-       (.EMPTY(EMPTY),
-        .FULLreg_reg_0(FULL),
+       (.EMPTY_reg_0(EMPTY),
+        .FULL_reg_0(FULL),
         .Rst(Rst),
         .dataIn(dataIn),
         .dataOut(dataOut),
         .rd_clk(rd_clk),
-        .wr_clk(wr_clk));
+        .\rd_pointer_reg[0]_0 (\^rd_point [0]),
+        .\rd_pointer_reg[1]_0 (\^rd_point [1]),
+        .wr_clk(wr_clk),
+        .\wr_pointer_reg[0]_0 (\^wr_point [0]),
+        .\wr_pointer_reg[1]_0 (\^wr_point [1]));
 endmodule
 
 (* ORIG_REF_NAME = "aFIFO" *) 
 module design_1_aFIFO_0_0_aFIFO
-   (FULLreg_reg_0,
-    EMPTY,
-    dataOut,
+   (dataOut,
+    EMPTY_reg_0,
+    \rd_pointer_reg[0]_0 ,
+    \rd_pointer_reg[1]_0 ,
+    \wr_pointer_reg[0]_0 ,
+    FULL_reg_0,
+    \wr_pointer_reg[1]_0 ,
     rd_clk,
-    Rst,
     wr_clk,
+    Rst,
     dataIn);
-  output FULLreg_reg_0;
-  output EMPTY;
   output [15:0]dataOut;
+  output EMPTY_reg_0;
+  output \rd_pointer_reg[0]_0 ;
+  output \rd_pointer_reg[1]_0 ;
+  output \wr_pointer_reg[0]_0 ;
+  output FULL_reg_0;
+  output \wr_pointer_reg[1]_0 ;
   input rd_clk;
-  input Rst;
   input wr_clk;
+  input Rst;
   input [15:0]dataIn;
 
-  wire EMPTY;
-  wire EMPTYreg_i_1_n_0;
-  wire FULLreg_i_1_n_0;
-  wire FULLreg_reg_0;
+  wire EMPTY_i_1_n_0;
+  wire EMPTY_i_2_n_0;
+  wire EMPTY_reg_0;
+  wire FULL_i_1_n_0;
+  wire FULL_i_2_n_0;
+  wire FULL_reg_0;
   wire Rst;
   wire [15:0]dataIn;
   wire [15:0]dataOut;
+  wire \dataOut[0]_INST_0_i_1_n_0 ;
+  wire \dataOut[10]_INST_0_i_1_n_0 ;
+  wire \dataOut[11]_INST_0_i_1_n_0 ;
+  wire \dataOut[12]_INST_0_i_1_n_0 ;
+  wire \dataOut[13]_INST_0_i_1_n_0 ;
+  wire \dataOut[14]_INST_0_i_1_n_0 ;
+  wire \dataOut[15]_INST_0_i_1_n_0 ;
+  wire \dataOut[1]_INST_0_i_1_n_0 ;
+  wire \dataOut[2]_INST_0_i_1_n_0 ;
+  wire \dataOut[3]_INST_0_i_1_n_0 ;
+  wire \dataOut[4]_INST_0_i_1_n_0 ;
+  wire \dataOut[5]_INST_0_i_1_n_0 ;
+  wire \dataOut[6]_INST_0_i_1_n_0 ;
+  wire \dataOut[7]_INST_0_i_1_n_0 ;
+  wire \dataOut[8]_INST_0_i_1_n_0 ;
+  wire \dataOut[9]_INST_0_i_1_n_0 ;
   wire \mem[0][15]_i_1_n_0 ;
   wire \mem[1][15]_i_1_n_0 ;
+  wire \mem[2][15]_i_1_n_0 ;
+  wire \mem[3][15]_i_1_n_0 ;
   wire [15:0]\mem_reg[0] ;
   wire [15:0]\mem_reg[1] ;
+  wire [15:0]\mem_reg[2] ;
+  wire [15:0]\mem_reg[3] ;
   wire rd_clk;
   wire \rd_pointer[0]_i_1_n_0 ;
-  wire \rd_pointer_reg_n_0_[0] ;
+  wire \rd_pointer[1]_i_1_n_0 ;
+  wire \rd_pointer_reg[0]_0 ;
+  wire \rd_pointer_reg[1]_0 ;
   wire wr_clk;
-  wire \wr_pointer[0]_C_i_1_n_0 ;
-  wire \wr_pointer_reg[0]_C_n_0 ;
-  wire \wr_pointer_reg[0]_LDC_i_1_n_0 ;
-  wire \wr_pointer_reg[0]_LDC_i_2_n_0 ;
-  wire \wr_pointer_reg[0]_LDC_n_0 ;
-  wire \wr_pointer_reg[0]_P_n_0 ;
+  wire \wr_pointer[0]_i_1_n_0 ;
+  wire \wr_pointer[1]_i_1_n_0 ;
+  wire \wr_pointer_reg[0]_0 ;
+  wire \wr_pointer_reg[1]_0 ;
 
-  LUT4 #(
-    .INIT(16'hFFA2)) 
-    EMPTYreg_i_1
-       (.I0(EMPTY),
+  LUT5 #(
+    .INIT(32'hF2F2F0AA)) 
+    EMPTY_i_1
+       (.I0(EMPTY_i_2_n_0),
         .I1(wr_clk),
-        .I2(FULLreg_reg_0),
-        .I3(\rd_pointer_reg_n_0_[0] ),
-        .O(EMPTYreg_i_1_n_0));
+        .I2(EMPTY_reg_0),
+        .I3(FULL_reg_0),
+        .I4(rd_clk),
+        .O(EMPTY_i_1_n_0));
+  LUT6 #(
+    .INIT(64'h1842FFFF18420000)) 
+    EMPTY_i_2
+       (.I0(\wr_pointer_reg[0]_0 ),
+        .I1(\rd_pointer_reg[1]_0 ),
+        .I2(\rd_pointer_reg[0]_0 ),
+        .I3(\wr_pointer_reg[1]_0 ),
+        .I4(rd_clk),
+        .I5(FULL_reg_0),
+        .O(EMPTY_i_2_n_0));
   FDPE #(
     .INIT(1'b1)) 
-    EMPTYreg_reg
-       (.C(rd_clk),
+    EMPTY_reg
+       (.C(wr_clk),
         .CE(1'b1),
-        .D(EMPTYreg_i_1_n_0),
+        .D(EMPTY_i_1_n_0),
         .PRE(Rst),
-        .Q(EMPTY));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    FULLreg_i_1
-       (.I0(EMPTY),
-        .I1(FULLreg_reg_0),
-        .O(FULLreg_i_1_n_0));
+        .Q(EMPTY_reg_0));
+  LUT5 #(
+    .INIT(32'hFE02FFAA)) 
+    FULL_i_1
+       (.I0(FULL_i_2_n_0),
+        .I1(wr_clk),
+        .I2(EMPTY_reg_0),
+        .I3(FULL_reg_0),
+        .I4(rd_clk),
+        .O(FULL_i_1_n_0));
+  LUT6 #(
+    .INIT(64'h888888888B888888)) 
+    FULL_i_2
+       (.I0(EMPTY_reg_0),
+        .I1(rd_clk),
+        .I2(\rd_pointer_reg[0]_0 ),
+        .I3(\wr_pointer_reg[1]_0 ),
+        .I4(\wr_pointer_reg[0]_0 ),
+        .I5(\rd_pointer_reg[1]_0 ),
+        .O(FULL_i_2_n_0));
   FDCE #(
     .INIT(1'b0)) 
-    FULLreg_reg
-       (.C(rd_clk),
+    FULL_reg
+       (.C(wr_clk),
         .CE(1'b1),
         .CLR(Rst),
-        .D(FULLreg_i_1_n_0),
-        .Q(FULLreg_reg_0));
-  LUT4 #(
-    .INIT(16'h00E2)) 
+        .D(FULL_i_1_n_0),
+        .Q(FULL_reg_0));
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  LUT2 #(
+    .INIT(4'h1)) 
     \dataOut[0]_INST_0 
-       (.I0(\mem_reg[0] [0]),
-        .I1(\rd_pointer_reg_n_0_[0] ),
-        .I2(\mem_reg[1] [0]),
-        .I3(EMPTY),
+       (.I0(EMPTY_reg_0),
+        .I1(\dataOut[0]_INST_0_i_1_n_0 ),
         .O(dataOut[0]));
-  LUT4 #(
-    .INIT(16'h00E2)) 
+  LUT6 #(
+    .INIT(64'h3300550F33FF550F)) 
+    \dataOut[0]_INST_0_i_1 
+       (.I0(\mem_reg[2] [0]),
+        .I1(\mem_reg[3] [0]),
+        .I2(\mem_reg[0] [0]),
+        .I3(\rd_pointer_reg[1]_0 ),
+        .I4(\rd_pointer_reg[0]_0 ),
+        .I5(\mem_reg[1] [0]),
+        .O(\dataOut[0]_INST_0_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  LUT2 #(
+    .INIT(4'h1)) 
     \dataOut[10]_INST_0 
-       (.I0(\mem_reg[0] [10]),
-        .I1(\rd_pointer_reg_n_0_[0] ),
-        .I2(\mem_reg[1] [10]),
-        .I3(EMPTY),
+       (.I0(EMPTY_reg_0),
+        .I1(\dataOut[10]_INST_0_i_1_n_0 ),
         .O(dataOut[10]));
-  LUT4 #(
-    .INIT(16'h00E2)) 
+  LUT6 #(
+    .INIT(64'h3300550F33FF550F)) 
+    \dataOut[10]_INST_0_i_1 
+       (.I0(\mem_reg[2] [10]),
+        .I1(\mem_reg[3] [10]),
+        .I2(\mem_reg[0] [10]),
+        .I3(\rd_pointer_reg[1]_0 ),
+        .I4(\rd_pointer_reg[0]_0 ),
+        .I5(\mem_reg[1] [10]),
+        .O(\dataOut[10]_INST_0_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  LUT2 #(
+    .INIT(4'h1)) 
     \dataOut[11]_INST_0 
-       (.I0(\mem_reg[0] [11]),
-        .I1(\rd_pointer_reg_n_0_[0] ),
-        .I2(\mem_reg[1] [11]),
-        .I3(EMPTY),
+       (.I0(EMPTY_reg_0),
+        .I1(\dataOut[11]_INST_0_i_1_n_0 ),
         .O(dataOut[11]));
-  LUT4 #(
-    .INIT(16'h00E2)) 
+  LUT6 #(
+    .INIT(64'h3300550F33FF550F)) 
+    \dataOut[11]_INST_0_i_1 
+       (.I0(\mem_reg[2] [11]),
+        .I1(\mem_reg[3] [11]),
+        .I2(\mem_reg[0] [11]),
+        .I3(\rd_pointer_reg[1]_0 ),
+        .I4(\rd_pointer_reg[0]_0 ),
+        .I5(\mem_reg[1] [11]),
+        .O(\dataOut[11]_INST_0_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  LUT2 #(
+    .INIT(4'h1)) 
     \dataOut[12]_INST_0 
-       (.I0(\mem_reg[0] [12]),
-        .I1(\rd_pointer_reg_n_0_[0] ),
-        .I2(\mem_reg[1] [12]),
-        .I3(EMPTY),
+       (.I0(EMPTY_reg_0),
+        .I1(\dataOut[12]_INST_0_i_1_n_0 ),
         .O(dataOut[12]));
-  LUT4 #(
-    .INIT(16'h00E2)) 
+  LUT6 #(
+    .INIT(64'h3300550F33FF550F)) 
+    \dataOut[12]_INST_0_i_1 
+       (.I0(\mem_reg[2] [12]),
+        .I1(\mem_reg[3] [12]),
+        .I2(\mem_reg[0] [12]),
+        .I3(\rd_pointer_reg[1]_0 ),
+        .I4(\rd_pointer_reg[0]_0 ),
+        .I5(\mem_reg[1] [12]),
+        .O(\dataOut[12]_INST_0_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  LUT2 #(
+    .INIT(4'h1)) 
     \dataOut[13]_INST_0 
-       (.I0(\mem_reg[0] [13]),
-        .I1(\rd_pointer_reg_n_0_[0] ),
-        .I2(\mem_reg[1] [13]),
-        .I3(EMPTY),
+       (.I0(EMPTY_reg_0),
+        .I1(\dataOut[13]_INST_0_i_1_n_0 ),
         .O(dataOut[13]));
-  LUT4 #(
-    .INIT(16'h00E2)) 
+  LUT6 #(
+    .INIT(64'h3300550F33FF550F)) 
+    \dataOut[13]_INST_0_i_1 
+       (.I0(\mem_reg[2] [13]),
+        .I1(\mem_reg[3] [13]),
+        .I2(\mem_reg[0] [13]),
+        .I3(\rd_pointer_reg[1]_0 ),
+        .I4(\rd_pointer_reg[0]_0 ),
+        .I5(\mem_reg[1] [13]),
+        .O(\dataOut[13]_INST_0_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  LUT2 #(
+    .INIT(4'h1)) 
     \dataOut[14]_INST_0 
-       (.I0(\mem_reg[0] [14]),
-        .I1(\rd_pointer_reg_n_0_[0] ),
-        .I2(\mem_reg[1] [14]),
-        .I3(EMPTY),
+       (.I0(EMPTY_reg_0),
+        .I1(\dataOut[14]_INST_0_i_1_n_0 ),
         .O(dataOut[14]));
-  LUT4 #(
-    .INIT(16'h00E2)) 
+  LUT6 #(
+    .INIT(64'h3300550F33FF550F)) 
+    \dataOut[14]_INST_0_i_1 
+       (.I0(\mem_reg[2] [14]),
+        .I1(\mem_reg[3] [14]),
+        .I2(\mem_reg[0] [14]),
+        .I3(\rd_pointer_reg[1]_0 ),
+        .I4(\rd_pointer_reg[0]_0 ),
+        .I5(\mem_reg[1] [14]),
+        .O(\dataOut[14]_INST_0_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  LUT2 #(
+    .INIT(4'h1)) 
     \dataOut[15]_INST_0 
-       (.I0(\mem_reg[0] [15]),
-        .I1(\rd_pointer_reg_n_0_[0] ),
-        .I2(\mem_reg[1] [15]),
-        .I3(EMPTY),
+       (.I0(EMPTY_reg_0),
+        .I1(\dataOut[15]_INST_0_i_1_n_0 ),
         .O(dataOut[15]));
-  LUT4 #(
-    .INIT(16'h00E2)) 
+  LUT6 #(
+    .INIT(64'h3300550F33FF550F)) 
+    \dataOut[15]_INST_0_i_1 
+       (.I0(\mem_reg[2] [15]),
+        .I1(\mem_reg[3] [15]),
+        .I2(\mem_reg[0] [15]),
+        .I3(\rd_pointer_reg[1]_0 ),
+        .I4(\rd_pointer_reg[0]_0 ),
+        .I5(\mem_reg[1] [15]),
+        .O(\dataOut[15]_INST_0_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  LUT2 #(
+    .INIT(4'h1)) 
     \dataOut[1]_INST_0 
-       (.I0(\mem_reg[0] [1]),
-        .I1(\rd_pointer_reg_n_0_[0] ),
-        .I2(\mem_reg[1] [1]),
-        .I3(EMPTY),
+       (.I0(EMPTY_reg_0),
+        .I1(\dataOut[1]_INST_0_i_1_n_0 ),
         .O(dataOut[1]));
-  LUT4 #(
-    .INIT(16'h00E2)) 
+  LUT6 #(
+    .INIT(64'h3300550F33FF550F)) 
+    \dataOut[1]_INST_0_i_1 
+       (.I0(\mem_reg[2] [1]),
+        .I1(\mem_reg[3] [1]),
+        .I2(\mem_reg[0] [1]),
+        .I3(\rd_pointer_reg[1]_0 ),
+        .I4(\rd_pointer_reg[0]_0 ),
+        .I5(\mem_reg[1] [1]),
+        .O(\dataOut[1]_INST_0_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  LUT2 #(
+    .INIT(4'h1)) 
     \dataOut[2]_INST_0 
-       (.I0(\mem_reg[0] [2]),
-        .I1(\rd_pointer_reg_n_0_[0] ),
-        .I2(\mem_reg[1] [2]),
-        .I3(EMPTY),
+       (.I0(EMPTY_reg_0),
+        .I1(\dataOut[2]_INST_0_i_1_n_0 ),
         .O(dataOut[2]));
-  LUT4 #(
-    .INIT(16'h00E2)) 
+  LUT6 #(
+    .INIT(64'h3300550F33FF550F)) 
+    \dataOut[2]_INST_0_i_1 
+       (.I0(\mem_reg[2] [2]),
+        .I1(\mem_reg[3] [2]),
+        .I2(\mem_reg[0] [2]),
+        .I3(\rd_pointer_reg[1]_0 ),
+        .I4(\rd_pointer_reg[0]_0 ),
+        .I5(\mem_reg[1] [2]),
+        .O(\dataOut[2]_INST_0_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  LUT2 #(
+    .INIT(4'h1)) 
     \dataOut[3]_INST_0 
-       (.I0(\mem_reg[0] [3]),
-        .I1(\rd_pointer_reg_n_0_[0] ),
-        .I2(\mem_reg[1] [3]),
-        .I3(EMPTY),
+       (.I0(EMPTY_reg_0),
+        .I1(\dataOut[3]_INST_0_i_1_n_0 ),
         .O(dataOut[3]));
-  LUT4 #(
-    .INIT(16'h00E2)) 
+  LUT6 #(
+    .INIT(64'h3300550F33FF550F)) 
+    \dataOut[3]_INST_0_i_1 
+       (.I0(\mem_reg[2] [3]),
+        .I1(\mem_reg[3] [3]),
+        .I2(\mem_reg[0] [3]),
+        .I3(\rd_pointer_reg[1]_0 ),
+        .I4(\rd_pointer_reg[0]_0 ),
+        .I5(\mem_reg[1] [3]),
+        .O(\dataOut[3]_INST_0_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  LUT2 #(
+    .INIT(4'h1)) 
     \dataOut[4]_INST_0 
-       (.I0(\mem_reg[0] [4]),
-        .I1(\rd_pointer_reg_n_0_[0] ),
-        .I2(\mem_reg[1] [4]),
-        .I3(EMPTY),
+       (.I0(EMPTY_reg_0),
+        .I1(\dataOut[4]_INST_0_i_1_n_0 ),
         .O(dataOut[4]));
-  LUT4 #(
-    .INIT(16'h00E2)) 
+  LUT6 #(
+    .INIT(64'h3300550F33FF550F)) 
+    \dataOut[4]_INST_0_i_1 
+       (.I0(\mem_reg[2] [4]),
+        .I1(\mem_reg[3] [4]),
+        .I2(\mem_reg[0] [4]),
+        .I3(\rd_pointer_reg[1]_0 ),
+        .I4(\rd_pointer_reg[0]_0 ),
+        .I5(\mem_reg[1] [4]),
+        .O(\dataOut[4]_INST_0_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  LUT2 #(
+    .INIT(4'h1)) 
     \dataOut[5]_INST_0 
-       (.I0(\mem_reg[0] [5]),
-        .I1(\rd_pointer_reg_n_0_[0] ),
-        .I2(\mem_reg[1] [5]),
-        .I3(EMPTY),
+       (.I0(EMPTY_reg_0),
+        .I1(\dataOut[5]_INST_0_i_1_n_0 ),
         .O(dataOut[5]));
-  LUT4 #(
-    .INIT(16'h00E2)) 
+  LUT6 #(
+    .INIT(64'h3300550F33FF550F)) 
+    \dataOut[5]_INST_0_i_1 
+       (.I0(\mem_reg[2] [5]),
+        .I1(\mem_reg[3] [5]),
+        .I2(\mem_reg[0] [5]),
+        .I3(\rd_pointer_reg[1]_0 ),
+        .I4(\rd_pointer_reg[0]_0 ),
+        .I5(\mem_reg[1] [5]),
+        .O(\dataOut[5]_INST_0_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  LUT2 #(
+    .INIT(4'h1)) 
     \dataOut[6]_INST_0 
-       (.I0(\mem_reg[0] [6]),
-        .I1(\rd_pointer_reg_n_0_[0] ),
-        .I2(\mem_reg[1] [6]),
-        .I3(EMPTY),
+       (.I0(EMPTY_reg_0),
+        .I1(\dataOut[6]_INST_0_i_1_n_0 ),
         .O(dataOut[6]));
-  LUT4 #(
-    .INIT(16'h00E2)) 
+  LUT6 #(
+    .INIT(64'h3300550F33FF550F)) 
+    \dataOut[6]_INST_0_i_1 
+       (.I0(\mem_reg[2] [6]),
+        .I1(\mem_reg[3] [6]),
+        .I2(\mem_reg[0] [6]),
+        .I3(\rd_pointer_reg[1]_0 ),
+        .I4(\rd_pointer_reg[0]_0 ),
+        .I5(\mem_reg[1] [6]),
+        .O(\dataOut[6]_INST_0_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  LUT2 #(
+    .INIT(4'h1)) 
     \dataOut[7]_INST_0 
-       (.I0(\mem_reg[0] [7]),
-        .I1(\rd_pointer_reg_n_0_[0] ),
-        .I2(\mem_reg[1] [7]),
-        .I3(EMPTY),
+       (.I0(EMPTY_reg_0),
+        .I1(\dataOut[7]_INST_0_i_1_n_0 ),
         .O(dataOut[7]));
-  LUT4 #(
-    .INIT(16'h00E2)) 
+  LUT6 #(
+    .INIT(64'h3300550F33FF550F)) 
+    \dataOut[7]_INST_0_i_1 
+       (.I0(\mem_reg[2] [7]),
+        .I1(\mem_reg[3] [7]),
+        .I2(\mem_reg[0] [7]),
+        .I3(\rd_pointer_reg[1]_0 ),
+        .I4(\rd_pointer_reg[0]_0 ),
+        .I5(\mem_reg[1] [7]),
+        .O(\dataOut[7]_INST_0_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  LUT2 #(
+    .INIT(4'h1)) 
     \dataOut[8]_INST_0 
-       (.I0(\mem_reg[0] [8]),
-        .I1(\rd_pointer_reg_n_0_[0] ),
-        .I2(\mem_reg[1] [8]),
-        .I3(EMPTY),
+       (.I0(EMPTY_reg_0),
+        .I1(\dataOut[8]_INST_0_i_1_n_0 ),
         .O(dataOut[8]));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
-  LUT4 #(
-    .INIT(16'h00E2)) 
+  LUT6 #(
+    .INIT(64'h3300550F33FF550F)) 
+    \dataOut[8]_INST_0_i_1 
+       (.I0(\mem_reg[2] [8]),
+        .I1(\mem_reg[3] [8]),
+        .I2(\mem_reg[0] [8]),
+        .I3(\rd_pointer_reg[1]_0 ),
+        .I4(\rd_pointer_reg[0]_0 ),
+        .I5(\mem_reg[1] [8]),
+        .O(\dataOut[8]_INST_0_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  LUT2 #(
+    .INIT(4'h1)) 
     \dataOut[9]_INST_0 
-       (.I0(\mem_reg[0] [9]),
-        .I1(\rd_pointer_reg_n_0_[0] ),
-        .I2(\mem_reg[1] [9]),
-        .I3(EMPTY),
+       (.I0(EMPTY_reg_0),
+        .I1(\dataOut[9]_INST_0_i_1_n_0 ),
         .O(dataOut[9]));
   LUT6 #(
-    .INIT(64'h0000001010100010)) 
+    .INIT(64'h3300550F33FF550F)) 
+    \dataOut[9]_INST_0_i_1 
+       (.I0(\mem_reg[2] [9]),
+        .I1(\mem_reg[3] [9]),
+        .I2(\mem_reg[0] [9]),
+        .I3(\rd_pointer_reg[1]_0 ),
+        .I4(\rd_pointer_reg[0]_0 ),
+        .I5(\mem_reg[1] [9]),
+        .O(\dataOut[9]_INST_0_i_1_n_0 ));
+  LUT5 #(
+    .INIT(32'h00000001)) 
     \mem[0][15]_i_1 
-       (.I0(Rst),
-        .I1(FULLreg_reg_0),
-        .I2(wr_clk),
-        .I3(\wr_pointer_reg[0]_C_n_0 ),
-        .I4(\wr_pointer_reg[0]_LDC_n_0 ),
-        .I5(\wr_pointer_reg[0]_P_n_0 ),
+       (.I0(\wr_pointer_reg[1]_0 ),
+        .I1(\wr_pointer_reg[0]_0 ),
+        .I2(rd_clk),
+        .I3(FULL_reg_0),
+        .I4(Rst),
         .O(\mem[0][15]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'h000000E200000000)) 
+  LUT5 #(
+    .INIT(32'h00000004)) 
     \mem[1][15]_i_1 
-       (.I0(\wr_pointer_reg[0]_C_n_0 ),
-        .I1(\wr_pointer_reg[0]_LDC_n_0 ),
-        .I2(\wr_pointer_reg[0]_P_n_0 ),
-        .I3(Rst),
-        .I4(FULLreg_reg_0),
-        .I5(wr_clk),
+       (.I0(\wr_pointer_reg[1]_0 ),
+        .I1(\wr_pointer_reg[0]_0 ),
+        .I2(rd_clk),
+        .I3(FULL_reg_0),
+        .I4(Rst),
         .O(\mem[1][15]_i_1_n_0 ));
+  LUT5 #(
+    .INIT(32'h00000004)) 
+    \mem[2][15]_i_1 
+       (.I0(\wr_pointer_reg[0]_0 ),
+        .I1(\wr_pointer_reg[1]_0 ),
+        .I2(rd_clk),
+        .I3(FULL_reg_0),
+        .I4(Rst),
+        .O(\mem[2][15]_i_1_n_0 ));
+  LUT5 #(
+    .INIT(32'h00000008)) 
+    \mem[3][15]_i_1 
+       (.I0(\wr_pointer_reg[1]_0 ),
+        .I1(\wr_pointer_reg[0]_0 ),
+        .I2(rd_clk),
+        .I3(FULL_reg_0),
+        .I4(Rst),
+        .O(\mem[3][15]_i_1_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \mem_reg[0][0] 
-       (.C(rd_clk),
+       (.C(wr_clk),
         .CE(\mem[0][15]_i_1_n_0 ),
         .D(dataIn[0]),
         .Q(\mem_reg[0] [0]),
@@ -503,7 +748,7 @@ module design_1_aFIFO_0_0_aFIFO
   FDRE #(
     .INIT(1'b0)) 
     \mem_reg[0][10] 
-       (.C(rd_clk),
+       (.C(wr_clk),
         .CE(\mem[0][15]_i_1_n_0 ),
         .D(dataIn[10]),
         .Q(\mem_reg[0] [10]),
@@ -511,7 +756,7 @@ module design_1_aFIFO_0_0_aFIFO
   FDRE #(
     .INIT(1'b0)) 
     \mem_reg[0][11] 
-       (.C(rd_clk),
+       (.C(wr_clk),
         .CE(\mem[0][15]_i_1_n_0 ),
         .D(dataIn[11]),
         .Q(\mem_reg[0] [11]),
@@ -519,7 +764,7 @@ module design_1_aFIFO_0_0_aFIFO
   FDRE #(
     .INIT(1'b0)) 
     \mem_reg[0][12] 
-       (.C(rd_clk),
+       (.C(wr_clk),
         .CE(\mem[0][15]_i_1_n_0 ),
         .D(dataIn[12]),
         .Q(\mem_reg[0] [12]),
@@ -527,7 +772,7 @@ module design_1_aFIFO_0_0_aFIFO
   FDRE #(
     .INIT(1'b0)) 
     \mem_reg[0][13] 
-       (.C(rd_clk),
+       (.C(wr_clk),
         .CE(\mem[0][15]_i_1_n_0 ),
         .D(dataIn[13]),
         .Q(\mem_reg[0] [13]),
@@ -535,7 +780,7 @@ module design_1_aFIFO_0_0_aFIFO
   FDRE #(
     .INIT(1'b0)) 
     \mem_reg[0][14] 
-       (.C(rd_clk),
+       (.C(wr_clk),
         .CE(\mem[0][15]_i_1_n_0 ),
         .D(dataIn[14]),
         .Q(\mem_reg[0] [14]),
@@ -543,7 +788,7 @@ module design_1_aFIFO_0_0_aFIFO
   FDRE #(
     .INIT(1'b0)) 
     \mem_reg[0][15] 
-       (.C(rd_clk),
+       (.C(wr_clk),
         .CE(\mem[0][15]_i_1_n_0 ),
         .D(dataIn[15]),
         .Q(\mem_reg[0] [15]),
@@ -551,7 +796,7 @@ module design_1_aFIFO_0_0_aFIFO
   FDRE #(
     .INIT(1'b0)) 
     \mem_reg[0][1] 
-       (.C(rd_clk),
+       (.C(wr_clk),
         .CE(\mem[0][15]_i_1_n_0 ),
         .D(dataIn[1]),
         .Q(\mem_reg[0] [1]),
@@ -559,7 +804,7 @@ module design_1_aFIFO_0_0_aFIFO
   FDRE #(
     .INIT(1'b0)) 
     \mem_reg[0][2] 
-       (.C(rd_clk),
+       (.C(wr_clk),
         .CE(\mem[0][15]_i_1_n_0 ),
         .D(dataIn[2]),
         .Q(\mem_reg[0] [2]),
@@ -567,7 +812,7 @@ module design_1_aFIFO_0_0_aFIFO
   FDRE #(
     .INIT(1'b0)) 
     \mem_reg[0][3] 
-       (.C(rd_clk),
+       (.C(wr_clk),
         .CE(\mem[0][15]_i_1_n_0 ),
         .D(dataIn[3]),
         .Q(\mem_reg[0] [3]),
@@ -575,7 +820,7 @@ module design_1_aFIFO_0_0_aFIFO
   FDRE #(
     .INIT(1'b0)) 
     \mem_reg[0][4] 
-       (.C(rd_clk),
+       (.C(wr_clk),
         .CE(\mem[0][15]_i_1_n_0 ),
         .D(dataIn[4]),
         .Q(\mem_reg[0] [4]),
@@ -583,7 +828,7 @@ module design_1_aFIFO_0_0_aFIFO
   FDRE #(
     .INIT(1'b0)) 
     \mem_reg[0][5] 
-       (.C(rd_clk),
+       (.C(wr_clk),
         .CE(\mem[0][15]_i_1_n_0 ),
         .D(dataIn[5]),
         .Q(\mem_reg[0] [5]),
@@ -591,7 +836,7 @@ module design_1_aFIFO_0_0_aFIFO
   FDRE #(
     .INIT(1'b0)) 
     \mem_reg[0][6] 
-       (.C(rd_clk),
+       (.C(wr_clk),
         .CE(\mem[0][15]_i_1_n_0 ),
         .D(dataIn[6]),
         .Q(\mem_reg[0] [6]),
@@ -599,7 +844,7 @@ module design_1_aFIFO_0_0_aFIFO
   FDRE #(
     .INIT(1'b0)) 
     \mem_reg[0][7] 
-       (.C(rd_clk),
+       (.C(wr_clk),
         .CE(\mem[0][15]_i_1_n_0 ),
         .D(dataIn[7]),
         .Q(\mem_reg[0] [7]),
@@ -607,7 +852,7 @@ module design_1_aFIFO_0_0_aFIFO
   FDRE #(
     .INIT(1'b0)) 
     \mem_reg[0][8] 
-       (.C(rd_clk),
+       (.C(wr_clk),
         .CE(\mem[0][15]_i_1_n_0 ),
         .D(dataIn[8]),
         .Q(\mem_reg[0] [8]),
@@ -615,7 +860,7 @@ module design_1_aFIFO_0_0_aFIFO
   FDRE #(
     .INIT(1'b0)) 
     \mem_reg[0][9] 
-       (.C(rd_clk),
+       (.C(wr_clk),
         .CE(\mem[0][15]_i_1_n_0 ),
         .D(dataIn[9]),
         .Q(\mem_reg[0] [9]),
@@ -623,7 +868,7 @@ module design_1_aFIFO_0_0_aFIFO
   FDRE #(
     .INIT(1'b0)) 
     \mem_reg[1][0] 
-       (.C(rd_clk),
+       (.C(wr_clk),
         .CE(\mem[1][15]_i_1_n_0 ),
         .D(dataIn[0]),
         .Q(\mem_reg[1] [0]),
@@ -631,7 +876,7 @@ module design_1_aFIFO_0_0_aFIFO
   FDRE #(
     .INIT(1'b0)) 
     \mem_reg[1][10] 
-       (.C(rd_clk),
+       (.C(wr_clk),
         .CE(\mem[1][15]_i_1_n_0 ),
         .D(dataIn[10]),
         .Q(\mem_reg[1] [10]),
@@ -639,7 +884,7 @@ module design_1_aFIFO_0_0_aFIFO
   FDRE #(
     .INIT(1'b0)) 
     \mem_reg[1][11] 
-       (.C(rd_clk),
+       (.C(wr_clk),
         .CE(\mem[1][15]_i_1_n_0 ),
         .D(dataIn[11]),
         .Q(\mem_reg[1] [11]),
@@ -647,7 +892,7 @@ module design_1_aFIFO_0_0_aFIFO
   FDRE #(
     .INIT(1'b0)) 
     \mem_reg[1][12] 
-       (.C(rd_clk),
+       (.C(wr_clk),
         .CE(\mem[1][15]_i_1_n_0 ),
         .D(dataIn[12]),
         .Q(\mem_reg[1] [12]),
@@ -655,7 +900,7 @@ module design_1_aFIFO_0_0_aFIFO
   FDRE #(
     .INIT(1'b0)) 
     \mem_reg[1][13] 
-       (.C(rd_clk),
+       (.C(wr_clk),
         .CE(\mem[1][15]_i_1_n_0 ),
         .D(dataIn[13]),
         .Q(\mem_reg[1] [13]),
@@ -663,7 +908,7 @@ module design_1_aFIFO_0_0_aFIFO
   FDRE #(
     .INIT(1'b0)) 
     \mem_reg[1][14] 
-       (.C(rd_clk),
+       (.C(wr_clk),
         .CE(\mem[1][15]_i_1_n_0 ),
         .D(dataIn[14]),
         .Q(\mem_reg[1] [14]),
@@ -671,7 +916,7 @@ module design_1_aFIFO_0_0_aFIFO
   FDRE #(
     .INIT(1'b0)) 
     \mem_reg[1][15] 
-       (.C(rd_clk),
+       (.C(wr_clk),
         .CE(\mem[1][15]_i_1_n_0 ),
         .D(dataIn[15]),
         .Q(\mem_reg[1] [15]),
@@ -679,7 +924,7 @@ module design_1_aFIFO_0_0_aFIFO
   FDRE #(
     .INIT(1'b0)) 
     \mem_reg[1][1] 
-       (.C(rd_clk),
+       (.C(wr_clk),
         .CE(\mem[1][15]_i_1_n_0 ),
         .D(dataIn[1]),
         .Q(\mem_reg[1] [1]),
@@ -687,7 +932,7 @@ module design_1_aFIFO_0_0_aFIFO
   FDRE #(
     .INIT(1'b0)) 
     \mem_reg[1][2] 
-       (.C(rd_clk),
+       (.C(wr_clk),
         .CE(\mem[1][15]_i_1_n_0 ),
         .D(dataIn[2]),
         .Q(\mem_reg[1] [2]),
@@ -695,7 +940,7 @@ module design_1_aFIFO_0_0_aFIFO
   FDRE #(
     .INIT(1'b0)) 
     \mem_reg[1][3] 
-       (.C(rd_clk),
+       (.C(wr_clk),
         .CE(\mem[1][15]_i_1_n_0 ),
         .D(dataIn[3]),
         .Q(\mem_reg[1] [3]),
@@ -703,7 +948,7 @@ module design_1_aFIFO_0_0_aFIFO
   FDRE #(
     .INIT(1'b0)) 
     \mem_reg[1][4] 
-       (.C(rd_clk),
+       (.C(wr_clk),
         .CE(\mem[1][15]_i_1_n_0 ),
         .D(dataIn[4]),
         .Q(\mem_reg[1] [4]),
@@ -711,7 +956,7 @@ module design_1_aFIFO_0_0_aFIFO
   FDRE #(
     .INIT(1'b0)) 
     \mem_reg[1][5] 
-       (.C(rd_clk),
+       (.C(wr_clk),
         .CE(\mem[1][15]_i_1_n_0 ),
         .D(dataIn[5]),
         .Q(\mem_reg[1] [5]),
@@ -719,7 +964,7 @@ module design_1_aFIFO_0_0_aFIFO
   FDRE #(
     .INIT(1'b0)) 
     \mem_reg[1][6] 
-       (.C(rd_clk),
+       (.C(wr_clk),
         .CE(\mem[1][15]_i_1_n_0 ),
         .D(dataIn[6]),
         .Q(\mem_reg[1] [6]),
@@ -727,7 +972,7 @@ module design_1_aFIFO_0_0_aFIFO
   FDRE #(
     .INIT(1'b0)) 
     \mem_reg[1][7] 
-       (.C(rd_clk),
+       (.C(wr_clk),
         .CE(\mem[1][15]_i_1_n_0 ),
         .D(dataIn[7]),
         .Q(\mem_reg[1] [7]),
@@ -735,7 +980,7 @@ module design_1_aFIFO_0_0_aFIFO
   FDRE #(
     .INIT(1'b0)) 
     \mem_reg[1][8] 
-       (.C(rd_clk),
+       (.C(wr_clk),
         .CE(\mem[1][15]_i_1_n_0 ),
         .D(dataIn[8]),
         .Q(\mem_reg[1] [8]),
@@ -743,79 +988,335 @@ module design_1_aFIFO_0_0_aFIFO
   FDRE #(
     .INIT(1'b0)) 
     \mem_reg[1][9] 
-       (.C(rd_clk),
+       (.C(wr_clk),
         .CE(\mem[1][15]_i_1_n_0 ),
         .D(dataIn[9]),
         .Q(\mem_reg[1] [9]),
         .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \mem_reg[2][0] 
+       (.C(wr_clk),
+        .CE(\mem[2][15]_i_1_n_0 ),
+        .D(dataIn[0]),
+        .Q(\mem_reg[2] [0]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \mem_reg[2][10] 
+       (.C(wr_clk),
+        .CE(\mem[2][15]_i_1_n_0 ),
+        .D(dataIn[10]),
+        .Q(\mem_reg[2] [10]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \mem_reg[2][11] 
+       (.C(wr_clk),
+        .CE(\mem[2][15]_i_1_n_0 ),
+        .D(dataIn[11]),
+        .Q(\mem_reg[2] [11]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \mem_reg[2][12] 
+       (.C(wr_clk),
+        .CE(\mem[2][15]_i_1_n_0 ),
+        .D(dataIn[12]),
+        .Q(\mem_reg[2] [12]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \mem_reg[2][13] 
+       (.C(wr_clk),
+        .CE(\mem[2][15]_i_1_n_0 ),
+        .D(dataIn[13]),
+        .Q(\mem_reg[2] [13]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \mem_reg[2][14] 
+       (.C(wr_clk),
+        .CE(\mem[2][15]_i_1_n_0 ),
+        .D(dataIn[14]),
+        .Q(\mem_reg[2] [14]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \mem_reg[2][15] 
+       (.C(wr_clk),
+        .CE(\mem[2][15]_i_1_n_0 ),
+        .D(dataIn[15]),
+        .Q(\mem_reg[2] [15]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \mem_reg[2][1] 
+       (.C(wr_clk),
+        .CE(\mem[2][15]_i_1_n_0 ),
+        .D(dataIn[1]),
+        .Q(\mem_reg[2] [1]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \mem_reg[2][2] 
+       (.C(wr_clk),
+        .CE(\mem[2][15]_i_1_n_0 ),
+        .D(dataIn[2]),
+        .Q(\mem_reg[2] [2]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \mem_reg[2][3] 
+       (.C(wr_clk),
+        .CE(\mem[2][15]_i_1_n_0 ),
+        .D(dataIn[3]),
+        .Q(\mem_reg[2] [3]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \mem_reg[2][4] 
+       (.C(wr_clk),
+        .CE(\mem[2][15]_i_1_n_0 ),
+        .D(dataIn[4]),
+        .Q(\mem_reg[2] [4]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \mem_reg[2][5] 
+       (.C(wr_clk),
+        .CE(\mem[2][15]_i_1_n_0 ),
+        .D(dataIn[5]),
+        .Q(\mem_reg[2] [5]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \mem_reg[2][6] 
+       (.C(wr_clk),
+        .CE(\mem[2][15]_i_1_n_0 ),
+        .D(dataIn[6]),
+        .Q(\mem_reg[2] [6]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \mem_reg[2][7] 
+       (.C(wr_clk),
+        .CE(\mem[2][15]_i_1_n_0 ),
+        .D(dataIn[7]),
+        .Q(\mem_reg[2] [7]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \mem_reg[2][8] 
+       (.C(wr_clk),
+        .CE(\mem[2][15]_i_1_n_0 ),
+        .D(dataIn[8]),
+        .Q(\mem_reg[2] [8]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \mem_reg[2][9] 
+       (.C(wr_clk),
+        .CE(\mem[2][15]_i_1_n_0 ),
+        .D(dataIn[9]),
+        .Q(\mem_reg[2] [9]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \mem_reg[3][0] 
+       (.C(wr_clk),
+        .CE(\mem[3][15]_i_1_n_0 ),
+        .D(dataIn[0]),
+        .Q(\mem_reg[3] [0]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \mem_reg[3][10] 
+       (.C(wr_clk),
+        .CE(\mem[3][15]_i_1_n_0 ),
+        .D(dataIn[10]),
+        .Q(\mem_reg[3] [10]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \mem_reg[3][11] 
+       (.C(wr_clk),
+        .CE(\mem[3][15]_i_1_n_0 ),
+        .D(dataIn[11]),
+        .Q(\mem_reg[3] [11]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \mem_reg[3][12] 
+       (.C(wr_clk),
+        .CE(\mem[3][15]_i_1_n_0 ),
+        .D(dataIn[12]),
+        .Q(\mem_reg[3] [12]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \mem_reg[3][13] 
+       (.C(wr_clk),
+        .CE(\mem[3][15]_i_1_n_0 ),
+        .D(dataIn[13]),
+        .Q(\mem_reg[3] [13]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \mem_reg[3][14] 
+       (.C(wr_clk),
+        .CE(\mem[3][15]_i_1_n_0 ),
+        .D(dataIn[14]),
+        .Q(\mem_reg[3] [14]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \mem_reg[3][15] 
+       (.C(wr_clk),
+        .CE(\mem[3][15]_i_1_n_0 ),
+        .D(dataIn[15]),
+        .Q(\mem_reg[3] [15]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \mem_reg[3][1] 
+       (.C(wr_clk),
+        .CE(\mem[3][15]_i_1_n_0 ),
+        .D(dataIn[1]),
+        .Q(\mem_reg[3] [1]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \mem_reg[3][2] 
+       (.C(wr_clk),
+        .CE(\mem[3][15]_i_1_n_0 ),
+        .D(dataIn[2]),
+        .Q(\mem_reg[3] [2]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \mem_reg[3][3] 
+       (.C(wr_clk),
+        .CE(\mem[3][15]_i_1_n_0 ),
+        .D(dataIn[3]),
+        .Q(\mem_reg[3] [3]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \mem_reg[3][4] 
+       (.C(wr_clk),
+        .CE(\mem[3][15]_i_1_n_0 ),
+        .D(dataIn[4]),
+        .Q(\mem_reg[3] [4]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \mem_reg[3][5] 
+       (.C(wr_clk),
+        .CE(\mem[3][15]_i_1_n_0 ),
+        .D(dataIn[5]),
+        .Q(\mem_reg[3] [5]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \mem_reg[3][6] 
+       (.C(wr_clk),
+        .CE(\mem[3][15]_i_1_n_0 ),
+        .D(dataIn[6]),
+        .Q(\mem_reg[3] [6]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \mem_reg[3][7] 
+       (.C(wr_clk),
+        .CE(\mem[3][15]_i_1_n_0 ),
+        .D(dataIn[7]),
+        .Q(\mem_reg[3] [7]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \mem_reg[3][8] 
+       (.C(wr_clk),
+        .CE(\mem[3][15]_i_1_n_0 ),
+        .D(dataIn[8]),
+        .Q(\mem_reg[3] [8]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \mem_reg[3][9] 
+       (.C(wr_clk),
+        .CE(\mem[3][15]_i_1_n_0 ),
+        .D(dataIn[9]),
+        .Q(\mem_reg[3] [9]),
+        .R(1'b0));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT4 #(
-    .INIT(16'hB04F)) 
+    .INIT(16'hFB04)) 
     \rd_pointer[0]_i_1 
-       (.I0(FULLreg_reg_0),
-        .I1(wr_clk),
-        .I2(EMPTY),
-        .I3(\rd_pointer_reg_n_0_[0] ),
+       (.I0(wr_clk),
+        .I1(rd_clk),
+        .I2(EMPTY_reg_0),
+        .I3(\rd_pointer_reg[0]_0 ),
         .O(\rd_pointer[0]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT5 #(
+    .INIT(32'hFFDF0020)) 
+    \rd_pointer[1]_i_1 
+       (.I0(\rd_pointer_reg[0]_0 ),
+        .I1(EMPTY_reg_0),
+        .I2(rd_clk),
+        .I3(wr_clk),
+        .I4(\rd_pointer_reg[1]_0 ),
+        .O(\rd_pointer[1]_i_1_n_0 ));
   FDCE #(
     .INIT(1'b0)) 
     \rd_pointer_reg[0] 
-       (.C(rd_clk),
+       (.C(wr_clk),
         .CE(1'b1),
         .CLR(Rst),
         .D(\rd_pointer[0]_i_1_n_0 ),
-        .Q(\rd_pointer_reg_n_0_[0] ));
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \wr_pointer[0]_C_i_1 
-       (.I0(\wr_pointer_reg[0]_P_n_0 ),
-        .I1(\wr_pointer_reg[0]_LDC_n_0 ),
-        .I2(\wr_pointer_reg[0]_C_n_0 ),
-        .O(\wr_pointer[0]_C_i_1_n_0 ));
+        .Q(\rd_pointer_reg[0]_0 ));
   FDCE #(
     .INIT(1'b0)) 
-    \wr_pointer_reg[0]_C 
-       (.C(rd_clk),
+    \rd_pointer_reg[1] 
+       (.C(wr_clk),
         .CE(1'b1),
-        .CLR(\wr_pointer_reg[0]_LDC_i_2_n_0 ),
-        .D(\wr_pointer[0]_C_i_1_n_0 ),
-        .Q(\wr_pointer_reg[0]_C_n_0 ));
-  (* XILINX_LEGACY_PRIM = "LDC" *) 
-  LDCE #(
+        .CLR(Rst),
+        .D(\rd_pointer[1]_i_1_n_0 ),
+        .Q(\rd_pointer_reg[1]_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  LUT3 #(
+    .INIT(8'hE1)) 
+    \wr_pointer[0]_i_1 
+       (.I0(rd_clk),
+        .I1(FULL_reg_0),
+        .I2(\wr_pointer_reg[0]_0 ),
+        .O(\wr_pointer[0]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  LUT4 #(
+    .INIT(16'hFD02)) 
+    \wr_pointer[1]_i_1 
+       (.I0(\wr_pointer_reg[0]_0 ),
+        .I1(FULL_reg_0),
+        .I2(rd_clk),
+        .I3(\wr_pointer_reg[1]_0 ),
+        .O(\wr_pointer[1]_i_1_n_0 ));
+  FDCE #(
     .INIT(1'b0)) 
-    \wr_pointer_reg[0]_LDC 
-       (.CLR(\wr_pointer_reg[0]_LDC_i_2_n_0 ),
-        .D(1'b1),
-        .G(\wr_pointer_reg[0]_LDC_i_1_n_0 ),
-        .GE(1'b1),
-        .Q(\wr_pointer_reg[0]_LDC_n_0 ));
-  LUT6 #(
-    .INIT(64'h4441114100000000)) 
-    \wr_pointer_reg[0]_LDC_i_1 
-       (.I0(Rst),
-        .I1(FULLreg_reg_0),
-        .I2(\wr_pointer_reg[0]_C_n_0 ),
-        .I3(\wr_pointer_reg[0]_LDC_n_0 ),
-        .I4(\wr_pointer_reg[0]_P_n_0 ),
-        .I5(wr_clk),
-        .O(\wr_pointer_reg[0]_LDC_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hAEAEAEEAEAEAAEEA)) 
-    \wr_pointer_reg[0]_LDC_i_2 
-       (.I0(Rst),
-        .I1(wr_clk),
-        .I2(FULLreg_reg_0),
-        .I3(\wr_pointer_reg[0]_C_n_0 ),
-        .I4(\wr_pointer_reg[0]_LDC_n_0 ),
-        .I5(\wr_pointer_reg[0]_P_n_0 ),
-        .O(\wr_pointer_reg[0]_LDC_i_2_n_0 ));
-  FDPE #(
-    .INIT(1'b1)) 
-    \wr_pointer_reg[0]_P 
-       (.C(rd_clk),
+    \wr_pointer_reg[0] 
+       (.C(wr_clk),
         .CE(1'b1),
-        .D(\wr_pointer[0]_C_i_1_n_0 ),
-        .PRE(\wr_pointer_reg[0]_LDC_i_1_n_0 ),
-        .Q(\wr_pointer_reg[0]_P_n_0 ));
+        .CLR(Rst),
+        .D(\wr_pointer[0]_i_1_n_0 ),
+        .Q(\wr_pointer_reg[0]_0 ));
+  FDCE #(
+    .INIT(1'b0)) 
+    \wr_pointer_reg[1] 
+       (.C(wr_clk),
+        .CE(1'b1),
+        .CLR(Rst),
+        .D(\wr_pointer[1]_i_1_n_0 ),
+        .Q(\wr_pointer_reg[1]_0 ));
 endmodule
 
 (* CHECK_LICENSE_TYPE = "design_1_processing_system7_0_0,processing_system7_v5_5_processing_system7,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "processing_system7_v5_5_processing_system7,Vivado 2019.2" *) 
@@ -888,9 +1389,9 @@ module design_1_processing_system7_0_0
     PS_SRSTB,
     PS_CLK,
     PS_PORB);
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 GPIO_0 TRI_I" *) input [35:0]GPIO_I;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 GPIO_0 TRI_O" *) output [35:0]GPIO_O;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 GPIO_0 TRI_T" *) output [35:0]GPIO_T;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 GPIO_0 TRI_I" *) input [44:0]GPIO_I;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 GPIO_0 TRI_O" *) output [44:0]GPIO_O;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 GPIO_0 TRI_T" *) output [44:0]GPIO_T;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:usbctrl:1.0 USBIND_0 PORT_INDCTL" *) output [1:0]USB0_PORT_INDCTL;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:usbctrl:1.0 USBIND_0 VBUS_PWRSELECT" *) output USB0_VBUS_PWRSELECT;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:usbctrl:1.0 USBIND_0 VBUS_PWRFAULT" *) input USB0_VBUS_PWRFAULT;
@@ -975,9 +1476,8 @@ module design_1_processing_system7_0_0
   wire DDR_VRP;
   wire DDR_WEB;
   wire FCLK_CLK0;
-  wire FCLK_RESET0_N;
-  wire [35:0]GPIO_I;
-  wire [35:0]GPIO_O;
+  wire [44:0]GPIO_I;
+  wire [44:0]GPIO_O;
   wire [53:0]MIO;
   wire M_AXI_GP0_ACLK;
   wire M_AXI_GP0_ARREADY;
@@ -1055,6 +1555,7 @@ module design_1_processing_system7_0_0
   wire NLW_inst_FCLK_CLKTRIG1_N_UNCONNECTED;
   wire NLW_inst_FCLK_CLKTRIG2_N_UNCONNECTED;
   wire NLW_inst_FCLK_CLKTRIG3_N_UNCONNECTED;
+  wire NLW_inst_FCLK_RESET0_N_UNCONNECTED;
   wire NLW_inst_FCLK_RESET1_N_UNCONNECTED;
   wire NLW_inst_FCLK_RESET2_N_UNCONNECTED;
   wire NLW_inst_FCLK_RESET3_N_UNCONNECTED;
@@ -1228,8 +1729,8 @@ module design_1_processing_system7_0_0
   wire [3:0]NLW_inst_FTMD_TRACEIN_ATID_UNCONNECTED;
   wire [31:0]NLW_inst_FTMD_TRACEIN_DATA_UNCONNECTED;
   wire [31:0]NLW_inst_FTMT_P2F_DEBUG_UNCONNECTED;
-  wire [17:0]NLW_inst_GPIO_O_UNCONNECTED;
-  wire [35:0]NLW_inst_GPIO_T_UNCONNECTED;
+  wire [25:0]NLW_inst_GPIO_O_UNCONNECTED;
+  wire [44:0]NLW_inst_GPIO_T_UNCONNECTED;
   wire [31:0]NLW_inst_M_AXI_GP0_ARADDR_UNCONNECTED;
   wire [1:0]NLW_inst_M_AXI_GP0_ARBURST_UNCONNECTED;
   wire [3:0]NLW_inst_M_AXI_GP0_ARCACHE_UNCONNECTED;
@@ -1350,7 +1851,7 @@ module design_1_processing_system7_0_0
   (* C_DM_WIDTH = "4" *) 
   (* C_DQS_WIDTH = "4" *) 
   (* C_DQ_WIDTH = "32" *) 
-  (* C_EMIO_GPIO_WIDTH = "36" *) 
+  (* C_EMIO_GPIO_WIDTH = "45" *) 
   (* C_EN_EMIO_ENET0 = "0" *) 
   (* C_EN_EMIO_ENET1 = "0" *) 
   (* C_EN_EMIO_PJTAG = "0" *) 
@@ -1405,7 +1906,7 @@ module design_1_processing_system7_0_0
   (* HW_HANDOFF = "design_1_processing_system7_0_0.hwdef" *) 
   (* POWER = "<PROCESSOR name={system} numA9Cores={2} clockFreq={650} load={0.5} /><MEMORY name={code} memType={DDR3} dataWidth={16} clockFreq={525} readRate={0.5} writeRate={0.5} /><IO interface={GPIO_Bank_1} ioStandard={LVCMOS18} bidis={4} ioBank={Vcco_p1} clockFreq={1} usageRate={0.5} /><IO interface={GPIO_Bank_0} ioStandard={LVCMOS33} bidis={6} ioBank={Vcco_p0} clockFreq={1} usageRate={0.5} /><IO interface={UART} ioStandard={LVCMOS33} bidis={2} ioBank={Vcco_p0} clockFreq={100.000000} usageRate={0.5} /><IO interface={SD} ioStandard={LVCMOS18} bidis={7} ioBank={Vcco_p1} clockFreq={50.000000} usageRate={0.5} /><IO interface={USB} ioStandard={LVCMOS18} bidis={12} ioBank={Vcco_p1} clockFreq={60} usageRate={0.5} /><IO interface={GigE} ioStandard={LVCMOS18} bidis={14} ioBank={Vcco_p1} clockFreq={125.000000} usageRate={0.5} /><IO interface={QSPI} ioStandard={LVCMOS33} bidis={7} ioBank={Vcco_p0} clockFreq={200} usageRate={0.5} /><PLL domain={Processor} vco={1300.000} /><PLL domain={Memory} vco={1050.000} /><PLL domain={IO} vco={1000.000} /><AXI interface={M_AXI_GP0} dataWidth={32} clockFreq={10} usageRate={0.5} />/>" *) 
   (* USE_TRACE_DATA_EDGE_DETECTOR = "0" *) 
-  design_1_processing_system7_0_0_processing_system7_v5_5_processing_system7 inst
+  design_1_processing_system7_0_0__processing_system7_v5_5_processing_system7 inst
        (.CAN0_PHY_RX(1'b0),
         .CAN0_PHY_TX(NLW_inst_CAN0_PHY_TX_UNCONNECTED),
         .CAN1_PHY_RX(1'b0),
@@ -1530,7 +2031,7 @@ module design_1_processing_system7_0_0
         .FCLK_CLKTRIG1_N(NLW_inst_FCLK_CLKTRIG1_N_UNCONNECTED),
         .FCLK_CLKTRIG2_N(NLW_inst_FCLK_CLKTRIG2_N_UNCONNECTED),
         .FCLK_CLKTRIG3_N(NLW_inst_FCLK_CLKTRIG3_N_UNCONNECTED),
-        .FCLK_RESET0_N(FCLK_RESET0_N),
+        .FCLK_RESET0_N(NLW_inst_FCLK_RESET0_N_UNCONNECTED),
         .FCLK_RESET1_N(NLW_inst_FCLK_RESET1_N_UNCONNECTED),
         .FCLK_RESET2_N(NLW_inst_FCLK_RESET2_N_UNCONNECTED),
         .FCLK_RESET3_N(NLW_inst_FCLK_RESET3_N_UNCONNECTED),
@@ -1558,8 +2059,8 @@ module design_1_processing_system7_0_0
         .FTMT_P2F_TRIG_2(NLW_inst_FTMT_P2F_TRIG_2_UNCONNECTED),
         .FTMT_P2F_TRIG_3(NLW_inst_FTMT_P2F_TRIG_3_UNCONNECTED),
         .GPIO_I(GPIO_I),
-        .GPIO_O({GPIO_O[35:18],NLW_inst_GPIO_O_UNCONNECTED[17:0]}),
-        .GPIO_T(NLW_inst_GPIO_T_UNCONNECTED[35:0]),
+        .GPIO_O({GPIO_O[44:26],NLW_inst_GPIO_O_UNCONNECTED[25:0]}),
+        .GPIO_T(NLW_inst_GPIO_T_UNCONNECTED[44:0]),
         .I2C0_SCL_I(1'b0),
         .I2C0_SCL_O(NLW_inst_I2C0_SCL_O_UNCONNECTED),
         .I2C0_SCL_T(NLW_inst_I2C0_SCL_T_UNCONNECTED),
@@ -2094,7 +2595,7 @@ module design_1_processing_system7_0_0
 endmodule
 
 (* C_DM_WIDTH = "4" *) (* C_DQS_WIDTH = "4" *) (* C_DQ_WIDTH = "32" *) 
-(* C_EMIO_GPIO_WIDTH = "36" *) (* C_EN_EMIO_ENET0 = "0" *) (* C_EN_EMIO_ENET1 = "0" *) 
+(* C_EMIO_GPIO_WIDTH = "45" *) (* C_EN_EMIO_ENET0 = "0" *) (* C_EN_EMIO_ENET1 = "0" *) 
 (* C_EN_EMIO_PJTAG = "0" *) (* C_EN_EMIO_TRACE = "0" *) (* C_FCLK_CLK0_BUF = "TRUE" *) 
 (* C_FCLK_CLK1_BUF = "FALSE" *) (* C_FCLK_CLK2_BUF = "FALSE" *) (* C_FCLK_CLK3_BUF = "FALSE" *) 
 (* C_GP0_EN_MODIFIABLE_TXN = "1" *) (* C_GP1_EN_MODIFIABLE_TXN = "1" *) (* C_INCLUDE_ACP_TRANS_CHECK = "0" *) 
@@ -2113,7 +2614,7 @@ endmodule
 (* C_USE_S_AXI_HP0 = "0" *) (* C_USE_S_AXI_HP1 = "0" *) (* C_USE_S_AXI_HP2 = "0" *) 
 (* C_USE_S_AXI_HP3 = "0" *) (* HW_HANDOFF = "design_1_processing_system7_0_0.hwdef" *) (* ORIG_REF_NAME = "processing_system7_v5_5_processing_system7" *) 
 (* POWER = "<PROCESSOR name={system} numA9Cores={2} clockFreq={650} load={0.5} /><MEMORY name={code} memType={DDR3} dataWidth={16} clockFreq={525} readRate={0.5} writeRate={0.5} /><IO interface={GPIO_Bank_1} ioStandard={LVCMOS18} bidis={4} ioBank={Vcco_p1} clockFreq={1} usageRate={0.5} /><IO interface={GPIO_Bank_0} ioStandard={LVCMOS33} bidis={6} ioBank={Vcco_p0} clockFreq={1} usageRate={0.5} /><IO interface={UART} ioStandard={LVCMOS33} bidis={2} ioBank={Vcco_p0} clockFreq={100.000000} usageRate={0.5} /><IO interface={SD} ioStandard={LVCMOS18} bidis={7} ioBank={Vcco_p1} clockFreq={50.000000} usageRate={0.5} /><IO interface={USB} ioStandard={LVCMOS18} bidis={12} ioBank={Vcco_p1} clockFreq={60} usageRate={0.5} /><IO interface={GigE} ioStandard={LVCMOS18} bidis={14} ioBank={Vcco_p1} clockFreq={125.000000} usageRate={0.5} /><IO interface={QSPI} ioStandard={LVCMOS33} bidis={7} ioBank={Vcco_p0} clockFreq={200} usageRate={0.5} /><PLL domain={Processor} vco={1300.000} /><PLL domain={Memory} vco={1050.000} /><PLL domain={IO} vco={1000.000} /><AXI interface={M_AXI_GP0} dataWidth={32} clockFreq={10} usageRate={0.5} />/>" *) (* USE_TRACE_DATA_EDGE_DETECTOR = "0" *) 
-module design_1_processing_system7_0_0_processing_system7_v5_5_processing_system7
+module design_1_processing_system7_0_0__processing_system7_v5_5_processing_system7
    (CAN0_PHY_TX,
     CAN0_PHY_RX,
     CAN1_PHY_TX,
@@ -2853,9 +3354,9 @@ module design_1_processing_system7_0_0_processing_system7_v5_5_processing_system
   input ENET1_MDIO_I;
   input ENET1_EXT_INTIN;
   input [7:0]ENET1_GMII_RXD;
-  input [35:0]GPIO_I;
-  output [35:0]GPIO_O;
-  output [35:0]GPIO_T;
+  input [44:0]GPIO_I;
+  output [44:0]GPIO_O;
+  output [44:0]GPIO_T;
   input I2C0_SDA_I;
   output I2C0_SDA_O;
   output I2C0_SDA_T;
@@ -3540,7 +4041,6 @@ module design_1_processing_system7_0_0_processing_system7_v5_5_processing_system
   wire EVENT_EVENTI;
   wire FCLK_CLK0;
   wire [0:0]FCLK_CLK_unbuffered;
-  wire FCLK_RESET0_N;
   wire FPGA_IDLE_N;
   wire FTMD_TRACEIN_CLK;
   wire [31:0]FTMT_F2P_DEBUG;
@@ -3552,9 +4052,9 @@ module design_1_processing_system7_0_0_processing_system7_v5_5_processing_system
   wire FTMT_P2F_TRIGACK_1;
   wire FTMT_P2F_TRIGACK_2;
   wire FTMT_P2F_TRIGACK_3;
-  wire [35:0]GPIO_I;
-  wire \GPIO_O[18] ;
-  wire [35:0]GPIO_O_BUFG;
+  wire [44:0]GPIO_I;
+  wire \GPIO_O[44] ;
+  wire [44:0]GPIO_O_BUFG;
   wire I2C0_SCL_I;
   wire I2C0_SDA_I;
   wire I2C1_SCL_I;
@@ -4033,7 +4533,7 @@ module design_1_processing_system7_0_0_processing_system7_v5_5_processing_system
   wire [1:0]NLW_PS7_i_EVENTSTANDBYWFE_UNCONNECTED;
   wire [1:0]NLW_PS7_i_EVENTSTANDBYWFI_UNCONNECTED;
   wire [3:1]NLW_PS7_i_FCLKCLK_UNCONNECTED;
-  wire [3:1]NLW_PS7_i_FCLKRESETN_UNCONNECTED;
+  wire [3:0]NLW_PS7_i_FCLKRESETN_UNCONNECTED;
   wire [3:0]NLW_PS7_i_FTMTF2PTRIGACK_UNCONNECTED;
   wire [31:0]NLW_PS7_i_FTMTP2FDEBUG_UNCONNECTED;
   wire [3:0]NLW_PS7_i_FTMTP2FTRIG_UNCONNECTED;
@@ -4132,7 +4632,7 @@ module design_1_processing_system7_0_0_processing_system7_v5_5_processing_system
   wire [5:0]NLW_PS7_i_SAXIHP3WACOUNT_UNCONNECTED;
   wire [7:0]NLW_PS7_i_SAXIHP3WCOUNT_UNCONNECTED;
 
-  assign GPIO_O[35:18] = GPIO_O_BUFG[35:18];
+  assign GPIO_O[44:26] = GPIO_O_BUFG[44:26];
   (* BOX_TYPE = "PRIMITIVE" *) 
   BIBUF DDR_CAS_n_BIBUF
        (.IO(buffered_DDR_CAS_n),
@@ -4179,9 +4679,9 @@ module design_1_processing_system7_0_0_processing_system7_v5_5_processing_system
         .PAD(DDR_WEB));
   (* LOPT_BUFG_CLOCK *) 
   (* OPT_MODIFIED = "BUFG_OPT" *) 
-  BUFG \GPIO_O[18]_BUFG_inst 
-       (.I(\GPIO_O[18] ),
-        .O(GPIO_O_BUFG[18]));
+  BUFG \GPIO_O[44]_BUFG_inst 
+       (.I(\GPIO_O[44] ),
+        .O(GPIO_O_BUFG[44]));
   (* BOX_TYPE = "PRIMITIVE" *) 
   (* OPT_MODIFIED = "SWEEP BUFG_OPT" *) 
   PS7 PS7_i
@@ -4293,8 +4793,8 @@ module design_1_processing_system7_0_0_processing_system7_v5_5_processing_system
         .EMIOENET1PTPSYNCFRAMETX(NLW_PS7_i_EMIOENET1PTPSYNCFRAMETX_UNCONNECTED),
         .EMIOENET1SOFRX(NLW_PS7_i_EMIOENET1SOFRX_UNCONNECTED),
         .EMIOENET1SOFTX(NLW_PS7_i_EMIOENET1SOFTX_UNCONNECTED),
-        .EMIOGPIOI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,GPIO_I}),
-        .EMIOGPIOO({NLW_PS7_i_EMIOGPIOO_UNCONNECTED[63:36],GPIO_O_BUFG[35:19],\GPIO_O[18] ,NLW_PS7_i_EMIOGPIOO_UNCONNECTED[17:0]}),
+        .EMIOGPIOI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,GPIO_I}),
+        .EMIOGPIOO({NLW_PS7_i_EMIOGPIOO_UNCONNECTED[63:45],\GPIO_O[44] ,GPIO_O_BUFG[43:26],NLW_PS7_i_EMIOGPIOO_UNCONNECTED[25:0]}),
         .EMIOGPIOTN(NLW_PS7_i_EMIOGPIOTN_UNCONNECTED[63:0]),
         .EMIOI2C0SCLI(I2C0_SCL_I),
         .EMIOI2C0SCLO(NLW_PS7_i_EMIOI2C0SCLO_UNCONNECTED),
@@ -4401,7 +4901,7 @@ module design_1_processing_system7_0_0_processing_system7_v5_5_processing_system
         .EVENTSTANDBYWFI(NLW_PS7_i_EVENTSTANDBYWFI_UNCONNECTED[1:0]),
         .FCLKCLK({NLW_PS7_i_FCLKCLK_UNCONNECTED[3:1],FCLK_CLK_unbuffered}),
         .FCLKCLKTRIGN({1'b0,1'b0,1'b0,1'b0}),
-        .FCLKRESETN({NLW_PS7_i_FCLKRESETN_UNCONNECTED[3:1],FCLK_RESET0_N}),
+        .FCLKRESETN(NLW_PS7_i_FCLKRESETN_UNCONNECTED[3:0]),
         .FPGAIDLEN(FPGA_IDLE_N),
         .FTMDTRACEINATID({1'b0,1'b0,1'b0,1'b0}),
         .FTMDTRACEINCLOCK(FTMD_TRACEIN_CLK),
@@ -5287,7 +5787,19 @@ module design_1_processing_system7_0_0_processing_system7_v5_5_processing_system
         .PAD(DDR_DQS[3]));
 endmodule
 
-(* ECO_CHECKSUM = "b57cfd2" *) 
+(* CHECK_LICENSE_TYPE = "design_1_rd_clk_0,xlslice_v1_0_2_xlslice,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "xlslice_v1_0_2_xlslice,Vivado 2019.2" *) 
+module design_1_rd_clk_0
+   (Din,
+    Dout);
+  input [44:0]Din;
+  output [0:0]Dout;
+
+  wire [44:0]Din;
+
+  assign Dout[0] = Din[27];
+endmodule
+
+(* ECO_CHECKSUM = "45a0711e" *) 
 (* NotValidForBitStream *)
 module design_1_wrapper
    (DDR_addr,
@@ -5526,16 +6038,24 @@ module design_1_xlconcat_0_0
    (In0,
     In1,
     In2,
+    In3,
+    In4,
     dout);
   input [15:0]In0;
   input [0:0]In1;
   input [0:0]In2;
-  output [17:0]dout;
+  input [3:0]In3;
+  input [3:0]In4;
+  output [25:0]dout;
 
   wire [15:0]In0;
   wire [0:0]In1;
   wire [0:0]In2;
+  wire [3:0]In3;
+  wire [3:0]In4;
 
+  assign dout[25:22] = In4;
+  assign dout[21:18] = In3;
   assign dout[17] = In2;
   assign dout[16] = In1;
   assign dout[15:0] = In0;
@@ -5545,36 +6065,36 @@ endmodule
 module design_1_xlslice_0_0
    (Din,
     Dout);
-  input [35:0]Din;
+  input [44:0]Din;
   output [15:0]Dout;
 
-  wire [35:0]Din;
+  wire [44:0]Din;
 
-  assign Dout[15:0] = Din[34:19];
+  assign Dout[15:0] = Din[43:28];
 endmodule
 
 (* CHECK_LICENSE_TYPE = "design_1_xlslice_0_1,xlslice_v1_0_2_xlslice,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "xlslice_v1_0_2_xlslice,Vivado 2019.2" *) 
 module design_1_xlslice_0_1
    (Din,
     Dout);
-  input [35:0]Din;
+  input [44:0]Din;
   output [0:0]Dout;
 
-  wire [35:0]Din;
+  wire [44:0]Din;
 
-  assign Dout[0] = Din[35];
+  assign Dout[0] = Din[44];
 endmodule
 
 (* CHECK_LICENSE_TYPE = "design_1_xlslice_0_2,xlslice_v1_0_2_xlslice,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* X_CORE_INFO = "xlslice_v1_0_2_xlslice,Vivado 2019.2" *) 
 module design_1_xlslice_0_2
    (Din,
     Dout);
-  input [35:0]Din;
+  input [44:0]Din;
   output [0:0]Dout;
 
-  wire [35:0]Din;
+  wire [44:0]Din;
 
-  assign Dout[0] = Din[18];
+  assign Dout[0] = Din[26];
 endmodule
 `ifndef GLBL
 `define GLBL

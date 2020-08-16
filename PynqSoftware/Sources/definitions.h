@@ -14,7 +14,6 @@
 *   
 *   FOR VIVADO DEVELOPMENT:SET THIS FILE TO GLOBAL INCLUDE OR SYNTHESIS/IMPLEMENTATION WILL FAIL!
 *
-*   Last updated:   7/26/2020 @ 1:17 P.M.
 */
 
 //START_User_Set
@@ -28,7 +27,6 @@
 `define inputPortCount      3                                   //N
 `define outputPortCount     3                                   //M
 `define addressLength       4                                   //Eventually want to come up with a way to generate this on N and M
-`define selectorLength      2                                   //Eventually want to come up with a way to generate this on number of outputs
 
 //Float Multiply
 `define mantissaIndex       9                                   //Float Multiply definitions = mantissa length-1
@@ -68,6 +66,6 @@
 `define restAddress         `inputPortCount*`outputPortCount
 
 //aFIFO
-`define bufferSize          2
+`define bufferSize          4
 /*#####################################################################################################################################################*/
 //END_Automated_Set

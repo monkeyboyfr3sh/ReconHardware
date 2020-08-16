@@ -125,9 +125,9 @@ PS_SRSTB,
 PS_CLK, 
 PS_PORB 
 );
-input [36 : 0] GPIO_I;
-output [36 : 0] GPIO_O;
-output [36 : 0] GPIO_T;
+input [44 : 0] GPIO_I;
+output [44 : 0] GPIO_O;
+output [44 : 0] GPIO_T;
 output [1 : 0] USB0_PORT_INDCTL;
 output USB0_VBUS_PWRSELECT;
 input USB0_VBUS_PWRFAULT;
