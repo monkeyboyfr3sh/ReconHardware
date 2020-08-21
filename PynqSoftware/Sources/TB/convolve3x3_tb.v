@@ -25,19 +25,6 @@ matrixAccTopDevice UUT(
 );
 
 initial begin
-/*
-multiplier_input[1*`bitLength-1:0*`bitLength] = `bitLength'h5015;		//       20501/  32.66
-multiplier_input[2*`bitLength-1:1*`bitLength] = `bitLength'h4958;		//       18776/  10.69
-multiplier_input[3*`bitLength-1:2*`bitLength] = `bitLength'h2525;		//       9509/   0.0201
-
-multiplicand_input[1*`bitLength-1:0*`bitLength] = `bitLength'h4f72;		//       20336/  29.78
-multiplicand_input[2*`bitLength-1:1*`bitLength] = `bitLength'h616a;		//       24938/  693.0
-multiplicand_input[3*`bitLength-1:2*`bitLength] = `bitLength'h6ded;		//       28141/  6068.0
-
-Multi0 	= 972.5 	= 0x6399
-Multi1	= 7408.0	= 0x6f3c
-Multi2	= 121.94	= 0x579f
-*/
 
 Clk = 0;
 wr_clk = 0;
@@ -127,9 +114,9 @@ wr_clk = 1;
 wr_clk = 0;
 #`toggleTime;
 /*
-*   Sum0 	= 972.5 	= 0x6799
-*   Sum1	= 7408.0	= 0x733c
-*   Sum2	= 121.94	= 0x5b9f
+*   Sum0 	= 1945.0    = 0x6799
+*   Sum1	= 1.4816E4	= 0x733c
+*   Sum2	= 243.9    	= 0x5b9f
 */
 
 //Set three
@@ -168,10 +155,16 @@ wr_clk = 1;
 #`toggleTime;
 wr_clk = 0;
 #`toggleTime;
+
+dataInput = `bitLength'h0;
+wr_clk = 1;
+#`toggleTime;
+wr_clk = 0;
+#`toggleTime;
 /*
-*   Sum0 	= 972.5 	= 0x69b3
-*   Sum1	= 7408.0	= 0x756d
-*   Sum2	= 121.94	= 0x5db7
+*   Sum0 	= 2918.0	= 0x69b3
+*   Sum1	= 2.222E4	= 0x756d
+*   Sum2	= 365.8	    = 0x5db7
 */
 
 // finalsum = 25500 = 0x763a

@@ -88,7 +88,7 @@
         "xci_name": "Convolution_Accel_processing_system7_0_0",
         "parameters": {
           "PCW_ACT_APU_PERIPHERAL_FREQMHZ": {
-            "value": "650.000000"
+            "value": "660.000000"
           },
           "PCW_ACT_CAN0_PERIPHERAL_FREQMHZ": {
             "value": "23.8095"
@@ -100,7 +100,7 @@
             "value": "10.000000"
           },
           "PCW_ACT_DCI_PERIPHERAL_FREQMHZ": {
-            "value": "10.096154"
+            "value": "10.196078"
           },
           "PCW_ACT_ENET0_PERIPHERAL_FREQMHZ": {
             "value": "125.000000"
@@ -142,22 +142,22 @@
             "value": "200.000000"
           },
           "PCW_ACT_TTC0_CLK0_PERIPHERAL_FREQMHZ": {
-            "value": "108.333336"
+            "value": "110.000000"
           },
           "PCW_ACT_TTC0_CLK1_PERIPHERAL_FREQMHZ": {
-            "value": "108.333336"
+            "value": "110.000000"
           },
           "PCW_ACT_TTC0_CLK2_PERIPHERAL_FREQMHZ": {
-            "value": "108.333336"
+            "value": "110.000000"
           },
           "PCW_ACT_TTC1_CLK0_PERIPHERAL_FREQMHZ": {
-            "value": "108.333336"
+            "value": "110.000000"
           },
           "PCW_ACT_TTC1_CLK1_PERIPHERAL_FREQMHZ": {
-            "value": "108.333336"
+            "value": "110.000000"
           },
           "PCW_ACT_TTC1_CLK2_PERIPHERAL_FREQMHZ": {
-            "value": "108.333336"
+            "value": "110.000000"
           },
           "PCW_ACT_TTC_PERIPHERAL_FREQMHZ": {
             "value": "50"
@@ -172,7 +172,7 @@
             "value": "60"
           },
           "PCW_ACT_WDT_PERIPHERAL_FREQMHZ": {
-            "value": "108.333336"
+            "value": "110.000000"
           },
           "PCW_APU_CLK_RATIO_ENABLE": {
             "value": "6:2:1"
@@ -211,7 +211,7 @@
             "value": "ARM PLL"
           },
           "PCW_CRYSTAL_PERIPHERAL_FREQMHZ": {
-            "value": "50"
+            "value": "40"
           },
           "PCW_DCI_PERIPHERAL_CLKSRC": {
             "value": "DDR PLL"
@@ -542,6 +542,9 @@
           },
           "PCW_INCLUDE_ACP_TRANS_CHECK": {
             "value": "0"
+          },
+          "PCW_IRQ_F2P_MODE": {
+            "value": "DIRECT"
           },
           "PCW_MIO_0_IOTYPE": {
             "value": "LVCMOS 3.3V"
@@ -1174,7 +1177,7 @@
             "value": "200"
           },
           "PCW_PERIPHERAL_BOARD_PRESET": {
-            "value": "None"
+            "value": "part0"
           },
           "PCW_PLL_BYPASSMODE_ENABLE": {
             "value": "0"
@@ -1299,6 +1302,18 @@
           "PCW_SPI_PERIPHERAL_VALID": {
             "value": "0"
           },
+          "PCW_S_AXI_HP0_DATA_WIDTH": {
+            "value": "64"
+          },
+          "PCW_S_AXI_HP1_DATA_WIDTH": {
+            "value": "64"
+          },
+          "PCW_S_AXI_HP2_DATA_WIDTH": {
+            "value": "64"
+          },
+          "PCW_S_AXI_HP3_DATA_WIDTH": {
+            "value": "64"
+          },
           "PCW_TPIU_PERIPHERAL_CLKSRC": {
             "value": "External"
           },
@@ -1369,7 +1384,7 @@
             "value": "1"
           },
           "PCW_UIPARAM_ACT_DDR_FREQ_MHZ": {
-            "value": "525.000000"
+            "value": "520.000000"
           },
           "PCW_UIPARAM_DDR_ADV_ENABLE": {
             "value": "0"
@@ -1848,13 +1863,6 @@
           "matrixAccTopDevice_0/wr_clk"
         ]
       },
-      "processing_system7_0_FCLK_CLK0": {
-        "ports": [
-          "processing_system7_0/FCLK_CLK0",
-          "processing_system7_0/M_AXI_GP0_ACLK",
-          "matrixAccTopDevice_0/Clk"
-        ]
-      },
       "processing_system7_0_FCLK_RESET0_N": {
         "ports": [
           "processing_system7_0/FCLK_RESET0_N",
@@ -1883,6 +1891,13 @@
         "ports": [
           "matrixAccTopDevice_0/EMPTY",
           "xlconcat_0/In3"
+        ]
+      },
+      "processing_system7_0_FCLK_CLK0": {
+        "ports": [
+          "processing_system7_0/FCLK_CLK0",
+          "processing_system7_0/M_AXI_GP0_ACLK",
+          "matrixAccTopDevice_0/Clk"
         ]
       }
     },

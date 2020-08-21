@@ -33,7 +33,7 @@ i_wclk = 0;
 
 //Set queue/dequeue low
 i_wr = 0;
-i_rd = 0;
+i_rd = 1;
 
 //Quick reset on both sides.
 i_wrst_n = 0;
@@ -54,46 +54,63 @@ i_wr = 0;
 
 i_wclk = 1;
 i_wr = 1;
-i_wdata = 20;
-#`toggleTime;
-i_wclk = 0;
-i_wr = 0;
-#`toggleTime;
-
-#`clkPeriod;
-#`clkPeriod;
-#`clkPeriod;
-i_rd = 1;
-#`clkPeriod;
-
-i_wrst_n = 0;
-#`clkPeriod;
-i_wrst_n = 1;
-
-i_wclk = 1;
-i_wr = 1;
-i_wdata = 12;
-#`toggleTime;
-i_wclk = 0;
-i_wr = 0;
-#`toggleTime;
-
-i_wclk = 1;
-i_wr = 1;
-i_wdata = 16;
-#`toggleTime;
-i_wclk = 0;
-i_wr = 0;
-#`toggleTime;
-
-i_wclk = 1;
-i_wr = 1;
 i_wdata = 96;
 #`toggleTime;
 i_wclk = 0;
 i_wr = 0;
 #`toggleTime;
 
+i_wclk = 1;
+i_wr = 1;
+i_wdata = 23;
+#`toggleTime;
+i_wclk = 0;
+i_wr = 0;
+#`toggleTime;
+
+i_wclk = 1;
+i_wr = 1;
+i_wdata = 100;
+#`toggleTime;
+i_wclk = 0;
+i_wr = 0;
+#`toggleTime;
+
+i_wclk = 1;
+i_wr = 1;
+i_wdata = 69;
+#`toggleTime;
+i_wclk = 0;
+i_wr = 0;
+#`toggleTime;
+
+i_wclk = 1;
+i_wr = 1;
+i_wdata = 37;
+#`toggleTime;
+i_wclk = 0;
+i_wr = 0;
+#`toggleTime;
+
+#`toggleTime;
+#`clkPeriod;
+#`clkPeriod;
+#`clkPeriod;
+#`clkPeriod;
+#`clkPeriod;
+
+i_rd = 0;
+
+#`toggleTime;
+#`clkPeriod;
+#`clkPeriod;
+#`clkPeriod;
+
+i_rd = 1;
+
 end
-always #(`clkPeriod/2) i_rclk = ~i_rclk;
+always #(`clkPeriod/2)begin
+    i_rclk = ~i_rclk;
+    //i_rd = i_rclk;
+end
 endmodule

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<webTalkData  fileName='usage_statistics_ext_xsim.xml'  majorVersion='1' minorVersion='0' timeStamp='Sun Aug 16 13:58:45 2020'>
+<webTalkData  fileName='usage_statistics_ext_xsim.xml'  majorVersion='1' minorVersion='0' timeStamp='Thu Aug 20 18:22:18 2020'>
 <section name="__ROOT__" level="0" order="1" description="">
  <section name="software_version_and_target_device" level="1" order="1" description="">
   <keyValuePair key="beta" value="FALSE" description="" />
   <keyValuePair key="build_version" value="2708876" description="" />
-  <keyValuePair key="date_generated" value="Sun Aug 16 13:58:45 2020" description="" />
+  <keyValuePair key="date_generated" value="Thu Aug 20 18:22:17 2020" description="" />
   <keyValuePair key="os_platform" value="WIN64" description="" />
   <keyValuePair key="product_version" value="XSIM v2019.2 (64-bit)" description="" />
   <keyValuePair key="project_id" value="c9763829a085402ebf4f5ad6c83803e9" description="" />
-  <keyValuePair key="project_iteration" value="144" description="" />
+  <keyValuePair key="project_iteration" value="171" description="" />
   <keyValuePair key="random_id" value="7b596f40-3836-4ce2-b964-99368072f512" description="" />
   <keyValuePair key="registration_id" value="211906792_0_0_347" description="" />
   <keyValuePair key="route_design" value="FALSE" description="" />
@@ -34,9 +34,9 @@
   </section>
   <section name="usage" level="2" order="2" description="">
    <keyValuePair key="iteration" value="1" description="" />
-   <keyValuePair key="runtime" value="3 ns" description="" />
-   <keyValuePair key="simulation_memory" value="6708_KB" description="" />
-   <keyValuePair key="simulation_time" value="0.01_sec" description="" />
+   <keyValuePair key="runtime" value="1690 ns" description="" />
+   <keyValuePair key="simulation_memory" value="7240_KB" description="" />
+   <keyValuePair key="simulation_time" value="0.05_sec" description="" />
    <keyValuePair key="trace_waveform" value="true" description="" />
   </section>
  </section>

@@ -1,7 +1,7 @@
-Running: xsim.dir/convolve3x3_tb_behav/xsimk.exe -simmode gui -wdb convolve3x3_tb_behav.wdb -simrunnum 0 -socket 55411
+Running: xsim.dir/convolve3x3_tb_behav/xsimk.exe -simmode gui -wdb convolve3x3_tb_behav.wdb -simrunnum 0 -socket 57735
 Design successfully loaded
-Design Loading Memory Usage: 5908 KB (Peak: 5908 KB)
+Design Loading Memory Usage: 6488 KB (Peak: 6488 KB)
 Design Loading CPU Usage: 0 ms
 Simulation completed
-Simulation Memory Usage: 6632 KB (Peak: 6632 KB)
-Simulation CPU Usage: 46 ms
+Simulation Memory Usage: 7228 KB (Peak: 7228 KB)
+Simulation CPU Usage: 0 ms

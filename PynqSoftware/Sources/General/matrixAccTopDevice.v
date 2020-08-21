@@ -77,9 +77,9 @@ aFIFO inputBuffer(
     .i_wdata(dataInput),        //Write data
     .o_wfull(FULL),             //Output full
     
-    .i_rclk(Clk),               //Read clock
+    .i_rclk(FIFO_RD_CLK),               //Read clock
     .i_rrst_n(~Rst),             //Asynchronous read reset
-    .i_rd(FIFO_RD_CLK),         //Read request
+    .i_rd(1),         //Read request
     .dataOut(FIFO_OUT_PORT),    //Output data
     .o_rempty(EMPTY)            //Output full
 );

@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1597604998">
+<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1597967583">
+  <File Type="OPT-HWDEF" Name="Convolution_Accel_wrapper.hwdef"/>
+  <File Type="ROUTE-BUS-SKEW" Name="Convolution_Accel_wrapper_bus_skew_routed.rpt"/>
+  <File Type="PA-DCP" Name="Convolution_Accel_wrapper.dcp"/>
   <File Type="BITSTR-BMM" Name="Convolution_Accel_wrapper_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="Convolution_Accel_wrapper_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="Convolution_Accel_wrapper_timing_summary_init.rpt"/>
@@ -10,7 +13,6 @@
   <File Type="ROUTE-PWR-SUM" Name="Convolution_Accel_wrapper_power_summary_routed.pb"/>
   <File Type="REPORTS-TCL" Name="Convolution_Accel_wrapper_reports.tcl"/>
   <File Type="OPT-DRC" Name="Convolution_Accel_wrapper_drc_opted.rpt"/>
-  <File Type="OPT-HWDEF" Name="Convolution_Accel_wrapper.hwdef"/>
   <File Type="PWROPT-DCP" Name="Convolution_Accel_wrapper_pwropt.dcp"/>
   <File Type="PWROPT-DRC" Name="Convolution_Accel_wrapper_drc_pwropted.rpt"/>
   <File Type="PWROPT-TIMING" Name="Convolution_Accel_wrapper_timing_summary_pwropted.rpt"/>
@@ -48,7 +50,6 @@
   <File Type="ROUTE-TIMING-RPX" Name="Convolution_Accel_wrapper_timing_summary_routed.rpx"/>
   <File Type="ROUTE-SIMILARITY" Name="Convolution_Accel_wrapper_incremental_reuse_routed.rpt"/>
   <File Type="ROUTE-CLK" Name="Convolution_Accel_wrapper_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW" Name="Convolution_Accel_wrapper_bus_skew_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW-PB" Name="Convolution_Accel_wrapper_bus_skew_routed.pb"/>
   <File Type="ROUTE-BUS-SKEW-RPX" Name="Convolution_Accel_wrapper_bus_skew_routed.rpx"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="Convolution_Accel_wrapper_postroute_physopt.dcp"/>
@@ -192,5 +193,6 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="Convolution_Accel_processing_system7_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Convolution_Accel_matrixAccTopDevice_0_0"/>
 </GenRun>

@@ -34,7 +34,8 @@ output                      MULTIPLICAND_INPUT;
 output                      MULTIPLY_START;
 
 output  reg                             FINALADD,cReady;
-output  reg     [(`bitLength*2)-1:0]    FINALADDEND;
+//output  reg     [(`bitLength*2)-1:0]    FINALADDEND;
+output  [(`bitLength*2)-1:0]    FINALADDEND;
 
 //State flags
 reg     RDst,MULTIst,ADDst;
@@ -54,6 +55,8 @@ integer i;
 
 assign  FIFO_RD_CLK         = (RDst)?Clk:0;       //Only want to read from FIFO if in RDst
 
+assign FINALADDEND = (ADDst)?FLATSUMOUT[(addPointer-1)*(2*`bitLength)+:2*`bitLength]:0;
+
 always @(posedge Clk or posedge Rst) begin
     if(Rst)begin
         RDst = 0;
@@ -65,7 +68,7 @@ always @(posedge Clk or posedge Rst) begin
         holdFilter = 0;
         MULTIPLIER_INPUT = 0;
         MULTIPLICAND_INPUT = 0;
-        FINALADDEND = 0;
+        //FINALADDEND = 0;
 
         MULTIPLY_START = 0;
         rdPointer = 0;
@@ -125,7 +128,7 @@ always @(posedge Clk or posedge Rst) begin
                 Mloopcnt = 0;
             end
         end
-        else if(MULTIst) begin
+        if(MULTIst) begin
             MULTIst = 0;
             MULTIPLY_START[multiPointer] = 1;
             multiPointer = multiPointer + 1;
@@ -152,7 +155,6 @@ always @(posedge Clk or posedge Rst) begin
                 cReady = 1;
             end
             else begin
-                FINALADDEND = FLATSUMOUT[addPointer*(2*`bitLength)+:2*`bitLength];
                 FINALADD = 1;
                 addPointer = addPointer + 1;
             end
