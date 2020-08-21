@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Thu Aug 20 18:58:52 2020
+| Date         : Thu Aug 20 21:24:54 2020
 | Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 | Command      : report_methodology -file Convolution_Accel_wrapper_methodology_drc_routed.rpt -pb Convolution_Accel_wrapper_methodology_drc_routed.pb -rpx Convolution_Accel_wrapper_methodology_drc_routed.rpx
 | Design       : Convolution_Accel_wrapper
@@ -20,17 +20,17 @@ Table of Contents
 1. REPORT SUMMARY
 -----------------
             Netlist: netlist
-          Floorplan: checkpoint_Convolution_Accel_wrapper
+          Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 173
+             Violations found: 175
 +-----------+------------------+-----------------------------+------------+
 | Rule      | Severity         | Description                 | Violations |
 +-----------+------------------+-----------------------------+------------+
 | TIMING-14 | Critical Warning | LUT on the clock tree       | 1          |
 | TIMING-17 | Critical Warning | Non-clocked sequential cell | 52         |
 | DPIR-1    | Warning          | Asynchronous driver check   | 60         |
-| TIMING-16 | Warning          | Large setup violation       | 60         |
+| TIMING-16 | Warning          | Large setup violation       | 62         |
 +-----------+------------------+-----------------------------+------------+
 
 2. REPORT DETAILS
@@ -602,302 +602,312 @@ Related violations: <none>
 
 TIMING-16#1 Warning
 Large setup violation  
-There is a large setup violation of -100.005 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[1].outputAdder/accumulate_reg[14]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[1].outputAdder/accumulate_reg[12]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -100.731 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[14]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/finalAdder/accumulate_reg[3]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#2 Warning
 Large setup violation  
-There is a large setup violation of -100.010 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[1].outputAdder/accumulate_reg[14]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[1].outputAdder/accumulate_reg[11]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -100.736 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[14]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/finalAdder/accumulate_reg[5]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#3 Warning
 Large setup violation  
-There is a large setup violation of -100.134 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk3[1].inputMulti/product_reg[14]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[1].outputAdder/accumulate_reg[14]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -100.783 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[14]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/finalAdder/accumulate_reg[2]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#4 Warning
 Large setup violation  
-There is a large setup violation of -100.176 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[1].outputAdder/accumulate_reg[14]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[1].outputAdder/accumulate_reg[10]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -100.785 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[14]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/finalAdder/accumulate_reg[4]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#5 Warning
 Large setup violation  
-There is a large setup violation of -100.349 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[1].outputAdder/accumulate_reg[14]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[1].outputAdder/accumulate_reg[13]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -100.799 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[2].outputAdder/accumulate_reg[13]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/finalAdder/accumulate_reg[11]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#6 Warning
 Large setup violation  
-There is a large setup violation of -101.014 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[2].outputAdder/accumulate_reg[13]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[2].outputAdder/accumulate_reg[4]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -100.804 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[2].outputAdder/accumulate_reg[13]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/finalAdder/accumulate_reg[10]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#7 Warning
 Large setup violation  
-There is a large setup violation of -101.018 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[2].outputAdder/accumulate_reg[13]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[2].outputAdder/accumulate_reg[2]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -100.896 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[14]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/finalAdder/accumulate_reg[7]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#8 Warning
 Large setup violation  
-There is a large setup violation of -101.023 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[2].outputAdder/accumulate_reg[13]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[2].outputAdder/accumulate_reg[0]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -100.902 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[2].outputAdder/accumulate_reg[13]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/finalAdder/accumulate_reg[14]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#9 Warning
 Large setup violation  
-There is a large setup violation of -101.048 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[2].outputAdder/accumulate_reg[13]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[2].outputAdder/accumulate_reg[8]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -100.915 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[14]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/finalAdder/accumulate_reg[9]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#10 Warning
 Large setup violation  
-There is a large setup violation of -101.064 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[2].outputAdder/accumulate_reg[13]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[2].outputAdder/accumulate_reg[3]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -100.933 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[14]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/finalAdder/accumulate_reg[8]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#11 Warning
 Large setup violation  
-There is a large setup violation of -101.066 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[2].outputAdder/accumulate_reg[13]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[2].outputAdder/accumulate_reg[1]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -100.937 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[14]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/finalAdder/accumulate_reg[1]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#12 Warning
 Large setup violation  
-There is a large setup violation of -101.068 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[2].outputAdder/accumulate_reg[13]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[2].outputAdder/accumulate_reg[7]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -100.948 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[14]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/finalAdder/accumulate_reg[6]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#13 Warning
 Large setup violation  
-There is a large setup violation of -101.074 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[2].outputAdder/accumulate_reg[13]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[2].outputAdder/accumulate_reg[6]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -100.957 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[14]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/finalAdder/accumulate_reg[0]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#14 Warning
 Large setup violation  
-There is a large setup violation of -101.126 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[2].outputAdder/accumulate_reg[13]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[2].outputAdder/accumulate_reg[5]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -101.208 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[2].outputAdder/accumulate_reg[13]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/finalAdder/accumulate_reg[12]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#15 Warning
 Large setup violation  
-There is a large setup violation of -101.283 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[2].outputAdder/accumulate_reg[13]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[2].outputAdder/accumulate_reg[9]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -101.212 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[2].outputAdder/accumulate_reg[13]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/finalAdder/accumulate_reg[13]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#16 Warning
 Large setup violation  
-There is a large setup violation of -101.464 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[2].outputAdder/accumulate_reg[13]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[2].outputAdder/accumulate_reg[14]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -101.248 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk3[0].inputMulti/product_reg[13]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[13]_replica_1/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#17 Warning
 Large setup violation  
-There is a large setup violation of -101.620 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[2].outputAdder/accumulate_reg[13]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[2].outputAdder/accumulate_reg[11]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -101.357 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk3[0].inputMulti/product_reg[13]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[6]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#18 Warning
 Large setup violation  
-There is a large setup violation of -101.774 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[2].outputAdder/accumulate_reg[13]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[2].outputAdder/accumulate_reg[10]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -101.368 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk3[0].inputMulti/product_reg[13]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[11]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#19 Warning
 Large setup violation  
-There is a large setup violation of -101.784 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk3[2].inputMulti/product_reg[14]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[2].outputAdder/accumulate_reg[13]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -101.391 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk3[0].inputMulti/product_reg[13]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[2]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#20 Warning
 Large setup violation  
-There is a large setup violation of -102.085 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[2].outputAdder/accumulate_reg[13]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[2].outputAdder/accumulate_reg[12]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -101.402 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk3[0].inputMulti/product_reg[13]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[1]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#21 Warning
 Large setup violation  
-There is a large setup violation of -102.978 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[11]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/finalAdder/accumulate_reg[14]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -101.409 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk3[0].inputMulti/product_reg[13]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[0]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#22 Warning
 Large setup violation  
-There is a large setup violation of -103.046 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[11]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/finalAdder/accumulate_reg[10]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -101.490 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk3[0].inputMulti/product_reg[13]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[7]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#23 Warning
 Large setup violation  
-There is a large setup violation of -103.053 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[11]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/finalAdder/accumulate_reg[11]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -101.505 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk3[0].inputMulti/product_reg[13]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[5]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#24 Warning
 Large setup violation  
-There is a large setup violation of -103.117 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[11]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/finalAdder/accumulate_reg[13]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -101.513 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk3[0].inputMulti/product_reg[13]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[10]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#25 Warning
 Large setup violation  
-There is a large setup violation of -103.205 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[11]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/finalAdder/accumulate_reg[9]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -101.565 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk3[0].inputMulti/product_reg[13]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[4]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#26 Warning
 Large setup violation  
-There is a large setup violation of -103.219 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[11]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/finalAdder/accumulate_reg[6]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -101.584 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk3[0].inputMulti/product_reg[13]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[3]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#27 Warning
 Large setup violation  
-There is a large setup violation of -103.220 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[11]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/finalAdder/accumulate_reg[0]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -101.701 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk3[0].inputMulti/product_reg[13]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[9]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#28 Warning
 Large setup violation  
-There is a large setup violation of -103.222 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[11]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/finalAdder/accumulate_reg[8]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -101.802 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk3[0].inputMulti/product_reg[13]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[14]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#29 Warning
 Large setup violation  
-There is a large setup violation of -103.233 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[11]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/finalAdder/accumulate_reg[5]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -101.807 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk3[0].inputMulti/product_reg[13]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[12]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#30 Warning
 Large setup violation  
-There is a large setup violation of -103.270 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[11]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/finalAdder/accumulate_reg[7]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -101.808 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk3[0].inputMulti/product_reg[13]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[8]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#31 Warning
 Large setup violation  
-There is a large setup violation of -103.274 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[11]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/finalAdder/accumulate_reg[4]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -101.926 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk3[0].inputMulti/product_reg[13]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[13]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#32 Warning
 Large setup violation  
-There is a large setup violation of -103.284 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[11]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/finalAdder/accumulate_reg[3]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -101.932 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk3[0].inputMulti/product_reg[13]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[13]_replica/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#33 Warning
 Large setup violation  
-There is a large setup violation of -103.412 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[11]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/finalAdder/accumulate_reg[2]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -97.522 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[2].outputAdder/accumulate_reg[13]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[2].outputAdder/accumulate_reg[4]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#34 Warning
 Large setup violation  
-There is a large setup violation of -103.423 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[11]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/finalAdder/accumulate_reg[1]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -97.555 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[2].outputAdder/accumulate_reg[13]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[2].outputAdder/accumulate_reg[8]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#35 Warning
 Large setup violation  
-There is a large setup violation of -103.493 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[11]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/finalAdder/accumulate_reg[12]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -97.569 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[2].outputAdder/accumulate_reg[13]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[2].outputAdder/accumulate_reg[7]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#36 Warning
 Large setup violation  
-There is a large setup violation of -98.943 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[14]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[10]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -97.570 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[2].outputAdder/accumulate_reg[13]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[2].outputAdder/accumulate_reg[2]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#37 Warning
 Large setup violation  
-There is a large setup violation of -99.209 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[14]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[6]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -97.574 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[2].outputAdder/accumulate_reg[13]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[2].outputAdder/accumulate_reg[3]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#38 Warning
 Large setup violation  
-There is a large setup violation of -99.229 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[14]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[5]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -97.578 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[2].outputAdder/accumulate_reg[13]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[2].outputAdder/accumulate_reg[6]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#39 Warning
 Large setup violation  
-There is a large setup violation of -99.285 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[14]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[8]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -97.588 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[2].outputAdder/accumulate_reg[13]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[2].outputAdder/accumulate_reg[1]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#40 Warning
 Large setup violation  
-There is a large setup violation of -99.286 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[14]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[2]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -97.598 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[2].outputAdder/accumulate_reg[13]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[2].outputAdder/accumulate_reg[5]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#41 Warning
 Large setup violation  
-There is a large setup violation of -99.301 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[14]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[7]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -97.708 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[2].outputAdder/accumulate_reg[13]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[2].outputAdder/accumulate_reg[0]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#42 Warning
 Large setup violation  
-There is a large setup violation of -99.304 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[14]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[1]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -97.710 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[2].outputAdder/accumulate_reg[13]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[2].outputAdder/accumulate_reg[12]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#43 Warning
 Large setup violation  
-There is a large setup violation of -99.323 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk3[0].inputMulti/product_reg[13]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[14]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -97.759 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[2].outputAdder/accumulate_reg[13]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[2].outputAdder/accumulate_reg[11]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#44 Warning
 Large setup violation  
-There is a large setup violation of -99.346 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[14]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[4]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -97.830 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[2].outputAdder/accumulate_reg[13]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[2].outputAdder/accumulate_reg[10]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#45 Warning
 Large setup violation  
-There is a large setup violation of -99.364 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[14]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[3]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -97.903 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[2].outputAdder/accumulate_reg[13]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[2].outputAdder/accumulate_reg[9]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#46 Warning
 Large setup violation  
-There is a large setup violation of -99.444 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[14]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[0]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -97.919 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[2].outputAdder/accumulate_reg[13]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[2].outputAdder/accumulate_reg[13]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#47 Warning
 Large setup violation  
-There is a large setup violation of -99.478 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[14]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[13]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -98.185 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[2].outputAdder/accumulate_reg[13]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[2].outputAdder/accumulate_reg[14]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#48 Warning
 Large setup violation  
-There is a large setup violation of -99.538 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[14]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[11]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -98.229 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[1].outputAdder/accumulate_reg[13]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[1].outputAdder/accumulate_reg[7]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#49 Warning
 Large setup violation  
-There is a large setup violation of -99.617 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[14]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[9]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -98.248 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[1].outputAdder/accumulate_reg[13]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[1].outputAdder/accumulate_reg[6]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#50 Warning
 Large setup violation  
-There is a large setup violation of -99.619 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[1].outputAdder/accumulate_reg[14]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[1].outputAdder/accumulate_reg[5]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -98.249 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[1].outputAdder/accumulate_reg[13]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[1].outputAdder/accumulate_reg[2]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#51 Warning
 Large setup violation  
-There is a large setup violation of -99.647 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[1].outputAdder/accumulate_reg[14]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[1].outputAdder/accumulate_reg[2]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -98.259 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[1].outputAdder/accumulate_reg[13]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[1].outputAdder/accumulate_reg[3]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#52 Warning
 Large setup violation  
-There is a large setup violation of -99.648 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[1].outputAdder/accumulate_reg[14]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[1].outputAdder/accumulate_reg[0]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -98.267 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[1].outputAdder/accumulate_reg[13]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[1].outputAdder/accumulate_reg[1]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#53 Warning
 Large setup violation  
-There is a large setup violation of -99.650 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[1].outputAdder/accumulate_reg[14]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[1].outputAdder/accumulate_reg[7]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -98.268 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[1].outputAdder/accumulate_reg[13]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[1].outputAdder/accumulate_reg[5]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#54 Warning
 Large setup violation  
-There is a large setup violation of -99.656 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[1].outputAdder/accumulate_reg[14]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[1].outputAdder/accumulate_reg[6]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -98.407 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[1].outputAdder/accumulate_reg[13]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[1].outputAdder/accumulate_reg[0]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#55 Warning
 Large setup violation  
-There is a large setup violation of -99.699 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[1].outputAdder/accumulate_reg[14]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[1].outputAdder/accumulate_reg[1]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -98.480 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[1].outputAdder/accumulate_reg[13]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[1].outputAdder/accumulate_reg[8]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#56 Warning
 Large setup violation  
-There is a large setup violation of -99.701 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[1].outputAdder/accumulate_reg[14]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[1].outputAdder/accumulate_reg[3]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -98.569 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[1].outputAdder/accumulate_reg[13]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[1].outputAdder/accumulate_reg[4]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#57 Warning
 Large setup violation  
-There is a large setup violation of -99.728 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[14]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[12]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -98.700 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[1].outputAdder/accumulate_reg[13]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[1].outputAdder/accumulate_reg[11]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#58 Warning
 Large setup violation  
-There is a large setup violation of -99.880 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[1].outputAdder/accumulate_reg[14]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[1].outputAdder/accumulate_reg[4]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -98.787 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk3[1].inputMulti/product_reg[13]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[1].outputAdder/accumulate_reg[10]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#59 Warning
 Large setup violation  
-There is a large setup violation of -99.885 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[1].outputAdder/accumulate_reg[14]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[1].outputAdder/accumulate_reg[8]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -98.865 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[1].outputAdder/accumulate_reg[13]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[1].outputAdder/accumulate_reg[9]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#60 Warning
 Large setup violation  
-There is a large setup violation of -99.886 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[1].outputAdder/accumulate_reg[14]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[1].outputAdder/accumulate_reg[9]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -99.422 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk3[1].inputMulti/product_reg[13]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[1].outputAdder/accumulate_reg[13]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#61 Warning
+Large setup violation  
+There is a large setup violation of -99.500 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk3[1].inputMulti/product_reg[13]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[1].outputAdder/accumulate_reg[14]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#62 Warning
+Large setup violation  
+There is a large setup violation of -99.544 ns between Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk3[1].inputMulti/product_reg[13]/C (clocked by clk_fpga_0) and Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[1].outputAdder/accumulate_reg[12]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 

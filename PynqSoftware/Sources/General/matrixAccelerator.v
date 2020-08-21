@@ -10,10 +10,12 @@ module matrixAccelerator(
     mReady,
     direct,
     Add,
-    flatsumout
+    finalAdd,
+    finalAccumulate,
+    finalReady
 );
 //Inputs
-input   Clk,Rst,direct;
+input   Clk,Rst,direct,finalAdd;
 input   [`inputPortCount-1:0]                   mStart;
 input   [`outputPortCount-1:0]                  Add;
 input   [`addressLength-1:0] AddressSelect;
@@ -22,7 +24,8 @@ input   [`inputPortCount*`bitLength-1:0]        multiplicand_input;
 
 //Outputs
 output  mReady;
-output  [`outputPortCount*(`bitLength*2)-1:0]   flatsumout;
+output  reg finalReady;
+output  [(2*`bitLength)-1:0]   finalAccumulate;
 
 //Internal Signals
 wire    [`inputPortCount-1:0]                   mReady;
@@ -31,6 +34,7 @@ wire    [`inputPortCount*(`bitLength*2)-1:0]    xbar_inputConnector;
 wire    [`outputPortCount*(`bitLength*2)-1:0]   xbar_outputConnector;
 wire    [`outputPortCount*(`bitLength*2)-1:0]   addarray_inputConnector;
 wire    [(`bitLength*2)-1:0]                    sum_Connector               [`outputPortCount-1:0];
+reg     [`addressLength:0]                      addPointer;
 
 XBar2 xbar2(
             .Clk(Clk),
@@ -49,7 +53,7 @@ generate
     end
     //Assign xbar output to adder input
     for(n=0;n<`outputPortCount;n=n+1)begin
-        assign flatsumout[(n+1)*(`bitLength*2)-1:n*(`bitLength*2)] = sum_Connector[n];
+        //assign flatsumout[(n+1)*(`bitLength*2)-1:n*(`bitLength*2)] = sum_Connector[n];
         assign addarray_inputConnector[(n+1)*(`bitLength*2)-1:n*(`bitLength*2)] = xbar_outputConnector[(n+1)*(`bitLength*2)-1:n*(`bitLength*2)];
     end
 endgenerate
@@ -78,5 +82,28 @@ generate
         );
     end
 endgenerate
+
+adderFloat finalAdder (
+    .Clk(Clk),
+    .Rst(Rst),
+    .addend(sum_Connector[addPointer]),
+    .Add(finalAdd),
+    .sum(finalAccumulate)
+);
+
+always @(posedge Clk or posedge Rst) begin
+    if(Rst) begin
+        addPointer = 0;
+        finalReady = 0;
+    end
+    else if(finalAdd)begin
+        addPointer = addPointer +1;
+        //Computation complete
+        if(addPointer >=`outputPortCount) begin
+            finalReady = 1;
+            addPointer = 0;
+        end
+    end
+end
 
 endmodule

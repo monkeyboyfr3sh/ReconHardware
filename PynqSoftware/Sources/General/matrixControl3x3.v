@@ -10,20 +10,17 @@ module matrixControl3x3(
     MULTIPLIER_INPUT,
     MULTIPLICAND_INPUT,
     MULTIPLY_START,
-    FLATSUMOUT,
-    FINALADD,
-    FINALADDEND
+    FINALADD
 );
 
 `define NUM_LOOP 3
 
 //Inputs
-input   Clk,Rst,cStart;
+input   Clk,Rst,cStart,cReady;
 
 input   FULL,EMPTY;
 input   [`bitLength-1:0]    FIFO_OUT_PORT;
 
-input   [`outputPortCount*(`bitLength*2)-1:0] FLATSUMOUT;
 
 //XBar Controls
 
@@ -33,9 +30,7 @@ output                      MULTIPLIER_INPUT;
 output                      MULTIPLICAND_INPUT;
 output                      MULTIPLY_START;
 
-output  reg                             FINALADD,cReady;
-//output  reg     [(`bitLength*2)-1:0]    FINALADDEND;
-output  [(`bitLength*2)-1:0]    FINALADDEND;
+output  reg                             FINALADD;
 
 //State flags
 reg     RDst,MULTIst,ADDst;
@@ -46,7 +41,6 @@ reg     [`addressLength:0]  RDloopcnt;
 reg     [`addressLength:0]  Mloopcnt;
 reg     [`addressLength:0]  rdPointer;       //Used to determine the multiplier to save a FIFO input to
 reg     [`addressLength:0]  multiPointer;       //Used to determine the multiplier to save a FIFO input to
-reg     [`addressLength:0]  addPointer;       //Used to determine the multiplier to save a FIFO input to
 reg     [`inputPortCount*`bitLength-1:0]    MULTIPLIER_INPUT;
 reg     [`inputPortCount*`bitLength-1:0]    MULTIPLICAND_INPUT;
 reg     [`inputPortCount-1:0]               MULTIPLY_START;
@@ -54,8 +48,6 @@ reg     [`inputPortCount-1:0]               MULTIPLY_START;
 integer i;
 
 assign  FIFO_RD_CLK         = (RDst)?Clk:0;       //Only want to read from FIFO if in RDst
-
-assign FINALADDEND = (ADDst)?FLATSUMOUT[(addPointer-1)*(2*`bitLength)+:2*`bitLength]:0;
 
 always @(posedge Clk or posedge Rst) begin
     if(Rst)begin
@@ -73,10 +65,8 @@ always @(posedge Clk or posedge Rst) begin
         MULTIPLY_START = 0;
         rdPointer = 0;
         multiPointer = 0;
-        addPointer = 0;
         inputToggle = 0;
         FINALADD = 0;
-        cReady = 0;
     end
     else begin
         //cStart triggers matrixcontroller to start
@@ -147,16 +137,14 @@ always @(posedge Clk or posedge Rst) begin
 
         //In an Add state, should add all values once data set has been completely computed.
         if(ADDst)begin
-            if(addPointer>=`outputPortCount) begin
+            if(cReady) begin
                 ADDst = 0;
                 RDst = 0;
                 MULTIst = 0;
                 FINALADD = 0;
-                cReady = 1;
             end
             else begin
                 FINALADD = 1;
-                addPointer = addPointer + 1;
             end
         end
     end

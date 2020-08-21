@@ -10,7 +10,6 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/monke/Documents/GitHub/Rec
 INFO: [VRFC 10-311] analyzing module floatmultiplyComputePynq
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixAccTopDevice.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module matrixAccTopDevice
-INFO: [VRFC 10-2458] undeclared symbol FULLL, assumed default net type wire [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixAccTopDevice.v:49]
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixAccelerator.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module matrixAccelerator
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v" into library xil_defaultlib

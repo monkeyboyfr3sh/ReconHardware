@@ -30,11 +30,9 @@ wire    [`inputPortCount-1:0]                   mStart_conncetor;
 wire    [`inputPortCount-1:0]                   mReady_connector;
 wire    [`inputPortCount*`bitLength-1:0]        multiplier_connector;
 wire    [`inputPortCount*`bitLength-1:0]        multiplicand_connector;
-wire    [2*`outputPortCount*`bitLength-1:0]     sum_connector;
 //Adder signals
 wire                                            addClk;
 wire                                            finalAdd;
-wire    [(`bitLength*2)-1:0]                    finalAddend;
 wire    [2*`bitLength-1:0]                      cSum;
 
 assign  finalsum = cReady?cSum[`bitLength-1:0]:0;
@@ -46,14 +44,12 @@ matrixControl3x3 controller(
     .cReady(cReady),
     .FIFO_RD_CLK(FIFO_RD_CLK),                      //Clock to read FIFO. Switched off if not in a read state
     .FIFO_OUT_PORT(FIFO_OUT_PORT),                  //Intake FIFO output data
-    .FULL(FULLL),                                   //Full signal for external device
+    .FULL(FULL),                                   //Full signal for external device
     .EMPTY(EMPTY),                                  //Empty signal for external device
     .MULTIPLIER_INPUT(multiplier_connector),        //Data to be fed to multiplier input
     .MULTIPLICAND_INPUT(multiplicand_connector),    //Data to be fed to multiplicand input
     .MULTIPLY_START(mStart_conncetor),              //Signal to start the multiplication
-    .FLATSUMOUT(sum_connector),                      //Control signal
-    .FINALADD(finalAdd),
-    .FINALADDEND(finalAddend)
+    .FINALADD(finalAdd)
 );
 
  matrixAccelerator matrixAccel(   
@@ -66,7 +62,9 @@ matrixControl3x3 controller(
     .mReady(mReady_connector),
     .direct(1),                                     //Controll bit to direct connect XBar IO
     .Add(mReady_connector),                         //Signals Adders to Add @posedge clk
-    .flatsumout(sum_connector)                      //Flat Adder output
+    .finalAdd(finalAdd),
+    .finalAccumulate(cSum),
+    .finalReady(cReady)
 );
 
 
@@ -82,14 +80,6 @@ aFIFO inputBuffer(
     .i_rd(1),         //Read request
     .dataOut(FIFO_OUT_PORT),    //Output data
     .o_rempty(EMPTY)            //Output full
-);
-
-adderFloat finalAdder(
-    .Clk(Clk),
-    .Rst(Rst),                      
-    .addend(finalAddend),                           //Addend from controller
-    .Add(finalAdd),                                 //Add from controller
-    .sum(cSum)                                  //Convolution sum
 );
 
 endmodule

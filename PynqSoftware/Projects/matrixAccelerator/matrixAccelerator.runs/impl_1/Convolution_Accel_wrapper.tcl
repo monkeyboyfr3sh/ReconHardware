@@ -69,12 +69,23 @@ set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
   set_param chipscope.maxJobs 2
-  reset_param project.defaultXPMLibraries 
-  open_checkpoint C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.runs/impl_1/Convolution_Accel_wrapper.dcp
+  create_project -in_memory -part xc7z020clg400-1
+  set_property board_part tul.com.tw:pynq-z2:part0:1.0 [current_project]
+  set_property design_mode GateLvl [current_fileset]
+  set_param project.singleFileAddWarning.threshold 0
   set_property webtalk.parent_dir C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.cache/wt [current_project]
   set_property parent.project_path C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.xpr [current_project]
   set_property ip_output_repo C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
+  add_files -quiet C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1/Convolution_Accel_wrapper.dcp
+  set_msg_config -source 4 -id {BD 41-1661} -limit 0
+  set_param project.isImplRun true
+  add_files C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/Convolution_Accel/Convolution_Accel.bd
+  set_param project.isImplRun false
+  set_param project.isImplRun true
+  link_design -top Convolution_Accel_wrapper -part xc7z020clg400-1
+  set_param project.isImplRun false
+  write_hwdef -force -file Convolution_Accel_wrapper.hwdef
   close_msg_db -file init_design.pb
 } RESULT]
 if {$rc} {
@@ -162,6 +173,24 @@ if {$rc} {
   return -code error $RESULT
 } else {
   end_step route_design
+  unset ACTIVE_STEP 
+}
+
+start_step write_bitstream
+set ACTIVE_STEP write_bitstream
+set rc [catch {
+  create_msg_db write_bitstream.pb
+  catch { write_mem_info -force Convolution_Accel_wrapper.mmi }
+  write_bitstream -force Convolution_Accel_wrapper.bit 
+  catch {write_debug_probes -quiet -force Convolution_Accel_wrapper}
+  catch {file copy -force Convolution_Accel_wrapper.ltx debug_nets.ltx}
+  close_msg_db -file write_bitstream.pb
+} RESULT]
+if {$rc} {
+  step_failed write_bitstream
+  return -code error $RESULT
+} else {
+  end_step write_bitstream
   unset ACTIVE_STEP 
 }
 
