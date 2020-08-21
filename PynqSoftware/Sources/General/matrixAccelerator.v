@@ -25,7 +25,7 @@ input   [`inputPortCount*`bitLength-1:0]        multiplicand_input;
 //Outputs
 output  mReady;
 output  reg finalReady;
-output  [(2*`bitLength)-1:0]   finalAccumulate;
+output  [(2*`bitLength)-1:0]                    finalAccumulate;
 
 //Internal Signals
 wire    [`inputPortCount-1:0]                   mReady;
@@ -34,7 +34,10 @@ wire    [`inputPortCount*(`bitLength*2)-1:0]    xbar_inputConnector;
 wire    [`outputPortCount*(`bitLength*2)-1:0]   xbar_outputConnector;
 wire    [`outputPortCount*(`bitLength*2)-1:0]   addarray_inputConnector;
 wire    [(`bitLength*2)-1:0]                    sum_Connector               [`outputPortCount-1:0];
+wire    [(2*`bitLength)-1:0]                    finalAccumulateWire;
 reg     [`addressLength:0]                      addPointer;
+
+assign  finalAccumulate = finalReady?finalAccumulateWire:0;
 
 XBar2 xbar2(
             .Clk(Clk),
@@ -88,7 +91,7 @@ adderFloat finalAdder (
     .Rst(Rst),
     .addend(sum_Connector[addPointer]),
     .Add(finalAdd),
-    .sum(finalAccumulate)
+    .sum(finalAccumulateWire)
 );
 
 always @(posedge Clk or posedge Rst) begin
@@ -96,7 +99,7 @@ always @(posedge Clk or posedge Rst) begin
         addPointer = 0;
         finalReady = 0;
     end
-    else if(finalAdd)begin
+    else if(finalAdd||(addPointer!=0))begin
         addPointer = addPointer +1;
         //Computation complete
         if(addPointer >=`outputPortCount) begin

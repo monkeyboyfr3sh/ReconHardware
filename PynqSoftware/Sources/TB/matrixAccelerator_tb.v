@@ -4,17 +4,19 @@
 module matrixAccelerator_tb;
 
 //Inputs
-reg		Clk,Rst,mStart,direct;
-reg     [`outputPortCount-1:0]              Add;
-reg		[`addressLength-1:0] AddressSelect;
-reg		[`inputPortCount*`bitLength-1:0]    multiplier_input;
-reg		[`inputPortCount*`bitLength-1:0]    multiplicand_input;
+reg     Clk,Rst,direct,finalAdd;
+reg     [`inputPortCount-1:0]                   mStart;
+reg     [`outputPortCount-1:0]                  Add;
+reg     [`addressLength-1:0] AddressSelect;
+reg     [`inputPortCount*`bitLength-1:0]        multiplier_input;
+reg     [`inputPortCount*`bitLength-1:0]        multiplicand_input;
 
 //Outputs
-wire    [`outputPortCount*(`bitLength*2)-1:0]   flatsumout;
-wire    [`inputPortCount-1:0]                   mReady;
+wire    mReady;
+wire    finalReady;
+wire    [(2*`bitLength)-1:0]   finalAccumulate;
 
-matrixAccelerator uut ( 
+matrixAccelerator uut (   
     Clk,Rst,
     multiplier_input,
     multiplicand_input,
@@ -23,14 +25,19 @@ matrixAccelerator uut (
     mReady,
     direct,
     Add,
-    flatsumout
+    finalAdd,
+    finalAccumulate,
+    finalReady
 );
             
 initial begin
 Clk = 0;
 Rst = 1;
 #`clkPeriod;
+Add = 0;
+AddressSelect = 0;
 Rst = 0;
+finalAdd = 0;
 mStart = 0;
 direct = 1;
 
@@ -42,54 +49,43 @@ multiplicand_input[1*`bitLength-1:0*`bitLength] = `bitLength'h4f72;		//       20
 multiplicand_input[2*`bitLength-1:1*`bitLength] = `bitLength'h616a;		//       24938/  693.0
 multiplicand_input[3*`bitLength-1:2*`bitLength] = `bitLength'h6ded;		//       28141/  6068.0
 
-//(16bit)Return values should be:
-/*
-*	Multi0 	= 972.5 	= 0x6399
-*	Multi1	= 7408.0	= 0x6f3c
-*	Multi2	= 121.94	= 0x579f
-*/
-
 #`clkPeriod;
-mStart = 1;
+mStart = 7;
 #`clkPeriod;
 Add = 7;
 mStart = 0;
 #`clkPeriod;
-
-/*
-Rst = 1;
-#`clkPeriod;
-Rst = 0;
-direct = 0;
 Add = 0;
 
-AddressSelect = 3;
 #`clkPeriod;
-AddressSelect = 6;
-#`clkPeriod;
-AddressSelect = 9;
-#`clkPeriod;
-AddressSelect = 12;
-#`clkPeriod;
-AddressSelect = `restAddress;
-
-multiplier_input[1*`bitLength-1:0*`bitLength] = `bitLength'h00;
-multiplier_input[2*`bitLength-1:1*`bitLength] = `bitLength'h10;
-multiplier_input[3*`bitLength-1:2*`bitLength] = `bitLength'h01;
-multiplier_input[4*`bitLength-1:3*`bitLength] = `bitLength'h03;
-
-multiplicand_input[1*`bitLength-1:0*`bitLength] = `bitLength'h01;
-multiplicand_input[2*`bitLength-1:1*`bitLength] = `bitLength'h01;
-multiplicand_input[3*`bitLength-1:2*`bitLength] = `bitLength'h01;
-multiplicand_input[4*`bitLength-1:3*`bitLength] = `bitLength'h01;
-
-#`clkPeriod;
-mStart = 1;
+mStart = 7;
 #`clkPeriod;
 Add = 7;
 mStart = 0;
 #`clkPeriod;
+Add = 0;
+
+#`clkPeriod;
+mStart = 7;
+#`clkPeriod;
+Add = 7;
+mStart = 0;
+#`clkPeriod;
+Add = 0;
+
+finalAdd = 1;
+#`clkPeriod;
+#`clkPeriod;
+#`clkPeriod;
+finalAdd = 0;
+
+/*
+*   Sum0 	= 2918.0	= 0x69b3
+*   Sum1	= 2.222E4	= 0x756d
+*   Sum2	= 365.8	    = 0x5db7
 */
+
+// finalsum = 25500 = 0x763a
 
 end
 always #(`clkPeriod/2) Clk = ~Clk;
