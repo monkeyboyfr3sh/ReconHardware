@@ -1,0 +1,7 @@
+verilog xil_defaultlib --include "../../../../../Sources" \
+"../../../../../Sources/General/FlipFlop.v" \
+"../../../../../Sources/General/ParallelBuffer.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

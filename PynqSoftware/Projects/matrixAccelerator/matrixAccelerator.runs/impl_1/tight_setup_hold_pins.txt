@@ -1,9 +1,8 @@
 +--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
 |       Launch Clock       |      Capture Clock       |                                                 Pin                                                      |
 +--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
-|               clk_fpga_0 |               clk_fpga_0 |     Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[2].outputAdder/accumulate_reg[10]/D|
-|               clk_fpga_0 |               clk_fpga_0 |     Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[1].outputAdder/accumulate_reg[12]/D|
+|               clk_fpga_0 |               clk_fpga_0 |     Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[2].outputAdder/accumulate_reg[11]/D|
+|               clk_fpga_0 |               clk_fpga_0 |     Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[14]/D|
 |               clk_fpga_0 |               clk_fpga_0 |                 Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/finalAdder/accumulate_reg[10]/D|
-|               clk_fpga_0 |               clk_fpga_0 |     Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[0].outputAdder/accumulate_reg[10]/D|
-|               clk_fpga_0 |               clk_fpga_0 |     Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[1].outputAdder/accumulate_reg[11]/D|
+|               clk_fpga_0 |               clk_fpga_0 |     Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk4[1].outputAdder/accumulate_reg[10]/D|
 +--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+

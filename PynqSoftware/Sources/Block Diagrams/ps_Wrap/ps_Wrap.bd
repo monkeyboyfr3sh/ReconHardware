@@ -1,11 +1,12 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x4DD305B33EC02A25",
+      "boundary_crc": "0x34F9C4655BC579E7",
       "device": "xc7z020clg400-1",
       "name": "ps_Wrap",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2019.2"
+      "tool_version": "2019.2",
+      "validated": "true"
     },
     "design_tree": {
       "ParallelBuffer_0": "",
@@ -14,7 +15,29 @@
     "ports": {
       "Clk": {
         "type": "clk",
-        "direction": "I"
+        "direction": "I",
+        "parameters": {
+          "ASSOCIATED_RESET": {
+            "value": "Rst",
+            "value_src": "default"
+          },
+          "CLK_DOMAIN": {
+            "value": "ps_Wrap_Clk",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          }
+        }
       },
       "bufferSelect": {
         "direction": "I"
@@ -27,7 +50,17 @@
       },
       "Rst": {
         "type": "rst",
-        "direction": "I"
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
       },
       "Clr": {
         "direction": "I"
@@ -48,12 +81,12 @@
       },
       "bufferOutput0": {
         "direction": "O",
-        "left": "7",
+        "left": "15",
         "right": "0"
       },
       "bufferOutput1": {
         "direction": "O",
-        "left": "7",
+        "left": "15",
         "right": "0"
       },
       "product_LONG": {
@@ -63,7 +96,7 @@
       },
       "product_SHORT": {
         "direction": "O",
-        "left": "7",
+        "left": "15",
         "right": "0"
       }
     },
@@ -79,7 +112,17 @@
         "ports": {
           "Clk": {
             "type": "clk",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "Rst",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "ps_Wrap_Clk",
+                "value_src": "default_prop"
+              }
+            }
           },
           "dataIn": {
             "direction": "I",
@@ -131,7 +174,17 @@
         "ports": {
           "Clk": {
             "type": "clk",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "Rst",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "ps_Wrap_Clk",
+                "value_src": "default_prop"
+              }
+            }
           },
           "Rst": {
             "type": "rst",

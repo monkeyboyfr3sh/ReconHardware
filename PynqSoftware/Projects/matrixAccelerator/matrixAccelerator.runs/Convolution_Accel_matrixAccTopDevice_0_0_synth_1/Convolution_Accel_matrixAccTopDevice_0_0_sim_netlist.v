@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-// Date        : Thu Aug 20 21:16:31 2020
+// Date        : Fri Aug 21 16:07:50 2020
 // Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ Convolution_Accel_matrixAccTopDevice_0_0_sim_netlist.v
@@ -2517,12 +2517,12 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_adderFloat
         .I5(\accumulate[3]_i_6_0 ),
         .O(\accumulate_reg[0]_0 ));
   LUT6 #(
-    .INIT(64'h0A8A0A80008A0080)) 
+    .INIT(64'h08AA08A0080A0800)) 
     \accumulate[3]_i_27 
        (.I0(\accumulate[10]_i_52_n_0 ),
         .I1(\accumulate[3]_i_18_0 ),
-        .I2(\accumulate[3]_i_18_1 [0]),
-        .I3(\accumulate[3]_i_18_1 [1]),
+        .I2(\accumulate[3]_i_18_1 [1]),
+        .I3(\accumulate[3]_i_18_1 [0]),
         .I4(\accumulate[3]_i_18_2 ),
         .I5(sum),
         .O(\accumulate[3]_i_27_n_0 ));
@@ -2662,113 +2662,113 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_adderFloat
   LUT2 #(
     .INIT(4'h8)) 
     \finalsum[0]_INST_0 
-       (.I0(finalsum_15_sn_1),
-        .I1(Q[0]),
+       (.I0(Q[0]),
+        .I1(finalsum_15_sn_1),
         .O(finalsum[0]));
   (* SOFT_HLUTNM = "soft_lutpair68" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \finalsum[10]_INST_0 
-       (.I0(finalsum_15_sn_1),
-        .I1(Q[10]),
+       (.I0(Q[10]),
+        .I1(finalsum_15_sn_1),
         .O(finalsum[10]));
   (* SOFT_HLUTNM = "soft_lutpair70" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \finalsum[11]_INST_0 
-       (.I0(finalsum_15_sn_1),
-        .I1(Q[11]),
+       (.I0(Q[11]),
+        .I1(finalsum_15_sn_1),
         .O(finalsum[11]));
   (* SOFT_HLUTNM = "soft_lutpair70" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \finalsum[12]_INST_0 
-       (.I0(finalsum_15_sn_1),
-        .I1(Q[12]),
+       (.I0(Q[12]),
+        .I1(finalsum_15_sn_1),
         .O(finalsum[12]));
   (* SOFT_HLUTNM = "soft_lutpair68" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \finalsum[13]_INST_0 
-       (.I0(finalsum_15_sn_1),
-        .I1(Q[13]),
+       (.I0(Q[13]),
+        .I1(finalsum_15_sn_1),
         .O(finalsum[13]));
   (* SOFT_HLUTNM = "soft_lutpair67" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \finalsum[14]_INST_0 
-       (.I0(finalsum_15_sn_1),
-        .I1(Q[14]),
+       (.I0(Q[14]),
+        .I1(finalsum_15_sn_1),
         .O(finalsum[14]));
   (* SOFT_HLUTNM = "soft_lutpair66" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \finalsum[15]_INST_0 
-       (.I0(finalsum_15_sn_1),
-        .I1(Q[15]),
+       (.I0(Q[15]),
+        .I1(finalsum_15_sn_1),
         .O(finalsum[15]));
   (* SOFT_HLUTNM = "soft_lutpair58" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \finalsum[1]_INST_0 
-       (.I0(finalsum_15_sn_1),
-        .I1(Q[1]),
+       (.I0(Q[1]),
+        .I1(finalsum_15_sn_1),
         .O(finalsum[1]));
   (* SOFT_HLUTNM = "soft_lutpair63" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \finalsum[2]_INST_0 
-       (.I0(finalsum_15_sn_1),
-        .I1(Q[2]),
+       (.I0(Q[2]),
+        .I1(finalsum_15_sn_1),
         .O(finalsum[2]));
   (* SOFT_HLUTNM = "soft_lutpair65" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \finalsum[3]_INST_0 
-       (.I0(finalsum_15_sn_1),
-        .I1(Q[3]),
+       (.I0(Q[3]),
+        .I1(finalsum_15_sn_1),
         .O(finalsum[3]));
   (* SOFT_HLUTNM = "soft_lutpair59" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \finalsum[4]_INST_0 
-       (.I0(finalsum_15_sn_1),
-        .I1(Q[4]),
+       (.I0(Q[4]),
+        .I1(finalsum_15_sn_1),
         .O(finalsum[4]));
   (* SOFT_HLUTNM = "soft_lutpair60" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \finalsum[5]_INST_0 
-       (.I0(finalsum_15_sn_1),
-        .I1(Q[5]),
+       (.I0(Q[5]),
+        .I1(finalsum_15_sn_1),
         .O(finalsum[5]));
   (* SOFT_HLUTNM = "soft_lutpair61" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \finalsum[6]_INST_0 
-       (.I0(finalsum_15_sn_1),
-        .I1(Q[6]),
+       (.I0(Q[6]),
+        .I1(finalsum_15_sn_1),
         .O(finalsum[6]));
   (* SOFT_HLUTNM = "soft_lutpair64" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \finalsum[7]_INST_0 
-       (.I0(finalsum_15_sn_1),
-        .I1(Q[7]),
+       (.I0(Q[7]),
+        .I1(finalsum_15_sn_1),
         .O(finalsum[7]));
   (* SOFT_HLUTNM = "soft_lutpair62" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \finalsum[8]_INST_0 
-       (.I0(finalsum_15_sn_1),
-        .I1(Q[8]),
+       (.I0(Q[8]),
+        .I1(finalsum_15_sn_1),
         .O(finalsum[8]));
   (* SOFT_HLUTNM = "soft_lutpair67" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \finalsum[9]_INST_0 
-       (.I0(finalsum_15_sn_1),
-        .I1(Q[9]),
+       (.I0(Q[9]),
+        .I1(finalsum_15_sn_1),
         .O(finalsum[9]));
 endmodule
 
@@ -3153,11 +3153,11 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_adderFloat_3
         .I3(\product_reg[11] ),
         .O(\accumulate_reg[8]_0 ));
   LUT6 #(
-    .INIT(64'h000000003B380B08)) 
+    .INIT(64'h000000002F2C2320)) 
     \accumulate[13]_i_6 
        (.I0(Q[11]),
-        .I1(\accumulate[10]_i_1145 [0]),
-        .I2(\accumulate[10]_i_1145 [1]),
+        .I1(\accumulate[10]_i_1145 [1]),
+        .I2(\accumulate[10]_i_1145 [0]),
         .I3(\accumulate[10]_i_1145_0 ),
         .I4(\accumulate[10]_i_1145_1 ),
         .I5(\accumulate[10]_i_1145_2 ),
@@ -10159,12 +10159,12 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_adderFloat_4
         .I5(\accumulate_reg[12]_12 ),
         .O(\accumulate[10]_i_499_n_0 ));
   LUT5 #(
-    .INIT(32'h0FAC00AC)) 
+    .INIT(32'h0AFC0A0C)) 
     \accumulate[10]_i_4__2 
        (.I0(\accumulate_reg[15]_0 [10]),
         .I1(\accumulate_reg[15]_2 [10]),
-        .I2(\accumulate_reg[15]_3 [1]),
-        .I3(\accumulate_reg[15]_3 [0]),
+        .I2(\accumulate_reg[15]_3 [0]),
+        .I3(\accumulate_reg[15]_3 [1]),
         .I4(\accumulate_reg[15]_4 [10]),
         .O(\accumulate_reg[10]_0 ));
   LUT5 #(
@@ -14753,12 +14753,12 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_adderFloat_4
         .I3(\accumulate_reg[14]_1 ),
         .O(\accumulate[11]_i_3_n_0 ));
   LUT5 #(
-    .INIT(32'h0FAC00AC)) 
+    .INIT(32'h0AFC0A0C)) 
     \accumulate[11]_i_4 
        (.I0(\accumulate_reg[15]_0 [11]),
         .I1(\accumulate_reg[15]_2 [11]),
-        .I2(\accumulate_reg[15]_3 [1]),
-        .I3(\accumulate_reg[15]_3 [0]),
+        .I2(\accumulate_reg[15]_3 [0]),
+        .I3(\accumulate_reg[15]_3 [1]),
         .I4(\accumulate_reg[15]_4 [11]),
         .O(\accumulate_reg[11]_0 ));
   LUT6 #(
@@ -14790,12 +14790,12 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_adderFloat_4
         .I3(\accumulate[12]_i_6_n_0 ),
         .O(\accumulate_reg[12]_0 ));
   LUT5 #(
-    .INIT(32'h0FAC00AC)) 
+    .INIT(32'h0AFC0A0C)) 
     \accumulate[12]_i_4 
        (.I0(\accumulate_reg[15]_0 [12]),
         .I1(\accumulate_reg[15]_2 [12]),
-        .I2(\accumulate_reg[15]_3 [1]),
-        .I3(\accumulate_reg[15]_3 [0]),
+        .I2(\accumulate_reg[15]_3 [0]),
+        .I3(\accumulate_reg[15]_3 [1]),
         .I4(\accumulate_reg[15]_4 [12]),
         .O(\accumulate_reg[12]_2 ));
   (* SOFT_HLUTNM = "soft_lutpair488" *) 
@@ -14837,12 +14837,12 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_adderFloat_4
         .I5(CO),
         .O(\accumulate[13]_i_2_n_0 ));
   LUT5 #(
-    .INIT(32'h0FAC00AC)) 
+    .INIT(32'h0AFC0A0C)) 
     \accumulate[13]_i_4 
        (.I0(\accumulate_reg[15]_0 [13]),
         .I1(\accumulate_reg[15]_2 [13]),
-        .I2(\accumulate_reg[15]_3 [1]),
-        .I3(\accumulate_reg[15]_3 [0]),
+        .I2(\accumulate_reg[15]_3 [0]),
+        .I3(\accumulate_reg[15]_3 [1]),
         .I4(\accumulate_reg[15]_4 [13]),
         .O(\accumulate_reg[13]_2 ));
   LUT6 #(
@@ -14873,12 +14873,12 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_adderFloat_4
         .I2(Q[14]),
         .O(\finalAdder/p_0_in [4]));
   LUT5 #(
-    .INIT(32'h0FAC00AC)) 
+    .INIT(32'h0AFC0A0C)) 
     \accumulate[14]_i_4 
        (.I0(\accumulate_reg[15]_0 [14]),
         .I1(\accumulate_reg[15]_2 [14]),
-        .I2(\accumulate_reg[15]_3 [1]),
-        .I3(\accumulate_reg[15]_3 [0]),
+        .I2(\accumulate_reg[15]_3 [0]),
+        .I3(\accumulate_reg[15]_3 [1]),
         .I4(\accumulate_reg[15]_4 [14]),
         .O(\accumulate_reg[14]_0 ));
   LUT5 #(
@@ -14955,12 +14955,12 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_adderFloat_4
         .I3(\accumulate[15]_i_2__2 [0]),
         .O(\accumulate_reg[7]_1 [0]));
   LUT5 #(
-    .INIT(32'h0FAC00AC)) 
+    .INIT(32'h0AFC0A0C)) 
     \accumulate[15]_i_19 
        (.I0(\accumulate_reg[15]_0 [9]),
         .I1(\accumulate_reg[15]_2 [9]),
-        .I2(\accumulate_reg[15]_3 [1]),
-        .I3(\accumulate_reg[15]_3 [0]),
+        .I2(\accumulate_reg[15]_3 [0]),
+        .I3(\accumulate_reg[15]_3 [1]),
         .I4(\accumulate_reg[15]_4 [9]),
         .O(\accumulate_reg[9]_0 ));
   LUT6 #(
@@ -14974,12 +14974,12 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_adderFloat_4
         .I5(\accumulate_reg[14]_1 ),
         .O(\finalAdder/smallVal1 ));
   LUT5 #(
-    .INIT(32'h0FAC00AC)) 
+    .INIT(32'h0AFC0A0C)) 
     \accumulate[15]_i_20 
        (.I0(\accumulate_reg[15]_0 [8]),
         .I1(\accumulate_reg[15]_2 [8]),
-        .I2(\accumulate_reg[15]_3 [1]),
-        .I3(\accumulate_reg[15]_3 [0]),
+        .I2(\accumulate_reg[15]_3 [0]),
+        .I3(\accumulate_reg[15]_3 [1]),
         .I4(\accumulate_reg[15]_4 [8]),
         .O(\accumulate_reg[8]_0 ));
   LUT5 #(
@@ -15002,12 +15002,12 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_adderFloat_4
         .I5(\accumulate_reg[15]_0 [12]),
         .O(\accumulate_reg[13]_34 ));
   LUT5 #(
-    .INIT(32'h0FAC00AC)) 
+    .INIT(32'h0AFC0A0C)) 
     \accumulate[15]_i_5__2 
        (.I0(\accumulate_reg[15]_0 [15]),
         .I1(\accumulate_reg[15]_2 [15]),
-        .I2(\accumulate_reg[15]_3 [1]),
-        .I3(\accumulate_reg[15]_3 [0]),
+        .I2(\accumulate_reg[15]_3 [0]),
+        .I3(\accumulate_reg[15]_3 [1]),
         .I4(\accumulate_reg[15]_4 [15]),
         .O(\accumulate[15]_i_5__2_n_0 ));
   LUT6 #(
@@ -15583,39 +15583,39 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_adderFloat_4
         .I4(\finalAdder/smallExp129_in ),
         .O(\accumulate[3]_i_17_n_0 ));
   LUT5 #(
-    .INIT(32'h0FAC00AC)) 
+    .INIT(32'h0AFC0A0C)) 
     \accumulate[3]_i_19__2 
        (.I0(\accumulate_reg[15]_0 [3]),
         .I1(\accumulate_reg[15]_2 [3]),
-        .I2(\accumulate_reg[15]_3 [1]),
-        .I3(\accumulate_reg[15]_3 [0]),
+        .I2(\accumulate_reg[15]_3 [0]),
+        .I3(\accumulate_reg[15]_3 [1]),
         .I4(\accumulate_reg[15]_4 [3]),
         .O(\accumulate_reg[3]_0 ));
   LUT5 #(
-    .INIT(32'h0FAC00AC)) 
+    .INIT(32'h0AFC0A0C)) 
     \accumulate[3]_i_20__2 
        (.I0(\accumulate_reg[15]_0 [2]),
         .I1(\accumulate_reg[15]_2 [2]),
-        .I2(\accumulate_reg[15]_3 [1]),
-        .I3(\accumulate_reg[15]_3 [0]),
+        .I2(\accumulate_reg[15]_3 [0]),
+        .I3(\accumulate_reg[15]_3 [1]),
         .I4(\accumulate_reg[15]_4 [2]),
         .O(\accumulate_reg[2]_0 ));
   LUT5 #(
-    .INIT(32'h0FAC00AC)) 
+    .INIT(32'h0AFC0A0C)) 
     \accumulate[3]_i_21__2 
        (.I0(\accumulate_reg[15]_0 [1]),
         .I1(\accumulate_reg[15]_2 [1]),
-        .I2(\accumulate_reg[15]_3 [1]),
-        .I3(\accumulate_reg[15]_3 [0]),
+        .I2(\accumulate_reg[15]_3 [0]),
+        .I3(\accumulate_reg[15]_3 [1]),
         .I4(\accumulate_reg[15]_4 [1]),
         .O(\accumulate_reg[1]_0 ));
   LUT5 #(
-    .INIT(32'h0FAC00AC)) 
+    .INIT(32'h0AFC0A0C)) 
     \accumulate[3]_i_22__2 
        (.I0(\accumulate_reg[15]_0 [0]),
         .I1(\accumulate_reg[15]_2 [0]),
-        .I2(\accumulate_reg[15]_3 [1]),
-        .I3(\accumulate_reg[15]_3 [0]),
+        .I2(\accumulate_reg[15]_3 [0]),
+        .I3(\accumulate_reg[15]_3 [1]),
         .I4(\accumulate_reg[15]_4 [0]),
         .O(\accumulate_reg[0]_0 ));
   LUT5 #(
@@ -16495,39 +16495,39 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_adderFloat_4
         .I3(\product_reg[11] ),
         .O(\accumulate_reg[4]_1 ));
   LUT5 #(
-    .INIT(32'h0FAC00AC)) 
+    .INIT(32'h0AFC0A0C)) 
     \accumulate[7]_i_19__2 
        (.I0(\accumulate_reg[15]_0 [7]),
         .I1(\accumulate_reg[15]_2 [7]),
-        .I2(\accumulate_reg[15]_3 [1]),
-        .I3(\accumulate_reg[15]_3 [0]),
+        .I2(\accumulate_reg[15]_3 [0]),
+        .I3(\accumulate_reg[15]_3 [1]),
         .I4(\accumulate_reg[15]_4 [7]),
         .O(\accumulate_reg[7]_0 ));
   LUT5 #(
-    .INIT(32'h0FAC00AC)) 
+    .INIT(32'h0AFC0A0C)) 
     \accumulate[7]_i_20__2 
        (.I0(\accumulate_reg[15]_0 [6]),
         .I1(\accumulate_reg[15]_2 [6]),
-        .I2(\accumulate_reg[15]_3 [1]),
-        .I3(\accumulate_reg[15]_3 [0]),
+        .I2(\accumulate_reg[15]_3 [0]),
+        .I3(\accumulate_reg[15]_3 [1]),
         .I4(\accumulate_reg[15]_4 [6]),
         .O(\accumulate_reg[6]_0 ));
   LUT5 #(
-    .INIT(32'h0FAC00AC)) 
+    .INIT(32'h0AFC0A0C)) 
     \accumulate[7]_i_21__2 
        (.I0(\accumulate_reg[15]_0 [5]),
         .I1(\accumulate_reg[15]_2 [5]),
-        .I2(\accumulate_reg[15]_3 [1]),
-        .I3(\accumulate_reg[15]_3 [0]),
+        .I2(\accumulate_reg[15]_3 [0]),
+        .I3(\accumulate_reg[15]_3 [1]),
         .I4(\accumulate_reg[15]_4 [5]),
         .O(\accumulate_reg[5]_0 ));
   LUT5 #(
-    .INIT(32'h0FAC00AC)) 
+    .INIT(32'h0AFC0A0C)) 
     \accumulate[7]_i_22__2 
        (.I0(\accumulate_reg[15]_0 [4]),
         .I1(\accumulate_reg[15]_2 [4]),
-        .I2(\accumulate_reg[15]_3 [1]),
-        .I3(\accumulate_reg[15]_3 [0]),
+        .I2(\accumulate_reg[15]_3 [0]),
+        .I3(\accumulate_reg[15]_3 [1]),
         .I4(\accumulate_reg[15]_4 [4]),
         .O(\accumulate_reg[4]_0 ));
   (* SOFT_HLUTNM = "soft_lutpair438" *) 
@@ -59366,13 +59366,13 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_matrixAccelerator
     ready_reg_2,
     ready_reg_3,
     Rst,
-    \accumulate_reg[0] ,
     \product_reg[0] ,
     D,
     \product_reg[0]_0 ,
     \product_reg[15] ,
     \product_reg[0]_1 ,
-    \product_reg[15]_0 );
+    \product_reg[15]_0 ,
+    \accumulate_reg[0] );
   output [0:0]P;
   output [0:0]product_man2;
   output [0:0]product_man2_0;
@@ -59388,13 +59388,13 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_matrixAccelerator
   input ready_reg_2;
   input ready_reg_3;
   input Rst;
-  input [0:0]\accumulate_reg[0] ;
   input [0:0]\product_reg[0] ;
   input [5:0]D;
   input [0:0]\product_reg[0]_0 ;
   input [5:0]\product_reg[15] ;
   input [0:0]\product_reg[0]_1 ;
   input [5:0]\product_reg[15]_0 ;
+  input [0:0]\accumulate_reg[0] ;
 
   wire Clk;
   wire [5:0]D;
@@ -59409,8 +59409,9 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_matrixAccelerator
   wire [0:0]\accumulate_reg[0] ;
   wire \addPointer[0]_i_1_n_0 ;
   wire \addPointer[1]_i_1_n_0 ;
+  wire \addPointer[1]_i_2_n_0 ;
   wire [1:0]addPointer_reg;
-  wire [15:0]cSum;
+  wire [15:0]finalAccumulateWire;
   wire finalAdder_n_32;
   wire finalAdder_n_33;
   wire finalAdder_n_34;
@@ -59687,30 +59688,37 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_matrixAccelerator
        (.I0(addPointer_reg[0]),
         .I1(addPointer_reg[1]),
         .O(\addPointer[0]_i_1_n_0 ));
+  LUT3 #(
+    .INIT(8'hFE)) 
+    \addPointer[1]_i_1 
+       (.I0(\accumulate_reg[0] ),
+        .I1(addPointer_reg[0]),
+        .I2(addPointer_reg[1]),
+        .O(\addPointer[1]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair499" *) 
   LUT2 #(
     .INIT(4'h2)) 
-    \addPointer[1]_i_1 
+    \addPointer[1]_i_2 
        (.I0(addPointer_reg[0]),
         .I1(addPointer_reg[1]),
-        .O(\addPointer[1]_i_1_n_0 ));
+        .O(\addPointer[1]_i_2_n_0 ));
   FDCE \addPointer_reg[0] 
        (.C(Clk),
-        .CE(\accumulate_reg[0] ),
+        .CE(\addPointer[1]_i_1_n_0 ),
         .CLR(Rst),
         .D(\addPointer[0]_i_1_n_0 ),
         .Q(addPointer_reg[0]));
   FDCE \addPointer_reg[1] 
        (.C(Clk),
-        .CE(\accumulate_reg[0] ),
+        .CE(\addPointer[1]_i_1_n_0 ),
         .CLR(Rst),
-        .D(\addPointer[1]_i_1_n_0 ),
+        .D(\addPointer[1]_i_2_n_0 ),
         .Q(addPointer_reg[1]));
   decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_adderFloat finalAdder
        (.CO(\genblk4[2].outputAdder_n_16 ),
         .Clk(Clk),
         .D({accumulate_5,p_1_out_4}),
-        .Q(cSum),
+        .Q(finalAccumulateWire),
         .Rst(Rst),
         .S({finalAdder_n_32,finalAdder_n_33,finalAdder_n_34,finalAdder_n_35}),
         .\accumulate[10]_i_25_0 (p_0_in[2]),
@@ -59879,12 +59887,11 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_matrixAccelerator
         .p_0_in1_in(p_0_in1_in),
         .smallExp(smallExp),
         .sum(p_0_out[0]));
-  LUT3 #(
-    .INIT(8'hF8)) 
+  LUT2 #(
+    .INIT(4'hE)) 
     finalReady_i_1
        (.I0(addPointer_reg[1]),
-        .I1(\accumulate_reg[0] ),
-        .I2(finalReady_reg_0),
+        .I1(finalReady_reg_0),
         .O(finalReady_i_1_n_0));
   FDCE finalReady_reg
        (.C(Clk),
@@ -60005,7 +60012,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_matrixAccelerator
         .\accumulate[10]_i_1145 (addPointer_reg),
         .\accumulate[10]_i_1145_0 (p_2_out[11]),
         .\accumulate[10]_i_1145_1 (p_0_out[11]),
-        .\accumulate[10]_i_1145_2 (cSum[11]),
+        .\accumulate[10]_i_1145_2 (finalAccumulateWire[11]),
         .\accumulate[15]_i_2__1 ({\genblk3[1].inputMulti_n_19 ,\genblk3[1].inputMulti_n_20 ,\genblk3[1].inputMulti_n_21 ,\genblk3[1].inputMulti_n_22 ,\genblk3[1].inputMulti_n_23 ,\genblk3[1].inputMulti_n_24 ,\genblk3[1].inputMulti_n_25 ,\genblk3[1].inputMulti_n_26 ,\genblk3[1].inputMulti_n_27 ,\genblk3[1].inputMulti_n_28 ,\genblk3[1].inputMulti_n_29 ,\genblk3[1].inputMulti_n_30 ,\genblk3[1].inputMulti_n_31 ,\genblk3[1].inputMulti_n_32 ,\genblk3[1].inputMulti_n_33 }),
         .\accumulate_reg[0]_0 (\genblk4[1].outputAdder_n_22 ),
         .\accumulate_reg[11]_0 (\genblk4[1].outputAdder_n_0 ),
@@ -60025,7 +60032,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_matrixAccelerator
         .Clk(Clk),
         .D({accumulate_5,p_1_out_4}),
         .E(ready_reg_0),
-        .Q(cSum),
+        .Q(finalAccumulateWire),
         .Rst(Rst),
         .S({finalAdder_n_32,finalAdder_n_33,finalAdder_n_34,finalAdder_n_35}),
         .\accumulate[10]_i_1019_0 (\genblk4[2].outputAdder_n_110 ),

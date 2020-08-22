@@ -1,7 +1,7 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
--- Date        : Thu Aug 20 21:16:31 2020
+-- Date        : Fri Aug 21 16:07:50 2020
 -- Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 --               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ Convolution_Accel_matrixAccTopDevice_0_0_sim_netlist.vhdl
@@ -2789,13 +2789,13 @@ begin
     );
 \accumulate[3]_i_27\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0A8A0A80008A0080"
+      INIT => X"08AA08A0080A0800"
     )
         port map (
       I0 => \accumulate[10]_i_52_n_0\,
       I1 => \accumulate[3]_i_18_0\(0),
-      I2 => \accumulate[3]_i_18_1\(0),
-      I3 => \accumulate[3]_i_18_1\(1),
+      I2 => \accumulate[3]_i_18_1\(1),
+      I3 => \accumulate[3]_i_18_1\(0),
       I4 => \accumulate[3]_i_18_2\(0),
       I5 => sum(0),
       O => \accumulate[3]_i_27_n_0\
@@ -2977,8 +2977,8 @@ begin
       INIT => X"8"
     )
         port map (
-      I0 => finalsum_15_sn_1,
-      I1 => \^q\(0),
+      I0 => \^q\(0),
+      I1 => finalsum_15_sn_1,
       O => finalsum(0)
     );
 \finalsum[10]_INST_0\: unisim.vcomponents.LUT2
@@ -2986,8 +2986,8 @@ begin
       INIT => X"8"
     )
         port map (
-      I0 => finalsum_15_sn_1,
-      I1 => \^q\(10),
+      I0 => \^q\(10),
+      I1 => finalsum_15_sn_1,
       O => finalsum(10)
     );
 \finalsum[11]_INST_0\: unisim.vcomponents.LUT2
@@ -2995,8 +2995,8 @@ begin
       INIT => X"8"
     )
         port map (
-      I0 => finalsum_15_sn_1,
-      I1 => \^q\(11),
+      I0 => \^q\(11),
+      I1 => finalsum_15_sn_1,
       O => finalsum(11)
     );
 \finalsum[12]_INST_0\: unisim.vcomponents.LUT2
@@ -3004,8 +3004,8 @@ begin
       INIT => X"8"
     )
         port map (
-      I0 => finalsum_15_sn_1,
-      I1 => \^q\(12),
+      I0 => \^q\(12),
+      I1 => finalsum_15_sn_1,
       O => finalsum(12)
     );
 \finalsum[13]_INST_0\: unisim.vcomponents.LUT2
@@ -3013,8 +3013,8 @@ begin
       INIT => X"8"
     )
         port map (
-      I0 => finalsum_15_sn_1,
-      I1 => \^q\(13),
+      I0 => \^q\(13),
+      I1 => finalsum_15_sn_1,
       O => finalsum(13)
     );
 \finalsum[14]_INST_0\: unisim.vcomponents.LUT2
@@ -3022,8 +3022,8 @@ begin
       INIT => X"8"
     )
         port map (
-      I0 => finalsum_15_sn_1,
-      I1 => \^q\(14),
+      I0 => \^q\(14),
+      I1 => finalsum_15_sn_1,
       O => finalsum(14)
     );
 \finalsum[15]_INST_0\: unisim.vcomponents.LUT2
@@ -3031,8 +3031,8 @@ begin
       INIT => X"8"
     )
         port map (
-      I0 => finalsum_15_sn_1,
-      I1 => \^q\(15),
+      I0 => \^q\(15),
+      I1 => finalsum_15_sn_1,
       O => finalsum(15)
     );
 \finalsum[1]_INST_0\: unisim.vcomponents.LUT2
@@ -3040,8 +3040,8 @@ begin
       INIT => X"8"
     )
         port map (
-      I0 => finalsum_15_sn_1,
-      I1 => \^q\(1),
+      I0 => \^q\(1),
+      I1 => finalsum_15_sn_1,
       O => finalsum(1)
     );
 \finalsum[2]_INST_0\: unisim.vcomponents.LUT2
@@ -3049,8 +3049,8 @@ begin
       INIT => X"8"
     )
         port map (
-      I0 => finalsum_15_sn_1,
-      I1 => \^q\(2),
+      I0 => \^q\(2),
+      I1 => finalsum_15_sn_1,
       O => finalsum(2)
     );
 \finalsum[3]_INST_0\: unisim.vcomponents.LUT2
@@ -3058,8 +3058,8 @@ begin
       INIT => X"8"
     )
         port map (
-      I0 => finalsum_15_sn_1,
-      I1 => \^q\(3),
+      I0 => \^q\(3),
+      I1 => finalsum_15_sn_1,
       O => finalsum(3)
     );
 \finalsum[4]_INST_0\: unisim.vcomponents.LUT2
@@ -3067,8 +3067,8 @@ begin
       INIT => X"8"
     )
         port map (
-      I0 => finalsum_15_sn_1,
-      I1 => \^q\(4),
+      I0 => \^q\(4),
+      I1 => finalsum_15_sn_1,
       O => finalsum(4)
     );
 \finalsum[5]_INST_0\: unisim.vcomponents.LUT2
@@ -3076,8 +3076,8 @@ begin
       INIT => X"8"
     )
         port map (
-      I0 => finalsum_15_sn_1,
-      I1 => \^q\(5),
+      I0 => \^q\(5),
+      I1 => finalsum_15_sn_1,
       O => finalsum(5)
     );
 \finalsum[6]_INST_0\: unisim.vcomponents.LUT2
@@ -3085,8 +3085,8 @@ begin
       INIT => X"8"
     )
         port map (
-      I0 => finalsum_15_sn_1,
-      I1 => \^q\(6),
+      I0 => \^q\(6),
+      I1 => finalsum_15_sn_1,
       O => finalsum(6)
     );
 \finalsum[7]_INST_0\: unisim.vcomponents.LUT2
@@ -3094,8 +3094,8 @@ begin
       INIT => X"8"
     )
         port map (
-      I0 => finalsum_15_sn_1,
-      I1 => \^q\(7),
+      I0 => \^q\(7),
+      I1 => finalsum_15_sn_1,
       O => finalsum(7)
     );
 \finalsum[8]_INST_0\: unisim.vcomponents.LUT2
@@ -3103,8 +3103,8 @@ begin
       INIT => X"8"
     )
         port map (
-      I0 => finalsum_15_sn_1,
-      I1 => \^q\(8),
+      I0 => \^q\(8),
+      I1 => finalsum_15_sn_1,
       O => finalsum(8)
     );
 \finalsum[9]_INST_0\: unisim.vcomponents.LUT2
@@ -3112,8 +3112,8 @@ begin
       INIT => X"8"
     )
         port map (
-      I0 => finalsum_15_sn_1,
-      I1 => \^q\(9),
+      I0 => \^q\(9),
+      I1 => finalsum_15_sn_1,
       O => finalsum(9)
     );
 end STRUCTURE;
@@ -3521,12 +3521,12 @@ begin
     );
 \accumulate[13]_i_6\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"000000003B380B08"
+      INIT => X"000000002F2C2320"
     )
         port map (
       I0 => \^q\(11),
-      I1 => \accumulate[10]_i_1145\(0),
-      I2 => \accumulate[10]_i_1145\(1),
+      I1 => \accumulate[10]_i_1145\(1),
+      I2 => \accumulate[10]_i_1145\(0),
       I3 => \accumulate[10]_i_1145_0\(0),
       I4 => \accumulate[10]_i_1145_1\(0),
       I5 => \accumulate[10]_i_1145_2\(0),
@@ -12172,13 +12172,13 @@ begin
     );
 \accumulate[10]_i_4__2\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0FAC00AC"
+      INIT => X"0AFC0A0C"
     )
         port map (
       I0 => \^accumulate_reg[15]_0\(10),
       I1 => \accumulate_reg[15]_2\(10),
-      I2 => \accumulate_reg[15]_3\(1),
-      I3 => \accumulate_reg[15]_3\(0),
+      I2 => \accumulate_reg[15]_3\(0),
+      I3 => \accumulate_reg[15]_3\(1),
       I4 => \accumulate_reg[15]_4\(10),
       O => \^accumulate_reg[10]_0\
     );
@@ -18215,13 +18215,13 @@ begin
     );
 \accumulate[11]_i_4\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0FAC00AC"
+      INIT => X"0AFC0A0C"
     )
         port map (
       I0 => \^accumulate_reg[15]_0\(11),
       I1 => \accumulate_reg[15]_2\(11),
-      I2 => \accumulate_reg[15]_3\(1),
-      I3 => \accumulate_reg[15]_3\(0),
+      I2 => \accumulate_reg[15]_3\(0),
+      I3 => \accumulate_reg[15]_3\(1),
       I4 => \accumulate_reg[15]_4\(11),
       O => \^accumulate_reg[11]_0\
     );
@@ -18264,13 +18264,13 @@ begin
     );
 \accumulate[12]_i_4\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0FAC00AC"
+      INIT => X"0AFC0A0C"
     )
         port map (
       I0 => \^accumulate_reg[15]_0\(12),
       I1 => \accumulate_reg[15]_2\(12),
-      I2 => \accumulate_reg[15]_3\(1),
-      I3 => \accumulate_reg[15]_3\(0),
+      I2 => \accumulate_reg[15]_3\(0),
+      I3 => \accumulate_reg[15]_3\(1),
       I4 => \accumulate_reg[15]_4\(12),
       O => \^accumulate_reg[12]_2\
     );
@@ -18324,13 +18324,13 @@ begin
     );
 \accumulate[13]_i_4\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0FAC00AC"
+      INIT => X"0AFC0A0C"
     )
         port map (
       I0 => \^accumulate_reg[15]_0\(13),
       I1 => \accumulate_reg[15]_2\(13),
-      I2 => \accumulate_reg[15]_3\(1),
-      I3 => \accumulate_reg[15]_3\(0),
+      I2 => \accumulate_reg[15]_3\(0),
+      I3 => \accumulate_reg[15]_3\(1),
       I4 => \accumulate_reg[15]_4\(13),
       O => \^accumulate_reg[13]_2\
     );
@@ -18372,13 +18372,13 @@ begin
     );
 \accumulate[14]_i_4\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0FAC00AC"
+      INIT => X"0AFC0A0C"
     )
         port map (
       I0 => \^accumulate_reg[15]_0\(14),
       I1 => \accumulate_reg[15]_2\(14),
-      I2 => \accumulate_reg[15]_3\(1),
-      I3 => \accumulate_reg[15]_3\(0),
+      I2 => \accumulate_reg[15]_3\(0),
+      I3 => \accumulate_reg[15]_3\(1),
       I4 => \accumulate_reg[15]_4\(14),
       O => \^accumulate_reg[14]_0\
     );
@@ -18484,13 +18484,13 @@ begin
     );
 \accumulate[15]_i_19\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0FAC00AC"
+      INIT => X"0AFC0A0C"
     )
         port map (
       I0 => \^accumulate_reg[15]_0\(9),
       I1 => \accumulate_reg[15]_2\(9),
-      I2 => \accumulate_reg[15]_3\(1),
-      I3 => \accumulate_reg[15]_3\(0),
+      I2 => \accumulate_reg[15]_3\(0),
+      I3 => \accumulate_reg[15]_3\(1),
       I4 => \accumulate_reg[15]_4\(9),
       O => \^accumulate_reg[9]_0\
     );
@@ -18509,13 +18509,13 @@ begin
     );
 \accumulate[15]_i_20\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0FAC00AC"
+      INIT => X"0AFC0A0C"
     )
         port map (
       I0 => \^accumulate_reg[15]_0\(8),
       I1 => \accumulate_reg[15]_2\(8),
-      I2 => \accumulate_reg[15]_3\(1),
-      I3 => \accumulate_reg[15]_3\(0),
+      I2 => \accumulate_reg[15]_3\(0),
+      I3 => \accumulate_reg[15]_3\(1),
       I4 => \accumulate_reg[15]_4\(8),
       O => \^accumulate_reg[8]_0\
     );
@@ -18546,13 +18546,13 @@ begin
     );
 \accumulate[15]_i_5__2\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0FAC00AC"
+      INIT => X"0AFC0A0C"
     )
         port map (
       I0 => \^accumulate_reg[15]_0\(15),
       I1 => \accumulate_reg[15]_2\(15),
-      I2 => \accumulate_reg[15]_3\(1),
-      I3 => \accumulate_reg[15]_3\(0),
+      I2 => \accumulate_reg[15]_3\(0),
+      I3 => \accumulate_reg[15]_3\(1),
       I4 => \accumulate_reg[15]_4\(15),
       O => \accumulate[15]_i_5__2_n_0\
     );
@@ -19306,49 +19306,49 @@ begin
     );
 \accumulate[3]_i_19__2\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0FAC00AC"
+      INIT => X"0AFC0A0C"
     )
         port map (
       I0 => \^accumulate_reg[15]_0\(3),
       I1 => \accumulate_reg[15]_2\(3),
-      I2 => \accumulate_reg[15]_3\(1),
-      I3 => \accumulate_reg[15]_3\(0),
+      I2 => \accumulate_reg[15]_3\(0),
+      I3 => \accumulate_reg[15]_3\(1),
       I4 => \accumulate_reg[15]_4\(3),
       O => \^accumulate_reg[3]_0\
     );
 \accumulate[3]_i_20__2\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0FAC00AC"
+      INIT => X"0AFC0A0C"
     )
         port map (
       I0 => \^accumulate_reg[15]_0\(2),
       I1 => \accumulate_reg[15]_2\(2),
-      I2 => \accumulate_reg[15]_3\(1),
-      I3 => \accumulate_reg[15]_3\(0),
+      I2 => \accumulate_reg[15]_3\(0),
+      I3 => \accumulate_reg[15]_3\(1),
       I4 => \accumulate_reg[15]_4\(2),
       O => \^accumulate_reg[2]_0\
     );
 \accumulate[3]_i_21__2\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0FAC00AC"
+      INIT => X"0AFC0A0C"
     )
         port map (
       I0 => \^accumulate_reg[15]_0\(1),
       I1 => \accumulate_reg[15]_2\(1),
-      I2 => \accumulate_reg[15]_3\(1),
-      I3 => \accumulate_reg[15]_3\(0),
+      I2 => \accumulate_reg[15]_3\(0),
+      I3 => \accumulate_reg[15]_3\(1),
       I4 => \accumulate_reg[15]_4\(1),
       O => \^accumulate_reg[1]_0\
     );
 \accumulate[3]_i_22__2\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0FAC00AC"
+      INIT => X"0AFC0A0C"
     )
         port map (
       I0 => \^accumulate_reg[15]_0\(0),
       I1 => \accumulate_reg[15]_2\(0),
-      I2 => \accumulate_reg[15]_3\(1),
-      I3 => \accumulate_reg[15]_3\(0),
+      I2 => \accumulate_reg[15]_3\(0),
+      I3 => \accumulate_reg[15]_3\(1),
       I4 => \accumulate_reg[15]_4\(0),
       O => \^accumulate_reg[0]_0\
     );
@@ -20505,49 +20505,49 @@ begin
     );
 \accumulate[7]_i_19__2\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0FAC00AC"
+      INIT => X"0AFC0A0C"
     )
         port map (
       I0 => \^accumulate_reg[15]_0\(7),
       I1 => \accumulate_reg[15]_2\(7),
-      I2 => \accumulate_reg[15]_3\(1),
-      I3 => \accumulate_reg[15]_3\(0),
+      I2 => \accumulate_reg[15]_3\(0),
+      I3 => \accumulate_reg[15]_3\(1),
       I4 => \accumulate_reg[15]_4\(7),
       O => \^accumulate_reg[7]_0\
     );
 \accumulate[7]_i_20__2\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0FAC00AC"
+      INIT => X"0AFC0A0C"
     )
         port map (
       I0 => \^accumulate_reg[15]_0\(6),
       I1 => \accumulate_reg[15]_2\(6),
-      I2 => \accumulate_reg[15]_3\(1),
-      I3 => \accumulate_reg[15]_3\(0),
+      I2 => \accumulate_reg[15]_3\(0),
+      I3 => \accumulate_reg[15]_3\(1),
       I4 => \accumulate_reg[15]_4\(6),
       O => \^accumulate_reg[6]_0\
     );
 \accumulate[7]_i_21__2\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0FAC00AC"
+      INIT => X"0AFC0A0C"
     )
         port map (
       I0 => \^accumulate_reg[15]_0\(5),
       I1 => \accumulate_reg[15]_2\(5),
-      I2 => \accumulate_reg[15]_3\(1),
-      I3 => \accumulate_reg[15]_3\(0),
+      I2 => \accumulate_reg[15]_3\(0),
+      I3 => \accumulate_reg[15]_3\(1),
       I4 => \accumulate_reg[15]_4\(5),
       O => \^accumulate_reg[5]_0\
     );
 \accumulate[7]_i_22__2\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0FAC00AC"
+      INIT => X"0AFC0A0C"
     )
         port map (
       I0 => \^accumulate_reg[15]_0\(4),
       I1 => \accumulate_reg[15]_2\(4),
-      I2 => \accumulate_reg[15]_3\(1),
-      I3 => \accumulate_reg[15]_3\(0),
+      I2 => \accumulate_reg[15]_3\(0),
+      I3 => \accumulate_reg[15]_3\(1),
       I4 => \accumulate_reg[15]_4\(4),
       O => \^accumulate_reg[4]_0\
     );
@@ -80116,13 +80116,13 @@ entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_matrixAccelerator is
     ready_reg_2 : in STD_LOGIC;
     ready_reg_3 : in STD_LOGIC;
     Rst : in STD_LOGIC;
-    \accumulate_reg[0]\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     \product_reg[0]\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     D : in STD_LOGIC_VECTOR ( 5 downto 0 );
     \product_reg[0]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     \product_reg[15]\ : in STD_LOGIC_VECTOR ( 5 downto 0 );
     \product_reg[0]_1\ : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \product_reg[15]_0\ : in STD_LOGIC_VECTOR ( 5 downto 0 )
+    \product_reg[15]_0\ : in STD_LOGIC_VECTOR ( 5 downto 0 );
+    \accumulate_reg[0]\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
 end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_matrixAccelerator;
 
@@ -80134,8 +80134,9 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_matrixAccele
   signal accumulate_5 : STD_LOGIC_VECTOR ( 15 to 15 );
   signal \addPointer[0]_i_1_n_0\ : STD_LOGIC;
   signal \addPointer[1]_i_1_n_0\ : STD_LOGIC;
+  signal \addPointer[1]_i_2_n_0\ : STD_LOGIC;
   signal addPointer_reg : STD_LOGIC_VECTOR ( 1 downto 0 );
-  signal cSum : STD_LOGIC_VECTOR ( 15 downto 0 );
+  signal finalAccumulateWire : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal finalAdder_n_32 : STD_LOGIC;
   signal finalAdder_n_33 : STD_LOGIC;
   signal finalAdder_n_34 : STD_LOGIC;
@@ -80394,7 +80395,7 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_matrixAccele
   signal \sum_Connector[1]_0\ : STD_LOGIC_VECTOR ( 15 downto 0 );
   attribute SOFT_HLUTNM : string;
   attribute SOFT_HLUTNM of \addPointer[0]_i_1\ : label is "soft_lutpair499";
-  attribute SOFT_HLUTNM of \addPointer[1]_i_1\ : label is "soft_lutpair499";
+  attribute SOFT_HLUTNM of \addPointer[1]_i_2\ : label is "soft_lutpair499";
 begin
   E(0) <= \^e\(0);
   finalReady_reg_0 <= \^finalready_reg_0\;
@@ -80409,19 +80410,29 @@ begin
       I1 => addPointer_reg(1),
       O => \addPointer[0]_i_1_n_0\
     );
-\addPointer[1]_i_1\: unisim.vcomponents.LUT2
+\addPointer[1]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"FE"
+    )
+        port map (
+      I0 => \accumulate_reg[0]\(0),
+      I1 => addPointer_reg(0),
+      I2 => addPointer_reg(1),
+      O => \addPointer[1]_i_1_n_0\
+    );
+\addPointer[1]_i_2\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"2"
     )
         port map (
       I0 => addPointer_reg(0),
       I1 => addPointer_reg(1),
-      O => \addPointer[1]_i_1_n_0\
+      O => \addPointer[1]_i_2_n_0\
     );
 \addPointer_reg[0]\: unisim.vcomponents.FDCE
      port map (
       C => Clk,
-      CE => \accumulate_reg[0]\(0),
+      CE => \addPointer[1]_i_1_n_0\,
       CLR => Rst,
       D => \addPointer[0]_i_1_n_0\,
       Q => addPointer_reg(0)
@@ -80429,9 +80440,9 @@ begin
 \addPointer_reg[1]\: unisim.vcomponents.FDCE
      port map (
       C => Clk,
-      CE => \accumulate_reg[0]\(0),
+      CE => \addPointer[1]_i_1_n_0\,
       CLR => Rst,
-      D => \addPointer[1]_i_1_n_0\,
+      D => \addPointer[1]_i_2_n_0\,
       Q => addPointer_reg(1)
     );
 finalAdder: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_adderFloat
@@ -80440,7 +80451,7 @@ finalAdder: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_adderFloat
       Clk => Clk,
       D(15) => accumulate_5(15),
       D(14 downto 0) => p_1_out_4(14 downto 0),
-      Q(15 downto 0) => cSum(15 downto 0),
+      Q(15 downto 0) => finalAccumulateWire(15 downto 0),
       Rst => Rst,
       S(3) => finalAdder_n_32,
       S(2) => finalAdder_n_33,
@@ -80613,14 +80624,13 @@ finalAdder: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_adderFloat
       smallExp(1 downto 0) => smallExp(3 downto 2),
       sum(0) => p_0_out(0)
     );
-finalReady_i_1: unisim.vcomponents.LUT3
+finalReady_i_1: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"F8"
+      INIT => X"E"
     )
         port map (
       I0 => addPointer_reg(1),
-      I1 => \accumulate_reg[0]\(0),
-      I2 => \^finalready_reg_0\,
+      I1 => \^finalready_reg_0\,
       O => finalReady_i_1_n_0
     );
 finalReady_reg: unisim.vcomponents.FDCE
@@ -80801,7 +80811,7 @@ finalReady_reg: unisim.vcomponents.FDCE
       \accumulate[10]_i_1145\(1 downto 0) => addPointer_reg(1 downto 0),
       \accumulate[10]_i_1145_0\(0) => p_2_out(11),
       \accumulate[10]_i_1145_1\(0) => p_0_out(11),
-      \accumulate[10]_i_1145_2\(0) => cSum(11),
+      \accumulate[10]_i_1145_2\(0) => finalAccumulateWire(11),
       \accumulate[15]_i_2__1\(14) => \genblk3[1].inputMulti_n_19\,
       \accumulate[15]_i_2__1\(13) => \genblk3[1].inputMulti_n_20\,
       \accumulate[15]_i_2__1\(12) => \genblk3[1].inputMulti_n_21\,
@@ -80838,7 +80848,7 @@ finalReady_reg: unisim.vcomponents.FDCE
       D(15) => accumulate_5(15),
       D(14 downto 0) => p_1_out_4(14 downto 0),
       E(0) => \^ready_reg_0\(0),
-      Q(15 downto 0) => cSum(15 downto 0),
+      Q(15 downto 0) => finalAccumulateWire(15 downto 0),
       Rst => Rst,
       S(3) => finalAdder_n_32,
       S(2) => finalAdder_n_33,

@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-// Date        : Thu Aug 20 21:16:32 2020
+// Date        : Fri Aug 21 16:07:51 2020
 // Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
 //               C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/Convolution_Accel/ip/Convolution_Accel_matrixAccTopDevice_0_0/Convolution_Accel_matrixAccTopDevice_0_0_stub.v

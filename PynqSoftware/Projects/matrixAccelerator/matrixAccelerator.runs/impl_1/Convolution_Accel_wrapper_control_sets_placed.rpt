@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Thu Aug 20 21:18:22 2020
+| Date         : Fri Aug 21 16:09:55 2020
 | Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Convolution_Accel_wrapper_control_sets_placed.rpt
 | Design       : Convolution_Accel_wrapper
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    19 |
-|    Minimum number of control sets                        |    19 |
+| Total control sets                                       |    20 |
+|    Minimum number of control sets                        |    20 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
 | Unused register locations in slices containing registers |    31 |
@@ -39,8 +39,8 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    19 |
-| >= 0 to < 4        |     2 |
+| Total control sets |    20 |
+| >= 0 to < 4        |     3 |
 | >= 4 to < 6        |     0 |
 | >= 6 to < 8        |     0 |
 | >= 8 to < 10       |     0 |
@@ -58,12 +58,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |               3 |            3 |
+| No           | No                    | No                     |               3 |            2 |
 | No           | No                    | Yes                    |              73 |           21 |
 | No           | Yes                   | No                     |               0 |            0 |
 | Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |             101 |           31 |
-| Yes          | Yes                   | No                     |             112 |           53 |
+| Yes          | No                    | Yes                    |             101 |           32 |
+| Yes          | Yes                   | No                     |             112 |           43 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -73,25 +73,26 @@ Table of Contents
 +-----------------------------------------------------------------------+-----------------------------------------------------------------------------------------+-------------------------------------------------------------+------------------+----------------+
 |                              Clock Signal                             |                                      Enable Signal                                      |                       Set/Reset Signal                      | Slice Load Count | Bel Load Count |
 +-----------------------------------------------------------------------+-----------------------------------------------------------------------------------------+-------------------------------------------------------------+------------------+----------------+
-|  Convolution_Accel_i/processing_system7_0/inst/FCLK_CLK0              |                                                                                         |                                                             |                3 |              3 |
+|  Convolution_Accel_i/processing_system7_0/inst/FCLK_CLK0              | Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/addPointer[1]_i_1_n_0         | Convolution_Accel_i/processing_system7_0/inst/FCLK_RESET0_N |                1 |              2 |
+|  Convolution_Accel_i/processing_system7_0/inst/FCLK_CLK0              |                                                                                         |                                                             |                2 |              3 |
 |  Convolution_Accel_i/processing_system7_0/inst/FCLK_CLK0              | Convolution_Accel_i/matrixAccTopDevice_0/inst/controller/RDloopcnt                      | Convolution_Accel_i/processing_system7_0/inst/FCLK_RESET0_N |                1 |              3 |
-|  Convolution_Accel_i/processing_system7_0/inst/FCLK_CLK0              | Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk3[1].inputMulti/E[0]    | Convolution_Accel_i/processing_system7_0/inst/FCLK_RESET0_N |               10 |             16 |
-|  Convolution_Accel_i/processing_system7_0/inst/FCLK_CLK0              | Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk3[0].inputMulti/E[0]    | Convolution_Accel_i/processing_system7_0/inst/FCLK_RESET0_N |                7 |             16 |
-|  Convolution_Accel_i/processing_system7_0/inst/FCLK_CLK0              | Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk3[2].inputMulti/E[0]    | Convolution_Accel_i/processing_system7_0/inst/FCLK_RESET0_N |                8 |             16 |
-|  Convolution_Accel_i/processing_system7_0/inst/FCLK_CLK0              | Convolution_Accel_i/matrixAccTopDevice_0/inst/controller/MULTIPLICAND_INPUT[15]_i_1_n_0 | Convolution_Accel_i/processing_system7_0/inst/FCLK_RESET0_N |                5 |             16 |
-|  Convolution_Accel_i/processing_system7_0/inst/FCLK_CLK0              | Convolution_Accel_i/matrixAccTopDevice_0/inst/controller/MULTIPLIER_INPUT[31]_i_1_n_0   | Convolution_Accel_i/processing_system7_0/inst/FCLK_RESET0_N |                5 |             16 |
-|  Convolution_Accel_i/processing_system7_0/inst/FCLK_CLK0              | Convolution_Accel_i/matrixAccTopDevice_0/inst/controller/MULTIPLICAND_INPUT[31]_i_1_n_0 | Convolution_Accel_i/processing_system7_0/inst/FCLK_RESET0_N |                4 |             16 |
-|  Convolution_Accel_i/processing_system7_0/inst/FCLK_CLK0              | Convolution_Accel_i/matrixAccTopDevice_0/inst/controller/MULTIPLIER_INPUT[15]_i_1_n_0   | Convolution_Accel_i/processing_system7_0/inst/FCLK_RESET0_N |                6 |             16 |
+|  Convolution_Accel_i/processing_system7_0/inst/FCLK_CLK0              | Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk3[0].inputMulti/E[0]    | Convolution_Accel_i/processing_system7_0/inst/FCLK_RESET0_N |                8 |             16 |
+|  Convolution_Accel_i/processing_system7_0/inst/FCLK_CLK0              | Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk3[1].inputMulti/E[0]    | Convolution_Accel_i/processing_system7_0/inst/FCLK_RESET0_N |                6 |             16 |
+|  Convolution_Accel_i/processing_system7_0/inst/FCLK_CLK0              | Convolution_Accel_i/matrixAccTopDevice_0/inst/matrixAccel/genblk3[2].inputMulti/E[0]    | Convolution_Accel_i/processing_system7_0/inst/FCLK_RESET0_N |                7 |             16 |
+|  Convolution_Accel_i/processing_system7_0/inst/FCLK_CLK0              | Convolution_Accel_i/matrixAccTopDevice_0/inst/controller/MULTIPLIER_INPUT[47]_i_1_n_0   | Convolution_Accel_i/processing_system7_0/inst/FCLK_RESET0_N |                6 |             16 |
+|  Convolution_Accel_i/processing_system7_0/inst/FCLK_CLK0              | Convolution_Accel_i/matrixAccTopDevice_0/inst/controller/MULTIPLICAND_INPUT[31]_i_1_n_0 | Convolution_Accel_i/processing_system7_0/inst/FCLK_RESET0_N |                5 |             16 |
 |  Convolution_Accel_i/processing_system7_0/inst/FCLK_CLK0              | Convolution_Accel_i/matrixAccTopDevice_0/inst/controller/MULTIPLICAND_INPUT[47]_i_1_n_0 | Convolution_Accel_i/processing_system7_0/inst/FCLK_RESET0_N |                5 |             16 |
-|  Convolution_Accel_i/processing_system7_0/inst/FCLK_CLK0              | Convolution_Accel_i/matrixAccTopDevice_0/inst/controller/MULTIPLIER_INPUT[47]_i_1_n_0   | Convolution_Accel_i/processing_system7_0/inst/FCLK_RESET0_N |                4 |             16 |
+|  Convolution_Accel_i/processing_system7_0/inst/FCLK_CLK0              | Convolution_Accel_i/matrixAccTopDevice_0/inst/controller/MULTIPLIER_INPUT[31]_i_1_n_0   | Convolution_Accel_i/processing_system7_0/inst/FCLK_RESET0_N |                5 |             16 |
+|  Convolution_Accel_i/processing_system7_0/inst/FCLK_CLK0              | Convolution_Accel_i/matrixAccTopDevice_0/inst/controller/MULTIPLIER_INPUT[15]_i_1_n_0   | Convolution_Accel_i/processing_system7_0/inst/FCLK_RESET0_N |                4 |             16 |
+|  Convolution_Accel_i/processing_system7_0/inst/FCLK_CLK0              | Convolution_Accel_i/matrixAccTopDevice_0/inst/controller/MULTIPLICAND_INPUT[15]_i_1_n_0 | Convolution_Accel_i/processing_system7_0/inst/FCLK_RESET0_N |                5 |             16 |
+|  Convolution_Accel_i/processing_system7_0/inst/FCLK_CLK0              | Convolution_Accel_i/matrixAccTopDevice_0/inst/controller/E[0]                           | Convolution_Accel_i/processing_system7_0/inst/FCLK_RESET0_N |                5 |             16 |
+|  Convolution_Accel_i/processing_system7_0/inst/FCLK_CLK0              | Convolution_Accel_i/matrixAccTopDevice_0/inst/controller/MULTIPLY_START_reg[0]_0[0]     | Convolution_Accel_i/processing_system7_0/inst/FCLK_RESET0_N |                6 |             16 |
 |  Convolution_Accel_i/processing_system7_0/inst/FCLK_CLK0              | Convolution_Accel_i/matrixAccTopDevice_0/inst/controller/MULTIPLY_START_reg[1]_0[0]     | Convolution_Accel_i/processing_system7_0/inst/FCLK_RESET0_N |                6 |             16 |
-|  Convolution_Accel_i/processing_system7_0/inst/FCLK_CLK0              | Convolution_Accel_i/matrixAccTopDevice_0/inst/controller/MULTIPLY_START_reg[2]_0[0]     | Convolution_Accel_i/processing_system7_0/inst/FCLK_RESET0_N |                9 |             16 |
-|  Convolution_Accel_i/processing_system7_0/inst/FCLK_CLK0              | Convolution_Accel_i/matrixAccTopDevice_0/inst/controller/MULTIPLY_START_reg[0]_0[0]     | Convolution_Accel_i/processing_system7_0/inst/FCLK_RESET0_N |                7 |             16 |
-|  Convolution_Accel_i/processing_system7_0/inst/FCLK_CLK0              |                                                                                         | Convolution_Accel_i/processing_system7_0/inst/FCLK_RESET0_N |                7 |             17 |
-|  Convolution_Accel_i/processing_system7_0/inst/FCLK_CLK0              | Convolution_Accel_i/matrixAccTopDevice_0/inst/controller/E[0]                           | Convolution_Accel_i/processing_system7_0/inst/FCLK_RESET0_N |                7 |             18 |
+|  Convolution_Accel_i/processing_system7_0/inst/FCLK_CLK0              | Convolution_Accel_i/matrixAccTopDevice_0/inst/controller/MULTIPLY_START_reg[2]_0[0]     | Convolution_Accel_i/processing_system7_0/inst/FCLK_RESET0_N |                5 |             16 |
+|  Convolution_Accel_i/processing_system7_0/inst/FCLK_CLK0              |                                                                                         | Convolution_Accel_i/processing_system7_0/inst/FCLK_RESET0_N |                6 |             17 |
 |  Convolution_Accel_i/processing_system7_0/inst/GPIO_O_BUFG[36]        | Convolution_Accel_i/matrixAccTopDevice_0/inst/inputBuffer/mem_reg_0_63_0_2_i_1_n_0      |                                                             |                6 |             24 |
 |  Convolution_Accel_i/matrixAccTopDevice_0/inst/controller/FIFO_RD_CLK |                                                                                         | Convolution_Accel_i/processing_system7_0/inst/FCLK_RESET0_N |                6 |             28 |
-|  Convolution_Accel_i/processing_system7_0/inst/GPIO_O_BUFG[36]        |                                                                                         | Convolution_Accel_i/processing_system7_0/inst/FCLK_RESET0_N |                8 |             28 |
+|  Convolution_Accel_i/processing_system7_0/inst/GPIO_O_BUFG[36]        |                                                                                         | Convolution_Accel_i/processing_system7_0/inst/FCLK_RESET0_N |                9 |             28 |
 +-----------------------------------------------------------------------+-----------------------------------------------------------------------------------------+-------------------------------------------------------------+------------------+----------------+
 
 
