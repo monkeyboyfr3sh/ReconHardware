@@ -1,7 +1,7 @@
 onbreak {quit -f}
 onerror {quit -f}
 
-vsim -voptargs="+acc" -t 1ps -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -lib xil_defaultlib xil_defaultlib.ParallelBuffer xil_defaultlib.glbl
+vsim -voptargs="+acc" -t 1ps -L xilinx_vip -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -lib xil_defaultlib xil_defaultlib.matrixAccelerator_tb xil_defaultlib.glbl
 
 do {wave.do}
 
@@ -9,7 +9,7 @@ view wave
 view structure
 view signals
 
-do {ParallelBuffer.udo}
+do {matrixAccelerator_tb.udo}
 
 run -all
 

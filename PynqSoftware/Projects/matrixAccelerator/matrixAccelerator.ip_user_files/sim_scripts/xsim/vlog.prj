@@ -1,6 +1,9 @@
-verilog xil_defaultlib --include "../../../../../Sources" \
-"../../../../../Sources/General/FlipFlop.v" \
-"../../../../../Sources/General/ParallelBuffer.v" \
+verilog xil_defaultlib "../../../../../Sources/definitions.h" --include "../../../../../Sources" --include "../../../../../Sources/Block Diagrams/Convolution_Accel/ipshared/ec67/hdl" --include "../../../../../Sources/Block Diagrams/Convolution_Accel/ipshared/2d50/hdl" \
+"../../../../../Sources/General/XBar2.v" \
+"../../../../../Sources/Adder/adderFloat.v" \
+"../../../../../Sources/Multiplier/floatmComputePynq.v" \
+"../../../../../Sources/General/matrixAccelerator.v" \
+"../../../../../Sources/TB/matrixAccelerator_tb.v" \
 
 verilog xil_defaultlib "glbl.v"
 
