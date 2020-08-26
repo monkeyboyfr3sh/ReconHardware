@@ -18,7 +18,6 @@ proc create_report { reportName command } {
   }
 }
 set_param chipscope.maxJobs 2
-set_msg_config -id {HDL-1065} -limit 10000
 set_msg_config  -id {VRFC 10-2989}  -string {{ERROR: [VRFC 10-2989] 'break' is not declared [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Adder/adderFloat.v:60]}}  -suppress 
 set_msg_config  -id {XSIM 43-3322}  -string {{ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.}}  -suppress 
 create_project -in_memory -part xc7z020clg400-1
@@ -37,10 +36,10 @@ set_property ip_cache_permissions {read write} [current_project]
 read_verilog C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/definitions.h
 set_property file_type "Verilog Header" [get_files C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/definitions.h]
 set_property is_global_include true [get_files C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/definitions.h]
-read_verilog -library xil_defaultlib C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/Convolution_Accel/hdl/Convolution_Accel_wrapper.v
-add_files C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/Convolution_Accel/Convolution_Accel.bd
-set_property used_in_implementation false [get_files -all c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/Convolution_Accel/ip/Convolution_Accel_processing_system7_0_0/Convolution_Accel_processing_system7_0_0.xdc]
-set_property used_in_implementation false [get_files -all C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/Convolution_Accel/Convolution_Accel_ooc.xdc]
+read_verilog -library xil_defaultlib {{C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/Convolution_Accel/hdl/Convolution_Accel_wrapper.v}}
+add_files {{C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/Convolution_Accel/Convolution_Accel.bd}}
+set_property used_in_implementation false [get_files -all {{c:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/Convolution_Accel/ip/Convolution_Accel_processing_system7_0_0/Convolution_Accel_processing_system7_0_0.xdc}}]
+set_property used_in_implementation false [get_files -all {{C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/Convolution_Accel/Convolution_Accel_ooc.xdc}}]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

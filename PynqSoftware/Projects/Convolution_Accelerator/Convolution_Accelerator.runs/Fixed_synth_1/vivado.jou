@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Wed Aug 26 15:03:38 2020
+# Process ID: 28496
+# Current directory: C:/GitHub/ReconHardware/PynqSoftware/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/Fixed_synth_1
+# Command line: vivado.exe -log fixedmultiplyCompute.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source fixedmultiplyCompute.tcl
+# Log file: C:/GitHub/ReconHardware/PynqSoftware/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/Fixed_synth_1/fixedmultiplyCompute.vds
+# Journal file: C:/GitHub/ReconHardware/PynqSoftware/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/Fixed_synth_1\vivado.jou
+#-----------------------------------------------------------
+source fixedmultiplyCompute.tcl -notrace

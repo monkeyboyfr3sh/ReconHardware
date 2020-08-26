@@ -1,0 +1,10 @@
+verilog xil_defaultlib "../../../../../Sources/definitions.h" --include "../../../../../Sources" --include "../../../../../Sources/Block Diagrams/Convolution_Accel/ipshared/ec67/hdl" --include "../../../../../Sources/Block Diagrams/Convolution_Accel/ipshared/2d50/hdl" \
+"../../../../../Sources/General/XBar2.v" \
+"../../../../../Sources/General/aFIFO.v" \
+"../../../../../Sources/General/matrixAccelerator.v" \
+"../../../../../Sources/General/matrixControl3x3.v" \
+"../../../../../Sources/General/matrixAccTopDevice.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

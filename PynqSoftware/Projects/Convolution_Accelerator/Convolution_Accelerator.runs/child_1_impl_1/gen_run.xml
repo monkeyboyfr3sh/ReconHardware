@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="child_1_impl_1" LaunchPart="xc7z020clg400-1" LaunchConfig="config_3" LaunchTime="1598474380">
+  <File Type="BITSTR-BMM" Name="matrixAccTopDevice_bd.bmm"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="matrixAccTopDevice_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="matrixAccTopDevice_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR" Name="matrixAccTopDevice_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="matrixAccTopDevice.tcl"/>
+  <File Type="OPT-TIMING" Name="matrixAccTopDevice_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="matrixAccTopDevice_opt.dcp"/>
+  <File Type="ROUTE-PWR-SUM" Name="matrixAccTopDevice_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="matrixAccTopDevice_reports.tcl"/>
+  <File Type="OPT-DRC" Name="matrixAccTopDevice_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="matrixAccTopDevice.hwdef"/>
+  <File Type="PWROPT-DCP" Name="matrixAccTopDevice_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="matrixAccTopDevice_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="matrixAccTopDevice_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="matrixAccTopDevice_placed.dcp"/>
+  <File Type="PLACE-IO" Name="matrixAccTopDevice_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="matrixAccTopDevice_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="matrixAccTopDevice_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="matrixAccTopDevice_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="matrixAccTopDevice_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="matrixAccTopDevice_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="matrixAccTopDevice_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="matrixAccTopDevice_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="matrixAccTopDevice_postplace_pwropt.dcp"/>
+  <File Type="BG-BIN" Name="matrixAccTopDevice.bin"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="matrixAccTopDevice_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="matrixAccTopDevice_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="matrixAccTopDevice_drc_physopted.rpt"/>
+  <File Type="BITSTR-MSK" Name="matrixAccTopDevice.msk"/>
+  <File Type="PHYSOPT-TIMING" Name="matrixAccTopDevice_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="matrixAccTopDevice_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="matrixAccTopDevice_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="matrixAccTopDevice_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="matrixAccTopDevice_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="matrixAccTopDevice_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="matrixAccTopDevice_drc_routed.rpx"/>
+  <File Type="BITSTR-MMI" Name="matrixAccTopDevice.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="matrixAccTopDevice_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="matrixAccTopDevice_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="matrixAccTopDevice_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="matrixAccTopDevice_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="matrixAccTopDevice_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="matrixAccTopDevice_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="matrixAccTopDevice_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="matrixAccTopDevice_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="matrixAccTopDevice_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="matrixAccTopDevice_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="matrixAccTopDevice_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="matrixAccTopDevice_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="matrixAccTopDevice_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="matrixAccTopDevice_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="matrixAccTopDevice_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="matrixAccTopDevice_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="matrixAccTopDevice_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="matrixAccTopDevice_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="matrixAccTopDevice_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="matrixAccTopDevice_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="matrixAccTopDevice_bus_skew_postroute_physopted.pb"/>
+  <File Type="BG-BIT" Name="matrixAccTopDevice.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="matrixAccTopDevice_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-RBT" Name="matrixAccTopDevice.rbt"/>
+  <File Type="BITSTR-NKY" Name="matrixAccTopDevice.nky"/>
+  <File Type="PDI-FILE" Name="matrixAccTopDevice.pdi"/>
+  <File Type="RCFI_FILE" Name="matrixAccTopDevice.rcfi"/>
+  <File Type="CFI_FILE" Name="matrixAccTopDevice.cfi"/>
+  <File Type="RNPI_FILE" Name="matrixAccTopDevice.rnpi"/>
+  <File Type="NPI_FILE" Name="matrixAccTopDevice.npi"/>
+  <File Type="RBD_FILE" Name="matrixAccTopDevice.rbd"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="matrixAccTopDevice.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="matrixAccTopDevice.sysdef"/>
+  <File Type="BG-BGN" Name="matrixAccTopDevice.bgn"/>
+  <File Type="BG-DRC" Name="matrixAccTopDevice.drc"/>
+  <File Type="RDI-RDI" Name="matrixAccTopDevice.vdi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="ROUTE-PARTITION-CELL-DCP" Name="matrixAccel_finalAdder_adder_routed.dcp"/>
+  <File Type="ROUTE-PARTITION-CELL-DCP" Name="matrixAccel_genblk3_0_.inputMulti_Integer_routed.dcp"/>
+  <File Type="ROUTE-PARTITION-CELL-DCP" Name="matrixAccel_genblk3_1_.inputMulti_Integer_routed.dcp"/>
+  <File Type="ROUTE-PARTITION-CELL-DCP" Name="matrixAccel_genblk3_2_.inputMulti_Integer_routed.dcp"/>
+  <File Type="ROUTE-PARTITION-CELL-DCP" Name="matrixAccel_genblk4_0_.outputAdder_adder_routed.dcp"/>
+  <File Type="ROUTE-PARTITION-CELL-DCP" Name="matrixAccel_genblk4_1_.outputAdder_adder_routed.dcp"/>
+  <File Type="ROUTE-PARTITION-CELL-DCP" Name="matrixAccel_genblk4_2_.outputAdder_adder_routed.dcp"/>
+  <File Type="BG-PARTITION-CELL-BIT" Name="matrixAccel_finalAdder_adder_partial.bit"/>
+  <File Type="BG-PARTITION-CELL-BIT" Name="matrixAccel_genblk3_0_.inputMulti_Integer_partial.bit"/>
+  <File Type="BG-PARTITION-CELL-BIT" Name="matrixAccel_genblk3_1_.inputMulti_Integer_partial.bit"/>
+  <File Type="BG-PARTITION-CELL-BIT" Name="matrixAccel_genblk3_2_.inputMulti_Integer_partial.bit"/>
+  <File Type="BG-PARTITION-CELL-BIT" Name="matrixAccel_genblk4_0_.outputAdder_adder_partial.bit"/>
+  <File Type="BG-PARTITION-CELL-BIT" Name="matrixAccel_genblk4_1_.outputAdder_adder_partial.bit"/>
+  <File Type="BG-PARTITION-CELL-BIT" Name="matrixAccel_genblk4_2_.outputAdder_adder_partial.bit"/>
+  <File Type="BG-PARTITION-LTX" Name="matrixAccel_finalAdder_adder.ltx"/>
+  <File Type="BG-PARTITION-LTX" Name="matrixAccel_genblk3_0_.inputMulti_Integer.ltx"/>
+  <File Type="BG-PARTITION-LTX" Name="matrixAccel_genblk3_1_.inputMulti_Integer.ltx"/>
+  <File Type="BG-PARTITION-LTX" Name="matrixAccel_genblk3_2_.inputMulti_Integer.ltx"/>
+  <File Type="BG-PARTITION-LTX" Name="matrixAccel_genblk4_0_.outputAdder_adder.ltx"/>
+  <File Type="BG-PARTITION-LTX" Name="matrixAccel_genblk4_1_.outputAdder_adder.ltx"/>
+  <File Type="BG-PARTITION-LTX" Name="matrixAccel_genblk4_2_.outputAdder_adder.ltx"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/../../Sources/definitions.h">
+      <FileInfo>
+        <Attr Name="IsGlobalInclude" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Sources/General/XBar2.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Sources/General/aFIFO.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Sources/General/matrixAccelerator.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Sources/General/matrixControl3x3.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Sources/General/matrixAccTopDevice.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Sources/Multiplier/fixedmultiplyCompute.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Sources/Multiplier/multiplyComputePynq.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="matrixAccTopDevice"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PPRDIR/../../Constraints/Conv_Accel.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TargetConstrsFile" Val="$PPRDIR/../../Constraints/Conv_Accel.xdc"/>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
+      <Desc>Default settings for Implementation.</Desc>
+    </StratHandle>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design" EnableStepBool="1"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="Integer"/>
+  <BlockFileSet Type="BlockSrcs" Name="adder"/>
+</GenRun>
