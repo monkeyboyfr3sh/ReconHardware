@@ -23,7 +23,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log matrixAccTopDevice.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source matrixAccTopDevice.tcl" );
+         "-log matrixControl3x3.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source matrixControl3x3.tcl" );
 
 
 

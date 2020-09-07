@@ -55,7 +55,7 @@
 #include <map>
 #include <string>
 
-PYNQ_wrap_processing_system7_0_0::PYNQ_wrap_processing_system7_0_0(const sc_core::sc_module_name& nm) : PYNQ_wrap_processing_system7_0_0_sc(nm), GPIO_I("GPIO_I"), GPIO_O("GPIO_O"), GPIO_T("GPIO_T"), USB0_PORT_INDCTL("USB0_PORT_INDCTL"), USB0_VBUS_PWRSELECT("USB0_VBUS_PWRSELECT"), USB0_VBUS_PWRFAULT("USB0_VBUS_PWRFAULT"), M_AXI_GP0_ARVALID("M_AXI_GP0_ARVALID"), M_AXI_GP0_AWVALID("M_AXI_GP0_AWVALID"), M_AXI_GP0_BREADY("M_AXI_GP0_BREADY"), M_AXI_GP0_RREADY("M_AXI_GP0_RREADY"), M_AXI_GP0_WLAST("M_AXI_GP0_WLAST"), M_AXI_GP0_WVALID("M_AXI_GP0_WVALID"), M_AXI_GP0_ARID("M_AXI_GP0_ARID"), M_AXI_GP0_AWID("M_AXI_GP0_AWID"), M_AXI_GP0_WID("M_AXI_GP0_WID"), M_AXI_GP0_ARBURST("M_AXI_GP0_ARBURST"), M_AXI_GP0_ARLOCK("M_AXI_GP0_ARLOCK"), M_AXI_GP0_ARSIZE("M_AXI_GP0_ARSIZE"), M_AXI_GP0_AWBURST("M_AXI_GP0_AWBURST"), M_AXI_GP0_AWLOCK("M_AXI_GP0_AWLOCK"), M_AXI_GP0_AWSIZE("M_AXI_GP0_AWSIZE"), M_AXI_GP0_ARPROT("M_AXI_GP0_ARPROT"), M_AXI_GP0_AWPROT("M_AXI_GP0_AWPROT"), M_AXI_GP0_ARADDR("M_AXI_GP0_ARADDR"), M_AXI_GP0_AWADDR("M_AXI_GP0_AWADDR"), M_AXI_GP0_WDATA("M_AXI_GP0_WDATA"), M_AXI_GP0_ARCACHE("M_AXI_GP0_ARCACHE"), M_AXI_GP0_ARLEN("M_AXI_GP0_ARLEN"), M_AXI_GP0_ARQOS("M_AXI_GP0_ARQOS"), M_AXI_GP0_AWCACHE("M_AXI_GP0_AWCACHE"), M_AXI_GP0_AWLEN("M_AXI_GP0_AWLEN"), M_AXI_GP0_AWQOS("M_AXI_GP0_AWQOS"), M_AXI_GP0_WSTRB("M_AXI_GP0_WSTRB"), M_AXI_GP0_ACLK("M_AXI_GP0_ACLK"), M_AXI_GP0_ARREADY("M_AXI_GP0_ARREADY"), M_AXI_GP0_AWREADY("M_AXI_GP0_AWREADY"), M_AXI_GP0_BVALID("M_AXI_GP0_BVALID"), M_AXI_GP0_RLAST("M_AXI_GP0_RLAST"), M_AXI_GP0_RVALID("M_AXI_GP0_RVALID"), M_AXI_GP0_WREADY("M_AXI_GP0_WREADY"), M_AXI_GP0_BID("M_AXI_GP0_BID"), M_AXI_GP0_RID("M_AXI_GP0_RID"), M_AXI_GP0_BRESP("M_AXI_GP0_BRESP"), M_AXI_GP0_RRESP("M_AXI_GP0_RRESP"), M_AXI_GP0_RDATA("M_AXI_GP0_RDATA"), S_AXI_GP0_ARREADY("S_AXI_GP0_ARREADY"), S_AXI_GP0_AWREADY("S_AXI_GP0_AWREADY"), S_AXI_GP0_BVALID("S_AXI_GP0_BVALID"), S_AXI_GP0_RLAST("S_AXI_GP0_RLAST"), S_AXI_GP0_RVALID("S_AXI_GP0_RVALID"), S_AXI_GP0_WREADY("S_AXI_GP0_WREADY"), S_AXI_GP0_BRESP("S_AXI_GP0_BRESP"), S_AXI_GP0_RRESP("S_AXI_GP0_RRESP"), S_AXI_GP0_RDATA("S_AXI_GP0_RDATA"), S_AXI_GP0_BID("S_AXI_GP0_BID"), S_AXI_GP0_RID("S_AXI_GP0_RID"), S_AXI_GP0_ACLK("S_AXI_GP0_ACLK"), S_AXI_GP0_ARVALID("S_AXI_GP0_ARVALID"), S_AXI_GP0_AWVALID("S_AXI_GP0_AWVALID"), S_AXI_GP0_BREADY("S_AXI_GP0_BREADY"), S_AXI_GP0_RREADY("S_AXI_GP0_RREADY"), S_AXI_GP0_WLAST("S_AXI_GP0_WLAST"), S_AXI_GP0_WVALID("S_AXI_GP0_WVALID"), S_AXI_GP0_ARBURST("S_AXI_GP0_ARBURST"), S_AXI_GP0_ARLOCK("S_AXI_GP0_ARLOCK"), S_AXI_GP0_ARSIZE("S_AXI_GP0_ARSIZE"), S_AXI_GP0_AWBURST("S_AXI_GP0_AWBURST"), S_AXI_GP0_AWLOCK("S_AXI_GP0_AWLOCK"), S_AXI_GP0_AWSIZE("S_AXI_GP0_AWSIZE"), S_AXI_GP0_ARPROT("S_AXI_GP0_ARPROT"), S_AXI_GP0_AWPROT("S_AXI_GP0_AWPROT"), S_AXI_GP0_ARADDR("S_AXI_GP0_ARADDR"), S_AXI_GP0_AWADDR("S_AXI_GP0_AWADDR"), S_AXI_GP0_WDATA("S_AXI_GP0_WDATA"), S_AXI_GP0_ARCACHE("S_AXI_GP0_ARCACHE"), S_AXI_GP0_ARLEN("S_AXI_GP0_ARLEN"), S_AXI_GP0_ARQOS("S_AXI_GP0_ARQOS"), S_AXI_GP0_AWCACHE("S_AXI_GP0_AWCACHE"), S_AXI_GP0_AWLEN("S_AXI_GP0_AWLEN"), S_AXI_GP0_AWQOS("S_AXI_GP0_AWQOS"), S_AXI_GP0_WSTRB("S_AXI_GP0_WSTRB"), S_AXI_GP0_ARID("S_AXI_GP0_ARID"), S_AXI_GP0_AWID("S_AXI_GP0_AWID"), S_AXI_GP0_WID("S_AXI_GP0_WID"), FCLK_CLK0("FCLK_CLK0"), FCLK_RESET0_N("FCLK_RESET0_N"), MIO("MIO"), DDR_CAS_n("DDR_CAS_n"), DDR_CKE("DDR_CKE"), DDR_Clk_n("DDR_Clk_n"), DDR_Clk("DDR_Clk"), DDR_CS_n("DDR_CS_n"), DDR_DRSTB("DDR_DRSTB"), DDR_ODT("DDR_ODT"), DDR_RAS_n("DDR_RAS_n"), DDR_WEB("DDR_WEB"), DDR_BankAddr("DDR_BankAddr"), DDR_Addr("DDR_Addr"), DDR_VRN("DDR_VRN"), DDR_VRP("DDR_VRP"), DDR_DM("DDR_DM"), DDR_DQ("DDR_DQ"), DDR_DQS_n("DDR_DQS_n"), DDR_DQS("DDR_DQS"), PS_SRSTB("PS_SRSTB"), PS_CLK("PS_CLK"), PS_PORB("PS_PORB")
+PYNQ_wrap_processing_system7_0_0::PYNQ_wrap_processing_system7_0_0(const sc_core::sc_module_name& nm) : PYNQ_wrap_processing_system7_0_0_sc(nm), GPIO_I("GPIO_I"), GPIO_O("GPIO_O"), GPIO_T("GPIO_T"), USB0_PORT_INDCTL("USB0_PORT_INDCTL"), USB0_VBUS_PWRSELECT("USB0_VBUS_PWRSELECT"), USB0_VBUS_PWRFAULT("USB0_VBUS_PWRFAULT"), M_AXI_GP0_ARVALID("M_AXI_GP0_ARVALID"), M_AXI_GP0_AWVALID("M_AXI_GP0_AWVALID"), M_AXI_GP0_BREADY("M_AXI_GP0_BREADY"), M_AXI_GP0_RREADY("M_AXI_GP0_RREADY"), M_AXI_GP0_WLAST("M_AXI_GP0_WLAST"), M_AXI_GP0_WVALID("M_AXI_GP0_WVALID"), M_AXI_GP0_ARID("M_AXI_GP0_ARID"), M_AXI_GP0_AWID("M_AXI_GP0_AWID"), M_AXI_GP0_WID("M_AXI_GP0_WID"), M_AXI_GP0_ARBURST("M_AXI_GP0_ARBURST"), M_AXI_GP0_ARLOCK("M_AXI_GP0_ARLOCK"), M_AXI_GP0_ARSIZE("M_AXI_GP0_ARSIZE"), M_AXI_GP0_AWBURST("M_AXI_GP0_AWBURST"), M_AXI_GP0_AWLOCK("M_AXI_GP0_AWLOCK"), M_AXI_GP0_AWSIZE("M_AXI_GP0_AWSIZE"), M_AXI_GP0_ARPROT("M_AXI_GP0_ARPROT"), M_AXI_GP0_AWPROT("M_AXI_GP0_AWPROT"), M_AXI_GP0_ARADDR("M_AXI_GP0_ARADDR"), M_AXI_GP0_AWADDR("M_AXI_GP0_AWADDR"), M_AXI_GP0_WDATA("M_AXI_GP0_WDATA"), M_AXI_GP0_ARCACHE("M_AXI_GP0_ARCACHE"), M_AXI_GP0_ARLEN("M_AXI_GP0_ARLEN"), M_AXI_GP0_ARQOS("M_AXI_GP0_ARQOS"), M_AXI_GP0_AWCACHE("M_AXI_GP0_AWCACHE"), M_AXI_GP0_AWLEN("M_AXI_GP0_AWLEN"), M_AXI_GP0_AWQOS("M_AXI_GP0_AWQOS"), M_AXI_GP0_WSTRB("M_AXI_GP0_WSTRB"), M_AXI_GP0_ACLK("M_AXI_GP0_ACLK"), M_AXI_GP0_ARREADY("M_AXI_GP0_ARREADY"), M_AXI_GP0_AWREADY("M_AXI_GP0_AWREADY"), M_AXI_GP0_BVALID("M_AXI_GP0_BVALID"), M_AXI_GP0_RLAST("M_AXI_GP0_RLAST"), M_AXI_GP0_RVALID("M_AXI_GP0_RVALID"), M_AXI_GP0_WREADY("M_AXI_GP0_WREADY"), M_AXI_GP0_BID("M_AXI_GP0_BID"), M_AXI_GP0_RID("M_AXI_GP0_RID"), M_AXI_GP0_BRESP("M_AXI_GP0_BRESP"), M_AXI_GP0_RRESP("M_AXI_GP0_RRESP"), M_AXI_GP0_RDATA("M_AXI_GP0_RDATA"), FCLK_CLK0("FCLK_CLK0"), FCLK_RESET0_N("FCLK_RESET0_N"), MIO("MIO"), DDR_CAS_n("DDR_CAS_n"), DDR_CKE("DDR_CKE"), DDR_Clk_n("DDR_Clk_n"), DDR_Clk("DDR_Clk"), DDR_CS_n("DDR_CS_n"), DDR_DRSTB("DDR_DRSTB"), DDR_ODT("DDR_ODT"), DDR_RAS_n("DDR_RAS_n"), DDR_WEB("DDR_WEB"), DDR_BankAddr("DDR_BankAddr"), DDR_Addr("DDR_Addr"), DDR_VRN("DDR_VRN"), DDR_VRP("DDR_VRP"), DDR_DM("DDR_DM"), DDR_DQ("DDR_DQ"), DDR_DQS_n("DDR_DQS_n"), DDR_DQS("DDR_DQS"), PS_SRSTB("PS_SRSTB"), PS_CLK("PS_CLK"), PS_PORB("PS_PORB")
 {
 
   // initialize pins
@@ -66,7 +66,6 @@ PYNQ_wrap_processing_system7_0_0::PYNQ_wrap_processing_system7_0_0(const sc_core
   mp_impl->USB0_VBUS_PWRSELECT(USB0_VBUS_PWRSELECT);
   mp_impl->USB0_VBUS_PWRFAULT(USB0_VBUS_PWRFAULT);
   mp_impl->M_AXI_GP0_ACLK(M_AXI_GP0_ACLK);
-  mp_impl->S_AXI_GP0_ACLK(S_AXI_GP0_ACLK);
   mp_impl->FCLK_CLK0(FCLK_CLK0);
   mp_impl->FCLK_RESET0_N(FCLK_RESET0_N);
   mp_impl->MIO(MIO);
@@ -97,11 +96,6 @@ PYNQ_wrap_processing_system7_0_0::PYNQ_wrap_processing_system7_0_0(const sc_core
   mp_M_AXI_GP0_AWLOCK_converter = NULL;
   mp_M_AXI_GP0_ARLEN_converter = NULL;
   mp_M_AXI_GP0_AWLEN_converter = NULL;
-  mp_S_AXI_GP0_transactor = NULL;
-  mp_S_AXI_GP0_ARLOCK_converter = NULL;
-  mp_S_AXI_GP0_AWLOCK_converter = NULL;
-  mp_S_AXI_GP0_ARLEN_converter = NULL;
-  mp_S_AXI_GP0_AWLEN_converter = NULL;
 }
 
 void PYNQ_wrap_processing_system7_0_0::before_end_of_elaboration()
@@ -197,97 +191,6 @@ void PYNQ_wrap_processing_system7_0_0::before_end_of_elaboration()
     mp_impl->M_AXI_GP0_rd_socket->bind(*(mp_M_AXI_GP0_transactor->rd_socket));
     mp_impl->M_AXI_GP0_wr_socket->bind(*(mp_M_AXI_GP0_transactor->wr_socket));
   }
-  // configure 'S_AXI_GP0' transactor
-  if (xsc::utils::xsc_sim_manager::getInstanceParameterInt("PYNQ_wrap_processing_system7_0_0", "S_AXI_GP0_TLM_MODE") != 1)
-  {
-    xsc::common_cpp::properties S_AXI_GP0_transactor_param_props;
-    S_AXI_GP0_transactor_param_props.addLong("DATA_WIDTH", "32");
-    S_AXI_GP0_transactor_param_props.addLong("FREQ_HZ", "100000000");
-    S_AXI_GP0_transactor_param_props.addLong("ID_WIDTH", "6");
-    S_AXI_GP0_transactor_param_props.addLong("ADDR_WIDTH", "32");
-    S_AXI_GP0_transactor_param_props.addLong("AWUSER_WIDTH", "0");
-    S_AXI_GP0_transactor_param_props.addLong("ARUSER_WIDTH", "0");
-    S_AXI_GP0_transactor_param_props.addLong("WUSER_WIDTH", "0");
-    S_AXI_GP0_transactor_param_props.addLong("RUSER_WIDTH", "0");
-    S_AXI_GP0_transactor_param_props.addLong("BUSER_WIDTH", "0");
-    S_AXI_GP0_transactor_param_props.addLong("HAS_BURST", "1");
-    S_AXI_GP0_transactor_param_props.addLong("HAS_LOCK", "1");
-    S_AXI_GP0_transactor_param_props.addLong("HAS_PROT", "1");
-    S_AXI_GP0_transactor_param_props.addLong("HAS_CACHE", "1");
-    S_AXI_GP0_transactor_param_props.addLong("HAS_QOS", "1");
-    S_AXI_GP0_transactor_param_props.addLong("HAS_REGION", "0");
-    S_AXI_GP0_transactor_param_props.addLong("HAS_WSTRB", "1");
-    S_AXI_GP0_transactor_param_props.addLong("HAS_BRESP", "1");
-    S_AXI_GP0_transactor_param_props.addLong("HAS_RRESP", "1");
-    S_AXI_GP0_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "1");
-    S_AXI_GP0_transactor_param_props.addLong("MAX_BURST_LENGTH", "16");
-    S_AXI_GP0_transactor_param_props.addLong("NUM_READ_THREADS", "1");
-    S_AXI_GP0_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
-    S_AXI_GP0_transactor_param_props.addLong("RUSER_BITS_PER_BYTE", "0");
-    S_AXI_GP0_transactor_param_props.addLong("WUSER_BITS_PER_BYTE", "0");
-    S_AXI_GP0_transactor_param_props.addFloat("PHASE", "0.000");
-    S_AXI_GP0_transactor_param_props.addString("NUM_WRITE_OUTSTANDING", "8");
-    S_AXI_GP0_transactor_param_props.addString("NUM_READ_OUTSTANDING", "8");
-    S_AXI_GP0_transactor_param_props.addString("PROTOCOL", "AXI3");
-    S_AXI_GP0_transactor_param_props.addString("READ_WRITE_MODE", "READ_WRITE");
-    S_AXI_GP0_transactor_param_props.addString("CLK_DOMAIN", "PYNQ_wrap_processing_system7_0_0_FCLK_CLK0");
-    mp_S_AXI_GP0_transactor = new xtlm::xaximm_pin2xtlm_t<32,32,6,1,1,1,1,1>("S_AXI_GP0_transactor", S_AXI_GP0_transactor_param_props);
-    mp_S_AXI_GP0_transactor->ARREADY(S_AXI_GP0_ARREADY);
-    mp_S_AXI_GP0_transactor->AWREADY(S_AXI_GP0_AWREADY);
-    mp_S_AXI_GP0_transactor->BVALID(S_AXI_GP0_BVALID);
-    mp_S_AXI_GP0_transactor->RLAST(S_AXI_GP0_RLAST);
-    mp_S_AXI_GP0_transactor->RVALID(S_AXI_GP0_RVALID);
-    mp_S_AXI_GP0_transactor->WREADY(S_AXI_GP0_WREADY);
-    mp_S_AXI_GP0_transactor->BRESP(S_AXI_GP0_BRESP);
-    mp_S_AXI_GP0_transactor->RRESP(S_AXI_GP0_RRESP);
-    mp_S_AXI_GP0_transactor->RDATA(S_AXI_GP0_RDATA);
-    mp_S_AXI_GP0_transactor->BID(S_AXI_GP0_BID);
-    mp_S_AXI_GP0_transactor->RID(S_AXI_GP0_RID);
-    mp_S_AXI_GP0_transactor->ARVALID(S_AXI_GP0_ARVALID);
-    mp_S_AXI_GP0_transactor->AWVALID(S_AXI_GP0_AWVALID);
-    mp_S_AXI_GP0_transactor->BREADY(S_AXI_GP0_BREADY);
-    mp_S_AXI_GP0_transactor->RREADY(S_AXI_GP0_RREADY);
-    mp_S_AXI_GP0_transactor->WLAST(S_AXI_GP0_WLAST);
-    mp_S_AXI_GP0_transactor->WVALID(S_AXI_GP0_WVALID);
-    mp_S_AXI_GP0_transactor->ARBURST(S_AXI_GP0_ARBURST);
-    mp_S_AXI_GP0_ARLOCK_converter = new xsc::common::vectorN2scalar_converter<2>("S_AXI_GP0_ARLOCK_converter");
-    mp_S_AXI_GP0_ARLOCK_converter->vector_in(S_AXI_GP0_ARLOCK);
-    mp_S_AXI_GP0_ARLOCK_converter->scalar_out(m_S_AXI_GP0_ARLOCK_converter_signal);
-    mp_S_AXI_GP0_transactor->ARLOCK(m_S_AXI_GP0_ARLOCK_converter_signal);
-    mp_S_AXI_GP0_transactor->ARSIZE(S_AXI_GP0_ARSIZE);
-    mp_S_AXI_GP0_transactor->AWBURST(S_AXI_GP0_AWBURST);
-    mp_S_AXI_GP0_AWLOCK_converter = new xsc::common::vectorN2scalar_converter<2>("S_AXI_GP0_AWLOCK_converter");
-    mp_S_AXI_GP0_AWLOCK_converter->vector_in(S_AXI_GP0_AWLOCK);
-    mp_S_AXI_GP0_AWLOCK_converter->scalar_out(m_S_AXI_GP0_AWLOCK_converter_signal);
-    mp_S_AXI_GP0_transactor->AWLOCK(m_S_AXI_GP0_AWLOCK_converter_signal);
-    mp_S_AXI_GP0_transactor->AWSIZE(S_AXI_GP0_AWSIZE);
-    mp_S_AXI_GP0_transactor->ARPROT(S_AXI_GP0_ARPROT);
-    mp_S_AXI_GP0_transactor->AWPROT(S_AXI_GP0_AWPROT);
-    mp_S_AXI_GP0_transactor->ARADDR(S_AXI_GP0_ARADDR);
-    mp_S_AXI_GP0_transactor->AWADDR(S_AXI_GP0_AWADDR);
-    mp_S_AXI_GP0_transactor->WDATA(S_AXI_GP0_WDATA);
-    mp_S_AXI_GP0_transactor->ARCACHE(S_AXI_GP0_ARCACHE);
-    mp_S_AXI_GP0_ARLEN_converter = new xsc::common::vector2vector_converter<4,8>("S_AXI_GP0_ARLEN_converter");
-    mp_S_AXI_GP0_ARLEN_converter->vector_in(S_AXI_GP0_ARLEN);
-    mp_S_AXI_GP0_ARLEN_converter->vector_out(m_S_AXI_GP0_ARLEN_converter_signal);
-    mp_S_AXI_GP0_transactor->ARLEN(m_S_AXI_GP0_ARLEN_converter_signal);
-    mp_S_AXI_GP0_transactor->ARQOS(S_AXI_GP0_ARQOS);
-    mp_S_AXI_GP0_transactor->AWCACHE(S_AXI_GP0_AWCACHE);
-    mp_S_AXI_GP0_AWLEN_converter = new xsc::common::vector2vector_converter<4,8>("S_AXI_GP0_AWLEN_converter");
-    mp_S_AXI_GP0_AWLEN_converter->vector_in(S_AXI_GP0_AWLEN);
-    mp_S_AXI_GP0_AWLEN_converter->vector_out(m_S_AXI_GP0_AWLEN_converter_signal);
-    mp_S_AXI_GP0_transactor->AWLEN(m_S_AXI_GP0_AWLEN_converter_signal);
-    mp_S_AXI_GP0_transactor->AWQOS(S_AXI_GP0_AWQOS);
-    mp_S_AXI_GP0_transactor->WSTRB(S_AXI_GP0_WSTRB);
-    mp_S_AXI_GP0_transactor->ARID(S_AXI_GP0_ARID);
-    mp_S_AXI_GP0_transactor->AWID(S_AXI_GP0_AWID);
-    mp_S_AXI_GP0_transactor->CLK(S_AXI_GP0_ACLK);
-    m_S_AXI_GP0_transactor_rst_signal.write(1);
-    mp_S_AXI_GP0_transactor->RST(m_S_AXI_GP0_transactor_rst_signal);
-
-    mp_impl->S_AXI_GP0_rd_socket->bind(*(mp_S_AXI_GP0_transactor->rd_socket));
-    mp_impl->S_AXI_GP0_wr_socket->bind(*(mp_S_AXI_GP0_transactor->wr_socket));
-  }
 }
 
 PYNQ_wrap_processing_system7_0_0::~PYNQ_wrap_processing_system7_0_0()
@@ -297,11 +200,6 @@ PYNQ_wrap_processing_system7_0_0::~PYNQ_wrap_processing_system7_0_0()
   delete mp_M_AXI_GP0_AWLOCK_converter;
   delete mp_M_AXI_GP0_ARLEN_converter;
   delete mp_M_AXI_GP0_AWLEN_converter;
-  delete mp_S_AXI_GP0_transactor;
-  delete mp_S_AXI_GP0_ARLOCK_converter;
-  delete mp_S_AXI_GP0_AWLOCK_converter;
-  delete mp_S_AXI_GP0_ARLEN_converter;
-  delete mp_S_AXI_GP0_AWLEN_converter;
 }
 
 #ifdef MTI_SYSTEMC

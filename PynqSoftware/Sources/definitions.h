@@ -42,10 +42,8 @@
 `define dataIn3             3
 `define dataIn4             6
 `define dataIn5             2
-`define dataIn6             2   
-`define dataIn7             1
-`define dataIn8             1
-`define toggleTime          9.3
+`define dataIn6             2
+`define toggleTime          0.2
 /*#####################################################################################################################################################*/
 //END_User_Set
 

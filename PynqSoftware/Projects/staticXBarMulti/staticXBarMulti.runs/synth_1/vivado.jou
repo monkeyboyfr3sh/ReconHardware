@@ -2,11 +2,11 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Sun Jul 26 14:21:48 2020
-# Process ID: 34008
-# Current directory: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/staticXBarMulti/staticXBarMulti.runs/synth_1
+# Start of session at: Sun Sep  6 16:28:32 2020
+# Process ID: 34040
+# Current directory: C:/GitHub/ReconHardware/PynqSoftware/Projects/staticXBarMulti/staticXBarMulti.runs/synth_1
 # Command line: vivado.exe -log top_wrap.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_wrap.tcl
-# Log file: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/staticXBarMulti/staticXBarMulti.runs/synth_1/top_wrap.vds
-# Journal file: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/staticXBarMulti/staticXBarMulti.runs/synth_1\vivado.jou
+# Log file: C:/GitHub/ReconHardware/PynqSoftware/Projects/staticXBarMulti/staticXBarMulti.runs/synth_1/top_wrap.vds
+# Journal file: C:/GitHub/ReconHardware/PynqSoftware/Projects/staticXBarMulti/staticXBarMulti.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source top_wrap.tcl -notrace

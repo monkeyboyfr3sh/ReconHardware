@@ -11,10 +11,13 @@
 -endlib
 -makelib ies_lib/xil_defaultlib \
   "../../../../../Sources/General/XBar2.v" \
+  "../../../../../Sources/General/aFIFO.v" \
   "../../../../../Sources/Adder/adderFloat.v" \
   "../../../../../Sources/Multiplier/floatmComputePynq.v" \
+  "../../../../../Sources/General/matrixAccTopDevice.v" \
   "../../../../../Sources/General/matrixAccelerator.v" \
-  "../../../../../Sources/TB/matrixAccelerator_tb.v" \
+  "../../../../../Sources/General/matrixControl3x3.v" \
+  "../../../../../Sources/TB/convolve3x3_tb.v" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
   glbl.v

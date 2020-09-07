@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-// Date        : Sun Jul 26 14:21:46 2020
+// Date        : Sun Sep  6 14:20:32 2020
 // Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ ps_Wrap_dataSplit_0_0_sim_netlist.v
@@ -16,27 +16,75 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_dataSplit
    (dataOut,
     dataIn,
     chunkCount);
-  output [7:0]dataOut;
-  input [15:0]dataIn;
+  output [15:0]dataOut;
+  input [31:0]dataIn;
   input chunkCount;
 
   wire chunkCount;
-  wire [15:0]dataIn;
-  wire [7:0]dataOut;
+  wire [31:0]dataIn;
+  wire [15:0]dataOut;
 
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \dataOut[0]_INST_0 
-       (.I0(dataIn[8]),
+       (.I0(dataIn[16]),
         .I1(chunkCount),
         .I2(dataIn[0]),
         .O(dataOut[0]));
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  LUT3 #(
+    .INIT(8'hB8)) 
+    \dataOut[10]_INST_0 
+       (.I0(dataIn[26]),
+        .I1(chunkCount),
+        .I2(dataIn[10]),
+        .O(dataOut[10]));
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  LUT3 #(
+    .INIT(8'hB8)) 
+    \dataOut[11]_INST_0 
+       (.I0(dataIn[27]),
+        .I1(chunkCount),
+        .I2(dataIn[11]),
+        .O(dataOut[11]));
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  LUT3 #(
+    .INIT(8'hB8)) 
+    \dataOut[12]_INST_0 
+       (.I0(dataIn[28]),
+        .I1(chunkCount),
+        .I2(dataIn[12]),
+        .O(dataOut[12]));
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  LUT3 #(
+    .INIT(8'hB8)) 
+    \dataOut[13]_INST_0 
+       (.I0(dataIn[29]),
+        .I1(chunkCount),
+        .I2(dataIn[13]),
+        .O(dataOut[13]));
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  LUT3 #(
+    .INIT(8'hB8)) 
+    \dataOut[14]_INST_0 
+       (.I0(dataIn[30]),
+        .I1(chunkCount),
+        .I2(dataIn[14]),
+        .O(dataOut[14]));
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  LUT3 #(
+    .INIT(8'hB8)) 
+    \dataOut[15]_INST_0 
+       (.I0(dataIn[31]),
+        .I1(chunkCount),
+        .I2(dataIn[15]),
+        .O(dataOut[15]));
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \dataOut[1]_INST_0 
-       (.I0(dataIn[9]),
+       (.I0(dataIn[17]),
         .I1(chunkCount),
         .I2(dataIn[1]),
         .O(dataOut[1]));
@@ -44,7 +92,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_dataSplit
   LUT3 #(
     .INIT(8'hB8)) 
     \dataOut[2]_INST_0 
-       (.I0(dataIn[10]),
+       (.I0(dataIn[18]),
         .I1(chunkCount),
         .I2(dataIn[2]),
         .O(dataOut[2]));
@@ -52,7 +100,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_dataSplit
   LUT3 #(
     .INIT(8'hB8)) 
     \dataOut[3]_INST_0 
-       (.I0(dataIn[11]),
+       (.I0(dataIn[19]),
         .I1(chunkCount),
         .I2(dataIn[3]),
         .O(dataOut[3]));
@@ -60,7 +108,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_dataSplit
   LUT3 #(
     .INIT(8'hB8)) 
     \dataOut[4]_INST_0 
-       (.I0(dataIn[12]),
+       (.I0(dataIn[20]),
         .I1(chunkCount),
         .I2(dataIn[4]),
         .O(dataOut[4]));
@@ -68,7 +116,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_dataSplit
   LUT3 #(
     .INIT(8'hB8)) 
     \dataOut[5]_INST_0 
-       (.I0(dataIn[13]),
+       (.I0(dataIn[21]),
         .I1(chunkCount),
         .I2(dataIn[5]),
         .O(dataOut[5]));
@@ -76,7 +124,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_dataSplit
   LUT3 #(
     .INIT(8'hB8)) 
     \dataOut[6]_INST_0 
-       (.I0(dataIn[14]),
+       (.I0(dataIn[22]),
         .I1(chunkCount),
         .I2(dataIn[6]),
         .O(dataOut[6]));
@@ -84,10 +132,26 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_dataSplit
   LUT3 #(
     .INIT(8'hB8)) 
     \dataOut[7]_INST_0 
-       (.I0(dataIn[15]),
+       (.I0(dataIn[23]),
         .I1(chunkCount),
         .I2(dataIn[7]),
         .O(dataOut[7]));
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  LUT3 #(
+    .INIT(8'hB8)) 
+    \dataOut[8]_INST_0 
+       (.I0(dataIn[24]),
+        .I1(chunkCount),
+        .I2(dataIn[8]),
+        .O(dataOut[8]));
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  LUT3 #(
+    .INIT(8'hB8)) 
+    \dataOut[9]_INST_0 
+       (.I0(dataIn[25]),
+        .I1(chunkCount),
+        .I2(dataIn[9]),
+        .O(dataOut[9]));
 endmodule
 
 (* CHECK_LICENSE_TYPE = "ps_Wrap_dataSplit_0_0,dataSplit,{}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* IP_DEFINITION_SOURCE = "module_ref" *) 
@@ -100,16 +164,16 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
     dataIn,
     chunkCount,
     dataOut);
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 Clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME Clk, ASSOCIATED_RESET Rst, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN ps_Wrap_Clk_0, INSERT_VIP 0" *) input Clk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 Clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME Clk, ASSOCIATED_RESET Rst, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN ps_Wrap_Clk, INSERT_VIP 0" *) input Clk;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 Rst RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME Rst, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input Rst;
   input RD;
-  input [15:0]dataIn;
+  input [31:0]dataIn;
   input chunkCount;
-  output [7:0]dataOut;
+  output [15:0]dataOut;
 
   wire chunkCount;
-  wire [15:0]dataIn;
-  wire [7:0]dataOut;
+  wire [31:0]dataIn;
+  wire [15:0]dataOut;
 
   decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_dataSplit inst
        (.chunkCount(chunkCount),

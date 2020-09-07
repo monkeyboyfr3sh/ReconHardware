@@ -2,263 +2,30 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Wed Aug 26 14:28:47 2020
-# Process ID: 33712
+# Start of session at: Sun Sep  6 16:32:33 2020
+# Process ID: 32612
 # Current directory: C:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent27528 C:\GitHub\ReconHardware\PynqSoftware\Projects\matrixAccelerator\matrixAccelerator.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent33828 C:\GitHub\ReconHardware\PynqSoftware\Projects\matrixAccelerator\matrixAccelerator.xpr
 # Log file: C:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/vivado.log
 # Journal file: C:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project C:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.xpr
 update_compile_order -fileset sources_1
-close_project
-create_project Convolution_Accelerator C:/GitHub/ReconHardware/PynqSoftware/Projects/Convolution_Accelerator -part xc7z020clg400-1
-set_property board_part tul.com.tw:pynq-z2:part0:1.0 [current_project]
-add_files -norecurse -scan_for_includes {C:/GitHub/ReconHardware/PynqSoftware/Sources/definitions.h {C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/Convolution_Accel/Convolution_Accel.bd}}
-export_ip_user_files -of_objects  [get_files  {{C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/Convolution_Accel/Convolution_Accel.bd}}] -lib_map_path [list {modelsim=C:/GitHub/ReconHardware/PynqSoftware/Projects/Convolution_Accelerator/Convolution_Accelerator.cache/compile_simlib/modelsim} {questa=C:/GitHub/ReconHardware/PynqSoftware/Projects/Convolution_Accelerator/Convolution_Accelerator.cache/compile_simlib/questa} {riviera=C:/GitHub/ReconHardware/PynqSoftware/Projects/Convolution_Accelerator/Convolution_Accelerator.cache/compile_simlib/riviera} {activehdl=C:/GitHub/ReconHardware/PynqSoftware/Projects/Convolution_Accelerator/Convolution_Accelerator.cache/compile_simlib/activehdl}] -force -quiet
-add_files -norecurse -scan_for_includes {C:/GitHub/ReconHardware/PynqSoftware/Sources/General/XBar2.v C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v C:/GitHub/ReconHardware/PynqSoftware/Sources/Multiplier/multiplyComputePynq.v C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixAccTopDevice.v C:/GitHub/ReconHardware/PynqSoftware/Sources/General/aFIFO.v C:/GitHub/ReconHardware/PynqSoftware/Sources/Adder/adderFloat.v C:/GitHub/ReconHardware/PynqSoftware/Sources/Multiplier/fixedmultiplyCompute.v C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixAccelerator.v C:/GitHub/ReconHardware/PynqSoftware/Sources/Multiplier/floatmComputePynq.v}
 update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-make_wrapper -files [get_files {{C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/Convolution_Accel/Convolution_Accel.bd}}] -top
-add_files -norecurse {{C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/Convolution_Accel/hdl/Convolution_Accel_wrapper.v}}
-update_compile_order -fileset sources_1
-open_bd_design {C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/Convolution_Accel/Convolution_Accel.bd}
-# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
-set_property source_mgmt_mode None [current_project]
-set_property top Convolution_Accel_wrapper [current_fileset]
-# Re-enabling previously disabled source management mode.
-set_property source_mgmt_mode All [current_project]
-update_compile_order -fileset sources_1
-launch_runs synth_1 -jobs 4
-wait_on_run synth_1
-set_property PR_FLOW 1 [current_project] 
-close_bd_design [get_bd_designs Convolution_Accel]
-set_property is_enabled false [get_files  {{C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/Convolution_Accel/Convolution_Accel.bd}}]
-update_compile_order -fileset sources_1
-set_property is_enabled true [get_files  {{C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/Convolution_Accel/Convolution_Accel.bd}}]
-set_property is_enabled false [get_files  {{C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/Convolution_Accel/hdl/Convolution_Accel_wrapper.v}}]
-update_compile_order -fileset sources_1
-export_ip_user_files -of_objects  [get_files {{C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/Convolution_Accel/Convolution_Accel.bd}}] -no_script -reset -force -quiet
-remove_files  {{C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/Convolution_Accel/Convolution_Accel.bd}}
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-create_partition_def -name Multiplier -module floatmultiplyComputePynq
-create_reconfig_module -name floatmultiplyComputePynq -partition_def [get_partition_defs Multiplier ]  -define_from floatmultiplyComputePynq
-update_compile_order -fileset floatmultiplyComputePynq
-set_property name {Floating Point} [get_reconfig_modules floatmultiplyComputePynq]
-set_property name Floating [get_reconfig_modules floatmultiplyComputePynq]
-create_reconfig_module -name Fixed -partition_def [get_partition_defs Multiplier ] 
-add_files -norecurse -scan_for_includes C:/GitHub/ReconHardware/PynqSoftware/Sources/definitions.h C:/GitHub/ReconHardware/PynqSoftware/Sources/Multiplier/fixedmultiplyCompute.v  -of_objects [get_reconfig_modules Fixed]
-create_reconfig_module -name Integer -partition_def [get_partition_defs Multiplier ] 
-add_files -norecurse -scan_for_includes C:/GitHub/ReconHardware/PynqSoftware/Sources/definitions.h C:/GitHub/ReconHardware/PynqSoftware/Sources/Multiplier/multiplyComputePynq.v  -of_objects [get_reconfig_modules Integer]
-create_partition_def -name Adder -module adderFloat
-create_reconfig_module -name adderFloat -partition_def [get_partition_defs Adder ]  -define_from adderFloat
-create_reconfig_module -name adder -partition_def [get_partition_defs Adder ] 
-add_files -norecurse -scan_for_includes C:/GitHub/ReconHardware/PynqSoftware/Sources/definitions.h C:/GitHub/ReconHardware/PynqSoftware/Sources/Adder/adder.v  -of_objects [get_reconfig_modules adder]
-create_pr_configuration -name config_1 -partitions [list matrixAccel/finalAdder:adderFloat matrixAccel/genblk4[0].outputAdder:adderFloat matrixAccel/genblk4[1].outputAdder:adderFloat matrixAccel/genblk4[2].outputAdder:adderFloat matrixAccel/genblk3[0].inputMulti:Floating matrixAccel/genblk3[1].inputMulti:Floating matrixAccel/genblk3[2].inputMulti:Floating ]
-create_pr_configuration -name config_2 -partitions [list matrixAccel/finalAdder:adder matrixAccel/genblk4[0].outputAdder:adder matrixAccel/genblk4[1].outputAdder:adder matrixAccel/genblk4[2].outputAdder:adder matrixAccel/genblk3[0].inputMulti:Fixed matrixAccel/genblk3[1].inputMulti:Fixed matrixAccel/genblk3[2].inputMulti:Fixed ]
-create_pr_configuration -name config_3 -partitions [list matrixAccel/finalAdder:adder matrixAccel/genblk4[0].outputAdder:adder matrixAccel/genblk4[1].outputAdder:adder matrixAccel/genblk4[2].outputAdder:adder matrixAccel/genblk3[0].inputMulti:Integer matrixAccel/genblk3[1].inputMulti:Integer matrixAccel/genblk3[2].inputMulti:Integer ]
-set_property PR_CONFIGURATION config_1 [get_runs impl_1]
-create_run child_0_impl_1 -parent_run impl_1 -flow {Vivado Implementation 2019} -pr_config config_2
-create_run child_1_impl_1 -parent_run impl_1 -flow {Vivado Implementation 2019} -pr_config config_3
-launch_runs synth_1 -jobs 4
-wait_on_run synth_1
-set_property is_global_include true [get_files  C:/GitHub/ReconHardware/PynqSoftware/Sources/definitions.h]
+reset_target all [get_files  {{C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/PYNQ_wrap.bd}}]
+export_ip_user_files -of_objects  [get_files  {{C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/PYNQ_wrap.bd}}] -sync -no_script -force -quiet
+delete_ip_run [get_files -of_objects [get_fileset sources_1] {{C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/PYNQ_wrap.bd}}]
+open_bd_design {C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/PYNQ_wrap.bd}
+write_bd_tcl -force C:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/PYNQ_wrap.tcl
 reset_run synth_1
-launch_runs synth_1 -jobs 4
-wait_on_run synth_1
-open_run synth_1 -name synth_1 -pr_config [current_pr_configuration]
-startgroup
-create_pblock pblock_finalAdder
-resize_pblock pblock_finalAdder -add SLICE_X50Y0:SLICE_X53Y24
-add_cells_to_pblock pblock_finalAdder [get_cells [list matrixAccel/finalAdder]] -clear_locs
-endgroup
-resize_pblock pblock_finalAdder -add SLICE_X50Y0:SLICE_X53Y49 -remove SLICE_X50Y0:SLICE_X53Y24 -locs keep_all
-resize_pblock pblock_finalAdder -add {SLICE_X50Y0:SLICE_X57Y49 RAMB18_X3Y0:RAMB18_X3Y19 RAMB36_X3Y0:RAMB36_X3Y9} -remove SLICE_X50Y0:SLICE_X53Y49 -locs keep_all
-startgroup
-create_pblock {pblock_gnblk4[0].otptAdr}
-resize_pblock {pblock_gnblk4[0].otptAdr} -add SLICE_X58Y0:SLICE_X65Y49
-add_cells_to_pblock {pblock_gnblk4[0].otptAdr} [get_cells [list {matrixAccel/genblk4[0].outputAdder}]] -clear_locs
-endgroup
-startgroup
-create_pblock {pblock_gnblk4[1].otptAdr}
-resize_pblock {pblock_gnblk4[1].otptAdr} -add SLICE_X66Y0:SLICE_X71Y49
-add_cells_to_pblock {pblock_gnblk4[1].otptAdr} [get_cells [list {matrixAccel/genblk4[1].outputAdder}]] -clear_locs
-endgroup
-resize_pblock {pblock_gnblk4[1].otptAdr} -add SLICE_X66Y0:SLICE_X75Y49 -remove SLICE_X66Y0:SLICE_X71Y49 -locs keep_all
-resize_pblock {pblock_gnblk4[1].otptAdr} -add SLICE_X66Y0:SLICE_X73Y49 -remove SLICE_X66Y0:SLICE_X75Y49 -locs keep_all
-close [ open C:/GitHub/ReconHardware/PynqSoftware/Constraints/Conv_Accel.xdc w ]
-add_files -fileset constrs_1 C:/GitHub/ReconHardware/PynqSoftware/Constraints/Conv_Accel.xdc
-set_property target_constrs_file C:/GitHub/ReconHardware/PynqSoftware/Constraints/Conv_Accel.xdc [current_fileset -constrset]
-save_constraints -force
-startgroup
-create_pblock {pblock_gnblk4[2].otptAdr}
-resize_pblock {pblock_gnblk4[2].otptAdr} -add SLICE_X74Y0:SLICE_X79Y49
-add_cells_to_pblock {pblock_gnblk4[2].otptAdr} [get_cells [list {matrixAccel/genblk4[2].outputAdder}]] -clear_locs
-endgroup
-resize_pblock {pblock_gnblk4[2].otptAdr} -add SLICE_X74Y0:SLICE_X81Y49 -remove SLICE_X74Y0:SLICE_X79Y49 -locs keep_all
-save_constraints
-startgroup
-create_pblock {pblock_gnblk3[0].inptMlt}
-resize_pblock {pblock_gnblk3[0].inptMlt} -add SLICE_X42Y0:SLICE_X49Y49
-add_cells_to_pblock {pblock_gnblk3[0].inptMlt} [get_cells [list {matrixAccel/genblk3[0].inputMulti}]] -clear_locs
-endgroup
-resize_pblock {pblock_gnblk3[0].inptMlt} -add {SLICE_X34Y0:SLICE_X49Y49 DSP48_X2Y0:DSP48_X2Y19} -remove SLICE_X42Y0:SLICE_X49Y49 -locs keep_all
-resize_pblock {pblock_gnblk3[0].inptMlt} -add {SLICE_X34Y0:SLICE_X49Y11 DSP48_X2Y0:DSP48_X2Y3} -remove {SLICE_X34Y0:SLICE_X49Y49 DSP48_X2Y0:DSP48_X2Y19} -locs keep_all
-save_constraints
-startgroup
-create_pblock {pblock_gnblk3[1].inptMlt}
-resize_pblock {pblock_gnblk3[1].inptMlt} -add {SLICE_X20Y0:SLICE_X33Y11 RAMB18_X1Y0:RAMB18_X2Y3 RAMB36_X1Y0:RAMB36_X2Y1}
-add_cells_to_pblock {pblock_gnblk3[1].inptMlt} [get_cells [list {matrixAccel/genblk3[1].inputMulti}]] -clear_locs
-endgroup
-resize_pblock {pblock_gnblk3[1].inptMlt} -add {SLICE_X20Y0:SLICE_X33Y11 DSP48_X1Y0:DSP48_X1Y3 RAMB18_X1Y0:RAMB18_X2Y3 RAMB36_X1Y0:RAMB36_X2Y1} -remove {SLICE_X20Y0:SLICE_X33Y11 RAMB18_X1Y0:RAMB18_X2Y3 RAMB36_X1Y0:RAMB36_X2Y1} -locs keep_all
-startgroup
-create_pblock {pblock_gnblk3[2].inptMlt}
-resize_pblock {pblock_gnblk3[2].inptMlt} -add {SLICE_X6Y0:SLICE_X19Y11 DSP48_X0Y0:DSP48_X0Y3 RAMB18_X0Y0:RAMB18_X0Y3 RAMB36_X0Y0:RAMB36_X0Y1}
-add_cells_to_pblock {pblock_gnblk3[2].inptMlt} [get_cells [list {matrixAccel/genblk3[2].inputMulti}]] -clear_locs
-endgroup
-resize_pblock {pblock_gnblk3[0].inptMlt} -add {SLICE_X34Y0:SLICE_X47Y11 DSP48_X2Y0:DSP48_X2Y3} -remove {SLICE_X34Y0:SLICE_X49Y11 DSP48_X2Y0:DSP48_X2Y3} -locs keep_all
-save_constraints
-reset_run synth_1
-launch_runs synth_1 -jobs 4
-wait_on_run synth_1
-close_design
-launch_runs impl_1 child_0_impl_1 child_1_impl_1 -jobs 4
+launch_runs impl_1 -to_step write_bitstream -jobs 4
 wait_on_run impl_1
-wait_on_run child_0_impl_1
-wait_on_run child_1_impl_1
-open_run synth_1 -name synth_1 -pr_config [current_pr_configuration]
-resize_pblock {pblock_gnblk4[2].otptAdr} -add {SLICE_X74Y0:SLICE_X113Y49 DSP48_X3Y0:DSP48_X4Y19 RAMB18_X4Y0:RAMB18_X5Y19 RAMB36_X4Y0:RAMB36_X5Y9} -remove SLICE_X74Y0:SLICE_X81Y49 -locs keep_all
-resize_pblock {pblock_gnblk4[2].otptAdr} -add {SLICE_X102Y0:SLICE_X113Y49 DSP48_X4Y0:DSP48_X4Y19 RAMB18_X5Y0:RAMB18_X5Y19 RAMB36_X5Y0:RAMB36_X5Y9} -remove {SLICE_X74Y0:SLICE_X113Y49 DSP48_X3Y0:DSP48_X4Y19 RAMB18_X4Y0:RAMB18_X5Y19 RAMB36_X4Y0:RAMB36_X5Y9} -locs keep_all
-resize_pblock {pblock_gnblk4[2].otptAdr} -add {SLICE_X102Y0:SLICE_X113Y24 DSP48_X4Y0:DSP48_X4Y9 RAMB18_X5Y0:RAMB18_X5Y9 RAMB36_X5Y0:RAMB36_X5Y4} -remove {SLICE_X102Y0:SLICE_X113Y49 DSP48_X4Y0:DSP48_X4Y19 RAMB18_X5Y0:RAMB18_X5Y19 RAMB36_X5Y0:RAMB36_X5Y9} -locs keep_all
-resize_pblock {pblock_gnblk4[1].otptAdr} -add {SLICE_X66Y0:SLICE_X99Y49 DSP48_X3Y0:DSP48_X3Y19 RAMB18_X4Y0:RAMB18_X4Y19 RAMB36_X4Y0:RAMB36_X4Y9} -remove SLICE_X66Y0:SLICE_X73Y49 -locs keep_all
-resize_pblock {pblock_gnblk4[1].otptAdr} -add {SLICE_X92Y0:SLICE_X99Y49 DSP48_X3Y0:DSP48_X3Y19} -remove {SLICE_X66Y0:SLICE_X99Y49 DSP48_X3Y0:DSP48_X3Y19 RAMB18_X4Y0:RAMB18_X4Y19 RAMB36_X4Y0:RAMB36_X4Y9} -locs keep_all
-resize_pblock {pblock_gnblk4[1].otptAdr} -add {SLICE_X92Y0:SLICE_X99Y24 DSP48_X3Y0:DSP48_X3Y9} -remove {SLICE_X92Y0:SLICE_X99Y49 DSP48_X3Y0:DSP48_X3Y19} -locs keep_all
-save_constraints
-resize_pblock pblock_finalAdder -add {SLICE_X50Y0:SLICE_X57Y24 RAMB18_X3Y0:RAMB18_X3Y9 RAMB36_X3Y0:RAMB36_X3Y4} -remove {SLICE_X50Y0:SLICE_X57Y49 RAMB18_X3Y0:RAMB18_X3Y19 RAMB36_X3Y0:RAMB36_X3Y9} -locs keep_all
-resize_pblock pblock_finalAdder -add {SLICE_X50Y0:SLICE_X57Y29 RAMB18_X3Y0:RAMB18_X3Y11 RAMB36_X3Y0:RAMB36_X3Y5} -remove {SLICE_X50Y0:SLICE_X57Y24 RAMB18_X3Y0:RAMB18_X3Y9 RAMB36_X3Y0:RAMB36_X3Y4} -locs keep_all
-resize_pblock pblock_finalAdder -add {SLICE_X50Y0:SLICE_X57Y35 RAMB18_X3Y0:RAMB18_X3Y13 RAMB36_X3Y0:RAMB36_X3Y6} -remove {SLICE_X50Y0:SLICE_X57Y29 RAMB18_X3Y0:RAMB18_X3Y11 RAMB36_X3Y0:RAMB36_X3Y5} -locs keep_all
-resize_pblock {pblock_gnblk4[0].otptAdr} -add SLICE_X58Y0:SLICE_X69Y49 -remove SLICE_X58Y0:SLICE_X65Y49 -locs keep_all
-resize_pblock {pblock_gnblk4[0].otptAdr} -add SLICE_X60Y0:SLICE_X69Y49 -remove SLICE_X58Y0:SLICE_X69Y49 -locs keep_all
-resize_pblock {pblock_gnblk4[0].otptAdr} -add SLICE_X60Y0:SLICE_X69Y35 -remove SLICE_X60Y0:SLICE_X69Y49 -locs keep_all
-resize_pblock {pblock_gnblk4[1].otptAdr} -add {SLICE_X72Y0:SLICE_X99Y24 DSP48_X3Y0:DSP48_X3Y9 RAMB18_X4Y0:RAMB18_X4Y9 RAMB36_X4Y0:RAMB36_X4Y4} -remove {SLICE_X92Y0:SLICE_X99Y24 DSP48_X3Y0:DSP48_X3Y9} -locs keep_all
-resize_pblock {pblock_gnblk4[1].otptAdr} -add SLICE_X72Y0:SLICE_X81Y24 -remove {SLICE_X72Y0:SLICE_X99Y24 DSP48_X3Y0:DSP48_X3Y9 RAMB18_X4Y0:RAMB18_X4Y9 RAMB36_X4Y0:RAMB36_X4Y4} -locs keep_all
-resize_pblock {pblock_gnblk4[1].otptAdr} -add SLICE_X72Y0:SLICE_X81Y35 -remove SLICE_X72Y0:SLICE_X81Y24 -locs keep_all
-resize_pblock {pblock_gnblk4[2].otptAdr} -add {SLICE_X84Y0:SLICE_X113Y24 DSP48_X3Y0:DSP48_X4Y9 RAMB18_X4Y0:RAMB18_X5Y9 RAMB36_X4Y0:RAMB36_X5Y4} -remove {SLICE_X102Y0:SLICE_X113Y24 DSP48_X4Y0:DSP48_X4Y9 RAMB18_X5Y0:RAMB18_X5Y9 RAMB36_X5Y0:RAMB36_X5Y4} -locs keep_all
-resize_pblock {pblock_gnblk4[2].otptAdr} -add {SLICE_X84Y0:SLICE_X113Y35 DSP48_X3Y0:DSP48_X4Y13 RAMB18_X4Y0:RAMB18_X5Y13 RAMB36_X4Y0:RAMB36_X5Y6} -remove {SLICE_X84Y0:SLICE_X113Y24 DSP48_X3Y0:DSP48_X4Y9 RAMB18_X4Y0:RAMB18_X5Y9 RAMB36_X4Y0:RAMB36_X5Y4} -locs keep_all
-resize_pblock {pblock_gnblk4[2].otptAdr} -add {SLICE_X84Y0:SLICE_X95Y35 DSP48_X3Y0:DSP48_X3Y13 RAMB18_X4Y0:RAMB18_X4Y13 RAMB36_X4Y0:RAMB36_X4Y6} -remove {SLICE_X84Y0:SLICE_X113Y35 DSP48_X3Y0:DSP48_X4Y13 RAMB18_X4Y0:RAMB18_X5Y13 RAMB36_X4Y0:RAMB36_X5Y6} -locs keep_all
-resize_pblock {pblock_gnblk4[2].otptAdr} -add {SLICE_X84Y0:SLICE_X93Y35 DSP48_X3Y0:DSP48_X3Y13 RAMB18_X4Y0:RAMB18_X4Y13 RAMB36_X4Y0:RAMB36_X4Y6} -remove {SLICE_X84Y0:SLICE_X95Y35 DSP48_X3Y0:DSP48_X3Y13 RAMB18_X4Y0:RAMB18_X4Y13 RAMB36_X4Y0:RAMB36_X4Y6} -locs keep_all
-save_constraints
-reset_run impl_1
-launch_runs impl_1 child_0_impl_1 child_1_impl_1 -jobs 4
-wait_on_run impl_1
-wait_on_run child_0_impl_1
-wait_on_run child_1_impl_1
-resize_pblock {pblock_gnblk4[0].otptAdr} -add SLICE_X60Y0:SLICE_X69Y24 -remove SLICE_X60Y0:SLICE_X69Y35 -locs keep_all
-resize_pblock {pblock_gnblk4[0].otptAdr} -add SLICE_X60Y0:SLICE_X69Y35 -remove SLICE_X60Y0:SLICE_X69Y24 -locs keep_all
-resize_pblock {pblock_gnblk4[0].otptAdr} -add SLICE_X60Y0:SLICE_X67Y35 -remove SLICE_X60Y0:SLICE_X69Y35 -locs keep_all
-resize_pblock pblock_finalAdder -add {SLICE_X50Y0:SLICE_X55Y35 RAMB18_X3Y0:RAMB18_X3Y13 RAMB36_X3Y0:RAMB36_X3Y6} -remove {SLICE_X50Y0:SLICE_X57Y35 RAMB18_X3Y0:RAMB18_X3Y13 RAMB36_X3Y0:RAMB36_X3Y6} -locs keep_all
-resize_pblock pblock_finalAdder -add {SLICE_X50Y0:SLICE_X55Y39 RAMB18_X3Y0:RAMB18_X3Y15 RAMB36_X3Y0:RAMB36_X3Y7} -remove {SLICE_X50Y0:SLICE_X55Y35 RAMB18_X3Y0:RAMB18_X3Y13 RAMB36_X3Y0:RAMB36_X3Y6} -locs keep_all
-resize_pblock pblock_finalAdder -add SLICE_X50Y0:SLICE_X53Y39 -remove {SLICE_X50Y0:SLICE_X55Y39 RAMB18_X3Y0:RAMB18_X3Y15 RAMB36_X3Y0:RAMB36_X3Y7} -locs keep_all
-resize_pblock pblock_finalAdder -add SLICE_X50Y0:SLICE_X53Y49 -remove SLICE_X50Y0:SLICE_X53Y39 -locs keep_all
-resize_pblock pblock_finalAdder -add SLICE_X50Y0:SLICE_X53Y35 -remove SLICE_X50Y0:SLICE_X53Y49 -locs keep_all
-resize_pblock pblock_finalAdder -add {SLICE_X50Y0:SLICE_X55Y35 RAMB18_X3Y0:RAMB18_X3Y13 RAMB36_X3Y0:RAMB36_X3Y6} -remove SLICE_X50Y0:SLICE_X53Y35 -locs keep_all
-resize_pblock {pblock_gnblk4[2].otptAdr} -add {SLICE_X84Y0:SLICE_X105Y35 DSP48_X3Y0:DSP48_X4Y13 RAMB18_X4Y0:RAMB18_X4Y13 RAMB36_X4Y0:RAMB36_X4Y6} -remove {SLICE_X84Y0:SLICE_X93Y35 DSP48_X3Y0:DSP48_X3Y13 RAMB18_X4Y0:RAMB18_X4Y13 RAMB36_X4Y0:RAMB36_X4Y6} -locs keep_all
-resize_pblock {pblock_gnblk4[2].otptAdr} -add {SLICE_X94Y0:SLICE_X105Y35 DSP48_X4Y0:DSP48_X4Y13} -remove {SLICE_X84Y0:SLICE_X105Y35 DSP48_X3Y0:DSP48_X4Y13 RAMB18_X4Y0:RAMB18_X4Y13 RAMB36_X4Y0:RAMB36_X4Y6} -locs keep_all
-resize_pblock {pblock_gnblk4[0].otptAdr} -add SLICE_X60Y0:SLICE_X69Y35 -remove SLICE_X60Y0:SLICE_X67Y35 -locs keep_all
-resize_pblock {pblock_gnblk4[1].otptAdr} -add SLICE_X72Y0:SLICE_X85Y35 -remove SLICE_X72Y0:SLICE_X81Y35 -locs keep_all
-resize_pblock {pblock_gnblk4[1].otptAdr} -add SLICE_X76Y0:SLICE_X85Y35 -remove SLICE_X72Y0:SLICE_X85Y35 -locs keep_all
-resize_pblock pblock_finalAdder -add {SLICE_X50Y0:SLICE_X57Y35 RAMB18_X3Y0:RAMB18_X3Y13 RAMB36_X3Y0:RAMB36_X3Y6} -remove {SLICE_X50Y0:SLICE_X55Y35 RAMB18_X3Y0:RAMB18_X3Y13 RAMB36_X3Y0:RAMB36_X3Y6} -locs keep_all
-resize_pblock {pblock_gnblk4[0].otptAdr} -add SLICE_X60Y0:SLICE_X73Y35 -remove SLICE_X60Y0:SLICE_X69Y35 -locs keep_all
-resize_pblock {pblock_gnblk4[0].otptAdr} -add SLICE_X62Y0:SLICE_X73Y35 -remove SLICE_X60Y0:SLICE_X73Y35 -locs keep_all
-resize_pblock pblock_finalAdder -add {SLICE_X50Y0:SLICE_X59Y35 RAMB18_X3Y0:RAMB18_X3Y13 RAMB36_X3Y0:RAMB36_X3Y6} -remove {SLICE_X50Y0:SLICE_X57Y35 RAMB18_X3Y0:RAMB18_X3Y13 RAMB36_X3Y0:RAMB36_X3Y6} -locs keep_all
-save_constraints
-reset_run impl_1
-launch_runs impl_1 child_0_impl_1 child_1_impl_1 -jobs 4
-wait_on_run impl_1
-wait_on_run child_0_impl_1
-wait_on_run child_1_impl_1
-close_design
-open_run impl_1
-resize_pblock {pblock_gnblk4[0].otptAdr} -add SLICE_X62Y0:SLICE_X73Y42 -remove SLICE_X62Y0:SLICE_X73Y35 -locs keep_all
-resize_pblock {pblock_gnblk4[0].otptAdr} -add SLICE_X64Y0:SLICE_X73Y42 -remove SLICE_X62Y0:SLICE_X73Y42 -locs keep_all
-resize_pblock {pblock_gnblk4[0].otptAdr} -add SLICE_X64Y0:SLICE_X71Y42 -remove SLICE_X64Y0:SLICE_X73Y42 -locs keep_all
-resize_pblock {pblock_gnblk4[0].otptAdr} -add SLICE_X64Y0:SLICE_X71Y35 -remove SLICE_X64Y0:SLICE_X71Y42 -locs keep_all
-resize_pblock {pblock_gnblk4[2].otptAdr} -add {SLICE_X94Y0:SLICE_X103Y35 DSP48_X4Y0:DSP48_X4Y13} -remove {SLICE_X94Y0:SLICE_X105Y35 DSP48_X4Y0:DSP48_X4Y13} -locs keep_all
-save_constraints
-reset_run impl_1
-launch_runs impl_1 child_0_impl_1 child_1_impl_1 -jobs 4
-wait_on_run impl_1
-wait_on_run child_0_impl_1
-wait_on_run child_1_impl_1
-close_design
-open_run impl_1
-resize_pblock {pblock_gnblk3[2].inptMlt} -add {SLICE_X8Y0:SLICE_X19Y11 DSP48_X0Y0:DSP48_X0Y3 RAMB18_X0Y0:RAMB18_X0Y3 RAMB36_X0Y0:RAMB36_X0Y1} -remove {SLICE_X6Y0:SLICE_X19Y11 DSP48_X0Y0:DSP48_X0Y3 RAMB18_X0Y0:RAMB18_X0Y3 RAMB36_X0Y0:RAMB36_X0Y1} -locs keep_all
-save_constraints
-close_design
-synth_design -rtl -name rtl_1
-open_run synth_1 -name synth_1 -pr_config [current_pr_configuration]
-reset_run impl_1
-launch_runs impl_1 child_0_impl_1 child_1_impl_1 -jobs 4
-wait_on_run impl_1
-wait_on_run child_0_impl_1
-wait_on_run child_1_impl_1
-close_design
-open_run impl_1
-open_run child_0_impl_1
-close_design
-close_design
-add_files -norecurse -scan_for_includes {{C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/Convolution_Accel/Convolution_Accel.bd}}
-export_ip_user_files -of_objects  [get_files  {{C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/Convolution_Accel/Convolution_Accel.bd}}] -lib_map_path [list {modelsim=C:/GitHub/ReconHardware/PynqSoftware/Projects/Convolution_Accelerator/Convolution_Accelerator.cache/compile_simlib/modelsim} {questa=C:/GitHub/ReconHardware/PynqSoftware/Projects/Convolution_Accelerator/Convolution_Accelerator.cache/compile_simlib/questa} {riviera=C:/GitHub/ReconHardware/PynqSoftware/Projects/Convolution_Accelerator/Convolution_Accelerator.cache/compile_simlib/riviera} {activehdl=C:/GitHub/ReconHardware/PynqSoftware/Projects/Convolution_Accelerator/Convolution_Accelerator.cache/compile_simlib/activehdl}] -force -quiet
+write_bd_tcl -force C:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/PYNQ_wrap.tcl
+open_bd_design {C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/PYNQ_wrap.bd}
+launch_simulation
+close [ open C:/GitHub/ReconHardware/PynqSoftware/Sources/General/Conv_Accel_Top.v w ]
+add_files C:/GitHub/ReconHardware/PynqSoftware/Sources/General/Conv_Accel_Top.v
 update_compile_order -fileset sources_1
-refresh_design
-refresh_design
-open_bd_design {C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/Convolution_Accel/Convolution_Accel.bd}
-update_module_reference Convolution_Accel_matrixAccTopDevice_0_0
-make_wrapper -files [get_files {{C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/Convolution_Accel/Convolution_Accel.bd}}] -top
-make_wrapper -files [get_files {{C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/Convolution_Accel/Convolution_Accel.bd}}] -top
-make_wrapper -files [get_files {{C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/Convolution_Accel/Convolution_Accel.bd}}] -top
-set_property is_enabled true [get_files  {{C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/Convolution_Accel/hdl/Convolution_Accel_wrapper.v}}]
 update_compile_order -fileset sources_1
-export_ip_user_files -of_objects  [get_files {{C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/Convolution_Accel/hdl/Convolution_Accel_wrapper.v}}] -no_script -reset -force -quiet
-remove_files  {{C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/Convolution_Accel/hdl/Convolution_Accel_wrapper.v}}
-export_ip_user_files -of_objects  [get_files C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixAccelerator.v] -no_script -reset -force -quiet
-remove_files  C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixAccelerator.v
-update_module_reference Convolution_Accel_matrixAccTopDevice_0_0
 update_compile_order -fileset sources_1
-export_ip_user_files -of_objects  [get_files {{C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/Convolution_Accel/Convolution_Accel.bd}}] -no_script -reset -force -quiet
-remove_files  {{C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/Convolution_Accel/Convolution_Accel.bd}}
-refresh_design
-close_design
-create_bd_design "design_1"
-update_compile_order -fileset sources_1
-add_files -norecurse -scan_for_includes C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixAccelerator.v
-update_compile_order -fileset sources_1
-export_ip_user_files -of_objects  [get_files C:/GitHub/ReconHardware/PynqSoftware/Projects/Convolution_Accelerator/Convolution_Accelerator.srcs/sources_1/bd/design_1/design_1.bd] -no_script -reset -force -quiet
-remove_files  C:/GitHub/ReconHardware/PynqSoftware/Projects/Convolution_Accelerator/Convolution_Accelerator.srcs/sources_1/bd/design_1/design_1.bd
-reset_run synth_1
-launch_runs impl_1 child_0_impl_1 child_1_impl_1 -jobs 4
-wait_on_run impl_1
-wait_on_run child_0_impl_1
-wait_on_run child_1_impl_1
-open_run impl_1
-open_run child_0_impl_1
-open_run child_1_impl_1
-report_utilization -name utilization_1
-report_power -name {power_1}
-report_power -name {power_1}
-current_design impl_1
-current_design child_1_impl_1
-close_design
-close_design
-open_run synth_1 -name synth_1 -pr_config [current_pr_configuration]
-current_design impl_1
-report_utilization -name utilization_1
-report_power -name {power_1}
-open_run child_0_impl_1
-report_power -name {power_1}
-report_utilization -name utilization_1
-open_run child_1_impl_1
-report_power -name {power_1}
-report_utilization -name utilization_1

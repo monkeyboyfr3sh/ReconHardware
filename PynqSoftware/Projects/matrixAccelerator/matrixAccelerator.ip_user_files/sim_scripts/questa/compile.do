@@ -18,12 +18,15 @@ vlog -work xilinx_vip "../../../../../Sources/definitions.h" -64 -sv -L axi_vip_
 "C:/Xilinx/Vivado/2019.2/data/xilinx_vip/hdl/clk_vip_if.sv" \
 "C:/Xilinx/Vivado/2019.2/data/xilinx_vip/hdl/rst_vip_if.sv" \
 
-vlog -work xil_defaultlib "../../../../../Sources/definitions.h" -64 "+incdir+../../../../../Sources" "+incdir+../../../../../Sources/Block Diagrams/Convolution_Accel/ipshared/ec67/hdl" "+incdir+../../../../../Sources/Block Diagrams/Convolution_Accel/ipshared/2d50/hdl" "+incdir+C:/Xilinx/Vivado/2019.2/data/xilinx_vip/include" \
+vlog -work xil_defaultlib "../../../../../Sources/definitions.h" -64 "+incdir+../../../../../Sources" "+incdir+../../../../../Sources/Block Diagrams/Convolution_Accel/ipshared/ec67/hdl" "+incdir+../../../../../Sources/Block Diagrams/Convolution_Accel/ipshared/2d50/hdl" "+incdir+../../../../../Sources/Block Diagrams/PYNQ_wrap/ipshared/ec67/hdl" "+incdir+../../../../../Sources/Block Diagrams/PYNQ_wrap/ipshared/2d50/hdl" "+incdir+C:/Xilinx/Vivado/2019.2/data/xilinx_vip/include" \
 "../../../../../Sources/General/XBar2.v" \
+"../../../../../Sources/General/aFIFO.v" \
 "../../../../../Sources/Adder/adderFloat.v" \
 "../../../../../Sources/Multiplier/floatmComputePynq.v" \
+"../../../../../Sources/General/matrixAccTopDevice.v" \
 "../../../../../Sources/General/matrixAccelerator.v" \
-"../../../../../Sources/TB/matrixAccelerator_tb.v" \
+"../../../../../Sources/General/matrixControl3x3.v" \
+"../../../../../Sources/TB/convolve3x3_tb.v" \
 
 vlog -work xil_defaultlib \
 "glbl.v"

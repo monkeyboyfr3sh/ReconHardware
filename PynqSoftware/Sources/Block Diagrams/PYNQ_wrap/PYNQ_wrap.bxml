@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="39">
   <CompositeFile CompositeFileTopName="PYNQ_wrap" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1595795935"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1595795935"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1595795935"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1595795935"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1599449770"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1599449770"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1599449770"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1599449770"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\PYNQ_wrap_processing_system7_0_0\PYNQ_wrap_processing_system7_0_0.xci" Type="IP">
         <Instance HierarchyPath="processing_system7_0"/>
@@ -15,15 +15,15 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\PYNQ_wrap_xlslice_0_0\PYNQ_wrap_xlslice_0_0.xci" Type="IP">
-        <Instance HierarchyPath="Clk"/>
+      <File Name="ip\PYNQ_wrap_xlconcat_0_0\PYNQ_wrap_xlconcat_0_0.xci" Type="IP">
+        <Instance HierarchyPath="xlconcat_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\PYNQ_wrap_xlslice_0_1\PYNQ_wrap_xlslice_0_1.xci" Type="IP">
+      <File Name="ip\PYNQ_wrap_Clk_0\PYNQ_wrap_Clk_0.xci" Type="IP">
         <Instance HierarchyPath="Rst"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
@@ -31,72 +31,32 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\PYNQ_wrap_xlslice_0_2\PYNQ_wrap_xlslice_0_2.xci" Type="IP">
-        <Instance HierarchyPath="dataIn"/>
+      <File Name="ip\PYNQ_wrap_Rst_1\PYNQ_wrap_Rst_1.xci" Type="IP">
+        <Instance HierarchyPath="dataInput"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\PYNQ_wrap_xlslice_0_3\PYNQ_wrap_xlslice_0_3.xci" Type="IP">
-        <Instance HierarchyPath="AddressSelect"/>
+      <File Name="ip\PYNQ_wrap_dataInput_0\PYNQ_wrap_dataInput_0.xci" Type="IP">
+        <Instance HierarchyPath="cStart"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\PYNQ_wrap_xlslice_0_4\PYNQ_wrap_xlslice_0_4.xci" Type="IP">
-        <Instance HierarchyPath="outputSelect"/>
+      <File Name="ip\PYNQ_wrap_cStart_0\PYNQ_wrap_cStart_0.xci" Type="IP">
+        <Instance HierarchyPath="wr_clk"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\PYNQ_wrap_AddressSelect_0\PYNQ_wrap_AddressSelect_0.xci" Type="IP">
-        <Instance HierarchyPath="bufferRD_in"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\PYNQ_wrap_bufferRD_in_0\PYNQ_wrap_bufferRD_in_0.xci" Type="IP">
-        <Instance HierarchyPath="bufferRD_out"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\PYNQ_wrap_bufferRD_in_1\PYNQ_wrap_bufferRD_in_1.xci" Type="IP">
-        <Instance HierarchyPath="bufferSelect"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\PYNQ_wrap_bufferSelect_0\PYNQ_wrap_bufferSelect_0.xci" Type="IP">
-        <Instance HierarchyPath="mStart_in"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\PYNQ_wrap_mStart_in_0\PYNQ_wrap_mStart_in_0.xci" Type="IP">
-        <Instance HierarchyPath="mStart_out"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\PYNQ_wrap_xlconcat_0_0\PYNQ_wrap_xlconcat_0_0.xci" Type="IP">
-        <Instance HierarchyPath="xlconcat_0"/>
+      <File Name="ip\PYNQ_wrap_clk_wiz_0_0\PYNQ_wrap_clk_wiz_0_0.xci" Type="IP">
+        <Instance HierarchyPath="clk_wiz_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -112,85 +72,6 @@
       <File Name="sim\PYNQ_wrap.v" Type="Verilog">
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\PYNQ_wrap_axi_hwicap_0_0\PYNQ_wrap_axi_hwicap_0_0.xci" Type="IP">
-        <Instance HierarchyPath="axi_hwicap_0"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\PYNQ_wrap_xbar_0\PYNQ_wrap_xbar_0.xci" Type="IP">
-        <Instance HierarchyPath="ps7_0_axi_periph/xbar"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\PYNQ_wrap_ps7_0_axi_periph_0\PYNQ_wrap_ps7_0_axi_periph_0.xci" Type="IP">
-        <Properties IsEditable="false" IsVisible="false" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\PYNQ_wrap_rst_ps7_0_100M_0\PYNQ_wrap_rst_ps7_0_100M_0.xci" Type="IP">
-        <Instance HierarchyPath="rst_ps7_0_100M"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\PYNQ_wrap_axi_hwicap_1_0\PYNQ_wrap_axi_hwicap_1_0.xci" Type="IP">
-        <Instance HierarchyPath="axi_hwicap_1"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\PYNQ_wrap_axi_hwicap_2_0\PYNQ_wrap_axi_hwicap_2_0.xci" Type="IP">
-        <Instance HierarchyPath="axi_hwicap_2"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\PYNQ_wrap_axi_hwicap_3_0\PYNQ_wrap_axi_hwicap_3_0.xci" Type="IP">
-        <Instance HierarchyPath="axi_hwicap_3"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\PYNQ_wrap_axi_hwicap_4_0\PYNQ_wrap_axi_hwicap_4_0.xci" Type="IP">
-        <Instance HierarchyPath="axi_hwicap_4"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\PYNQ_wrap_axi_uartlite_0_0\PYNQ_wrap_axi_uartlite_0_0.xci" Type="IP">
-        <Instance HierarchyPath="axi_uartlite_0"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="ip\PYNQ_wrap_auto_pc_0\PYNQ_wrap_auto_pc_0.xci" Type="IP">
-        <Instance HierarchyPath="ps7_0_axi_periph/s00_couplers/auto_pc"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="PYNQ_wrap_ooc.xdc" Type="XDC">

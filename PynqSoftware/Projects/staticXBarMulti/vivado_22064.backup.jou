@@ -1,0 +1,38 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Sun Sep  6 14:15:06 2020
+# Process ID: 22064
+# Current directory: C:/GitHub/ReconHardware/PynqSoftware/Projects/staticXBarMulti
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent22264 C:\GitHub\ReconHardware\PynqSoftware\Projects\staticXBarMulti\staticXBarMulti.xpr
+# Log file: C:/GitHub/ReconHardware/PynqSoftware/Projects/staticXBarMulti/vivado.log
+# Journal file: C:/GitHub/ReconHardware/PynqSoftware/Projects/staticXBarMulti\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/GitHub/ReconHardware/PynqSoftware/Projects/staticXBarMulti/staticXBarMulti.xpr
+update_compile_order -fileset sources_1
+open_bd_design {C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/PYNQ_wrap.bd}
+delete_bd_objs [get_bd_nets processing_system7_0_FCLK_RESET0_N] [get_bd_nets clk_wiz_0_clk_out1] [get_bd_cells clk_wiz_0]
+copy_bd_objs /  [get_bd_cells {Rst}]
+set_property location {2 873 -811} [get_bd_cells Rst1]
+connect_bd_net [get_bd_ports clk_out1_0] [get_bd_pins Rst1/Dout]
+set_property name Clk [get_bd_ports clk_out1_0]
+startgroup
+connect_bd_net [get_bd_pins processing_system7_0/GPIO_O] [get_bd_pins Rst1/Din]
+endgroup
+set_property location {2 907 -803} [get_bd_cells Rst1]
+startgroup
+set_property -dict [list CONFIG.DIN_TO {16} CONFIG.DIN_FROM {16}] [get_bd_cells Rst1]
+endgroup
+save_bd_design
+set_property name Clk [get_bd_cells Rst1]
+reset_run ps_Wrap_ParallelBuffer_0_0_synth_1
+reset_run ps_Wrap_dataSplit_0_0_synth_1
+save_bd_design
+reset_run synth_1
+update_module_reference ps_Wrap_ParallelBuffer_0_0
+update_module_reference ps_Wrap_dataSplit_0_0
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+reset_run synth_1

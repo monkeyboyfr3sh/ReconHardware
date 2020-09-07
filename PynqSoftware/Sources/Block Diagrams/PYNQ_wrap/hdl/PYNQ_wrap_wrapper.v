@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-//Date        : Sun Jul 26 15:38:34 2020
+//Date        : Sun Sep  6 22:35:51 2020
 //Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 //Command     : generate_target PYNQ_wrap_wrapper.bd
 //Design      : PYNQ_wrap_wrapper
@@ -10,8 +10,7 @@
 `timescale 1 ps / 1 ps
 
 module PYNQ_wrap_wrapper
-   (AddressSelect,
-    Clk,
+   (Clk,
     DDR_addr,
     DDR_ba,
     DDR_cas_n,
@@ -27,27 +26,21 @@ module PYNQ_wrap_wrapper
     DDR_ras_n,
     DDR_reset_n,
     DDR_we_n,
+    EMPTY,
     FIXED_IO_ddr_vrn,
     FIXED_IO_ddr_vrp,
     FIXED_IO_mio,
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
+    FULL,
     Rst,
-    bufferRD_in,
-    bufferRD_out,
-    bufferSelect,
-    dataIn,
-    dataOut,
-    mReady_in,
-    mReady_out,
-    mStart_in,
-    mStart_out,
-    outputSelect,
-    uart_rtl_rxd,
-    uart_rtl_txd);
-  output [4:0]AddressSelect;
-  output [0:0]Clk;
+    cReady,
+    cStart,
+    dataInput,
+    finalsum,
+    wr_clk);
+  output Clk;
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -63,28 +56,22 @@ module PYNQ_wrap_wrapper
   inout DDR_ras_n;
   inout DDR_reset_n;
   inout DDR_we_n;
+  input [0:0]EMPTY;
   inout FIXED_IO_ddr_vrn;
   inout FIXED_IO_ddr_vrp;
   inout [53:0]FIXED_IO_mio;
   inout FIXED_IO_ps_clk;
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
+  input [0:0]FULL;
   output [0:0]Rst;
-  output [3:0]bufferRD_in;
-  output [3:0]bufferRD_out;
-  output [0:0]bufferSelect;
-  output [7:0]dataIn;
-  input [7:0]dataOut;
-  input [3:0]mReady_in;
-  input [3:0]mReady_out;
-  output [0:0]mStart_in;
-  output [0:0]mStart_out;
-  output [1:0]outputSelect;
-  input uart_rtl_rxd;
-  output uart_rtl_txd;
+  input [0:0]cReady;
+  output [0:0]cStart;
+  output [15:0]dataInput;
+  input [15:0]finalsum;
+  output [0:0]wr_clk;
 
-  wire [4:0]AddressSelect;
-  wire [0:0]Clk;
+  wire Clk;
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
   wire DDR_cas_n;
@@ -100,29 +87,23 @@ module PYNQ_wrap_wrapper
   wire DDR_ras_n;
   wire DDR_reset_n;
   wire DDR_we_n;
+  wire [0:0]EMPTY;
   wire FIXED_IO_ddr_vrn;
   wire FIXED_IO_ddr_vrp;
   wire [53:0]FIXED_IO_mio;
   wire FIXED_IO_ps_clk;
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
+  wire [0:0]FULL;
   wire [0:0]Rst;
-  wire [3:0]bufferRD_in;
-  wire [3:0]bufferRD_out;
-  wire [0:0]bufferSelect;
-  wire [7:0]dataIn;
-  wire [7:0]dataOut;
-  wire [3:0]mReady_in;
-  wire [3:0]mReady_out;
-  wire [0:0]mStart_in;
-  wire [0:0]mStart_out;
-  wire [1:0]outputSelect;
-  wire uart_rtl_rxd;
-  wire uart_rtl_txd;
+  wire [0:0]cReady;
+  wire [0:0]cStart;
+  wire [15:0]dataInput;
+  wire [15:0]finalsum;
+  wire [0:0]wr_clk;
 
   PYNQ_wrap PYNQ_wrap_i
-       (.AddressSelect(AddressSelect),
-        .Clk(Clk),
+       (.Clk(Clk),
         .DDR_addr(DDR_addr),
         .DDR_ba(DDR_ba),
         .DDR_cas_n(DDR_cas_n),
@@ -138,23 +119,18 @@ module PYNQ_wrap_wrapper
         .DDR_ras_n(DDR_ras_n),
         .DDR_reset_n(DDR_reset_n),
         .DDR_we_n(DDR_we_n),
+        .EMPTY(EMPTY),
         .FIXED_IO_ddr_vrn(FIXED_IO_ddr_vrn),
         .FIXED_IO_ddr_vrp(FIXED_IO_ddr_vrp),
         .FIXED_IO_mio(FIXED_IO_mio),
         .FIXED_IO_ps_clk(FIXED_IO_ps_clk),
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
+        .FULL(FULL),
         .Rst(Rst),
-        .bufferRD_in(bufferRD_in),
-        .bufferRD_out(bufferRD_out),
-        .bufferSelect(bufferSelect),
-        .dataIn(dataIn),
-        .dataOut(dataOut),
-        .mReady_in(mReady_in),
-        .mReady_out(mReady_out),
-        .mStart_in(mStart_in),
-        .mStart_out(mStart_out),
-        .outputSelect(outputSelect),
-        .uart_rtl_rxd(uart_rtl_rxd),
-        .uart_rtl_txd(uart_rtl_txd));
+        .cReady(cReady),
+        .cStart(cStart),
+        .dataInput(dataInput),
+        .finalsum(finalsum),
+        .wr_clk(wr_clk));
 endmodule

@@ -1,9 +1,12 @@
-verilog xil_defaultlib "../../../../../Sources/definitions.h" --include "../../../../../Sources" --include "../../../../../Sources/Block Diagrams/Convolution_Accel/ipshared/ec67/hdl" --include "../../../../../Sources/Block Diagrams/Convolution_Accel/ipshared/2d50/hdl" \
+verilog xil_defaultlib "../../../../../Sources/definitions.h" --include "../../../../../Sources" --include "../../../../../Sources/Block Diagrams/Convolution_Accel/ipshared/ec67/hdl" --include "../../../../../Sources/Block Diagrams/Convolution_Accel/ipshared/2d50/hdl" --include "../../../../../Sources/Block Diagrams/PYNQ_wrap/ipshared/ec67/hdl" --include "../../../../../Sources/Block Diagrams/PYNQ_wrap/ipshared/2d50/hdl" \
 "../../../../../Sources/General/XBar2.v" \
+"../../../../../Sources/General/aFIFO.v" \
 "../../../../../Sources/Adder/adderFloat.v" \
 "../../../../../Sources/Multiplier/floatmComputePynq.v" \
+"../../../../../Sources/General/matrixAccTopDevice.v" \
 "../../../../../Sources/General/matrixAccelerator.v" \
-"../../../../../Sources/TB/matrixAccelerator_tb.v" \
+"../../../../../Sources/General/matrixControl3x3.v" \
+"../../../../../Sources/TB/convolve3x3_tb.v" \
 
 verilog xil_defaultlib "glbl.v"
 

@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1'
+HD_PWD='C:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log Convolution_Accel_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Convolution_Accel_wrapper.tcl
+EAStep vivado -log Conv_Accel_Top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Conv_Accel_Top.tcl

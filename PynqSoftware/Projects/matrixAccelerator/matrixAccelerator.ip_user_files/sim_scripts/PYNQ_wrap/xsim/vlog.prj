@@ -1,0 +1,14 @@
+verilog xil_defaultlib --include "../../../../../../Sources/Block Diagrams/PYNQ_wrap/ipshared/ec67/hdl" --include "../../../../../../Sources/Block Diagrams/PYNQ_wrap/ipshared/2d50/hdl" --include "../../../../../../Sources/Block Diagrams/PYNQ_wrap/ip/PYNQ_wrap_processing_system7_0_0" --include "../../../../../../Sources/Block Diagrams/PYNQ_wrap/ipshared/4fba" \
+"../../../bd/PYNQ_wrap/ip/PYNQ_wrap_processing_system7_0_0/sim/PYNQ_wrap_processing_system7_0_0.v" \
+"../../../bd/PYNQ_wrap/ip/PYNQ_wrap_xlconcat_0_0/sim/PYNQ_wrap_xlconcat_0_0.v" \
+"../../../bd/PYNQ_wrap/ip/PYNQ_wrap_Clk_0/sim/PYNQ_wrap_Clk_0.v" \
+"../../../bd/PYNQ_wrap/ip/PYNQ_wrap_Rst_1/sim/PYNQ_wrap_Rst_1.v" \
+"../../../bd/PYNQ_wrap/ip/PYNQ_wrap_dataInput_0/sim/PYNQ_wrap_dataInput_0.v" \
+"../../../bd/PYNQ_wrap/ip/PYNQ_wrap_cStart_0/sim/PYNQ_wrap_cStart_0.v" \
+"../../../bd/PYNQ_wrap/ip/PYNQ_wrap_clk_wiz_0_0/PYNQ_wrap_clk_wiz_0_0_clk_wiz.v" \
+"../../../bd/PYNQ_wrap/ip/PYNQ_wrap_clk_wiz_0_0/PYNQ_wrap_clk_wiz_0_0.v" \
+"../../../bd/PYNQ_wrap/sim/PYNQ_wrap.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

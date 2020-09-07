@@ -65,7 +65,7 @@ endgenerate
 generate
     genvar m ;
     for(m=0;m<`inputPortCount;m=m+1)begin
-        floatmultiplyComputePynq inputMulti (
+        multiplyComputePynq inputMulti (
             .clk(Clk),
             .reset(Rst),
             .multiplier(multiplier_input[m*`bitLength+:`bitLength]),
@@ -76,7 +76,7 @@ generate
         );
     end
     for(m=0;m<`outputPortCount;m=m+1)begin
-        adderFloat outputAdder (   
+        adder outputAdder (   
             .Clk(Clk),
             .Rst(Rst),
             .addend(addarray_inputConnector[(m+1)*(`bitLength*2)-1:m*(`bitLength*2)]),
@@ -86,7 +86,7 @@ generate
     end
 endgenerate
 
-adderFloat finalAdder (
+adder finalAdder (
     .Clk(Clk),
     .Rst(Rst),
     .addend(sum_Connector[addPointer]),

@@ -1,20 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1598456059">
-  <File Type="PA-TCL" Name="Convolution_Accel_wrapper.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="Convolution_Accel_wrapper_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="Convolution_Accel_wrapper_reports.tcl"/>
-  <File Type="RDS-RDS" Name="Convolution_Accel_wrapper.vds"/>
-  <File Type="RDS-UTIL" Name="Convolution_Accel_wrapper_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="Convolution_Accel_wrapper_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="Convolution_Accel_wrapper.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="Convolution_Accel_wrapper_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="Convolution_Accel_wrapper_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1599449787">
+  <File Type="PA-TCL" Name="Conv_Accel_Top.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="Conv_Accel_Top_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="Conv_Accel_Top_reports.tcl"/>
+  <File Type="RDS-RDS" Name="Conv_Accel_Top.vds"/>
+  <File Type="RDS-UTIL" Name="Conv_Accel_Top_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="Conv_Accel_Top_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="Conv_Accel_Top.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="Conv_Accel_Top_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="Conv_Accel_Top_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/../../Sources/definitions.h">
       <FileInfo>
         <Attr Name="IsGlobalInclude" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Sources/Block Diagrams/PYNQ_wrap/PYNQ_wrap.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Sources/Block Diagrams/PYNQ_wrap/hdl/PYNQ_wrap_wrapper.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
@@ -32,14 +46,14 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../../Sources/Adder/adderFloat.v">
+    <File Path="$PPRDIR/../../Sources/Adder/adder.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../../Sources/Multiplier/floatmComputePynq.v">
+    <File Path="$PPRDIR/../../Sources/General/matrixAccTopDevice.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -60,44 +74,21 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../../Sources/General/matrixAccTopDevice.v">
+    <File Path="$PPRDIR/../../Sources/Multiplier/multiplyComputePynq.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../../Sources/Block Diagrams/Convolution_Accel/Convolution_Accel.bd">
+    <File Path="$PPRDIR/../../Sources/General/Conv_Accel_Top.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../../Sources/Block Diagrams/Convolution_Accel/hdl/Convolution_Accel_wrapper.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../../Sources/Adder/adder.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../../Sources/Multiplier/multiplyCompute.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/bd/Convolution_Accel/hdl/Convolution_Accel_wrapper.v">
+    <File Path="$PPRDIR/../../Sources/Adder/adderFloat.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -107,7 +98,8 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="Convolution_Accel_wrapper"/>
+      <Option Name="TopModule" Val="Conv_Accel_Top"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">

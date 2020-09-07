@@ -158,137 +158,53 @@ proc create_root_design { parentCell } {
 
   set FIXED_IO [ create_bd_intf_port -mode Master -vlnv xilinx.com:display_processing_system7:fixedio_rtl:1.0 FIXED_IO ]
 
-  set uart_rtl [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:uart_rtl:1.0 uart_rtl ]
-
 
   # Create ports
-  set AddressSelect [ create_bd_port -dir O -from 4 -to 0 AddressSelect ]
-  set Clk [ create_bd_port -dir O -from 0 -to 0 Clk ]
+  set Clk [ create_bd_port -dir O -type clk Clk ]
+  set EMPTY [ create_bd_port -dir I -from 0 -to 0 EMPTY ]
+  set FULL [ create_bd_port -dir I -from 0 -to 0 FULL ]
   set Rst [ create_bd_port -dir O -from 0 -to 0 Rst ]
-  set bufferRD_in [ create_bd_port -dir O -from 3 -to 0 bufferRD_in ]
-  set bufferRD_out [ create_bd_port -dir O -from 3 -to 0 bufferRD_out ]
-  set bufferSelect [ create_bd_port -dir O -from 0 -to 0 bufferSelect ]
-  set dataIn [ create_bd_port -dir O -from 7 -to 0 dataIn ]
-  set dataOut [ create_bd_port -dir I -from 7 -to 0 dataOut ]
-  set mReady_in [ create_bd_port -dir I -from 3 -to 0 mReady_in ]
-  set mReady_out [ create_bd_port -dir I -from 3 -to 0 mReady_out ]
-  set mStart_in [ create_bd_port -dir O -from 0 -to 0 mStart_in ]
-  set mStart_out [ create_bd_port -dir O -from 0 -to 0 mStart_out ]
-  set outputSelect [ create_bd_port -dir O -from 1 -to 0 outputSelect ]
-
-  # Create instance: AddressSelect, and set properties
-  set AddressSelect [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 AddressSelect ]
-  set_property -dict [ list \
-   CONFIG.DIN_FROM {30} \
-   CONFIG.DIN_TO {26} \
-   CONFIG.DIN_WIDTH {64} \
-   CONFIG.DOUT_WIDTH {5} \
- ] $AddressSelect
-
-  # Create instance: Clk, and set properties
-  set Clk [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 Clk ]
-  set_property -dict [ list \
-   CONFIG.DIN_FROM {16} \
-   CONFIG.DIN_TO {16} \
-   CONFIG.DIN_WIDTH {64} \
-   CONFIG.DOUT_WIDTH {1} \
- ] $Clk
+  set cReady [ create_bd_port -dir I -from 0 -to 0 cReady ]
+  set cStart [ create_bd_port -dir O -from 0 -to 0 cStart ]
+  set dataInput [ create_bd_port -dir O -from 15 -to 0 dataInput ]
+  set finalsum [ create_bd_port -dir I -from 15 -to 0 finalsum ]
+  set wr_clk [ create_bd_port -dir O -from 0 -to 0 wr_clk ]
 
   # Create instance: Rst, and set properties
   set Rst [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 Rst ]
   set_property -dict [ list \
-   CONFIG.DIN_FROM {17} \
-   CONFIG.DIN_TO {17} \
-   CONFIG.DIN_WIDTH {64} \
+   CONFIG.DIN_FROM {20} \
+   CONFIG.DIN_TO {20} \
+   CONFIG.DIN_WIDTH {39} \
    CONFIG.DOUT_WIDTH {1} \
  ] $Rst
 
-  # Create instance: axi_hwicap_0, and set properties
-  set axi_hwicap_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_hwicap:3.0 axi_hwicap_0 ]
+  # Create instance: cStart, and set properties
+  set cStart [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 cStart ]
   set_property -dict [ list \
-   CONFIG.C_OPERATION {1} \
- ] $axi_hwicap_0
+   CONFIG.DIN_FROM {37} \
+   CONFIG.DIN_TO {37} \
+   CONFIG.DIN_WIDTH {39} \
+   CONFIG.DOUT_WIDTH {1} \
+ ] $cStart
 
-  # Create instance: axi_hwicap_1, and set properties
-  set axi_hwicap_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_hwicap:3.0 axi_hwicap_1 ]
-
-  # Create instance: axi_hwicap_2, and set properties
-  set axi_hwicap_2 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_hwicap:3.0 axi_hwicap_2 ]
-
-  # Create instance: axi_hwicap_3, and set properties
-  set axi_hwicap_3 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_hwicap:3.0 axi_hwicap_3 ]
-
-  # Create instance: axi_hwicap_4, and set properties
-  set axi_hwicap_4 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_hwicap:3.0 axi_hwicap_4 ]
-
-  # Create instance: axi_uartlite_0, and set properties
-  set axi_uartlite_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_uartlite:2.0 axi_uartlite_0 ]
+  # Create instance: clk_wiz_0, and set properties
+  set clk_wiz_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_0 ]
   set_property -dict [ list \
-   CONFIG.C_BAUDRATE {115200} \
- ] $axi_uartlite_0
+   CONFIG.RESET_PORT {resetn} \
+   CONFIG.RESET_TYPE {ACTIVE_LOW} \
+   CONFIG.USE_LOCKED {false} \
+   CONFIG.USE_RESET {true} \
+ ] $clk_wiz_0
 
-  # Create instance: bufferRD_in, and set properties
-  set bufferRD_in [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 bufferRD_in ]
+  # Create instance: dataInput, and set properties
+  set dataInput [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 dataInput ]
   set_property -dict [ list \
    CONFIG.DIN_FROM {36} \
-   CONFIG.DIN_TO {33} \
-   CONFIG.DIN_WIDTH {64} \
-   CONFIG.DOUT_WIDTH {4} \
- ] $bufferRD_in
-
-  # Create instance: bufferRD_out, and set properties
-  set bufferRD_out [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 bufferRD_out ]
-  set_property -dict [ list \
-   CONFIG.DIN_FROM {40} \
-   CONFIG.DIN_TO {37} \
-   CONFIG.DIN_WIDTH {64} \
-   CONFIG.DOUT_WIDTH {4} \
- ] $bufferRD_out
-
-  # Create instance: bufferSelect, and set properties
-  set bufferSelect [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 bufferSelect ]
-  set_property -dict [ list \
-   CONFIG.DIN_FROM {41} \
-   CONFIG.DIN_TO {41} \
-   CONFIG.DIN_WIDTH {64} \
-   CONFIG.DOUT_WIDTH {1} \
- ] $bufferSelect
-
-  # Create instance: dataIn, and set properties
-  set dataIn [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 dataIn ]
-  set_property -dict [ list \
-   CONFIG.DIN_FROM {25} \
-   CONFIG.DIN_TO {18} \
-   CONFIG.DIN_WIDTH {64} \
-   CONFIG.DOUT_WIDTH {8} \
- ] $dataIn
-
-  # Create instance: mStart_in, and set properties
-  set mStart_in [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 mStart_in ]
-  set_property -dict [ list \
-   CONFIG.DIN_FROM {42} \
-   CONFIG.DIN_TO {42} \
-   CONFIG.DIN_WIDTH {64} \
-   CONFIG.DOUT_WIDTH {1} \
- ] $mStart_in
-
-  # Create instance: mStart_out, and set properties
-  set mStart_out [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 mStart_out ]
-  set_property -dict [ list \
-   CONFIG.DIN_FROM {43} \
-   CONFIG.DIN_TO {43} \
-   CONFIG.DIN_WIDTH {64} \
-   CONFIG.DOUT_WIDTH {1} \
- ] $mStart_out
-
-  # Create instance: outputSelect, and set properties
-  set outputSelect [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 outputSelect ]
-  set_property -dict [ list \
-   CONFIG.DIN_FROM {32} \
-   CONFIG.DIN_TO {31} \
-   CONFIG.DIN_WIDTH {64} \
-   CONFIG.DOUT_WIDTH {2} \
- ] $outputSelect
+   CONFIG.DIN_TO {21} \
+   CONFIG.DIN_WIDTH {39} \
+   CONFIG.DOUT_WIDTH {16} \
+ ] $dataInput
 
   # Create instance: processing_system7_0, and set properties
   set processing_system7_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0 ]
@@ -487,8 +403,8 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_FPGA_FCLK3_ENABLE {0} \
    CONFIG.PCW_GPIO_BASEADDR {0xE000A000} \
    CONFIG.PCW_GPIO_EMIO_GPIO_ENABLE {1} \
-   CONFIG.PCW_GPIO_EMIO_GPIO_IO {64} \
-   CONFIG.PCW_GPIO_EMIO_GPIO_WIDTH {64} \
+   CONFIG.PCW_GPIO_EMIO_GPIO_IO {39} \
+   CONFIG.PCW_GPIO_EMIO_GPIO_WIDTH {39} \
    CONFIG.PCW_GPIO_HIGHADDR {0xE000AFFF} \
    CONFIG.PCW_GPIO_MIO_GPIO_ENABLE {0} \
    CONFIG.PCW_GPIO_MIO_GPIO_IO {<Select>} \
@@ -1050,7 +966,7 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_USE_PROC_EVENT_BUS {0} \
    CONFIG.PCW_USE_PS_SLCR_REGISTERS {0} \
    CONFIG.PCW_USE_S_AXI_ACP {0} \
-   CONFIG.PCW_USE_S_AXI_GP0 {1} \
+   CONFIG.PCW_USE_S_AXI_GP0 {0} \
    CONFIG.PCW_USE_S_AXI_GP1 {0} \
    CONFIG.PCW_USE_S_AXI_HP0 {0} \
    CONFIG.PCW_USE_S_AXI_HP1 {0} \
@@ -1064,64 +980,45 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_WDT_PERIPHERAL_FREQMHZ {133.333333} \
  ] $processing_system7_0
 
-  # Create instance: ps7_0_axi_periph, and set properties
-  set ps7_0_axi_periph [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 ps7_0_axi_periph ]
+  # Create instance: wr_clk, and set properties
+  set wr_clk [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 wr_clk ]
   set_property -dict [ list \
-   CONFIG.ENABLE_ADVANCED_OPTIONS {0} \
-   CONFIG.NUM_MI {6} \
- ] $ps7_0_axi_periph
-
-  # Create instance: rst_ps7_0_100M, and set properties
-  set rst_ps7_0_100M [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 rst_ps7_0_100M ]
+   CONFIG.DIN_FROM {38} \
+   CONFIG.DIN_TO {38} \
+   CONFIG.DIN_WIDTH {39} \
+   CONFIG.DOUT_WIDTH {1} \
+ ] $wr_clk
 
   # Create instance: xlconcat_0, and set properties
   set xlconcat_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 xlconcat_0 ]
   set_property -dict [ list \
-   CONFIG.IN0_WIDTH {8} \
-   CONFIG.IN1_WIDTH {4} \
-   CONFIG.IN2_WIDTH {4} \
-   CONFIG.NUM_PORTS {3} \
+   CONFIG.IN0_WIDTH {16} \
+   CONFIG.IN1_WIDTH {1} \
+   CONFIG.IN2_WIDTH {1} \
+   CONFIG.IN3_WIDTH {1} \
+   CONFIG.NUM_PORTS {4} \
  ] $xlconcat_0
 
   # Create interface connections
-  connect_bd_intf_net -intf_net axi_uartlite_0_UART [get_bd_intf_ports uart_rtl] [get_bd_intf_pins axi_uartlite_0/UART]
   connect_bd_intf_net -intf_net processing_system7_0_DDR [get_bd_intf_ports DDR] [get_bd_intf_pins processing_system7_0/DDR]
   connect_bd_intf_net -intf_net processing_system7_0_FIXED_IO [get_bd_intf_ports FIXED_IO] [get_bd_intf_pins processing_system7_0/FIXED_IO]
-  connect_bd_intf_net -intf_net processing_system7_0_M_AXI_GP0 [get_bd_intf_pins processing_system7_0/M_AXI_GP0] [get_bd_intf_pins ps7_0_axi_periph/S00_AXI]
-  connect_bd_intf_net -intf_net ps7_0_axi_periph_M00_AXI [get_bd_intf_pins axi_hwicap_0/S_AXI_LITE] [get_bd_intf_pins ps7_0_axi_periph/M00_AXI]
-  connect_bd_intf_net -intf_net ps7_0_axi_periph_M01_AXI [get_bd_intf_pins axi_hwicap_1/S_AXI_LITE] [get_bd_intf_pins ps7_0_axi_periph/M01_AXI]
-  connect_bd_intf_net -intf_net ps7_0_axi_periph_M02_AXI [get_bd_intf_pins axi_hwicap_2/S_AXI_LITE] [get_bd_intf_pins ps7_0_axi_periph/M02_AXI]
-  connect_bd_intf_net -intf_net ps7_0_axi_periph_M03_AXI [get_bd_intf_pins axi_hwicap_3/S_AXI_LITE] [get_bd_intf_pins ps7_0_axi_periph/M03_AXI]
-  connect_bd_intf_net -intf_net ps7_0_axi_periph_M04_AXI [get_bd_intf_pins axi_hwicap_4/S_AXI_LITE] [get_bd_intf_pins ps7_0_axi_periph/M04_AXI]
-  connect_bd_intf_net -intf_net ps7_0_axi_periph_M05_AXI [get_bd_intf_pins axi_uartlite_0/S_AXI] [get_bd_intf_pins ps7_0_axi_periph/M05_AXI]
 
   # Create port connections
-  connect_bd_net -net AddressSelect_Dout [get_bd_ports AddressSelect] [get_bd_pins AddressSelect/Dout]
-  connect_bd_net -net Clk_Dout [get_bd_ports Clk] [get_bd_pins Clk/Dout]
-  connect_bd_net -net In0_0_1 [get_bd_ports dataOut] [get_bd_pins xlconcat_0/In0]
-  connect_bd_net -net In1_0_1 [get_bd_ports mReady_in] [get_bd_pins xlconcat_0/In1]
-  connect_bd_net -net In2_0_1 [get_bd_ports mReady_out] [get_bd_pins xlconcat_0/In2]
+  connect_bd_net -net In0_0_1 [get_bd_ports finalsum] [get_bd_pins xlconcat_0/In0]
+  connect_bd_net -net In1_0_1 [get_bd_ports cReady] [get_bd_pins xlconcat_0/In1]
+  connect_bd_net -net In2_0_1 [get_bd_ports FULL] [get_bd_pins xlconcat_0/In2]
+  connect_bd_net -net In3_0_1 [get_bd_ports EMPTY] [get_bd_pins xlconcat_0/In3]
   connect_bd_net -net Rst_Dout [get_bd_ports Rst] [get_bd_pins Rst/Dout]
-  connect_bd_net -net bufferRD_in_Dout [get_bd_ports bufferRD_in] [get_bd_pins bufferRD_in/Dout]
-  connect_bd_net -net bufferRD_out_Dout [get_bd_ports bufferRD_out] [get_bd_pins bufferRD_out/Dout]
-  connect_bd_net -net bufferSelect_Dout [get_bd_ports bufferSelect] [get_bd_pins bufferSelect/Dout]
-  connect_bd_net -net dataIn_Dout [get_bd_ports dataIn] [get_bd_pins dataIn/Dout]
-  connect_bd_net -net mStart_in_Dout [get_bd_ports mStart_in] [get_bd_pins mStart_in/Dout]
-  connect_bd_net -net mStart_out_Dout [get_bd_ports mStart_out] [get_bd_pins mStart_out/Dout]
-  connect_bd_net -net outputSelect_Dout [get_bd_ports outputSelect] [get_bd_pins outputSelect/Dout]
-  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins axi_hwicap_0/icap_clk] [get_bd_pins axi_hwicap_0/s_axi_aclk] [get_bd_pins axi_hwicap_1/icap_clk] [get_bd_pins axi_hwicap_1/s_axi_aclk] [get_bd_pins axi_hwicap_2/icap_clk] [get_bd_pins axi_hwicap_2/s_axi_aclk] [get_bd_pins axi_hwicap_3/icap_clk] [get_bd_pins axi_hwicap_3/s_axi_aclk] [get_bd_pins axi_hwicap_4/icap_clk] [get_bd_pins axi_hwicap_4/s_axi_aclk] [get_bd_pins axi_uartlite_0/s_axi_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins processing_system7_0/S_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/M01_ACLK] [get_bd_pins ps7_0_axi_periph/M02_ACLK] [get_bd_pins ps7_0_axi_periph/M03_ACLK] [get_bd_pins ps7_0_axi_periph/M04_ACLK] [get_bd_pins ps7_0_axi_periph/M05_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_100M/slowest_sync_clk]
-  connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_ps7_0_100M/ext_reset_in]
-  connect_bd_net -net processing_system7_0_GPIO_O [get_bd_pins AddressSelect/Din] [get_bd_pins Clk/Din] [get_bd_pins Rst/Din] [get_bd_pins bufferRD_in/Din] [get_bd_pins bufferRD_out/Din] [get_bd_pins bufferSelect/Din] [get_bd_pins dataIn/Din] [get_bd_pins mStart_in/Din] [get_bd_pins mStart_out/Din] [get_bd_pins outputSelect/Din] [get_bd_pins processing_system7_0/GPIO_O]
-  connect_bd_net -net rst_ps7_0_100M_peripheral_aresetn [get_bd_pins axi_hwicap_0/s_axi_aresetn] [get_bd_pins axi_hwicap_1/s_axi_aresetn] [get_bd_pins axi_hwicap_2/s_axi_aresetn] [get_bd_pins axi_hwicap_3/s_axi_aresetn] [get_bd_pins axi_hwicap_4/s_axi_aresetn] [get_bd_pins axi_uartlite_0/s_axi_aresetn] [get_bd_pins ps7_0_axi_periph/ARESETN] [get_bd_pins ps7_0_axi_periph/M00_ARESETN] [get_bd_pins ps7_0_axi_periph/M01_ARESETN] [get_bd_pins ps7_0_axi_periph/M02_ARESETN] [get_bd_pins ps7_0_axi_periph/M03_ARESETN] [get_bd_pins ps7_0_axi_periph/M04_ARESETN] [get_bd_pins ps7_0_axi_periph/M05_ARESETN] [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps7_0_100M/peripheral_aresetn]
+  connect_bd_net -net cStart_Dout [get_bd_ports cStart] [get_bd_pins cStart/Dout]
+  connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_ports Clk] [get_bd_pins clk_wiz_0/clk_out1]
+  connect_bd_net -net dataInput_Dout [get_bd_ports dataInput] [get_bd_pins dataInput/Dout]
+  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins clk_wiz_0/clk_in1] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK]
+  connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins clk_wiz_0/resetn] [get_bd_pins processing_system7_0/FCLK_RESET0_N]
+  connect_bd_net -net processing_system7_0_GPIO_O [get_bd_pins Rst/Din] [get_bd_pins cStart/Din] [get_bd_pins dataInput/Din] [get_bd_pins processing_system7_0/GPIO_O] [get_bd_pins wr_clk/Din]
+  connect_bd_net -net wr_clk_Dout [get_bd_ports wr_clk] [get_bd_pins wr_clk/Dout]
   connect_bd_net -net xlconcat_0_dout [get_bd_pins processing_system7_0/GPIO_I] [get_bd_pins xlconcat_0/dout]
 
   # Create address segments
-  assign_bd_address -offset 0x41400000 -range 0x00010000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_hwicap_0/S_AXI_LITE/Reg] -force
-  assign_bd_address -offset 0x41410000 -range 0x00010000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_hwicap_1/S_AXI_LITE/Reg] -force
-  assign_bd_address -offset 0x41420000 -range 0x00010000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_hwicap_2/S_AXI_LITE/Reg] -force
-  assign_bd_address -offset 0x41430000 -range 0x00010000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_hwicap_3/S_AXI_LITE/Reg] -force
-  assign_bd_address -offset 0x41440000 -range 0x00010000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_hwicap_4/S_AXI_LITE/Reg] -force
-  assign_bd_address -offset 0x42C00000 -range 0x00010000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_uartlite_0/S_AXI/Reg] -force
 
 
   # Restore current instance

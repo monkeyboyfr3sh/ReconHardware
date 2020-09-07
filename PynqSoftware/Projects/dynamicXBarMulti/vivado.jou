@@ -2,175 +2,74 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Sun Jul 26 14:25:47 2020
-# Process ID: 33936
-# Current directory: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/dynamicXBarMulti
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2276 C:\Users\monke\Documents\GitHub\ReconHardware\PynqSoftware\Projects\dynamicXBarMulti\dynamicXBarMulti.xpr
-# Log file: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/dynamicXBarMulti/vivado.log
-# Journal file: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/dynamicXBarMulti\vivado.jou
+# Start of session at: Sun Sep  6 13:58:08 2020
+# Process ID: 20104
+# Current directory: C:/GitHub/ReconHardware/PynqSoftware/Projects/dynamicXBarMulti
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent19920 C:\GitHub\ReconHardware\PynqSoftware\Projects\dynamicXBarMulti\dynamicXBarMulti.xpr
+# Log file: C:/GitHub/ReconHardware/PynqSoftware/Projects/dynamicXBarMulti/vivado.log
+# Journal file: C:/GitHub/ReconHardware/PynqSoftware/Projects/dynamicXBarMulti\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/dynamicXBarMulti/dynamicXBarMulti.xpr
-
+open_project C:/GitHub/ReconHardware/PynqSoftware/Projects/dynamicXBarMulti/dynamicXBarMulti.xpr
+open_bd_design {C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/PYNQ_wrap.bd}
 update_compile_order -fileset sources_1
-set_property PR_FLOW 1 [current_project] 
-export_ip_user_files -of_objects  [get_files C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/dynamicXBarMulti/dynamicXBarMulti.srcs/sim_1/new/XBarMulti1mutliuse_tb.v] -no_script -reset -force -quiet
-remove_files  -fileset sim_1 C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/dynamicXBarMulti/dynamicXBarMulti.srcs/sim_1/new/XBarMulti1mutliuse_tb.v
-file delete -force C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/dynamicXBarMulti/dynamicXBarMulti.srcs/sim_1/new/XBarMulti1mutliuse_tb.v
-update_compile_order -fileset sim_1
-export_ip_user_files -of_objects  [get_files C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/dynamicXBarMulti/dynamicXBarMulti.srcs/sim_1/new/XBarMulti_tb.v] -no_script -reset -force -quiet
-remove_files  -fileset sim_1 C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/dynamicXBarMulti/dynamicXBarMulti.srcs/sim_1/new/XBarMulti_tb.v
-file delete -force C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/dynamicXBarMulti/dynamicXBarMulti.srcs/sim_1/new/XBarMulti_tb.v
-create_partition_def -name multiplier -module multiplyCompute
-create_reconfig_module -name integer -partition_def [get_partition_defs multiplier ]  -define_from multiplyCompute
-update_compile_order -fileset integer
-export_ip_user_files -of_objects  [get_files C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/dynamicXBarMulti/dynamicXBarMulti.srcs/sources_1/imports/Sources/definitions.h] -no_script -reset -force -quiet
-remove_files  C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/dynamicXBarMulti/dynamicXBarMulti.srcs/sources_1/imports/Sources/definitions.h
-file delete -force C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/dynamicXBarMulti/dynamicXBarMulti.srcs/sources_1/imports/Sources/definitions.h
-update_compile_order -fileset integer
+set_property is_enabled true [get_files  C:/GitHub/ReconHardware/PynqSoftware/Sources/General/top_wrap.v]
+set_property is_enabled true [get_files  C:/GitHub/ReconHardware/PynqSoftware/Sources/General/multiplyXBar.v]
 update_compile_order -fileset sources_1
-export_ip_user_files -of_objects  [get_files C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/dynamicXBarMulti/dynamicXBarMulti.srcs/sources_1/imports/Sources/General/XBar.v] -no_script -reset -force -quiet
-remove_files  C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/dynamicXBarMulti/dynamicXBarMulti.srcs/sources_1/imports/Sources/General/XBar.v
-export_ip_user_files -of_objects  [get_files C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/dynamicXBarMulti/dynamicXBarMulti.srcs/sources_1/imports/Sources/General/multiplyXBar.v] -no_script -reset -force -quiet
-remove_files  C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/dynamicXBarMulti/dynamicXBarMulti.srcs/sources_1/imports/Sources/General/multiplyXBar.v
-export_ip_user_files -of_objects  [get_files C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/dynamicXBarMulti/dynamicXBarMulti.srcs/sources_1/imports/Sources/General/mux.v] -no_script -reset -force -quiet
-remove_files  C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/dynamicXBarMulti/dynamicXBarMulti.srcs/sources_1/imports/Sources/General/mux.v
-update_compile_order -fileset integer
+open_bd_design {C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/PYNQ_wrap.bd}
+delete_bd_objs [get_bd_intf_nets ps7_0_axi_periph_M00_AXI] [get_bd_cells axi_hwicap_0]
+delete_bd_objs [get_bd_intf_nets ps7_0_axi_periph_M01_AXI] [get_bd_cells axi_hwicap_1]
+delete_bd_objs [get_bd_intf_nets ps7_0_axi_periph_M02_AXI] [get_bd_cells axi_hwicap_2]
+delete_bd_objs [get_bd_intf_nets ps7_0_axi_periph_M03_AXI] [get_bd_cells axi_hwicap_3]
+delete_bd_objs [get_bd_intf_nets ps7_0_axi_periph_M04_AXI] [get_bd_cells axi_hwicap_4]
+delete_bd_objs [get_bd_intf_nets processing_system7_0_M_AXI_GP0] [get_bd_intf_nets ps7_0_axi_periph_M05_AXI] [get_bd_cells ps7_0_axi_periph]
+delete_bd_objs [get_bd_nets processing_system7_0_FCLK_RESET0_N] [get_bd_nets rst_ps7_0_100M_peripheral_aresetn] [get_bd_cells rst_ps7_0_100M]
+set_property location {1 100 -859} [get_bd_cells xlconcat_0]
+startgroup
+set_property location {-462 -867} [get_bd_ports mReady_out]
+set_property location {-462 -847} [get_bd_ports mReady_in]
+set_property location {-462 -887} [get_bd_ports dataOut]
+endgroup
+set_property location {-434 -842} [get_bd_ports mReady_out]
+set_property location {-435 -869} [get_bd_ports dataOut]
+set_property location {-433 -896} [get_bd_ports dataOut]
+save_bd_design
+delete_bd_objs [get_bd_intf_nets axi_uartlite_0_UART] [get_bd_cells axi_uartlite_0]
+delete_bd_objs [get_bd_intf_ports uart_rtl]
+save_bd_design
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top top_wrap [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
 update_compile_order -fileset sources_1
-export_ip_user_files -of_objects  [get_files C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/dynamicXBarMulti/dynamicXBarMulti.srcs/sources_1/imports/Sources/General/FlipFlop.v] -no_script -reset -force -quiet
-remove_files  C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/dynamicXBarMulti/dynamicXBarMulti.srcs/sources_1/imports/Sources/General/FlipFlop.v
-export_ip_user_files -of_objects  [get_files C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/dynamicXBarMulti/dynamicXBarMulti.srcs/sources_1/bd/PYNQ_wrap/PYNQ_wrap.bd] -no_script -reset -force -quiet
-remove_files  C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/dynamicXBarMulti/dynamicXBarMulti.srcs/sources_1/bd/PYNQ_wrap/PYNQ_wrap.bd
-export_ip_user_files -of_objects  [get_files C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/dynamicXBarMulti/dynamicXBarMulti.srcs/sources_1/bd/ps_Wrap/ps_Wrap.bd] -no_script -reset -force -quiet
-remove_files  C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/dynamicXBarMulti/dynamicXBarMulti.srcs/sources_1/bd/ps_Wrap/ps_Wrap.bd
-export_ip_user_files -of_objects  [get_files C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/dynamicXBarMulti/dynamicXBarMulti.srcs/sources_1/imports/Sources/Multiplier/dynamicMulti.v] -no_script -reset -force -quiet
-remove_files  C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/dynamicXBarMulti/dynamicXBarMulti.srcs/sources_1/imports/Sources/Multiplier/dynamicMulti.v
-export_ip_user_files -of_objects  [get_files C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/dynamicXBarMulti/dynamicXBarMulti.srcs/sources_1/imports/Sources/General/dataSplit.v] -no_script -reset -force -quiet
-remove_files  C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/dynamicXBarMulti/dynamicXBarMulti.srcs/sources_1/imports/Sources/General/dataSplit.v
-export_ip_user_files -of_objects  [get_files C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/dynamicXBarMulti/dynamicXBarMulti.srcs/sources_1/imports/Sources/General/ParallelBuffer.v] -no_script -reset -force -quiet
-remove_files  C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/dynamicXBarMulti/dynamicXBarMulti.srcs/sources_1/imports/Sources/General/ParallelBuffer.v
-export_ip_user_files -of_objects  [get_files C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/dynamicXBarMulti/dynamicXBarMulti.srcs/sources_1/imports/Sources/General/top_wrap.v] -no_script -reset -force -quiet
-remove_files  C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/dynamicXBarMulti/dynamicXBarMulti.srcs/sources_1/imports/Sources/General/top_wrap.v
-add_files -norecurse -scan_for_includes {{C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/ps_Wrap/ps_Wrap.bd} C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/definitions.h {C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/PYNQ_wrap.bd}}
-export_ip_user_files -of_objects  [get_files  {{C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/ps_Wrap/ps_Wrap.bd} {C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/PYNQ_wrap.bd}}] -lib_map_path [list {modelsim=C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/dynamicXBarMulti/dynamicXBarMulti.cache/compile_simlib/modelsim} {questa=C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/dynamicXBarMulti/dynamicXBarMulti.cache/compile_simlib/questa} {riviera=C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/dynamicXBarMulti/dynamicXBarMulti.cache/compile_simlib/riviera} {activehdl=C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/dynamicXBarMulti/dynamicXBarMulti.cache/compile_simlib/activehdl}] -force -quiet
-add_files -norecurse -scan_for_includes {C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Multiplier/multiplyCompute.v C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/multiplyXBar.v C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/XBar.v C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/mux.v C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/FlipFlop.v C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/dataSplit.v C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/top_wrap.v C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/General/ParallelBuffer.v C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Multiplier/dynamicMulti.v}
-update_compile_order -fileset sources_1
-set_property is_global_include true [get_files  C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/definitions.h]
-open_bd_design {C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/ps_Wrap/ps_Wrap.bd}
-open_bd_design {C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/ps_Wrap/ps_Wrap.bd}
-open_bd_design {C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/PYNQ_wrap.bd}
-current_bd_design [get_bd_designs ps_Wrap]
-close_bd_design [get_bd_designs ps_Wrap]
-close_bd_design [get_bd_designs PYNQ_wrap]
-set_property used_in_synthesis false [get_files  C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Multiplier/multiplyCompute.v]
-export_ip_user_files -of_objects  [get_files C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Multiplier/multiplyCompute.v] -no_script -reset -force -quiet
-remove_files  C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Multiplier/multiplyCompute.v
-delete_reconfig_modules -merge sources_1 [get_reconfig_modules integer]
-export_ip_user_files -of_objects  [get_files C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/dynamicXBarMulti/dynamicXBarMulti.srcs/sources_1/imports/Sources/definitions.h] -no_script -reset -force -quiet
-remove_files  C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/dynamicXBarMulti/dynamicXBarMulti.srcs/sources_1/imports/Sources/definitions.h
-export_ip_user_files -of_objects  [get_files C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/dynamicXBarMulti/dynamicXBarMulti.srcs/sources_1/imports/Sources/Multiplier/multiplyCompute.v] -no_script -reset -force -quiet
-remove_files  C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/dynamicXBarMulti/dynamicXBarMulti.srcs/sources_1/imports/Sources/Multiplier/multiplyCompute.v
-create_reconfig_module -name float -partition_def [get_partition_defs multiplier ] 
-add_files -norecurse -scan_for_includes C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Multiplier/floatmCompute.v C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/definitions.h  -of_objects [get_reconfig_modules float]
-create_reconfig_module -name floatPynq -partition_def [get_partition_defs multiplier ] 
-add_files -norecurse -scan_for_includes C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Multiplier/floatmComputePynq.v C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/definitions.h  -of_objects [get_reconfig_modules floatPynq]
-create_reconfig_module -name integer -partition_def [get_partition_defs multiplier ] 
-add_files -norecurse -scan_for_includes C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Multiplier/multiplyCompute.v C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/definitions.h  -of_objects [get_reconfig_modules integer]
-create_reconfig_module -name integerPynq -partition_def [get_partition_defs multiplier ] 
-add_files -norecurse -scan_for_includes C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Multiplier/multiplyComputePynq.v C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/definitions.h  -of_objects [get_reconfig_modules integerPynq]
-create_reconfig_module -name fixed -partition_def [get_partition_defs multiplier ] 
-add_files -norecurse -scan_for_includes C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Multiplier/fixedmultiplyCompute.v C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/definitions.h  -of_objects [get_reconfig_modules fixed]
-create_pr_configuration -name config_1 -partitions [list mxbar/genblk3[0].m_computeBlock_in/mCompute:float mxbar/genblk3[1].m_computeBlock_in/mCompute:float mxbar/genblk3[2].m_computeBlock_in/mCompute:float mxbar/genblk3[3].m_computeBlock_in/mCompute:float mxbar/genblk4[0].m_computeBlock_out/mCompute:float mxbar/genblk4[1].m_computeBlock_out/mCompute:float mxbar/genblk4[2].m_computeBlock_out/mCompute:float mxbar/genblk4[3].m_computeBlock_out/mCompute:float ]
-create_pr_configuration -name config_2 -partitions [list mxbar/genblk3[0].m_computeBlock_in/mCompute:floatPynq mxbar/genblk3[1].m_computeBlock_in/mCompute:floatPynq mxbar/genblk3[2].m_computeBlock_in/mCompute:floatPynq mxbar/genblk3[3].m_computeBlock_in/mCompute:floatPynq mxbar/genblk4[0].m_computeBlock_out/mCompute:floatPynq mxbar/genblk4[1].m_computeBlock_out/mCompute:floatPynq mxbar/genblk4[2].m_computeBlock_out/mCompute:floatPynq mxbar/genblk4[3].m_computeBlock_out/mCompute:floatPynq ]
-create_pr_configuration -name config_3 -partitions [list mxbar/genblk3[0].m_computeBlock_in/mCompute:integer mxbar/genblk3[1].m_computeBlock_in/mCompute:integer mxbar/genblk3[2].m_computeBlock_in/mCompute:integer mxbar/genblk3[3].m_computeBlock_in/mCompute:integer mxbar/genblk4[0].m_computeBlock_out/mCompute:integer mxbar/genblk4[1].m_computeBlock_out/mCompute:integer mxbar/genblk4[2].m_computeBlock_out/mCompute:integer mxbar/genblk4[3].m_computeBlock_out/mCompute:integer ]
-create_pr_configuration -name config_4 -partitions [list mxbar/genblk3[0].m_computeBlock_in/mCompute:integerPynq mxbar/genblk3[1].m_computeBlock_in/mCompute:integerPynq mxbar/genblk3[2].m_computeBlock_in/mCompute:integerPynq mxbar/genblk3[3].m_computeBlock_in/mCompute:integerPynq mxbar/genblk4[0].m_computeBlock_out/mCompute:integerPynq mxbar/genblk4[1].m_computeBlock_out/mCompute:integerPynq mxbar/genblk4[2].m_computeBlock_out/mCompute:integerPynq mxbar/genblk4[3].m_computeBlock_out/mCompute:integerPynq ]
-create_pr_configuration -name config_5 -partitions [list mxbar/genblk3[0].m_computeBlock_in/mCompute:fixed mxbar/genblk3[1].m_computeBlock_in/mCompute:fixed mxbar/genblk3[2].m_computeBlock_in/mCompute:fixed mxbar/genblk3[3].m_computeBlock_in/mCompute:fixed mxbar/genblk4[0].m_computeBlock_out/mCompute:fixed mxbar/genblk4[1].m_computeBlock_out/mCompute:fixed mxbar/genblk4[2].m_computeBlock_out/mCompute:fixed mxbar/genblk4[3].m_computeBlock_out/mCompute:fixed ]
-set_property PR_CONFIGURATION config_1 [get_runs impl_1]
-create_run child_0_impl_1 -parent_run impl_1 -flow {Vivado Implementation 2019} -pr_config config_2
-create_run child_1_impl_1 -parent_run impl_1 -flow {Vivado Implementation 2019} -pr_config config_3
-create_run child_2_impl_1 -parent_run impl_1 -flow {Vivado Implementation 2019} -pr_config config_4
-create_run child_3_impl_1 -parent_run impl_1 -flow {Vivado Implementation 2019} -pr_config config_5
+startgroup
+set_property -dict [list CONFIG.PCW_USE_S_AXI_GP0 {0} CONFIG.PCW_QSPI_GRP_SINGLE_SS_ENABLE {1}] [get_bd_cells processing_system7_0]
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_0
+endgroup
+set_property location {1 -68 -431} [get_bd_cells clk_wiz_0]
+connect_bd_net [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins clk_wiz_0/reset]
+connect_bd_net [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins clk_wiz_0/clk_in1]
+startgroup
+make_bd_pins_external  [get_bd_pins clk_wiz_0/clk_out1]
+endgroup
+startgroup
+set_property -dict [list CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {50} CONFIG.USE_LOCKED {false} CONFIG.MMCM_CLKOUT0_DIVIDE_F {20.000} CONFIG.CLKOUT1_JITTER {151.636}] [get_bd_cells clk_wiz_0]
+endgroup
+delete_bd_objs [get_bd_nets Clk_Dout] [get_bd_cells Clk]
+delete_bd_objs [get_bd_ports Clk]
+set_property location {2 905 -829} [get_bd_cells clk_wiz_0]
+set_property location {1053 -831} [get_bd_ports clk_out1_0]
+save_bd_design
+reset_run PYNQ_wrap_processing_system7_0_0_synth_1
+launch_runs synth_1 -jobs 4
+startgroup
+set_property -dict [list CONFIG.RESET_TYPE {ACTIVE_LOW} CONFIG.RESET_PORT {resetn}] [get_bd_cells clk_wiz_0]
+delete_bd_objs [get_bd_nets processing_system7_0_FCLK_RESET0_N]
+endgroup
+connect_bd_net [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins clk_wiz_0/resetn]
+save_bd_design
 launch_runs synth_1 -jobs 4
 wait_on_run synth_1
-open_run synth_1 -name synth_1 -pr_config [current_pr_configuration]
-startgroup 
-create_pblock pblock_1
-resize_pblock pblock_1 -add SLICE_X50Y0:SLICE_X53Y24
-endgroup
-startgroup 
-create_pblock pblock_2
-resize_pblock pblock_2 -add SLICE_X56Y0:SLICE_X59Y24
-endgroup
-startgroup 
-create_pblock pblock_3
-resize_pblock pblock_3 -add SLICE_X60Y0:SLICE_X63Y24
-endgroup
-startgroup 
-create_pblock pblock_4
-resize_pblock pblock_4 -add SLICE_X64Y0:SLICE_X67Y23
-endgroup
-resize_pblock pblock_4 -add SLICE_X64Y0:SLICE_X67Y24 -remove SLICE_X64Y0:SLICE_X67Y23 -locs keep_all
-startgroup 
-create_pblock pblock_5
-resize_pblock pblock_5 -add SLICE_X68Y0:SLICE_X71Y24
-endgroup
-startgroup 
-create_pblock pblock_6
-resize_pblock pblock_6 -add SLICE_X72Y0:SLICE_X75Y24
-endgroup
-startgroup 
-create_pblock pblock_7
-resize_pblock pblock_7 -add SLICE_X78Y0:SLICE_X81Y24
-endgroup
-add_cells_to_pblock pblock_1 [get_cells [list {mxbar/genblk3[0].m_computeBlock_in/mCompute}]] -clear_locs
-add_cells_to_pblock pblock_2 [get_cells [list {mxbar/genblk3[1].m_computeBlock_in/mCompute}]] -clear_locs
-add_cells_to_pblock pblock_3 [get_cells [list {mxbar/genblk3[2].m_computeBlock_in/mCompute}]] -clear_locs
-add_cells_to_pblock pblock_4 [get_cells [list {mxbar/genblk3[3].m_computeBlock_in/mCompute}]] -clear_locs
-add_cells_to_pblock pblock_5 [get_cells [list {mxbar/genblk4[0].m_computeBlock_out/mCompute}]] -clear_locs
-add_cells_to_pblock pblock_6 [get_cells [list {mxbar/genblk4[1].m_computeBlock_out/mCompute}]] -clear_locs
-delete_pblock [get_pblocks  pblock_7]
-startgroup 
-create_pblock pblock_7
-resize_pblock pblock_7 -add SLICE_X76Y0:SLICE_X79Y24
-endgroup
-startgroup 
-create_pblock pblock_8
-resize_pblock pblock_8 -add SLICE_X82Y0:SLICE_X85Y24
-endgroup
-add_cells_to_pblock pblock_7 [get_cells [list {mxbar/genblk4[2].m_computeBlock_out/mCompute}]] -clear_locs
-add_cells_to_pblock pblock_8 [get_cells [list {mxbar/genblk4[3].m_computeBlock_out/mCompute}]] -clear_locs
-close [ open C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Constraints/dXBM.xdc w ]
-add_files -fileset constrs_1 C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Constraints/dXBM.xdc
-set_property target_constrs_file C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Constraints/dXBM.xdc [current_fileset -constrset]
-save_constraints -force
-reset_run synth_1
-launch_runs synth_1 -jobs 4
-wait_on_run synth_1
-close_design
-open_run synth_1 -name synth_1 -pr_config [current_pr_configuration]
-launch_runs impl_1 child_0_impl_1 child_1_impl_1 child_2_impl_1 child_3_impl_1 -jobs 4
-wait_on_run impl_1
-wait_on_run child_0_impl_1
-wait_on_run child_1_impl_1
-wait_on_run child_2_impl_1
-wait_on_run child_3_impl_1
-close_design
-reset_run impl_1 -prev_step 
-update_module_reference ps_Wrap_ParallelBuffer_0_0
-update_module_reference ps_Wrap_dataSplit_0_0
-reset_run float_synth_1
-reset_run floatPynq_synth_1
-reset_run integer_synth_1
-reset_run integerPynq_synth_1
-reset_run fixed_synth_1
-reset_run synth_1
-launch_runs impl_1 child_0_impl_1 child_1_impl_1 child_2_impl_1 child_3_impl_1 -jobs 4
-wait_on_run impl_1
-wait_on_run child_0_impl_1
-wait_on_run child_1_impl_1
-wait_on_run child_2_impl_1
-wait_on_run child_3_impl_1
-close_bd_design [get_bd_designs ps_Wrap]
-open_run impl_1
-open_run child_2_impl_1
-report_utilization -name utilization_1

@@ -1,13 +1,14 @@
 `include "definitions.h"
 `timescale `myTimeScale
 
-module matrixAccTopDevice(
-    Clk, Rst,
+module ConvolutionAccelerator(
+    Clk,
+    Rst,
     dataInput,
     cStart,
-    cReady,
-    finalsum,
     wr_clk,
+    finalsum,
+    cReady,
     FULL,
     EMPTY
 );
