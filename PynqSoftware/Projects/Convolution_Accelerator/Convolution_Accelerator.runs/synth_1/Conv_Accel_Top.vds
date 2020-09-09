@@ -1,0 +1,130 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Wed Sep  9 09:51:54 2020
+# Process ID: 43496
+# Current directory: C:/GitHub/ReconHardware/PynqSoftware/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/synth_1
+# Command line: vivado.exe -log Conv_Accel_Top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Conv_Accel_Top.tcl
+# Log file: C:/GitHub/ReconHardware/PynqSoftware/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/synth_1/Conv_Accel_Top.vds
+# Journal file: C:/GitHub/ReconHardware/PynqSoftware/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source Conv_Accel_Top.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'.
+Command: synth_design -top Conv_Accel_Top -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 37676 
+WARNING: [Synth 8-6901] identifier 'o_rdata' is used before its declaration [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/aFIFO.v:94]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1000.508 ; gain = 238.262
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Conv_Accel_Top' [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/Conv_Accel_Top.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/hdl/design_1_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'design_1' [C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/synth/design_1.v:13]
+INFO: [Synth 8-6157] synthesizing module 'design_1_Rst_0' [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ip/design_1_Rst_0/synth/design_1_Rst_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice' [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+	Parameter DIN_WIDTH bound to: 40 - type: integer 
+	Parameter DIN_FROM bound to: 20 - type: integer 
+	Parameter DIN_TO bound to: 20 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice' (1#1) [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_Rst_0' (2#1) [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ip/design_1_Rst_0/synth/design_1_Rst_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'design_1_cStart_0' [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ip/design_1_cStart_0/synth/design_1_cStart_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized0' [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+	Parameter DIN_WIDTH bound to: 40 - type: integer 
+	Parameter DIN_FROM bound to: 37 - type: integer 
+	Parameter DIN_TO bound to: 37 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized0' (2#1) [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_cStart_0' (3#1) [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ip/design_1_cStart_0/synth/design_1_cStart_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'design_1_clk_wiz_0_0' [C:/GitHub/ReconHardware/PynqSoftware/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/synth_1/.Xil/Vivado-43496-DESKTOP-D9F9TPQ/realtime/design_1_clk_wiz_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_clk_wiz_0_0' (4#1) [C:/GitHub/ReconHardware/PynqSoftware/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/synth_1/.Xil/Vivado-43496-DESKTOP-D9F9TPQ/realtime/design_1_clk_wiz_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'design_1_dataInput_0' [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ip/design_1_dataInput_0_1/synth/design_1_dataInput_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized1' [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+	Parameter DIN_WIDTH bound to: 40 - type: integer 
+	Parameter DIN_FROM bound to: 36 - type: integer 
+	Parameter DIN_TO bound to: 21 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized1' (4#1) [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_dataInput_0' (5#1) [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ip/design_1_dataInput_0_1/synth/design_1_dataInput_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'design_1_processing_system7_0_0' [C:/GitHub/ReconHardware/PynqSoftware/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/synth_1/.Xil/Vivado-43496-DESKTOP-D9F9TPQ/realtime/design_1_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_processing_system7_0_0' (6#1) [C:/GitHub/ReconHardware/PynqSoftware/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/synth_1/.Xil/Vivado-43496-DESKTOP-D9F9TPQ/realtime/design_1_processing_system7_0_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'design_1_processing_system7_0_0' has 68 connections declared, but only 38 given [C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/synth/design_1.v:136]
+INFO: [Synth 8-6157] synthesizing module 'design_1_wr_clk_1' [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ip/design_1_wr_clk_1/synth/design_1_wr_clk_1.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized2' [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+	Parameter DIN_WIDTH bound to: 40 - type: integer 
+	Parameter DIN_FROM bound to: 39 - type: integer 
+	Parameter DIN_TO bound to: 39 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized2' (6#1) [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_wr_clk_1' (7#1) [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ip/design_1_wr_clk_1/synth/design_1_wr_clk_1.v:57]
+INFO: [Synth 8-6157] synthesizing module 'design_1_wr_clk_0' [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ip/design_1_wr_clk_0/synth/design_1_wr_clk_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized3' [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+	Parameter DIN_WIDTH bound to: 40 - type: integer 
+	Parameter DIN_FROM bound to: 38 - type: integer 
+	Parameter DIN_TO bound to: 38 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized3' (7#1) [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_wr_clk_0' (8#1) [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ip/design_1_wr_clk_0/synth/design_1_wr_clk_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xlconcat_0_0' [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ip/design_1_xlconcat_0_0_1/synth/design_1_xlconcat_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_3_xlconcat' [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ipshared/442e/hdl/xlconcat_v2_1_vl_rfs.v:14]
+	Parameter IN0_WIDTH bound to: 16 - type: integer 
+	Parameter IN1_WIDTH bound to: 1 - type: integer 
+	Parameter IN2_WIDTH bound to: 1 - type: integer 
+	Parameter IN3_WIDTH bound to: 1 - type: integer 
+	Parameter IN4_WIDTH bound to: 1 - type: integer 
+	Parameter IN5_WIDTH bound to: 1 - type: integer 
+	Parameter IN6_WIDTH bound to: 1 - type: integer 
+	Parameter IN7_WIDTH bound to: 1 - type: integer 
+	Parameter IN8_WIDTH bound to: 1 - type: integer 
+	Parameter IN9_WIDTH bound to: 1 - type: integer 
+	Parameter IN10_WIDTH bound to: 1 - type: integer 
+	Parameter IN11_WIDTH bound to: 1 - type: integer 
+	Parameter IN12_WIDTH bound to: 1 - type: integer 
+	Parameter IN13_WIDTH bound to: 1 - type: integer 
+	Parameter IN14_WIDTH bound to: 1 - type: integer 
+	Parameter IN15_WIDTH bound to: 1 - type: integer 
+	Parameter IN16_WIDTH bound to: 1 - type: integer 
+	Parameter IN17_WIDTH bound to: 1 - type: integer 
+	Parameter IN18_WIDTH bound to: 1 - type: integer 
+	Parameter IN19_WIDTH bound to: 1 - type: integer 
+	Parameter IN20_WIDTH bound to: 1 - type: integer 
+	Parameter IN21_WIDTH bound to: 1 - type: integer 
+	Parameter IN22_WIDTH bound to: 1 - type: integer 
+	Parameter IN23_WIDTH bound to: 1 - type: integer 
+	Parameter IN24_WIDTH bound to: 1 - type: integer 
+	Parameter IN25_WIDTH bound to: 1 - type: integer 
+	Parameter IN26_WIDTH bound to: 1 - type: integer 
+	Parameter IN27_WIDTH bound to: 1 - type: integer 
+	Parameter IN28_WIDTH bound to: 1 - type: integer 
+	Parameter IN29_WIDTH bound to: 1 - type: integer 
+	Parameter IN30_WIDTH bound to: 1 - type: integer 
+	Parameter IN31_WIDTH bound to: 1 - type: integer 
+	Parameter dout_width bound to: 19 - type: integer 
+	Parameter NUM_PORTS bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_3_xlconcat' (9#1) [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ipshared/442e/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xlconcat_0_0' (10#1) [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ip/design_1_xlconcat_0_0_1/synth/design_1_xlconcat_0_0.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'design_1' (11#1) [C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/synth/design_1.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (12#1) [C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/hdl/design_1_wrapper.v:12]
+WARNING: [Synth 8-7023] instance 'processer' of module 'design_1_wrapper' has 31 connections declared, but only 10 given [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/Conv_Accel_Top.v:26]
+INFO: [Synth 8-6157] synthesizing module 'ConvolutionAccelerator' [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixAccTopDevice.v:6]
+INFO: [Synth 8-6157] synthesizing module 'matrixControl3x3' [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'matrixControl3x3' (13#1) [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v:4]
+INFO: [Synth 8-6157] synthesizing module 'matrixAccelerator' [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixAccelerator.v:4]
+INFO: [Synth 8-6157] synthesizing module 'multiplyComputePynq' [C:/GitHub/ReconHardware/PynqSoftware/Sources/Multiplier/multiplyComputePynq.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'multiplyComputePynq' (14#1) [C:/GitHub/ReconHardware/PynqSoftware/Sources/Multiplier/multiplyComputePynq.v:4]
+ERROR: [Synth 8-439] module 'adder' not found [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixAccelerator.v:80]
+ERROR: [Synth 8-196] conditional expression could not be resolved to a constant [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixAccelerator.v:79]
+ERROR: [Synth 8-6156] failed synthesizing module 'matrixAccelerator' [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixAccelerator.v:4]
+ERROR: [Synth 8-6156] failed synthesizing module 'ConvolutionAccelerator' [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixAccTopDevice.v:6]
+ERROR: [Synth 8-6156] failed synthesizing module 'Conv_Accel_Top' [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/Conv_Accel_Top.v:6]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1049.703 ; gain = 287.457
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+INFO: [Common 17-83] Releasing license: Synthesis
+45 Infos, 3 Warnings, 0 Critical Warnings and 6 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+INFO: [Common 17-206] Exiting Vivado at Wed Sep  9 09:52:07 2020...

@@ -23,6 +23,10 @@
 `define myTimeScale         1ns / 1ps
 `define clkPeriod           2
 
+//If reset signal is active high, define as 1
+//If reset signal is active low, define as 0
+`define RSTACTIVEHIGH 1
+
 //Xbar Definitions
 `define inputPortCount      3                                   //N
 `define outputPortCount     3                                   //M
@@ -37,13 +41,13 @@
 `define fracBitCount        8                                   //Fixed Multiply definitions = number of bits dedicated to fraction
 
 //Testbench Definitions, data will be truncated to lowest order bits of size `inputWidth
-`define dataIn1             1
-`define dataIn2             2
-`define dataIn3             3
-`define dataIn4             6
-`define dataIn5             2
-`define dataIn6             2
-`define toggleTime          0.2
+`define dataIn1             9
+`define dataIn2             60
+`define dataIn3             6
+`define dataIn4             12
+`define dataIn5             3
+`define dataIn6             8
+`define toggleTime          10.8
 /*#####################################################################################################################################################*/
 //END_User_Set
 

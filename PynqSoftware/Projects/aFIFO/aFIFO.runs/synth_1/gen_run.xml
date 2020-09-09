@@ -1,20 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1597599721">
-  <File Type="PA-TCL" Name="design_1_wrapper.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="design_1_wrapper_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="design_1_wrapper_reports.tcl"/>
-  <File Type="RDS-RDS" Name="design_1_wrapper.vds"/>
-  <File Type="RDS-UTIL" Name="design_1_wrapper_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="design_1_wrapper_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="design_1_wrapper.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="design_1_wrapper_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="design_1_wrapper_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1599585890">
+  <File Type="PA-TCL" Name="BUF_WRAP.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="BUF_WRAP_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="BUF_WRAP_reports.tcl"/>
+  <File Type="RDS-RDS" Name="BUF_WRAP.vds"/>
+  <File Type="RDS-UTIL" Name="BUF_WRAP_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="BUF_WRAP_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="BUF_WRAP.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="BUF_WRAP_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="BUF_WRAP_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/../../Sources/definitions.h">
       <FileInfo>
         <Attr Name="IsGlobalInclude" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/design_2/design_2.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
@@ -25,8 +32,23 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/bd/design_2/hdl/design_2_wrapper.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/BUF_WRAP.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/bd/design_1/design_1.bd">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -34,6 +56,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/bd/design_1/hdl/design_1_wrapper.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -41,7 +64,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="design_1_wrapper"/>
+      <Option Name="TopModule" Val="BUF_WRAP"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -60,5 +83,4 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_aFIFO_0_0"/>
 </GenRun>

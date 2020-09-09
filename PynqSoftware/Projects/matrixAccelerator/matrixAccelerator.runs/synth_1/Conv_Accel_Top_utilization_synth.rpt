@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Sun Sep  6 22:37:03 2020
+| Date         : Tue Sep  8 16:56:51 2020
 | Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 | Command      : report_utilization -file Conv_Accel_Top_utilization_synth.rpt -pb Conv_Accel_Top_utilization_synth.pb
 | Design       : Conv_Accel_Top
@@ -30,14 +30,14 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                |  286 |     0 |     53200 |  0.54 |
-|   LUT as Logic             |  262 |     0 |     53200 |  0.49 |
+| Slice LUTs*                |  208 |     0 |     53200 |  0.39 |
+|   LUT as Logic             |  184 |     0 |     53200 |  0.35 |
 |   LUT as Memory            |   24 |     0 |     17400 |  0.14 |
 |     LUT as Distributed RAM |   24 |     0 |           |       |
 |     LUT as Shift Register  |    0 |     0 |           |       |
-| Slice Registers            |  299 |     0 |    106400 |  0.28 |
-|   Register as Flip Flop    |  251 |     0 |    106400 |  0.24 |
-|   Register as Latch        |   48 |     0 |    106400 |  0.05 |
+| Slice Registers            |  237 |     0 |    106400 |  0.22 |
+|   Register as Flip Flop    |  237 |     0 |    106400 |  0.22 |
+|   Register as Latch        |    0 |     0 |    106400 |  0.00 |
 | F7 Muxes                   |    0 |     0 |     26600 |  0.00 |
 | F8 Muxes                   |    0 |     0 |     13300 |  0.00 |
 +----------------------------+------+-------+-----------+-------+
@@ -57,7 +57,7 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 1     |          Yes |           - |          Set |
-| 231   |          Yes |           - |        Reset |
+| 169   |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
 | 67    |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
@@ -93,7 +93,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |    0 |     0 |       125 |  0.00 |
+| Bonded IOB                  |    4 |     0 |       125 |  3.20 |
 | Bonded IPADs                |    0 |     0 |         2 |  0.00 |
 | Bonded IOPADs               |    0 |     0 |       130 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |         4 |  0.00 |
@@ -116,7 +116,7 @@ Table of Contents
 +------------+------+-------+-----------+-------+
 |  Site Type | Used | Fixed | Available | Util% |
 +------------+------+-------+-----------+-------+
-| BUFGCTRL   |    1 |     0 |        32 |  3.13 |
+| BUFGCTRL   |    0 |     0 |        32 |  0.00 |
 | BUFIO      |    0 |     0 |        16 |  0.00 |
 | MMCME2_ADV |    0 |     0 |         4 |  0.00 |
 | PLLE2_ADV  |    0 |     0 |         4 |  0.00 |
@@ -149,31 +149,30 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDCE     |  183 |        Flop & Latch |
-| LUT6     |  145 |                 LUT |
-| LUT2     |   73 |                 LUT |
+| FDCE     |  169 |        Flop & Latch |
+| LUT5     |   87 |                 LUT |
 | FDRE     |   67 |        Flop & Latch |
-| LDCE     |   48 |        Flop & Latch |
-| LUT4     |   39 |                 LUT |
-| LUT5     |   26 |                 LUT |
+| LUT2     |   56 |                 LUT |
+| LUT6     |   39 |                 LUT |
+| LUT4     |   33 |                 LUT |
 | RAMD64E  |   24 |  Distributed Memory |
-| LUT3     |   17 |                 LUT |
 | CARRY4   |   16 |          CarryLogic |
+| LUT3     |   11 |                 LUT |
+| OBUF     |    4 |                  IO |
 | DSP48E1  |    3 |    Block Arithmetic |
 | FDPE     |    1 |        Flop & Latch |
-| BUFG     |    1 |               Clock |
 +----------+------+---------------------+
 
 
 8. Black Boxes
 --------------
 
-+----------------------------------+------+
-|             Ref Name             | Used |
-+----------------------------------+------+
-| PYNQ_wrap_processing_system7_0_0 |    1 |
-| PYNQ_wrap_clk_wiz_0_0            |    1 |
-+----------------------------------+------+
++---------------------------------+------+
+|             Ref Name            | Used |
++---------------------------------+------+
+| design_1_processing_system7_0_0 |    1 |
+| design_1_clk_wiz_0_0            |    1 |
++---------------------------------+------+
 
 
 9. Instantiated Netlists

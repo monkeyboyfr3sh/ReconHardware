@@ -1,39 +1,39 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"1.0",
-   "Default View_TopLeft":"-456,-278",
+   "Default View_ScaleFactor":"0.944944",
+   "Default View_TopLeft":"-205,12",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0.21  2019-05-29 bk=1.5064 VDI=41 GEI=36 GUI=JA:9.0 non-TLS
 #  -string -flagsOSRD
-preplace port DDR -pg 1 -lvl 4 -x 1120 -y -30 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -lvl 4 -x 1120 -y -10 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 2 -x 450 -y -40 -defaultsOSRD
-preplace inst xlconcat_0 -pg 1 -lvl 3 -x 980 -y 250 -defaultsOSRD
-preplace inst wclk -pg 1 -lvl 1 -x 80 -y -170 -defaultsOSRD
-preplace inst wrst -pg 1 -lvl 1 -x 80 -y -70 -defaultsOSRD
-preplace inst wr -pg 1 -lvl 1 -x 80 -y 30 -defaultsOSRD
-preplace inst wdata -pg 1 -lvl 1 -x 80 -y 130 -defaultsOSRD
-preplace inst rclk -pg 1 -lvl 1 -x 80 -y 230 -defaultsOSRD
-preplace inst rrst -pg 1 -lvl 1 -x 80 -y 330 -defaultsOSRD
-preplace inst rd -pg 1 -lvl 1 -x 80 -y 430 -defaultsOSRD
-preplace inst aFIFO_0 -pg 1 -lvl 2 -x 450 -y 250 -defaultsOSRD
-preplace netloc processing_system7_0_FCLK_CLK0 1 1 2 230 -190 660
-preplace netloc aFIFO_0_o_wfull 1 2 1 N 230
-preplace netloc aFIFO_0_dataOut 1 2 1 N 250
-preplace netloc aFIFO_0_o_rempty 1 2 1 N 270
-preplace netloc xlconcat_0_dout 1 2 2 NJ -110 1080
-preplace netloc wdata_Dout 1 1 1 190 130n
-preplace netloc wr_Dout 1 1 1 200 30n
-preplace netloc wrst_Dout 1 1 1 210 -70n
-preplace netloc wclk_Dout 1 1 1 220 -170n
-preplace netloc rclk_Dout 1 1 1 180 230n
-preplace netloc rrst_Dout 1 1 1 190 290n
-preplace netloc rd_Dout 1 1 1 220 310n
-preplace netloc processing_system7_0_GPIO_O 1 0 3 -20 490 NJ 490 650
-preplace netloc processing_system7_0_DDR 1 2 2 NJ -50 1100
-preplace netloc processing_system7_0_FIXED_IO 1 2 2 NJ -30 1090
-levelinfo -pg 1 -40 80 450 980 1120
-pagesize -pg 1 -db -bbox -sgen -40 -230 1240 1480
+preplace port DDR -pg 1 -lvl 5 -x 1190 -y 730 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 5 -x 1190 -y 750 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 1 -x 220 -y 750 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 4 -x 1070 -y 230 -defaultsOSRD
+preplace inst wclk -pg 1 -lvl 2 -x 530 -y 70 -defaultsOSRD
+preplace inst wrst -pg 1 -lvl 2 -x 530 -y 570 -defaultsOSRD
+preplace inst wr -pg 1 -lvl 2 -x 530 -y 670 -defaultsOSRD
+preplace inst wdata -pg 1 -lvl 2 -x 530 -y 470 -defaultsOSRD
+preplace inst rclk -pg 1 -lvl 2 -x 530 -y 170 -defaultsOSRD
+preplace inst rrst -pg 1 -lvl 2 -x 530 -y 270 -defaultsOSRD
+preplace inst rd -pg 1 -lvl 2 -x 530 -y 370 -defaultsOSRD
+preplace inst aFIFO_0 -pg 1 -lvl 3 -x 820 -y 230 -defaultsOSRD
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 2 20 890 430
+preplace netloc aFIFO_0_o_wfull 1 3 1 N 210
+preplace netloc aFIFO_0_dataOut 1 3 1 N 230
+preplace netloc aFIFO_0_o_rempty 1 3 1 N 250
+preplace netloc xlconcat_0_dout 1 1 4 420J 740 NJ 740 NJ 740 1170
+preplace netloc wdata_Dout 1 2 1 650 230n
+preplace netloc wr_Dout 1 2 1 670 210n
+preplace netloc wrst_Dout 1 2 1 640 190n
+preplace netloc wclk_Dout 1 2 1 670 70n
+preplace netloc rclk_Dout 1 2 1 630 170n
+preplace netloc rrst_Dout 1 2 1 N 270
+preplace netloc rd_Dout 1 2 1 660 290n
+preplace netloc processing_system7_0_GPIO_O 1 1 1 430 70n
+preplace netloc processing_system7_0_DDR 1 1 4 NJ 730 NJ 730 NJ 730 NJ
+preplace netloc processing_system7_0_FIXED_IO 1 1 4 NJ 750 NJ 750 NJ 750 NJ
+levelinfo -pg 1 0 220 530 820 1070 1190
+pagesize -pg 1 -db -bbox -sgen 0 0 1310 900
 "
 }
 {

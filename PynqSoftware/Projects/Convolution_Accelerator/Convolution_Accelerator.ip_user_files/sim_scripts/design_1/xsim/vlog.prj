@@ -1,0 +1,15 @@
+verilog xil_defaultlib --include "../../../../../../Sources/Block Diagrams/design_1/ipshared/ec67/hdl" --include "../../../../../../Sources/Block Diagrams/design_1/ipshared/2d50/hdl" --include "../../../../../../Sources/Block Diagrams/design_1/ip/design_1_processing_system7_0_0_1" --include "../../../../../../Sources/Block Diagrams/design_1/ipshared/4fba" \
+"../../../bd/design_1/ip/design_1_Rst_0/sim/design_1_Rst_0.v" \
+"../../../bd/design_1/ip/design_1_cStart_0/sim/design_1_cStart_0.v" \
+"../../../bd/design_1/ip/design_1_dataInput_0_1/sim/design_1_dataInput_0.v" \
+"../../../bd/design_1/ip/design_1_processing_system7_0_0_1/sim/design_1_processing_system7_0_0.v" \
+"../../../bd/design_1/ip/design_1_wr_clk_0/sim/design_1_wr_clk_0.v" \
+"../../../bd/design_1/ip/design_1_xlconcat_0_0_1/sim/design_1_xlconcat_0_0.v" \
+"../../../bd/design_1/ip/design_1_wr_clk_1/sim/design_1_wr_clk_1.v" \
+"../../../bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_clk_wiz.v" \
+"../../../bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.v" \
+"../../../bd/design_1/sim/design_1.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

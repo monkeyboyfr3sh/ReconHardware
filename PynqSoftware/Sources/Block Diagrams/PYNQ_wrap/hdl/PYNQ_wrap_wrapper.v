@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-//Date        : Sun Sep  6 22:35:51 2020
+//Date        : Mon Sep  7 17:04:34 2020
 //Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 //Command     : generate_target PYNQ_wrap_wrapper.bd
 //Design      : PYNQ_wrap_wrapper
@@ -40,7 +40,7 @@ module PYNQ_wrap_wrapper
     dataInput,
     finalsum,
     wr_clk);
-  output Clk;
+  output [0:0]Clk;
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -71,7 +71,7 @@ module PYNQ_wrap_wrapper
   input [15:0]finalsum;
   output [0:0]wr_clk;
 
-  wire Clk;
+  wire [0:0]Clk;
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
   wire DDR_cas_n;

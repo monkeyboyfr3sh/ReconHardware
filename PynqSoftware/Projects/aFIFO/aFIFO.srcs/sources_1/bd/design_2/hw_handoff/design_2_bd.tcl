@@ -162,11 +162,16 @@ proc create_root_design { parentCell } {
 
 
   # Create ports
-  set Dout_0 [ create_bd_port -dir O -from 3 -to 0 Dout_0 ]
-  set In0_0 [ create_bd_port -dir I -from 0 -to 0 In0_0 ]
-  set In1_0 [ create_bd_port -dir I -from 0 -to 0 In1_0 ]
-  set In2_0 [ create_bd_port -dir I -from 0 -to 0 In2_0 ]
-  set In3_0 [ create_bd_port -dir I -from 0 -to 0 In3_0 ]
+  set BUFFEROUT [ create_bd_port -dir I -from 15 -to 0 BUFFEROUT ]
+  set EMPTY [ create_bd_port -dir I -from 0 -to 0 EMPTY ]
+  set FULL [ create_bd_port -dir I -from 0 -to 0 FULL ]
+  set rclk [ create_bd_port -dir O -from 0 -to 0 rclk ]
+  set rd [ create_bd_port -dir O -from 0 -to 0 rd ]
+  set rrst [ create_bd_port -dir O -from 0 -to 0 rrst ]
+  set wclk [ create_bd_port -dir O -from 0 -to 0 wclk ]
+  set wdata [ create_bd_port -dir O -from 15 -to 0 wdata ]
+  set wr [ create_bd_port -dir O -from 0 -to 0 wr ]
+  set wrst [ create_bd_port -dir O -from 0 -to 0 wrst ]
 
   # Create instance: processing_system7_0, and set properties
   set processing_system7_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0 ]
@@ -365,8 +370,8 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_FPGA_FCLK3_ENABLE {0} \
    CONFIG.PCW_GPIO_BASEADDR {0xE000A000} \
    CONFIG.PCW_GPIO_EMIO_GPIO_ENABLE {1} \
-   CONFIG.PCW_GPIO_EMIO_GPIO_IO {8} \
-   CONFIG.PCW_GPIO_EMIO_GPIO_WIDTH {8} \
+   CONFIG.PCW_GPIO_EMIO_GPIO_IO {40} \
+   CONFIG.PCW_GPIO_EMIO_GPIO_WIDTH {40} \
    CONFIG.PCW_GPIO_HIGHADDR {0xE000AFFF} \
    CONFIG.PCW_GPIO_MIO_GPIO_ENABLE {1} \
    CONFIG.PCW_GPIO_MIO_GPIO_IO {MIO} \
@@ -942,34 +947,96 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_WDT_PERIPHERAL_FREQMHZ {133.333333} \
  ] $processing_system7_0
 
+  # Create instance: rclk, and set properties
+  set rclk [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 rclk ]
+  set_property -dict [ list \
+   CONFIG.DIN_FROM {37} \
+   CONFIG.DIN_TO {37} \
+   CONFIG.DIN_WIDTH {40} \
+   CONFIG.DOUT_WIDTH {1} \
+ ] $rclk
+
+  # Create instance: rd, and set properties
+  set rd [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 rd ]
+  set_property -dict [ list \
+   CONFIG.DIN_FROM {39} \
+   CONFIG.DIN_TO {39} \
+   CONFIG.DIN_WIDTH {40} \
+   CONFIG.DOUT_WIDTH {1} \
+ ] $rd
+
+  # Create instance: rrst, and set properties
+  set rrst [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 rrst ]
+  set_property -dict [ list \
+   CONFIG.DIN_FROM {38} \
+   CONFIG.DIN_TO {38} \
+   CONFIG.DIN_WIDTH {40} \
+   CONFIG.DOUT_WIDTH {1} \
+ ] $rrst
+
+  # Create instance: wclk, and set properties
+  set wclk [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 wclk ]
+  set_property -dict [ list \
+   CONFIG.DIN_FROM {18} \
+   CONFIG.DIN_TO {18} \
+   CONFIG.DIN_WIDTH {40} \
+   CONFIG.DOUT_WIDTH {1} \
+ ] $wclk
+
+  # Create instance: wdata, and set properties
+  set wdata [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 wdata ]
+  set_property -dict [ list \
+   CONFIG.DIN_FROM {36} \
+   CONFIG.DIN_TO {21} \
+   CONFIG.DIN_WIDTH {40} \
+   CONFIG.DOUT_WIDTH {16} \
+ ] $wdata
+
+  # Create instance: wr, and set properties
+  set wr [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 wr ]
+  set_property -dict [ list \
+   CONFIG.DIN_FROM {20} \
+   CONFIG.DIN_TO {20} \
+   CONFIG.DIN_WIDTH {40} \
+   CONFIG.DOUT_WIDTH {1} \
+ ] $wr
+
+  # Create instance: wrst, and set properties
+  set wrst [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 wrst ]
+  set_property -dict [ list \
+   CONFIG.DIN_FROM {19} \
+   CONFIG.DIN_TO {19} \
+   CONFIG.DIN_WIDTH {40} \
+   CONFIG.DOUT_WIDTH {1} \
+ ] $wrst
+
   # Create instance: xlconcat_0, and set properties
   set xlconcat_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 xlconcat_0 ]
   set_property -dict [ list \
-   CONFIG.NUM_PORTS {4} \
+   CONFIG.IN0_WIDTH {1} \
+   CONFIG.IN1_WIDTH {16} \
+   CONFIG.IN2_WIDTH {1} \
+   CONFIG.NUM_PORTS {3} \
  ] $xlconcat_0
-
-  # Create instance: xlslice_0, and set properties
-  set xlslice_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 xlslice_0 ]
-  set_property -dict [ list \
-   CONFIG.DIN_FROM {7} \
-   CONFIG.DIN_TO {4} \
-   CONFIG.DIN_WIDTH {8} \
-   CONFIG.DOUT_WIDTH {4} \
- ] $xlslice_0
 
   # Create interface connections
   connect_bd_intf_net -intf_net processing_system7_0_DDR [get_bd_intf_ports DDR] [get_bd_intf_pins processing_system7_0/DDR]
   connect_bd_intf_net -intf_net processing_system7_0_FIXED_IO [get_bd_intf_ports FIXED_IO] [get_bd_intf_pins processing_system7_0/FIXED_IO]
 
   # Create port connections
-  connect_bd_net -net In0_0_1 [get_bd_ports In0_0] [get_bd_pins xlconcat_0/In0]
-  connect_bd_net -net In1_0_1 [get_bd_ports In1_0] [get_bd_pins xlconcat_0/In1]
-  connect_bd_net -net In2_0_1 [get_bd_ports In2_0] [get_bd_pins xlconcat_0/In2]
-  connect_bd_net -net In3_0_1 [get_bd_ports In3_0] [get_bd_pins xlconcat_0/In3]
+  connect_bd_net -net In0_0_1 [get_bd_ports FULL] [get_bd_pins xlconcat_0/In0]
+  connect_bd_net -net In1_0_1 [get_bd_ports BUFFEROUT] [get_bd_pins xlconcat_0/In1]
+  connect_bd_net -net In2_0_1 [get_bd_ports EMPTY] [get_bd_pins xlconcat_0/In2]
   connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK]
-  connect_bd_net -net processing_system7_0_GPIO_O [get_bd_pins processing_system7_0/GPIO_O] [get_bd_pins xlslice_0/Din]
+  connect_bd_net -net processing_system7_0_GPIO_O [get_bd_pins processing_system7_0/GPIO_O] [get_bd_pins rclk/Din] [get_bd_pins rd/Din] [get_bd_pins rrst/Din] [get_bd_pins wclk/Din] [get_bd_pins wdata/Din] [get_bd_pins wr/Din] [get_bd_pins wrst/Din]
+  connect_bd_net -net rclk_Dout [get_bd_ports rclk] [get_bd_pins rclk/Dout]
+  connect_bd_net -net rd_Dout [get_bd_ports rd] [get_bd_pins rd/Dout]
+  connect_bd_net -net rrst_Dout [get_bd_ports rrst] [get_bd_pins rrst/Dout]
+  connect_bd_net -net wclk_Dout [get_bd_ports wclk] [get_bd_pins wclk/Dout]
+  connect_bd_net -net wdata_Dout [get_bd_ports wdata] [get_bd_pins wdata/Dout]
+  connect_bd_net -net wr_Dout [get_bd_ports wr] [get_bd_pins wr/Dout]
+  connect_bd_net -net wrst_Dout [get_bd_ports wrst] [get_bd_pins wrst/Dout]
   connect_bd_net -net xlconcat_0_dout [get_bd_pins processing_system7_0/GPIO_I] [get_bd_pins xlconcat_0/dout]
-  connect_bd_net -net xlslice_0_Dout [get_bd_ports Dout_0] [get_bd_pins xlslice_0/Dout]
 
   # Create address segments
 

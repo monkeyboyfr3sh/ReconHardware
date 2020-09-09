@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date             : Sun Sep  6 22:37:59 2020
+| Date             : Tue Sep  8 16:57:46 2020
 | Host             : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 | Command          : report_power -file Conv_Accel_Top_power_routed.rpt -pb Conv_Accel_Top_power_summary_routed.pb -rpx Conv_Accel_Top_power_routed.rpx
 | Design           : Conv_Accel_Top
@@ -30,11 +30,11 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.505        |
+| Total On-Chip Power (W)  | 1.510        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.370        |
-| Device Static (W)        | 0.135        |
+| Dynamic (W)              | 1.371        |
+| Device Static (W)        | 0.139        |
 | Effective TJA (C/W)      | 11.5         |
 | Max Ambient (C)          | 67.6         |
 | Junction Temperature (C) | 42.4         |
@@ -52,20 +52,21 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.004 |        6 |       --- |             --- |
-| Slice Logic              |     0.001 |      746 |       --- |             --- |
-|   LUT as Logic           |    <0.001 |      261 |     53200 |            0.49 |
+| Clocks                   |     0.002 |        6 |       --- |             --- |
+| Slice Logic              |    <0.001 |      657 |       --- |             --- |
+|   LUT as Logic           |    <0.001 |      181 |     53200 |            0.34 |
 |   CARRY4                 |    <0.001 |       16 |     13300 |            0.12 |
-|   Register               |    <0.001 |      251 |    106400 |            0.24 |
 |   LUT as Distributed RAM |    <0.001 |       24 |     17400 |            0.14 |
+|   Register               |    <0.001 |      237 |    106400 |            0.22 |
 |   BUFG                   |    <0.001 |        1 |        32 |            3.13 |
-|   Others                 |     0.000 |      154 |       --- |             --- |
-| Signals                  |     0.001 |      442 |       --- |             --- |
+|   Others                 |     0.000 |      153 |       --- |             --- |
+| Signals                  |    <0.001 |      453 |       --- |             --- |
 | MMCM                     |     0.106 |        1 |         4 |           25.00 |
-| DSPs                     |     0.002 |        3 |       220 |            1.36 |
+| DSPs                     |    <0.001 |        3 |       220 |            1.36 |
+| I/O                      |     0.007 |        4 |       125 |            3.20 |
 | PS7                      |     1.256 |        1 |       --- |             --- |
-| Static Power             |     0.135 |          |           |                 |
-| Total                    |     1.505 |          |           |                 |
+| Static Power             |     0.139 |          |           |                 |
+| Total                    |     1.510 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -75,9 +76,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.023 |       0.009 |      0.014 |
+| Vccint    |       1.000 |     0.017 |       0.003 |      0.014 |
 | Vccaux    |       1.800 |     0.073 |       0.059 |      0.015 |
-| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
+| Vcco33    |       3.300 |     0.003 |       0.002 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -135,14 +136,14 @@ Table of Contents
 2.2 Clock Constraints
 ---------------------
 
-+--------------------------------+------------------------------------------------------------------------+-----------------+
-| Clock                          | Domain                                                                 | Constraint (ns) |
-+--------------------------------+------------------------------------------------------------------------+-----------------+
-| clk_fpga_0                     | processer/PYNQ_wrap_i/processing_system7_0/inst/FCLK_CLK0              |            10.0 |
-| clk_fpga_0                     | processer/PYNQ_wrap_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0] |            10.0 |
-| clk_out1_PYNQ_wrap_clk_wiz_0_0 | processer/PYNQ_wrap_i/clk_wiz_0/inst/clk_out1_PYNQ_wrap_clk_wiz_0_0    |            10.0 |
-| clkfbout_PYNQ_wrap_clk_wiz_0_0 | processer/PYNQ_wrap_i/clk_wiz_0/inst/clkfbout_PYNQ_wrap_clk_wiz_0_0    |            10.0 |
-+--------------------------------+------------------------------------------------------------------------+-----------------+
++-------------------------------+-----------------------------------------------------------------------+-----------------+
+| Clock                         | Domain                                                                | Constraint (ns) |
++-------------------------------+-----------------------------------------------------------------------+-----------------+
+| clk_fpga_0                    | processer/design_1_i/processing_system7_0/inst/FCLK_CLK0              |            10.0 |
+| clk_fpga_0                    | processer/design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0] |            10.0 |
+| clk_out1_design_1_clk_wiz_0_0 | processer/design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0     |            20.0 |
+| clkfbout_design_1_clk_wiz_0_0 | processer/design_1_i/clk_wiz_0/inst/clkfbout_design_1_clk_wiz_0_0     |            10.0 |
++-------------------------------+-----------------------------------------------------------------------+-----------------+
 
 
 3. Detailed Reports
@@ -154,13 +155,10 @@ Table of Contents
 +----------------------------+-----------+
 | Name                       | Power (W) |
 +----------------------------+-----------+
-| Conv_Accel_Top             |     1.370 |
-|   ConvAccel                |     0.007 |
-|     controller             |     0.002 |
-|     inputBuffer            |     0.002 |
-|     matrixAccel            |     0.003 |
+| Conv_Accel_Top             |     1.371 |
+|   ConvAccel                |     0.001 |
 |   processer                |     1.363 |
-|     PYNQ_wrap_i            |     1.363 |
+|     design_1_i             |     1.363 |
 |       clk_wiz_0            |     0.107 |
 |       processing_system7_0 |     1.256 |
 +----------------------------+-----------+

@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/aFIFO/aFIFO.runs/synth_1'
+HD_PWD='C:/GitHub/ReconHardware/PynqSoftware/Projects/aFIFO/aFIFO.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log design_1_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
+EAStep vivado -log BUF_WRAP.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source BUF_WRAP.tcl

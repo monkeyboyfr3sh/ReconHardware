@@ -9,12 +9,20 @@
   "C:/Xilinx/Vivado/2019.2/data/xilinx_vip/hdl/clk_vip_if.sv" \
   "C:/Xilinx/Vivado/2019.2/data/xilinx_vip/hdl/rst_vip_if.sv" \
 -endlib
+-makelib xcelium_lib/xpm -sv \
+  "C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
+-endlib
+-makelib xcelium_lib/xpm \
+  "C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_VCOMP.vhd" \
+-endlib
 -makelib xcelium_lib/xil_defaultlib \
   "../../../../../Sources/General/XBar2.v" \
   "../../../../../Sources/General/aFIFO.v" \
+  "../../../../../Sources/General/matrixAccTopDevice.v" \
   "../../../../../Sources/General/matrixAccelerator.v" \
   "../../../../../Sources/General/matrixControl3x3.v" \
-  "../../../../../Sources/General/matrixAccTopDevice.v" \
+  "../../../../../Sources/Multiplier/multiplyComputePynq.v" \
+  "../../../../../Sources/General/Conv_Accel_Top.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   glbl.v

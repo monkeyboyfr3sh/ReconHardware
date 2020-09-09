@@ -3,6 +3,7 @@
 
 module matrixControl3x3(
     Clk, Rst,cStart,cReady,//Convolution start
+    FIFO_CTRL_RST,
     FIFO_RD_CLK,
     FIFO_OUT_PORT,
     FULL,
@@ -10,7 +11,7 @@ module matrixControl3x3(
     MULTIPLIER_INPUT,
     MULTIPLICAND_INPUT,
     MULTIPLY_START,
-    FINALADD
+    FINALADDOUT
 );
 
 `define NUM_LOOP 3
@@ -25,16 +26,16 @@ input   [`bitLength-1:0]    FIFO_OUT_PORT;
 //XBar Controls
 
 //Multiplier Controls
-output                      FIFO_RD_CLK;
+output                      FIFO_RD_CLK,FIFO_CTRL_RST;
 output                      MULTIPLIER_INPUT;
 output                      MULTIPLICAND_INPUT;
 output                      MULTIPLY_START;
-
-output  reg                             FINALADD;
+output                      FINALADDOUT;
 
 //State flags
 reg     RDst,MULTIst,ADDst;
 
+reg                         FINALADD;
 reg                         holdFilter;     //Flag used to hold filter values to speed up input data
 reg                         inputToggle;
 reg     [`addressLength:0]  RDloopcnt;
@@ -47,7 +48,9 @@ reg     [`inputPortCount-1:0]               MULTIPLY_START;
 
 integer i;
 
-assign  FIFO_RD_CLK         = (RDst)?Clk:0;       //Only want to read from FIFO if in RDst
+assign  FIFO_RD_CLK         = (RDst)?Clk:0;                     //Only want to read from FIFO if in RDst
+assign  FIFO_CTRL_RST       = ~cStart;  //If cstart is high, do not clear FIFO, If cstart is low, clear FIFO 
+assign  FINALADDOUT         = FINALADD && ~cReady;
 
 always @(posedge Clk or posedge Rst) begin
     if(Rst)begin
@@ -68,7 +71,7 @@ always @(posedge Clk or posedge Rst) begin
         inputToggle = 0;
         FINALADD = 0;
     end
-    else begin
+    else if(cStart)begin
         //cStart triggers matrixcontroller to start
         if(cStart&&!(RDst||MULTIst||ADDst||cReady))
             RDst = 1;
@@ -77,12 +80,9 @@ always @(posedge Clk or posedge Rst) begin
         if(RDst)begin
             if(RDloopcnt>=`NUM_LOOP)begin
                 //Prevents RDstate reset if cStart is high
-                if(!cStart)begin
-                    RDst = 0;
-                    RDloopcnt = 0;
-                end
+                RDst = 0;
+                RDloopcnt = 0;
             end
-
             else if(!EMPTY)begin
                 //Input is multiplier
                 if(!inputToggle)begin
@@ -111,12 +111,10 @@ always @(posedge Clk or posedge Rst) begin
 
         //In a multiply state, else case is to clear the mStart signal
         if(Mloopcnt>=`NUM_LOOP) begin
-            //Prevents MULTIst reset if cStart is high
-            if(!cStart) begin
-                ADDst = 1;
-                MULTIst = 0;
-                Mloopcnt = 0;
-            end
+            //Prevents MULTIst reset if cStart is highbegin
+            ADDst = 1;
+            MULTIst = 0;
+            Mloopcnt = 0;
         end
         if(MULTIst) begin
             MULTIst = 0;
@@ -147,6 +145,25 @@ always @(posedge Clk or posedge Rst) begin
                 FINALADD = 1;
             end
         end
+    end
+    //Basically reset if cStart is not high
+    else begin
+        RDst = 0;
+        MULTIst = 0;
+        ADDst = 0;
+
+        RDloopcnt = 0;
+        Mloopcnt = 0;
+        holdFilter = 0;
+        MULTIPLIER_INPUT = 0;
+        MULTIPLICAND_INPUT = 0;
+        //FINALADDEND = 0;
+
+        MULTIPLY_START = 0;
+        rdPointer = 0;
+        multiPointer = 0;
+        inputToggle = 0;
+        FINALADD = 0;
     end
 end
 

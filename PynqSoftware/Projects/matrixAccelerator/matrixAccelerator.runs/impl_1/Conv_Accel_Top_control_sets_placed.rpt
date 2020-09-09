@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Sun Sep  6 22:37:37 2020
+| Date         : Tue Sep  8 16:57:24 2020
 | Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Conv_Accel_Top_control_sets_placed.rpt
 | Design       : Conv_Accel_Top
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    10 |
-|    Minimum number of control sets                        |    10 |
+| Total control sets                                       |    15 |
+|    Minimum number of control sets                        |    15 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    21 |
+| Unused register locations in slices containing registers |    19 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,15 +39,15 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    10 |
+| Total control sets |    15 |
 | >= 0 to < 4        |     1 |
-| >= 4 to < 6        |     1 |
+| >= 4 to < 6        |     0 |
 | >= 6 to < 8        |     0 |
 | >= 8 to < 10       |     0 |
 | >= 10 to < 12      |     0 |
 | >= 12 to < 14      |     0 |
 | >= 14 to < 16      |     0 |
-| >= 16              |     8 |
+| >= 16              |    14 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -59,10 +59,10 @@ Table of Contents
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | No           | No                    | No                     |               3 |            3 |
-| No           | No                    | Yes                    |             179 |           62 |
+| No           | No                    | Yes                    |              74 |           19 |
 | No           | Yes                   | No                     |               0 |            0 |
 | Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |               5 |            2 |
+| Yes          | No                    | Yes                    |              96 |           22 |
 | Yes          | Yes                   | No                     |              64 |           16 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
@@ -70,19 +70,24 @@ Table of Contents
 4. Detailed Control Set Information
 -----------------------------------
 
-+------------------------------------------------------------------+---------------------------------------------------------+-----------------------------------------------------------------+------------------+----------------+
-|                           Clock Signal                           |                      Enable Signal                      |                         Set/Reset Signal                        | Slice Load Count | Bel Load Count |
-+------------------------------------------------------------------+---------------------------------------------------------+-----------------------------------------------------------------+------------------+----------------+
-|  processer/PYNQ_wrap_i/clk_wiz_0/inst/clk_out1                   |                                                         |                                                                 |                3 |              3 |
-|  processer/PYNQ_wrap_i/clk_wiz_0/inst/clk_out1                   | ConvAccel/controller/RDloopcnt                          | processer/PYNQ_wrap_i/processing_system7_0/inst/GPIO_O_BUFG[20] |                2 |              5 |
-|  processer/PYNQ_wrap_i/clk_wiz_0/inst/clk_out1                   | ConvAccel/controller/finalAdd                           | processer/PYNQ_wrap_i/processing_system7_0/inst/GPIO_O_BUFG[20] |                4 |             16 |
-|  processer/PYNQ_wrap_i/clk_wiz_0/inst/clk_out1                   | ConvAccel/matrixAccel/genblk3[1].inputMulti/ready_reg_0 | processer/PYNQ_wrap_i/processing_system7_0/inst/GPIO_O_BUFG[20] |                4 |             16 |
-|  processer/PYNQ_wrap_i/clk_wiz_0/inst/clk_out1                   | ConvAccel/matrixAccel/genblk3[2].inputMulti/ready_reg_0 | processer/PYNQ_wrap_i/processing_system7_0/inst/GPIO_O_BUFG[20] |                4 |             16 |
-|  processer/PYNQ_wrap_i/clk_wiz_0/inst/clk_out1                   | ConvAccel/matrixAccel/genblk3[0].inputMulti/ready_reg_0 | processer/PYNQ_wrap_i/processing_system7_0/inst/GPIO_O_BUFG[20] |                4 |             16 |
-|  processer/PYNQ_wrap_i/processing_system7_0/inst/GPIO_O_BUFG[38] | processer/wbinnext0                                     |                                                                 |                6 |             24 |
-|  processer/PYNQ_wrap_i/processing_system7_0/inst/GPIO_O_BUFG[38] |                                                         | processer/PYNQ_wrap_i/processing_system7_0/inst/GPIO_O_BUFG[20] |                8 |             29 |
-|  FIFO_RD_CLK                                                     |                                                         | processer/PYNQ_wrap_i/processing_system7_0/inst/GPIO_O_BUFG[20] |               14 |             35 |
-|  processer/PYNQ_wrap_i/clk_wiz_0/inst/clk_out1                   |                                                         | processer/PYNQ_wrap_i/processing_system7_0/inst/GPIO_O_BUFG[20] |               40 |            115 |
-+------------------------------------------------------------------+---------------------------------------------------------+-----------------------------------------------------------------+------------------+----------------+
++-----------------------------------------------------------------+---------------------------------------------------------+----------------------------------------------------------------+------------------+----------------+
+|                           Clock Signal                          |                      Enable Signal                      |                        Set/Reset Signal                        | Slice Load Count | Bel Load Count |
++-----------------------------------------------------------------+---------------------------------------------------------+----------------------------------------------------------------+------------------+----------------+
+|  processer/design_1_i/clk_wiz_0/inst/clk_out1                   |                                                         |                                                                |                3 |              3 |
+|  processer/design_1_i/clk_wiz_0/inst/clk_out1                   | ConvAccel/controller/MULTIPLICAND_INPUT[15]_i_1_n_0     | processer/design_1_i/processing_system7_0/inst/GPIO_O_BUFG[20] |                4 |             16 |
+|  processer/design_1_i/clk_wiz_0/inst/clk_out1                   | ConvAccel/controller/MULTIPLICAND_INPUT[31]_i_1_n_0     | processer/design_1_i/processing_system7_0/inst/GPIO_O_BUFG[20] |                4 |             16 |
+|  processer/design_1_i/clk_wiz_0/inst/clk_out1                   | ConvAccel/controller/finalAdd                           | processer/design_1_i/processing_system7_0/inst/GPIO_O_BUFG[20] |                4 |             16 |
+|  processer/design_1_i/clk_wiz_0/inst/clk_out1                   | ConvAccel/controller/MULTIPLIER_INPUT[47]_i_1_n_0       | processer/design_1_i/processing_system7_0/inst/GPIO_O_BUFG[20] |                3 |             16 |
+|  processer/design_1_i/clk_wiz_0/inst/clk_out1                   | ConvAccel/controller/MULTIPLIER_INPUT[15]_i_1_n_0       | processer/design_1_i/processing_system7_0/inst/GPIO_O_BUFG[20] |                3 |             16 |
+|  processer/design_1_i/clk_wiz_0/inst/clk_out1                   | ConvAccel/controller/MULTIPLICAND_INPUT[47]_i_1_n_0     | processer/design_1_i/processing_system7_0/inst/GPIO_O_BUFG[20] |                4 |             16 |
+|  processer/design_1_i/clk_wiz_0/inst/clk_out1                   | ConvAccel/controller/MULTIPLIER_INPUT[31]_i_1_n_0       | processer/design_1_i/processing_system7_0/inst/GPIO_O_BUFG[20] |                4 |             16 |
+|  processer/design_1_i/clk_wiz_0/inst/clk_out1                   | ConvAccel/matrixAccel/genblk3[2].inputMulti/ready_reg_0 | processer/design_1_i/processing_system7_0/inst/GPIO_O_BUFG[20] |                4 |             16 |
+|  processer/design_1_i/clk_wiz_0/inst/clk_out1                   | ConvAccel/matrixAccel/genblk3[0].inputMulti/ready_reg_0 | processer/design_1_i/processing_system7_0/inst/GPIO_O_BUFG[20] |                4 |             16 |
+|  processer/design_1_i/clk_wiz_0/inst/clk_out1                   | ConvAccel/matrixAccel/genblk3[1].inputMulti/ready_reg_0 | processer/design_1_i/processing_system7_0/inst/GPIO_O_BUFG[20] |                4 |             16 |
+|  processer/design_1_i/clk_wiz_0/inst/clk_out1                   |                                                         | processer/design_1_i/processing_system7_0/inst/GPIO_O_BUFG[20] |                6 |             18 |
+|  processer/design_1_i/processing_system7_0/inst/GPIO_O_BUFG[38] | processer/o_wfull_reg                                   |                                                                |                6 |             24 |
+|  processer/FIFO_RD_CLK                                          |                                                         | processer/bbstub_GPIO_O[37]                                    |                6 |             28 |
+|  processer/design_1_i/processing_system7_0/inst/GPIO_O_BUFG[38] |                                                         | processer/bbstub_GPIO_O[37]                                    |                7 |             28 |
++-----------------------------------------------------------------+---------------------------------------------------------+----------------------------------------------------------------+------------------+----------------+
 
 

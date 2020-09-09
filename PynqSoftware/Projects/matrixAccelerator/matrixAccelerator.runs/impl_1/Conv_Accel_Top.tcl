@@ -60,6 +60,7 @@ proc step_failed { step } {
   close $ch
 }
 
+set_msg_config -id {HDL-1065} -limit 10000
 set_msg_config  -id {VRFC 10-2989}  -string {{ERROR: [VRFC 10-2989] 'break' is not declared [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Adder/adderFloat.v:60]}}  -suppress 
 set_msg_config  -id {XSIM 43-3322}  -string {{ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.}}  -suppress 
 
@@ -80,8 +81,9 @@ set rc [catch {
   add_files -quiet C:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1/Conv_Accel_Top.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files {{C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/PYNQ_wrap.bd}}
+  add_files C:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/design_1/design_1.bd
   set_param project.isImplRun false
+  read_xdc C:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.srcs/constrs_1/new/my_brd.xdc
   set_param project.isImplRun true
   link_design -top Conv_Accel_Top -part xc7z020clg400-1
   set_param project.isImplRun false

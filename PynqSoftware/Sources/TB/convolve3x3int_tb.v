@@ -7,7 +7,7 @@ module convolve3x3int_tb;
 reg 	Clk,Rst,cStart;
 
 reg     [`bitLength-1:0]    dataInput;
-reg     wr_clk;
+reg     wr,wr_clk;
 
 //Outputs
 wire    FULL,EMPTY,cReady;
@@ -18,6 +18,7 @@ ConvolutionAccelerator UUT(
     Rst,
     dataInput,
     cStart,
+    wr,
     wr_clk,
     finalsum,
     cReady,
@@ -28,46 +29,92 @@ ConvolutionAccelerator UUT(
 initial begin
 
 Clk = 0;
+wr = 0;
 wr_clk = 0;
 Rst = 1;
 #`clkPeriod;
 Rst = 0;
+cStart = 0;
+#(4*`clkPeriod);
+
 cStart = 1;
 #`clkPeriod;
-cStart = 0;
+
+//Fake load values then actaully try to start
+for(integer i = 0;i<2;i=i+1)begin
+    dataInput = `dataIn1*(i+1);
+    wr_clk = 1;
+    #`toggleTime;
+    wr_clk = 0;
+    #`toggleTime;
+    
+    dataInput = `dataIn2*(i+1);
+    wr_clk = 1;
+    #`toggleTime;
+    wr_clk = 0;
+    #`toggleTime;
+    
+    dataInput = `dataIn3*(i+1);
+    wr_clk = 1;
+    #`toggleTime;
+    wr_clk = 0;
+    #`toggleTime;
+    
+    dataInput = `dataIn4*(i+1);
+    wr_clk = 1;
+    #`toggleTime;
+    wr_clk = 0;
+    #`toggleTime;
+    
+    dataInput = `dataIn5*(i+1);
+    wr_clk = 1;
+    #`toggleTime;
+    wr_clk = 0;
+    #`toggleTime;
+    
+    dataInput = `dataIn6*(i+1);
+    wr_clk = 1;
+    #`toggleTime;
+    wr_clk = 0;
+    #`toggleTime;
+end
+
+wr = 1;
+#`clkPeriod;
+
 
 for(integer i = 0;i<3;i=i+1)begin
-    dataInput = `dataIn1;
+    dataInput = `dataIn1*(i+1);
     wr_clk = 1;
     #`toggleTime;
     wr_clk = 0;
     #`toggleTime;
     
-    dataInput = `dataIn2;
+    dataInput = `dataIn2*(i+1);
     wr_clk = 1;
     #`toggleTime;
     wr_clk = 0;
     #`toggleTime;
     
-    dataInput = `dataIn3;
+    dataInput = `dataIn3*(i+1);
     wr_clk = 1;
     #`toggleTime;
     wr_clk = 0;
     #`toggleTime;
     
-    dataInput = `dataIn4;
+    dataInput = `dataIn4*(i+1);
     wr_clk = 1;
     #`toggleTime;
     wr_clk = 0;
     #`toggleTime;
     
-    dataInput = `dataIn5;
+    dataInput = `dataIn5*(i+1);
     wr_clk = 1;
     #`toggleTime;
     wr_clk = 0;
     #`toggleTime;
     
-    dataInput = `dataIn6;
+    dataInput = `dataIn6*(i+1);
     wr_clk = 1;
     #`toggleTime;
     wr_clk = 0;
@@ -76,10 +123,11 @@ end
 
 
 dataInput = `bitLength'h0000;
-    wr_clk = 1;
-    #`toggleTime;
-    wr_clk = 0;
-    #`toggleTime;
+wr_clk = 1;
+#`toggleTime;
+wr_clk = 0;
+#`toggleTime;
+wr = 0;
 
 end
 always #(`clkPeriod/2) Clk = ~Clk;

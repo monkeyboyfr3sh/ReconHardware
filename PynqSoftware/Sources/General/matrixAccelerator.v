@@ -37,7 +37,8 @@ wire    [(`bitLength*2)-1:0]                    sum_Connector               [`ou
 wire    [(2*`bitLength)-1:0]                    finalAccumulateWire;
 reg     [`addressLength:0]                      addPointer;
 
-assign  finalAccumulate = finalReady?finalAccumulateWire:0;
+//assign  finalAccumulate = finalReady?finalAccumulateWire:0;
+assign  finalAccumulate = finalAccumulateWire;
 
 XBar2 xbar2(
             .Clk(Clk),

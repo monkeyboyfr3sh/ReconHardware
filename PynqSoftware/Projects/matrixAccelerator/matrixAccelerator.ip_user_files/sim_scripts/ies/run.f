@@ -9,15 +9,21 @@
   "C:/Xilinx/Vivado/2019.2/data/xilinx_vip/hdl/clk_vip_if.sv" \
   "C:/Xilinx/Vivado/2019.2/data/xilinx_vip/hdl/rst_vip_if.sv" \
 -endlib
+-makelib ies_lib/xpm -sv \
+  "C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
+-endlib
+-makelib ies_lib/xpm \
+  "C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_VCOMP.vhd" \
+-endlib
 -makelib ies_lib/xil_defaultlib \
   "../../../../../Sources/General/XBar2.v" \
   "../../../../../Sources/General/aFIFO.v" \
-  "../../../../../Sources/Adder/adderFloat.v" \
-  "../../../../../Sources/Multiplier/floatmComputePynq.v" \
+  "../../../../../Sources/Adder/adder.v" \
   "../../../../../Sources/General/matrixAccTopDevice.v" \
   "../../../../../Sources/General/matrixAccelerator.v" \
   "../../../../../Sources/General/matrixControl3x3.v" \
-  "../../../../../Sources/TB/convolve3x3_tb.v" \
+  "../../../../../Sources/Multiplier/multiplyComputePynq.v" \
+  "../../../../../Sources/TB/convolve3x3int_tb.v" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
   glbl.v

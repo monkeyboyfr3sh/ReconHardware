@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-//Date        : Sun Sep  6 22:35:51 2020
+//Date        : Mon Sep  7 17:04:34 2020
 //Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 //Command     : generate_target PYNQ_wrap.bd
 //Design      : PYNQ_wrap
@@ -41,7 +41,7 @@ module PYNQ_wrap
     dataInput,
     finalsum,
     wr_clk);
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK, CLK_DOMAIN /clk_wiz_0_clk_out1, FREQ_HZ 100000000, INSERT_VIP 0, PHASE 0.0" *) output Clk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK, CLK_DOMAIN /clk_wiz_0_clk_out1, FREQ_HZ 5000000, INSERT_VIP 0, PHASE 0.0" *) output [0:0]Clk;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR ADDR" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DDR, AXI_ARBITRATION_SCHEME TDM, BURST_LENGTH 8, CAN_DEBUG false, CAS_LATENCY 11, CAS_WRITE_LATENCY 11, CS_ENABLED true, DATA_MASK_ENABLED true, DATA_WIDTH 8, MEMORY_TYPE COMPONENTS, MEM_ADDR_MAP ROW_COLUMN_BANK, SLOT Single, TIMEPERIOD_PS 1250" *) inout [14:0]DDR_addr;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR BA" *) inout [2:0]DDR_ba;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR CAS_N" *) inout DDR_cas_n;
@@ -76,9 +76,9 @@ module PYNQ_wrap
   wire [0:0]In1_0_1;
   wire [0:0]In2_0_1;
   wire [0:0]In3_0_1;
+  wire [0:0]Rst1_Dout;
   wire [0:0]Rst_Dout;
   wire [0:0]cStart_Dout;
-  wire clk_wiz_0_clk_out1;
   wire [15:0]dataInput_Dout;
   wire [14:0]processing_system7_0_DDR_ADDR;
   wire [2:0]processing_system7_0_DDR_BA;
@@ -96,7 +96,6 @@ module PYNQ_wrap
   wire processing_system7_0_DDR_RESET_N;
   wire processing_system7_0_DDR_WE_N;
   wire processing_system7_0_FCLK_CLK0;
-  wire processing_system7_0_FCLK_RESET0_N;
   wire processing_system7_0_FIXED_IO_DDR_VRN;
   wire processing_system7_0_FIXED_IO_DDR_VRP;
   wire [53:0]processing_system7_0_FIXED_IO_MIO;
@@ -107,7 +106,7 @@ module PYNQ_wrap
   wire [0:0]wr_clk_Dout;
   wire [18:0]xlconcat_0_dout;
 
-  assign Clk = clk_wiz_0_clk_out1;
+  assign Clk[0] = Rst1_Dout;
   assign In0_0_1 = finalsum[15:0];
   assign In1_0_1 = cReady[0];
   assign In2_0_1 = FULL[0];
@@ -116,16 +115,15 @@ module PYNQ_wrap
   assign cStart[0] = cStart_Dout;
   assign dataInput[15:0] = dataInput_Dout;
   assign wr_clk[0] = wr_clk_Dout;
+  PYNQ_wrap_Rst_2 Clk_RnM
+       (.Din(processing_system7_0_GPIO_O),
+        .Dout(Rst1_Dout));
   PYNQ_wrap_Clk_0 Rst_RnM
        (.Din(processing_system7_0_GPIO_O),
         .Dout(Rst_Dout));
   PYNQ_wrap_dataInput_0 cStart_RnM
        (.Din(processing_system7_0_GPIO_O),
         .Dout(cStart_Dout));
-  PYNQ_wrap_clk_wiz_0_0 clk_wiz_0
-       (.clk_in1(processing_system7_0_FCLK_CLK0),
-        .clk_out1(clk_wiz_0_clk_out1),
-        .resetn(processing_system7_0_FCLK_RESET0_N));
   PYNQ_wrap_Rst_1 dataInput_RnM
        (.Din(processing_system7_0_GPIO_O),
         .Dout(dataInput_Dout));
@@ -148,7 +146,6 @@ module PYNQ_wrap
         .DDR_VRP(FIXED_IO_ddr_vrp),
         .DDR_WEB(DDR_we_n),
         .FCLK_CLK0(processing_system7_0_FCLK_CLK0),
-        .FCLK_RESET0_N(processing_system7_0_FCLK_RESET0_N),
         .GPIO_I({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,xlconcat_0_dout}),
         .GPIO_O(processing_system7_0_GPIO_O),
         .MIO(FIXED_IO_mio[53:0]),

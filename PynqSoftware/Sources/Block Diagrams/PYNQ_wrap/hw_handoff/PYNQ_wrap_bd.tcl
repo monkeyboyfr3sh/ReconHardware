@@ -160,7 +160,7 @@ proc create_root_design { parentCell } {
 
 
   # Create ports
-  set Clk [ create_bd_port -dir O -type clk Clk ]
+  set Clk [ create_bd_port -dir O -from 0 -to 0 -type clk Clk ]
   set EMPTY [ create_bd_port -dir I -from 0 -to 0 EMPTY ]
   set FULL [ create_bd_port -dir I -from 0 -to 0 FULL ]
   set Rst [ create_bd_port -dir O -from 0 -to 0 Rst ]
@@ -169,6 +169,15 @@ proc create_root_design { parentCell } {
   set dataInput [ create_bd_port -dir O -from 15 -to 0 dataInput ]
   set finalsum [ create_bd_port -dir I -from 15 -to 0 finalsum ]
   set wr_clk [ create_bd_port -dir O -from 0 -to 0 wr_clk ]
+
+  # Create instance: Clk, and set properties
+  set Clk [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 Clk ]
+  set_property -dict [ list \
+   CONFIG.DIN_FROM {19} \
+   CONFIG.DIN_TO {19} \
+   CONFIG.DIN_WIDTH {39} \
+   CONFIG.DOUT_WIDTH {1} \
+ ] $Clk
 
   # Create instance: Rst, and set properties
   set Rst [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 Rst ]
@@ -187,15 +196,6 @@ proc create_root_design { parentCell } {
    CONFIG.DIN_WIDTH {39} \
    CONFIG.DOUT_WIDTH {1} \
  ] $cStart
-
-  # Create instance: clk_wiz_0, and set properties
-  set clk_wiz_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_0 ]
-  set_property -dict [ list \
-   CONFIG.RESET_PORT {resetn} \
-   CONFIG.RESET_TYPE {ACTIVE_LOW} \
-   CONFIG.USE_LOCKED {false} \
-   CONFIG.USE_RESET {true} \
- ] $clk_wiz_0
 
   # Create instance: dataInput, and set properties
   set dataInput [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 dataInput ]
@@ -1008,13 +1008,12 @@ proc create_root_design { parentCell } {
   connect_bd_net -net In1_0_1 [get_bd_ports cReady] [get_bd_pins xlconcat_0/In1]
   connect_bd_net -net In2_0_1 [get_bd_ports FULL] [get_bd_pins xlconcat_0/In2]
   connect_bd_net -net In3_0_1 [get_bd_ports EMPTY] [get_bd_pins xlconcat_0/In3]
+  connect_bd_net -net Rst1_Dout [get_bd_ports Clk] [get_bd_pins Clk/Dout]
   connect_bd_net -net Rst_Dout [get_bd_ports Rst] [get_bd_pins Rst/Dout]
   connect_bd_net -net cStart_Dout [get_bd_ports cStart] [get_bd_pins cStart/Dout]
-  connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_ports Clk] [get_bd_pins clk_wiz_0/clk_out1]
   connect_bd_net -net dataInput_Dout [get_bd_ports dataInput] [get_bd_pins dataInput/Dout]
-  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins clk_wiz_0/clk_in1] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK]
-  connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins clk_wiz_0/resetn] [get_bd_pins processing_system7_0/FCLK_RESET0_N]
-  connect_bd_net -net processing_system7_0_GPIO_O [get_bd_pins Rst/Din] [get_bd_pins cStart/Din] [get_bd_pins dataInput/Din] [get_bd_pins processing_system7_0/GPIO_O] [get_bd_pins wr_clk/Din]
+  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK]
+  connect_bd_net -net processing_system7_0_GPIO_O [get_bd_pins Clk/Din] [get_bd_pins Rst/Din] [get_bd_pins cStart/Din] [get_bd_pins dataInput/Din] [get_bd_pins processing_system7_0/GPIO_O] [get_bd_pins wr_clk/Din]
   connect_bd_net -net wr_clk_Dout [get_bd_ports wr_clk] [get_bd_pins wr_clk/Dout]
   connect_bd_net -net xlconcat_0_dout [get_bd_pins processing_system7_0/GPIO_I] [get_bd_pins xlconcat_0/dout]
 

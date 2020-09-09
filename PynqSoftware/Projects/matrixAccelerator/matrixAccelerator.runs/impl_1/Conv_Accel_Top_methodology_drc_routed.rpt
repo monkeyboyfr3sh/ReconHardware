@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Sun Sep  6 22:37:59 2020
+| Date         : Tue Sep  8 16:57:46 2020
 | Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 | Command      : report_methodology -file Conv_Accel_Top_methodology_drc_routed.rpt -pb Conv_Accel_Top_methodology_drc_routed.pb -rpx Conv_Accel_Top_methodology_drc_routed.rpx
 | Design       : Conv_Accel_Top
@@ -29,21 +29,22 @@ Table of Contents
 +-----------+------------------+----------------------------------------------------+------------+
 | TIMING-4  | Critical Warning | Invalid primary clock redefinition on a clock tree | 1          |
 | TIMING-14 | Critical Warning | LUT on the clock tree                              | 1          |
-| TIMING-17 | Critical Warning | Non-clocked sequential cell                        | 53         |
+| TIMING-17 | Critical Warning | Non-clocked sequential cell                        | 52         |
 | TIMING-27 | Critical Warning | Invalid primary clock on hierarchical pin          | 1          |
 | DPIR-1    | Warning          | Asynchronous driver check                          | 96         |
+| LUTAR-1   | Warning          | LUT drives async reset alert                       | 1          |
 +-----------+------------------+----------------------------------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
 TIMING-4#1 Critical Warning
 Invalid primary clock redefinition on a clock tree  
-Invalid clock redefinition on a clock tree. The primary clock processer/PYNQ_wrap_i/clk_wiz_0/inst/clk_in1 is defined downstream of clock clk_fpga_0 and overrides its insertion delay and/or waveform definition
+Invalid clock redefinition on a clock tree. The primary clock processer/design_1_i/clk_wiz_0/inst/clk_in1 is defined downstream of clock clk_fpga_0 and overrides its insertion delay and/or waveform definition
 Related violations: <none>
 
 TIMING-14#1 Critical Warning
 LUT on the clock tree  
-The LUT ConvAccel/controller/rbin_rep[5]_i_4 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+The LUT processer/rgray[5]_i_2 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
 Related violations: <none>
 
 TIMING-17#1 Critical Warning
@@ -238,82 +239,77 @@ Related violations: <none>
 
 TIMING-17#39 Critical Warning
 Non-clocked sequential cell  
-The clock pin ConvAccel/inputBuffer/wgray_reg[6]/C is not reached by a timing clock
+The clock pin ConvAccel/inputBuffer/wq1_rgray_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#40 Critical Warning
 Non-clocked sequential cell  
-The clock pin ConvAccel/inputBuffer/wq1_rgray_reg[0]/C is not reached by a timing clock
+The clock pin ConvAccel/inputBuffer/wq1_rgray_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#41 Critical Warning
 Non-clocked sequential cell  
-The clock pin ConvAccel/inputBuffer/wq1_rgray_reg[1]/C is not reached by a timing clock
+The clock pin ConvAccel/inputBuffer/wq1_rgray_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#42 Critical Warning
 Non-clocked sequential cell  
-The clock pin ConvAccel/inputBuffer/wq1_rgray_reg[2]/C is not reached by a timing clock
+The clock pin ConvAccel/inputBuffer/wq1_rgray_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#43 Critical Warning
 Non-clocked sequential cell  
-The clock pin ConvAccel/inputBuffer/wq1_rgray_reg[3]/C is not reached by a timing clock
+The clock pin ConvAccel/inputBuffer/wq1_rgray_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#44 Critical Warning
 Non-clocked sequential cell  
-The clock pin ConvAccel/inputBuffer/wq1_rgray_reg[4]/C is not reached by a timing clock
+The clock pin ConvAccel/inputBuffer/wq1_rgray_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#45 Critical Warning
 Non-clocked sequential cell  
-The clock pin ConvAccel/inputBuffer/wq1_rgray_reg[5]/C is not reached by a timing clock
+The clock pin ConvAccel/inputBuffer/wq1_rgray_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#46 Critical Warning
 Non-clocked sequential cell  
-The clock pin ConvAccel/inputBuffer/wq1_rgray_reg[6]/C is not reached by a timing clock
+The clock pin ConvAccel/inputBuffer/wq2_rgray_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#47 Critical Warning
 Non-clocked sequential cell  
-The clock pin ConvAccel/inputBuffer/wq2_rgray_reg[0]/C is not reached by a timing clock
+The clock pin ConvAccel/inputBuffer/wq2_rgray_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#48 Critical Warning
 Non-clocked sequential cell  
-The clock pin ConvAccel/inputBuffer/wq2_rgray_reg[1]/C is not reached by a timing clock
+The clock pin ConvAccel/inputBuffer/wq2_rgray_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#49 Critical Warning
 Non-clocked sequential cell  
-The clock pin ConvAccel/inputBuffer/wq2_rgray_reg[2]/C is not reached by a timing clock
+The clock pin ConvAccel/inputBuffer/wq2_rgray_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#50 Critical Warning
 Non-clocked sequential cell  
-The clock pin ConvAccel/inputBuffer/wq2_rgray_reg[3]/C is not reached by a timing clock
+The clock pin ConvAccel/inputBuffer/wq2_rgray_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#51 Critical Warning
 Non-clocked sequential cell  
-The clock pin ConvAccel/inputBuffer/wq2_rgray_reg[4]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#52 Critical Warning
-Non-clocked sequential cell  
 The clock pin ConvAccel/inputBuffer/wq2_rgray_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
-TIMING-17#53 Critical Warning
+TIMING-17#52 Critical Warning
 Non-clocked sequential cell  
 The clock pin ConvAccel/inputBuffer/wq2_rgray_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-27#1 Critical Warning
 Invalid primary clock on hierarchical pin  
-A primary clock processer/PYNQ_wrap_i/clk_wiz_0/inst/clk_in1 is created on an inappropriate internal pin processer/PYNQ_wrap_i/clk_wiz_0/inst/clk_in1. It is not recommended to create a primary clock on a hierarchical pin when its driver pin has a fanout connected to multiple clock pins
+A primary clock processer/design_1_i/clk_wiz_0/inst/clk_in1 is created on an inappropriate internal pin processer/design_1_i/clk_wiz_0/inst/clk_in1. It is not recommended to create a primary clock on a hierarchical pin when its driver pin has a fanout connected to multiple clock pins
 Related violations: <none>
 
 DPIR-1#1 Warning
@@ -794,6 +790,11 @@ Related violations: <none>
 DPIR-1#96 Warning
 Asynchronous driver check  
 DSP ConvAccel/matrixAccel/genblk3[2].inputMulti/product_reg input pin ConvAccel/matrixAccel/genblk3[2].inputMulti/product_reg/B[9] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+LUTAR-1#1 Warning
+LUT drives async reset alert  
+LUT cell processer/rgray[5]_i_3, with 2 or more inputs, drives asynchronous preset/clear pin(s) ConvAccel/inputBuffer/o_wfull_reg/CLR, ConvAccel/inputBuffer/rbin_reg[0]/CLR, ConvAccel/inputBuffer/rbin_reg[1]/CLR, ConvAccel/inputBuffer/rbin_reg[2]/CLR, ConvAccel/inputBuffer/rbin_reg[3]/CLR, ConvAccel/inputBuffer/rbin_reg[4]/CLR, ConvAccel/inputBuffer/rbin_reg[5]/CLR, ConvAccel/inputBuffer/rbin_reg[6]/CLR, ConvAccel/inputBuffer/rgray_reg[0]/CLR, ConvAccel/inputBuffer/rgray_reg[1]/CLR, ConvAccel/inputBuffer/rgray_reg[2]/CLR, ConvAccel/inputBuffer/rgray_reg[3]/CLR, ConvAccel/inputBuffer/rgray_reg[4]/CLR, ConvAccel/inputBuffer/rgray_reg[5]/CLR, ConvAccel/inputBuffer/rq1_wgray_reg[0]/CLR (the first 15 of 56 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 

@@ -1,0 +1,194 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Sun Sep  6 16:32:33 2020
+# Process ID: 32612
+# Current directory: C:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent33828 C:\GitHub\ReconHardware\PynqSoftware\Projects\matrixAccelerator\matrixAccelerator.xpr
+# Log file: C:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/vivado.log
+# Journal file: C:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'.
+open_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:09 . Memory (MB): peak = 1186.984 ; gain = 548.309
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_target all [get_files  {{C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/PYNQ_wrap.bd}}]
+export_ip_user_files -of_objects  [get_files  {{C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/PYNQ_wrap.bd}}] -sync -no_script -force -quiet
+delete_ip_run [get_files -of_objects [get_fileset sources_1] {{C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/PYNQ_wrap.bd}}]
+open_bd_design {C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/PYNQ_wrap.bd}
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP2_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_rd_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'S_AXI_GP3_wr_socket' specified in the portmap, is not found on the block! 
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - Clk
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - xlconcat_0
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - Rst
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - dataInput
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - cStart
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - wr_clk
+Successfully read diagram <PYNQ_wrap> from BD file <C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/PYNQ_wrap.bd>
+open_bd_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1291.645 ; gain = 74.348
+write_bd_tcl -force C:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/PYNQ_wrap.tcl
+INFO: [BD 5-148] Tcl file written out <C:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/PYNQ_wrap.tcl>.
+
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+INFO: [BD 41-1662] The design 'PYNQ_wrap.bd' is already validated. Therefore parameter propagation will not be re-run.
+Wrote  : <C:\GitHub\ReconHardware\PynqSoftware\Sources\Block Diagrams\PYNQ_wrap\PYNQ_wrap.bd> 
+Wrote  : <C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/ui/bd_8197d31d.ui> 
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/processing_system7_0/GPIO_I'(39) to net 'xlconcat_0_dout'(19) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/synth/PYNQ_wrap.v
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/processing_system7_0/GPIO_I'(39) to net 'xlconcat_0_dout'(19) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/sim/PYNQ_wrap.v
+VHDL Output written to : C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/hdl/PYNQ_wrap_wrapper.v
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI_GP0'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Clk .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Rst .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block dataInput .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block cStart .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block wr_clk .
+Exporting to file C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/hw_handoff/PYNQ_wrap.hwh
+Generated Block Design Tcl file C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/hw_handoff/PYNQ_wrap_bd.tcl
+Generated Hardware Definition File C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/synth/PYNQ_wrap.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP PYNQ_wrap_processing_system7_0_0, cache-ID = e19a8c5eab687084; cache size = 3.571 MB.
+[Sun Sep  6 16:34:46 2020] Launched synth_1...
+Run output will be captured here: C:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1/runme.log
+[Sun Sep  6 16:34:46 2020] Launched impl_1...
+Run output will be captured here: C:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1493.543 ; gain = 179.496
+write_bd_tcl -force C:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/PYNQ_wrap.tcl
+INFO: [BD 5-148] Tcl file written out <C:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/PYNQ_wrap.tcl>.
+
+open_bd_design {C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/PYNQ_wrap.bd}
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'C:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'convolve3x3_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_6 -L processing_system7_vip_v1_0_8 -L xilinx_vip -prj convolve3x3_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/PynqSoftware/Sources/definitions.h" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.ip_user_files/bd/PYNQ_wrap/ip/PYNQ_wrap_processing_system7_0_0/sim/PYNQ_wrap_processing_system7_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PYNQ_wrap_processing_system7_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.ip_user_files/bd/PYNQ_wrap/ip/PYNQ_wrap_xlslice_0_3/sim/PYNQ_wrap_xlslice_0_3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PYNQ_wrap_xlslice_0_3
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.ip_user_files/bd/PYNQ_wrap/ip/PYNQ_wrap_xlconcat_0_0/sim/PYNQ_wrap_xlconcat_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PYNQ_wrap_xlconcat_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.ip_user_files/bd/PYNQ_wrap/ip/PYNQ_wrap_Clk_0/sim/PYNQ_wrap_Clk_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PYNQ_wrap_Clk_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.ip_user_files/bd/PYNQ_wrap/ip/PYNQ_wrap_Rst_1/sim/PYNQ_wrap_Rst_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PYNQ_wrap_Rst_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.ip_user_files/bd/PYNQ_wrap/ip/PYNQ_wrap_dataInput_0/sim/PYNQ_wrap_dataInput_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PYNQ_wrap_dataInput_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.ip_user_files/bd/PYNQ_wrap/ip/PYNQ_wrap_cStart_0/sim/PYNQ_wrap_cStart_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PYNQ_wrap_cStart_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.ip_user_files/bd/PYNQ_wrap/sim/PYNQ_wrap.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PYNQ_wrap
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/PYNQ_wrap/hdl/PYNQ_wrap_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PYNQ_wrap_wrapper
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/PynqSoftware/Sources/General/XBar2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module XBar2
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/PynqSoftware/Sources/General/aFIFO.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aFIFO
+WARNING: [VRFC 10-3380] identifier 'o_rdata' is used before its declaration [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/aFIFO.v:94]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/PynqSoftware/Sources/Adder/adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/PynqSoftware/Sources/Adder/adderFloat.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adderFloat
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixAccTopDevice.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module matrixAccTopDevice
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixAccelerator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module matrixAccelerator
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module matrixControl3x3
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/PynqSoftware/Sources/Multiplier/multiplyComputePynq.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplyComputePynq
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/PynqSoftware/Sources/TB/convolve3x3_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module convolve3x3_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.sim/sim_1/behav/xsim'
+"xelab -wto c9763829a085402ebf4f5ad6c83803e9 --incr --debug typical --relax --mt 2 -L axi_infrastructure_v1_1_0 -L axi_vip_v1_1_6 -L processing_system7_vip_v1_0_8 -L xil_defaultlib -L xlslice_v1_0_2 -L xlconcat_v2_1_3 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot convolve3x3_tb_behav xil_defaultlib.convolve3x3_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto c9763829a085402ebf4f5ad6c83803e9 --incr --debug typical --relax --mt 2 -L axi_infrastructure_v1_1_0 -L axi_vip_v1_1_6 -L processing_system7_vip_v1_0_8 -L xil_defaultlib -L xlslice_v1_0_2 -L xlconcat_v2_1_3 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot convolve3x3_tb_behav xil_defaultlib.convolve3x3_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 128 differs from formal bit length 64 for port 'WR_DATA_STRB' [/proj/xbuilds/SWIP/2019.2_1106_2127/infra/XSIM/lin/.cxl.ip/incl/processing_system7_vip_v1_0_8_axi_gp.v:208]
+WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 6 for port 'm_axi_bid' [/wrk/2019.2/continuous/2019_11_06_2708876/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:5496]
+WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 6 for port 'm_axi_rid' [/wrk/2019.2/continuous/2019_11_06_2708876/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:5514]
+WARNING: [VRFC 10-3091] actual bit length 128 differs from formal bit length 64 for port 'WR_DATA_STRB' [/proj/xbuilds/SWIP/2019.2_1106_2127/infra/XSIM/lin/.cxl.ip/incl/processing_system7_vip_v1_0_8_axi_gp.v:292]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 9 for port 'WR_BYTES' [/proj/xbuilds/SWIP/2019.2_1106_2127/infra/XSIM/lin/.cxl.ip/incl/processing_system7_vip_v1_0_8_axi_hp.v:80]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 9 for port 'RD_BYTES' [/proj/xbuilds/SWIP/2019.2_1106_2127/infra/XSIM/lin/.cxl.ip/incl/processing_system7_vip_v1_0_8_axi_hp.v:89]
+WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 6 for port 'm_axi_bid' [/wrk/2019.2/continuous/2019_11_06_2708876/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:10203]
+WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 6 for port 'm_axi_rid' [/wrk/2019.2/continuous/2019_11_06_2708876/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:10221]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'm_axi_rdata' [/wrk/2019.2/continuous/2019_11_06_2708876/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:10222]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 9 for port 'WR_BYTES' [/proj/xbuilds/SWIP/2019.2_1106_2127/infra/XSIM/lin/.cxl.ip/incl/processing_system7_vip_v1_0_8_axi_hp.v:165]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 9 for port 'RD_BYTES' [/proj/xbuilds/SWIP/2019.2_1106_2127/infra/XSIM/lin/.cxl.ip/incl/processing_system7_vip_v1_0_8_axi_hp.v:174]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 9 for port 'WR_BYTES' [/proj/xbuilds/SWIP/2019.2_1106_2127/infra/XSIM/lin/.cxl.ip/incl/processing_system7_vip_v1_0_8_axi_hp.v:251]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 9 for port 'RD_BYTES' [/proj/xbuilds/SWIP/2019.2_1106_2127/infra/XSIM/lin/.cxl.ip/incl/processing_system7_vip_v1_0_8_axi_hp.v:260]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 9 for port 'WR_BYTES' [/proj/xbuilds/SWIP/2019.2_1106_2127/infra/XSIM/lin/.cxl.ip/incl/processing_system7_vip_v1_0_8_axi_hp.v:337]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 9 for port 'RD_BYTES' [/proj/xbuilds/SWIP/2019.2_1106_2127/infra/XSIM/lin/.cxl.ip/incl/processing_system7_vip_v1_0_8_axi_hp.v:346]
+WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 3 for port 'm_axi_bid' [/wrk/2019.2/continuous/2019_11_06_2708876/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:7107]
+WARNING: [VRFC 10-3091] actual bit length 12 differs from formal bit length 3 for port 'm_axi_rid' [/wrk/2019.2/continuous/2019_11_06_2708876/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:7125]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'm_axi_rdata' [/wrk/2019.2/continuous/2019_11_06_2708876/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:7126]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'direct' [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixAccTopDevice.v:66]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_rd' [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixAccTopDevice.v:83]
+ERROR: [VRFC 10-2922] 'matrixAccTopDevice' expects 0 arguments [C:/GitHub/ReconHardware/PynqSoftware/Sources/TB/convolve3x3_tb.v:16]
+ERROR: [VRFC 10-1219] part-select direction is opposite from prefix index direction [/wrk/2019.2/continuous/2019_11_06_2708876/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:9413]
+ERROR: [VRFC 10-1219] part-select direction is opposite from prefix index direction [/wrk/2019.2/continuous/2019_11_06_2708876/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:9630]
+WARNING: [VRFC 10-3283] element index 64 into 'wrp_strb' is out of bounds [/wrk/2019.2/continuous/2019_11_06_2708876/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:6084]
+WARNING: [VRFC 10-3283] element index 128 into 'wrp_strb' is out of bounds [/wrk/2019.2/continuous/2019_11_06_2708876/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:10844]
+WARNING: [VRFC 10-3283] element index 128 into 'wrp_strb' is out of bounds [/wrk/2019.2/continuous/2019_11_06_2708876/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:7722]
+WARNING: [VRFC 10-3705] select index 4 into 'wr_fifo_rd_ptr' is out of bounds [/wrk/2019.2/continuous/2019_11_06_2708876/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:7935]
+WARNING: [VRFC 10-3705] select index 4 into 'ar_cnt' is out of bounds [/wrk/2019.2/continuous/2019_11_06_2708876/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:8074]
+WARNING: [VRFC 10-3705] select index 4 into 'wr_rresp_cnt' is out of bounds [/wrk/2019.2/continuous/2019_11_06_2708876/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:8171]
+WARNING: [VRFC 10-3705] select index 4 into 'rd_fifo_wr_ptr' is out of bounds [/wrk/2019.2/continuous/2019_11_06_2708876/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:8190]
+WARNING: [VRFC 10-3705] select index 4 into 'rd_cnt' is out of bounds [/wrk/2019.2/continuous/2019_11_06_2708876/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:8331]
+WARNING: [VRFC 10-3705] select index 4 into 'rresp_time_cnt' is out of bounds [/wrk/2019.2/continuous/2019_11_06_2708876/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:8336]
+WARNING: [VRFC 10-3705] select index 4 into 'rd_fifo_rd_ptr' is out of bounds [/wrk/2019.2/continuous/2019_11_06_2708876/packages/customer/vivado/data/ip/xilinx/processing_system7_vip_v1_0/hdl/processing_system7_vip_v1_0_vl_rfs.sv:8341]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1514.770 ; gain = 0.000
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+close [ open C:/GitHub/ReconHardware/PynqSoftware/Sources/General/Conv_Accel_Top.v w ]
+add_files C:/GitHub/ReconHardware/PynqSoftware/Sources/General/Conv_Accel_Top.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+WARNING: [Common 17-9] Error reading message records.
+WARNING: [Common 17-9] Error reading message records.
+WARNING: [Common 17-9] Error reading message records.
+WARNING: [Common 17-9] Error reading message records.
+WARNING: [Common 17-9] Error reading message records.
+WARNING: [Common 17-9] Error reading message records.
+WARNING: [Common 17-9] Error reading message records.
+WARNING: [Common 17-9] Error reading message records.
+WARNING: [Common 17-9] Error reading message records.
+WARNING: [Common 17-9] Error reading message records.
+WARNING: [Common 17-9] Error reading message records.
+WARNING: [Common 17-9] Error reading message records.
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Sep  6 22:40:49 2020...

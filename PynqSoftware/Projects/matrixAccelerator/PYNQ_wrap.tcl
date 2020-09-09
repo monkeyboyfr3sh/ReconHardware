@@ -194,7 +194,7 @@ proc create_root_design { parentCell } {
 
 
   # Create ports
-  set Clk [ create_bd_port -dir O -from 0 -to 0 Clk ]
+  set Clk [ create_bd_port -dir O -from 0 -to 0 -type clk Clk ]
   set EMPTY [ create_bd_port -dir I -from 0 -to 0 EMPTY ]
   set FULL [ create_bd_port -dir I -from 0 -to 0 FULL ]
   set Rst [ create_bd_port -dir O -from 0 -to 0 Rst ]
@@ -1038,11 +1038,11 @@ proc create_root_design { parentCell } {
   connect_bd_intf_net -intf_net processing_system7_0_FIXED_IO [get_bd_intf_ports FIXED_IO] [get_bd_intf_pins processing_system7_0/FIXED_IO]
 
   # Create port connections
-  connect_bd_net -net Clk_Dout [get_bd_ports Clk] [get_bd_pins Clk/Dout]
   connect_bd_net -net In0_0_1 [get_bd_ports finalsum] [get_bd_pins xlconcat_0/In0]
   connect_bd_net -net In1_0_1 [get_bd_ports cReady] [get_bd_pins xlconcat_0/In1]
   connect_bd_net -net In2_0_1 [get_bd_ports FULL] [get_bd_pins xlconcat_0/In2]
   connect_bd_net -net In3_0_1 [get_bd_ports EMPTY] [get_bd_pins xlconcat_0/In3]
+  connect_bd_net -net Rst1_Dout [get_bd_ports Clk] [get_bd_pins Clk/Dout]
   connect_bd_net -net Rst_Dout [get_bd_ports Rst] [get_bd_pins Rst/Dout]
   connect_bd_net -net cStart_Dout [get_bd_ports cStart] [get_bd_pins cStart/Dout]
   connect_bd_net -net dataInput_Dout [get_bd_ports dataInput] [get_bd_pins dataInput/Dout]
@@ -1057,7 +1057,6 @@ proc create_root_design { parentCell } {
   # Restore current instance
   current_bd_instance $oldCurInst
 
-  validate_bd_design
   save_bd_design
 }
 # End of create_root_design()
@@ -1069,4 +1068,6 @@ proc create_root_design { parentCell } {
 
 create_root_design ""
 
+
+common::send_msg_id "BD_TCL-1000" "WARNING" "This Tcl script was generated from a block design that has not been validated. It is possible that design <$design_name> may result in errors during validation."
 

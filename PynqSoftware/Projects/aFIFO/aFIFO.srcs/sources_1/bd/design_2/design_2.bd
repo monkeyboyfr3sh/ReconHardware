@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xE0B9318587CEFD1C",
+      "boundary_crc": "0x7F664289CBF47808",
       "device": "xc7z020clg400-1",
       "name": "design_2",
       "synth_flow_mode": "Hierarchical",
@@ -10,7 +10,13 @@
     },
     "design_tree": {
       "processing_system7_0": "",
-      "xlslice_0": "",
+      "rclk": "",
+      "rd": "",
+      "rrst": "",
+      "wclk": "",
+      "wdata": "",
+      "wr": "",
+      "wrst": "",
       "xlconcat_0": ""
     },
     "interface_ports": {
@@ -80,29 +86,54 @@
       }
     },
     "ports": {
-      "Dout_0": {
+      "wclk": {
         "direction": "O",
-        "left": "3",
+        "left": "0",
         "right": "0"
       },
-      "In0_0": {
+      "rclk": {
+        "direction": "O",
+        "left": "0",
+        "right": "0"
+      },
+      "rrst": {
+        "direction": "O",
+        "left": "0",
+        "right": "0"
+      },
+      "rd": {
+        "direction": "O",
+        "left": "0",
+        "right": "0"
+      },
+      "wdata": {
+        "direction": "O",
+        "left": "15",
+        "right": "0"
+      },
+      "wrst": {
+        "direction": "O",
+        "left": "0",
+        "right": "0"
+      },
+      "wr": {
+        "direction": "O",
+        "left": "0",
+        "right": "0"
+      },
+      "FULL": {
         "direction": "I",
         "left": "0",
         "right": "0"
       },
-      "In1_0": {
+      "EMPTY": {
         "direction": "I",
         "left": "0",
         "right": "0"
       },
-      "In2_0": {
+      "BUFFEROUT": {
         "direction": "I",
-        "left": "0",
-        "right": "0"
-      },
-      "In3_0": {
-        "direction": "I",
-        "left": "0",
+        "left": "15",
         "right": "0"
       }
     },
@@ -538,10 +569,10 @@
             "value": "1"
           },
           "PCW_GPIO_EMIO_GPIO_IO": {
-            "value": "8"
+            "value": "40"
           },
           "PCW_GPIO_EMIO_GPIO_WIDTH": {
-            "value": "8"
+            "value": "40"
           },
           "PCW_GPIO_HIGHADDR": {
             "value": "0xE000AFFF"
@@ -1694,21 +1725,129 @@
           }
         }
       },
-      "xlslice_0": {
+      "rclk": {
         "vlnv": "xilinx.com:ip:xlslice:1.0",
-        "xci_name": "design_2_xlslice_0_0",
+        "xci_name": "design_2_rclk_0",
         "parameters": {
           "DIN_FROM": {
-            "value": "7"
+            "value": "37"
           },
           "DIN_TO": {
-            "value": "4"
+            "value": "37"
           },
           "DIN_WIDTH": {
-            "value": "8"
+            "value": "40"
           },
           "DOUT_WIDTH": {
-            "value": "4"
+            "value": "1"
+          }
+        }
+      },
+      "rd": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "xci_name": "design_2_rd_0",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "39"
+          },
+          "DIN_TO": {
+            "value": "39"
+          },
+          "DIN_WIDTH": {
+            "value": "40"
+          },
+          "DOUT_WIDTH": {
+            "value": "1"
+          }
+        }
+      },
+      "rrst": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "xci_name": "design_2_rrst_0",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "38"
+          },
+          "DIN_TO": {
+            "value": "38"
+          },
+          "DIN_WIDTH": {
+            "value": "40"
+          },
+          "DOUT_WIDTH": {
+            "value": "1"
+          }
+        }
+      },
+      "wclk": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "xci_name": "design_2_wclk_0",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "18"
+          },
+          "DIN_TO": {
+            "value": "18"
+          },
+          "DIN_WIDTH": {
+            "value": "40"
+          },
+          "DOUT_WIDTH": {
+            "value": "1"
+          }
+        }
+      },
+      "wdata": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "xci_name": "design_2_wdata_0",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "36"
+          },
+          "DIN_TO": {
+            "value": "21"
+          },
+          "DIN_WIDTH": {
+            "value": "40"
+          },
+          "DOUT_WIDTH": {
+            "value": "16"
+          }
+        }
+      },
+      "wr": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "xci_name": "design_2_wr_0",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "20"
+          },
+          "DIN_TO": {
+            "value": "20"
+          },
+          "DIN_WIDTH": {
+            "value": "40"
+          },
+          "DOUT_WIDTH": {
+            "value": "1"
+          }
+        }
+      },
+      "wrst": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "xci_name": "design_2_wrst_0",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "19"
+          },
+          "DIN_TO": {
+            "value": "19"
+          },
+          "DIN_WIDTH": {
+            "value": "40"
+          },
+          "DOUT_WIDTH": {
+            "value": "1"
           }
         }
       },
@@ -1716,23 +1855,32 @@
         "vlnv": "xilinx.com:ip:xlconcat:2.1",
         "xci_name": "design_2_xlconcat_0_0",
         "parameters": {
+          "IN0_WIDTH": {
+            "value": "1"
+          },
+          "IN1_WIDTH": {
+            "value": "16"
+          },
+          "IN2_WIDTH": {
+            "value": "1"
+          },
           "NUM_PORTS": {
-            "value": "4"
+            "value": "3"
           }
         }
       }
     },
     "interface_nets": {
-      "processing_system7_0_DDR": {
-        "interface_ports": [
-          "DDR",
-          "processing_system7_0/DDR"
-        ]
-      },
       "processing_system7_0_FIXED_IO": {
         "interface_ports": [
           "FIXED_IO",
           "processing_system7_0/FIXED_IO"
+        ]
+      },
+      "processing_system7_0_DDR": {
+        "interface_ports": [
+          "DDR",
+          "processing_system7_0/DDR"
         ]
       }
     },
@@ -1746,13 +1894,13 @@
       "processing_system7_0_GPIO_O": {
         "ports": [
           "processing_system7_0/GPIO_O",
-          "xlslice_0/Din"
-        ]
-      },
-      "xlslice_0_Dout": {
-        "ports": [
-          "xlslice_0/Dout",
-          "Dout_0"
+          "wclk/Din",
+          "wrst/Din",
+          "wr/Din",
+          "wdata/Din",
+          "rclk/Din",
+          "rrst/Din",
+          "rd/Din"
         ]
       },
       "xlconcat_0_dout": {
@@ -1761,28 +1909,64 @@
           "processing_system7_0/GPIO_I"
         ]
       },
-      "In0_0_1": {
+      "wclk_Dout": {
         "ports": [
-          "In0_0",
-          "xlconcat_0/In0"
+          "wclk/Dout",
+          "wclk"
         ]
       },
-      "In1_0_1": {
+      "rclk_Dout": {
         "ports": [
-          "In1_0",
-          "xlconcat_0/In1"
+          "rclk/Dout",
+          "rclk"
+        ]
+      },
+      "rrst_Dout": {
+        "ports": [
+          "rrst/Dout",
+          "rrst"
+        ]
+      },
+      "rd_Dout": {
+        "ports": [
+          "rd/Dout",
+          "rd"
+        ]
+      },
+      "wdata_Dout": {
+        "ports": [
+          "wdata/Dout",
+          "wdata"
+        ]
+      },
+      "wrst_Dout": {
+        "ports": [
+          "wrst/Dout",
+          "wrst"
+        ]
+      },
+      "wr_Dout": {
+        "ports": [
+          "wr/Dout",
+          "wr"
+        ]
+      },
+      "In0_0_1": {
+        "ports": [
+          "FULL",
+          "xlconcat_0/In0"
         ]
       },
       "In2_0_1": {
         "ports": [
-          "In2_0",
+          "EMPTY",
           "xlconcat_0/In2"
         ]
       },
-      "In3_0_1": {
+      "In1_0_1": {
         "ports": [
-          "In3_0",
-          "xlconcat_0/In3"
+          "BUFFEROUT",
+          "xlconcat_0/In1"
         ]
       }
     },

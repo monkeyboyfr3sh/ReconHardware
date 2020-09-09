@@ -9,12 +9,6 @@
   "C:/Xilinx/Vivado/2019.2/data/xilinx_vip/hdl/clk_vip_if.sv" \
   "C:/Xilinx/Vivado/2019.2/data/xilinx_vip/hdl/rst_vip_if.sv" \
 -endlib
--makelib ies_lib/xpm -sv \
-  "C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
--endlib
--makelib ies_lib/xpm \
-  "C:/Xilinx/Vivado/2019.2/data/ip/xpm/xpm_VCOMP.vhd" \
--endlib
 -makelib ies_lib/axi_infrastructure_v1_1_0 \
   "../../../../../../Sources/Block Diagrams/PYNQ_wrap/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v" \
 -endlib
@@ -41,8 +35,7 @@
   "../../../bd/PYNQ_wrap/ip/PYNQ_wrap_Rst_1/sim/PYNQ_wrap_Rst_1.v" \
   "../../../bd/PYNQ_wrap/ip/PYNQ_wrap_dataInput_0/sim/PYNQ_wrap_dataInput_0.v" \
   "../../../bd/PYNQ_wrap/ip/PYNQ_wrap_cStart_0/sim/PYNQ_wrap_cStart_0.v" \
-  "../../../bd/PYNQ_wrap/ip/PYNQ_wrap_clk_wiz_0_0/PYNQ_wrap_clk_wiz_0_0_clk_wiz.v" \
-  "../../../bd/PYNQ_wrap/ip/PYNQ_wrap_clk_wiz_0_0/PYNQ_wrap_clk_wiz_0_0.v" \
+  "../../../bd/PYNQ_wrap/ip/PYNQ_wrap_Rst_2/sim/PYNQ_wrap_Rst_2.v" \
   "../../../bd/PYNQ_wrap/sim/PYNQ_wrap.v" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
