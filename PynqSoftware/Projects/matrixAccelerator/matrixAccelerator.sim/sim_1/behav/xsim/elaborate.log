@@ -4,16 +4,13 @@ Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto c9763829a0
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'direct' [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixAccTopDevice.v:71]
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_rd' [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixAccTopDevice.v:88]
-WARNING: [VRFC 10-3283] element index 127 into 'addarray_inputConnector' is out of bounds [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixAccelerator.v:83]
-WARNING: [VRFC 10-3705] select index 3 into 'Add' is out of bounds [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixAccelerator.v:84]
-WARNING: [VRFC 10-3283] element index 3 into 'sum_Connector' is out of bounds [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixAccelerator.v:85]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'direct' [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixAccTopDevice.v:73]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_rd' [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixAccTopDevice.v:89]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.matrixControl3x3
+Compiling module xil_defaultlib.ConvolutionController
 Compiling module xil_defaultlib.XBar2
 Compiling module xil_defaultlib.multiplyComputePynq
 Compiling module xil_defaultlib.adder

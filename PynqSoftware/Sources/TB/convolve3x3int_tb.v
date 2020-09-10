@@ -4,7 +4,7 @@
 module convolve3x3int_tb;
 
 //Inputs
-reg 	Clk,Rst,cStart;
+reg 	Clk,Rst,cStart,newline;
 
 reg     [`bitLength-1:0]    dataInput;
 reg     wr,wr_clk;
@@ -18,6 +18,7 @@ ConvolutionAccelerator UUT(
     Rst,
     dataInput,
     cStart,
+    newline,
     wr,
     wr_clk,
     finalsum,
@@ -31,6 +32,8 @@ initial begin
 Clk = 0;
 wr = 0;
 wr_clk = 0;
+newline = 0;
+dataInput = 0;
 Rst = 1;
 #`clkPeriod;
 Rst = 0;
@@ -39,90 +42,118 @@ cStart = 0;
 
 cStart = 1;
 #`clkPeriod;
-
-//Fake load values then actaully try to start
-for(integer i = 0;i<2;i=i+1)begin
-    dataInput = `dataIn1*(i+1);
-    wr_clk = 1;
-    #`toggleTime;
-    wr_clk = 0;
-    #`toggleTime;
-    
-    dataInput = `dataIn2*(i+1);
-    wr_clk = 1;
-    #`toggleTime;
-    wr_clk = 0;
-    #`toggleTime;
-    
-    dataInput = `dataIn3*(i+1);
-    wr_clk = 1;
-    #`toggleTime;
-    wr_clk = 0;
-    #`toggleTime;
-    
-    dataInput = `dataIn4*(i+1);
-    wr_clk = 1;
-    #`toggleTime;
-    wr_clk = 0;
-    #`toggleTime;
-    
-    dataInput = `dataIn5*(i+1);
-    wr_clk = 1;
-    #`toggleTime;
-    wr_clk = 0;
-    #`toggleTime;
-    
-    dataInput = `dataIn6*(i+1);
-    wr_clk = 1;
-    #`toggleTime;
-    wr_clk = 0;
-    #`toggleTime;
-end
-
 wr = 1;
 #`clkPeriod;
 
+//Load a filter
+dataInput = 0;
+wr_clk = 1;
+#`toggleTime;
+wr_clk = 0;
+#`toggleTime;
 
-for(integer i = 0;i<3;i=i+1)begin
-    dataInput = `dataIn1*(i+1);
-    wr_clk = 1;
-    #`toggleTime;
-    wr_clk = 0;
-    #`toggleTime;
-    
-    dataInput = `dataIn2*(i+1);
-    wr_clk = 1;
-    #`toggleTime;
-    wr_clk = 0;
-    #`toggleTime;
-    
-    dataInput = `dataIn3*(i+1);
-    wr_clk = 1;
-    #`toggleTime;
-    wr_clk = 0;
-    #`toggleTime;
-    
-    dataInput = `dataIn4*(i+1);
-    wr_clk = 1;
-    #`toggleTime;
-    wr_clk = 0;
-    #`toggleTime;
-    
-    dataInput = `dataIn5*(i+1);
-    wr_clk = 1;
-    #`toggleTime;
-    wr_clk = 0;
-    #`toggleTime;
-    
-    dataInput = `dataIn6*(i+1);
+dataInput = 1;
+wr_clk = 1;
+#`toggleTime;
+wr_clk = 0;
+#`toggleTime;
+
+dataInput = 0;
+wr_clk = 1;
+#`toggleTime;
+wr_clk = 0;
+#`toggleTime;
+
+dataInput = 1;
+wr_clk = 1;
+#`toggleTime;
+wr_clk = 0;
+#`toggleTime;
+
+dataInput = 0;
+wr_clk = 1;
+#`toggleTime;
+wr_clk = 0;
+#`toggleTime;
+
+dataInput = 1;
+wr_clk = 1;
+#`toggleTime;
+wr_clk = 0;
+#`toggleTime;
+
+dataInput = 0;
+wr_clk = 1;
+#`toggleTime;
+wr_clk = 0;
+#`toggleTime;
+
+dataInput = 1;
+wr_clk = 1;
+#`toggleTime;
+wr_clk = 0;
+#`toggleTime;
+
+dataInput = 0;
+wr_clk = 1;
+#`toggleTime;
+wr_clk = 0;
+#`toggleTime;
+
+for(integer i = 0;i<9;i=i+1)begin
+    dataInput = 3*(i+1);
     wr_clk = 1;
     #`toggleTime;
     wr_clk = 0;
     #`toggleTime;
 end
 
+while(cReady!=1)begin
+    wr = 0;
+    #`clkPeriod;
+end
 
-dataInput = `bitLength'h0000;
+#`clkPeriod;
+wr = 1;
+dataInput = 13;
+wr_clk = 1;
+#`toggleTime;
+wr_clk = 0;
+#`toggleTime;
+
+dataInput = 0;
+wr_clk = 1;
+#`toggleTime;
+wr_clk = 0;
+#`toggleTime;
+
+dataInput = 12;
+wr_clk = 1;
+#`toggleTime;
+wr_clk = 0;
+#`toggleTime;
+wr = 0;
+
+while(cReady!=1)begin
+    wr = 0;
+    #`clkPeriod;
+end
+
+#`clkPeriod;
+wr = 1;
+dataInput = 0;
+wr_clk = 1;
+#`toggleTime;
+wr_clk = 0;
+#`toggleTime;
+
+dataInput = 23;
+wr_clk = 1;
+#`toggleTime;
+wr_clk = 0;
+#`toggleTime;
+
+dataInput = 69;
 wr_clk = 1;
 #`toggleTime;
 wr_clk = 0;
