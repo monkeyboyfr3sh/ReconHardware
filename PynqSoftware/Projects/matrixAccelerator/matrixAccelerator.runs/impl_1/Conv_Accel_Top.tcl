@@ -81,7 +81,7 @@ set rc [catch {
   add_files -quiet C:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1/Conv_Accel_Top.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files C:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/design_1/design_1.bd
+  add_files {{C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/design_1.bd}}
   set_param project.isImplRun false
   read_xdc C:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.srcs/constrs_1/new/my_brd.xdc
   set_param project.isImplRun true
@@ -175,25 +175,6 @@ if {$rc} {
   return -code error $RESULT
 } else {
   end_step route_design
-  unset ACTIVE_STEP 
-}
-
-start_step write_bitstream
-set ACTIVE_STEP write_bitstream
-set rc [catch {
-  create_msg_db write_bitstream.pb
-  set_property XPM_LIBRARIES XPM_CDC [current_project]
-  catch { write_mem_info -force Conv_Accel_Top.mmi }
-  write_bitstream -force Conv_Accel_Top.bit 
-  catch {write_debug_probes -quiet -force Conv_Accel_Top}
-  catch {file copy -force Conv_Accel_Top.ltx debug_nets.ltx}
-  close_msg_db -file write_bitstream.pb
-} RESULT]
-if {$rc} {
-  step_failed write_bitstream
-  return -code error $RESULT
-} else {
-  end_step write_bitstream
   unset ACTIVE_STEP 
 }
 

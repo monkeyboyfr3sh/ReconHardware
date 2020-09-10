@@ -4,12 +4,7 @@
 //Simply a device to connect Zynq processign unit BD to Convolution Accelerator
 //This is done in verilog because BD does not support PR devices
 module Conv_Accel_Top(
-    LED_CLK1,
-    LED_CLK2,
-    LED_FULL,
-    LED_EMPTY
 );
-output LED_CLK1,LED_CLK2,LED_FULL,LED_EMPTY;
 
 wire    Clk,Rst;
 wire    cStart,wr,wr_clk;

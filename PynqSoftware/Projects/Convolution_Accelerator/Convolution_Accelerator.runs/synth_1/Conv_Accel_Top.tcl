@@ -17,6 +17,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param chipscope.maxJobs 2
 create_project -in_memory -part xc7z020clg400-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -31,6 +32,12 @@ set_property target_language Verilog [current_project]
 set_property board_part tul.com.tw:pynq-z2:part0:1.0 [current_project]
 set_property ip_output_repo c:/GitHub/ReconHardware/PynqSoftware/Projects/Convolution_Accelerator/Convolution_Accelerator.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
+add_files -quiet C:/GitHub/ReconHardware/PynqSoftware/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/adder_synth_1/adder.dcp
+set_property used_in_implementation false [get_files C:/GitHub/ReconHardware/PynqSoftware/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/adder_synth_1/adder.dcp]
+add_files -quiet C:/GitHub/ReconHardware/PynqSoftware/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/Integer_synth_1/multiplyComputePynq.dcp
+set_property used_in_implementation false [get_files C:/GitHub/ReconHardware/PynqSoftware/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/Integer_synth_1/multiplyComputePynq.dcp]
+read_xdc hd_reconfig.xdc
+set_property used_in_implementation false [get_files hd_reconfig.xdc]
 read_verilog C:/GitHub/ReconHardware/PynqSoftware/Sources/definitions.h
 set_property file_type "Verilog Header" [get_files C:/GitHub/ReconHardware/PynqSoftware/Sources/definitions.h]
 set_property is_global_include true [get_files C:/GitHub/ReconHardware/PynqSoftware/Sources/definitions.h]
@@ -41,7 +48,6 @@ read_verilog -library xil_defaultlib {
   C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixAccTopDevice.v
   C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixAccelerator.v
   C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v
-  C:/GitHub/ReconHardware/PynqSoftware/Sources/Multiplier/multiplyComputePynq.v
   C:/GitHub/ReconHardware/PynqSoftware/Sources/General/Conv_Accel_Top.v
 }
 add_files {{C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/design_1.bd}}
@@ -59,6 +65,9 @@ set_property used_in_implementation false [get_files -all {{C:/GitHub/ReconHardw
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
+read_xdc C:/GitHub/ReconHardware/PynqSoftware/Projects/Convolution_Accelerator/Convolution_Accelerator.srcs/constrs_1/new/ConvolutionAccelerator.xdc
+set_property used_in_implementation false [get_files C:/GitHub/ReconHardware/PynqSoftware/Projects/Convolution_Accelerator/Convolution_Accelerator.srcs/constrs_1/new/ConvolutionAccelerator.xdc]
+
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1

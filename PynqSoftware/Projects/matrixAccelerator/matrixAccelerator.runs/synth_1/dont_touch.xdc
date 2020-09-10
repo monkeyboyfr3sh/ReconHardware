@@ -3,31 +3,31 @@
 
 # XDC: new/my_brd.xdc
 
-# Block Designs: bd/design_1/design_1.bd
+# Block Designs: C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/design_1.bd
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1 || ORIG_REF_NAME==design_1} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_Rst_0/design_1_Rst_0.xci
+# IP: C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ip/design_1_Rst_0/design_1_Rst_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_Rst_0 || ORIG_REF_NAME==design_1_Rst_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_cStart_0/design_1_cStart_0.xci
+# IP: C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ip/design_1_cStart_0/design_1_cStart_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_cStart_0 || ORIG_REF_NAME==design_1_cStart_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_dataInput_0_1/design_1_dataInput_0.xci
+# IP: C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ip/design_1_dataInput_0_1/design_1_dataInput_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_dataInput_0 || ORIG_REF_NAME==design_1_dataInput_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_processing_system7_0_0_1/design_1_processing_system7_0_0.xci
+# IP: C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ip/design_1_processing_system7_0_0_1/design_1_processing_system7_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_processing_system7_0_0 || ORIG_REF_NAME==design_1_processing_system7_0_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_wr_clk_0/design_1_wr_clk_0.xci
+# IP: C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ip/design_1_wr_clk_0/design_1_wr_clk_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_wr_clk_0 || ORIG_REF_NAME==design_1_wr_clk_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_xlconcat_0_0_1/design_1_xlconcat_0_0.xci
+# IP: C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ip/design_1_xlconcat_0_0_1/design_1_xlconcat_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_xlconcat_0_0 || ORIG_REF_NAME==design_1_xlconcat_0_0} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_wr_clk_1/design_1_wr_clk_1.xci
+# IP: C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ip/design_1_wr_clk_1/design_1_wr_clk_1.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_wr_clk_1 || ORIG_REF_NAME==design_1_wr_clk_1} -quiet] -quiet
 
-# IP: bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xci
+# IP: C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_clk_wiz_0_0 || ORIG_REF_NAME==design_1_clk_wiz_0_0} -quiet] -quiet
 
-# XDC: bd/design_1/design_1_ooc.xdc
+# XDC: C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/design_1_ooc.xdc
