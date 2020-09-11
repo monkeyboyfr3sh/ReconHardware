@@ -1,55 +1,56 @@
 `include "definitions.h"
 `timescale `myTimeScale
 
-module matrixControl3x3(
+module ConvolutionController(
     Clk, Rst,cStart,cReady,//Convolution start
-    FIFO_CTRL_RST,
+    CTRL_RST,
     FIFO_RD_CLK,
     FIFO_OUT_PORT,
     FULL,
     EMPTY,
+    NEWLINE,    //Input to signal a newline start. This will clear the dataset but not the filter set
     MULTIPLIER_INPUT,
     MULTIPLICAND_INPUT,
     MULTIPLY_START,
     FINALADDOUT
 );
 
-`define NUM_LOOP 3
-
 //Inputs
 input   Clk,Rst,cStart,cReady;
 
-input   FULL,EMPTY;
+input   FULL,EMPTY,NEWLINE;
 input   [`bitLength-1:0]    FIFO_OUT_PORT;
 
 
 //XBar Controls
 
 //Multiplier Controls
-output                      FIFO_RD_CLK,FIFO_CTRL_RST;
+output  reg CTRL_RST;
+output                      FIFO_RD_CLK;
 output                      MULTIPLIER_INPUT;
 output                      MULTIPLICAND_INPUT;
 output                      MULTIPLY_START;
 output                      FINALADDOUT;
 
 //State flags
-reg     RDst,MULTIst,ADDst;
+reg     RDst,MULTIst,ADDst,FINALADD;
 
-reg                         FINALADD;
-reg                         holdFilter;     //Flag used to hold filter values to speed up input data
+integer i,datapointer,filterpointer,MPi;
+reg                         dataSetFilled;     //Flag used to tell if the data set has been filled
+reg                         filterSetFilled;     //Flag used to tell if the data set has been filled
+reg                         multiplyQueue;
+reg     [`bitLength-1:0]    currentValue;
+reg     [`bitLength-1:0]    dataSet       [(`KERNELSIZE*`KERNELSIZE)-1:0];   
+reg     [`bitLength-1:0]    filterSet     [(`KERNELSIZE*`KERNELSIZE)-1:0];
+
 reg                         inputToggle;
 reg     [`addressLength:0]  RDloopcnt;
 reg     [`addressLength:0]  Mloopcnt;
-reg     [`addressLength:0]  rdPointer;       //Used to determine the multiplier to save a FIFO input to
-reg     [`addressLength:0]  multiPointer;       //Used to determine the multiplier to save a FIFO input to
-reg     [`inputPortCount*`bitLength-1:0]    MULTIPLIER_INPUT;
-reg     [`inputPortCount*`bitLength-1:0]    MULTIPLICAND_INPUT;
+reg     [`inputPortCount*`bitLength-1:0]    MULTIPLIER_INPUT;   //Flat output for data set
+reg     [`inputPortCount*`bitLength-1:0]    MULTIPLICAND_INPUT; //Flat output for filter set
 reg     [`inputPortCount-1:0]               MULTIPLY_START;
 
-integer i;
-
 assign  FIFO_RD_CLK         = (RDst)?Clk:0;                     //Only want to read from FIFO if in RDst
-assign  FIFO_CTRL_RST       = ~cStart;  //If cstart is high, do not clear FIFO, If cstart is low, clear FIFO 
 assign  FINALADDOUT         = FINALADD && ~cReady;
 
 always @(posedge Clk or posedge Rst) begin
@@ -57,113 +58,108 @@ always @(posedge Clk or posedge Rst) begin
         RDst = 0;
         MULTIst = 0;
         ADDst = 0;
+        
+        datapointer = 0;
+        filterpointer = 0;
+        dataSetFilled = 0;
+        filterSetFilled = 0;
+        multiplyQueue = 0;
+        currentValue = 0;
+        CTRL_RST = 0;
 
         RDloopcnt = 0;
         Mloopcnt = 0;
-        holdFilter = 0;
         MULTIPLIER_INPUT = 0;
         MULTIPLICAND_INPUT = 0;
-        //FINALADDEND = 0;
 
         MULTIPLY_START = 0;
-        rdPointer = 0;
-        multiPointer = 0;
+        MPi = 0;
         inputToggle = 0;
         FINALADD = 0;
     end
+    
+    //cStart triggers matrixcontroller to start
     else if(cStart)begin
-        //cStart triggers matrixcontroller to start
-        if(cStart&&!(RDst||MULTIst||ADDst||cReady))
+        CTRL_RST = 0;
+        //Trigger RDst if no other states are active
+        if(!(RDst||MULTIst||ADDst))
             RDst = 1;
         
         //In a read state (data still needs to be input) 
         if(RDst)begin
-            if(RDloopcnt>=`NUM_LOOP)begin
-                //Prevents RDstate reset if cStart is high
-                RDst = 0;
-                RDloopcnt = 0;
-            end
-            else if(!EMPTY)begin
-                //Input is multiplier
-                if(!inputToggle)begin
-                    MULTIPLIER_INPUT[rdPointer*`bitLength+:`bitLength] = FIFO_OUT_PORT;
-                end
-
-                //Input is multiplicand
-                else begin
-                    if(!holdFilter)
-                        MULTIPLICAND_INPUT[rdPointer*`bitLength+:`bitLength] = FIFO_OUT_PORT;
-
-                    MULTIst = 1;
+            if(!EMPTY)begin
+                currentValue=FIFO_OUT_PORT;
+                
+                //Need to load currentValue into filterSet
+                if(!filterSetFilled)begin
+                    filterSet[filterpointer] = currentValue;
+                    filterpointer=filterpointer+1;
                     
-                    //Increment multiplier pointer
-                    rdPointer = rdPointer + 1;
-                    if(rdPointer >= `inputPortCount)begin 
-                        rdPointer = 0;
-                        RDloopcnt = RDloopcnt + 1;
+                    //Filled all values for filter
+                    if(filterpointer >= (`KERNELSIZE*`KERNELSIZE))begin
+                        filterSetFilled = 1;
                     end
                 end
                 
-                //Toggle input type
-                inputToggle = ~inputToggle;
+                //Need to load currentValue into dataSet
+                else if(filterSetFilled&&!dataSetFilled)begin
+                    dataSet[datapointer] = currentValue;
+                    datapointer=datapointer+1;
+                    
+                    //Filled all values for data, can start multiplication
+                    if(datapointer >=  (`KERNELSIZE*`KERNELSIZE))begin
+                        dataSetFilled = 1;
+                        RDst = 0;
+                        MULTIst = 1;
+                    end
+                end
+                
             end
         end
+        //End of RDst
 
-        //In a multiply state, else case is to clear the mStart signal
-        if(Mloopcnt>=`NUM_LOOP) begin
-            //Prevents MULTIst reset if cStart is highbegin
-            ADDst = 1;
-            MULTIst = 0;
-            Mloopcnt = 0;
-        end
+        //In a multiply state, dataSet and filterSet should be filled with needed values
         if(MULTIst) begin
-            MULTIst = 0;
-            MULTIPLY_START[multiPointer] = 1;
-            multiPointer = multiPointer + 1;
-            
-            if(multiPointer >= `inputPortCount)begin
-                multiPointer = 0;
+            //Completed all multiplications
+            if(Mloopcnt>=`KERNELSIZE) begin
+                //Shift values in the data register to let next kernelsize be read in
+                for(datapointer = 0; datapointer < (`KERNELSIZE*`KERNELSIZE-`KERNELSIZE); datapointer = datapointer+1)begin
+                    dataSet[datapointer] = dataSet[datapointer+`KERNELSIZE];
+                end
+                //Indicate the next values need to be read in when reading
+                dataSetFilled = 0;
+                MULTIPLY_START = 0;
+                Mloopcnt = 0;
+                MULTIst = 0;
+                ADDst = 1;
+            end
+            else begin
+                //Loop through each row at Mloopcnt column
+                for( MPi = 0; MPi < `KERNELSIZE; MPi=MPi+1 )begin
+                   MULTIPLIER_INPUT[MPi*`bitLength+:`bitLength] = dataSet[MPi+(Mloopcnt*`KERNELSIZE)];
+                   MULTIPLICAND_INPUT[MPi*`bitLength+:`bitLength] = filterSet[MPi+(Mloopcnt*`KERNELSIZE)];
+                   MULTIPLY_START[MPi] = 1;
+                end
+                
                 Mloopcnt = Mloopcnt + 1;
             end
         end
-        else begin
-            if(multiPointer>0)
-                MULTIPLY_START[multiPointer-1] = 0;
-            else
-                MULTIPLY_START[`inputPortCount-1] = 0;
-        end
+        //End of MULTIst
 
         //In an Add state, should add all values once data set has been completely computed.
         if(ADDst)begin
             if(cReady) begin
+                CTRL_RST = 1;
                 ADDst = 0;
                 RDst = 0;
                 MULTIst = 0;
                 FINALADD = 0;
+                
             end
             else begin
                 FINALADD = 1;
             end
         end
-    end
-    //Basically reset if cStart is not high
-    else begin
-        RDst = 0;
-        MULTIst = 0;
-        ADDst = 0;
-
-        RDloopcnt = 0;
-        Mloopcnt = 0;
-        holdFilter = 0;
-        MULTIPLIER_INPUT = 0;
-        MULTIPLICAND_INPUT = 0;
-        //FINALADDEND = 0;
-
-        MULTIPLY_START = 0;
-        rdPointer = 0;
-        multiPointer = 0;
-        inputToggle = 0;
-        FINALADD = 0;
     end
 end
 

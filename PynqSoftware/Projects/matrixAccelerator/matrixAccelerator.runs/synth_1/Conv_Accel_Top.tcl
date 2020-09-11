@@ -17,7 +17,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param chipscope.maxJobs 2
 set_msg_config -id {HDL-1065} -limit 10000
 set_msg_config  -id {VRFC 10-2989}  -string {{ERROR: [VRFC 10-2989] 'break' is not declared [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Adder/adderFloat.v:60]}}  -suppress 
 set_msg_config  -id {XSIM 43-3322}  -string {{ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.}}  -suppress 
@@ -42,19 +41,19 @@ read_verilog -library xil_defaultlib {
   C:/GitHub/ReconHardware/PynqSoftware/Sources/General/XBar2.v
   C:/GitHub/ReconHardware/PynqSoftware/Sources/General/aFIFO.v
   C:/GitHub/ReconHardware/PynqSoftware/Sources/Adder/adder.v
-  C:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+  {C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/hdl/design_1_wrapper.v}
   C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixAccTopDevice.v
   C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixAccelerator.v
   C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v
   C:/GitHub/ReconHardware/PynqSoftware/Sources/Multiplier/multiplyComputePynq.v
   C:/GitHub/ReconHardware/PynqSoftware/Sources/General/Conv_Accel_Top.v
 }
-add_files C:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/design_1/design_1.bd
-set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0_1/design_1_processing_system7_0_0.xdc]
-set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xdc]
-set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all C:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/design_1/design_1_ooc.xdc]
+add_files {{C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/design_1.bd}}
+set_property used_in_implementation false [get_files -all {{c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ip/design_1_processing_system7_0_0_1/design_1_processing_system7_0_0.xdc}}]
+set_property used_in_implementation false [get_files -all {{c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_board.xdc}}]
+set_property used_in_implementation false [get_files -all {{c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xdc}}]
+set_property used_in_implementation false [get_files -all {{c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_ooc.xdc}}]
+set_property used_in_implementation false [get_files -all {{C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/design_1_ooc.xdc}}]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

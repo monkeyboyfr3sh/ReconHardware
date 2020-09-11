@@ -30,6 +30,7 @@
 //Xbar Definitions
 `define inputPortCount      3                                   //N
 `define outputPortCount     3                                   //M
+`define KERNELSIZE          3
 `define addressLength       4                                   //Eventually want to come up with a way to generate this on N and M
 
 //Float Multiply
@@ -47,7 +48,7 @@
 `define dataIn4             12
 `define dataIn5             3
 `define dataIn6             8
-`define toggleTime          10.8
+`define toggleTime          0.2
 /*#####################################################################################################################################################*/
 //END_User_Set
 

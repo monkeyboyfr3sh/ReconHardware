@@ -1,0 +1,1557 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Wed Sep  9 20:51:52 2020
+| Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -max_paths 10 -file Conv_Accel_Top_timing_summary_routed.rpt -pb Conv_Accel_Top_timing_summary_routed.pb -rpx Conv_Accel_Top_timing_summary_routed.rpx -warn_on_violation
+| Design       : Conv_Accel_Top
+| Device       : 7z020-clg400
+| Speed File   : -1  PRODUCTION 1.11 2014-09-11
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock
+2. checking constant_clock
+3. checking pulse_width_clock
+4. checking unconstrained_internal_endpoints
+5. checking no_input_delay
+6. checking no_output_delay
+7. checking multiple_clock
+8. checking generated_clocks
+9. checking loops
+10. checking partial_input_delay
+11. checking partial_output_delay
+12. checking latch_loops
+
+1. checking no_clock
+--------------------
+ There are 53 register/latch pins with no clock driven by root clock pin: processer/design_1_i/processing_system7_0/inst/PS7_i/EMIOGPIOO[38] (HIGH)
+
+
+2. checking constant_clock
+--------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock
+-----------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints
+--------------------------------------------
+ There are 242 pins that are not constrained for maximum delay. (HIGH)
+
+ There are 96 pins that are not constrained for maximum delay due to constant clock. (MEDIUM)
+
+
+5. checking no_input_delay
+--------------------------
+ There are 0 input ports with no input delay specified.
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay
+---------------------------
+ There are 0 ports with no output delay specified.
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock
+--------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks
+----------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops
+-----------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay
+--------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay
+---------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops
+------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+      9.063        0.000                      0                  503        0.121        0.000                      0                  503        3.000        0.000                       0                   291  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock                                        Waveform(ns)       Period(ns)      Frequency(MHz)
+-----                                        ------------       ----------      --------------
+clk_fpga_0                                   {0.000 5.000}      10.000          100.000         
+processer/design_1_i/clk_wiz_0/inst/clk_in1  {0.000 5.000}      10.000          100.000         
+  clk_out1_design_1_clk_wiz_0_0              {0.000 10.000}     20.000          50.000          
+  clkfbout_design_1_clk_wiz_0_0              {0.000 5.000}      10.000          100.000         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock                                            WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----                                            -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+clk_fpga_0                                                                                                                                                                                     7.845        0.000                       0                     1  
+processer/design_1_i/clk_wiz_0/inst/clk_in1                                                                                                                                                    3.000        0.000                       0                     1  
+  clk_out1_design_1_clk_wiz_0_0                    9.063        0.000                      0                  503        0.121        0.000                      0                  503        9.500        0.000                       0                   286  
+  clkfbout_design_1_clk_wiz_0_0                                                                                                                                                                7.845        0.000                       0                     3  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk_fpga_0
+  To Clock:  clk_fpga_0
+
+Setup :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+PW    :            0  Failing Endpoints,  Worst Slack        7.845ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk_fpga_0
+Waveform(ns):       { 0.000 5.000 }
+Period(ns):         10.000
+Sources:            { processer/design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0] }
+
+Check Type  Corner  Lib Pin  Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location        Pin
+Min Period  n/a     BUFG/I   n/a            2.155         10.000      7.845      BUFGCTRL_X0Y19  processer/design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/I
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  processer/design_1_i/clk_wiz_0/inst/clk_in1
+  To Clock:  processer/design_1_i/clk_wiz_0/inst/clk_in1
+
+Setup :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+PW    :            0  Failing Endpoints,  Worst Slack        3.000ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         processer/design_1_i/clk_wiz_0/inst/clk_in1
+Waveform(ns):       { 0.000 5.000 }
+Period(ns):         10.000
+Sources:            { processer/design_1_i/clk_wiz_0/inst/clk_in1 }
+
+Check Type        Corner  Lib Pin            Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
+Min Period        n/a     MMCME2_ADV/CLKIN1  n/a            1.249         10.000      8.751      MMCME2_ADV_X1Y2  processer/design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKIN1
+Max Period        n/a     MMCME2_ADV/CLKIN1  n/a            100.000       10.000      90.000     MMCME2_ADV_X1Y2  processer/design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKIN1
+Low Pulse Width   Fast    MMCME2_ADV/CLKIN1  n/a            2.000         5.000       3.000      MMCME2_ADV_X1Y2  processer/design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKIN1
+Low Pulse Width   Slow    MMCME2_ADV/CLKIN1  n/a            2.000         5.000       3.000      MMCME2_ADV_X1Y2  processer/design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKIN1
+High Pulse Width  Slow    MMCME2_ADV/CLKIN1  n/a            2.000         5.000       3.000      MMCME2_ADV_X1Y2  processer/design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKIN1
+High Pulse Width  Fast    MMCME2_ADV/CLKIN1  n/a            2.000         5.000       3.000      MMCME2_ADV_X1Y2  processer/design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKIN1
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk_out1_design_1_clk_wiz_0_0
+  To Clock:  clk_out1_design_1_clk_wiz_0_0
+
+Setup :            0  Failing Endpoints,  Worst Slack        9.063ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.121ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        9.500ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             9.063ns  (required time - arrival time)
+  Source:                 ConvAccel/inputBuffer/rbin_reg_rep[0]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out1_design_1_clk_wiz_0_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            ConvAccel/controller/MULTIPLIER_INPUT_reg[36]/D
+                            (rising edge-triggered cell FDCE clocked by clk_out1_design_1_clk_wiz_0_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_out1_design_1_clk_wiz_0_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk_out1_design_1_clk_wiz_0_0 rise@20.000ns - clk_out1_design_1_clk_wiz_0_0 rise@0.000ns)
+  Data Path Delay:        7.920ns  (logic 0.966ns (12.196%)  route 6.954ns (87.804%))
+  Logic Levels:           3  (LUT5=1 LUT6=1 RAMD64E=1)
+  Clock Path Skew:        -3.014ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.625ns = ( 21.625 - 20.000 ) 
+    Source Clock Delay      (SCD):    4.629ns
+    Clock Pessimism Removal (CPR):    -0.010ns
+  Clock Uncertainty:      0.084ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.152ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Partition      Netlist Resource(s)
+  -------------------------------------------------------------------    ----------------------------------
+                         (clock clk_out1_design_1_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r                 
+    BUFGCTRL_X0Y19       BUFG                         0.000     0.000 r  static         processer/design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2, routed)           1.980     1.980    static         processer/design_1_i/clk_wiz_0/inst/clk_in1
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -4.287    -2.307 r  static         processer/design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.206    -0.101    static         processer/design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.101    -0.000 r  static         processer/design_1_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=249, routed)         2.120     2.120    static         ConvAccel/controller/Clk
+    SLICE_X50Y50         LUT2 (Prop_lut2_I1_O)        0.124     2.244 r  static         ConvAccel/controller/rbin_rep[5]_i_5/O
+                         net (fo=1, routed)           0.591     2.835    static         ConvAccel_n_19
+    BUFGCTRL_X0Y20       BUFG (Prop_bufg_I_O)         0.101     2.936 r  static         rbin_reg_rep[5]_i_2/O
+                         net (fo=35, routed)          1.693     4.629    static         ConvAccel/inputBuffer/FIFO_RD_CLK
+    SLICE_X27Y90         FDCE                                         r  static         ConvAccel/inputBuffer/rbin_reg_rep[0]/C
+  -------------------------------------------------------------------    ----------------------------------
+    SLICE_X27Y90         FDCE (Prop_fdce_C_Q)         0.419     5.048 r  static         ConvAccel/inputBuffer/rbin_reg_rep[0]/Q
+                         net (fo=18, routed)          1.056     6.104    static         ConvAccel/inputBuffer/mem_reg_0_63_3_5/ADDRB0
+    SLICE_X26Y88         RAMD64E (Prop_ramd64e_RADR0_O)
+                                                      0.299     6.403 r  static         ConvAccel/inputBuffer/mem_reg_0_63_3_5/RAMB/O
+                         net (fo=4, routed)           3.946    10.350    static         ConvAccel/controller/o_rdata[4]
+    SLICE_X74Y46         LUT5 (Prop_lut5_I3_O)        0.124    10.474 r  static         ConvAccel/controller/MULTIPLIER_INPUT[36]_i_2/O
+                         net (fo=2, routed)           1.952    12.425    static         ConvAccel/controller/MULTIPLIER_INPUT[36]_i_2_n_0
+    SLICE_X100Y46        LUT6 (Prop_lut6_I0_O)        0.124    12.549 r  static         ConvAccel/controller/MULTIPLIER_INPUT[36]_i_1/O
+                         net (fo=1, routed)           0.000    12.549    static         ConvAccel/controller/MULTIPLIER_INPUT[36]_i_1_n_0
+    SLICE_X100Y46        FDCE                                         r  static         ConvAccel/controller/MULTIPLIER_INPUT_reg[36]/D
+  -------------------------------------------------------------------    ----------------------------------
+
+                         (clock clk_out1_design_1_clk_wiz_0_0 rise edge)
+                                                     20.000    20.000 r                 
+    BUFGCTRL_X0Y19       BUFG                         0.000    20.000 r  static         processer/design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2, routed)           1.770    21.770    static         processer/design_1_i/clk_wiz_0/inst/clk_in1
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.873    17.897 r  static         processer/design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.012    19.909    static         processer/design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.091    20.000 r  static         processer/design_1_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=249, routed)         1.625    21.625    static         ConvAccel/controller/Clk
+    SLICE_X100Y46        FDCE                                         r  static         ConvAccel/controller/MULTIPLIER_INPUT_reg[36]/C
+                         clock pessimism             -0.010    21.615                     
+                         clock uncertainty           -0.084    21.532                     
+    SLICE_X100Y46        FDCE (Setup_fdce_C_D)        0.081    21.613    static           ConvAccel/controller/MULTIPLIER_INPUT_reg[36]
+  -------------------------------------------------------------------
+                         required time                         21.613                     
+                         arrival time                         -12.549                     
+  -------------------------------------------------------------------
+                         slack                                  9.063                     
+
+Slack (MET) :             9.238ns  (required time - arrival time)
+  Source:                 ConvAccel/inputBuffer/rbin_reg_rep[2]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out1_design_1_clk_wiz_0_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            ConvAccel/controller/MULTIPLIER_INPUT_reg[47]/D
+                            (rising edge-triggered cell FDCE clocked by clk_out1_design_1_clk_wiz_0_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_out1_design_1_clk_wiz_0_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk_out1_design_1_clk_wiz_0_0 rise@20.000ns - clk_out1_design_1_clk_wiz_0_0 rise@0.000ns)
+  Data Path Delay:        7.745ns  (logic 0.828ns (10.690%)  route 6.917ns (89.310%))
+  Logic Levels:           3  (LUT5=1 LUT6=1 RAMD64E=1)
+  Clock Path Skew:        -3.013ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.626ns = ( 21.626 - 20.000 ) 
+    Source Clock Delay      (SCD):    4.629ns
+    Clock Pessimism Removal (CPR):    -0.010ns
+  Clock Uncertainty:      0.084ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.152ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Partition      Netlist Resource(s)
+  -------------------------------------------------------------------    ----------------------------------
+                         (clock clk_out1_design_1_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r                 
+    BUFGCTRL_X0Y19       BUFG                         0.000     0.000 r  static         processer/design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2, routed)           1.980     1.980    static         processer/design_1_i/clk_wiz_0/inst/clk_in1
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -4.287    -2.307 r  static         processer/design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.206    -0.101    static         processer/design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.101    -0.000 r  static         processer/design_1_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=249, routed)         2.120     2.120    static         ConvAccel/controller/Clk
+    SLICE_X50Y50         LUT2 (Prop_lut2_I1_O)        0.124     2.244 r  static         ConvAccel/controller/rbin_rep[5]_i_5/O
+                         net (fo=1, routed)           0.591     2.835    static         ConvAccel_n_19
+    BUFGCTRL_X0Y20       BUFG (Prop_bufg_I_O)         0.101     2.936 r  static         rbin_reg_rep[5]_i_2/O
+                         net (fo=35, routed)          1.693     4.629    static         ConvAccel/inputBuffer/FIFO_RD_CLK
+    SLICE_X27Y89         FDCE                                         r  static         ConvAccel/inputBuffer/rbin_reg_rep[2]/C
+  -------------------------------------------------------------------    ----------------------------------
+    SLICE_X27Y89         FDCE (Prop_fdce_C_Q)         0.456     5.085 r  static         ConvAccel/inputBuffer/rbin_reg_rep[2]/Q
+                         net (fo=18, routed)          1.456     6.540    static         ConvAccel/inputBuffer/mem_reg_0_63_15_15/ADDRA2
+    SLICE_X26Y91         RAMD64E (Prop_ramd64e_RADR2_O)
+                                                      0.124     6.664 r  static         ConvAccel/inputBuffer/mem_reg_0_63_15_15/RAMA/O
+                         net (fo=4, routed)           3.490    10.154    static         ConvAccel/controller/o_rdata[15]
+    SLICE_X75Y47         LUT5 (Prop_lut5_I3_O)        0.124    10.278 r  static         ConvAccel/controller/MULTIPLIER_INPUT[47]_i_2/O
+                         net (fo=2, routed)           1.972    12.250    static         ConvAccel/controller/MULTIPLIER_INPUT[47]_i_2_n_0
+    SLICE_X100Y47        LUT6 (Prop_lut6_I0_O)        0.124    12.374 r  static         ConvAccel/controller/MULTIPLIER_INPUT[47]_i_1/O
+                         net (fo=1, routed)           0.000    12.374    static         ConvAccel/controller/MULTIPLIER_INPUT[47]_i_1_n_0
+    SLICE_X100Y47        FDCE                                         r  static         ConvAccel/controller/MULTIPLIER_INPUT_reg[47]/D
+  -------------------------------------------------------------------    ----------------------------------
+
+                         (clock clk_out1_design_1_clk_wiz_0_0 rise edge)
+                                                     20.000    20.000 r                 
+    BUFGCTRL_X0Y19       BUFG                         0.000    20.000 r  static         processer/design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2, routed)           1.770    21.770    static         processer/design_1_i/clk_wiz_0/inst/clk_in1
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.873    17.897 r  static         processer/design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.012    19.909    static         processer/design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.091    20.000 r  static         processer/design_1_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=249, routed)         1.626    21.626    static         ConvAccel/controller/Clk
+    SLICE_X100Y47        FDCE                                         r  static         ConvAccel/controller/MULTIPLIER_INPUT_reg[47]/C
+                         clock pessimism             -0.010    21.616                     
+                         clock uncertainty           -0.084    21.533                     
+    SLICE_X100Y47        FDCE (Setup_fdce_C_D)        0.079    21.612    static           ConvAccel/controller/MULTIPLIER_INPUT_reg[47]
+  -------------------------------------------------------------------
+                         required time                         21.612                     
+                         arrival time                         -12.374                     
+  -------------------------------------------------------------------
+                         slack                                  9.238                     
+
+Slack (MET) :             9.242ns  (required time - arrival time)
+  Source:                 ConvAccel/inputBuffer/rbin_reg_rep[0]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out1_design_1_clk_wiz_0_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            ConvAccel/controller/MULTIPLICAND_INPUT_reg[37]/D
+                            (rising edge-triggered cell FDCE clocked by clk_out1_design_1_clk_wiz_0_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_out1_design_1_clk_wiz_0_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk_out1_design_1_clk_wiz_0_0 rise@20.000ns - clk_out1_design_1_clk_wiz_0_0 rise@0.000ns)
+  Data Path Delay:        7.691ns  (logic 0.966ns (12.561%)  route 6.725ns (87.439%))
+  Logic Levels:           3  (LUT5=1 LUT6=1 RAMD64E=1)
+  Clock Path Skew:        -3.013ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.626ns = ( 21.626 - 20.000 ) 
+    Source Clock Delay      (SCD):    4.629ns
+    Clock Pessimism Removal (CPR):    -0.010ns
+  Clock Uncertainty:      0.084ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.152ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Partition      Netlist Resource(s)
+  -------------------------------------------------------------------    ----------------------------------
+                         (clock clk_out1_design_1_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r                 
+    BUFGCTRL_X0Y19       BUFG                         0.000     0.000 r  static         processer/design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2, routed)           1.980     1.980    static         processer/design_1_i/clk_wiz_0/inst/clk_in1
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -4.287    -2.307 r  static         processer/design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.206    -0.101    static         processer/design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.101    -0.000 r  static         processer/design_1_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=249, routed)         2.120     2.120    static         ConvAccel/controller/Clk
+    SLICE_X50Y50         LUT2 (Prop_lut2_I1_O)        0.124     2.244 r  static         ConvAccel/controller/rbin_rep[5]_i_5/O
+                         net (fo=1, routed)           0.591     2.835    static         ConvAccel_n_19
+    BUFGCTRL_X0Y20       BUFG (Prop_bufg_I_O)         0.101     2.936 r  static         rbin_reg_rep[5]_i_2/O
+                         net (fo=35, routed)          1.693     4.629    static         ConvAccel/inputBuffer/FIFO_RD_CLK
+    SLICE_X27Y90         FDCE                                         r  static         ConvAccel/inputBuffer/rbin_reg_rep[0]/C
+  -------------------------------------------------------------------    ----------------------------------
+    SLICE_X27Y90         FDCE (Prop_fdce_C_Q)         0.419     5.048 r  static         ConvAccel/inputBuffer/rbin_reg_rep[0]/Q
+                         net (fo=18, routed)          1.337     6.385    static         ConvAccel/inputBuffer/mem_reg_0_63_3_5/ADDRC0
+    SLICE_X26Y88         RAMD64E (Prop_ramd64e_RADR0_O)
+                                                      0.299     6.684 r  static         ConvAccel/inputBuffer/mem_reg_0_63_3_5/RAMC/O
+                         net (fo=4, routed)           3.797    10.481    static         ConvAccel/controller/o_rdata[5]
+    SLICE_X74Y47         LUT5 (Prop_lut5_I3_O)        0.124    10.605 r  static         ConvAccel/controller/MULTIPLIER_INPUT[37]_i_2/O
+                         net (fo=2, routed)           1.591    12.196    static         ConvAccel/controller/MULTIPLIER_INPUT[37]_i_2_n_0
+    SLICE_X99Y47         LUT6 (Prop_lut6_I0_O)        0.124    12.320 r  static         ConvAccel/controller/MULTIPLICAND_INPUT[37]_i_1/O
+                         net (fo=1, routed)           0.000    12.320    static         ConvAccel/controller/MULTIPLICAND_INPUT[37]_i_1_n_0
+    SLICE_X99Y47         FDCE                                         r  static         ConvAccel/controller/MULTIPLICAND_INPUT_reg[37]/D
+  -------------------------------------------------------------------    ----------------------------------
+
+                         (clock clk_out1_design_1_clk_wiz_0_0 rise edge)
+                                                     20.000    20.000 r                 
+    BUFGCTRL_X0Y19       BUFG                         0.000    20.000 r  static         processer/design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2, routed)           1.770    21.770    static         processer/design_1_i/clk_wiz_0/inst/clk_in1
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.873    17.897 r  static         processer/design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.012    19.909    static         processer/design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.091    20.000 r  static         processer/design_1_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=249, routed)         1.626    21.626    static         ConvAccel/controller/Clk
+    SLICE_X99Y47         FDCE                                         r  static         ConvAccel/controller/MULTIPLICAND_INPUT_reg[37]/C
+                         clock pessimism             -0.010    21.616                     
+                         clock uncertainty           -0.084    21.533                     
+    SLICE_X99Y47         FDCE (Setup_fdce_C_D)        0.029    21.562    static           ConvAccel/controller/MULTIPLICAND_INPUT_reg[37]
+  -------------------------------------------------------------------
+                         required time                         21.562                     
+                         arrival time                         -12.320                     
+  -------------------------------------------------------------------
+                         slack                                  9.242                     
+
+Slack (MET) :             9.371ns  (required time - arrival time)
+  Source:                 ConvAccel/inputBuffer/rbin_reg_rep[0]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out1_design_1_clk_wiz_0_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            ConvAccel/controller/MULTIPLIER_INPUT_reg[37]/D
+                            (rising edge-triggered cell FDCE clocked by clk_out1_design_1_clk_wiz_0_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_out1_design_1_clk_wiz_0_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk_out1_design_1_clk_wiz_0_0 rise@20.000ns - clk_out1_design_1_clk_wiz_0_0 rise@0.000ns)
+  Data Path Delay:        7.611ns  (logic 0.966ns (12.692%)  route 6.645ns (87.308%))
+  Logic Levels:           3  (LUT5=1 LUT6=1 RAMD64E=1)
+  Clock Path Skew:        -3.014ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.625ns = ( 21.625 - 20.000 ) 
+    Source Clock Delay      (SCD):    4.629ns
+    Clock Pessimism Removal (CPR):    -0.010ns
+  Clock Uncertainty:      0.084ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.152ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Partition      Netlist Resource(s)
+  -------------------------------------------------------------------    ----------------------------------
+                         (clock clk_out1_design_1_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r                 
+    BUFGCTRL_X0Y19       BUFG                         0.000     0.000 r  static         processer/design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2, routed)           1.980     1.980    static         processer/design_1_i/clk_wiz_0/inst/clk_in1
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -4.287    -2.307 r  static         processer/design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.206    -0.101    static         processer/design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.101    -0.000 r  static         processer/design_1_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=249, routed)         2.120     2.120    static         ConvAccel/controller/Clk
+    SLICE_X50Y50         LUT2 (Prop_lut2_I1_O)        0.124     2.244 r  static         ConvAccel/controller/rbin_rep[5]_i_5/O
+                         net (fo=1, routed)           0.591     2.835    static         ConvAccel_n_19
+    BUFGCTRL_X0Y20       BUFG (Prop_bufg_I_O)         0.101     2.936 r  static         rbin_reg_rep[5]_i_2/O
+                         net (fo=35, routed)          1.693     4.629    static         ConvAccel/inputBuffer/FIFO_RD_CLK
+    SLICE_X27Y90         FDCE                                         r  static         ConvAccel/inputBuffer/rbin_reg_rep[0]/C
+  -------------------------------------------------------------------    ----------------------------------
+    SLICE_X27Y90         FDCE (Prop_fdce_C_Q)         0.419     5.048 r  static         ConvAccel/inputBuffer/rbin_reg_rep[0]/Q
+                         net (fo=18, routed)          1.337     6.385    static         ConvAccel/inputBuffer/mem_reg_0_63_3_5/ADDRC0
+    SLICE_X26Y88         RAMD64E (Prop_ramd64e_RADR0_O)
+                                                      0.299     6.684 r  static         ConvAccel/inputBuffer/mem_reg_0_63_3_5/RAMC/O
+                         net (fo=4, routed)           3.797    10.481    static         ConvAccel/controller/o_rdata[5]
+    SLICE_X74Y47         LUT5 (Prop_lut5_I3_O)        0.124    10.605 r  static         ConvAccel/controller/MULTIPLIER_INPUT[37]_i_2/O
+                         net (fo=2, routed)           1.511    12.116    static         ConvAccel/controller/MULTIPLIER_INPUT[37]_i_2_n_0
+    SLICE_X100Y46        LUT6 (Prop_lut6_I0_O)        0.124    12.240 r  static         ConvAccel/controller/MULTIPLIER_INPUT[37]_i_1/O
+                         net (fo=1, routed)           0.000    12.240    static         ConvAccel/controller/MULTIPLIER_INPUT[37]_i_1_n_0
+    SLICE_X100Y46        FDCE                                         r  static         ConvAccel/controller/MULTIPLIER_INPUT_reg[37]/D
+  -------------------------------------------------------------------    ----------------------------------
+
+                         (clock clk_out1_design_1_clk_wiz_0_0 rise edge)
+                                                     20.000    20.000 r                 
+    BUFGCTRL_X0Y19       BUFG                         0.000    20.000 r  static         processer/design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2, routed)           1.770    21.770    static         processer/design_1_i/clk_wiz_0/inst/clk_in1
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.873    17.897 r  static         processer/design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.012    19.909    static         processer/design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.091    20.000 r  static         processer/design_1_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=249, routed)         1.625    21.625    static         ConvAccel/controller/Clk
+    SLICE_X100Y46        FDCE                                         r  static         ConvAccel/controller/MULTIPLIER_INPUT_reg[37]/C
+                         clock pessimism             -0.010    21.615                     
+                         clock uncertainty           -0.084    21.532                     
+    SLICE_X100Y46        FDCE (Setup_fdce_C_D)        0.079    21.611    static           ConvAccel/controller/MULTIPLIER_INPUT_reg[37]
+  -------------------------------------------------------------------
+                         required time                         21.611                     
+                         arrival time                         -12.240                     
+  -------------------------------------------------------------------
+                         slack                                  9.371                     
+
+Slack (MET) :             9.374ns  (required time - arrival time)
+  Source:                 ConvAccel/inputBuffer/rbin_reg_rep[1]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out1_design_1_clk_wiz_0_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            ConvAccel/controller/MULTIPLICAND_INPUT_reg[39]/D
+                            (rising edge-triggered cell FDCE clocked by clk_out1_design_1_clk_wiz_0_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_out1_design_1_clk_wiz_0_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk_out1_design_1_clk_wiz_0_0 rise@20.000ns - clk_out1_design_1_clk_wiz_0_0 rise@0.000ns)
+  Data Path Delay:        7.560ns  (logic 0.828ns (10.953%)  route 6.732ns (89.047%))
+  Logic Levels:           3  (LUT5=1 LUT6=1 RAMD64E=1)
+  Clock Path Skew:        -3.014ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.625ns = ( 21.625 - 20.000 ) 
+    Source Clock Delay      (SCD):    4.629ns
+    Clock Pessimism Removal (CPR):    -0.010ns
+  Clock Uncertainty:      0.084ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.152ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Partition      Netlist Resource(s)
+  -------------------------------------------------------------------    ----------------------------------
+                         (clock clk_out1_design_1_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r                 
+    BUFGCTRL_X0Y19       BUFG                         0.000     0.000 r  static         processer/design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2, routed)           1.980     1.980    static         processer/design_1_i/clk_wiz_0/inst/clk_in1
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -4.287    -2.307 r  static         processer/design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.206    -0.101    static         processer/design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.101    -0.000 r  static         processer/design_1_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=249, routed)         2.120     2.120    static         ConvAccel/controller/Clk
+    SLICE_X50Y50         LUT2 (Prop_lut2_I1_O)        0.124     2.244 r  static         ConvAccel/controller/rbin_rep[5]_i_5/O
+                         net (fo=1, routed)           0.591     2.835    static         ConvAccel_n_19
+    BUFGCTRL_X0Y20       BUFG (Prop_bufg_I_O)         0.101     2.936 r  static         rbin_reg_rep[5]_i_2/O
+                         net (fo=35, routed)          1.693     4.629    static         ConvAccel/inputBuffer/FIFO_RD_CLK
+    SLICE_X27Y89         FDCE                                         r  static         ConvAccel/inputBuffer/rbin_reg_rep[1]/C
+  -------------------------------------------------------------------    ----------------------------------
+    SLICE_X27Y89         FDCE (Prop_fdce_C_Q)         0.456     5.085 r  static         ConvAccel/inputBuffer/rbin_reg_rep[1]/Q
+                         net (fo=18, routed)          1.201     6.286    static         ConvAccel/inputBuffer/mem_reg_0_63_6_8/ADDRB1
+    SLICE_X26Y89         RAMD64E (Prop_ramd64e_RADR1_O)
+                                                      0.124     6.410 r  static         ConvAccel/inputBuffer/mem_reg_0_63_6_8/RAMB/O
+                         net (fo=4, routed)           3.969    10.379    static         ConvAccel/controller/o_rdata[7]
+    SLICE_X75Y46         LUT5 (Prop_lut5_I3_O)        0.124    10.503 r  static         ConvAccel/controller/MULTIPLIER_INPUT[39]_i_2/O
+                         net (fo=2, routed)           1.562    12.065    static         ConvAccel/controller/MULTIPLIER_INPUT[39]_i_2_n_0
+    SLICE_X99Y46         LUT6 (Prop_lut6_I0_O)        0.124    12.189 r  static         ConvAccel/controller/MULTIPLICAND_INPUT[39]_i_1/O
+                         net (fo=1, routed)           0.000    12.189    static         ConvAccel/controller/MULTIPLICAND_INPUT[39]_i_1_n_0
+    SLICE_X99Y46         FDCE                                         r  static         ConvAccel/controller/MULTIPLICAND_INPUT_reg[39]/D
+  -------------------------------------------------------------------    ----------------------------------
+
+                         (clock clk_out1_design_1_clk_wiz_0_0 rise edge)
+                                                     20.000    20.000 r                 
+    BUFGCTRL_X0Y19       BUFG                         0.000    20.000 r  static         processer/design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2, routed)           1.770    21.770    static         processer/design_1_i/clk_wiz_0/inst/clk_in1
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.873    17.897 r  static         processer/design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.012    19.909    static         processer/design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.091    20.000 r  static         processer/design_1_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=249, routed)         1.625    21.625    static         ConvAccel/controller/Clk
+    SLICE_X99Y46         FDCE                                         r  static         ConvAccel/controller/MULTIPLICAND_INPUT_reg[39]/C
+                         clock pessimism             -0.010    21.615                     
+                         clock uncertainty           -0.084    21.532                     
+    SLICE_X99Y46         FDCE (Setup_fdce_C_D)        0.031    21.563    static           ConvAccel/controller/MULTIPLICAND_INPUT_reg[39]
+  -------------------------------------------------------------------
+                         required time                         21.563                     
+                         arrival time                         -12.189                     
+  -------------------------------------------------------------------
+                         slack                                  9.374                     
+
+Slack (MET) :             9.390ns  (required time - arrival time)
+  Source:                 ConvAccel/inputBuffer/rbin_reg_rep[0]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out1_design_1_clk_wiz_0_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            ConvAccel/controller/MULTIPLIER_INPUT_reg[41]/D
+                            (rising edge-triggered cell FDCE clocked by clk_out1_design_1_clk_wiz_0_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_out1_design_1_clk_wiz_0_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk_out1_design_1_clk_wiz_0_0 rise@20.000ns - clk_out1_design_1_clk_wiz_0_0 rise@0.000ns)
+  Data Path Delay:        7.592ns  (logic 0.966ns (12.724%)  route 6.626ns (87.276%))
+  Logic Levels:           3  (LUT5=1 LUT6=1 RAMD64E=1)
+  Clock Path Skew:        -3.014ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.625ns = ( 21.625 - 20.000 ) 
+    Source Clock Delay      (SCD):    4.629ns
+    Clock Pessimism Removal (CPR):    -0.010ns
+  Clock Uncertainty:      0.084ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.152ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Partition      Netlist Resource(s)
+  -------------------------------------------------------------------    ----------------------------------
+                         (clock clk_out1_design_1_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r                 
+    BUFGCTRL_X0Y19       BUFG                         0.000     0.000 r  static         processer/design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2, routed)           1.980     1.980    static         processer/design_1_i/clk_wiz_0/inst/clk_in1
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -4.287    -2.307 r  static         processer/design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.206    -0.101    static         processer/design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.101    -0.000 r  static         processer/design_1_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=249, routed)         2.120     2.120    static         ConvAccel/controller/Clk
+    SLICE_X50Y50         LUT2 (Prop_lut2_I1_O)        0.124     2.244 r  static         ConvAccel/controller/rbin_rep[5]_i_5/O
+                         net (fo=1, routed)           0.591     2.835    static         ConvAccel_n_19
+    BUFGCTRL_X0Y20       BUFG (Prop_bufg_I_O)         0.101     2.936 r  static         rbin_reg_rep[5]_i_2/O
+                         net (fo=35, routed)          1.693     4.629    static         ConvAccel/inputBuffer/FIFO_RD_CLK
+    SLICE_X27Y90         FDCE                                         r  static         ConvAccel/inputBuffer/rbin_reg_rep[0]/C
+  -------------------------------------------------------------------    ----------------------------------
+    SLICE_X27Y90         FDCE (Prop_fdce_C_Q)         0.419     5.048 r  static         ConvAccel/inputBuffer/rbin_reg_rep[0]/Q
+                         net (fo=18, routed)          1.235     6.283    static         ConvAccel/inputBuffer/mem_reg_0_63_9_11/ADDRA0
+    SLICE_X26Y93         RAMD64E (Prop_ramd64e_RADR0_O)
+                                                      0.299     6.582 r  static         ConvAccel/inputBuffer/mem_reg_0_63_9_11/RAMA/O
+                         net (fo=4, routed)           3.882    10.464    static         ConvAccel/controller/o_rdata[9]
+    SLICE_X74Y45         LUT5 (Prop_lut5_I3_O)        0.124    10.588 r  static         ConvAccel/controller/MULTIPLIER_INPUT[41]_i_2/O
+                         net (fo=2, routed)           1.509    12.097    static         ConvAccel/controller/MULTIPLIER_INPUT[41]_i_2_n_0
+    SLICE_X100Y45        LUT6 (Prop_lut6_I0_O)        0.124    12.221 r  static         ConvAccel/controller/MULTIPLIER_INPUT[41]_i_1/O
+                         net (fo=1, routed)           0.000    12.221    static         ConvAccel/controller/MULTIPLIER_INPUT[41]_i_1_n_0
+    SLICE_X100Y45        FDCE                                         r  static         ConvAccel/controller/MULTIPLIER_INPUT_reg[41]/D
+  -------------------------------------------------------------------    ----------------------------------
+
+                         (clock clk_out1_design_1_clk_wiz_0_0 rise edge)
+                                                     20.000    20.000 r                 
+    BUFGCTRL_X0Y19       BUFG                         0.000    20.000 r  static         processer/design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2, routed)           1.770    21.770    static         processer/design_1_i/clk_wiz_0/inst/clk_in1
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.873    17.897 r  static         processer/design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.012    19.909    static         processer/design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.091    20.000 r  static         processer/design_1_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=249, routed)         1.625    21.625    static         ConvAccel/controller/Clk
+    SLICE_X100Y45        FDCE                                         r  static         ConvAccel/controller/MULTIPLIER_INPUT_reg[41]/C
+                         clock pessimism             -0.010    21.615                     
+                         clock uncertainty           -0.084    21.532                     
+    SLICE_X100Y45        FDCE (Setup_fdce_C_D)        0.079    21.611    static           ConvAccel/controller/MULTIPLIER_INPUT_reg[41]
+  -------------------------------------------------------------------
+                         required time                         21.611                     
+                         arrival time                         -12.221                     
+  -------------------------------------------------------------------
+                         slack                                  9.390                     
+
+Slack (MET) :             9.405ns  (required time - arrival time)
+  Source:                 ConvAccel/inputBuffer/rbin_reg_rep[0]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out1_design_1_clk_wiz_0_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            ConvAccel/controller/MULTIPLICAND_INPUT_reg[45]/D
+                            (rising edge-triggered cell FDCE clocked by clk_out1_design_1_clk_wiz_0_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_out1_design_1_clk_wiz_0_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk_out1_design_1_clk_wiz_0_0 rise@20.000ns - clk_out1_design_1_clk_wiz_0_0 rise@0.000ns)
+  Data Path Delay:        7.530ns  (logic 0.966ns (12.828%)  route 6.564ns (87.172%))
+  Logic Levels:           3  (LUT5=1 LUT6=1 RAMD64E=1)
+  Clock Path Skew:        -3.014ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.625ns = ( 21.625 - 20.000 ) 
+    Source Clock Delay      (SCD):    4.629ns
+    Clock Pessimism Removal (CPR):    -0.010ns
+  Clock Uncertainty:      0.084ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.152ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Partition      Netlist Resource(s)
+  -------------------------------------------------------------------    ----------------------------------
+                         (clock clk_out1_design_1_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r                 
+    BUFGCTRL_X0Y19       BUFG                         0.000     0.000 r  static         processer/design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2, routed)           1.980     1.980    static         processer/design_1_i/clk_wiz_0/inst/clk_in1
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -4.287    -2.307 r  static         processer/design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.206    -0.101    static         processer/design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.101    -0.000 r  static         processer/design_1_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=249, routed)         2.120     2.120    static         ConvAccel/controller/Clk
+    SLICE_X50Y50         LUT2 (Prop_lut2_I1_O)        0.124     2.244 r  static         ConvAccel/controller/rbin_rep[5]_i_5/O
+                         net (fo=1, routed)           0.591     2.835    static         ConvAccel_n_19
+    BUFGCTRL_X0Y20       BUFG (Prop_bufg_I_O)         0.101     2.936 r  static         rbin_reg_rep[5]_i_2/O
+                         net (fo=35, routed)          1.693     4.629    static         ConvAccel/inputBuffer/FIFO_RD_CLK
+    SLICE_X27Y90         FDCE                                         r  static         ConvAccel/inputBuffer/rbin_reg_rep[0]/C
+  -------------------------------------------------------------------    ----------------------------------
+    SLICE_X27Y90         FDCE (Prop_fdce_C_Q)         0.419     5.048 r  static         ConvAccel/inputBuffer/rbin_reg_rep[0]/Q
+                         net (fo=18, routed)          1.158     6.206    static         ConvAccel/inputBuffer/mem_reg_0_63_12_14/ADDRB0
+    SLICE_X26Y92         RAMD64E (Prop_ramd64e_RADR0_O)
+                                                      0.299     6.505 r  static         ConvAccel/inputBuffer/mem_reg_0_63_12_14/RAMB/O
+                         net (fo=4, routed)           3.780    10.286    static         ConvAccel/controller/o_rdata[13]
+    SLICE_X75Y46         LUT5 (Prop_lut5_I3_O)        0.124    10.410 r  static         ConvAccel/controller/MULTIPLIER_INPUT[45]_i_2/O
+                         net (fo=2, routed)           1.626    12.035    static         ConvAccel/controller/MULTIPLIER_INPUT[45]_i_2_n_0
+    SLICE_X99Y46         LUT6 (Prop_lut6_I0_O)        0.124    12.159 r  static         ConvAccel/controller/MULTIPLICAND_INPUT[45]_i_1/O
+                         net (fo=1, routed)           0.000    12.159    static         ConvAccel/controller/MULTIPLICAND_INPUT[45]_i_1_n_0
+    SLICE_X99Y46         FDCE                                         r  static         ConvAccel/controller/MULTIPLICAND_INPUT_reg[45]/D
+  -------------------------------------------------------------------    ----------------------------------
+
+                         (clock clk_out1_design_1_clk_wiz_0_0 rise edge)
+                                                     20.000    20.000 r                 
+    BUFGCTRL_X0Y19       BUFG                         0.000    20.000 r  static         processer/design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2, routed)           1.770    21.770    static         processer/design_1_i/clk_wiz_0/inst/clk_in1
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.873    17.897 r  static         processer/design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.012    19.909    static         processer/design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.091    20.000 r  static         processer/design_1_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=249, routed)         1.625    21.625    static         ConvAccel/controller/Clk
+    SLICE_X99Y46         FDCE                                         r  static         ConvAccel/controller/MULTIPLICAND_INPUT_reg[45]/C
+                         clock pessimism             -0.010    21.615                     
+                         clock uncertainty           -0.084    21.532                     
+    SLICE_X99Y46         FDCE (Setup_fdce_C_D)        0.032    21.564    static           ConvAccel/controller/MULTIPLICAND_INPUT_reg[45]
+  -------------------------------------------------------------------
+                         required time                         21.564                     
+                         arrival time                         -12.159                     
+  -------------------------------------------------------------------
+                         slack                                  9.405                     
+
+Slack (MET) :             9.440ns  (required time - arrival time)
+  Source:                 ConvAccel/inputBuffer/rbin_reg_rep[1]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out1_design_1_clk_wiz_0_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            ConvAccel/controller/MULTIPLIER_INPUT_reg[39]/D
+                            (rising edge-triggered cell FDCE clocked by clk_out1_design_1_clk_wiz_0_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_out1_design_1_clk_wiz_0_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk_out1_design_1_clk_wiz_0_0 rise@20.000ns - clk_out1_design_1_clk_wiz_0_0 rise@0.000ns)
+  Data Path Delay:        7.539ns  (logic 0.828ns (10.982%)  route 6.711ns (89.018%))
+  Logic Levels:           3  (LUT5=1 LUT6=1 RAMD64E=1)
+  Clock Path Skew:        -3.014ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.625ns = ( 21.625 - 20.000 ) 
+    Source Clock Delay      (SCD):    4.629ns
+    Clock Pessimism Removal (CPR):    -0.010ns
+  Clock Uncertainty:      0.084ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.152ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Partition      Netlist Resource(s)
+  -------------------------------------------------------------------    ----------------------------------
+                         (clock clk_out1_design_1_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r                 
+    BUFGCTRL_X0Y19       BUFG                         0.000     0.000 r  static         processer/design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2, routed)           1.980     1.980    static         processer/design_1_i/clk_wiz_0/inst/clk_in1
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -4.287    -2.307 r  static         processer/design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.206    -0.101    static         processer/design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.101    -0.000 r  static         processer/design_1_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=249, routed)         2.120     2.120    static         ConvAccel/controller/Clk
+    SLICE_X50Y50         LUT2 (Prop_lut2_I1_O)        0.124     2.244 r  static         ConvAccel/controller/rbin_rep[5]_i_5/O
+                         net (fo=1, routed)           0.591     2.835    static         ConvAccel_n_19
+    BUFGCTRL_X0Y20       BUFG (Prop_bufg_I_O)         0.101     2.936 r  static         rbin_reg_rep[5]_i_2/O
+                         net (fo=35, routed)          1.693     4.629    static         ConvAccel/inputBuffer/FIFO_RD_CLK
+    SLICE_X27Y89         FDCE                                         r  static         ConvAccel/inputBuffer/rbin_reg_rep[1]/C
+  -------------------------------------------------------------------    ----------------------------------
+    SLICE_X27Y89         FDCE (Prop_fdce_C_Q)         0.456     5.085 r  static         ConvAccel/inputBuffer/rbin_reg_rep[1]/Q
+                         net (fo=18, routed)          1.201     6.286    static         ConvAccel/inputBuffer/mem_reg_0_63_6_8/ADDRB1
+    SLICE_X26Y89         RAMD64E (Prop_ramd64e_RADR1_O)
+                                                      0.124     6.410 r  static         ConvAccel/inputBuffer/mem_reg_0_63_6_8/RAMB/O
+                         net (fo=4, routed)           3.969    10.379    static         ConvAccel/controller/o_rdata[7]
+    SLICE_X75Y46         LUT5 (Prop_lut5_I3_O)        0.124    10.503 r  static         ConvAccel/controller/MULTIPLIER_INPUT[39]_i_2/O
+                         net (fo=2, routed)           1.542    12.044    static         ConvAccel/controller/MULTIPLIER_INPUT[39]_i_2_n_0
+    SLICE_X100Y45        LUT6 (Prop_lut6_I0_O)        0.124    12.168 r  static         ConvAccel/controller/MULTIPLIER_INPUT[39]_i_1/O
+                         net (fo=1, routed)           0.000    12.168    static         ConvAccel/controller/MULTIPLIER_INPUT[39]_i_1_n_0
+    SLICE_X100Y45        FDCE                                         r  static         ConvAccel/controller/MULTIPLIER_INPUT_reg[39]/D
+  -------------------------------------------------------------------    ----------------------------------
+
+                         (clock clk_out1_design_1_clk_wiz_0_0 rise edge)
+                                                     20.000    20.000 r                 
+    BUFGCTRL_X0Y19       BUFG                         0.000    20.000 r  static         processer/design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2, routed)           1.770    21.770    static         processer/design_1_i/clk_wiz_0/inst/clk_in1
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.873    17.897 r  static         processer/design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.012    19.909    static         processer/design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.091    20.000 r  static         processer/design_1_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=249, routed)         1.625    21.625    static         ConvAccel/controller/Clk
+    SLICE_X100Y45        FDCE                                         r  static         ConvAccel/controller/MULTIPLIER_INPUT_reg[39]/C
+                         clock pessimism             -0.010    21.615                     
+                         clock uncertainty           -0.084    21.532                     
+    SLICE_X100Y45        FDCE (Setup_fdce_C_D)        0.077    21.609    static           ConvAccel/controller/MULTIPLIER_INPUT_reg[39]
+  -------------------------------------------------------------------
+                         required time                         21.609                     
+                         arrival time                         -12.168                     
+  -------------------------------------------------------------------
+                         slack                                  9.440                     
+
+Slack (MET) :             9.466ns  (required time - arrival time)
+  Source:                 ConvAccel/inputBuffer/rbin_reg_rep[0]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out1_design_1_clk_wiz_0_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            ConvAccel/controller/MULTIPLICAND_INPUT_reg[44]/D
+                            (rising edge-triggered cell FDCE clocked by clk_out1_design_1_clk_wiz_0_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_out1_design_1_clk_wiz_0_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk_out1_design_1_clk_wiz_0_0 rise@20.000ns - clk_out1_design_1_clk_wiz_0_0 rise@0.000ns)
+  Data Path Delay:        7.469ns  (logic 0.966ns (12.933%)  route 6.503ns (87.067%))
+  Logic Levels:           3  (LUT5=1 LUT6=1 RAMD64E=1)
+  Clock Path Skew:        -3.013ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.626ns = ( 21.626 - 20.000 ) 
+    Source Clock Delay      (SCD):    4.629ns
+    Clock Pessimism Removal (CPR):    -0.010ns
+  Clock Uncertainty:      0.084ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.152ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Partition      Netlist Resource(s)
+  -------------------------------------------------------------------    ----------------------------------
+                         (clock clk_out1_design_1_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r                 
+    BUFGCTRL_X0Y19       BUFG                         0.000     0.000 r  static         processer/design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2, routed)           1.980     1.980    static         processer/design_1_i/clk_wiz_0/inst/clk_in1
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -4.287    -2.307 r  static         processer/design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.206    -0.101    static         processer/design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.101    -0.000 r  static         processer/design_1_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=249, routed)         2.120     2.120    static         ConvAccel/controller/Clk
+    SLICE_X50Y50         LUT2 (Prop_lut2_I1_O)        0.124     2.244 r  static         ConvAccel/controller/rbin_rep[5]_i_5/O
+                         net (fo=1, routed)           0.591     2.835    static         ConvAccel_n_19
+    BUFGCTRL_X0Y20       BUFG (Prop_bufg_I_O)         0.101     2.936 r  static         rbin_reg_rep[5]_i_2/O
+                         net (fo=35, routed)          1.693     4.629    static         ConvAccel/inputBuffer/FIFO_RD_CLK
+    SLICE_X27Y90         FDCE                                         r  static         ConvAccel/inputBuffer/rbin_reg_rep[0]/C
+  -------------------------------------------------------------------    ----------------------------------
+    SLICE_X27Y90         FDCE (Prop_fdce_C_Q)         0.419     5.048 r  static         ConvAccel/inputBuffer/rbin_reg_rep[0]/Q
+                         net (fo=18, routed)          1.168     6.216    static         ConvAccel/inputBuffer/mem_reg_0_63_12_14/ADDRA0
+    SLICE_X26Y92         RAMD64E (Prop_ramd64e_RADR0_O)
+                                                      0.299     6.515 r  static         ConvAccel/inputBuffer/mem_reg_0_63_12_14/RAMA/O
+                         net (fo=4, routed)           3.085     9.600    static         ConvAccel/controller/o_rdata[12]
+    SLICE_X49Y48         LUT5 (Prop_lut5_I3_O)        0.124     9.724 r  static         ConvAccel/controller/MULTIPLIER_INPUT[44]_i_2/O
+                         net (fo=2, routed)           2.250    11.974    static         ConvAccel/controller/MULTIPLIER_INPUT[44]_i_2_n_0
+    SLICE_X99Y48         LUT6 (Prop_lut6_I0_O)        0.124    12.098 r  static         ConvAccel/controller/MULTIPLICAND_INPUT[44]_i_1/O
+                         net (fo=1, routed)           0.000    12.098    static         ConvAccel/controller/MULTIPLICAND_INPUT[44]_i_1_n_0
+    SLICE_X99Y48         FDCE                                         r  static         ConvAccel/controller/MULTIPLICAND_INPUT_reg[44]/D
+  -------------------------------------------------------------------    ----------------------------------
+
+                         (clock clk_out1_design_1_clk_wiz_0_0 rise edge)
+                                                     20.000    20.000 r                 
+    BUFGCTRL_X0Y19       BUFG                         0.000    20.000 r  static         processer/design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2, routed)           1.770    21.770    static         processer/design_1_i/clk_wiz_0/inst/clk_in1
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.873    17.897 r  static         processer/design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.012    19.909    static         processer/design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.091    20.000 r  static         processer/design_1_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=249, routed)         1.626    21.626    static         ConvAccel/controller/Clk
+    SLICE_X99Y48         FDCE                                         r  static         ConvAccel/controller/MULTIPLICAND_INPUT_reg[44]/C
+                         clock pessimism             -0.010    21.616                     
+                         clock uncertainty           -0.084    21.533                     
+    SLICE_X99Y48         FDCE (Setup_fdce_C_D)        0.031    21.564    static           ConvAccel/controller/MULTIPLICAND_INPUT_reg[44]
+  -------------------------------------------------------------------
+                         required time                         21.564                     
+                         arrival time                         -12.098                     
+  -------------------------------------------------------------------
+                         slack                                  9.466                     
+
+Slack (MET) :             9.467ns  (required time - arrival time)
+  Source:                 ConvAccel/inputBuffer/rbin_reg_rep[0]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out1_design_1_clk_wiz_0_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            ConvAccel/controller/MULTIPLICAND_INPUT_reg[41]/D
+                            (rising edge-triggered cell FDCE clocked by clk_out1_design_1_clk_wiz_0_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_out1_design_1_clk_wiz_0_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            20.000ns  (clk_out1_design_1_clk_wiz_0_0 rise@20.000ns - clk_out1_design_1_clk_wiz_0_0 rise@0.000ns)
+  Data Path Delay:        7.467ns  (logic 0.966ns (12.937%)  route 6.501ns (87.063%))
+  Logic Levels:           3  (LUT5=1 LUT6=1 RAMD64E=1)
+  Clock Path Skew:        -3.014ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    1.625ns = ( 21.625 - 20.000 ) 
+    Source Clock Delay      (SCD):    4.629ns
+    Clock Pessimism Removal (CPR):    -0.010ns
+  Clock Uncertainty:      0.084ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.152ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Partition      Netlist Resource(s)
+  -------------------------------------------------------------------    ----------------------------------
+                         (clock clk_out1_design_1_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r                 
+    BUFGCTRL_X0Y19       BUFG                         0.000     0.000 r  static         processer/design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2, routed)           1.980     1.980    static         processer/design_1_i/clk_wiz_0/inst/clk_in1
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -4.287    -2.307 r  static         processer/design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.206    -0.101    static         processer/design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.101    -0.000 r  static         processer/design_1_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=249, routed)         2.120     2.120    static         ConvAccel/controller/Clk
+    SLICE_X50Y50         LUT2 (Prop_lut2_I1_O)        0.124     2.244 r  static         ConvAccel/controller/rbin_rep[5]_i_5/O
+                         net (fo=1, routed)           0.591     2.835    static         ConvAccel_n_19
+    BUFGCTRL_X0Y20       BUFG (Prop_bufg_I_O)         0.101     2.936 r  static         rbin_reg_rep[5]_i_2/O
+                         net (fo=35, routed)          1.693     4.629    static         ConvAccel/inputBuffer/FIFO_RD_CLK
+    SLICE_X27Y90         FDCE                                         r  static         ConvAccel/inputBuffer/rbin_reg_rep[0]/C
+  -------------------------------------------------------------------    ----------------------------------
+    SLICE_X27Y90         FDCE (Prop_fdce_C_Q)         0.419     5.048 r  static         ConvAccel/inputBuffer/rbin_reg_rep[0]/Q
+                         net (fo=18, routed)          1.235     6.283    static         ConvAccel/inputBuffer/mem_reg_0_63_9_11/ADDRA0
+    SLICE_X26Y93         RAMD64E (Prop_ramd64e_RADR0_O)
+                                                      0.299     6.582 r  static         ConvAccel/inputBuffer/mem_reg_0_63_9_11/RAMA/O
+                         net (fo=4, routed)           3.882    10.464    static         ConvAccel/controller/o_rdata[9]
+    SLICE_X74Y45         LUT5 (Prop_lut5_I3_O)        0.124    10.588 r  static         ConvAccel/controller/MULTIPLIER_INPUT[41]_i_2/O
+                         net (fo=2, routed)           1.384    11.972    static         ConvAccel/controller/MULTIPLIER_INPUT[41]_i_2_n_0
+    SLICE_X99Y45         LUT6 (Prop_lut6_I0_O)        0.124    12.096 r  static         ConvAccel/controller/MULTIPLICAND_INPUT[41]_i_1/O
+                         net (fo=1, routed)           0.000    12.096    static         ConvAccel/controller/MULTIPLICAND_INPUT[41]_i_1_n_0
+    SLICE_X99Y45         FDCE                                         r  static         ConvAccel/controller/MULTIPLICAND_INPUT_reg[41]/D
+  -------------------------------------------------------------------    ----------------------------------
+
+                         (clock clk_out1_design_1_clk_wiz_0_0 rise edge)
+                                                     20.000    20.000 r                 
+    BUFGCTRL_X0Y19       BUFG                         0.000    20.000 r  static         processer/design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2, routed)           1.770    21.770    static         processer/design_1_i/clk_wiz_0/inst/clk_in1
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.873    17.897 r  static         processer/design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           2.012    19.909    static         processer/design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.091    20.000 r  static         processer/design_1_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=249, routed)         1.625    21.625    static         ConvAccel/controller/Clk
+    SLICE_X99Y45         FDCE                                         r  static         ConvAccel/controller/MULTIPLICAND_INPUT_reg[41]/C
+                         clock pessimism             -0.010    21.615                     
+                         clock uncertainty           -0.084    21.532                     
+    SLICE_X99Y45         FDCE (Setup_fdce_C_D)        0.031    21.563    static           ConvAccel/controller/MULTIPLICAND_INPUT_reg[41]
+  -------------------------------------------------------------------
+                         required time                         21.563                     
+                         arrival time                         -12.096                     
+  -------------------------------------------------------------------
+                         slack                                  9.467                     
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.121ns  (arrival time - required time)
+  Source:                 ConvAccel/inputBuffer/rq1_wgray_reg[6]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out1_design_1_clk_wiz_0_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            ConvAccel/inputBuffer/rq2_wgray_reg[6]/D
+                            (rising edge-triggered cell FDCE clocked by clk_out1_design_1_clk_wiz_0_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_out1_design_1_clk_wiz_0_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out1_design_1_clk_wiz_0_0 rise@0.000ns - clk_out1_design_1_clk_wiz_0_0 rise@0.000ns)
+  Data Path Delay:        0.197ns  (logic 0.141ns (71.611%)  route 0.056ns (28.389%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.172ns
+    Source Clock Delay      (SCD):    1.569ns
+    Clock Pessimism Removal (CPR):    0.603ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Partition      Netlist Resource(s)
+  -------------------------------------------------------------------    ----------------------------------
+                         (clock clk_out1_design_1_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r                 
+    BUFGCTRL_X0Y19       BUFG                         0.000     0.000 r  static         processer/design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2, routed)           0.672     0.672    static         processer/design_1_i/clk_wiz_0/inst/clk_in1
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.395    -0.722 r  static         processer/design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.696    -0.026    static         processer/design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.026    -0.000 r  static         processer/design_1_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=249, routed)         0.710     0.710    static         ConvAccel/controller/Clk
+    SLICE_X50Y50         LUT2 (Prop_lut2_I1_O)        0.045     0.755 r  static         ConvAccel/controller/rbin_rep[5]_i_5/O
+                         net (fo=1, routed)           0.213     0.969    static         ConvAccel_n_19
+    BUFGCTRL_X0Y20       BUFG (Prop_bufg_I_O)         0.026     0.995 r  static         rbin_reg_rep[5]_i_2/O
+                         net (fo=35, routed)          0.575     1.569    static         ConvAccel/inputBuffer/FIFO_RD_CLK
+    SLICE_X29Y90         FDCE                                         r  static         ConvAccel/inputBuffer/rq1_wgray_reg[6]/C
+  -------------------------------------------------------------------    ----------------------------------
+    SLICE_X29Y90         FDCE (Prop_fdce_C_Q)         0.141     1.710 r  static         ConvAccel/inputBuffer/rq1_wgray_reg[6]/Q
+                         net (fo=1, routed)           0.056     1.766    static         ConvAccel/inputBuffer/rq1_wgray[6]
+    SLICE_X29Y90         FDCE                                         r  static         ConvAccel/inputBuffer/rq2_wgray_reg[6]/D
+  -------------------------------------------------------------------    ----------------------------------
+
+                         (clock clk_out1_design_1_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r                 
+    BUFGCTRL_X0Y19       BUFG                         0.000     0.000 r  static         processer/design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2, routed)           0.945     0.945    static         processer/design_1_i/clk_wiz_0/inst/clk_in1
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.726    -0.781 r  static         processer/design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.752    -0.029    static         processer/design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.029     0.000 r  static         processer/design_1_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=249, routed)         1.007     1.007    static         ConvAccel/controller/Clk
+    SLICE_X50Y50         LUT2 (Prop_lut2_I1_O)        0.056     1.063 r  static         ConvAccel/controller/rbin_rep[5]_i_5/O
+                         net (fo=1, routed)           0.237     1.300    static         ConvAccel_n_19
+    BUFGCTRL_X0Y20       BUFG (Prop_bufg_I_O)         0.029     1.329 r  static         rbin_reg_rep[5]_i_2/O
+                         net (fo=35, routed)          0.843     2.172    static         ConvAccel/inputBuffer/FIFO_RD_CLK
+    SLICE_X29Y90         FDCE                                         r  static         ConvAccel/inputBuffer/rq2_wgray_reg[6]/C
+                         clock pessimism             -0.603     1.569                     
+    SLICE_X29Y90         FDCE (Hold_fdce_C_D)         0.076     1.645    static           ConvAccel/inputBuffer/rq2_wgray_reg[6]
+  -------------------------------------------------------------------
+                         required time                         -1.645                     
+                         arrival time                           1.766                     
+  -------------------------------------------------------------------
+                         slack                                  0.121                     
+
+Slack (MET) :             0.149ns  (arrival time - required time)
+  Source:                 ConvAccel/inputBuffer/rq1_wgray_reg[3]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out1_design_1_clk_wiz_0_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            ConvAccel/inputBuffer/rq2_wgray_reg[3]/D
+                            (rising edge-triggered cell FDCE clocked by clk_out1_design_1_clk_wiz_0_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_out1_design_1_clk_wiz_0_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out1_design_1_clk_wiz_0_0 rise@0.000ns - clk_out1_design_1_clk_wiz_0_0 rise@0.000ns)
+  Data Path Delay:        0.258ns  (logic 0.141ns (54.706%)  route 0.117ns (45.294%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.037ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.172ns
+    Source Clock Delay      (SCD):    1.566ns
+    Clock Pessimism Removal (CPR):    0.569ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Partition      Netlist Resource(s)
+  -------------------------------------------------------------------    ----------------------------------
+                         (clock clk_out1_design_1_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r                 
+    BUFGCTRL_X0Y19       BUFG                         0.000     0.000 r  static         processer/design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2, routed)           0.672     0.672    static         processer/design_1_i/clk_wiz_0/inst/clk_in1
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.395    -0.722 r  static         processer/design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.696    -0.026    static         processer/design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.026    -0.000 r  static         processer/design_1_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=249, routed)         0.710     0.710    static         ConvAccel/controller/Clk
+    SLICE_X50Y50         LUT2 (Prop_lut2_I1_O)        0.045     0.755 r  static         ConvAccel/controller/rbin_rep[5]_i_5/O
+                         net (fo=1, routed)           0.213     0.969    static         ConvAccel_n_19
+    BUFGCTRL_X0Y20       BUFG (Prop_bufg_I_O)         0.026     0.995 r  static         rbin_reg_rep[5]_i_2/O
+                         net (fo=35, routed)          0.572     1.566    static         ConvAccel/inputBuffer/FIFO_RD_CLK
+    SLICE_X27Y90         FDCE                                         r  static         ConvAccel/inputBuffer/rq1_wgray_reg[3]/C
+  -------------------------------------------------------------------    ----------------------------------
+    SLICE_X27Y90         FDCE (Prop_fdce_C_Q)         0.141     1.707 r  static         ConvAccel/inputBuffer/rq1_wgray_reg[3]/Q
+                         net (fo=1, routed)           0.117     1.824    static         ConvAccel/inputBuffer/rq1_wgray[3]
+    SLICE_X29Y90         FDCE                                         r  static         ConvAccel/inputBuffer/rq2_wgray_reg[3]/D
+  -------------------------------------------------------------------    ----------------------------------
+
+                         (clock clk_out1_design_1_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r                 
+    BUFGCTRL_X0Y19       BUFG                         0.000     0.000 r  static         processer/design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2, routed)           0.945     0.945    static         processer/design_1_i/clk_wiz_0/inst/clk_in1
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.726    -0.781 r  static         processer/design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.752    -0.029    static         processer/design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.029     0.000 r  static         processer/design_1_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=249, routed)         1.007     1.007    static         ConvAccel/controller/Clk
+    SLICE_X50Y50         LUT2 (Prop_lut2_I1_O)        0.056     1.063 r  static         ConvAccel/controller/rbin_rep[5]_i_5/O
+                         net (fo=1, routed)           0.237     1.300    static         ConvAccel_n_19
+    BUFGCTRL_X0Y20       BUFG (Prop_bufg_I_O)         0.029     1.329 r  static         rbin_reg_rep[5]_i_2/O
+                         net (fo=35, routed)          0.843     2.172    static         ConvAccel/inputBuffer/FIFO_RD_CLK
+    SLICE_X29Y90         FDCE                                         r  static         ConvAccel/inputBuffer/rq2_wgray_reg[3]/C
+                         clock pessimism             -0.569     1.603                     
+    SLICE_X29Y90         FDCE (Hold_fdce_C_D)         0.072     1.675    static           ConvAccel/inputBuffer/rq2_wgray_reg[3]
+  -------------------------------------------------------------------
+                         required time                         -1.675                     
+                         arrival time                           1.824                     
+  -------------------------------------------------------------------
+                         slack                                  0.149                     
+
+Slack (MET) :             0.208ns  (arrival time - required time)
+  Source:                 ConvAccel/inputBuffer/rq1_wgray_reg[2]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out1_design_1_clk_wiz_0_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            ConvAccel/inputBuffer/rq2_wgray_reg[2]/D
+                            (rising edge-triggered cell FDCE clocked by clk_out1_design_1_clk_wiz_0_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_out1_design_1_clk_wiz_0_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out1_design_1_clk_wiz_0_0 rise@0.000ns - clk_out1_design_1_clk_wiz_0_0 rise@0.000ns)
+  Data Path Delay:        0.315ns  (logic 0.141ns (44.699%)  route 0.174ns (55.301%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.037ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.172ns
+    Source Clock Delay      (SCD):    1.566ns
+    Clock Pessimism Removal (CPR):    0.569ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Partition      Netlist Resource(s)
+  -------------------------------------------------------------------    ----------------------------------
+                         (clock clk_out1_design_1_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r                 
+    BUFGCTRL_X0Y19       BUFG                         0.000     0.000 r  static         processer/design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2, routed)           0.672     0.672    static         processer/design_1_i/clk_wiz_0/inst/clk_in1
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.395    -0.722 r  static         processer/design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.696    -0.026    static         processer/design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.026    -0.000 r  static         processer/design_1_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=249, routed)         0.710     0.710    static         ConvAccel/controller/Clk
+    SLICE_X50Y50         LUT2 (Prop_lut2_I1_O)        0.045     0.755 r  static         ConvAccel/controller/rbin_rep[5]_i_5/O
+                         net (fo=1, routed)           0.213     0.969    static         ConvAccel_n_19
+    BUFGCTRL_X0Y20       BUFG (Prop_bufg_I_O)         0.026     0.995 r  static         rbin_reg_rep[5]_i_2/O
+                         net (fo=35, routed)          0.572     1.566    static         ConvAccel/inputBuffer/FIFO_RD_CLK
+    SLICE_X27Y92         FDCE                                         r  static         ConvAccel/inputBuffer/rq1_wgray_reg[2]/C
+  -------------------------------------------------------------------    ----------------------------------
+    SLICE_X27Y92         FDCE (Prop_fdce_C_Q)         0.141     1.707 r  static         ConvAccel/inputBuffer/rq1_wgray_reg[2]/Q
+                         net (fo=1, routed)           0.174     1.882    static         ConvAccel/inputBuffer/rq1_wgray[2]
+    SLICE_X28Y92         FDCE                                         r  static         ConvAccel/inputBuffer/rq2_wgray_reg[2]/D
+  -------------------------------------------------------------------    ----------------------------------
+
+                         (clock clk_out1_design_1_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r                 
+    BUFGCTRL_X0Y19       BUFG                         0.000     0.000 r  static         processer/design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2, routed)           0.945     0.945    static         processer/design_1_i/clk_wiz_0/inst/clk_in1
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.726    -0.781 r  static         processer/design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.752    -0.029    static         processer/design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.029     0.000 r  static         processer/design_1_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=249, routed)         1.007     1.007    static         ConvAccel/controller/Clk
+    SLICE_X50Y50         LUT2 (Prop_lut2_I1_O)        0.056     1.063 r  static         ConvAccel/controller/rbin_rep[5]_i_5/O
+                         net (fo=1, routed)           0.237     1.300    static         ConvAccel_n_19
+    BUFGCTRL_X0Y20       BUFG (Prop_bufg_I_O)         0.029     1.329 r  static         rbin_reg_rep[5]_i_2/O
+                         net (fo=35, routed)          0.843     2.172    static         ConvAccel/inputBuffer/FIFO_RD_CLK
+    SLICE_X28Y92         FDCE                                         r  static         ConvAccel/inputBuffer/rq2_wgray_reg[2]/C
+                         clock pessimism             -0.569     1.603                     
+    SLICE_X28Y92         FDCE (Hold_fdce_C_D)         0.070     1.673    static           ConvAccel/inputBuffer/rq2_wgray_reg[2]
+  -------------------------------------------------------------------
+                         required time                         -1.673                     
+                         arrival time                           1.882                     
+  -------------------------------------------------------------------
+                         slack                                  0.208                     
+
+Slack (MET) :             0.212ns  (arrival time - required time)
+  Source:                 ConvAccel/inputBuffer/rq1_wgray_reg[0]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out1_design_1_clk_wiz_0_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            ConvAccel/inputBuffer/rq2_wgray_reg[0]/D
+                            (rising edge-triggered cell FDCE clocked by clk_out1_design_1_clk_wiz_0_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_out1_design_1_clk_wiz_0_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out1_design_1_clk_wiz_0_0 rise@0.000ns - clk_out1_design_1_clk_wiz_0_0 rise@0.000ns)
+  Data Path Delay:        0.321ns  (logic 0.141ns (43.932%)  route 0.180ns (56.068%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.037ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.172ns
+    Source Clock Delay      (SCD):    1.566ns
+    Clock Pessimism Removal (CPR):    0.569ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Partition      Netlist Resource(s)
+  -------------------------------------------------------------------    ----------------------------------
+                         (clock clk_out1_design_1_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r                 
+    BUFGCTRL_X0Y19       BUFG                         0.000     0.000 r  static         processer/design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2, routed)           0.672     0.672    static         processer/design_1_i/clk_wiz_0/inst/clk_in1
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.395    -0.722 r  static         processer/design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.696    -0.026    static         processer/design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.026    -0.000 r  static         processer/design_1_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=249, routed)         0.710     0.710    static         ConvAccel/controller/Clk
+    SLICE_X50Y50         LUT2 (Prop_lut2_I1_O)        0.045     0.755 r  static         ConvAccel/controller/rbin_rep[5]_i_5/O
+                         net (fo=1, routed)           0.213     0.969    static         ConvAccel_n_19
+    BUFGCTRL_X0Y20       BUFG (Prop_bufg_I_O)         0.026     0.995 r  static         rbin_reg_rep[5]_i_2/O
+                         net (fo=35, routed)          0.572     1.566    static         ConvAccel/inputBuffer/FIFO_RD_CLK
+    SLICE_X27Y90         FDCE                                         r  static         ConvAccel/inputBuffer/rq1_wgray_reg[0]/C
+  -------------------------------------------------------------------    ----------------------------------
+    SLICE_X27Y90         FDCE (Prop_fdce_C_Q)         0.141     1.707 r  static         ConvAccel/inputBuffer/rq1_wgray_reg[0]/Q
+                         net (fo=1, routed)           0.180     1.887    static         ConvAccel/inputBuffer/rq1_wgray[0]
+    SLICE_X28Y90         FDCE                                         r  static         ConvAccel/inputBuffer/rq2_wgray_reg[0]/D
+  -------------------------------------------------------------------    ----------------------------------
+
+                         (clock clk_out1_design_1_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r                 
+    BUFGCTRL_X0Y19       BUFG                         0.000     0.000 r  static         processer/design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2, routed)           0.945     0.945    static         processer/design_1_i/clk_wiz_0/inst/clk_in1
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.726    -0.781 r  static         processer/design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.752    -0.029    static         processer/design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.029     0.000 r  static         processer/design_1_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=249, routed)         1.007     1.007    static         ConvAccel/controller/Clk
+    SLICE_X50Y50         LUT2 (Prop_lut2_I1_O)        0.056     1.063 r  static         ConvAccel/controller/rbin_rep[5]_i_5/O
+                         net (fo=1, routed)           0.237     1.300    static         ConvAccel_n_19
+    BUFGCTRL_X0Y20       BUFG (Prop_bufg_I_O)         0.029     1.329 r  static         rbin_reg_rep[5]_i_2/O
+                         net (fo=35, routed)          0.843     2.172    static         ConvAccel/inputBuffer/FIFO_RD_CLK
+    SLICE_X28Y90         FDCE                                         r  static         ConvAccel/inputBuffer/rq2_wgray_reg[0]/C
+                         clock pessimism             -0.569     1.603                     
+    SLICE_X28Y90         FDCE (Hold_fdce_C_D)         0.072     1.675    static           ConvAccel/inputBuffer/rq2_wgray_reg[0]
+  -------------------------------------------------------------------
+                         required time                         -1.675                     
+                         arrival time                           1.887                     
+  -------------------------------------------------------------------
+                         slack                                  0.212                     
+
+Slack (MET) :             0.216ns  (arrival time - required time)
+  Source:                 ConvAccel/controller/MULTIPLIER_INPUT_reg[28]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out1_design_1_clk_wiz_0_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            ConvAccel/controller/MULTIPLIER_INPUT_reg[28]/D
+                            (rising edge-triggered cell FDCE clocked by clk_out1_design_1_clk_wiz_0_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_out1_design_1_clk_wiz_0_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out1_design_1_clk_wiz_0_0 rise@0.000ns - clk_out1_design_1_clk_wiz_0_0 rise@0.000ns)
+  Data Path Delay:        0.308ns  (logic 0.186ns (60.473%)  route 0.122ns (39.527%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.865ns
+    Source Clock Delay      (SCD):    0.595ns
+    Clock Pessimism Removal (CPR):    0.270ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Partition      Netlist Resource(s)
+  -------------------------------------------------------------------    ----------------------------------
+                         (clock clk_out1_design_1_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r                 
+    BUFGCTRL_X0Y19       BUFG                         0.000     0.000 r  static         processer/design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2, routed)           0.672     0.672    static         processer/design_1_i/clk_wiz_0/inst/clk_in1
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.395    -0.722 r  static         processer/design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.696    -0.026    static         processer/design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.026    -0.000 r  static         processer/design_1_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=249, routed)         0.595     0.595    static         ConvAccel/controller/Clk
+    SLICE_X19Y46         FDCE                                         r  static         ConvAccel/controller/MULTIPLIER_INPUT_reg[28]/C
+  -------------------------------------------------------------------    ----------------------------------
+    SLICE_X19Y46         FDCE (Prop_fdce_C_Q)         0.141     0.736 r  static         ConvAccel/controller/MULTIPLIER_INPUT_reg[28]/Q
+                         net (fo=3, routed)           0.122     0.857    static         ConvAccel/controller/multiplier_connector[28]
+    SLICE_X19Y46         LUT6 (Prop_lut6_I5_O)        0.045     0.902 r  static         ConvAccel/controller/MULTIPLIER_INPUT[28]_i_1/O
+                         net (fo=1, routed)           0.000     0.902    static         ConvAccel/controller/MULTIPLIER_INPUT[28]_i_1_n_0
+    SLICE_X19Y46         FDCE                                         r  static         ConvAccel/controller/MULTIPLIER_INPUT_reg[28]/D
+  -------------------------------------------------------------------    ----------------------------------
+
+                         (clock clk_out1_design_1_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r                 
+    BUFGCTRL_X0Y19       BUFG                         0.000     0.000 r  static         processer/design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2, routed)           0.945     0.945    static         processer/design_1_i/clk_wiz_0/inst/clk_in1
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.726    -0.781 r  static         processer/design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.752    -0.029    static         processer/design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.029     0.000 r  static         processer/design_1_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=249, routed)         0.865     0.865    static         ConvAccel/controller/Clk
+    SLICE_X19Y46         FDCE                                         r  static         ConvAccel/controller/MULTIPLIER_INPUT_reg[28]/C
+                         clock pessimism             -0.270     0.595                     
+    SLICE_X19Y46         FDCE (Hold_fdce_C_D)         0.092     0.687    static           ConvAccel/controller/MULTIPLIER_INPUT_reg[28]
+  -------------------------------------------------------------------
+                         required time                         -0.687                     
+                         arrival time                           0.902                     
+  -------------------------------------------------------------------
+                         slack                                  0.216                     
+
+Slack (MET) :             0.217ns  (arrival time - required time)
+  Source:                 ConvAccel/controller/MULTIPLICAND_INPUT_reg[29]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out1_design_1_clk_wiz_0_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            ConvAccel/controller/MULTIPLICAND_INPUT_reg[29]/D
+                            (rising edge-triggered cell FDCE clocked by clk_out1_design_1_clk_wiz_0_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_out1_design_1_clk_wiz_0_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out1_design_1_clk_wiz_0_0 rise@0.000ns - clk_out1_design_1_clk_wiz_0_0 rise@0.000ns)
+  Data Path Delay:        0.309ns  (logic 0.186ns (60.277%)  route 0.123ns (39.723%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.865ns
+    Source Clock Delay      (SCD):    0.595ns
+    Clock Pessimism Removal (CPR):    0.270ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Partition      Netlist Resource(s)
+  -------------------------------------------------------------------    ----------------------------------
+                         (clock clk_out1_design_1_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r                 
+    BUFGCTRL_X0Y19       BUFG                         0.000     0.000 r  static         processer/design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2, routed)           0.672     0.672    static         processer/design_1_i/clk_wiz_0/inst/clk_in1
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.395    -0.722 r  static         processer/design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.696    -0.026    static         processer/design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.026    -0.000 r  static         processer/design_1_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=249, routed)         0.595     0.595    static         ConvAccel/controller/Clk
+    SLICE_X19Y46         FDCE                                         r  static         ConvAccel/controller/MULTIPLICAND_INPUT_reg[29]/C
+  -------------------------------------------------------------------    ----------------------------------
+    SLICE_X19Y46         FDCE (Prop_fdce_C_Q)         0.141     0.736 r  static         ConvAccel/controller/MULTIPLICAND_INPUT_reg[29]/Q
+                         net (fo=3, routed)           0.123     0.858    static         ConvAccel/controller/multiplicand_connector[29]
+    SLICE_X19Y46         LUT6 (Prop_lut6_I5_O)        0.045     0.903 r  static         ConvAccel/controller/MULTIPLICAND_INPUT[29]_i_1/O
+                         net (fo=1, routed)           0.000     0.903    static         ConvAccel/controller/MULTIPLICAND_INPUT[29]_i_1_n_0
+    SLICE_X19Y46         FDCE                                         r  static         ConvAccel/controller/MULTIPLICAND_INPUT_reg[29]/D
+  -------------------------------------------------------------------    ----------------------------------
+
+                         (clock clk_out1_design_1_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r                 
+    BUFGCTRL_X0Y19       BUFG                         0.000     0.000 r  static         processer/design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2, routed)           0.945     0.945    static         processer/design_1_i/clk_wiz_0/inst/clk_in1
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.726    -0.781 r  static         processer/design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.752    -0.029    static         processer/design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.029     0.000 r  static         processer/design_1_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=249, routed)         0.865     0.865    static         ConvAccel/controller/Clk
+    SLICE_X19Y46         FDCE                                         r  static         ConvAccel/controller/MULTIPLICAND_INPUT_reg[29]/C
+                         clock pessimism             -0.270     0.595                     
+    SLICE_X19Y46         FDCE (Hold_fdce_C_D)         0.092     0.687    static           ConvAccel/controller/MULTIPLICAND_INPUT_reg[29]
+  -------------------------------------------------------------------
+                         required time                         -0.687                     
+                         arrival time                           0.903                     
+  -------------------------------------------------------------------
+                         slack                                  0.217                     
+
+Slack (MET) :             0.221ns  (arrival time - required time)
+  Source:                 ConvAccel/inputBuffer/rbin_reg[1]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out1_design_1_clk_wiz_0_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            ConvAccel/inputBuffer/rgray_reg[3]/D
+                            (rising edge-triggered cell FDCE clocked by clk_out1_design_1_clk_wiz_0_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_out1_design_1_clk_wiz_0_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out1_design_1_clk_wiz_0_0 rise@0.000ns - clk_out1_design_1_clk_wiz_0_0 rise@0.000ns)
+  Data Path Delay:        0.326ns  (logic 0.186ns (57.051%)  route 0.140ns (42.949%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.172ns
+    Source Clock Delay      (SCD):    1.569ns
+    Clock Pessimism Removal (CPR):    0.590ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Partition      Netlist Resource(s)
+  -------------------------------------------------------------------    ----------------------------------
+                         (clock clk_out1_design_1_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r                 
+    BUFGCTRL_X0Y19       BUFG                         0.000     0.000 r  static         processer/design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2, routed)           0.672     0.672    static         processer/design_1_i/clk_wiz_0/inst/clk_in1
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.395    -0.722 r  static         processer/design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.696    -0.026    static         processer/design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.026    -0.000 r  static         processer/design_1_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=249, routed)         0.710     0.710    static         ConvAccel/controller/Clk
+    SLICE_X50Y50         LUT2 (Prop_lut2_I1_O)        0.045     0.755 r  static         ConvAccel/controller/rbin_rep[5]_i_5/O
+                         net (fo=1, routed)           0.213     0.969    static         ConvAccel_n_19
+    BUFGCTRL_X0Y20       BUFG (Prop_bufg_I_O)         0.026     0.995 r  static         rbin_reg_rep[5]_i_2/O
+                         net (fo=35, routed)          0.575     1.569    static         ConvAccel/inputBuffer/FIFO_RD_CLK
+    SLICE_X28Y90         FDCE                                         r  static         ConvAccel/inputBuffer/rbin_reg[1]/C
+  -------------------------------------------------------------------    ----------------------------------
+    SLICE_X28Y90         FDCE (Prop_fdce_C_Q)         0.141     1.710 r  static         ConvAccel/inputBuffer/rbin_reg[1]/Q
+                         net (fo=17, routed)          0.140     1.850    static         ConvAccel/inputBuffer/rbin_reg[1]
+    SLICE_X29Y90         LUT6 (Prop_lut6_I4_O)        0.045     1.895 r  static         ConvAccel/inputBuffer/rgray[3]_i_1/O
+                         net (fo=1, routed)           0.000     1.895    static         ConvAccel/inputBuffer/rgraynext[3]
+    SLICE_X29Y90         FDCE                                         r  static         ConvAccel/inputBuffer/rgray_reg[3]/D
+  -------------------------------------------------------------------    ----------------------------------
+
+                         (clock clk_out1_design_1_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r                 
+    BUFGCTRL_X0Y19       BUFG                         0.000     0.000 r  static         processer/design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2, routed)           0.945     0.945    static         processer/design_1_i/clk_wiz_0/inst/clk_in1
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.726    -0.781 r  static         processer/design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.752    -0.029    static         processer/design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.029     0.000 r  static         processer/design_1_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=249, routed)         1.007     1.007    static         ConvAccel/controller/Clk
+    SLICE_X50Y50         LUT2 (Prop_lut2_I1_O)        0.056     1.063 r  static         ConvAccel/controller/rbin_rep[5]_i_5/O
+                         net (fo=1, routed)           0.237     1.300    static         ConvAccel_n_19
+    BUFGCTRL_X0Y20       BUFG (Prop_bufg_I_O)         0.029     1.329 r  static         rbin_reg_rep[5]_i_2/O
+                         net (fo=35, routed)          0.843     2.172    static         ConvAccel/inputBuffer/FIFO_RD_CLK
+    SLICE_X29Y90         FDCE                                         r  static         ConvAccel/inputBuffer/rgray_reg[3]/C
+                         clock pessimism             -0.590     1.582                     
+    SLICE_X29Y90         FDCE (Hold_fdce_C_D)         0.092     1.674    static           ConvAccel/inputBuffer/rgray_reg[3]
+  -------------------------------------------------------------------
+                         required time                         -1.674                     
+                         arrival time                           1.895                     
+  -------------------------------------------------------------------
+                         slack                                  0.221                     
+
+Slack (MET) :             0.233ns  (arrival time - required time)
+  Source:                 ConvAccel/controller/ADDst_reg/C
+                            (rising edge-triggered cell FDCE clocked by clk_out1_design_1_clk_wiz_0_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            ConvAccel/controller/RDst_reg/D
+                            (rising edge-triggered cell FDCE clocked by clk_out1_design_1_clk_wiz_0_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_out1_design_1_clk_wiz_0_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out1_design_1_clk_wiz_0_0 rise@0.000ns - clk_out1_design_1_clk_wiz_0_0 rise@0.000ns)
+  Data Path Delay:        0.337ns  (logic 0.209ns (62.101%)  route 0.128ns (37.899%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.830ns
+    Source Clock Delay      (SCD):    0.563ns
+    Clock Pessimism Removal (CPR):    0.254ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Partition      Netlist Resource(s)
+  -------------------------------------------------------------------    ----------------------------------
+                         (clock clk_out1_design_1_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r                 
+    BUFGCTRL_X0Y19       BUFG                         0.000     0.000 r  static         processer/design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2, routed)           0.672     0.672    static         processer/design_1_i/clk_wiz_0/inst/clk_in1
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.395    -0.722 r  static         processer/design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.696    -0.026    static         processer/design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.026    -0.000 r  static         processer/design_1_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=249, routed)         0.563     0.563    static         ConvAccel/controller/Clk
+    SLICE_X46Y48         FDCE                                         r  static         ConvAccel/controller/ADDst_reg/C
+  -------------------------------------------------------------------    ----------------------------------
+    SLICE_X46Y48         FDCE (Prop_fdce_C_Q)         0.164     0.727 f  static         ConvAccel/controller/ADDst_reg/Q
+                         net (fo=6, routed)           0.128     0.854    static         ConvAccel/controller/ADDst
+    SLICE_X47Y48         LUT6 (Prop_lut6_I2_O)        0.045     0.899 r  static         ConvAccel/controller/RDst_i_1/O
+                         net (fo=1, routed)           0.000     0.899    static         ConvAccel/controller/RDst1_out
+    SLICE_X47Y48         FDCE                                         r  static         ConvAccel/controller/RDst_reg/D
+  -------------------------------------------------------------------    ----------------------------------
+
+                         (clock clk_out1_design_1_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r                 
+    BUFGCTRL_X0Y19       BUFG                         0.000     0.000 r  static         processer/design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2, routed)           0.945     0.945    static         processer/design_1_i/clk_wiz_0/inst/clk_in1
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.726    -0.781 r  static         processer/design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.752    -0.029    static         processer/design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.029     0.000 r  static         processer/design_1_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=249, routed)         0.830     0.830    static         ConvAccel/controller/Clk
+    SLICE_X47Y48         FDCE                                         r  static         ConvAccel/controller/RDst_reg/C
+                         clock pessimism             -0.254     0.576                     
+    SLICE_X47Y48         FDCE (Hold_fdce_C_D)         0.091     0.667    static           ConvAccel/controller/RDst_reg
+  -------------------------------------------------------------------
+                         required time                         -0.667                     
+                         arrival time                           0.899                     
+  -------------------------------------------------------------------
+                         slack                                  0.233                     
+
+Slack (MET) :             0.237ns  (arrival time - required time)
+  Source:                 ConvAccel/controller/MULTIPLIER_INPUT_reg[42]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out1_design_1_clk_wiz_0_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            ConvAccel/controller/MULTIPLIER_INPUT_reg[42]/D
+                            (rising edge-triggered cell FDCE clocked by clk_out1_design_1_clk_wiz_0_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_out1_design_1_clk_wiz_0_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out1_design_1_clk_wiz_0_0 rise@0.000ns - clk_out1_design_1_clk_wiz_0_0 rise@0.000ns)
+  Data Path Delay:        0.358ns  (logic 0.209ns (58.341%)  route 0.149ns (41.659%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.883ns
+    Source Clock Delay      (SCD):    0.614ns
+    Clock Pessimism Removal (CPR):    0.269ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Partition      Netlist Resource(s)
+  -------------------------------------------------------------------    ----------------------------------
+                         (clock clk_out1_design_1_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r                 
+    BUFGCTRL_X0Y19       BUFG                         0.000     0.000 r  static         processer/design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2, routed)           0.672     0.672    static         processer/design_1_i/clk_wiz_0/inst/clk_in1
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.395    -0.722 r  static         processer/design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.696    -0.026    static         processer/design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.026    -0.000 r  static         processer/design_1_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=249, routed)         0.614     0.614    static         ConvAccel/controller/Clk
+    SLICE_X100Y45        FDCE                                         r  static         ConvAccel/controller/MULTIPLIER_INPUT_reg[42]/C
+  -------------------------------------------------------------------    ----------------------------------
+    SLICE_X100Y45        FDCE (Prop_fdce_C_Q)         0.164     0.778 r  static         ConvAccel/controller/MULTIPLIER_INPUT_reg[42]/Q
+                         net (fo=3, routed)           0.149     0.927    static         ConvAccel/controller/multiplier_connector[42]
+    SLICE_X100Y45        LUT6 (Prop_lut6_I5_O)        0.045     0.972 r  static         ConvAccel/controller/MULTIPLIER_INPUT[42]_i_1/O
+                         net (fo=1, routed)           0.000     0.972    static         ConvAccel/controller/MULTIPLIER_INPUT[42]_i_1_n_0
+    SLICE_X100Y45        FDCE                                         r  static         ConvAccel/controller/MULTIPLIER_INPUT_reg[42]/D
+  -------------------------------------------------------------------    ----------------------------------
+
+                         (clock clk_out1_design_1_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r                 
+    BUFGCTRL_X0Y19       BUFG                         0.000     0.000 r  static         processer/design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2, routed)           0.945     0.945    static         processer/design_1_i/clk_wiz_0/inst/clk_in1
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.726    -0.781 r  static         processer/design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.752    -0.029    static         processer/design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.029     0.000 r  static         processer/design_1_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=249, routed)         0.883     0.883    static         ConvAccel/controller/Clk
+    SLICE_X100Y45        FDCE                                         r  static         ConvAccel/controller/MULTIPLIER_INPUT_reg[42]/C
+                         clock pessimism             -0.269     0.614                     
+    SLICE_X100Y45        FDCE (Hold_fdce_C_D)         0.121     0.735    static           ConvAccel/controller/MULTIPLIER_INPUT_reg[42]
+  -------------------------------------------------------------------
+                         required time                         -0.735                     
+                         arrival time                           0.972                     
+  -------------------------------------------------------------------
+                         slack                                  0.237                     
+
+Slack (MET) :             0.237ns  (arrival time - required time)
+  Source:                 ConvAccel/controller/MULTIPLIER_INPUT_reg[25]/C
+                            (rising edge-triggered cell FDCE clocked by clk_out1_design_1_clk_wiz_0_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            ConvAccel/controller/MULTIPLIER_INPUT_reg[25]/D
+                            (rising edge-triggered cell FDCE clocked by clk_out1_design_1_clk_wiz_0_0  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             clk_out1_design_1_clk_wiz_0_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out1_design_1_clk_wiz_0_0 rise@0.000ns - clk_out1_design_1_clk_wiz_0_0 rise@0.000ns)
+  Data Path Delay:        0.358ns  (logic 0.209ns (58.341%)  route 0.149ns (41.659%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.865ns
+    Source Clock Delay      (SCD):    0.595ns
+    Clock Pessimism Removal (CPR):    0.270ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Partition      Netlist Resource(s)
+  -------------------------------------------------------------------    ----------------------------------
+                         (clock clk_out1_design_1_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r                 
+    BUFGCTRL_X0Y19       BUFG                         0.000     0.000 r  static         processer/design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2, routed)           0.672     0.672    static         processer/design_1_i/clk_wiz_0/inst/clk_in1
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.395    -0.722 r  static         processer/design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.696    -0.026    static         processer/design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.026    -0.000 r  static         processer/design_1_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=249, routed)         0.595     0.595    static         ConvAccel/controller/Clk
+    SLICE_X18Y45         FDCE                                         r  static         ConvAccel/controller/MULTIPLIER_INPUT_reg[25]/C
+  -------------------------------------------------------------------    ----------------------------------
+    SLICE_X18Y45         FDCE (Prop_fdce_C_Q)         0.164     0.759 r  static         ConvAccel/controller/MULTIPLIER_INPUT_reg[25]/Q
+                         net (fo=3, routed)           0.149     0.908    static         ConvAccel/controller/multiplier_connector[25]
+    SLICE_X18Y45         LUT6 (Prop_lut6_I5_O)        0.045     0.953 r  static         ConvAccel/controller/MULTIPLIER_INPUT[25]_i_1/O
+                         net (fo=1, routed)           0.000     0.953    static         ConvAccel/controller/MULTIPLIER_INPUT[25]_i_1_n_0
+    SLICE_X18Y45         FDCE                                         r  static         ConvAccel/controller/MULTIPLIER_INPUT_reg[25]/D
+  -------------------------------------------------------------------    ----------------------------------
+
+                         (clock clk_out1_design_1_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r                 
+    BUFGCTRL_X0Y19       BUFG                         0.000     0.000 r  static         processer/design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2, routed)           0.945     0.945    static         processer/design_1_i/clk_wiz_0/inst/clk_in1
+    MMCME2_ADV_X1Y2      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.726    -0.781 r  static         processer/design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           0.752    -0.029    static         processer/design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.029     0.000 r  static         processer/design_1_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=249, routed)         0.865     0.865    static         ConvAccel/controller/Clk
+    SLICE_X18Y45         FDCE                                         r  static         ConvAccel/controller/MULTIPLIER_INPUT_reg[25]/C
+                         clock pessimism             -0.270     0.595                     
+    SLICE_X18Y45         FDCE (Hold_fdce_C_D)         0.121     0.716    static           ConvAccel/controller/MULTIPLIER_INPUT_reg[25]
+  -------------------------------------------------------------------
+                         required time                         -0.716                     
+                         arrival time                           0.953                     
+  -------------------------------------------------------------------
+                         slack                                  0.237                     
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk_out1_design_1_clk_wiz_0_0
+Waveform(ns):       { 0.000 10.000 }
+Period(ns):         20.000
+Sources:            { processer/design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0 }
+
+Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
+Min Period        n/a     BUFG/I              n/a            2.155         20.000      17.845     BUFGCTRL_X0Y17   processer/design_1_i/clk_wiz_0/inst/clkout1_buf/I
+Min Period        n/a     BUFG/I              n/a            2.155         20.000      17.845     BUFGCTRL_X0Y20   rbin_reg_rep[5]_i_2/I
+Min Period        n/a     DSP48E1/CLK         n/a            2.154         20.000      17.846     DSP48_X1Y18      ConvAccel/matrixAccel/genblk3[1].inputMulti/product_reg/CLK
+Min Period        n/a     DSP48E1/CLK         n/a            2.154         20.000      17.846     DSP48_X4Y18      ConvAccel/matrixAccel/genblk3[2].inputMulti/product_reg/CLK
+Min Period        n/a     DSP48E1/CLK         n/a            2.154         20.000      17.846     DSP48_X2Y18      ConvAccel/matrixAccel/genblk3[0].inputMulti/product_reg/CLK
+Min Period        n/a     MMCME2_ADV/CLKOUT0  n/a            1.249         20.000      18.751     MMCME2_ADV_X1Y2  processer/design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+Min Period        n/a     FDCE/C              n/a            1.000         20.000      19.000     SLICE_X46Y48     ConvAccel/controller/ADDst_reg/C
+Min Period        n/a     FDCE/C              n/a            1.000         20.000      19.000     SLICE_X46Y48     ConvAccel/controller/FINALADD_reg/C
+Min Period        n/a     FDRE/C              n/a            1.000         20.000      19.000     SLICE_X36Y45     ConvAccel/matrixAccel/genblk3[0].inputMulti/ready_reg/C
+Min Period        n/a     FDRE/C              n/a            1.000         20.000      19.000     SLICE_X21Y45     ConvAccel/matrixAccel/genblk3[1].inputMulti/ready_reg/C
+Max Period        n/a     MMCME2_ADV/CLKOUT0  n/a            213.360       20.000      193.360    MMCME2_ADV_X1Y2  processer/design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+Low Pulse Width   Slow    FDCE/C              n/a            0.500         10.000      9.500      SLICE_X46Y48     ConvAccel/controller/ADDst_reg/C
+Low Pulse Width   Slow    FDCE/C              n/a            0.500         10.000      9.500      SLICE_X46Y48     ConvAccel/controller/FINALADD_reg/C
+Low Pulse Width   Slow    FDRE/C              n/a            0.500         10.000      9.500      SLICE_X36Y45     ConvAccel/matrixAccel/genblk3[0].inputMulti/ready_reg/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         10.000      9.500      SLICE_X86Y42     ConvAccel/matrixAccel/genblk4[0].outputAdder/accumulate_reg[0]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         10.000      9.500      SLICE_X86Y44     ConvAccel/matrixAccel/genblk4[0].outputAdder/accumulate_reg[10]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         10.000      9.500      SLICE_X86Y44     ConvAccel/matrixAccel/genblk4[0].outputAdder/accumulate_reg[11]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         10.000      9.500      SLICE_X86Y45     ConvAccel/matrixAccel/genblk4[0].outputAdder/accumulate_reg[12]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         10.000      9.500      SLICE_X86Y45     ConvAccel/matrixAccel/genblk4[0].outputAdder/accumulate_reg[13]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         10.000      9.500      SLICE_X86Y45     ConvAccel/matrixAccel/genblk4[0].outputAdder/accumulate_reg[14]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         10.000      9.500      SLICE_X86Y45     ConvAccel/matrixAccel/genblk4[0].outputAdder/accumulate_reg[15]/C
+High Pulse Width  Slow    FDCE/C              n/a            0.500         10.000      9.500      SLICE_X46Y48     ConvAccel/controller/ADDst_reg/C
+High Pulse Width  Fast    FDCE/C              n/a            0.500         10.000      9.500      SLICE_X46Y48     ConvAccel/controller/ADDst_reg/C
+High Pulse Width  Slow    FDCE/C              n/a            0.500         10.000      9.500      SLICE_X46Y48     ConvAccel/controller/FINALADD_reg/C
+High Pulse Width  Fast    FDCE/C              n/a            0.500         10.000      9.500      SLICE_X46Y48     ConvAccel/controller/FINALADD_reg/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         10.000      9.500      SLICE_X36Y45     ConvAccel/matrixAccel/genblk3[0].inputMulti/ready_reg/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         10.000      9.500      SLICE_X36Y45     ConvAccel/matrixAccel/genblk3[0].inputMulti/ready_reg/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         10.000      9.500      SLICE_X21Y45     ConvAccel/matrixAccel/genblk3[1].inputMulti/ready_reg/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         10.000      9.500      SLICE_X21Y45     ConvAccel/matrixAccel/genblk3[1].inputMulti/ready_reg/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         10.000      9.500      SLICE_X103Y45    ConvAccel/matrixAccel/genblk3[2].inputMulti/ready_reg/C
+High Pulse Width  Fast    FDRE/C              n/a            0.500         10.000      9.500      SLICE_X103Y45    ConvAccel/matrixAccel/genblk3[2].inputMulti/ready_reg/C
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clkfbout_design_1_clk_wiz_0_0
+  To Clock:  clkfbout_design_1_clk_wiz_0_0
+
+Setup :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+PW    :            0  Failing Endpoints,  Worst Slack        7.845ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clkfbout_design_1_clk_wiz_0_0
+Waveform(ns):       { 0.000 5.000 }
+Period(ns):         10.000
+Sources:            { processer/design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKFBOUT }
+
+Check Type  Corner  Lib Pin              Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location         Pin
+Min Period  n/a     BUFG/I               n/a            2.155         10.000      7.845      BUFGCTRL_X0Y16   processer/design_1_i/clk_wiz_0/inst/clkf_buf/I
+Min Period  n/a     MMCME2_ADV/CLKFBOUT  n/a            1.249         10.000      8.751      MMCME2_ADV_X1Y2  processer/design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKFBOUT
+Min Period  n/a     MMCME2_ADV/CLKFBIN   n/a            1.249         10.000      8.751      MMCME2_ADV_X1Y2  processer/design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKFBIN
+Max Period  n/a     MMCME2_ADV/CLKFBIN   n/a            100.000       10.000      90.000     MMCME2_ADV_X1Y2  processer/design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKFBIN
+Max Period  n/a     MMCME2_ADV/CLKFBOUT  n/a            213.360       10.000      203.360    MMCME2_ADV_X1Y2  processer/design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKFBOUT
+
+
+
