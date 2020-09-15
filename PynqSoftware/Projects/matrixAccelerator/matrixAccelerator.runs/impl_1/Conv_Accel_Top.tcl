@@ -60,7 +60,6 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {HDL-1065} -limit 10000
 set_msg_config  -id {VRFC 10-2989}  -string {{ERROR: [VRFC 10-2989] 'break' is not declared [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Adder/adderFloat.v:60]}}  -suppress 
 set_msg_config  -id {XSIM 43-3322}  -string {{ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.}}  -suppress 
 
@@ -83,7 +82,6 @@ set rc [catch {
   set_param project.isImplRun true
   add_files {{C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/design_1.bd}}
   set_param project.isImplRun false
-  read_xdc C:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.srcs/constrs_1/new/my_brd.xdc
   set_param project.isImplRun true
   link_design -top Conv_Accel_Top -part xc7z020clg400-1
   set_param project.isImplRun false
@@ -175,6 +173,25 @@ if {$rc} {
   return -code error $RESULT
 } else {
   end_step route_design
+  unset ACTIVE_STEP 
+}
+
+start_step write_bitstream
+set ACTIVE_STEP write_bitstream
+set rc [catch {
+  create_msg_db write_bitstream.pb
+  set_property XPM_LIBRARIES XPM_CDC [current_project]
+  catch { write_mem_info -force Conv_Accel_Top.mmi }
+  write_bitstream -force Conv_Accel_Top.bit 
+  catch {write_debug_probes -quiet -force Conv_Accel_Top}
+  catch {file copy -force Conv_Accel_Top.ltx debug_nets.ltx}
+  close_msg_db -file write_bitstream.pb
+} RESULT]
+if {$rc} {
+  step_failed write_bitstream
+  return -code error $RESULT
+} else {
+  end_step write_bitstream
   unset ACTIVE_STEP 
 }
 

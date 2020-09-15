@@ -48,7 +48,7 @@
 `define dataIn4             12
 `define dataIn5             3
 `define dataIn6             8
-`define toggleTime          0.2
+`define toggleTime          10.2
 /*#####################################################################################################################################################*/
 //END_User_Set
 
@@ -69,6 +69,6 @@
 `define restAddress         `inputPortCount*`outputPortCount
 
 //aFIFO
-`define bufferSize          6                                   //buffer count = 2**buffersize
+`define bufferSize          8                                   //buffer count = 2**buffersize
 /*#####################################################################################################################################################*/
 //END_Automated_Set

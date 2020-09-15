@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x3D4168B39F84AF76",
+      "boundary_crc": "0x9C3FFDBD3BFE3A95",
       "device": "xc7z020clg400-1",
       "name": "design_1",
       "synth_flow_mode": "Hierarchical",
@@ -11,12 +11,14 @@
     "design_tree": {
       "Rst": "",
       "cStart": "",
-      "dataInput": "",
+      "bufferInput": "",
       "processing_system7_0": "",
-      "wr_clk": "",
+      "io_clk": "",
       "xlconcat_0": "",
       "wr": "",
-      "clk_wiz_0": ""
+      "clk_wiz_0": "",
+      "newline": "",
+      "rd": ""
     },
     "interface_ports": {
       "DDR": {
@@ -85,12 +87,12 @@
       }
     },
     "ports": {
-      "EMPTY": {
+      "FULL_out": {
         "direction": "I",
         "left": "0",
         "right": "0"
       },
-      "FULL": {
+      "EMPTY_in": {
         "direction": "I",
         "left": "0",
         "right": "0"
@@ -100,7 +102,7 @@
         "left": "0",
         "right": "0"
       },
-      "cReady": {
+      "FULL_in": {
         "direction": "I",
         "left": "0",
         "right": "0"
@@ -110,17 +112,17 @@
         "left": "0",
         "right": "0"
       },
-      "dataInput": {
+      "bufferInput": {
         "direction": "O",
         "left": "15",
         "right": "0"
       },
-      "finalsum": {
+      "BufferedConvolution_out": {
         "direction": "I",
         "left": "15",
         "right": "0"
       },
-      "wr_clk": {
+      "io_clk": {
         "direction": "O",
         "left": "0",
         "right": "0"
@@ -150,6 +152,21 @@
             "value_src": "ip_prop"
           }
         }
+      },
+      "newline": {
+        "direction": "O",
+        "left": "0",
+        "right": "0"
+      },
+      "rd": {
+        "direction": "O",
+        "left": "0",
+        "right": "0"
+      },
+      "EMPTY_out": {
+        "direction": "I",
+        "left": "0",
+        "right": "0"
       }
     },
     "components": {
@@ -164,7 +181,7 @@
             "value": "20"
           },
           "DIN_WIDTH": {
-            "value": "40"
+            "value": "42"
           },
           "DOUT_WIDTH": {
             "value": "1"
@@ -182,14 +199,14 @@
             "value": "37"
           },
           "DIN_WIDTH": {
-            "value": "40"
+            "value": "42"
           },
           "DOUT_WIDTH": {
             "value": "1"
           }
         }
       },
-      "dataInput": {
+      "bufferInput": {
         "vlnv": "xilinx.com:ip:xlslice:1.0",
         "xci_name": "design_1_dataInput_0",
         "parameters": {
@@ -200,7 +217,7 @@
             "value": "21"
           },
           "DIN_WIDTH": {
-            "value": "40"
+            "value": "42"
           },
           "DOUT_WIDTH": {
             "value": "16"
@@ -647,10 +664,10 @@
             "value": "1"
           },
           "PCW_GPIO_EMIO_GPIO_IO": {
-            "value": "40"
+            "value": "42"
           },
           "PCW_GPIO_EMIO_GPIO_WIDTH": {
-            "value": "40"
+            "value": "42"
           },
           "PCW_GPIO_MIO_GPIO_ENABLE": {
             "value": "0"
@@ -672,6 +689,9 @@
           },
           "PCW_INCLUDE_ACP_TRANS_CHECK": {
             "value": "0"
+          },
+          "PCW_IRQ_F2P_MODE": {
+            "value": "DIRECT"
           },
           "PCW_MIO_14_IOTYPE": {
             "value": "LVCMOS 3.3V"
@@ -1327,6 +1347,18 @@
           "PCW_SPI_PERIPHERAL_VALID": {
             "value": "0"
           },
+          "PCW_S_AXI_HP0_DATA_WIDTH": {
+            "value": "64"
+          },
+          "PCW_S_AXI_HP1_DATA_WIDTH": {
+            "value": "64"
+          },
+          "PCW_S_AXI_HP2_DATA_WIDTH": {
+            "value": "64"
+          },
+          "PCW_S_AXI_HP3_DATA_WIDTH": {
+            "value": "64"
+          },
           "PCW_TPIU_PERIPHERAL_CLKSRC": {
             "value": "External"
           },
@@ -1701,18 +1733,18 @@
           }
         }
       },
-      "wr_clk": {
+      "io_clk": {
         "vlnv": "xilinx.com:ip:xlslice:1.0",
         "xci_name": "design_1_wr_clk_0",
         "parameters": {
           "DIN_FROM": {
-            "value": "38"
+            "value": "41"
           },
           "DIN_TO": {
-            "value": "38"
+            "value": "41"
           },
           "DIN_WIDTH": {
-            "value": "40"
+            "value": "42"
           },
           "DOUT_WIDTH": {
             "value": "1"
@@ -1735,8 +1767,11 @@
           "IN3_WIDTH": {
             "value": "1"
           },
+          "IN4_WIDTH": {
+            "value": "1"
+          },
           "NUM_PORTS": {
-            "value": "4"
+            "value": "5"
           }
         }
       },
@@ -1751,7 +1786,7 @@
             "value": "39"
           },
           "DIN_WIDTH": {
-            "value": "40"
+            "value": "42"
           },
           "DOUT_WIDTH": {
             "value": "1"
@@ -1781,6 +1816,42 @@
             "value": "false"
           }
         }
+      },
+      "newline": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "xci_name": "design_1_cStart_1",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "38"
+          },
+          "DIN_TO": {
+            "value": "38"
+          },
+          "DIN_WIDTH": {
+            "value": "42"
+          },
+          "DOUT_WIDTH": {
+            "value": "1"
+          }
+        }
+      },
+      "rd": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "xci_name": "design_1_wr_0",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "40"
+          },
+          "DIN_TO": {
+            "value": "40"
+          },
+          "DIN_WIDTH": {
+            "value": "42"
+          },
+          "DOUT_WIDTH": {
+            "value": "1"
+          }
+        }
       }
     },
     "interface_nets": {
@@ -1800,25 +1871,25 @@
     "nets": {
       "In0_0_1": {
         "ports": [
-          "finalsum",
+          "BufferedConvolution_out",
           "xlconcat_0/In0"
         ]
       },
       "In1_0_1": {
         "ports": [
-          "cReady",
+          "FULL_in",
           "xlconcat_0/In1"
         ]
       },
       "In2_0_1": {
         "ports": [
-          "FULL",
+          "EMPTY_in",
           "xlconcat_0/In2"
         ]
       },
       "In3_0_1": {
         "ports": [
-          "EMPTY",
+          "FULL_out",
           "xlconcat_0/In3"
         ]
       },
@@ -1836,8 +1907,8 @@
       },
       "dataInput_Dout": {
         "ports": [
-          "dataInput/Dout",
-          "dataInput"
+          "bufferInput/Dout",
+          "bufferInput"
         ]
       },
       "processing_system7_0_FCLK_CLK0": {
@@ -1851,16 +1922,18 @@
         "ports": [
           "processing_system7_0/GPIO_O",
           "Rst/Din",
-          "dataInput/Din",
+          "bufferInput/Din",
           "cStart/Din",
-          "wr_clk/Din",
-          "wr/Din"
+          "io_clk/Din",
+          "wr/Din",
+          "newline/Din",
+          "rd/Din"
         ]
       },
       "wr_clk_Dout": {
         "ports": [
-          "wr_clk/Dout",
-          "wr_clk"
+          "io_clk/Dout",
+          "io_clk"
         ]
       },
       "xlconcat_0_dout": {
@@ -1885,6 +1958,24 @@
         "ports": [
           "clk_wiz_0/clk_out1",
           "Clk"
+        ]
+      },
+      "newline_Dout": {
+        "ports": [
+          "newline/Dout",
+          "newline"
+        ]
+      },
+      "rd_Dout": {
+        "ports": [
+          "rd/Dout",
+          "rd"
+        ]
+      },
+      "In4_0_1": {
+        "ports": [
+          "EMPTY_out",
+          "xlconcat_0/In4"
         ]
       }
     },

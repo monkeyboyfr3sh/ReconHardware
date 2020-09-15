@@ -18,54 +18,68 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 18936 
+INFO: Helper process launched with PID 33432 
 WARNING: [Synth 8-6901] identifier 'o_rdata' is used before its declaration [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/aFIFO.v:94]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1001.137 ; gain = 240.133
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1001.043 ; gain = 239.562
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'Conv_Accel_Top' [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/Conv_Accel_Top.v:6]
 INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/hdl/design_1_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'design_1' [C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/synth/design_1.v:13]
 INFO: [Synth 8-6157] synthesizing module 'design_1_Rst_0' [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ip/design_1_Rst_0/synth/design_1_Rst_0.v:57]
 INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice' [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
-	Parameter DIN_WIDTH bound to: 40 - type: integer 
+	Parameter DIN_WIDTH bound to: 42 - type: integer 
 	Parameter DIN_FROM bound to: 20 - type: integer 
 	Parameter DIN_TO bound to: 20 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice' (1#1) [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_Rst_0' (2#1) [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ip/design_1_Rst_0/synth/design_1_Rst_0.v:57]
-INFO: [Synth 8-6157] synthesizing module 'design_1_cStart_0' [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ip/design_1_cStart_0/synth/design_1_cStart_0.v:57]
-INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized0' [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
-	Parameter DIN_WIDTH bound to: 40 - type: integer 
-	Parameter DIN_FROM bound to: 37 - type: integer 
-	Parameter DIN_TO bound to: 37 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized0' (2#1) [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_cStart_0' (3#1) [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ip/design_1_cStart_0/synth/design_1_cStart_0.v:57]
-INFO: [Synth 8-6157] synthesizing module 'design_1_clk_wiz_0_0' [C:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1/.Xil/Vivado-21616-DESKTOP-D9F9TPQ/realtime/design_1_clk_wiz_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_clk_wiz_0_0' (4#1) [C:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1/.Xil/Vivado-21616-DESKTOP-D9F9TPQ/realtime/design_1_clk_wiz_0_0_stub.v:5]
 INFO: [Synth 8-6157] synthesizing module 'design_1_dataInput_0' [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ip/design_1_dataInput_0_1/synth/design_1_dataInput_0.v:57]
-INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized1' [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
-	Parameter DIN_WIDTH bound to: 40 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized0' [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+	Parameter DIN_WIDTH bound to: 42 - type: integer 
 	Parameter DIN_FROM bound to: 36 - type: integer 
 	Parameter DIN_TO bound to: 21 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized1' (4#1) [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_dataInput_0' (5#1) [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ip/design_1_dataInput_0_1/synth/design_1_dataInput_0.v:57]
-INFO: [Synth 8-6157] synthesizing module 'design_1_processing_system7_0_0' [C:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1/.Xil/Vivado-21616-DESKTOP-D9F9TPQ/realtime/design_1_processing_system7_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_processing_system7_0_0' (6#1) [C:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1/.Xil/Vivado-21616-DESKTOP-D9F9TPQ/realtime/design_1_processing_system7_0_0_stub.v:6]
-WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'design_1_processing_system7_0_0' has 68 connections declared, but only 38 given [C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/synth/design_1.v:136]
-INFO: [Synth 8-6157] synthesizing module 'design_1_wr_clk_1' [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ip/design_1_wr_clk_1/synth/design_1_wr_clk_1.v:57]
-INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized2' [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
-	Parameter DIN_WIDTH bound to: 40 - type: integer 
-	Parameter DIN_FROM bound to: 39 - type: integer 
-	Parameter DIN_TO bound to: 39 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized2' (6#1) [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_wr_clk_1' (7#1) [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ip/design_1_wr_clk_1/synth/design_1_wr_clk_1.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized0' (2#1) [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_dataInput_0' (3#1) [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ip/design_1_dataInput_0_1/synth/design_1_dataInput_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'design_1_cStart_0' [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ip/design_1_cStart_0/synth/design_1_cStart_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized1' [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+	Parameter DIN_WIDTH bound to: 42 - type: integer 
+	Parameter DIN_FROM bound to: 37 - type: integer 
+	Parameter DIN_TO bound to: 37 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized1' (3#1) [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_cStart_0' (4#1) [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ip/design_1_cStart_0/synth/design_1_cStart_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'design_1_clk_wiz_0_0' [C:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1/.Xil/Vivado-30868-DESKTOP-D9F9TPQ/realtime/design_1_clk_wiz_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_clk_wiz_0_0' (5#1) [C:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1/.Xil/Vivado-30868-DESKTOP-D9F9TPQ/realtime/design_1_clk_wiz_0_0_stub.v:5]
 INFO: [Synth 8-6157] synthesizing module 'design_1_wr_clk_0' [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ip/design_1_wr_clk_0/synth/design_1_wr_clk_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized2' [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+	Parameter DIN_WIDTH bound to: 42 - type: integer 
+	Parameter DIN_FROM bound to: 41 - type: integer 
+	Parameter DIN_TO bound to: 41 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized2' (5#1) [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_wr_clk_0' (6#1) [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ip/design_1_wr_clk_0/synth/design_1_wr_clk_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'design_1_cStart_1' [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ip/design_1_cStart_1/synth/design_1_cStart_1.v:57]
 INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized3' [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
-	Parameter DIN_WIDTH bound to: 40 - type: integer 
+	Parameter DIN_WIDTH bound to: 42 - type: integer 
 	Parameter DIN_FROM bound to: 38 - type: integer 
 	Parameter DIN_TO bound to: 38 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized3' (7#1) [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_wr_clk_0' (8#1) [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ip/design_1_wr_clk_0/synth/design_1_wr_clk_0.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized3' (6#1) [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_cStart_1' (7#1) [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ip/design_1_cStart_1/synth/design_1_cStart_1.v:57]
+INFO: [Synth 8-6157] synthesizing module 'design_1_processing_system7_0_0' [C:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1/.Xil/Vivado-30868-DESKTOP-D9F9TPQ/realtime/design_1_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_processing_system7_0_0' (8#1) [C:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1/.Xil/Vivado-30868-DESKTOP-D9F9TPQ/realtime/design_1_processing_system7_0_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'design_1_processing_system7_0_0' has 68 connections declared, but only 38 given [C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/synth/design_1.v:154]
+INFO: [Synth 8-6157] synthesizing module 'design_1_wr_0' [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ip/design_1_wr_0/synth/design_1_wr_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized4' [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+	Parameter DIN_WIDTH bound to: 42 - type: integer 
+	Parameter DIN_FROM bound to: 40 - type: integer 
+	Parameter DIN_TO bound to: 40 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized4' (8#1) [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_wr_0' (9#1) [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ip/design_1_wr_0/synth/design_1_wr_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'design_1_wr_clk_1' [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ip/design_1_wr_clk_1/synth/design_1_wr_clk_1.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized5' [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+	Parameter DIN_WIDTH bound to: 42 - type: integer 
+	Parameter DIN_FROM bound to: 39 - type: integer 
+	Parameter DIN_TO bound to: 39 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized5' (9#1) [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_wr_clk_1' (10#1) [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ip/design_1_wr_clk_1/synth/design_1_wr_clk_1.v:57]
 INFO: [Synth 8-6157] synthesizing module 'design_1_xlconcat_0_0' [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ip/design_1_xlconcat_0_0_1/synth/design_1_xlconcat_0_0.v:58]
 INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_3_xlconcat' [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ipshared/442e/hdl/xlconcat_v2_1_vl_rfs.v:14]
 	Parameter IN0_WIDTH bound to: 16 - type: integer 
@@ -100,36 +114,54 @@ INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_3_xlconcat' [c:/GitHub/R
 	Parameter IN29_WIDTH bound to: 1 - type: integer 
 	Parameter IN30_WIDTH bound to: 1 - type: integer 
 	Parameter IN31_WIDTH bound to: 1 - type: integer 
-	Parameter dout_width bound to: 19 - type: integer 
-	Parameter NUM_PORTS bound to: 4 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_3_xlconcat' (9#1) [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ipshared/442e/hdl/xlconcat_v2_1_vl_rfs.v:14]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_xlconcat_0_0' (10#1) [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ip/design_1_xlconcat_0_0_1/synth/design_1_xlconcat_0_0.v:58]
-INFO: [Synth 8-6155] done synthesizing module 'design_1' (11#1) [C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/synth/design_1.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (12#1) [C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/hdl/design_1_wrapper.v:12]
-WARNING: [Synth 8-7023] instance 'processer' of module 'design_1_wrapper' has 31 connections declared, but only 10 given [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/Conv_Accel_Top.v:21]
+	Parameter dout_width bound to: 20 - type: integer 
+	Parameter NUM_PORTS bound to: 5 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_3_xlconcat' (11#1) [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ipshared/442e/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xlconcat_0_0' (12#1) [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ip/design_1_xlconcat_0_0_1/synth/design_1_xlconcat_0_0.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'design_1' (13#1) [C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/synth/design_1.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (14#1) [C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/hdl/design_1_wrapper.v:12]
+WARNING: [Synth 8-7023] instance 'processer' of module 'design_1_wrapper' has 34 connections declared, but only 13 given [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/Conv_Accel_Top.v:15]
 INFO: [Synth 8-6157] synthesizing module 'ConvolutionAccelerator' [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixAccTopDevice.v:6]
-INFO: [Synth 8-6157] synthesizing module 'matrixControl3x3' [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v:4]
-INFO: [Synth 8-6155] done synthesizing module 'matrixControl3x3' (13#1) [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v:4]
+INFO: [Synth 8-6157] synthesizing module 'ConvolutionController' [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v:4]
+WARNING: [Synth 8-6014] Unused sequential element multiplyQueue_reg was removed.  [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v:66]
+WARNING: [Synth 8-6014] Unused sequential element currentValue_reg was removed.  [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v:67]
+WARNING: [Synth 8-6014] Unused sequential element RDloopcnt_reg was removed.  [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v:70]
+WARNING: [Synth 8-6014] Unused sequential element MPi_reg was removed.  [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v:76]
+WARNING: [Synth 8-6014] Unused sequential element inputToggle_reg was removed.  [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v:77]
+WARNING: [Synth 8-5788] Register filterSet_reg in module ConvolutionController is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code 
+WARNING: [Synth 8-5788] Register dataSet_reg[8] in module ConvolutionController is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v:110]
+WARNING: [Synth 8-5788] Register dataSet_reg[7] in module ConvolutionController is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v:110]
+WARNING: [Synth 8-5788] Register dataSet_reg[6] in module ConvolutionController is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v:110]
+WARNING: [Synth 8-5788] Register dataSet_reg[5] in module ConvolutionController is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v:110]
+WARNING: [Synth 8-5788] Register dataSet_reg[4] in module ConvolutionController is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v:110]
+WARNING: [Synth 8-5788] Register dataSet_reg[3] in module ConvolutionController is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v:110]
+WARNING: [Synth 8-5788] Register dataSet_reg[2] in module ConvolutionController is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v:110]
+WARNING: [Synth 8-5788] Register dataSet_reg[1] in module ConvolutionController is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v:110]
+WARNING: [Synth 8-5788] Register dataSet_reg[0] in module ConvolutionController is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v:110]
+WARNING: [Synth 8-4767] Trying to implement RAM 'filterSet_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+RAM "filterSet_reg" dissolved into registers
+INFO: [Synth 8-6155] done synthesizing module 'ConvolutionController' (15#1) [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v:4]
 INFO: [Synth 8-6157] synthesizing module 'matrixAccelerator' [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixAccelerator.v:4]
 INFO: [Synth 8-6157] synthesizing module 'multiplyComputePynq' [C:/GitHub/ReconHardware/PynqSoftware/Sources/Multiplier/multiplyComputePynq.v:4]
-INFO: [Synth 8-6155] done synthesizing module 'multiplyComputePynq' (14#1) [C:/GitHub/ReconHardware/PynqSoftware/Sources/Multiplier/multiplyComputePynq.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'multiplyComputePynq' (16#1) [C:/GitHub/ReconHardware/PynqSoftware/Sources/Multiplier/multiplyComputePynq.v:4]
 INFO: [Synth 8-6157] synthesizing module 'adder' [C:/GitHub/ReconHardware/PynqSoftware/Sources/Adder/adder.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'adder' (15#1) [C:/GitHub/ReconHardware/PynqSoftware/Sources/Adder/adder.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'adder' (17#1) [C:/GitHub/ReconHardware/PynqSoftware/Sources/Adder/adder.v:5]
 INFO: [Synth 8-6157] synthesizing module 'XBar2' [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/XBar2.v:19]
 WARNING: [Synth 8-567] referenced signal 'AddressSave' should be on the sensitivity list [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/XBar2.v:53]
 WARNING: [Synth 8-6014] Unused sequential element rowCheck_reg was removed.  [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/XBar2.v:86]
 WARNING: [Synth 8-6014] Unused sequential element rowSet_reg was removed.  [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/XBar2.v:87]
 WARNING: [Synth 8-6014] Unused sequential element selectRow_reg was removed.  [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/XBar2.v:89]
 WARNING: [Synth 8-6014] Unused sequential element selectColomn_reg was removed.  [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/XBar2.v:91]
-INFO: [Synth 8-6155] done synthesizing module 'XBar2' (16#1) [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/XBar2.v:19]
-INFO: [Synth 8-6155] done synthesizing module 'matrixAccelerator' (17#1) [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixAccelerator.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'XBar2' (18#1) [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/XBar2.v:19]
+INFO: [Synth 8-6155] done synthesizing module 'matrixAccelerator' (19#1) [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixAccelerator.v:4]
 INFO: [Synth 8-6157] synthesizing module 'aFIFO' [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/aFIFO.v:68]
-INFO: [Synth 8-6155] done synthesizing module 'aFIFO' (18#1) [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/aFIFO.v:68]
-WARNING: [Synth 8-3848] Net AddressSelect in module/entity ConvolutionAccelerator does not have driver. [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixAccTopDevice.v:33]
-INFO: [Synth 8-6155] done synthesizing module 'ConvolutionAccelerator' (19#1) [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixAccTopDevice.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Conv_Accel_Top' (20#1) [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/Conv_Accel_Top.v:6]
-WARNING: [Synth 8-3331] design matrixControl3x3 has unconnected port FULL
-WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In4[0]
+INFO: [Synth 8-6155] done synthesizing module 'aFIFO' (20#1) [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/aFIFO.v:68]
+WARNING: [Synth 8-3848] Net AddressSelect in module/entity ConvolutionAccelerator does not have driver. [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixAccTopDevice.v:38]
+INFO: [Synth 8-6155] done synthesizing module 'ConvolutionAccelerator' (21#1) [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixAccTopDevice.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Conv_Accel_Top' (22#1) [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/Conv_Accel_Top.v:6]
+WARNING: [Synth 8-3331] design ConvolutionController has unconnected port FULL
 WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In5[0]
 WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In6[0]
 WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In7[0]
@@ -157,80 +189,81 @@ WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In2
 WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In29[0]
 WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In30[0]
 WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In31[0]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized3 has unconnected port Din[39]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized3 has unconnected port Din[37]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized3 has unconnected port Din[36]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized3 has unconnected port Din[35]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized3 has unconnected port Din[34]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized3 has unconnected port Din[33]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized3 has unconnected port Din[32]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized3 has unconnected port Din[31]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized3 has unconnected port Din[30]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized3 has unconnected port Din[29]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized3 has unconnected port Din[28]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized3 has unconnected port Din[27]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized3 has unconnected port Din[26]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized3 has unconnected port Din[25]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized3 has unconnected port Din[24]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized3 has unconnected port Din[23]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized3 has unconnected port Din[22]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized3 has unconnected port Din[21]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized3 has unconnected port Din[20]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized3 has unconnected port Din[19]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized3 has unconnected port Din[18]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized3 has unconnected port Din[17]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized3 has unconnected port Din[16]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized3 has unconnected port Din[15]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized3 has unconnected port Din[14]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized3 has unconnected port Din[13]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized3 has unconnected port Din[12]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized3 has unconnected port Din[11]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized3 has unconnected port Din[10]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized3 has unconnected port Din[9]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized3 has unconnected port Din[8]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized3 has unconnected port Din[7]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized3 has unconnected port Din[6]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized3 has unconnected port Din[5]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized3 has unconnected port Din[4]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized3 has unconnected port Din[3]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized3 has unconnected port Din[2]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized3 has unconnected port Din[1]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized3 has unconnected port Din[0]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized2 has unconnected port Din[38]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized2 has unconnected port Din[37]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized2 has unconnected port Din[36]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized2 has unconnected port Din[35]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized2 has unconnected port Din[34]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized2 has unconnected port Din[33]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized2 has unconnected port Din[32]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized2 has unconnected port Din[31]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized2 has unconnected port Din[30]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized2 has unconnected port Din[29]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized2 has unconnected port Din[28]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized2 has unconnected port Din[27]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized2 has unconnected port Din[26]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized2 has unconnected port Din[25]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized2 has unconnected port Din[24]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized2 has unconnected port Din[23]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized2 has unconnected port Din[22]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized2 has unconnected port Din[21]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized2 has unconnected port Din[20]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized2 has unconnected port Din[19]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized2 has unconnected port Din[18]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized2 has unconnected port Din[17]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized2 has unconnected port Din[16]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized2 has unconnected port Din[15]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized2 has unconnected port Din[14]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized2 has unconnected port Din[13]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized2 has unconnected port Din[12]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized2 has unconnected port Din[11]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized2 has unconnected port Din[10]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized2 has unconnected port Din[9]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized2 has unconnected port Din[8]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized2 has unconnected port Din[7]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[41]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[40]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[38]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[37]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[36]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[35]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[34]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[33]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[32]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[31]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[30]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[29]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[28]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[27]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[26]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[25]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[24]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[23]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[22]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[21]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[20]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[19]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[18]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[17]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[16]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[15]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[14]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[13]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[12]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[11]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[10]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[9]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[8]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[7]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[6]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[5]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[4]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[3]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[2]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[1]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[0]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized4 has unconnected port Din[41]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized4 has unconnected port Din[39]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized4 has unconnected port Din[38]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized4 has unconnected port Din[37]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized4 has unconnected port Din[36]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized4 has unconnected port Din[35]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized4 has unconnected port Din[34]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized4 has unconnected port Din[33]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized4 has unconnected port Din[32]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized4 has unconnected port Din[31]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized4 has unconnected port Din[30]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized4 has unconnected port Din[29]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized4 has unconnected port Din[28]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized4 has unconnected port Din[27]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized4 has unconnected port Din[26]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized4 has unconnected port Din[25]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized4 has unconnected port Din[24]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized4 has unconnected port Din[23]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized4 has unconnected port Din[22]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized4 has unconnected port Din[21]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized4 has unconnected port Din[20]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized4 has unconnected port Din[19]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized4 has unconnected port Din[18]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized4 has unconnected port Din[17]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized4 has unconnected port Din[16]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized4 has unconnected port Din[15]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized4 has unconnected port Din[14]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized4 has unconnected port Din[13]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized4 has unconnected port Din[12]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized4 has unconnected port Din[11]
+WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized4 has unconnected port Din[10]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1052.785 ; gain = 291.781
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1056.387 ; gain = 294.906
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -243,12 +276,12 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1052.785 ; gain = 291.781
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1056.387 ; gain = 294.906
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1052.785 ; gain = 291.781
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1056.387 ; gain = 294.906
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 1052.785 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 1056.387 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -257,35 +290,24 @@ Parsing XDC File [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/de
 Finished Parsing XDC File [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ip/design_1_processing_system7_0_0_1/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc] for cell 'processer/design_1_i/processing_system7_0'
 Parsing XDC File [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_in_context.xdc] for cell 'processer/design_1_i/clk_wiz_0'
 Finished Parsing XDC File [c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_in_context.xdc] for cell 'processer/design_1_i/clk_wiz_0'
-Parsing XDC File [C:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.srcs/constrs_1/new/my_brd.xdc]
-WARNING: [Vivado 12-584] No ports matched 'LED_CLK1'. [C:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.srcs/constrs_1/new/my_brd.xdc:1]
-WARNING: [Vivado 12-584] No ports matched 'LED_CLK2'. [C:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.srcs/constrs_1/new/my_brd.xdc:2]
-WARNING: [Vivado 12-584] No ports matched 'LED_CLK1'. [C:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.srcs/constrs_1/new/my_brd.xdc:3]
-WARNING: [Vivado 12-584] No ports matched 'LED_CLK2'. [C:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.srcs/constrs_1/new/my_brd.xdc:4]
-WARNING: [Vivado 12-584] No ports matched 'LED_EMPTY'. [C:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.srcs/constrs_1/new/my_brd.xdc:6]
-WARNING: [Vivado 12-584] No ports matched 'LED_FULL'. [C:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.srcs/constrs_1/new/my_brd.xdc:7]
-WARNING: [Vivado 12-584] No ports matched 'LED_EMPTY'. [C:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.srcs/constrs_1/new/my_brd.xdc:8]
-WARNING: [Vivado 12-584] No ports matched 'LED_FULL'. [C:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.srcs/constrs_1/new/my_brd.xdc:9]
-Finished Parsing XDC File [C:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.srcs/constrs_1/new/my_brd.xdc]
-WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.srcs/constrs_1/new/my_brd.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/Conv_Accel_Top_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
 Parsing XDC File [C:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [C:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1178.348 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1192.918 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1178.348 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 1192.918 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1178.348 ; gain = 417.344
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1192.918 ; gain = 431.438
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1178.348 ; gain = 417.344
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1192.918 ; gain = 431.438
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -293,20 +315,22 @@ Start Applying 'set_property' XDC Constraints
 Applied set_property DONT_TOUCH = true for processer/design_1_i. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for processer/design_1_i/Rst_RnM. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for processer/design_1_i/cStart_RnM. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for processer/design_1_i/dataInput_RnM. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for processer/design_1_i/bufferInput_RnM. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for processer/design_1_i/processing_system7_0. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for processer/design_1_i/wr_clk_RnM. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for processer/design_1_i/io_clk_RnM. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for processer/design_1_i/xlconcat_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for processer/design_1_i/wr_RnM. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for processer/design_1_i/clk_wiz_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for processer/design_1_i/newline_RnM. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for processer/design_1_i/rd_RnM. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1178.348 ; gain = 417.344
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1192.918 ; gain = 431.438
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-327] inferring latch for variable 'OutputSave_reg[0]' [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/XBar2.v:49]
 WARNING: [Synth 8-327] inferring latch for variable 'OutputSave_reg[1]' [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/XBar2.v:49]
 WARNING: [Synth 8-327] inferring latch for variable 'OutputSave_reg[2]' [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/XBar2.v:49]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1178.348 ; gain = 417.344
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1192.918 ; gain = 431.438
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -319,28 +343,29 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input      7 Bit       Adders := 4     
-	   2 Input      6 Bit       Adders := 1     
-	   2 Input      5 Bit       Adders := 6     
+	   2 Input     32 Bit       Adders := 2     
+	   2 Input      9 Bit       Adders := 8     
+	   2 Input      5 Bit       Adders := 3     
 +---XORs : 
-	   2 Input      7 Bit         XORs := 2     
+	   2 Input      9 Bit         XORs := 4     
 +---Registers : 
 	               48 Bit    Registers := 2     
-	                7 Bit    Registers := 8     
-	                5 Bit    Registers := 5     
+	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 18    
+	                9 Bit    Registers := 16    
+	                5 Bit    Registers := 2     
 	                3 Bit    Registers := 4     
-	                1 Bit    Registers := 12    
+	                1 Bit    Registers := 15    
 +---RAMs : 
-	             1024 Bit         RAMs := 1     
+	               4K Bit         RAMs := 2     
 +---Muxes : 
-	   2 Input     48 Bit        Muxes := 11    
-	   2 Input     32 Bit        Muxes := 18    
+	   2 Input     32 Bit        Muxes := 20    
 	   3 Input     32 Bit        Muxes := 1     
-	   2 Input     16 Bit        Muxes := 1     
-	   2 Input      5 Bit        Muxes := 8     
-	   2 Input      3 Bit        Muxes := 16    
+	   2 Input     16 Bit        Muxes := 8     
+	   2 Input      5 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 11    
 	   3 Input      3 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 47    
+	   2 Input      1 Bit        Muxes := 66    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -348,21 +373,24 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
-Module matrixControl3x3 
+Module ConvolutionController 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input      6 Bit       Adders := 1     
-	   2 Input      5 Bit       Adders := 4     
+	   2 Input     32 Bit       Adders := 2     
+	   2 Input      5 Bit       Adders := 1     
 +---Registers : 
 	               48 Bit    Registers := 2     
-	                5 Bit    Registers := 4     
+	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 18    
+	                5 Bit    Registers := 1     
 	                3 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
+	                1 Bit    Registers := 7     
 +---Muxes : 
-	   2 Input     48 Bit        Muxes := 11    
-	   2 Input      5 Bit        Muxes := 7     
-	   2 Input      3 Bit        Muxes := 6     
-	   2 Input      1 Bit        Muxes := 15    
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input     16 Bit        Muxes := 6     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 33    
 Module XBar2 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -391,16 +419,20 @@ Detailed RTL Component Info :
 Module aFIFO 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input      7 Bit       Adders := 4     
+	   2 Input      9 Bit       Adders := 4     
 +---XORs : 
-	   2 Input      7 Bit         XORs := 2     
+	   2 Input      9 Bit         XORs := 2     
 +---Registers : 
-	                7 Bit    Registers := 8     
+	                9 Bit    Registers := 8     
 	                1 Bit    Registers := 2     
 +---RAMs : 
-	             1024 Bit         RAMs := 1     
+	               4K Bit         RAMs := 1     
 +---Muxes : 
 	   2 Input     16 Bit        Muxes := 1     
+Module ConvolutionAccelerator 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -475,18 +507,19 @@ WARNING: [Synth 8-3332] Sequential element (ConvAccel/matrixAccel/xbar2/OutputSa
 WARNING: [Synth 8-3332] Sequential element (ConvAccel/matrixAccel/xbar2/OutputSave_reg[2][17]) is unused and will be removed from module Conv_Accel_Top.
 WARNING: [Synth 8-3332] Sequential element (ConvAccel/matrixAccel/xbar2/OutputSave_reg[2][16]) is unused and will be removed from module Conv_Accel_Top.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1178.348 ; gain = 417.344
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1192.918 ; gain = 431.438
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 
 Distributed RAM: Preliminary Mapping	Report (see note below)
-+---------------+-------------------------------+-----------+----------------------+-------------+
-|Module Name    | RTL Object                    | Inference | Size (Depth x Width) | Primitives  | 
-+---------------+-------------------------------+-----------+----------------------+-------------+
-|Conv_Accel_Top | ConvAccel/inputBuffer/mem_reg | Implied   | 64 x 16              | RAM64M x 6	 | 
-+---------------+-------------------------------+-----------+----------------------+-------------+
++---------------+--------------------------------+-----------+----------------------+---------------------------+
+|Module Name    | RTL Object                     | Inference | Size (Depth x Width) | Primitives                | 
++---------------+--------------------------------+-----------+----------------------+---------------------------+
+|Conv_Accel_Top | ConvAccel/inputBuffer/mem_reg  | Implied   | 256 x 16             | RAM64X1D x 4	RAM64M x 20	 | 
+|Conv_Accel_Top | ConvAccel/outputBuffer/mem_reg | Implied   | 256 x 16             | RAM64X1D x 4	RAM64M x 20	 | 
++---------------+--------------------------------+-----------+----------------------+---------------------------+
 
 Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
 
@@ -503,12 +536,12 @@ Note: The table above is a preliminary report that shows the DSPs inferred at th
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v:64]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v:65]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v:64]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v:65]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v:64]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v:65]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v:72]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v:73]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v:72]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v:73]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v:72]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v:73]
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -519,24 +552,25 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1195.211 ; gain = 434.207
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1200.906 ; gain = 439.426
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1196.539 ; gain = 435.535
+Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1308.902 ; gain = 547.422
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 
 Distributed RAM: Final Mapping	Report
-+---------------+-------------------------------+-----------+----------------------+-------------+
-|Module Name    | RTL Object                    | Inference | Size (Depth x Width) | Primitives  | 
-+---------------+-------------------------------+-----------+----------------------+-------------+
-|Conv_Accel_Top | ConvAccel/inputBuffer/mem_reg | Implied   | 64 x 16              | RAM64M x 6	 | 
-+---------------+-------------------------------+-----------+----------------------+-------------+
++---------------+--------------------------------+-----------+----------------------+---------------------------+
+|Module Name    | RTL Object                     | Inference | Size (Depth x Width) | Primitives                | 
++---------------+--------------------------------+-----------+----------------------+---------------------------+
+|Conv_Accel_Top | ConvAccel/inputBuffer/mem_reg  | Implied   | 256 x 16             | RAM64X1D x 4	RAM64M x 20	 | 
+|Conv_Accel_Top | ConvAccel/outputBuffer/mem_reg | Implied   | 256 x 16             | RAM64X1D x 4	RAM64M x 20	 | 
++---------------+--------------------------------+-----------+----------------------+---------------------------+
 
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP and Shift Register Reporting
@@ -550,14 +584,14 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v:64]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v:65]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v:64]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v:65]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v:64]
-INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v:65]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v:72]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v:73]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v:72]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v:73]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v:72]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v:73]
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1210.965 ; gain = 449.961
+Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1309.953 ; gain = 548.473
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -581,13 +615,13 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1227.066 ; gain = 466.062
+Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1309.953 ; gain = 548.473
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1227.066 ; gain = 466.062
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1309.953 ; gain = 548.473
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -606,25 +640,25 @@ Report Check Netlist:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1227.066 ; gain = 466.062
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1309.953 ; gain = 548.473
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1227.066 ; gain = 466.062
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1309.953 ; gain = 548.473
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1227.066 ; gain = 466.062
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1309.953 ; gain = 548.473
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1227.066 ; gain = 466.062
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1309.953 ; gain = 548.473
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -644,72 +678,78 @@ Report Cell Usage:
 +------+--------------------------------+------+
 |1     |design_1_clk_wiz_0_0            |     1|
 |2     |design_1_processing_system7_0_0 |     1|
-|3     |BUFG                            |     1|
-|4     |CARRY4                          |    16|
+|3     |BUFG                            |     2|
+|4     |CARRY4                          |    52|
 |5     |DSP48E1_1                       |     3|
-|6     |LUT2                            |    78|
-|7     |LUT3                            |    14|
-|8     |LUT4                            |    34|
-|9     |LUT5                            |    79|
-|10    |LUT6                            |   138|
-|11    |RAM64M                          |     6|
-|12    |FDCE                            |   177|
-|13    |FDPE                            |     1|
-|14    |FDRE                            |    67|
-|15    |LD                              |    48|
+|6     |LUT1                            |     6|
+|7     |LUT2                            |   170|
+|8     |LUT3                            |    46|
+|9     |LUT4                            |    93|
+|10    |LUT5                            |   186|
+|11    |LUT6                            |   393|
+|12    |RAM64M                          |    40|
+|13    |RAM64X1D                        |     8|
+|14    |FDCE                            |   342|
+|15    |FDPE                            |     2|
+|16    |FDRE                            |   355|
+|17    |LD                              |    48|
 +------+--------------------------------+------+
 
 Report Instance Areas: 
 +------+-------------------------------+-----------------------+------+
 |      |Instance                       |Module                 |Cells |
 +------+-------------------------------+-----------------------+------+
-|1     |top                            |                       |   934|
-|2     |  ConvAccel                    |ConvolutionAccelerator |   657|
-|3     |    controller                 |matrixControl3x3       |   303|
-|4     |    inputBuffer                |aFIFO                  |   150|
+|1     |top                            |                       |  2022|
+|2     |  ConvAccel                    |ConvolutionAccelerator |  1738|
+|3     |    controller                 |ConvolutionController  |  1087|
+|4     |    inputBuffer                |aFIFO                  |   225|
 |5     |    matrixAccel                |matrixAccelerator      |   204|
 |6     |      finalAdder               |adder                  |    21|
 |7     |      \genblk3[0].inputMulti   |multiplyComputePynq    |     2|
-|8     |      \genblk3[1].inputMulti   |multiplyComputePynq_0  |     2|
-|9     |      \genblk3[2].inputMulti   |multiplyComputePynq_1  |     2|
-|10    |      \genblk4[0].outputAdder  |adder_2                |    18|
-|11    |      \genblk4[1].outputAdder  |adder_3                |    26|
-|12    |      \genblk4[2].outputAdder  |adder_4                |    22|
+|8     |      \genblk3[1].inputMulti   |multiplyComputePynq_1  |     2|
+|9     |      \genblk3[2].inputMulti   |multiplyComputePynq_2  |     2|
+|10    |      \genblk4[0].outputAdder  |adder_3                |    17|
+|11    |      \genblk4[1].outputAdder  |adder_4                |    29|
+|12    |      \genblk4[2].outputAdder  |adder_5                |    20|
 |13    |      xbar2                    |XBar2                  |   105|
-|14    |  processer                    |design_1_wrapper       |   276|
-|15    |    design_1_i                 |design_1               |   272|
-|16    |      Rst_RnM                  |design_1_Rst_0         |     0|
-|17    |      cStart_RnM               |design_1_cStart_0      |     0|
-|18    |      dataInput_RnM            |design_1_dataInput_0   |     0|
-|19    |      wr_RnM                   |design_1_wr_clk_1      |     0|
-|20    |      wr_clk_RnM               |design_1_wr_clk_0      |     0|
-|21    |      xlconcat_0               |design_1_xlconcat_0_0  |     0|
+|14    |    outputBuffer               |aFIFO_0                |   222|
+|15    |  processer                    |design_1_wrapper       |   282|
+|16    |    design_1_i                 |design_1               |   276|
+|17    |      Rst_RnM                  |design_1_Rst_0         |     0|
+|18    |      bufferInput_RnM          |design_1_dataInput_0   |     0|
+|19    |      cStart_RnM               |design_1_cStart_0      |     0|
+|20    |      io_clk_RnM               |design_1_wr_clk_0      |     0|
+|21    |      newline_RnM              |design_1_cStart_1      |     0|
+|22    |      rd_RnM                   |design_1_wr_0          |     0|
+|23    |      wr_RnM                   |design_1_wr_clk_1      |     0|
+|24    |      xlconcat_0               |design_1_xlconcat_0_0  |     0|
 +------+-------------------------------+-----------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1227.066 ; gain = 466.062
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1309.953 ; gain = 548.473
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 232 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 1227.066 ; gain = 340.500
-Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1227.066 ; gain = 466.062
+Synthesis finished with 0 errors, 0 critical warnings and 324 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:29 . Memory (MB): peak = 1309.953 ; gain = 411.941
+Synthesis Optimization Complete : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1309.953 ; gain = 548.473
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 1239.125 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 73 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 1321.836 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 151 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1239.125 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1321.836 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 54 instances were transformed.
+  A total of 96 instances were transformed.
   LD => LDCE: 48 instances
-  RAM64M => RAM64M (RAMD64E(x4)): 6 instances
+  RAM64M => RAM64M (RAMD64E(x4)): 40 instances
+  RAM64X1D => RAM64X1D (RAMD64E(x2)): 8 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-75 Infos, 169 Warnings, 0 Critical Warnings and 0 Errors encountered.
+83 Infos, 176 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1239.125 ; gain = 782.352
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1239.125 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1321.836 ; gain = 865.402
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1321.836 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1/Conv_Accel_Top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Conv_Accel_Top_utilization_synth.rpt -pb Conv_Accel_Top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Sep  9 19:23:45 2020...
+INFO: [Common 17-206] Exiting Vivado at Sun Sep 13 18:47:18 2020...

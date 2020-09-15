@@ -1,10 +1,10 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-// Date        : Wed Sep  9 20:49:28 2020
+// Date        : Tue Sep  8 16:56:13 2020
 // Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub {C:/GitHub/ReconHardware/PynqSoftware/Sources/Block
-//               Diagrams/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_stub.v}
+// Command     : write_verilog -force -mode synth_stub -rename_top design_1_clk_wiz_0_0 -prefix
+//               design_1_clk_wiz_0_0_ design_1_clk_wiz_0_0_stub.v
 // Design      : design_1_clk_wiz_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg400-1

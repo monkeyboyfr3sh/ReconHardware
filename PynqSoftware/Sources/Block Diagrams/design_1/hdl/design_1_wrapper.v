@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-//Date        : Wed Sep  9 20:48:32 2020
+//Date        : Sun Sep 13 17:06:58 2020
 //Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
@@ -10,7 +10,8 @@
 `timescale 1 ps / 1 ps
 
 module design_1_wrapper
-   (Clk,
+   (BufferedConvolution_out,
+    Clk,
     DDR_addr,
     DDR_ba,
     DDR_cas_n,
@@ -26,21 +27,24 @@ module design_1_wrapper
     DDR_ras_n,
     DDR_reset_n,
     DDR_we_n,
-    EMPTY,
+    EMPTY_in,
+    EMPTY_out,
     FIXED_IO_ddr_vrn,
     FIXED_IO_ddr_vrp,
     FIXED_IO_mio,
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
-    FULL,
+    FULL_in,
+    FULL_out,
     Rst,
-    cReady,
+    bufferInput,
     cStart,
-    dataInput,
-    finalsum,
-    wr,
-    wr_clk);
+    io_clk,
+    newline,
+    rd,
+    wr);
+  input [15:0]BufferedConvolution_out;
   output Clk;
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
@@ -57,22 +61,25 @@ module design_1_wrapper
   inout DDR_ras_n;
   inout DDR_reset_n;
   inout DDR_we_n;
-  input [0:0]EMPTY;
+  input [0:0]EMPTY_in;
+  input [0:0]EMPTY_out;
   inout FIXED_IO_ddr_vrn;
   inout FIXED_IO_ddr_vrp;
   inout [53:0]FIXED_IO_mio;
   inout FIXED_IO_ps_clk;
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
-  input [0:0]FULL;
+  input [0:0]FULL_in;
+  input [0:0]FULL_out;
   output [0:0]Rst;
-  input [0:0]cReady;
+  output [15:0]bufferInput;
   output [0:0]cStart;
-  output [15:0]dataInput;
-  input [15:0]finalsum;
+  output [0:0]io_clk;
+  output [0:0]newline;
+  output [0:0]rd;
   output [0:0]wr;
-  output [0:0]wr_clk;
 
+  wire [15:0]BufferedConvolution_out;
   wire Clk;
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
@@ -89,24 +96,27 @@ module design_1_wrapper
   wire DDR_ras_n;
   wire DDR_reset_n;
   wire DDR_we_n;
-  wire [0:0]EMPTY;
+  wire [0:0]EMPTY_in;
+  wire [0:0]EMPTY_out;
   wire FIXED_IO_ddr_vrn;
   wire FIXED_IO_ddr_vrp;
   wire [53:0]FIXED_IO_mio;
   wire FIXED_IO_ps_clk;
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
-  wire [0:0]FULL;
+  wire [0:0]FULL_in;
+  wire [0:0]FULL_out;
   wire [0:0]Rst;
-  wire [0:0]cReady;
+  wire [15:0]bufferInput;
   wire [0:0]cStart;
-  wire [15:0]dataInput;
-  wire [15:0]finalsum;
+  wire [0:0]io_clk;
+  wire [0:0]newline;
+  wire [0:0]rd;
   wire [0:0]wr;
-  wire [0:0]wr_clk;
 
   design_1 design_1_i
-       (.Clk(Clk),
+       (.BufferedConvolution_out(BufferedConvolution_out),
+        .Clk(Clk),
         .DDR_addr(DDR_addr),
         .DDR_ba(DDR_ba),
         .DDR_cas_n(DDR_cas_n),
@@ -122,19 +132,21 @@ module design_1_wrapper
         .DDR_ras_n(DDR_ras_n),
         .DDR_reset_n(DDR_reset_n),
         .DDR_we_n(DDR_we_n),
-        .EMPTY(EMPTY),
+        .EMPTY_in(EMPTY_in),
+        .EMPTY_out(EMPTY_out),
         .FIXED_IO_ddr_vrn(FIXED_IO_ddr_vrn),
         .FIXED_IO_ddr_vrp(FIXED_IO_ddr_vrp),
         .FIXED_IO_mio(FIXED_IO_mio),
         .FIXED_IO_ps_clk(FIXED_IO_ps_clk),
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
-        .FULL(FULL),
+        .FULL_in(FULL_in),
+        .FULL_out(FULL_out),
         .Rst(Rst),
-        .cReady(cReady),
+        .bufferInput(bufferInput),
         .cStart(cStart),
-        .dataInput(dataInput),
-        .finalsum(finalsum),
-        .wr(wr),
-        .wr_clk(wr_clk));
+        .io_clk(io_clk),
+        .newline(newline),
+        .rd(rd),
+        .wr(wr));
 endmodule

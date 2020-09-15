@@ -77,7 +77,11 @@ always @(posedge Clk or posedge Rst) begin
         inputToggle = 0;
         FINALADD = 0;
     end
-    
+    else if(NEWLINE)begin
+        dataSetFilled = 0;
+        datapointer = 0;
+        CTRL_RST = 1;
+    end
     //cStart triggers matrixcontroller to start
     else if(cStart)begin
         CTRL_RST = 0;
@@ -119,7 +123,7 @@ always @(posedge Clk or posedge Rst) begin
         //End of RDst
 
         //In a multiply state, dataSet and filterSet should be filled with needed values
-        if(MULTIst) begin
+        else if(MULTIst) begin
             //Completed all multiplications
             if(Mloopcnt>=`KERNELSIZE) begin
                 //Shift values in the data register to let next kernelsize be read in
@@ -147,7 +151,7 @@ always @(posedge Clk or posedge Rst) begin
         //End of MULTIst
 
         //In an Add state, should add all values once data set has been completely computed.
-        if(ADDst)begin
+        else if(ADDst)begin
             if(cReady) begin
                 CTRL_RST = 1;
                 ADDst = 0;

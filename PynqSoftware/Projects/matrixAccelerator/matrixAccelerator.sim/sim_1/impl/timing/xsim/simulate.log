@@ -1,2 +1,12 @@
 Vivado Simulator 2019.2
 Time resolution is 1 ps
+Stopped at time : 367 ns : File "C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v" Line 144
+Stopped at time : 367 ns : File "C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v" Line 56
+Stopped at time : 369 ns : File "C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v" Line 144
+Stopped at time : 371 ns : File "C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v" Line 144
+Stopped at time : 373 ns : File "C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v" Line 134
+Stopped at time : 373 ns : File "C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v" Line 56
+Stopped at time : 375 ns : File "C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v" Line 151
+Stopped at time : 375 ns : File "C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v" Line 160
+Stopped at time : 375 ns : File "C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v" Line 56
+Stopped at time : 377 ns : File "C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v" Line 151

@@ -160,35 +160,47 @@ proc create_root_design { parentCell } {
 
 
   # Create ports
+  set BufferedConvolution_out [ create_bd_port -dir I -from 15 -to 0 BufferedConvolution_out ]
   set Clk [ create_bd_port -dir O -type clk Clk ]
   set_property -dict [ list \
    CONFIG.FREQ_HZ {50000000} \
  ] $Clk
-  set EMPTY [ create_bd_port -dir I -from 0 -to 0 EMPTY ]
-  set FULL [ create_bd_port -dir I -from 0 -to 0 FULL ]
+  set EMPTY_in [ create_bd_port -dir I -from 0 -to 0 EMPTY_in ]
+  set EMPTY_out [ create_bd_port -dir I -from 0 -to 0 EMPTY_out ]
+  set FULL_in [ create_bd_port -dir I -from 0 -to 0 FULL_in ]
+  set FULL_out [ create_bd_port -dir I -from 0 -to 0 FULL_out ]
   set Rst [ create_bd_port -dir O -from 0 -to 0 Rst ]
-  set cReady [ create_bd_port -dir I -from 0 -to 0 cReady ]
+  set bufferInput [ create_bd_port -dir O -from 15 -to 0 bufferInput ]
   set cStart [ create_bd_port -dir O -from 0 -to 0 cStart ]
-  set dataInput [ create_bd_port -dir O -from 15 -to 0 dataInput ]
-  set finalsum [ create_bd_port -dir I -from 15 -to 0 finalsum ]
+  set io_clk [ create_bd_port -dir O -from 0 -to 0 io_clk ]
+  set newline [ create_bd_port -dir O -from 0 -to 0 newline ]
+  set rd [ create_bd_port -dir O -from 0 -to 0 rd ]
   set wr [ create_bd_port -dir O -from 0 -to 0 wr ]
-  set wr_clk [ create_bd_port -dir O -from 0 -to 0 wr_clk ]
 
   # Create instance: Rst, and set properties
   set Rst [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 Rst ]
   set_property -dict [ list \
    CONFIG.DIN_FROM {20} \
    CONFIG.DIN_TO {20} \
-   CONFIG.DIN_WIDTH {40} \
+   CONFIG.DIN_WIDTH {42} \
    CONFIG.DOUT_WIDTH {1} \
  ] $Rst
+
+  # Create instance: bufferInput, and set properties
+  set bufferInput [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 bufferInput ]
+  set_property -dict [ list \
+   CONFIG.DIN_FROM {36} \
+   CONFIG.DIN_TO {21} \
+   CONFIG.DIN_WIDTH {42} \
+   CONFIG.DOUT_WIDTH {16} \
+ ] $bufferInput
 
   # Create instance: cStart, and set properties
   set cStart [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 cStart ]
   set_property -dict [ list \
    CONFIG.DIN_FROM {37} \
    CONFIG.DIN_TO {37} \
-   CONFIG.DIN_WIDTH {40} \
+   CONFIG.DIN_WIDTH {42} \
    CONFIG.DOUT_WIDTH {1} \
  ] $cStart
 
@@ -203,14 +215,23 @@ proc create_root_design { parentCell } {
    CONFIG.USE_LOCKED {false} \
  ] $clk_wiz_0
 
-  # Create instance: dataInput, and set properties
-  set dataInput [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 dataInput ]
+  # Create instance: io_clk, and set properties
+  set io_clk [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 io_clk ]
   set_property -dict [ list \
-   CONFIG.DIN_FROM {36} \
-   CONFIG.DIN_TO {21} \
-   CONFIG.DIN_WIDTH {40} \
-   CONFIG.DOUT_WIDTH {16} \
- ] $dataInput
+   CONFIG.DIN_FROM {41} \
+   CONFIG.DIN_TO {41} \
+   CONFIG.DIN_WIDTH {42} \
+   CONFIG.DOUT_WIDTH {1} \
+ ] $io_clk
+
+  # Create instance: newline, and set properties
+  set newline [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 newline ]
+  set_property -dict [ list \
+   CONFIG.DIN_FROM {38} \
+   CONFIG.DIN_TO {38} \
+   CONFIG.DIN_WIDTH {42} \
+   CONFIG.DOUT_WIDTH {1} \
+ ] $newline
 
   # Create instance: processing_system7_0, and set properties
   set processing_system7_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0 ]
@@ -419,8 +440,8 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_GP1_NUM_WRITE_THREADS {4} \
    CONFIG.PCW_GPIO_BASEADDR {0xE000A000} \
    CONFIG.PCW_GPIO_EMIO_GPIO_ENABLE {1} \
-   CONFIG.PCW_GPIO_EMIO_GPIO_IO {40} \
-   CONFIG.PCW_GPIO_EMIO_GPIO_WIDTH {40} \
+   CONFIG.PCW_GPIO_EMIO_GPIO_IO {42} \
+   CONFIG.PCW_GPIO_EMIO_GPIO_WIDTH {42} \
    CONFIG.PCW_GPIO_HIGHADDR {0xE000AFFF} \
    CONFIG.PCW_GPIO_MIO_GPIO_ENABLE {0} \
    CONFIG.PCW_GPIO_MIO_GPIO_IO {<Select>} \
@@ -665,10 +686,12 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_MIO_TREE_PERIPHERALS {unassigned#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#Quad SPI Flash#unassigned#Quad SPI Flash#unassigned#unassigned#unassigned#unassigned#unassigned#UART 0#UART 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#Enet 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#USB 0#SD 0#SD 0#SD 0#SD 0#SD 0#SD 0#unassigned#SD 0#unassigned#unassigned#unassigned#unassigned#Enet 0#Enet 0} \
    CONFIG.PCW_MIO_TREE_SIGNALS {unassigned#qspi0_ss_b#qspi0_io[0]#qspi0_io[1]#qspi0_io[2]#qspi0_io[3]/HOLD_B#qspi0_sclk#unassigned#qspi_fbclk#unassigned#unassigned#unassigned#unassigned#unassigned#rx#tx#tx_clk#txd[0]#txd[1]#txd[2]#txd[3]#tx_ctl#rx_clk#rxd[0]#rxd[1]#rxd[2]#rxd[3]#rx_ctl#data[4]#dir#stp#nxt#data[0]#data[1]#data[2]#data[3]#clk#data[5]#data[6]#data[7]#clk#cmd#data[0]#data[1]#data[2]#data[3]#unassigned#cd#unassigned#unassigned#unassigned#unassigned#mdc#mdio} \
    CONFIG.PCW_M_AXI_GP0_ENABLE_STATIC_REMAP {0} \
+   CONFIG.PCW_M_AXI_GP0_FREQMHZ {10} \
    CONFIG.PCW_M_AXI_GP0_ID_WIDTH {12} \
    CONFIG.PCW_M_AXI_GP0_SUPPORT_NARROW_BURST {0} \
    CONFIG.PCW_M_AXI_GP0_THREAD_ID_WIDTH {12} \
    CONFIG.PCW_M_AXI_GP1_ENABLE_STATIC_REMAP {0} \
+   CONFIG.PCW_M_AXI_GP1_FREQMHZ {10} \
    CONFIG.PCW_M_AXI_GP1_ID_WIDTH {12} \
    CONFIG.PCW_M_AXI_GP1_SUPPORT_NARROW_BURST {0} \
    CONFIG.PCW_M_AXI_GP1_THREAD_ID_WIDTH {12} \
@@ -822,16 +845,23 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_SPI_PERIPHERAL_VALID {0} \
    CONFIG.PCW_S_AXI_ACP_ARUSER_VAL {31} \
    CONFIG.PCW_S_AXI_ACP_AWUSER_VAL {31} \
+   CONFIG.PCW_S_AXI_ACP_FREQMHZ {10} \
    CONFIG.PCW_S_AXI_ACP_ID_WIDTH {3} \
+   CONFIG.PCW_S_AXI_GP0_FREQMHZ {10} \
    CONFIG.PCW_S_AXI_GP0_ID_WIDTH {6} \
+   CONFIG.PCW_S_AXI_GP1_FREQMHZ {10} \
    CONFIG.PCW_S_AXI_GP1_ID_WIDTH {6} \
    CONFIG.PCW_S_AXI_HP0_DATA_WIDTH {64} \
+   CONFIG.PCW_S_AXI_HP0_FREQMHZ {10} \
    CONFIG.PCW_S_AXI_HP0_ID_WIDTH {6} \
    CONFIG.PCW_S_AXI_HP1_DATA_WIDTH {64} \
+   CONFIG.PCW_S_AXI_HP1_FREQMHZ {10} \
    CONFIG.PCW_S_AXI_HP1_ID_WIDTH {6} \
    CONFIG.PCW_S_AXI_HP2_DATA_WIDTH {64} \
+   CONFIG.PCW_S_AXI_HP2_FREQMHZ {10} \
    CONFIG.PCW_S_AXI_HP2_ID_WIDTH {6} \
    CONFIG.PCW_S_AXI_HP3_DATA_WIDTH {64} \
+   CONFIG.PCW_S_AXI_HP3_FREQMHZ {10} \
    CONFIG.PCW_S_AXI_HP3_ID_WIDTH {6} \
    CONFIG.PCW_TPIU_PERIPHERAL_CLKSRC {External} \
    CONFIG.PCW_TPIU_PERIPHERAL_DIVISOR0 {1} \
@@ -1011,23 +1041,23 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_WDT_PERIPHERAL_FREQMHZ {133.333333} \
  ] $processing_system7_0
 
+  # Create instance: rd, and set properties
+  set rd [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 rd ]
+  set_property -dict [ list \
+   CONFIG.DIN_FROM {40} \
+   CONFIG.DIN_TO {40} \
+   CONFIG.DIN_WIDTH {42} \
+   CONFIG.DOUT_WIDTH {1} \
+ ] $rd
+
   # Create instance: wr, and set properties
   set wr [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 wr ]
   set_property -dict [ list \
    CONFIG.DIN_FROM {39} \
    CONFIG.DIN_TO {39} \
-   CONFIG.DIN_WIDTH {40} \
+   CONFIG.DIN_WIDTH {42} \
    CONFIG.DOUT_WIDTH {1} \
  ] $wr
-
-  # Create instance: wr_clk, and set properties
-  set wr_clk [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlslice:1.0 wr_clk ]
-  set_property -dict [ list \
-   CONFIG.DIN_FROM {38} \
-   CONFIG.DIN_TO {38} \
-   CONFIG.DIN_WIDTH {40} \
-   CONFIG.DOUT_WIDTH {1} \
- ] $wr_clk
 
   # Create instance: xlconcat_0, and set properties
   set xlconcat_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 xlconcat_0 ]
@@ -1036,7 +1066,8 @@ proc create_root_design { parentCell } {
    CONFIG.IN1_WIDTH {1} \
    CONFIG.IN2_WIDTH {1} \
    CONFIG.IN3_WIDTH {1} \
-   CONFIG.NUM_PORTS {4} \
+   CONFIG.IN4_WIDTH {1} \
+   CONFIG.NUM_PORTS {5} \
  ] $xlconcat_0
 
   # Create interface connections
@@ -1044,19 +1075,22 @@ proc create_root_design { parentCell } {
   connect_bd_intf_net -intf_net processing_system7_0_FIXED_IO [get_bd_intf_ports FIXED_IO] [get_bd_intf_pins processing_system7_0/FIXED_IO]
 
   # Create port connections
-  connect_bd_net -net In0_0_1 [get_bd_ports finalsum] [get_bd_pins xlconcat_0/In0]
-  connect_bd_net -net In1_0_1 [get_bd_ports cReady] [get_bd_pins xlconcat_0/In1]
-  connect_bd_net -net In2_0_1 [get_bd_ports FULL] [get_bd_pins xlconcat_0/In2]
-  connect_bd_net -net In3_0_1 [get_bd_ports EMPTY] [get_bd_pins xlconcat_0/In3]
+  connect_bd_net -net In0_0_1 [get_bd_ports BufferedConvolution_out] [get_bd_pins xlconcat_0/In0]
+  connect_bd_net -net In1_0_1 [get_bd_ports FULL_in] [get_bd_pins xlconcat_0/In1]
+  connect_bd_net -net In2_0_1 [get_bd_ports EMPTY_in] [get_bd_pins xlconcat_0/In2]
+  connect_bd_net -net In3_0_1 [get_bd_ports FULL_out] [get_bd_pins xlconcat_0/In3]
+  connect_bd_net -net In4_0_1 [get_bd_ports EMPTY_out] [get_bd_pins xlconcat_0/In4]
   connect_bd_net -net Rst_Dout [get_bd_ports Rst] [get_bd_pins Rst/Dout]
   connect_bd_net -net cStart_Dout [get_bd_ports cStart] [get_bd_pins cStart/Dout]
   connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_ports Clk] [get_bd_pins clk_wiz_0/clk_out1]
-  connect_bd_net -net dataInput_Dout [get_bd_ports dataInput] [get_bd_pins dataInput/Dout]
+  connect_bd_net -net dataInput_Dout [get_bd_ports bufferInput] [get_bd_pins bufferInput/Dout]
+  connect_bd_net -net newline_Dout [get_bd_ports newline] [get_bd_pins newline/Dout]
   connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins clk_wiz_0/clk_in1] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK]
   connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins clk_wiz_0/resetn] [get_bd_pins processing_system7_0/FCLK_RESET0_N]
-  connect_bd_net -net processing_system7_0_GPIO_O [get_bd_pins Rst/Din] [get_bd_pins cStart/Din] [get_bd_pins dataInput/Din] [get_bd_pins processing_system7_0/GPIO_O] [get_bd_pins wr/Din] [get_bd_pins wr_clk/Din]
+  connect_bd_net -net processing_system7_0_GPIO_O [get_bd_pins Rst/Din] [get_bd_pins bufferInput/Din] [get_bd_pins cStart/Din] [get_bd_pins io_clk/Din] [get_bd_pins newline/Din] [get_bd_pins processing_system7_0/GPIO_O] [get_bd_pins rd/Din] [get_bd_pins wr/Din]
+  connect_bd_net -net rd_Dout [get_bd_ports rd] [get_bd_pins rd/Dout]
   connect_bd_net -net wr_clk1_Dout [get_bd_ports wr] [get_bd_pins wr/Dout]
-  connect_bd_net -net wr_clk_Dout [get_bd_ports wr_clk] [get_bd_pins wr_clk/Dout]
+  connect_bd_net -net wr_clk_Dout [get_bd_ports io_clk] [get_bd_pins io_clk/Dout]
   connect_bd_net -net xlconcat_0_dout [get_bd_pins processing_system7_0/GPIO_I] [get_bd_pins xlconcat_0/dout]
 
   # Create address segments
