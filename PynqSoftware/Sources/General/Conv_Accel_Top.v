@@ -12,7 +12,8 @@ wire    [`bitLength-1:0]    dataInput;
 wire    cReady,FULL_in,EMPTY_in,FULL_out,EMPTY_out;
 wire    [`bitLength-1:0]    bufferOut;
 
-design_1_wrapper processer (
+//design_1_wrapper processer (
+design_2_wrapper processer (
     .Clk(Clk),
     .Rst(Rst),
     .bufferInput(dataInput),

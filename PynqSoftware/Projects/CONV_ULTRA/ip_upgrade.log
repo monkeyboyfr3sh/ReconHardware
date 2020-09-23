@@ -1,0 +1,16 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Tue Sep 15 14:51:32 2020
+| Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xczu3eg-sbva484-1-e
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_2_clk_wiz_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of design_2_clk_wiz_0_1 (xilinx.com:ip:clk_wiz:6.0 (Rev. 4)) to Vivado generation flows.
+

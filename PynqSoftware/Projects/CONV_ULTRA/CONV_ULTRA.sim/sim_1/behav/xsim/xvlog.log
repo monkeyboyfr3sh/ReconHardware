@@ -1,0 +1,22 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/PynqSoftware/Sources/General/XBar2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module XBar2
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/PynqSoftware/Sources/General/aFIFO.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aFIFO
+WARNING: [VRFC 10-3380] identifier 'o_rdata' is used before its declaration [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/aFIFO.v:94]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/PynqSoftware/Sources/Adder/adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixAccTopDevice.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ConvolutionAccelerator
+INFO: [VRFC 10-2458] undeclared symbol CTRL_RST, assumed default net type wire [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixAccTopDevice.v:61]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixAccelerator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module matrixAccelerator
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ConvolutionController
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/PynqSoftware/Sources/Multiplier/multiplyComputePynq.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplyComputePynq
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/PynqSoftware/Sources/TB/convolve3x3int_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module convolve3x3int_tb
+WARNING: [VRFC 10-2019] loop variable declaration is not allowed in this mode of verilog [C:/GitHub/ReconHardware/PynqSoftware/Sources/TB/convolve3x3int_tb.v:52]
+WARNING: [VRFC 10-2019] loop variable declaration is not allowed in this mode of verilog [C:/GitHub/ReconHardware/PynqSoftware/Sources/TB/convolve3x3int_tb.v:120]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/PynqSoftware/Projects/CONV_ULTRA/CONV_ULTRA.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

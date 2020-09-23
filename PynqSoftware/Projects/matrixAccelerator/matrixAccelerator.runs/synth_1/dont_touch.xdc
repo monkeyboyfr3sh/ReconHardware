@@ -28,10 +28,10 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_wr_clk
 # IP: C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_clk_wiz_0_0 || ORIG_REF_NAME==design_1_clk_wiz_0_0} -quiet] -quiet
 
-# IP: c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ip/design_1_cStart_1/design_1_cStart_1.xci
+# IP: C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ip/design_1_cStart_1/design_1_cStart_1.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_cStart_1 || ORIG_REF_NAME==design_1_cStart_1} -quiet] -quiet
 
-# IP: c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ip/design_1_wr_0/design_1_wr_0.xci
+# IP: C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ip/design_1_wr_0/design_1_wr_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_wr_0 || ORIG_REF_NAME==design_1_wr_0} -quiet] -quiet
 
 # XDC: C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/design_1_ooc.xdc

@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date             : Sun Sep 13 18:48:20 2020
+| Date             : Tue Sep 15 12:30:03 2020
 | Host             : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 | Command          : report_power -file Conv_Accel_Top_power_routed.rpt -pb Conv_Accel_Top_power_summary_routed.pb -rpx Conv_Accel_Top_power_routed.rpx
 | Design           : Conv_Accel_Top
