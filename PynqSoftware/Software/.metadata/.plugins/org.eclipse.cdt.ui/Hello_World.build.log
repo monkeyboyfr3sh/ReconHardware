@@ -1,0 +1,8 @@
+16:57:36 **** Auto Build of configuration Debug for project Hello_World ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+
+16:57:36 Build Finished (took 168ms)
+

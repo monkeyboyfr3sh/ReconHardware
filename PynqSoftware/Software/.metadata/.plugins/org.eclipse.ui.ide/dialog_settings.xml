@@ -3,4 +3,6 @@
 	<section name="org.eclipse.ui.internal.ide.dialogs.ProjectContentsLocationArea">
 		<item value="C:\GitHub\ReconHardware\PynqSoftware\Projects\Hello_World" key="OUTSIDE_LOCATION"/>
 	</section>
+	<section name="NewWizardAction">
+	</section>
 </section>
