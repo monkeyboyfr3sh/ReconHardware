@@ -1,0 +1,701 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Sat Sep 26 20:43:43 2020
+| Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
+| Command      : report_methodology -file Conv_Accel_Top_methodology_drc_routed.rpt -pb Conv_Accel_Top_methodology_drc_routed.pb -rpx Conv_Accel_Top_methodology_drc_routed.rpx
+| Design       : Conv_Accel_Top
+| Device       : xc7z020clg400-1
+| Speed File   : -1
+| Design State : Fully Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 132
++-----------+------------------+----------------------------------------------------+------------+
+| Rule      | Severity         | Description                                        | Violations |
++-----------+------------------+----------------------------------------------------+------------+
+| TIMING-4  | Critical Warning | Invalid primary clock redefinition on a clock tree | 1          |
+| TIMING-6  | Critical Warning | No common primary clock between related clocks     | 1          |
+| TIMING-7  | Critical Warning | No common node between related clocks              | 1          |
+| TIMING-14 | Critical Warning | LUT on the clock tree                              | 2          |
+| TIMING-17 | Critical Warning | Non-clocked sequential cell                        | 125        |
+| TIMING-27 | Critical Warning | Invalid primary clock on hierarchical pin          | 1          |
+| LUTAR-1   | Warning          | LUT drives async reset alert                       | 1          |
++-----------+------------------+----------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-4#1 Critical Warning
+Invalid primary clock redefinition on a clock tree  
+Invalid clock redefinition on a clock tree. The primary clock processer/design_2_i/clk_wiz_0/inst/clk_in1 is defined downstream of clock clk_fpga_0 and overrides its insertion delay and/or waveform definition
+Related violations: <none>
+
+TIMING-6#1 Critical Warning
+No common primary clock between related clocks  
+The clocks clk_fpga_0 and clk_out1_design_2_clk_wiz_0_0 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_fpga_0] -to [get_clocks clk_out1_design_2_clk_wiz_0_0]
+Related violations: <none>
+
+TIMING-7#1 Critical Warning
+No common node between related clocks  
+The clocks clk_fpga_0 and clk_out1_design_2_clk_wiz_0_0 are related (timed together) but they have no common node. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_fpga_0] -to [get_clocks clk_out1_design_2_clk_wiz_0_0]
+Related violations: <none>
+
+TIMING-14#1 Critical Warning
+LUT on the clock tree  
+The LUT ConvAccel/controller/rbin_rep[7]_i_4 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-14#2 Critical Warning
+LUT on the clock tree  
+The LUT processer/rbin_rep[7]_i_4__0 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-17#1 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_0_63_0_2/RAMA/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#2 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_0_63_0_2/RAMB/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#3 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_0_63_0_2/RAMC/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#4 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_0_63_0_2/RAMD/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#5 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_0_63_12_14/RAMA/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#6 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_0_63_12_14/RAMB/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#7 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_0_63_12_14/RAMC/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#8 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_0_63_12_14/RAMD/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#9 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_0_63_15_15/DP/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#10 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_0_63_15_15/SP/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#11 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_0_63_3_5/RAMA/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#12 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_0_63_3_5/RAMB/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#13 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_0_63_3_5/RAMC/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#14 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_0_63_3_5/RAMD/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#15 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_0_63_6_8/RAMA/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#16 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_0_63_6_8/RAMB/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#17 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_0_63_6_8/RAMC/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#18 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_0_63_6_8/RAMD/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#19 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_0_63_9_11/RAMA/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#20 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_0_63_9_11/RAMB/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#21 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_0_63_9_11/RAMC/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#22 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_0_63_9_11/RAMD/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#23 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_128_191_0_2/RAMA/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#24 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_128_191_0_2/RAMB/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#25 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_128_191_0_2/RAMC/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#26 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_128_191_0_2/RAMD/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#27 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_128_191_12_14/RAMA/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#28 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_128_191_12_14/RAMB/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#29 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_128_191_12_14/RAMC/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#30 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_128_191_12_14/RAMD/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#31 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_128_191_15_15/DP/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#32 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_128_191_15_15/SP/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#33 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_128_191_3_5/RAMA/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#34 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_128_191_3_5/RAMB/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#35 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_128_191_3_5/RAMC/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#36 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_128_191_3_5/RAMD/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#37 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_128_191_6_8/RAMA/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#38 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_128_191_6_8/RAMB/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#39 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_128_191_6_8/RAMC/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#40 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_128_191_6_8/RAMD/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#41 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_128_191_9_11/RAMA/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#42 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_128_191_9_11/RAMB/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#43 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_128_191_9_11/RAMC/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#44 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_128_191_9_11/RAMD/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#45 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_192_255_0_2/RAMA/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#46 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_192_255_0_2/RAMB/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#47 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_192_255_0_2/RAMC/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#48 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_192_255_0_2/RAMD/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#49 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_192_255_12_14/RAMA/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#50 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_192_255_12_14/RAMB/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#51 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_192_255_12_14/RAMC/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#52 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_192_255_12_14/RAMD/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#53 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_192_255_15_15/DP/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#54 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_192_255_15_15/SP/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#55 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_192_255_3_5/RAMA/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#56 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_192_255_3_5/RAMB/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#57 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_192_255_3_5/RAMC/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#58 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_192_255_3_5/RAMD/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#59 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_192_255_6_8/RAMA/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#60 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_192_255_6_8/RAMB/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#61 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_192_255_6_8/RAMC/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#62 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_192_255_6_8/RAMD/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#63 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_192_255_9_11/RAMA/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#64 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_192_255_9_11/RAMB/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#65 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_192_255_9_11/RAMC/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#66 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_192_255_9_11/RAMD/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#67 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_64_127_0_2/RAMA/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#68 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_64_127_0_2/RAMB/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#69 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_64_127_0_2/RAMC/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#70 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_64_127_0_2/RAMD/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#71 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_64_127_12_14/RAMA/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#72 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_64_127_12_14/RAMB/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#73 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_64_127_12_14/RAMC/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#74 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_64_127_12_14/RAMD/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#75 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_64_127_15_15/DP/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#76 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_64_127_15_15/SP/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#77 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_64_127_3_5/RAMA/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#78 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_64_127_3_5/RAMB/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#79 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_64_127_3_5/RAMC/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#80 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_64_127_3_5/RAMD/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#81 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_64_127_6_8/RAMA/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#82 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_64_127_6_8/RAMB/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#83 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_64_127_6_8/RAMC/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#84 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_64_127_6_8/RAMD/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#85 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_64_127_9_11/RAMA/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#86 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_64_127_9_11/RAMB/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#87 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_64_127_9_11/RAMC/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#88 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/mem_reg_64_127_9_11/RAMD/CLK is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#89 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/o_wfull_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#90 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/wbin_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#91 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/wbin_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#92 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/wbin_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#93 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/wbin_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#94 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/wbin_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#95 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/wbin_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#96 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/wbin_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#97 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/wbin_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#98 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/wbin_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#99 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/wgray_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#100 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/wgray_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#101 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/wgray_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#102 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/wgray_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#103 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/wgray_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#104 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/wgray_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#105 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/wgray_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#106 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/wgray_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#107 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/wgray_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#108 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/wq1_rgray_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#109 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/wq1_rgray_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#110 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/wq1_rgray_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#111 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/wq1_rgray_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#112 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/wq1_rgray_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#113 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/wq1_rgray_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#114 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/wq1_rgray_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#115 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/wq1_rgray_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#116 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/wq1_rgray_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#117 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/wq2_rgray_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#118 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/wq2_rgray_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#119 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/wq2_rgray_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#120 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/wq2_rgray_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#121 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/wq2_rgray_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#122 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/wq2_rgray_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#123 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/wq2_rgray_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#124 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/wq2_rgray_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#125 Critical Warning
+Non-clocked sequential cell  
+The clock pin ConvAccel/inputBuffer/wq2_rgray_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-27#1 Critical Warning
+Invalid primary clock on hierarchical pin  
+A primary clock processer/design_2_i/clk_wiz_0/inst/clk_in1 is created on an inappropriate internal pin processer/design_2_i/clk_wiz_0/inst/clk_in1. It is not recommended to create a primary clock on a hierarchical pin when its driver pin has a fanout connected to multiple clock pins
+Related violations: <none>
+
+LUTAR-1#1 Warning
+LUT drives async reset alert  
+LUT cell processer/finalAdder_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) ConvAccel/matrixAccel/addPointer_reg[0]/CLR, ConvAccel/matrixAccel/addPointer_reg[1]/CLR, ConvAccel/matrixAccel/finalReady_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+

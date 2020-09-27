@@ -1,0 +1,31 @@
+timestamp=[2020-09-26 16:26:29], mode=WORKBENCH_START, duration=0:00:03.462, duration_ms=3462, data={}
+timestamp=[2020-09-26 16:26:30], mode=WORKBENCH_UI_INIT, duration=0:00:00.405, duration_ms=405, data={editors_count=0, platform_editors_count=0, projects_count=0, platform_projects_count=0, active_platform_editor=false, projects=}
+timestamp=[2020-09-26 16:27:50], mode=PLATFORM_CREATION, duration=0:00:25.413, duration_ms=25413, data={platform_source=dsa, os=standalone, processor=psu_cortexa53, platform=null}
+timestamp=[2020-09-26 16:29:35], mode=PLATFORM_GENERATION, duration=0:01:32.271, duration_ms=92271, data={name=hello_world}
+timestamp=[2020-09-26 16:30:51], mode=APP_CREATION, duration=0:00:02.534, duration_ms=2534, data={name=hello_world_application, project_type=sdk, os=standalone, processor=cortex-a53, runtime=C/C++, platform=hello_world, application_type=application}
+timestamp=[2020-09-26 16:33:54], mode=PLATFORM_GENERATION, duration=0:00:26.645, duration_ms=26645, data={name=hello_world}
+timestamp=[2020-09-26 17:01:21], mode=WORKBENCH_START, duration=0:00:06.536, duration_ms=6536, data={}
+timestamp=[2020-09-26 17:01:21], mode=WORKBENCH_UI_INIT, duration=0:00:00.552, duration_ms=552, data={editors_count=4, platform_editors_count=1, projects_count=4, platform_projects_count=1, active_platform_editor=true, projects=RemoteSystemsTempFiles,hello_world,hello_world_application,hello_world_application_system}
+timestamp=[2020-09-26 17:03:33], mode=PLATFORM_GENERATION, duration=0:00:02.009, duration_ms=2009, data={name=hello_world}
+timestamp=[2020-09-26 17:32:20], mode=WORKBENCH_START, duration=0:00:07.290, duration_ms=7290, data={}
+timestamp=[2020-09-26 17:32:21], mode=WORKBENCH_UI_INIT, duration=0:00:00.689, duration_ms=689, data={editors_count=4, platform_editors_count=1, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,hello_world,hello_world_application,hello_world_application_system}
+timestamp=[2020-09-26 17:33:26], mode=PLATFORM_CREATION, duration=0:00:17.927, duration_ms=17927, data={platform_source=dsa, os=standalone, processor=ps7_cortexa9, platform=null}
+timestamp=[2020-09-26 17:36:07], mode=APP_CREATION, duration=0:00:07.309, duration_ms=7309, data={name=Hello_Zynq_application, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=Hello_Zynq, application_type=application}
+timestamp=[2020-09-26 17:37:07], mode=PLATFORM_GENERATION, duration=0:00:38.872, duration_ms=38872, data={name=Hello_Zynq}
+timestamp=[2020-09-26 17:45:16], mode=PLATFORM_GENERATION, duration=0:00:17.190, duration_ms=17190, data={name=Hello_Zynq}
+timestamp=[2020-09-26 17:53:56], mode=PLATFORM_GENERATION, duration=0:00:18.612, duration_ms=18612, data={name=Hello_Zynq}
+timestamp=[2020-09-26 17:57:49], mode=PLATFORM_GENERATION, duration=0:00:02.385, duration_ms=2385, data={name=Hello_Zynq}
+timestamp=[2020-09-26 17:58:29], mode=PLATFORM_GENERATION, duration=0:00:34.360, duration_ms=34360, data={name=Hello_Zynq}
+timestamp=[2020-09-26 18:20:54], mode=PLATFORM_CREATION, duration=0:00:12.690, duration_ms=12690, data={platform_source=dsa, os=standalone, processor=ps7_cortexa9, platform=null}
+timestamp=[2020-09-26 18:21:53], mode=PLATFORM_GENERATION, duration=0:00:37.132, duration_ms=37132, data={name=BTN_IO_HW}
+timestamp=[2020-09-26 18:27:40], mode=APP_CREATION, duration=0:00:05.839, duration_ms=5839, data={name=BTN_IO_APP, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=BTN_IO_HW, application_type=application}
+timestamp=[2020-09-26 20:52:00], mode=WORKBENCH_START, duration=0:00:09.576, duration_ms=9576, data={}
+timestamp=[2020-09-26 20:52:01], mode=WORKBENCH_UI_INIT, duration=0:00:00.705, duration_ms=705, data={editors_count=11, platform_editors_count=4, projects_count=7, platform_projects_count=2, active_platform_editor=false, projects=BTN_IO_APP,BTN_IO_APP_system,BTN_IO_HW,Hello_Zynq,Hello_Zynq_application,Hello_Zynq_application_system,RemoteSystemsTempFiles}
+timestamp=[2020-09-26 20:53:57], mode=PLATFORM_CREATION, duration=0:00:18.596, duration_ms=18596, data={platform_source=dsa, os=standalone, processor=ps7_cortexa9, platform=null}
+timestamp=[2020-09-26 20:55:16], mode=PLATFORM_GENERATION, duration=0:00:38.133, duration_ms=38133, data={name=Convolution_Accelerator_HW}
+timestamp=[2020-09-26 20:56:05], mode=APP_CREATION, duration=0:00:06.392, duration_ms=6392, data={name=Convolution_Accelerator_APP, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=Convolution_Accelerator_HW, application_type=application}
+timestamp=[2020-09-26 21:13:53], mode=MISC, duration=0:00:03.500, duration_ms=3500, data={name=Convolution_Accelerator_APP_system, type=bif_creation}
+timestamp=[2020-09-26 21:42:50], mode=PLATFORM_GENERATION, duration=0:00:06.802, duration_ms=6802, data={name=Convolution_Accelerator_HW}
+timestamp=[2020-09-26 21:43:35], mode=PLATFORM_GENERATION, duration=0:00:40.760, duration_ms=40760, data={name=Convolution_Accelerator_HW}
+timestamp=[2020-09-26 21:48:08], mode=PLATFORM_GENERATION, duration=0:00:02.591, duration_ms=2591, data={name=Convolution_Accelerator_HW}
+timestamp=[2020-09-26 21:48:56], mode=PLATFORM_GENERATION, duration=0:00:37.650, duration_ms=37650, data={name=Convolution_Accelerator_HW}

@@ -1,0 +1,7 @@
+/*BTN_IO_HW*/
+the_ROM_image:
+{
+  [bootloader]<BTN_IO_HW/boot/fsbl.elf>
+   <bitstream> 
+  <elf,ps7_cortexa9_0>
+}

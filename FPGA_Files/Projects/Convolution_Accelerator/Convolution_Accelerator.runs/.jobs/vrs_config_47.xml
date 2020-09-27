@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="design_2_axi_gpio_7_0_synth_1" LaunchDir="C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/design_2_axi_gpio_7_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_2_axi_gpio_6_0_synth_1" LaunchDir="C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/design_2_axi_gpio_6_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_2_axi_gpio_8_0_synth_1" LaunchDir="C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/design_2_axi_gpio_8_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_2_axi_gpio_7_0_synth_1"/>
+	</Run>
+	<Run Id="design_2_axi_gpio_9_0_synth_1" LaunchDir="C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/design_2_axi_gpio_9_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_2_axi_gpio_7_0_synth_1"/>
+	</Run>
+	<Run Id="design_2_axi_gpio_10_0_synth_1" LaunchDir="C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/design_2_axi_gpio_10_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="design_2_axi_gpio_7_0_synth_1"/>
+	</Run>
+	<Run Id="synth_1" LaunchDir="C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="design_2_axi_gpio_7_0_synth_1"/>
+		<Parent Id="design_2_axi_gpio_6_0_synth_1"/>
+		<Parent Id="design_2_axi_gpio_8_0_synth_1"/>
+		<Parent Id="design_2_axi_gpio_9_0_synth_1"/>
+		<Parent Id="design_2_axi_gpio_10_0_synth_1"/>
+	</Run>
+	<Run Id="impl_1" LaunchDir="C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/impl_1" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="route_design">
+		<Parent Id="synth_1"/>
+		<Parent Id="design_2_axi_gpio_7_0_synth_1"/>
+		<Parent Id="design_2_axi_gpio_6_0_synth_1"/>
+		<Parent Id="design_2_axi_gpio_8_0_synth_1"/>
+		<Parent Id="design_2_axi_gpio_9_0_synth_1"/>
+		<Parent Id="design_2_axi_gpio_10_0_synth_1"/>
+	</Run>
+	<Run Id="child_0_impl_1" LaunchDir="C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/child_0_impl_1" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="route_design">
+		<Parent Id="impl_1"/>
+		<Parent Id="design_2_axi_gpio_7_0_synth_1"/>
+		<Parent Id="design_2_axi_gpio_6_0_synth_1"/>
+		<Parent Id="design_2_axi_gpio_8_0_synth_1"/>
+		<Parent Id="design_2_axi_gpio_9_0_synth_1"/>
+		<Parent Id="design_2_axi_gpio_10_0_synth_1"/>
+	</Run>
+	<Run Id="child_1_impl_1" LaunchDir="C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/child_1_impl_1" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="route_design">
+		<Parent Id="impl_1"/>
+		<Parent Id="design_2_axi_gpio_7_0_synth_1"/>
+		<Parent Id="design_2_axi_gpio_6_0_synth_1"/>
+		<Parent Id="design_2_axi_gpio_8_0_synth_1"/>
+		<Parent Id="design_2_axi_gpio_9_0_synth_1"/>
+		<Parent Id="design_2_axi_gpio_10_0_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

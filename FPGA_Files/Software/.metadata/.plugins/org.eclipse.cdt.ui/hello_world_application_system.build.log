@@ -1,0 +1,10 @@
+18:00:22 **** Incremental Build of configuration Debug for project hello_world_application_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 54410 C:/GitHub/ReconHardware/FPGA_Files/Software/hello_world/export/hello_world/hello_world.xpfm standalone_domain C:/GitHub/ReconHardware/FPGA_Files/Software/hello_world_application_system/Debug/system.bif
+sdcard_gen --xpfm C:/GitHub/ReconHardware/FPGA_Files/Software/hello_world/export/hello_world/hello_world.xpfm --sys_config hello_world --bif C:/GitHub/ReconHardware/FPGA_Files/Software/hello_world_application_system/Debug/system.bif --bitstream C:/GitHub/ReconHardware/FPGA_Files/Software/hello_world_application/_ide/bitstream/design_1_wrapper.bit --elf C:/GitHub/ReconHardware/FPGA_Files/Software/hello_world_application/Debug/hello_world_application.elf,psu_cortexa53_0
+creating BOOT.BIN using C:/GitHub/ReconHardware/FPGA_Files/Software/hello_world_application/_ide/bitstream/design_1_wrapper.bit
+Running C:/Xilinx/Vitis/2019.2/bin/bootgen -arch zynqmp -image C:/GitHub/ReconHardware/FPGA_Files/Software/hello_world_application_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+
+18:00:27 Build Finished (took 4s.615ms)
+
