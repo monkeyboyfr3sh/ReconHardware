@@ -20,21 +20,57 @@ clients =
 	{ client_name = "vitis"; 
 		rules = (
 			{
-				context="vitis\\\\platform/1601171619109";
-				xml_map="vitis\\\\platform/1601171619109";
-				html_map="vitis\\\\platform/1601171619109";
+				context="vitis\\\\platform/1601252139893";
+				xml_map="vitis\\\\platform/1601252139893";
+				html_map="vitis\\\\platform/1601252139893";
 				html_format="UnisimStatsStyle";
 			},
 			{
-				context="vitis\\\\application/1601171760181";
-				xml_map="vitis\\\\application/1601171760181";
-				html_map="vitis\\\\application/1601171760181";
+				context="vitis\\\\application/1601252356321";
+				xml_map="vitis\\\\application/1601252356321";
+				html_map="vitis\\\\application/1601252356321";
 				html_format="UnisimStatsStyle";
 			},
 			{
-				context="vitis\\\\tool/1601177156613";
-				xml_map="vitis\\\\tool/1601177156613";
-				html_map="vitis\\\\tool/1601177156613";
+				context="vitis\\\\application/1601266349218";
+				xml_map="vitis\\\\application/1601266349218";
+				html_map="vitis\\\\application/1601266349218";
+				html_format="UnisimStatsStyle";
+			},
+			{
+				context="vitis\\\\application/1601267606945";
+				xml_map="vitis\\\\application/1601267606945";
+				html_map="vitis\\\\application/1601267606945";
+				html_format="UnisimStatsStyle";
+			},
+			{
+				context="vitis\\\\platform/1601268423384";
+				xml_map="vitis\\\\platform/1601268423384";
+				html_map="vitis\\\\platform/1601268423384";
+				html_format="UnisimStatsStyle";
+			},
+			{
+				context="vitis\\\\application/1601268547968";
+				xml_map="vitis\\\\application/1601268547968";
+				html_map="vitis\\\\application/1601268547968";
+				html_format="UnisimStatsStyle";
+			},
+			{
+				context="vitis\\\\platform/1601268852564";
+				xml_map="vitis\\\\platform/1601268852564";
+				html_map="vitis\\\\platform/1601268852564";
+				html_format="UnisimStatsStyle";
+			},
+			{
+				context="vitis\\\\application/1601268914911";
+				xml_map="vitis\\\\application/1601268914911";
+				html_map="vitis\\\\application/1601268914911";
+				html_format="UnisimStatsStyle";
+			},
+			{
+				context="vitis\\\\tool/1601269191418";
+				xml_map="vitis\\\\tool/1601269191418";
+				html_map="vitis\\\\tool/1601269191418";
 				html_format="UnisimStatsStyle";
 			}
 		);

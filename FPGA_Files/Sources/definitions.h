@@ -16,10 +16,14 @@
 *
 */
 
+`define inputWidth          1
+`define inputPortCount      4
+`define outputPortCount     4
+
 //START_User_Set
 /*#####################################################################################################################################################*/
 //Data/Device Definition
-`define inputWidth          16
+//`define inputWidth          16
 `define myTimeScale         1ns / 1ps
 `define clkPeriod           2
 
@@ -28,8 +32,8 @@
 `define RSTACTIVEHIGH 1
 
 //Xbar Definitions
-`define inputPortCount      3                                   //N
-`define outputPortCount     3                                   //M
+//`define inputPortCount      3                                   //N
+//`define outputPortCount     3                                   //M
 `define KERNELSIZE          3
 `define addressLength       4                                   //Eventually want to come up with a way to generate this on N and M
 

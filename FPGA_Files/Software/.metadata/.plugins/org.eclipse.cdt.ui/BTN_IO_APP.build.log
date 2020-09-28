@@ -1,10 +1,25 @@
-22:09:50 **** Incremental Build of configuration Debug for project BTN_IO_APP ****
+23:31:40 **** Incremental Build of configuration Debug for project BTN_IO_APP ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 make --no-print-directory main-build
-make[1]: Nothing to be done for 'main-build'.
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/export/BTN_IO_HW/sw/BTN_IO_HW/standalone_domain/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: BTN_IO_APP.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/export/BTN_IO_HW/sw/BTN_IO_HW/standalone_domain/bsplib/lib -o "BTN_IO_APP.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: BTN_IO_APP.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size BTN_IO_APP.elf  |tee "BTN_IO_APP.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  58348	   2600	  23344	  84292	  14944	BTN_IO_APP.elf
+'Finished building: BTN_IO_APP.elf.size'
+' '
 
-22:09:50 Build Finished (took 290ms)
+23:31:41 Build Finished (took 734ms)
 
