@@ -61,40 +61,123 @@ proc step_failed { step } {
 }
 
 
-start_step write_bitstream
-set ACTIVE_STEP write_bitstream
+start_step init_design
+set ACTIVE_STEP init_design
 set rc [catch {
-  create_msg_db write_bitstream.pb
+  create_msg_db init_design.pb
   set_param chipscope.maxJobs 2
-  pr_verify -full_check -initial C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/impl_1/Conv_Accel_Top_routed.dcp -additional C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/child_0_impl_1/Conv_Accel_Top_routed.dcp -file child_0_impl_1_pr_verify.log
-  open_checkpoint Conv_Accel_Top_routed.dcp
+  create_project -in_memory -part xc7z020clg400-1
+  set_property board_part tul.com.tw:pynq-z2:part0:1.0 [current_project]
+  set_property design_mode GateLvl [current_fileset]
+  set_param project.singleFileAddWarning.threshold 0
   set_property webtalk.parent_dir C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.cache/wt [current_project]
+  set_property parent.project_path C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.xpr [current_project]
+  set_property ip_output_repo C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.cache/ip [current_project]
+  set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
-  catch { write_mem_info -force Conv_Accel_Top.mmi }
-  write_bitstream -force -no_partial_bitfile Conv_Accel_Top.bit 
-  write_bitstream -force -cell ConvAccel/matrixAccel/finalAdder ConvAccel_matrixAccel_finalAdder_adderFloat_partial.bit 
-  write_bitstream -force -cell ConvAccel/matrixAccel/genblk3[0].inputMulti ConvAccel_matrixAccel_genblk3_0_.inputMulti_Floating_partial.bit 
-  write_bitstream -force -cell ConvAccel/matrixAccel/genblk3[1].inputMulti ConvAccel_matrixAccel_genblk3_1_.inputMulti_Floating_partial.bit 
-  write_bitstream -force -cell ConvAccel/matrixAccel/genblk3[2].inputMulti ConvAccel_matrixAccel_genblk3_2_.inputMulti_Floating_partial.bit 
-  write_bitstream -force -cell ConvAccel/matrixAccel/genblk4[0].outputAdder ConvAccel_matrixAccel_genblk4_0_.outputAdder_adderFloat_partial.bit 
-  write_bitstream -force -cell ConvAccel/matrixAccel/genblk4[1].outputAdder ConvAccel_matrixAccel_genblk4_1_.outputAdder_adderFloat_partial.bit 
-  write_bitstream -force -cell ConvAccel/matrixAccel/genblk4[2].outputAdder ConvAccel_matrixAccel_genblk4_2_.outputAdder_adderFloat_partial.bit 
-  catch {write_debug_probes -no_partial_ltxfile -quiet -force Conv_Accel_Top}
-  catch {file copy -force Conv_Accel_Top.ltx debug_nets.ltx}
-  catch {write_debug_probes -quiet -force -cell ConvAccel/matrixAccel/finalAdder -file ConvAccel_matrixAccel_finalAdder_adderFloat_partial.ltx}
-  catch {write_debug_probes -quiet -force -cell ConvAccel/matrixAccel/genblk3[0].inputMulti -file ConvAccel_matrixAccel_genblk3_0_.inputMulti_Floating_partial.ltx}
-  catch {write_debug_probes -quiet -force -cell ConvAccel/matrixAccel/genblk3[1].inputMulti -file ConvAccel_matrixAccel_genblk3_1_.inputMulti_Floating_partial.ltx}
-  catch {write_debug_probes -quiet -force -cell ConvAccel/matrixAccel/genblk3[2].inputMulti -file ConvAccel_matrixAccel_genblk3_2_.inputMulti_Floating_partial.ltx}
-  catch {write_debug_probes -quiet -force -cell ConvAccel/matrixAccel/genblk4[0].outputAdder -file ConvAccel_matrixAccel_genblk4_0_.outputAdder_adderFloat_partial.ltx}
-  catch {write_debug_probes -quiet -force -cell ConvAccel/matrixAccel/genblk4[1].outputAdder -file ConvAccel_matrixAccel_genblk4_1_.outputAdder_adderFloat_partial.ltx}
-  catch {write_debug_probes -quiet -force -cell ConvAccel/matrixAccel/genblk4[2].outputAdder -file ConvAccel_matrixAccel_genblk4_2_.outputAdder_adderFloat_partial.ltx}
-  close_msg_db -file write_bitstream.pb
+  add_files -quiet C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/impl_1/Conv_Accel_Top_routed_bb.dcp
+  add_files -quiet C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/Floating_synth_1/floatmultiplyComputePynq.dcp
+  set_property SCOPED_TO_CELLS {{ConvAccel/matrixAccel/genblk3[0].inputMulti} {ConvAccel/matrixAccel/genblk3[1].inputMulti} {ConvAccel/matrixAccel/genblk3[2].inputMulti}} [get_files C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/Floating_synth_1/floatmultiplyComputePynq.dcp]
+  set_property netlist_only true [get_files C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/Floating_synth_1/floatmultiplyComputePynq.dcp]
+  add_files -quiet C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/adderFloat_synth_1/adderFloat.dcp
+  set_property SCOPED_TO_CELLS {ConvAccel/matrixAccel/finalAdder {ConvAccel/matrixAccel/genblk4[0].outputAdder} {ConvAccel/matrixAccel/genblk4[1].outputAdder} {ConvAccel/matrixAccel/genblk4[2].outputAdder}} [get_files C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/adderFloat_synth_1/adderFloat.dcp]
+  set_property netlist_only true [get_files C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/adderFloat_synth_1/adderFloat.dcp]
+  link_design -top Conv_Accel_Top -part xc7z020clg400-1
+  write_hwdef -force -file Conv_Accel_Top.hwdef
+  close_msg_db -file init_design.pb
 } RESULT]
 if {$rc} {
-  step_failed write_bitstream
+  step_failed init_design
   return -code error $RESULT
 } else {
-  end_step write_bitstream
+  end_step init_design
+  unset ACTIVE_STEP 
+}
+
+start_step opt_design
+set ACTIVE_STEP opt_design
+set rc [catch {
+  create_msg_db opt_design.pb
+  opt_design 
+  write_checkpoint -force Conv_Accel_Top_opt.dcp
+  create_report "child_0_impl_1_opt_report_drc_0" "report_drc -file Conv_Accel_Top_drc_opted.rpt -pb Conv_Accel_Top_drc_opted.pb -rpx Conv_Accel_Top_drc_opted.rpx"
+  close_msg_db -file opt_design.pb
+} RESULT]
+if {$rc} {
+  step_failed opt_design
+  return -code error $RESULT
+} else {
+  end_step opt_design
+  unset ACTIVE_STEP 
+}
+
+start_step place_design
+set ACTIVE_STEP place_design
+set rc [catch {
+  create_msg_db place_design.pb
+  if { [llength [get_debug_cores -quiet] ] > 0 }  { 
+    implement_debug_core 
+  } 
+  place_design 
+  write_checkpoint -force Conv_Accel_Top_placed.dcp
+  create_report "child_0_impl_1_place_report_io_0" "report_io -file Conv_Accel_Top_io_placed.rpt"
+  create_report "child_0_impl_1_place_report_utilization_0" "report_utilization -file Conv_Accel_Top_utilization_placed.rpt -pb Conv_Accel_Top_utilization_placed.pb"
+  create_report "child_0_impl_1_place_report_control_sets_0" "report_control_sets -verbose -file Conv_Accel_Top_control_sets_placed.rpt"
+  close_msg_db -file place_design.pb
+} RESULT]
+if {$rc} {
+  step_failed place_design
+  return -code error $RESULT
+} else {
+  end_step place_design
+  unset ACTIVE_STEP 
+}
+
+start_step phys_opt_design
+set ACTIVE_STEP phys_opt_design
+set rc [catch {
+  create_msg_db phys_opt_design.pb
+  phys_opt_design 
+  write_checkpoint -force Conv_Accel_Top_physopt.dcp
+  close_msg_db -file phys_opt_design.pb
+} RESULT]
+if {$rc} {
+  step_failed phys_opt_design
+  return -code error $RESULT
+} else {
+  end_step phys_opt_design
+  unset ACTIVE_STEP 
+}
+
+start_step route_design
+set ACTIVE_STEP route_design
+set rc [catch {
+  create_msg_db route_design.pb
+  route_design 
+  write_checkpoint -force Conv_Accel_Top_routed.dcp
+  create_report "child_0_impl_1_route_report_drc_0" "report_drc -file Conv_Accel_Top_drc_routed.rpt -pb Conv_Accel_Top_drc_routed.pb -rpx Conv_Accel_Top_drc_routed.rpx"
+  create_report "child_0_impl_1_route_report_methodology_0" "report_methodology -file Conv_Accel_Top_methodology_drc_routed.rpt -pb Conv_Accel_Top_methodology_drc_routed.pb -rpx Conv_Accel_Top_methodology_drc_routed.rpx"
+  create_report "child_0_impl_1_route_report_power_0" "report_power -file Conv_Accel_Top_power_routed.rpt -pb Conv_Accel_Top_power_summary_routed.pb -rpx Conv_Accel_Top_power_routed.rpx"
+  create_report "child_0_impl_1_route_report_route_status_0" "report_route_status -file Conv_Accel_Top_route_status.rpt -pb Conv_Accel_Top_route_status.pb"
+  create_report "child_0_impl_1_route_report_timing_summary_0" "report_timing_summary -max_paths 10 -file Conv_Accel_Top_timing_summary_routed.rpt -pb Conv_Accel_Top_timing_summary_routed.pb -rpx Conv_Accel_Top_timing_summary_routed.rpx -warn_on_violation "
+  create_report "child_0_impl_1_route_report_incremental_reuse_0" "report_incremental_reuse -file Conv_Accel_Top_incremental_reuse_routed.rpt"
+  create_report "child_0_impl_1_route_report_clock_utilization_0" "report_clock_utilization -file Conv_Accel_Top_clock_utilization_routed.rpt"
+  create_report "child_0_impl_1_route_report_bus_skew_0" "report_bus_skew -warn_on_violation -file Conv_Accel_Top_bus_skew_routed.rpt -pb Conv_Accel_Top_bus_skew_routed.pb -rpx Conv_Accel_Top_bus_skew_routed.rpx"
+  write_checkpoint -force -cell ConvAccel/matrixAccel/finalAdder ConvAccel_matrixAccel_finalAdder_adderFloat_routed.dcp
+  write_checkpoint -force -cell ConvAccel/matrixAccel/genblk3[0].inputMulti ConvAccel_matrixAccel_genblk3_0_.inputMulti_Floating_routed.dcp
+  write_checkpoint -force -cell ConvAccel/matrixAccel/genblk3[1].inputMulti ConvAccel_matrixAccel_genblk3_1_.inputMulti_Floating_routed.dcp
+  write_checkpoint -force -cell ConvAccel/matrixAccel/genblk3[2].inputMulti ConvAccel_matrixAccel_genblk3_2_.inputMulti_Floating_routed.dcp
+  write_checkpoint -force -cell ConvAccel/matrixAccel/genblk4[0].outputAdder ConvAccel_matrixAccel_genblk4_0_.outputAdder_adderFloat_routed.dcp
+  write_checkpoint -force -cell ConvAccel/matrixAccel/genblk4[1].outputAdder ConvAccel_matrixAccel_genblk4_1_.outputAdder_adderFloat_routed.dcp
+  write_checkpoint -force -cell ConvAccel/matrixAccel/genblk4[2].outputAdder ConvAccel_matrixAccel_genblk4_2_.outputAdder_adderFloat_routed.dcp
+  close_msg_db -file route_design.pb
+} RESULT]
+if {$rc} {
+  write_checkpoint -force Conv_Accel_Top_routed_error.dcp
+  step_failed route_design
+  return -code error $RESULT
+} else {
+  end_step route_design
   unset ACTIVE_STEP 
 }
 

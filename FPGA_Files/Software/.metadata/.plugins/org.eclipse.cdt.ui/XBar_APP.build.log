@@ -1,4 +1,4 @@
-23:57:22 **** Build of configuration Debug for project XBar_APP ****
+23:19:45 **** Incremental Build of configuration Debug for project XBar_APP ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -9,11 +9,6 @@ make --no-print-directory main-build
 arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/GitHub/ReconHardware/FPGA_Files/Software/XBar_HW/export/XBar_HW/sw/XBar_HW/standalone_domain/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
 'Finished building: ../src/helloworld.c'
 ' '
-'Building file: ../src/platform.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/GitHub/ReconHardware/FPGA_Files/Software/XBar_HW/export/XBar_HW/sw/XBar_HW/standalone_domain/bspinclude/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
-'Finished building: ../src/platform.c'
-' '
 'Building target: XBar_APP.elf'
 'Invoking: ARM v7 gcc linker'
 arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/GitHub/ReconHardware/FPGA_Files/Software/XBar_HW/export/XBar_HW/sw/XBar_HW/standalone_domain/bsplib/lib -o "XBar_APP.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
@@ -22,9 +17,9 @@ arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size XBar_APP.elf  |tee "XBar_APP.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  58668	   2632	  23376	  84676	  14ac4	XBar_APP.elf
+  58660	   2632	  23376	  84668	  14abc	XBar_APP.elf
 'Finished building: XBar_APP.elf.size'
 ' '
 
-23:57:23 Build Finished (took 785ms)
+23:19:46 Build Finished (took 601ms)
 

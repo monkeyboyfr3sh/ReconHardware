@@ -48,68 +48,13 @@
 #include <stdio.h>
 #include "platform.h"
 #include "xil_printf.h"
-#include "xgpio.h"
-#include "sleep.h"
 
-#define AXIGPIOCNT 2
-
-XGpio gpio0;
-XGpio gpio1;
-XGpio gpio2;
-
-void driverInit() {
-	int status;
-
-	status = XGpio_Initialize(&gpio0, XPAR_AXI_GPIO_0_DEVICE_ID);
-	if (status != XST_SUCCESS) {
-		printf("GPIO %d Initialization failed\n\r",0);
-	} else {
-		printf("GPIO %d Initialization successful\n\r",0);
-	}
-
-	status = XGpio_Initialize(&gpio1, XPAR_AXI_GPIO_1_DEVICE_ID);
-	if (status != XST_SUCCESS) {
-		printf("GPIO %d Initialization failed\n\r",1);
-	} else {
-		printf("GPIO %d Initialization successful\n\r",1);
-	}
-
-	status = XGpio_Initialize(&gpio2, XPAR_AXI_GPIO_2_DEVICE_ID);
-	if (status != XST_SUCCESS) {
-		printf("GPIO %d Initialization failed\n\r",2);
-	} else {
-		printf("GPIO %d Initialization successful\n\r",2);
-	}
-}
-
-void configGPIO() {
-	XGpio_SetDataDirection(&gpio0, 1, 1);//btn
-
-	XGpio_SetDataDirection(&gpio1, 1, 0);//flatInput
-	XGpio_SetDataDirection(&gpio2, 1, 0);//addressSel
-	XGpio_SetDataDirection(&gpio2, 2, 0);//direct
-
-	XGpio_DiscreteSet(&gpio1, 1, 0);
-	XGpio_DiscreteSet(&gpio2, 1, 0);
-	XGpio_DiscreteSet(&gpio2, 2, 1);
-}
 
 int main()
 {
     init_platform();
 
     print("Hello World\n\r");
-
-    driverInit();
-
-    configGPIO();
-
-    int btn;
-    while(1){
-    	btn = XGpio_DiscreteRead(&gpio0, 1);
-    	printf("Button Input: %d",btn);
-    	XGpio_DiscreteSet(&gpio1, 1, btn);
-    }
 
     cleanup_platform();
     return 0;

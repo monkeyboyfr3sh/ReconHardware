@@ -18,43 +18,44 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 3224 
+INFO: Helper process launched with PID 24548 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1015.629 ; gain = 233.836
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1017.434 ; gain = 234.414
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'XBAR_TOP_WRAPPER' [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/new/XBAR_TOP_WRAPPER.v:4]
 INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'design_1' [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/synth/design_1.v:13]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_0_2' [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.runs/synth_1/.Xil/Vivado-9568-DESKTOP-D9F9TPQ/realtime/design_1_axi_gpio_0_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_0_2' (1#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.runs/synth_1/.Xil/Vivado-9568-DESKTOP-D9F9TPQ/realtime/design_1_axi_gpio_0_2_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_1_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.runs/synth_1/.Xil/Vivado-9568-DESKTOP-D9F9TPQ/realtime/design_1_axi_gpio_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_1_0' (2#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.runs/synth_1/.Xil/Vivado-9568-DESKTOP-D9F9TPQ/realtime/design_1_axi_gpio_1_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_0_1' [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.runs/synth_1/.Xil/Vivado-9568-DESKTOP-D9F9TPQ/realtime/design_1_axi_gpio_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_0_1' (3#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.runs/synth_1/.Xil/Vivado-9568-DESKTOP-D9F9TPQ/realtime/design_1_axi_gpio_0_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_interconnect_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/synth/design_1.v:430]
-INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_1CA5Z32' [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/synth/design_1.v:1103]
-INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_1CA5Z32' (4#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/synth/design_1.v:1103]
-INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_I4GRPB' [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/synth/design_1.v:1235]
-INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_I4GRPB' (5#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/synth/design_1.v:1235]
-INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_1BOGR4T' [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/synth/design_1.v:1367]
-INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_1BOGR4T' (6#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/synth/design_1.v:1367]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_O7FAN0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/synth/design_1.v:1499]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.runs/synth_1/.Xil/Vivado-9568-DESKTOP-D9F9TPQ/realtime/design_1_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_0' (7#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.runs/synth_1/.Xil/Vivado-9568-DESKTOP-D9F9TPQ/realtime/design_1_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_O7FAN0' (8#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/synth/design_1.v:1499]
-INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.runs/synth_1/.Xil/Vivado-9568-DESKTOP-D9F9TPQ/realtime/design_1_xbar_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_0' (9#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.runs/synth_1/.Xil/Vivado-9568-DESKTOP-D9F9TPQ/realtime/design_1_xbar_0_stub.v:6]
-WARNING: [Synth 8-7023] instance 'xbar' of module 'design_1_xbar_0' has 40 connections declared, but only 38 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/synth/design_1.v:1062]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_interconnect_0_0' (10#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/synth/design_1.v:430]
-INFO: [Synth 8-6157] synthesizing module 'design_1_proc_sys_reset_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.runs/synth_1/.Xil/Vivado-9568-DESKTOP-D9F9TPQ/realtime/design_1_proc_sys_reset_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_proc_sys_reset_0_0' (11#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.runs/synth_1/.Xil/Vivado-9568-DESKTOP-D9F9TPQ/realtime/design_1_proc_sys_reset_0_0_stub.v:6]
-WARNING: [Synth 8-7023] instance 'proc_sys_reset_0' of module 'design_1_proc_sys_reset_0_0' has 10 connections declared, but only 6 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/synth/design_1.v:357]
-INFO: [Synth 8-6157] synthesizing module 'design_1_processing_system7_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.runs/synth_1/.Xil/Vivado-9568-DESKTOP-D9F9TPQ/realtime/design_1_processing_system7_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_processing_system7_0_0' (12#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.runs/synth_1/.Xil/Vivado-9568-DESKTOP-D9F9TPQ/realtime/design_1_processing_system7_0_0_stub.v:6]
-WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'design_1_processing_system7_0_0' has 65 connections declared, but only 63 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/synth/design_1.v:364]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_0_2' [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.runs/synth_1/.Xil/Vivado-16736-DESKTOP-D9F9TPQ/realtime/design_1_axi_gpio_0_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_0_2' (1#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.runs/synth_1/.Xil/Vivado-16736-DESKTOP-D9F9TPQ/realtime/design_1_axi_gpio_0_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_1_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.runs/synth_1/.Xil/Vivado-16736-DESKTOP-D9F9TPQ/realtime/design_1_axi_gpio_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_1_0' (2#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.runs/synth_1/.Xil/Vivado-16736-DESKTOP-D9F9TPQ/realtime/design_1_axi_gpio_1_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'axi_gpio_1' of module 'design_1_axi_gpio_1_0' has 20 connections declared, but only 19 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/synth/design_1.v:206]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_0_1' [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.runs/synth_1/.Xil/Vivado-16736-DESKTOP-D9F9TPQ/realtime/design_1_axi_gpio_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_0_1' (3#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.runs/synth_1/.Xil/Vivado-16736-DESKTOP-D9F9TPQ/realtime/design_1_axi_gpio_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_interconnect_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/synth/design_1.v:421]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_1CA5Z32' [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/synth/design_1.v:1094]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_1CA5Z32' (4#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/synth/design_1.v:1094]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_I4GRPB' [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/synth/design_1.v:1226]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_I4GRPB' (5#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/synth/design_1.v:1226]
+INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_1BOGR4T' [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/synth/design_1.v:1358]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_1BOGR4T' (6#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/synth/design_1.v:1358]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_O7FAN0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/synth/design_1.v:1490]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.runs/synth_1/.Xil/Vivado-16736-DESKTOP-D9F9TPQ/realtime/design_1_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_0' (7#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.runs/synth_1/.Xil/Vivado-16736-DESKTOP-D9F9TPQ/realtime/design_1_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_O7FAN0' (8#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/synth/design_1.v:1490]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.runs/synth_1/.Xil/Vivado-16736-DESKTOP-D9F9TPQ/realtime/design_1_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_0' (9#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.runs/synth_1/.Xil/Vivado-16736-DESKTOP-D9F9TPQ/realtime/design_1_xbar_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'xbar' of module 'design_1_xbar_0' has 40 connections declared, but only 38 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/synth/design_1.v:1053]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_interconnect_0_0' (10#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/synth/design_1.v:421]
+INFO: [Synth 8-6157] synthesizing module 'design_1_proc_sys_reset_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.runs/synth_1/.Xil/Vivado-16736-DESKTOP-D9F9TPQ/realtime/design_1_proc_sys_reset_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_proc_sys_reset_0_0' (11#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.runs/synth_1/.Xil/Vivado-16736-DESKTOP-D9F9TPQ/realtime/design_1_proc_sys_reset_0_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'proc_sys_reset_0' of module 'design_1_proc_sys_reset_0_0' has 10 connections declared, but only 6 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/synth/design_1.v:348]
+INFO: [Synth 8-6157] synthesizing module 'design_1_processing_system7_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.runs/synth_1/.Xil/Vivado-16736-DESKTOP-D9F9TPQ/realtime/design_1_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_processing_system7_0_0' (12#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.runs/synth_1/.Xil/Vivado-16736-DESKTOP-D9F9TPQ/realtime/design_1_processing_system7_0_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'design_1_processing_system7_0_0' has 65 connections declared, but only 63 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/synth/design_1.v:355]
 INFO: [Synth 8-6155] done synthesizing module 'design_1' (13#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/synth/design_1.v:13]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (14#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
-WARNING: [Synth 8-7023] instance 'BD' of module 'design_1_wrapper' has 27 connections declared, but only 4 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/new/XBAR_TOP_WRAPPER.v:13]
+WARNING: [Synth 8-7023] instance 'BD' of module 'design_1_wrapper' has 25 connections declared, but only 4 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/new/XBAR_TOP_WRAPPER.v:14]
 INFO: [Synth 8-6157] synthesizing module 'XBar2' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/XBar2.v:19]
 WARNING: [Synth 8-567] referenced signal 'AddressSave' should be on the sensitivity list [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/XBar2.v:53]
 WARNING: [Synth 8-6014] Unused sequential element rowCheck_reg was removed.  [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/XBar2.v:86]
@@ -62,7 +63,6 @@ WARNING: [Synth 8-6014] Unused sequential element rowSet_reg was removed.  [C:/G
 WARNING: [Synth 8-6014] Unused sequential element selectRow_reg was removed.  [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/XBar2.v:89]
 WARNING: [Synth 8-6014] Unused sequential element selectColomn_reg was removed.  [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/XBar2.v:91]
 INFO: [Synth 8-6155] done synthesizing module 'XBar2' (15#1) [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/XBar2.v:19]
-WARNING: [Synth 8-3848] Net AddressSelect in module/entity XBAR_TOP_WRAPPER does not have driver. [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/new/XBAR_TOP_WRAPPER.v:9]
 INFO: [Synth 8-6155] done synthesizing module 'XBAR_TOP_WRAPPER' (16#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/new/XBAR_TOP_WRAPPER.v:4]
 WARNING: [Synth 8-3331] design s00_couplers_imp_O7FAN0 has unconnected port M_ACLK
 WARNING: [Synth 8-3331] design s00_couplers_imp_O7FAN0 has unconnected port M_ARESETN
@@ -87,7 +87,7 @@ WARNING: [Synth 8-3331] design design_1_axi_interconnect_0_0 has unconnected por
 WARNING: [Synth 8-3331] design design_1_axi_interconnect_0_0 has unconnected port S00_ACLK
 WARNING: [Synth 8-3331] design design_1_axi_interconnect_0_0 has unconnected port S00_ARESETN
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1092.312 ; gain = 310.520
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1094.773 ; gain = 311.754
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -100,12 +100,12 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1092.312 ; gain = 310.520
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1094.773 ; gain = 311.754
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1092.312 ; gain = 310.520
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1094.773 ; gain = 311.754
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 1092.312 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 1094.773 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -132,20 +132,20 @@ Parsing XDC File [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.runs/syn
 Finished Parsing XDC File [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1182.023 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1186.508 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1182.023 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1186.508 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1182.023 ; gain = 400.230
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1186.508 ; gain = 403.488
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1182.023 ; gain = 400.230
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1186.508 ; gain = 403.488
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -160,14 +160,14 @@ Applied set_property DONT_TOUCH = true for BD/design_1_i/axi_gpio_1. (constraint
 Applied set_property DONT_TOUCH = true for BD/design_1_i/axi_gpio_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for BD/design_1_i/axi_interconnect_0/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1182.023 ; gain = 400.230
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1186.508 ; gain = 403.488
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-327] inferring latch for variable 'OutputSave_reg[0]' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/XBar2.v:49]
 WARNING: [Synth 8-327] inferring latch for variable 'OutputSave_reg[1]' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/XBar2.v:49]
 WARNING: [Synth 8-327] inferring latch for variable 'OutputSave_reg[2]' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/XBar2.v:49]
 WARNING: [Synth 8-327] inferring latch for variable 'OutputSave_reg[3]' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/XBar2.v:49]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1182.023 ; gain = 400.230
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1186.508 ; gain = 403.488
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -226,21 +226,6 @@ WARNING: [Synth 8-3331] design design_1_axi_interconnect_0_0 has unconnected por
 WARNING: [Synth 8-3331] design design_1_axi_interconnect_0_0 has unconnected port M02_ARESETN
 WARNING: [Synth 8-3331] design design_1_axi_interconnect_0_0 has unconnected port S00_ACLK
 WARNING: [Synth 8-3331] design design_1_axi_interconnect_0_0 has unconnected port S00_ARESETN
-INFO: [Synth 8-3886] merging instance 'xbar/AddressSave_reg[1][0]' (FDCE) to 'xbar/AddressSave_reg[3][1]'
-INFO: [Synth 8-3886] merging instance 'xbar/AddressSave_reg[2][0]' (FDCE) to 'xbar/AddressSave_reg[3][1]'
-INFO: [Synth 8-3886] merging instance 'xbar/AddressSave_reg[3][0]' (FDCE) to 'xbar/AddressSave_reg[3][1]'
-INFO: [Synth 8-3886] merging instance 'xbar/AddressSave_reg[0][1]' (FDCE) to 'xbar/AddressSave_reg[3][1]'
-INFO: [Synth 8-3886] merging instance 'xbar/AddressSave_reg[1][1]' (FDCE) to 'xbar/AddressSave_reg[3][1]'
-INFO: [Synth 8-3886] merging instance 'xbar/AddressSave_reg[2][1]' (FDCE) to 'xbar/AddressSave_reg[3][1]'
-INFO: [Synth 8-3886] merging instance 'xbar/AddressSave_reg[3][1]' (FDCE) to 'xbar/AddressSave_reg[3][2]'
-INFO: [Synth 8-3886] merging instance 'xbar/AddressSave_reg[0][2]' (FDCE) to 'xbar/AddressSave_reg[3][2]'
-INFO: [Synth 8-3886] merging instance 'xbar/AddressSave_reg[1][2]' (FDCE) to 'xbar/AddressSave_reg[3][2]'
-INFO: [Synth 8-3886] merging instance 'xbar/AddressSave_reg[2][2]' (FDCE) to 'xbar/AddressSave_reg[3][2]'
-INFO: [Synth 8-3886] merging instance 'xbar/AddressSave_reg[3][2]' (FDCE) to 'xbar/AddressSave_reg[1][3]'
-INFO: [Synth 8-3886] merging instance 'xbar/AddressSave_reg[0][3]' (FDCE) to 'xbar/AddressSave_reg[1][3]'
-INFO: [Synth 8-3886] merging instance 'xbar/AddressSave_reg[1][3]' (FDCE) to 'xbar/AddressSave_reg[2][3]'
-INFO: [Synth 8-3886] merging instance 'xbar/AddressSave_reg[2][3]' (FDCE) to 'xbar/AddressSave_reg[3][3]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\xbar/AddressSave_reg[3][3] )
 WARNING: [Synth 8-3332] Sequential element (xbar/OutputSave_reg[0][1]) is unused and will be removed from module XBAR_TOP_WRAPPER.
 WARNING: [Synth 8-3332] Sequential element (xbar/OutputSave_reg[0][0]) is unused and will be removed from module XBAR_TOP_WRAPPER.
 WARNING: [Synth 8-3332] Sequential element (xbar/OutputSave_reg[1][1]) is unused and will be removed from module XBAR_TOP_WRAPPER.
@@ -250,7 +235,7 @@ WARNING: [Synth 8-3332] Sequential element (xbar/OutputSave_reg[2][0]) is unused
 WARNING: [Synth 8-3332] Sequential element (xbar/OutputSave_reg[3][1]) is unused and will be removed from module XBAR_TOP_WRAPPER.
 WARNING: [Synth 8-3332] Sequential element (xbar/OutputSave_reg[3][0]) is unused and will be removed from module XBAR_TOP_WRAPPER.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1182.023 ; gain = 400.230
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1186.508 ; gain = 403.488
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -262,13 +247,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1182.023 ; gain = 400.230
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1186.508 ; gain = 403.488
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1183.812 ; gain = 402.020
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1194.691 ; gain = 411.672
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -280,7 +265,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1184.113 ; gain = 402.320
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1194.691 ; gain = 411.672
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -304,13 +289,13 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1199.898 ; gain = 418.105
+Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1200.629 ; gain = 417.609
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1199.898 ; gain = 418.105
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1200.629 ; gain = 417.609
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -329,25 +314,25 @@ Report Check Netlist:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1199.898 ; gain = 418.105
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1200.629 ; gain = 417.609
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1199.898 ; gain = 418.105
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1200.629 ; gain = 417.609
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1199.898 ; gain = 418.105
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1200.629 ; gain = 417.609
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1199.898 ; gain = 418.105
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1200.629 ; gain = 417.609
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -377,45 +362,48 @@ Report Cell Usage:
 |5     |design_1_proc_sys_reset_0_0     |     1|
 |6     |design_1_processing_system7_0_0 |     1|
 |7     |design_1_xbar_0                 |     1|
-|8     |LUT1                            |     2|
+|8     |LUT1                            |     1|
 |9     |LUT2                            |     6|
-|10    |LUT3                            |     2|
-|11    |FDCE                            |     1|
-|12    |OBUF                            |     8|
+|10    |LUT4                            |     4|
+|11    |LUT5                            |     8|
+|12    |LUT6                            |    22|
+|13    |FDCE                            |    16|
+|14    |IBUF                            |     4|
+|15    |OBUF                            |     8|
 +------+--------------------------------+------+
 
 Report Instance Areas: 
 +------+-------------------------+------------------------------+------+
 |      |Instance                 |Module                        |Cells |
 +------+-------------------------+------------------------------+------+
-|1     |top                      |                              |   902|
-|2     |  BD                     |design_1_wrapper              |   884|
+|1     |top                      |                              |   952|
+|2     |  BD                     |design_1_wrapper              |   890|
 |3     |    design_1_i           |design_1                      |   883|
 |4     |      axi_interconnect_0 |design_1_axi_interconnect_0_0 |   551|
 |5     |        s00_couplers     |s00_couplers_imp_O7FAN0       |   177|
-|6     |  xbar                   |XBar2                         |    10|
+|6     |  xbar                   |XBar2                         |    50|
 +------+-------------------------+------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1199.898 ; gain = 418.105
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1200.629 ; gain = 417.609
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 20 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 1199.898 ; gain = 328.395
-Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1199.898 ; gain = 418.105
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 1200.629 ; gain = 325.875
+Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1200.629 ; gain = 417.609
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1211.984 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1213.742 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1219.676 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1219.012 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-60 Infos, 52 Warnings, 0 Critical Warnings and 0 Errors encountered.
+45 Infos, 52 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1219.676 ; gain = 744.551
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1219.676 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1219.012 ; gain = 743.281
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1219.012 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.runs/synth_1/XBAR_TOP_WRAPPER.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file XBAR_TOP_WRAPPER_utilization_synth.rpt -pb XBAR_TOP_WRAPPER_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Sep 27 23:42:56 2020...
+INFO: [Common 17-206] Exiting Vivado at Wed Sep 30 23:34:18 2020...

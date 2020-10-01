@@ -43,3 +43,18 @@ timestamp=[2020-09-27 23:49:14], mode=APP_CREATION, duration=0:00:07.159, durati
 timestamp=[2020-09-27 23:54:29], mode=PLATFORM_CREATION, duration=0:00:17.120, duration_ms=17120, data={platform_source=dsa, os=standalone, processor=ps7_cortexa9, platform=null}
 timestamp=[2020-09-27 23:55:21], mode=APP_CREATION, duration=0:00:07.355, duration_ms=7355, data={name=XBar_APP, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=XBar_HW, application_type=application}
 timestamp=[2020-09-27 23:57:22], mode=PLATFORM_GENERATION, duration=0:00:39.342, duration_ms=39342, data={name=XBar_HW}
+timestamp=[2020-09-30 22:47:04], mode=WORKBENCH_START, duration=0:00:09.305, duration_ms=9305, data={}
+timestamp=[2020-09-30 22:47:05], mode=WORKBENCH_UI_INIT, duration=0:00:01.126, duration_ms=1126, data={editors_count=4, platform_editors_count=1, projects_count=13, platform_projects_count=4, active_platform_editor=false, projects=BTN_IO_APP,BTN_IO_APP_system,BTN_IO_HW,Convolution_Accelerator_APP,Convolution_Accelerator_APP_system,Convolution_Accelerator_HW,Hello_Zynq,Hello_Zynq_application,Hello_Zynq_application_system,RemoteSystemsTempFiles,XBar_APP,XBar_APP_system,XBar_HW}
+timestamp=[2020-09-30 22:56:24], mode=WORKBENCH_START, duration=0:00:09.521, duration_ms=9521, data={}
+timestamp=[2020-09-30 22:56:25], mode=WORKBENCH_UI_INIT, duration=0:00:00.687, duration_ms=687, data={editors_count=1, platform_editors_count=0, projects_count=10, platform_projects_count=3, active_platform_editor=false, projects=BTN_IO_APP,BTN_IO_APP_system,BTN_IO_HW,Convolution_Accelerator_APP,Convolution_Accelerator_APP_system,Convolution_Accelerator_HW,Hello_Zynq,Hello_Zynq_application,Hello_Zynq_application_system,RemoteSystemsTempFiles}
+timestamp=[2020-09-30 23:00:04], mode=PLATFORM_CREATION, duration=0:00:13.319, duration_ms=13319, data={platform_source=dsa, os=standalone, processor=ps7_cortexa9, platform=null}
+timestamp=[2020-09-30 23:00:40], mode=APP_CREATION, duration=0:00:07.255, duration_ms=7255, data={name=XBar_APP, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=XBar_HW, application_type=application}
+timestamp=[2020-09-30 23:01:48], mode=PLATFORM_GENERATION, duration=0:00:38.278, duration_ms=38278, data={name=XBar_HW}
+timestamp=[2020-09-30 23:05:04], mode=PLATFORM_GENERATION, duration=0:00:22.542, duration_ms=22542, data={name=BTN_IO_HW}
+timestamp=[2020-09-30 23:41:06], mode=PLATFORM_CREATION, duration=0:00:15.172, duration_ms=15172, data={platform_source=dsa, os=standalone, processor=ps7_cortexa9, platform=null}
+timestamp=[2020-09-30 23:43:32], mode=APP_CREATION, duration=0:00:07.034, duration_ms=7034, data={name=XBar_APP, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=XBar_HW, application_type=application}
+timestamp=[2020-09-30 23:44:18], mode=PLATFORM_GENERATION, duration=0:00:37.286, duration_ms=37286, data={name=XBar_HW}
+timestamp=[2020-10-01 00:06:20], mode=PLATFORM_GENERATION, duration=0:00:22.434, duration_ms=22434, data={name=Convolution_Accelerator_HW}
+timestamp=[2020-10-01 00:28:24], mode=PLATFORM_CREATION, duration=0:00:15.023, duration_ms=15023, data={platform_source=dsa, os=standalone, processor=ps7_cortexa9, platform=null}
+timestamp=[2020-10-01 00:29:26], mode=PLATFORM_GENERATION, duration=0:00:38.111, duration_ms=38111, data={name=Conv_Accel_HW}
+timestamp=[2020-10-01 00:30:06], mode=APP_CREATION, duration=0:00:06.866, duration_ms=6866, data={name=Conv_Accel_APP, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=Conv_Accel_HW, application_type=application}

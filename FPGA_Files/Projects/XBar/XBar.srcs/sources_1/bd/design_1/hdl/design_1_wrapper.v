@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-//Date        : Sun Sep 27 23:41:45 2020
+//Date        : Wed Sep 30 23:33:42 2020
 //Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
@@ -34,9 +34,7 @@ module design_1_wrapper
     FIXED_IO_ps_srstb,
     Rst,
     adressSel_tri_o,
-    btn_tri_i,
-    direct_tri_o,
-    flatInput_tri_o);
+    direct_tri_o);
   output Clk;
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
@@ -61,9 +59,7 @@ module design_1_wrapper
   inout FIXED_IO_ps_srstb;
   output Rst;
   output [3:0]adressSel_tri_o;
-  input [3:0]btn_tri_i;
   output [0:0]direct_tri_o;
-  output [7:0]flatInput_tri_o;
 
   wire Clk;
   wire [14:0]DDR_addr;
@@ -89,9 +85,7 @@ module design_1_wrapper
   wire FIXED_IO_ps_srstb;
   wire Rst;
   wire [3:0]adressSel_tri_o;
-  wire [3:0]btn_tri_i;
   wire [0:0]direct_tri_o;
-  wire [7:0]flatInput_tri_o;
 
   design_1 design_1_i
        (.Clk(Clk),
@@ -118,7 +112,5 @@ module design_1_wrapper
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
         .Rst(Rst),
         .adressSel_tri_o(adressSel_tri_o),
-        .btn_tri_i(btn_tri_i),
-        .direct_tri_o(direct_tri_o),
-        .flatInput_tri_o(flatInput_tri_o));
+        .direct_tri_o(direct_tri_o));
 endmodule

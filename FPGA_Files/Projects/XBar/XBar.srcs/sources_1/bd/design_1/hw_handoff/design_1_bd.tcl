@@ -162,11 +162,7 @@ proc create_root_design { parentCell } {
 
   set adressSel [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 adressSel ]
 
-  set btn [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 btn ]
-
   set direct [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 direct ]
-
-  set flatInput [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 flatInput ]
 
 
   # Create ports
@@ -985,8 +981,6 @@ proc create_root_design { parentCell } {
  ] $processing_system7_0
 
   # Create interface connections
-  connect_bd_intf_net -intf_net axi_gpio_0_GPIO [get_bd_intf_ports btn] [get_bd_intf_pins axi_gpio_0/GPIO]
-  connect_bd_intf_net -intf_net axi_gpio_1_GPIO [get_bd_intf_ports flatInput] [get_bd_intf_pins axi_gpio_1/GPIO]
   connect_bd_intf_net -intf_net axi_gpio_2_GPIO1 [get_bd_intf_ports adressSel] [get_bd_intf_pins axi_gpio_2/GPIO]
   connect_bd_intf_net -intf_net axi_gpio_2_GPIO2 [get_bd_intf_ports direct] [get_bd_intf_pins axi_gpio_2/GPIO2]
   connect_bd_intf_net -intf_net axi_interconnect_0_M00_AXI [get_bd_intf_pins axi_gpio_0/S_AXI] [get_bd_intf_pins axi_interconnect_0/M00_AXI]

@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-//Date        : Sun Sep 27 23:41:45 2020
+//Date        : Wed Sep 30 23:33:42 2020
 //Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -35,9 +35,7 @@ module design_1
     FIXED_IO_ps_srstb,
     Rst,
     adressSel_tri_o,
-    btn_tri_i,
-    direct_tri_o,
-    flatInput_tri_o);
+    direct_tri_o);
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, FREQ_HZ 100000000, INSERT_VIP 0, PHASE 0.000" *) output Clk;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR ADDR" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DDR, AXI_ARBITRATION_SCHEME TDM, BURST_LENGTH 8, CAN_DEBUG false, CAS_LATENCY 11, CAS_WRITE_LATENCY 11, CS_ENABLED true, DATA_MASK_ENABLED true, DATA_WIDTH 8, MEMORY_TYPE COMPONENTS, MEM_ADDR_MAP ROW_COLUMN_BANK, SLOT Single, TIMEPERIOD_PS 1250" *) inout [14:0]DDR_addr;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR BA" *) inout [2:0]DDR_ba;
@@ -61,32 +59,28 @@ module design_1
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_PORB" *) inout FIXED_IO_ps_porb;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_SRSTB" *) inout FIXED_IO_ps_srstb;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.RST RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.RST, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) output Rst;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 adressSel " *) output [3:0]adressSel_tri_o;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 btn " *) input [3:0]btn_tri_i;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 direct " *) output [0:0]direct_tri_o;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 flatInput " *) output [7:0]flatInput_tri_o;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 adressSel TRI_O" *) output [3:0]adressSel_tri_o;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 direct TRI_O" *) output [0:0]direct_tri_o;
 
-  wire [3:0]axi_gpio_0_GPIO_TRI_I;
-  wire [7:0]axi_gpio_1_GPIO_TRI_O;
   wire [3:0]axi_gpio_2_GPIO1_TRI_O;
   wire [0:0]axi_gpio_2_GPIO2_TRI_O;
   wire [31:0]axi_interconnect_0_M00_AXI_ARADDR;
   wire axi_interconnect_0_M00_AXI_ARREADY;
-  wire [0:0]axi_interconnect_0_M00_AXI_ARVALID;
+  wire axi_interconnect_0_M00_AXI_ARVALID;
   wire [31:0]axi_interconnect_0_M00_AXI_AWADDR;
   wire axi_interconnect_0_M00_AXI_AWREADY;
-  wire [0:0]axi_interconnect_0_M00_AXI_AWVALID;
-  wire [0:0]axi_interconnect_0_M00_AXI_BREADY;
+  wire axi_interconnect_0_M00_AXI_AWVALID;
+  wire axi_interconnect_0_M00_AXI_BREADY;
   wire [1:0]axi_interconnect_0_M00_AXI_BRESP;
   wire axi_interconnect_0_M00_AXI_BVALID;
   wire [31:0]axi_interconnect_0_M00_AXI_RDATA;
-  wire [0:0]axi_interconnect_0_M00_AXI_RREADY;
+  wire axi_interconnect_0_M00_AXI_RREADY;
   wire [1:0]axi_interconnect_0_M00_AXI_RRESP;
   wire axi_interconnect_0_M00_AXI_RVALID;
   wire [31:0]axi_interconnect_0_M00_AXI_WDATA;
   wire axi_interconnect_0_M00_AXI_WREADY;
   wire [3:0]axi_interconnect_0_M00_AXI_WSTRB;
-  wire [0:0]axi_interconnect_0_M00_AXI_WVALID;
+  wire axi_interconnect_0_M00_AXI_WVALID;
   wire [31:0]axi_interconnect_0_M01_AXI_ARADDR;
   wire axi_interconnect_0_M01_AXI_ARREADY;
   wire axi_interconnect_0_M01_AXI_ARVALID;
@@ -187,11 +181,9 @@ module design_1
   assign Clk = processing_system7_0_FCLK_CLK0;
   assign Rst = processing_system7_0_FCLK_RESET0_N;
   assign adressSel_tri_o[3:0] = axi_gpio_2_GPIO1_TRI_O;
-  assign axi_gpio_0_GPIO_TRI_I = btn_tri_i[3:0];
   assign direct_tri_o[0] = axi_gpio_2_GPIO2_TRI_O;
-  assign flatInput_tri_o[7:0] = axi_gpio_1_GPIO_TRI_O;
   design_1_axi_gpio_0_2 axi_gpio_0
-       (.gpio_io_i(axi_gpio_0_GPIO_TRI_I),
+       (.gpio_io_i({1'b0,1'b0,1'b0,1'b0}),
         .s_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s_axi_araddr(axi_interconnect_0_M00_AXI_ARADDR[8:0]),
         .s_axi_aresetn(proc_sys_reset_0_peripheral_aresetn),
@@ -212,8 +204,7 @@ module design_1
         .s_axi_wstrb(axi_interconnect_0_M00_AXI_WSTRB),
         .s_axi_wvalid(axi_interconnect_0_M00_AXI_WVALID));
   design_1_axi_gpio_1_0 axi_gpio_1
-       (.gpio_io_o(axi_gpio_1_GPIO_TRI_O),
-        .s_axi_aclk(processing_system7_0_FCLK_CLK0),
+       (.s_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s_axi_araddr(axi_interconnect_0_M01_AXI_ARADDR[8:0]),
         .s_axi_aresetn(proc_sys_reset_0_peripheral_aresetn),
         .s_axi_arready(axi_interconnect_0_M01_AXI_ARREADY),
@@ -532,22 +523,22 @@ module design_1_axi_interconnect_0_0
   input M00_ACLK;
   input M00_ARESETN;
   output [31:0]M00_AXI_araddr;
-  input [0:0]M00_AXI_arready;
-  output [0:0]M00_AXI_arvalid;
+  input M00_AXI_arready;
+  output M00_AXI_arvalid;
   output [31:0]M00_AXI_awaddr;
-  input [0:0]M00_AXI_awready;
-  output [0:0]M00_AXI_awvalid;
-  output [0:0]M00_AXI_bready;
+  input M00_AXI_awready;
+  output M00_AXI_awvalid;
+  output M00_AXI_bready;
   input [1:0]M00_AXI_bresp;
-  input [0:0]M00_AXI_bvalid;
+  input M00_AXI_bvalid;
   input [31:0]M00_AXI_rdata;
-  output [0:0]M00_AXI_rready;
+  output M00_AXI_rready;
   input [1:0]M00_AXI_rresp;
-  input [0:0]M00_AXI_rvalid;
+  input M00_AXI_rvalid;
   output [31:0]M00_AXI_wdata;
-  input [0:0]M00_AXI_wready;
+  input M00_AXI_wready;
   output [3:0]M00_AXI_wstrb;
-  output [0:0]M00_AXI_wvalid;
+  output M00_AXI_wvalid;
   input M01_ACLK;
   input M01_ARESETN;
   output [31:0]M01_AXI_araddr;
@@ -668,20 +659,20 @@ module design_1_axi_interconnect_0_0
   wire [3:0]axi_interconnect_0_to_s00_couplers_WSTRB;
   wire axi_interconnect_0_to_s00_couplers_WVALID;
   wire [31:0]m00_couplers_to_axi_interconnect_0_ARADDR;
-  wire [0:0]m00_couplers_to_axi_interconnect_0_ARREADY;
+  wire m00_couplers_to_axi_interconnect_0_ARREADY;
   wire m00_couplers_to_axi_interconnect_0_ARVALID;
   wire [31:0]m00_couplers_to_axi_interconnect_0_AWADDR;
-  wire [0:0]m00_couplers_to_axi_interconnect_0_AWREADY;
+  wire m00_couplers_to_axi_interconnect_0_AWREADY;
   wire m00_couplers_to_axi_interconnect_0_AWVALID;
   wire m00_couplers_to_axi_interconnect_0_BREADY;
   wire [1:0]m00_couplers_to_axi_interconnect_0_BRESP;
-  wire [0:0]m00_couplers_to_axi_interconnect_0_BVALID;
+  wire m00_couplers_to_axi_interconnect_0_BVALID;
   wire [31:0]m00_couplers_to_axi_interconnect_0_RDATA;
   wire m00_couplers_to_axi_interconnect_0_RREADY;
   wire [1:0]m00_couplers_to_axi_interconnect_0_RRESP;
-  wire [0:0]m00_couplers_to_axi_interconnect_0_RVALID;
+  wire m00_couplers_to_axi_interconnect_0_RVALID;
   wire [31:0]m00_couplers_to_axi_interconnect_0_WDATA;
-  wire [0:0]m00_couplers_to_axi_interconnect_0_WREADY;
+  wire m00_couplers_to_axi_interconnect_0_WREADY;
   wire [3:0]m00_couplers_to_axi_interconnect_0_WSTRB;
   wire m00_couplers_to_axi_interconnect_0_WVALID;
   wire [31:0]m01_couplers_to_axi_interconnect_0_ARADDR;
@@ -790,14 +781,14 @@ module design_1_axi_interconnect_0_0
   wire [2:2]xbar_to_m02_couplers_WVALID;
 
   assign M00_AXI_araddr[31:0] = m00_couplers_to_axi_interconnect_0_ARADDR;
-  assign M00_AXI_arvalid[0] = m00_couplers_to_axi_interconnect_0_ARVALID;
+  assign M00_AXI_arvalid = m00_couplers_to_axi_interconnect_0_ARVALID;
   assign M00_AXI_awaddr[31:0] = m00_couplers_to_axi_interconnect_0_AWADDR;
-  assign M00_AXI_awvalid[0] = m00_couplers_to_axi_interconnect_0_AWVALID;
-  assign M00_AXI_bready[0] = m00_couplers_to_axi_interconnect_0_BREADY;
-  assign M00_AXI_rready[0] = m00_couplers_to_axi_interconnect_0_RREADY;
+  assign M00_AXI_awvalid = m00_couplers_to_axi_interconnect_0_AWVALID;
+  assign M00_AXI_bready = m00_couplers_to_axi_interconnect_0_BREADY;
+  assign M00_AXI_rready = m00_couplers_to_axi_interconnect_0_RREADY;
   assign M00_AXI_wdata[31:0] = m00_couplers_to_axi_interconnect_0_WDATA;
   assign M00_AXI_wstrb[3:0] = m00_couplers_to_axi_interconnect_0_WSTRB;
-  assign M00_AXI_wvalid[0] = m00_couplers_to_axi_interconnect_0_WVALID;
+  assign M00_AXI_wvalid = m00_couplers_to_axi_interconnect_0_WVALID;
   assign M01_AXI_araddr[31:0] = m01_couplers_to_axi_interconnect_0_ARADDR;
   assign M01_AXI_arvalid = m01_couplers_to_axi_interconnect_0_ARVALID;
   assign M01_AXI_awaddr[31:0] = m01_couplers_to_axi_interconnect_0_AWADDR;
@@ -856,14 +847,14 @@ module design_1_axi_interconnect_0_0
   assign axi_interconnect_0_to_s00_couplers_WLAST = S00_AXI_wlast;
   assign axi_interconnect_0_to_s00_couplers_WSTRB = S00_AXI_wstrb[3:0];
   assign axi_interconnect_0_to_s00_couplers_WVALID = S00_AXI_wvalid;
-  assign m00_couplers_to_axi_interconnect_0_ARREADY = M00_AXI_arready[0];
-  assign m00_couplers_to_axi_interconnect_0_AWREADY = M00_AXI_awready[0];
+  assign m00_couplers_to_axi_interconnect_0_ARREADY = M00_AXI_arready;
+  assign m00_couplers_to_axi_interconnect_0_AWREADY = M00_AXI_awready;
   assign m00_couplers_to_axi_interconnect_0_BRESP = M00_AXI_bresp[1:0];
-  assign m00_couplers_to_axi_interconnect_0_BVALID = M00_AXI_bvalid[0];
+  assign m00_couplers_to_axi_interconnect_0_BVALID = M00_AXI_bvalid;
   assign m00_couplers_to_axi_interconnect_0_RDATA = M00_AXI_rdata[31:0];
   assign m00_couplers_to_axi_interconnect_0_RRESP = M00_AXI_rresp[1:0];
-  assign m00_couplers_to_axi_interconnect_0_RVALID = M00_AXI_rvalid[0];
-  assign m00_couplers_to_axi_interconnect_0_WREADY = M00_AXI_wready[0];
+  assign m00_couplers_to_axi_interconnect_0_RVALID = M00_AXI_rvalid;
+  assign m00_couplers_to_axi_interconnect_0_WREADY = M00_AXI_wready;
   assign m01_couplers_to_axi_interconnect_0_ARREADY = M01_AXI_arready;
   assign m01_couplers_to_axi_interconnect_0_AWREADY = M01_AXI_awready;
   assign m01_couplers_to_axi_interconnect_0_BRESP = M01_AXI_bresp[1:0];

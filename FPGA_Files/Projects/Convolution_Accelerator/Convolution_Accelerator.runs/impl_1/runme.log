@@ -40,7 +40,7 @@ INFO: [Project 1-454] Reading design checkpoint 'c:/GitHub/ReconHardware/FPGA_Fi
 INFO: [Project 1-454] Reading design checkpoint 'c:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.srcs/sources_1/bd/design_2/ip/design_2_processing_system7_0_0/design_2_processing_system7_0_0.dcp' for cell 'processer/design_2_i/processing_system7_0'
 INFO: [Project 1-454] Reading design checkpoint 'c:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.srcs/sources_1/bd/design_2/ip/design_2_xbar_0/design_2_xbar_0.dcp' for cell 'processer/design_2_i/axi_interconnect_0/xbar'
 INFO: [Project 1-454] Reading design checkpoint 'c:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.srcs/sources_1/bd/design_2/ip/design_2_auto_pc_0/design_2_auto_pc_0.dcp' for cell 'processer/design_2_i/axi_interconnect_0/s00_couplers/auto_pc'
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.135 . Memory (MB): peak = 822.797 ; gain = 0.074
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.134 . Memory (MB): peak = 822.711 ; gain = 0.074
 INFO: [Netlist 29-17] Analyzing 138 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2019.2
@@ -308,12 +308,12 @@ Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/Convoluti
 Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.srcs/sources_1/bd/design_2/ip/design_2_clk_wiz_0_0/design_2_clk_wiz_0_0.xdc] for cell 'processer/design_2_i/clk_wiz_0/inst'
 INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.srcs/sources_1/bd/design_2/ip/design_2_clk_wiz_0_0/design_2_clk_wiz_0_0.xdc:57]
 INFO: [Timing 38-2] Deriving generated clocks [c:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.srcs/sources_1/bd/design_2/ip/design_2_clk_wiz_0_0/design_2_clk_wiz_0_0.xdc:57]
-get_clocks: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1485.105 ; gain = 511.668
+get_clocks: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1484.566 ; gain = 511.141
 Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.srcs/sources_1/bd/design_2/ip/design_2_clk_wiz_0_0/design_2_clk_wiz_0_0.xdc] for cell 'processer/design_2_i/clk_wiz_0/inst'
 Parsing XDC File [C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.srcs/constrs_1/new/ConvolutionAccelerator.xdc]
 Finished Parsing XDC File [C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.srcs/constrs_1/new/ConvolutionAccelerator.xdc]
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1485.105 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1484.566 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 48 instances were transformed.
   RAM64M => RAM64M (RAMD64E(x4)): 40 instances
@@ -321,7 +321,7 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 
 37 Infos, 2 Warnings, 100 Critical Warnings and 0 Errors encountered.
 link_design completed successfully
-link_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1485.105 ; gain = 995.637
+link_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 1484.566 ; gain = 994.965
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
@@ -332,13 +332,13 @@ INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.538 . Memory (MB): peak = 1485.105 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.551 . Memory (MB): peak = 1484.566 ; gain = 0.000
 
 Starting Cache Timing Information Task
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 Ending Cache Timing Information Task | Checksum: 1475f8b9e
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.184 . Memory (MB): peak = 1500.578 ; gain = 15.473
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.190 . Memory (MB): peak = 1499.812 ; gain = 15.246
 
 Starting Logic Optimization Task
 
@@ -347,7 +347,7 @@ INFO: [Opt 31-138] Pushed 1 inverter(s) to 1 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
 Phase 1 Retarget | Checksum: a8049bad
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.294 . Memory (MB): peak = 1684.676 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.300 . Memory (MB): peak = 1685.277 ; gain = 0.000
 INFO: [Opt 31-389] Phase Retarget created 24 cells and removed 106 cells
 INFO: [Opt 31-1021] In phase Retarget, 3 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
@@ -355,14 +355,14 @@ Phase 2 Constant propagation
 INFO: [Opt 31-138] Pushed 2 inverter(s) to 3 load pin(s).
 Phase 2 Constant propagation | Checksum: de9a56a7
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.343 . Memory (MB): peak = 1684.676 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.351 . Memory (MB): peak = 1685.277 ; gain = 0.000
 INFO: [Opt 31-389] Phase Constant propagation created 2 cells and removed 24 cells
 INFO: [Opt 31-1021] In phase Constant propagation, 99 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 3 Sweep
 Phase 3 Sweep | Checksum: 853740f5
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.901 . Memory (MB): peak = 1684.676 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.911 . Memory (MB): peak = 1685.277 ; gain = 0.000
 INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 229 cells
 INFO: [Opt 31-1021] In phase Sweep, 372 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
@@ -374,20 +374,20 @@ INFO: [Opt 31-1112] Starts optimizing BUFG(s) with a common driver.
 INFO: [Opt 31-1092] Phase BUFG optimization transformed 0 BUFG(s) to MBUFG(s).
 Phase 4 BUFG optimization | Checksum: ab1de644
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.983 . Memory (MB): peak = 1684.676 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1685.277 ; gain = 0.000
 INFO: [Opt 31-662] Phase BUFG optimization created 1 cells of which 1 are BUFGs and removed 0 cells.
 
 Phase 5 Shift Register Optimization
 INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
 Phase 5 Shift Register Optimization | Checksum: ab1de644
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1684.676 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1685.277 ; gain = 0.000
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Phase 6 Post Processing Netlist
 Phase 6 Post Processing Netlist | Checksum: ab1de644
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1684.676 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1685.277 ; gain = 0.000
 INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
 Opt_design Change Summary
 =========================
@@ -408,32 +408,32 @@ Opt_design Change Summary
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1684.676 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1685.277 ; gain = 0.000
 Ending Logic Optimization Task | Checksum: 125ed762b
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1684.676 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1685.277 ; gain = 0.000
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
 Ending Power Optimization Task | Checksum: 125ed762b
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1684.676 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1685.277 ; gain = 0.000
 
 Starting Final Cleanup Task
 Ending Final Cleanup Task | Checksum: 125ed762b
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1684.676 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1685.277 ; gain = 0.000
 
 Starting Netlist Obfuscation Task
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1684.676 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1685.277 ; gain = 0.000
 Ending Netlist Obfuscation Task | Checksum: 125ed762b
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1684.676 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1685.277 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
 62 Infos, 2 Warnings, 100 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1694.410 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1692.980 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
 INFO: [Common 17-1381] The checkpoint 'C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/impl_1/Conv_Accel_Top_opt.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file Conv_Accel_Top_drc_opted.rpt -pb Conv_Accel_Top_drc_opted.pb -rpx Conv_Accel_Top_drc_opted.rpx
@@ -459,11 +459,11 @@ INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 
 Phase 1 Placer Initialization
 
 Phase 1.1 Placer Initialization Netlist Sorting
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1707.559 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1710.133 ; gain = 0.000
 Phase 1.1 Placer Initialization Netlist Sorting | Checksum: fe7ff94b
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1707.559 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1707.559 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1710.133 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1710.133 ; gain = 0.000
 
 Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
 CRITICAL WARNING: [Constraints 18-993] The Pblock pblock_2 has defined an area that causes the splitting of interconnect tile columns. Partial reconfiguration requires that the left and right paired interconnect tile columns cannot be split by a reconfigurable boundary.  This is caused by either the left or right edge of a Pblock boundary, or by the Pblock spanning over logic types not included in the Pblock ranges.  To avoid an unroutable situation, placement will be prohibited from both of these columns. To avoid placement restrictions, modify the Pblock to avoid splitting the two columns.
@@ -480,27 +480,27 @@ CRITICAL WARNING: [Constraints 18-992]   Site Type: SLICEL excluded sites: 50
 CRITICAL WARNING: [Constraints 18-992]   Site Type: SLICEM excluded sites: 50
 Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 16a465cca
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.925 . Memory (MB): peak = 1707.559 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.926 . Memory (MB): peak = 1710.133 ; gain = 0.000
 
 Phase 1.3 Build Placer Netlist Model
 Phase 1.3 Build Placer Netlist Model | Checksum: 278c737c7
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1707.559 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1710.133 ; gain = 0.000
 
 Phase 1.4 Constrain Clocks/Macros
 Phase 1.4 Constrain Clocks/Macros | Checksum: 278c737c7
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1707.559 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1710.133 ; gain = 0.000
 Phase 1 Placer Initialization | Checksum: 278c737c7
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1707.559 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1710.133 ; gain = 0.000
 
 Phase 2 Global Placement
 
 Phase 2.1 Floorplanning
 Phase 2.1 Floorplanning | Checksum: 27ba1777a
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1707.559 ; gain = 0.000
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1710.133 ; gain = 0.000
 
 Phase 2.2 Global Placement Core
 
@@ -516,7 +516,7 @@ INFO: [Physopt 32-670] No setup violation found.  Shift Register Optimization wa
 INFO: [Physopt 32-670] No setup violation found.  BRAM Register Optimization was not performed.
 INFO: [Physopt 32-949] No candidate nets found for HD net replication
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1707.559 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1710.133 ; gain = 0.000
 
 Summary of Physical Synthesis Optimizations
 ============================================
@@ -538,58 +538,58 @@ Summary of Physical Synthesis Optimizations
 
 Phase 2.2.1 Physical Synthesis In Placer | Checksum: 1cff9b405
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 1707.559 ; gain = 0.000
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 1710.133 ; gain = 0.000
 Phase 2.2 Global Placement Core | Checksum: 169963c7f
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:05 . Memory (MB): peak = 1707.559 ; gain = 0.000
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 1710.133 ; gain = 0.000
 Phase 2 Global Placement | Checksum: 169963c7f
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:05 . Memory (MB): peak = 1707.559 ; gain = 0.000
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 1710.133 ; gain = 0.000
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
 Phase 3.1 Commit Multi Column Macros | Checksum: 1267ab6c1
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 1707.559 ; gain = 0.000
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 1710.133 ; gain = 0.000
 
 Phase 3.2 Commit Most Macros & LUTRAMs
 Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 16ce0b45f
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:06 . Memory (MB): peak = 1707.559 ; gain = 0.000
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 1710.133 ; gain = 0.000
 
 Phase 3.3 Area Swap Optimization
 Phase 3.3 Area Swap Optimization | Checksum: 12cfe64a9
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:06 . Memory (MB): peak = 1707.559 ; gain = 0.000
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 1710.133 ; gain = 0.000
 
 Phase 3.4 Pipeline Register Optimization
 Phase 3.4 Pipeline Register Optimization | Checksum: 12cfe64a9
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:06 . Memory (MB): peak = 1707.559 ; gain = 0.000
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 1710.133 ; gain = 0.000
 
 Phase 3.5 Small Shape Detail Placement
 
 Phase 3.5.1 Place Remaining
 Phase 3.5.1 Place Remaining | Checksum: 194bc48c4
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 1707.559 ; gain = 0.000
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 1710.133 ; gain = 0.000
 Phase 3.5 Small Shape Detail Placement | Checksum: 194bc48c4
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 1707.559 ; gain = 0.000
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 1710.133 ; gain = 0.000
 
 Phase 3.6 Re-assign LUT pins
 Phase 3.6 Re-assign LUT pins | Checksum: 1a4c16f58
 
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:08 . Memory (MB): peak = 1707.559 ; gain = 0.000
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 1710.133 ; gain = 0.000
 
 Phase 3.7 Pipeline Register Optimization
 Phase 3.7 Pipeline Register Optimization | Checksum: 1a4c16f58
 
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:08 . Memory (MB): peak = 1707.559 ; gain = 0.000
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 1710.133 ; gain = 0.000
 Phase 3 Detail Placement | Checksum: 1a4c16f58
 
-Time (s): cpu = 00:00:13 ; elapsed = 00:00:08 . Memory (MB): peak = 1707.559 ; gain = 0.000
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 1710.133 ; gain = 0.000
 
 Phase 4 Post Placement Optimization and Clean-Up
 
@@ -603,53 +603,53 @@ Phase 4.1.1.1 BUFG Insertion
 INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
 Phase 4.1.1.1 BUFG Insertion | Checksum: 1e1db4235
 
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 1722.168 ; gain = 14.609
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:09 . Memory (MB): peak = 1719.938 ; gain = 9.805
 INFO: [Place 30-746] Post Placement Timing Summary WNS=0.548. For the most accurate timing information please run report_timing.
 Phase 4.1.1 Post Placement Optimization | Checksum: 10e881f09
 
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 1722.168 ; gain = 14.609
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 1719.938 ; gain = 9.805
 Phase 4.1 Post Commit Optimization | Checksum: 10e881f09
 
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 1722.168 ; gain = 14.609
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 1719.938 ; gain = 9.805
 
 Phase 4.2 Post Placement Cleanup
 Phase 4.2 Post Placement Cleanup | Checksum: 10e881f09
 
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 1722.168 ; gain = 14.609
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 1719.938 ; gain = 9.805
 
 Phase 4.3 Placer Reporting
 Phase 4.3 Placer Reporting | Checksum: 10e881f09
 
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 1722.168 ; gain = 14.609
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 1719.938 ; gain = 9.805
 
 Phase 4.4 Final Placement Cleanup
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1722.168 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1719.938 ; gain = 0.000
 Phase 4.4 Final Placement Cleanup | Checksum: 10517563c
 
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 1722.168 ; gain = 14.609
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 1719.938 ; gain = 9.805
 Phase 4 Post Placement Optimization and Clean-Up | Checksum: 10517563c
 
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:09 . Memory (MB): peak = 1722.168 ; gain = 14.609
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 1719.938 ; gain = 9.805
 Ending Placer Task | Checksum: c77c3ed3
 
-Time (s): cpu = 00:00:15 ; elapsed = 00:00:09 . Memory (MB): peak = 1722.168 ; gain = 14.609
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 1719.938 ; gain = 9.805
 INFO: [Common 17-83] Releasing license: Implementation
 92 Infos, 2 Warnings, 108 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:10 . Memory (MB): peak = 1722.168 ; gain = 14.609
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1722.168 ; gain = 0.000
+place_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:10 . Memory (MB): peak = 1719.938 ; gain = 9.805
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1719.938 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.288 . Memory (MB): peak = 1723.227 ; gain = 1.059
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.304 . Memory (MB): peak = 1720.980 ; gain = 1.043
 INFO: [Common 17-1381] The checkpoint 'C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/impl_1/Conv_Accel_Top_placed.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_io -file Conv_Accel_Top_io_placed.rpt
-report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 1723.227 ; gain = 0.000
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 1720.980 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_utilization -file Conv_Accel_Top_utilization_placed.rpt -pb Conv_Accel_Top_utilization_placed.pb
 INFO: [runtcl-4] Executing : report_control_sets -verbose -file Conv_Accel_Top_control_sets_placed.rpt
-report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1723.227 ; gain = 0.000
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1720.980 ; gain = 0.000
 Command: phys_opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
@@ -658,13 +658,13 @@ INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
 INFO: [Common 17-83] Releasing license: Implementation
 101 Infos, 2 Warnings, 108 Critical Warnings and 0 Errors encountered.
 phys_opt_design completed successfully
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1723.801 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1721.062 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.294 . Memory (MB): peak = 1733.855 ; gain = 10.055
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.301 . Memory (MB): peak = 1731.109 ; gain = 10.047
 INFO: [Common 17-1381] The checkpoint 'C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/impl_1/Conv_Accel_Top_physopt.dcp' has been generated.
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
@@ -682,7 +682,7 @@ Checksum: PlaceDB: 7fefcf21 ConstDB: 0 ShapeSum: 478c6fb2 RouteDB: 0
 Phase 1 Build RT Design
 Phase 1 Build RT Design | Checksum: bbe9529f
 
-Time (s): cpu = 00:00:21 ; elapsed = 00:00:19 . Memory (MB): peak = 1854.910 ; gain = 108.008
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 1853.391 ; gain = 111.227
 Post Restoration Checksum: NetGraph: 24e300fb NumContArr: 8fad3984 Constraints: 7591820 Timing: 0
 
 Phase 2 Router Initialization
@@ -690,28 +690,28 @@ Phase 2 Router Initialization
 Phase 2.1 Create Timer
 Phase 2.1 Create Timer | Checksum: bbe9529f
 
-Time (s): cpu = 00:00:21 ; elapsed = 00:00:19 . Memory (MB): peak = 1854.910 ; gain = 108.008
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 1853.391 ; gain = 111.227
 
 Phase 2.2 Fix Topology Constraints
 Phase 2.2 Fix Topology Constraints | Checksum: bbe9529f
 
-Time (s): cpu = 00:00:21 ; elapsed = 00:00:19 . Memory (MB): peak = 1863.648 ; gain = 116.746
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 1862.051 ; gain = 119.887
 
 Phase 2.3 Pre Route Cleanup
 Phase 2.3 Pre Route Cleanup | Checksum: bbe9529f
 
-Time (s): cpu = 00:00:21 ; elapsed = 00:00:19 . Memory (MB): peak = 1863.648 ; gain = 116.746
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 1862.051 ; gain = 119.887
  Number of Nodes with overlaps = 0
 
 Phase 2.4 Update Timing
 Phase 2.4 Update Timing | Checksum: 1afe89a5a
 
-Time (s): cpu = 00:00:23 ; elapsed = 00:00:20 . Memory (MB): peak = 1886.348 ; gain = 139.445
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:22 . Memory (MB): peak = 1885.363 ; gain = 143.199
 INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.563  | TNS=0.000  | WHS=-1.320 | THS=-159.703|
 
 Phase 2 Router Initialization | Checksum: 1b0b32dd1
 
-Time (s): cpu = 00:00:23 ; elapsed = 00:00:21 . Memory (MB): peak = 1901.082 ; gain = 154.180
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:23 . Memory (MB): peak = 1900.977 ; gain = 158.812
 
 Router Utilization Summary
   Global Vertical Routing Utilization    = 0.00336543 %
@@ -729,7 +729,7 @@ Router Utilization Summary
 Phase 3 Initial Routing
 Phase 3 Initial Routing | Checksum: 1c22b53e1
 
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 1901.082 ; gain = 154.180
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:23 . Memory (MB): peak = 1900.977 ; gain = 158.812
 
 Phase 4 Rip-up And Reroute
 
@@ -743,7 +743,7 @@ INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.706  | TNS=0.000  | WHS
 
 Phase 4.1 Global Iteration 0 | Checksum: 166f6bd95
 
-Time (s): cpu = 00:00:27 ; elapsed = 00:00:23 . Memory (MB): peak = 1901.082 ; gain = 154.180
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:25 . Memory (MB): peak = 1900.977 ; gain = 158.812
 
 Phase 4.2 Global Iteration 1
  Number of Nodes with overlaps = 1
@@ -752,10 +752,10 @@ INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.706  | TNS=0.000  | WHS
 
 Phase 4.2 Global Iteration 1 | Checksum: 2158d4087
 
-Time (s): cpu = 00:00:27 ; elapsed = 00:00:23 . Memory (MB): peak = 1901.082 ; gain = 154.180
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:25 . Memory (MB): peak = 1900.977 ; gain = 158.812
 Phase 4 Rip-up And Reroute | Checksum: 2158d4087
 
-Time (s): cpu = 00:00:27 ; elapsed = 00:00:23 . Memory (MB): peak = 1901.082 ; gain = 154.180
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:25 . Memory (MB): peak = 1900.977 ; gain = 158.812
 
 Phase 5 Delay and Skew Optimization
 
@@ -764,20 +764,20 @@ Phase 5.1 Delay CleanUp
 Phase 5.1.1 Update Timing
 Phase 5.1.1 Update Timing | Checksum: 1c828f57a
 
-Time (s): cpu = 00:00:27 ; elapsed = 00:00:23 . Memory (MB): peak = 1901.082 ; gain = 154.180
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:26 . Memory (MB): peak = 1900.977 ; gain = 158.812
 INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.706  | TNS=0.000  | WHS=N/A    | THS=N/A    |
 
 Phase 5.1 Delay CleanUp | Checksum: 1c828f57a
 
-Time (s): cpu = 00:00:27 ; elapsed = 00:00:23 . Memory (MB): peak = 1901.082 ; gain = 154.180
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:26 . Memory (MB): peak = 1900.977 ; gain = 158.812
 
 Phase 5.2 Clock Skew Optimization
 Phase 5.2 Clock Skew Optimization | Checksum: 1c828f57a
 
-Time (s): cpu = 00:00:27 ; elapsed = 00:00:23 . Memory (MB): peak = 1901.082 ; gain = 154.180
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:26 . Memory (MB): peak = 1900.977 ; gain = 158.812
 Phase 5 Delay and Skew Optimization | Checksum: 1c828f57a
 
-Time (s): cpu = 00:00:27 ; elapsed = 00:00:23 . Memory (MB): peak = 1901.082 ; gain = 154.180
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:26 . Memory (MB): peak = 1900.977 ; gain = 158.812
 
 Phase 6 Post Hold Fix
 
@@ -786,15 +786,15 @@ Phase 6.1 Hold Fix Iter
 Phase 6.1.1 Update Timing
 Phase 6.1.1 Update Timing | Checksum: 18ceed370
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:24 . Memory (MB): peak = 1901.082 ; gain = 154.180
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:26 . Memory (MB): peak = 1900.977 ; gain = 158.812
 INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.706  | TNS=0.000  | WHS=0.042  | THS=0.000  |
 
 Phase 6.1 Hold Fix Iter | Checksum: 1c5024100
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:24 . Memory (MB): peak = 1901.082 ; gain = 154.180
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:26 . Memory (MB): peak = 1900.977 ; gain = 158.812
 Phase 6 Post Hold Fix | Checksum: 1c5024100
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:24 . Memory (MB): peak = 1901.082 ; gain = 154.180
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:26 . Memory (MB): peak = 1900.977 ; gain = 158.812
 
 Phase 7 Route finalize
 
@@ -812,19 +812,19 @@ Router Utilization Summary
 
 Phase 7 Route finalize | Checksum: 1eaba4d76
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:24 . Memory (MB): peak = 1901.082 ; gain = 154.180
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:26 . Memory (MB): peak = 1900.977 ; gain = 158.812
 
 Phase 8 Verifying routed nets
 
  Verification completed successfully
 Phase 8 Verifying routed nets | Checksum: 1eaba4d76
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:24 . Memory (MB): peak = 1901.082 ; gain = 154.180
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:26 . Memory (MB): peak = 1900.977 ; gain = 158.812
 
 Phase 9 Depositing Routes
 Phase 9 Depositing Routes | Checksum: 2502fee84
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:24 . Memory (MB): peak = 1901.082 ; gain = 154.180
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:26 . Memory (MB): peak = 1900.977 ; gain = 158.812
 
 Phase 10 Post Router Timing
 INFO: [Route 35-57] Estimated Timing Summary | WNS=0.706  | TNS=0.000  | WHS=0.042  | THS=0.000  |
@@ -832,23 +832,23 @@ INFO: [Route 35-57] Estimated Timing Summary | WNS=0.706  | TNS=0.000  | WHS=0.0
 INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
 Phase 10 Post Router Timing | Checksum: 2502fee84
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:24 . Memory (MB): peak = 1901.082 ; gain = 154.180
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:26 . Memory (MB): peak = 1900.977 ; gain = 158.812
 INFO: [Route 35-16] Router Completed Successfully
 
-Time (s): cpu = 00:00:29 ; elapsed = 00:00:25 . Memory (MB): peak = 1907.652 ; gain = 160.750
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:27 . Memory (MB): peak = 1907.945 ; gain = 165.781
 
 Routing Is Done.
 INFO: [Common 17-83] Releasing license: Implementation
 117 Infos, 2 Warnings, 108 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:26 . Memory (MB): peak = 1907.652 ; gain = 173.797
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1907.652 ; gain = 0.000
+route_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:28 . Memory (MB): peak = 1907.945 ; gain = 176.836
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1907.945 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.366 . Memory (MB): peak = 1907.695 ; gain = 0.043
+Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.378 . Memory (MB): peak = 1908.039 ; gain = 0.094
 INFO: [Common 17-1381] The checkpoint 'C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/impl_1/Conv_Accel_Top_routed.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file Conv_Accel_Top_drc_routed.rpt -pb Conv_Accel_Top_drc_routed.pb -rpx Conv_Accel_Top_drc_routed.rpx
 Command: report_drc -file Conv_Accel_Top_drc_routed.rpt -pb Conv_Accel_Top_drc_routed.pb -rpx Conv_Accel_Top_drc_routed.rpx
@@ -881,54 +881,54 @@ INFO: [runtcl-4] Executing : report_clock_utilization -file Conv_Accel_Top_clock
 INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file Conv_Accel_Top_bus_skew_routed.rpt -pb Conv_Accel_Top_bus_skew_routed.pb -rpx Conv_Accel_Top_bus_skew_routed.rpx
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
 INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1931.027 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1927.105 ; gain = 0.000
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.113 . Memory (MB): peak = 1931.027 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.117 . Memory (MB): peak = 1927.105 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/impl_1/ConvAccel_matrixAccel_finalAdder_adder_routed.dcp' has been generated.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1931.027 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1927.105 ; gain = 0.000
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.107 . Memory (MB): peak = 1931.027 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.110 . Memory (MB): peak = 1927.105 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/impl_1/ConvAccel_matrixAccel_genblk3_0_.inputMulti_Integer_routed.dcp' has been generated.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1931.027 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1927.105 ; gain = 0.000
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.101 . Memory (MB): peak = 1931.027 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.106 . Memory (MB): peak = 1927.105 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/impl_1/ConvAccel_matrixAccel_genblk3_1_.inputMulti_Integer_routed.dcp' has been generated.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1931.027 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1927.105 ; gain = 0.000
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.106 . Memory (MB): peak = 1931.027 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.108 . Memory (MB): peak = 1927.105 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/impl_1/ConvAccel_matrixAccel_genblk3_2_.inputMulti_Integer_routed.dcp' has been generated.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1931.027 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1927.105 ; gain = 0.000
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.130 . Memory (MB): peak = 1931.027 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.134 . Memory (MB): peak = 1927.105 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/impl_1/ConvAccel_matrixAccel_genblk4_0_.outputAdder_adder_routed.dcp' has been generated.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1931.027 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1927.105 ; gain = 0.000
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.136 . Memory (MB): peak = 1931.027 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.156 . Memory (MB): peak = 1927.105 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/impl_1/ConvAccel_matrixAccel_genblk4_1_.outputAdder_adder_routed.dcp' has been generated.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1931.027 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1927.105 ; gain = 0.000
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.138 . Memory (MB): peak = 1931.027 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.132 . Memory (MB): peak = 1927.105 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/impl_1/ConvAccel_matrixAccel_genblk4_2_.outputAdder_adder_routed.dcp' has been generated.
 INFO: [Designutils 20-2277] Running 'update_design -black_box' on cell ConvAccel/matrixAccel/finalAdder. The cell has HD.RECONFIGURABLE property set to true and it will be turned into a black-box cell after this command.
 INFO: [Designutils 20-2277] Running 'update_design -black_box' on cell ConvAccel/matrixAccel/genblk3[0].inputMulti. The cell has HD.RECONFIGURABLE property set to true and it will be turned into a black-box cell after this command.
@@ -940,390 +940,12 @@ INFO: [Designutils 20-2277] Running 'update_design -black_box' on cell ConvAccel
 Locking Netlist...
 Locking Placement...
 Locking Routing...
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1931.027 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1927.105 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.341 . Memory (MB): peak = 1931.027 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.346 . Memory (MB): peak = 1927.105 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/impl_1/Conv_Accel_Top_routed_bb.dcp' has been generated.
-INFO: [Common 17-206] Exiting Vivado at Sat Sep 26 20:42:05 2020...
-
-*** Running vivado
-    with args -log Conv_Accel_Top.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source Conv_Accel_Top.tcl -notrace
-
-
-****** Vivado v2019.2 (64-bit)
-  **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
-  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
-
-source Conv_Accel_Top.tcl -notrace
-Command: open_checkpoint Conv_Accel_Top_routed.dcp
-
-Starting open_checkpoint Task
-
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 300.359 ; gain = 0.000
-INFO: [Device 21-403] Loading part xc7z020clg400-1
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.128 . Memory (MB): peak = 757.902 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 138 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2019.2
-INFO: [Project 1-570] Preparing netlist for logic optimization
-WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'processer/design_2_i/clk_wiz_0/clk_in1' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
-INFO: [Timing 38-478] Restoring timing data from binary archive.
-INFO: [Timing 38-479] Binary timing data restore complete.
-INFO: [Project 1-856] Restoring constraints from binary archive.
-INFO: [Project 1-853] Binary constraint restore complete.
-Reading XDEF placement.
-Reading placer database...
-Reading XDEF routing.
-Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.524 . Memory (MB): peak = 1412.551 ; gain = 7.121
-Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.525 . Memory (MB): peak = 1412.551 ; gain = 7.121
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1412.551 ; gain = 0.000
-INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 48 instances were transformed.
-  RAM64M => RAM64M (RAMD64E(x4)): 40 instances
-  RAM64X1D => RAM64X1D (RAMD64E(x2)): 8 instances
-
-INFO: [Project 1-604] Checkpoint was created with Vivado v2019.2 (64-bit) build 2708876
-open_checkpoint: Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1412.551 ; gain = 1112.191
-Command: write_bitstream -force -no_partial_bitfile Conv_Accel_Top.bit
-Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
-INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
-Running DRC as a precondition to command write_bitstream
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'.
-INFO: [DRC 23-27] Running DRC with 2 threads
-WARNING: [DRC DPIP-1] Input pipelining: DSP ConvAccel/matrixAccel/genblk3[0].inputMulti/product_reg input ConvAccel/matrixAccel/genblk3[0].inputMulti/product_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP ConvAccel/matrixAccel/genblk3[0].inputMulti/product_reg input ConvAccel/matrixAccel/genblk3[0].inputMulti/product_reg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP ConvAccel/matrixAccel/genblk3[1].inputMulti/product_reg input ConvAccel/matrixAccel/genblk3[1].inputMulti/product_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP ConvAccel/matrixAccel/genblk3[1].inputMulti/product_reg input ConvAccel/matrixAccel/genblk3[1].inputMulti/product_reg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP ConvAccel/matrixAccel/genblk3[2].inputMulti/product_reg input ConvAccel/matrixAccel/genblk3[2].inputMulti/product_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP ConvAccel/matrixAccel/genblk3[2].inputMulti/product_reg input ConvAccel/matrixAccel/genblk3[2].inputMulti/product_reg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP ConvAccel/matrixAccel/genblk3[0].inputMulti/product_reg multiplier stage ConvAccel/matrixAccel/genblk3[0].inputMulti/product_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP ConvAccel/matrixAccel/genblk3[1].inputMulti/product_reg multiplier stage ConvAccel/matrixAccel/genblk3[1].inputMulti/product_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP ConvAccel/matrixAccel/genblk3[2].inputMulti/product_reg multiplier stage ConvAccel/matrixAccel/genblk3[2].inputMulti/product_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-INFO: [Vivado 12-3199] DRC finished with 0 Errors, 9 Warnings
-INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
-Partition "pblock_finalAdder" Reconfigurable Module "ConvAccel/matrixAccel/finalAdder"
-Partition "pblock_gnblk4[2].otptAdr" Reconfigurable Module "ConvAccel/matrixAccel/genblk4[2].outputAdder"
-Partition "pblock_2" Reconfigurable Module "ConvAccel/matrixAccel/genblk4[0].outputAdder"
-Partition "pblock_gnblk3[2].inptMlt" Reconfigurable Module "ConvAccel/matrixAccel/genblk3[2].inputMulti"
-Partition "pblock_1" Reconfigurable Module "ConvAccel/matrixAccel/genblk3[0].inputMulti"
-Partition "pblock_gnblk4[1].otptAdr" Reconfigurable Module "ConvAccel/matrixAccel/genblk4[1].outputAdder"
-Partition "pblock_gnblk3[1].inptMlt" Reconfigurable Module "ConvAccel/matrixAccel/genblk3[1].inputMulti"
-INFO: [Vivado 12-4752] Design contains reconfigurable partitions, but no partial bit files will be generated since -no_partial_bitfile option was specified.
-INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
-Loading data files...
-Loading site data...
-Loading route data...
-Processing options...
-Creating bitmap...
-Creating bitstream...
-Writing bitstream ./Conv_Accel_Top.bit...
-INFO: [Vivado 12-1842] Bitgen Completed Successfully.
-INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
-INFO: [Common 17-186] 'C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Sat Sep 26 20:49:05 2020. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2019.2/doc/webtalk_introduction.html.
-INFO: [Common 17-83] Releasing license: Implementation
-24 Infos, 10 Warnings, 0 Critical Warnings and 0 Errors encountered.
-write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1913.566 ; gain = 501.016
-Command: write_bitstream -force -cell ConvAccel/matrixAccel/finalAdder ConvAccel_matrixAccel_finalAdder_adder_partial.bit
-Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
-INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
-Running DRC as a precondition to command write_bitstream
-INFO: [IP_Flow 19-1839] IP Catalog is up to date.
-INFO: [DRC 23-27] Running DRC with 2 threads
-WARNING: [DRC DPIP-1] Input pipelining: DSP ConvAccel/matrixAccel/genblk3[0].inputMulti/product_reg input ConvAccel/matrixAccel/genblk3[0].inputMulti/product_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP ConvAccel/matrixAccel/genblk3[0].inputMulti/product_reg input ConvAccel/matrixAccel/genblk3[0].inputMulti/product_reg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP ConvAccel/matrixAccel/genblk3[1].inputMulti/product_reg input ConvAccel/matrixAccel/genblk3[1].inputMulti/product_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP ConvAccel/matrixAccel/genblk3[1].inputMulti/product_reg input ConvAccel/matrixAccel/genblk3[1].inputMulti/product_reg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP ConvAccel/matrixAccel/genblk3[2].inputMulti/product_reg input ConvAccel/matrixAccel/genblk3[2].inputMulti/product_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP ConvAccel/matrixAccel/genblk3[2].inputMulti/product_reg input ConvAccel/matrixAccel/genblk3[2].inputMulti/product_reg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP ConvAccel/matrixAccel/genblk3[0].inputMulti/product_reg multiplier stage ConvAccel/matrixAccel/genblk3[0].inputMulti/product_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP ConvAccel/matrixAccel/genblk3[1].inputMulti/product_reg multiplier stage ConvAccel/matrixAccel/genblk3[1].inputMulti/product_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP ConvAccel/matrixAccel/genblk3[2].inputMulti/product_reg multiplier stage ConvAccel/matrixAccel/genblk3[2].inputMulti/product_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-INFO: [Vivado 12-3199] DRC finished with 0 Errors, 9 Warnings
-INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
-Partition "pblock_finalAdder" Reconfigurable Module "ConvAccel/matrixAccel/finalAdder"
-Partition "pblock_gnblk4[2].otptAdr" Reconfigurable Module "ConvAccel/matrixAccel/genblk4[2].outputAdder"
-Partition "pblock_2" Reconfigurable Module "ConvAccel/matrixAccel/genblk4[0].outputAdder"
-Partition "pblock_gnblk3[2].inptMlt" Reconfigurable Module "ConvAccel/matrixAccel/genblk3[2].inputMulti"
-Partition "pblock_1" Reconfigurable Module "ConvAccel/matrixAccel/genblk3[0].inputMulti"
-Partition "pblock_gnblk4[1].otptAdr" Reconfigurable Module "ConvAccel/matrixAccel/genblk4[1].outputAdder"
-Partition "pblock_gnblk3[1].inptMlt" Reconfigurable Module "ConvAccel/matrixAccel/genblk3[1].inputMulti"
-INFO: [Vivado 12-4077] No full design bitstream will be created with the use of the -cell option.
-Process Partition "pblock_finalAdder"
-INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
-Loading data files...
-Loading site data...
-Loading route data...
-Processing options...
-Creating bitmap...
-Creating bitstream...
-Partial bitstream contains 2135936 bits.
-Writing bitstream ./ConvAccel_matrixAccel_finalAdder_adder_partial.bit...
-INFO: [Vivado 12-1842] Bitgen Completed Successfully.
-INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
-INFO: [Common 17-186] 'C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Sat Sep 26 20:49:15 2020. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2019.2/doc/webtalk_introduction.html.
-INFO: [Common 17-83] Releasing license: Implementation
-35 Infos, 19 Warnings, 0 Critical Warnings and 0 Errors encountered.
-write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1913.566 ; gain = 0.000
-Command: write_bitstream -force -cell {ConvAccel/matrixAccel/genblk3[0].inputMulti} ConvAccel_matrixAccel_genblk3_0_.inputMulti_Integer_partial.bit
-Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
-INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
-Running DRC as a precondition to command write_bitstream
-INFO: [IP_Flow 19-1839] IP Catalog is up to date.
-INFO: [DRC 23-27] Running DRC with 2 threads
-WARNING: [DRC DPIP-1] Input pipelining: DSP ConvAccel/matrixAccel/genblk3[0].inputMulti/product_reg input ConvAccel/matrixAccel/genblk3[0].inputMulti/product_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP ConvAccel/matrixAccel/genblk3[0].inputMulti/product_reg input ConvAccel/matrixAccel/genblk3[0].inputMulti/product_reg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP ConvAccel/matrixAccel/genblk3[1].inputMulti/product_reg input ConvAccel/matrixAccel/genblk3[1].inputMulti/product_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP ConvAccel/matrixAccel/genblk3[1].inputMulti/product_reg input ConvAccel/matrixAccel/genblk3[1].inputMulti/product_reg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP ConvAccel/matrixAccel/genblk3[2].inputMulti/product_reg input ConvAccel/matrixAccel/genblk3[2].inputMulti/product_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP ConvAccel/matrixAccel/genblk3[2].inputMulti/product_reg input ConvAccel/matrixAccel/genblk3[2].inputMulti/product_reg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP ConvAccel/matrixAccel/genblk3[0].inputMulti/product_reg multiplier stage ConvAccel/matrixAccel/genblk3[0].inputMulti/product_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP ConvAccel/matrixAccel/genblk3[1].inputMulti/product_reg multiplier stage ConvAccel/matrixAccel/genblk3[1].inputMulti/product_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP ConvAccel/matrixAccel/genblk3[2].inputMulti/product_reg multiplier stage ConvAccel/matrixAccel/genblk3[2].inputMulti/product_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-INFO: [Vivado 12-3199] DRC finished with 0 Errors, 9 Warnings
-INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
-Partition "pblock_finalAdder" Reconfigurable Module "ConvAccel/matrixAccel/finalAdder"
-Partition "pblock_gnblk4[2].otptAdr" Reconfigurable Module "ConvAccel/matrixAccel/genblk4[2].outputAdder"
-Partition "pblock_2" Reconfigurable Module "ConvAccel/matrixAccel/genblk4[0].outputAdder"
-Partition "pblock_gnblk3[2].inptMlt" Reconfigurable Module "ConvAccel/matrixAccel/genblk3[2].inputMulti"
-Partition "pblock_1" Reconfigurable Module "ConvAccel/matrixAccel/genblk3[0].inputMulti"
-Partition "pblock_gnblk4[1].otptAdr" Reconfigurable Module "ConvAccel/matrixAccel/genblk4[1].outputAdder"
-Partition "pblock_gnblk3[1].inptMlt" Reconfigurable Module "ConvAccel/matrixAccel/genblk3[1].inputMulti"
-INFO: [Vivado 12-4077] No full design bitstream will be created with the use of the -cell option.
-Process Partition "pblock_1"
-INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
-Loading data files...
-Loading site data...
-Loading route data...
-Processing options...
-Creating bitmap...
-Creating bitstream...
-Partial bitstream contains 1353280 bits.
-Writing bitstream ./ConvAccel_matrixAccel_genblk3_0_.inputMulti_Integer_partial.bit...
-INFO: [Vivado 12-1842] Bitgen Completed Successfully.
-INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
-INFO: [Common 17-186] 'C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Sat Sep 26 20:49:26 2020. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2019.2/doc/webtalk_introduction.html.
-INFO: [Common 17-83] Releasing license: Implementation
-46 Infos, 28 Warnings, 0 Critical Warnings and 0 Errors encountered.
-write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1913.566 ; gain = 0.000
-Command: write_bitstream -force -cell {ConvAccel/matrixAccel/genblk3[1].inputMulti} ConvAccel_matrixAccel_genblk3_1_.inputMulti_Integer_partial.bit
-Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
-INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
-Running DRC as a precondition to command write_bitstream
-INFO: [IP_Flow 19-1839] IP Catalog is up to date.
-INFO: [DRC 23-27] Running DRC with 2 threads
-WARNING: [DRC DPIP-1] Input pipelining: DSP ConvAccel/matrixAccel/genblk3[0].inputMulti/product_reg input ConvAccel/matrixAccel/genblk3[0].inputMulti/product_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP ConvAccel/matrixAccel/genblk3[0].inputMulti/product_reg input ConvAccel/matrixAccel/genblk3[0].inputMulti/product_reg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP ConvAccel/matrixAccel/genblk3[1].inputMulti/product_reg input ConvAccel/matrixAccel/genblk3[1].inputMulti/product_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP ConvAccel/matrixAccel/genblk3[1].inputMulti/product_reg input ConvAccel/matrixAccel/genblk3[1].inputMulti/product_reg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP ConvAccel/matrixAccel/genblk3[2].inputMulti/product_reg input ConvAccel/matrixAccel/genblk3[2].inputMulti/product_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP ConvAccel/matrixAccel/genblk3[2].inputMulti/product_reg input ConvAccel/matrixAccel/genblk3[2].inputMulti/product_reg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP ConvAccel/matrixAccel/genblk3[0].inputMulti/product_reg multiplier stage ConvAccel/matrixAccel/genblk3[0].inputMulti/product_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP ConvAccel/matrixAccel/genblk3[1].inputMulti/product_reg multiplier stage ConvAccel/matrixAccel/genblk3[1].inputMulti/product_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP ConvAccel/matrixAccel/genblk3[2].inputMulti/product_reg multiplier stage ConvAccel/matrixAccel/genblk3[2].inputMulti/product_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-INFO: [Vivado 12-3199] DRC finished with 0 Errors, 9 Warnings
-INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
-Partition "pblock_finalAdder" Reconfigurable Module "ConvAccel/matrixAccel/finalAdder"
-Partition "pblock_gnblk4[2].otptAdr" Reconfigurable Module "ConvAccel/matrixAccel/genblk4[2].outputAdder"
-Partition "pblock_2" Reconfigurable Module "ConvAccel/matrixAccel/genblk4[0].outputAdder"
-Partition "pblock_gnblk3[2].inptMlt" Reconfigurable Module "ConvAccel/matrixAccel/genblk3[2].inputMulti"
-Partition "pblock_1" Reconfigurable Module "ConvAccel/matrixAccel/genblk3[0].inputMulti"
-Partition "pblock_gnblk4[1].otptAdr" Reconfigurable Module "ConvAccel/matrixAccel/genblk4[1].outputAdder"
-Partition "pblock_gnblk3[1].inptMlt" Reconfigurable Module "ConvAccel/matrixAccel/genblk3[1].inputMulti"
-INFO: [Vivado 12-4077] No full design bitstream will be created with the use of the -cell option.
-Process Partition "pblock_gnblk3[1].inptMlt"
-INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
-Loading data files...
-Loading site data...
-Loading route data...
-Processing options...
-Creating bitmap...
-Creating bitstream...
-Partial bitstream contains 2601344 bits.
-Writing bitstream ./ConvAccel_matrixAccel_genblk3_1_.inputMulti_Integer_partial.bit...
-INFO: [Vivado 12-1842] Bitgen Completed Successfully.
-INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
-INFO: [Common 17-186] 'C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Sat Sep 26 20:49:36 2020. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2019.2/doc/webtalk_introduction.html.
-INFO: [Common 17-83] Releasing license: Implementation
-57 Infos, 37 Warnings, 0 Critical Warnings and 0 Errors encountered.
-write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1913.566 ; gain = 0.000
-Command: write_bitstream -force -cell {ConvAccel/matrixAccel/genblk3[2].inputMulti} ConvAccel_matrixAccel_genblk3_2_.inputMulti_Integer_partial.bit
-Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
-INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
-Running DRC as a precondition to command write_bitstream
-INFO: [IP_Flow 19-1839] IP Catalog is up to date.
-INFO: [DRC 23-27] Running DRC with 2 threads
-WARNING: [DRC DPIP-1] Input pipelining: DSP ConvAccel/matrixAccel/genblk3[0].inputMulti/product_reg input ConvAccel/matrixAccel/genblk3[0].inputMulti/product_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP ConvAccel/matrixAccel/genblk3[0].inputMulti/product_reg input ConvAccel/matrixAccel/genblk3[0].inputMulti/product_reg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP ConvAccel/matrixAccel/genblk3[1].inputMulti/product_reg input ConvAccel/matrixAccel/genblk3[1].inputMulti/product_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP ConvAccel/matrixAccel/genblk3[1].inputMulti/product_reg input ConvAccel/matrixAccel/genblk3[1].inputMulti/product_reg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP ConvAccel/matrixAccel/genblk3[2].inputMulti/product_reg input ConvAccel/matrixAccel/genblk3[2].inputMulti/product_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP ConvAccel/matrixAccel/genblk3[2].inputMulti/product_reg input ConvAccel/matrixAccel/genblk3[2].inputMulti/product_reg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP ConvAccel/matrixAccel/genblk3[0].inputMulti/product_reg multiplier stage ConvAccel/matrixAccel/genblk3[0].inputMulti/product_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP ConvAccel/matrixAccel/genblk3[1].inputMulti/product_reg multiplier stage ConvAccel/matrixAccel/genblk3[1].inputMulti/product_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP ConvAccel/matrixAccel/genblk3[2].inputMulti/product_reg multiplier stage ConvAccel/matrixAccel/genblk3[2].inputMulti/product_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-INFO: [Vivado 12-3199] DRC finished with 0 Errors, 9 Warnings
-INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
-Partition "pblock_finalAdder" Reconfigurable Module "ConvAccel/matrixAccel/finalAdder"
-Partition "pblock_gnblk4[2].otptAdr" Reconfigurable Module "ConvAccel/matrixAccel/genblk4[2].outputAdder"
-Partition "pblock_2" Reconfigurable Module "ConvAccel/matrixAccel/genblk4[0].outputAdder"
-Partition "pblock_gnblk3[2].inptMlt" Reconfigurable Module "ConvAccel/matrixAccel/genblk3[2].inputMulti"
-Partition "pblock_1" Reconfigurable Module "ConvAccel/matrixAccel/genblk3[0].inputMulti"
-Partition "pblock_gnblk4[1].otptAdr" Reconfigurable Module "ConvAccel/matrixAccel/genblk4[1].outputAdder"
-Partition "pblock_gnblk3[1].inptMlt" Reconfigurable Module "ConvAccel/matrixAccel/genblk3[1].inputMulti"
-INFO: [Vivado 12-4077] No full design bitstream will be created with the use of the -cell option.
-Process Partition "pblock_gnblk3[2].inptMlt"
-INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
-Loading data files...
-Loading site data...
-Loading route data...
-Processing options...
-Creating bitmap...
-Creating bitstream...
-Partial bitstream contains 1676992 bits.
-Writing bitstream ./ConvAccel_matrixAccel_genblk3_2_.inputMulti_Integer_partial.bit...
-INFO: [Vivado 12-1842] Bitgen Completed Successfully.
-INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
-INFO: [Common 17-186] 'C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Sat Sep 26 20:49:47 2020. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2019.2/doc/webtalk_introduction.html.
-INFO: [Common 17-83] Releasing license: Implementation
-68 Infos, 46 Warnings, 0 Critical Warnings and 0 Errors encountered.
-write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1916.027 ; gain = 2.461
-Command: write_bitstream -force -cell {ConvAccel/matrixAccel/genblk4[0].outputAdder} ConvAccel_matrixAccel_genblk4_0_.outputAdder_adder_partial.bit
-Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
-INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
-Running DRC as a precondition to command write_bitstream
-INFO: [IP_Flow 19-1839] IP Catalog is up to date.
-INFO: [DRC 23-27] Running DRC with 2 threads
-WARNING: [DRC DPIP-1] Input pipelining: DSP ConvAccel/matrixAccel/genblk3[0].inputMulti/product_reg input ConvAccel/matrixAccel/genblk3[0].inputMulti/product_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP ConvAccel/matrixAccel/genblk3[0].inputMulti/product_reg input ConvAccel/matrixAccel/genblk3[0].inputMulti/product_reg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP ConvAccel/matrixAccel/genblk3[1].inputMulti/product_reg input ConvAccel/matrixAccel/genblk3[1].inputMulti/product_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP ConvAccel/matrixAccel/genblk3[1].inputMulti/product_reg input ConvAccel/matrixAccel/genblk3[1].inputMulti/product_reg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP ConvAccel/matrixAccel/genblk3[2].inputMulti/product_reg input ConvAccel/matrixAccel/genblk3[2].inputMulti/product_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP ConvAccel/matrixAccel/genblk3[2].inputMulti/product_reg input ConvAccel/matrixAccel/genblk3[2].inputMulti/product_reg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP ConvAccel/matrixAccel/genblk3[0].inputMulti/product_reg multiplier stage ConvAccel/matrixAccel/genblk3[0].inputMulti/product_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP ConvAccel/matrixAccel/genblk3[1].inputMulti/product_reg multiplier stage ConvAccel/matrixAccel/genblk3[1].inputMulti/product_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP ConvAccel/matrixAccel/genblk3[2].inputMulti/product_reg multiplier stage ConvAccel/matrixAccel/genblk3[2].inputMulti/product_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-INFO: [Vivado 12-3199] DRC finished with 0 Errors, 9 Warnings
-INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
-Partition "pblock_finalAdder" Reconfigurable Module "ConvAccel/matrixAccel/finalAdder"
-Partition "pblock_gnblk4[2].otptAdr" Reconfigurable Module "ConvAccel/matrixAccel/genblk4[2].outputAdder"
-Partition "pblock_2" Reconfigurable Module "ConvAccel/matrixAccel/genblk4[0].outputAdder"
-Partition "pblock_gnblk3[2].inptMlt" Reconfigurable Module "ConvAccel/matrixAccel/genblk3[2].inputMulti"
-Partition "pblock_1" Reconfigurable Module "ConvAccel/matrixAccel/genblk3[0].inputMulti"
-Partition "pblock_gnblk4[1].otptAdr" Reconfigurable Module "ConvAccel/matrixAccel/genblk4[1].outputAdder"
-Partition "pblock_gnblk3[1].inptMlt" Reconfigurable Module "ConvAccel/matrixAccel/genblk3[1].inputMulti"
-INFO: [Vivado 12-4077] No full design bitstream will be created with the use of the -cell option.
-Process Partition "pblock_2"
-INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
-Loading data files...
-Loading site data...
-Loading route data...
-Processing options...
-Creating bitmap...
-Creating bitstream...
-Partial bitstream contains 2368640 bits.
-Writing bitstream ./ConvAccel_matrixAccel_genblk4_0_.outputAdder_adder_partial.bit...
-INFO: [Vivado 12-1842] Bitgen Completed Successfully.
-INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
-INFO: [Common 17-186] 'C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Sat Sep 26 20:49:58 2020. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2019.2/doc/webtalk_introduction.html.
-INFO: [Common 17-83] Releasing license: Implementation
-79 Infos, 55 Warnings, 0 Critical Warnings and 0 Errors encountered.
-write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1928.199 ; gain = 12.172
-Command: write_bitstream -force -cell {ConvAccel/matrixAccel/genblk4[1].outputAdder} ConvAccel_matrixAccel_genblk4_1_.outputAdder_adder_partial.bit
-Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
-INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
-Running DRC as a precondition to command write_bitstream
-INFO: [IP_Flow 19-1839] IP Catalog is up to date.
-INFO: [DRC 23-27] Running DRC with 2 threads
-WARNING: [DRC DPIP-1] Input pipelining: DSP ConvAccel/matrixAccel/genblk3[0].inputMulti/product_reg input ConvAccel/matrixAccel/genblk3[0].inputMulti/product_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP ConvAccel/matrixAccel/genblk3[0].inputMulti/product_reg input ConvAccel/matrixAccel/genblk3[0].inputMulti/product_reg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP ConvAccel/matrixAccel/genblk3[1].inputMulti/product_reg input ConvAccel/matrixAccel/genblk3[1].inputMulti/product_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP ConvAccel/matrixAccel/genblk3[1].inputMulti/product_reg input ConvAccel/matrixAccel/genblk3[1].inputMulti/product_reg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP ConvAccel/matrixAccel/genblk3[2].inputMulti/product_reg input ConvAccel/matrixAccel/genblk3[2].inputMulti/product_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP ConvAccel/matrixAccel/genblk3[2].inputMulti/product_reg input ConvAccel/matrixAccel/genblk3[2].inputMulti/product_reg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP ConvAccel/matrixAccel/genblk3[0].inputMulti/product_reg multiplier stage ConvAccel/matrixAccel/genblk3[0].inputMulti/product_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP ConvAccel/matrixAccel/genblk3[1].inputMulti/product_reg multiplier stage ConvAccel/matrixAccel/genblk3[1].inputMulti/product_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP ConvAccel/matrixAccel/genblk3[2].inputMulti/product_reg multiplier stage ConvAccel/matrixAccel/genblk3[2].inputMulti/product_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-INFO: [Vivado 12-3199] DRC finished with 0 Errors, 9 Warnings
-INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
-Partition "pblock_finalAdder" Reconfigurable Module "ConvAccel/matrixAccel/finalAdder"
-Partition "pblock_gnblk4[2].otptAdr" Reconfigurable Module "ConvAccel/matrixAccel/genblk4[2].outputAdder"
-Partition "pblock_2" Reconfigurable Module "ConvAccel/matrixAccel/genblk4[0].outputAdder"
-Partition "pblock_gnblk3[2].inptMlt" Reconfigurable Module "ConvAccel/matrixAccel/genblk3[2].inputMulti"
-Partition "pblock_1" Reconfigurable Module "ConvAccel/matrixAccel/genblk3[0].inputMulti"
-Partition "pblock_gnblk4[1].otptAdr" Reconfigurable Module "ConvAccel/matrixAccel/genblk4[1].outputAdder"
-Partition "pblock_gnblk3[1].inptMlt" Reconfigurable Module "ConvAccel/matrixAccel/genblk3[1].inputMulti"
-INFO: [Vivado 12-4077] No full design bitstream will be created with the use of the -cell option.
-Process Partition "pblock_gnblk4[1].otptAdr"
-INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
-Loading data files...
-Loading site data...
-Loading route data...
-Processing options...
-Creating bitmap...
-Creating bitstream...
-Partial bitstream contains 1353280 bits.
-Writing bitstream ./ConvAccel_matrixAccel_genblk4_1_.outputAdder_adder_partial.bit...
-INFO: [Vivado 12-1842] Bitgen Completed Successfully.
-INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
-INFO: [Common 17-186] 'C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Sat Sep 26 20:50:09 2020. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2019.2/doc/webtalk_introduction.html.
-INFO: [Common 17-83] Releasing license: Implementation
-90 Infos, 64 Warnings, 0 Critical Warnings and 0 Errors encountered.
-write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1942.129 ; gain = 13.930
-Command: write_bitstream -force -cell {ConvAccel/matrixAccel/genblk4[2].outputAdder} ConvAccel_matrixAccel_genblk4_2_.outputAdder_adder_partial.bit
-Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
-INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
-Running DRC as a precondition to command write_bitstream
-INFO: [IP_Flow 19-1839] IP Catalog is up to date.
-INFO: [DRC 23-27] Running DRC with 2 threads
-WARNING: [DRC DPIP-1] Input pipelining: DSP ConvAccel/matrixAccel/genblk3[0].inputMulti/product_reg input ConvAccel/matrixAccel/genblk3[0].inputMulti/product_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP ConvAccel/matrixAccel/genblk3[0].inputMulti/product_reg input ConvAccel/matrixAccel/genblk3[0].inputMulti/product_reg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP ConvAccel/matrixAccel/genblk3[1].inputMulti/product_reg input ConvAccel/matrixAccel/genblk3[1].inputMulti/product_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP ConvAccel/matrixAccel/genblk3[1].inputMulti/product_reg input ConvAccel/matrixAccel/genblk3[1].inputMulti/product_reg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP ConvAccel/matrixAccel/genblk3[2].inputMulti/product_reg input ConvAccel/matrixAccel/genblk3[2].inputMulti/product_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPIP-1] Input pipelining: DSP ConvAccel/matrixAccel/genblk3[2].inputMulti/product_reg input ConvAccel/matrixAccel/genblk3[2].inputMulti/product_reg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP ConvAccel/matrixAccel/genblk3[0].inputMulti/product_reg multiplier stage ConvAccel/matrixAccel/genblk3[0].inputMulti/product_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP ConvAccel/matrixAccel/genblk3[1].inputMulti/product_reg multiplier stage ConvAccel/matrixAccel/genblk3[1].inputMulti/product_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-WARNING: [DRC DPOP-2] MREG Output pipelining: DSP ConvAccel/matrixAccel/genblk3[2].inputMulti/product_reg multiplier stage ConvAccel/matrixAccel/genblk3[2].inputMulti/product_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-INFO: [Vivado 12-3199] DRC finished with 0 Errors, 9 Warnings
-INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
-Partition "pblock_finalAdder" Reconfigurable Module "ConvAccel/matrixAccel/finalAdder"
-Partition "pblock_gnblk4[2].otptAdr" Reconfigurable Module "ConvAccel/matrixAccel/genblk4[2].outputAdder"
-Partition "pblock_2" Reconfigurable Module "ConvAccel/matrixAccel/genblk4[0].outputAdder"
-Partition "pblock_gnblk3[2].inptMlt" Reconfigurable Module "ConvAccel/matrixAccel/genblk3[2].inputMulti"
-Partition "pblock_1" Reconfigurable Module "ConvAccel/matrixAccel/genblk3[0].inputMulti"
-Partition "pblock_gnblk4[1].otptAdr" Reconfigurable Module "ConvAccel/matrixAccel/genblk4[1].outputAdder"
-Partition "pblock_gnblk3[1].inptMlt" Reconfigurable Module "ConvAccel/matrixAccel/genblk3[1].inputMulti"
-INFO: [Vivado 12-4077] No full design bitstream will be created with the use of the -cell option.
-Process Partition "pblock_gnblk4[2].otptAdr"
-INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
-Loading data files...
-Loading site data...
-Loading route data...
-Processing options...
-Creating bitmap...
-Creating bitstream...
-Partial bitstream contains 2135936 bits.
-Writing bitstream ./ConvAccel_matrixAccel_genblk4_2_.outputAdder_adder_partial.bit...
-INFO: [Vivado 12-1842] Bitgen Completed Successfully.
-INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
-INFO: [Common 17-186] 'C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Sat Sep 26 20:50:21 2020. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2019.2/doc/webtalk_introduction.html.
-INFO: [Common 17-83] Releasing license: Implementation
-101 Infos, 73 Warnings, 0 Critical Warnings and 0 Errors encountered.
-write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1947.758 ; gain = 5.629
-INFO: [Common 17-206] Exiting Vivado at Sat Sep 26 20:50:21 2020...
+INFO: [Common 17-206] Exiting Vivado at Thu Oct  1 00:12:44 2020...

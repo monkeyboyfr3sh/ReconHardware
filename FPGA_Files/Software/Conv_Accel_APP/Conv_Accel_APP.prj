@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="Conv_Accel_APP" location="C:/GitHub/ReconHardware/FPGA_Files/Software/Conv_Accel_APP" platform="C:/GitHub/ReconHardware/FPGA_Files/Software/Conv_Accel_HW/export/Conv_Accel_HW/Conv_Accel_HW.xpfm" platformUID="xilinx:pynq-z2::0.0(custom)" systemProject="Conv_Accel_APP_system" sysConfig="Conv_Accel_HW" runtime="C/C++" cpu="standalone_domain" cpuInstance="ps7_cortexa9_0" os="standalone" mssSignature="0825fb75cdf1fc4d57d609f2d2ea1c8b">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.1181249313">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.960109240" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="hello_world"/>
+</sdkproject:SdkProject>

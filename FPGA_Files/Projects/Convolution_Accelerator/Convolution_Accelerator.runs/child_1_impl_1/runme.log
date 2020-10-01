@@ -16,7 +16,7 @@ INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Project 1-454] Reading design checkpoint 'C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/Fixed_synth_1/fixedmultiplyCompute.dcp' for cell 'ConvAccel/matrixAccel/genblk3[0].inputMulti'
 INFO: [Project 1-454] Reading design checkpoint 'C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/Fixed_synth_1/fixedmultiplyCompute.dcp' for cell 'ConvAccel/matrixAccel/genblk3[1].inputMulti'
 INFO: [Project 1-454] Reading design checkpoint 'C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/Fixed_synth_1/fixedmultiplyCompute.dcp' for cell 'ConvAccel/matrixAccel/genblk3[2].inputMulti'
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.130 . Memory (MB): peak = 799.242 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.137 . Memory (MB): peak = 799.578 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 223 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2019.2
@@ -27,7 +27,7 @@ Finished Parsing XDC File [C:/GitHub/ReconHardware/FPGA_Files/Projects/Convoluti
 Parsing XDC File [C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/impl_1/Conv_Accel_Top_routed_bb/Conv_Accel_Top_early.xdc]
 INFO: [Timing 38-35] Done setting XDC timing constraints. [C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.srcs/sources_1/bd/design_2/ip/design_2_clk_wiz_0_0/design_2_clk_wiz_0_0.xdc:57]
 INFO: [Timing 38-2] Deriving generated clocks [C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.srcs/sources_1/bd/design_2/ip/design_2_clk_wiz_0_0/design_2_clk_wiz_0_0.xdc:57]
-get_clocks: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1493.492 ; gain = 577.406
+get_clocks: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1494.262 ; gain = 577.961
 Finished Parsing XDC File [C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/impl_1/Conv_Accel_Top_routed_bb/Conv_Accel_Top_early.xdc]
 Parsing XDC File [C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/impl_1/Conv_Accel_Top_routed_bb/Conv_Accel_Top.xdc]
 Finished Parsing XDC File [C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/impl_1/Conv_Accel_Top_routed_bb/Conv_Accel_Top.xdc]
@@ -36,12 +36,12 @@ Finished Parsing XDC File [C:/GitHub/ReconHardware/FPGA_Files/Projects/Convoluti
 Reading XDEF placement.
 Reading placer database...
 Reading XDEF routing.
-Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.477 . Memory (MB): peak = 1493.492 ; gain = 0.000
-Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.477 . Memory (MB): peak = 1493.492 ; gain = 0.000
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.478 . Memory (MB): peak = 1494.262 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.478 . Memory (MB): peak = 1494.262 ; gain = 0.000
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-560] Could not resolve non-primitive black box cell 'adder_bb' instantiated as 'ConvAccel/matrixAccel/finalAdder'. 4 instances of this cell are unresolved black boxes. [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/matrixAccelerator.v:90]
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1493.492 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1494.262 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 48 instances were transformed.
   RAM64M => RAM64M (RAMD64E(x4)): 40 instances
@@ -49,7 +49,7 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 
 13 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
 link_design completed successfully
-link_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1493.492 ; gain = 1047.758
+link_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1494.262 ; gain = 1050.352
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
@@ -60,13 +60,13 @@ INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.477 . Memory (MB): peak = 1493.492 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.479 . Memory (MB): peak = 1494.262 ; gain = 0.000
 
 Starting Cache Timing Information Task
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 Ending Cache Timing Information Task | Checksum: 2ff356602
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.200 . Memory (MB): peak = 1519.238 ; gain = 25.746
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.193 . Memory (MB): peak = 1519.012 ; gain = 24.750
 
 Starting Logic Optimization Task
 
@@ -75,7 +75,7 @@ INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
 Phase 1 Retarget | Checksum: 2ff356602
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.745 . Memory (MB): peak = 1727.832 ; gain = 25.438
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.407 . Memory (MB): peak = 1703.340 ; gain = 0.000
 INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
 INFO: [Opt 31-1021] In phase Retarget, 495 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
@@ -83,14 +83,14 @@ Phase 2 Constant propagation
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 Phase 2 Constant propagation | Checksum: 33757ac5b
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.867 . Memory (MB): peak = 1727.832 ; gain = 25.438
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.533 . Memory (MB): peak = 1703.340 ; gain = 0.000
 INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 16 cells
 INFO: [Opt 31-1021] In phase Constant propagation, 368 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 3 Sweep
 Phase 3 Sweep | Checksum: 32a78ac16
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1727.832 ; gain = 25.438
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.877 . Memory (MB): peak = 1703.340 ; gain = 0.000
 INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
 INFO: [Opt 31-1021] In phase Sweep, 26570 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
@@ -100,7 +100,7 @@ INFO: [Opt 31-1112] Starts optimizing BUFG(s) with a common driver.
 INFO: [Opt 31-1092] Phase BUFG optimization transformed 0 BUFG(s) to MBUFG(s).
 Phase 4 BUFG optimization | Checksum: 32a78ac16
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1727.832 ; gain = 25.438
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1703.340 ; gain = 0.000
 INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
 INFO: [Opt 31-1021] In phase BUFG optimization, 6 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
@@ -108,13 +108,13 @@ Phase 5 Shift Register Optimization
 INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
 Phase 5 Shift Register Optimization | Checksum: 32a78ac16
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1727.832 ; gain = 25.438
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1703.340 ; gain = 0.000
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Phase 6 Post Processing Netlist
 Phase 6 Post Processing Netlist | Checksum: 32a78ac16
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1727.832 ; gain = 25.438
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1703.340 ; gain = 0.000
 INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
 INFO: [Opt 31-1021] In phase Post Processing Netlist, 276 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 Opt_design Change Summary
@@ -136,37 +136,37 @@ Opt_design Change Summary
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1727.832 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1703.340 ; gain = 0.000
 Ending Logic Optimization Task | Checksum: 355de4b94
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1727.832 ; gain = 25.438
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1703.340 ; gain = 0.000
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
 Ending Power Optimization Task | Checksum: 355de4b94
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1727.832 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1703.340 ; gain = 0.000
 
 Starting Final Cleanup Task
 Ending Final Cleanup Task | Checksum: 355de4b94
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1727.832 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1703.340 ; gain = 0.000
 
 Starting Netlist Obfuscation Task
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1727.832 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1703.340 ; gain = 0.000
 Ending Netlist Obfuscation Task | Checksum: 355de4b94
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1727.832 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1703.340 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
 38 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1727.832 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1703.340 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.352 . Memory (MB): peak = 1727.832 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.401 . Memory (MB): peak = 1703.340 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/child_1_impl_1/Conv_Accel_Top_opt.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file Conv_Accel_Top_drc_opted.rpt -pb Conv_Accel_Top_drc_opted.pb -rpx Conv_Accel_Top_drc_opted.rpx
 Command: report_drc -file Conv_Accel_Top_drc_opted.rpt -pb Conv_Accel_Top_drc_opted.pb -rpx Conv_Accel_Top_drc_opted.rpx
@@ -193,11 +193,11 @@ INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 
 Phase 1 Placer Initialization
 
 Phase 1.1 Placer Initialization Netlist Sorting
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1727.832 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1703.340 ; gain = 0.000
 Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 1b8aa0d88
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.044 . Memory (MB): peak = 1727.832 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1727.832 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 1703.340 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1703.340 ; gain = 0.000
 
 Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
 CRITICAL WARNING: [Constraints 18-993] The Pblock pblock_2 has defined an area that causes the splitting of interconnect tile columns. Partial reconfiguration requires that the left and right paired interconnect tile columns cannot be split by a reconfigurable boundary.  This is caused by either the left or right edge of a Pblock boundary, or by the Pblock spanning over logic types not included in the Pblock ranges.  To avoid an unroutable situation, placement will be prohibited from both of these columns. To avoid placement restrictions, modify the Pblock to avoid splitting the two columns.
@@ -215,27 +215,27 @@ CRITICAL WARNING: [Constraints 18-992]   Site Type: SLICEM excluded sites: 50
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 1e1c54a13
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1727.832 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1703.340 ; gain = 0.000
 
 Phase 1.3 Build Placer Netlist Model
 Phase 1.3 Build Placer Netlist Model | Checksum: 27483d45c
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1727.832 ; gain = 0.000
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1710.141 ; gain = 6.801
 
 Phase 1.4 Constrain Clocks/Macros
 Phase 1.4 Constrain Clocks/Macros | Checksum: 27483d45c
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1727.832 ; gain = 0.000
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1710.141 ; gain = 6.801
 Phase 1 Placer Initialization | Checksum: 27483d45c
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1727.832 ; gain = 0.000
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1710.141 ; gain = 6.801
 
 Phase 2 Global Placement
 
 Phase 2.1 Floorplanning
 Phase 2.1 Floorplanning | Checksum: 2bb17ac20
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1727.832 ; gain = 0.000
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 1710.141 ; gain = 6.801
 
 Phase 2.2 Global Placement Core
 
@@ -254,7 +254,7 @@ INFO: [Physopt 32-526] No candidate cells for BRAM register optimization found i
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
 INFO: [Physopt 32-949] No candidate nets found for HD net replication
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1727.832 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1710.141 ; gain = 0.000
 
 Summary of Physical Synthesis Optimizations
 ============================================
@@ -276,63 +276,63 @@ Summary of Physical Synthesis Optimizations
 
 Phase 2.2.1 Physical Synthesis In Placer | Checksum: 194a3f8c8
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 1727.832 ; gain = 0.000
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 1710.141 ; gain = 6.801
 Phase 2.2 Global Placement Core | Checksum: 2430ebb6b
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 1727.832 ; gain = 0.000
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 1710.141 ; gain = 6.801
 Phase 2 Global Placement | Checksum: 2430ebb6b
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 1727.832 ; gain = 0.000
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 1710.141 ; gain = 6.801
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
 Phase 3.1 Commit Multi Column Macros | Checksum: 2116a2a5c
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 1727.832 ; gain = 0.000
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 1710.141 ; gain = 6.801
 
 Phase 3.2 Commit Most Macros & LUTRAMs
 Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 157d86880
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 1727.832 ; gain = 0.000
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 1710.141 ; gain = 6.801
 
 Phase 3.3 Area Swap Optimization
 Phase 3.3 Area Swap Optimization | Checksum: bdfe3497
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 1727.832 ; gain = 0.000
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 1710.141 ; gain = 6.801
 
 Phase 3.4 Pipeline Register Optimization
 Phase 3.4 Pipeline Register Optimization | Checksum: bdfe3497
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 1727.832 ; gain = 0.000
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 1710.141 ; gain = 6.801
 
 Phase 3.5 Fast Optimization
 Phase 3.5 Fast Optimization | Checksum: c097979b
 
-Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 1727.832 ; gain = 0.000
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 1710.141 ; gain = 6.801
 
 Phase 3.6 Small Shape Detail Placement
 Phase 3.6 Small Shape Detail Placement | Checksum: 1209997eb
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 1727.832 ; gain = 0.000
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:07 . Memory (MB): peak = 1710.141 ; gain = 6.801
 
 Phase 3.7 Re-assign LUT pins
 Phase 3.7 Re-assign LUT pins | Checksum: 14ec92899
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 1727.832 ; gain = 0.000
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 1710.141 ; gain = 6.801
 
 Phase 3.8 Pipeline Register Optimization
 Phase 3.8 Pipeline Register Optimization | Checksum: 14ec92899
 
-Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 1727.832 ; gain = 0.000
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 1710.141 ; gain = 6.801
 
 Phase 3.9 Fast Optimization
 Phase 3.9 Fast Optimization | Checksum: f2cea438
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 1727.832 ; gain = 0.000
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:09 . Memory (MB): peak = 1710.141 ; gain = 6.801
 Phase 3 Detail Placement | Checksum: f2cea438
 
-Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 1727.832 ; gain = 0.000
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:09 . Memory (MB): peak = 1710.141 ; gain = 6.801
 
 Phase 4 Post Placement Optimization and Clean-Up
 
@@ -346,57 +346,57 @@ Phase 4.1.1.1 BUFG Insertion
 INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
 Phase 4.1.1.1 BUFG Insertion | Checksum: 1816c68a6
 
-Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 1739.066 ; gain = 11.234
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:10 . Memory (MB): peak = 1734.246 ; gain = 30.906
 INFO: [Place 30-746] Post Placement Timing Summary WNS=-0.215. For the most accurate timing information please run report_timing.
 Phase 4.1.1 Post Placement Optimization | Checksum: 12b002a7f
 
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:12 . Memory (MB): peak = 1739.066 ; gain = 11.234
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:13 . Memory (MB): peak = 1734.246 ; gain = 30.906
 Phase 4.1 Post Commit Optimization | Checksum: 12b002a7f
 
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:12 . Memory (MB): peak = 1739.066 ; gain = 11.234
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:13 . Memory (MB): peak = 1734.246 ; gain = 30.906
 
 Phase 4.2 Post Placement Cleanup
 Phase 4.2 Post Placement Cleanup | Checksum: 12b002a7f
 
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:12 . Memory (MB): peak = 1739.066 ; gain = 11.234
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:13 . Memory (MB): peak = 1734.246 ; gain = 30.906
 
 Phase 4.3 Placer Reporting
 Phase 4.3 Placer Reporting | Checksum: 20b97a2c2
 
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:13 . Memory (MB): peak = 1739.066 ; gain = 11.234
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:13 . Memory (MB): peak = 1734.246 ; gain = 30.906
 
 Phase 4.4 Final Placement Cleanup
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1739.066 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1734.246 ; gain = 0.000
 Phase 4.4 Final Placement Cleanup | Checksum: 26d586764
 
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:13 . Memory (MB): peak = 1739.066 ; gain = 11.234
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:13 . Memory (MB): peak = 1734.246 ; gain = 30.906
 Phase 4 Post Placement Optimization and Clean-Up | Checksum: 26d586764
 
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:13 . Memory (MB): peak = 1739.066 ; gain = 11.234
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:13 . Memory (MB): peak = 1734.246 ; gain = 30.906
 Ending Placer Task | Checksum: 24f787fc7
 
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:13 . Memory (MB): peak = 1739.066 ; gain = 11.234
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:13 . Memory (MB): peak = 1734.246 ; gain = 30.906
 INFO: [Common 17-83] Releasing license: Implementation
 73 Infos, 1 Warnings, 8 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:14 . Memory (MB): peak = 1739.066 ; gain = 11.234
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1739.066 ; gain = 0.000
+place_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:14 . Memory (MB): peak = 1734.246 ; gain = 30.906
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1734.246 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.472 . Memory (MB): peak = 1740.133 ; gain = 1.066
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.476 . Memory (MB): peak = 1735.277 ; gain = 1.031
 INFO: [Common 17-1381] The checkpoint 'C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/child_1_impl_1/Conv_Accel_Top_placed.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_io -file Conv_Accel_Top_io_placed.rpt
-report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 1740.133 ; gain = 0.000
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 1735.277 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_utilization -file Conv_Accel_Top_utilization_placed.rpt -pb Conv_Accel_Top_utilization_placed.pb
 INFO: [runtcl-4] Executing : report_control_sets -verbose -file Conv_Accel_Top_control_sets_placed.rpt
-report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1740.133 ; gain = 0.000
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 1735.277 ; gain = 0.000
 Command: phys_opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1754.578 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1749.730 ; gain = 0.000
 
 Starting Physical Synthesis Task
 
@@ -406,7 +406,7 @@ INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximu
 INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.215 | TNS=-0.872 |
 Phase 1 Physical Synthesis Initialization | Checksum: dec80342
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1758.016 ; gain = 3.438
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1753.172 ; gain = 3.441
 INFO: [Physopt 32-245] Routed nets are present in the design. phys_opt_design will optimize unrouted part of the design.
 INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.215 | TNS=-0.872 |
 
@@ -415,7 +415,7 @@ INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in
 INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
 Phase 2 DSP Register Optimization | Checksum: dec80342
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1758.016 ; gain = 3.438
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 1753.172 ; gain = 3.441
 
 Phase 3 Critical Path Optimization
 INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.215 | TNS=-0.872 |
@@ -451,15 +451,15 @@ INFO: [Physopt 32-619] Estimated Timing Summary | WNS=0.021 | TNS=0.000 |
 INFO: [Physopt 32-619] Estimated Timing Summary | WNS=0.021 | TNS=0.000 |
 Phase 3 Critical Path Optimization | Checksum: dec80342
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1763.668 ; gain = 9.090
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1758.797 ; gain = 9.066
 
 Phase 4 Critical Path Optimization
 INFO: [Physopt 32-619] Estimated Timing Summary | WNS=0.021 | TNS=0.000 |
 INFO: [Physopt 32-619] Estimated Timing Summary | WNS=0.021 | TNS=0.000 |
 Phase 4 Critical Path Optimization | Checksum: dec80342
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1763.668 ; gain = 9.090
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1763.668 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1758.797 ; gain = 9.066
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1758.797 ; gain = 0.000
 INFO: [Physopt 32-603] Post Physical Optimization Timing Summary | WNS=0.021 | TNS=0.000 |
 
 Summary of Physical Synthesis Optimizations
@@ -475,20 +475,20 @@ Summary of Physical Synthesis Optimizations
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1763.668 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1758.797 ; gain = 0.000
 Ending Physical Synthesis Task | Checksum: dec80342
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1763.668 ; gain = 9.090
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1758.797 ; gain = 9.066
 INFO: [Common 17-83] Releasing license: Implementation
 121 Infos, 1 Warnings, 8 Critical Warnings and 0 Errors encountered.
 phys_opt_design completed successfully
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1763.668 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1758.797 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.463 . Memory (MB): peak = 1772.477 ; gain = 8.809
+Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.489 . Memory (MB): peak = 1767.652 ; gain = 8.855
 INFO: [Common 17-1381] The checkpoint 'C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/child_1_impl_1/Conv_Accel_Top_physopt.dcp' has been generated.
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
@@ -509,7 +509,7 @@ Checksum: PlaceDB: a3334c29 ConstDB: 0 ShapeSum: 54d61717 RouteDB: e0977843
 Phase 1 Build RT Design
 Phase 1 Build RT Design | Checksum: 28a77a77c
 
-Time (s): cpu = 00:00:21 ; elapsed = 00:00:18 . Memory (MB): peak = 1879.250 ; gain = 97.703
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:19 . Memory (MB): peak = 1878.820 ; gain = 102.145
 Post Restoration Checksum: NetGraph: 40f2e0c0 NumContArr: d46ec0c9 Constraints: fd919732 Timing: 0
 
 Phase 2 Router Initialization
@@ -517,28 +517,28 @@ Phase 2 Router Initialization
 Phase 2.1 Create Timer
 Phase 2.1 Create Timer | Checksum: 212f338bb
 
-Time (s): cpu = 00:00:21 ; elapsed = 00:00:19 . Memory (MB): peak = 1879.250 ; gain = 97.703
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:19 . Memory (MB): peak = 1878.820 ; gain = 102.145
 
 Phase 2.2 Fix Topology Constraints
 Phase 2.2 Fix Topology Constraints | Checksum: 212f338bb
 
-Time (s): cpu = 00:00:21 ; elapsed = 00:00:19 . Memory (MB): peak = 1888.500 ; gain = 106.953
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:19 . Memory (MB): peak = 1887.480 ; gain = 110.805
 
 Phase 2.3 Pre Route Cleanup
 Phase 2.3 Pre Route Cleanup | Checksum: 212f338bb
 
-Time (s): cpu = 00:00:21 ; elapsed = 00:00:19 . Memory (MB): peak = 1888.500 ; gain = 106.953
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:19 . Memory (MB): peak = 1887.480 ; gain = 110.805
  Number of Nodes with overlaps = 0
 
 Phase 2.4 Update Timing
 Phase 2.4 Update Timing | Checksum: 1e2b799d9
 
-Time (s): cpu = 00:00:23 ; elapsed = 00:00:20 . Memory (MB): peak = 1896.844 ; gain = 115.297
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:20 . Memory (MB): peak = 1894.609 ; gain = 117.934
 INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.401 | TNS=-2.410 | WHS=-0.172 | THS=-26.629|
 
 Phase 2 Router Initialization | Checksum: 1f084efb7
 
-Time (s): cpu = 00:00:23 ; elapsed = 00:00:20 . Memory (MB): peak = 1901.816 ; gain = 120.270
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 1899.699 ; gain = 123.023
 
 Router Utilization Summary
   Global Vertical Routing Utilization    = 0 %
@@ -556,7 +556,7 @@ Router Utilization Summary
 Phase 3 Initial Routing
 Phase 3 Initial Routing | Checksum: a4cb4b82
 
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:21 . Memory (MB): peak = 1904.285 ; gain = 122.738
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:21 . Memory (MB): peak = 1902.328 ; gain = 125.652
 
 Phase 4 Rip-up And Reroute
 
@@ -579,7 +579,7 @@ INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.813 | TNS=-6.766 | WHS
 
 Phase 4.1 Global Iteration 0 | Checksum: 218d625e6
 
-Time (s): cpu = 00:00:36 ; elapsed = 00:00:28 . Memory (MB): peak = 1904.289 ; gain = 122.742
+Time (s): cpu = 00:00:37 ; elapsed = 00:00:28 . Memory (MB): peak = 1902.332 ; gain = 125.656
 
 Phase 4.2 Global Iteration 1
  Number of Nodes with overlaps = 83
@@ -595,7 +595,7 @@ INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.577 | TNS=-5.145 | WHS
 
 Phase 4.2 Global Iteration 1 | Checksum: 260549e8f
 
-Time (s): cpu = 00:00:39 ; elapsed = 00:00:30 . Memory (MB): peak = 1904.289 ; gain = 122.742
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:31 . Memory (MB): peak = 1902.332 ; gain = 125.656
 
 Phase 4.3 Global Iteration 2
  Number of Nodes with overlaps = 48
@@ -618,10 +618,10 @@ INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.575 | TNS=-5.117 | WHS
 
 Phase 4.3 Global Iteration 2 | Checksum: 2723bb34d
 
-Time (s): cpu = 00:00:44 ; elapsed = 00:00:35 . Memory (MB): peak = 1904.289 ; gain = 122.742
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:36 . Memory (MB): peak = 1902.332 ; gain = 125.656
 Phase 4 Rip-up And Reroute | Checksum: 2723bb34d
 
-Time (s): cpu = 00:00:44 ; elapsed = 00:00:35 . Memory (MB): peak = 1904.289 ; gain = 122.742
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:36 . Memory (MB): peak = 1902.332 ; gain = 125.656
 
 Phase 5 Delay and Skew Optimization
 
@@ -630,21 +630,21 @@ Phase 5.1 Delay CleanUp
 Phase 5.1.1 Update Timing
 Phase 5.1.1 Update Timing | Checksum: 27610977e
 
-Time (s): cpu = 00:00:44 ; elapsed = 00:00:35 . Memory (MB): peak = 1904.289 ; gain = 122.742
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:36 . Memory (MB): peak = 1902.332 ; gain = 125.656
 INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.561 | TNS=-4.921 | WHS=N/A    | THS=N/A    |
 
  Number of Nodes with overlaps = 0
 Phase 5.1 Delay CleanUp | Checksum: 2dbeecabf
 
-Time (s): cpu = 00:00:44 ; elapsed = 00:00:35 . Memory (MB): peak = 1904.289 ; gain = 122.742
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:36 . Memory (MB): peak = 1902.332 ; gain = 125.656
 
 Phase 5.2 Clock Skew Optimization
 Phase 5.2 Clock Skew Optimization | Checksum: 2dbeecabf
 
-Time (s): cpu = 00:00:44 ; elapsed = 00:00:35 . Memory (MB): peak = 1904.289 ; gain = 122.742
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:36 . Memory (MB): peak = 1902.332 ; gain = 125.656
 Phase 5 Delay and Skew Optimization | Checksum: 2dbeecabf
 
-Time (s): cpu = 00:00:44 ; elapsed = 00:00:35 . Memory (MB): peak = 1904.289 ; gain = 122.742
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:36 . Memory (MB): peak = 1902.332 ; gain = 125.656
 
 Phase 6 Post Hold Fix
 
@@ -653,15 +653,15 @@ Phase 6.1 Hold Fix Iter
 Phase 6.1.1 Update Timing
 Phase 6.1.1 Update Timing | Checksum: 24bf84bc5
 
-Time (s): cpu = 00:00:45 ; elapsed = 00:00:35 . Memory (MB): peak = 1904.289 ; gain = 122.742
+Time (s): cpu = 00:00:47 ; elapsed = 00:00:36 . Memory (MB): peak = 1902.332 ; gain = 125.656
 INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.542 | TNS=-4.655 | WHS=-0.033 | THS=-0.033 |
 
 Phase 6.1 Hold Fix Iter | Checksum: 28a79c960
 
-Time (s): cpu = 00:00:45 ; elapsed = 00:00:35 . Memory (MB): peak = 1904.848 ; gain = 123.301
+Time (s): cpu = 00:00:47 ; elapsed = 00:00:37 . Memory (MB): peak = 1902.398 ; gain = 125.723
 Phase 6 Post Hold Fix | Checksum: 2c7337233
 
-Time (s): cpu = 00:00:45 ; elapsed = 00:00:36 . Memory (MB): peak = 1904.848 ; gain = 123.301
+Time (s): cpu = 00:00:47 ; elapsed = 00:00:37 . Memory (MB): peak = 1902.398 ; gain = 125.723
 
 Phase 7 Route finalize
 
@@ -705,19 +705,19 @@ Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
 
 Phase 7 Route finalize | Checksum: 323ee9467
 
-Time (s): cpu = 00:00:45 ; elapsed = 00:00:36 . Memory (MB): peak = 1904.848 ; gain = 123.301
+Time (s): cpu = 00:00:47 ; elapsed = 00:00:37 . Memory (MB): peak = 1902.398 ; gain = 125.723
 
 Phase 8 Verifying routed nets
 
  Verification completed successfully
 Phase 8 Verifying routed nets | Checksum: 323ee9467
 
-Time (s): cpu = 00:00:45 ; elapsed = 00:00:36 . Memory (MB): peak = 1906.852 ; gain = 125.305
+Time (s): cpu = 00:00:47 ; elapsed = 00:00:37 . Memory (MB): peak = 1904.379 ; gain = 127.703
 
 Phase 9 Depositing Routes
 Phase 9 Depositing Routes | Checksum: 35d7b847b
 
-Time (s): cpu = 00:00:46 ; elapsed = 00:00:36 . Memory (MB): peak = 1906.852 ; gain = 125.305
+Time (s): cpu = 00:00:48 ; elapsed = 00:00:37 . Memory (MB): peak = 1904.379 ; gain = 127.703
 WARNING: [Route 35-426] Router was unable to fix hold violation on unroutable pins. The router cannot add routing detours to improve hold time because the pins are part of one or more of the following unroutable types: partition pins, fixed routes and intra-site connections.
 Resolution: Run report_timing_summary to analyze the hold violations.
 
@@ -726,30 +726,30 @@ Phase 10 Post Router Timing
 Phase 10.1 Update Timing
 Phase 10.1 Update Timing | Checksum: 331fa8cd1
 
-Time (s): cpu = 00:00:46 ; elapsed = 00:00:36 . Memory (MB): peak = 1906.852 ; gain = 125.305
+Time (s): cpu = 00:00:48 ; elapsed = 00:00:38 . Memory (MB): peak = 1904.379 ; gain = 127.703
 INFO: [Route 35-57] Estimated Timing Summary | WNS=-0.542 | TNS=-4.655 | WHS=-0.033 | THS=-0.033 |
 
 WARNING: [Route 35-328] Router estimated timing not met.
 Resolution: For a complete and accurate timing signoff, report_timing_summary must be run after route_design. Alternatively, route_design can be run with the -timing_summary option to enable a complete timing signoff at the end of route_design.
 Phase 10 Post Router Timing | Checksum: 331fa8cd1
 
-Time (s): cpu = 00:00:46 ; elapsed = 00:00:36 . Memory (MB): peak = 1906.852 ; gain = 125.305
+Time (s): cpu = 00:00:48 ; elapsed = 00:00:38 . Memory (MB): peak = 1904.379 ; gain = 127.703
 INFO: [Route 35-16] Router Completed Successfully
 
-Time (s): cpu = 00:00:47 ; elapsed = 00:00:38 . Memory (MB): peak = 1906.852 ; gain = 125.305
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:39 . Memory (MB): peak = 1904.379 ; gain = 127.703
 
 Routing Is Done.
 INFO: [Common 17-83] Releasing license: Implementation
 140 Infos, 3 Warnings, 8 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:00:49 ; elapsed = 00:00:39 . Memory (MB): peak = 1906.852 ; gain = 134.375
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1906.852 ; gain = 0.000
+route_design: Time (s): cpu = 00:00:51 ; elapsed = 00:00:40 . Memory (MB): peak = 1904.379 ; gain = 136.727
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1904.379 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.460 . Memory (MB): peak = 1916.738 ; gain = 9.887
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.520 . Memory (MB): peak = 1914.234 ; gain = 9.855
 INFO: [Common 17-1381] The checkpoint 'C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/child_1_impl_1/Conv_Accel_Top_routed.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file Conv_Accel_Top_drc_routed.rpt -pb Conv_Accel_Top_drc_routed.pb -rpx Conv_Accel_Top_drc_routed.rpx
 Command: report_drc -file Conv_Accel_Top_drc_routed.rpt -pb Conv_Accel_Top_drc_routed.pb -rpx Conv_Accel_Top_drc_routed.rpx
@@ -782,416 +782,53 @@ INFO: [runtcl-4] Executing : report_clock_utilization -file Conv_Accel_Top_clock
 INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file Conv_Accel_Top_bus_skew_routed.rpt -pb Conv_Accel_Top_bus_skew_routed.pb -rpx Conv_Accel_Top_bus_skew_routed.rpx
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
 INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1957.949 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1955.059 ; gain = 0.000
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.077 . Memory (MB): peak = 1957.949 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.091 . Memory (MB): peak = 1955.059 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/child_1_impl_1/ConvAccel_matrixAccel_finalAdder_routed.dcp' has been generated.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1957.949 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1955.059 ; gain = 0.000
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.109 . Memory (MB): peak = 1957.949 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.092 . Memory (MB): peak = 1955.059 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/child_1_impl_1/ConvAccel_matrixAccel_genblk4_0_.outputAdder_routed.dcp' has been generated.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1957.949 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1955.059 ; gain = 0.000
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.088 . Memory (MB): peak = 1957.949 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.096 . Memory (MB): peak = 1955.059 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/child_1_impl_1/ConvAccel_matrixAccel_genblk4_1_.outputAdder_routed.dcp' has been generated.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1957.949 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1955.059 ; gain = 0.000
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.087 . Memory (MB): peak = 1957.949 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.093 . Memory (MB): peak = 1955.059 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/child_1_impl_1/ConvAccel_matrixAccel_genblk4_2_.outputAdder_routed.dcp' has been generated.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1957.949 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1955.059 ; gain = 0.000
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.452 . Memory (MB): peak = 1957.949 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.544 . Memory (MB): peak = 1955.059 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/child_1_impl_1/ConvAccel_matrixAccel_genblk3_0_.inputMulti_Fixed_routed.dcp' has been generated.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1957.949 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1955.059 ; gain = 0.000
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.465 . Memory (MB): peak = 1957.949 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.532 . Memory (MB): peak = 1955.059 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/child_1_impl_1/ConvAccel_matrixAccel_genblk3_1_.inputMulti_Fixed_routed.dcp' has been generated.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1957.949 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1955.059 ; gain = 0.000
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.461 . Memory (MB): peak = 1957.949 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.525 . Memory (MB): peak = 1955.059 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/child_1_impl_1/ConvAccel_matrixAccel_genblk3_2_.inputMulti_Fixed_routed.dcp' has been generated.
-INFO: [Common 17-206] Exiting Vivado at Sat Sep 26 20:43:49 2020...
-
-*** Running vivado
-    with args -log Conv_Accel_Top.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source Conv_Accel_Top.tcl -notrace
-
-
-****** Vivado v2019.2 (64-bit)
-  **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
-  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
-
-source Conv_Accel_Top.tcl -notrace
-Command: pr_verify -full_check -initial C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/impl_1/Conv_Accel_Top_routed.dcp -additional C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/child_1_impl_1/Conv_Accel_Top_routed.dcp -file child_1_impl_1_pr_verify.log
-INFO: [Device 21-403] Loading part xc7z020clg400-1
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.129 . Memory (MB): peak = 757.867 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 138 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2019.2
-INFO: [Project 1-570] Preparing netlist for logic optimization
-WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'processer/design_2_i/clk_wiz_0/clk_in1' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
-INFO: [Timing 38-478] Restoring timing data from binary archive.
-INFO: [Timing 38-479] Binary timing data restore complete.
-INFO: [Project 1-856] Restoring constraints from binary archive.
-INFO: [Project 1-853] Binary constraint restore complete.
-Reading XDEF placement.
-Reading placer database...
-Reading XDEF routing.
-Read XDEF File: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.527 . Memory (MB): peak = 1411.121 ; gain = 7.055
-Restored from archive | CPU: 1.000000 secs | Memory: 0.000000 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.527 . Memory (MB): peak = 1411.121 ; gain = 7.055
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1411.121 ; gain = 0.000
-INFO: [Project 1-604] Checkpoint was created with Vivado v2019.2 (64-bit) build 2708876
-INFO: [Vivado 12-3501] pr_verify C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/impl_1/Conv_Accel_Top_routed.dcp C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/child_1_impl_1/Conv_Accel_Top_routed.dcp
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.130 . Memory (MB): peak = 1431.676 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 223 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2019.2
-INFO: [Project 1-570] Preparing netlist for logic optimization
-WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'processer/design_2_i/clk_wiz_0/clk_in1' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
-INFO: [Timing 38-478] Restoring timing data from binary archive.
-INFO: [Timing 38-479] Binary timing data restore complete.
-INFO: [Project 1-856] Restoring constraints from binary archive.
-INFO: [Project 1-853] Binary constraint restore complete.
-Reading XDEF placement.
-Reading placer database...
-Reading XDEF routing.
-Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.667 . Memory (MB): peak = 1670.688 ; gain = 0.000
-Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.667 . Memory (MB): peak = 1670.688 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1670.688 ; gain = 0.000
-INFO: [Project 1-604] Checkpoint was created with Vivado v2019.2 (64-bit) build 2708876
-INFO: [Constraints 18-1020] PR Verify Summary:
-DCP1: C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/impl_1/Conv_Accel_Top_routed.dcp
-  Number of reconfigurable modules compared = 7
-  Number of partition pins compared         = 456
-  Number of static tiles compared           = 5355
-  Number of static sites compared           = 1004
-  Number of static cells compared           = 4787
-  Number of static routed nodes compared    = 63552
-  Number of static routed pips compared     = 59097
-
-DCP2: C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/child_1_impl_1/Conv_Accel_Top_routed.dcp
-  Number of reconfigurable modules compared = 7
-  Number of partition pins compared         = 456
-  Number of static tiles compared           = 5355
-  Number of static sites compared           = 1004
-  Number of static cells compared           = 4787
-  Number of static routed nodes compared    = 63552
-  Number of static routed pips compared     = 59097
-INFO: [Vivado 12-3253] PR_VERIFY: check points C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/impl_1/Conv_Accel_Top_routed.dcp and C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/child_1_impl_1/Conv_Accel_Top_routed.dcp are compatible
-pr_verify: Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1679.078 ; gain = 1376.559
-Command: open_checkpoint Conv_Accel_Top_routed.dcp
-
-Starting open_checkpoint Task
-
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1679.078 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.135 . Memory (MB): peak = 1679.078 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 223 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2019.2
-INFO: [Project 1-570] Preparing netlist for logic optimization
-WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'processer/design_2_i/clk_wiz_0/clk_in1' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
-INFO: [Timing 38-478] Restoring timing data from binary archive.
-INFO: [Timing 38-479] Binary timing data restore complete.
-INFO: [Project 1-856] Restoring constraints from binary archive.
-INFO: [Project 1-853] Binary constraint restore complete.
-Reading XDEF placement.
-Reading placer database...
-Reading XDEF routing.
-Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.606 . Memory (MB): peak = 1679.078 ; gain = 0.000
-Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.606 . Memory (MB): peak = 1679.078 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1679.078 ; gain = 0.000
-INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 48 instances were transformed.
-  RAM64M => RAM64M (RAMD64E(x4)): 40 instances
-  RAM64X1D => RAM64X1D (RAMD64E(x2)): 8 instances
-
-INFO: [Project 1-604] Checkpoint was created with Vivado v2019.2 (64-bit) build 2708876
-Command: write_bitstream -force -no_partial_bitfile Conv_Accel_Top.bit
-Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
-INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
-Running DRC as a precondition to command write_bitstream
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'.
-INFO: [DRC 23-27] Running DRC with 2 threads
-INFO: [Vivado 12-3199] DRC finished with 0 Errors
-INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
-Partition "pblock_finalAdder" Reconfigurable Module "ConvAccel/matrixAccel/finalAdder"
-Partition "pblock_1" Reconfigurable Module "ConvAccel/matrixAccel/genblk3[0].inputMulti"
-Partition "pblock_gnblk3[1].inptMlt" Reconfigurable Module "ConvAccel/matrixAccel/genblk3[1].inputMulti"
-Partition "pblock_gnblk3[2].inptMlt" Reconfigurable Module "ConvAccel/matrixAccel/genblk3[2].inputMulti"
-Partition "pblock_2" Reconfigurable Module "ConvAccel/matrixAccel/genblk4[0].outputAdder"
-Partition "pblock_gnblk4[1].otptAdr" Reconfigurable Module "ConvAccel/matrixAccel/genblk4[1].outputAdder"
-Partition "pblock_gnblk4[2].otptAdr" Reconfigurable Module "ConvAccel/matrixAccel/genblk4[2].outputAdder"
-INFO: [Vivado 12-4752] Design contains reconfigurable partitions, but no partial bit files will be generated since -no_partial_bitfile option was specified.
-INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
-Loading data files...
-Loading site data...
-Loading route data...
-Processing options...
-Creating bitmap...
-Creating bitstream...
-Writing bitstream ./Conv_Accel_Top.bit...
-INFO: [Vivado 12-1842] Bitgen Completed Successfully.
-INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
-INFO: [Common 17-186] 'C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/child_1_impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Sat Sep 26 20:49:12 2020. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2019.2/doc/webtalk_introduction.html.
-INFO: [Common 17-83] Releasing license: Implementation
-45 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
-write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:17 ; elapsed = 00:00:16 . Memory (MB): peak = 1998.551 ; gain = 319.473
-Command: write_bitstream -force -cell ConvAccel/matrixAccel/finalAdder ConvAccel_matrixAccel_finalAdder_greybox_partial.bit
-Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
-INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
-Running DRC as a precondition to command write_bitstream
-INFO: [IP_Flow 19-1839] IP Catalog is up to date.
-INFO: [DRC 23-27] Running DRC with 2 threads
-INFO: [Vivado 12-3199] DRC finished with 0 Errors
-INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
-Partition "pblock_finalAdder" Reconfigurable Module "ConvAccel/matrixAccel/finalAdder"
-Partition "pblock_1" Reconfigurable Module "ConvAccel/matrixAccel/genblk3[0].inputMulti"
-Partition "pblock_gnblk3[1].inptMlt" Reconfigurable Module "ConvAccel/matrixAccel/genblk3[1].inputMulti"
-Partition "pblock_gnblk3[2].inptMlt" Reconfigurable Module "ConvAccel/matrixAccel/genblk3[2].inputMulti"
-Partition "pblock_2" Reconfigurable Module "ConvAccel/matrixAccel/genblk4[0].outputAdder"
-Partition "pblock_gnblk4[1].otptAdr" Reconfigurable Module "ConvAccel/matrixAccel/genblk4[1].outputAdder"
-Partition "pblock_gnblk4[2].otptAdr" Reconfigurable Module "ConvAccel/matrixAccel/genblk4[2].outputAdder"
-INFO: [Vivado 12-4077] No full design bitstream will be created with the use of the -cell option.
-Process Partition "pblock_finalAdder"
-INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
-Loading data files...
-Loading site data...
-Loading route data...
-Processing options...
-Creating bitmap...
-Creating bitstream...
-Partial bitstream contains 2135936 bits.
-Writing bitstream ./ConvAccel_matrixAccel_finalAdder_greybox_partial.bit...
-INFO: [Vivado 12-1842] Bitgen Completed Successfully.
-INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
-INFO: [Common 17-186] 'C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/child_1_impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Sat Sep 26 20:49:23 2020. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2019.2/doc/webtalk_introduction.html.
-INFO: [Common 17-83] Releasing license: Implementation
-56 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
-write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1998.551 ; gain = 0.000
-Command: write_bitstream -force -cell {ConvAccel/matrixAccel/genblk4[0].outputAdder} ConvAccel_matrixAccel_genblk4_0_.outputAdder_greybox_partial.bit
-Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
-INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
-Running DRC as a precondition to command write_bitstream
-INFO: [IP_Flow 19-1839] IP Catalog is up to date.
-INFO: [DRC 23-27] Running DRC with 2 threads
-INFO: [Vivado 12-3199] DRC finished with 0 Errors
-INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
-Partition "pblock_finalAdder" Reconfigurable Module "ConvAccel/matrixAccel/finalAdder"
-Partition "pblock_1" Reconfigurable Module "ConvAccel/matrixAccel/genblk3[0].inputMulti"
-Partition "pblock_gnblk3[1].inptMlt" Reconfigurable Module "ConvAccel/matrixAccel/genblk3[1].inputMulti"
-Partition "pblock_gnblk3[2].inptMlt" Reconfigurable Module "ConvAccel/matrixAccel/genblk3[2].inputMulti"
-Partition "pblock_2" Reconfigurable Module "ConvAccel/matrixAccel/genblk4[0].outputAdder"
-Partition "pblock_gnblk4[1].otptAdr" Reconfigurable Module "ConvAccel/matrixAccel/genblk4[1].outputAdder"
-Partition "pblock_gnblk4[2].otptAdr" Reconfigurable Module "ConvAccel/matrixAccel/genblk4[2].outputAdder"
-INFO: [Vivado 12-4077] No full design bitstream will be created with the use of the -cell option.
-Process Partition "pblock_2"
-INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
-Loading data files...
-Loading site data...
-Loading route data...
-Processing options...
-Creating bitmap...
-Creating bitstream...
-Partial bitstream contains 2368640 bits.
-Writing bitstream ./ConvAccel_matrixAccel_genblk4_0_.outputAdder_greybox_partial.bit...
-INFO: [Vivado 12-1842] Bitgen Completed Successfully.
-INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
-INFO: [Common 17-186] 'C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/child_1_impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Sat Sep 26 20:49:33 2020. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2019.2/doc/webtalk_introduction.html.
-INFO: [Common 17-83] Releasing license: Implementation
-67 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
-write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1998.551 ; gain = 0.000
-Command: write_bitstream -force -cell {ConvAccel/matrixAccel/genblk4[1].outputAdder} ConvAccel_matrixAccel_genblk4_1_.outputAdder_greybox_partial.bit
-Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
-INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
-Running DRC as a precondition to command write_bitstream
-INFO: [IP_Flow 19-1839] IP Catalog is up to date.
-INFO: [DRC 23-27] Running DRC with 2 threads
-INFO: [Vivado 12-3199] DRC finished with 0 Errors
-INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
-Partition "pblock_finalAdder" Reconfigurable Module "ConvAccel/matrixAccel/finalAdder"
-Partition "pblock_1" Reconfigurable Module "ConvAccel/matrixAccel/genblk3[0].inputMulti"
-Partition "pblock_gnblk3[1].inptMlt" Reconfigurable Module "ConvAccel/matrixAccel/genblk3[1].inputMulti"
-Partition "pblock_gnblk3[2].inptMlt" Reconfigurable Module "ConvAccel/matrixAccel/genblk3[2].inputMulti"
-Partition "pblock_2" Reconfigurable Module "ConvAccel/matrixAccel/genblk4[0].outputAdder"
-Partition "pblock_gnblk4[1].otptAdr" Reconfigurable Module "ConvAccel/matrixAccel/genblk4[1].outputAdder"
-Partition "pblock_gnblk4[2].otptAdr" Reconfigurable Module "ConvAccel/matrixAccel/genblk4[2].outputAdder"
-INFO: [Vivado 12-4077] No full design bitstream will be created with the use of the -cell option.
-Process Partition "pblock_gnblk4[1].otptAdr"
-INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
-Loading data files...
-Loading site data...
-Loading route data...
-Processing options...
-Creating bitmap...
-Creating bitstream...
-Partial bitstream contains 1353280 bits.
-Writing bitstream ./ConvAccel_matrixAccel_genblk4_1_.outputAdder_greybox_partial.bit...
-INFO: [Vivado 12-1842] Bitgen Completed Successfully.
-INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
-INFO: [Common 17-186] 'C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/child_1_impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Sat Sep 26 20:49:44 2020. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2019.2/doc/webtalk_introduction.html.
-INFO: [Common 17-83] Releasing license: Implementation
-78 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
-write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1998.551 ; gain = 0.000
-Command: write_bitstream -force -cell {ConvAccel/matrixAccel/genblk4[2].outputAdder} ConvAccel_matrixAccel_genblk4_2_.outputAdder_greybox_partial.bit
-Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
-INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
-Running DRC as a precondition to command write_bitstream
-INFO: [IP_Flow 19-1839] IP Catalog is up to date.
-INFO: [DRC 23-27] Running DRC with 2 threads
-INFO: [Vivado 12-3199] DRC finished with 0 Errors
-INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
-Partition "pblock_finalAdder" Reconfigurable Module "ConvAccel/matrixAccel/finalAdder"
-Partition "pblock_1" Reconfigurable Module "ConvAccel/matrixAccel/genblk3[0].inputMulti"
-Partition "pblock_gnblk3[1].inptMlt" Reconfigurable Module "ConvAccel/matrixAccel/genblk3[1].inputMulti"
-Partition "pblock_gnblk3[2].inptMlt" Reconfigurable Module "ConvAccel/matrixAccel/genblk3[2].inputMulti"
-Partition "pblock_2" Reconfigurable Module "ConvAccel/matrixAccel/genblk4[0].outputAdder"
-Partition "pblock_gnblk4[1].otptAdr" Reconfigurable Module "ConvAccel/matrixAccel/genblk4[1].outputAdder"
-Partition "pblock_gnblk4[2].otptAdr" Reconfigurable Module "ConvAccel/matrixAccel/genblk4[2].outputAdder"
-INFO: [Vivado 12-4077] No full design bitstream will be created with the use of the -cell option.
-Process Partition "pblock_gnblk4[2].otptAdr"
-INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
-Loading data files...
-Loading site data...
-Loading route data...
-Processing options...
-Creating bitmap...
-Creating bitstream...
-Partial bitstream contains 2135936 bits.
-Writing bitstream ./ConvAccel_matrixAccel_genblk4_2_.outputAdder_greybox_partial.bit...
-INFO: [Vivado 12-1842] Bitgen Completed Successfully.
-INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
-INFO: [Common 17-186] 'C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/child_1_impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Sat Sep 26 20:49:55 2020. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2019.2/doc/webtalk_introduction.html.
-INFO: [Common 17-83] Releasing license: Implementation
-89 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
-write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1998.551 ; gain = 0.000
-Command: write_bitstream -force -cell {ConvAccel/matrixAccel/genblk3[0].inputMulti} ConvAccel_matrixAccel_genblk3_0_.inputMulti_Fixed_partial.bit
-Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
-INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
-Running DRC as a precondition to command write_bitstream
-INFO: [IP_Flow 19-1839] IP Catalog is up to date.
-INFO: [DRC 23-27] Running DRC with 2 threads
-INFO: [Vivado 12-3199] DRC finished with 0 Errors
-INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
-Partition "pblock_finalAdder" Reconfigurable Module "ConvAccel/matrixAccel/finalAdder"
-Partition "pblock_1" Reconfigurable Module "ConvAccel/matrixAccel/genblk3[0].inputMulti"
-Partition "pblock_gnblk3[1].inptMlt" Reconfigurable Module "ConvAccel/matrixAccel/genblk3[1].inputMulti"
-Partition "pblock_gnblk3[2].inptMlt" Reconfigurable Module "ConvAccel/matrixAccel/genblk3[2].inputMulti"
-Partition "pblock_2" Reconfigurable Module "ConvAccel/matrixAccel/genblk4[0].outputAdder"
-Partition "pblock_gnblk4[1].otptAdr" Reconfigurable Module "ConvAccel/matrixAccel/genblk4[1].outputAdder"
-Partition "pblock_gnblk4[2].otptAdr" Reconfigurable Module "ConvAccel/matrixAccel/genblk4[2].outputAdder"
-INFO: [Vivado 12-4077] No full design bitstream will be created with the use of the -cell option.
-Process Partition "pblock_1"
-INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
-Loading data files...
-Loading site data...
-Loading route data...
-Processing options...
-Creating bitmap...
-Creating bitstream...
-Partial bitstream contains 1353280 bits.
-Writing bitstream ./ConvAccel_matrixAccel_genblk3_0_.inputMulti_Fixed_partial.bit...
-INFO: [Vivado 12-1842] Bitgen Completed Successfully.
-INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
-INFO: [Common 17-186] 'C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/child_1_impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Sat Sep 26 20:50:06 2020. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2019.2/doc/webtalk_introduction.html.
-INFO: [Common 17-83] Releasing license: Implementation
-100 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
-write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2004.469 ; gain = 5.918
-Command: write_bitstream -force -cell {ConvAccel/matrixAccel/genblk3[1].inputMulti} ConvAccel_matrixAccel_genblk3_1_.inputMulti_Fixed_partial.bit
-Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
-INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
-Running DRC as a precondition to command write_bitstream
-INFO: [IP_Flow 19-1839] IP Catalog is up to date.
-INFO: [DRC 23-27] Running DRC with 2 threads
-INFO: [Vivado 12-3199] DRC finished with 0 Errors
-INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
-Partition "pblock_finalAdder" Reconfigurable Module "ConvAccel/matrixAccel/finalAdder"
-Partition "pblock_1" Reconfigurable Module "ConvAccel/matrixAccel/genblk3[0].inputMulti"
-Partition "pblock_gnblk3[1].inptMlt" Reconfigurable Module "ConvAccel/matrixAccel/genblk3[1].inputMulti"
-Partition "pblock_gnblk3[2].inptMlt" Reconfigurable Module "ConvAccel/matrixAccel/genblk3[2].inputMulti"
-Partition "pblock_2" Reconfigurable Module "ConvAccel/matrixAccel/genblk4[0].outputAdder"
-Partition "pblock_gnblk4[1].otptAdr" Reconfigurable Module "ConvAccel/matrixAccel/genblk4[1].outputAdder"
-Partition "pblock_gnblk4[2].otptAdr" Reconfigurable Module "ConvAccel/matrixAccel/genblk4[2].outputAdder"
-INFO: [Vivado 12-4077] No full design bitstream will be created with the use of the -cell option.
-Process Partition "pblock_gnblk3[1].inptMlt"
-INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
-Loading data files...
-Loading site data...
-Loading route data...
-Processing options...
-Creating bitmap...
-Creating bitstream...
-Partial bitstream contains 2601344 bits.
-Writing bitstream ./ConvAccel_matrixAccel_genblk3_1_.inputMulti_Fixed_partial.bit...
-INFO: [Vivado 12-1842] Bitgen Completed Successfully.
-INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
-INFO: [Common 17-186] 'C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/child_1_impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Sat Sep 26 20:50:17 2020. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2019.2/doc/webtalk_introduction.html.
-INFO: [Common 17-83] Releasing license: Implementation
-111 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
-write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2012.617 ; gain = 8.148
-Command: write_bitstream -force -cell {ConvAccel/matrixAccel/genblk3[2].inputMulti} ConvAccel_matrixAccel_genblk3_2_.inputMulti_Fixed_partial.bit
-Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
-INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
-Running DRC as a precondition to command write_bitstream
-INFO: [IP_Flow 19-1839] IP Catalog is up to date.
-INFO: [DRC 23-27] Running DRC with 2 threads
-INFO: [Vivado 12-3199] DRC finished with 0 Errors
-INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
-Partition "pblock_finalAdder" Reconfigurable Module "ConvAccel/matrixAccel/finalAdder"
-Partition "pblock_1" Reconfigurable Module "ConvAccel/matrixAccel/genblk3[0].inputMulti"
-Partition "pblock_gnblk3[1].inptMlt" Reconfigurable Module "ConvAccel/matrixAccel/genblk3[1].inputMulti"
-Partition "pblock_gnblk3[2].inptMlt" Reconfigurable Module "ConvAccel/matrixAccel/genblk3[2].inputMulti"
-Partition "pblock_2" Reconfigurable Module "ConvAccel/matrixAccel/genblk4[0].outputAdder"
-Partition "pblock_gnblk4[1].otptAdr" Reconfigurable Module "ConvAccel/matrixAccel/genblk4[1].outputAdder"
-Partition "pblock_gnblk4[2].otptAdr" Reconfigurable Module "ConvAccel/matrixAccel/genblk4[2].outputAdder"
-INFO: [Vivado 12-4077] No full design bitstream will be created with the use of the -cell option.
-Process Partition "pblock_gnblk3[2].inptMlt"
-INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
-Loading data files...
-Loading site data...
-Loading route data...
-Processing options...
-Creating bitmap...
-Creating bitstream...
-Partial bitstream contains 1676992 bits.
-Writing bitstream ./ConvAccel_matrixAccel_genblk3_2_.inputMulti_Fixed_partial.bit...
-INFO: [Vivado 12-1842] Bitgen Completed Successfully.
-INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
-INFO: [Common 17-186] 'C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/child_1_impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Sat Sep 26 20:50:28 2020. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2019.2/doc/webtalk_introduction.html.
-INFO: [Common 17-83] Releasing license: Implementation
-122 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
-write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2020.988 ; gain = 8.371
-INFO: [Common 17-206] Exiting Vivado at Sat Sep 26 20:50:29 2020...
+INFO: [Common 17-206] Exiting Vivado at Thu Oct  1 00:14:31 2020...

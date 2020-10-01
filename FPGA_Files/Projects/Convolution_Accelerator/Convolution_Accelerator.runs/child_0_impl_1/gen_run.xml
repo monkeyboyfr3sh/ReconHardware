@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="child_0_impl_1" LaunchPart="xc7z020clg400-1" LaunchConfig="config_2" LaunchTime="1601170836">
+<GenRun Id="child_0_impl_1" LaunchPart="xc7z020clg400-1" LaunchConfig="config_2" LaunchTime="1601529073">
   <File Type="BITSTR-BMM" Name="Conv_Accel_Top_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="Conv_Accel_Top_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="Conv_Accel_Top_timing_summary_init.rpt"/>

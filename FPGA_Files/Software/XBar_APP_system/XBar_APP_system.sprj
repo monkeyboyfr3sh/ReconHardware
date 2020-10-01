@@ -5,10 +5,6 @@
       <applications name="XBar_APP" domainName="standalone_domain" domainPrettyName="standalone_domain" appBuildConfig="Debug"/>
       <options xsi:type="sdsproject:Option" gensdcard="true" dmclkid="0"/>
     </configBuildOptions>
-    <lastBuildOptions xsi:type="systemproject:SystemOptions">
-      <applications name="XBar_APP" domainName="standalone_domain" domainPrettyName="standalone_domain" appBuildConfig="Debug"/>
-      <options xsi:type="sdsproject:Option" gensdcard="true" dmclkid="0"/>
-    </lastBuildOptions>
   </configuration>
   <configuration name="Release">
     <configBuildOptions xsi:type="systemproject:SystemOptions">

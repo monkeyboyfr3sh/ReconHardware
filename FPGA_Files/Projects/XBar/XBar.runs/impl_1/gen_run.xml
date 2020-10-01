@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1601268110">
+<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1601526922">
+  <File Type="OPT-HWDEF" Name="XBAR_TOP_WRAPPER.hwdef"/>
+  <File Type="ROUTE-BUS-SKEW" Name="XBAR_TOP_WRAPPER_bus_skew_routed.rpt"/>
+  <File Type="PA-DCP" Name="XBAR_TOP_WRAPPER.dcp"/>
   <File Type="BITSTR-BMM" Name="XBAR_TOP_WRAPPER_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="XBAR_TOP_WRAPPER_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="XBAR_TOP_WRAPPER_timing_summary_init.rpt"/>
@@ -10,7 +13,6 @@
   <File Type="ROUTE-PWR-SUM" Name="XBAR_TOP_WRAPPER_power_summary_routed.pb"/>
   <File Type="REPORTS-TCL" Name="XBAR_TOP_WRAPPER_reports.tcl"/>
   <File Type="OPT-DRC" Name="XBAR_TOP_WRAPPER_drc_opted.rpt"/>
-  <File Type="OPT-HWDEF" Name="XBAR_TOP_WRAPPER.hwdef"/>
   <File Type="PWROPT-DCP" Name="XBAR_TOP_WRAPPER_pwropt.dcp"/>
   <File Type="PWROPT-DRC" Name="XBAR_TOP_WRAPPER_drc_pwropted.rpt"/>
   <File Type="PWROPT-TIMING" Name="XBAR_TOP_WRAPPER_timing_summary_pwropted.rpt"/>
@@ -48,7 +50,6 @@
   <File Type="ROUTE-TIMING-RPX" Name="XBAR_TOP_WRAPPER_timing_summary_routed.rpx"/>
   <File Type="ROUTE-SIMILARITY" Name="XBAR_TOP_WRAPPER_incremental_reuse_routed.rpt"/>
   <File Type="ROUTE-CLK" Name="XBAR_TOP_WRAPPER_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW" Name="XBAR_TOP_WRAPPER_bus_skew_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW-PB" Name="XBAR_TOP_WRAPPER_bus_skew_routed.pb"/>
   <File Type="ROUTE-BUS-SKEW-RPX" Name="XBAR_TOP_WRAPPER_bus_skew_routed.rpx"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="XBAR_TOP_WRAPPER_postroute_physopt.dcp"/>

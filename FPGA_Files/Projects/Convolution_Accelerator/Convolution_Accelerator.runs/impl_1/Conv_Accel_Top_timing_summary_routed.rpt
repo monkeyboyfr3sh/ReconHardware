@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Sat Sep 26 20:41:58 2020
+| Date         : Thu Oct  1 00:12:37 2020
 | Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file Conv_Accel_Top_timing_summary_routed.rpt -pb Conv_Accel_Top_timing_summary_routed.pb -rpx Conv_Accel_Top_timing_summary_routed.rpx -warn_on_violation
 | Design       : Conv_Accel_Top

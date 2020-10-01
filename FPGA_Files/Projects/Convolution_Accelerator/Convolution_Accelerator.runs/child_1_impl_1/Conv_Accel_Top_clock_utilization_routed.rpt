@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Sat Sep 26 20:43:44 2020
+| Date         : Thu Oct  1 00:14:26 2020
 | Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 | Command      : report_clock_utilization -file Conv_Accel_Top_clock_utilization_routed.rpt
 | Design       : Conv_Accel_Top
@@ -124,6 +124,16 @@ ConvAccel/matrixAccel/finalAdder - Usages of Clock Resources for Clocks Sourced 
 +----+----+----+
 
 
+ConvAccel/matrixAccel/genblk3[0].inputMulti - Usages of Clock Resources for Clocks Sourced (if any) in this RP Module
++----+----+----+
+|    | X0 | X1 |
++----+----+----+
+| Y2 |  1 |  2 |
+| Y1 |  4 |  3 |
+| Y0 |  2 |  1 |
++----+----+----+
+
+
 ConvAccel/matrixAccel/genblk3[2].inputMulti - Usages of Clock Resources for Clocks Sourced (if any) in this RP Module
 +----+----+----+
 |    | X0 | X1 |
@@ -144,6 +154,16 @@ ConvAccel/matrixAccel/genblk3[1].inputMulti - Usages of Clock Resources for Cloc
 +----+----+----+
 
 
+ConvAccel/matrixAccel/genblk4[2].outputAdder - Usages of Clock Resources for Clocks Sourced (if any) in this RP Module
++----+----+----+
+|    | X0 | X1 |
++----+----+----+
+| Y2 |  1 |  2 |
+| Y1 |  4 |  3 |
+| Y0 |  2 |  1 |
++----+----+----+
+
+
 ConvAccel/matrixAccel/genblk4[0].outputAdder - Usages of Clock Resources for Clocks Sourced (if any) in this RP Module
 +----+----+----+
 |    | X0 | X1 |
@@ -154,27 +174,7 @@ ConvAccel/matrixAccel/genblk4[0].outputAdder - Usages of Clock Resources for Clo
 +----+----+----+
 
 
-ConvAccel/matrixAccel/genblk3[0].inputMulti - Usages of Clock Resources for Clocks Sourced (if any) in this RP Module
-+----+----+----+
-|    | X0 | X1 |
-+----+----+----+
-| Y2 |  1 |  2 |
-| Y1 |  4 |  3 |
-| Y0 |  2 |  1 |
-+----+----+----+
-
-
 ConvAccel/matrixAccel/genblk4[1].outputAdder - Usages of Clock Resources for Clocks Sourced (if any) in this RP Module
-+----+----+----+
-|    | X0 | X1 |
-+----+----+----+
-| Y2 |  1 |  2 |
-| Y1 |  4 |  3 |
-| Y0 |  2 |  1 |
-+----+----+----+
-
-
-ConvAccel/matrixAccel/genblk4[2].outputAdder - Usages of Clock Resources for Clocks Sourced (if any) in this RP Module
 +----+----+----+
 |    | X0 | X1 |
 +----+----+----+

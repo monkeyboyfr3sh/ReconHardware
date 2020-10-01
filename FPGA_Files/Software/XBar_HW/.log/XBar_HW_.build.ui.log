@@ -1,6 +1,6 @@
-2020-09-27T23:56:42.671056500255-23:56:42 **** Build of project XBar_HW ****
-000-buildplatform.bat 51642 XBar_HW  
-000-XSDB Server Channel: tcfchan#47
+2020-09-30T23:43:41.276097700255-23:43:41 **** Build of project XBar_HW ****
+000-buildplatform.bat 54582 XBar_HW  
+000-XSDB Server Channel: tcfchan#18
 000-Building the zynq_fsbl application.
 000-make -C zynq_fsbl_bsp
 000-
@@ -834,5 +834,5 @@
 000-'Finished building libraries'
 000-
 00255-
-23:57:21 Build Finished (took 39s.292ms)
+23:44:18 Build Finished (took 37s.236ms)
 

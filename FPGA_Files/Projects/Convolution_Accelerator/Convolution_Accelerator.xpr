@@ -74,53 +74,53 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="design_2.bd" FileRelPathName="ip/design_2_axi_gpio_0_0/design_2_axi_gpio_0_0.xci">
-          <Proxy FileSetName="design_2_axi_gpio_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_2.bd" FileRelPathName="ip/design_2_axi_gpio_0_1/design_2_axi_gpio_0_1.xci">
-          <Proxy FileSetName="design_2_axi_gpio_0_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_2.bd" FileRelPathName="ip/design_2_axi_gpio_1_0/design_2_axi_gpio_1_0.xci">
-          <Proxy FileSetName="design_2_axi_gpio_1_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_2.bd" FileRelPathName="ip/design_2_axi_gpio_1_1/design_2_axi_gpio_1_1.xci">
-          <Proxy FileSetName="design_2_axi_gpio_1_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_2.bd" FileRelPathName="ip/design_2_axi_gpio_3_0/design_2_axi_gpio_3_0.xci">
-          <Proxy FileSetName="design_2_axi_gpio_3_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_2.bd" FileRelPathName="ip/design_2_axi_gpio_4_0/design_2_axi_gpio_4_0.xci">
-          <Proxy FileSetName="design_2_axi_gpio_4_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_2.bd" FileRelPathName="ip/design_2_axi_gpio_5_0/design_2_axi_gpio_5_0.xci">
-          <Proxy FileSetName="design_2_axi_gpio_5_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="design_2.bd" FileRelPathName="ip/design_2_axi_gpio_6_0/design_2_axi_gpio_6_0.xci">
           <Proxy FileSetName="design_2_axi_gpio_6_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_2.bd" FileRelPathName="ip/design_2_processing_system7_0_0/design_2_processing_system7_0_0.xci">
-          <Proxy FileSetName="design_2_processing_system7_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_2.bd" FileRelPathName="ip/design_2_proc_sys_reset_0_0/design_2_proc_sys_reset_0_0.xci">
-          <Proxy FileSetName="design_2_proc_sys_reset_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_2.bd" FileRelPathName="ip/design_2_xbar_0/design_2_xbar_0.xci">
-          <Proxy FileSetName="design_2_xbar_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_2.bd" FileRelPathName="ip/design_2_axi_gpio_10_0/design_2_axi_gpio_10_0.xci">
-          <Proxy FileSetName="design_2_axi_gpio_10_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="design_2.bd" FileRelPathName="ip/design_2_clk_wiz_0_0/design_2_clk_wiz_0_0.xci">
           <Proxy FileSetName="design_2_clk_wiz_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_2.bd" FileRelPathName="ip/design_2_axi_gpio_9_0/design_2_axi_gpio_9_0.xci">
-          <Proxy FileSetName="design_2_axi_gpio_9_0"/>
+        <CompFileExtendedInfo CompFileName="design_2.bd" FileRelPathName="ip/design_2_axi_gpio_0_0/design_2_axi_gpio_0_0.xci">
+          <Proxy FileSetName="design_2_axi_gpio_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_2.bd" FileRelPathName="ip/design_2_axi_gpio_1_1/design_2_axi_gpio_1_1.xci">
+          <Proxy FileSetName="design_2_axi_gpio_1_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_2.bd" FileRelPathName="ip/design_2_xbar_0/design_2_xbar_0.xci">
+          <Proxy FileSetName="design_2_xbar_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_2.bd" FileRelPathName="ip/design_2_axi_gpio_7_0/design_2_axi_gpio_7_0.xci">
+          <Proxy FileSetName="design_2_axi_gpio_7_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="design_2.bd" FileRelPathName="ip/design_2_axi_gpio_8_0/design_2_axi_gpio_8_0.xci">
           <Proxy FileSetName="design_2_axi_gpio_8_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_2.bd" FileRelPathName="ip/design_2_axi_gpio_7_0/design_2_axi_gpio_7_0.xci">
-          <Proxy FileSetName="design_2_axi_gpio_7_0"/>
+        <CompFileExtendedInfo CompFileName="design_2.bd" FileRelPathName="ip/design_2_axi_gpio_3_0/design_2_axi_gpio_3_0.xci">
+          <Proxy FileSetName="design_2_axi_gpio_3_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_2.bd" FileRelPathName="ip/design_2_axi_gpio_1_0/design_2_axi_gpio_1_0.xci">
+          <Proxy FileSetName="design_2_axi_gpio_1_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_2.bd" FileRelPathName="ip/design_2_processing_system7_0_0/design_2_processing_system7_0_0.xci">
+          <Proxy FileSetName="design_2_processing_system7_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_2.bd" FileRelPathName="ip/design_2_axi_gpio_4_0/design_2_axi_gpio_4_0.xci">
+          <Proxy FileSetName="design_2_axi_gpio_4_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_2.bd" FileRelPathName="ip/design_2_proc_sys_reset_0_0/design_2_proc_sys_reset_0_0.xci">
+          <Proxy FileSetName="design_2_proc_sys_reset_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_2.bd" FileRelPathName="ip/design_2_axi_gpio_5_0/design_2_axi_gpio_5_0.xci">
+          <Proxy FileSetName="design_2_axi_gpio_5_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_2.bd" FileRelPathName="ip/design_2_axi_gpio_0_1/design_2_axi_gpio_0_1.xci">
+          <Proxy FileSetName="design_2_axi_gpio_0_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_2.bd" FileRelPathName="ip/design_2_axi_gpio_9_0/design_2_axi_gpio_9_0.xci">
+          <Proxy FileSetName="design_2_axi_gpio_9_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_2.bd" FileRelPathName="ip/design_2_axi_gpio_10_0/design_2_axi_gpio_10_0.xci">
+          <Proxy FileSetName="design_2_axi_gpio_10_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PPRDIR/../../Sources/General/XBar2.v">
