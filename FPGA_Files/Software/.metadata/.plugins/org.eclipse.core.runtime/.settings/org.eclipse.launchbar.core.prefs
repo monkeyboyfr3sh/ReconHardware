@@ -1,12 +1,14 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
-configDescList=org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_Hello_Zynq_application_system,org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_XBar_APP_system,org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_BTN_IO_APP_system,org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_Conv_Accel_APP_system
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_XBar_APP_system,org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_Conv_Accel_APP_system,org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_BTN_IO_APP_system,org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_Hello_Zynq_application_system,org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_aFIFO_BUFFER_APP_system
 eclipse.preferences.version=1
 org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_BTN_IO_APP_system/activeLaunchMode=run
 org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_BTN_IO_APP_system/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
 org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_Convolution_Accelerator_APP_system/activeLaunchMode=debug
 org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_Hello_Zynq_application_system/activeLaunchMode=run
 org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_XBar_APP_system/activeLaunchMode=debug
+org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_aFIFO_APP_system/activeLaunchMode=debug
+org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_aFIFO_BUFFER_APP_system/activeLaunchMode=debug
 org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_hello_world_application_system/activeLaunchMode=debug
 org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_hello_world_application_system/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local

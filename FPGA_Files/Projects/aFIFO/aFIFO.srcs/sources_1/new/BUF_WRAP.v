@@ -1,7 +1,9 @@
 `include "definitions.h"
 `timescale `myTimeScale
 
-module BUF_WRAP();
+module BUF_WRAP(wclk,rclk,wr,rd);
+
+output wclk,rclk,wr,rd;
 
 //IP inputs
 wire wclk,rclk;
@@ -14,16 +16,16 @@ wire FULL,EMPTY;
 wire [`bitLength-1:0] BUFFEROUT;
 
 design_2_wrapper(
-    .wclk(wclk),
-    .rclk(rclk),
-    .rrst(rrst),
-    .rd(rd),
-    .wdata(wdata),
-    .wrst(wrst),
-    .wr(wr),
-    .FULL(FULL),
-    .EMPTY(EMPTY),
-    .BUFFEROUT(BUFFEROUT)
+    .wclk_tri_o(wclk),
+    .rclk_tri_o(rclk),
+    .rrst_tri_o(rrst),
+    .rd_tri_o(rd),
+    .wdata_tri_o(wdata),
+    .wrst_tri_o(wrst),
+    .wr_tri_o(wr),
+    .FULL_tri_i(FULL),
+    .EMPTY_tri_i(EMPTY),
+    .BUFFEROUT_tri_i(BUFFEROUT)
 );
 
 aFIFO myFIFO(

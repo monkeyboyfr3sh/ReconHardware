@@ -18,213 +18,141 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 19868 
-WARNING: [Synth 8-6901] identifier 'o_rdata' is used before its declaration [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/aFIFO.v:94]
+INFO: Helper process launched with PID 9948 
+WARNING: [Synth 8-6901] identifier 'o_rdata' is used before its declaration [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/aFIFO.v:94]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 999.578 ; gain = 238.559
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1023.957 ; gain = 241.367
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'BUF_WRAP' [C:/GitHub/ReconHardware/PynqSoftware/Projects/aFIFO/aFIFO.srcs/sources_1/new/BUF_WRAP.v:4]
-INFO: [Synth 8-6157] synthesizing module 'design_2_wrapper' [C:/GitHub/ReconHardware/PynqSoftware/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/hdl/design_2_wrapper.v:12]
-INFO: [Synth 8-6157] synthesizing module 'design_2' [C:/GitHub/ReconHardware/PynqSoftware/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/synth/design_2.v:13]
-INFO: [Synth 8-6157] synthesizing module 'design_2_processing_system7_0_0' [C:/GitHub/ReconHardware/PynqSoftware/Projects/aFIFO/aFIFO.runs/synth_1/.Xil/Vivado-11980-DESKTOP-D9F9TPQ/realtime/design_2_processing_system7_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_2_processing_system7_0_0' (1#1) [C:/GitHub/ReconHardware/PynqSoftware/Projects/aFIFO/aFIFO.runs/synth_1/.Xil/Vivado-11980-DESKTOP-D9F9TPQ/realtime/design_2_processing_system7_0_0_stub.v:6]
-WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'design_2_processing_system7_0_0' has 68 connections declared, but only 37 given [C:/GitHub/ReconHardware/PynqSoftware/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/synth/design_2.v:122]
-INFO: [Synth 8-6157] synthesizing module 'design_2_rclk_0' [c:/GitHub/ReconHardware/PynqSoftware/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/ip/design_2_rclk_0/synth/design_2_rclk_0.v:57]
-INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice' [c:/GitHub/ReconHardware/PynqSoftware/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
-	Parameter DIN_WIDTH bound to: 40 - type: integer 
-	Parameter DIN_FROM bound to: 37 - type: integer 
-	Parameter DIN_TO bound to: 37 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice' (2#1) [c:/GitHub/ReconHardware/PynqSoftware/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'design_2_rclk_0' (3#1) [c:/GitHub/ReconHardware/PynqSoftware/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/ip/design_2_rclk_0/synth/design_2_rclk_0.v:57]
-INFO: [Synth 8-6157] synthesizing module 'design_2_rd_0' [c:/GitHub/ReconHardware/PynqSoftware/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/ip/design_2_rd_0/synth/design_2_rd_0.v:57]
-INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized0' [c:/GitHub/ReconHardware/PynqSoftware/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
-	Parameter DIN_WIDTH bound to: 40 - type: integer 
-	Parameter DIN_FROM bound to: 39 - type: integer 
-	Parameter DIN_TO bound to: 39 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized0' (3#1) [c:/GitHub/ReconHardware/PynqSoftware/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'design_2_rd_0' (4#1) [c:/GitHub/ReconHardware/PynqSoftware/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/ip/design_2_rd_0/synth/design_2_rd_0.v:57]
-INFO: [Synth 8-6157] synthesizing module 'design_2_rrst_0' [c:/GitHub/ReconHardware/PynqSoftware/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/ip/design_2_rrst_0/synth/design_2_rrst_0.v:57]
-INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized1' [c:/GitHub/ReconHardware/PynqSoftware/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
-	Parameter DIN_WIDTH bound to: 40 - type: integer 
-	Parameter DIN_FROM bound to: 38 - type: integer 
-	Parameter DIN_TO bound to: 38 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized1' (4#1) [c:/GitHub/ReconHardware/PynqSoftware/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'design_2_rrst_0' (5#1) [c:/GitHub/ReconHardware/PynqSoftware/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/ip/design_2_rrst_0/synth/design_2_rrst_0.v:57]
-INFO: [Synth 8-6157] synthesizing module 'design_2_wclk_0' [c:/GitHub/ReconHardware/PynqSoftware/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/ip/design_2_wclk_0/synth/design_2_wclk_0.v:57]
-INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized2' [c:/GitHub/ReconHardware/PynqSoftware/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
-	Parameter DIN_WIDTH bound to: 40 - type: integer 
-	Parameter DIN_FROM bound to: 18 - type: integer 
-	Parameter DIN_TO bound to: 18 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized2' (5#1) [c:/GitHub/ReconHardware/PynqSoftware/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'design_2_wclk_0' (6#1) [c:/GitHub/ReconHardware/PynqSoftware/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/ip/design_2_wclk_0/synth/design_2_wclk_0.v:57]
-INFO: [Synth 8-6157] synthesizing module 'design_2_wdata_0' [c:/GitHub/ReconHardware/PynqSoftware/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/ip/design_2_wdata_0/synth/design_2_wdata_0.v:57]
-INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized3' [c:/GitHub/ReconHardware/PynqSoftware/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
-	Parameter DIN_WIDTH bound to: 40 - type: integer 
-	Parameter DIN_FROM bound to: 36 - type: integer 
-	Parameter DIN_TO bound to: 21 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized3' (6#1) [c:/GitHub/ReconHardware/PynqSoftware/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'design_2_wdata_0' (7#1) [c:/GitHub/ReconHardware/PynqSoftware/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/ip/design_2_wdata_0/synth/design_2_wdata_0.v:57]
-INFO: [Synth 8-6157] synthesizing module 'design_2_wr_0' [c:/GitHub/ReconHardware/PynqSoftware/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/ip/design_2_wr_0/synth/design_2_wr_0.v:57]
-INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized4' [c:/GitHub/ReconHardware/PynqSoftware/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
-	Parameter DIN_WIDTH bound to: 40 - type: integer 
-	Parameter DIN_FROM bound to: 20 - type: integer 
-	Parameter DIN_TO bound to: 20 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized4' (7#1) [c:/GitHub/ReconHardware/PynqSoftware/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'design_2_wr_0' (8#1) [c:/GitHub/ReconHardware/PynqSoftware/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/ip/design_2_wr_0/synth/design_2_wr_0.v:57]
-INFO: [Synth 8-6157] synthesizing module 'design_2_wrst_0' [c:/GitHub/ReconHardware/PynqSoftware/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/ip/design_2_wrst_0/synth/design_2_wrst_0.v:57]
-INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized5' [c:/GitHub/ReconHardware/PynqSoftware/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
-	Parameter DIN_WIDTH bound to: 40 - type: integer 
-	Parameter DIN_FROM bound to: 19 - type: integer 
-	Parameter DIN_TO bound to: 19 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized5' (8#1) [c:/GitHub/ReconHardware/PynqSoftware/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'design_2_wrst_0' (9#1) [c:/GitHub/ReconHardware/PynqSoftware/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/ip/design_2_wrst_0/synth/design_2_wrst_0.v:57]
-INFO: [Synth 8-6157] synthesizing module 'design_2_xlconcat_0_0' [c:/GitHub/ReconHardware/PynqSoftware/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/ip/design_2_xlconcat_0_0_1/synth/design_2_xlconcat_0_0.v:58]
-INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_3_xlconcat' [c:/GitHub/ReconHardware/PynqSoftware/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/ipshared/442e/hdl/xlconcat_v2_1_vl_rfs.v:14]
-	Parameter IN0_WIDTH bound to: 1 - type: integer 
-	Parameter IN1_WIDTH bound to: 16 - type: integer 
-	Parameter IN2_WIDTH bound to: 1 - type: integer 
-	Parameter IN3_WIDTH bound to: 1 - type: integer 
-	Parameter IN4_WIDTH bound to: 1 - type: integer 
-	Parameter IN5_WIDTH bound to: 1 - type: integer 
-	Parameter IN6_WIDTH bound to: 1 - type: integer 
-	Parameter IN7_WIDTH bound to: 1 - type: integer 
-	Parameter IN8_WIDTH bound to: 1 - type: integer 
-	Parameter IN9_WIDTH bound to: 1 - type: integer 
-	Parameter IN10_WIDTH bound to: 1 - type: integer 
-	Parameter IN11_WIDTH bound to: 1 - type: integer 
-	Parameter IN12_WIDTH bound to: 1 - type: integer 
-	Parameter IN13_WIDTH bound to: 1 - type: integer 
-	Parameter IN14_WIDTH bound to: 1 - type: integer 
-	Parameter IN15_WIDTH bound to: 1 - type: integer 
-	Parameter IN16_WIDTH bound to: 1 - type: integer 
-	Parameter IN17_WIDTH bound to: 1 - type: integer 
-	Parameter IN18_WIDTH bound to: 1 - type: integer 
-	Parameter IN19_WIDTH bound to: 1 - type: integer 
-	Parameter IN20_WIDTH bound to: 1 - type: integer 
-	Parameter IN21_WIDTH bound to: 1 - type: integer 
-	Parameter IN22_WIDTH bound to: 1 - type: integer 
-	Parameter IN23_WIDTH bound to: 1 - type: integer 
-	Parameter IN24_WIDTH bound to: 1 - type: integer 
-	Parameter IN25_WIDTH bound to: 1 - type: integer 
-	Parameter IN26_WIDTH bound to: 1 - type: integer 
-	Parameter IN27_WIDTH bound to: 1 - type: integer 
-	Parameter IN28_WIDTH bound to: 1 - type: integer 
-	Parameter IN29_WIDTH bound to: 1 - type: integer 
-	Parameter IN30_WIDTH bound to: 1 - type: integer 
-	Parameter IN31_WIDTH bound to: 1 - type: integer 
-	Parameter dout_width bound to: 18 - type: integer 
-	Parameter NUM_PORTS bound to: 3 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_3_xlconcat' (10#1) [c:/GitHub/ReconHardware/PynqSoftware/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/ipshared/442e/hdl/xlconcat_v2_1_vl_rfs.v:14]
-INFO: [Synth 8-6155] done synthesizing module 'design_2_xlconcat_0_0' (11#1) [c:/GitHub/ReconHardware/PynqSoftware/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/ip/design_2_xlconcat_0_0_1/synth/design_2_xlconcat_0_0.v:58]
-INFO: [Synth 8-6155] done synthesizing module 'design_2' (12#1) [C:/GitHub/ReconHardware/PynqSoftware/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/synth/design_2.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'design_2_wrapper' (13#1) [C:/GitHub/ReconHardware/PynqSoftware/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/hdl/design_2_wrapper.v:12]
-WARNING: [Synth 8-7023] instance 'nolabel_line16' of module 'design_2_wrapper' has 31 connections declared, but only 10 given [C:/GitHub/ReconHardware/PynqSoftware/Projects/aFIFO/aFIFO.srcs/sources_1/new/BUF_WRAP.v:16]
-INFO: [Synth 8-6157] synthesizing module 'aFIFO' [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/aFIFO.v:68]
-INFO: [Synth 8-6155] done synthesizing module 'aFIFO' (14#1) [C:/GitHub/ReconHardware/PynqSoftware/Sources/General/aFIFO.v:68]
-INFO: [Synth 8-6155] done synthesizing module 'BUF_WRAP' (15#1) [C:/GitHub/ReconHardware/PynqSoftware/Projects/aFIFO/aFIFO.srcs/sources_1/new/BUF_WRAP.v:4]
-WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In3[0]
-WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In4[0]
-WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In5[0]
-WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In6[0]
-WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In7[0]
-WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In8[0]
-WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In9[0]
-WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In10[0]
-WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In11[0]
-WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In12[0]
-WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In13[0]
-WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In14[0]
-WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In15[0]
-WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In16[0]
-WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In17[0]
-WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In18[0]
-WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In19[0]
-WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In20[0]
-WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In21[0]
-WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In22[0]
-WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In23[0]
-WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In24[0]
-WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In25[0]
-WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In26[0]
-WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In27[0]
-WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In28[0]
-WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In29[0]
-WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In30[0]
-WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In31[0]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[39]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[38]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[37]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[36]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[35]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[34]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[33]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[32]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[31]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[30]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[29]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[28]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[27]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[26]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[25]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[24]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[23]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[22]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[21]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[20]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[18]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[17]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[16]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[15]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[14]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[13]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[12]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[11]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[10]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[9]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[8]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[7]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[6]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[5]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[4]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[3]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[2]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[1]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized5 has unconnected port Din[0]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized4 has unconnected port Din[39]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized4 has unconnected port Din[38]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized4 has unconnected port Din[37]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized4 has unconnected port Din[36]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized4 has unconnected port Din[35]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized4 has unconnected port Din[34]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized4 has unconnected port Din[33]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized4 has unconnected port Din[32]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized4 has unconnected port Din[31]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized4 has unconnected port Din[30]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized4 has unconnected port Din[29]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized4 has unconnected port Din[28]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized4 has unconnected port Din[27]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized4 has unconnected port Din[26]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized4 has unconnected port Din[25]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized4 has unconnected port Din[24]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized4 has unconnected port Din[23]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized4 has unconnected port Din[22]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized4 has unconnected port Din[21]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized4 has unconnected port Din[19]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized4 has unconnected port Din[18]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized4 has unconnected port Din[17]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized4 has unconnected port Din[16]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized4 has unconnected port Din[15]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized4 has unconnected port Din[14]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized4 has unconnected port Din[13]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized4 has unconnected port Din[12]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized4 has unconnected port Din[11]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized4 has unconnected port Din[10]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized4 has unconnected port Din[9]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized4 has unconnected port Din[8]
-WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized4 has unconnected port Din[7]
-INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-6157] synthesizing module 'BUF_WRAP' [C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.srcs/sources_1/new/BUF_WRAP.v:4]
+INFO: [Synth 8-6157] synthesizing module 'design_2_wrapper' [C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/hdl/design_2_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'design_2' [C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/synth/design_2.v:13]
+INFO: [Synth 8-6157] synthesizing module 'design_2_axi_gpio_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.runs/synth_1/.Xil/Vivado-9820-DESKTOP-D9F9TPQ/realtime/design_2_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_2_axi_gpio_0_0' (1#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.runs/synth_1/.Xil/Vivado-9820-DESKTOP-D9F9TPQ/realtime/design_2_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_2_axi_gpio_0_1' [C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.runs/synth_1/.Xil/Vivado-9820-DESKTOP-D9F9TPQ/realtime/design_2_axi_gpio_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_2_axi_gpio_0_1' (2#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.runs/synth_1/.Xil/Vivado-9820-DESKTOP-D9F9TPQ/realtime/design_2_axi_gpio_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_2_axi_gpio_1_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.runs/synth_1/.Xil/Vivado-9820-DESKTOP-D9F9TPQ/realtime/design_2_axi_gpio_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_2_axi_gpio_1_0' (3#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.runs/synth_1/.Xil/Vivado-9820-DESKTOP-D9F9TPQ/realtime/design_2_axi_gpio_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_2_axi_gpio_2_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.runs/synth_1/.Xil/Vivado-9820-DESKTOP-D9F9TPQ/realtime/design_2_axi_gpio_2_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_2_axi_gpio_2_0' (4#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.runs/synth_1/.Xil/Vivado-9820-DESKTOP-D9F9TPQ/realtime/design_2_axi_gpio_2_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_2_axi_gpio_3_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.runs/synth_1/.Xil/Vivado-9820-DESKTOP-D9F9TPQ/realtime/design_2_axi_gpio_3_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_2_axi_gpio_3_0' (5#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.runs/synth_1/.Xil/Vivado-9820-DESKTOP-D9F9TPQ/realtime/design_2_axi_gpio_3_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_2_axi_gpio_4_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.runs/synth_1/.Xil/Vivado-9820-DESKTOP-D9F9TPQ/realtime/design_2_axi_gpio_4_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_2_axi_gpio_4_0' (6#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.runs/synth_1/.Xil/Vivado-9820-DESKTOP-D9F9TPQ/realtime/design_2_axi_gpio_4_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_2_axi_gpio_5_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.runs/synth_1/.Xil/Vivado-9820-DESKTOP-D9F9TPQ/realtime/design_2_axi_gpio_5_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_2_axi_gpio_5_0' (7#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.runs/synth_1/.Xil/Vivado-9820-DESKTOP-D9F9TPQ/realtime/design_2_axi_gpio_5_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_2_axi_gpio_6_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.runs/synth_1/.Xil/Vivado-9820-DESKTOP-D9F9TPQ/realtime/design_2_axi_gpio_6_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_2_axi_gpio_6_0' (8#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.runs/synth_1/.Xil/Vivado-9820-DESKTOP-D9F9TPQ/realtime/design_2_axi_gpio_6_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_2_axi_gpio_7_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.runs/synth_1/.Xil/Vivado-9820-DESKTOP-D9F9TPQ/realtime/design_2_axi_gpio_7_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_2_axi_gpio_7_0' (9#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.runs/synth_1/.Xil/Vivado-9820-DESKTOP-D9F9TPQ/realtime/design_2_axi_gpio_7_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_2_axi_gpio_8_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.runs/synth_1/.Xil/Vivado-9820-DESKTOP-D9F9TPQ/realtime/design_2_axi_gpio_8_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_2_axi_gpio_8_0' (10#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.runs/synth_1/.Xil/Vivado-9820-DESKTOP-D9F9TPQ/realtime/design_2_axi_gpio_8_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_2_axi_interconnect_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/synth/design_2.v:847]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_F9RV50' [C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/synth/design_2.v:2416]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_F9RV50' (11#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/synth/design_2.v:2416]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_1O10UX1' [C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/synth/design_2.v:2548]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_1O10UX1' (12#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/synth/design_2.v:2548]
+INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_E445IF' [C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/synth/design_2.v:2680]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_E445IF' (13#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/synth/design_2.v:2680]
+INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_1PH007A' [C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/synth/design_2.v:2812]
+INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_1PH007A' (14#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/synth/design_2.v:2812]
+INFO: [Synth 8-6157] synthesizing module 'm04_couplers_imp_GTOBC2' [C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/synth/design_2.v:2944]
+INFO: [Synth 8-6155] done synthesizing module 'm04_couplers_imp_GTOBC2' (15#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/synth/design_2.v:2944]
+INFO: [Synth 8-6157] synthesizing module 'm05_couplers_imp_1MT048Z' [C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/synth/design_2.v:3076]
+INFO: [Synth 8-6155] done synthesizing module 'm05_couplers_imp_1MT048Z' (16#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/synth/design_2.v:3076]
+INFO: [Synth 8-6157] synthesizing module 'm06_couplers_imp_FXZIZL' [C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/synth/design_2.v:3208]
+INFO: [Synth 8-6155] done synthesizing module 'm06_couplers_imp_FXZIZL' (17#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/synth/design_2.v:3208]
+INFO: [Synth 8-6157] synthesizing module 'm07_couplers_imp_1NEZRPC' [C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/synth/design_2.v:3340]
+INFO: [Synth 8-6155] done synthesizing module 'm07_couplers_imp_1NEZRPC' (18#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/synth/design_2.v:3340]
+INFO: [Synth 8-6157] synthesizing module 'm08_couplers_imp_8Z7TRC' [C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/synth/design_2.v:3472]
+INFO: [Synth 8-6155] done synthesizing module 'm08_couplers_imp_8Z7TRC' (19#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/synth/design_2.v:3472]
+INFO: [Synth 8-6157] synthesizing module 'm09_couplers_imp_1LG0M15' [C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/synth/design_2.v:3604]
+INFO: [Synth 8-6155] done synthesizing module 'm09_couplers_imp_1LG0M15' (20#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/synth/design_2.v:3604]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1L7QRZA' [C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/synth/design_2.v:3736]
+INFO: [Synth 8-6157] synthesizing module 'design_2_auto_pc_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.runs/synth_1/.Xil/Vivado-9820-DESKTOP-D9F9TPQ/realtime/design_2_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_2_auto_pc_0' (21#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.runs/synth_1/.Xil/Vivado-9820-DESKTOP-D9F9TPQ/realtime/design_2_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1L7QRZA' (22#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/synth/design_2.v:3736]
+INFO: [Synth 8-6157] synthesizing module 'design_2_xbar_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.runs/synth_1/.Xil/Vivado-9820-DESKTOP-D9F9TPQ/realtime/design_2_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_2_xbar_0' (23#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.runs/synth_1/.Xil/Vivado-9820-DESKTOP-D9F9TPQ/realtime/design_2_xbar_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'xbar' of module 'design_2_xbar_0' has 40 connections declared, but only 38 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/synth/design_2.v:2375]
+INFO: [Synth 8-6155] done synthesizing module 'design_2_axi_interconnect_0_0' (24#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/synth/design_2.v:847]
+INFO: [Synth 8-6157] synthesizing module 'design_2_proc_sys_reset_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.runs/synth_1/.Xil/Vivado-9820-DESKTOP-D9F9TPQ/realtime/design_2_proc_sys_reset_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_2_proc_sys_reset_0_0' (25#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.runs/synth_1/.Xil/Vivado-9820-DESKTOP-D9F9TPQ/realtime/design_2_proc_sys_reset_0_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'proc_sys_reset_0' of module 'design_2_proc_sys_reset_0_0' has 10 connections declared, but only 6 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/synth/design_2.v:773]
+INFO: [Synth 8-6157] synthesizing module 'design_2_processing_system7_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.runs/synth_1/.Xil/Vivado-9820-DESKTOP-D9F9TPQ/realtime/design_2_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_2_processing_system7_0_0' (26#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.runs/synth_1/.Xil/Vivado-9820-DESKTOP-D9F9TPQ/realtime/design_2_processing_system7_0_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'design_2_processing_system7_0_0' has 68 connections declared, but only 64 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/synth/design_2.v:780]
+INFO: [Synth 8-6155] done synthesizing module 'design_2' (27#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/synth/design_2.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_2_wrapper' (28#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/hdl/design_2_wrapper.v:12]
+WARNING: [Synth 8-7023] instance 'nolabel_line18' of module 'design_2_wrapper' has 31 connections declared, but only 10 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.srcs/sources_1/new/BUF_WRAP.v:18]
+INFO: [Synth 8-6157] synthesizing module 'aFIFO' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/aFIFO.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'aFIFO' (29#1) [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/aFIFO.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'BUF_WRAP' (30#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.srcs/sources_1/new/BUF_WRAP.v:4]
+WARNING: [Synth 8-3331] design s00_couplers_imp_1L7QRZA has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design s00_couplers_imp_1L7QRZA has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m09_couplers_imp_1LG0M15 has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m09_couplers_imp_1LG0M15 has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m09_couplers_imp_1LG0M15 has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m09_couplers_imp_1LG0M15 has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m08_couplers_imp_8Z7TRC has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m08_couplers_imp_8Z7TRC has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m08_couplers_imp_8Z7TRC has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m08_couplers_imp_8Z7TRC has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m07_couplers_imp_1NEZRPC has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m07_couplers_imp_1NEZRPC has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m07_couplers_imp_1NEZRPC has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m07_couplers_imp_1NEZRPC has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m06_couplers_imp_FXZIZL has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m06_couplers_imp_FXZIZL has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m06_couplers_imp_FXZIZL has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m06_couplers_imp_FXZIZL has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m05_couplers_imp_1MT048Z has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m05_couplers_imp_1MT048Z has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m05_couplers_imp_1MT048Z has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m05_couplers_imp_1MT048Z has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m04_couplers_imp_GTOBC2 has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m04_couplers_imp_GTOBC2 has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m04_couplers_imp_GTOBC2 has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m04_couplers_imp_GTOBC2 has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m03_couplers_imp_1PH007A has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m03_couplers_imp_1PH007A has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m03_couplers_imp_1PH007A has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m03_couplers_imp_1PH007A has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m02_couplers_imp_E445IF has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m02_couplers_imp_E445IF has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m02_couplers_imp_E445IF has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m02_couplers_imp_E445IF has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m01_couplers_imp_1O10UX1 has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m01_couplers_imp_1O10UX1 has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m01_couplers_imp_1O10UX1 has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m01_couplers_imp_1O10UX1 has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m00_couplers_imp_F9RV50 has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m00_couplers_imp_F9RV50 has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m00_couplers_imp_F9RV50 has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m00_couplers_imp_F9RV50 has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design design_2_axi_interconnect_0_0 has unconnected port M00_ACLK
+WARNING: [Synth 8-3331] design design_2_axi_interconnect_0_0 has unconnected port M00_ARESETN
+WARNING: [Synth 8-3331] design design_2_axi_interconnect_0_0 has unconnected port M01_ACLK
+WARNING: [Synth 8-3331] design design_2_axi_interconnect_0_0 has unconnected port M01_ARESETN
+WARNING: [Synth 8-3331] design design_2_axi_interconnect_0_0 has unconnected port M02_ACLK
+WARNING: [Synth 8-3331] design design_2_axi_interconnect_0_0 has unconnected port M02_ARESETN
+WARNING: [Synth 8-3331] design design_2_axi_interconnect_0_0 has unconnected port M03_ACLK
+WARNING: [Synth 8-3331] design design_2_axi_interconnect_0_0 has unconnected port M03_ARESETN
+WARNING: [Synth 8-3331] design design_2_axi_interconnect_0_0 has unconnected port M04_ACLK
+WARNING: [Synth 8-3331] design design_2_axi_interconnect_0_0 has unconnected port M04_ARESETN
+WARNING: [Synth 8-3331] design design_2_axi_interconnect_0_0 has unconnected port M05_ACLK
+WARNING: [Synth 8-3331] design design_2_axi_interconnect_0_0 has unconnected port M05_ARESETN
+WARNING: [Synth 8-3331] design design_2_axi_interconnect_0_0 has unconnected port M06_ACLK
+WARNING: [Synth 8-3331] design design_2_axi_interconnect_0_0 has unconnected port M06_ARESETN
+WARNING: [Synth 8-3331] design design_2_axi_interconnect_0_0 has unconnected port M07_ACLK
+WARNING: [Synth 8-3331] design design_2_axi_interconnect_0_0 has unconnected port M07_ARESETN
+WARNING: [Synth 8-3331] design design_2_axi_interconnect_0_0 has unconnected port M08_ACLK
+WARNING: [Synth 8-3331] design design_2_axi_interconnect_0_0 has unconnected port M08_ARESETN
+WARNING: [Synth 8-3331] design design_2_axi_interconnect_0_0 has unconnected port M09_ACLK
+WARNING: [Synth 8-3331] design design_2_axi_interconnect_0_0 has unconnected port M09_ARESETN
+WARNING: [Synth 8-3331] design design_2_axi_interconnect_0_0 has unconnected port S00_ACLK
+WARNING: [Synth 8-3331] design design_2_axi_interconnect_0_0 has unconnected port S00_ARESETN
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1046.609 ; gain = 285.590
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1078.117 ; gain = 295.527
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -237,55 +165,91 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1046.609 ; gain = 285.590
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1078.117 ; gain = 295.527
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1046.609 ; gain = 285.590
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1078.117 ; gain = 295.527
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1046.609 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.048 . Memory (MB): peak = 1078.117 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [c:/GitHub/ReconHardware/PynqSoftware/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/ip/design_2_processing_system7_0_0_1/design_2_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc] for cell 'nolabel_line16/design_2_i/processing_system7_0'
-Finished Parsing XDC File [c:/GitHub/ReconHardware/PynqSoftware/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/ip/design_2_processing_system7_0_0_1/design_2_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc] for cell 'nolabel_line16/design_2_i/processing_system7_0'
-Parsing XDC File [C:/GitHub/ReconHardware/PynqSoftware/Projects/aFIFO/aFIFO.runs/synth_1/dont_touch.xdc]
-Finished Parsing XDC File [C:/GitHub/ReconHardware/PynqSoftware/Projects/aFIFO/aFIFO.runs/synth_1/dont_touch.xdc]
+Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/ip/design_2_processing_system7_0_0_1/design_2_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc] for cell 'nolabel_line18/design_2_i/processing_system7_0'
+Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/ip/design_2_processing_system7_0_0_1/design_2_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc] for cell 'nolabel_line18/design_2_i/processing_system7_0'
+Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/ip/design_2_axi_gpio_0_0/design_2_axi_gpio_0_0/design_2_axi_gpio_2_0_in_context.xdc] for cell 'nolabel_line18/design_2_i/axi_gpio_0'
+Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/ip/design_2_axi_gpio_0_0/design_2_axi_gpio_0_0/design_2_axi_gpio_2_0_in_context.xdc] for cell 'nolabel_line18/design_2_i/axi_gpio_0'
+Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/ip/design_2_axi_gpio_0_1/design_2_axi_gpio_0_1/design_2_axi_gpio_2_0_in_context.xdc] for cell 'nolabel_line18/design_2_i/axi_gpio_1'
+Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/ip/design_2_axi_gpio_0_1/design_2_axi_gpio_0_1/design_2_axi_gpio_2_0_in_context.xdc] for cell 'nolabel_line18/design_2_i/axi_gpio_1'
+Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/ip/design_2_axi_gpio_1_0/design_2_axi_gpio_1_0/design_2_axi_gpio_2_0_in_context.xdc] for cell 'nolabel_line18/design_2_i/axi_gpio_2'
+Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/ip/design_2_axi_gpio_1_0/design_2_axi_gpio_1_0/design_2_axi_gpio_2_0_in_context.xdc] for cell 'nolabel_line18/design_2_i/axi_gpio_2'
+Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/ip/design_2_axi_gpio_2_0/design_2_axi_gpio_2_0/design_2_axi_gpio_2_0_in_context.xdc] for cell 'nolabel_line18/design_2_i/axi_gpio_3'
+Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/ip/design_2_axi_gpio_2_0/design_2_axi_gpio_2_0/design_2_axi_gpio_2_0_in_context.xdc] for cell 'nolabel_line18/design_2_i/axi_gpio_3'
+Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/ip/design_2_axi_gpio_3_0/design_2_axi_gpio_3_0/design_2_axi_gpio_3_0_in_context.xdc] for cell 'nolabel_line18/design_2_i/axi_gpio_4'
+Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/ip/design_2_axi_gpio_3_0/design_2_axi_gpio_3_0/design_2_axi_gpio_3_0_in_context.xdc] for cell 'nolabel_line18/design_2_i/axi_gpio_4'
+Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/ip/design_2_axi_gpio_4_0/design_2_axi_gpio_4_0/design_2_axi_gpio_2_0_in_context.xdc] for cell 'nolabel_line18/design_2_i/axi_gpio_5'
+Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/ip/design_2_axi_gpio_4_0/design_2_axi_gpio_4_0/design_2_axi_gpio_2_0_in_context.xdc] for cell 'nolabel_line18/design_2_i/axi_gpio_5'
+Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/ip/design_2_axi_gpio_5_0/design_2_axi_gpio_5_0/design_2_axi_gpio_2_0_in_context.xdc] for cell 'nolabel_line18/design_2_i/axi_gpio_6'
+Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/ip/design_2_axi_gpio_5_0/design_2_axi_gpio_5_0/design_2_axi_gpio_2_0_in_context.xdc] for cell 'nolabel_line18/design_2_i/axi_gpio_6'
+Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/ip/design_2_axi_gpio_6_0/design_2_axi_gpio_6_0/design_2_axi_gpio_6_0_in_context.xdc] for cell 'nolabel_line18/design_2_i/axi_gpio_7'
+Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/ip/design_2_axi_gpio_6_0/design_2_axi_gpio_6_0/design_2_axi_gpio_6_0_in_context.xdc] for cell 'nolabel_line18/design_2_i/axi_gpio_7'
+Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/ip/design_2_axi_gpio_7_0/design_2_axi_gpio_7_0/design_2_axi_gpio_6_0_in_context.xdc] for cell 'nolabel_line18/design_2_i/axi_gpio_8'
+Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/ip/design_2_axi_gpio_7_0/design_2_axi_gpio_7_0/design_2_axi_gpio_6_0_in_context.xdc] for cell 'nolabel_line18/design_2_i/axi_gpio_8'
+Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/ip/design_2_axi_gpio_8_0/design_2_axi_gpio_8_0/design_2_axi_gpio_8_0_in_context.xdc] for cell 'nolabel_line18/design_2_i/axi_gpio_9'
+Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/ip/design_2_axi_gpio_8_0/design_2_axi_gpio_8_0/design_2_axi_gpio_8_0_in_context.xdc] for cell 'nolabel_line18/design_2_i/axi_gpio_9'
+Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/ip/design_2_xbar_0/design_2_xbar_0/design_2_xbar_0_in_context.xdc] for cell 'nolabel_line18/design_2_i/axi_interconnect_0/xbar'
+Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/ip/design_2_xbar_0/design_2_xbar_0/design_2_xbar_0_in_context.xdc] for cell 'nolabel_line18/design_2_i/axi_interconnect_0/xbar'
+Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/ip/design_2_proc_sys_reset_0_0/design_2_proc_sys_reset_0_0/design_2_proc_sys_reset_0_0_in_context.xdc] for cell 'nolabel_line18/design_2_i/proc_sys_reset_0'
+Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/ip/design_2_proc_sys_reset_0_0/design_2_proc_sys_reset_0_0/design_2_proc_sys_reset_0_0_in_context.xdc] for cell 'nolabel_line18/design_2_i/proc_sys_reset_0'
+Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/ip/design_2_auto_pc_0/design_2_auto_pc_0/design_2_auto_pc_0_in_context.xdc] for cell 'nolabel_line18/design_2_i/axi_interconnect_0/s00_couplers/auto_pc'
+Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.srcs/sources_1/bd/design_2/ip/design_2_auto_pc_0/design_2_auto_pc_0/design_2_auto_pc_0_in_context.xdc] for cell 'nolabel_line18/design_2_i/axi_interconnect_0/s00_couplers/auto_pc'
+Parsing XDC File [C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.srcs/constrs_1/new/brd.xdc]
+Finished Parsing XDC File [C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.srcs/constrs_1/new/brd.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.srcs/constrs_1/new/brd.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/BUF_WRAP_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/BUF_WRAP_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1168.180 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1173.535 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1168.180 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1173.535 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1168.180 ; gain = 407.160
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1173.535 ; gain = 390.945
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1168.180 ; gain = 407.160
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1173.535 ; gain = 390.945
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for nolabel_line16/design_2_i. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for nolabel_line16/design_2_i/processing_system7_0. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for nolabel_line16/design_2_i/rclk_RnM. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for nolabel_line16/design_2_i/rd_RnM. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for nolabel_line16/design_2_i/rrst_RnM. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for nolabel_line16/design_2_i/wclk_RnM. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for nolabel_line16/design_2_i/wdata_RnM. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for nolabel_line16/design_2_i/wr_RnM. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for nolabel_line16/design_2_i/wrst_RnM. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for nolabel_line16/design_2_i/xlconcat_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for nolabel_line18/design_2_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for nolabel_line18/design_2_i/processing_system7_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for nolabel_line18/design_2_i/axi_gpio_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for nolabel_line18/design_2_i/axi_gpio_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for nolabel_line18/design_2_i/axi_gpio_2. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for nolabel_line18/design_2_i/axi_gpio_3. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for nolabel_line18/design_2_i/axi_gpio_4. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for nolabel_line18/design_2_i/axi_gpio_5. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for nolabel_line18/design_2_i/axi_gpio_6. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for nolabel_line18/design_2_i/axi_gpio_7. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for nolabel_line18/design_2_i/axi_gpio_8. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for nolabel_line18/design_2_i/axi_gpio_9. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for nolabel_line18/design_2_i/axi_interconnect_0/xbar. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for nolabel_line18/design_2_i/axi_interconnect_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for nolabel_line18/design_2_i/proc_sys_reset_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for nolabel_line18/design_2_i/axi_interconnect_0/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1168.180 ; gain = 407.160
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1173.535 ; gain = 390.945
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1168.180 ; gain = 407.160
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1173.535 ; gain = 390.945
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -298,14 +262,14 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input      7 Bit       Adders := 4     
+	   2 Input      9 Bit       Adders := 4     
 +---XORs : 
-	   2 Input      7 Bit         XORs := 2     
+	   2 Input      9 Bit         XORs := 2     
 +---Registers : 
-	                7 Bit    Registers := 8     
+	                9 Bit    Registers := 8     
 	                1 Bit    Registers := 2     
 +---RAMs : 
-	             1024 Bit         RAMs := 1     
+	               4K Bit         RAMs := 1     
 +---Muxes : 
 	   2 Input     16 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
@@ -318,14 +282,14 @@ Hierarchical RTL Component report
 Module aFIFO 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input      7 Bit       Adders := 4     
+	   2 Input      9 Bit       Adders := 4     
 +---XORs : 
-	   2 Input      7 Bit         XORs := 2     
+	   2 Input      9 Bit         XORs := 2     
 +---Registers : 
-	                7 Bit    Registers := 8     
+	                9 Bit    Registers := 8     
 	                1 Bit    Registers := 2     
 +---RAMs : 
-	             1024 Bit         RAMs := 1     
+	               4K Bit         RAMs := 1     
 +---Muxes : 
 	   2 Input     16 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
@@ -344,19 +308,41 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design design_2_axi_interconnect_0_0 has unconnected port M00_ACLK
+WARNING: [Synth 8-3331] design design_2_axi_interconnect_0_0 has unconnected port M00_ARESETN
+WARNING: [Synth 8-3331] design design_2_axi_interconnect_0_0 has unconnected port M01_ACLK
+WARNING: [Synth 8-3331] design design_2_axi_interconnect_0_0 has unconnected port M01_ARESETN
+WARNING: [Synth 8-3331] design design_2_axi_interconnect_0_0 has unconnected port M02_ACLK
+WARNING: [Synth 8-3331] design design_2_axi_interconnect_0_0 has unconnected port M02_ARESETN
+WARNING: [Synth 8-3331] design design_2_axi_interconnect_0_0 has unconnected port M03_ACLK
+WARNING: [Synth 8-3331] design design_2_axi_interconnect_0_0 has unconnected port M03_ARESETN
+WARNING: [Synth 8-3331] design design_2_axi_interconnect_0_0 has unconnected port M04_ACLK
+WARNING: [Synth 8-3331] design design_2_axi_interconnect_0_0 has unconnected port M04_ARESETN
+WARNING: [Synth 8-3331] design design_2_axi_interconnect_0_0 has unconnected port M05_ACLK
+WARNING: [Synth 8-3331] design design_2_axi_interconnect_0_0 has unconnected port M05_ARESETN
+WARNING: [Synth 8-3331] design design_2_axi_interconnect_0_0 has unconnected port M06_ACLK
+WARNING: [Synth 8-3331] design design_2_axi_interconnect_0_0 has unconnected port M06_ARESETN
+WARNING: [Synth 8-3331] design design_2_axi_interconnect_0_0 has unconnected port M07_ACLK
+WARNING: [Synth 8-3331] design design_2_axi_interconnect_0_0 has unconnected port M07_ARESETN
+WARNING: [Synth 8-3331] design design_2_axi_interconnect_0_0 has unconnected port M08_ACLK
+WARNING: [Synth 8-3331] design design_2_axi_interconnect_0_0 has unconnected port M08_ARESETN
+WARNING: [Synth 8-3331] design design_2_axi_interconnect_0_0 has unconnected port M09_ACLK
+WARNING: [Synth 8-3331] design design_2_axi_interconnect_0_0 has unconnected port M09_ARESETN
+WARNING: [Synth 8-3331] design design_2_axi_interconnect_0_0 has unconnected port S00_ACLK
+WARNING: [Synth 8-3331] design design_2_axi_interconnect_0_0 has unconnected port S00_ARESETN
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1168.180 ; gain = 407.160
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1173.535 ; gain = 390.945
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 
 Distributed RAM: Preliminary Mapping	Report (see note below)
-+------------+----------------+-----------+----------------------+-------------+
-|Module Name | RTL Object     | Inference | Size (Depth x Width) | Primitives  | 
-+------------+----------------+-----------+----------------------+-------------+
-|BUF_WRAP    | myFIFO/mem_reg | Implied   | 64 x 16              | RAM64M x 6	 | 
-+------------+----------------+-----------+----------------------+-------------+
++------------+----------------+-----------+----------------------+---------------------------+
+|Module Name | RTL Object     | Inference | Size (Depth x Width) | Primitives                | 
++------------+----------------+-----------+----------------------+---------------------------+
+|BUF_WRAP    | myFIFO/mem_reg | Implied   | 256 x 16             | RAM64X1D x 4	RAM64M x 20	 | 
++------------+----------------+-----------+----------------------+---------------------------+
 
 Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
 ---------------------------------------------------------------------------------
@@ -372,24 +358,24 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1168.180 ; gain = 407.160
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1181.016 ; gain = 398.426
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1168.180 ; gain = 407.160
+Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1181.461 ; gain = 398.871
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 
 Distributed RAM: Final Mapping	Report
-+------------+----------------+-----------+----------------------+-------------+
-|Module Name | RTL Object     | Inference | Size (Depth x Width) | Primitives  | 
-+------------+----------------+-----------+----------------------+-------------+
-|BUF_WRAP    | myFIFO/mem_reg | Implied   | 64 x 16              | RAM64M x 6	 | 
-+------------+----------------+-----------+----------------------+-------------+
++------------+----------------+-----------+----------------------+---------------------------+
+|Module Name | RTL Object     | Inference | Size (Depth x Width) | Primitives                | 
++------------+----------------+-----------+----------------------+---------------------------+
+|BUF_WRAP    | myFIFO/mem_reg | Implied   | 256 x 16             | RAM64X1D x 4	RAM64M x 20	 | 
++------------+----------------+-----------+----------------------+---------------------------+
 
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP and Shift Register Reporting
@@ -403,8 +389,18 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'myFIFO/rgray_reg[8]' (FDC) to 'myFIFO/rbin_reg[8]'
+INFO: [Synth 8-3886] merging instance 'myFIFO/wgray_reg[8]' (FDC) to 'myFIFO/wbin_reg[8]'
+INFO: [Synth 8-3886] merging instance 'myFIFO/rbin_reg_rep[5]' (FDC) to 'myFIFO/rbin_reg[5]'
+INFO: [Synth 8-3886] merging instance 'myFIFO/rbin_reg_rep[4]' (FDC) to 'myFIFO/rbin_reg[4]'
+INFO: [Synth 8-3886] merging instance 'myFIFO/rbin_reg_rep[3]' (FDC) to 'myFIFO/rbin_reg[3]'
+INFO: [Synth 8-3886] merging instance 'myFIFO/rbin_reg_rep[2]' (FDC) to 'myFIFO/rbin_reg[2]'
+INFO: [Synth 8-3886] merging instance 'myFIFO/rbin_reg_rep[1]' (FDC) to 'myFIFO/rbin_reg[1]'
+INFO: [Synth 8-3886] merging instance 'myFIFO/rbin_reg_rep[0]' (FDC) to 'myFIFO/rbin_reg[0]'
+INFO: [Synth 8-3886] merging instance 'myFIFO/rbin_reg_rep[7]' (FDC) to 'myFIFO/rbin_reg[7]'
+INFO: [Synth 8-3886] merging instance 'myFIFO/rbin_reg_rep[6]' (FDC) to 'myFIFO/rbin_reg[6]'
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1168.180 ; gain = 407.160
+Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1192.051 ; gain = 409.461
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -428,13 +424,13 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1174.699 ; gain = 413.680
+Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1206.801 ; gain = 424.211
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1174.699 ; gain = 413.680
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1206.801 ; gain = 424.211
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -453,25 +449,25 @@ Report Check Netlist:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1174.699 ; gain = 413.680
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1206.801 ; gain = 424.211
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1174.699 ; gain = 413.680
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1206.801 ; gain = 424.211
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1174.699 ; gain = 413.680
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1206.801 ; gain = 424.211
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1174.699 ; gain = 413.680
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1206.801 ; gain = 424.211
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -481,66 +477,90 @@ Report BlackBoxes:
 +------+--------------------------------+----------+
 |      |BlackBox name                   |Instances |
 +------+--------------------------------+----------+
-|1     |design_2_processing_system7_0_0 |         1|
+|1     |design_2_xbar_0                 |         1|
+|2     |design_2_auto_pc_0              |         1|
+|3     |design_2_axi_gpio_0_0           |         1|
+|4     |design_2_axi_gpio_0_1           |         1|
+|5     |design_2_axi_gpio_1_0           |         1|
+|6     |design_2_axi_gpio_2_0           |         1|
+|7     |design_2_axi_gpio_3_0           |         1|
+|8     |design_2_axi_gpio_4_0           |         1|
+|9     |design_2_axi_gpio_5_0           |         1|
+|10    |design_2_axi_gpio_6_0           |         1|
+|11    |design_2_axi_gpio_7_0           |         1|
+|12    |design_2_axi_gpio_8_0           |         1|
+|13    |design_2_proc_sys_reset_0_0     |         1|
+|14    |design_2_processing_system7_0_0 |         1|
 +------+--------------------------------+----------+
 
 Report Cell Usage: 
 +------+--------------------------------+------+
 |      |Cell                            |Count |
 +------+--------------------------------+------+
-|1     |design_2_processing_system7_0_0 |     1|
-|2     |LUT1                            |     2|
-|3     |LUT2                            |    18|
-|4     |LUT3                            |     8|
-|5     |LUT4                            |    12|
-|6     |LUT5                            |    11|
-|7     |LUT6                            |    16|
-|8     |RAM64M                          |     6|
-|9     |FDCE                            |    63|
-|10    |FDPE                            |     1|
+|1     |design_2_auto_pc_0              |     1|
+|2     |design_2_axi_gpio_0_0           |     1|
+|3     |design_2_axi_gpio_0_1           |     1|
+|4     |design_2_axi_gpio_1_0           |     1|
+|5     |design_2_axi_gpio_2_0           |     1|
+|6     |design_2_axi_gpio_3_0           |     1|
+|7     |design_2_axi_gpio_4_0           |     1|
+|8     |design_2_axi_gpio_5_0           |     1|
+|9     |design_2_axi_gpio_6_0           |     1|
+|10    |design_2_axi_gpio_7_0           |     1|
+|11    |design_2_axi_gpio_8_0           |     1|
+|12    |design_2_proc_sys_reset_0_0     |     1|
+|13    |design_2_processing_system7_0_0 |     1|
+|14    |design_2_xbar_0                 |     1|
+|15    |CARRY4                          |     2|
+|16    |LUT1                            |     2|
+|17    |LUT2                            |    18|
+|18    |LUT3                            |     6|
+|19    |LUT4                            |    15|
+|20    |LUT5                            |    11|
+|21    |LUT6                            |    37|
+|22    |RAM64M                          |    20|
+|23    |RAM64X1D                        |     4|
+|24    |FDCE                            |    71|
+|25    |FDPE                            |     1|
+|26    |OBUF                            |     4|
 +------+--------------------------------+------+
 
 Report Instance Areas: 
-+------+-----------------+----------------------+------+
-|      |Instance         |Module                |Cells |
-+------+-----------------+----------------------+------+
-|1     |top              |                      |   408|
-|2     |  myFIFO         |aFIFO                 |   134|
-|3     |  nolabel_line16 |design_2_wrapper      |   274|
-|4     |    design_2_i   |design_2              |   271|
-|5     |      rclk_RnM   |design_2_rclk_0       |     0|
-|6     |      rd_RnM     |design_2_rd_0         |     0|
-|7     |      rrst_RnM   |design_2_rrst_0       |     0|
-|8     |      wclk_RnM   |design_2_wclk_0       |     0|
-|9     |      wdata_RnM  |design_2_wdata_0      |     0|
-|10    |      wr_RnM     |design_2_wr_0         |     0|
-|11    |      wrst_RnM   |design_2_wrst_0       |     0|
-|12    |      xlconcat_0 |design_2_xlconcat_0_0 |     0|
-+------+-----------------+----------------------+------+
++------+-------------------------+------------------------------+------+
+|      |Instance                 |Module                        |Cells |
++------+-------------------------+------------------------------+------+
+|1     |top                      |                              |  2227|
+|2     |  myFIFO                 |aFIFO                         |   184|
+|3     |  nolabel_line18         |design_2_wrapper              |  2039|
+|4     |    design_2_i           |design_2                      |  2036|
+|5     |      axi_interconnect_0 |design_2_axi_interconnect_0_0 |  1328|
+|6     |        s00_couplers     |s00_couplers_imp_1L7QRZA      |   177|
++------+-------------------------+------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1174.699 ; gain = 413.680
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1206.801 ; gain = 424.211
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 258 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 1174.699 ; gain = 292.109
-Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1174.699 ; gain = 413.680
+Synthesis finished with 0 errors, 0 critical warnings and 22 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 1206.801 ; gain = 328.793
+Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1206.801 ; gain = 424.211
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1185.762 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 6 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 1214.402 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 26 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1193.480 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1229.473 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 6 instances were transformed.
-  RAM64M => RAM64M (RAMD64E(x4)): 6 instances
+  A total of 24 instances were transformed.
+  RAM64M => RAM64M (RAMD64E(x4)): 20 instances
+  RAM64X1D => RAM64X1D (RAMD64E(x2)): 4 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-57 Infos, 103 Warnings, 0 Critical Warnings and 0 Errors encountered.
+85 Infos, 91 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1193.480 ; gain = 730.789
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1193.480 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1229.473 ; gain = 754.316
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1229.473 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint 'C:/GitHub/ReconHardware/PynqSoftware/Projects/aFIFO/aFIFO.runs/synth_1/BUF_WRAP.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.runs/synth_1/BUF_WRAP.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file BUF_WRAP_utilization_synth.rpt -pb BUF_WRAP_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Sep  8 12:25:24 2020...
+INFO: [Common 17-206] Exiting Vivado at Thu Oct  1 20:02:54 2020...

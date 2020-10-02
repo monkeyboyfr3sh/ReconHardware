@@ -60,7 +60,6 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {HDL-1065} -limit 10000
 
 start_step write_bitstream
 set ACTIVE_STEP write_bitstream
@@ -68,7 +67,8 @@ set rc [catch {
   create_msg_db write_bitstream.pb
   set_param chipscope.maxJobs 2
   open_checkpoint BUF_WRAP_routed.dcp
-  set_property webtalk.parent_dir C:/GitHub/ReconHardware/PynqSoftware/Projects/aFIFO/aFIFO.cache/wt [current_project]
+  set_property webtalk.parent_dir C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.cache/wt [current_project]
+  set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
   catch { write_mem_info -force BUF_WRAP.mmi }
   write_bitstream -force BUF_WRAP.bit 
   catch {write_debug_probes -quiet -force BUF_WRAP}

@@ -1,0 +1,8 @@
+set_property IOSTANDARD LVCMOS33 [get_ports rclk]
+set_property IOSTANDARD LVCMOS33 [get_ports rd]
+set_property IOSTANDARD LVCMOS33 [get_ports wclk]
+set_property IOSTANDARD LVCMOS33 [get_ports wr]
+set_property PACKAGE_PIN R14 [get_ports rclk]
+set_property PACKAGE_PIN P14 [get_ports rd]
+set_property PACKAGE_PIN N16 [get_ports wclk]
+set_property PACKAGE_PIN M14 [get_ports wr]

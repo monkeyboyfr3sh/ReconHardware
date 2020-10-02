@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Thu Oct  1 20:03:01 2020
+# Process ID: 21940
+# Current directory: C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.runs/impl_1
+# Command line: vivado.exe -log BUF_WRAP.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source BUF_WRAP.tcl -notrace
+# Log file: C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.runs/impl_1/BUF_WRAP.vdi
+# Journal file: C:/GitHub/ReconHardware/FPGA_Files/Projects/aFIFO/aFIFO.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source BUF_WRAP.tcl -notrace

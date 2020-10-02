@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<item value="C:\GitHub\ReconHardware\FPGA_Files\Software\Conv_Accel_HW\export\Conv_Accel_HW" key="sdx.custom.platform.repository.last.directory.dialog.location"/>
-	<item value="C:/GitHub/ReconHardware/FPGA_Files/Software/Hello_Zynq/export/Hello_Zynq;C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/export/BTN_IO_HW;C:/GitHub/ReconHardware/FPGA_Files/Software/XBar_HW/export/XBar_HW;C:/GitHub/ReconHardware/FPGA_Files/Software/Conv_Accel_HW/export/Conv_Accel_HW" key="sdx.custom.platform.repository.locations"/>
+	<item value="C:\GitHub\ReconHardware\FPGA_Files\Software\aFIFO_BUFFER_HW\export\aFIFO_BUFFER_HW" key="sdx.custom.platform.repository.last.directory.dialog.location"/>
+	<item value="C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/export/BTN_IO_HW;C:/GitHub/ReconHardware/FPGA_Files/Software/XBar_HW/export/XBar_HW;C:/GitHub/ReconHardware/FPGA_Files/Software/Conv_Accel_HW/export/Conv_Accel_HW;C:/GitHub/ReconHardware/FPGA_Files/Software/Hello_Zynq/export/Hello_Zynq;C:/GitHub/ReconHardware/FPGA_Files/Software/aFIFO_BUFFER_HW/export/aFIFO_BUFFER_HW" key="sdx.custom.platform.repository.locations"/>
 </section>

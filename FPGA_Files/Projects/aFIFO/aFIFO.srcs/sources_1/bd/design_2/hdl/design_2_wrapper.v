@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-//Date        : Tue Sep  8 12:23:55 2020
+//Date        : Thu Oct  1 19:25:10 2020
 //Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 //Command     : generate_target design_2_wrapper.bd
 //Design      : design_2_wrapper
@@ -10,7 +10,7 @@
 `timescale 1 ps / 1 ps
 
 module design_2_wrapper
-   (BUFFEROUT,
+   (BUFFEROUT_tri_i,
     DDR_addr,
     DDR_ba,
     DDR_cas_n,
@@ -26,22 +26,22 @@ module design_2_wrapper
     DDR_ras_n,
     DDR_reset_n,
     DDR_we_n,
-    EMPTY,
+    EMPTY_tri_i,
     FIXED_IO_ddr_vrn,
     FIXED_IO_ddr_vrp,
     FIXED_IO_mio,
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
-    FULL,
-    rclk,
-    rd,
-    rrst,
-    wclk,
-    wdata,
-    wr,
-    wrst);
-  input [15:0]BUFFEROUT;
+    FULL_tri_i,
+    rclk_tri_o,
+    rd_tri_o,
+    rrst_tri_o,
+    wclk_tri_o,
+    wdata_tri_o,
+    wr_tri_o,
+    wrst_tri_o);
+  input [15:0]BUFFEROUT_tri_i;
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -57,23 +57,23 @@ module design_2_wrapper
   inout DDR_ras_n;
   inout DDR_reset_n;
   inout DDR_we_n;
-  input [0:0]EMPTY;
+  input [0:0]EMPTY_tri_i;
   inout FIXED_IO_ddr_vrn;
   inout FIXED_IO_ddr_vrp;
   inout [53:0]FIXED_IO_mio;
   inout FIXED_IO_ps_clk;
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
-  input [0:0]FULL;
-  output [0:0]rclk;
-  output [0:0]rd;
-  output [0:0]rrst;
-  output [0:0]wclk;
-  output [15:0]wdata;
-  output [0:0]wr;
-  output [0:0]wrst;
+  input [0:0]FULL_tri_i;
+  output [0:0]rclk_tri_o;
+  output [0:0]rd_tri_o;
+  output [0:0]rrst_tri_o;
+  output [0:0]wclk_tri_o;
+  output [15:0]wdata_tri_o;
+  output [0:0]wr_tri_o;
+  output [0:0]wrst_tri_o;
 
-  wire [15:0]BUFFEROUT;
+  wire [15:0]BUFFEROUT_tri_i;
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
   wire DDR_cas_n;
@@ -89,24 +89,24 @@ module design_2_wrapper
   wire DDR_ras_n;
   wire DDR_reset_n;
   wire DDR_we_n;
-  wire [0:0]EMPTY;
+  wire [0:0]EMPTY_tri_i;
   wire FIXED_IO_ddr_vrn;
   wire FIXED_IO_ddr_vrp;
   wire [53:0]FIXED_IO_mio;
   wire FIXED_IO_ps_clk;
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
-  wire [0:0]FULL;
-  wire [0:0]rclk;
-  wire [0:0]rd;
-  wire [0:0]rrst;
-  wire [0:0]wclk;
-  wire [15:0]wdata;
-  wire [0:0]wr;
-  wire [0:0]wrst;
+  wire [0:0]FULL_tri_i;
+  wire [0:0]rclk_tri_o;
+  wire [0:0]rd_tri_o;
+  wire [0:0]rrst_tri_o;
+  wire [0:0]wclk_tri_o;
+  wire [15:0]wdata_tri_o;
+  wire [0:0]wr_tri_o;
+  wire [0:0]wrst_tri_o;
 
   design_2 design_2_i
-       (.BUFFEROUT(BUFFEROUT),
+       (.BUFFEROUT_tri_i(BUFFEROUT_tri_i),
         .DDR_addr(DDR_addr),
         .DDR_ba(DDR_ba),
         .DDR_cas_n(DDR_cas_n),
@@ -122,19 +122,19 @@ module design_2_wrapper
         .DDR_ras_n(DDR_ras_n),
         .DDR_reset_n(DDR_reset_n),
         .DDR_we_n(DDR_we_n),
-        .EMPTY(EMPTY),
+        .EMPTY_tri_i(EMPTY_tri_i),
         .FIXED_IO_ddr_vrn(FIXED_IO_ddr_vrn),
         .FIXED_IO_ddr_vrp(FIXED_IO_ddr_vrp),
         .FIXED_IO_mio(FIXED_IO_mio),
         .FIXED_IO_ps_clk(FIXED_IO_ps_clk),
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
-        .FULL(FULL),
-        .rclk(rclk),
-        .rd(rd),
-        .rrst(rrst),
-        .wclk(wclk),
-        .wdata(wdata),
-        .wr(wr),
-        .wrst(wrst));
+        .FULL_tri_i(FULL_tri_i),
+        .rclk_tri_o(rclk_tri_o),
+        .rd_tri_o(rd_tri_o),
+        .rrst_tri_o(rrst_tri_o),
+        .wclk_tri_o(wclk_tri_o),
+        .wdata_tri_o(wdata_tri_o),
+        .wr_tri_o(wr_tri_o),
+        .wrst_tri_o(wrst_tri_o));
 endmodule

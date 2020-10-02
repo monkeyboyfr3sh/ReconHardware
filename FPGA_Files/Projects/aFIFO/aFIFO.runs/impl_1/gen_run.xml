@@ -1,43 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1599585940">
-  <File Type="BITSTR-BMM" Name="BUF_WRAP_bd.bmm"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="BUF_WRAP_methodology_drc_opted.rpt"/>
-  <File Type="INIT-TIMING" Name="BUF_WRAP_timing_summary_init.rpt"/>
+<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1601600541">
   <File Type="ROUTE-PWR" Name="BUF_WRAP_power_routed.rpt"/>
   <File Type="PA-TCL" Name="BUF_WRAP.tcl"/>
-  <File Type="OPT-TIMING" Name="BUF_WRAP_timing_summary_opted.rpt"/>
-  <File Type="OPT-DCP" Name="BUF_WRAP_opt.dcp"/>
+  <File Type="BITSTR-BMM" Name="BUF_WRAP_bd.bmm"/>
   <File Type="ROUTE-PWR-SUM" Name="BUF_WRAP_power_summary_routed.pb"/>
   <File Type="REPORTS-TCL" Name="BUF_WRAP_reports.tcl"/>
+  <File Type="OPT-DCP" Name="BUF_WRAP_opt.dcp"/>
   <File Type="OPT-DRC" Name="BUF_WRAP_drc_opted.rpt"/>
   <File Type="OPT-HWDEF" Name="BUF_WRAP.hwdef"/>
   <File Type="PWROPT-DCP" Name="BUF_WRAP_pwropt.dcp"/>
-  <File Type="PWROPT-DRC" Name="BUF_WRAP_drc_pwropted.rpt"/>
-  <File Type="PWROPT-TIMING" Name="BUF_WRAP_timing_summary_pwropted.rpt"/>
   <File Type="PLACE-DCP" Name="BUF_WRAP_placed.dcp"/>
   <File Type="PLACE-IO" Name="BUF_WRAP_io_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="BUF_WRAP_clock_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL" Name="BUF_WRAP_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL-PB" Name="BUF_WRAP_utilization_placed.pb"/>
   <File Type="PLACE-CTRL" Name="BUF_WRAP_control_sets_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="BUF_WRAP_incremental_reuse_placed.rpt"/>
   <File Type="PLACE-PRE-SIMILARITY" Name="BUF_WRAP_incremental_reuse_pre_placed.rpt"/>
-  <File Type="PLACE-TIMING" Name="BUF_WRAP_timing_summary_placed.rpt"/>
   <File Type="POSTPLACE-PWROPT-DCP" Name="BUF_WRAP_postplace_pwropt.dcp"/>
   <File Type="BG-BIN" Name="BUF_WRAP.bin"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="BUF_WRAP_timing_summary_postplace_pwropted.rpt"/>
   <File Type="PHYSOPT-DCP" Name="BUF_WRAP_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="BUF_WRAP_drc_physopted.rpt"/>
   <File Type="BITSTR-MSK" Name="BUF_WRAP.msk"/>
-  <File Type="PHYSOPT-TIMING" Name="BUF_WRAP_timing_summary_physopted.rpt"/>
   <File Type="ROUTE-ERROR-DCP" Name="BUF_WRAP_routed_error.dcp"/>
   <File Type="ROUTE-DCP" Name="BUF_WRAP_routed.dcp"/>
   <File Type="ROUTE-BLACKBOX-DCP" Name="BUF_WRAP_routed_bb.dcp"/>
   <File Type="ROUTE-DRC" Name="BUF_WRAP_drc_routed.rpt"/>
   <File Type="ROUTE-DRC-PB" Name="BUF_WRAP_drc_routed.pb"/>
   <File Type="ROUTE-DRC-RPX" Name="BUF_WRAP_drc_routed.rpx"/>
-  <File Type="BITSTR-MMI" Name="BUF_WRAP.mmi"/>
   <File Type="ROUTE-METHODOLOGY-DRC" Name="BUF_WRAP_methodology_drc_routed.rpt"/>
+  <File Type="BITSTR-MMI" Name="BUF_WRAP.mmi"/>
   <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="BUF_WRAP_methodology_drc_routed.rpx"/>
   <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="BUF_WRAP_methodology_drc_routed.pb"/>
   <File Type="ROUTE-PWR-RPX" Name="BUF_WRAP_power_routed.rpx"/>
@@ -46,20 +35,13 @@
   <File Type="ROUTE-TIMINGSUMMARY" Name="BUF_WRAP_timing_summary_routed.rpt"/>
   <File Type="ROUTE-TIMING-PB" Name="BUF_WRAP_timing_summary_routed.pb"/>
   <File Type="ROUTE-TIMING-RPX" Name="BUF_WRAP_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-SIMILARITY" Name="BUF_WRAP_incremental_reuse_routed.rpt"/>
   <File Type="ROUTE-CLK" Name="BUF_WRAP_clock_utilization_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW" Name="BUF_WRAP_bus_skew_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW-PB" Name="BUF_WRAP_bus_skew_routed.pb"/>
   <File Type="ROUTE-BUS-SKEW-RPX" Name="BUF_WRAP_bus_skew_routed.rpx"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="BUF_WRAP_postroute_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="BUF_WRAP_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="BUF_WRAP_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="BUF_WRAP_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="BUF_WRAP_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="BUF_WRAP_bus_skew_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="BUF_WRAP_bus_skew_postroute_physopted.pb"/>
   <File Type="BG-BIT" Name="BUF_WRAP.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="BUF_WRAP_bus_skew_postroute_physopted.rpx"/>
   <File Type="BITSTR-RBT" Name="BUF_WRAP.rbt"/>
   <File Type="BITSTR-NKY" Name="BUF_WRAP.nky"/>
   <File Type="PDI-FILE" Name="BUF_WRAP.pdi"/>
@@ -68,7 +50,6 @@
   <File Type="RNPI_FILE" Name="BUF_WRAP.rnpi"/>
   <File Type="NPI_FILE" Name="BUF_WRAP.npi"/>
   <File Type="RBD_FILE" Name="BUF_WRAP.rbd"/>
-  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
   <File Type="BITSTR-LTX" Name="BUF_WRAP.ltx"/>
   <File Type="BITSTR-SYSDEF" Name="BUF_WRAP.sysdef"/>
   <File Type="BG-BGN" Name="BUF_WRAP.bgn"/>
@@ -135,7 +116,14 @@
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
     <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/brd.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
     <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/brd.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>
@@ -157,4 +145,16 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="design_2_proc_sys_reset_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_2_axi_gpio_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_2_axi_gpio_8_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_2_axi_gpio_2_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_2_axi_gpio_4_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_2_axi_gpio_5_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_2_axi_gpio_6_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_2_axi_gpio_7_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_2_axi_gpio_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_2_axi_gpio_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_2_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_2_axi_gpio_3_0"/>
 </GenRun>

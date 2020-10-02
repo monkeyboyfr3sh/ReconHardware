@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1599585890">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1601600540">
   <File Type="PA-TCL" Name="BUF_WRAP.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="BUF_WRAP_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="BUF_WRAP_reports.tcl"/>
   <File Type="RDS-RDS" Name="BUF_WRAP.vds"/>
   <File Type="RDS-UTIL" Name="BUF_WRAP_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="BUF_WRAP_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="BUF_WRAP.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="BUF_WRAP_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="BUF_WRAP_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/../../Sources/definitions.h">
@@ -69,7 +66,14 @@
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
     <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/brd.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
     <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/brd.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>
@@ -83,4 +87,16 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
     <Step Id="synth_design"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="design_2_proc_sys_reset_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_2_axi_gpio_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_2_axi_gpio_8_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_2_axi_gpio_2_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_2_axi_gpio_4_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_2_axi_gpio_5_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_2_axi_gpio_6_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_2_axi_gpio_7_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_2_axi_gpio_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_2_axi_gpio_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_2_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_2_axi_gpio_3_0"/>
 </GenRun>

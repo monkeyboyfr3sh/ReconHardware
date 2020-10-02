@@ -1,7 +1,7 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.944944",
-   "Default View_TopLeft":"-205,12",
+   "Default View_ScaleFactor":"0.584356",
+   "Default View_TopLeft":"0,-240",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0.21  2019-05-29 bk=1.5064 VDI=41 GEI=36 GUI=JA:9.0 non-TLS
 #  -string -flagsOSRD
@@ -30,8 +30,8 @@ preplace netloc rclk_Dout 1 2 1 630 170n
 preplace netloc rrst_Dout 1 2 1 N 270
 preplace netloc rd_Dout 1 2 1 660 290n
 preplace netloc processing_system7_0_GPIO_O 1 1 1 430 70n
-preplace netloc processing_system7_0_DDR 1 1 4 NJ 730 NJ 730 NJ 730 NJ
 preplace netloc processing_system7_0_FIXED_IO 1 1 4 NJ 750 NJ 750 NJ 750 NJ
+preplace netloc processing_system7_0_DDR 1 1 4 NJ 730 NJ 730 NJ 730 NJ
 levelinfo -pg 1 0 220 530 820 1070 1190
 pagesize -pg 1 -db -bbox -sgen 0 0 1310 900
 "

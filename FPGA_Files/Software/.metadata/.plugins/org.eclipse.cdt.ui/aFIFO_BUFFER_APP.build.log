@@ -1,0 +1,32 @@
+23:09:15 **** Incremental Build of configuration Debug for project aFIFO_BUFFER_APP ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/GitHub/ReconHardware/FPGA_Files/Software/aFIFO_BUFFER_HW/export/aFIFO_BUFFER_HW/sw/aFIFO_BUFFER_HW/standalone_domain/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:224:1: warning: return type defaults to 'int' [-Wimplicit-int]
+ read_buffer(){
+ ^~~~~~~~~~~
+../src/helloworld.c: In function 'read_buffer':
+../src/helloworld.c:240:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: aFIFO_BUFFER_APP.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/GitHub/ReconHardware/FPGA_Files/Software/aFIFO_BUFFER_HW/export/aFIFO_BUFFER_HW/sw/aFIFO_BUFFER_HW/standalone_domain/bsplib/lib -o "aFIFO_BUFFER_APP.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: aFIFO_BUFFER_APP.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size aFIFO_BUFFER_APP.elf  |tee "aFIFO_BUFFER_APP.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  60112	   2744	  23488	  86344	  15148	aFIFO_BUFFER_APP.elf
+'Finished building: aFIFO_BUFFER_APP.elf.size'
+' '
+
+23:09:16 Build Finished (took 665ms)
+

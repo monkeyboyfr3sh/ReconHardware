@@ -20,45 +20,21 @@ clients =
 	{ client_name = "vitis"; 
 		rules = (
 			{
-				context="vitis\\\\platform/1601524791073";
-				xml_map="vitis\\\\platform/1601524791073";
-				html_map="vitis\\\\platform/1601524791073";
+				context="vitis\\\\platform/1601608212912";
+				xml_map="vitis\\\\platform/1601608212912";
+				html_map="vitis\\\\platform/1601608212912";
 				html_format="UnisimStatsStyle";
 			},
 			{
-				context="vitis\\\\application/1601524834298";
-				xml_map="vitis\\\\application/1601524834298";
-				html_map="vitis\\\\application/1601524834298";
+				context="vitis\\\\application/1601608329675";
+				xml_map="vitis\\\\application/1601608329675";
+				html_map="vitis\\\\application/1601608329675";
 				html_format="UnisimStatsStyle";
 			},
 			{
-				context="vitis\\\\platform/1601527251243";
-				xml_map="vitis\\\\platform/1601527251243";
-				html_map="vitis\\\\platform/1601527251243";
-				html_format="UnisimStatsStyle";
-			},
-			{
-				context="vitis\\\\application/1601527406196";
-				xml_map="vitis\\\\application/1601527406196";
-				html_map="vitis\\\\application/1601527406196";
-				html_format="UnisimStatsStyle";
-			},
-			{
-				context="vitis\\\\platform/1601530089600";
-				xml_map="vitis\\\\platform/1601530089600";
-				html_map="vitis\\\\platform/1601530089600";
-				html_format="UnisimStatsStyle";
-			},
-			{
-				context="vitis\\\\application/1601530200123";
-				xml_map="vitis\\\\application/1601530200123";
-				html_map="vitis\\\\application/1601530200123";
-				html_format="UnisimStatsStyle";
-			},
-			{
-				context="vitis\\\\tool/1601531689368";
-				xml_map="vitis\\\\tool/1601531689368";
-				html_map="vitis\\\\tool/1601531689368";
+				context="vitis\\\\tool/1601612104195";
+				xml_map="vitis\\\\tool/1601612104195";
+				html_map="vitis\\\\tool/1601612104195";
 				html_format="UnisimStatsStyle";
 			}
 		);

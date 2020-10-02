@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Tue Sep  8 12:25:24 2020
+| Date         : Thu Oct  1 20:02:54 2020
 | Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 | Command      : report_utilization -file BUF_WRAP_utilization_synth.rpt -pb BUF_WRAP_utilization_synth.pb
 | Design       : BUF_WRAP
@@ -30,13 +30,13 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                |   69 |     0 |     53200 |  0.13 |
-|   LUT as Logic             |   45 |     0 |     53200 |  0.08 |
-|   LUT as Memory            |   24 |     0 |     17400 |  0.14 |
-|     LUT as Distributed RAM |   24 |     0 |           |       |
+| Slice LUTs*                |  156 |     0 |     53200 |  0.29 |
+|   LUT as Logic             |   68 |     0 |     53200 |  0.13 |
+|   LUT as Memory            |   88 |     0 |     17400 |  0.51 |
+|     LUT as Distributed RAM |   88 |     0 |           |       |
 |     LUT as Shift Register  |    0 |     0 |           |       |
-| Slice Registers            |   64 |     0 |    106400 |  0.06 |
-|   Register as Flip Flop    |   64 |     0 |    106400 |  0.06 |
+| Slice Registers            |   72 |     0 |    106400 |  0.07 |
+|   Register as Flip Flop    |   72 |     0 |    106400 |  0.07 |
 |   Register as Latch        |    0 |     0 |    106400 |  0.00 |
 | F7 Muxes                   |    0 |     0 |     26600 |  0.00 |
 | F8 Muxes                   |    0 |     0 |     13300 |  0.00 |
@@ -57,7 +57,7 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 1     |          Yes |           - |          Set |
-| 63    |          Yes |           - |        Reset |
+| 71    |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
 | 0     |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
@@ -92,7 +92,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |    0 |     0 |       125 |  0.00 |
+| Bonded IOB                  |    4 |     0 |       125 |  3.20 |
 | Bonded IPADs                |    0 |     0 |         2 |  0.00 |
 | Bonded IOPADs               |    0 |     0 |       130 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |         4 |  0.00 |
@@ -148,14 +148,16 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDCE     |   63 |        Flop & Latch |
-| RAMD64E  |   24 |  Distributed Memory |
+| RAMD64E  |   88 |  Distributed Memory |
+| FDCE     |   71 |        Flop & Latch |
+| LUT6     |   37 |                 LUT |
 | LUT2     |   18 |                 LUT |
-| LUT6     |   16 |                 LUT |
-| LUT4     |   12 |                 LUT |
+| LUT4     |   15 |                 LUT |
 | LUT5     |   11 |                 LUT |
-| LUT3     |    8 |                 LUT |
+| LUT3     |    6 |                 LUT |
+| OBUF     |    4 |                  IO |
 | LUT1     |    2 |                 LUT |
+| CARRY4   |    2 |          CarryLogic |
 | FDPE     |    1 |        Flop & Latch |
 +----------+------+---------------------+
 
@@ -166,7 +168,20 @@ Table of Contents
 +---------------------------------+------+
 |             Ref Name            | Used |
 +---------------------------------+------+
+| design_2_xbar_0                 |    1 |
 | design_2_processing_system7_0_0 |    1 |
+| design_2_proc_sys_reset_0_0     |    1 |
+| design_2_axi_gpio_8_0           |    1 |
+| design_2_axi_gpio_7_0           |    1 |
+| design_2_axi_gpio_6_0           |    1 |
+| design_2_axi_gpio_5_0           |    1 |
+| design_2_axi_gpio_4_0           |    1 |
+| design_2_axi_gpio_3_0           |    1 |
+| design_2_axi_gpio_2_0           |    1 |
+| design_2_axi_gpio_1_0           |    1 |
+| design_2_axi_gpio_0_1           |    1 |
+| design_2_axi_gpio_0_0           |    1 |
+| design_2_auto_pc_0              |    1 |
 +---------------------------------+------+
 
 
