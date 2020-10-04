@@ -2,60 +2,302 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Mon Jul 20 11:24:45 2020
-# Process ID: 17068
-# Current directory: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/dynamicMulti
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9256 C:\Users\monke\Documents\GitHub\ReconHardware\PynqSoftware\dynamicMulti\dynamicMulti.xpr
-# Log file: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/dynamicMulti/vivado.log
-# Journal file: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/dynamicMulti\vivado.jou
+# Start of session at: Sat Oct  3 12:39:13 2020
+# Process ID: 11332
+# Current directory: C:/GitHub/ReconHardware/FPGA_Files/Projects/dynamicMulti
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11824 C:\GitHub\ReconHardware\FPGA_Files\Projects\dynamicMulti\dynamicMulti.xpr
+# Log file: C:/GitHub/ReconHardware/FPGA_Files/Projects/dynamicMulti/vivado.log
+# Journal file: C:/GitHub/ReconHardware/FPGA_Files/Projects/dynamicMulti\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/dynamicMulti/dynamicMulti.xpr
+open_project C:/GitHub/ReconHardware/FPGA_Files/Projects/dynamicMulti/dynamicMulti.xpr
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files C:/GitHub/ReconHardware/FPGA_Files/Projects/dynamicMulti/dynamicMulti.srcs/sources_1/bd/ps_Wrap/ps_Wrap.bd] -no_script -reset -force -quiet
+remove_files  C:/GitHub/ReconHardware/FPGA_Files/Projects/dynamicMulti/dynamicMulti.srcs/sources_1/bd/ps_Wrap/ps_Wrap.bd
+export_ip_user_files -of_objects  [get_files C:/GitHub/ReconHardware/FPGA_Files/Projects/dynamicMulti/dynamicMulti.srcs/sources_1/imports/new/ParallelBuffer.v] -no_script -reset -force -quiet
+remove_files  C:/GitHub/ReconHardware/FPGA_Files/Projects/dynamicMulti/dynamicMulti.srcs/sources_1/imports/new/ParallelBuffer.v
+export_ip_user_files -of_objects  [get_files C:/GitHub/ReconHardware/FPGA_Files/Projects/dynamicMulti/dynamicMulti.srcs/sources_1/imports/new/FlipFlop.v] -no_script -reset -force -quiet
+remove_files  C:/GitHub/ReconHardware/FPGA_Files/Projects/dynamicMulti/dynamicMulti.srcs/sources_1/imports/new/FlipFlop.v
+remove_files  C:/GitHub/ReconHardware/FPGA_Files/Projects/dynamicMulti/dynamicMulti.srcs/sources_1/imports/new/ParallelBuffer.v
+export_ip_user_files -of_objects  [get_files C:/GitHub/ReconHardware/FPGA_Files/Projects/dynamicMulti/dynamicMulti.srcs/sources_1/imports/new/definitions.h] -no_script -reset -force -quiet
+remove_files  C:/GitHub/ReconHardware/FPGA_Files/Projects/dynamicMulti/dynamicMulti.srcs/sources_1/imports/new/definitions.h
+export_ip_user_files -of_objects  [get_files C:/GitHub/ReconHardware/FPGA_Files/Projects/dynamicMulti/dynamicMulti.srcs/sources_1/new/dynamicMulti.v] -no_script -reset -force -quiet
+remove_files  C:/GitHub/ReconHardware/FPGA_Files/Projects/dynamicMulti/dynamicMulti.srcs/sources_1/new/dynamicMulti.v
+export_ip_user_files -of_objects  [get_files C:/GitHub/ReconHardware/FPGA_Files/Projects/dynamicMulti/dynamicMulti.srcs/sources_1/imports/new/dataSplit.v] -no_script -reset -force -quiet
+remove_files  C:/GitHub/ReconHardware/FPGA_Files/Projects/dynamicMulti/dynamicMulti.srcs/sources_1/imports/new/dataSplit.v
+add_files -norecurse -scan_for_includes C:/GitHub/ReconHardware/FPGA_Files/Sources/definitions.h
+add_files -norecurse -scan_for_includes {C:/GitHub/ReconHardware/FPGA_Files/Sources/Multiplier/fixedmultiplyCompute.v C:/GitHub/ReconHardware/FPGA_Files/Sources/Multiplier/floatmComputePynq.v C:/GitHub/ReconHardware/FPGA_Files/Sources/Multiplier/dynamicMulti2.v C:/GitHub/ReconHardware/FPGA_Files/Sources/Multiplier/multiplyComputePynq.v}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+add_files -norecurse -scan_for_includes C:/GitHub/ReconHardware/FPGA_Files/Sources/General/FlipFlop.v
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files C:/GitHub/ReconHardware/FPGA_Files/Sources/Multiplier/fixedmultiplyCompute.v] -no_script -reset -force -quiet
+remove_files  C:/GitHub/ReconHardware/FPGA_Files/Sources/Multiplier/fixedmultiplyCompute.v
+export_ip_user_files -of_objects  [get_files C:/GitHub/ReconHardware/FPGA_Files/Sources/Multiplier/floatmComputePynq.v] -no_script -reset -force -quiet
+remove_files  C:/GitHub/ReconHardware/FPGA_Files/Sources/Multiplier/floatmComputePynq.v
+export_ip_user_files -of_objects  [get_files C:/GitHub/ReconHardware/FPGA_Files/Sources/Multiplier/multiplyComputePynq.v] -no_script -reset -force -quiet
+remove_files  C:/GitHub/ReconHardware/FPGA_Files/Sources/Multiplier/multiplyComputePynq.v
+export_ip_user_files -of_objects  [get_files -of_objects [get_reconfig_modules fixedCompute] C:/GitHub/ReconHardware/FPGA_Files/Projects/dynamicMulti/dynamicMulti.srcs/fixedCompute/imports/new/fixedmultiplyCompute.v] -no_script -reset -force -quiet
+remove_files  [get_files -of_objects [get_reconfig_modules fixedCompute] C:/GitHub/ReconHardware/FPGA_Files/Projects/dynamicMulti/dynamicMulti.srcs/fixedCompute/imports/new/fixedmultiplyCompute.v]
+export_ip_user_files -of_objects  [get_files -of_objects [get_reconfig_modules fixedCompute] C:/GitHub/ReconHardware/FPGA_Files/Projects/dynamicMulti/dynamicMulti.srcs/fixedCompute/imports/new/definitions.h] -no_script -reset -force -quiet
+remove_files  [get_files -of_objects [get_reconfig_modules fixedCompute] C:/GitHub/ReconHardware/FPGA_Files/Projects/dynamicMulti/dynamicMulti.srcs/fixedCompute/imports/new/definitions.h]
+export_ip_user_files -of_objects  [get_files -of_objects [get_reconfig_modules floatCompute] C:/GitHub/ReconHardware/FPGA_Files/Projects/dynamicMulti/dynamicMulti.srcs/sources_1/imports/new/definitions.h] -no_script -reset -force -quiet
+remove_files  [get_files -of_objects [get_reconfig_modules floatCompute] C:/GitHub/ReconHardware/FPGA_Files/Projects/dynamicMulti/dynamicMulti.srcs/sources_1/imports/new/definitions.h]
+export_ip_user_files -of_objects  [get_files -of_objects [get_reconfig_modules floatCompute] C:/GitHub/ReconHardware/FPGA_Files/Projects/dynamicMulti/dynamicMulti.srcs/sources_1/imports/new/floatmCompute.v] -no_script -reset -force -quiet
+remove_files  [get_files -of_objects [get_reconfig_modules floatCompute] C:/GitHub/ReconHardware/FPGA_Files/Projects/dynamicMulti/dynamicMulti.srcs/sources_1/imports/new/floatmCompute.v]
+delete_reconfig_modules  [get_reconfig_modules floatCompute]
+delete_reconfig_modules  [get_reconfig_modules integerCompute]
+export_ip_user_files -of_objects  [get_files -of_objects [get_reconfig_modules floatComputePynq] C:/GitHub/ReconHardware/FPGA_Files/Projects/dynamicMulti/dynamicMulti.srcs/sources_1/imports/new/floatmComputePynq.v] -no_script -reset -force -quiet
+remove_files  [get_files -of_objects [get_reconfig_modules floatComputePynq] C:/GitHub/ReconHardware/FPGA_Files/Projects/dynamicMulti/dynamicMulti.srcs/sources_1/imports/new/floatmComputePynq.v]
+export_ip_user_files -of_objects  [get_files -of_objects [get_reconfig_modules floatComputePynq] C:/GitHub/ReconHardware/FPGA_Files/Projects/dynamicMulti/dynamicMulti.srcs/sources_1/imports/new/definitions.h] -no_script -reset -force -quiet
+remove_files  [get_files -of_objects [get_reconfig_modules floatComputePynq] C:/GitHub/ReconHardware/FPGA_Files/Projects/dynamicMulti/dynamicMulti.srcs/sources_1/imports/new/definitions.h]
+export_ip_user_files -of_objects  [get_files -of_objects [get_reconfig_modules integerComputePynq] C:/GitHub/ReconHardware/FPGA_Files/Projects/dynamicMulti/dynamicMulti.srcs/sources_1/imports/new/multiplyComputePynq.v] -no_script -reset -force -quiet
+remove_files  [get_files -of_objects [get_reconfig_modules integerComputePynq] C:/GitHub/ReconHardware/FPGA_Files/Projects/dynamicMulti/dynamicMulti.srcs/sources_1/imports/new/multiplyComputePynq.v]
+export_ip_user_files -of_objects  [get_files -of_objects [get_reconfig_modules integerComputePynq] C:/GitHub/ReconHardware/FPGA_Files/Projects/dynamicMulti/dynamicMulti.srcs/sources_1/imports/new/definitions.h] -no_script -reset -force -quiet
+remove_files  [get_files -of_objects [get_reconfig_modules integerComputePynq] C:/GitHub/ReconHardware/FPGA_Files/Projects/dynamicMulti/dynamicMulti.srcs/sources_1/imports/new/definitions.h]
+add_files -norecurse -scan_for_includes C:/GitHub/ReconHardware/FPGA_Files/Sources/Multiplier/fixedmultiplyCompute.v C:/GitHub/ReconHardware/FPGA_Files/Sources/definitions.h  -of_objects [get_reconfig_modules fixedCompute]
+add_files -norecurse -scan_for_includes C:/GitHub/ReconHardware/FPGA_Files/Sources/definitions.h C:/GitHub/ReconHardware/FPGA_Files/Sources/Multiplier/multiplyComputePynq.v  -of_objects [get_reconfig_modules integerComputePynq]
+add_files -norecurse -scan_for_includes C:/GitHub/ReconHardware/FPGA_Files/Sources/Multiplier/floatmComputePynq.v C:/GitHub/ReconHardware/FPGA_Files/Sources/definitions.h  -of_objects [get_reconfig_modules floatComputePynq]
+delete_pr_configurations config_5
+delete_pr_configurations config_4
+delete_pr_configurations config_3
+delete_pr_configurations config_2
+delete_pr_configurations config_1
+create_pr_configuration -name config_1 -partitions [list mCompute:fixedCompute ]
+create_pr_configuration -name config_2 -partitions [list mCompute:floatComputePynq ]
+create_pr_configuration -name config_3 -partitions [list mCompute:integerComputePynq ]
+set_property PR_CONFIGURATION config_1 [get_runs impl_1]
+set_property PR_CONFIGURATION config_2 [get_runs child_0_impl_1]
+set_property PR_CONFIGURATION config_3 [get_runs child_1_impl_1]
+reset_run integerComputePynq_synth_1
+reset_run floatComputePynq_synth_1
+reset_run fixedCompute_synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+add_files -norecurse -scan_for_includes C:/GitHub/ReconHardware/FPGA_Files/Sources/Multiplier/multiplyComputePynq.v
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 4
+launch_runs synth_1 -jobs 4
+delete_partition_defs  [get_partition_defs reconfigMultiply]
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+create_partition_def -name reconfigMultiply -module multiplyComputePynq
+create_reconfig_module -name multiplyComputePynq -partition_def [get_partition_defs reconfigMultiply ]  -define_from multiplyComputePynq
+update_compile_order -fileset multiplyComputePynq
+set_property MODULE_NAME integer [get_reconfig_modules multiplyComputePynq]
+set_property name integer [get_reconfig_modules multiplyComputePynq]
+delete_pr_configurations config_3
+delete_pr_configurations config_2
+delete_pr_configurations config_1
+create_pr_configuration -name config_1 -partitions [list mCompute:integer ]
+delete_runs "child_0_impl_1 child_1_impl_1"
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+create_reconfig_module -name {floating point} -partition_def [get_partition_defs reconfigMultiply ]  -top {floating point}
+delete_partition_defs  [get_partition_defs reconfigMultiply]
+add_files -norecurse -scan_for_includes C:/GitHub/ReconHardware/FPGA_Files/Sources/Multiplier/multiplyComputePynq.v
+update_compile_order -fileset sources_1
+create_partition_def -name reconfigMultiply -module multiplyComputePynq
+create_reconfig_module -name multiplyComputePynq -partition_def [get_partition_defs reconfigMultiply ]  -define_from multiplyComputePynq
+update_compile_order -fileset multiplyComputePynq
+set_property MODULE_NAME Integer [get_reconfig_modules multiplyComputePynq]
+set_property name Integer [get_reconfig_modules multiplyComputePynq]
+create_reconfig_module -name Float -partition_def [get_partition_defs reconfigMultiply ]  -top Float
+add_files -norecurse -scan_for_includes C:/GitHub/ReconHardware/FPGA_Files/Sources/Multiplier/floatmComputePynq.v C:/GitHub/ReconHardware/FPGA_Files/Sources/definitions.h  -of_objects [get_reconfig_modules Float]
+create_reconfig_module -name Fixed -partition_def [get_partition_defs reconfigMultiply ]  -top Fixed
+add_files -norecurse -scan_for_includes C:/GitHub/ReconHardware/FPGA_Files/Sources/Multiplier/fixedmultiplyCompute.v C:/GitHub/ReconHardware/FPGA_Files/Sources/definitions.h  -of_objects [get_reconfig_modules Fixed]
+delete_pr_configurations config_1
+create_pr_configuration -name config_1 -partitions [list mCompute:Integer ]
+create_pr_configuration -name config_2 -partitions [list mCompute:Float ]
+create_pr_configuration -name config_3 -partitions [list mCompute:Fixed ]
+set_property PR_CONFIGURATION config_2 [get_runs child_2_impl_1]
+set_property PR_CONFIGURATION config_3 [get_runs child_3_impl_1]
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+create_bd_design "design_1"
+update_compile_order -fileset sources_1
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 proc_sys_reset_0
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 axi_interconnect_0
+endgroup
+regenerate_bd_layout
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0
+endgroup
+set_property location {2.5 948 161} [get_bd_cells axi_gpio_0]
+set_property -dict [list CONFIG.C_GPIO_WIDTH {1} CONFIG.C_GPIO2_WIDTH {1} CONFIG.C_IS_DUAL {1} CONFIG.C_ALL_OUTPUTS {1} CONFIG.C_ALL_OUTPUTS_2 {1}] [get_bd_cells axi_gpio_0]
+set_property location {2 964 62} [get_bd_cells axi_gpio_0]
+startgroup
+make_bd_intf_pins_external  [get_bd_intf_pins axi_gpio_0/GPIO]
+endgroup
+set_property name Clk [get_bd_intf_ports GPIO_0]
+startgroup
+make_bd_intf_pins_external  [get_bd_intf_pins axi_gpio_0/GPIO2]
+endgroup
+set_property name Rst [get_bd_intf_ports GPIO2_0]
+copy_bd_objs /  [get_bd_cells {axi_gpio_0}]
+set_property location {2 958 215} [get_bd_cells axi_gpio_1]
+startgroup
+make_bd_intf_pins_external  [get_bd_intf_pins axi_gpio_1/GPIO]
+endgroup
+startgroup
+make_bd_intf_pins_external  [get_bd_intf_pins axi_gpio_1/GPIO2]
+endgroup
+set_property name bufferRD [get_bd_intf_ports GPIO_0]
+set_property name bufferEN [get_bd_intf_ports GPIO2_0]
+copy_bd_objs /  [get_bd_cells {axi_gpio_1}]
+set_property location {2 990 365} [get_bd_cells axi_gpio_2]
+set_property -dict [list CONFIG.C_GPIO_WIDTH {16} CONFIG.C_GPIO2_WIDTH {16} CONFIG.C_IS_DUAL {1}] [get_bd_cells axi_gpio_2]
+startgroup
+make_bd_intf_pins_external  [get_bd_intf_pins axi_gpio_2/GPIO]
+endgroup
+startgroup
+make_bd_intf_pins_external  [get_bd_intf_pins axi_gpio_2/GPIO2]
+endgroup
+set_property location {1152 343} [get_bd_intf_ports GPIO_0]
+undo
+set_property name dataIn0 [get_bd_intf_ports GPIO_0]
+set_property name dataIn1 [get_bd_intf_ports GPIO2_0]
+copy_bd_objs /  [get_bd_cells {axi_gpio_1}]
+set_property location {2 928 507} [get_bd_cells axi_gpio_3]
+set_property -dict [list CONFIG.C_IS_DUAL {0}] [get_bd_cells axi_gpio_3]
+startgroup
+make_bd_intf_pins_external  [get_bd_intf_pins axi_gpio_3/GPIO]
+endgroup
+set_property name mStart [get_bd_intf_ports GPIO_0]
+copy_bd_objs /  [get_bd_cells {axi_gpio_2}]
+set_property location {2 955 828} [get_bd_cells axi_gpio_4]
+set_property -dict [list CONFIG.C_ALL_INPUTS {1} CONFIG.C_ALL_INPUTS_2 {1} CONFIG.C_ALL_OUTPUTS {0} CONFIG.C_ALL_OUTPUTS_2 {0}] [get_bd_cells axi_gpio_4]
+startgroup
+make_bd_intf_pins_external  [get_bd_intf_pins axi_gpio_4/GPIO]
+endgroup
+startgroup
+make_bd_intf_pins_external  [get_bd_intf_pins axi_gpio_4/GPIO2]
+endgroup
+set_property name dataOutMSB [get_bd_intf_ports GPIO2_0]
+save_bd_design
+set_property name dataOutLSB [get_bd_intf_ports GPIO_0]
+copy_bd_objs /  [get_bd_cells {axi_gpio_3}]
+set_property location {3 969 954} [get_bd_cells axi_gpio_5]
+set_property location {2 986 975} [get_bd_cells axi_gpio_5]
+set_property location {2 982 821} [get_bd_cells axi_gpio_4]
+set_property location {2 988 826} [get_bd_cells axi_gpio_4]
+set_property -dict [list CONFIG.C_ALL_INPUTS {1} CONFIG.C_ALL_OUTPUTS {0}] [get_bd_cells axi_gpio_5]
+startgroup
+make_bd_intf_pins_external  [get_bd_intf_pins axi_gpio_5/GPIO]
+endgroup
+set_property name mReady [get_bd_intf_ports GPIO_0]
+copy_bd_objs /  [get_bd_cells {axi_gpio_5}]
+set_property location {3 1062 1137} [get_bd_cells axi_gpio_6]
+set_property -dict [list CONFIG.C_GPIO2_WIDTH {1} CONFIG.C_IS_DUAL {1} CONFIG.C_ALL_INPUTS_2 {1}] [get_bd_cells axi_gpio_6]
+startgroup
+make_bd_intf_pins_external  [get_bd_intf_pins axi_gpio_6/GPIO]
+endgroup
+startgroup
+make_bd_intf_pins_external  [get_bd_intf_pins axi_gpio_6/GPIO2]
+endgroup
+set_property name FULL0 [get_bd_intf_ports GPIO_0]
+set_property name FULL1 [get_bd_intf_ports GPIO2_0]
+set_property -dict [list CONFIG.NUM_MI {7}] [get_bd_cells axi_interconnect_0]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_gpio_0/S_AXI} ddr_seg {Auto} intc_ip {/axi_interconnect_0} master_apm {0}}  [get_bd_intf_pins axi_gpio_0/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_gpio_1/S_AXI} ddr_seg {Auto} intc_ip {/axi_interconnect_0} master_apm {0}}  [get_bd_intf_pins axi_gpio_1/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_gpio_2/S_AXI} ddr_seg {Auto} intc_ip {/axi_interconnect_0} master_apm {0}}  [get_bd_intf_pins axi_gpio_2/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_gpio_3/S_AXI} ddr_seg {Auto} intc_ip {/axi_interconnect_0} master_apm {0}}  [get_bd_intf_pins axi_gpio_3/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_gpio_4/S_AXI} ddr_seg {Auto} intc_ip {/axi_interconnect_0} master_apm {0}}  [get_bd_intf_pins axi_gpio_4/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_gpio_5/S_AXI} ddr_seg {Auto} intc_ip {/axi_interconnect_0} master_apm {0}}  [get_bd_intf_pins axi_gpio_5/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_gpio_6/S_AXI} ddr_seg {Auto} intc_ip {/axi_interconnect_0} master_apm {0}}  [get_bd_intf_pins axi_gpio_6/S_AXI]
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" apply_board_preset "1" Master "Disable" Slave "Disable" }  [get_bd_cells processing_system7_0]
+validate_bd_design
+close [ open C:/GitHub/ReconHardware/FPGA_Files/Projects/dynamicMulti/dynamicMulti.srcs/sources_1/new/Multiplier_Processor_Wrapper.v w ]
+add_files C:/GitHub/ReconHardware/FPGA_Files/Projects/dynamicMulti/dynamicMulti.srcs/sources_1/new/Multiplier_Processor_Wrapper.v
+update_compile_order -fileset sources_1
+make_wrapper -files [get_files C:/GitHub/ReconHardware/FPGA_Files/Projects/dynamicMulti/dynamicMulti.srcs/sources_1/bd/design_1/design_1.bd] -top
+add_files -norecurse C:/GitHub/ReconHardware/FPGA_Files/Projects/dynamicMulti/dynamicMulti.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
 update_compile_order -fileset sources_1
 reset_run synth_1
 launch_runs synth_1 -jobs 4
 wait_on_run synth_1
+launch_runs impl_1 child_2_impl_1 child_3_impl_1 -jobs 4
 open_run synth_1 -name synth_1 -pr_config [current_pr_configuration]
 startgroup
-set_property package_pin "" [get_ports [list  Rst]]
-place_ports Clk U12
+create_pblock pblock_mCompute_2
+resize_pblock pblock_mCompute_2 -add SLICE_X68Y0:SLICE_X79Y24
+add_cells_to_pblock pblock_mCompute_2 [get_cells [list nolabel_line13/mCompute]] -clear_locs
 endgroup
-place_ports Rst T14
 save_constraints
-reset_run ps_Wrap_ParallelBuffer_0_0_synth_1
-launch_runs impl_1 child_0_impl_1 child_1_impl_1 child_2_impl_1 child_3_impl_1 -to_step write_bitstream -jobs 4
-wait_on_run impl_1
-wait_on_run child_0_impl_1
-wait_on_run child_1_impl_1
-wait_on_run child_2_impl_1
-wait_on_run child_3_impl_1
+launch_runs impl_1 child_2_impl_1 child_3_impl_1 -jobs 4
+launch_runs impl_1 child_2_impl_1 child_3_impl_1 -jobs 4
 close_design
-open_hw_manager
-connect_hw_server -allow_non_jtag
-open_hw_target
-set_property PROGRAM.FILE {C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/dynamicMulti/dynamicMulti.runs/child_3_impl_1/mCompute_fixedCompute_partial.bit} [get_hw_devices xc7z020_1]
-current_hw_device [get_hw_devices xc7z020_1]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
-set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
-set_property PROGRAM.FILE {C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/dynamicMulti/dynamicMulti.runs/child_0_impl_1/dynamicMulti.bit} [get_hw_devices xc7z020_1]
-program_hw_devices [get_hw_devices xc7z020_1]
-refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+launch_runs impl_1 child_2_impl_1 child_3_impl_1 -jobs 4
 reset_run synth_1
-launch_runs impl_1 child_0_impl_1 child_1_impl_1 child_2_impl_1 child_3_impl_1 -jobs 4
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_runs impl_1 child_2_impl_1 child_3_impl_1 -jobs 4
+open_run synth_1 -name synth_1 -pr_config [current_pr_configuration]
+delete_pblock [get_pblocks  pblock_mCompute_1]
+delete_pblock [get_pblocks  pblock_mCompute_2]
+startgroup
+create_pblock pblock_mCompute_1
+resize_pblock pblock_mCompute_1 -add SLICE_X56Y0:SLICE_X67Y24
+add_cells_to_pblock pblock_mCompute_1 [get_cells [list ReconfigMultiplier/mCompute]] -clear_locs
+endgroup
+save_constraints
+launch_runs impl_1 child_2_impl_1 child_3_impl_1 -jobs 4
+delete_pblock [get_pblocks  pblock_mCompute]
+save_constraints
+launch_runs impl_1 child_2_impl_1 child_3_impl_1 -jobs 4
+delete_pblock [get_pblocks  pblock_mCompute_1]
+save_constraints
+launch_runs impl_1 child_2_impl_1 child_3_impl_1 -jobs 4
+close_design
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+open_run synth_1 -name synth_1 -pr_config [current_pr_configuration]
+close_design
+open_run synth_1 -name synth_1 -pr_config [current_pr_configuration]
+startgroup
+create_pblock pblock_Integer
+resize_pblock pblock_Integer -add SLICE_X58Y0:SLICE_X67Y22
+add_cells_to_pblock pblock_Integer [get_cells [list ReconfigMultiplier/Integer]] -clear_locs
+endgroup
+save_constraints
+launch_runs impl_1 child_2_impl_1 child_3_impl_1 -jobs 4
+close_design
+launch_runs impl_1 child_2_impl_1 child_3_impl_1 -jobs 4
+set_property MODULE_NAME Integer [get_reconfig_modules Integer]
+set_property MODULE_NAME Integer [get_reconfig_modules Float]
+set_property MODULE_NAME Integer [get_reconfig_modules Fixed]
+set_property PARTITION_CELL_RMS [list ReconfigMultiplier/Integer:Float ] [get_pr_configurations config_3]
+set_property greybox_cells [list ] [get_pr_configurations config_3]
+set_property PARTITION_CELL_RMS [list ReconfigMultiplier/Integer:Fixed ] [get_pr_configurations config_2]
+set_property greybox_cells [list ] [get_pr_configurations config_2]
+set_property PARTITION_CELL_RMS [list ReconfigMultiplier/Integer:Integer ] [get_pr_configurations config_1]
+set_property greybox_cells [list ] [get_pr_configurations config_1]
+delete_runs "child_2_impl_1 child_3_impl_1"
+create_run child_2_impl_1 -parent_run impl_1 -flow {Vivado Implementation 2019} -pr_config config_2
+create_run child_3_impl_1 -parent_run impl_1 -flow {Vivado Implementation 2019} -pr_config config_3
+reset_run Integer_synth_1
+reset_run Float_synth_1
+reset_run Fixed_synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_runs impl_1 child_2_impl_1 child_3_impl_1 -jobs 4
 wait_on_run impl_1
-wait_on_run child_0_impl_1
-wait_on_run child_1_impl_1
 wait_on_run child_2_impl_1
 wait_on_run child_3_impl_1
-launch_runs impl_1 child_0_impl_1 child_1_impl_1 child_2_impl_1 child_3_impl_1 -to_step write_bitstream -jobs 4
-wait_on_run impl_1
-wait_on_run child_0_impl_1
-wait_on_run child_1_impl_1
-wait_on_run child_2_impl_1
-wait_on_run child_3_impl_1
-set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
-set_property PROGRAM.FILE {C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/dynamicMulti/dynamicMulti.runs/child_0_impl_1/dynamicMulti.bit} [get_hw_devices xc7z020_1]
-program_hw_devices [get_hw_devices xc7z020_1]
-refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+open_run synth_1 -name synth_1 -pr_config [current_pr_configuration]

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="child_0_impl_1" LaunchPart="xc7z020clg400-1" LaunchConfig="config_2" LaunchTime="1601529073">
+<GenRun Id="child_0_impl_1" LaunchPart="xc7z020clg400-1" LaunchConfig="config_2" LaunchTime="1601751306">
   <File Type="BITSTR-BMM" Name="Conv_Accel_Top_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="Conv_Accel_Top_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="Conv_Accel_Top_timing_summary_init.rpt"/>
@@ -75,27 +75,27 @@
   <File Type="BG-DRC" Name="Conv_Accel_Top.drc"/>
   <File Type="RDI-RDI" Name="Conv_Accel_Top.vdi"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
-  <File Type="ROUTE-PARTITION-CELL-DCP" Name="ConvAccel_matrixAccel_finalAdder_adderFloat_routed.dcp"/>
-  <File Type="ROUTE-PARTITION-CELL-DCP" Name="ConvAccel_matrixAccel_genblk3_0_.inputMulti_Floating_routed.dcp"/>
-  <File Type="ROUTE-PARTITION-CELL-DCP" Name="ConvAccel_matrixAccel_genblk3_1_.inputMulti_Floating_routed.dcp"/>
-  <File Type="ROUTE-PARTITION-CELL-DCP" Name="ConvAccel_matrixAccel_genblk3_2_.inputMulti_Floating_routed.dcp"/>
-  <File Type="ROUTE-PARTITION-CELL-DCP" Name="ConvAccel_matrixAccel_genblk4_0_.outputAdder_adderFloat_routed.dcp"/>
-  <File Type="ROUTE-PARTITION-CELL-DCP" Name="ConvAccel_matrixAccel_genblk4_1_.outputAdder_adderFloat_routed.dcp"/>
-  <File Type="ROUTE-PARTITION-CELL-DCP" Name="ConvAccel_matrixAccel_genblk4_2_.outputAdder_adderFloat_routed.dcp"/>
-  <File Type="BG-PARTITION-CELL-BIT" Name="ConvAccel_matrixAccel_finalAdder_adderFloat_partial.bit"/>
-  <File Type="BG-PARTITION-CELL-BIT" Name="ConvAccel_matrixAccel_genblk3_0_.inputMulti_Floating_partial.bit"/>
-  <File Type="BG-PARTITION-CELL-BIT" Name="ConvAccel_matrixAccel_genblk3_1_.inputMulti_Floating_partial.bit"/>
-  <File Type="BG-PARTITION-CELL-BIT" Name="ConvAccel_matrixAccel_genblk3_2_.inputMulti_Floating_partial.bit"/>
-  <File Type="BG-PARTITION-CELL-BIT" Name="ConvAccel_matrixAccel_genblk4_0_.outputAdder_adderFloat_partial.bit"/>
-  <File Type="BG-PARTITION-CELL-BIT" Name="ConvAccel_matrixAccel_genblk4_1_.outputAdder_adderFloat_partial.bit"/>
-  <File Type="BG-PARTITION-CELL-BIT" Name="ConvAccel_matrixAccel_genblk4_2_.outputAdder_adderFloat_partial.bit"/>
-  <File Type="BG-PARTITION-LTX" Name="ConvAccel_matrixAccel_finalAdder_adderFloat.ltx"/>
-  <File Type="BG-PARTITION-LTX" Name="ConvAccel_matrixAccel_genblk3_0_.inputMulti_Floating.ltx"/>
-  <File Type="BG-PARTITION-LTX" Name="ConvAccel_matrixAccel_genblk3_1_.inputMulti_Floating.ltx"/>
-  <File Type="BG-PARTITION-LTX" Name="ConvAccel_matrixAccel_genblk3_2_.inputMulti_Floating.ltx"/>
-  <File Type="BG-PARTITION-LTX" Name="ConvAccel_matrixAccel_genblk4_0_.outputAdder_adderFloat.ltx"/>
-  <File Type="BG-PARTITION-LTX" Name="ConvAccel_matrixAccel_genblk4_1_.outputAdder_adderFloat.ltx"/>
-  <File Type="BG-PARTITION-LTX" Name="ConvAccel_matrixAccel_genblk4_2_.outputAdder_adderFloat.ltx"/>
+  <File Type="ROUTE-PARTITION-CELL-DCP" Name="ConvAccel_matrixAccel_finalAdder_adder_routed.dcp"/>
+  <File Type="ROUTE-PARTITION-CELL-DCP" Name="ConvAccel_matrixAccel_genblk3_0_.inputMulti_Fixed_routed.dcp"/>
+  <File Type="ROUTE-PARTITION-CELL-DCP" Name="ConvAccel_matrixAccel_genblk3_1_.inputMulti_Fixed_routed.dcp"/>
+  <File Type="ROUTE-PARTITION-CELL-DCP" Name="ConvAccel_matrixAccel_genblk3_2_.inputMulti_Fixed_routed.dcp"/>
+  <File Type="ROUTE-PARTITION-CELL-DCP" Name="ConvAccel_matrixAccel_genblk4_0_.outputAdder_adder_routed.dcp"/>
+  <File Type="ROUTE-PARTITION-CELL-DCP" Name="ConvAccel_matrixAccel_genblk4_1_.outputAdder_adder_routed.dcp"/>
+  <File Type="ROUTE-PARTITION-CELL-DCP" Name="ConvAccel_matrixAccel_genblk4_2_.outputAdder_adder_routed.dcp"/>
+  <File Type="BG-PARTITION-CELL-BIT" Name="ConvAccel_matrixAccel_finalAdder_adder_partial.bit"/>
+  <File Type="BG-PARTITION-CELL-BIT" Name="ConvAccel_matrixAccel_genblk3_0_.inputMulti_Fixed_partial.bit"/>
+  <File Type="BG-PARTITION-CELL-BIT" Name="ConvAccel_matrixAccel_genblk3_1_.inputMulti_Fixed_partial.bit"/>
+  <File Type="BG-PARTITION-CELL-BIT" Name="ConvAccel_matrixAccel_genblk3_2_.inputMulti_Fixed_partial.bit"/>
+  <File Type="BG-PARTITION-CELL-BIT" Name="ConvAccel_matrixAccel_genblk4_0_.outputAdder_adder_partial.bit"/>
+  <File Type="BG-PARTITION-CELL-BIT" Name="ConvAccel_matrixAccel_genblk4_1_.outputAdder_adder_partial.bit"/>
+  <File Type="BG-PARTITION-CELL-BIT" Name="ConvAccel_matrixAccel_genblk4_2_.outputAdder_adder_partial.bit"/>
+  <File Type="BG-PARTITION-LTX" Name="ConvAccel_matrixAccel_finalAdder_adder.ltx"/>
+  <File Type="BG-PARTITION-LTX" Name="ConvAccel_matrixAccel_genblk3_0_.inputMulti_Fixed.ltx"/>
+  <File Type="BG-PARTITION-LTX" Name="ConvAccel_matrixAccel_genblk3_1_.inputMulti_Fixed.ltx"/>
+  <File Type="BG-PARTITION-LTX" Name="ConvAccel_matrixAccel_genblk3_2_.inputMulti_Fixed.ltx"/>
+  <File Type="BG-PARTITION-LTX" Name="ConvAccel_matrixAccel_genblk4_0_.outputAdder_adder.ltx"/>
+  <File Type="BG-PARTITION-LTX" Name="ConvAccel_matrixAccel_genblk4_1_.outputAdder_adder.ltx"/>
+  <File Type="BG-PARTITION-LTX" Name="ConvAccel_matrixAccel_genblk4_2_.outputAdder_adder.ltx"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/../../Sources/definitions.h">
@@ -225,6 +225,7 @@
   <BlockFileSet Type="BlockSrcs" Name="design_2_axi_gpio_7_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_2_proc_sys_reset_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_2_axi_gpio_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Fixed"/>
   <BlockFileSet Type="BlockSrcs" Name="design_2_axi_gpio_8_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_2_axi_gpio_9_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_2_axi_gpio_10_0"/>
@@ -233,6 +234,5 @@
   <BlockFileSet Type="BlockSrcs" Name="design_2_axi_gpio_5_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_2_axi_gpio_3_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_2_clk_wiz_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="adderFloat"/>
-  <BlockFileSet Type="BlockSrcs" Name="Floating"/>
+  <BlockFileSet Type="BlockSrcs" Name="adder"/>
 </GenRun>

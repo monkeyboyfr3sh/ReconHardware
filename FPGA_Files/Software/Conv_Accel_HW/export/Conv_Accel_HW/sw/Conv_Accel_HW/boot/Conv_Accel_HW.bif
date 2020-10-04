@@ -1,7 +1,0 @@
-/*Conv_Accel_HW*/
-the_ROM_image:
-{
-  [bootloader]<Conv_Accel_HW/boot/fsbl.elf>
-   <bitstream> 
-  <elf,ps7_cortexa9_0>
-}

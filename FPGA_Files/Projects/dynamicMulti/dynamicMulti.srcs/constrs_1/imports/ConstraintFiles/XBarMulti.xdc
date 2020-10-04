@@ -1,5 +1,5 @@
 set_property IOSTANDARD LVCMOS33 [get_ports Clk]
-set_property PACKAGE_PIN U12 [get_ports Clk]
+set_property PACKAGE_PIN L15 [get_ports Clk]
 set_property IOSTANDARD LVCMOS33 [get_ports Rst]
 set_property IOSTANDARD LVCMOS33 [get_ports {bufferRD_in[3]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {bufferRD_in[2]}]
@@ -55,7 +55,7 @@ set_property PACKAGE_PIN V15 [get_ports bufferRD]
 set_property PACKAGE_PIN V13 [get_ports bufferSelect]
 set_property PACKAGE_PIN L15 [get_ports FULL0]
 set_property PACKAGE_PIN G14 [get_ports FULL1]
-set_property PACKAGE_PIN G17 [get_ports mReady]
+set_property PACKAGE_PIN G14 [get_ports mReady]
 set_property PACKAGE_PIN T15 [get_ports mStart]
 set_property PACKAGE_PIN M20 [get_ports chunkCount]
 set_property IOSTANDARD LVCMOS33 [get_ports {dataInput[3]}]
@@ -70,9 +70,28 @@ set_property IOSTANDARD LVCMOS33 [get_ports FULL1]
 set_property IOSTANDARD LVCMOS33 [get_ports mReady]
 set_property IOSTANDARD LVCMOS33 [get_ports mStart]
 
-create_pblock pblock_mCompute
-create_pblock pblock_mCompute_1
 add_cells_to_pblock [get_pblocks pblock_mCompute_1] [get_cells -quiet [list mCompute]]
-resize_pblock [get_pblocks pblock_mCompute_1] -add {SLICE_X58Y52:SLICE_X67Y70}
 
 set_property PACKAGE_PIN T14 [get_ports Rst]
+
+add_cells_to_pblock [get_pblocks pblock_mCompute_2] [get_cells -quiet [list nolabel_line13/mCompute]]
+
+
+add_cells_to_pblock [get_pblocks pblock_Integer] [get_cells -quiet [list Integer]]
+add_cells_to_pblock [get_pblocks pblock_Integer] [get_cells -quiet [list ReconfigMultiplier/Integer]]
+
+
+
+create_pblock pblock_multiplyComputePynq
+add_cells_to_pblock [get_pblocks pblock_multiplyComputePynq] [get_cells -quiet [list multiplyComputePynq]]
+resize_pblock [get_pblocks pblock_multiplyComputePynq] -add {SLICE_X90Y0:SLICE_X97Y24}
+resize_pblock [get_pblocks pblock_multiplyComputePynq] -add {DSP48_X3Y0:DSP48_X3Y9}
+
+set_property IOSTANDARD LVCMOS33 [get_ports {product_out[3]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {product_out[2]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {product_out[1]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {product_out[0]}]
+set_property PACKAGE_PIN N16 [get_ports {product_out[2]}]
+set_property PACKAGE_PIN P14 [get_ports {product_out[1]}]
+set_property PACKAGE_PIN R14 [get_ports {product_out[0]}]
+set_property PACKAGE_PIN M14 [get_ports {product_out[3]}]

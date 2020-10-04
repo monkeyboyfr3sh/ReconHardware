@@ -1,7 +1,7 @@
 //Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-//Date        : Sat Sep 26 20:38:50 2020
+//Date        : Sat Oct  3 11:54:15 2020
 //Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 //Command     : generate_target design_2.bd
 //Design      : design_2
@@ -45,7 +45,7 @@ module design_2
     newline_tri_o,
     rd_tri_o,
     wr_tri_o);
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK, CLK_DOMAIN /clk_wiz_0_clk_out1, FREQ_HZ 100000000, INSERT_VIP 0, PHASE 0.0" *) output Clk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.CLK, CLK_DOMAIN /clk_wiz_0_clk_out1, FREQ_HZ 25000000, INSERT_VIP 0, PHASE 0.0" *) output Clk;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR ADDR" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DDR, AXI_ARBITRATION_SCHEME TDM, BURST_LENGTH 8, CAN_DEBUG false, CAS_LATENCY 11, CAS_WRITE_LATENCY 11, CS_ENABLED true, DATA_MASK_ENABLED true, DATA_WIDTH 8, MEMORY_TYPE COMPONENTS, MEM_ADDR_MAP ROW_COLUMN_BANK, SLOT Single, TIMEPERIOD_PS 1250" *) inout [14:0]DDR_addr;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR BA" *) inout [2:0]DDR_ba;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR CAS_N" *) inout DDR_cas_n;
@@ -61,24 +61,24 @@ module design_2
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR RAS_N" *) inout DDR_ras_n;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR RESET_N" *) inout DDR_reset_n;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR WE_N" *) inout DDR_we_n;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 EMPTY_IN " *) input [0:0]EMPTY_IN_tri_i;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 EMPTY_OUT " *) input [0:0]EMPTY_OUT_tri_i;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 EMPTY_IN TRI_I" *) input [0:0]EMPTY_IN_tri_i;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 EMPTY_OUT TRI_I" *) input [0:0]EMPTY_OUT_tri_i;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO DDR_VRN" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME FIXED_IO, CAN_DEBUG false" *) inout FIXED_IO_ddr_vrn;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO DDR_VRP" *) inout FIXED_IO_ddr_vrp;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO MIO" *) inout [53:0]FIXED_IO_mio;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_CLK" *) inout FIXED_IO_ps_clk;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_PORB" *) inout FIXED_IO_ps_porb;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_SRSTB" *) inout FIXED_IO_ps_srstb;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 FULL_IN " *) input [0:0]FULL_IN_tri_i;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 FULL_OUT " *) input [0:0]FULL_OUT_tri_i;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 Rst " *) output [0:0]Rst_tri_o;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 bufferInput " *) output [15:0]bufferInput_tri_o;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 buffered_conv_out " *) input [15:0]buffered_conv_out_tri_i;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 cStart " *) output [0:0]cStart_tri_o;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 io_clk " *) output [0:0]io_clk_tri_o;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 newline " *) output [0:0]newline_tri_o;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 rd " *) output [0:0]rd_tri_o;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 wr " *) output [0:0]wr_tri_o;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 FULL_IN TRI_I" *) input [0:0]FULL_IN_tri_i;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 FULL_OUT TRI_I" *) input [0:0]FULL_OUT_tri_i;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 Rst TRI_O" *) output [0:0]Rst_tri_o;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 bufferInput TRI_O" *) output [15:0]bufferInput_tri_o;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 buffered_conv_out TRI_I" *) input [15:0]buffered_conv_out_tri_i;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 cStart TRI_O" *) output [0:0]cStart_tri_o;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 io_clk TRI_O" *) output [0:0]io_clk_tri_o;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 newline TRI_O" *) output [0:0]newline_tri_o;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 rd TRI_O" *) output [0:0]rd_tri_o;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 wr TRI_O" *) output [0:0]wr_tri_o;
 
   wire [15:0]axi_gpio_0_GPIO_TRI_O;
   wire [0:0]axi_gpio_10_GPIO_TRI_I;

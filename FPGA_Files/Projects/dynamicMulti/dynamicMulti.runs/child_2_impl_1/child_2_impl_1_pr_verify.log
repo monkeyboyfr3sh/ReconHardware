@@ -1,22 +1,22 @@
-Command: pr_verify -full_check -initial C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/dynamicMulti/dynamicMulti.runs/impl_1/dynamicMulti_routed.dcp -additional C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/dynamicMulti/dynamicMulti.runs/child_2_impl_1/dynamicMulti_routed.dcp -file child_2_impl_1_pr_verify.log
-Mon Jul 20 12:16:59 2020
+Command: pr_verify -full_check -initial C:/GitHub/ReconHardware/FPGA_Files/Projects/dynamicMulti/dynamicMulti.runs/impl_1/Multiplier_Processor_Wrapper_routed.dcp -additional C:/GitHub/ReconHardware/FPGA_Files/Projects/dynamicMulti/dynamicMulti.runs/child_2_impl_1/Multiplier_Processor_Wrapper_routed.dcp -file child_2_impl_1_pr_verify.log
+Sat Oct  3 16:21:18 2020
 
 INFO: [Constraints 18-1020] PR Verify Summary:
-DCP1: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/dynamicMulti/dynamicMulti.runs/impl_1/dynamicMulti_routed.dcp
+DCP1: C:/GitHub/ReconHardware/FPGA_Files/Projects/dynamicMulti/dynamicMulti.runs/impl_1/Multiplier_Processor_Wrapper_routed.dcp
   Number of reconfigurable modules compared = 1
-  Number of partition pins compared         = 20
-  Number of static tiles compared           = 200
-  Number of static sites compared           = 24
-  Number of static cells compared           = 45
-  Number of static routed nodes compared    = 599
-  Number of static routed pips compared     = 552
+  Number of partition pins compared         = 68
+  Number of static tiles compared           = 311
+  Number of static sites compared           = 527
+  Number of static cells compared           = 2509
+  Number of static routed nodes compared    = 31413
+  Number of static routed pips compared     = 29100
 
-DCP2: C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/dynamicMulti/dynamicMulti.runs/child_2_impl_1/dynamicMulti_routed.dcp
+DCP2: C:/GitHub/ReconHardware/FPGA_Files/Projects/dynamicMulti/dynamicMulti.runs/child_2_impl_1/Multiplier_Processor_Wrapper_routed.dcp
   Number of reconfigurable modules compared = 1
-  Number of partition pins compared         = 20
-  Number of static tiles compared           = 200
-  Number of static sites compared           = 24
-  Number of static cells compared           = 45
-  Number of static routed nodes compared    = 599
-  Number of static routed pips compared     = 552
-INFO: [Vivado 12-3253] PR_VERIFY: check points C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/dynamicMulti/dynamicMulti.runs/impl_1/dynamicMulti_routed.dcp and C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/dynamicMulti/dynamicMulti.runs/child_2_impl_1/dynamicMulti_routed.dcp are compatible
+  Number of partition pins compared         = 68
+  Number of static tiles compared           = 311
+  Number of static sites compared           = 527
+  Number of static cells compared           = 2509
+  Number of static routed nodes compared    = 31413
+  Number of static routed pips compared     = 29100
+INFO: [Vivado 12-3253] PR_VERIFY: check points C:/GitHub/ReconHardware/FPGA_Files/Projects/dynamicMulti/dynamicMulti.runs/impl_1/Multiplier_Processor_Wrapper_routed.dcp and C:/GitHub/ReconHardware/FPGA_Files/Projects/dynamicMulti/dynamicMulti.runs/child_2_impl_1/Multiplier_Processor_Wrapper_routed.dcp are compatible

@@ -1,0 +1,7 @@
+/*Multiplier_HW*/
+the_ROM_image:
+{
+  [bootloader]<Multiplier_HW/boot/fsbl.elf>
+   <bitstream> 
+  <elf,ps7_cortexa9_0>
+}

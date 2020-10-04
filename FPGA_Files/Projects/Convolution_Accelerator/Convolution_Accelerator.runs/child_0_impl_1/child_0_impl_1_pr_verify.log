@@ -1,0 +1,22 @@
+Command: pr_verify -full_check -initial C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/impl_1/Conv_Accel_Top_routed.dcp -additional C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/child_0_impl_1/Conv_Accel_Top_routed.dcp -file child_0_impl_1_pr_verify.log
+Sat Oct  3 13:58:13 2020
+
+INFO: [Constraints 18-1020] PR Verify Summary:
+DCP1: C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/impl_1/Conv_Accel_Top_routed.dcp
+  Number of reconfigurable modules compared = 7
+  Number of partition pins compared         = 456
+  Number of static tiles compared           = 5355
+  Number of static sites compared           = 1007
+  Number of static cells compared           = 4787
+  Number of static routed nodes compared    = 63347
+  Number of static routed pips compared     = 58889
+
+DCP2: C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/child_0_impl_1/Conv_Accel_Top_routed.dcp
+  Number of reconfigurable modules compared = 7
+  Number of partition pins compared         = 456
+  Number of static tiles compared           = 5355
+  Number of static sites compared           = 1007
+  Number of static cells compared           = 4787
+  Number of static routed nodes compared    = 63347
+  Number of static routed pips compared     = 58889
+INFO: [Vivado 12-3253] PR_VERIFY: check points C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/impl_1/Conv_Accel_Top_routed.dcp and C:/GitHub/ReconHardware/FPGA_Files/Projects/Convolution_Accelerator/Convolution_Accelerator.runs/child_0_impl_1/Conv_Accel_Top_routed.dcp are compatible

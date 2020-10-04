@@ -74,50 +74,50 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="design_2.bd" FileRelPathName="ip/design_2_axi_gpio_6_0/design_2_axi_gpio_6_0.xci">
-          <Proxy FileSetName="design_2_axi_gpio_6_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_2.bd" FileRelPathName="ip/design_2_clk_wiz_0_0/design_2_clk_wiz_0_0.xci">
-          <Proxy FileSetName="design_2_clk_wiz_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_2.bd" FileRelPathName="ip/design_2_axi_gpio_0_0/design_2_axi_gpio_0_0.xci">
-          <Proxy FileSetName="design_2_axi_gpio_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_2.bd" FileRelPathName="ip/design_2_axi_gpio_1_1/design_2_axi_gpio_1_1.xci">
-          <Proxy FileSetName="design_2_axi_gpio_1_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_2.bd" FileRelPathName="ip/design_2_xbar_0/design_2_xbar_0.xci">
-          <Proxy FileSetName="design_2_xbar_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_2.bd" FileRelPathName="ip/design_2_axi_gpio_7_0/design_2_axi_gpio_7_0.xci">
-          <Proxy FileSetName="design_2_axi_gpio_7_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_2.bd" FileRelPathName="ip/design_2_axi_gpio_8_0/design_2_axi_gpio_8_0.xci">
-          <Proxy FileSetName="design_2_axi_gpio_8_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_2.bd" FileRelPathName="ip/design_2_axi_gpio_3_0/design_2_axi_gpio_3_0.xci">
-          <Proxy FileSetName="design_2_axi_gpio_3_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_2.bd" FileRelPathName="ip/design_2_axi_gpio_1_0/design_2_axi_gpio_1_0.xci">
-          <Proxy FileSetName="design_2_axi_gpio_1_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="design_2.bd" FileRelPathName="ip/design_2_processing_system7_0_0/design_2_processing_system7_0_0.xci">
           <Proxy FileSetName="design_2_processing_system7_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_2.bd" FileRelPathName="ip/design_2_axi_gpio_4_0/design_2_axi_gpio_4_0.xci">
-          <Proxy FileSetName="design_2_axi_gpio_4_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="design_2.bd" FileRelPathName="ip/design_2_proc_sys_reset_0_0/design_2_proc_sys_reset_0_0.xci">
           <Proxy FileSetName="design_2_proc_sys_reset_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_2.bd" FileRelPathName="ip/design_2_axi_gpio_5_0/design_2_axi_gpio_5_0.xci">
-          <Proxy FileSetName="design_2_axi_gpio_5_0"/>
+        <CompFileExtendedInfo CompFileName="design_2.bd" FileRelPathName="ip/design_2_xbar_0/design_2_xbar_0.xci">
+          <Proxy FileSetName="design_2_xbar_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_2.bd" FileRelPathName="ip/design_2_axi_gpio_0_0/design_2_axi_gpio_0_0.xci">
+          <Proxy FileSetName="design_2_axi_gpio_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="design_2.bd" FileRelPathName="ip/design_2_axi_gpio_0_1/design_2_axi_gpio_0_1.xci">
           <Proxy FileSetName="design_2_axi_gpio_0_1"/>
         </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_2.bd" FileRelPathName="ip/design_2_axi_gpio_1_0/design_2_axi_gpio_1_0.xci">
+          <Proxy FileSetName="design_2_axi_gpio_1_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_2.bd" FileRelPathName="ip/design_2_axi_gpio_1_1/design_2_axi_gpio_1_1.xci">
+          <Proxy FileSetName="design_2_axi_gpio_1_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_2.bd" FileRelPathName="ip/design_2_axi_gpio_5_0/design_2_axi_gpio_5_0.xci">
+          <Proxy FileSetName="design_2_axi_gpio_5_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_2.bd" FileRelPathName="ip/design_2_axi_gpio_8_0/design_2_axi_gpio_8_0.xci">
+          <Proxy FileSetName="design_2_axi_gpio_8_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_2.bd" FileRelPathName="ip/design_2_axi_gpio_4_0/design_2_axi_gpio_4_0.xci">
+          <Proxy FileSetName="design_2_axi_gpio_4_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_2.bd" FileRelPathName="ip/design_2_axi_gpio_6_0/design_2_axi_gpio_6_0.xci">
+          <Proxy FileSetName="design_2_axi_gpio_6_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_2.bd" FileRelPathName="ip/design_2_axi_gpio_7_0/design_2_axi_gpio_7_0.xci">
+          <Proxy FileSetName="design_2_axi_gpio_7_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_2.bd" FileRelPathName="ip/design_2_axi_gpio_3_0/design_2_axi_gpio_3_0.xci">
+          <Proxy FileSetName="design_2_axi_gpio_3_0"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="design_2.bd" FileRelPathName="ip/design_2_axi_gpio_9_0/design_2_axi_gpio_9_0.xci">
           <Proxy FileSetName="design_2_axi_gpio_9_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_2.bd" FileRelPathName="ip/design_2_clk_wiz_0_0/design_2_clk_wiz_0_0.xci">
+          <Proxy FileSetName="design_2_clk_wiz_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="design_2.bd" FileRelPathName="ip/design_2_axi_gpio_10_0/design_2_axi_gpio_10_0.xci">
           <Proxy FileSetName="design_2_axi_gpio_10_0"/>
@@ -181,11 +181,11 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_processing_system7_0_0_1/design_1_processing_system7_0_0.xci">
-          <Proxy FileSetName="design_1_processing_system7_0_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xci">
           <Proxy FileSetName="design_1_clk_wiz_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_1.bd" FileRelPathName="ip/design_1_processing_system7_0_0_1/design_1_processing_system7_0_0.xci">
+          <Proxy FileSetName="design_1_processing_system7_0_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PPRDIR/../../Sources/Multiplier/fixedmultiplyCompute.v">
@@ -254,26 +254,6 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="adderFloat" Type="BlockSrcs" RelSrcDir="$PSRCDIR/adderFloat">
-      <File Path="$PPRDIR/../../Sources/definitions.h">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../Sources/Adder/adderFloat.v">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <Config>
-        <Option Name="TopModule" Val="adderFloat"/>
-        <Option Name="TopAutoSet" Val="TRUE"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
     <FileSet Name="Integer" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Floating">
       <File Path="$PPRDIR/../../Sources/definitions.h">
         <FileInfo>
@@ -292,26 +272,6 @@
       <Config>
         <Option Name="TopModule" Val="multiplyComputePynq"/>
         <Option Name="TopRTLFile" Val="$PPRDIR/../../Sources/Multiplier/multiplyComputePynq.v"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="Floating" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Floating">
-      <File Path="$PPRDIR/../../Sources/definitions.h">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../Sources/Multiplier/floatmComputePynq.v">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <Config>
-        <Option Name="TopModule" Val="floatmultiplyComputePynq"/>
-        <Option Name="TopAutoSet" Val="TRUE"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -483,27 +443,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="adderFloat_synth_1" Type="Ft3:Synth" SrcSet="adderFloat" Part="xc7z020clg400-1" ConstrsSet="adderFloat" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/adderFloat_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
     <Run Id="Integer_synth_1" Type="Ft3:Synth" SrcSet="Integer" Part="xc7z020clg400-1" ConstrsSet="Integer" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/Integer_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="Floating_synth_1" Type="Ft3:Synth" SrcSet="Floating" Part="xc7z020clg400-1" ConstrsSet="Floating" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/Floating_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
@@ -738,41 +678,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="adderFloat_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="adderFloat" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="adderFloat_synth_1" IncludeInArchive="false" GenFullBitstream="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design" EnableStepBool="1"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
     <Run Id="Integer_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="Integer" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="Integer_synth_1" IncludeInArchive="false" GenFullBitstream="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design" EnableStepBool="1"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="Floating_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="Floating" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="Floating_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
@@ -807,24 +713,6 @@
       <RQSFiles/>
     </Run>
     <Run Id="child_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/child_0_impl_1" SynthRun="impl_1" IncludeInArchive="true" PRConfiguration="config_2" ConfigurationChanged="false" GenFullBitstream="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design" EnableStepBool="1"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="child_1_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/child_1_impl_1" SynthRun="impl_1" IncludeInArchive="true" PRConfiguration="config_3" ConfigurationChanged="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
@@ -1156,11 +1044,9 @@
     <PartitionDefs>
       <PartitionDef Name="Adder" DefaultRM="adder" ModuleName="adder" LibraryName="xil_defaultlib" Type="NONE">
         <ReconfigModule Name="adder" Top="adder" SrcSet="adder" SynthRun="adder_synth_1" ImplRun="adder_impl_1"/>
-        <ReconfigModule Name="adderFloat" Top="adderFloat" SrcSet="adderFloat" SynthRun="adderFloat_synth_1" ImplRun="adderFloat_impl_1"/>
       </PartitionDef>
       <PartitionDef Name="Multiplier" DefaultRM="Integer" ModuleName="multiplyComputePynq" LibraryName="xil_defaultlib" Type="NONE">
         <ReconfigModule Name="Fixed" Top="fixedmultiplyCompute" SrcSet="Fixed" SynthRun="Fixed_synth_1" ImplRun="Fixed_impl_1"/>
-        <ReconfigModule Name="Floating" Top="floatmultiplyComputePynq" SrcSet="Floating" SynthRun="Floating_synth_1" ImplRun="Floating_impl_1"/>
         <ReconfigModule Name="Integer" Top="multiplyComputePynq" SrcSet="Integer" SynthRun="Integer_synth_1" ImplRun="Integer_impl_1"/>
       </PartitionDef>
     </PartitionDefs>
@@ -1175,22 +1061,13 @@
         <PartitionInstMap PartitionInst="ConvAccel/matrixAccel/genblk4[2].outputAdder" RM="adder"/>
       </PRConfiguration>
       <PRConfiguration Name="config_2">
-        <PartitionInstMap PartitionInst="ConvAccel/matrixAccel/finalAdder" RM="adderFloat"/>
-        <PartitionInstMap PartitionInst="ConvAccel/matrixAccel/genblk3[0].inputMulti" RM="Floating"/>
-        <PartitionInstMap PartitionInst="ConvAccel/matrixAccel/genblk3[1].inputMulti" RM="Floating"/>
-        <PartitionInstMap PartitionInst="ConvAccel/matrixAccel/genblk3[2].inputMulti" RM="Floating"/>
-        <PartitionInstMap PartitionInst="ConvAccel/matrixAccel/genblk4[0].outputAdder" RM="adderFloat"/>
-        <PartitionInstMap PartitionInst="ConvAccel/matrixAccel/genblk4[1].outputAdder" RM="adderFloat"/>
-        <PartitionInstMap PartitionInst="ConvAccel/matrixAccel/genblk4[2].outputAdder" RM="adderFloat"/>
-      </PRConfiguration>
-      <PRConfiguration Name="config_3">
+        <PartitionInstMap PartitionInst="ConvAccel/matrixAccel/finalAdder" RM="adder"/>
         <PartitionInstMap PartitionInst="ConvAccel/matrixAccel/genblk3[0].inputMulti" RM="Fixed"/>
         <PartitionInstMap PartitionInst="ConvAccel/matrixAccel/genblk3[1].inputMulti" RM="Fixed"/>
         <PartitionInstMap PartitionInst="ConvAccel/matrixAccel/genblk3[2].inputMulti" RM="Fixed"/>
-        <GreyboxInst Name="ConvAccel/matrixAccel/finalAdder"/>
-        <GreyboxInst Name="ConvAccel/matrixAccel/genblk4[0].outputAdder"/>
-        <GreyboxInst Name="ConvAccel/matrixAccel/genblk4[1].outputAdder"/>
-        <GreyboxInst Name="ConvAccel/matrixAccel/genblk4[2].outputAdder"/>
+        <PartitionInstMap PartitionInst="ConvAccel/matrixAccel/genblk4[0].outputAdder" RM="adder"/>
+        <PartitionInstMap PartitionInst="ConvAccel/matrixAccel/genblk4[1].outputAdder" RM="adder"/>
+        <PartitionInstMap PartitionInst="ConvAccel/matrixAccel/genblk4[2].outputAdder" RM="adder"/>
       </PRConfiguration>
     </PRConfigurations>
   </PRFlow>

@@ -187,6 +187,9 @@ proc create_root_design { parentCell } {
 
   # Create ports
   set Clk [ create_bd_port -dir O -type clk Clk ]
+  set_property -dict [ list \
+   CONFIG.FREQ_HZ {25000000} \
+ ] $Clk
 
   # Create instance: axi_gpio_0, and set properties
   set axi_gpio_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0 ]
@@ -317,6 +320,15 @@ proc create_root_design { parentCell } {
   # Create instance: clk_wiz_0, and set properties
   set clk_wiz_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_0 ]
   set_property -dict [ list \
+   CONFIG.CLKIN1_JITTER_PS {100.0} \
+   CONFIG.CLKOUT1_JITTER {181.828} \
+   CONFIG.CLKOUT1_PHASE_ERROR {104.359} \
+   CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {25} \
+   CONFIG.MMCM_CLKFBOUT_MULT_F {9.125} \
+   CONFIG.MMCM_CLKIN1_PERIOD {10.000} \
+   CONFIG.MMCM_CLKIN2_PERIOD {10.000} \
+   CONFIG.MMCM_CLKOUT0_DIVIDE_F {36.500} \
+   CONFIG.PRIM_IN_FREQ {100.000} \
    CONFIG.RESET_PORT {resetn} \
    CONFIG.RESET_TYPE {ACTIVE_LOW} \
    CONFIG.USE_LOCKED {false} \
