@@ -15180,3 +15180,1471 @@ Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-5: Launch
 
 !ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:03:34.337
 !MESSAGE XSCT command with result: [disconnect tcfchan#6], Result: [null, ]. Thread: Thread-371
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:09:16.449
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/sw/Convolution_Accel_HW/standalone_domain/system.mss ], Thread: Worker-5: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:09:16.455
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/sw/Convolution_Accel_HW/standalone_domain/system.mss ], Result: [null, ]. Thread: Worker-5: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:09:16.458
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/sw/Convolution_Accel_HW/standalone_domain/system.mss], Thread: Worker-5: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:09:16.463
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/sw/Convolution_Accel_HW/standalone_domain/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "7.1",
+}]. Thread: Worker-5: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2020-10-14 09:09:16.466
+!MESSAGE Generating MD5 hash for file: C:\GitHub\ReconHardware\FPGA_Files\Software\Convolution_Accel_HW\export\Convolution_Accel_HW\sw\Convolution_Accel_HW\standalone_domain\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:09:16.470
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/sw/Convolution_Accel_HW/standalone_domain/system.mss], Thread: Worker-5: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:09:16.475
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/sw/Convolution_Accel_HW/standalone_domain/system.mss], Result: [null, ]. Thread: Worker-5: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2020-10-14 09:09:22.169
+!MESSAGE Tool usage for 'SDX_NO_OP_BUILD' updated to '3'
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:09:55.057
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-2: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY org.eclipse.tcf 4 0 2020-10-14 09:09:57.156
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1182)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:96)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.tcf 4 0 2020-10-14 09:09:57.159
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1182)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:96)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.tcf 4 0 2020-10-14 09:09:57.162
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1182)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:96)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.tcf 4 0 2020-10-14 09:09:57.165
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1182)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:96)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:09:57.200
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#8]. Thread: Worker-2: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:09:57.203
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-2: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:09:58.055
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-2: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:09:58.058
+!MESSAGE XSCT Command: [version -server], Thread: Worker-2: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:09:58.069
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2019.2]. Thread: Worker-2: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:09:58.073
+!MESSAGE XSCT Command: [version], Thread: Worker-2: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:09:58.076
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2019.2
+SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-2: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:09:58.079
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-2: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:09:58.086
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-2: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:09:58.089
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Thread: Worker-2: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:09:58.103
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-2: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:09:58.106
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-2: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:09:58.113
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-2: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:09:58.117
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Thread: Worker-2: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:09:58.131
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-2: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:09:58.134
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-2: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:09:58.142
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-2: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:09:58.145
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Thread: Worker-2: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:09:58.159
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-2: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:09:58.162
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-2: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:09:58.168
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-2: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:09:58.171
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Thread: Worker-2: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:09:58.185
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-2: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:09:58.188
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-2: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:09:58.195
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-2: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:09:58.198
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Thread: Worker-2: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:09:58.212
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-2: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:09:58.215
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-2: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:09:58.222
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-2: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:09:58.226
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Thread: Worker-2: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:09:58.239
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-2: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:09:58.242
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Xilinx TUL 1234-tulA" && level == 0}], Thread: Worker-2: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:09:58.257
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Xilinx TUL 1234-tulA" && level == 0}], Result: [null, ]. Thread: Worker-2: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:09:58.260
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-2: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:09:58.300
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-2: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:09:58.303
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-2: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:09:58.777
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-2: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:09:58.780
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-2: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:09:58.828
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-2: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:09:58.831
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-2: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:10:01.838
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-2: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:10:01.853
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:10:01.859
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:10:01.862
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:10:01.877
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:10:01.880
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:10:01.902
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:10:01.906
+!MESSAGE XSCT Command: [fpga -file C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_APP/_ide/bitstream/Conv_Accel_Top.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:10:04.232
+!MESSAGE XSCT command with result: [fpga -file C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_APP/_ide/bitstream/Conv_Accel_Top.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:10:04.251
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-2: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:10:04.732
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-2: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:10:04.735
+!MESSAGE XSCT Command: [loadhw -hw C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa -mem-ranges [list {0x40000000 0xbfffffff}]], Thread: Worker-2: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:10:04.743
+!MESSAGE XSCT command with result: [loadhw -hw C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa -mem-ranges [list {0x40000000 0xbfffffff}]], Result: [null, Conv_Accel_Top_0]. Thread: Worker-2: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:10:04.746
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-2: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:10:04.749
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-2: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:10:04.752
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-2: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:10:04.761
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-2: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:10:04.763
+!MESSAGE XSCT Command: [source C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_APP/_ide/psinit/ps7_init.tcl], Thread: Worker-2: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:10:04.767
+!MESSAGE XSCT command with result: [source C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_APP/_ide/psinit/ps7_init.tcl], Result: [null, ]. Thread: Worker-2: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:10:04.770
+!MESSAGE XSCT Command: [ps7_init], Thread: Worker-2: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:10:05.055
+!MESSAGE XSCT command with result: [ps7_init], Result: [null, ]. Thread: Worker-2: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:10:05.058
+!MESSAGE XSCT Command: [ps7_post_config], Thread: Worker-2: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:10:05.068
+!MESSAGE XSCT command with result: [ps7_post_config], Result: [null, ]. Thread: Worker-2: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:10:05.071
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-2: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:10:05.511
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-2: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:10:05.514
+!MESSAGE XSCT Command: [dow C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_APP/Debug/Convolution_Accel_APP.elf], Thread: Worker-2: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:10:05.703
+!MESSAGE XSCT command with result: [dow C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_APP/Debug/Convolution_Accel_APP.elf], Result: [null, ]. Thread: Worker-2: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:10:05.707
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-2: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:10:05.737
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-2: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:10:05.800
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-2: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:10:05.849
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-2: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:10:05.853
+!MESSAGE XSCT Command: [con], Thread: Worker-2: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:10:05.869
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-2: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 1 0 2020-10-14 09:10:05.876
+!MESSAGE Tool usage for 'TCF_APP_DEBUG' updated to '4'
+
+!ENTRY com.xilinx.sdk.utils 1 0 2020-10-14 09:10:05.879
+!MESSAGE Tool usage for 'TCF_SYSTEM_DEBUG' updated to '4'
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:12:44.449
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/sw/Convolution_Accel_HW/standalone_domain/system.mss ], Thread: Worker-7: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:12:44.455
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/sw/Convolution_Accel_HW/standalone_domain/system.mss ], Result: [null, ]. Thread: Worker-7: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:12:44.458
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/sw/Convolution_Accel_HW/standalone_domain/system.mss], Thread: Worker-7: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:12:44.463
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/sw/Convolution_Accel_HW/standalone_domain/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "7.1",
+}]. Thread: Worker-7: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2020-10-14 09:12:44.467
+!MESSAGE Generating MD5 hash for file: C:\GitHub\ReconHardware\FPGA_Files\Software\Convolution_Accel_HW\export\Convolution_Accel_HW\sw\Convolution_Accel_HW\standalone_domain\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:12:44.470
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/sw/Convolution_Accel_HW/standalone_domain/system.mss], Thread: Worker-7: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:12:44.474
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/sw/Convolution_Accel_HW/standalone_domain/system.mss], Result: [null, ]. Thread: Worker-7: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2020-10-14 09:12:50.107
+!MESSAGE Tool usage for 'SDX_NO_OP_BUILD' updated to '4'
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:12:57.893
+!MESSAGE XSCT Command: [disconnect tcfchan#8], Thread: Thread-550
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:12:57.898
+!MESSAGE XSCT command with result: [disconnect tcfchan#8], Result: [null, ]. Thread: Thread-550
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:00.560
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/sw/Convolution_Accel_HW/standalone_domain/system.mss ], Thread: Worker-4: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:00.566
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/sw/Convolution_Accel_HW/standalone_domain/system.mss ], Result: [null, ]. Thread: Worker-4: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:00.569
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/sw/Convolution_Accel_HW/standalone_domain/system.mss], Thread: Worker-4: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:00.574
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/sw/Convolution_Accel_HW/standalone_domain/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "7.1",
+}]. Thread: Worker-4: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2020-10-14 09:13:00.577
+!MESSAGE Generating MD5 hash for file: C:\GitHub\ReconHardware\FPGA_Files\Software\Convolution_Accel_HW\export\Convolution_Accel_HW\sw\Convolution_Accel_HW\standalone_domain\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:00.581
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/sw/Convolution_Accel_HW/standalone_domain/system.mss], Thread: Worker-4: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:00.584
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/sw/Convolution_Accel_HW/standalone_domain/system.mss], Result: [null, ]. Thread: Worker-4: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2020-10-14 09:13:05.823
+!MESSAGE Tool usage for 'SDX_NO_OP_BUILD' updated to '5'
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:12.358
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-5: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY org.eclipse.tcf 4 0 2020-10-14 09:13:14.469
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1182)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:96)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.tcf 4 0 2020-10-14 09:13:14.472
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1182)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:96)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.tcf 4 0 2020-10-14 09:13:14.475
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1182)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:96)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.tcf 4 0 2020-10-14 09:13:14.478
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1182)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:96)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.tcf 4 0 2020-10-14 09:13:14.482
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1182)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:96)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.tcf 4 0 2020-10-14 09:13:14.485
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1182)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:96)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:14.513
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#11]. Thread: Worker-5: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:14.517
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-5: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:15.331
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-5: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:15.334
+!MESSAGE XSCT Command: [version -server], Thread: Worker-5: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:15.338
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2019.2]. Thread: Worker-5: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:15.341
+!MESSAGE XSCT Command: [version], Thread: Worker-5: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:15.344
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2019.2
+SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-5: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:15.347
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-5: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:15.353
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-5: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:15.356
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Thread: Worker-5: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:15.370
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-5: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:15.373
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-5: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:15.380
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-5: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:15.383
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Thread: Worker-5: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:15.398
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-5: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:15.401
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-5: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:15.408
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-5: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:15.412
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Thread: Worker-5: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:15.425
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-5: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:15.428
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-5: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:15.435
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-5: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:15.438
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Thread: Worker-5: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:15.453
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-5: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:15.456
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-5: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:15.462
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-5: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:15.465
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Thread: Worker-5: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:15.480
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-5: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:15.483
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-5: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:15.490
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-5: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:15.493
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Thread: Worker-5: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:15.507
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-5: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:15.510
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Xilinx TUL 1234-tulA" && level == 0}], Thread: Worker-5: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:15.524
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Xilinx TUL 1234-tulA" && level == 0}], Result: [null, ]. Thread: Worker-5: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:15.527
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-5: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:15.561
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-5: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:15.565
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-5: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:16.037
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-5: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:16.039
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-5: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:16.088
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-5: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:16.091
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-5: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:19.099
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-5: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:19.112
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:19.119
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:19.122
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:19.136
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:19.139
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:19.650
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:19.653
+!MESSAGE XSCT Command: [fpga -file C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_APP/_ide/bitstream/Conv_Accel_Top.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:22.438
+!MESSAGE XSCT command with result: [fpga -file C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_APP/_ide/bitstream/Conv_Accel_Top.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:22.453
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-5: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:22.924
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-5: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:22.927
+!MESSAGE XSCT Command: [loadhw -hw C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa -mem-ranges [list {0x40000000 0xbfffffff}]], Thread: Worker-5: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:22.934
+!MESSAGE XSCT command with result: [loadhw -hw C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa -mem-ranges [list {0x40000000 0xbfffffff}]], Result: [null, Conv_Accel_Top_0]. Thread: Worker-5: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:22.937
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-5: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:22.940
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-5: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:22.943
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-5: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:22.951
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-5: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:22.954
+!MESSAGE XSCT Command: [source C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_APP/_ide/psinit/ps7_init.tcl], Thread: Worker-5: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:22.958
+!MESSAGE XSCT command with result: [source C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_APP/_ide/psinit/ps7_init.tcl], Result: [null, ]. Thread: Worker-5: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:22.961
+!MESSAGE XSCT Command: [ps7_init], Thread: Worker-5: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:23.225
+!MESSAGE XSCT command with result: [ps7_init], Result: [null, ]. Thread: Worker-5: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:23.228
+!MESSAGE XSCT Command: [ps7_post_config], Thread: Worker-5: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:23.252
+!MESSAGE XSCT command with result: [ps7_post_config], Result: [null, ]. Thread: Worker-5: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:23.255
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-5: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:23.729
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-5: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:23.732
+!MESSAGE XSCT Command: [dow C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_APP/Debug/Convolution_Accel_APP.elf], Thread: Worker-5: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:23.918
+!MESSAGE XSCT command with result: [dow C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_APP/Debug/Convolution_Accel_APP.elf], Result: [null, ]. Thread: Worker-5: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:23.921
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-5: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:23.941
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-5: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:23.997
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-5: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:24.510
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-5: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:24.513
+!MESSAGE XSCT Command: [con], Thread: Worker-5: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:13:24.525
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-5: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 1 0 2020-10-14 09:13:24.530
+!MESSAGE Tool usage for 'TCF_APP_DEBUG' updated to '5'
+
+!ENTRY com.xilinx.sdk.utils 1 0 2020-10-14 09:13:24.533
+!MESSAGE Tool usage for 'TCF_SYSTEM_DEBUG' updated to '5'
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:15:31.467
+!MESSAGE XSCT Command: [disconnect tcfchan#11], Thread: Thread-648
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:15:31.472
+!MESSAGE XSCT command with result: [disconnect tcfchan#11], Result: [null, ]. Thread: Thread-648
+
+!ENTRY org.eclipse.jface 4 0 2020-10-14 09:18:18.937
+!MESSAGE /icons/elcl16/watchpoint_co.gif
+!STACK 0
+java.io.FileNotFoundException: /icons/elcl16/watchpoint_co.gif
+	at org.eclipse.osgi.storage.url.bundleentry.Handler.findBundleEntry(Handler.java:51)
+	at org.eclipse.osgi.storage.url.BundleResourceHandler.openConnection(BundleResourceHandler.java:169)
+	at java.base/java.net.URL.openConnection(Unknown Source)
+	at org.eclipse.core.internal.boot.PlatformURLConnection.connect(PlatformURLConnection.java:112)
+	at org.eclipse.core.internal.boot.PlatformURLConnection.getURLAsLocal(PlatformURLConnection.java:237)
+	at org.eclipse.core.internal.runtime.PlatformURLConverter.toFileURL(PlatformURLConverter.java:34)
+	at org.eclipse.core.runtime.FileLocator.toFileURL(FileLocator.java:255)
+	at org.eclipse.jface.resource.URLImageDescriptor.getFilePath(URLImageDescriptor.java:230)
+	at org.eclipse.jface.resource.URLImageDescriptor.access$2(URLImageDescriptor.java:218)
+	at org.eclipse.jface.resource.URLImageDescriptor$URLImageFileNameProvider.getImagePath(URLImageDescriptor.java:54)
+	at org.eclipse.swt.internal.DPIUtil.validateAndGetImagePathAtZoom(DPIUtil.java:416)
+	at org.eclipse.swt.graphics.Image.<init>(Image.java:684)
+	at org.eclipse.jface.resource.URLImageDescriptor.createImage(URLImageDescriptor.java:261)
+	at org.eclipse.jface.resource.ImageDescriptor.createResource(ImageDescriptor.java:180)
+	at org.eclipse.jface.resource.DeviceResourceManager.allocate(DeviceResourceManager.java:52)
+	at org.eclipse.jface.resource.AbstractResourceManager.create(AbstractResourceManager.java:85)
+	at org.eclipse.jface.resource.LocalResourceManager.allocate(LocalResourceManager.java:69)
+	at org.eclipse.jface.resource.AbstractResourceManager.create(AbstractResourceManager.java:85)
+	at org.eclipse.jface.resource.ResourceManager.createImage(ResourceManager.java:172)
+	at org.eclipse.e4.ui.workbench.renderers.swt.AbstractContributionItem.getImage(AbstractContributionItem.java:148)
+	at org.eclipse.e4.ui.workbench.renderers.swt.AbstractContributionItem.updateIcons(AbstractContributionItem.java:174)
+	at org.eclipse.e4.ui.workbench.renderers.swt.AbstractContributionItem.update(AbstractContributionItem.java:124)
+	at org.eclipse.e4.ui.workbench.renderers.swt.AbstractContributionItem.fill(AbstractContributionItem.java:261)
+	at org.eclipse.jface.action.MenuManager.doItemFill(MenuManager.java:728)
+	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:810)
+	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:669)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer.scheduleManagerUpdate(MenuManagerRenderer.java:1219)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer.processContents(MenuManagerRenderer.java:649)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer.subscribeTopicChildAdded(MenuManagerRenderer.java:324)
+	at jdk.internal.reflect.GeneratedMethodAccessor20.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:55)
+	at org.eclipse.e4.ui.internal.di.UIEventObjectSupplier$UIEventHandler$1.run(UIEventObjectSupplier.java:64)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:233)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:144)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4567)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application$1.syncExec(E4Application.java:212)
+	at org.eclipse.e4.ui.internal.di.UIEventObjectSupplier$UIEventHandler.handleEvent(UIEventObjectSupplier.java:61)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:201)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:196)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:135)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:78)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:39)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:52)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:60)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:374)
+	at org.eclipse.emf.ecore.util.EcoreEList.dispatchNotification(EcoreEList.java:249)
+	at org.eclipse.emf.common.notify.impl.NotifyingListImpl.addUnique(NotifyingListImpl.java:356)
+	at org.eclipse.emf.common.util.AbstractEList.add(AbstractEList.java:340)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributionRecord.mergeIntoModel(ContributionRecord.java:250)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer.processAddition(MenuManagerRenderer.java:546)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer.generateContributions(MenuManagerRenderer.java:525)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer.processContributions(MenuManagerRenderer.java:493)
+	at org.eclipse.ui.internal.PopupMenuExtender.addMenuContributions(PopupMenuExtender.java:410)
+	at org.eclipse.ui.internal.PopupMenuExtender.menuAboutToShow(PopupMenuExtender.java:382)
+	at org.eclipse.jface.action.MenuManager.fireAboutToShow(MenuManager.java:339)
+	at org.eclipse.jface.action.MenuManager.handleAboutToShow(MenuManager.java:470)
+	at org.eclipse.jface.action.MenuManager.access$1(MenuManager.java:465)
+	at org.eclipse.jface.action.MenuManager$2.menuShown(MenuManager.java:497)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:256)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4118)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1052)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1076)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1057)
+	at org.eclipse.swt.widgets.Control.WM_INITMENUPOPUP(Control.java:5125)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4794)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:345)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1499)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2159)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4757)
+	at org.eclipse.swt.internal.win32.OS.TrackPopupMenu(Native Method)
+	at org.eclipse.swt.widgets.Menu._setVisible(Menu.java:250)
+	at org.eclipse.swt.widgets.Display.runPopups(Display.java:3972)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3528)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1170)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1059)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:667)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:597)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at com.xilinx.ide.application.ui.Application.start(Application.java:78)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:656)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:592)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1498)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:22.168
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/sw/Convolution_Accel_HW/standalone_domain/system.mss ], Thread: Worker-2: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:22.174
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/sw/Convolution_Accel_HW/standalone_domain/system.mss ], Result: [null, ]. Thread: Worker-2: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:22.177
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/sw/Convolution_Accel_HW/standalone_domain/system.mss], Thread: Worker-2: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:22.182
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/sw/Convolution_Accel_HW/standalone_domain/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "7.1",
+}]. Thread: Worker-2: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2020-10-14 09:24:22.185
+!MESSAGE Generating MD5 hash for file: C:\GitHub\ReconHardware\FPGA_Files\Software\Convolution_Accel_HW\export\Convolution_Accel_HW\sw\Convolution_Accel_HW\standalone_domain\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:22.189
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/sw/Convolution_Accel_HW/standalone_domain/system.mss], Thread: Worker-2: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:22.193
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/sw/Convolution_Accel_HW/standalone_domain/system.mss], Result: [null, ]. Thread: Worker-2: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2020-10-14 09:24:27.798
+!MESSAGE Tool usage for 'SDX_NO_OP_BUILD' updated to '6'
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:31.155
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-14: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY org.eclipse.tcf 4 0 2020-10-14 09:24:33.238
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1182)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:96)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.tcf 4 0 2020-10-14 09:24:33.244
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1182)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:96)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.tcf 4 0 2020-10-14 09:24:33.247
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1182)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:96)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.tcf 4 0 2020-10-14 09:24:33.250
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1182)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:96)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.tcf 4 0 2020-10-14 09:24:33.253
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1182)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:96)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.tcf 4 0 2020-10-14 09:24:33.255
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1182)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:96)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.tcf 4 0 2020-10-14 09:24:33.258
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1182)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:96)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:33.289
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#13]. Thread: Worker-14: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:33.293
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-14: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:34.124
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-14: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:34.127
+!MESSAGE XSCT Command: [version -server], Thread: Worker-14: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:34.131
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2019.2]. Thread: Worker-14: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:34.134
+!MESSAGE XSCT Command: [version], Thread: Worker-14: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:34.137
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2019.2
+SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-14: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:34.140
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-14: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:34.146
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-14: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:34.149
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Thread: Worker-14: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:34.163
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-14: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:34.166
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-14: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:34.173
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-14: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:34.176
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Thread: Worker-14: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:34.190
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-14: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:34.193
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-14: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:34.199
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-14: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:34.203
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Thread: Worker-14: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:34.217
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-14: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:34.220
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-14: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:34.227
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-14: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:34.230
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Thread: Worker-14: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:34.244
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-14: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:34.247
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-14: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:34.254
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-14: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:34.257
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Thread: Worker-14: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:34.270
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-14: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:34.273
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-14: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:34.279
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-14: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:34.282
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Thread: Worker-14: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:34.296
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-14: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:34.299
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Xilinx TUL 1234-tulA" && level == 0}], Thread: Worker-14: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:34.313
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Xilinx TUL 1234-tulA" && level == 0}], Result: [null, ]. Thread: Worker-14: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:34.316
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-14: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:34.319
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-14: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:34.322
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-14: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:34.735
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-14: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:34.738
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-14: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:34.801
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-14: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:34.804
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-14: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:37.815
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-14: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:37.829
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:37.836
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:37.839
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:37.852
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:37.855
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:37.877
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:37.880
+!MESSAGE XSCT Command: [fpga -file C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_APP/_ide/bitstream/Conv_Accel_Top.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:40.212
+!MESSAGE XSCT command with result: [fpga -file C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_APP/_ide/bitstream/Conv_Accel_Top.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:40.228
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-14: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:40.687
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-14: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:40.691
+!MESSAGE XSCT Command: [loadhw -hw C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa -mem-ranges [list {0x40000000 0xbfffffff}]], Thread: Worker-14: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:40.699
+!MESSAGE XSCT command with result: [loadhw -hw C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa -mem-ranges [list {0x40000000 0xbfffffff}]], Result: [null, Conv_Accel_Top_0]. Thread: Worker-14: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:40.702
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-14: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:40.705
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-14: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:40.708
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-14: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:40.716
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-14: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:40.719
+!MESSAGE XSCT Command: [source C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_APP/_ide/psinit/ps7_init.tcl], Thread: Worker-14: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:40.723
+!MESSAGE XSCT command with result: [source C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_APP/_ide/psinit/ps7_init.tcl], Result: [null, ]. Thread: Worker-14: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:40.726
+!MESSAGE XSCT Command: [ps7_init], Thread: Worker-14: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:40.956
+!MESSAGE XSCT command with result: [ps7_init], Result: [null, ]. Thread: Worker-14: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:40.960
+!MESSAGE XSCT Command: [ps7_post_config], Thread: Worker-14: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:40.978
+!MESSAGE XSCT command with result: [ps7_post_config], Result: [null, ]. Thread: Worker-14: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:40.981
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-14: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:40.999
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-14: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:41.002
+!MESSAGE XSCT Command: [dow C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_APP/Debug/Convolution_Accel_APP.elf], Thread: Worker-14: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:41.176
+!MESSAGE XSCT command with result: [dow C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_APP/Debug/Convolution_Accel_APP.elf], Result: [null, ]. Thread: Worker-14: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:41.179
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-14: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:41.201
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-14: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:41.266
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-14: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:41.717
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-14: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:41.720
+!MESSAGE XSCT Command: [con], Thread: Worker-14: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:24:41.732
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-14: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 1 0 2020-10-14 09:24:41.736
+!MESSAGE Tool usage for 'TCF_APP_DEBUG' updated to '6'
+
+!ENTRY com.xilinx.sdk.utils 1 0 2020-10-14 09:24:41.739
+!MESSAGE Tool usage for 'TCF_SYSTEM_DEBUG' updated to '6'
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:25:41.551
+!MESSAGE XSCT Command: [disconnect tcfchan#13], Thread: Thread-914
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:25:41.556
+!MESSAGE XSCT command with result: [disconnect tcfchan#13], Result: [null, ]. Thread: Thread-914
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:26.223
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/sw/Convolution_Accel_HW/standalone_domain/system.mss ], Thread: Worker-15: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:26.229
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/sw/Convolution_Accel_HW/standalone_domain/system.mss ], Result: [null, ]. Thread: Worker-15: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:26.233
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/sw/Convolution_Accel_HW/standalone_domain/system.mss], Thread: Worker-15: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:26.238
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/sw/Convolution_Accel_HW/standalone_domain/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "7.1",
+}]. Thread: Worker-15: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2020-10-14 09:26:26.241
+!MESSAGE Generating MD5 hash for file: C:\GitHub\ReconHardware\FPGA_Files\Software\Convolution_Accel_HW\export\Convolution_Accel_HW\sw\Convolution_Accel_HW\standalone_domain\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:26.245
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/sw/Convolution_Accel_HW/standalone_domain/system.mss], Thread: Worker-15: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:26.249
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/sw/Convolution_Accel_HW/standalone_domain/system.mss], Result: [null, ]. Thread: Worker-15: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2020-10-14 09:26:31.818
+!MESSAGE Tool usage for 'SDX_NO_OP_BUILD' updated to '7'
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:36.648
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-16: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY org.eclipse.tcf 4 0 2020-10-14 09:26:38.751
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1182)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:96)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.tcf 4 0 2020-10-14 09:26:38.755
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1182)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:96)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.tcf 4 0 2020-10-14 09:26:38.759
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1182)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:96)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.tcf 4 0 2020-10-14 09:26:38.761
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1182)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:96)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.tcf 4 0 2020-10-14 09:26:38.764
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1182)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:96)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.tcf 4 0 2020-10-14 09:26:38.767
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1182)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:96)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.tcf 4 0 2020-10-14 09:26:38.771
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1182)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:96)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.tcf 4 0 2020-10-14 09:26:38.774
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1182)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:96)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:38.792
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#15]. Thread: Worker-16: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:38.796
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-16: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:39.530
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-16: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:39.533
+!MESSAGE XSCT Command: [version -server], Thread: Worker-16: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:39.545
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2019.2]. Thread: Worker-16: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:39.549
+!MESSAGE XSCT Command: [version], Thread: Worker-16: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:39.552
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2019.2
+SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-16: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:39.555
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-16: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:39.562
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-16: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:39.565
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Thread: Worker-16: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:39.579
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-16: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:39.582
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-16: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:39.590
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-16: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:39.593
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Thread: Worker-16: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:39.607
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-16: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:39.610
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-16: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:39.617
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-16: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:39.620
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Thread: Worker-16: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:39.634
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-16: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:39.637
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-16: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:39.644
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-16: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:39.647
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Thread: Worker-16: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:39.661
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-16: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:39.664
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-16: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:39.671
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-16: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:39.674
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Thread: Worker-16: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:39.688
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-16: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:39.691
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-16: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:39.698
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: Worker-16: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:39.701
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Thread: Worker-16: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:39.715
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-16: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:39.718
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Xilinx TUL 1234-tulA" && level == 0}], Thread: Worker-16: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:39.732
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Xilinx TUL 1234-tulA" && level == 0}], Result: [null, ]. Thread: Worker-16: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:39.735
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-16: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:39.799
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-16: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:39.804
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-16: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:39.960
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-16: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:39.963
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-16: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:40.023
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-16: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:40.026
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-16: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:43.035
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-16: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:43.046
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:43.053
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Xilinx TUL 1234-tulA]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:43.056
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:43.070
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:43.073
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:43.583
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:43.586
+!MESSAGE XSCT Command: [fpga -file C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_APP/_ide/bitstream/Conv_Accel_Top.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:46.373
+!MESSAGE XSCT command with result: [fpga -file C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_APP/_ide/bitstream/Conv_Accel_Top.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:46.396
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-16: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:46.884
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-16: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:46.887
+!MESSAGE XSCT Command: [loadhw -hw C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa -mem-ranges [list {0x40000000 0xbfffffff}]], Thread: Worker-16: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:46.894
+!MESSAGE XSCT command with result: [loadhw -hw C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa -mem-ranges [list {0x40000000 0xbfffffff}]], Result: [null, Conv_Accel_Top_0]. Thread: Worker-16: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:46.897
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-16: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:46.900
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-16: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:46.903
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-16: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:46.911
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-16: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:46.914
+!MESSAGE XSCT Command: [source C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_APP/_ide/psinit/ps7_init.tcl], Thread: Worker-16: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:46.918
+!MESSAGE XSCT command with result: [source C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_APP/_ide/psinit/ps7_init.tcl], Result: [null, ]. Thread: Worker-16: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:46.921
+!MESSAGE XSCT Command: [ps7_init], Thread: Worker-16: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:47.227
+!MESSAGE XSCT command with result: [ps7_init], Result: [null, ]. Thread: Worker-16: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:47.230
+!MESSAGE XSCT Command: [ps7_post_config], Thread: Worker-16: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:47.255
+!MESSAGE XSCT command with result: [ps7_post_config], Result: [null, ]. Thread: Worker-16: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:47.259
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-16: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:47.745
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-16: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:47.748
+!MESSAGE XSCT Command: [dow C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_APP/Debug/Convolution_Accel_APP.elf], Thread: Worker-16: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:47.937
+!MESSAGE XSCT command with result: [dow C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_APP/Debug/Convolution_Accel_APP.elf], Result: [null, ]. Thread: Worker-16: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:47.940
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-16: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:47.965
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-16: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:48.026
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-16: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:48.531
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-16: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:48.534
+!MESSAGE XSCT Command: [con], Thread: Worker-16: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:26:48.546
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-16: Launching SystemDebugger_Convolution_Accel_APP_system
+
+!ENTRY com.xilinx.sdk.utils 1 0 2020-10-14 09:26:48.550
+!MESSAGE Tool usage for 'TCF_APP_DEBUG' updated to '7'
+
+!ENTRY com.xilinx.sdk.utils 1 0 2020-10-14 09:26:48.553
+!MESSAGE Tool usage for 'TCF_SYSTEM_DEBUG' updated to '7'
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:27:59.272
+!MESSAGE XSCT Command: [disconnect tcfchan#15], Thread: Thread-1145
+
+!ENTRY com.xilinx.sdk.utils 0 0 2020-10-14 09:27:59.277
+!MESSAGE XSCT command with result: [disconnect tcfchan#15], Result: [null, ]. Thread: Thread-1145
+
+!ENTRY com.xilinx.sdk.utils 1 0 2020-10-14 09:36:31.045
+!MESSAGE Executing command: cmd /C C:\Xilinx\Vitis\2019.2\bin\wbtcv.bat -mode batch -source vitis_webtalk.tcl
+
+!ENTRY com.xilinx.sdk.utils 1 0 2020-10-14 09:36:31.079
+!MESSAGE Executed Webtalk command

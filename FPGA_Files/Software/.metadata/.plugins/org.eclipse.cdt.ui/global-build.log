@@ -1,6 +1,6 @@
 Nothing to build in platform 'Convolution_Accel_HW'
 
-09:00:37 **** Incremental Build of configuration Debug for project Convolution_Accel_APP ****
+09:26:26 **** Incremental Build of configuration Debug for project Convolution_Accel_APP ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -19,10 +19,10 @@ arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size Convolution_Accel_APP.elf  |tee "Convolution_Accel_APP.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  59136	   2696	  23440	  85272	  14d18	Convolution_Accel_APP.elf
+  59520	   2696	  23440	  85656	  14e98	Convolution_Accel_APP.elf
 'Finished building: Convolution_Accel_APP.elf.size'
 ' '
-09:00:38 **** Incremental Build of configuration Debug for project Convolution_Accel_APP_system ****
+09:26:27 **** Incremental Build of configuration Debug for project Convolution_Accel_APP_system ****
 make all 
 Generating bif file for the system project
 generate_system_bif.bat 55181 C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/Convolution_Accel_HW.xpfm standalone_domain C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_APP_system/Debug/system.bif

@@ -46,6 +46,7 @@
  */
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <stdbool.h>
 #include "platform.h"
 #include "xil_printf.h"
@@ -114,7 +115,7 @@ void configGpio() {
 	XGpio_SetDataDirection(	&GPIO_Arr[0], 	1, 		0 	);//io_lk
 	XGpio_SetDataDirection(	&GPIO_Arr[0], 	2, 		0	);//Rst
 
-	XGpio_SetDataDirection(	&GPIO_Arr[1], 	1, 		0	);//bufferInutput
+	XGpio_SetDataDirection(	&GPIO_Arr[1], 	1, 		0	);//bufferInput
 
 	XGpio_SetDataDirection(	&GPIO_Arr[2], 	1, 		0	);//cStart
 	XGpio_SetDataDirection(	&GPIO_Arr[2], 	2, 		0	);//newline
@@ -123,7 +124,7 @@ void configGpio() {
 	XGpio_SetDataDirection(	&GPIO_Arr[3], 	2, 		0	);//rd
 
 	//Inputs
-	//XGpio_SetDataDirection(	&GPIO_Arr[4], 	1, 		1	);//bufferOut
+	XGpio_SetDataDirection(	&GPIO_Arr[4], 	1, 		1	);//bufferOut
 
 	XGpio_SetDataDirection(	&GPIO_Arr[5], 	1, 		1	);//FULL_in
 	XGpio_SetDataDirection(	&GPIO_Arr[5], 	2, 		1	);//EMPTY_in
@@ -143,6 +144,36 @@ void ioclk(){
 	//Set pin low
 	XGpio_DiscreteClear(&GPIO_Arr[0], 1, 1);
 }
+
+void writeBuffer(int input_val){
+	//Set wr
+	XGpio_DiscreteSet(&GPIO_Arr[3], 1, 1);
+
+	//Set bufferInput to input_val
+	XGpio_DiscreteSet(&GPIO_Arr[1], 1, input_val);
+
+	ioclk();
+
+	//Clear ports after use
+	XGpio_DiscreteClear(&GPIO_Arr[1], 1, input_val);
+	XGpio_DiscreteClear(&GPIO_Arr[3], 1, 1);
+}
+
+int readBuffer(){
+	//Set rd
+	XGpio_DiscreteSet(&GPIO_Arr[3], 2, 1);
+	int buffout = XGpio_DiscreteRead(&GPIO_Arr[4], 1);
+
+	ioclk();
+	//Clear ports after use
+	XGpio_DiscreteClear(&GPIO_Arr[3], 2, 1);
+
+	return buffout;
+}
+
+void start_convolution(){
+	XGpio_DiscreteSet(&GPIO_Arr[2], 1, 1);
+}
 int main()
 {
     init_platform();
@@ -151,6 +182,21 @@ int main()
 
     driverInit();
     configGpio();
+
+    //Load values into buffer
+    for(int i = 0;i<9;i++){
+    	//writeBuffer(rand()%15);
+    	writeBuffer(i);
+    }
+    for(int i = 0;i<3;i++){
+		//writeBuffer(rand()%15);
+		writeBuffer(i);
+	}
+
+    start_convolution();
+
+    readBuffer();
+
 
 	printf("Program Completed!\n");
 

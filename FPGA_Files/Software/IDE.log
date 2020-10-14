@@ -7132,3 +7132,196 @@ con
 
 09:02:30 INFO  : Launch script is exported to file 'C:\GitHub\ReconHardware\FPGA_Files\Software\.sdk\launch_scripts\single_application_debug\systemdebugger_convolution_accel_app_system_standalone.tcl'
 09:03:34 INFO  : Disconnected from the channel tcfchan#6.
+09:09:16 INFO  : Checking for BSP changes to sync application flags for project 'Convolution_Accel_APP'...
+09:09:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:09:58 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+09:09:58 INFO  : 'jtag frequency' command is executed.
+09:09:58 INFO  : Context for 'APU' is selected.
+09:09:58 INFO  : System reset is completed.
+09:10:01 INFO  : 'after 3000' command is executed.
+09:10:01 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+09:10:04 INFO  : FPGA configured successfully with bitstream "C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_APP/_ide/bitstream/Conv_Accel_Top.bit"
+09:10:04 INFO  : Context for 'APU' is selected.
+09:10:04 INFO  : Hardware design information is loaded from 'C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa'.
+09:10:04 INFO  : 'configparams force-mem-access 1' command is executed.
+09:10:04 INFO  : Context for 'APU' is selected.
+09:10:04 INFO  : Sourcing of 'C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_APP/_ide/psinit/ps7_init.tcl' is done.
+09:10:05 INFO  : 'ps7_init' command is executed.
+09:10:05 INFO  : 'ps7_post_config' command is executed.
+09:10:05 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:10:05 INFO  : The application 'C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_APP/Debug/Convolution_Accel_APP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+09:10:05 INFO  : 'configparams force-mem-access 0' command is executed.
+09:10:05 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1
+fpga -file C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_APP/_ide/bitstream/Conv_Accel_Top.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_APP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_APP/Debug/Convolution_Accel_APP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+09:10:05 INFO  : Memory regions updated for context APU
+09:10:05 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:10:05 INFO  : 'con' command is executed.
+09:10:05 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+09:10:05 INFO  : Launch script is exported to file 'C:\GitHub\ReconHardware\FPGA_Files\Software\.sdk\launch_scripts\single_application_debug\systemdebugger_convolution_accel_app_system_standalone.tcl'
+09:12:44 INFO  : Checking for BSP changes to sync application flags for project 'Convolution_Accel_APP'...
+09:12:57 INFO  : Disconnected from the channel tcfchan#8.
+09:13:00 INFO  : Checking for BSP changes to sync application flags for project 'Convolution_Accel_APP'...
+09:13:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:13:15 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+09:13:15 INFO  : 'jtag frequency' command is executed.
+09:13:16 INFO  : Context for 'APU' is selected.
+09:13:16 INFO  : System reset is completed.
+09:13:19 INFO  : 'after 3000' command is executed.
+09:13:19 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+09:13:22 INFO  : FPGA configured successfully with bitstream "C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_APP/_ide/bitstream/Conv_Accel_Top.bit"
+09:13:22 INFO  : Context for 'APU' is selected.
+09:13:22 INFO  : Hardware design information is loaded from 'C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa'.
+09:13:22 INFO  : 'configparams force-mem-access 1' command is executed.
+09:13:22 INFO  : Context for 'APU' is selected.
+09:13:22 INFO  : Sourcing of 'C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_APP/_ide/psinit/ps7_init.tcl' is done.
+09:13:23 INFO  : 'ps7_init' command is executed.
+09:13:23 INFO  : 'ps7_post_config' command is executed.
+09:13:23 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:13:23 INFO  : The application 'C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_APP/Debug/Convolution_Accel_APP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+09:13:23 INFO  : 'configparams force-mem-access 0' command is executed.
+09:13:23 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1
+fpga -file C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_APP/_ide/bitstream/Conv_Accel_Top.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_APP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_APP/Debug/Convolution_Accel_APP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+09:13:23 INFO  : Memory regions updated for context APU
+09:13:24 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:13:24 INFO  : 'con' command is executed.
+09:13:24 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+09:13:24 INFO  : Launch script is exported to file 'C:\GitHub\ReconHardware\FPGA_Files\Software\.sdk\launch_scripts\single_application_debug\systemdebugger_convolution_accel_app_system_standalone.tcl'
+09:15:31 INFO  : Disconnected from the channel tcfchan#11.
+09:24:22 INFO  : Checking for BSP changes to sync application flags for project 'Convolution_Accel_APP'...
+09:24:33 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:24:34 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+09:24:34 INFO  : 'jtag frequency' command is executed.
+09:24:34 INFO  : Context for 'APU' is selected.
+09:24:34 INFO  : System reset is completed.
+09:24:37 INFO  : 'after 3000' command is executed.
+09:24:37 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+09:24:40 INFO  : FPGA configured successfully with bitstream "C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_APP/_ide/bitstream/Conv_Accel_Top.bit"
+09:24:40 INFO  : Context for 'APU' is selected.
+09:24:40 INFO  : Hardware design information is loaded from 'C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa'.
+09:24:40 INFO  : 'configparams force-mem-access 1' command is executed.
+09:24:40 INFO  : Context for 'APU' is selected.
+09:24:40 INFO  : Sourcing of 'C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_APP/_ide/psinit/ps7_init.tcl' is done.
+09:24:40 INFO  : 'ps7_init' command is executed.
+09:24:40 INFO  : 'ps7_post_config' command is executed.
+09:24:41 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:24:41 INFO  : The application 'C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_APP/Debug/Convolution_Accel_APP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+09:24:41 INFO  : 'configparams force-mem-access 0' command is executed.
+09:24:41 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1
+fpga -file C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_APP/_ide/bitstream/Conv_Accel_Top.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_APP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_APP/Debug/Convolution_Accel_APP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+09:24:41 INFO  : Memory regions updated for context APU
+09:24:41 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:24:41 INFO  : 'con' command is executed.
+09:24:41 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+09:24:41 INFO  : Launch script is exported to file 'C:\GitHub\ReconHardware\FPGA_Files\Software\.sdk\launch_scripts\single_application_debug\systemdebugger_convolution_accel_app_system_standalone.tcl'
+09:25:41 INFO  : Disconnected from the channel tcfchan#13.
+09:26:26 INFO  : Checking for BSP changes to sync application flags for project 'Convolution_Accel_APP'...
+09:26:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:26:39 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+09:26:39 INFO  : 'jtag frequency' command is executed.
+09:26:39 INFO  : Context for 'APU' is selected.
+09:26:40 INFO  : System reset is completed.
+09:26:43 INFO  : 'after 3000' command is executed.
+09:26:43 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+09:26:46 INFO  : FPGA configured successfully with bitstream "C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_APP/_ide/bitstream/Conv_Accel_Top.bit"
+09:26:46 INFO  : Context for 'APU' is selected.
+09:26:46 INFO  : Hardware design information is loaded from 'C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa'.
+09:26:46 INFO  : 'configparams force-mem-access 1' command is executed.
+09:26:46 INFO  : Context for 'APU' is selected.
+09:26:46 INFO  : Sourcing of 'C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_APP/_ide/psinit/ps7_init.tcl' is done.
+09:26:47 INFO  : 'ps7_init' command is executed.
+09:26:47 INFO  : 'ps7_post_config' command is executed.
+09:26:47 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:26:47 INFO  : The application 'C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_APP/Debug/Convolution_Accel_APP.elf' is downloaded to processor 'ps7_cortexa9_0'.
+09:26:47 INFO  : 'configparams force-mem-access 0' command is executed.
+09:26:47 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1
+fpga -file C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_APP/_ide/bitstream/Conv_Accel_Top.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_APP/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_APP/Debug/Convolution_Accel_APP.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+09:26:48 INFO  : Memory regions updated for context APU
+09:26:48 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:26:48 INFO  : 'con' command is executed.
+09:26:48 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+09:26:48 INFO  : Launch script is exported to file 'C:\GitHub\ReconHardware\FPGA_Files\Software\.sdk\launch_scripts\single_application_debug\systemdebugger_convolution_accel_app_system_standalone.tcl'
+09:27:59 INFO  : Disconnected from the channel tcfchan#15.

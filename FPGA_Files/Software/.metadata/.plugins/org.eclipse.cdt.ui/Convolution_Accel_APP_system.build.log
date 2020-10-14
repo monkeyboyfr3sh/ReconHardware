@@ -1,4 +1,4 @@
-09:00:38 **** Incremental Build of configuration Debug for project Convolution_Accel_APP_system ****
+09:26:27 **** Incremental Build of configuration Debug for project Convolution_Accel_APP_system ****
 make all 
 Generating bif file for the system project
 generate_system_bif.bat 55181 C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/Convolution_Accel_HW.xpfm standalone_domain C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_APP_system/Debug/system.bif
@@ -6,5 +6,5 @@ sdcard_gen --xpfm C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_
 creating BOOT.BIN using C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_APP/_ide/bitstream/Conv_Accel_Top.bit
 Running C:/Xilinx/Vitis/2019.2/bin/bootgen  -image C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_APP_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
 
-09:00:43 Build Finished (took 4s.522ms)
+09:26:31 Build Finished (took 4s.392ms)
 
