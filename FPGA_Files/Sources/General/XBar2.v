@@ -41,7 +41,6 @@ reg     [(`bitLength*2)-1:0]                    OutputSave [`outputPortCount-1:0
 //Needed vars
 integer     selectColomn, selectRow,i,j,k;
 reg         rowCheck, rowSet, outUsed; 
-
 generate
     genvar n;
     //Assigning Output port to corresponding saved outputs

@@ -25,34 +25,60 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir C:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.cache/wt [current_project]
-set_property parent.project_path C:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.xpr [current_project]
-set_property XPM_LIBRARIES XPM_CDC [current_project]
+set_property webtalk.parent_dir C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.cache/wt [current_project]
+set_property parent.project_path C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.xpr [current_project]
+set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part tul.com.tw:pynq-z2:part0:1.0 [current_project]
-set_property ip_output_repo c:/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.cache/ip [current_project]
+set_property ip_output_repo c:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_verilog C:/GitHub/ReconHardware/PynqSoftware/Sources/definitions.h
-set_property file_type "Verilog Header" [get_files C:/GitHub/ReconHardware/PynqSoftware/Sources/definitions.h]
-set_property is_global_include true [get_files C:/GitHub/ReconHardware/PynqSoftware/Sources/definitions.h]
+read_verilog C:/GitHub/ReconHardware/FPGA_Files/Sources/definitions.h
+set_property file_type "Verilog Header" [get_files C:/GitHub/ReconHardware/FPGA_Files/Sources/definitions.h]
+set_property is_global_include true [get_files C:/GitHub/ReconHardware/FPGA_Files/Sources/definitions.h]
 read_verilog -library xil_defaultlib {
-  C:/GitHub/ReconHardware/PynqSoftware/Sources/General/XBar2.v
-  C:/GitHub/ReconHardware/PynqSoftware/Sources/General/aFIFO.v
-  C:/GitHub/ReconHardware/PynqSoftware/Sources/Adder/adder.v
-  {C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/hdl/design_1_wrapper.v}
-  C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixAccTopDevice.v
-  C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixAccelerator.v
-  C:/GitHub/ReconHardware/PynqSoftware/Sources/General/matrixControl3x3.v
-  C:/GitHub/ReconHardware/PynqSoftware/Sources/Multiplier/multiplyComputePynq.v
-  C:/GitHub/ReconHardware/PynqSoftware/Sources/General/Conv_Accel_Top.v
+  C:/GitHub/ReconHardware/FPGA_Files/Sources/General/XBar2.v
+  C:/GitHub/ReconHardware/FPGA_Files/Sources/General/aFIFO.v
+  C:/GitHub/ReconHardware/FPGA_Files/Sources/Adder/adder.v
+  C:/GitHub/ReconHardware/FPGA_Files/Sources/General/matrixAccTopDevice.v
+  C:/GitHub/ReconHardware/FPGA_Files/Sources/General/matrixAccelerator.v
+  C:/GitHub/ReconHardware/FPGA_Files/Sources/General/matrixControl3x3.v
+  C:/GitHub/ReconHardware/FPGA_Files/Sources/Multiplier/multiplyComputePynq.v
+  C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/hdl/processor_wrapper.v
+  C:/GitHub/ReconHardware/FPGA_Files/Sources/General/Conv_Accel_Top.v
 }
-add_files {{C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/design_1.bd}}
-set_property used_in_implementation false [get_files -all {{c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ip/design_1_processing_system7_0_0_1/design_1_processing_system7_0_0.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_board.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xdc}}]
-set_property used_in_implementation false [get_files -all {{c:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_ooc.xdc}}]
-set_property used_in_implementation false [get_files -all {{C:/GitHub/ReconHardware/PynqSoftware/Sources/Block Diagrams/design_1/design_1_ooc.xdc}}]
+add_files C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/processor.bd
+set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/ip/processor_processing_system7_0_0/processor_processing_system7_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/ip/processor_proc_sys_reset_0_0/processor_proc_sys_reset_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/ip/processor_proc_sys_reset_0_0/processor_proc_sys_reset_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/ip/processor_proc_sys_reset_0_0/processor_proc_sys_reset_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/ip/processor_xbar_0/processor_xbar_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/ip/processor_axi_gpio_0_0/processor_axi_gpio_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/ip/processor_axi_gpio_0_0/processor_axi_gpio_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/ip/processor_axi_gpio_0_0/processor_axi_gpio_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/ip/processor_axi_gpio_0_1/processor_axi_gpio_0_1_board.xdc]
+set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/ip/processor_axi_gpio_0_1/processor_axi_gpio_0_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/ip/processor_axi_gpio_0_1/processor_axi_gpio_0_1.xdc]
+set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/ip/processor_axi_gpio_1_0/processor_axi_gpio_1_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/ip/processor_axi_gpio_1_0/processor_axi_gpio_1_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/ip/processor_axi_gpio_1_0/processor_axi_gpio_1_0.xdc]
+set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/ip/processor_axi_gpio_2_0/processor_axi_gpio_2_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/ip/processor_axi_gpio_2_0/processor_axi_gpio_2_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/ip/processor_axi_gpio_2_0/processor_axi_gpio_2_0.xdc]
+set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/ip/processor_clk_wiz_0_0/processor_clk_wiz_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/ip/processor_clk_wiz_0_0/processor_clk_wiz_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/ip/processor_clk_wiz_0_0/processor_clk_wiz_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/ip/processor_axi_gpio_3_0/processor_axi_gpio_3_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/ip/processor_axi_gpio_3_0/processor_axi_gpio_3_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/ip/processor_axi_gpio_3_0/processor_axi_gpio_3_0.xdc]
+set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/ip/processor_axi_gpio_4_0/processor_axi_gpio_4_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/ip/processor_axi_gpio_4_0/processor_axi_gpio_4_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/ip/processor_axi_gpio_4_0/processor_axi_gpio_4_0.xdc]
+set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/ip/processor_axi_gpio_5_0/processor_axi_gpio_5_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/ip/processor_axi_gpio_5_0/processor_axi_gpio_5_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/ip/processor_axi_gpio_5_0/processor_axi_gpio_5_0.xdc]
+set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/ip/processor_auto_pc_0/processor_auto_pc_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/processor_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -62,6 +88,9 @@ set_property used_in_implementation false [get_files -all {{C:/GitHub/ReconHardw
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
+read_xdc C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/constrs_1/new/makerfile.xdc
+set_property used_in_implementation false [get_files C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/constrs_1/new/makerfile.xdc]
+
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1

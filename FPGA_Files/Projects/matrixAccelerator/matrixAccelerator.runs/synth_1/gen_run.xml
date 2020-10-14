@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1600190830">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1602441729">
   <File Type="PA-TCL" Name="Conv_Accel_Top.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="Conv_Accel_Top_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="Conv_Accel_Top_reports.tcl"/>
@@ -18,7 +18,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../../Sources/Block Diagrams/design_1/design_1.bd">
+    <File Path="$PSRCDIR/sources_1/bd/processor/processor.bd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -40,13 +40,6 @@
       </FileInfo>
     </File>
     <File Path="$PPRDIR/../../Sources/Adder/adder.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../../Sources/Block Diagrams/design_1/hdl/design_1_wrapper.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -81,6 +74,13 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/bd/processor/hdl/processor_wrapper.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PPRDIR/../../Sources/General/Conv_Accel_Top.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -99,12 +99,18 @@
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="Conv_Accel_Top"/>
-      <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
     <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/makerfile.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
     <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/makerfile.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>
@@ -118,4 +124,16 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
     <Step Id="synth_design"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="processor_axi_gpio_4_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="processor_axi_gpio_5_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="processor_axi_gpio_3_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="processor_processing_system7_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="processor_proc_sys_reset_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="processor_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="processor_axi_gpio_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="processor_axi_gpio_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="processor_axi_gpio_2_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="processor_axi_gpio_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="processor_clk_wiz_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="processor_auto_pc_0"/>
 </GenRun>

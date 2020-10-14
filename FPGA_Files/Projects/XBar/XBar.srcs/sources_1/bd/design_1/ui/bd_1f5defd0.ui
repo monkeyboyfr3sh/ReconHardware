@@ -1,40 +1,40 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"1.24456",
-   "Default View_TopLeft":"661,-51",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"58,-199",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0.21  2019-05-29 bk=1.5064 VDI=41 GEI=36 GUI=JA:9.0 non-TLS
 #  -string -flagsOSRD
-preplace port DDR -pg 1 -lvl 3 -x 1080 -y 460 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -lvl 3 -x 1080 -y 480 -defaultsOSRD
-preplace port adressSel -pg 1 -lvl 3 -x 1080 -y 260 -defaultsOSRD
-preplace port direct -pg 1 -lvl 3 -x 1080 -y 280 -defaultsOSRD
-preplace port Rst -pg 1 -lvl 3 -x 1080 -y 720 -defaultsOSRD
-preplace port Clk -pg 1 -lvl 3 -x 1080 -y 680 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 1 -x 180 -y 650 -defaultsOSRD
-preplace inst axi_interconnect_0 -pg 1 -lvl 1 -x 180 -y 380 -defaultsOSRD
-preplace inst proc_sys_reset_0 -pg 1 -lvl 1 -x 180 -y 120 -defaultsOSRD
-preplace inst axi_gpio_2 -pg 1 -lvl 2 -x 580 -y 270 -defaultsOSRD
-preplace inst axi_gpio_1 -pg 1 -lvl 2 -x 580 -y 130 -defaultsOSRD
-preplace inst axi_gpio_0 -pg 1 -lvl 2 -x 580 -y -10 -defaultsOSRD
-preplace netloc proc_sys_reset_0_peripheral_aresetn 1 0 2 -40 220 430
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 3 -30 20 390J 720 NJ
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 3 -50 10 400J 680 NJ
-preplace netloc processing_system7_0_DDR 1 1 2 NJ 600 690
-preplace netloc processing_system7_0_FIXED_IO 1 1 2 NJ 620 700
-preplace netloc processing_system7_0_M_AXI_GP0 1 0 2 -30 540 380
-preplace netloc axi_interconnect_0_M02_AXI 1 1 1 420 250n
-preplace netloc axi_interconnect_0_M01_AXI 1 1 1 410 110n
-preplace netloc axi_gpio_2_GPIO1 1 2 1 NJ 260
-preplace netloc axi_gpio_2_GPIO2 1 2 1 NJ 280
-preplace netloc axi_interconnect_0_M00_AXI 1 1 1 380 -30n
-levelinfo -pg 1 -70 180 580 1080
-pagesize -pg 1 -db -bbox -sgen -70 -320 1200 760
+preplace port DDR -pg 1 -lvl 3 -x 750 -y 460 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 3 -x 750 -y 480 -defaultsOSRD
+preplace port Clk -pg 1 -lvl 3 -x 750 -y 120 -defaultsOSRD
+preplace port Rst -pg 1 -lvl 3 -x 750 -y 140 -defaultsOSRD
+preplace port AddressSelect -pg 1 -lvl 3 -x 750 -y 270 -defaultsOSRD
+preplace port direct -pg 1 -lvl 3 -x 750 -y 290 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 1 -x 100 -y 650 -defaultsOSRD
+preplace inst axi_interconnect_0 -pg 1 -lvl 1 -x 100 -y 380 -defaultsOSRD
+preplace inst proc_sys_reset_0 -pg 1 -lvl 1 -x 100 -y 60 -defaultsOSRD
+preplace inst axi_gpio_0 -pg 1 -lvl 2 -x 610 -y 130 -defaultsOSRD
+preplace inst axi_gpio_1 -pg 1 -lvl 2 -x 610 -y 280 -defaultsOSRD
+preplace netloc proc_sys_reset_0_peripheral_aresetn 1 0 2 -110 230 330
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 2 -100 -40 310J
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 2 -120 160 340J
+preplace netloc axi_interconnect_0_M00_AXI 1 1 1 320 110n
+preplace netloc axi_gpio_0_GPIO 1 2 1 N 120
+preplace netloc processing_system7_0_FIXED_IO 1 1 2 NJ 620 730
+preplace netloc processing_system7_0_DDR 1 1 2 NJ 600 720
+preplace netloc processing_system7_0_M_AXI_GP0 1 0 2 -100 240 300
+preplace netloc axi_interconnect_0_M01_AXI 1 1 1 350 260n
+preplace netloc axi_gpio_0_GPIO2 1 2 1 N 140
+preplace netloc axi_gpio_1_GPIO 1 2 1 N 270
+preplace netloc axi_gpio_1_GPIO2 1 2 1 N 290
+levelinfo -pg 1 -140 100 610 750
+pagesize -pg 1 -db -bbox -sgen -140 -350 900 1520
 "
 }
 {
-   "da_axi4_cnt":"1",
-   "da_board_cnt":"2",
+   "da_axi4_cnt":"2",
+   "da_board_cnt":"6",
    "da_clkrst_cnt":"7",
    "da_ps7_cnt":"1"
 }

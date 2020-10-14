@@ -6,7 +6,7 @@ reg     [`inputPortCount*`bitLength-1:0]    flatInputPort;
 wire    [`outputPortCount*`bitLength-1:0]   flatOutputPort;
 reg     [`addressLength-1:0]                AddressSelect;
 
-XBar uut (  
+XBar2 uut (  
             Clk,
             Rst,
             flatInputPort,

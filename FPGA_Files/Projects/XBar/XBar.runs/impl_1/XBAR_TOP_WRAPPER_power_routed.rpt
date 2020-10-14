@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date             : Wed Sep 30 23:36:19 2020
+| Date             : Sun Oct 11 12:51:21 2020
 | Host             : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 | Command          : report_power -file XBAR_TOP_WRAPPER_power_routed.rpt -pb XBAR_TOP_WRAPPER_power_summary_routed.pb -rpx XBAR_TOP_WRAPPER_power_routed.rpx
 | Design           : XBAR_TOP_WRAPPER
@@ -33,7 +33,7 @@ Table of Contents
 | Total On-Chip Power (W)  | 1.404        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.267        |
+| Dynamic (W)              | 1.266        |
 | Device Static (W)        | 0.138        |
 | Effective TJA (C/W)      | 11.5         |
 | Max Ambient (C)          | 68.8         |
@@ -53,15 +53,14 @@ Table of Contents
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
 | Clocks                  |     0.004 |        3 |       --- |             --- |
-| Slice Logic             |     0.001 |     2000 |       --- |             --- |
-|   LUT as Logic          |     0.001 |      611 |     53200 |            1.15 |
-|   Register              |    <0.001 |      882 |    106400 |            0.83 |
+| Slice Logic             |     0.001 |     1754 |       --- |             --- |
+|   LUT as Logic          |    <0.001 |      515 |     53200 |            0.97 |
+|   Register              |    <0.001 |      767 |    106400 |            0.72 |
 |   CARRY4                |    <0.001 |       18 |     13300 |            0.14 |
 |   LUT as Shift Register |    <0.001 |       62 |     17400 |            0.36 |
-|   F7/F8 Muxes           |    <0.001 |        1 |     53200 |           <0.01 |
-|   Others                |     0.000 |      216 |       --- |             --- |
-| Signals                 |     0.002 |     1454 |       --- |             --- |
-| I/O                     |     0.004 |       12 |       125 |            9.60 |
+|   Others                |     0.000 |      209 |       --- |             --- |
+| Signals                 |     0.002 |     1269 |       --- |             --- |
+| I/O                     |     0.003 |        8 |       125 |            6.40 |
 | PS7                     |     1.256 |        1 |       --- |             --- |
 | Static Power            |     0.138 |          |           |                 |
 | Total                   |     1.404 |          |           |                 |
@@ -150,10 +149,10 @@ Table of Contents
 +----------------------------+-----------+
 | Name                       | Power (W) |
 +----------------------------+-----------+
-| XBAR_TOP_WRAPPER           |     1.267 |
+| XBAR_TOP_WRAPPER           |     1.266 |
 |   BD                       |     1.263 |
 |     design_1_i             |     1.263 |
-|       axi_interconnect_0   |     0.005 |
+|       axi_interconnect_0   |     0.006 |
 |       processing_system7_0 |     1.256 |
 +----------------------------+-----------+
 

@@ -11,5 +11,7 @@ targets -set -nocase -filter {name =~"APU*"}
 source C:/GitHub/ReconHardware/FPGA_Files/Software/XBar_APP/_ide/psinit/ps7_init.tcl
 ps7_init
 ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/GitHub/ReconHardware/FPGA_Files/Software/XBar_APP/Debug/XBar_APP.elf
 configparams force-mem-access 0
 bpadd -addr &main

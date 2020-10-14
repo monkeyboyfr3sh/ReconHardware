@@ -1,5 +1,5 @@
 /*
-*   "definitions.h",
+*   definitions.h:
 *   Created by David Cain for
 *   https://github.com/monkeyboyfr3sh/ReconHardware
 *
@@ -17,33 +17,29 @@
 */
 
 //`define inputWidth          1
-//`define inputPortCount      4
-//`define outputPortCount     4
+//`define inputPortCount      2
+//`define outputPortCount     2
 
 //START_User_Set
 /*#####################################################################################################################################################*/
 //Data/Device Definition
-`define inputWidth          16
 `define myTimeScale         1ns / 1ps
 `define clkPeriod           2
+
+`define inputWidth          16
+`define KERNELSIZE          3
 
 //If reset signal is active high, define as 1
 //If reset signal is active low, define as 0
 `define RSTACTIVEHIGH 1
 
-//Xbar Definitions
-`define inputPortCount      3                                   //N
-`define outputPortCount     3                                   //M
-`define KERNELSIZE          3
-`define addressLength       4                                   //Eventually want to come up with a way to generate this on N and M
-
 //Float Multiply
-`define mantissaIndex       9                                   //Float Multiply definitions = mantissa length-1
-`define expBias             01111                               //Bias for floating point representation
-`define expWide             5
+`define mantissaIndex       2           //Float Multiply definitions = mantissa length-1
+`define expBias             0111        //Bias for floating point representation
+`define expWide             4
 
 //Fixed Multiply Definition
-`define fracBitCount        8                                   //Fixed Multiply definitions = number of bits dedicated to fraction
+`define fracBitCount        4           //Fixed Multiply definitions = number of bits dedicated to fraction
 
 //Testbench Definitions, data will be truncated to lowest order bits of size `inputWidth
 `define dataIn1             9
@@ -69,8 +65,11 @@
 `define width               (`exponentIndex-`mantissaIndex)-1
 
 //Xbar
+`define inputPortCount      `KERNELSIZE                       //N
+`define outputPortCount     `KERNELSIZE                       //M
 `define bitLength           `inputWidth                         //Size of each data input/outputport for Xbar
 `define restAddress         `inputPortCount*`outputPortCount
+`define addressLength        $clog2(`restAddress)
 
 //aFIFO
 `define bufferSize          8                                   //buffer count = 2**buffersize

@@ -18,58 +18,49 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 24548 
+INFO: Helper process launched with PID 17876 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1017.434 ; gain = 234.414
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1014.934 ; gain = 232.660
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'XBAR_TOP_WRAPPER' [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/new/XBAR_TOP_WRAPPER.v:4]
 INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'design_1' [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/synth/design_1.v:13]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_0_2' [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.runs/synth_1/.Xil/Vivado-16736-DESKTOP-D9F9TPQ/realtime/design_1_axi_gpio_0_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_0_2' (1#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.runs/synth_1/.Xil/Vivado-16736-DESKTOP-D9F9TPQ/realtime/design_1_axi_gpio_0_2_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_1_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.runs/synth_1/.Xil/Vivado-16736-DESKTOP-D9F9TPQ/realtime/design_1_axi_gpio_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_1_0' (2#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.runs/synth_1/.Xil/Vivado-16736-DESKTOP-D9F9TPQ/realtime/design_1_axi_gpio_1_0_stub.v:6]
-WARNING: [Synth 8-7023] instance 'axi_gpio_1' of module 'design_1_axi_gpio_1_0' has 20 connections declared, but only 19 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/synth/design_1.v:206]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_0_1' [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.runs/synth_1/.Xil/Vivado-16736-DESKTOP-D9F9TPQ/realtime/design_1_axi_gpio_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_0_1' (3#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.runs/synth_1/.Xil/Vivado-16736-DESKTOP-D9F9TPQ/realtime/design_1_axi_gpio_0_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_interconnect_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/synth/design_1.v:421]
-INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_1CA5Z32' [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/synth/design_1.v:1094]
-INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_1CA5Z32' (4#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/synth/design_1.v:1094]
-INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_I4GRPB' [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/synth/design_1.v:1226]
-INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_I4GRPB' (5#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/synth/design_1.v:1226]
-INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_1BOGR4T' [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/synth/design_1.v:1358]
-INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_1BOGR4T' (6#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/synth/design_1.v:1358]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_O7FAN0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/synth/design_1.v:1490]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.runs/synth_1/.Xil/Vivado-16736-DESKTOP-D9F9TPQ/realtime/design_1_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_0' (7#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.runs/synth_1/.Xil/Vivado-16736-DESKTOP-D9F9TPQ/realtime/design_1_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_O7FAN0' (8#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/synth/design_1.v:1490]
-INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.runs/synth_1/.Xil/Vivado-16736-DESKTOP-D9F9TPQ/realtime/design_1_xbar_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_0' (9#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.runs/synth_1/.Xil/Vivado-16736-DESKTOP-D9F9TPQ/realtime/design_1_xbar_0_stub.v:6]
-WARNING: [Synth 8-7023] instance 'xbar' of module 'design_1_xbar_0' has 40 connections declared, but only 38 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/synth/design_1.v:1053]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_interconnect_0_0' (10#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/synth/design_1.v:421]
-INFO: [Synth 8-6157] synthesizing module 'design_1_proc_sys_reset_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.runs/synth_1/.Xil/Vivado-16736-DESKTOP-D9F9TPQ/realtime/design_1_proc_sys_reset_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_proc_sys_reset_0_0' (11#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.runs/synth_1/.Xil/Vivado-16736-DESKTOP-D9F9TPQ/realtime/design_1_proc_sys_reset_0_0_stub.v:6]
-WARNING: [Synth 8-7023] instance 'proc_sys_reset_0' of module 'design_1_proc_sys_reset_0_0' has 10 connections declared, but only 6 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/synth/design_1.v:348]
-INFO: [Synth 8-6157] synthesizing module 'design_1_processing_system7_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.runs/synth_1/.Xil/Vivado-16736-DESKTOP-D9F9TPQ/realtime/design_1_processing_system7_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_processing_system7_0_0' (12#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.runs/synth_1/.Xil/Vivado-16736-DESKTOP-D9F9TPQ/realtime/design_1_processing_system7_0_0_stub.v:6]
-WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'design_1_processing_system7_0_0' has 65 connections declared, but only 63 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/synth/design_1.v:355]
-INFO: [Synth 8-6155] done synthesizing module 'design_1' (13#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/synth/design_1.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (14#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_0_5' [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.runs/synth_1/.Xil/Vivado-1412-DESKTOP-D9F9TPQ/realtime/design_1_axi_gpio_0_5_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_0_5' (1#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.runs/synth_1/.Xil/Vivado-1412-DESKTOP-D9F9TPQ/realtime/design_1_axi_gpio_0_5_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_0_6' [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.runs/synth_1/.Xil/Vivado-1412-DESKTOP-D9F9TPQ/realtime/design_1_axi_gpio_0_6_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_0_6' (2#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.runs/synth_1/.Xil/Vivado-1412-DESKTOP-D9F9TPQ/realtime/design_1_axi_gpio_0_6_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_interconnect_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/synth/design_1.v:368]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_1CA5Z32' [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/synth/design_1.v:913]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_1CA5Z32' (3#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/synth/design_1.v:913]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_I4GRPB' [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/synth/design_1.v:1045]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_I4GRPB' (4#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/synth/design_1.v:1045]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_O7FAN0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/synth/design_1.v:1177]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.runs/synth_1/.Xil/Vivado-1412-DESKTOP-D9F9TPQ/realtime/design_1_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_0' (5#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.runs/synth_1/.Xil/Vivado-1412-DESKTOP-D9F9TPQ/realtime/design_1_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_O7FAN0' (6#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/synth/design_1.v:1177]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.runs/synth_1/.Xil/Vivado-1412-DESKTOP-D9F9TPQ/realtime/design_1_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_0' (7#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.runs/synth_1/.Xil/Vivado-1412-DESKTOP-D9F9TPQ/realtime/design_1_xbar_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'xbar' of module 'design_1_xbar_0' has 40 connections declared, but only 38 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/synth/design_1.v:872]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_interconnect_0_0' (8#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/synth/design_1.v:368]
+INFO: [Synth 8-6157] synthesizing module 'design_1_proc_sys_reset_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.runs/synth_1/.Xil/Vivado-1412-DESKTOP-D9F9TPQ/realtime/design_1_proc_sys_reset_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_proc_sys_reset_0_0' (9#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.runs/synth_1/.Xil/Vivado-1412-DESKTOP-D9F9TPQ/realtime/design_1_proc_sys_reset_0_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'proc_sys_reset_0' of module 'design_1_proc_sys_reset_0_0' has 10 connections declared, but only 6 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/synth/design_1.v:295]
+INFO: [Synth 8-6157] synthesizing module 'design_1_processing_system7_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.runs/synth_1/.Xil/Vivado-1412-DESKTOP-D9F9TPQ/realtime/design_1_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_processing_system7_0_0' (10#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.runs/synth_1/.Xil/Vivado-1412-DESKTOP-D9F9TPQ/realtime/design_1_processing_system7_0_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'design_1_processing_system7_0_0' has 65 connections declared, but only 63 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/synth/design_1.v:302]
+INFO: [Synth 8-6155] done synthesizing module 'design_1' (11#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (12#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
 WARNING: [Synth 8-7023] instance 'BD' of module 'design_1_wrapper' has 25 connections declared, but only 4 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/new/XBAR_TOP_WRAPPER.v:14]
 INFO: [Synth 8-6157] synthesizing module 'XBar2' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/XBar2.v:19]
-WARNING: [Synth 8-567] referenced signal 'AddressSave' should be on the sensitivity list [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/XBar2.v:53]
-WARNING: [Synth 8-6014] Unused sequential element rowCheck_reg was removed.  [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/XBar2.v:86]
-WARNING: [Synth 8-6014] Unused sequential element rowSet_reg was removed.  [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/XBar2.v:87]
-WARNING: [Synth 8-6014] Unused sequential element selectRow_reg was removed.  [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/XBar2.v:89]
-WARNING: [Synth 8-6014] Unused sequential element selectColomn_reg was removed.  [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/XBar2.v:91]
-INFO: [Synth 8-6155] done synthesizing module 'XBar2' (15#1) [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/XBar2.v:19]
-INFO: [Synth 8-6155] done synthesizing module 'XBAR_TOP_WRAPPER' (16#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/new/XBAR_TOP_WRAPPER.v:4]
+WARNING: [Synth 8-567] referenced signal 'AddressSave' should be on the sensitivity list [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/XBar2.v:52]
+WARNING: [Synth 8-6014] Unused sequential element rowCheck_reg was removed.  [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/XBar2.v:85]
+WARNING: [Synth 8-6014] Unused sequential element rowSet_reg was removed.  [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/XBar2.v:86]
+WARNING: [Synth 8-6014] Unused sequential element selectRow_reg was removed.  [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/XBar2.v:88]
+WARNING: [Synth 8-6014] Unused sequential element selectColomn_reg was removed.  [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/XBar2.v:90]
+INFO: [Synth 8-6155] done synthesizing module 'XBar2' (13#1) [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/XBar2.v:19]
+INFO: [Synth 8-6155] done synthesizing module 'XBAR_TOP_WRAPPER' (14#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/new/XBAR_TOP_WRAPPER.v:4]
 WARNING: [Synth 8-3331] design s00_couplers_imp_O7FAN0 has unconnected port M_ACLK
 WARNING: [Synth 8-3331] design s00_couplers_imp_O7FAN0 has unconnected port M_ARESETN
-WARNING: [Synth 8-3331] design m02_couplers_imp_1BOGR4T has unconnected port M_ACLK
-WARNING: [Synth 8-3331] design m02_couplers_imp_1BOGR4T has unconnected port M_ARESETN
-WARNING: [Synth 8-3331] design m02_couplers_imp_1BOGR4T has unconnected port S_ACLK
-WARNING: [Synth 8-3331] design m02_couplers_imp_1BOGR4T has unconnected port S_ARESETN
 WARNING: [Synth 8-3331] design m01_couplers_imp_I4GRPB has unconnected port M_ACLK
 WARNING: [Synth 8-3331] design m01_couplers_imp_I4GRPB has unconnected port M_ARESETN
 WARNING: [Synth 8-3331] design m01_couplers_imp_I4GRPB has unconnected port S_ACLK
@@ -82,12 +73,10 @@ WARNING: [Synth 8-3331] design design_1_axi_interconnect_0_0 has unconnected por
 WARNING: [Synth 8-3331] design design_1_axi_interconnect_0_0 has unconnected port M00_ARESETN
 WARNING: [Synth 8-3331] design design_1_axi_interconnect_0_0 has unconnected port M01_ACLK
 WARNING: [Synth 8-3331] design design_1_axi_interconnect_0_0 has unconnected port M01_ARESETN
-WARNING: [Synth 8-3331] design design_1_axi_interconnect_0_0 has unconnected port M02_ACLK
-WARNING: [Synth 8-3331] design design_1_axi_interconnect_0_0 has unconnected port M02_ARESETN
 WARNING: [Synth 8-3331] design design_1_axi_interconnect_0_0 has unconnected port S00_ACLK
 WARNING: [Synth 8-3331] design design_1_axi_interconnect_0_0 has unconnected port S00_ARESETN
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1094.773 ; gain = 311.754
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1091.816 ; gain = 309.543
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -100,12 +89,12 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1094.773 ; gain = 311.754
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1091.816 ; gain = 309.543
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1094.773 ; gain = 311.754
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1091.816 ; gain = 309.543
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 1094.773 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 1091.816 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -116,36 +105,71 @@ Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sou
 Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0/design_1_xbar_0_in_context.xdc] for cell 'BD/design_1_i/axi_interconnect_0/xbar'
 Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0_in_context.xdc] for cell 'BD/design_1_i/proc_sys_reset_0'
 Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0_in_context.xdc] for cell 'BD/design_1_i/proc_sys_reset_0'
-Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_1/design_1_axi_gpio_0_1/design_1_axi_gpio_0_1_in_context.xdc] for cell 'BD/design_1_i/axi_gpio_2'
-Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_1/design_1_axi_gpio_0_1/design_1_axi_gpio_0_1_in_context.xdc] for cell 'BD/design_1_i/axi_gpio_2'
-Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_1_0/design_1_axi_gpio_1_0/design_1_axi_gpio_1_0_in_context.xdc] for cell 'BD/design_1_i/axi_gpio_1'
-Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_1_0/design_1_axi_gpio_1_0/design_1_axi_gpio_1_0_in_context.xdc] for cell 'BD/design_1_i/axi_gpio_1'
-Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_2/design_1_axi_gpio_0_2/design_1_axi_gpio_0_2_in_context.xdc] for cell 'BD/design_1_i/axi_gpio_0'
-Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_2/design_1_axi_gpio_0_2/design_1_axi_gpio_0_2_in_context.xdc] for cell 'BD/design_1_i/axi_gpio_0'
+Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_5/design_1_axi_gpio_0_5/design_1_axi_gpio_0_0_in_context.xdc] for cell 'BD/design_1_i/axi_gpio_0'
+Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_5/design_1_axi_gpio_0_5/design_1_axi_gpio_0_0_in_context.xdc] for cell 'BD/design_1_i/axi_gpio_0'
+Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_6/design_1_axi_gpio_0_6/design_1_axi_gpio_1_0_in_context.xdc] for cell 'BD/design_1_i/axi_gpio_1'
+Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_6/design_1_axi_gpio_0_6/design_1_axi_gpio_1_0_in_context.xdc] for cell 'BD/design_1_i/axi_gpio_1'
 Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0/design_1_auto_pc_0_in_context.xdc] for cell 'BD/design_1_i/axi_interconnect_0/s00_couplers/auto_pc'
 Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0/design_1_auto_pc_0_in_context.xdc] for cell 'BD/design_1_i/axi_interconnect_0/s00_couplers/auto_pc'
 Parsing XDC File [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/constrs_1/new/plezwork.xdc]
+WARNING: [Vivado 12-584] No ports matched 'flatOutput[7]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/constrs_1/new/plezwork.xdc:2]
+WARNING: [Vivado 12-584] No ports matched 'flatOutput[6]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/constrs_1/new/plezwork.xdc:3]
+WARNING: [Vivado 12-584] No ports matched 'flatOutput[5]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/constrs_1/new/plezwork.xdc:4]
+WARNING: [Vivado 12-584] No ports matched 'flatOutput[4]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/constrs_1/new/plezwork.xdc:5]
+WARNING: [Vivado 12-584] No ports matched 'flatOutput[4]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/constrs_1/new/plezwork.xdc:14]
+WARNING: [Vivado 12-584] No ports matched 'flatOutput[5]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/constrs_1/new/plezwork.xdc:15]
+WARNING: [Vivado 12-584] No ports matched 'flatOutput[6]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/constrs_1/new/plezwork.xdc:16]
+WARNING: [Vivado 12-584] No ports matched 'flatOutput[7]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/constrs_1/new/plezwork.xdc:17]
+WARNING: [Vivado 12-584] No ports matched 'AddressSelect[1]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/constrs_1/new/plezwork.xdc:28]
+WARNING: [Vivado 12-584] No ports matched 'AddressSelect[0]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/constrs_1/new/plezwork.xdc:29]
+WARNING: [Vivado 12-584] No ports matched 'flatInputPort[3]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/constrs_1/new/plezwork.xdc:30]
+WARNING: [Vivado 12-584] No ports matched 'flatInputPort[2]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/constrs_1/new/plezwork.xdc:31]
+WARNING: [Vivado 12-584] No ports matched 'flatInputPort[1]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/constrs_1/new/plezwork.xdc:32]
+WARNING: [Vivado 12-584] No ports matched 'flatInputPort[0]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/constrs_1/new/plezwork.xdc:33]
+WARNING: [Vivado 12-584] No ports matched 'flatOutputPort[3]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/constrs_1/new/plezwork.xdc:34]
+WARNING: [Vivado 12-584] No ports matched 'flatOutputPort[2]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/constrs_1/new/plezwork.xdc:35]
+WARNING: [Vivado 12-584] No ports matched 'flatOutputPort[1]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/constrs_1/new/plezwork.xdc:36]
+WARNING: [Vivado 12-584] No ports matched 'flatOutputPort[0]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/constrs_1/new/plezwork.xdc:37]
+WARNING: [Vivado 12-584] No ports matched 'Rst'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/constrs_1/new/plezwork.xdc:38]
+WARNING: [Vivado 12-584] No ports matched 'Rst'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/constrs_1/new/plezwork.xdc:39]
+WARNING: [Vivado 12-584] No ports matched 'direct'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/constrs_1/new/plezwork.xdc:40]
+WARNING: [Vivado 12-584] No ports matched 'flatOutputPort[0]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/constrs_1/new/plezwork.xdc:42]
+WARNING: [Vivado 12-584] No ports matched 'flatOutputPort[1]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/constrs_1/new/plezwork.xdc:43]
+WARNING: [Vivado 12-584] No ports matched 'flatOutputPort[3]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/constrs_1/new/plezwork.xdc:44]
+WARNING: [Vivado 12-584] No ports matched 'flatOutputPort[2]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/constrs_1/new/plezwork.xdc:45]
+WARNING: [Vivado 12-584] No ports matched 'flatInputPort[3]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/constrs_1/new/plezwork.xdc:46]
+WARNING: [Vivado 12-584] No ports matched 'flatInputPort[2]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/constrs_1/new/plezwork.xdc:47]
+WARNING: [Vivado 12-584] No ports matched 'flatInputPort[1]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/constrs_1/new/plezwork.xdc:48]
+WARNING: [Vivado 12-584] No ports matched 'flatInputPort[0]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/constrs_1/new/plezwork.xdc:49]
+WARNING: [Vivado 12-584] No ports matched 'AddressSelect[1]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/constrs_1/new/plezwork.xdc:50]
+WARNING: [Vivado 12-584] No ports matched 'AddressSelect[0]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/constrs_1/new/plezwork.xdc:51]
+WARNING: [Vivado 12-584] No ports matched 'direct'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/constrs_1/new/plezwork.xdc:52]
+WARNING: [Vivado 12-584] No ports matched 'Rst'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/constrs_1/new/plezwork.xdc:53]
+WARNING: [Vivado 12-507] No nets matched 'MyInput_IBUF'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/constrs_1/new/plezwork.xdc:55]
+WARNING: [Vivado 12-584] No ports matched 'MyInput'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/constrs_1/new/plezwork.xdc:57]
+WARNING: [Vivado 12-584] No ports matched 'MyInput'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/constrs_1/new/plezwork.xdc:58]
 Finished Parsing XDC File [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/constrs_1/new/plezwork.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/constrs_1/new/plezwork.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/XBAR_TOP_WRAPPER_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.srcs/constrs_1/new/plezwork.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/XBAR_TOP_WRAPPER_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/XBAR_TOP_WRAPPER_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Parsing XDC File [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1186.508 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1162.125 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1186.508 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1162.125 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1186.508 ; gain = 403.488
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1162.125 ; gain = 379.852
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1186.508 ; gain = 403.488
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1162.125 ; gain = 379.852
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -155,19 +179,16 @@ Applied set_property DONT_TOUCH = true for BD/design_1_i/processing_system7_0. (
 Applied set_property DONT_TOUCH = true for BD/design_1_i/axi_interconnect_0/xbar. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for BD/design_1_i/axi_interconnect_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for BD/design_1_i/proc_sys_reset_0. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for BD/design_1_i/axi_gpio_2. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for BD/design_1_i/axi_gpio_1. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for BD/design_1_i/axi_gpio_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for BD/design_1_i/axi_gpio_1. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for BD/design_1_i/axi_interconnect_0/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1186.508 ; gain = 403.488
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1162.125 ; gain = 379.852
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-327] inferring latch for variable 'OutputSave_reg[0]' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/XBar2.v:49]
-WARNING: [Synth 8-327] inferring latch for variable 'OutputSave_reg[1]' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/XBar2.v:49]
-WARNING: [Synth 8-327] inferring latch for variable 'OutputSave_reg[2]' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/XBar2.v:49]
-WARNING: [Synth 8-327] inferring latch for variable 'OutputSave_reg[3]' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/XBar2.v:49]
+WARNING: [Synth 8-327] inferring latch for variable 'OutputSave_reg[0]' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/XBar2.v:48]
+WARNING: [Synth 8-327] inferring latch for variable 'OutputSave_reg[1]' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/XBar2.v:48]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1186.508 ; gain = 403.488
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1162.125 ; gain = 379.852
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -180,12 +201,10 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Registers : 
-	                4 Bit    Registers := 4     
+	                2 Bit    Registers := 2     
 +---Muxes : 
-	   2 Input      4 Bit        Muxes := 9     
-	   4 Input      4 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 32    
-	   2 Input      1 Bit        Muxes := 47    
+	   2 Input      2 Bit        Muxes := 14    
+	   2 Input      1 Bit        Muxes := 11    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -196,12 +215,10 @@ Hierarchical RTL Component report
 Module XBar2 
 Detailed RTL Component Info : 
 +---Registers : 
-	                4 Bit    Registers := 4     
+	                2 Bit    Registers := 2     
 +---Muxes : 
-	   2 Input      4 Bit        Muxes := 9     
-	   4 Input      4 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 32    
-	   2 Input      1 Bit        Muxes := 47    
+	   2 Input      2 Bit        Muxes := 14    
+	   2 Input      1 Bit        Muxes := 11    
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -222,20 +239,14 @@ WARNING: [Synth 8-3331] design design_1_axi_interconnect_0_0 has unconnected por
 WARNING: [Synth 8-3331] design design_1_axi_interconnect_0_0 has unconnected port M00_ARESETN
 WARNING: [Synth 8-3331] design design_1_axi_interconnect_0_0 has unconnected port M01_ACLK
 WARNING: [Synth 8-3331] design design_1_axi_interconnect_0_0 has unconnected port M01_ARESETN
-WARNING: [Synth 8-3331] design design_1_axi_interconnect_0_0 has unconnected port M02_ACLK
-WARNING: [Synth 8-3331] design design_1_axi_interconnect_0_0 has unconnected port M02_ARESETN
 WARNING: [Synth 8-3331] design design_1_axi_interconnect_0_0 has unconnected port S00_ACLK
 WARNING: [Synth 8-3331] design design_1_axi_interconnect_0_0 has unconnected port S00_ARESETN
 WARNING: [Synth 8-3332] Sequential element (xbar/OutputSave_reg[0][1]) is unused and will be removed from module XBAR_TOP_WRAPPER.
 WARNING: [Synth 8-3332] Sequential element (xbar/OutputSave_reg[0][0]) is unused and will be removed from module XBAR_TOP_WRAPPER.
 WARNING: [Synth 8-3332] Sequential element (xbar/OutputSave_reg[1][1]) is unused and will be removed from module XBAR_TOP_WRAPPER.
 WARNING: [Synth 8-3332] Sequential element (xbar/OutputSave_reg[1][0]) is unused and will be removed from module XBAR_TOP_WRAPPER.
-WARNING: [Synth 8-3332] Sequential element (xbar/OutputSave_reg[2][1]) is unused and will be removed from module XBAR_TOP_WRAPPER.
-WARNING: [Synth 8-3332] Sequential element (xbar/OutputSave_reg[2][0]) is unused and will be removed from module XBAR_TOP_WRAPPER.
-WARNING: [Synth 8-3332] Sequential element (xbar/OutputSave_reg[3][1]) is unused and will be removed from module XBAR_TOP_WRAPPER.
-WARNING: [Synth 8-3332] Sequential element (xbar/OutputSave_reg[3][0]) is unused and will be removed from module XBAR_TOP_WRAPPER.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1186.508 ; gain = 403.488
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1162.125 ; gain = 379.852
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -247,13 +258,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1186.508 ; gain = 403.488
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1173.609 ; gain = 391.336
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1194.691 ; gain = 411.672
+Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1173.758 ; gain = 391.484
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -265,7 +276,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1194.691 ; gain = 411.672
+Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1183.844 ; gain = 401.570
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -289,13 +300,13 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1200.629 ; gain = 417.609
+Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1198.613 ; gain = 416.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1200.629 ; gain = 417.609
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1198.613 ; gain = 416.340
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -314,25 +325,25 @@ Report Check Netlist:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1200.629 ; gain = 417.609
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1198.613 ; gain = 416.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1200.629 ; gain = 417.609
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1198.613 ; gain = 416.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1200.629 ; gain = 417.609
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1198.613 ; gain = 416.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1200.629 ; gain = 417.609
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1198.613 ; gain = 416.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -344,11 +355,10 @@ Report BlackBoxes:
 +------+--------------------------------+----------+
 |1     |design_1_xbar_0                 |         1|
 |2     |design_1_auto_pc_0              |         1|
-|3     |design_1_axi_gpio_0_2           |         1|
-|4     |design_1_axi_gpio_1_0           |         1|
-|5     |design_1_axi_gpio_0_1           |         1|
-|6     |design_1_proc_sys_reset_0_0     |         1|
-|7     |design_1_processing_system7_0_0 |         1|
+|3     |design_1_axi_gpio_0_5           |         1|
+|4     |design_1_axi_gpio_0_6           |         1|
+|5     |design_1_proc_sys_reset_0_0     |         1|
+|6     |design_1_processing_system7_0_0 |         1|
 +------+--------------------------------+----------+
 
 Report Cell Usage: 
@@ -356,54 +366,50 @@ Report Cell Usage:
 |      |Cell                            |Count |
 +------+--------------------------------+------+
 |1     |design_1_auto_pc_0              |     1|
-|2     |design_1_axi_gpio_0_1           |     1|
-|3     |design_1_axi_gpio_0_2           |     1|
-|4     |design_1_axi_gpio_1_0           |     1|
-|5     |design_1_proc_sys_reset_0_0     |     1|
-|6     |design_1_processing_system7_0_0 |     1|
-|7     |design_1_xbar_0                 |     1|
-|8     |LUT1                            |     1|
-|9     |LUT2                            |     6|
-|10    |LUT4                            |     4|
-|11    |LUT5                            |     8|
-|12    |LUT6                            |    22|
-|13    |FDCE                            |    16|
-|14    |IBUF                            |     4|
-|15    |OBUF                            |     8|
+|2     |design_1_axi_gpio_0_5           |     1|
+|3     |design_1_axi_gpio_0_6           |     1|
+|4     |design_1_proc_sys_reset_0_0     |     1|
+|5     |design_1_processing_system7_0_0 |     1|
+|6     |design_1_xbar_0                 |     1|
+|7     |LUT4                            |     4|
+|8     |LUT5                            |     4|
+|9     |FDCE                            |     4|
+|10    |IBUF                            |     4|
+|11    |OBUF                            |     4|
 +------+--------------------------------+------+
 
 Report Instance Areas: 
 +------+-------------------------+------------------------------+------+
 |      |Instance                 |Module                        |Cells |
 +------+-------------------------+------------------------------+------+
-|1     |top                      |                              |   952|
-|2     |  BD                     |design_1_wrapper              |   890|
-|3     |    design_1_i           |design_1                      |   883|
-|4     |      axi_interconnect_0 |design_1_axi_interconnect_0_0 |   551|
+|1     |top                      |                              |   743|
+|2     |  BD                     |design_1_wrapper              |   723|
+|3     |    design_1_i           |design_1                      |   723|
+|4     |      axi_interconnect_0 |design_1_axi_interconnect_0_0 |   440|
 |5     |        s00_couplers     |s00_couplers_imp_O7FAN0       |   177|
-|6     |  xbar                   |XBar2                         |    50|
+|6     |  xbar                   |XBar2                         |    12|
 +------+-------------------------+------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1200.629 ; gain = 417.609
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1198.613 ; gain = 416.340
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 20 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 1200.629 ; gain = 325.875
-Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1200.629 ; gain = 417.609
+Synthesis finished with 0 errors, 0 critical warnings and 12 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 1198.613 ; gain = 346.031
+Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1198.613 ; gain = 416.340
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1213.742 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1210.641 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1219.012 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1220.211 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-45 Infos, 52 Warnings, 0 Critical Warnings and 0 Errors encountered.
+41 Infos, 74 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1219.012 ; gain = 743.281
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1219.012 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1220.211 ; gain = 745.766
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1220.211 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/GitHub/ReconHardware/FPGA_Files/Projects/XBar/XBar.runs/synth_1/XBAR_TOP_WRAPPER.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file XBAR_TOP_WRAPPER_utilization_synth.rpt -pb XBAR_TOP_WRAPPER_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Sep 30 23:34:18 2020...
+INFO: [Common 17-206] Exiting Vivado at Sun Oct 11 12:50:21 2020...

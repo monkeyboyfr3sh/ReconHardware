@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Tue Sep 15 12:30:02 2020
+| Date         : Sun Oct 11 13:44:04 2020
 | Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 | Command      : report_methodology -file Conv_Accel_Top_methodology_drc_routed.rpt -pb Conv_Accel_Top_methodology_drc_routed.pb -rpx Conv_Accel_Top_methodology_drc_routed.rpx
 | Design       : Conv_Accel_Top
@@ -23,33 +23,46 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 226
+             Violations found: 232
 +-----------+------------------+----------------------------------------------------+------------+
 | Rule      | Severity         | Description                                        | Violations |
 +-----------+------------------+----------------------------------------------------+------------+
 | TIMING-4  | Critical Warning | Invalid primary clock redefinition on a clock tree | 1          |
+| TIMING-6  | Critical Warning | No common primary clock between related clocks     | 1          |
+| TIMING-7  | Critical Warning | No common node between related clocks              | 1          |
 | TIMING-14 | Critical Warning | LUT on the clock tree                              | 2          |
-| TIMING-17 | Critical Warning | Non-clocked sequential cell                        | 125        |
+| TIMING-17 | Critical Warning | Non-clocked sequential cell                        | 124        |
 | TIMING-27 | Critical Warning | Invalid primary clock on hierarchical pin          | 1          |
 | DPIR-1    | Warning          | Asynchronous driver check                          | 96         |
 | LUTAR-1   | Warning          | LUT drives async reset alert                       | 1          |
+| TIMING-18 | Warning          | Missing input or output delay                      | 5          |
 +-----------+------------------+----------------------------------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
 TIMING-4#1 Critical Warning
 Invalid primary clock redefinition on a clock tree  
-Invalid clock redefinition on a clock tree. The primary clock processer/design_1_i/clk_wiz_0/inst/clk_in1 is defined downstream of clock clk_fpga_0 and overrides its insertion delay and/or waveform definition
+Invalid clock redefinition on a clock tree. The primary clock processer/processor_i/clk_wiz_0/inst/clk_in1 is defined downstream of clock clk_fpga_0 and overrides its insertion delay and/or waveform definition
+Related violations: <none>
+
+TIMING-6#1 Critical Warning
+No common primary clock between related clocks  
+The clocks clk_fpga_0 and clk_out1_processor_clk_wiz_0_0 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_fpga_0] -to [get_clocks clk_out1_processor_clk_wiz_0_0]
+Related violations: <none>
+
+TIMING-7#1 Critical Warning
+No common node between related clocks  
+The clocks clk_fpga_0 and clk_out1_processor_clk_wiz_0_0 are related (timed together) but they have no common node. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_fpga_0] -to [get_clocks clk_out1_processor_clk_wiz_0_0]
 Related violations: <none>
 
 TIMING-14#1 Critical Warning
 LUT on the clock tree  
-The LUT ConvAccel/controller/rbin_rep[7]_i_4 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+The LUT processer/rgray[7]_i_4 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
 Related violations: <none>
 
 TIMING-14#2 Critical Warning
 LUT on the clock tree  
-The LUT processer/rbin_rep[7]_i_4__0 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+The LUT processer/rgray[7]_i_4__0 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
 Related violations: <none>
 
 TIMING-17#1 Critical Warning
@@ -584,102 +597,97 @@ Related violations: <none>
 
 TIMING-17#107 Critical Warning
 Non-clocked sequential cell  
-The clock pin ConvAccel/inputBuffer/wgray_reg[8]/C is not reached by a timing clock
+The clock pin ConvAccel/inputBuffer/wq1_rgray_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#108 Critical Warning
 Non-clocked sequential cell  
-The clock pin ConvAccel/inputBuffer/wq1_rgray_reg[0]/C is not reached by a timing clock
+The clock pin ConvAccel/inputBuffer/wq1_rgray_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#109 Critical Warning
 Non-clocked sequential cell  
-The clock pin ConvAccel/inputBuffer/wq1_rgray_reg[1]/C is not reached by a timing clock
+The clock pin ConvAccel/inputBuffer/wq1_rgray_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#110 Critical Warning
 Non-clocked sequential cell  
-The clock pin ConvAccel/inputBuffer/wq1_rgray_reg[2]/C is not reached by a timing clock
+The clock pin ConvAccel/inputBuffer/wq1_rgray_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#111 Critical Warning
 Non-clocked sequential cell  
-The clock pin ConvAccel/inputBuffer/wq1_rgray_reg[3]/C is not reached by a timing clock
+The clock pin ConvAccel/inputBuffer/wq1_rgray_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#112 Critical Warning
 Non-clocked sequential cell  
-The clock pin ConvAccel/inputBuffer/wq1_rgray_reg[4]/C is not reached by a timing clock
+The clock pin ConvAccel/inputBuffer/wq1_rgray_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#113 Critical Warning
 Non-clocked sequential cell  
-The clock pin ConvAccel/inputBuffer/wq1_rgray_reg[5]/C is not reached by a timing clock
+The clock pin ConvAccel/inputBuffer/wq1_rgray_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#114 Critical Warning
 Non-clocked sequential cell  
-The clock pin ConvAccel/inputBuffer/wq1_rgray_reg[6]/C is not reached by a timing clock
+The clock pin ConvAccel/inputBuffer/wq1_rgray_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#115 Critical Warning
 Non-clocked sequential cell  
-The clock pin ConvAccel/inputBuffer/wq1_rgray_reg[7]/C is not reached by a timing clock
+The clock pin ConvAccel/inputBuffer/wq1_rgray_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#116 Critical Warning
 Non-clocked sequential cell  
-The clock pin ConvAccel/inputBuffer/wq1_rgray_reg[8]/C is not reached by a timing clock
+The clock pin ConvAccel/inputBuffer/wq2_rgray_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#117 Critical Warning
 Non-clocked sequential cell  
-The clock pin ConvAccel/inputBuffer/wq2_rgray_reg[0]/C is not reached by a timing clock
+The clock pin ConvAccel/inputBuffer/wq2_rgray_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#118 Critical Warning
 Non-clocked sequential cell  
-The clock pin ConvAccel/inputBuffer/wq2_rgray_reg[1]/C is not reached by a timing clock
+The clock pin ConvAccel/inputBuffer/wq2_rgray_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#119 Critical Warning
 Non-clocked sequential cell  
-The clock pin ConvAccel/inputBuffer/wq2_rgray_reg[2]/C is not reached by a timing clock
+The clock pin ConvAccel/inputBuffer/wq2_rgray_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#120 Critical Warning
 Non-clocked sequential cell  
-The clock pin ConvAccel/inputBuffer/wq2_rgray_reg[3]/C is not reached by a timing clock
+The clock pin ConvAccel/inputBuffer/wq2_rgray_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#121 Critical Warning
 Non-clocked sequential cell  
-The clock pin ConvAccel/inputBuffer/wq2_rgray_reg[4]/C is not reached by a timing clock
+The clock pin ConvAccel/inputBuffer/wq2_rgray_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#122 Critical Warning
 Non-clocked sequential cell  
-The clock pin ConvAccel/inputBuffer/wq2_rgray_reg[5]/C is not reached by a timing clock
+The clock pin ConvAccel/inputBuffer/wq2_rgray_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#123 Critical Warning
 Non-clocked sequential cell  
-The clock pin ConvAccel/inputBuffer/wq2_rgray_reg[6]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#124 Critical Warning
-Non-clocked sequential cell  
 The clock pin ConvAccel/inputBuffer/wq2_rgray_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
-TIMING-17#125 Critical Warning
+TIMING-17#124 Critical Warning
 Non-clocked sequential cell  
 The clock pin ConvAccel/inputBuffer/wq2_rgray_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-27#1 Critical Warning
 Invalid primary clock on hierarchical pin  
-A primary clock processer/design_1_i/clk_wiz_0/inst/clk_in1 is created on an inappropriate internal pin processer/design_1_i/clk_wiz_0/inst/clk_in1. It is not recommended to create a primary clock on a hierarchical pin when its driver pin has a fanout connected to multiple clock pins
+A primary clock processer/processor_i/clk_wiz_0/inst/clk_in1 is created on an inappropriate internal pin processer/processor_i/clk_wiz_0/inst/clk_in1. It is not recommended to create a primary clock on a hierarchical pin when its driver pin has a fanout connected to multiple clock pins
 Related violations: <none>
 
 DPIR-1#1 Warning
@@ -1164,7 +1172,32 @@ Related violations: <none>
 
 LUTAR-1#1 Warning
 LUT drives async reset alert  
-LUT cell processer/addPointer[1]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) ConvAccel/matrixAccel/addPointer_reg[0]/CLR, ConvAccel/matrixAccel/addPointer_reg[1]/CLR, ConvAccel/matrixAccel/finalReady_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell ConvAccel/controller/addPointer[1]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) ConvAccel/matrixAccel/addPointer_reg[0]/CLR, ConvAccel/matrixAccel/addPointer_reg[1]/CLR, ConvAccel/matrixAccel/finalReady_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+TIMING-18#1 Warning
+Missing input or output delay  
+An output delay is missing on EMPTY_in relative to clock(s) processer/processor_i/clk_wiz_0/inst/clk_in1
+Related violations: <none>
+
+TIMING-18#2 Warning
+Missing input or output delay  
+An output delay is missing on EMPTY_out relative to clock(s) processer/processor_i/clk_wiz_0/inst/clk_in1
+Related violations: <none>
+
+TIMING-18#3 Warning
+Missing input or output delay  
+An output delay is missing on FULL_out relative to clock(s) processer/processor_i/clk_wiz_0/inst/clk_in1
+Related violations: <none>
+
+TIMING-18#4 Warning
+Missing input or output delay  
+An output delay is missing on rd relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#5 Warning
+Missing input or output delay  
+An output delay is missing on wr relative to clock(s) clk_fpga_0
 Related violations: <none>
 
 

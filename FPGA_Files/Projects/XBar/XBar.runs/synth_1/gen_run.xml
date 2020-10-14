@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1601526921">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1602438546">
   <File Type="PA-TCL" Name="XBAR_TOP_WRAPPER.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="XBAR_TOP_WRAPPER_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="XBAR_TOP_WRAPPER_reports.tcl"/>
@@ -25,14 +25,14 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../../Sources/General/XBar2.v">
+    <File Path="$PSRCDIR/sources_1/bd/design_1/hdl/design_1_wrapper.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/bd/design_1/hdl/design_1_wrapper.v">
+    <File Path="$PPRDIR/../../Sources/General/XBar2.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -76,7 +76,5 @@
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="design_1_processing_system7_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_proc_sys_reset_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_0_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_1_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_0_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_xbar_0"/>
 </GenRun>

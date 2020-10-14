@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<item value="C:\GitHub\ReconHardware\FPGA_Files\Projects\dynamicMulti" key="scw_hwspec_file_selection"/>
+	<item value="C:\GitHub\ReconHardware\FPGA_Files\Projects\Convolution_Accelerator" key="scw_hwspec_file_selection"/>
 	<item value="C:\GitHub\ReconHardware\FPGA_Files\Projects\Hello_World" key="debug_files_selection"/>
-	<item value="C:\GitHub\ReconHardware\FPGA_Files\Projects\dynamicMulti" key="scw_hwspec"/>
+	<item value="C:\GitHub\ReconHardware\FPGA_Files\Projects\matrixAccelerator" key="scw_hwspec"/>
 </section>
