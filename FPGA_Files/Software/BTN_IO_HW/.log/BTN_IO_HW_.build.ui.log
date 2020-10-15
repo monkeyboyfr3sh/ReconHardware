@@ -1,5 +1,5 @@
-2020-09-30T23:04:41.955183900255-23:04:41 **** Build of project BTN_IO_HW ****
-000-buildplatform.bat 54582 BTN_IO_HW  
+2020-10-15T10:43:12.285468300255-10:43:12 **** Build of project BTN_IO_HW ****
+000-buildplatform.bat 50337 BTN_IO_HW  
 000-XSDB Server Channel: tcfchan#5
 000-Reading the platform  : "BTN_IO_HW"
 000-Building the zynq_fsbl application.
@@ -263,5 +263,5 @@
 000-'Finished building libraries'
 000-
 00255-
-23:05:04 Build Finished (took 22s.482ms)
+10:43:34 Build Finished (took 22s.188ms)
 

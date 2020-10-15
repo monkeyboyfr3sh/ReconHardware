@@ -1,10 +1,10 @@
-23:05:08 **** Build of configuration Debug for project BTN_IO_APP_system ****
+10:43:37 **** Build of configuration Debug for project BTN_IO_APP_system ****
 make all 
 Generating bif file for the system project
-generate_system_bif.bat 54582 C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/export/BTN_IO_HW/BTN_IO_HW.xpfm standalone_domain C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_APP_system/Debug/system.bif
+generate_system_bif.bat 50337 C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/export/BTN_IO_HW/BTN_IO_HW.xpfm standalone_domain C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_APP_system/Debug/system.bif
 sdcard_gen --xpfm C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/export/BTN_IO_HW/BTN_IO_HW.xpfm --sys_config BTN_IO_HW --bif C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_APP_system/Debug/system.bif --bitstream C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_APP/_ide/bitstream/design_2_wrapper.bit --elf C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_APP/Debug/BTN_IO_APP.elf,ps7_cortexa9_0
 creating BOOT.BIN using C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_APP/_ide/bitstream/design_2_wrapper.bit
 Running C:/Xilinx/Vitis/2019.2/bin/bootgen  -image C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_APP_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
 
-23:05:12 Build Finished (took 4s.685ms)
+10:43:41 Build Finished (took 4s.456ms)
 

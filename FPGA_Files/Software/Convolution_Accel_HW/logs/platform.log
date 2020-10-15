@@ -3783,3 +3783,1550 @@ C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_
 
 TRACE::2020-10-14.08:56:02::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
 TRACE::2020-10-14.08:56:02::SCWMssOS::Removing the swdes entry for  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.12:10:38::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:38::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:38::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:38::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.12:10:38::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:38::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.12:10:38::SCWPlatform::Do not have an existing db opened. 
+TRACE::2020-10-15.12:10:40::SCWPlatform::Opened new HwDB with name Conv_Accel_Top_2
+TRACE::2020-10-15.12:10:40::SCWReader::Active system found as  Convolution_Accel_HW
+TRACE::2020-10-15.12:10:40::SCWReader::Handling sysconfig Convolution_Accel_HW
+TRACE::2020-10-15.12:10:40::SCWDomain::checking for install qemu data   : 
+TRACE::2020-10-15.12:10:40::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/
+TRACE::2020-10-15.12:10:40::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/qemu_args.txt
+TRACE::2020-10-15.12:10:40::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:40::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:40::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:40::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.12:10:40::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:40::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.12:10:40::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_2
+TRACE::2020-10-15.12:10:40::SCWPlatform::Opened existing hwdb Conv_Accel_Top_2
+TRACE::2020-10-15.12:10:40::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.12:10:40::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:40::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:40::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:40::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.12:10:40::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:40::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.12:10:40::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_2
+TRACE::2020-10-15.12:10:40::SCWPlatform::Opened existing hwdb Conv_Accel_Top_2
+TRACE::2020-10-15.12:10:40::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.12:10:40::SCWReader::Boot application domain added for zynq_fsbl
+TRACE::2020-10-15.12:10:40::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:40::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:40::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:40::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.12:10:40::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:40::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.12:10:40::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_2
+TRACE::2020-10-15.12:10:40::SCWPlatform::Opened existing hwdb Conv_Accel_Top_2
+TRACE::2020-10-15.12:10:40::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.12:10:40::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2020-10-15.12:10:40::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.12:10:40::SCWMssOS::No sw design opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2020-10-15.12:10:40::SCWMssOS::mss exists loading the mss file  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2020-10-15.12:10:40::SCWMssOS::Opened the sw design from mss  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2020-10-15.12:10:40::SCWMssOS::Adding the swdes entry C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss with des name system_3
+TRACE::2020-10-15.12:10:40::SCWMssOS::updating the scw layer about changes
+TRACE::2020-10-15.12:10:40::SCWMssOS::Opened the sw design.  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2020-10-15.12:10:40::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:40::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:40::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:40::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.12:10:40::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:40::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.12:10:40::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_2
+TRACE::2020-10-15.12:10:40::SCWPlatform::Opened existing hwdb Conv_Accel_Top_2
+TRACE::2020-10-15.12:10:40::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.12:10:40::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2020-10-15.12:10:40::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.12:10:40::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2020-10-15.12:10:40::SCWMssOS:: library already available in sw design:  xilffs:4.2
+TRACE::2020-10-15.12:10:40::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:40::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:40::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:40::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.12:10:40::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:40::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.12:10:40::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_2
+TRACE::2020-10-15.12:10:40::SCWPlatform::Opened existing hwdb Conv_Accel_Top_2
+TRACE::2020-10-15.12:10:40::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.12:10:40::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2020-10-15.12:10:40::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.12:10:40::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2020-10-15.12:10:40::SCWMssOS:: library already available in sw design:  xilrsa:1.5
+TRACE::2020-10-15.12:10:40::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2020-10-15.12:10:40::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2020-10-15.12:10:40::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:40::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:40::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:40::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.12:10:40::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:40::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.12:10:40::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_2
+TRACE::2020-10-15.12:10:40::SCWPlatform::Opened existing hwdb Conv_Accel_Top_2
+TRACE::2020-10-15.12:10:40::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.12:10:40::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2020-10-15.12:10:40::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.12:10:40::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2020-10-15.12:10:40::SCWReader::No isolation master present  
+TRACE::2020-10-15.12:10:40::SCWDomain::checking for install qemu data   : 
+TRACE::2020-10-15.12:10:40::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/
+TRACE::2020-10-15.12:10:40::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/qemu_args.txt
+TRACE::2020-10-15.12:10:40::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:40::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:40::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:40::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.12:10:40::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:40::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.12:10:40::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_2
+TRACE::2020-10-15.12:10:40::SCWPlatform::Opened existing hwdb Conv_Accel_Top_2
+TRACE::2020-10-15.12:10:40::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.12:10:40::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:40::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:40::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:40::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.12:10:40::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:40::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.12:10:40::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_2
+TRACE::2020-10-15.12:10:40::SCWPlatform::Opened existing hwdb Conv_Accel_Top_2
+TRACE::2020-10-15.12:10:40::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.12:10:40::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.12:10:40::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.12:10:40::SCWMssOS::No sw design opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.12:10:40::SCWMssOS::mss exists loading the mss file  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.12:10:40::SCWMssOS::Opened the sw design from mss  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.12:10:40::SCWMssOS::Adding the swdes entry C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss with des name system_4
+TRACE::2020-10-15.12:10:40::SCWMssOS::updating the scw layer about changes
+TRACE::2020-10-15.12:10:40::SCWMssOS::Opened the sw design.  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.12:10:40::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:40::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:40::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:40::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.12:10:40::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:40::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.12:10:40::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_2
+TRACE::2020-10-15.12:10:40::SCWPlatform::Opened existing hwdb Conv_Accel_Top_2
+TRACE::2020-10-15.12:10:40::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.12:10:40::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.12:10:40::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_4||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.12:10:40::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.12:10:40::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:40::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:40::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:40::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.12:10:40::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:40::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.12:10:40::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_2
+TRACE::2020-10-15.12:10:40::SCWPlatform::Opened existing hwdb Conv_Accel_Top_2
+TRACE::2020-10-15.12:10:40::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.12:10:40::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.12:10:40::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_4||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.12:10:40::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.12:10:40::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:40::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:40::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:40::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.12:10:40::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:40::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.12:10:40::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_2
+TRACE::2020-10-15.12:10:40::SCWPlatform::Opened existing hwdb Conv_Accel_Top_2
+TRACE::2020-10-15.12:10:40::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.12:10:40::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.12:10:40::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_4||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.12:10:40::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.12:10:40::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:40::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:40::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:40::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.12:10:40::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:40::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.12:10:40::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_2
+TRACE::2020-10-15.12:10:40::SCWPlatform::Opened existing hwdb Conv_Accel_Top_2
+TRACE::2020-10-15.12:10:40::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.12:10:40::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.12:10:41::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_4||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.12:10:41::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.12:10:41::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2020-10-15.12:10:41::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2020-10-15.12:10:41::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:41::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:41::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:41::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.12:10:41::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:41::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.12:10:41::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_2
+TRACE::2020-10-15.12:10:41::SCWPlatform::Opened existing hwdb Conv_Accel_Top_2
+TRACE::2020-10-15.12:10:41::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.12:10:41::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.12:10:41::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_4||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.12:10:41::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.12:10:41::SCWReader::No isolation master present  
+TRACE::2020-10-15.12:10:41::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:41::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:41::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:41::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.12:10:41::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:41::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.12:10:41::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_2
+TRACE::2020-10-15.12:10:41::SCWPlatform::Opened existing hwdb Conv_Accel_Top_2
+TRACE::2020-10-15.12:10:41::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.12:10:41::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2020-10-15.12:10:41::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_4||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.12:10:41::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2020-10-15.12:10:41::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:41::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:41::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:41::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.12:10:41::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:41::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.12:10:41::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_2
+TRACE::2020-10-15.12:10:41::SCWPlatform::Opened existing hwdb Conv_Accel_Top_2
+TRACE::2020-10-15.12:10:41::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.12:10:41::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.12:10:41::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_4||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.12:10:41::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.12:10:41::SCWMssOS::In reload Mss file.
+TRACE::2020-10-15.12:10:41::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:41::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:41::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:41::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.12:10:41::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:41::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.12:10:41::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_2
+TRACE::2020-10-15.12:10:41::SCWPlatform::Opened existing hwdb Conv_Accel_Top_2
+TRACE::2020-10-15.12:10:41::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.12:10:41::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.12:10:41::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_4||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+KEYINFO::2020-10-15.12:10:41::SCWMssOS::Could not open the swdb for system_4
+KEYINFO::2020-10-15.12:10:41::SCWMssOS::Could not open the sw design at  system_4
+ERROR: [Hsi 55-1558] Software Design system_4 is not found
+
+TRACE::2020-10-15.12:10:41::SCWMssOS::Cleared the swdb table entry
+TRACE::2020-10-15.12:10:41::SCWMssOS::No sw design opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.12:10:41::SCWMssOS::mss exists loading the mss file  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.12:10:41::SCWMssOS::Opened the sw design from mss  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.12:10:41::SCWMssOS::Adding the swdes entry C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss with des name system_4
+TRACE::2020-10-15.12:10:41::SCWMssOS::updating the scw layer about changes
+TRACE::2020-10-15.12:10:41::SCWMssOS::Opened the sw design.  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.12:10:41::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:41::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:41::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:41::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.12:10:41::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:41::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.12:10:41::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_2
+TRACE::2020-10-15.12:10:41::SCWPlatform::Opened existing hwdb Conv_Accel_Top_2
+TRACE::2020-10-15.12:10:41::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.12:10:41::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.12:10:41::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_4||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.12:10:41::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.12:10:41::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:41::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:41::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:41::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.12:10:41::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:41::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.12:10:41::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_2
+TRACE::2020-10-15.12:10:41::SCWPlatform::Opened existing hwdb Conv_Accel_Top_2
+TRACE::2020-10-15.12:10:41::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.12:10:41::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.12:10:41::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_4||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.12:10:41::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.12:10:41::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:41::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:41::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:41::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.12:10:41::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:41::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.12:10:41::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_2
+TRACE::2020-10-15.12:10:41::SCWPlatform::Opened existing hwdb Conv_Accel_Top_2
+TRACE::2020-10-15.12:10:41::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.12:10:41::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.12:10:41::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_4||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.12:10:41::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.12:10:41::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:41::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:41::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:41::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.12:10:41::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:41::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.12:10:41::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_2
+TRACE::2020-10-15.12:10:41::SCWPlatform::Opened existing hwdb Conv_Accel_Top_2
+TRACE::2020-10-15.12:10:41::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.12:10:41::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.12:10:41::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_4||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.12:10:41::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.12:10:41::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:41::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:41::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:41::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.12:10:41::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:41::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.12:10:41::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_2
+TRACE::2020-10-15.12:10:41::SCWPlatform::Opened existing hwdb Conv_Accel_Top_2
+TRACE::2020-10-15.12:10:41::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.12:10:41::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.12:10:41::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_4||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.12:10:41::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.12:10:41::SCWMssOS::Removing the swdes entry for  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.12:10:41::SCWMssOS::In reload Mss file.
+TRACE::2020-10-15.12:10:41::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:41::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:41::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:41::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.12:10:41::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:41::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.12:10:41::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_2
+TRACE::2020-10-15.12:10:41::SCWPlatform::Opened existing hwdb Conv_Accel_Top_2
+TRACE::2020-10-15.12:10:41::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.12:10:41::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.12:10:41::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.12:10:41::SCWMssOS::No sw design opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.12:10:41::SCWMssOS::mss exists loading the mss file  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.12:10:41::SCWMssOS::Opened the sw design from mss  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.12:10:41::SCWMssOS::Adding the swdes entry C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss with des name system_4
+TRACE::2020-10-15.12:10:41::SCWMssOS::updating the scw layer about changes
+TRACE::2020-10-15.12:10:41::SCWMssOS::Opened the sw design.  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.12:10:41::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:41::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:41::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:41::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.12:10:41::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:41::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.12:10:41::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_2
+TRACE::2020-10-15.12:10:41::SCWPlatform::Opened existing hwdb Conv_Accel_Top_2
+TRACE::2020-10-15.12:10:41::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.12:10:41::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.12:10:41::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_4||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.12:10:41::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.12:10:41::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:41::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:41::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:41::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.12:10:41::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:41::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.12:10:41::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_2
+TRACE::2020-10-15.12:10:41::SCWPlatform::Opened existing hwdb Conv_Accel_Top_2
+TRACE::2020-10-15.12:10:41::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.12:10:41::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.12:10:41::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_4||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.12:10:41::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.12:10:42::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:42::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:42::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:42::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.12:10:42::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:42::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.12:10:42::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_2
+TRACE::2020-10-15.12:10:42::SCWPlatform::Opened existing hwdb Conv_Accel_Top_2
+TRACE::2020-10-15.12:10:42::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.12:10:42::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.12:10:42::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_4||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.12:10:42::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.12:10:42::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:42::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:42::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:42::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.12:10:42::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:42::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.12:10:42::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_2
+TRACE::2020-10-15.12:10:42::SCWPlatform::Opened existing hwdb Conv_Accel_Top_2
+TRACE::2020-10-15.12:10:42::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.12:10:42::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.12:10:42::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_4||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.12:10:42::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.12:10:42::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:42::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:42::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:42::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.12:10:42::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:10:42::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.12:10:42::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_2
+TRACE::2020-10-15.12:10:42::SCWPlatform::Opened existing hwdb Conv_Accel_Top_2
+TRACE::2020-10-15.12:10:42::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.12:10:42::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.12:10:42::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_4||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.12:10:42::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.12:10:42::SCWMssOS::Removing the swdes entry for  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+LOG::2020-10-15.12:11:17::SCWPlatform::Started generating the artifacts platform Convolution_Accel_HW
+TRACE::2020-10-15.12:11:17::SCWPlatform::Sanity checking of platform is completed
+LOG::2020-10-15.12:11:17::SCWPlatform::Started generating the artifacts for system configuration Convolution_Accel_HW
+LOG::2020-10-15.12:11:17::SCWSystem::Checking the domain zynq_fsbl
+LOG::2020-10-15.12:11:17::SCWSystem::Doing application build for :  zynq_fsbl
+TRACE::2020-10-15.12:11:17::SCWBDomain::Not a forced makefile updation, No changes are present. 
+TRACE::2020-10-15.12:11:17::SCWDomain::Skipping the build for domain :  zynq_fsbl
+LOG::2020-10-15.12:11:17::SCWSystem::Checking the domain standalone_domain
+LOG::2020-10-15.12:11:17::SCWSystem::Not a boot domain 
+LOG::2020-10-15.12:11:17::SCWSystem::Started Processing the domain standalone_domain
+TRACE::2020-10-15.12:11:17::SCWDomain::Generating domain artifcats
+TRACE::2020-10-15.12:11:17::SCWMssOS::Generating standalone artifcats
+TRACE::2020-10-15.12:11:17::SCWMssOS::Copying the qemu file from  C:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/qemu_args.txt To C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/sw/Convolution_Accel_HW/qemu/
+TRACE::2020-10-15.12:11:17::SCWMssOS::Copying the qemu file from  C:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/qemu_args.txt To C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/sw/Convolution_Accel_HW/standalone_domain/qemu/
+TRACE::2020-10-15.12:11:17::SCWMssOS:: Copying the user libraries. 
+TRACE::2020-10-15.12:11:17::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:11:17::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:11:17::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:11:17::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.12:11:17::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:11:17::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.12:11:17::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_2
+TRACE::2020-10-15.12:11:17::SCWPlatform::Opened existing hwdb Conv_Accel_Top_2
+TRACE::2020-10-15.12:11:17::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.12:11:17::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.12:11:17::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.12:11:17::SCWMssOS::No sw design opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.12:11:17::SCWMssOS::mss exists loading the mss file  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.12:11:17::SCWMssOS::Opened the sw design from mss  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.12:11:17::SCWMssOS::Adding the swdes entry C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss with des name system_4
+TRACE::2020-10-15.12:11:17::SCWMssOS::updating the scw layer about changes
+TRACE::2020-10-15.12:11:17::SCWMssOS::Opened the sw design.  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.12:11:17::SCWMssOS::Completed writing the mss file at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp
+TRACE::2020-10-15.12:11:17::SCWMssOS::Mss edits present, copying mssfile into export location C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.12:11:17::SCWMssOS::bsp generated is upto date with the mss file. Skipping bsp generation.
+TRACE::2020-10-15.12:11:17::SCWMssOS::BSP is already built. skipping the bsp build ... 
+TRACE::2020-10-15.12:11:17::SCWDomain::Skipping the build for domain :  standalone_domain
+TRACE::2020-10-15.12:11:17::SCWMssOS::skipping the bsp build ... 
+TRACE::2020-10-15.12:11:17::SCWMssOS::Copying to export directory.
+TRACE::2020-10-15.12:11:17::SCWMssOS:: Checking if to create the Supporting Applications
+TRACE::2020-10-15.12:11:17::SCWMssOS:: No Linux domain exists, trying to generate FSBL 
+LOG::2020-10-15.12:11:17::SCWSystem::Completed Processing the domain standalone_domain
+LOG::2020-10-15.12:11:17::SCWSystem::Completed Processing the sysconfig Convolution_Accel_HW
+LOG::2020-10-15.12:11:17::SCWPlatform::Completed generating the artifacts for system configuration Convolution_Accel_HW
+TRACE::2020-10-15.12:11:17::SCWPlatform::Started preparing the platform 
+TRACE::2020-10-15.12:11:17::SCWSystem::Writing the bif file for system config Convolution_Accel_HW
+TRACE::2020-10-15.12:11:17::SCWSystem::dir created 
+TRACE::2020-10-15.12:11:17::SCWSystem::Writing the bif 
+TRACE::2020-10-15.12:11:17::SCWPlatform::Started writing the spfm file 
+TRACE::2020-10-15.12:11:17::SCWPlatform::Started writing the xpfm file 
+TRACE::2020-10-15.12:11:18::SCWPlatform::Completed generating the platform
+TRACE::2020-10-15.12:11:18::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:11:18::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:11:18::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:11:18::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.12:11:18::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:11:18::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.12:11:18::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_2
+TRACE::2020-10-15.12:11:18::SCWPlatform::Opened existing hwdb Conv_Accel_Top_2
+TRACE::2020-10-15.12:11:18::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.12:11:18::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2020-10-15.12:11:18::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_4||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.12:11:18::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2020-10-15.12:11:18::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:11:18::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:11:18::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:11:18::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.12:11:18::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:11:18::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.12:11:18::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_2
+TRACE::2020-10-15.12:11:18::SCWPlatform::Opened existing hwdb Conv_Accel_Top_2
+TRACE::2020-10-15.12:11:18::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.12:11:18::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.12:11:18::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_4||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.12:11:18::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.12:11:18::SCWWriter::formatted JSON is {
+	"platformName":	"Convolution_Accel_HW",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"Convolution_Accel_HW",
+	"platHandOff":	"C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/Conv_Accel_Top.xsa",
+	"platIntHandOff":	"<platformDir>/hw/Conv_Accel_Top.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"Convolution_Accel_HW",
+	"systems":	[{
+			"systemName":	"Convolution_Accel_HW",
+			"systemDesc":	"Convolution_Accel_HW",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"Convolution_Accel_HW",
+			"sysActiveDom":	"standalone_domain",
+			"sysDefaultDom":	"standalone_domain",
+			"domains":	[{
+					"domainName":	"zynq_fsbl",
+					"domainDispName":	"zynq_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.1",
+					"mssFile":	"",
+					"md5Digest":	"15d8aef540c3bc343f613d0d6eef1467",
+					"compatibleApp":	"zynq_fsbl",
+					"domType":	"bootDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.2", "xilrsa:1.5"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"standalone_domain",
+					"domainDispName":	"standalone on ps7_cortexa9_0",
+					"domainDesc":	"standalone_domain",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"C:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/qemu_args.txt",
+					"qemuData":	"C:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.1",
+					"mssFile":	"",
+					"md5Digest":	"53e8733268af13d027e85ac3879ac8bd",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"standalone":	{
+							"stdin":	"ps7_coresight_comp_0",
+							"stdout":	"ps7_coresight_comp_0",
+							"libOptionNames":	["stdin", "stdout"]
+						},
+						"libsContainingOptions":	["standalone"]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+KEYINFO::2020-10-15.12:11:18::SCWPlatform::updated the xpfm file.
+TRACE::2020-10-15.12:11:18::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:11:18::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:11:18::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:11:18::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.12:11:18::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.12:11:18::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.12:11:18::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_2
+TRACE::2020-10-15.12:11:18::SCWPlatform::Opened existing hwdb Conv_Accel_Top_2
+TRACE::2020-10-15.12:11:18::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.12:11:18::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.12:11:18::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_4||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.12:11:18::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:22::SCWPlatform::Clearing the existing platform
+TRACE::2020-10-15.13:49:22::SCWSystem::Clearing the existing sysconfig
+TRACE::2020-10-15.13:49:22::SCWBDomain::clearing the fsbl build
+TRACE::2020-10-15.13:49:22::SCWMssOS::Removing the swdes entry for  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2020-10-15.13:49:22::SCWMssOS::Removing the swdes entry for  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:22::SCWSystem::Clearing the domains completed.
+TRACE::2020-10-15.13:49:22::SCWPlatform::Clearing the opened hw db.
+TRACE::2020-10-15.13:49:22::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:22::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:22::SCWPlatform:: Platform location is C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.13:49:22::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:22::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.13:49:22::SCWPlatform::Removing the HwDB with name C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:22::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:22::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:22::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:22::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.13:49:22::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:22::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.13:49:22::SCWPlatform::Do not have an existing db opened. 
+TRACE::2020-10-15.13:49:24::SCWPlatform::Opened new HwDB with name Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:24::SCWReader::Active system found as  Convolution_Accel_HW
+TRACE::2020-10-15.13:49:24::SCWReader::Handling sysconfig Convolution_Accel_HW
+TRACE::2020-10-15.13:49:24::SCWDomain::checking for install qemu data   : 
+TRACE::2020-10-15.13:49:24::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/
+TRACE::2020-10-15.13:49:24::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/qemu_args.txt
+TRACE::2020-10-15.13:49:24::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:24::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:24::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:24::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.13:49:24::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:24::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.13:49:24::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:24::SCWPlatform::Opened existing hwdb Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:24::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.13:49:24::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:24::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:24::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:24::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.13:49:24::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:24::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.13:49:24::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:24::SCWPlatform::Opened existing hwdb Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:24::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.13:49:24::SCWReader::Boot application domain added for zynq_fsbl
+TRACE::2020-10-15.13:49:24::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:24::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:24::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:24::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.13:49:24::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:24::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.13:49:24::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:24::SCWPlatform::Opened existing hwdb Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:24::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.13:49:24::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2020-10-15.13:49:24::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.13:49:24::SCWMssOS::No sw design opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2020-10-15.13:49:24::SCWMssOS::mss exists loading the mss file  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2020-10-15.13:49:24::SCWMssOS::Opened the sw design from mss  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2020-10-15.13:49:24::SCWMssOS::Adding the swdes entry C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss with des name system_3
+TRACE::2020-10-15.13:49:24::SCWMssOS::updating the scw layer about changes
+TRACE::2020-10-15.13:49:24::SCWMssOS::Opened the sw design.  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2020-10-15.13:49:24::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:24::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:24::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:24::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.13:49:24::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:24::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.13:49:24::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:24::SCWPlatform::Opened existing hwdb Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:24::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.13:49:24::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2020-10-15.13:49:24::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.13:49:24::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2020-10-15.13:49:24::SCWMssOS:: library already available in sw design:  xilffs:4.2
+TRACE::2020-10-15.13:49:24::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:24::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:24::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:24::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.13:49:24::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:24::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.13:49:24::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:25::SCWPlatform::Opened existing hwdb Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:25::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.13:49:25::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2020-10-15.13:49:25::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.13:49:25::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2020-10-15.13:49:25::SCWMssOS:: library already available in sw design:  xilrsa:1.5
+TRACE::2020-10-15.13:49:25::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2020-10-15.13:49:25::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2020-10-15.13:49:25::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:25::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:25::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:25::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.13:49:25::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:25::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.13:49:25::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:25::SCWPlatform::Opened existing hwdb Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:25::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.13:49:25::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2020-10-15.13:49:25::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.13:49:25::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2020-10-15.13:49:25::SCWReader::No isolation master present  
+TRACE::2020-10-15.13:49:25::SCWDomain::checking for install qemu data   : 
+TRACE::2020-10-15.13:49:25::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/
+TRACE::2020-10-15.13:49:25::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/qemu_args.txt
+TRACE::2020-10-15.13:49:25::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:25::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:25::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:25::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.13:49:25::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:25::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.13:49:25::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:25::SCWPlatform::Opened existing hwdb Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:25::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.13:49:25::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:25::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:25::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:25::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.13:49:25::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:25::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.13:49:25::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:25::SCWPlatform::Opened existing hwdb Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:25::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.13:49:25::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:25::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.13:49:25::SCWMssOS::No sw design opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:25::SCWMssOS::mss exists loading the mss file  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:25::SCWMssOS::Opened the sw design from mss  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:25::SCWMssOS::Adding the swdes entry C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss with des name system_4
+TRACE::2020-10-15.13:49:25::SCWMssOS::updating the scw layer about changes
+TRACE::2020-10-15.13:49:25::SCWMssOS::Opened the sw design.  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:25::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:25::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:25::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:25::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.13:49:25::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:25::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.13:49:25::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:25::SCWPlatform::Opened existing hwdb Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:25::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.13:49:25::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:25::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_4||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.13:49:25::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:25::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:25::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:25::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:25::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.13:49:25::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:25::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.13:49:25::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:25::SCWPlatform::Opened existing hwdb Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:25::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.13:49:25::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:25::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_4||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.13:49:25::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:25::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:25::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:25::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:25::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.13:49:25::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:25::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.13:49:25::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:25::SCWPlatform::Opened existing hwdb Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:25::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.13:49:25::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:25::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_4||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.13:49:25::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:25::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:25::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:25::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:25::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.13:49:25::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:25::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.13:49:25::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:25::SCWPlatform::Opened existing hwdb Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:25::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.13:49:25::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:25::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_4||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.13:49:25::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:25::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2020-10-15.13:49:25::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2020-10-15.13:49:25::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:25::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:25::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:25::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.13:49:25::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:25::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.13:49:25::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:25::SCWPlatform::Opened existing hwdb Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:25::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.13:49:25::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:25::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_4||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.13:49:25::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:25::SCWReader::No isolation master present  
+TRACE::2020-10-15.13:49:25::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:25::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:25::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:25::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.13:49:25::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:25::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.13:49:25::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:25::SCWPlatform::Opened existing hwdb Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:25::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.13:49:25::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2020-10-15.13:49:25::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_4||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.13:49:25::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2020-10-15.13:49:25::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:25::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:25::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:25::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.13:49:25::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:25::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.13:49:25::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:25::SCWPlatform::Opened existing hwdb Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:25::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.13:49:25::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:25::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_4||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.13:49:25::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:25::SCWMssOS::In reload Mss file.
+TRACE::2020-10-15.13:49:25::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:25::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:25::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:25::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.13:49:25::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:25::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.13:49:25::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:25::SCWPlatform::Opened existing hwdb Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:25::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.13:49:25::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:25::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_4||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+KEYINFO::2020-10-15.13:49:25::SCWMssOS::Could not open the swdb for system_4
+KEYINFO::2020-10-15.13:49:25::SCWMssOS::Could not open the sw design at  system_4
+ERROR: [Hsi 55-1558] Software Design system_4 is not found
+
+TRACE::2020-10-15.13:49:25::SCWMssOS::Cleared the swdb table entry
+TRACE::2020-10-15.13:49:25::SCWMssOS::No sw design opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:25::SCWMssOS::mss exists loading the mss file  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:25::SCWMssOS::Opened the sw design from mss  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:25::SCWMssOS::Adding the swdes entry C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss with des name system_4
+TRACE::2020-10-15.13:49:25::SCWMssOS::updating the scw layer about changes
+TRACE::2020-10-15.13:49:25::SCWMssOS::Opened the sw design.  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:25::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:25::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:25::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:25::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.13:49:25::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:25::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.13:49:25::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:25::SCWPlatform::Opened existing hwdb Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:25::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.13:49:25::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:25::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_4||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.13:49:25::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:25::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:25::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:25::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:25::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.13:49:25::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:25::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.13:49:25::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:25::SCWPlatform::Opened existing hwdb Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:25::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.13:49:25::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:25::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_4||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.13:49:25::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:25::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:25::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:25::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:25::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.13:49:25::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:25::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.13:49:25::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:25::SCWPlatform::Opened existing hwdb Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:25::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.13:49:25::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:25::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_4||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.13:49:25::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:25::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:25::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:25::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:25::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.13:49:25::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:26::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.13:49:26::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:26::SCWPlatform::Opened existing hwdb Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:26::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.13:49:26::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:26::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_4||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.13:49:26::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:26::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:26::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:26::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:26::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.13:49:26::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:26::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.13:49:26::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:26::SCWPlatform::Opened existing hwdb Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:26::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.13:49:26::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:26::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_4||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.13:49:26::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:26::SCWMssOS::Removing the swdes entry for  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:26::SCWMssOS::In reload Mss file.
+TRACE::2020-10-15.13:49:26::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:26::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:26::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:26::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.13:49:26::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:26::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.13:49:26::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:26::SCWPlatform::Opened existing hwdb Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:26::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.13:49:26::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:26::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.13:49:26::SCWMssOS::No sw design opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:26::SCWMssOS::mss exists loading the mss file  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:26::SCWMssOS::Opened the sw design from mss  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:26::SCWMssOS::Adding the swdes entry C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss with des name system_4
+TRACE::2020-10-15.13:49:26::SCWMssOS::updating the scw layer about changes
+TRACE::2020-10-15.13:49:26::SCWMssOS::Opened the sw design.  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:26::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:26::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:26::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:26::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.13:49:26::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:26::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.13:49:26::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:26::SCWPlatform::Opened existing hwdb Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:26::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.13:49:26::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:26::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_4||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.13:49:26::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:26::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:26::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:26::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:26::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.13:49:26::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:26::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.13:49:26::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:26::SCWPlatform::Opened existing hwdb Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:26::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.13:49:26::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:26::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_4||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.13:49:26::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:26::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:26::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:26::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:26::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.13:49:26::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:26::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.13:49:26::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:26::SCWPlatform::Opened existing hwdb Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:26::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.13:49:26::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:26::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_4||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.13:49:26::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:26::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:26::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:26::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:26::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.13:49:26::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:26::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.13:49:26::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:26::SCWPlatform::Opened existing hwdb Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:26::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.13:49:26::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:26::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_4||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.13:49:26::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:26::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:26::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:26::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:26::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.13:49:26::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:26::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.13:49:26::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:26::SCWPlatform::Opened existing hwdb Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:26::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.13:49:26::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:26::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_4||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.13:49:26::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:26::SCWMssOS::Removing the swdes entry for  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:33::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:33::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:33::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:33::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.13:49:33::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:33::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.13:49:33::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:33::SCWPlatform::Opened existing hwdb Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:33::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.13:49:33::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:33::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.13:49:33::SCWMssOS::No sw design opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:33::SCWMssOS::mss exists loading the mss file  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:33::SCWMssOS::Opened the sw design from mss  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:33::SCWMssOS::Adding the swdes entry C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss with des name system_4
+TRACE::2020-10-15.13:49:33::SCWMssOS::updating the scw layer about changes
+TRACE::2020-10-15.13:49:33::SCWMssOS::Opened the sw design.  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:42::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:42::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:43::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:43::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.13:49:43::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:43::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.13:49:43::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:43::SCWPlatform::Opened existing hwdb Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:43::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.13:49:43::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:43::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_4||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.13:49:43::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:43::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:43::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:43::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:43::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.13:49:43::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:43::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.13:49:43::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:43::SCWPlatform::Opened existing hwdb Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:43::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.13:49:43::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:43::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_4||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.13:49:43::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:43::SCWMssOS::In reload Mss file.
+TRACE::2020-10-15.13:49:43::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:43::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:43::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:43::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.13:49:43::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:43::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.13:49:43::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:43::SCWPlatform::Opened existing hwdb Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:43::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.13:49:43::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:43::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_4||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+KEYINFO::2020-10-15.13:49:43::SCWMssOS::Could not open the swdb for system_4
+KEYINFO::2020-10-15.13:49:43::SCWMssOS::Could not open the sw design at  system_4
+ERROR: [Hsi 55-1558] Software Design system_4 is not found
+
+TRACE::2020-10-15.13:49:43::SCWMssOS::Cleared the swdb table entry
+TRACE::2020-10-15.13:49:43::SCWMssOS::No sw design opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:43::SCWMssOS::mss exists loading the mss file  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:43::SCWMssOS::Opened the sw design from mss  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:43::SCWMssOS::Adding the swdes entry C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss with des name system_4
+TRACE::2020-10-15.13:49:43::SCWMssOS::updating the scw layer about changes
+TRACE::2020-10-15.13:49:43::SCWMssOS::Opened the sw design.  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:43::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:43::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:43::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:43::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.13:49:43::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:43::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.13:49:43::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:43::SCWPlatform::Opened existing hwdb Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:43::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.13:49:43::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:43::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_4||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.13:49:43::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:43::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:43::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:43::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:43::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.13:49:43::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:43::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.13:49:43::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:43::SCWPlatform::Opened existing hwdb Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:43::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.13:49:43::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:43::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_4||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.13:49:43::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:43::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:43::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:43::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:43::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.13:49:43::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:43::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.13:49:43::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:43::SCWPlatform::Opened existing hwdb Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:43::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.13:49:43::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:43::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_4||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.13:49:43::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:43::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:43::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:43::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:43::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.13:49:43::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:43::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.13:49:43::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:43::SCWPlatform::Opened existing hwdb Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:43::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.13:49:43::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:43::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_4||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.13:49:43::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:43::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:43::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:43::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:43::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.13:49:43::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:49:43::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.13:49:43::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:43::SCWPlatform::Opened existing hwdb Conv_Accel_Top_3
+TRACE::2020-10-15.13:49:43::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.13:49:43::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:43::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_4||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.13:49:43::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:49:43::SCWMssOS::Removing the swdes entry for  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:52:20::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:52:20::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:52:20::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:52:20::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.13:52:20::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:52:20::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.13:52:20::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_3
+TRACE::2020-10-15.13:52:20::SCWPlatform::Opened existing hwdb Conv_Accel_Top_3
+TRACE::2020-10-15.13:52:20::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.13:52:20::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:52:20::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.13:52:20::SCWMssOS::No sw design opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:52:20::SCWMssOS::mss exists loading the mss file  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:52:20::SCWMssOS::Opened the sw design from mss  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:52:20::SCWMssOS::Adding the swdes entry C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss with des name system_4
+TRACE::2020-10-15.13:52:20::SCWMssOS::updating the scw layer about changes
+TRACE::2020-10-15.13:52:20::SCWMssOS::Opened the sw design.  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:52:23::SCWMssOS::In reload Mss file.
+TRACE::2020-10-15.13:52:23::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:52:23::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:52:23::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:52:23::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.13:52:23::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:52:23::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.13:52:23::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_3
+TRACE::2020-10-15.13:52:23::SCWPlatform::Opened existing hwdb Conv_Accel_Top_3
+TRACE::2020-10-15.13:52:23::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.13:52:23::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:52:23::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_4||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+KEYINFO::2020-10-15.13:52:23::SCWMssOS::Could not open the swdb for system_4
+KEYINFO::2020-10-15.13:52:23::SCWMssOS::Could not open the sw design at  system_4
+ERROR: [Hsi 55-1558] Software Design system_4 is not found
+
+TRACE::2020-10-15.13:52:23::SCWMssOS::Cleared the swdb table entry
+TRACE::2020-10-15.13:52:23::SCWMssOS::No sw design opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:52:23::SCWMssOS::mss exists loading the mss file  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:52:23::SCWMssOS::Opened the sw design from mss  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:52:23::SCWMssOS::Adding the swdes entry C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss with des name system_4
+TRACE::2020-10-15.13:52:24::SCWMssOS::updating the scw layer about changes
+TRACE::2020-10-15.13:52:24::SCWMssOS::Opened the sw design.  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:52:24::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:52:24::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:52:24::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:52:24::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.13:52:24::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:52:24::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.13:52:24::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_3
+TRACE::2020-10-15.13:52:24::SCWPlatform::Opened existing hwdb Conv_Accel_Top_3
+TRACE::2020-10-15.13:52:24::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.13:52:24::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:52:24::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_4||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.13:52:24::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:52:24::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:52:24::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:52:24::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:52:24::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.13:52:24::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:52:24::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.13:52:24::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_3
+TRACE::2020-10-15.13:52:24::SCWPlatform::Opened existing hwdb Conv_Accel_Top_3
+TRACE::2020-10-15.13:52:24::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.13:52:24::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:52:24::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_4||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.13:52:24::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:52:24::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:52:24::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:52:24::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:52:24::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.13:52:24::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:52:24::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.13:52:24::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_3
+TRACE::2020-10-15.13:52:24::SCWPlatform::Opened existing hwdb Conv_Accel_Top_3
+TRACE::2020-10-15.13:52:24::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.13:52:24::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:52:24::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_4||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.13:52:24::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:52:24::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:52:24::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:52:24::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:52:24::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.13:52:24::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:52:24::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.13:52:24::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_3
+TRACE::2020-10-15.13:52:24::SCWPlatform::Opened existing hwdb Conv_Accel_Top_3
+TRACE::2020-10-15.13:52:24::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.13:52:24::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:52:24::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_4||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.13:52:24::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:52:24::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:52:24::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:52:24::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:52:24::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw
+TRACE::2020-10-15.13:52:24::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa
+TRACE::2020-10-15.13:52:24::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.13:52:24::SCWPlatform::Trying to set the existing hwdb with name Conv_Accel_Top_3
+TRACE::2020-10-15.13:52:24::SCWPlatform::Opened existing hwdb Conv_Accel_Top_3
+TRACE::2020-10-15.13:52:24::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.13:52:24::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:52:24::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_4||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_3||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.13:52:24::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.13:52:24::SCWMssOS::Removing the swdes entry for  C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss

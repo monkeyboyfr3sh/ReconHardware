@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1602441729">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1602775285">
   <File Type="PA-TCL" Name="Conv_Accel_Top.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="Conv_Accel_Top_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="Conv_Accel_Top_reports.tcl"/>
   <File Type="RDS-RDS" Name="Conv_Accel_Top.vds"/>
   <File Type="RDS-UTIL" Name="Conv_Accel_Top_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="Conv_Accel_Top_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="Conv_Accel_Top.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="Conv_Accel_Top_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="Conv_Accel_Top_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/../../Sources/definitions.h">
@@ -124,8 +127,8 @@
   <BlockFileSet Type="BlockSrcs" Name="processor_axi_gpio_4_0"/>
   <BlockFileSet Type="BlockSrcs" Name="processor_axi_gpio_5_0"/>
   <BlockFileSet Type="BlockSrcs" Name="processor_axi_gpio_3_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="processor_proc_sys_reset_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="processor_processing_system7_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="processor_proc_sys_reset_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="processor_xbar_0"/>
   <BlockFileSet Type="BlockSrcs" Name="processor_axi_gpio_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="processor_axi_gpio_1_0"/>

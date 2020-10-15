@@ -1,4 +1,4 @@
-23:05:06 **** Build of configuration Debug for project BTN_IO_APP ****
+10:43:36 **** Build of configuration Debug for project BTN_IO_APP ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -26,5 +26,5 @@ arm-none-eabi-size BTN_IO_APP.elf  |tee "BTN_IO_APP.elf.size"
 'Finished building: BTN_IO_APP.elf.size'
 ' '
 
-23:05:07 Build Finished (took 792ms)
+10:43:37 Build Finished (took 795ms)
 
