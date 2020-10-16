@@ -1,6 +1,2 @@
-2020-10-15T21:16:27.382514700255-21:16:27 **** Incremental Build of project Convolution_Accel_HW ****
-000-buildplatform.bat 55083 Convolution_Accel_HW no_domain_build 
-000-XSDB Server Channel: tcfchan#1
-00255-
-21:16:29 Build Finished (took 1s.893ms)
+2020-10-16T13:54:58.4524898000-Nothing to build in platform 'Convolution_Accel_HW'
 

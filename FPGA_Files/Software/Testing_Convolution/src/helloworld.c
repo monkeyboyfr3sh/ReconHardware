@@ -255,28 +255,19 @@ void test_convolution(int test_count,int *test_results){
 
 	printf("Stopping convolution test!\n");
 }
-int main()
-{
-    init_platform();
+void deepTest(int test_cnt_in){
+	XTime tStart, tEnd;
 
-    printf("Hello World\n");
+	int test_cnt =test_cnt_in;
+	bool results[test_cnt];
 
-    driverInit();
-    configGpio();
-
-    XTime tStart, tEnd;
-
-    int test_cnt =10000;
-    bool results[test_cnt];
-
-    XTime_GetTime(&tStart);
+	XTime_GetTime(&tStart);
 	test_convolution(test_cnt,results);
 	XTime_GetTime(&tEnd);
 
 	bool all_pass = true;
 
 	for(int i = 0;i< test_cnt;i++){
-		//printf("Test %d result: %d\n",(i+1),results[i]);
 		if(!results[i]){
 			printf("Test %d failed! :(\n",i+1);
 			all_pass = false;
@@ -289,6 +280,19 @@ int main()
 	float runtime = 1.0 * (tEnd - tStart) / (COUNTS_PER_SECOND/scale);
 	printf("System runtime was %.2f ms.\n",runtime);
 	printf("System convolutions per second: %.2f\n",(1.0 * test_cnt)*scale/runtime);
+
+}
+int main()
+{
+    init_platform();
+
+    printf("Hello World\n");
+    deepTest(1);
+    deepTest(10000);
+
+    driverInit();
+    configGpio();
+
 
 
 	printf("Program Completed!\n");

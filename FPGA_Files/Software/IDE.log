@@ -9346,3 +9346,13 @@ con
 
 21:18:15 INFO  : Launch script is exported to file 'C:\GitHub\ReconHardware\FPGA_Files\Software\.sdk\launch_scripts\single_application_debug\systemdebugger_testing_convolution_system_standalone.tcl'
 22:38:20 INFO  : Disconnected from the channel tcfchan#4.
+13:52:45 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\GitHub\ReconHardware\FPGA_Files\Software\temp_xsdb_launch_script.tcl
+13:52:48 INFO  : XSCT server has started successfully.
+13:52:48 INFO  : Successfully done setting XSCT server connection channel  
+13:52:48 INFO  : plnx-install-location is set to ''
+13:52:48 INFO  : Successfully done setting workspace for the tool. 
+13:52:49 INFO  : Registering command handlers for Vitis TCF services
+13:52:52 INFO  : Successfully done query RDI_DATADIR 
+13:54:58 INFO  : Checking for BSP changes to sync application flags for project 'Testing_Convolution'...
+13:55:04 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/hw/Conv_Accel_Top.xsa is already opened
+
