@@ -2,8 +2,8 @@
 # Webtalk v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # 
-# Start of session at: Sat Oct  3 16:20:02 2020
-# Process ID: 4132
+# Start of session at: Thu Oct 15 13:55:45 2020
+# Process ID: 21192
 # Current directory: C:/GitHub/ReconHardware/FPGA_Files/Software/webtalk
 # Command line: wbtcv.exe -mode batch -source vitis_webtalk.tcl
 # Log file: C:/GitHub/ReconHardware/FPGA_Files/Software/webtalk/webtalk.log

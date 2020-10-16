@@ -184,7 +184,7 @@ void start_convolution(bool state){
 		printf("Clearing cStart\n");
 	}
 }
-void test_convolution(int test_count,bool *test_results){
+void test_convolution(int test_count,int *test_results){
 	printf("Starting convolution test!\n");
 
 	int filter[9];
@@ -207,7 +207,8 @@ void test_convolution(int test_count,bool *test_results){
 		expected = 0;
 		calculated = 0;
 
-		//printf("\nLoading data values for test %d.\n",test_compltd);
+		printf("\nLoading data values for test %d.\n",test_compltd);
+
 		//First test will need 9 data values
 		if(test_compltd==0){
 			for(int i = 0;i<9;i++){
@@ -234,20 +235,17 @@ void test_convolution(int test_count,bool *test_results){
 		for(int i = 0;i<9;i++){
 			expected+=(data[i]*filter[i]);
 		}
+
 		//Grab calculated from buffer
 		calculated = readBuffer();
 
-		//printf("Expected convolution output:        %d\n",expected);
-		//printf("FPGA Calculated convolution output: %d\n",calculated);
+		printf("Expected convolution output:        %d\n",expected);
+		printf("FPGA Calculated convolution output: %d\n",calculated);
 
 		if(expected==calculated){
-			//printf("Convolution test passed!\n");
-			*(test_results+test_compltd) = true;
-			//return true;
+			*(test_results+test_compltd) = calculated;
 		} else {
-			//printf("Convolution test failed!\n");
-			*(test_results+test_compltd) = false;
-			//return false;
+			*(test_results+test_compltd) = -1;
 		}
 
 		test_compltd++;

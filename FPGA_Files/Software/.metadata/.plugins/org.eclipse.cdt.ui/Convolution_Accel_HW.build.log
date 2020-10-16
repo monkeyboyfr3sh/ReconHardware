@@ -1,2 +1,6 @@
-Nothing to build in platform 'Convolution_Accel_HW'
+21:16:27 **** Incremental Build of project Convolution_Accel_HW ****
+buildplatform.bat 55083 Convolution_Accel_HW no_domain_build 
+XSDB Server Channel: tcfchan#1
+
+21:16:29 Build Finished (took 1s.893ms)
 
