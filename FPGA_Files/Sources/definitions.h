@@ -24,7 +24,7 @@
 /*#####################################################################################################################################################*/
 //Data/Device Definition
 `define myTimeScale         1ns / 1ps
-`define clkPeriod           2
+`define clkPeriod           10
 
 `define inputWidth          16
 `define KERNELSIZE          3

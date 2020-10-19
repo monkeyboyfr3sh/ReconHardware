@@ -4152,3 +4152,672 @@ TRACE::2020-10-03.16:31:04::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardwar
 C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
 
 TRACE::2020-10-03.16:31:04::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.10:43:50::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:43:50::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:43:50::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:43:50::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw
+TRACE::2020-10-15.10:43:50::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:43:50::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.10:43:50::SCWPlatform::Do not have an existing db opened. 
+TRACE::2020-10-15.10:43:51::SCWPlatform::Opened new HwDB with name Multiplier_Processor_Wrapper
+TRACE::2020-10-15.10:43:51::SCWReader::Active system found as  Multiplier_HW
+TRACE::2020-10-15.10:43:51::SCWReader::Handling sysconfig Multiplier_HW
+TRACE::2020-10-15.10:43:51::SCWDomain::checking for install qemu data   : 
+TRACE::2020-10-15.10:43:51::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/
+TRACE::2020-10-15.10:43:51::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/qemu_args.txt
+TRACE::2020-10-15.10:43:51::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:43:51::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:43:51::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:43:51::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw
+TRACE::2020-10-15.10:43:51::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:43:51::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.10:43:51::SCWPlatform::Trying to set the existing hwdb with name Multiplier_Processor_Wrapper
+TRACE::2020-10-15.10:43:51::SCWPlatform::Opened existing hwdb Multiplier_Processor_Wrapper
+TRACE::2020-10-15.10:43:51::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.10:43:51::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:43:51::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:43:51::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:43:51::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw
+TRACE::2020-10-15.10:43:51::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:43:51::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.10:43:51::SCWPlatform::Trying to set the existing hwdb with name Multiplier_Processor_Wrapper
+TRACE::2020-10-15.10:43:51::SCWPlatform::Opened existing hwdb Multiplier_Processor_Wrapper
+TRACE::2020-10-15.10:43:51::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.10:43:51::SCWReader::Boot application domain added for zynq_fsbl
+TRACE::2020-10-15.10:43:51::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:43:51::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:43:51::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:43:51::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw
+TRACE::2020-10-15.10:43:51::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:43:51::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.10:43:51::SCWPlatform::Trying to set the existing hwdb with name Multiplier_Processor_Wrapper
+TRACE::2020-10-15.10:43:51::SCWPlatform::Opened existing hwdb Multiplier_Processor_Wrapper
+TRACE::2020-10-15.10:43:51::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.10:43:51::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2020-10-15.10:43:51::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2020-10-15.10:43:51::SCWMssOS::No sw design opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2020-10-15.10:43:51::SCWMssOS::mss exists loading the mss file  C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2020-10-15.10:43:51::SCWMssOS::Opened the sw design from mss  C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2020-10-15.10:43:51::SCWMssOS::Adding the swdes entry C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss with des name system_1
+TRACE::2020-10-15.10:43:51::SCWMssOS::updating the scw layer about changes
+TRACE::2020-10-15.10:43:51::SCWMssOS::Opened the sw design.  C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2020-10-15.10:43:51::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:43:51::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:43:51::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:43:51::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw
+TRACE::2020-10-15.10:43:52::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:43:52::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.10:43:52::SCWPlatform::Trying to set the existing hwdb with name Multiplier_Processor_Wrapper
+TRACE::2020-10-15.10:43:52::SCWPlatform::Opened existing hwdb Multiplier_Processor_Wrapper
+TRACE::2020-10-15.10:43:52::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.10:43:52::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2020-10-15.10:43:52::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.10:43:52::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2020-10-15.10:43:52::SCWMssOS:: library already available in sw design:  xilffs:4.2
+TRACE::2020-10-15.10:43:52::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:43:52::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:43:52::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:43:52::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw
+TRACE::2020-10-15.10:43:52::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:43:52::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.10:43:52::SCWPlatform::Trying to set the existing hwdb with name Multiplier_Processor_Wrapper
+TRACE::2020-10-15.10:43:52::SCWPlatform::Opened existing hwdb Multiplier_Processor_Wrapper
+TRACE::2020-10-15.10:43:52::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.10:43:52::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2020-10-15.10:43:52::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.10:43:52::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2020-10-15.10:43:52::SCWMssOS:: library already available in sw design:  xilrsa:1.5
+TRACE::2020-10-15.10:43:52::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2020-10-15.10:43:52::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2020-10-15.10:43:52::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:43:52::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:43:52::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:43:52::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw
+TRACE::2020-10-15.10:43:52::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:43:52::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.10:43:52::SCWPlatform::Trying to set the existing hwdb with name Multiplier_Processor_Wrapper
+TRACE::2020-10-15.10:43:52::SCWPlatform::Opened existing hwdb Multiplier_Processor_Wrapper
+TRACE::2020-10-15.10:43:52::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.10:43:52::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2020-10-15.10:43:52::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.10:43:52::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2020-10-15.10:43:52::SCWReader::No isolation master present  
+TRACE::2020-10-15.10:43:52::SCWDomain::checking for install qemu data   : 
+TRACE::2020-10-15.10:43:52::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/
+TRACE::2020-10-15.10:43:52::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/qemu_args.txt
+TRACE::2020-10-15.10:43:52::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:43:52::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:43:52::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:43:52::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw
+TRACE::2020-10-15.10:43:52::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:43:52::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.10:43:52::SCWPlatform::Trying to set the existing hwdb with name Multiplier_Processor_Wrapper
+TRACE::2020-10-15.10:43:52::SCWPlatform::Opened existing hwdb Multiplier_Processor_Wrapper
+TRACE::2020-10-15.10:43:52::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.10:43:52::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:43:52::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:43:52::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:43:52::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw
+TRACE::2020-10-15.10:43:52::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:43:52::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.10:43:52::SCWPlatform::Trying to set the existing hwdb with name Multiplier_Processor_Wrapper
+TRACE::2020-10-15.10:43:52::SCWPlatform::Opened existing hwdb Multiplier_Processor_Wrapper
+TRACE::2020-10-15.10:43:52::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.10:43:52::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.10:43:52::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.10:43:52::SCWMssOS::No sw design opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.10:43:52::SCWMssOS::mss exists loading the mss file  C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.10:43:52::SCWMssOS::Opened the sw design from mss  C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.10:43:52::SCWMssOS::Adding the swdes entry C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss with des name system_2
+TRACE::2020-10-15.10:43:52::SCWMssOS::updating the scw layer about changes
+TRACE::2020-10-15.10:43:52::SCWMssOS::Opened the sw design.  C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.10:43:52::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:43:52::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:43:52::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:43:52::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw
+TRACE::2020-10-15.10:43:52::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:43:52::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.10:43:52::SCWPlatform::Trying to set the existing hwdb with name Multiplier_Processor_Wrapper
+TRACE::2020-10-15.10:43:52::SCWPlatform::Opened existing hwdb Multiplier_Processor_Wrapper
+TRACE::2020-10-15.10:43:52::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.10:43:52::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.10:43:52::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.10:43:52::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.10:43:52::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:43:52::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:43:52::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:43:52::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw
+TRACE::2020-10-15.10:43:52::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:43:52::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.10:43:52::SCWPlatform::Trying to set the existing hwdb with name Multiplier_Processor_Wrapper
+TRACE::2020-10-15.10:43:52::SCWPlatform::Opened existing hwdb Multiplier_Processor_Wrapper
+TRACE::2020-10-15.10:43:52::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.10:43:52::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.10:43:52::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.10:43:52::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.10:43:52::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:43:52::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:43:52::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:43:52::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw
+TRACE::2020-10-15.10:43:52::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:43:52::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.10:43:52::SCWPlatform::Trying to set the existing hwdb with name Multiplier_Processor_Wrapper
+TRACE::2020-10-15.10:43:52::SCWPlatform::Opened existing hwdb Multiplier_Processor_Wrapper
+TRACE::2020-10-15.10:43:52::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.10:43:52::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.10:43:52::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.10:43:52::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.10:43:52::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:43:52::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:43:52::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:43:52::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw
+TRACE::2020-10-15.10:43:52::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:43:52::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.10:43:52::SCWPlatform::Trying to set the existing hwdb with name Multiplier_Processor_Wrapper
+TRACE::2020-10-15.10:43:52::SCWPlatform::Opened existing hwdb Multiplier_Processor_Wrapper
+TRACE::2020-10-15.10:43:52::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.10:43:52::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.10:43:52::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.10:43:52::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.10:43:52::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2020-10-15.10:43:52::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2020-10-15.10:43:52::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:43:52::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:43:52::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:43:52::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw
+TRACE::2020-10-15.10:43:52::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:43:52::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.10:43:52::SCWPlatform::Trying to set the existing hwdb with name Multiplier_Processor_Wrapper
+TRACE::2020-10-15.10:43:52::SCWPlatform::Opened existing hwdb Multiplier_Processor_Wrapper
+TRACE::2020-10-15.10:43:52::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.10:43:52::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.10:43:52::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.10:43:52::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.10:43:52::SCWReader::No isolation master present  
+LOG::2020-10-15.10:43:52::SCWPlatform::Started generating the artifacts platform Multiplier_HW
+TRACE::2020-10-15.10:43:52::SCWPlatform::Sanity checking of platform is completed
+LOG::2020-10-15.10:43:52::SCWPlatform::Started generating the artifacts for system configuration Multiplier_HW
+LOG::2020-10-15.10:43:52::SCWSystem::Checking the domain zynq_fsbl
+LOG::2020-10-15.10:43:52::SCWSystem::Doing application build for :  zynq_fsbl
+TRACE::2020-10-15.10:43:52::SCWBDomain::Not a forced makefile updation, No changes are present. 
+TRACE::2020-10-15.10:43:52::SCWDomain::Building the domain as part of full build :  zynq_fsbl
+TRACE::2020-10-15.10:43:52::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:43:52::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:43:52::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:43:52::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw
+TRACE::2020-10-15.10:43:52::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:43:52::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.10:43:52::SCWPlatform::Trying to set the existing hwdb with name Multiplier_Processor_Wrapper
+TRACE::2020-10-15.10:43:52::SCWPlatform::Opened existing hwdb Multiplier_Processor_Wrapper
+TRACE::2020-10-15.10:43:52::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.10:43:52::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2020-10-15.10:43:52::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.10:43:52::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2020-10-15.10:43:52::SCWBDomain::Completed writing the mss file at C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp
+TRACE::2020-10-15.10:43:52::SCWBDomain::bsp generated is upto date with the mss file. Skipping bsp generation.
+TRACE::2020-10-15.10:43:52::SCWBDomain::Not a forced makefile updation, No changes are present. 
+TRACE::2020-10-15.10:43:52::SCWBDomain::System Command Ran  C:&  cd  C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl & make 
+TRACE::2020-10-15.10:43:52::SCWBDomain::make: Nothing to be done for 'all'.
+
+LOG::2020-10-15.10:43:52::SCWSystem::Checking the domain standalone_domain
+LOG::2020-10-15.10:43:52::SCWSystem::Not a boot domain 
+LOG::2020-10-15.10:43:52::SCWSystem::Started Processing the domain standalone_domain
+TRACE::2020-10-15.10:43:52::SCWDomain::Generating domain artifcats
+TRACE::2020-10-15.10:43:52::SCWMssOS::Generating standalone artifcats
+TRACE::2020-10-15.10:43:52::SCWMssOS::Copying the qemu file from  C:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/qemu_args.txt To C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/export/Multiplier_HW/sw/Multiplier_HW/qemu/
+TRACE::2020-10-15.10:43:52::SCWMssOS::Copying the qemu file from  C:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/qemu_args.txt To C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/export/Multiplier_HW/sw/Multiplier_HW/standalone_domain/qemu/
+TRACE::2020-10-15.10:43:52::SCWMssOS:: Copying the user libraries. 
+TRACE::2020-10-15.10:43:52::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:43:52::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:43:52::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:43:52::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw
+TRACE::2020-10-15.10:43:52::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:43:52::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.10:43:52::SCWPlatform::Trying to set the existing hwdb with name Multiplier_Processor_Wrapper
+TRACE::2020-10-15.10:43:52::SCWPlatform::Opened existing hwdb Multiplier_Processor_Wrapper
+TRACE::2020-10-15.10:43:52::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.10:43:52::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.10:43:52::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.10:43:52::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.10:43:52::SCWMssOS::Completed writing the mss file at C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp
+TRACE::2020-10-15.10:43:52::SCWMssOS::Mss edits present, copying mssfile into export location C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.10:43:52::SCWMssOS::bsp generated is upto date with the mss file. Skipping bsp generation.
+TRACE::2020-10-15.10:43:52::SCWMssOS::BSP is already built. skipping the bsp build ... 
+TRACE::2020-10-15.10:43:52::SCWDomain::Building the domain as part of full build :  standalone_domain
+TRACE::2020-10-15.10:43:52::SCWMssOS::doing bsp build ... 
+TRACE::2020-10-15.10:43:52::SCWMssOS::System Command Ran  C: & cd  C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp & make 
+TRACE::2020-10-15.10:43:52::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_6/src"
+
+TRACE::2020-10-15.10:43:52::SCWMssOS::make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none
+TRACE::2020-10-15.10:43:52::SCWMssOS::-eabi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=h
+TRACE::2020-10-15.10:43:52::SCWMssOS::ard -nostartfiles -g -Wall -Wextra"
+
+TRACE::2020-10-15.10:43:52::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_8/src"
+
+TRACE::2020-10-15.10:43:52::SCWMssOS::make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_8/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-ea
+TRACE::2020-10-15.10:43:52::SCWMssOS::bi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard
+TRACE::2020-10-15.10:43:52::SCWMssOS:: -nostartfiles -g -Wall -Wextra"
+
+TRACE::2020-10-15.10:43:52::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+
+TRACE::2020-10-15.10:43:52::SCWMssOS::make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+TRACE::2020-10-15.10:43:52::SCWMssOS::"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+TRACE::2020-10-15.10:43:52::SCWMssOS::rtfiles -g -Wall -Wextra"
+
+TRACE::2020-10-15.10:43:52::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+
+TRACE::2020-10-15.10:43:52::SCWMssOS::make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2020-10-15.10:43:52::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2020-10-15.10:43:52::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2020-10-15.10:43:52::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_5/src"
+
+TRACE::2020-10-15.10:43:52::SCWMssOS::make -C ps7_cortexa9_0/libsrc/dmaps_v2_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+TRACE::2020-10-15.10:43:52::SCWMssOS::"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+TRACE::2020-10-15.10:43:52::SCWMssOS::rtfiles -g -Wall -Wextra"
+
+TRACE::2020-10-15.10:43:52::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_10/src"
+
+TRACE::2020-10-15.10:43:52::SCWMssOS::make -C ps7_cortexa9_0/libsrc/emacps_v3_10/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as
+TRACE::2020-10-15.10:43:52::SCWMssOS::" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nos
+TRACE::2020-10-15.10:43:52::SCWMssOS::tartfiles -g -Wall -Wextra"
+
+TRACE::2020-10-15.10:43:53::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_6/src"
+
+TRACE::2020-10-15.10:43:53::SCWMssOS::make -C ps7_cortexa9_0/libsrc/gpiops_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2020-10-15.10:43:53::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2020-10-15.10:43:53::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2020-10-15.10:43:53::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_5/src"
+
+TRACE::2020-10-15.10:43:53::SCWMssOS::make -C ps7_cortexa9_0/libsrc/gpio_v4_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "
+TRACE::2020-10-15.10:43:53::SCWMssOS::ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostar
+TRACE::2020-10-15.10:43:53::SCWMssOS::tfiles -g -Wall -Wextra"
+
+TRACE::2020-10-15.10:43:53::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_6/src"
+
+TRACE::2020-10-15.10:43:53::SCWMssOS::make -C ps7_cortexa9_0/libsrc/qspips_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2020-10-15.10:43:53::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2020-10-15.10:43:53::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2020-10-15.10:43:53::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/scugic_v4_1/src"
+
+TRACE::2020-10-15.10:43:53::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scugic_v4_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2020-10-15.10:43:53::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2020-10-15.10:43:53::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2020-10-15.10:43:53::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+
+TRACE::2020-10-15.10:43:53::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-a
+TRACE::2020-10-15.10:43:53::SCWMssOS::s" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -no
+TRACE::2020-10-15.10:43:53::SCWMssOS::startfiles -g -Wall -Wextra"
+
+TRACE::2020-10-15.10:43:53::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+
+TRACE::2020-10-15.10:43:53::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2020-10-15.10:43:53::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2020-10-15.10:43:53::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2020-10-15.10:43:53::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_8/src"
+
+TRACE::2020-10-15.10:43:53::SCWMssOS::make -C ps7_cortexa9_0/libsrc/sdps_v3_8/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "
+TRACE::2020-10-15.10:43:53::SCWMssOS::ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostar
+TRACE::2020-10-15.10:43:53::SCWMssOS::tfiles -g -Wall -Wextra"
+
+TRACE::2020-10-15.10:43:53::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/standalone_v7_1/src"
+
+TRACE::2020-10-15.10:43:53::SCWMssOS::make -C ps7_cortexa9_0/libsrc/standalone_v7_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi
+TRACE::2020-10-15.10:43:53::SCWMssOS::-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -
+TRACE::2020-10-15.10:43:53::SCWMssOS::nostartfiles -g -Wall -Wextra"
+
+TRACE::2020-10-15.10:43:53::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_8/src"
+
+TRACE::2020-10-15.10:43:53::SCWMssOS::make -C ps7_cortexa9_0/libsrc/uartps_v3_8/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2020-10-15.10:43:53::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2020-10-15.10:43:53::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2020-10-15.10:43:53::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+
+TRACE::2020-10-15.10:43:53::SCWMssOS::make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+TRACE::2020-10-15.10:43:53::SCWMssOS::"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+TRACE::2020-10-15.10:43:53::SCWMssOS::rtfiles -g -Wall -Wextra"
+
+TRACE::2020-10-15.10:43:53::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_3/src"
+
+TRACE::2020-10-15.10:43:53::SCWMssOS::make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2020-10-15.10:43:53::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2020-10-15.10:43:53::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2020-10-15.10:43:53::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_6/src"
+
+TRACE::2020-10-15.10:43:53::SCWMssOS::make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-ea
+TRACE::2020-10-15.10:43:53::SCWMssOS::bi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard
+TRACE::2020-10-15.10:43:54::SCWMssOS:: -nostartfiles -g -Wall -Wextra"
+
+TRACE::2020-10-15.10:43:54::SCWMssOS::"Compiling coresightps_dcc"
+
+TRACE::2020-10-15.10:43:54::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_8/src"
+
+TRACE::2020-10-15.10:43:54::SCWMssOS::make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_8/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-
+TRACE::2020-10-15.10:43:54::SCWMssOS::as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -n
+TRACE::2020-10-15.10:43:54::SCWMssOS::ostartfiles -g -Wall -Wextra"
+
+TRACE::2020-10-15.10:43:54::SCWMssOS::"Compiling cpu_cortexa9"
+
+TRACE::2020-10-15.10:43:54::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+
+TRACE::2020-10-15.10:43:54::SCWMssOS::make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "AR
+TRACE::2020-10-15.10:43:54::SCWMssOS::CHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartf
+TRACE::2020-10-15.10:43:54::SCWMssOS::iles -g -Wall -Wextra"
+
+TRACE::2020-10-15.10:43:54::SCWMssOS::"Compiling ddrps"
+
+TRACE::2020-10-15.10:43:54::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+
+TRACE::2020-10-15.10:43:54::SCWMssOS::make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2020-10-15.10:43:54::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2020-10-15.10:43:54::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2020-10-15.10:43:54::SCWMssOS::"Compiling devcfg"
+
+TRACE::2020-10-15.10:43:55::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_5/src"
+
+TRACE::2020-10-15.10:43:55::SCWMssOS::make -C ps7_cortexa9_0/libsrc/dmaps_v2_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "AR
+TRACE::2020-10-15.10:43:55::SCWMssOS::CHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartf
+TRACE::2020-10-15.10:43:55::SCWMssOS::iles -g -Wall -Wextra"
+
+TRACE::2020-10-15.10:43:55::SCWMssOS::"Compiling dmaps"
+
+TRACE::2020-10-15.10:43:56::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_10/src"
+
+TRACE::2020-10-15.10:43:56::SCWMssOS::make -C ps7_cortexa9_0/libsrc/emacps_v3_10/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "
+TRACE::2020-10-15.10:43:56::SCWMssOS::ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostar
+TRACE::2020-10-15.10:43:56::SCWMssOS::tfiles -g -Wall -Wextra"
+
+TRACE::2020-10-15.10:43:56::SCWMssOS::"Compiling emacps"
+
+TRACE::2020-10-15.10:43:57::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_6/src"
+
+TRACE::2020-10-15.10:43:57::SCWMssOS::make -C ps7_cortexa9_0/libsrc/gpiops_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2020-10-15.10:43:57::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2020-10-15.10:43:57::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2020-10-15.10:43:57::SCWMssOS::"Compiling gpiops"
+
+TRACE::2020-10-15.10:43:58::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_5/src"
+
+TRACE::2020-10-15.10:43:58::SCWMssOS::make -C ps7_cortexa9_0/libsrc/gpio_v4_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "ARC
+TRACE::2020-10-15.10:43:58::SCWMssOS::HIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfi
+TRACE::2020-10-15.10:43:58::SCWMssOS::les -g -Wall -Wextra"
+
+TRACE::2020-10-15.10:43:58::SCWMssOS::"Compiling gpio"
+
+TRACE::2020-10-15.10:43:59::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_6/src"
+
+TRACE::2020-10-15.10:43:59::SCWMssOS::make -C ps7_cortexa9_0/libsrc/qspips_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2020-10-15.10:43:59::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2020-10-15.10:43:59::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2020-10-15.10:43:59::SCWMssOS::"Compiling qspips"
+
+TRACE::2020-10-15.10:44:00::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v4_1/src"
+
+TRACE::2020-10-15.10:44:00::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scugic_v4_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2020-10-15.10:44:00::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2020-10-15.10:44:00::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2020-10-15.10:44:00::SCWMssOS::"Compiling scugic"
+
+TRACE::2020-10-15.10:44:00::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+
+TRACE::2020-10-15.10:44:00::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+TRACE::2020-10-15.10:44:00::SCWMssOS::"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+TRACE::2020-10-15.10:44:00::SCWMssOS::rtfiles -g -Wall -Wextra"
+
+TRACE::2020-10-15.10:44:00::SCWMssOS::"Compiling scutimer"
+
+TRACE::2020-10-15.10:44:01::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+
+TRACE::2020-10-15.10:44:01::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2020-10-15.10:44:01::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2020-10-15.10:44:01::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2020-10-15.10:44:01::SCWMssOS::"Compiling scuwdt"
+
+TRACE::2020-10-15.10:44:01::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_8/src"
+
+TRACE::2020-10-15.10:44:01::SCWMssOS::make -C ps7_cortexa9_0/libsrc/sdps_v3_8/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "ARC
+TRACE::2020-10-15.10:44:01::SCWMssOS::HIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfi
+TRACE::2020-10-15.10:44:01::SCWMssOS::les -g -Wall -Wextra"
+
+TRACE::2020-10-15.10:44:01::SCWMssOS::"Compiling sdps"
+
+TRACE::2020-10-15.10:44:03::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v7_1/src"
+
+TRACE::2020-10-15.10:44:03::SCWMssOS::make -C ps7_cortexa9_0/libsrc/standalone_v7_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as
+TRACE::2020-10-15.10:44:03::SCWMssOS::" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nos
+TRACE::2020-10-15.10:44:03::SCWMssOS::tartfiles -g -Wall -Wextra"
+
+TRACE::2020-10-15.10:44:03::SCWMssOS::"Compiling standalone"
+
+TRACE::2020-10-15.10:44:06::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_8/src"
+
+TRACE::2020-10-15.10:44:06::SCWMssOS::make -C ps7_cortexa9_0/libsrc/uartps_v3_8/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2020-10-15.10:44:06::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2020-10-15.10:44:06::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2020-10-15.10:44:06::SCWMssOS::"Compiling uartps"
+
+TRACE::2020-10-15.10:44:07::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_4/src"
+
+TRACE::2020-10-15.10:44:07::SCWMssOS::make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "AR
+TRACE::2020-10-15.10:44:07::SCWMssOS::CHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartf
+TRACE::2020-10-15.10:44:07::SCWMssOS::iles -g -Wall -Wextra"
+
+TRACE::2020-10-15.10:44:07::SCWMssOS::"Compiling usbps"
+
+TRACE::2020-10-15.10:44:08::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_3/src"
+
+TRACE::2020-10-15.10:44:08::SCWMssOS::make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2020-10-15.10:44:08::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2020-10-15.10:44:08::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2020-10-15.10:44:08::SCWMssOS::"Compiling xadcps"
+
+TRACE::2020-10-15.10:44:09::SCWMssOS::'Finished building libraries'
+
+TRACE::2020-10-15.10:44:09::SCWMssOS::Copying to export directory.
+TRACE::2020-10-15.10:44:10::SCWMssOS:: Checking if to create the Supporting Applications
+TRACE::2020-10-15.10:44:10::SCWMssOS:: No Linux domain exists, trying to generate FSBL 
+LOG::2020-10-15.10:44:10::SCWSystem::Completed Processing the domain standalone_domain
+LOG::2020-10-15.10:44:10::SCWSystem::Completed Processing the sysconfig Multiplier_HW
+LOG::2020-10-15.10:44:10::SCWPlatform::Completed generating the artifacts for system configuration Multiplier_HW
+TRACE::2020-10-15.10:44:10::SCWPlatform::Started preparing the platform 
+TRACE::2020-10-15.10:44:10::SCWSystem::Writing the bif file for system config Multiplier_HW
+TRACE::2020-10-15.10:44:10::SCWSystem::dir created 
+TRACE::2020-10-15.10:44:10::SCWSystem::Writing the bif 
+TRACE::2020-10-15.10:44:10::SCWPlatform::Started writing the spfm file 
+TRACE::2020-10-15.10:44:10::SCWPlatform::Started writing the xpfm file 
+TRACE::2020-10-15.10:44:10::SCWPlatform::Completed generating the platform
+TRACE::2020-10-15.10:44:10::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:44:10::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:44:10::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:44:10::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw
+TRACE::2020-10-15.10:44:10::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:44:10::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.10:44:10::SCWPlatform::Trying to set the existing hwdb with name Multiplier_Processor_Wrapper
+TRACE::2020-10-15.10:44:10::SCWPlatform::Opened existing hwdb Multiplier_Processor_Wrapper
+TRACE::2020-10-15.10:44:10::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.10:44:10::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2020-10-15.10:44:10::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.10:44:10::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2020-10-15.10:44:10::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:44:10::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:44:10::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:44:10::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw
+TRACE::2020-10-15.10:44:10::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:44:10::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.10:44:10::SCWPlatform::Trying to set the existing hwdb with name Multiplier_Processor_Wrapper
+TRACE::2020-10-15.10:44:10::SCWPlatform::Opened existing hwdb Multiplier_Processor_Wrapper
+TRACE::2020-10-15.10:44:10::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.10:44:10::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.10:44:10::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.10:44:10::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.10:44:10::SCWWriter::formatted JSON is {
+	"platformName":	"Multiplier_HW",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"Multiplier_HW",
+	"platHandOff":	"C:/GitHub/ReconHardware/FPGA_Files/Projects/dynamicMulti/Multiplier_Processor_Wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/Multiplier_Processor_Wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"Multiplier_HW",
+	"systems":	[{
+			"systemName":	"Multiplier_HW",
+			"systemDesc":	"Multiplier_HW",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"Multiplier_HW",
+			"sysActiveDom":	"standalone_domain",
+			"sysDefaultDom":	"standalone_domain",
+			"domains":	[{
+					"domainName":	"zynq_fsbl",
+					"domainDispName":	"zynq_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.1",
+					"mssFile":	"",
+					"md5Digest":	"4baca85b7143f72422fcc12bd4ce1318",
+					"compatibleApp":	"zynq_fsbl",
+					"domType":	"bootDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.2", "xilrsa:1.5"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"standalone_domain",
+					"domainDispName":	"standalone on ps7_cortexa9_0",
+					"domainDesc":	"standalone_domain",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"C:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/qemu_args.txt",
+					"qemuData":	"C:/Xilinx/Vitis/2019.2/data/emulation/platforms/zynq/qemu/",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.1",
+					"mssFile":	"",
+					"md5Digest":	"e02cb148bea03c4e60819ac91c8efc89",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"standalone":	{
+							"stdin":	"ps7_coresight_comp_0",
+							"stdout":	"ps7_coresight_comp_0",
+							"libOptionNames":	["stdin", "stdout"]
+						},
+						"libsContainingOptions":	["standalone"]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+KEYINFO::2020-10-15.10:44:10::SCWPlatform::updated the xpfm file.
+TRACE::2020-10-15.10:44:10::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:44:10::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:44:10::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:44:10::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw
+TRACE::2020-10-15.10:44:10::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/hw/Multiplier_Processor_Wrapper.xsa
+TRACE::2020-10-15.10:44:10::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2020-10-15.10:44:10::SCWPlatform::Trying to set the existing hwdb with name Multiplier_Processor_Wrapper
+TRACE::2020-10-15.10:44:10::SCWPlatform::Opened existing hwdb Multiplier_Processor_Wrapper
+TRACE::2020-10-15.10:44:10::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2020-10-15.10:44:10::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2020-10-15.10:44:10::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/BTN_IO_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+
+TRACE::2020-10-15.10:44:10::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/Multiplier_HW/ps7_cortexa9_0/standalone_domain/bsp/system.mss

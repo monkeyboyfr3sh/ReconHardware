@@ -1,0 +1,36 @@
+13:54:58 **** Incremental Build of configuration Debug for project Testing_Convolution ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/sw/Convolution_Accel_HW/standalone_domain/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:55:
+C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/sw/Convolution_Accel_HW/standalone_domain/bspinclude/include/xtime_l.h:85:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'deepTest':
+../src/helloworld.c:265:28: warning: passing argument 2 of 'test_convolution' from incompatible pointer type [-Wincompatible-pointer-types]
+  test_convolution(test_cnt,results);
+                            ^~~~~~~
+../src/helloworld.c:187:43: note: expected 'int *' but argument is of type '_Bool *'
+ void test_convolution(int test_count,int *test_results){
+                                      ~~~~~^~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Testing_Convolution.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/sw/Convolution_Accel_HW/standalone_domain/bsplib/lib -o "Testing_Convolution.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Testing_Convolution.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Testing_Convolution.elf  |tee "Testing_Convolution.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  62028	   2696	  23440	  88164	  15864	Testing_Convolution.elf
+'Finished building: Testing_Convolution.elf.size'
+' '
+
+13:55:00 Build Finished (took 1s.854ms)
+

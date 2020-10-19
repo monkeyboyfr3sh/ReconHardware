@@ -44,8 +44,10 @@ Rst = 0;
 cStart = 0;
 #(4*`clkPeriod);
 
-cStart = 1;
+//cStart = 1;
 #`clkPeriod;
+
+cStart = 1;
 
 //Load filter
 wr = 1;
