@@ -1,4 +1,4 @@
-13:54:58 **** Incremental Build of configuration Debug for project Testing_Convolution ****
+21:07:53 **** Incremental Build of configuration Debug for project Testing_Convolution ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -9,15 +9,17 @@ make --no-print-directory main-build
 arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/sw/Convolution_Accel_HW/standalone_domain/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
 In file included from ../src/helloworld.c:55:
 C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/sw/Convolution_Accel_HW/standalone_domain/bspinclude/include/xtime_l.h:85:9: note: #pragma message: For the sleep routines, Global timer is being used
- #pragma message ("For the sleep routines, Global timer is being used")
-         ^~~~~~~
+   85 | #pragma message ("For the sleep routines, Global timer is being used")
+      |         ^~~~~~~
 ../src/helloworld.c: In function 'deepTest':
-../src/helloworld.c:265:28: warning: passing argument 2 of 'test_convolution' from incompatible pointer type [-Wincompatible-pointer-types]
-  test_convolution(test_cnt,results);
-                            ^~~~~~~
+../src/helloworld.c:266:28: warning: passing argument 2 of 'test_convolution' from incompatible pointer type [-Wincompatible-pointer-types]
+  266 |  test_convolution(test_cnt,results);
+      |                            ^~~~~~~
+      |                            |
+      |                            _Bool *
 ../src/helloworld.c:187:43: note: expected 'int *' but argument is of type '_Bool *'
- void test_convolution(int test_count,int *test_results){
-                                      ~~~~~^~~~~~~~~~~~
+  187 | void test_convolution(int test_count,int *test_results){
+      |                                      ~~~~~^~~~~~~~~~~~
 'Finished building: ../src/helloworld.c'
 ' '
 'Building target: Testing_Convolution.elf'
@@ -28,9 +30,9 @@ arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size Testing_Convolution.elf  |tee "Testing_Convolution.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  62028	   2696	  23440	  88164	  15864	Testing_Convolution.elf
+  46121	   2660	  22752	  71533	  1176d	Testing_Convolution.elf
 'Finished building: Testing_Convolution.elf.size'
 ' '
 
-13:55:00 Build Finished (took 1s.854ms)
+21:07:53 Build Finished (took 596ms)
 

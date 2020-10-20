@@ -1,10 +1,10 @@
--- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+-- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
--- Date        : Sun Oct 11 13:35:39 2020
+-- Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+-- Date        : Mon Oct 19 15:59:00 2020
 -- Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
---               C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/ip/processor_processing_system7_0_0/processor_processing_system7_0_0_sim_netlist.vhdl
+--               c:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/ip/processor_processing_system7_0_0/processor_processing_system7_0_0_sim_netlist.vhdl
 -- Design      : processor_processing_system7_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -3432,7 +3432,7 @@ entity processor_processing_system7_0_0 is
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of processor_processing_system7_0_0 : entity is "yes";
   attribute X_CORE_INFO : string;
-  attribute X_CORE_INFO of processor_processing_system7_0_0 : entity is "processing_system7_v5_5_processing_system7,Vivado 2019.2";
+  attribute X_CORE_INFO of processor_processing_system7_0_0 : entity is "processing_system7_v5_5_processing_system7,Vivado 2020.1";
 end processor_processing_system7_0_0;
 
 architecture STRUCTURE of processor_processing_system7_0_0 is

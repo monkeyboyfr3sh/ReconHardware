@@ -185,7 +185,7 @@ void start_convolution(bool state){
 	}
 }
 void test_convolution(int test_count,int *test_results){
-	printf("Starting convolution test!\n");
+	//printf("Starting convolution test!\n");
 
 	int filter[9];
 	int data[9];
@@ -207,7 +207,7 @@ void test_convolution(int test_count,int *test_results){
 		expected = 0;
 		calculated = 0;
 
-		printf("\nLoading data values for test %d.\n",test_compltd);
+		//printf("\nLoading data values for test %d.\n",test_compltd);
 
 		//First test will need 9 data values
 		if(test_compltd==0){
@@ -239,13 +239,13 @@ void test_convolution(int test_count,int *test_results){
 		//Grab calculated from buffer
 		calculated = readBuffer();
 
-		printf("Expected convolution output:        %d\n",expected);
-		printf("FPGA Calculated convolution output: %d\n",calculated);
+		//printf("Expected convolution output:        %d\n",expected);
+		//printf("FPGA Calculated convolution output: %d\n",calculated);
 
 		if(expected==calculated){
-			*(test_results+test_compltd) = calculated;
+			*(test_results+test_compltd) = true;
 		} else {
-			*(test_results+test_compltd) = -1;
+			*(test_results+test_compltd) = false;
 		}
 
 		test_compltd++;
@@ -253,7 +253,7 @@ void test_convolution(int test_count,int *test_results){
 
 	start_convolution(0);
 
-	printf("Stopping convolution test!\n");
+	//printf("Stopping convolution test!\n");
 }
 void deepTest(int test_cnt_in){
 	XTime tStart, tEnd;
@@ -262,7 +262,9 @@ void deepTest(int test_cnt_in){
 	bool results[test_cnt];
 
 	XTime_GetTime(&tStart);
+
 	test_convolution(test_cnt,results);
+
 	XTime_GetTime(&tEnd);
 
 	bool all_pass = true;
@@ -287,13 +289,12 @@ int main()
     init_platform();
 
     printf("Hello World\n");
-    deepTest(1);
-    deepTest(10000);
 
     driverInit();
     configGpio();
 
-
+    deepTest(100);
+	//deepTest(100);
 
 	printf("Program Completed!\n");
 

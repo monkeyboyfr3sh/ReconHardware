@@ -1,6 +1,6 @@
-Vivado Simulator 2019.2
-Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto c9763829a085402ebf4f5ad6c83803e9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot convolve3x3int_tb_behav xil_defaultlib.convolve3x3int_tb xil_defaultlib.glbl -log elaborate.log 
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto c9763829a085402ebf4f5ad6c83803e9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot Image_Convolution_behav xil_defaultlib.Image_Convolution xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
@@ -17,6 +17,14 @@ Compiling module xil_defaultlib.adder
 Compiling module xil_defaultlib.matrixAccelerator_default
 Compiling module xil_defaultlib.aFIFO
 Compiling module xil_defaultlib.ConvolutionAccelerator
-Compiling module xil_defaultlib.convolve3x3int_tb
+Compiling module xil_defaultlib.Image_Convolution
+WARNING: [XSIM 43-3373] "C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/Image_Convolution.v" Line 57. System function $fgets is used as system task. This system function should have a LHS e.g. x=$fgets().
+WARNING: [XSIM 43-3373] "C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/Image_Convolution.v" Line 58. System function $sscanf is used as system task. This system function should have a LHS e.g. x=$sscanf().
+WARNING: [XSIM 43-3373] "C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/Image_Convolution.v" Line 60. System function $fgets is used as system task. This system function should have a LHS e.g. x=$fgets().
+WARNING: [XSIM 43-3373] "C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/Image_Convolution.v" Line 61. System function $sscanf is used as system task. This system function should have a LHS e.g. x=$sscanf().
+WARNING: [XSIM 43-3373] "C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/Image_Convolution.v" Line 64. System function $fgets is used as system task. This system function should have a LHS e.g. x=$fgets().
+WARNING: [XSIM 43-3373] "C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/Image_Convolution.v" Line 65. System function $sscanf is used as system task. This system function should have a LHS e.g. x=$sscanf().
+WARNING: [XSIM 43-3373] "C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/Image_Convolution.v" Line 68. System function $fgets is used as system task. This system function should have a LHS e.g. x=$fgets().
+WARNING: [XSIM 43-3373] "C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/Image_Convolution.v" Line 69. System function $sscanf is used as system task. This system function should have a LHS e.g. x=$sscanf().
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot convolve3x3int_tb_behav
+Built simulation snapshot Image_Convolution_behav

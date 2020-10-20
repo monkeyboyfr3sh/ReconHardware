@@ -15,7 +15,8 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/FPGA_Files/
 INFO: [VRFC 10-311] analyzing module ConvolutionController
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/FPGA_Files/Sources/Multiplier/multiplyComputePynq.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module multiplyComputePynq
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/convolve3x3int_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module convolve3x3int_tb
-WARNING: [VRFC 10-2019] loop variable declaration is not allowed in this mode of verilog [C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/convolve3x3int_tb.v:54]
-WARNING: [VRFC 10-2019] loop variable declaration is not allowed in this mode of verilog [C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/convolve3x3int_tb.v:122]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/Image_Convolution.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Image_Convolution
+WARNING: [VRFC 10-8374] loop variable declaration is not allowed in this mode of Verilog [C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/Image_Convolution.v:165]
+WARNING: [VRFC 10-8374] loop variable declaration is not allowed in this mode of Verilog [C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/Image_Convolution.v:164]
+WARNING: [VRFC 10-8374] loop variable declaration is not allowed in this mode of Verilog [C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/Image_Convolution.v:181]

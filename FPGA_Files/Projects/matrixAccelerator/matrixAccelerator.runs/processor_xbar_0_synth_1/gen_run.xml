@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="processor_xbar_0_synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1602441253">
+<GenRun Id="processor_xbar_0_synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1603141091">
   <File Type="PA-TCL" Name="processor_xbar_0.tcl"/>
   <File Type="REPORTS-TCL" Name="processor_xbar_0_reports.tcl"/>
   <File Type="RDS-RDS" Name="processor_xbar_0.vds"/>
@@ -9,11 +9,9 @@
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/processor_xbar_0">
     <File Path="$PSRCDIR/sources_1/bd/processor/ip/processor_xbar_0/processor_xbar_0.xci">
       <FileInfo>
-        <Attr Name="Library" Val="xil_defaultlib"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
-        <Attr Name="ProcessingOrder" Val="EARLY"/>
       </FileInfo>
     </File>
     <Config>
@@ -24,11 +22,9 @@
   <FileSet Name="constrs_in" Type="BlockSrcs" RelSrcDir="$PSRCDIR/processor_xbar_0">
     <File Path="$PSRCDIR/sources_1/bd/processor/ip/processor_xbar_0/processor_xbar_0.xci">
       <FileInfo>
-        <Attr Name="Library" Val="xil_defaultlib"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
-        <Attr Name="ProcessingOrder" Val="EARLY"/>
       </FileInfo>
     </File>
     <Config>
@@ -43,7 +39,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>

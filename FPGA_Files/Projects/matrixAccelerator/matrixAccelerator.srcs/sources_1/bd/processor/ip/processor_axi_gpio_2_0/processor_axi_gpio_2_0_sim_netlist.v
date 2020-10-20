@@ -1,135 +1,17 @@
-// Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+// Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-// Date        : Sun Oct 11 13:35:28 2020
+// Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+// Date        : Mon Oct 19 15:59:39 2020
 // Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/ip/processor_axi_gpio_2_0/processor_axi_gpio_2_0_sim_netlist.v
-// Design      : processor_axi_gpio_2_0
+// Command     : write_verilog -force -mode funcsim -rename_top processor_axi_gpio_2_0 -prefix
+//               processor_axi_gpio_2_0_ processor_axi_gpio_1_0_sim_netlist.v
+// Design      : processor_axi_gpio_1_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
 // Device      : xc7z020clg400-1
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "processor_axi_gpio_2_0,axi_gpio,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "axi_gpio,Vivado 2019.2" *) 
-(* NotValidForBitStream *)
-module processor_axi_gpio_2_0
-   (s_axi_aclk,
-    s_axi_aresetn,
-    s_axi_awaddr,
-    s_axi_awvalid,
-    s_axi_awready,
-    s_axi_wdata,
-    s_axi_wstrb,
-    s_axi_wvalid,
-    s_axi_wready,
-    s_axi_bresp,
-    s_axi_bvalid,
-    s_axi_bready,
-    s_axi_araddr,
-    s_axi_arvalid,
-    s_axi_arready,
-    s_axi_rdata,
-    s_axi_rresp,
-    s_axi_rvalid,
-    s_axi_rready,
-    gpio_io_o,
-    gpio2_io_o);
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 S_AXI_ACLK CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME S_AXI_ACLK, ASSOCIATED_BUSIF S_AXI, ASSOCIATED_RESET s_axi_aresetn, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN processor_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *) input s_axi_aclk;
-  (* x_interface_info = "xilinx.com:signal:reset:1.0 S_AXI_ARESETN RST" *) (* x_interface_parameter = "XIL_INTERFACENAME S_AXI_ARESETN, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input s_axi_aresetn;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI AWADDR" *) (* x_interface_parameter = "XIL_INTERFACENAME S_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 9, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN processor_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) input [8:0]s_axi_awaddr;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI AWVALID" *) input s_axi_awvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI AWREADY" *) output s_axi_awready;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI WDATA" *) input [31:0]s_axi_wdata;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI WSTRB" *) input [3:0]s_axi_wstrb;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI WVALID" *) input s_axi_wvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI WREADY" *) output s_axi_wready;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI BRESP" *) output [1:0]s_axi_bresp;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI BVALID" *) output s_axi_bvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI BREADY" *) input s_axi_bready;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI ARADDR" *) input [8:0]s_axi_araddr;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI ARVALID" *) input s_axi_arvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI ARREADY" *) output s_axi_arready;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI RDATA" *) output [31:0]s_axi_rdata;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI RRESP" *) output [1:0]s_axi_rresp;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI RVALID" *) output s_axi_rvalid;
-  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI RREADY" *) input s_axi_rready;
-  (* x_interface_info = "xilinx.com:interface:gpio:1.0 GPIO TRI_O" *) (* x_interface_parameter = "XIL_INTERFACENAME GPIO, BOARD.ASSOCIATED_PARAM GPIO_BOARD_INTERFACE" *) output [0:0]gpio_io_o;
-  (* x_interface_info = "xilinx.com:interface:gpio:1.0 GPIO2 TRI_O" *) (* x_interface_parameter = "XIL_INTERFACENAME GPIO2, BOARD.ASSOCIATED_PARAM GPIO2_BOARD_INTERFACE" *) output [0:0]gpio2_io_o;
-
-  wire [0:0]gpio2_io_o;
-  wire [0:0]gpio_io_o;
-  wire s_axi_aclk;
-  wire [8:0]s_axi_araddr;
-  wire s_axi_aresetn;
-  wire s_axi_arready;
-  wire s_axi_arvalid;
-  wire [8:0]s_axi_awaddr;
-  wire s_axi_awready;
-  wire s_axi_awvalid;
-  wire s_axi_bready;
-  wire [1:0]s_axi_bresp;
-  wire s_axi_bvalid;
-  wire [31:0]s_axi_rdata;
-  wire s_axi_rready;
-  wire [1:0]s_axi_rresp;
-  wire s_axi_rvalid;
-  wire [31:0]s_axi_wdata;
-  wire s_axi_wready;
-  wire [3:0]s_axi_wstrb;
-  wire s_axi_wvalid;
-  wire NLW_U0_ip2intc_irpt_UNCONNECTED;
-  wire [0:0]NLW_U0_gpio2_io_t_UNCONNECTED;
-  wire [0:0]NLW_U0_gpio_io_t_UNCONNECTED;
-
-  (* C_ALL_INPUTS = "0" *) 
-  (* C_ALL_INPUTS_2 = "0" *) 
-  (* C_ALL_OUTPUTS = "1" *) 
-  (* C_ALL_OUTPUTS_2 = "1" *) 
-  (* C_DOUT_DEFAULT = "0" *) 
-  (* C_DOUT_DEFAULT_2 = "0" *) 
-  (* C_FAMILY = "zynq" *) 
-  (* C_GPIO2_WIDTH = "1" *) 
-  (* C_GPIO_WIDTH = "1" *) 
-  (* C_INTERRUPT_PRESENT = "0" *) 
-  (* C_IS_DUAL = "1" *) 
-  (* C_S_AXI_ADDR_WIDTH = "9" *) 
-  (* C_S_AXI_DATA_WIDTH = "32" *) 
-  (* C_TRI_DEFAULT = "-1" *) 
-  (* C_TRI_DEFAULT_2 = "-1" *) 
-  (* downgradeipidentifiedwarnings = "yes" *) 
-  (* ip_group = "LOGICORE" *) 
-  processor_axi_gpio_2_0_axi_gpio U0
-       (.gpio2_io_i(1'b0),
-        .gpio2_io_o(gpio2_io_o),
-        .gpio2_io_t(NLW_U0_gpio2_io_t_UNCONNECTED[0]),
-        .gpio_io_i(1'b0),
-        .gpio_io_o(gpio_io_o),
-        .gpio_io_t(NLW_U0_gpio_io_t_UNCONNECTED[0]),
-        .ip2intc_irpt(NLW_U0_ip2intc_irpt_UNCONNECTED),
-        .s_axi_aclk(s_axi_aclk),
-        .s_axi_araddr(s_axi_araddr),
-        .s_axi_aresetn(s_axi_aresetn),
-        .s_axi_arready(s_axi_arready),
-        .s_axi_arvalid(s_axi_arvalid),
-        .s_axi_awaddr(s_axi_awaddr),
-        .s_axi_awready(s_axi_awready),
-        .s_axi_awvalid(s_axi_awvalid),
-        .s_axi_bready(s_axi_bready),
-        .s_axi_bresp(s_axi_bresp),
-        .s_axi_bvalid(s_axi_bvalid),
-        .s_axi_rdata(s_axi_rdata),
-        .s_axi_rready(s_axi_rready),
-        .s_axi_rresp(s_axi_rresp),
-        .s_axi_rvalid(s_axi_rvalid),
-        .s_axi_wdata(s_axi_wdata),
-        .s_axi_wready(s_axi_wready),
-        .s_axi_wstrb(s_axi_wstrb),
-        .s_axi_wvalid(s_axi_wvalid));
-endmodule
-
-(* ORIG_REF_NAME = "GPIO_Core" *) 
 module processor_axi_gpio_2_0_GPIO_Core
    (reg3,
     reg1,
@@ -193,7 +75,7 @@ module processor_axi_gpio_2_0_GPIO_Core
         .I1(bus2ip_cs),
         .I2(GPIO_xferAck_i),
         .O(iGPIO_xferAck));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT5 #(
     .INIT(32'h00080000)) 
     \Dual.ALLOUT0_ND_G1.READ_REG_GEN[0].reg1[31]_i_1 
@@ -209,7 +91,7 @@ module processor_axi_gpio_2_0_GPIO_Core
         .D(\Dual.ALLOUT0_ND_G1.READ_REG_GEN[0].reg1[31]_i_1_n_0 ),
         .Q(reg1),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT5 #(
     .INIT(32'h00080000)) 
     \Dual.ALLOUT1_ND_G2.READ_REG2_GEN[0].reg3[31]_i_1 
@@ -285,7 +167,6 @@ module processor_axi_gpio_2_0_GPIO_Core
         .O(ip2bus_wrack_i));
 endmodule
 
-(* ORIG_REF_NAME = "address_decoder" *) 
 module processor_axi_gpio_2_0_address_decoder
    (bus2ip_cs,
     s_axi_wdata_0_sp_1,
@@ -560,7 +441,7 @@ endmodule
 (* C_FAMILY = "zynq" *) (* C_GPIO2_WIDTH = "1" *) (* C_GPIO_WIDTH = "1" *) 
 (* C_INTERRUPT_PRESENT = "0" *) (* C_IS_DUAL = "1" *) (* C_S_AXI_ADDR_WIDTH = "9" *) 
 (* C_S_AXI_DATA_WIDTH = "32" *) (* C_TRI_DEFAULT = "-1" *) (* C_TRI_DEFAULT_2 = "-1" *) 
-(* ORIG_REF_NAME = "axi_gpio" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_group = "LOGICORE" *) 
+(* downgradeipidentifiedwarnings = "yes" *) (* ip_group = "LOGICORE" *) 
 module processor_axi_gpio_2_0_axi_gpio
    (s_axi_aclk,
     s_axi_aresetn,
@@ -767,7 +648,6 @@ module processor_axi_gpio_2_0_axi_gpio
         .R(\I_SLAVE_ATTACHMENT/rst ));
 endmodule
 
-(* ORIG_REF_NAME = "axi_lite_ipif" *) 
 module processor_axi_gpio_2_0_axi_lite_ipif
    (rst,
     bus2ip_rnw,
@@ -903,7 +783,123 @@ module processor_axi_gpio_2_0_axi_lite_ipif
         .s_axi_wvalid(s_axi_wvalid));
 endmodule
 
-(* ORIG_REF_NAME = "pselect_f" *) 
+(* CHECK_LICENSE_TYPE = "processor_axi_gpio_1_0,axi_gpio,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "axi_gpio,Vivado 2020.1" *) 
+(* NotValidForBitStream *)
+module processor_axi_gpio_2_0
+   (s_axi_aclk,
+    s_axi_aresetn,
+    s_axi_awaddr,
+    s_axi_awvalid,
+    s_axi_awready,
+    s_axi_wdata,
+    s_axi_wstrb,
+    s_axi_wvalid,
+    s_axi_wready,
+    s_axi_bresp,
+    s_axi_bvalid,
+    s_axi_bready,
+    s_axi_araddr,
+    s_axi_arvalid,
+    s_axi_arready,
+    s_axi_rdata,
+    s_axi_rresp,
+    s_axi_rvalid,
+    s_axi_rready,
+    gpio_io_o,
+    gpio2_io_o);
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 S_AXI_ACLK CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME S_AXI_ACLK, ASSOCIATED_BUSIF S_AXI, ASSOCIATED_RESET s_axi_aresetn, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, CLK_DOMAIN processor_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *) input s_axi_aclk;
+  (* x_interface_info = "xilinx.com:signal:reset:1.0 S_AXI_ARESETN RST" *) (* x_interface_parameter = "XIL_INTERFACENAME S_AXI_ARESETN, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input s_axi_aresetn;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI AWADDR" *) (* x_interface_parameter = "XIL_INTERFACENAME S_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 9, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN processor_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) input [8:0]s_axi_awaddr;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI AWVALID" *) input s_axi_awvalid;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI AWREADY" *) output s_axi_awready;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI WDATA" *) input [31:0]s_axi_wdata;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI WSTRB" *) input [3:0]s_axi_wstrb;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI WVALID" *) input s_axi_wvalid;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI WREADY" *) output s_axi_wready;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI BRESP" *) output [1:0]s_axi_bresp;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI BVALID" *) output s_axi_bvalid;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI BREADY" *) input s_axi_bready;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI ARADDR" *) input [8:0]s_axi_araddr;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI ARVALID" *) input s_axi_arvalid;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI ARREADY" *) output s_axi_arready;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI RDATA" *) output [31:0]s_axi_rdata;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI RRESP" *) output [1:0]s_axi_rresp;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI RVALID" *) output s_axi_rvalid;
+  (* x_interface_info = "xilinx.com:interface:aximm:1.0 S_AXI RREADY" *) input s_axi_rready;
+  (* x_interface_info = "xilinx.com:interface:gpio:1.0 GPIO TRI_O" *) (* x_interface_parameter = "XIL_INTERFACENAME GPIO, BOARD.ASSOCIATED_PARAM GPIO_BOARD_INTERFACE" *) output [0:0]gpio_io_o;
+  (* x_interface_info = "xilinx.com:interface:gpio:1.0 GPIO2 TRI_O" *) (* x_interface_parameter = "XIL_INTERFACENAME GPIO2, BOARD.ASSOCIATED_PARAM GPIO2_BOARD_INTERFACE" *) output [0:0]gpio2_io_o;
+
+  wire [0:0]gpio2_io_o;
+  wire [0:0]gpio_io_o;
+  wire s_axi_aclk;
+  wire [8:0]s_axi_araddr;
+  wire s_axi_aresetn;
+  wire s_axi_arready;
+  wire s_axi_arvalid;
+  wire [8:0]s_axi_awaddr;
+  wire s_axi_awready;
+  wire s_axi_awvalid;
+  wire s_axi_bready;
+  wire [1:0]s_axi_bresp;
+  wire s_axi_bvalid;
+  wire [31:0]s_axi_rdata;
+  wire s_axi_rready;
+  wire [1:0]s_axi_rresp;
+  wire s_axi_rvalid;
+  wire [31:0]s_axi_wdata;
+  wire s_axi_wready;
+  wire [3:0]s_axi_wstrb;
+  wire s_axi_wvalid;
+  wire NLW_U0_ip2intc_irpt_UNCONNECTED;
+  wire [0:0]NLW_U0_gpio2_io_t_UNCONNECTED;
+  wire [0:0]NLW_U0_gpio_io_t_UNCONNECTED;
+
+  (* C_ALL_INPUTS = "0" *) 
+  (* C_ALL_INPUTS_2 = "0" *) 
+  (* C_ALL_OUTPUTS = "1" *) 
+  (* C_ALL_OUTPUTS_2 = "1" *) 
+  (* C_DOUT_DEFAULT = "0" *) 
+  (* C_DOUT_DEFAULT_2 = "0" *) 
+  (* C_FAMILY = "zynq" *) 
+  (* C_GPIO2_WIDTH = "1" *) 
+  (* C_GPIO_WIDTH = "1" *) 
+  (* C_INTERRUPT_PRESENT = "0" *) 
+  (* C_IS_DUAL = "1" *) 
+  (* C_S_AXI_ADDR_WIDTH = "9" *) 
+  (* C_S_AXI_DATA_WIDTH = "32" *) 
+  (* C_TRI_DEFAULT = "-1" *) 
+  (* C_TRI_DEFAULT_2 = "-1" *) 
+  (* downgradeipidentifiedwarnings = "yes" *) 
+  (* ip_group = "LOGICORE" *) 
+  processor_axi_gpio_2_0_axi_gpio U0
+       (.gpio2_io_i(1'b0),
+        .gpio2_io_o(gpio2_io_o),
+        .gpio2_io_t(NLW_U0_gpio2_io_t_UNCONNECTED[0]),
+        .gpio_io_i(1'b0),
+        .gpio_io_o(gpio_io_o),
+        .gpio_io_t(NLW_U0_gpio_io_t_UNCONNECTED[0]),
+        .ip2intc_irpt(NLW_U0_ip2intc_irpt_UNCONNECTED),
+        .s_axi_aclk(s_axi_aclk),
+        .s_axi_araddr(s_axi_araddr),
+        .s_axi_aresetn(s_axi_aresetn),
+        .s_axi_arready(s_axi_arready),
+        .s_axi_arvalid(s_axi_arvalid),
+        .s_axi_awaddr(s_axi_awaddr),
+        .s_axi_awready(s_axi_awready),
+        .s_axi_awvalid(s_axi_awvalid),
+        .s_axi_bready(s_axi_bready),
+        .s_axi_bresp(s_axi_bresp),
+        .s_axi_bvalid(s_axi_bvalid),
+        .s_axi_rdata(s_axi_rdata),
+        .s_axi_rready(s_axi_rready),
+        .s_axi_rresp(s_axi_rresp),
+        .s_axi_rvalid(s_axi_rvalid),
+        .s_axi_wdata(s_axi_wdata),
+        .s_axi_wready(s_axi_wready),
+        .s_axi_wstrb(s_axi_wstrb),
+        .s_axi_wvalid(s_axi_wvalid));
+endmodule
+
 module processor_axi_gpio_2_0_pselect_f
    (ce_expnd_i_3,
     \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0] );
@@ -939,7 +935,6 @@ module processor_axi_gpio_2_0_pselect_f__parameterized1
         .O(ce_expnd_i_1));
 endmodule
 
-(* ORIG_REF_NAME = "slave_attachment" *) 
 module processor_axi_gpio_2_0_slave_attachment
    (SS,
     bus2ip_rnw_i_reg_0,
@@ -1238,7 +1233,6 @@ module processor_axi_gpio_2_0_slave_attachment
         .\s_axi_wdata[0]_2 (\s_axi_wdata[0]_2 ),
         .s_axi_wdata_0_sp_1(s_axi_wdata_0_sn_1),
         .s_axi_wready(is_write_reg_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \bus2ip_addr_i[2]_i_1 
@@ -1246,6 +1240,7 @@ module processor_axi_gpio_2_0_slave_attachment
         .I1(s_axi_awaddr[0]),
         .I2(s_axi_arvalid),
         .O(p_1_in[2]));
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT3 #(
     .INIT(8'hAC)) 
     \bus2ip_addr_i[3]_i_1 
@@ -1475,12 +1470,15 @@ module glbl ();
 
     parameter ROC_WIDTH = 100000;
     parameter TOC_WIDTH = 0;
+    parameter GRES_WIDTH = 10000;
+    parameter GRES_START = 10000;
 
 //--------   STARTUP Globals --------------
     wire GSR;
     wire GTS;
     wire GWE;
     wire PRLD;
+    wire GRESTORE;
     tri1 p_up_tmp;
     tri (weak1, strong0) PLL_LOCKG = p_up_tmp;
 
@@ -1493,6 +1491,7 @@ module glbl ();
     reg GSR_int;
     reg GTS_int;
     reg PRLD_int;
+    reg GRESTORE_int;
 
 //--------   JTAG Globals --------------
     wire JTAG_TDO_GLBL;
@@ -1520,6 +1519,7 @@ module glbl ();
     assign (strong1, weak0) GSR = GSR_int;
     assign (strong1, weak0) GTS = GTS_int;
     assign (weak1, weak0) PRLD = PRLD_int;
+    assign (strong1, weak0) GRESTORE = GRESTORE_int;
 
     initial begin
 	GSR_int = 1'b1;
@@ -1533,6 +1533,14 @@ module glbl ();
 	GTS_int = 1'b1;
 	#(TOC_WIDTH)
 	GTS_int = 1'b0;
+    end
+
+    initial begin 
+	GRESTORE_int = 1'b0;
+	#(GRES_START);
+	GRESTORE_int = 1'b1;
+	#(GRES_WIDTH);
+	GRESTORE_int = 1'b0;
     end
 
 endmodule

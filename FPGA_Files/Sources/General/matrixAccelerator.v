@@ -66,6 +66,7 @@ endgenerate
 generate
     genvar m ;
     for(m=0;m<`inputPortCount;m=m+1)begin
+        //fixedmultiplyCompute inputMulti (
         multiplyComputePynq inputMulti (
             .clk(Clk),
             .reset(Rst),
@@ -95,7 +96,7 @@ adder finalAdder (
     .sum(finalAccumulateWire)
 );
 
-always @(posedge Clk or posedge Rst) begin
+ always @(posedge Clk or posedge Rst) begin
     if(Rst) begin
         addPointer = 0;
         finalReady = 0;

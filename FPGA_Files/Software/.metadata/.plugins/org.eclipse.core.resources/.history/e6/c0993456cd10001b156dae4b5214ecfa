@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="Convolve_Image" location="C:/GitHub/ReconHardware/FPGA_Files/Software/Convolve_Image" platform="C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/Convolution_Accel_HW.xpfm" platformUID="xilinx:pynq-z2::0.0(custom)" systemProject="Convolve_Image_system" sysConfig="Convolution_Accel_HW" runtime="C/C++" cpu="standalone_domain" cpuInstance="ps7_cortexa9_0" os="standalone" mssSignature="392bca0147337992b3c9c5cc2a5b792f">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.1557106531" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.184552245" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="hello_world"/>
+</sdkproject:SdkProject>

@@ -1,7 +1,7 @@
-// Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+// Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-// Date        : Sun Oct 11 13:34:51 2020
+// Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+// Date        : Mon Oct 19 16:00:11 2020
 // Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
 //               c:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/ip/processor_axi_gpio_3_0/processor_axi_gpio_3_0_stub.v
@@ -13,7 +13,7 @@
 // This empty module with port declaration file causes synthesis tools to infer a black box for IP.
 // The synthesis directives are for Synopsys Synplify support to prevent IO buffer insertion.
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
-(* x_core_info = "axi_gpio,Vivado 2019.2" *)
+(* x_core_info = "axi_gpio,Vivado 2020.1" *)
 module processor_axi_gpio_3_0(s_axi_aclk, s_axi_aresetn, s_axi_awaddr, 
   s_axi_awvalid, s_axi_awready, s_axi_wdata, s_axi_wstrb, s_axi_wvalid, s_axi_wready, 
   s_axi_bresp, s_axi_bvalid, s_axi_bready, s_axi_araddr, s_axi_arvalid, s_axi_arready, 

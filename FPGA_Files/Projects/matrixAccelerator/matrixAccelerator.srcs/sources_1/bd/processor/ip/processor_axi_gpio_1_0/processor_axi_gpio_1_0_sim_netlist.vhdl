@@ -1,11 +1,11 @@
--- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+-- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
--- Date        : Sun Oct 11 13:35:28 2020
+-- Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+-- Date        : Mon Oct 19 15:59:40 2020
 -- Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim -rename_top processor_axi_gpio_1_0 -prefix
---               processor_axi_gpio_1_0_ processor_axi_gpio_2_0_sim_netlist.vhdl
--- Design      : processor_axi_gpio_2_0
+-- Command     : write_vhdl -force -mode funcsim
+--               c:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/ip/processor_axi_gpio_1_0/processor_axi_gpio_1_0_sim_netlist.vhdl
+-- Design      : processor_axi_gpio_1_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
 -- Device      : xc7z020clg400-1
@@ -33,6 +33,8 @@ entity processor_axi_gpio_1_0_GPIO_Core is
     \Dual.gpio2_OE_reg[0]_0\ : in STD_LOGIC;
     bus2ip_rnw : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of processor_axi_gpio_1_0_GPIO_Core : entity is "GPIO_Core";
 end processor_axi_gpio_1_0_GPIO_Core;
 
 architecture STRUCTURE of processor_axi_gpio_1_0_GPIO_Core is
@@ -44,8 +46,8 @@ architecture STRUCTURE of processor_axi_gpio_1_0_GPIO_Core is
   signal gpio_xferAck_Reg : STD_LOGIC;
   signal iGPIO_xferAck : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \Dual.ALLOUT0_ND_G1.READ_REG_GEN[0].reg1[31]_i_1\ : label is "soft_lutpair7";
-  attribute SOFT_HLUTNM of \Dual.ALLOUT1_ND_G2.READ_REG2_GEN[0].reg3[31]_i_1\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \Dual.ALLOUT0_ND_G1.READ_REG_GEN[0].reg1[31]_i_1\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \Dual.ALLOUT1_ND_G2.READ_REG2_GEN[0].reg3[31]_i_1\ : label is "soft_lutpair7";
   attribute SOFT_HLUTNM of ip2bus_rdack_i_D1_i_1 : label is "soft_lutpair7";
   attribute SOFT_HLUTNM of ip2bus_wrack_i_D1_i_1 : label is "soft_lutpair6";
 begin
@@ -189,6 +191,8 @@ entity processor_axi_gpio_1_0_pselect_f is
     ce_expnd_i_3 : out STD_LOGIC;
     \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0]\ : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of processor_axi_gpio_1_0_pselect_f : entity is "pselect_f";
 end processor_axi_gpio_1_0_pselect_f;
 
 architecture STRUCTURE of processor_axi_gpio_1_0_pselect_f is
@@ -260,6 +264,8 @@ entity processor_axi_gpio_1_0_address_decoder is
     reg3 : in STD_LOGIC_VECTOR ( 0 to 0 );
     reg1 : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of processor_axi_gpio_1_0_address_decoder : entity is "address_decoder";
 end processor_axi_gpio_1_0_address_decoder;
 
 architecture STRUCTURE of processor_axi_gpio_1_0_address_decoder is
@@ -562,6 +568,8 @@ entity processor_axi_gpio_1_0_slave_attachment is
     s_axi_araddr : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of processor_axi_gpio_1_0_slave_attachment : entity is "slave_attachment";
 end processor_axi_gpio_1_0_slave_attachment;
 
 architecture STRUCTURE of processor_axi_gpio_1_0_slave_attachment is
@@ -613,7 +621,7 @@ architecture STRUCTURE of processor_axi_gpio_1_0_slave_attachment is
   attribute SOFT_HLUTNM of \INCLUDE_DPHASE_TIMER.dpto_cnt[1]_i_1\ : label is "soft_lutpair5";
   attribute SOFT_HLUTNM of \INCLUDE_DPHASE_TIMER.dpto_cnt[2]_i_1\ : label is "soft_lutpair2";
   attribute SOFT_HLUTNM of \INCLUDE_DPHASE_TIMER.dpto_cnt[3]_i_2\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \bus2ip_addr_i[2]_i_1\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \bus2ip_addr_i[3]_i_1\ : label is "soft_lutpair4";
   attribute SOFT_HLUTNM of \bus2ip_addr_i[8]_i_2\ : label is "soft_lutpair4";
   attribute SOFT_HLUTNM of \s_axi_rdata_i[0]_i_1\ : label is "soft_lutpair3";
   attribute SOFT_HLUTNM of \s_axi_rdata_i[31]_i_1\ : label is "soft_lutpair3";
@@ -1184,6 +1192,8 @@ entity processor_axi_gpio_1_0_axi_lite_ipif is
     s_axi_araddr : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of processor_axi_gpio_1_0_axi_lite_ipif : entity is "axi_lite_ipif";
 end processor_axi_gpio_1_0_axi_lite_ipif;
 
 architecture STRUCTURE of processor_axi_gpio_1_0_axi_lite_ipif is
@@ -1289,6 +1299,8 @@ entity processor_axi_gpio_1_0_axi_gpio is
   attribute C_TRI_DEFAULT of processor_axi_gpio_1_0_axi_gpio : entity is -1;
   attribute C_TRI_DEFAULT_2 : integer;
   attribute C_TRI_DEFAULT_2 of processor_axi_gpio_1_0_axi_gpio : entity is -1;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of processor_axi_gpio_1_0_axi_gpio : entity is "axi_gpio";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of processor_axi_gpio_1_0_axi_gpio : entity is "yes";
   attribute ip_group : string;
@@ -1493,11 +1505,11 @@ entity processor_axi_gpio_1_0 is
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of processor_axi_gpio_1_0 : entity is true;
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of processor_axi_gpio_1_0 : entity is "processor_axi_gpio_2_0,axi_gpio,{}";
+  attribute CHECK_LICENSE_TYPE of processor_axi_gpio_1_0 : entity is "processor_axi_gpio_1_0,axi_gpio,{}";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of processor_axi_gpio_1_0 : entity is "yes";
   attribute x_core_info : string;
-  attribute x_core_info of processor_axi_gpio_1_0 : entity is "axi_gpio,Vivado 2019.2";
+  attribute x_core_info of processor_axi_gpio_1_0 : entity is "axi_gpio,Vivado 2020.1";
 end processor_axi_gpio_1_0;
 
 architecture STRUCTURE of processor_axi_gpio_1_0 is
@@ -1540,7 +1552,7 @@ architecture STRUCTURE of processor_axi_gpio_1_0 is
   attribute x_interface_info : string;
   attribute x_interface_info of s_axi_aclk : signal is "xilinx.com:signal:clock:1.0 S_AXI_ACLK CLK";
   attribute x_interface_parameter : string;
-  attribute x_interface_parameter of s_axi_aclk : signal is "XIL_INTERFACENAME S_AXI_ACLK, ASSOCIATED_BUSIF S_AXI, ASSOCIATED_RESET s_axi_aresetn, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN processor_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0";
+  attribute x_interface_parameter of s_axi_aclk : signal is "XIL_INTERFACENAME S_AXI_ACLK, ASSOCIATED_BUSIF S_AXI, ASSOCIATED_RESET s_axi_aresetn, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, CLK_DOMAIN processor_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0";
   attribute x_interface_info of s_axi_aresetn : signal is "xilinx.com:signal:reset:1.0 S_AXI_ARESETN RST";
   attribute x_interface_parameter of s_axi_aresetn : signal is "XIL_INTERFACENAME S_AXI_ARESETN, POLARITY ACTIVE_LOW, INSERT_VIP 0";
   attribute x_interface_info of s_axi_arready : signal is "xilinx.com:interface:aximm:1.0 S_AXI ARREADY";

@@ -1,13 +1,143 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Projects/matrixAccelerator/matrixAccelerator.sim/sim_1/synth/func/xsim/adderFloat_tb_func_synth.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module adderFloat
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.sim/sim_1/synth/func/xsim/Image_Convolution_func_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Conv_Accel_Top
+INFO: [VRFC 10-311] analyzing module ConvolutionAccelerator
+INFO: [VRFC 10-311] analyzing module ConvolutionController
+INFO: [VRFC 10-311] analyzing module aFIFO
+INFO: [VRFC 10-311] analyzing module aFIFO_0
+INFO: [VRFC 10-311] analyzing module adder
+INFO: [VRFC 10-311] analyzing module adder_3
+INFO: [VRFC 10-311] analyzing module adder_4
+INFO: [VRFC 10-311] analyzing module adder_5
+INFO: [VRFC 10-311] analyzing module matrixAccelerator
+INFO: [VRFC 10-311] analyzing module multiplyComputePynq
+INFO: [VRFC 10-311] analyzing module multiplyComputePynq_1
+INFO: [VRFC 10-311] analyzing module multiplyComputePynq_2
+INFO: [VRFC 10-311] analyzing module processor
+INFO: [VRFC 10-311] analyzing module processor_auto_pc_0
+INFO: [VRFC 10-311] analyzing module processor_auto_pc_0_axi_protocol_converter_v2_1_21_axi_protocol_converter
+INFO: [VRFC 10-311] analyzing module processor_auto_pc_0_axi_protocol_converter_v2_1_21_b2s
+INFO: [VRFC 10-311] analyzing module processor_auto_pc_0_axi_protocol_converter_v2_1_21_b2s_ar_channel
+INFO: [VRFC 10-311] analyzing module processor_auto_pc_0_axi_protocol_converter_v2_1_21_b2s_aw_channel
+INFO: [VRFC 10-311] analyzing module processor_auto_pc_0_axi_protocol_converter_v2_1_21_b2s_b_channel
+INFO: [VRFC 10-311] analyzing module processor_auto_pc_0_axi_protocol_converter_v2_1_21_b2s_cmd_translator
+INFO: [VRFC 10-311] analyzing module processor_auto_pc_0_axi_protocol_converter_v2_1_21_b2s_cmd_translator_1
+INFO: [VRFC 10-311] analyzing module processor_auto_pc_0_axi_protocol_converter_v2_1_21_b2s_incr_cmd
+INFO: [VRFC 10-311] analyzing module processor_auto_pc_0_axi_protocol_converter_v2_1_21_b2s_incr_cmd_2
+INFO: [VRFC 10-311] analyzing module processor_auto_pc_0_axi_protocol_converter_v2_1_21_b2s_r_channel
+INFO: [VRFC 10-311] analyzing module processor_auto_pc_0_axi_protocol_converter_v2_1_21_b2s_rd_cmd_fsm
+INFO: [VRFC 10-311] analyzing module processor_auto_pc_0_axi_protocol_converter_v2_1_21_b2s_simple_fifo
+INFO: [VRFC 10-311] analyzing module processor_auto_pc_0_axi_protocol_converter_v2_1_21_b2s_simple_fifo__parameterized0
+INFO: [VRFC 10-311] analyzing module processor_auto_pc_0_axi_protocol_converter_v2_1_21_b2s_simple_fifo__parameterized1
+INFO: [VRFC 10-311] analyzing module processor_auto_pc_0_axi_protocol_converter_v2_1_21_b2s_simple_fifo__parameterized2
+INFO: [VRFC 10-311] analyzing module processor_auto_pc_0_axi_protocol_converter_v2_1_21_b2s_wr_cmd_fsm
+INFO: [VRFC 10-311] analyzing module processor_auto_pc_0_axi_protocol_converter_v2_1_21_b2s_wrap_cmd
+INFO: [VRFC 10-311] analyzing module processor_auto_pc_0_axi_protocol_converter_v2_1_21_b2s_wrap_cmd_3
+INFO: [VRFC 10-311] analyzing module processor_auto_pc_0_axi_register_slice_v2_1_21_axi_register_slice
+INFO: [VRFC 10-311] analyzing module processor_auto_pc_0_axi_register_slice_v2_1_21_axic_register_slice
+INFO: [VRFC 10-311] analyzing module processor_auto_pc_0_axi_register_slice_v2_1_21_axic_register_slice_0
+INFO: [VRFC 10-311] analyzing module processor_auto_pc_0_axi_register_slice_v2_1_21_axic_register_slice__parameterized1
+INFO: [VRFC 10-311] analyzing module processor_auto_pc_0_axi_register_slice_v2_1_21_axic_register_slice__parameterized2
+INFO: [VRFC 10-311] analyzing module processor_axi_gpio_0_0
+INFO: [VRFC 10-311] analyzing module processor_axi_gpio_0_0__GPIO_Core
+INFO: [VRFC 10-311] analyzing module processor_axi_gpio_0_0__address_decoder
+INFO: [VRFC 10-311] analyzing module processor_axi_gpio_0_0__axi_gpio
+INFO: [VRFC 10-311] analyzing module processor_axi_gpio_0_0__axi_lite_ipif
+INFO: [VRFC 10-311] analyzing module processor_axi_gpio_0_0__pselect_f
+INFO: [VRFC 10-311] analyzing module processor_axi_gpio_0_0__pselect_f__parameterized1
+INFO: [VRFC 10-311] analyzing module processor_axi_gpio_0_0__slave_attachment
+INFO: [VRFC 10-311] analyzing module processor_axi_gpio_0_1
+INFO: [VRFC 10-311] analyzing module processor_axi_gpio_0_1_GPIO_Core
+INFO: [VRFC 10-311] analyzing module processor_axi_gpio_0_1_address_decoder
+INFO: [VRFC 10-311] analyzing module processor_axi_gpio_0_1_axi_gpio
+INFO: [VRFC 10-311] analyzing module processor_axi_gpio_0_1_axi_lite_ipif
+INFO: [VRFC 10-311] analyzing module processor_axi_gpio_0_1_pselect_f
+INFO: [VRFC 10-311] analyzing module processor_axi_gpio_0_1_pselect_f__parameterized1
+INFO: [VRFC 10-311] analyzing module processor_axi_gpio_0_1_slave_attachment
+INFO: [VRFC 10-311] analyzing module processor_axi_gpio_1_0
+INFO: [VRFC 10-311] analyzing module processor_axi_gpio_1_0_GPIO_Core
+INFO: [VRFC 10-311] analyzing module processor_axi_gpio_1_0_address_decoder
+INFO: [VRFC 10-311] analyzing module processor_axi_gpio_1_0_axi_gpio
+INFO: [VRFC 10-311] analyzing module processor_axi_gpio_1_0_axi_lite_ipif
+INFO: [VRFC 10-311] analyzing module processor_axi_gpio_1_0_pselect_f
+INFO: [VRFC 10-311] analyzing module processor_axi_gpio_1_0_pselect_f__parameterized1
+INFO: [VRFC 10-311] analyzing module processor_axi_gpio_1_0_slave_attachment
+INFO: [VRFC 10-311] analyzing module processor_axi_gpio_2_0
+INFO: [VRFC 10-311] analyzing module processor_axi_gpio_2_0__GPIO_Core
+INFO: [VRFC 10-311] analyzing module processor_axi_gpio_2_0__address_decoder
+INFO: [VRFC 10-311] analyzing module processor_axi_gpio_2_0__axi_gpio
+INFO: [VRFC 10-311] analyzing module processor_axi_gpio_2_0__axi_lite_ipif
+INFO: [VRFC 10-311] analyzing module processor_axi_gpio_2_0__pselect_f
+INFO: [VRFC 10-311] analyzing module processor_axi_gpio_2_0__pselect_f__parameterized1
+INFO: [VRFC 10-311] analyzing module processor_axi_gpio_2_0__slave_attachment
+INFO: [VRFC 10-311] analyzing module processor_axi_gpio_3_0
+INFO: [VRFC 10-311] analyzing module processor_axi_gpio_3_0_GPIO_Core
+INFO: [VRFC 10-311] analyzing module processor_axi_gpio_3_0_address_decoder
+INFO: [VRFC 10-311] analyzing module processor_axi_gpio_3_0_axi_gpio
+INFO: [VRFC 10-311] analyzing module processor_axi_gpio_3_0_axi_lite_ipif
+INFO: [VRFC 10-311] analyzing module processor_axi_gpio_3_0_cdc_sync
+INFO: [VRFC 10-311] analyzing module processor_axi_gpio_3_0_pselect_f
+INFO: [VRFC 10-311] analyzing module processor_axi_gpio_3_0_pselect_f__parameterized1
+INFO: [VRFC 10-311] analyzing module processor_axi_gpio_3_0_slave_attachment
+INFO: [VRFC 10-311] analyzing module processor_axi_gpio_4_0
+INFO: [VRFC 10-311] analyzing module processor_axi_gpio_4_0__GPIO_Core
+INFO: [VRFC 10-311] analyzing module processor_axi_gpio_4_0__address_decoder
+INFO: [VRFC 10-311] analyzing module processor_axi_gpio_4_0__axi_gpio
+INFO: [VRFC 10-311] analyzing module processor_axi_gpio_4_0__axi_lite_ipif
+INFO: [VRFC 10-311] analyzing module processor_axi_gpio_4_0__cdc_sync
+INFO: [VRFC 10-311] analyzing module processor_axi_gpio_4_0__cdc_sync_0
+INFO: [VRFC 10-311] analyzing module processor_axi_gpio_4_0__slave_attachment
+INFO: [VRFC 10-311] analyzing module processor_axi_gpio_5_0
+INFO: [VRFC 10-311] analyzing module processor_axi_gpio_5_0_GPIO_Core
+INFO: [VRFC 10-311] analyzing module processor_axi_gpio_5_0_address_decoder
+INFO: [VRFC 10-311] analyzing module processor_axi_gpio_5_0_axi_gpio
+INFO: [VRFC 10-311] analyzing module processor_axi_gpio_5_0_axi_lite_ipif
+INFO: [VRFC 10-311] analyzing module processor_axi_gpio_5_0_cdc_sync
+INFO: [VRFC 10-311] analyzing module processor_axi_gpio_5_0_cdc_sync_0
+INFO: [VRFC 10-311] analyzing module processor_axi_gpio_5_0_slave_attachment
+INFO: [VRFC 10-311] analyzing module processor_axi_interconnect_0_0
+INFO: [VRFC 10-311] analyzing module processor_clk_wiz_0_0
+INFO: [VRFC 10-311] analyzing module processor_clk_wiz_0_0_processor_clk_wiz_0_0_clk_wiz
+INFO: [VRFC 10-311] analyzing module processor_proc_sys_reset_0_0
+INFO: [VRFC 10-311] analyzing module processor_proc_sys_reset_0_0_cdc_sync
+INFO: [VRFC 10-311] analyzing module processor_proc_sys_reset_0_0_cdc_sync_0
+INFO: [VRFC 10-311] analyzing module processor_proc_sys_reset_0_0_lpf
+INFO: [VRFC 10-311] analyzing module processor_proc_sys_reset_0_0_proc_sys_reset
+INFO: [VRFC 10-311] analyzing module processor_proc_sys_reset_0_0_sequence_psr
+INFO: [VRFC 10-311] analyzing module processor_proc_sys_reset_0_0_upcnt_n
+INFO: [VRFC 10-311] analyzing module processor_processing_system7_0_0
+INFO: [VRFC 10-311] analyzing module processor_processing_system7_0_0_processing_system7_v5_5_processing_system7
+INFO: [VRFC 10-311] analyzing module processor_wrapper
+INFO: [VRFC 10-311] analyzing module processor_xbar_0
+INFO: [VRFC 10-311] analyzing module processor_xbar_0_axi_crossbar_v2_1_22_addr_arbiter_sasd
+INFO: [VRFC 10-311] analyzing module processor_xbar_0_axi_crossbar_v2_1_22_axi_crossbar
+INFO: [VRFC 10-311] analyzing module processor_xbar_0_axi_crossbar_v2_1_22_crossbar_sasd
+INFO: [VRFC 10-311] analyzing module processor_xbar_0_axi_crossbar_v2_1_22_decerr_slave
+INFO: [VRFC 10-311] analyzing module processor_xbar_0_axi_crossbar_v2_1_22_splitter
+INFO: [VRFC 10-311] analyzing module processor_xbar_0_axi_crossbar_v2_1_22_splitter__parameterized0
+INFO: [VRFC 10-311] analyzing module processor_xbar_0_axi_register_slice_v2_1_21_axic_register_slice
+INFO: [VRFC 10-311] analyzing module s00_couplers_imp_1PQZU0N
 INFO: [VRFC 10-311] analyzing module glbl
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/TB/dynamicMulti2_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module dynamicMulti2_tb
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/TB/XBar2_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module XBar2_tb
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/TB/adder_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module adder_tb
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/TB/matrixAccelerator_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module matrixAccelerator_tb
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/TB/adderFloat_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module adderFloat_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/FPGA_Files/Sources/General/XBar2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module XBar2
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/FPGA_Files/Sources/General/aFIFO.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module aFIFO
+WARNING: [VRFC 10-3380] identifier 'o_rdata' is used before its declaration [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/aFIFO.v:94]
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'aFIFO' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/aFIFO.v:68]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/FPGA_Files/Sources/Adder/adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'adder' [C:/GitHub/ReconHardware/FPGA_Files/Sources/Adder/adder.v:5]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/FPGA_Files/Sources/General/matrixAccTopDevice.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ConvolutionAccelerator
+INFO: [VRFC 10-2458] undeclared symbol CTRL_RST, assumed default net type wire [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/matrixAccTopDevice.v:61]
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'ConvolutionAccelerator' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/matrixAccTopDevice.v:6]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/FPGA_Files/Sources/General/matrixAccelerator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module matrixAccelerator
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'matrixAccelerator' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/matrixAccelerator.v:4]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/FPGA_Files/Sources/General/matrixControl3x3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ConvolutionController
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'ConvolutionController' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/matrixControl3x3.v:4]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/FPGA_Files/Sources/Multiplier/multiplyComputePynq.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplyComputePynq
+WARNING: [VRFC 10-3609] overwriting previous definition of module 'multiplyComputePynq' [C:/GitHub/ReconHardware/FPGA_Files/Sources/Multiplier/multiplyComputePynq.v:4]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/Image_Convolution.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Image_Convolution

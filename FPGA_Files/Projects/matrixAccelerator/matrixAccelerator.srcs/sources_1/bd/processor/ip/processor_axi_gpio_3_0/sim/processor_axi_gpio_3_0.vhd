@@ -47,14 +47,14 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: xilinx.com:ip:axi_gpio:2.0
--- IP Revision: 22
+-- IP Revision: 23
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL;
 
-LIBRARY axi_gpio_v2_0_22;
-USE axi_gpio_v2_0_22.axi_gpio;
+LIBRARY axi_gpio_v2_0_23;
+USE axi_gpio_v2_0_23.axi_gpio;
 
 ENTITY processor_axi_gpio_3_0 IS
   PORT (
@@ -126,9 +126,9 @@ ARCHITECTURE processor_axi_gpio_3_0_arch OF processor_axi_gpio_3_0 IS
       gpio_io_i : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
       gpio_io_o : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
       gpio_io_t : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
-      gpio2_io_i : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-      gpio2_io_o : OUT STD_LOGIC_VECTOR(0 DOWNTO 0);
-      gpio2_io_t : OUT STD_LOGIC_VECTOR(0 DOWNTO 0)
+      gpio2_io_i : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+      gpio2_io_o : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+      gpio2_io_t : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
     );
   END COMPONENT axi_gpio;
   ATTRIBUTE X_INTERFACE_INFO : STRING;
@@ -156,7 +156,7 @@ ARCHITECTURE processor_axi_gpio_3_0_arch OF processor_axi_gpio_3_0 IS
   ATTRIBUTE X_INTERFACE_INFO OF s_axi_awaddr: SIGNAL IS "xilinx.com:interface:aximm:1.0 S_AXI AWADDR";
   ATTRIBUTE X_INTERFACE_PARAMETER OF s_axi_aresetn: SIGNAL IS "XIL_INTERFACENAME S_AXI_ARESETN, POLARITY ACTIVE_LOW, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF s_axi_aresetn: SIGNAL IS "xilinx.com:signal:reset:1.0 S_AXI_ARESETN RST";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF s_axi_aclk: SIGNAL IS "XIL_INTERFACENAME S_AXI_ACLK, ASSOCIATED_BUSIF S_AXI, ASSOCIATED_RESET s_axi_aresetn, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN processor_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF s_axi_aclk: SIGNAL IS "XIL_INTERFACENAME S_AXI_ACLK, ASSOCIATED_BUSIF S_AXI, ASSOCIATED_RESET s_axi_aresetn, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, CLK_DOMAIN processor_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF s_axi_aclk: SIGNAL IS "xilinx.com:signal:clock:1.0 S_AXI_ACLK CLK";
 BEGIN
   U0 : axi_gpio
@@ -165,11 +165,11 @@ BEGIN
       C_S_AXI_ADDR_WIDTH => 9,
       C_S_AXI_DATA_WIDTH => 32,
       C_GPIO_WIDTH => 16,
-      C_GPIO2_WIDTH => 1,
+      C_GPIO2_WIDTH => 32,
       C_ALL_INPUTS => 1,
       C_ALL_INPUTS_2 => 0,
       C_ALL_OUTPUTS => 0,
-      C_ALL_OUTPUTS_2 => 1,
+      C_ALL_OUTPUTS_2 => 0,
       C_INTERRUPT_PRESENT => 0,
       C_DOUT_DEFAULT => X"00000000",
       C_TRI_DEFAULT => X"FFFFFFFF",
@@ -198,6 +198,6 @@ BEGIN
       s_axi_rvalid => s_axi_rvalid,
       s_axi_rready => s_axi_rready,
       gpio_io_i => gpio_io_i,
-      gpio2_io_i => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 1))
+      gpio2_io_i => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 32))
     );
 END processor_axi_gpio_3_0_arch;

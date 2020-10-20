@@ -1,11 +1,11 @@
--- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+-- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
--- Date        : Sun Oct 11 13:34:50 2020
+-- Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+-- Date        : Mon Oct 19 15:59:35 2020
 -- Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim -rename_top processor_axi_gpio_5_0 -prefix
---               processor_axi_gpio_5_0_ processor_axi_gpio_4_0_sim_netlist.vhdl
--- Design      : processor_axi_gpio_4_0
+-- Command     : write_vhdl -force -mode funcsim
+--               c:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/ip/processor_axi_gpio_5_0/processor_axi_gpio_5_0_sim_netlist.vhdl
+-- Design      : processor_axi_gpio_5_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
 -- Device      : xc7z020clg400-1
@@ -48,6 +48,8 @@ entity processor_axi_gpio_5_0_address_decoder is
     reg3 : in STD_LOGIC_VECTOR ( 0 to 0 );
     reg1 : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of processor_axi_gpio_5_0_address_decoder : entity is "address_decoder";
 end processor_axi_gpio_5_0_address_decoder;
 
 architecture STRUCTURE of processor_axi_gpio_5_0_address_decoder is
@@ -72,12 +74,12 @@ architecture STRUCTURE of processor_axi_gpio_5_0_address_decoder is
   signal \^ip2bus_wrack_i_d1_reg\ : STD_LOGIC;
   signal s_axi_wdata_0_sn_1 : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \Dual.gpio2_Data_Out[0]_i_1\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \Dual.gpio2_OE[0]_i_1\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \Dual.gpio_Data_Out[0]_i_1\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \Dual.gpio_Data_Out[0]_i_2\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \Dual.gpio_OE[0]_i_1\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \Dual.gpio_OE[0]_i_2\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \Dual.gpio2_Data_Out[0]_i_1\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \Dual.gpio2_OE[0]_i_1\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \Dual.gpio_Data_Out[0]_i_1\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \Dual.gpio_Data_Out[0]_i_2\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \Dual.gpio_OE[0]_i_1\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \Dual.gpio_OE[0]_i_2\ : label is "soft_lutpair0";
   attribute SOFT_HLUTNM of \GEN_BKEND_CE_REGISTERS[0].ce_out_i[0]_i_1\ : label is "soft_lutpair4";
   attribute SOFT_HLUTNM of \GEN_BKEND_CE_REGISTERS[1].ce_out_i[1]_i_1\ : label is "soft_lutpair4";
   attribute SOFT_HLUTNM of \GEN_BKEND_CE_REGISTERS[2].ce_out_i[2]_i_1\ : label is "soft_lutpair3";
@@ -381,12 +383,14 @@ entity processor_axi_gpio_5_0_cdc_sync is
     gpio_io_i : in STD_LOGIC_VECTOR ( 0 to 0 );
     s_axi_aclk : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of processor_axi_gpio_5_0_cdc_sync : entity is "cdc_sync";
 end processor_axi_gpio_5_0_cdc_sync;
 
 architecture STRUCTURE of processor_axi_gpio_5_0_cdc_sync is
-  signal \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2_n_0\ : STD_LOGIC;
-  signal \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3_n_0\ : STD_LOGIC;
-  signal Q : STD_LOGIC;
+  signal s_level_out_bus_d1_cdc_to : STD_LOGIC;
+  signal s_level_out_bus_d2 : STD_LOGIC;
+  signal s_level_out_bus_d3 : STD_LOGIC;
   attribute ASYNC_REG : boolean;
   attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\ : label is std.standard.true;
   attribute XILINX_LEGACY_PRIM : string;
@@ -410,8 +414,8 @@ begin
         port map (
       C => s_axi_aclk,
       CE => '1',
-      D => Q,
-      Q => \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2_n_0\,
+      D => s_level_out_bus_d1_cdc_to,
+      Q => s_level_out_bus_d2,
       R => '0'
     );
 \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\: unisim.vcomponents.FDRE
@@ -421,8 +425,8 @@ begin
         port map (
       C => s_axi_aclk,
       CE => '1',
-      D => \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2_n_0\,
-      Q => \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3_n_0\,
+      D => s_level_out_bus_d2,
+      Q => s_level_out_bus_d3,
       R => '0'
     );
 \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\: unisim.vcomponents.FDRE
@@ -432,7 +436,7 @@ begin
         port map (
       C => s_axi_aclk,
       CE => '1',
-      D => \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3_n_0\,
+      D => s_level_out_bus_d3,
       Q => scndry_vect_out(0),
       R => '0'
     );
@@ -444,7 +448,7 @@ begin
       C => s_axi_aclk,
       CE => '1',
       D => gpio_io_i(0),
-      Q => Q,
+      Q => s_level_out_bus_d1_cdc_to,
       R => '0'
     );
 end STRUCTURE;
@@ -463,9 +467,9 @@ entity processor_axi_gpio_5_0_cdc_sync_0 is
 end processor_axi_gpio_5_0_cdc_sync_0;
 
 architecture STRUCTURE of processor_axi_gpio_5_0_cdc_sync_0 is
-  signal \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2_n_0\ : STD_LOGIC;
-  signal \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3_n_0\ : STD_LOGIC;
-  signal Q : STD_LOGIC;
+  signal s_level_out_bus_d1_cdc_to : STD_LOGIC;
+  signal s_level_out_bus_d2 : STD_LOGIC;
+  signal s_level_out_bus_d3 : STD_LOGIC;
   attribute ASYNC_REG : boolean;
   attribute ASYNC_REG of \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2\ : label is std.standard.true;
   attribute XILINX_LEGACY_PRIM : string;
@@ -489,8 +493,8 @@ begin
         port map (
       C => s_axi_aclk,
       CE => '1',
-      D => Q,
-      Q => \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2_n_0\,
+      D => s_level_out_bus_d1_cdc_to,
+      Q => s_level_out_bus_d2,
       R => '0'
     );
 \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3\: unisim.vcomponents.FDRE
@@ -500,8 +504,8 @@ begin
         port map (
       C => s_axi_aclk,
       CE => '1',
-      D => \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2_n_0\,
-      Q => \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3_n_0\,
+      D => s_level_out_bus_d2,
+      Q => s_level_out_bus_d3,
       R => '0'
     );
 \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4\: unisim.vcomponents.FDRE
@@ -511,7 +515,7 @@ begin
         port map (
       C => s_axi_aclk,
       CE => '1',
-      D => \GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d3[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d3_n_0\,
+      D => s_level_out_bus_d3,
       Q => scndry_vect_out(0),
       R => '0'
     );
@@ -523,7 +527,7 @@ begin
       C => s_axi_aclk,
       CE => '1',
       D => gpio2_io_i(0),
-      Q => Q,
+      Q => s_level_out_bus_d1_cdc_to,
       R => '0'
     );
 end STRUCTURE;
@@ -557,6 +561,8 @@ entity processor_axi_gpio_5_0_GPIO_Core is
     gpio_io_i : in STD_LOGIC_VECTOR ( 0 to 0 );
     gpio2_io_i : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of processor_axi_gpio_5_0_GPIO_Core : entity is "GPIO_Core";
 end processor_axi_gpio_5_0_GPIO_Core;
 
 architecture STRUCTURE of processor_axi_gpio_5_0_GPIO_Core is
@@ -741,6 +747,8 @@ entity processor_axi_gpio_5_0_slave_attachment is
     s_axi_araddr : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of processor_axi_gpio_5_0_slave_attachment : entity is "slave_attachment";
 end processor_axi_gpio_5_0_slave_attachment;
 
 architecture STRUCTURE of processor_axi_gpio_5_0_slave_attachment is
@@ -792,7 +800,7 @@ architecture STRUCTURE of processor_axi_gpio_5_0_slave_attachment is
   attribute SOFT_HLUTNM of \INCLUDE_DPHASE_TIMER.dpto_cnt[1]_i_1\ : label is "soft_lutpair9";
   attribute SOFT_HLUTNM of \INCLUDE_DPHASE_TIMER.dpto_cnt[2]_i_1\ : label is "soft_lutpair6";
   attribute SOFT_HLUTNM of \INCLUDE_DPHASE_TIMER.dpto_cnt[3]_i_2\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of \bus2ip_addr_i[2]_i_1\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \bus2ip_addr_i[3]_i_1\ : label is "soft_lutpair8";
   attribute SOFT_HLUTNM of \bus2ip_addr_i[8]_i_2\ : label is "soft_lutpair8";
   attribute SOFT_HLUTNM of \s_axi_rdata_i[0]_i_1\ : label is "soft_lutpair7";
   attribute SOFT_HLUTNM of \s_axi_rdata_i[31]_i_1\ : label is "soft_lutpair7";
@@ -1385,6 +1393,8 @@ entity processor_axi_gpio_5_0_axi_lite_ipif is
     s_axi_araddr : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of processor_axi_gpio_5_0_axi_lite_ipif : entity is "axi_lite_ipif";
 end processor_axi_gpio_5_0_axi_lite_ipif;
 
 architecture STRUCTURE of processor_axi_gpio_5_0_axi_lite_ipif is
@@ -1497,6 +1507,8 @@ entity processor_axi_gpio_5_0_axi_gpio is
   attribute C_TRI_DEFAULT of processor_axi_gpio_5_0_axi_gpio : entity is -1;
   attribute C_TRI_DEFAULT_2 : integer;
   attribute C_TRI_DEFAULT_2 of processor_axi_gpio_5_0_axi_gpio : entity is -1;
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of processor_axi_gpio_5_0_axi_gpio : entity is "axi_gpio";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of processor_axi_gpio_5_0_axi_gpio : entity is "yes";
   attribute ip_group : string;
@@ -1721,11 +1733,11 @@ entity processor_axi_gpio_5_0 is
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of processor_axi_gpio_5_0 : entity is true;
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of processor_axi_gpio_5_0 : entity is "processor_axi_gpio_4_0,axi_gpio,{}";
+  attribute CHECK_LICENSE_TYPE of processor_axi_gpio_5_0 : entity is "processor_axi_gpio_5_0,axi_gpio,{}";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of processor_axi_gpio_5_0 : entity is "yes";
   attribute x_core_info : string;
-  attribute x_core_info of processor_axi_gpio_5_0 : entity is "axi_gpio,Vivado 2019.2";
+  attribute x_core_info of processor_axi_gpio_5_0 : entity is "axi_gpio,Vivado 2020.1";
 end processor_axi_gpio_5_0;
 
 architecture STRUCTURE of processor_axi_gpio_5_0 is
@@ -1770,7 +1782,7 @@ architecture STRUCTURE of processor_axi_gpio_5_0 is
   attribute x_interface_info : string;
   attribute x_interface_info of s_axi_aclk : signal is "xilinx.com:signal:clock:1.0 S_AXI_ACLK CLK";
   attribute x_interface_parameter : string;
-  attribute x_interface_parameter of s_axi_aclk : signal is "XIL_INTERFACENAME S_AXI_ACLK, ASSOCIATED_BUSIF S_AXI, ASSOCIATED_RESET s_axi_aresetn, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN processor_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0";
+  attribute x_interface_parameter of s_axi_aclk : signal is "XIL_INTERFACENAME S_AXI_ACLK, ASSOCIATED_BUSIF S_AXI, ASSOCIATED_RESET s_axi_aresetn, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, CLK_DOMAIN processor_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0";
   attribute x_interface_info of s_axi_aresetn : signal is "xilinx.com:signal:reset:1.0 S_AXI_ARESETN RST";
   attribute x_interface_parameter of s_axi_aresetn : signal is "XIL_INTERFACENAME S_AXI_ARESETN, POLARITY ACTIVE_LOW, INSERT_VIP 0";
   attribute x_interface_info of s_axi_arready : signal is "xilinx.com:interface:aximm:1.0 S_AXI ARREADY";
