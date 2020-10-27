@@ -20,29 +20,29 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 6104
+INFO: [Synth 8-7075] Helper process launched with PID 3140
 WARNING: [Synth 8-6901] identifier 'o_rdata' is used before its declaration [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/aFIFO.v:94]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1082.012 ; gain = 0.414
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1082.680 ; gain = 1.914
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'Conv_Accel_Top' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/Conv_Accel_Top.v:6]
 INFO: [Synth 8-6157] synthesizing module 'processor_wrapper' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/hdl/processor_wrapper.v:12]
-INFO: [Synth 8-6157] synthesizing module 'processor' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/synth/processor.v:937]
-INFO: [Synth 8-6157] synthesizing module 'processor_axi_gpio_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1/.Xil/Vivado-22144-DESKTOP-D9F9TPQ/realtime/processor_axi_gpio_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'processor_axi_gpio_0_0' (1#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1/.Xil/Vivado-22144-DESKTOP-D9F9TPQ/realtime/processor_axi_gpio_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'processor_axi_gpio_0_1' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1/.Xil/Vivado-22144-DESKTOP-D9F9TPQ/realtime/processor_axi_gpio_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'processor_axi_gpio_0_1' (2#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1/.Xil/Vivado-22144-DESKTOP-D9F9TPQ/realtime/processor_axi_gpio_0_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'processor_axi_gpio_1_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1/.Xil/Vivado-22144-DESKTOP-D9F9TPQ/realtime/processor_axi_gpio_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'processor_axi_gpio_1_0' (3#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1/.Xil/Vivado-22144-DESKTOP-D9F9TPQ/realtime/processor_axi_gpio_1_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'processor_axi_gpio_2_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1/.Xil/Vivado-22144-DESKTOP-D9F9TPQ/realtime/processor_axi_gpio_2_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'processor_axi_gpio_2_0' (4#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1/.Xil/Vivado-22144-DESKTOP-D9F9TPQ/realtime/processor_axi_gpio_2_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'processor_axi_gpio_3_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1/.Xil/Vivado-22144-DESKTOP-D9F9TPQ/realtime/processor_axi_gpio_3_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'processor_axi_gpio_3_0' (5#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1/.Xil/Vivado-22144-DESKTOP-D9F9TPQ/realtime/processor_axi_gpio_3_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'processor_axi_gpio_4_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1/.Xil/Vivado-22144-DESKTOP-D9F9TPQ/realtime/processor_axi_gpio_4_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'processor_axi_gpio_4_0' (6#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1/.Xil/Vivado-22144-DESKTOP-D9F9TPQ/realtime/processor_axi_gpio_4_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'processor_axi_gpio_5_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1/.Xil/Vivado-22144-DESKTOP-D9F9TPQ/realtime/processor_axi_gpio_5_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'processor_axi_gpio_5_0' (7#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1/.Xil/Vivado-22144-DESKTOP-D9F9TPQ/realtime/processor_axi_gpio_5_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'processor_axi_interconnect_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/synth/processor.v:1620]
+INFO: [Synth 8-6157] synthesizing module 'processor' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/synth/processor.v:1083]
+INFO: [Synth 8-6157] synthesizing module 'processor_axi_gpio_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1/.Xil/Vivado-10744-DESKTOP-D9F9TPQ/realtime/processor_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'processor_axi_gpio_0_0' (1#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1/.Xil/Vivado-10744-DESKTOP-D9F9TPQ/realtime/processor_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'processor_axi_gpio_0_1' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1/.Xil/Vivado-10744-DESKTOP-D9F9TPQ/realtime/processor_axi_gpio_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'processor_axi_gpio_0_1' (2#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1/.Xil/Vivado-10744-DESKTOP-D9F9TPQ/realtime/processor_axi_gpio_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'processor_axi_gpio_1_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1/.Xil/Vivado-10744-DESKTOP-D9F9TPQ/realtime/processor_axi_gpio_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'processor_axi_gpio_1_0' (3#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1/.Xil/Vivado-10744-DESKTOP-D9F9TPQ/realtime/processor_axi_gpio_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'processor_axi_gpio_2_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1/.Xil/Vivado-10744-DESKTOP-D9F9TPQ/realtime/processor_axi_gpio_2_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'processor_axi_gpio_2_0' (4#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1/.Xil/Vivado-10744-DESKTOP-D9F9TPQ/realtime/processor_axi_gpio_2_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'processor_axi_gpio_3_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1/.Xil/Vivado-10744-DESKTOP-D9F9TPQ/realtime/processor_axi_gpio_3_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'processor_axi_gpio_3_0' (5#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1/.Xil/Vivado-10744-DESKTOP-D9F9TPQ/realtime/processor_axi_gpio_3_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'processor_axi_gpio_4_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1/.Xil/Vivado-10744-DESKTOP-D9F9TPQ/realtime/processor_axi_gpio_4_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'processor_axi_gpio_4_0' (6#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1/.Xil/Vivado-10744-DESKTOP-D9F9TPQ/realtime/processor_axi_gpio_4_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'processor_axi_gpio_5_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1/.Xil/Vivado-10744-DESKTOP-D9F9TPQ/realtime/processor_axi_gpio_5_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'processor_axi_gpio_5_0' (7#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1/.Xil/Vivado-10744-DESKTOP-D9F9TPQ/realtime/processor_axi_gpio_5_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'processor_axi_interconnect_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/synth/processor.v:1789]
 INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_JLRGTN' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/synth/processor.v:12]
 INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_JLRGTN' (8#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/synth/processor.v:12]
 INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_14B2NJN' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/synth/processor.v:144]
@@ -57,32 +57,53 @@ INFO: [Synth 8-6157] synthesizing module 'm05_couplers_imp_XCF13L' [C:/GitHub/Re
 INFO: [Synth 8-6155] done synthesizing module 'm05_couplers_imp_XCF13L' (13#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/synth/processor.v:672]
 INFO: [Synth 8-6157] synthesizing module 'm06_couplers_imp_1OWD43C' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/synth/processor.v:804]
 INFO: [Synth 8-6155] done synthesizing module 'm06_couplers_imp_1OWD43C' (14#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/synth/processor.v:804]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1PQZU0N' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/synth/processor.v:2805]
-INFO: [Synth 8-6157] synthesizing module 'processor_auto_pc_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1/.Xil/Vivado-22144-DESKTOP-D9F9TPQ/realtime/processor_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'processor_auto_pc_0' (15#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1/.Xil/Vivado-22144-DESKTOP-D9F9TPQ/realtime/processor_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1PQZU0N' (16#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/synth/processor.v:2805]
-INFO: [Synth 8-6157] synthesizing module 'processor_xbar_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1/.Xil/Vivado-22144-DESKTOP-D9F9TPQ/realtime/processor_xbar_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'processor_xbar_0' (17#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1/.Xil/Vivado-22144-DESKTOP-D9F9TPQ/realtime/processor_xbar_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'processor_xbar_0' is unconnected for instance 'xbar' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/synth/processor.v:2764]
-WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'processor_xbar_0' is unconnected for instance 'xbar' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/synth/processor.v:2764]
-WARNING: [Synth 8-7023] instance 'xbar' of module 'processor_xbar_0' has 40 connections declared, but only 38 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/synth/processor.v:2764]
-INFO: [Synth 8-6155] done synthesizing module 'processor_axi_interconnect_0_0' (18#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/synth/processor.v:1620]
-INFO: [Synth 8-6157] synthesizing module 'processor_clk_wiz_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1/.Xil/Vivado-22144-DESKTOP-D9F9TPQ/realtime/processor_clk_wiz_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'processor_clk_wiz_0_0' (19#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1/.Xil/Vivado-22144-DESKTOP-D9F9TPQ/realtime/processor_clk_wiz_0_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'processor_proc_sys_reset_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1/.Xil/Vivado-22144-DESKTOP-D9F9TPQ/realtime/processor_proc_sys_reset_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'processor_proc_sys_reset_0_0' (20#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1/.Xil/Vivado-22144-DESKTOP-D9F9TPQ/realtime/processor_proc_sys_reset_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'mb_reset' of module 'processor_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/synth/processor.v:1547]
-WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'processor_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/synth/processor.v:1547]
-WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'processor_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/synth/processor.v:1547]
-WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'processor_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/synth/processor.v:1547]
-WARNING: [Synth 8-7023] instance 'proc_sys_reset_0' of module 'processor_proc_sys_reset_0_0' has 10 connections declared, but only 6 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/synth/processor.v:1547]
-INFO: [Synth 8-6157] synthesizing module 'processor_processing_system7_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1/.Xil/Vivado-22144-DESKTOP-D9F9TPQ/realtime/processor_processing_system7_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'processor_processing_system7_0_0' (21#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1/.Xil/Vivado-22144-DESKTOP-D9F9TPQ/realtime/processor_processing_system7_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'USB0_PORT_INDCTL' of module 'processor_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/synth/processor.v:1554]
-WARNING: [Synth 8-7071] port 'USB0_VBUS_PWRSELECT' of module 'processor_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/synth/processor.v:1554]
-WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'processor_processing_system7_0_0' has 65 connections declared, but only 63 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/synth/processor.v:1554]
-INFO: [Synth 8-6155] done synthesizing module 'processor' (22#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/synth/processor.v:937]
-INFO: [Synth 8-6155] done synthesizing module 'processor_wrapper' (23#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/hdl/processor_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'm07_couplers_imp_3HULK0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/synth/processor.v:936]
+INFO: [Synth 8-6155] done synthesizing module 'm07_couplers_imp_3HULK0' (15#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/synth/processor.v:936]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1PQZU0N' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/synth/processor.v:3262]
+INFO: [Synth 8-6157] synthesizing module 'processor_auto_pc_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1/.Xil/Vivado-10744-DESKTOP-D9F9TPQ/realtime/processor_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'processor_auto_pc_0' (16#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1/.Xil/Vivado-10744-DESKTOP-D9F9TPQ/realtime/processor_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1PQZU0N' (17#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/synth/processor.v:3262]
+INFO: [Synth 8-6157] synthesizing module 's01_couplers_imp_2M7H7Z' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/synth/processor.v:3567]
+INFO: [Synth 8-6155] done synthesizing module 's01_couplers_imp_2M7H7Z' (18#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/synth/processor.v:3567]
+INFO: [Synth 8-6157] synthesizing module 'processor_xbar_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1/.Xil/Vivado-10744-DESKTOP-D9F9TPQ/realtime/processor_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'processor_xbar_0' (19#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1/.Xil/Vivado-10744-DESKTOP-D9F9TPQ/realtime/processor_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'processor_axi_interconnect_0_0' (20#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/synth/processor.v:1789]
+WARNING: [Synth 8-7071] port 'M07_AXI_araddr' of module 'processor_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/synth/processor.v:1513]
+WARNING: [Synth 8-7071] port 'M07_AXI_arprot' of module 'processor_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/synth/processor.v:1513]
+WARNING: [Synth 8-7071] port 'M07_AXI_arvalid' of module 'processor_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/synth/processor.v:1513]
+WARNING: [Synth 8-7071] port 'M07_AXI_awaddr' of module 'processor_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/synth/processor.v:1513]
+WARNING: [Synth 8-7071] port 'M07_AXI_awprot' of module 'processor_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/synth/processor.v:1513]
+WARNING: [Synth 8-7071] port 'M07_AXI_awvalid' of module 'processor_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/synth/processor.v:1513]
+WARNING: [Synth 8-7071] port 'M07_AXI_bready' of module 'processor_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/synth/processor.v:1513]
+WARNING: [Synth 8-7071] port 'M07_AXI_rready' of module 'processor_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/synth/processor.v:1513]
+WARNING: [Synth 8-7071] port 'M07_AXI_wdata' of module 'processor_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/synth/processor.v:1513]
+WARNING: [Synth 8-7071] port 'M07_AXI_wstrb' of module 'processor_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/synth/processor.v:1513]
+WARNING: [Synth 8-7071] port 'M07_AXI_wvalid' of module 'processor_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/synth/processor.v:1513]
+WARNING: [Synth 8-7071] port 'S01_AXI_arready' of module 'processor_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/synth/processor.v:1513]
+WARNING: [Synth 8-7071] port 'S01_AXI_awready' of module 'processor_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/synth/processor.v:1513]
+WARNING: [Synth 8-7071] port 'S01_AXI_bresp' of module 'processor_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/synth/processor.v:1513]
+WARNING: [Synth 8-7071] port 'S01_AXI_bvalid' of module 'processor_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/synth/processor.v:1513]
+WARNING: [Synth 8-7071] port 'S01_AXI_rdata' of module 'processor_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/synth/processor.v:1513]
+WARNING: [Synth 8-7071] port 'S01_AXI_rresp' of module 'processor_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/synth/processor.v:1513]
+WARNING: [Synth 8-7071] port 'S01_AXI_rvalid' of module 'processor_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/synth/processor.v:1513]
+WARNING: [Synth 8-7071] port 'S01_AXI_wready' of module 'processor_axi_interconnect_0_0' is unconnected for instance 'axi_interconnect_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/synth/processor.v:1513]
+WARNING: [Synth 8-7023] instance 'axi_interconnect_0' of module 'processor_axi_interconnect_0_0' has 217 connections declared, but only 198 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/synth/processor.v:1513]
+INFO: [Synth 8-6157] synthesizing module 'processor_clk_wiz_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1/.Xil/Vivado-10744-DESKTOP-D9F9TPQ/realtime/processor_clk_wiz_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'processor_clk_wiz_0_0' (21#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1/.Xil/Vivado-10744-DESKTOP-D9F9TPQ/realtime/processor_clk_wiz_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'processor_proc_sys_reset_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1/.Xil/Vivado-10744-DESKTOP-D9F9TPQ/realtime/processor_proc_sys_reset_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'processor_proc_sys_reset_0_0' (22#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1/.Xil/Vivado-10744-DESKTOP-D9F9TPQ/realtime/processor_proc_sys_reset_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'processor_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/synth/processor.v:1716]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'processor_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/synth/processor.v:1716]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'processor_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/synth/processor.v:1716]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'processor_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/synth/processor.v:1716]
+WARNING: [Synth 8-7023] instance 'proc_sys_reset_0' of module 'processor_proc_sys_reset_0_0' has 10 connections declared, but only 6 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/synth/processor.v:1716]
+INFO: [Synth 8-6157] synthesizing module 'processor_processing_system7_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1/.Xil/Vivado-10744-DESKTOP-D9F9TPQ/realtime/processor_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'processor_processing_system7_0_0' (23#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1/.Xil/Vivado-10744-DESKTOP-D9F9TPQ/realtime/processor_processing_system7_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'USB0_PORT_INDCTL' of module 'processor_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/synth/processor.v:1723]
+WARNING: [Synth 8-7071] port 'USB0_VBUS_PWRSELECT' of module 'processor_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/synth/processor.v:1723]
+WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'processor_processing_system7_0_0' has 65 connections declared, but only 63 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/synth/processor.v:1723]
+INFO: [Synth 8-6155] done synthesizing module 'processor' (24#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/synth/processor.v:1083]
+INFO: [Synth 8-6155] done synthesizing module 'processor_wrapper' (25#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/hdl/processor_wrapper.v:12]
 WARNING: [Synth 8-7071] port 'DDR_addr' of module 'processor_wrapper' is unconnected for instance 'processer' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/Conv_Accel_Top.v:25]
 WARNING: [Synth 8-7071] port 'DDR_ba' of module 'processor_wrapper' is unconnected for instance 'processer' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/Conv_Accel_Top.v:25]
 WARNING: [Synth 8-7071] port 'DDR_cas_n' of module 'processor_wrapper' is unconnected for instance 'processer' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/Conv_Accel_Top.v:25]
@@ -110,33 +131,33 @@ INFO: [Synth 8-6157] synthesizing module 'ConvolutionController' [C:/GitHub/Reco
 Reason is one or more of the following :
 	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
 RAM "filterSet_reg" dissolved into registers
-INFO: [Synth 8-6155] done synthesizing module 'ConvolutionController' (24#1) [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/matrixControl3x3.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'ConvolutionController' (26#1) [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/matrixControl3x3.v:4]
 INFO: [Synth 8-6157] synthesizing module 'matrixAccelerator' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/matrixAccelerator.v:4]
 INFO: [Synth 8-6157] synthesizing module 'multiplyComputePynq' [C:/GitHub/ReconHardware/FPGA_Files/Sources/Multiplier/multiplyComputePynq.v:4]
-INFO: [Synth 8-6155] done synthesizing module 'multiplyComputePynq' (25#1) [C:/GitHub/ReconHardware/FPGA_Files/Sources/Multiplier/multiplyComputePynq.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'multiplyComputePynq' (27#1) [C:/GitHub/ReconHardware/FPGA_Files/Sources/Multiplier/multiplyComputePynq.v:4]
 INFO: [Synth 8-6157] synthesizing module 'adder' [C:/GitHub/ReconHardware/FPGA_Files/Sources/Adder/adder.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'adder' (26#1) [C:/GitHub/ReconHardware/FPGA_Files/Sources/Adder/adder.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'adder' (28#1) [C:/GitHub/ReconHardware/FPGA_Files/Sources/Adder/adder.v:5]
 INFO: [Synth 8-6157] synthesizing module 'XBar2' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/XBar2.v:19]
 WARNING: [Synth 8-567] referenced signal 'AddressSave' should be on the sensitivity list [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/XBar2.v:52]
-INFO: [Synth 8-6155] done synthesizing module 'XBar2' (27#1) [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/XBar2.v:19]
-INFO: [Synth 8-6155] done synthesizing module 'matrixAccelerator' (28#1) [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/matrixAccelerator.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'XBar2' (29#1) [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/XBar2.v:19]
+INFO: [Synth 8-6155] done synthesizing module 'matrixAccelerator' (30#1) [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/matrixAccelerator.v:4]
 INFO: [Synth 8-6157] synthesizing module 'aFIFO' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/aFIFO.v:68]
-INFO: [Synth 8-6155] done synthesizing module 'aFIFO' (29#1) [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/aFIFO.v:68]
-INFO: [Synth 8-6155] done synthesizing module 'ConvolutionAccelerator' (30#1) [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/matrixAccTopDevice.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Conv_Accel_Top' (31#1) [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/Conv_Accel_Top.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'aFIFO' (31#1) [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/aFIFO.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'ConvolutionAccelerator' (32#1) [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/matrixAccTopDevice.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Conv_Accel_Top' (33#1) [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/Conv_Accel_Top.v:6]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1152.660 ; gain = 71.062
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1153.902 ; gain = 73.137
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1152.660 ; gain = 71.062
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1153.902 ; gain = 73.137
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1152.660 ; gain = 71.062
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1153.902 ; gain = 73.137
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.057 . Memory (MB): peak = 1152.660 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.063 . Memory (MB): peak = 1153.902 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -176,20 +197,20 @@ Parsing XDC File [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/
 Finished Parsing XDC File [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1284.371 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1283.988 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1284.371 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 1283.988 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1284.371 ; gain = 202.773
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 1283.988 ; gain = 203.223
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1284.371 ; gain = 202.773
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 1283.988 ; gain = 203.223
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -209,13 +230,13 @@ Applied set_property DONT_TOUCH = true for processer/processor_i/axi_gpio_6. (co
 Applied set_property DONT_TOUCH = true for processer/processor_i/axi_interconnect_0/xbar. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for processer/processor_i/axi_interconnect_0/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1284.371 ; gain = 202.773
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 1283.988 ; gain = 203.223
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-327] inferring latch for variable 'OutputSave_reg[0]' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/XBar2.v:48]
 WARNING: [Synth 8-327] inferring latch for variable 'OutputSave_reg[1]' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/XBar2.v:48]
 WARNING: [Synth 8-327] inferring latch for variable 'OutputSave_reg[2]' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/XBar2.v:48]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1284.371 ; gain = 202.773
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:17 . Memory (MB): peak = 1283.988 ; gain = 203.223
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -271,7 +292,7 @@ DSP Report: Generating DSP genblk3[2].inputMulti/product_reg, operation Mode is:
 DSP Report: register genblk3[2].inputMulti/product_reg is absorbed into DSP genblk3[2].inputMulti/product_reg.
 DSP Report: operator genblk3[2].inputMulti/product0 is absorbed into DSP genblk3[2].inputMulti/product_reg.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1284.371 ; gain = 202.773
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:22 . Memory (MB): peak = 1283.988 ; gain = 203.223
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -304,13 +325,13 @@ Finished ROM, RAM, DSP and Shift Register Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1284.371 ; gain = 202.773
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:31 . Memory (MB): peak = 1283.988 ; gain = 203.223
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1379.539 ; gain = 297.941
+Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:34 . Memory (MB): peak = 1377.703 ; gain = 296.938
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -331,7 +352,7 @@ Finished ROM, RAM, DSP and Shift Register Reporting
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1389.586 ; gain = 307.988
+Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:35 . Memory (MB): peak = 1387.793 ; gain = 307.027
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -349,37 +370,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1389.586 ; gain = 307.988
+Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:38 . Memory (MB): peak = 1387.793 ; gain = 307.027
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1389.586 ; gain = 307.988
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:00:38 . Memory (MB): peak = 1387.793 ; gain = 307.027
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1389.586 ; gain = 307.988
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:32 ; elapsed = 00:00:38 . Memory (MB): peak = 1387.793 ; gain = 307.027
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1389.586 ; gain = 307.988
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:32 ; elapsed = 00:00:38 . Memory (MB): peak = 1387.793 ; gain = 307.027
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1389.586 ; gain = 307.988
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:38 . Memory (MB): peak = 1387.793 ; gain = 307.027
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1389.586 ; gain = 307.988
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:32 ; elapsed = 00:00:38 . Memory (MB): peak = 1387.793 ; gain = 307.027
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -435,27 +456,27 @@ Report Cell Usage:
 |27    |OBUF                           |     6|
 +------+-------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1389.586 ; gain = 307.988
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:32 ; elapsed = 00:00:38 . Memory (MB): peak = 1387.793 ; gain = 307.027
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:28 . Memory (MB): peak = 1389.586 ; gain = 176.277
-Synthesis Optimization Complete : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1389.586 ; gain = 307.988
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:34 . Memory (MB): peak = 1387.793 ; gain = 176.941
+Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:00:38 . Memory (MB): peak = 1387.793 ; gain = 307.027
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.041 . Memory (MB): peak = 1392.426 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.042 . Memory (MB): peak = 1387.793 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 103 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1392.426 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1387.793 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 48 instances were transformed.
   RAM64M => RAM64M (RAMD64E(x4)): 40 instances
   RAM64X1D => RAM64X1D (RAMD64E(x2)): 8 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-80 Infos, 41 Warnings, 0 Critical Warnings and 0 Errors encountered.
+84 Infos, 58 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 1392.426 ; gain = 310.828
+synth_design: Time (s): cpu = 00:00:37 ; elapsed = 00:00:47 . Memory (MB): peak = 1387.793 ; gain = 307.027
 INFO: [Common 17-1381] The checkpoint 'C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1/Conv_Accel_Top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Conv_Accel_Top_utilization_synth.rpt -pb Conv_Accel_Top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Oct 19 20:33:35 2020...
+INFO: [Common 17-206] Exiting Vivado at Tue Oct 27 00:43:25 2020...

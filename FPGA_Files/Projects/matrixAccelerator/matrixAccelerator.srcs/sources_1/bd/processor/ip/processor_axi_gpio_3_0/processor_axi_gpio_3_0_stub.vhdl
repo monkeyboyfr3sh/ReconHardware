@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
 -- Date        : Mon Oct 19 16:00:11 2020
 -- Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               c:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/ip/processor_axi_gpio_3_0/processor_axi_gpio_3_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top processor_axi_gpio_3_0 -prefix
+--               processor_axi_gpio_3_0_ processor_axi_gpio_3_0_stub.vhdl
 -- Design      : processor_axi_gpio_3_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg400-1

@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date             : Mon Oct 19 20:34:45 2020
+| Date             : Tue Oct 27 00:45:08 2020
 | Host             : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 | Command          : report_power -file Conv_Accel_Top_power_routed.rpt -pb Conv_Accel_Top_power_summary_routed.pb -rpx Conv_Accel_Top_power_routed.rpx
 | Design           : Conv_Accel_Top
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.518        |
+| Total On-Chip Power (W)  | 1.519        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.378        |
+| Dynamic (W)              | 1.379        |
 | Device Static (W)        | 0.140        |
 | Effective TJA (C/W)      | 11.5         |
 | Max Ambient (C)          | 67.5         |
@@ -53,21 +53,21 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.011 |        6 |       --- |             --- |
-| Slice Logic              |     0.002 |     4163 |       --- |             --- |
-|   LUT as Logic           |     0.002 |     1394 |     53200 |            2.62 |
+| Slice Logic              |     0.002 |     4208 |       --- |             --- |
+|   LUT as Logic           |     0.002 |     1420 |     53200 |            2.67 |
 |   CARRY4                 |    <0.001 |       70 |     13300 |            0.53 |
-|   Register               |    <0.001 |     1839 |    106400 |            1.73 |
+|   Register               |    <0.001 |     1845 |    106400 |            1.73 |
 |   LUT as Distributed RAM |    <0.001 |      176 |     17400 |            1.01 |
 |   BUFG                   |    <0.001 |        1 |        32 |            3.13 |
 |   LUT as Shift Register  |    <0.001 |       62 |     17400 |            0.36 |
-|   Others                 |     0.000 |      274 |       --- |             --- |
-| Signals                  |     0.003 |     3017 |       --- |             --- |
+|   Others                 |     0.000 |      275 |       --- |             --- |
+| Signals                  |     0.003 |     3090 |       --- |             --- |
 | MMCM                     |     0.106 |        1 |         4 |           25.00 |
 | DSPs                     |    <0.001 |        3 |       220 |            1.36 |
 | I/O                      |    <0.001 |        6 |       125 |            4.80 |
 | PS7                      |     1.256 |        1 |       --- |             --- |
 | Static Power             |     0.140 |          |           |                 |
-| Total                    |     1.518 |          |           |                 |
+| Total                    |     1.519 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -77,7 +77,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.030 |       0.016 |      0.014 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.031 |       0.017 |      0.014 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.073 |       0.059 |      0.015 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -156,13 +156,14 @@ Table of Contents
 +----------------------------+-----------+
 | Name                       | Power (W) |
 +----------------------------+-----------+
-| Conv_Accel_Top             |     1.378 |
+| Conv_Accel_Top             |     1.379 |
 |   ConvAccel                |     0.006 |
 |     controller             |     0.002 |
-|     inputBuffer            |     0.001 |
+|     inputBuffer            |     0.002 |
 |     outputBuffer           |     0.002 |
 |   processer                |     1.372 |
 |     processor_i            |     1.372 |
+|       axi_gpio_4           |     0.001 |
 |       axi_interconnect_0   |     0.006 |
 |       clk_wiz_0            |     0.106 |
 |       processing_system7_0 |     1.256 |
