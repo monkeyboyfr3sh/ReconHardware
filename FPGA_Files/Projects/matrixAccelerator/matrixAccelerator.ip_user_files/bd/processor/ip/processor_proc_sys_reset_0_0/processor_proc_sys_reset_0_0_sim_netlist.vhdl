@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
 -- Date        : Mon Oct 19 15:58:55 2020
 -- Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               c:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/ip/processor_proc_sys_reset_0_0/processor_proc_sys_reset_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top processor_proc_sys_reset_0_0 -prefix
+--               processor_proc_sys_reset_0_0_ processor_proc_sys_reset_0_0_sim_netlist.vhdl
 -- Design      : processor_proc_sys_reset_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -25,8 +25,6 @@ entity processor_proc_sys_reset_0_0_cdc_sync is
     aux_reset_in : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of processor_proc_sys_reset_0_0_cdc_sync : entity is "cdc_sync";
 end processor_proc_sys_reset_0_0_cdc_sync;
 
 architecture STRUCTURE of processor_proc_sys_reset_0_0_cdc_sync is
@@ -237,8 +235,6 @@ entity processor_proc_sys_reset_0_0_upcnt_n is
     seq_cnt_en : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of processor_proc_sys_reset_0_0_upcnt_n : entity is "upcnt_n";
 end processor_proc_sys_reset_0_0_upcnt_n;
 
 architecture STRUCTURE of processor_proc_sys_reset_0_0_upcnt_n is
@@ -403,8 +399,6 @@ entity processor_proc_sys_reset_0_0_lpf is
     ext_reset_in : in STD_LOGIC;
     aux_reset_in : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of processor_proc_sys_reset_0_0_lpf : entity is "lpf";
 end processor_proc_sys_reset_0_0_lpf;
 
 architecture STRUCTURE of processor_proc_sys_reset_0_0_lpf is
@@ -591,8 +585,6 @@ entity processor_proc_sys_reset_0_0_sequence_psr is
     lpf_int : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of processor_proc_sys_reset_0_0_sequence_psr : entity is "sequence_psr";
 end processor_proc_sys_reset_0_0_sequence_psr;
 
 architecture STRUCTURE of processor_proc_sys_reset_0_0_sequence_psr is
@@ -931,8 +923,6 @@ entity processor_proc_sys_reset_0_0_proc_sys_reset is
   attribute C_NUM_PERP_ARESETN of processor_proc_sys_reset_0_0_proc_sys_reset : entity is 1;
   attribute C_NUM_PERP_RST : integer;
   attribute C_NUM_PERP_RST of processor_proc_sys_reset_0_0_proc_sys_reset : entity is 1;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of processor_proc_sys_reset_0_0_proc_sys_reset : entity is "proc_sys_reset";
 end processor_proc_sys_reset_0_0_proc_sys_reset;
 
 architecture STRUCTURE of processor_proc_sys_reset_0_0_proc_sys_reset is

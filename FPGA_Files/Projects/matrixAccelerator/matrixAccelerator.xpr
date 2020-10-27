@@ -51,13 +51,13 @@
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="26"/>
-    <Option Name="WTModelSimExportSim" Val="26"/>
-    <Option Name="WTQuestaExportSim" Val="26"/>
-    <Option Name="WTIesExportSim" Val="26"/>
-    <Option Name="WTVcsExportSim" Val="26"/>
-    <Option Name="WTRivieraExportSim" Val="26"/>
-    <Option Name="WTActivehdlExportSim" Val="26"/>
+    <Option Name="WTXSimExportSim" Val="27"/>
+    <Option Name="WTModelSimExportSim" Val="27"/>
+    <Option Name="WTQuestaExportSim" Val="27"/>
+    <Option Name="WTIesExportSim" Val="27"/>
+    <Option Name="WTVcsExportSim" Val="27"/>
+    <Option Name="WTRivieraExportSim" Val="27"/>
+    <Option Name="WTActivehdlExportSim" Val="27"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -86,6 +86,15 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
+        <CompFileExtendedInfo CompFileName="processor.bd" FileRelPathName="ip/processor_axi_gpio_4_0/processor_axi_gpio_4_0.xci">
+          <Proxy FileSetName="processor_axi_gpio_4_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="processor.bd" FileRelPathName="ip/processor_clk_wiz_0_0/processor_clk_wiz_0_0.xci">
+          <Proxy FileSetName="processor_clk_wiz_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="processor.bd" FileRelPathName="ip/processor_proc_sys_reset_0_0/processor_proc_sys_reset_0_0.xci">
+          <Proxy FileSetName="processor_proc_sys_reset_0_0"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="processor.bd" FileRelPathName="ip/processor_axi_gpio_2_0/processor_axi_gpio_2_0.xci">
           <Proxy FileSetName="processor_axi_gpio_2_0"/>
         </CompFileExtendedInfo>
@@ -95,23 +104,14 @@
         <CompFileExtendedInfo CompFileName="processor.bd" FileRelPathName="ip/processor_axi_gpio_1_0/processor_axi_gpio_1_0.xci">
           <Proxy FileSetName="processor_axi_gpio_1_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="processor.bd" FileRelPathName="ip/processor_axi_gpio_4_0/processor_axi_gpio_4_0.xci">
-          <Proxy FileSetName="processor_axi_gpio_4_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="processor.bd" FileRelPathName="ip/processor_proc_sys_reset_0_0/processor_proc_sys_reset_0_0.xci">
-          <Proxy FileSetName="processor_proc_sys_reset_0_0"/>
+        <CompFileExtendedInfo CompFileName="processor.bd" FileRelPathName="ip/processor_axi_gpio_0_1/processor_axi_gpio_0_1.xci">
+          <Proxy FileSetName="processor_axi_gpio_0_1"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="processor.bd" FileRelPathName="ip/processor_axi_gpio_5_0/processor_axi_gpio_5_0.xci">
           <Proxy FileSetName="processor_axi_gpio_5_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="processor.bd" FileRelPathName="ip/processor_axi_gpio_0_1/processor_axi_gpio_0_1.xci">
-          <Proxy FileSetName="processor_axi_gpio_0_1"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="processor.bd" FileRelPathName="ip/processor_axi_gpio_3_0/processor_axi_gpio_3_0.xci">
           <Proxy FileSetName="processor_axi_gpio_3_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="processor.bd" FileRelPathName="ip/processor_clk_wiz_0_0/processor_clk_wiz_0_0.xci">
-          <Proxy FileSetName="processor_clk_wiz_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="processor.bd" FileRelPathName="ip/processor_xbar_0/processor_xbar_0.xci">
           <Proxy FileSetName="processor_xbar_0"/>

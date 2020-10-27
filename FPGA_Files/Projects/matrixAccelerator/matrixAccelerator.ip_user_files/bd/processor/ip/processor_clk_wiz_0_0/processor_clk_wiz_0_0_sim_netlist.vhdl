@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
 -- Date        : Mon Oct 19 15:59:48 2020
 -- Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               c:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/processor/ip/processor_clk_wiz_0_0/processor_clk_wiz_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top processor_clk_wiz_0_0 -prefix
+--               processor_clk_wiz_0_0_ processor_clk_wiz_0_0_sim_netlist.vhdl
 -- Design      : processor_clk_wiz_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -20,8 +20,6 @@ entity processor_clk_wiz_0_0_processor_clk_wiz_0_0_clk_wiz is
     resetn : in STD_LOGIC;
     clk_in1 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of processor_clk_wiz_0_0_processor_clk_wiz_0_0_clk_wiz : entity is "processor_clk_wiz_0_0_clk_wiz";
 end processor_clk_wiz_0_0_processor_clk_wiz_0_0_clk_wiz;
 
 architecture STRUCTURE of processor_clk_wiz_0_0_processor_clk_wiz_0_0_clk_wiz is
