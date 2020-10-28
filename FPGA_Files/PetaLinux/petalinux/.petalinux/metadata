@@ -1,2 +1,4 @@
 PETALINUX_VER=2020.1
 VALIDATE_HW_CHKSUM=1
+HARDWARE_PATH=/media/sf_GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/Conv_Accel_Top.xsa
+HARDWARE_CHECKSUM=f7e567230f34e9901cf56bec66ac22ce

@@ -1,7 +1,7 @@
--- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+-- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
--- Date        : Sat Sep 26 18:15:59 2020
+-- Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+-- Date        : Tue Oct 27 16:34:41 2020
 -- Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
 --               c:/GitHub/ReconHardware/FPGA_Files/Projects/Hello_Zynq/Hello_Zynq.srcs/sources_1/bd/design_2/ip/design_2_xbar_0/design_2_xbar_0_stub.vhdl
@@ -102,6 +102,6 @@ attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
 attribute black_box_pad_pin of stub : architecture is "aclk,aresetn,s_axi_awid[11:0],s_axi_awaddr[31:0],s_axi_awlen[7:0],s_axi_awsize[2:0],s_axi_awburst[1:0],s_axi_awlock[0:0],s_axi_awcache[3:0],s_axi_awprot[2:0],s_axi_awqos[3:0],s_axi_awvalid[0:0],s_axi_awready[0:0],s_axi_wdata[31:0],s_axi_wstrb[3:0],s_axi_wlast[0:0],s_axi_wvalid[0:0],s_axi_wready[0:0],s_axi_bid[11:0],s_axi_bresp[1:0],s_axi_bvalid[0:0],s_axi_bready[0:0],s_axi_arid[11:0],s_axi_araddr[31:0],s_axi_arlen[7:0],s_axi_arsize[2:0],s_axi_arburst[1:0],s_axi_arlock[0:0],s_axi_arcache[3:0],s_axi_arprot[2:0],s_axi_arqos[3:0],s_axi_arvalid[0:0],s_axi_arready[0:0],s_axi_rid[11:0],s_axi_rdata[31:0],s_axi_rresp[1:0],s_axi_rlast[0:0],s_axi_rvalid[0:0],s_axi_rready[0:0],m_axi_awid[23:0],m_axi_awaddr[63:0],m_axi_awlen[15:0],m_axi_awsize[5:0],m_axi_awburst[3:0],m_axi_awlock[1:0],m_axi_awcache[7:0],m_axi_awprot[5:0],m_axi_awregion[7:0],m_axi_awqos[7:0],m_axi_awvalid[1:0],m_axi_awready[1:0],m_axi_wdata[63:0],m_axi_wstrb[7:0],m_axi_wlast[1:0],m_axi_wvalid[1:0],m_axi_wready[1:0],m_axi_bid[23:0],m_axi_bresp[3:0],m_axi_bvalid[1:0],m_axi_bready[1:0],m_axi_arid[23:0],m_axi_araddr[63:0],m_axi_arlen[15:0],m_axi_arsize[5:0],m_axi_arburst[3:0],m_axi_arlock[1:0],m_axi_arcache[7:0],m_axi_arprot[5:0],m_axi_arregion[7:0],m_axi_arqos[7:0],m_axi_arvalid[1:0],m_axi_arready[1:0],m_axi_rid[23:0],m_axi_rdata[63:0],m_axi_rresp[3:0],m_axi_rlast[1:0],m_axi_rvalid[1:0],m_axi_rready[1:0]";
 attribute X_CORE_INFO : string;
-attribute X_CORE_INFO of stub : architecture is "axi_crossbar_v2_1_21_axi_crossbar,Vivado 2019.2";
+attribute X_CORE_INFO of stub : architecture is "axi_crossbar_v2_1_22_axi_crossbar,Vivado 2020.1";
 begin
 end;

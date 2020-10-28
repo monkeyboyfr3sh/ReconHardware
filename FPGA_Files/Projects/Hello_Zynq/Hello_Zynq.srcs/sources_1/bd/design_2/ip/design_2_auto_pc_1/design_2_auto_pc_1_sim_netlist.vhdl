@@ -1,7 +1,7 @@
--- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+-- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
--- Date        : Sat Sep 26 18:15:45 2020
+-- Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+-- Date        : Tue Oct 27 16:35:01 2020
 -- Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               c:/GitHub/ReconHardware/FPGA_Files/Projects/Hello_Zynq/Hello_Zynq.srcs/sources_1/bd/design_2/ip/design_2_auto_pc_1/design_2_auto_pc_1_sim_netlist.vhdl
@@ -14,7 +14,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity design_2_auto_pc_1_axi_protocol_converter_v2_1_20_axi_protocol_converter is
+entity design_2_auto_pc_1_axi_protocol_converter_v2_1_21_axi_protocol_converter is
   port (
     aclk : in STD_LOGIC;
     aresetn : in STD_LOGIC;
@@ -110,62 +110,62 @@ entity design_2_auto_pc_1_axi_protocol_converter_v2_1_20_axi_protocol_converter 
     m_axi_rready : out STD_LOGIC
   );
   attribute C_AXI_ADDR_WIDTH : integer;
-  attribute C_AXI_ADDR_WIDTH of design_2_auto_pc_1_axi_protocol_converter_v2_1_20_axi_protocol_converter : entity is 32;
+  attribute C_AXI_ADDR_WIDTH of design_2_auto_pc_1_axi_protocol_converter_v2_1_21_axi_protocol_converter : entity is 32;
   attribute C_AXI_ARUSER_WIDTH : integer;
-  attribute C_AXI_ARUSER_WIDTH of design_2_auto_pc_1_axi_protocol_converter_v2_1_20_axi_protocol_converter : entity is 1;
+  attribute C_AXI_ARUSER_WIDTH of design_2_auto_pc_1_axi_protocol_converter_v2_1_21_axi_protocol_converter : entity is 1;
   attribute C_AXI_AWUSER_WIDTH : integer;
-  attribute C_AXI_AWUSER_WIDTH of design_2_auto_pc_1_axi_protocol_converter_v2_1_20_axi_protocol_converter : entity is 1;
+  attribute C_AXI_AWUSER_WIDTH of design_2_auto_pc_1_axi_protocol_converter_v2_1_21_axi_protocol_converter : entity is 1;
   attribute C_AXI_BUSER_WIDTH : integer;
-  attribute C_AXI_BUSER_WIDTH of design_2_auto_pc_1_axi_protocol_converter_v2_1_20_axi_protocol_converter : entity is 1;
+  attribute C_AXI_BUSER_WIDTH of design_2_auto_pc_1_axi_protocol_converter_v2_1_21_axi_protocol_converter : entity is 1;
   attribute C_AXI_DATA_WIDTH : integer;
-  attribute C_AXI_DATA_WIDTH of design_2_auto_pc_1_axi_protocol_converter_v2_1_20_axi_protocol_converter : entity is 32;
+  attribute C_AXI_DATA_WIDTH of design_2_auto_pc_1_axi_protocol_converter_v2_1_21_axi_protocol_converter : entity is 32;
   attribute C_AXI_ID_WIDTH : integer;
-  attribute C_AXI_ID_WIDTH of design_2_auto_pc_1_axi_protocol_converter_v2_1_20_axi_protocol_converter : entity is 12;
+  attribute C_AXI_ID_WIDTH of design_2_auto_pc_1_axi_protocol_converter_v2_1_21_axi_protocol_converter : entity is 12;
   attribute C_AXI_RUSER_WIDTH : integer;
-  attribute C_AXI_RUSER_WIDTH of design_2_auto_pc_1_axi_protocol_converter_v2_1_20_axi_protocol_converter : entity is 1;
+  attribute C_AXI_RUSER_WIDTH of design_2_auto_pc_1_axi_protocol_converter_v2_1_21_axi_protocol_converter : entity is 1;
   attribute C_AXI_SUPPORTS_READ : integer;
-  attribute C_AXI_SUPPORTS_READ of design_2_auto_pc_1_axi_protocol_converter_v2_1_20_axi_protocol_converter : entity is 1;
+  attribute C_AXI_SUPPORTS_READ of design_2_auto_pc_1_axi_protocol_converter_v2_1_21_axi_protocol_converter : entity is 1;
   attribute C_AXI_SUPPORTS_USER_SIGNALS : integer;
-  attribute C_AXI_SUPPORTS_USER_SIGNALS of design_2_auto_pc_1_axi_protocol_converter_v2_1_20_axi_protocol_converter : entity is 0;
+  attribute C_AXI_SUPPORTS_USER_SIGNALS of design_2_auto_pc_1_axi_protocol_converter_v2_1_21_axi_protocol_converter : entity is 0;
   attribute C_AXI_SUPPORTS_WRITE : integer;
-  attribute C_AXI_SUPPORTS_WRITE of design_2_auto_pc_1_axi_protocol_converter_v2_1_20_axi_protocol_converter : entity is 1;
+  attribute C_AXI_SUPPORTS_WRITE of design_2_auto_pc_1_axi_protocol_converter_v2_1_21_axi_protocol_converter : entity is 1;
   attribute C_AXI_WUSER_WIDTH : integer;
-  attribute C_AXI_WUSER_WIDTH of design_2_auto_pc_1_axi_protocol_converter_v2_1_20_axi_protocol_converter : entity is 1;
+  attribute C_AXI_WUSER_WIDTH of design_2_auto_pc_1_axi_protocol_converter_v2_1_21_axi_protocol_converter : entity is 1;
   attribute C_FAMILY : string;
-  attribute C_FAMILY of design_2_auto_pc_1_axi_protocol_converter_v2_1_20_axi_protocol_converter : entity is "zynq";
+  attribute C_FAMILY of design_2_auto_pc_1_axi_protocol_converter_v2_1_21_axi_protocol_converter : entity is "zynq";
   attribute C_IGNORE_ID : integer;
-  attribute C_IGNORE_ID of design_2_auto_pc_1_axi_protocol_converter_v2_1_20_axi_protocol_converter : entity is 0;
+  attribute C_IGNORE_ID of design_2_auto_pc_1_axi_protocol_converter_v2_1_21_axi_protocol_converter : entity is 0;
   attribute C_M_AXI_PROTOCOL : integer;
-  attribute C_M_AXI_PROTOCOL of design_2_auto_pc_1_axi_protocol_converter_v2_1_20_axi_protocol_converter : entity is 0;
+  attribute C_M_AXI_PROTOCOL of design_2_auto_pc_1_axi_protocol_converter_v2_1_21_axi_protocol_converter : entity is 0;
   attribute C_S_AXI_PROTOCOL : integer;
-  attribute C_S_AXI_PROTOCOL of design_2_auto_pc_1_axi_protocol_converter_v2_1_20_axi_protocol_converter : entity is 1;
+  attribute C_S_AXI_PROTOCOL of design_2_auto_pc_1_axi_protocol_converter_v2_1_21_axi_protocol_converter : entity is 1;
   attribute C_TRANSLATION_MODE : integer;
-  attribute C_TRANSLATION_MODE of design_2_auto_pc_1_axi_protocol_converter_v2_1_20_axi_protocol_converter : entity is 2;
+  attribute C_TRANSLATION_MODE of design_2_auto_pc_1_axi_protocol_converter_v2_1_21_axi_protocol_converter : entity is 2;
   attribute DowngradeIPIdentifiedWarnings : string;
-  attribute DowngradeIPIdentifiedWarnings of design_2_auto_pc_1_axi_protocol_converter_v2_1_20_axi_protocol_converter : entity is "yes";
+  attribute DowngradeIPIdentifiedWarnings of design_2_auto_pc_1_axi_protocol_converter_v2_1_21_axi_protocol_converter : entity is "yes";
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_2_auto_pc_1_axi_protocol_converter_v2_1_20_axi_protocol_converter : entity is "axi_protocol_converter_v2_1_20_axi_protocol_converter";
+  attribute ORIG_REF_NAME of design_2_auto_pc_1_axi_protocol_converter_v2_1_21_axi_protocol_converter : entity is "axi_protocol_converter_v2_1_21_axi_protocol_converter";
   attribute P_AXI3 : integer;
-  attribute P_AXI3 of design_2_auto_pc_1_axi_protocol_converter_v2_1_20_axi_protocol_converter : entity is 1;
+  attribute P_AXI3 of design_2_auto_pc_1_axi_protocol_converter_v2_1_21_axi_protocol_converter : entity is 1;
   attribute P_AXI4 : integer;
-  attribute P_AXI4 of design_2_auto_pc_1_axi_protocol_converter_v2_1_20_axi_protocol_converter : entity is 0;
+  attribute P_AXI4 of design_2_auto_pc_1_axi_protocol_converter_v2_1_21_axi_protocol_converter : entity is 0;
   attribute P_AXILITE : integer;
-  attribute P_AXILITE of design_2_auto_pc_1_axi_protocol_converter_v2_1_20_axi_protocol_converter : entity is 2;
+  attribute P_AXILITE of design_2_auto_pc_1_axi_protocol_converter_v2_1_21_axi_protocol_converter : entity is 2;
   attribute P_AXILITE_SIZE : string;
-  attribute P_AXILITE_SIZE of design_2_auto_pc_1_axi_protocol_converter_v2_1_20_axi_protocol_converter : entity is "3'b010";
+  attribute P_AXILITE_SIZE of design_2_auto_pc_1_axi_protocol_converter_v2_1_21_axi_protocol_converter : entity is "3'b010";
   attribute P_CONVERSION : integer;
-  attribute P_CONVERSION of design_2_auto_pc_1_axi_protocol_converter_v2_1_20_axi_protocol_converter : entity is 2;
+  attribute P_CONVERSION of design_2_auto_pc_1_axi_protocol_converter_v2_1_21_axi_protocol_converter : entity is 2;
   attribute P_DECERR : string;
-  attribute P_DECERR of design_2_auto_pc_1_axi_protocol_converter_v2_1_20_axi_protocol_converter : entity is "2'b11";
+  attribute P_DECERR of design_2_auto_pc_1_axi_protocol_converter_v2_1_21_axi_protocol_converter : entity is "2'b11";
   attribute P_INCR : string;
-  attribute P_INCR of design_2_auto_pc_1_axi_protocol_converter_v2_1_20_axi_protocol_converter : entity is "2'b01";
+  attribute P_INCR of design_2_auto_pc_1_axi_protocol_converter_v2_1_21_axi_protocol_converter : entity is "2'b01";
   attribute P_PROTECTION : integer;
-  attribute P_PROTECTION of design_2_auto_pc_1_axi_protocol_converter_v2_1_20_axi_protocol_converter : entity is 1;
+  attribute P_PROTECTION of design_2_auto_pc_1_axi_protocol_converter_v2_1_21_axi_protocol_converter : entity is 1;
   attribute P_SLVERR : string;
-  attribute P_SLVERR of design_2_auto_pc_1_axi_protocol_converter_v2_1_20_axi_protocol_converter : entity is "2'b10";
-end design_2_auto_pc_1_axi_protocol_converter_v2_1_20_axi_protocol_converter;
+  attribute P_SLVERR of design_2_auto_pc_1_axi_protocol_converter_v2_1_21_axi_protocol_converter : entity is "2'b10";
+end design_2_auto_pc_1_axi_protocol_converter_v2_1_21_axi_protocol_converter;
 
-architecture STRUCTURE of design_2_auto_pc_1_axi_protocol_converter_v2_1_20_axi_protocol_converter is
+architecture STRUCTURE of design_2_auto_pc_1_axi_protocol_converter_v2_1_21_axi_protocol_converter is
   signal \<const0>\ : STD_LOGIC;
   signal \^m_axi_arready\ : STD_LOGIC;
   signal \^m_axi_awready\ : STD_LOGIC;
@@ -416,11 +416,11 @@ entity design_2_auto_pc_1 is
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of design_2_auto_pc_1 : entity is true;
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of design_2_auto_pc_1 : entity is "design_2_auto_pc_1,axi_protocol_converter_v2_1_20_axi_protocol_converter,{}";
+  attribute CHECK_LICENSE_TYPE of design_2_auto_pc_1 : entity is "design_2_auto_pc_1,axi_protocol_converter_v2_1_21_axi_protocol_converter,{}";
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of design_2_auto_pc_1 : entity is "yes";
   attribute X_CORE_INFO : string;
-  attribute X_CORE_INFO of design_2_auto_pc_1 : entity is "axi_protocol_converter_v2_1_20_axi_protocol_converter,Vivado 2019.2";
+  attribute X_CORE_INFO of design_2_auto_pc_1 : entity is "axi_protocol_converter_v2_1_21_axi_protocol_converter,Vivado 2020.1";
 end design_2_auto_pc_1;
 
 architecture STRUCTURE of design_2_auto_pc_1 is
@@ -484,7 +484,7 @@ architecture STRUCTURE of design_2_auto_pc_1 is
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of aclk : signal is "xilinx.com:signal:clock:1.0 CLK CLK";
   attribute X_INTERFACE_PARAMETER : string;
-  attribute X_INTERFACE_PARAMETER of aclk : signal is "XIL_INTERFACENAME CLK, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN design_2_processing_system7_0_0_FCLK_CLK0, ASSOCIATED_BUSIF S_AXI:M_AXI, ASSOCIATED_RESET ARESETN, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of aclk : signal is "XIL_INTERFACENAME CLK, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, CLK_DOMAIN design_2_processing_system7_0_0_FCLK_CLK0, ASSOCIATED_BUSIF S_AXI:M_AXI, ASSOCIATED_RESET ARESETN, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of aresetn : signal is "xilinx.com:signal:reset:1.0 RST RST";
   attribute X_INTERFACE_PARAMETER of aresetn : signal is "XIL_INTERFACENAME RST, POLARITY ACTIVE_LOW, INSERT_VIP 0, TYPE INTERCONNECT";
   attribute X_INTERFACE_INFO of m_axi_arready : signal is "xilinx.com:interface:aximm:1.0 M_AXI ARREADY";
@@ -567,7 +567,7 @@ architecture STRUCTURE of design_2_auto_pc_1 is
   attribute X_INTERFACE_INFO of s_axi_wid : signal is "xilinx.com:interface:aximm:1.0 S_AXI WID";
   attribute X_INTERFACE_INFO of s_axi_wstrb : signal is "xilinx.com:interface:aximm:1.0 S_AXI WSTRB";
 begin
-inst: entity work.design_2_auto_pc_1_axi_protocol_converter_v2_1_20_axi_protocol_converter
+inst: entity work.design_2_auto_pc_1_axi_protocol_converter_v2_1_21_axi_protocol_converter
      port map (
       aclk => aclk,
       aresetn => aresetn,

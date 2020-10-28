@@ -1,15 +1,17 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x27E399419065D151",
+      "boundary_crc": "0x27E39941D274373A",
       "device": "xc7z020clg400-1",
       "name": "design_2",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2019.2",
+      "tool_version": "2020.1",
       "validated": "true"
     },
     "design_tree": {
       "processing_system7_0": "",
+      "proc_sys_reset_0": "",
       "axi_gpio_0": "",
       "axi_interconnect_0": {
         "xbar": "",
@@ -20,8 +22,7 @@
           "auto_pc": ""
         },
         "m01_couplers": {}
-      },
-      "proc_sys_reset_0": ""
+      }
     },
     "interface_ports": {
       "arduino_a0_a5": {
@@ -1677,7 +1678,29 @@
           "PCW_WDT_PERIPHERAL_DIVISOR0": {
             "value": "1"
           }
+        },
+        "addressing": {
+          "address_spaces": {
+            "Data": {
+              "range": "4G",
+              "width": "32"
+            }
+          },
+          "interface_ports": {
+            "M_AXI_GP0": {
+              "mode": "Master",
+              "address_space_ref": "Data",
+              "base_address": {
+                "minimum": "0x40000000",
+                "maximum": "0x7FFFFFFF"
+              }
+            }
+          }
         }
+      },
+      "proc_sys_reset_0": {
+        "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
+        "xci_name": "design_2_proc_sys_reset_0_0"
       },
       "axi_gpio_0": {
         "vlnv": "xilinx.com:ip:axi_gpio:2.0",
@@ -1788,6 +1811,17 @@
               "STRATEGY": {
                 "value": "0"
               }
+            },
+            "addressing": {
+              "interface_ports": {
+                "S00_AXI": {
+                  "mode": "Slave",
+                  "bridges": [
+                    "M00_AXI",
+                    "M01_AXI"
+                  ]
+                }
+              }
             }
           },
           "s00_couplers": {
@@ -1846,20 +1880,30 @@
                   "SI_PROTOCOL": {
                     "value": "AXI3"
                   }
+                },
+                "addressing": {
+                  "interface_ports": {
+                    "S_AXI": {
+                      "mode": "Slave",
+                      "bridges": [
+                        "M_AXI"
+                      ]
+                    }
+                  }
                 }
               }
             },
             "interface_nets": {
-              "s00_couplers_to_auto_pc": {
-                "interface_ports": [
-                  "S_AXI",
-                  "auto_pc/S_AXI"
-                ]
-              },
               "auto_pc_to_s00_couplers": {
                 "interface_ports": [
                   "M_AXI",
                   "auto_pc/M_AXI"
+                ]
+              },
+              "s00_couplers_to_auto_pc": {
+                "interface_ports": [
+                  "S_AXI",
+                  "auto_pc/S_AXI"
                 ]
               }
             },
@@ -1933,6 +1977,16 @@
                   },
                   "SI_PROTOCOL": {
                     "value": "AXI4"
+                  }
+                },
+                "addressing": {
+                  "interface_ports": {
+                    "S_AXI": {
+                      "mode": "Slave",
+                      "bridges": [
+                        "M_AXI"
+                      ]
+                    }
                   }
                 }
               }
@@ -2022,30 +2076,6 @@
           }
         },
         "interface_nets": {
-          "axi_interconnect_0_to_s00_couplers": {
-            "interface_ports": [
-              "S00_AXI",
-              "s00_couplers/S_AXI"
-            ]
-          },
-          "s00_couplers_to_xbar": {
-            "interface_ports": [
-              "s00_couplers/M_AXI",
-              "xbar/S00_AXI"
-            ]
-          },
-          "m00_couplers_to_axi_interconnect_0": {
-            "interface_ports": [
-              "M00_AXI",
-              "m00_couplers/M_AXI"
-            ]
-          },
-          "xbar_to_m00_couplers": {
-            "interface_ports": [
-              "xbar/M00_AXI",
-              "m00_couplers/S_AXI"
-            ]
-          },
           "m01_couplers_to_axi_interconnect_0": {
             "interface_ports": [
               "M01_AXI",
@@ -2056,6 +2086,30 @@
             "interface_ports": [
               "xbar/M01_AXI",
               "m01_couplers/S_AXI"
+            ]
+          },
+          "axi_interconnect_0_to_s00_couplers": {
+            "interface_ports": [
+              "S00_AXI",
+              "s00_couplers/S_AXI"
+            ]
+          },
+          "m00_couplers_to_axi_interconnect_0": {
+            "interface_ports": [
+              "M00_AXI",
+              "m00_couplers/M_AXI"
+            ]
+          },
+          "s00_couplers_to_xbar": {
+            "interface_ports": [
+              "s00_couplers/M_AXI",
+              "xbar/S00_AXI"
+            ]
+          },
+          "xbar_to_m00_couplers": {
+            "interface_ports": [
+              "xbar/M00_AXI",
+              "m00_couplers/S_AXI"
             ]
           }
         },
@@ -2085,10 +2139,6 @@
             ]
           }
         }
-      },
-      "proc_sys_reset_0": {
-        "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
-        "xci_name": "design_2_proc_sys_reset_0_0"
       }
     },
     "interface_nets": {
@@ -2104,18 +2154,6 @@
           "processing_system7_0/DDR"
         ]
       },
-      "axi_gpio_0_GPIO": {
-        "interface_ports": [
-          "arduino_a0_a5",
-          "axi_gpio_0/GPIO"
-        ]
-      },
-      "processing_system7_0_FIXED_IO": {
-        "interface_ports": [
-          "FIXED_IO",
-          "processing_system7_0/FIXED_IO"
-        ]
-      },
       "processing_system7_0_M_AXI_GP0": {
         "interface_ports": [
           "processing_system7_0/M_AXI_GP0",
@@ -2127,16 +2165,28 @@
           "axi_interconnect_0/M00_AXI",
           "axi_gpio_0/S_AXI"
         ]
+      },
+      "processing_system7_0_FIXED_IO": {
+        "interface_ports": [
+          "FIXED_IO",
+          "processing_system7_0/FIXED_IO"
+        ]
+      },
+      "axi_gpio_0_GPIO": {
+        "interface_ports": [
+          "arduino_a0_a5",
+          "axi_gpio_0/GPIO"
+        ]
       }
     },
     "nets": {
       "proc_sys_reset_0_peripheral_aresetn": {
         "ports": [
           "proc_sys_reset_0/peripheral_aresetn",
-          "axi_interconnect_0/S00_ARESETN",
           "axi_gpio_0/s_axi_aresetn",
-          "axi_interconnect_0/M00_ARESETN",
           "axi_interconnect_0/ARESETN",
+          "axi_interconnect_0/S00_ARESETN",
+          "axi_interconnect_0/M00_ARESETN",
           "axi_interconnect_0/M01_ARESETN"
         ]
       },
@@ -2150,12 +2200,12 @@
         "ports": [
           "processing_system7_0/FCLK_CLK0",
           "processing_system7_0/M_AXI_GP0_ACLK",
+          "proc_sys_reset_0/slowest_sync_clk",
+          "axi_gpio_0/s_axi_aclk",
+          "axi_interconnect_0/ACLK",
           "axi_interconnect_0/S00_ACLK",
           "axi_interconnect_0/M00_ACLK",
-          "axi_interconnect_0/ACLK",
-          "axi_gpio_0/s_axi_aclk",
-          "axi_interconnect_0/M01_ACLK",
-          "proc_sys_reset_0/slowest_sync_clk"
+          "axi_interconnect_0/M01_ACLK"
         ]
       }
     },

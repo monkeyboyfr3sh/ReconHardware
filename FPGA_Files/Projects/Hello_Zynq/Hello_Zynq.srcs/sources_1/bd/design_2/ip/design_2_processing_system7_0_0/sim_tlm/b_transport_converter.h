@@ -52,6 +52,8 @@
 #include "tlm_utils/simple_initiator_socket.h"
 #include <utility>
 #include <vector>
+#include "xtlm.h"
+#include <queue>
 
 template<int IN_WIDTH, int OUT_WIDTH>
 class b_transport_converter: public sc_core::sc_module 
@@ -164,6 +166,191 @@ template<int IN_WIDTH, int OUT_WIDTH>
 typename b_transport_converter<IN_WIDTH,OUT_WIDTH>::addr_range_list b_transport_converter<IN_WIDTH,OUT_WIDTH>::m_nb_transport_addr_list = {std::make_pair(0, 0)};
 template<int IN_WIDTH, int OUT_WIDTH>
 typename b_transport_converter<IN_WIDTH,OUT_WIDTH>::addr_range_list b_transport_converter<IN_WIDTH,OUT_WIDTH>::m_dbg_transport_addr_list = {std::make_pair(0, 0)};
+
+using namespace xtlm;
+namespace zynq_tlm {
+class xtlm_aximm_targ_rd_b_util: public xtlm_aximm_target_rd_socket_util
+{
+public:
+	xtlm_aximm_targ_rd_b_util(sc_core::sc_module_name p_name,
+			aximm::granularity g_hint, int width,
+			xtlm_aximm_initiator_rd_socket_util* init_util) :
+			xtlm_aximm_target_rd_socket_util(p_name, g_hint, width), m_init_util(
+					init_util)
+	{
+
+	}
+	void b_transport_cb(xtlm::aximm_payload& trans, sc_core::sc_time& delay)
+	{
+		m_init_util->b_transport(trans, delay);
+	}
+
+	unsigned int transport_dbg_cb(xtlm::aximm_payload& trans)
+	{
+		return m_init_util->transport_dbg(trans);
+	}
+private:
+	xtlm::xtlm_aximm_initiator_rd_socket_util* m_init_util;
+};
+
+class xtlm_aximm_targ_wr_b_util: public xtlm_aximm_target_wr_socket_util
+{
+public:
+	xtlm_aximm_targ_wr_b_util(sc_core::sc_module_name p_name,
+			aximm::granularity g_hint, int width,
+			xtlm_aximm_initiator_wr_socket_util* init_util) :
+			xtlm_aximm_target_wr_socket_util(p_name, g_hint, width), m_init_util(
+					init_util)
+	{
+
+	}
+	void b_transport_cb(xtlm::aximm_payload& trans, sc_core::sc_time& delay)
+	{
+		m_init_util->b_transport(trans, delay);
+	}
+	unsigned int transport_dbg_cb(xtlm::aximm_payload& trans)
+	{
+		return m_init_util->transport_dbg(trans);
+	}
+private:
+	xtlm::xtlm_aximm_initiator_wr_socket_util* m_init_util;
+};
+
+
+class xsc_xtlm_aximm_tran_buffer: public sc_module
+{
+public:
+	xtlm::xtlm_aximm_target_socket *in_rd_socket;
+	xtlm::xtlm_aximm_target_socket *in_wr_socket;
+	xtlm::xtlm_aximm_initiator_socket *out_rd_socket;
+	xtlm::xtlm_aximm_initiator_socket *out_wr_socket;
+
+	SC_HAS_PROCESS(xsc_xtlm_aximm_tran_buffer);
+	xsc_xtlm_aximm_tran_buffer(const sc_core::sc_module_name &name) :
+			sc_module(name)
+	{
+		in_rd_socket = new xtlm::xtlm_aximm_target_socket("in_rd_socket", 0);
+		in_wr_socket = new xtlm::xtlm_aximm_target_socket("in_wr_socket", 0);
+		out_rd_socket = new xtlm::xtlm_aximm_initiator_socket("out_rd_socket",
+				0);
+		out_wr_socket = new xtlm::xtlm_aximm_initiator_socket("out_wr_socket",
+				0);
+
+		out_rd_socket_util = new xtlm::xtlm_aximm_initiator_rd_socket_util(
+				"out_rd_socket_util", xtlm::aximm::TRANSACTION, 0);
+		out_wr_socket_util = new xtlm::xtlm_aximm_initiator_wr_socket_util(
+				"out_wr_socket_util", xtlm::aximm::TRANSACTION, 0);
+
+		in_rd_socket_util = new xtlm_aximm_targ_rd_b_util(
+				"in_rd_socket_util", xtlm::aximm::TRANSACTION, 0,
+				out_rd_socket_util);
+		in_wr_socket_util = new xtlm_aximm_targ_wr_b_util(
+				"in_wr_socket_util", xtlm::aximm::TRANSACTION, 0,
+				out_wr_socket_util);
+		in_rd_socket->bind(in_rd_socket_util->rd_socket);
+		in_wr_socket->bind(in_wr_socket_util->wr_socket);
+
+		out_rd_socket_util->rd_socket.bind(*out_rd_socket);
+		out_wr_socket_util->wr_socket.bind(*out_wr_socket);
+
+		SC_METHOD(read_request_process);
+		sensitive << in_rd_socket_util->transaction_available;
+		sensitive << out_rd_socket_util->transaction_sampled;
+		dont_initialize();
+
+		SC_METHOD(read_response_process);
+		sensitive << out_rd_socket_util->data_available;
+		sensitive << in_rd_socket_util->data_sampled;
+		dont_initialize();
+
+		SC_METHOD(write_request_process);
+		sensitive << in_wr_socket_util->transaction_available;
+		sensitive << out_wr_socket_util->transaction_sampled;
+		dont_initialize();
+
+		SC_METHOD(write_response_process);
+		sensitive << in_wr_socket_util->resp_sampled;
+		sensitive << out_wr_socket_util->resp_available;
+		dont_initialize();
+	}
+	~xsc_xtlm_aximm_tran_buffer()
+	{
+		delete in_rd_socket;
+		delete in_wr_socket;
+		delete out_rd_socket;
+		delete out_wr_socket;
+
+		delete out_rd_socket_util;
+		delete out_wr_socket_util;
+		delete in_rd_socket_util;
+		delete in_wr_socket_util;
+	}
+private:
+	xtlm_aximm_targ_rd_b_util* in_rd_socket_util;
+	xtlm_aximm_targ_wr_b_util* in_wr_socket_util;
+	xtlm::xtlm_aximm_initiator_rd_socket_util* out_rd_socket_util;
+	xtlm::xtlm_aximm_initiator_wr_socket_util* out_wr_socket_util;
+	std::queue<xtlm::aximm_payload*> rd_request_queue;
+	std::queue<xtlm::aximm_payload*> wr_request_queue;
+	std::queue<xtlm::aximm_payload*> rd_response_queue;
+	std::queue<xtlm::aximm_payload*> wr_response_queue;
+
+	void read_response_process()
+	{
+		if (out_rd_socket_util->is_data_available())
+		{
+			rd_response_queue.push(out_rd_socket_util->get_data());
+		}
+
+		if (in_rd_socket_util->is_master_ready()
+				&& rd_response_queue.size() > 0)
+		{
+			sc_core::sc_time zero_time = SC_ZERO_TIME;
+			in_rd_socket_util->send_data(*rd_response_queue.front(), zero_time);
+			rd_response_queue.pop();
+		}
+	}
+	void write_response_process()
+	{
+		if (out_wr_socket_util->is_resp_available())
+			wr_response_queue.push(out_wr_socket_util->get_resp());
+
+		if (in_wr_socket_util->is_master_ready() && wr_response_queue.size())
+		{
+			sc_core::sc_time zero_time = SC_ZERO_TIME;
+			in_wr_socket_util->send_resp(*wr_response_queue.front(), zero_time);
+			wr_response_queue.pop();
+		}
+	}
+	void read_request_process()
+	{
+		if (in_rd_socket_util->is_trans_available())
+			rd_request_queue.push(in_rd_socket_util->get_transaction());
+
+		if (out_rd_socket_util->is_slave_ready() && rd_request_queue.size() > 0)
+		{
+			sc_core::sc_time zero_time = SC_ZERO_TIME;
+			out_rd_socket_util->send_transaction(*rd_request_queue.front(),
+					zero_time);
+			rd_request_queue.pop();
+		}
+	}
+
+	void write_request_process()
+	{
+		if (in_wr_socket_util->is_trans_available())
+			wr_request_queue.push(in_wr_socket_util->get_transaction());
+
+		if (out_wr_socket_util->is_slave_ready() && wr_request_queue.size() > 0)
+		{
+			sc_core::sc_time zero_time = SC_ZERO_TIME;
+			out_wr_socket_util->send_transaction(*wr_request_queue.front(),
+					zero_time);
+			wr_request_queue.pop();
+		}
+	}
+};
+}
 
 
 #endif /* _B_TRANSPORT_CONVERTER_H_ */

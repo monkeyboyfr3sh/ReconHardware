@@ -1,7 +1,7 @@
--- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+-- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
--- Date        : Sat Sep 26 18:15:38 2020
+-- Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+-- Date        : Tue Oct 27 16:34:22 2020
 -- Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               c:/GitHub/ReconHardware/FPGA_Files/Projects/Hello_Zynq/Hello_Zynq.srcs/sources_1/bd/design_2/ip/design_2_proc_sys_reset_0_0/design_2_proc_sys_reset_0_0_sim_netlist.vhdl
@@ -619,16 +619,16 @@ architecture STRUCTURE of design_2_proc_sys_reset_0_0_sequence_psr is
   signal seq_cnt : STD_LOGIC_VECTOR ( 5 downto 0 );
   signal seq_cnt_en : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \ACTIVE_LOW_BSR_OUT_DFF[0].FDRE_BSR_N_i_1\ : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of \ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_i_1\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \ACTIVE_LOW_BSR_OUT_DFF[0].FDRE_BSR_N_i_1\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N_i_1\ : label is "soft_lutpair5";
   attribute SOFT_HLUTNM of Core_i_1 : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \bsr_dec[0]_i_1\ : label is "soft_lutpair2";
   attribute SOFT_HLUTNM of \bsr_dec[2]_i_1\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of bsr_i_1 : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of bsr_i_1 : label is "soft_lutpair4";
   attribute SOFT_HLUTNM of \core_dec[0]_i_1\ : label is "soft_lutpair2";
   attribute SOFT_HLUTNM of \core_dec[2]_i_1\ : label is "soft_lutpair6";
   attribute SOFT_HLUTNM of from_sys_i_1 : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \pr_dec[0]_i_1\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of pr_i_1 : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of pr_i_1 : label is "soft_lutpair5";
 begin
   Bsr_out <= \^bsr_out\;
   MB_out <= \^mb_out\;
@@ -1063,7 +1063,7 @@ entity design_2_proc_sys_reset_0_0 is
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of design_2_proc_sys_reset_0_0 : entity is "yes";
   attribute x_core_info : string;
-  attribute x_core_info of design_2_proc_sys_reset_0_0 : entity is "proc_sys_reset,Vivado 2019.2";
+  attribute x_core_info of design_2_proc_sys_reset_0_0 : entity is "proc_sys_reset,Vivado 2020.1";
 end design_2_proc_sys_reset_0_0;
 
 architecture STRUCTURE of design_2_proc_sys_reset_0_0 is

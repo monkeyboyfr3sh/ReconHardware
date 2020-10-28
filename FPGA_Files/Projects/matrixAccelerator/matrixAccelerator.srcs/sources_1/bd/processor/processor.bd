@@ -4,7 +4,7 @@
       "boundary_crc": "0xE49C851A7D0B4420",
       "device": "xc7z020clg400-1",
       "name": "processor",
-      "pfm_name": "xilinx:pynq-z2:name:0.0",
+      "pfm_name": "",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
       "tool_version": "2020.1",
