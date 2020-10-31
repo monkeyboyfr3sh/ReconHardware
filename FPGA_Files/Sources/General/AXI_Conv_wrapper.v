@@ -2,17 +2,11 @@
 
 module AXI_Conv_wrapper();
 wire clk;
-wire [`inputPortCount*`bitLength-1:0]   MULTIPLIER_INPUT;
-wire [`outputPortCount*`bitLength-1:0]  MULTIPLICAND_INPUT;
-wire [`inputPortCount-1:0]              MULTIPLY_START;
 wire cReady,finaladd_start;
 
 //Internal Signals
 wire    cReady,rst,rst_w_ctrl;
-//FIFO signals
-wire    FIFO_RD_CLK,FIFO_CTRL_RST,FIFO_RST;
-wire    outBuffClk;
-wire    [`bitLength-1:0]                        FIFO_OUT_PORT;
+
 //Matrix Accelerator signals
 wire    [`addressLength-1:0]                    AddressSelect;
 wire    [`inputPortCount-1:0]                   mStart_conncetor;

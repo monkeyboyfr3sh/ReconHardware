@@ -136,7 +136,10 @@ integer     pic_width;      //0x08
 
 //State flags
 reg     RDst,MULTIst,ADDst,FINALADD;
+reg     DMA_valid = 0;
+reg     [`bitLength-1:0]DMA_data;
 
+//Internal data
 integer i,datapointer,filterpointer,MPi;
 reg                         dataSetFilled;     //Flag used to tell if the data set has been filled
 reg                         filterSetFilled;     //Flag used to tell if the data set has been filled
@@ -151,14 +154,52 @@ reg     [`addressLength:0]  Mloopcnt;
 reg     [`inputPortCount*`bitLength-1:0]    MULTIPLIER_INPUT;   //Flat output for data set
 reg     [`inputPortCount*`bitLength-1:0]    MULTIPLICAND_INPUT; //Flat output for filter set
 reg     [`inputPortCount-1:0]               MULTIPLY_START;
+wire    [2*`bitLength-1:0]                  cSum;
+wire    [`bitLength-1:0]                    finalSum;
 
-assign  FINALADD_START         = FINALADD && ~cReady;
+//Current position tracking
+integer current_x   = 0;//Default 0
+integer current_y   = 0;//Default 0
+reg newline         = 0;//Default 0
+//
+integer stop_x,stop_y;
 
+assign  FINALADD_START = FINALADD && ~cReady;
+assign  finalSum = cSum[`bitLength-1:0];//bitslice the convolution sum
+
+always @(posedge s00_axi_aclk or !s00_axi_aresetn)begin
+    //Need to reset
+    if(!s00_axi_aresetn) begin
+        cStart = 0;
+        pic_height = 0;
+        pic_width = 0;
+    end
+    //Need to handle kernel setting.
+    if(s00_axi_wvalid)begin
+        //cStart
+        if(s00_axi_awaddr == 16'h00)begin
+            cStart = s00_axi_wdata;
+        end
+        //pic_height
+        if(s00_axi_awaddr == 16'h04)begin
+            pic_height = s00_axi_wdata;
+        end
+        //pic_width
+        if(s00_axi_awaddr == 16'h08)begin
+            pic_width = s00_axi_wdata;
+        end
+        
+    end
+end
 always @(posedge s00_axis_aclk or posedge !s00_axis_aresetn) begin
     if(!s00_axis_aresetn)begin
         RDst = 0;
         MULTIst = 0;
         ADDst = 0;
+        
+        current_x = 0;
+        current_y = 0;
+        newline = 0;
         
         datapointer = 0;
         filterpointer = 0;
@@ -177,46 +218,46 @@ always @(posedge s00_axis_aclk or posedge !s00_axis_aresetn) begin
         inputToggle = 0;
         FINALADD = 0;
     end
-    else if(NEWLINE)begin
+    
+    //Newline means we need to reset data buffer
+    if(newline)begin
         dataSetFilled = 0;
         datapointer = 0;
-        CTRL_RST = 1;
+        newline = 0;
     end
+    
     //cStart triggers matrixcontroller to start
-    else if(cStart)begin
+    if(cStart)begin
         //Trigger RDst if no other states are active
         if(!(RDst||MULTIst||ADDst))
             RDst = 1;
         
         //In a read state (data still needs to be input) 
-        if(RDst)begin
-            if(!EMPTY)begin
-                currentValue=FIFO_OUT_PORT;
+        if(RDst&&s00_axis_tvalid)begin
+            currentValue=s00_axis_tdata;
+            
+            //Need to load currentValue into filterSet
+            if(!filterSetFilled)begin
+                filterSet[filterpointer] = currentValue;
+                filterpointer=filterpointer+1;
                 
-                //Need to load currentValue into filterSet
-                if(!filterSetFilled)begin
-                    filterSet[filterpointer] = currentValue;
-                    filterpointer=filterpointer+1;
-                    
-                    //Filled all values for filter
-                    if(filterpointer >= (`KERNELSIZE*`KERNELSIZE))begin
-                        filterSetFilled = 1;
-                    end
+                //Filled all values for filter
+                if(filterpointer >= (`KERNELSIZE*`KERNELSIZE))begin
+                    filterSetFilled = 1;
                 end
+            end
+            
+            //Need to load currentValue into dataSet
+            else if(filterSetFilled&&!dataSetFilled)begin
+                dataSet[datapointer] = currentValue;
+                datapointer=datapointer+1;
                 
-                //Need to load currentValue into dataSet
-                else if(filterSetFilled&&!dataSetFilled)begin
-                    dataSet[datapointer] = currentValue;
-                    datapointer=datapointer+1;
-                    
-                    //Filled all values for data, can start multiplication
-                    if(datapointer >=  (`KERNELSIZE*`KERNELSIZE))begin
-                        dataSetFilled = 1;
-                        RDst = 0;
-                        MULTIst = 1;
-                    end
+                //Filled all values for data, can start multiplication
+                if(datapointer >=  (`KERNELSIZE*`KERNELSIZE))begin
+                    dataSetFilled = 1;
+                    RDst = 0;
+                    MULTIst = 1;
                 end
-                
             end
         end
         //End of RDst
@@ -251,15 +292,27 @@ always @(posedge s00_axis_aclk or posedge !s00_axis_aresetn) begin
 
         //In an Add state, should add all values once data set has been completely computed.
         else if(ADDst)begin
+            //Got the signal that the convolution is completed
             if(cReady) begin
                 ADDst = 0;
                 RDst = 0;
                 MULTIst = 0;
                 FINALADD = 0;
                 
+                //Need to output cSum to DMA and signal for transaction
+                DMA_data = finalSum;
+                DMA_valid = 1;
             end
             else begin
                 FINALADD = 1;
+                //If need to update position due to end of row
+                if(current_x+`KERNELSIZE-1 >= pic_width)begin
+                    newline=1;
+                end
+                //Pixels left to operate on in row
+                else begin
+                    current_x=current_x+1;
+                end
             end
         end
     end
