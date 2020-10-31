@@ -1,62 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_2" LaunchPart="xc7z020clg400-1" LaunchTime="1603777287">
-  <File Type="ROUTE-PWR" Name="Conv_Accel_Top_power_routed.rpt"/>
-  <File Type="PA-TCL" Name="Conv_Accel_Top.tcl"/>
-  <File Type="ROUTE-PWR-SUM" Name="Conv_Accel_Top_power_summary_routed.pb"/>
-  <File Type="REPORTS-TCL" Name="Conv_Accel_Top_reports.tcl"/>
-  <File Type="BITSTR-MSK" Name="Conv_Accel_Top.msk"/>
-  <File Type="ROUTE-CLK" Name="Conv_Accel_Top_clock_utilization_routed.rpt"/>
-  <File Type="RDI-RDI" Name="Conv_Accel_Top.vdi"/>
-  <File Type="BG-BIT" Name="Conv_Accel_Top.bit"/>
-  <File Type="BG-DRC" Name="Conv_Accel_Top.drc"/>
-  <File Type="BG-BGN" Name="Conv_Accel_Top.bgn"/>
-  <File Type="BG-BIN" Name="Conv_Accel_Top.bin"/>
-  <File Type="BITSTR-RBT" Name="Conv_Accel_Top.rbt"/>
-  <File Type="BITSTR-NKY" Name="Conv_Accel_Top.nky"/>
-  <File Type="BITSTR-BMM" Name="Conv_Accel_Top_bd.bmm"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="Conv_Accel_Top_methodology_drc_routed.rpt"/>
-  <File Type="BITSTR-MMI" Name="Conv_Accel_Top.mmi"/>
-  <File Type="BITSTR-SYSDEF" Name="Conv_Accel_Top.sysdef"/>
+<GenRun Id="impl_2" LaunchPart="xc7z020clg400-1" LaunchTime="1604108108">
+  <File Type="OPT-HWDEF" Name="design_1_wrapper.hwdef"/>
+  <File Type="ROUTE-BUS-SKEW" Name="design_1_wrapper_bus_skew_routed.rpt"/>
+  <File Type="PA-DCP" Name="design_1_wrapper.dcp"/>
+  <File Type="BITSTR-BMM" Name="design_1_wrapper_bd.bmm"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="design_1_wrapper_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="design_1_wrapper_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR" Name="design_1_wrapper_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="design_1_wrapper.tcl"/>
+  <File Type="OPT-TIMING" Name="design_1_wrapper_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="design_1_wrapper_opt.dcp"/>
+  <File Type="ROUTE-PWR-SUM" Name="design_1_wrapper_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="design_1_wrapper_reports.tcl"/>
+  <File Type="OPT-DRC" Name="design_1_wrapper_drc_opted.rpt"/>
+  <File Type="PWROPT-DCP" Name="design_1_wrapper_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="design_1_wrapper_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="design_1_wrapper_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="design_1_wrapper_placed.dcp"/>
+  <File Type="PLACE-IO" Name="design_1_wrapper_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="design_1_wrapper_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="design_1_wrapper_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="design_1_wrapper_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="design_1_wrapper_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="design_1_wrapper_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="design_1_wrapper_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="design_1_wrapper_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="design_1_wrapper_postplace_pwropt.dcp"/>
+  <File Type="BG-BIN" Name="design_1_wrapper.bin"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="design_1_wrapper_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="design_1_wrapper_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="design_1_wrapper_drc_physopted.rpt"/>
+  <File Type="BITSTR-MSK" Name="design_1_wrapper.msk"/>
+  <File Type="PHYSOPT-TIMING" Name="design_1_wrapper_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="design_1_wrapper_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="design_1_wrapper_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="design_1_wrapper_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="design_1_wrapper_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="design_1_wrapper_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="design_1_wrapper_drc_routed.rpx"/>
+  <File Type="BITSTR-MMI" Name="design_1_wrapper.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="design_1_wrapper_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="design_1_wrapper_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="design_1_wrapper_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="design_1_wrapper_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="design_1_wrapper_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="design_1_wrapper_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="design_1_wrapper_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="design_1_wrapper_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="design_1_wrapper_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="design_1_wrapper_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="design_1_wrapper_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="design_1_wrapper_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="design_1_wrapper_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="design_1_wrapper_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="design_1_wrapper_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="design_1_wrapper_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="design_1_wrapper_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="design_1_wrapper_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="design_1_wrapper_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="design_1_wrapper_bus_skew_postroute_physopted.pb"/>
+  <File Type="BG-BIT" Name="design_1_wrapper.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="design_1_wrapper_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-RBT" Name="design_1_wrapper.rbt"/>
+  <File Type="BITSTR-NKY" Name="design_1_wrapper.nky"/>
+  <File Type="PDI-FILE" Name="design_1_wrapper.pdi"/>
+  <File Type="RCFI_FILE" Name="design_1_wrapper.rcfi"/>
+  <File Type="CFI_FILE" Name="design_1_wrapper.cfi"/>
+  <File Type="RNPI_FILE" Name="design_1_wrapper.rnpi"/>
+  <File Type="NPI_FILE" Name="design_1_wrapper.npi"/>
+  <File Type="RBD_FILE" Name="design_1_wrapper.rbd"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="Conv_Accel_Top.ltx"/>
+  <File Type="BITSTR-LTX" Name="design_1_wrapper.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="design_1_wrapper.sysdef"/>
+  <File Type="BG-BGN" Name="design_1_wrapper.bgn"/>
+  <File Type="BG-DRC" Name="design_1_wrapper.drc"/>
+  <File Type="RDI-RDI" Name="design_1_wrapper.vdi"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
-  <File Type="OPT-DRC" Name="Conv_Accel_Top_drc_opted.rpt"/>
-  <File Type="OPT-HWDEF" Name="Conv_Accel_Top.hwdef"/>
-  <File Type="PLACE-IO" Name="Conv_Accel_Top_io_placed.rpt"/>
-  <File Type="PLACE-UTIL" Name="Conv_Accel_Top_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="Conv_Accel_Top_utilization_placed.pb"/>
-  <File Type="PLACE-CTRL" Name="Conv_Accel_Top_control_sets_placed.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="Conv_Accel_Top_incremental_reuse_pre_placed.rpt"/>
-  <File Type="ROUTE-DRC" Name="Conv_Accel_Top_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-PB" Name="Conv_Accel_Top_drc_routed.pb"/>
-  <File Type="ROUTE-PWR-RPX" Name="Conv_Accel_Top_power_routed.rpx"/>
-  <File Type="ROUTE-STATUS" Name="Conv_Accel_Top_route_status.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="Conv_Accel_Top_route_status.pb"/>
-  <File Type="ROUTE-DCP" Name="Conv_Accel_Top_routed.dcp"/>
-  <File Type="ROUTE-ERROR-DCP" Name="Conv_Accel_Top_routed_error.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="Conv_Accel_Top_routed_bb.dcp"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="Conv_Accel_Top_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-TIMING-PB" Name="Conv_Accel_Top_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMING-RPX" Name="Conv_Accel_Top_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-BUS-SKEW" Name="Conv_Accel_Top_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="Conv_Accel_Top_bus_skew_routed.pb"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="Conv_Accel_Top_bus_skew_routed.rpx"/>
-  <File Type="OPT-DCP" Name="Conv_Accel_Top_opt.dcp"/>
-  <File Type="PLACE-DCP" Name="Conv_Accel_Top_placed.dcp"/>
-  <File Type="PWROPT-DCP" Name="Conv_Accel_Top_pwropt.dcp"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="Conv_Accel_Top_postplace_pwropt.dcp"/>
-  <File Type="PHYSOPT-DCP" Name="Conv_Accel_Top_physopt.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="Conv_Accel_Top_postroute_physopt.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="Conv_Accel_Top_postroute_physopt_bb.dcp"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="Conv_Accel_Top_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-DRC-RPX" Name="Conv_Accel_Top_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="Conv_Accel_Top_methodology_drc_routed.rpx"/>
-  <File Type="PDI-FILE" Name="Conv_Accel_Top.pdi"/>
-  <File Type="RCFI_FILE" Name="Conv_Accel_Top.rcfi"/>
-  <File Type="CFI_FILE" Name="Conv_Accel_Top.cfi"/>
-  <File Type="RNPI_FILE" Name="Conv_Accel_Top.rnpi"/>
-  <File Type="NPI_FILE" Name="Conv_Accel_Top.npi"/>
-  <File Type="RBD_FILE" Name="Conv_Accel_Top.rbd"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/../../Sources/definitions.h">
@@ -66,8 +85,23 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/bd/design_1/design_1.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/design_1/hdl/design_1_wrapper.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/bd/processor/processor.bd">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -75,6 +109,7 @@
     </File>
     <File Path="$PPRDIR/../../Sources/General/XBar2.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -82,6 +117,7 @@
     </File>
     <File Path="$PPRDIR/../../Sources/General/aFIFO.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -89,6 +125,7 @@
     </File>
     <File Path="$PPRDIR/../../Sources/Adder/adder.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -96,6 +133,7 @@
     </File>
     <File Path="$PPRDIR/../../Sources/General/matrixAccTopDevice.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -103,6 +141,7 @@
     </File>
     <File Path="$PPRDIR/../../Sources/General/matrixAccelerator.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -110,6 +149,7 @@
     </File>
     <File Path="$PPRDIR/../../Sources/General/matrixControl3x3.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -117,6 +157,7 @@
     </File>
     <File Path="$PPRDIR/../../Sources/Multiplier/multiplyComputePynq.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -124,19 +165,13 @@
     </File>
     <File Path="$PSRCDIR/sources_1/bd/processor/hdl/processor_wrapper.v">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <File Path="$PPRDIR/../../Sources/General/Conv_Accel_Top.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../../Sources/Multiplier/fixedmultiplyCompute.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -152,9 +187,17 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PPRDIR/../../Sources/Multiplier/fixedmultiplyCompute.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="Conv_Accel_Top"/>
+      <Option Name="TopModule" Val="design_1_wrapper"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -187,16 +230,18 @@
     <Step Id="route_design"/>
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
-    <Step Id="write_device_image"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="processor_proc_sys_reset_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="processor_axi_gpio_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="processor_proc_sys_reset_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="processor_xbar_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="processor_axi_gpio_5_0"/>
   <BlockFileSet Type="BlockSrcs" Name="processor_clk_wiz_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="processor_axi_gpio_5_0"/>
   <BlockFileSet Type="BlockSrcs" Name="processor_axi_gpio_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="processor_axi_gpio_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_processing_system7_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="processor_axi_gpio_2_0"/>
   <BlockFileSet Type="BlockSrcs" Name="processor_axi_gpio_3_0"/>
   <BlockFileSet Type="BlockSrcs" Name="processor_axi_gpio_4_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_rst_ps7_0_100M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_LED_Timer_0_4"/>
 </GenRun>

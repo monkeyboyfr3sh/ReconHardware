@@ -1,6 +1,6 @@
-Nothing to build in platform 'Convolution_Accel_HW'
+Nothing to build in platform 'AXI_Convolution_Engine'
 
-21:07:53 **** Incremental Build of configuration Debug for project Testing_Convolution ****
+17:21:30 **** Incremental Build of configuration Debug for project AXI_Convolution_Engine_APP ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -8,37 +8,27 @@ a9-linaro-pre-build-step
 make --no-print-directory main-build
 'Building file: ../src/helloworld.c'
 'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/sw/Convolution_Accel_HW/standalone_domain/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
-In file included from ../src/helloworld.c:55:
-C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/sw/Convolution_Accel_HW/standalone_domain/bspinclude/include/xtime_l.h:85:9: note: #pragma message: For the sleep routines, Global timer is being used
-   85 | #pragma message ("For the sleep routines, Global timer is being used")
-      |         ^~~~~~~
-../src/helloworld.c: In function 'deepTest':
-../src/helloworld.c:266:28: warning: passing argument 2 of 'test_convolution' from incompatible pointer type [-Wincompatible-pointer-types]
-  266 |  test_convolution(test_cnt,results);
-      |                            ^~~~~~~
-      |                            |
-      |                            _Bool *
-../src/helloworld.c:187:43: note: expected 'int *' but argument is of type '_Bool *'
-  187 | void test_convolution(int test_count,int *test_results){
-      |                                      ~~~~~^~~~~~~~~~~~
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/GitHub/ReconHardware/FPGA_Files/Software/AXI_Convolution_Engine/export/AXI_Convolution_Engine/sw/AXI_Convolution_Engine/standalone_domain/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:115:2: warning: #warning CHECK FOR THE VALID DDR ADDRESS IN XPARAMETERS.H, DEFAULT SET TO 0x01000000 [-Wcpp]
+  115 | #warning CHECK FOR THE VALID DDR ADDRESS IN XPARAMETERS.H, \
+      |  ^~~~~~~
 'Finished building: ../src/helloworld.c'
 ' '
-'Building target: Testing_Convolution.elf'
+'Building target: AXI_Convolution_Engine_APP.elf'
 'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/sw/Convolution_Accel_HW/standalone_domain/bsplib/lib -o "Testing_Convolution.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: Testing_Convolution.elf'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/GitHub/ReconHardware/FPGA_Files/Software/AXI_Convolution_Engine/export/AXI_Convolution_Engine/sw/AXI_Convolution_Engine/standalone_domain/bsplib/lib -o "AXI_Convolution_Engine_APP.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: AXI_Convolution_Engine_APP.elf'
 ' '
 'Invoking: ARM v7 Print Size'
-arm-none-eabi-size Testing_Convolution.elf  |tee "Testing_Convolution.elf.size"
+arm-none-eabi-size AXI_Convolution_Engine_APP.elf  |tee "AXI_Convolution_Engine_APP.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  46121	   2660	  22752	  71533	  1176d	Testing_Convolution.elf
-'Finished building: Testing_Convolution.elf.size'
+  36432	   2256	  24504	  63192	   f6d8	AXI_Convolution_Engine_APP.elf
+'Finished building: AXI_Convolution_Engine_APP.elf.size'
 ' '
-21:07:54 **** Incremental Build of configuration Debug for project Testing_Convolution_system ****
+17:21:31 **** Incremental Build of configuration Debug for project AXI_Convolution_Engine_APP_system ****
 make all 
 Generating bif file for the system project
-generate_system_bif.bat 63478 C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/Convolution_Accel_HW.xpfm standalone_domain C:/GitHub/ReconHardware/FPGA_Files/Software/Testing_Convolution_system/Debug/system.bif
-sdcard_gen --xpfm C:/GitHub/ReconHardware/FPGA_Files/Software/Convolution_Accel_HW/export/Convolution_Accel_HW/Convolution_Accel_HW.xpfm --sys_config Convolution_Accel_HW --bif C:/GitHub/ReconHardware/FPGA_Files/Software/Testing_Convolution_system/Debug/system.bif --bitstream C:/GitHub/ReconHardware/FPGA_Files/Software/Testing_Convolution/_ide/bitstream/Conv_Accel_Top.bit --elf C:/GitHub/ReconHardware/FPGA_Files/Software/Testing_Convolution/Debug/Testing_Convolution.elf,ps7_cortexa9_0
-creating BOOT.BIN using C:/GitHub/ReconHardware/FPGA_Files/Software/Testing_Convolution/_ide/bitstream/Conv_Accel_Top.bit
-Running C:/Xilinx/Vitis/2020.1/bin/bootgen  -image C:/GitHub/ReconHardware/FPGA_Files/Software/Testing_Convolution_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+generate_system_bif.bat 62784 C:/GitHub/ReconHardware/FPGA_Files/Software/AXI_Convolution_Engine/export/AXI_Convolution_Engine/AXI_Convolution_Engine.xpfm standalone_domain C:/GitHub/ReconHardware/FPGA_Files/Software/AXI_Convolution_Engine_APP_system/Debug/system.bif
+sdcard_gen --xpfm C:/GitHub/ReconHardware/FPGA_Files/Software/AXI_Convolution_Engine/export/AXI_Convolution_Engine/AXI_Convolution_Engine.xpfm --sys_config AXI_Convolution_Engine --bif C:/GitHub/ReconHardware/FPGA_Files/Software/AXI_Convolution_Engine_APP_system/Debug/system.bif --bitstream C:/GitHub/ReconHardware/FPGA_Files/Software/AXI_Convolution_Engine_APP/_ide/bitstream/AXI_Convolution_Engine_wrapper.bit --elf C:/GitHub/ReconHardware/FPGA_Files/Software/AXI_Convolution_Engine_APP/Debug/AXI_Convolution_Engine_APP.elf,ps7_cortexa9_0
+creating BOOT.BIN using C:/GitHub/ReconHardware/FPGA_Files/Software/AXI_Convolution_Engine_APP/_ide/bitstream/AXI_Convolution_Engine_wrapper.bit
+Running C:/Xilinx/Vitis/2020.1/bin/bootgen  -image C:/GitHub/ReconHardware/FPGA_Files/Software/AXI_Convolution_Engine_APP_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
