@@ -38,8 +38,8 @@
   "../../../bd/design_1/ip/design_1_rst_ps7_0_100M_0/sim/design_1_rst_ps7_0_100M_0.vhd" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
-  "../../../bd/design_1/ipshared/0d81/hdl/LED_Timer_v1_0_S00_AXI.v" \
-  "../../../bd/design_1/ipshared/0d81/hdl/LED_Timer_v1_0.v" \
+  "../../../bd/design_1/ipshared/bd68/hdl/LED_Timer_v1_0_S00_AXI.v" \
+  "../../../bd/design_1/ipshared/bd68/hdl/LED_Timer_v1_0.v" \
   "../../../bd/design_1/ip/design_1_LED_Timer_0_4/sim/design_1_LED_Timer_0_4.v" \
 -endlib
 -makelib ies_lib/generic_baseblocks_v2_1_0 \

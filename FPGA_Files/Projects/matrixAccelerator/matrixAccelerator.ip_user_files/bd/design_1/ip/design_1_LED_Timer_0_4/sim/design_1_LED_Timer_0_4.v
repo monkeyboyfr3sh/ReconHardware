@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:user:LED_Timer:1.0
-// IP Revision: 5
+// IP Revision: 10
 
 `timescale 1ns/1ps
 

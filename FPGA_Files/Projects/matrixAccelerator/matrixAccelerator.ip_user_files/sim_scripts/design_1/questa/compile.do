@@ -69,8 +69,8 @@ vcom -work xil_defaultlib  -93 \
 "../../../bd/design_1/ip/design_1_rst_ps7_0_100M_0/sim/design_1_rst_ps7_0_100M_0.vhd" \
 
 vlog -work xil_defaultlib  "+incdir+../../../../matrixAccelerator.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../matrixAccelerator.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
-"../../../bd/design_1/ipshared/0d81/hdl/LED_Timer_v1_0_S00_AXI.v" \
-"../../../bd/design_1/ipshared/0d81/hdl/LED_Timer_v1_0.v" \
+"../../../bd/design_1/ipshared/bd68/hdl/LED_Timer_v1_0_S00_AXI.v" \
+"../../../bd/design_1/ipshared/bd68/hdl/LED_Timer_v1_0.v" \
 "../../../bd/design_1/ip/design_1_LED_Timer_0_4/sim/design_1_LED_Timer_0_4.v" \
 
 vlog -work generic_baseblocks_v2_1_0  "+incdir+../../../../matrixAccelerator.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../matrixAccelerator.srcs/sources_1/bd/design_1/ipshared/6b56/hdl" "+incdir+C:/Xilinx/Vivado/2020.1/data/xilinx_vip/include" \
