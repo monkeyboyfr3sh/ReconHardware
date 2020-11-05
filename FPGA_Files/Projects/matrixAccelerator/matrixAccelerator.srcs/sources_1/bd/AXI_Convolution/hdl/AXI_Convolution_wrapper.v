@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-//Date        : Sat Oct 31 14:16:36 2020
+//Date        : Wed Nov  4 21:41:33 2020
 //Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 //Command     : generate_target AXI_Convolution_wrapper.bd
 //Design      : AXI_Convolution_wrapper
@@ -25,6 +25,8 @@ module AXI_Convolution_wrapper
     DDR_ras_n,
     DDR_reset_n,
     DDR_we_n,
+    FCLK_CLK0_0,
+    FCLK_RESET0_N_0,
     FINALADD_START_0,
     FIXED_IO_ddr_vrn,
     FIXED_IO_ddr_vrp,
@@ -36,7 +38,8 @@ module AXI_Convolution_wrapper
     MULTIPLIER_INPUT_0,
     MULTIPLY_START_0,
     cReady_0,
-    cSum_0);
+    cSum_0,
+    debug_0);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -52,6 +55,8 @@ module AXI_Convolution_wrapper
   inout DDR_ras_n;
   inout DDR_reset_n;
   inout DDR_we_n;
+  output FCLK_CLK0_0;
+  output FCLK_RESET0_N_0;
   output FINALADD_START_0;
   inout FIXED_IO_ddr_vrn;
   inout FIXED_IO_ddr_vrp;
@@ -64,6 +69,7 @@ module AXI_Convolution_wrapper
   output [2:0]MULTIPLY_START_0;
   input cReady_0;
   input cSum_0;
+  output debug_0;
 
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
@@ -80,6 +86,8 @@ module AXI_Convolution_wrapper
   wire DDR_ras_n;
   wire DDR_reset_n;
   wire DDR_we_n;
+  wire FCLK_CLK0_0;
+  wire FCLK_RESET0_N_0;
   wire FINALADD_START_0;
   wire FIXED_IO_ddr_vrn;
   wire FIXED_IO_ddr_vrp;
@@ -92,6 +100,7 @@ module AXI_Convolution_wrapper
   wire [2:0]MULTIPLY_START_0;
   wire cReady_0;
   wire cSum_0;
+  wire debug_0;
 
   AXI_Convolution AXI_Convolution_i
        (.DDR_addr(DDR_addr),
@@ -109,6 +118,8 @@ module AXI_Convolution_wrapper
         .DDR_ras_n(DDR_ras_n),
         .DDR_reset_n(DDR_reset_n),
         .DDR_we_n(DDR_we_n),
+        .FCLK_CLK0_0(FCLK_CLK0_0),
+        .FCLK_RESET0_N_0(FCLK_RESET0_N_0),
         .FINALADD_START_0(FINALADD_START_0),
         .FIXED_IO_ddr_vrn(FIXED_IO_ddr_vrn),
         .FIXED_IO_ddr_vrp(FIXED_IO_ddr_vrp),
@@ -120,5 +131,6 @@ module AXI_Convolution_wrapper
         .MULTIPLIER_INPUT_0(MULTIPLIER_INPUT_0),
         .MULTIPLY_START_0(MULTIPLY_START_0),
         .cReady_0(cReady_0),
-        .cSum_0(cSum_0));
+        .cSum_0(cSum_0),
+        .debug_0(debug_0));
 endmodule

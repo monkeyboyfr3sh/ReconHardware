@@ -14,3 +14,6 @@ set_property PACKAGE_PIN N15 [get_ports rd]
 set_property PACKAGE_PIN R14 [get_ports LED_signal_0]
 set_property IOSTANDARD LVCMOS33 [get_ports LED_signal_0]
 
+
+set_property IOSTANDARD LVCMOS33 [get_ports debug]
+set_property PACKAGE_PIN R14 [get_ports debug]
