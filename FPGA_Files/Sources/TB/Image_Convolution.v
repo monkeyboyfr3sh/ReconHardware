@@ -1,7 +1,7 @@
 `include "definitions.h"
 `timescale `myTimeScale
 
-module Image_Convolution;
+module Image_Convolution_tb;
 
 reg[8*66:1] file_name = "C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/TB_Files/custom.ppm";
 //reg[8*66:1] file_name = "C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/TB_Files/image_1.ppm";
@@ -51,8 +51,13 @@ ConvolutionAccelerator UUT(
     EMPTY_out
 );
 
-
+reg [3:0] x = 15;
+reg [3:0] y = 6;
+reg a;
 initial begin
+
+a = x==y;
+/*
 input_file = $fopen(file_name,"r");
 $fgets(line_in,input_file);
 $sscanf(line_in,"%s",file_type);
@@ -208,7 +213,7 @@ io_clk = 1;
 io_clk = 0;
 #`toggleTime;
 rd = 0;
-
+*/
 end
 always #(`clkPeriod/2) Clk = ~Clk;
 endmodule

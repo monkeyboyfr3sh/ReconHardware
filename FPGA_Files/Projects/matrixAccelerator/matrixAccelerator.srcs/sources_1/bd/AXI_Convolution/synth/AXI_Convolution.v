@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-//Date        : Sat Oct 31 14:16:36 2020
+//Date        : Wed Nov  4 21:41:33 2020
 //Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 //Command     : generate_target AXI_Convolution.bd
 //Design      : AXI_Convolution
@@ -9,7 +9,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "AXI_Convolution,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=AXI_Convolution,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=10,numReposBlks=6,numNonXlnxBlks=0,numHierBlks=4,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=3,da_clkrst_cnt=2,da_ps7_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "AXI_Convolution.hwdef" *) 
+(* CORE_GENERATION_INFO = "AXI_Convolution,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=AXI_Convolution,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=10,numReposBlks=6,numNonXlnxBlks=0,numHierBlks=4,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=3,da_board_cnt=3,da_clkrst_cnt=9,da_ps7_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "AXI_Convolution.hwdef" *) 
 module AXI_Convolution
    (DDR_addr,
     DDR_ba,
@@ -26,6 +26,8 @@ module AXI_Convolution
     DDR_ras_n,
     DDR_reset_n,
     DDR_we_n,
+    FCLK_CLK0_0,
+    FCLK_RESET0_N_0,
     FINALADD_START_0,
     FIXED_IO_ddr_vrn,
     FIXED_IO_ddr_vrp,
@@ -37,7 +39,8 @@ module AXI_Convolution
     MULTIPLIER_INPUT_0,
     MULTIPLY_START_0,
     cReady_0,
-    cSum_0);
+    cSum_0,
+    debug_0);
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR ADDR" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DDR, AXI_ARBITRATION_SCHEME TDM, BURST_LENGTH 8, CAN_DEBUG false, CAS_LATENCY 11, CAS_WRITE_LATENCY 11, CS_ENABLED true, DATA_MASK_ENABLED true, DATA_WIDTH 8, MEMORY_TYPE COMPONENTS, MEM_ADDR_MAP ROW_COLUMN_BANK, SLOT Single, TIMEPERIOD_PS 1250" *) inout [14:0]DDR_addr;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR BA" *) inout [2:0]DDR_ba;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR CAS_N" *) inout DDR_cas_n;
@@ -53,6 +56,8 @@ module AXI_Convolution
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR RAS_N" *) inout DDR_ras_n;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR RESET_N" *) inout DDR_reset_n;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR WE_N" *) inout DDR_we_n;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.FCLK_CLK0_0 CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.FCLK_CLK0_0, CLK_DOMAIN AXI_Convolution_processing_system7_0_0_FCLK_CLK0, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.000" *) output FCLK_CLK0_0;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.FCLK_RESET0_N_0 RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.FCLK_RESET0_N_0, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) output FCLK_RESET0_N_0;
   output FINALADD_START_0;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO DDR_VRN" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME FIXED_IO, CAN_DEBUG false" *) inout FIXED_IO_ddr_vrn;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO DDR_VRP" *) inout FIXED_IO_ddr_vrp;
@@ -65,6 +70,7 @@ module AXI_Convolution
   output [2:0]MULTIPLY_START_0;
   input cReady_0;
   input cSum_0;
+  output debug_0;
 
   wire AXI_Convolution_Cont_0_FINALADD_START;
   wire [31:0]AXI_Convolution_Cont_0_M00_AXIS_TDATA;
@@ -74,6 +80,7 @@ module AXI_Convolution
   wire [47:0]AXI_Convolution_Cont_0_MULTIPLICAND_INPUT;
   wire [47:0]AXI_Convolution_Cont_0_MULTIPLIER_INPUT;
   wire [2:0]AXI_Convolution_Cont_0_MULTIPLY_START;
+  wire AXI_Convolution_Cont_0_debug;
   wire [31:0]axi_dma_0_M_AXIS_MM2S_TDATA;
   wire axi_dma_0_M_AXIS_MM2S_TLAST;
   wire axi_dma_0_M_AXIS_MM2S_TREADY;
@@ -178,19 +185,23 @@ module AXI_Convolution
   wire ps7_0_axi_periph_M01_AXI_WVALID;
   wire [0:0]rst_ps7_0_50M_peripheral_aresetn;
 
+  assign FCLK_CLK0_0 = processing_system7_0_FCLK_CLK0;
+  assign FCLK_RESET0_N_0 = processing_system7_0_FCLK_RESET0_N;
   assign FINALADD_START_0 = AXI_Convolution_Cont_0_FINALADD_START;
   assign MULTIPLICAND_INPUT_0[47:0] = AXI_Convolution_Cont_0_MULTIPLICAND_INPUT;
   assign MULTIPLIER_INPUT_0[47:0] = AXI_Convolution_Cont_0_MULTIPLIER_INPUT;
   assign MULTIPLY_START_0[2:0] = AXI_Convolution_Cont_0_MULTIPLY_START;
   assign cReady_0_1 = cReady_0;
   assign cSum_0_1 = cSum_0;
+  assign debug_0 = AXI_Convolution_Cont_0_debug;
   AXI_Convolution_AXI_Convolution_Cont_0_0 AXI_Convolution_Cont_0
        (.FINALADD_START(AXI_Convolution_Cont_0_FINALADD_START),
         .MULTIPLICAND_INPUT(AXI_Convolution_Cont_0_MULTIPLICAND_INPUT),
         .MULTIPLIER_INPUT(AXI_Convolution_Cont_0_MULTIPLIER_INPUT),
         .MULTIPLY_START(AXI_Convolution_Cont_0_MULTIPLY_START),
         .cReady(cReady_0_1),
-        .cSum(cSum_0_1),
+        .cSum({cSum_0_1,cSum_0_1,cSum_0_1,cSum_0_1,cSum_0_1,cSum_0_1,cSum_0_1,cSum_0_1,cSum_0_1,cSum_0_1,cSum_0_1,cSum_0_1,cSum_0_1,cSum_0_1,cSum_0_1,cSum_0_1,cSum_0_1,cSum_0_1,cSum_0_1,cSum_0_1,cSum_0_1,cSum_0_1,cSum_0_1,cSum_0_1,cSum_0_1,cSum_0_1,cSum_0_1,cSum_0_1,cSum_0_1,cSum_0_1,cSum_0_1,cSum_0_1}),
+        .debug(AXI_Convolution_Cont_0_debug),
         .m00_axis_aclk(processing_system7_0_FCLK_CLK0),
         .m00_axis_aresetn(rst_ps7_0_50M_peripheral_aresetn),
         .m00_axis_tdata(AXI_Convolution_Cont_0_M00_AXIS_TDATA),

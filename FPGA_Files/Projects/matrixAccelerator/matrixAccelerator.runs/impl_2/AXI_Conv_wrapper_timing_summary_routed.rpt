@@ -1,0 +1,1727 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Wed Nov  4 21:45:06 2020
+| Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -max_paths 10 -file AXI_Conv_wrapper_timing_summary_routed.rpt -pb AXI_Conv_wrapper_timing_summary_routed.pb -rpx AXI_Conv_wrapper_timing_summary_routed.rpx -warn_on_violation
+| Design       : AXI_Conv_wrapper
+| Device       : 7z020-clg400
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (0)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (0)
+5. checking no_input_delay (0)
+6. checking no_output_delay (1)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (0)
+------------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (0)
+------------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (0)
+------------------------------
+ There are 0 input ports with no input delay specified.
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (1)
+-------------------------------
+ There is 1 port with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+      2.338        0.000                      0                 6201        0.024        0.000                      0                 6201        3.750        0.000                       0                  2888  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock       Waveform(ns)       Period(ns)      Frequency(MHz)
+-----       ------------       ----------      --------------
+clk_fpga_0  {0.000 5.000}      10.000          100.000         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+clk_fpga_0          2.338        0.000                      0                 6201        0.024        0.000                      0                 6201        3.750        0.000                       0                  2888  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk_fpga_0
+  To Clock:  clk_fpga_0
+
+Setup :            0  Failing Endpoints,  Worst Slack        2.338ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.024ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        3.750ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             2.338ns  (required time - arrival time)
+  Source:                 nolabel_line23/AXI_Convolution_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x_reg[29]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_fpga_0 rise@10.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        7.596ns  (logic 4.427ns (58.278%)  route 3.169ns (41.722%))
+  Logic Levels:           18  (CARRY4=15 LUT2=1 LUT4=1 LUT6=1)
+  Clock Path Skew:        0.026ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.834ns = ( 12.834 - 10.000 ) 
+    Source Clock Delay      (SCD):    2.937ns
+    Clock Pessimism Removal (CPR):    0.129ns
+  Clock Uncertainty:      0.154ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.300ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.193     1.193    nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2888, routed)        1.643     2.937    nolabel_line23/AXI_Convolution_i/rst_ps7_0_50M/U0/slowest_sync_clk
+    SLICE_X33Y82         FDRE                                         r  nolabel_line23/AXI_Convolution_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X33Y82         FDRE (Prop_fdre_C_Q)         0.456     3.393 r  nolabel_line23/AXI_Convolution_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/Q
+                         net (fo=190, routed)         1.496     4.889    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/s00_axis_aresetn
+    SLICE_X34Y94         LUT2 (Prop_lut2_I0_O)        0.124     5.013 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__0_i_3/O
+                         net (fo=1, routed)           0.000     5.013    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__0_i_3_n_0
+    SLICE_X34Y94         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     5.546 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     5.546    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__0_n_0
+    SLICE_X34Y95         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     5.663 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     5.663    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__1_n_0
+    SLICE_X34Y96         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     5.780 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__2/CO[3]
+                         net (fo=1, routed)           0.000     5.780    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__2_n_0
+    SLICE_X34Y97         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     5.897 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__3/CO[3]
+                         net (fo=1, routed)           0.000     5.897    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__3_n_0
+    SLICE_X34Y98         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.014 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__4/CO[3]
+                         net (fo=1, routed)           0.000     6.014    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__4_n_0
+    SLICE_X34Y99         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.315     6.329 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__5/O[3]
+                         net (fo=2, routed)           0.840     7.169    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2[27]
+    SLICE_X33Y99         LUT4 (Prop_lut4_I1_O)        0.307     7.476 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x1_carry__2_i_7/O
+                         net (fo=1, routed)           0.000     7.476    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x1_carry__2_i_7_n_0
+    SLICE_X33Y99         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     8.026 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x1_carry__2/CO[3]
+                         net (fo=2, routed)           0.833     8.859    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/newline_reg[0]
+    SLICE_X35Y93         LUT6 (Prop_lut6_I3_O)        0.124     8.983 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x[3]_i_6/O
+                         net (fo=1, routed)           0.000     8.983    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x[3]_i_6_n_0
+    SLICE_X35Y93         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532     9.515 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[3]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.515    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[3]_i_1_n_0
+    SLICE_X35Y94         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.629 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[7]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.629    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[7]_i_1_n_0
+    SLICE_X35Y95         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.743 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[11]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.743    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[11]_i_1_n_0
+    SLICE_X35Y96         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.857 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[15]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.857    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[15]_i_1_n_0
+    SLICE_X35Y97         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.971 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[19]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.971    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[19]_i_1_n_0
+    SLICE_X35Y98         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.085 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[23]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.085    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[23]_i_1_n_0
+    SLICE_X35Y99         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.199 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[27]_i_1/CO[3]
+                         net (fo=1, routed)           0.001    10.199    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[27]_i_1_n_0
+    SLICE_X35Y100        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    10.533 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[31]_i_1/O[1]
+                         net (fo=1, routed)           0.000    10.533    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x[29]
+    SLICE_X35Y100        FDRE                                         r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x_reg[29]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                     10.000    10.000 r  
+    PS7_X0Y0             PS7                          0.000    10.000 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.088    11.088    nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    11.179 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2888, routed)        1.655    12.834    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/s00_axis_aclk
+    SLICE_X35Y100        FDRE                                         r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x_reg[29]/C
+                         clock pessimism              0.129    12.963    
+                         clock uncertainty           -0.154    12.809    
+    SLICE_X35Y100        FDRE (Setup_fdre_C_D)        0.062    12.871    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x_reg[29]
+  -------------------------------------------------------------------
+                         required time                         12.871    
+                         arrival time                         -10.533    
+  -------------------------------------------------------------------
+                         slack                                  2.338    
+
+Slack (MET) :             2.359ns  (required time - arrival time)
+  Source:                 nolabel_line23/AXI_Convolution_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x_reg[31]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_fpga_0 rise@10.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        7.575ns  (logic 4.406ns (58.162%)  route 3.169ns (41.838%))
+  Logic Levels:           18  (CARRY4=15 LUT2=1 LUT4=1 LUT6=1)
+  Clock Path Skew:        0.026ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.834ns = ( 12.834 - 10.000 ) 
+    Source Clock Delay      (SCD):    2.937ns
+    Clock Pessimism Removal (CPR):    0.129ns
+  Clock Uncertainty:      0.154ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.300ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.193     1.193    nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2888, routed)        1.643     2.937    nolabel_line23/AXI_Convolution_i/rst_ps7_0_50M/U0/slowest_sync_clk
+    SLICE_X33Y82         FDRE                                         r  nolabel_line23/AXI_Convolution_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X33Y82         FDRE (Prop_fdre_C_Q)         0.456     3.393 r  nolabel_line23/AXI_Convolution_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/Q
+                         net (fo=190, routed)         1.496     4.889    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/s00_axis_aresetn
+    SLICE_X34Y94         LUT2 (Prop_lut2_I0_O)        0.124     5.013 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__0_i_3/O
+                         net (fo=1, routed)           0.000     5.013    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__0_i_3_n_0
+    SLICE_X34Y94         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     5.546 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     5.546    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__0_n_0
+    SLICE_X34Y95         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     5.663 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     5.663    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__1_n_0
+    SLICE_X34Y96         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     5.780 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__2/CO[3]
+                         net (fo=1, routed)           0.000     5.780    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__2_n_0
+    SLICE_X34Y97         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     5.897 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__3/CO[3]
+                         net (fo=1, routed)           0.000     5.897    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__3_n_0
+    SLICE_X34Y98         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.014 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__4/CO[3]
+                         net (fo=1, routed)           0.000     6.014    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__4_n_0
+    SLICE_X34Y99         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.315     6.329 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__5/O[3]
+                         net (fo=2, routed)           0.840     7.169    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2[27]
+    SLICE_X33Y99         LUT4 (Prop_lut4_I1_O)        0.307     7.476 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x1_carry__2_i_7/O
+                         net (fo=1, routed)           0.000     7.476    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x1_carry__2_i_7_n_0
+    SLICE_X33Y99         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     8.026 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x1_carry__2/CO[3]
+                         net (fo=2, routed)           0.833     8.859    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/newline_reg[0]
+    SLICE_X35Y93         LUT6 (Prop_lut6_I3_O)        0.124     8.983 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x[3]_i_6/O
+                         net (fo=1, routed)           0.000     8.983    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x[3]_i_6_n_0
+    SLICE_X35Y93         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532     9.515 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[3]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.515    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[3]_i_1_n_0
+    SLICE_X35Y94         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.629 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[7]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.629    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[7]_i_1_n_0
+    SLICE_X35Y95         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.743 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[11]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.743    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[11]_i_1_n_0
+    SLICE_X35Y96         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.857 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[15]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.857    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[15]_i_1_n_0
+    SLICE_X35Y97         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.971 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[19]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.971    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[19]_i_1_n_0
+    SLICE_X35Y98         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.085 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[23]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.085    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[23]_i_1_n_0
+    SLICE_X35Y99         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.199 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[27]_i_1/CO[3]
+                         net (fo=1, routed)           0.001    10.199    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[27]_i_1_n_0
+    SLICE_X35Y100        CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313    10.512 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[31]_i_1/O[3]
+                         net (fo=1, routed)           0.000    10.512    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x[31]
+    SLICE_X35Y100        FDRE                                         r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x_reg[31]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                     10.000    10.000 r  
+    PS7_X0Y0             PS7                          0.000    10.000 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.088    11.088    nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    11.179 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2888, routed)        1.655    12.834    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/s00_axis_aclk
+    SLICE_X35Y100        FDRE                                         r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x_reg[31]/C
+                         clock pessimism              0.129    12.963    
+                         clock uncertainty           -0.154    12.809    
+    SLICE_X35Y100        FDRE (Setup_fdre_C_D)        0.062    12.871    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x_reg[31]
+  -------------------------------------------------------------------
+                         required time                         12.871    
+                         arrival time                         -10.512    
+  -------------------------------------------------------------------
+                         slack                                  2.359    
+
+Slack (MET) :             2.378ns  (required time - arrival time)
+  Source:                 nolabel_line23/AXI_Convolution_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x_reg[25]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_fpga_0 rise@10.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        7.482ns  (logic 4.313ns (57.648%)  route 3.169ns (42.352%))
+  Logic Levels:           17  (CARRY4=14 LUT2=1 LUT4=1 LUT6=1)
+  Clock Path Skew:        -0.048ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.660ns = ( 12.660 - 10.000 ) 
+    Source Clock Delay      (SCD):    2.937ns
+    Clock Pessimism Removal (CPR):    0.229ns
+  Clock Uncertainty:      0.154ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.300ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.193     1.193    nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2888, routed)        1.643     2.937    nolabel_line23/AXI_Convolution_i/rst_ps7_0_50M/U0/slowest_sync_clk
+    SLICE_X33Y82         FDRE                                         r  nolabel_line23/AXI_Convolution_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X33Y82         FDRE (Prop_fdre_C_Q)         0.456     3.393 r  nolabel_line23/AXI_Convolution_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/Q
+                         net (fo=190, routed)         1.496     4.889    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/s00_axis_aresetn
+    SLICE_X34Y94         LUT2 (Prop_lut2_I0_O)        0.124     5.013 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__0_i_3/O
+                         net (fo=1, routed)           0.000     5.013    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__0_i_3_n_0
+    SLICE_X34Y94         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     5.546 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     5.546    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__0_n_0
+    SLICE_X34Y95         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     5.663 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     5.663    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__1_n_0
+    SLICE_X34Y96         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     5.780 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__2/CO[3]
+                         net (fo=1, routed)           0.000     5.780    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__2_n_0
+    SLICE_X34Y97         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     5.897 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__3/CO[3]
+                         net (fo=1, routed)           0.000     5.897    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__3_n_0
+    SLICE_X34Y98         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.014 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__4/CO[3]
+                         net (fo=1, routed)           0.000     6.014    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__4_n_0
+    SLICE_X34Y99         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.315     6.329 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__5/O[3]
+                         net (fo=2, routed)           0.840     7.169    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2[27]
+    SLICE_X33Y99         LUT4 (Prop_lut4_I1_O)        0.307     7.476 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x1_carry__2_i_7/O
+                         net (fo=1, routed)           0.000     7.476    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x1_carry__2_i_7_n_0
+    SLICE_X33Y99         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     8.026 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x1_carry__2/CO[3]
+                         net (fo=2, routed)           0.833     8.859    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/newline_reg[0]
+    SLICE_X35Y93         LUT6 (Prop_lut6_I3_O)        0.124     8.983 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x[3]_i_6/O
+                         net (fo=1, routed)           0.000     8.983    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x[3]_i_6_n_0
+    SLICE_X35Y93         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532     9.515 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[3]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.515    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[3]_i_1_n_0
+    SLICE_X35Y94         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.629 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[7]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.629    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[7]_i_1_n_0
+    SLICE_X35Y95         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.743 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[11]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.743    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[11]_i_1_n_0
+    SLICE_X35Y96         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.857 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[15]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.857    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[15]_i_1_n_0
+    SLICE_X35Y97         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.971 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[19]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.971    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[19]_i_1_n_0
+    SLICE_X35Y98         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.085 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[23]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.085    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[23]_i_1_n_0
+    SLICE_X35Y99         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    10.419 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[27]_i_1/O[1]
+                         net (fo=1, routed)           0.000    10.419    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x[25]
+    SLICE_X35Y99         FDRE                                         r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x_reg[25]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                     10.000    10.000 r  
+    PS7_X0Y0             PS7                          0.000    10.000 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.088    11.088    nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    11.179 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2888, routed)        1.481    12.660    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/s00_axis_aclk
+    SLICE_X35Y99         FDRE                                         r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x_reg[25]/C
+                         clock pessimism              0.229    12.889    
+                         clock uncertainty           -0.154    12.735    
+    SLICE_X35Y99         FDRE (Setup_fdre_C_D)        0.062    12.797    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x_reg[25]
+  -------------------------------------------------------------------
+                         required time                         12.797    
+                         arrival time                         -10.419    
+  -------------------------------------------------------------------
+                         slack                                  2.378    
+
+Slack (MET) :             2.399ns  (required time - arrival time)
+  Source:                 nolabel_line23/AXI_Convolution_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x_reg[27]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_fpga_0 rise@10.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        7.461ns  (logic 4.292ns (57.528%)  route 3.169ns (42.472%))
+  Logic Levels:           17  (CARRY4=14 LUT2=1 LUT4=1 LUT6=1)
+  Clock Path Skew:        -0.048ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.660ns = ( 12.660 - 10.000 ) 
+    Source Clock Delay      (SCD):    2.937ns
+    Clock Pessimism Removal (CPR):    0.229ns
+  Clock Uncertainty:      0.154ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.300ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.193     1.193    nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2888, routed)        1.643     2.937    nolabel_line23/AXI_Convolution_i/rst_ps7_0_50M/U0/slowest_sync_clk
+    SLICE_X33Y82         FDRE                                         r  nolabel_line23/AXI_Convolution_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X33Y82         FDRE (Prop_fdre_C_Q)         0.456     3.393 r  nolabel_line23/AXI_Convolution_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/Q
+                         net (fo=190, routed)         1.496     4.889    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/s00_axis_aresetn
+    SLICE_X34Y94         LUT2 (Prop_lut2_I0_O)        0.124     5.013 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__0_i_3/O
+                         net (fo=1, routed)           0.000     5.013    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__0_i_3_n_0
+    SLICE_X34Y94         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     5.546 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     5.546    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__0_n_0
+    SLICE_X34Y95         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     5.663 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     5.663    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__1_n_0
+    SLICE_X34Y96         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     5.780 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__2/CO[3]
+                         net (fo=1, routed)           0.000     5.780    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__2_n_0
+    SLICE_X34Y97         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     5.897 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__3/CO[3]
+                         net (fo=1, routed)           0.000     5.897    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__3_n_0
+    SLICE_X34Y98         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.014 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__4/CO[3]
+                         net (fo=1, routed)           0.000     6.014    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__4_n_0
+    SLICE_X34Y99         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.315     6.329 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__5/O[3]
+                         net (fo=2, routed)           0.840     7.169    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2[27]
+    SLICE_X33Y99         LUT4 (Prop_lut4_I1_O)        0.307     7.476 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x1_carry__2_i_7/O
+                         net (fo=1, routed)           0.000     7.476    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x1_carry__2_i_7_n_0
+    SLICE_X33Y99         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     8.026 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x1_carry__2/CO[3]
+                         net (fo=2, routed)           0.833     8.859    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/newline_reg[0]
+    SLICE_X35Y93         LUT6 (Prop_lut6_I3_O)        0.124     8.983 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x[3]_i_6/O
+                         net (fo=1, routed)           0.000     8.983    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x[3]_i_6_n_0
+    SLICE_X35Y93         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532     9.515 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[3]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.515    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[3]_i_1_n_0
+    SLICE_X35Y94         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.629 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[7]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.629    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[7]_i_1_n_0
+    SLICE_X35Y95         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.743 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[11]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.743    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[11]_i_1_n_0
+    SLICE_X35Y96         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.857 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[15]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.857    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[15]_i_1_n_0
+    SLICE_X35Y97         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.971 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[19]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.971    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[19]_i_1_n_0
+    SLICE_X35Y98         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.085 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[23]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.085    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[23]_i_1_n_0
+    SLICE_X35Y99         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313    10.398 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[27]_i_1/O[3]
+                         net (fo=1, routed)           0.000    10.398    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x[27]
+    SLICE_X35Y99         FDRE                                         r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x_reg[27]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                     10.000    10.000 r  
+    PS7_X0Y0             PS7                          0.000    10.000 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.088    11.088    nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    11.179 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2888, routed)        1.481    12.660    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/s00_axis_aclk
+    SLICE_X35Y99         FDRE                                         r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x_reg[27]/C
+                         clock pessimism              0.229    12.889    
+                         clock uncertainty           -0.154    12.735    
+    SLICE_X35Y99         FDRE (Setup_fdre_C_D)        0.062    12.797    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x_reg[27]
+  -------------------------------------------------------------------
+                         required time                         12.797    
+                         arrival time                         -10.398    
+  -------------------------------------------------------------------
+                         slack                                  2.399    
+
+Slack (MET) :             2.433ns  (required time - arrival time)
+  Source:                 nolabel_line23/AXI_Convolution_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x_reg[30]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_fpga_0 rise@10.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        7.501ns  (logic 4.332ns (57.749%)  route 3.169ns (42.250%))
+  Logic Levels:           18  (CARRY4=15 LUT2=1 LUT4=1 LUT6=1)
+  Clock Path Skew:        0.026ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.834ns = ( 12.834 - 10.000 ) 
+    Source Clock Delay      (SCD):    2.937ns
+    Clock Pessimism Removal (CPR):    0.129ns
+  Clock Uncertainty:      0.154ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.300ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.193     1.193    nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2888, routed)        1.643     2.937    nolabel_line23/AXI_Convolution_i/rst_ps7_0_50M/U0/slowest_sync_clk
+    SLICE_X33Y82         FDRE                                         r  nolabel_line23/AXI_Convolution_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X33Y82         FDRE (Prop_fdre_C_Q)         0.456     3.393 r  nolabel_line23/AXI_Convolution_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/Q
+                         net (fo=190, routed)         1.496     4.889    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/s00_axis_aresetn
+    SLICE_X34Y94         LUT2 (Prop_lut2_I0_O)        0.124     5.013 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__0_i_3/O
+                         net (fo=1, routed)           0.000     5.013    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__0_i_3_n_0
+    SLICE_X34Y94         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     5.546 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     5.546    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__0_n_0
+    SLICE_X34Y95         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     5.663 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     5.663    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__1_n_0
+    SLICE_X34Y96         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     5.780 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__2/CO[3]
+                         net (fo=1, routed)           0.000     5.780    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__2_n_0
+    SLICE_X34Y97         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     5.897 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__3/CO[3]
+                         net (fo=1, routed)           0.000     5.897    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__3_n_0
+    SLICE_X34Y98         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.014 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__4/CO[3]
+                         net (fo=1, routed)           0.000     6.014    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__4_n_0
+    SLICE_X34Y99         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.315     6.329 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__5/O[3]
+                         net (fo=2, routed)           0.840     7.169    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2[27]
+    SLICE_X33Y99         LUT4 (Prop_lut4_I1_O)        0.307     7.476 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x1_carry__2_i_7/O
+                         net (fo=1, routed)           0.000     7.476    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x1_carry__2_i_7_n_0
+    SLICE_X33Y99         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     8.026 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x1_carry__2/CO[3]
+                         net (fo=2, routed)           0.833     8.859    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/newline_reg[0]
+    SLICE_X35Y93         LUT6 (Prop_lut6_I3_O)        0.124     8.983 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x[3]_i_6/O
+                         net (fo=1, routed)           0.000     8.983    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x[3]_i_6_n_0
+    SLICE_X35Y93         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532     9.515 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[3]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.515    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[3]_i_1_n_0
+    SLICE_X35Y94         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.629 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[7]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.629    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[7]_i_1_n_0
+    SLICE_X35Y95         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.743 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[11]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.743    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[11]_i_1_n_0
+    SLICE_X35Y96         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.857 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[15]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.857    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[15]_i_1_n_0
+    SLICE_X35Y97         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.971 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[19]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.971    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[19]_i_1_n_0
+    SLICE_X35Y98         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.085 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[23]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.085    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[23]_i_1_n_0
+    SLICE_X35Y99         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.199 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[27]_i_1/CO[3]
+                         net (fo=1, routed)           0.001    10.199    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[27]_i_1_n_0
+    SLICE_X35Y100        CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239    10.438 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[31]_i_1/O[2]
+                         net (fo=1, routed)           0.000    10.438    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x[30]
+    SLICE_X35Y100        FDRE                                         r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x_reg[30]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                     10.000    10.000 r  
+    PS7_X0Y0             PS7                          0.000    10.000 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.088    11.088    nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    11.179 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2888, routed)        1.655    12.834    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/s00_axis_aclk
+    SLICE_X35Y100        FDRE                                         r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x_reg[30]/C
+                         clock pessimism              0.129    12.963    
+                         clock uncertainty           -0.154    12.809    
+    SLICE_X35Y100        FDRE (Setup_fdre_C_D)        0.062    12.871    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x_reg[30]
+  -------------------------------------------------------------------
+                         required time                         12.871    
+                         arrival time                         -10.438    
+  -------------------------------------------------------------------
+                         slack                                  2.433    
+
+Slack (MET) :             2.449ns  (required time - arrival time)
+  Source:                 nolabel_line23/AXI_Convolution_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x_reg[28]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_fpga_0 rise@10.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        7.485ns  (logic 4.316ns (57.659%)  route 3.169ns (42.341%))
+  Logic Levels:           18  (CARRY4=15 LUT2=1 LUT4=1 LUT6=1)
+  Clock Path Skew:        0.026ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.834ns = ( 12.834 - 10.000 ) 
+    Source Clock Delay      (SCD):    2.937ns
+    Clock Pessimism Removal (CPR):    0.129ns
+  Clock Uncertainty:      0.154ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.300ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.193     1.193    nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2888, routed)        1.643     2.937    nolabel_line23/AXI_Convolution_i/rst_ps7_0_50M/U0/slowest_sync_clk
+    SLICE_X33Y82         FDRE                                         r  nolabel_line23/AXI_Convolution_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X33Y82         FDRE (Prop_fdre_C_Q)         0.456     3.393 r  nolabel_line23/AXI_Convolution_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/Q
+                         net (fo=190, routed)         1.496     4.889    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/s00_axis_aresetn
+    SLICE_X34Y94         LUT2 (Prop_lut2_I0_O)        0.124     5.013 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__0_i_3/O
+                         net (fo=1, routed)           0.000     5.013    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__0_i_3_n_0
+    SLICE_X34Y94         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     5.546 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     5.546    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__0_n_0
+    SLICE_X34Y95         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     5.663 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     5.663    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__1_n_0
+    SLICE_X34Y96         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     5.780 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__2/CO[3]
+                         net (fo=1, routed)           0.000     5.780    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__2_n_0
+    SLICE_X34Y97         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     5.897 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__3/CO[3]
+                         net (fo=1, routed)           0.000     5.897    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__3_n_0
+    SLICE_X34Y98         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.014 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__4/CO[3]
+                         net (fo=1, routed)           0.000     6.014    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__4_n_0
+    SLICE_X34Y99         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.315     6.329 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__5/O[3]
+                         net (fo=2, routed)           0.840     7.169    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2[27]
+    SLICE_X33Y99         LUT4 (Prop_lut4_I1_O)        0.307     7.476 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x1_carry__2_i_7/O
+                         net (fo=1, routed)           0.000     7.476    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x1_carry__2_i_7_n_0
+    SLICE_X33Y99         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     8.026 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x1_carry__2/CO[3]
+                         net (fo=2, routed)           0.833     8.859    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/newline_reg[0]
+    SLICE_X35Y93         LUT6 (Prop_lut6_I3_O)        0.124     8.983 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x[3]_i_6/O
+                         net (fo=1, routed)           0.000     8.983    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x[3]_i_6_n_0
+    SLICE_X35Y93         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532     9.515 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[3]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.515    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[3]_i_1_n_0
+    SLICE_X35Y94         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.629 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[7]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.629    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[7]_i_1_n_0
+    SLICE_X35Y95         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.743 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[11]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.743    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[11]_i_1_n_0
+    SLICE_X35Y96         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.857 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[15]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.857    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[15]_i_1_n_0
+    SLICE_X35Y97         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.971 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[19]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.971    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[19]_i_1_n_0
+    SLICE_X35Y98         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.085 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[23]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.085    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[23]_i_1_n_0
+    SLICE_X35Y99         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.199 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[27]_i_1/CO[3]
+                         net (fo=1, routed)           0.001    10.199    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[27]_i_1_n_0
+    SLICE_X35Y100        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.223    10.422 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[31]_i_1/O[0]
+                         net (fo=1, routed)           0.000    10.422    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x[28]
+    SLICE_X35Y100        FDRE                                         r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x_reg[28]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                     10.000    10.000 r  
+    PS7_X0Y0             PS7                          0.000    10.000 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.088    11.088    nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    11.179 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2888, routed)        1.655    12.834    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/s00_axis_aclk
+    SLICE_X35Y100        FDRE                                         r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x_reg[28]/C
+                         clock pessimism              0.129    12.963    
+                         clock uncertainty           -0.154    12.809    
+    SLICE_X35Y100        FDRE (Setup_fdre_C_D)        0.062    12.871    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x_reg[28]
+  -------------------------------------------------------------------
+                         required time                         12.871    
+                         arrival time                         -10.422    
+  -------------------------------------------------------------------
+                         slack                                  2.449    
+
+Slack (MET) :             2.473ns  (required time - arrival time)
+  Source:                 nolabel_line23/AXI_Convolution_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x_reg[26]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_fpga_0 rise@10.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        7.387ns  (logic 4.218ns (57.103%)  route 3.169ns (42.897%))
+  Logic Levels:           17  (CARRY4=14 LUT2=1 LUT4=1 LUT6=1)
+  Clock Path Skew:        -0.048ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.660ns = ( 12.660 - 10.000 ) 
+    Source Clock Delay      (SCD):    2.937ns
+    Clock Pessimism Removal (CPR):    0.229ns
+  Clock Uncertainty:      0.154ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.300ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.193     1.193    nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2888, routed)        1.643     2.937    nolabel_line23/AXI_Convolution_i/rst_ps7_0_50M/U0/slowest_sync_clk
+    SLICE_X33Y82         FDRE                                         r  nolabel_line23/AXI_Convolution_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X33Y82         FDRE (Prop_fdre_C_Q)         0.456     3.393 r  nolabel_line23/AXI_Convolution_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/Q
+                         net (fo=190, routed)         1.496     4.889    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/s00_axis_aresetn
+    SLICE_X34Y94         LUT2 (Prop_lut2_I0_O)        0.124     5.013 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__0_i_3/O
+                         net (fo=1, routed)           0.000     5.013    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__0_i_3_n_0
+    SLICE_X34Y94         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     5.546 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     5.546    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__0_n_0
+    SLICE_X34Y95         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     5.663 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     5.663    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__1_n_0
+    SLICE_X34Y96         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     5.780 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__2/CO[3]
+                         net (fo=1, routed)           0.000     5.780    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__2_n_0
+    SLICE_X34Y97         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     5.897 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__3/CO[3]
+                         net (fo=1, routed)           0.000     5.897    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__3_n_0
+    SLICE_X34Y98         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.014 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__4/CO[3]
+                         net (fo=1, routed)           0.000     6.014    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__4_n_0
+    SLICE_X34Y99         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.315     6.329 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__5/O[3]
+                         net (fo=2, routed)           0.840     7.169    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2[27]
+    SLICE_X33Y99         LUT4 (Prop_lut4_I1_O)        0.307     7.476 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x1_carry__2_i_7/O
+                         net (fo=1, routed)           0.000     7.476    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x1_carry__2_i_7_n_0
+    SLICE_X33Y99         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     8.026 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x1_carry__2/CO[3]
+                         net (fo=2, routed)           0.833     8.859    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/newline_reg[0]
+    SLICE_X35Y93         LUT6 (Prop_lut6_I3_O)        0.124     8.983 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x[3]_i_6/O
+                         net (fo=1, routed)           0.000     8.983    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x[3]_i_6_n_0
+    SLICE_X35Y93         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532     9.515 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[3]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.515    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[3]_i_1_n_0
+    SLICE_X35Y94         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.629 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[7]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.629    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[7]_i_1_n_0
+    SLICE_X35Y95         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.743 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[11]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.743    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[11]_i_1_n_0
+    SLICE_X35Y96         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.857 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[15]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.857    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[15]_i_1_n_0
+    SLICE_X35Y97         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.971 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[19]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.971    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[19]_i_1_n_0
+    SLICE_X35Y98         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.085 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[23]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.085    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[23]_i_1_n_0
+    SLICE_X35Y99         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239    10.324 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[27]_i_1/O[2]
+                         net (fo=1, routed)           0.000    10.324    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x[26]
+    SLICE_X35Y99         FDRE                                         r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x_reg[26]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                     10.000    10.000 r  
+    PS7_X0Y0             PS7                          0.000    10.000 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.088    11.088    nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    11.179 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2888, routed)        1.481    12.660    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/s00_axis_aclk
+    SLICE_X35Y99         FDRE                                         r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x_reg[26]/C
+                         clock pessimism              0.229    12.889    
+                         clock uncertainty           -0.154    12.735    
+    SLICE_X35Y99         FDRE (Setup_fdre_C_D)        0.062    12.797    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x_reg[26]
+  -------------------------------------------------------------------
+                         required time                         12.797    
+                         arrival time                         -10.324    
+  -------------------------------------------------------------------
+                         slack                                  2.473    
+
+Slack (MET) :             2.489ns  (required time - arrival time)
+  Source:                 nolabel_line23/AXI_Convolution_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x_reg[24]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_fpga_0 rise@10.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        7.371ns  (logic 4.202ns (57.010%)  route 3.169ns (42.990%))
+  Logic Levels:           17  (CARRY4=14 LUT2=1 LUT4=1 LUT6=1)
+  Clock Path Skew:        -0.048ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.660ns = ( 12.660 - 10.000 ) 
+    Source Clock Delay      (SCD):    2.937ns
+    Clock Pessimism Removal (CPR):    0.229ns
+  Clock Uncertainty:      0.154ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.300ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.193     1.193    nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2888, routed)        1.643     2.937    nolabel_line23/AXI_Convolution_i/rst_ps7_0_50M/U0/slowest_sync_clk
+    SLICE_X33Y82         FDRE                                         r  nolabel_line23/AXI_Convolution_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X33Y82         FDRE (Prop_fdre_C_Q)         0.456     3.393 r  nolabel_line23/AXI_Convolution_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/Q
+                         net (fo=190, routed)         1.496     4.889    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/s00_axis_aresetn
+    SLICE_X34Y94         LUT2 (Prop_lut2_I0_O)        0.124     5.013 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__0_i_3/O
+                         net (fo=1, routed)           0.000     5.013    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__0_i_3_n_0
+    SLICE_X34Y94         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     5.546 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     5.546    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__0_n_0
+    SLICE_X34Y95         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     5.663 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     5.663    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__1_n_0
+    SLICE_X34Y96         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     5.780 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__2/CO[3]
+                         net (fo=1, routed)           0.000     5.780    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__2_n_0
+    SLICE_X34Y97         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     5.897 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__3/CO[3]
+                         net (fo=1, routed)           0.000     5.897    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__3_n_0
+    SLICE_X34Y98         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.014 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__4/CO[3]
+                         net (fo=1, routed)           0.000     6.014    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__4_n_0
+    SLICE_X34Y99         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.315     6.329 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__5/O[3]
+                         net (fo=2, routed)           0.840     7.169    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2[27]
+    SLICE_X33Y99         LUT4 (Prop_lut4_I1_O)        0.307     7.476 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x1_carry__2_i_7/O
+                         net (fo=1, routed)           0.000     7.476    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x1_carry__2_i_7_n_0
+    SLICE_X33Y99         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     8.026 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x1_carry__2/CO[3]
+                         net (fo=2, routed)           0.833     8.859    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/newline_reg[0]
+    SLICE_X35Y93         LUT6 (Prop_lut6_I3_O)        0.124     8.983 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x[3]_i_6/O
+                         net (fo=1, routed)           0.000     8.983    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x[3]_i_6_n_0
+    SLICE_X35Y93         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532     9.515 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[3]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.515    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[3]_i_1_n_0
+    SLICE_X35Y94         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.629 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[7]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.629    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[7]_i_1_n_0
+    SLICE_X35Y95         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.743 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[11]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.743    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[11]_i_1_n_0
+    SLICE_X35Y96         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.857 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[15]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.857    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[15]_i_1_n_0
+    SLICE_X35Y97         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.971 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[19]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.971    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[19]_i_1_n_0
+    SLICE_X35Y98         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.085 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[23]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    10.085    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[23]_i_1_n_0
+    SLICE_X35Y99         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.223    10.308 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[27]_i_1/O[0]
+                         net (fo=1, routed)           0.000    10.308    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x[24]
+    SLICE_X35Y99         FDRE                                         r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x_reg[24]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                     10.000    10.000 r  
+    PS7_X0Y0             PS7                          0.000    10.000 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.088    11.088    nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    11.179 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2888, routed)        1.481    12.660    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/s00_axis_aclk
+    SLICE_X35Y99         FDRE                                         r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x_reg[24]/C
+                         clock pessimism              0.229    12.889    
+                         clock uncertainty           -0.154    12.735    
+    SLICE_X35Y99         FDRE (Setup_fdre_C_D)        0.062    12.797    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x_reg[24]
+  -------------------------------------------------------------------
+                         required time                         12.797    
+                         arrival time                         -10.308    
+  -------------------------------------------------------------------
+                         slack                                  2.489    
+
+Slack (MET) :             2.492ns  (required time - arrival time)
+  Source:                 nolabel_line23/AXI_Convolution_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x_reg[21]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_fpga_0 rise@10.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        7.368ns  (logic 4.199ns (56.992%)  route 3.169ns (43.008%))
+  Logic Levels:           16  (CARRY4=13 LUT2=1 LUT4=1 LUT6=1)
+  Clock Path Skew:        -0.048ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.660ns = ( 12.660 - 10.000 ) 
+    Source Clock Delay      (SCD):    2.937ns
+    Clock Pessimism Removal (CPR):    0.229ns
+  Clock Uncertainty:      0.154ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.300ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.193     1.193    nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2888, routed)        1.643     2.937    nolabel_line23/AXI_Convolution_i/rst_ps7_0_50M/U0/slowest_sync_clk
+    SLICE_X33Y82         FDRE                                         r  nolabel_line23/AXI_Convolution_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X33Y82         FDRE (Prop_fdre_C_Q)         0.456     3.393 r  nolabel_line23/AXI_Convolution_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/Q
+                         net (fo=190, routed)         1.496     4.889    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/s00_axis_aresetn
+    SLICE_X34Y94         LUT2 (Prop_lut2_I0_O)        0.124     5.013 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__0_i_3/O
+                         net (fo=1, routed)           0.000     5.013    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__0_i_3_n_0
+    SLICE_X34Y94         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     5.546 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     5.546    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__0_n_0
+    SLICE_X34Y95         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     5.663 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     5.663    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__1_n_0
+    SLICE_X34Y96         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     5.780 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__2/CO[3]
+                         net (fo=1, routed)           0.000     5.780    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__2_n_0
+    SLICE_X34Y97         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     5.897 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__3/CO[3]
+                         net (fo=1, routed)           0.000     5.897    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__3_n_0
+    SLICE_X34Y98         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.014 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__4/CO[3]
+                         net (fo=1, routed)           0.000     6.014    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__4_n_0
+    SLICE_X34Y99         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.315     6.329 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__5/O[3]
+                         net (fo=2, routed)           0.840     7.169    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2[27]
+    SLICE_X33Y99         LUT4 (Prop_lut4_I1_O)        0.307     7.476 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x1_carry__2_i_7/O
+                         net (fo=1, routed)           0.000     7.476    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x1_carry__2_i_7_n_0
+    SLICE_X33Y99         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     8.026 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x1_carry__2/CO[3]
+                         net (fo=2, routed)           0.833     8.859    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/newline_reg[0]
+    SLICE_X35Y93         LUT6 (Prop_lut6_I3_O)        0.124     8.983 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x[3]_i_6/O
+                         net (fo=1, routed)           0.000     8.983    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x[3]_i_6_n_0
+    SLICE_X35Y93         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532     9.515 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[3]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.515    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[3]_i_1_n_0
+    SLICE_X35Y94         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.629 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[7]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.629    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[7]_i_1_n_0
+    SLICE_X35Y95         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.743 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[11]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.743    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[11]_i_1_n_0
+    SLICE_X35Y96         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.857 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[15]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.857    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[15]_i_1_n_0
+    SLICE_X35Y97         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.971 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[19]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.971    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[19]_i_1_n_0
+    SLICE_X35Y98         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    10.305 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[23]_i_1/O[1]
+                         net (fo=1, routed)           0.000    10.305    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x[21]
+    SLICE_X35Y98         FDRE                                         r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x_reg[21]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                     10.000    10.000 r  
+    PS7_X0Y0             PS7                          0.000    10.000 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.088    11.088    nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    11.179 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2888, routed)        1.481    12.660    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/s00_axis_aclk
+    SLICE_X35Y98         FDRE                                         r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x_reg[21]/C
+                         clock pessimism              0.229    12.889    
+                         clock uncertainty           -0.154    12.735    
+    SLICE_X35Y98         FDRE (Setup_fdre_C_D)        0.062    12.797    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x_reg[21]
+  -------------------------------------------------------------------
+                         required time                         12.797    
+                         arrival time                         -10.305    
+  -------------------------------------------------------------------
+                         slack                                  2.492    
+
+Slack (MET) :             2.513ns  (required time - arrival time)
+  Source:                 nolabel_line23/AXI_Convolution_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x_reg[23]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_fpga_0 rise@10.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        7.347ns  (logic 4.178ns (56.869%)  route 3.169ns (43.131%))
+  Logic Levels:           16  (CARRY4=13 LUT2=1 LUT4=1 LUT6=1)
+  Clock Path Skew:        -0.048ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.660ns = ( 12.660 - 10.000 ) 
+    Source Clock Delay      (SCD):    2.937ns
+    Clock Pessimism Removal (CPR):    0.229ns
+  Clock Uncertainty:      0.154ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.300ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.193     1.193    nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     1.294 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2888, routed)        1.643     2.937    nolabel_line23/AXI_Convolution_i/rst_ps7_0_50M/U0/slowest_sync_clk
+    SLICE_X33Y82         FDRE                                         r  nolabel_line23/AXI_Convolution_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X33Y82         FDRE (Prop_fdre_C_Q)         0.456     3.393 r  nolabel_line23/AXI_Convolution_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/Q
+                         net (fo=190, routed)         1.496     4.889    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/s00_axis_aresetn
+    SLICE_X34Y94         LUT2 (Prop_lut2_I0_O)        0.124     5.013 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__0_i_3/O
+                         net (fo=1, routed)           0.000     5.013    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__0_i_3_n_0
+    SLICE_X34Y94         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     5.546 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     5.546    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__0_n_0
+    SLICE_X34Y95         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     5.663 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     5.663    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__1_n_0
+    SLICE_X34Y96         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     5.780 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__2/CO[3]
+                         net (fo=1, routed)           0.000     5.780    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__2_n_0
+    SLICE_X34Y97         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     5.897 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__3/CO[3]
+                         net (fo=1, routed)           0.000     5.897    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__3_n_0
+    SLICE_X34Y98         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     6.014 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__4/CO[3]
+                         net (fo=1, routed)           0.000     6.014    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__4_n_0
+    SLICE_X34Y99         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.315     6.329 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2_carry__5/O[3]
+                         net (fo=2, routed)           0.840     7.169    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x2[27]
+    SLICE_X33Y99         LUT4 (Prop_lut4_I1_O)        0.307     7.476 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x1_carry__2_i_7/O
+                         net (fo=1, routed)           0.000     7.476    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x1_carry__2_i_7_n_0
+    SLICE_X33Y99         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     8.026 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x1_carry__2/CO[3]
+                         net (fo=2, routed)           0.833     8.859    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/newline_reg[0]
+    SLICE_X35Y93         LUT6 (Prop_lut6_I3_O)        0.124     8.983 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x[3]_i_6/O
+                         net (fo=1, routed)           0.000     8.983    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x[3]_i_6_n_0
+    SLICE_X35Y93         CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532     9.515 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[3]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.515    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[3]_i_1_n_0
+    SLICE_X35Y94         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.629 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[7]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.629    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[7]_i_1_n_0
+    SLICE_X35Y95         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.743 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[11]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.743    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[11]_i_1_n_0
+    SLICE_X35Y96         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.857 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[15]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.857    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[15]_i_1_n_0
+    SLICE_X35Y97         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     9.971 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[19]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     9.971    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[19]_i_1_n_0
+    SLICE_X35Y98         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313    10.284 r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXIS_inst/current_x_reg[23]_i_1/O[3]
+                         net (fo=1, routed)           0.000    10.284    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x[23]
+    SLICE_X35Y98         FDRE                                         r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x_reg[23]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                     10.000    10.000 r  
+    PS7_X0Y0             PS7                          0.000    10.000 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.088    11.088    nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    11.179 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2888, routed)        1.481    12.660    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/s00_axis_aclk
+    SLICE_X35Y98         FDRE                                         r  nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x_reg[23]/C
+                         clock pessimism              0.229    12.889    
+                         clock uncertainty           -0.154    12.735    
+    SLICE_X35Y98         FDRE (Setup_fdre_C_D)        0.062    12.797    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/current_x_reg[23]
+  -------------------------------------------------------------------
+                         required time                         12.797    
+                         arrival time                         -10.284    
+  -------------------------------------------------------------------
+                         slack                                  2.513    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.024ns  (arrival time - required time)
+  Source:                 nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_addr_cntr_incr_ireg2_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_btt_cntr_im0_reg[4]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_fpga_0 rise@0.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        0.507ns  (logic 0.391ns (77.101%)  route 0.116ns (22.899%))
+  Logic Levels:           3  (CARRY4=2 LUT3=1)
+  Clock Path Skew:        0.349ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.273ns
+    Source Clock Delay      (SCD):    0.889ns
+    Clock Pessimism Removal (CPR):    0.035ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.310     0.310    nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.336 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2888, routed)        0.553     0.889    nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/m_axi_mm2s_aclk
+    SLICE_X51Y99         FDRE                                         r  nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_addr_cntr_incr_ireg2_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X51Y99         FDRE (Prop_fdre_C_Q)         0.141     1.030 r  nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_addr_cntr_incr_ireg2_reg[1]/Q
+                         net (fo=3, routed)           0.115     1.145    nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_addr_cntr_incr_ireg2_reg_n_0_[1]
+    SLICE_X50Y99         LUT3 (Prop_lut3_I0_O)        0.045     1.190 r  nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_btt_cntr_im0[3]_i_8/O
+                         net (fo=1, routed)           0.000     1.190    nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_btt_cntr_im0[3]_i_8_n_0
+    SLICE_X50Y99         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.152     1.342 r  nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_btt_cntr_im0_reg[3]_i_1/CO[3]
+                         net (fo=1, routed)           0.001     1.343    nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_btt_cntr_im0_reg[3]_i_1_n_0
+    SLICE_X50Y100        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.053     1.396 r  nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_btt_cntr_im0_reg[7]_i_1/O[0]
+                         net (fo=1, routed)           0.000     1.396    nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_btt_cntr_im0_reg[7]_i_1_n_7
+    SLICE_X50Y100        FDRE                                         r  nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_btt_cntr_im0_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.337     0.337    nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     0.366 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2888, routed)        0.907     1.273    nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/m_axi_mm2s_aclk
+    SLICE_X50Y100        FDRE                                         r  nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_btt_cntr_im0_reg[4]/C
+                         clock pessimism             -0.035     1.238    
+    SLICE_X50Y100        FDRE (Hold_fdre_C_D)         0.134     1.372    nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_btt_cntr_im0_reg[4]
+  -------------------------------------------------------------------
+                         required time                         -1.372    
+                         arrival time                           1.396    
+  -------------------------------------------------------------------
+                         slack                                  0.024    
+
+Slack (MET) :             0.037ns  (arrival time - required time)
+  Source:                 nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_addr_cntr_incr_ireg2_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_btt_cntr_im0_reg[6]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_fpga_0 rise@0.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        0.520ns  (logic 0.404ns (77.673%)  route 0.116ns (22.327%))
+  Logic Levels:           3  (CARRY4=2 LUT3=1)
+  Clock Path Skew:        0.349ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.273ns
+    Source Clock Delay      (SCD):    0.889ns
+    Clock Pessimism Removal (CPR):    0.035ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.310     0.310    nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.336 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2888, routed)        0.553     0.889    nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/m_axi_mm2s_aclk
+    SLICE_X51Y99         FDRE                                         r  nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_addr_cntr_incr_ireg2_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X51Y99         FDRE (Prop_fdre_C_Q)         0.141     1.030 r  nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_addr_cntr_incr_ireg2_reg[1]/Q
+                         net (fo=3, routed)           0.115     1.145    nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_addr_cntr_incr_ireg2_reg_n_0_[1]
+    SLICE_X50Y99         LUT3 (Prop_lut3_I0_O)        0.045     1.190 r  nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_btt_cntr_im0[3]_i_8/O
+                         net (fo=1, routed)           0.000     1.190    nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_btt_cntr_im0[3]_i_8_n_0
+    SLICE_X50Y99         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.152     1.342 r  nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_btt_cntr_im0_reg[3]_i_1/CO[3]
+                         net (fo=1, routed)           0.001     1.343    nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_btt_cntr_im0_reg[3]_i_1_n_0
+    SLICE_X50Y100        CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.066     1.409 r  nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_btt_cntr_im0_reg[7]_i_1/O[2]
+                         net (fo=1, routed)           0.000     1.409    nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_btt_cntr_im0_reg[7]_i_1_n_5
+    SLICE_X50Y100        FDRE                                         r  nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_btt_cntr_im0_reg[6]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.337     0.337    nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     0.366 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2888, routed)        0.907     1.273    nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/m_axi_mm2s_aclk
+    SLICE_X50Y100        FDRE                                         r  nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_btt_cntr_im0_reg[6]/C
+                         clock pessimism             -0.035     1.238    
+    SLICE_X50Y100        FDRE (Hold_fdre_C_D)         0.134     1.372    nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_btt_cntr_im0_reg[6]
+  -------------------------------------------------------------------
+                         required time                         -1.372    
+                         arrival time                           1.409    
+  -------------------------------------------------------------------
+                         slack                                  0.037    
+
+Slack (MET) :             0.041ns  (arrival time - required time)
+  Source:                 nolabel_line23/AXI_Convolution_i/ps7_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/reg_slice_r/m_payload_i_reg[13]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            nolabel_line23/AXI_Convolution_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][10]_srl32/D
+                            (rising edge-triggered cell SRLC32E clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_fpga_0 rise@0.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        0.338ns  (logic 0.141ns (41.675%)  route 0.197ns (58.325%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.180ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.190ns
+    Source Clock Delay      (SCD):    0.975ns
+    Clock Pessimism Removal (CPR):    0.035ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.310     0.310    nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.336 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2888, routed)        0.639     0.975    nolabel_line23/AXI_Convolution_i/ps7_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/reg_slice_r/aclk
+    SLICE_X37Y100        FDRE                                         r  nolabel_line23/AXI_Convolution_i/ps7_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/reg_slice_r/m_payload_i_reg[13]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X37Y100        FDRE (Prop_fdre_C_Q)         0.141     1.116 r  nolabel_line23/AXI_Convolution_i/ps7_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/reg_slice_r/m_payload_i_reg[13]/Q
+                         net (fo=1, routed)           0.197     1.313    nolabel_line23/AXI_Convolution_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/in[10]
+    SLICE_X36Y93         SRLC32E                                      r  nolabel_line23/AXI_Convolution_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][10]_srl32/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.337     0.337    nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     0.366 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2888, routed)        0.824     1.190    nolabel_line23/AXI_Convolution_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/aclk
+    SLICE_X36Y93         SRLC32E                                      r  nolabel_line23/AXI_Convolution_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][10]_srl32/CLK
+                         clock pessimism             -0.035     1.155    
+    SLICE_X36Y93         SRLC32E (Hold_srlc32e_CLK_D)
+                                                      0.117     1.272    nolabel_line23/AXI_Convolution_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][10]_srl32
+  -------------------------------------------------------------------
+                         required time                         -1.272    
+                         arrival time                           1.313    
+  -------------------------------------------------------------------
+                         slack                                  0.041    
+
+Slack (MET) :             0.046ns  (arrival time - required time)
+  Source:                 nolabel_line23/AXI_Convolution_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/b.b_pipe/m_payload_i_reg[12]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/PS7_i/MAXIGP0BID[10]
+                            (rising edge-triggered cell PS7 clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_fpga_0 rise@0.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        0.270ns  (logic 0.141ns (52.263%)  route 0.129ns (47.737%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.224ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.251ns
+    Source Clock Delay      (SCD):    0.992ns
+    Clock Pessimism Removal (CPR):    0.035ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.310     0.310    nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.336 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2888, routed)        0.656     0.992    nolabel_line23/AXI_Convolution_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/b.b_pipe/aclk
+    SLICE_X27Y100        FDRE                                         r  nolabel_line23/AXI_Convolution_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/b.b_pipe/m_payload_i_reg[12]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X27Y100        FDRE (Prop_fdre_C_Q)         0.141     1.133 r  nolabel_line23/AXI_Convolution_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/b.b_pipe/m_payload_i_reg[12]/Q
+                         net (fo=1, routed)           0.129     1.262    nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/M_AXI_GP0_BID[10]
+    PS7_X0Y0             PS7                                          r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/PS7_i/MAXIGP0BID[10]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.337     0.337    nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     0.366 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2888, routed)        0.885     1.251    nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/M_AXI_GP0_ACLK
+    PS7_X0Y0             PS7                                          r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/PS7_i/MAXIGP0ACLK
+                         clock pessimism             -0.035     1.216    
+    PS7_X0Y0             PS7 (Hold_ps7_MAXIGP0ACLK_MAXIGP0BID[10])
+                                                      0.000     1.216    nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/PS7_i
+  -------------------------------------------------------------------
+                         required time                         -1.216    
+                         arrival time                           1.262    
+  -------------------------------------------------------------------
+                         slack                                  0.046    
+
+Slack (MET) :             0.050ns  (arrival time - required time)
+  Source:                 nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_S2MM_REGISTERS.I_S2MM_DMA_REGISTER/GEN_DESC_REG_FOR_SG.GEN_TAILUPDATE_EQL32.tailpntr_updated_d1_reg/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_S2MM_REGISTERS.I_S2MM_DMA_REGISTER/GEN_DESC_REG_FOR_SG.GEN_TAILUPDATE_EQL32.tailpntr_updated_d2_reg/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_fpga_0 rise@0.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        0.381ns  (logic 0.141ns (36.982%)  route 0.240ns (63.018%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.259ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.271ns
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.039ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.310     0.310    nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.336 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2888, routed)        0.637     0.973    nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_S2MM_REGISTERS.I_S2MM_DMA_REGISTER/m_axi_sg_aclk
+    SLICE_X44Y108        FDRE                                         r  nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_S2MM_REGISTERS.I_S2MM_DMA_REGISTER/GEN_DESC_REG_FOR_SG.GEN_TAILUPDATE_EQL32.tailpntr_updated_d1_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X44Y108        FDRE (Prop_fdre_C_Q)         0.141     1.114 r  nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_S2MM_REGISTERS.I_S2MM_DMA_REGISTER/GEN_DESC_REG_FOR_SG.GEN_TAILUPDATE_EQL32.tailpntr_updated_d1_reg/Q
+                         net (fo=2, routed)           0.240     1.354    nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_S2MM_REGISTERS.I_S2MM_DMA_REGISTER/tailpntr_updated_d1
+    SLICE_X51Y108        FDRE                                         r  nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_S2MM_REGISTERS.I_S2MM_DMA_REGISTER/GEN_DESC_REG_FOR_SG.GEN_TAILUPDATE_EQL32.tailpntr_updated_d2_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.337     0.337    nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     0.366 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2888, routed)        0.905     1.271    nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_S2MM_REGISTERS.I_S2MM_DMA_REGISTER/m_axi_sg_aclk
+    SLICE_X51Y108        FDRE                                         r  nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_S2MM_REGISTERS.I_S2MM_DMA_REGISTER/GEN_DESC_REG_FOR_SG.GEN_TAILUPDATE_EQL32.tailpntr_updated_d2_reg/C
+                         clock pessimism             -0.039     1.232    
+    SLICE_X51Y108        FDRE (Hold_fdre_C_D)         0.072     1.304    nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_AXI_DMA_REG_MODULE/GEN_S2MM_REGISTERS.I_S2MM_DMA_REGISTER/GEN_DESC_REG_FOR_SG.GEN_TAILUPDATE_EQL32.tailpntr_updated_d2_reg
+  -------------------------------------------------------------------
+                         required time                         -1.304    
+                         arrival time                           1.354    
+  -------------------------------------------------------------------
+                         slack                                  0.050    
+
+Slack (MET) :             0.055ns  (arrival time - required time)
+  Source:                 nolabel_line23/AXI_Convolution_i/ps7_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/reg_slice_r/m_payload_i_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            nolabel_line23/AXI_Convolution_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][33]_srl32/D
+                            (rising edge-triggered cell SRLC32E clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_fpga_0 rise@0.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        0.364ns  (logic 0.128ns (35.155%)  route 0.236ns (64.845%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.180ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.190ns
+    Source Clock Delay      (SCD):    0.975ns
+    Clock Pessimism Removal (CPR):    0.035ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.310     0.310    nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.336 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2888, routed)        0.639     0.975    nolabel_line23/AXI_Convolution_i/ps7_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/reg_slice_r/aclk
+    SLICE_X37Y100        FDRE                                         r  nolabel_line23/AXI_Convolution_i/ps7_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/reg_slice_r/m_payload_i_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X37Y100        FDRE (Prop_fdre_C_Q)         0.128     1.103 r  nolabel_line23/AXI_Convolution_i/ps7_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/reg_slice_r/m_payload_i_reg[2]/Q
+                         net (fo=1, routed)           0.236     1.339    nolabel_line23/AXI_Convolution_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/in[33]
+    SLICE_X36Y95         SRLC32E                                      r  nolabel_line23/AXI_Convolution_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][33]_srl32/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.337     0.337    nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     0.366 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2888, routed)        0.824     1.190    nolabel_line23/AXI_Convolution_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/aclk
+    SLICE_X36Y95         SRLC32E                                      r  nolabel_line23/AXI_Convolution_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][33]_srl32/CLK
+                         clock pessimism             -0.035     1.155    
+    SLICE_X36Y95         SRLC32E (Hold_srlc32e_CLK_D)
+                                                      0.129     1.284    nolabel_line23/AXI_Convolution_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][33]_srl32
+  -------------------------------------------------------------------
+                         required time                         -1.284    
+                         arrival time                           1.339    
+  -------------------------------------------------------------------
+                         slack                                  0.055    
+
+Slack (MET) :             0.057ns  (arrival time - required time)
+  Source:                 nolabel_line23/AXI_Convolution_i/ps7_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/reg_slice_r/m_payload_i_reg[30]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            nolabel_line23/AXI_Convolution_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][27]_srl32/D
+                            (rising edge-triggered cell SRLC32E clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_fpga_0 rise@0.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        0.347ns  (logic 0.141ns (40.627%)  route 0.206ns (59.373%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.181ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.211ns
+    Source Clock Delay      (SCD):    0.995ns
+    Clock Pessimism Removal (CPR):    0.035ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.310     0.310    nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.336 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2888, routed)        0.659     0.995    nolabel_line23/AXI_Convolution_i/ps7_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/reg_slice_r/aclk
+    SLICE_X31Y100        FDRE                                         r  nolabel_line23/AXI_Convolution_i/ps7_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/reg_slice_r/m_payload_i_reg[30]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X31Y100        FDRE (Prop_fdre_C_Q)         0.141     1.136 r  nolabel_line23/AXI_Convolution_i/ps7_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/reg_slice_r/m_payload_i_reg[30]/Q
+                         net (fo=1, routed)           0.206     1.342    nolabel_line23/AXI_Convolution_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/in[27]
+    SLICE_X30Y98         SRLC32E                                      r  nolabel_line23/AXI_Convolution_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][27]_srl32/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.337     0.337    nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     0.366 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2888, routed)        0.845     1.211    nolabel_line23/AXI_Convolution_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/aclk
+    SLICE_X30Y98         SRLC32E                                      r  nolabel_line23/AXI_Convolution_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][27]_srl32/CLK
+                         clock pessimism             -0.035     1.176    
+    SLICE_X30Y98         SRLC32E (Hold_srlc32e_CLK_D)
+                                                      0.109     1.285    nolabel_line23/AXI_Convolution_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][27]_srl32
+  -------------------------------------------------------------------
+                         required time                         -1.285    
+                         arrival time                           1.342    
+  -------------------------------------------------------------------
+                         slack                                  0.057    
+
+Slack (MET) :             0.058ns  (arrival time - required time)
+  Source:                 nolabel_line23/AXI_Convolution_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw.aw_pipe/m_payload_i_reg[27]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            nolabel_line23/AXI_Convolution_i/ps7_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/addr_arbiter_inst/gen_no_arbiter.m_amesg_i_reg[28]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_fpga_0 rise@0.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        0.330ns  (logic 0.186ns (56.425%)  route 0.144ns (43.575%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.181ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.211ns
+    Source Clock Delay      (SCD):    0.995ns
+    Clock Pessimism Removal (CPR):    0.035ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.310     0.310    nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.336 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2888, routed)        0.659     0.995    nolabel_line23/AXI_Convolution_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw.aw_pipe/aclk
+    SLICE_X29Y101        FDRE                                         r  nolabel_line23/AXI_Convolution_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw.aw_pipe/m_payload_i_reg[27]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X29Y101        FDRE (Prop_fdre_C_Q)         0.141     1.136 r  nolabel_line23/AXI_Convolution_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/aw.aw_pipe/m_payload_i_reg[27]/Q
+                         net (fo=1, routed)           0.144     1.280    nolabel_line23/AXI_Convolution_i/ps7_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/addr_arbiter_inst/s_axi_awaddr[27]
+    SLICE_X29Y99         LUT4 (Prop_lut4_I3_O)        0.045     1.325 r  nolabel_line23/AXI_Convolution_i/ps7_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/addr_arbiter_inst/gen_no_arbiter.m_amesg_i[28]_i_1/O
+                         net (fo=1, routed)           0.000     1.325    nolabel_line23/AXI_Convolution_i/ps7_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/addr_arbiter_inst/s_amesg[28]
+    SLICE_X29Y99         FDRE                                         r  nolabel_line23/AXI_Convolution_i/ps7_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/addr_arbiter_inst/gen_no_arbiter.m_amesg_i_reg[28]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.337     0.337    nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     0.366 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2888, routed)        0.845     1.211    nolabel_line23/AXI_Convolution_i/ps7_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/addr_arbiter_inst/aclk
+    SLICE_X29Y99         FDRE                                         r  nolabel_line23/AXI_Convolution_i/ps7_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/addr_arbiter_inst/gen_no_arbiter.m_amesg_i_reg[28]/C
+                         clock pessimism             -0.035     1.176    
+    SLICE_X29Y99         FDRE (Hold_fdre_C_D)         0.091     1.267    nolabel_line23/AXI_Convolution_i/ps7_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/addr_arbiter_inst/gen_no_arbiter.m_amesg_i_reg[28]
+  -------------------------------------------------------------------
+                         required time                         -1.267    
+                         arrival time                           1.325    
+  -------------------------------------------------------------------
+                         slack                                  0.058    
+
+Slack (MET) :             0.060ns  (arrival time - required time)
+  Source:                 nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_addr_cntr_incr_ireg2_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_btt_cntr_im0_reg[5]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_fpga_0 rise@0.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        0.543ns  (logic 0.427ns (78.618%)  route 0.116ns (21.382%))
+  Logic Levels:           3  (CARRY4=2 LUT3=1)
+  Clock Path Skew:        0.349ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.273ns
+    Source Clock Delay      (SCD):    0.889ns
+    Clock Pessimism Removal (CPR):    0.035ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.310     0.310    nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.336 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2888, routed)        0.553     0.889    nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/m_axi_mm2s_aclk
+    SLICE_X51Y99         FDRE                                         r  nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_addr_cntr_incr_ireg2_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X51Y99         FDRE (Prop_fdre_C_Q)         0.141     1.030 r  nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_addr_cntr_incr_ireg2_reg[1]/Q
+                         net (fo=3, routed)           0.115     1.145    nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_addr_cntr_incr_ireg2_reg_n_0_[1]
+    SLICE_X50Y99         LUT3 (Prop_lut3_I0_O)        0.045     1.190 r  nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_btt_cntr_im0[3]_i_8/O
+                         net (fo=1, routed)           0.000     1.190    nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_btt_cntr_im0[3]_i_8_n_0
+    SLICE_X50Y99         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.152     1.342 r  nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_btt_cntr_im0_reg[3]_i_1/CO[3]
+                         net (fo=1, routed)           0.001     1.343    nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_btt_cntr_im0_reg[3]_i_1_n_0
+    SLICE_X50Y100        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.089     1.432 r  nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_btt_cntr_im0_reg[7]_i_1/O[1]
+                         net (fo=1, routed)           0.000     1.432    nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_btt_cntr_im0_reg[7]_i_1_n_6
+    SLICE_X50Y100        FDRE                                         r  nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_btt_cntr_im0_reg[5]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.337     0.337    nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     0.366 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2888, routed)        0.907     1.273    nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/m_axi_mm2s_aclk
+    SLICE_X50Y100        FDRE                                         r  nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_btt_cntr_im0_reg[5]/C
+                         clock pessimism             -0.035     1.238    
+    SLICE_X50Y100        FDRE (Hold_fdre_C_D)         0.134     1.372    nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_btt_cntr_im0_reg[5]
+  -------------------------------------------------------------------
+                         required time                         -1.372    
+                         arrival time                           1.432    
+  -------------------------------------------------------------------
+                         slack                                  0.060    
+
+Slack (MET) :             0.062ns  (arrival time - required time)
+  Source:                 nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_addr_cntr_incr_ireg2_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_btt_cntr_im0_reg[7]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_fpga_0 rise@0.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        0.545ns  (logic 0.429ns (78.697%)  route 0.116ns (21.303%))
+  Logic Levels:           3  (CARRY4=2 LUT3=1)
+  Clock Path Skew:        0.349ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.273ns
+    Source Clock Delay      (SCD):    0.889ns
+    Clock Pessimism Removal (CPR):    0.035ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.310     0.310    nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.336 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2888, routed)        0.553     0.889    nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/m_axi_mm2s_aclk
+    SLICE_X51Y99         FDRE                                         r  nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_addr_cntr_incr_ireg2_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X51Y99         FDRE (Prop_fdre_C_Q)         0.141     1.030 r  nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_addr_cntr_incr_ireg2_reg[1]/Q
+                         net (fo=3, routed)           0.115     1.145    nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_addr_cntr_incr_ireg2_reg_n_0_[1]
+    SLICE_X50Y99         LUT3 (Prop_lut3_I0_O)        0.045     1.190 r  nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_btt_cntr_im0[3]_i_8/O
+                         net (fo=1, routed)           0.000     1.190    nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_btt_cntr_im0[3]_i_8_n_0
+    SLICE_X50Y99         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.152     1.342 r  nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_btt_cntr_im0_reg[3]_i_1/CO[3]
+                         net (fo=1, routed)           0.001     1.343    nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_btt_cntr_im0_reg[3]_i_1_n_0
+    SLICE_X50Y100        CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.091     1.434 r  nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_btt_cntr_im0_reg[7]_i_1/O[3]
+                         net (fo=1, routed)           0.000     1.434    nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_btt_cntr_im0_reg[7]_i_1_n_4
+    SLICE_X50Y100        FDRE                                         r  nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_btt_cntr_im0_reg[7]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r  
+    PS7_X0Y0             PS7                          0.000     0.000 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           0.337     0.337    nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     0.366 r  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=2888, routed)        0.907     1.273    nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/m_axi_mm2s_aclk
+    SLICE_X50Y100        FDRE                                         r  nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_btt_cntr_im0_reg[7]/C
+                         clock pessimism             -0.035     1.238    
+    SLICE_X50Y100        FDRE (Hold_fdre_C_D)         0.134     1.372    nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_MSTR_PCC/sig_btt_cntr_im0_reg[7]
+  -------------------------------------------------------------------
+                         required time                         -1.372    
+                         arrival time                           1.434    
+  -------------------------------------------------------------------
+                         slack                                  0.062    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk_fpga_0
+Waveform(ns):       { 0.000 5.000 }
+Period(ns):         10.000
+Sources:            { nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/PS7_i/FCLKCLK[0] }
+
+Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location        Pin
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.576         10.000      7.424      RAMB36_X3Y16    nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKBWRCLK  n/a            2.576         10.000      7.424      RAMB36_X3Y16    nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg/CLKBWRCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.576         10.000      7.424      RAMB36_X2Y17    nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKBWRCLK  n/a            2.576         10.000      7.424      RAMB36_X2Y17    nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg/CLKBWRCLK
+Min Period        n/a     BUFG/I              n/a            2.155         10.000      7.845      BUFGCTRL_X0Y16  nolabel_line23/AXI_Convolution_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/I
+Min Period        n/a     FDCE/C              n/a            1.000         10.000      9.000      SLICE_X42Y90    matrixAccel/addPointer_reg[0]/C
+Min Period        n/a     FDCE/C              n/a            1.000         10.000      9.000      SLICE_X42Y90    matrixAccel/addPointer_reg[1]/C
+Min Period        n/a     FDCE/C              n/a            1.000         10.000      9.000      SLICE_X42Y90    matrixAccel/finalReady_reg/C
+Min Period        n/a     FDRE/C              n/a            1.000         10.000      9.000      SLICE_X42Y89    nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/ADDst_reg/C
+Min Period        n/a     FDRE/C              n/a            1.000         10.000      9.000      SLICE_X32Y107   nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0/inst/AXI_Convolution_Controller_v1_0_S00_AXI_inst/slv_reg4_reg[17]/C
+Low Pulse Width   Fast    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X50Y85    nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_XD_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_15_0_5/RAMA/CLK
+Low Pulse Width   Fast    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X50Y85    nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_XD_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_15_0_5/RAMA_D1/CLK
+Low Pulse Width   Fast    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X50Y85    nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_XD_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_15_0_5/RAMB/CLK
+Low Pulse Width   Fast    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X50Y85    nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_XD_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_15_0_5/RAMB_D1/CLK
+Low Pulse Width   Fast    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X50Y85    nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_XD_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_15_0_5/RAMC/CLK
+Low Pulse Width   Fast    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X50Y85    nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_XD_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_15_0_5/RAMC_D1/CLK
+Low Pulse Width   Fast    RAMS32/CLK          n/a            1.250         5.000       3.750      SLICE_X50Y85    nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_XD_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_15_0_5/RAMD/CLK
+Low Pulse Width   Fast    RAMS32/CLK          n/a            1.250         5.000       3.750      SLICE_X50Y85    nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_XD_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_15_0_5/RAMD_D1/CLK
+Low Pulse Width   Fast    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X50Y86    nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_XD_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_15_6_8/RAMA/CLK
+Low Pulse Width   Fast    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X50Y86    nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_XD_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_15_6_8/RAMA_D1/CLK
+High Pulse Width  Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X50Y85    nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_XD_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_15_0_5/RAMA/CLK
+High Pulse Width  Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X50Y85    nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_XD_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_15_0_5/RAMA_D1/CLK
+High Pulse Width  Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X50Y85    nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_XD_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_15_0_5/RAMB/CLK
+High Pulse Width  Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X50Y85    nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_XD_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_15_0_5/RAMB_D1/CLK
+High Pulse Width  Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X50Y85    nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_XD_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_15_0_5/RAMC/CLK
+High Pulse Width  Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X50Y85    nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_XD_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_15_0_5/RAMC_D1/CLK
+High Pulse Width  Slow    RAMS32/CLK          n/a            1.250         5.000       3.750      SLICE_X50Y85    nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_XD_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_15_0_5/RAMD/CLK
+High Pulse Width  Slow    RAMS32/CLK          n/a            1.250         5.000       3.750      SLICE_X50Y85    nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_XD_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_15_0_5/RAMD_D1/CLK
+High Pulse Width  Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X50Y86    nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_XD_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_15_6_8/RAMA/CLK
+High Pulse Width  Slow    RAMD32/CLK          n/a            1.250         5.000       3.750      SLICE_X50Y86    nolabel_line23/AXI_Convolution_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_XD_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0_15_6_8/RAMA_D1/CLK
+
+
+

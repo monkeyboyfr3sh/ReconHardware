@@ -1,0 +1,433 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Wed Nov  4 21:42:37 2020
+# Process ID: 20296
+# Current directory: C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1
+# Command line: vivado.exe -log AXI_Conv_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source AXI_Conv_wrapper.tcl
+# Log file: C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1/AXI_Conv_wrapper.vds
+# Journal file: C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1\vivado.jou
+#-----------------------------------------------------------
+source AXI_Conv_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/GitHub/ReconHardware/FPGA_Files/Projects/ip_repo/AXI_Convolution_Controller_1.0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller/Convolution_Controller_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Accelerator/Convolution_Accelerator_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/LED_Timer_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/GitHub/ReconHardware/FPGA_Files/Projects/ip_repo/AXI_LED_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/GitHub/ReconHardware/FPGA_Files/Projects/ip_repo/Convolution_Accelerator_1.0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/AXI_Matrix_Controller_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+WARNING: [IP_Flow 19-2207] Repository 'c:/GitHub/ReconHardware/FPGA_Files/Projects/ip_repo/Convolution_Accelerator_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/GitHub/ReconHardware/FPGA_Files/Projects/ip_repo/Convolution_Accelerator_1.0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/GitHub/ReconHardware/FPGA_Files/Projects/ip_repo/AXI_Convolution_Accelerator_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/GitHub/ReconHardware/FPGA_Files/Projects/ip_repo/AXI_Convolution_IP_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.1/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is c:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.cache/ip 
+Command: synth_design -top AXI_Conv_wrapper -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 22272
+WARNING: [Synth 8-6901] identifier 'o_rdata' is used before its declaration [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/aFIFO.v:94]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1091.758 ; gain = 11.680
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'AXI_Conv_wrapper' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:3]
+INFO: [Synth 8-6157] synthesizing module 'AXI_Convolution_wrapper' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/hdl/AXI_Convolution_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'AXI_Convolution' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/synth/AXI_Convolution.v:13]
+INFO: [Synth 8-6157] synthesizing module 'AXI_Convolution_AXI_Convolution_Cont_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1/.Xil/Vivado-20296-DESKTOP-D9F9TPQ/realtime/AXI_Convolution_AXI_Convolution_Cont_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'AXI_Convolution_AXI_Convolution_Cont_0_0' (1#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1/.Xil/Vivado-20296-DESKTOP-D9F9TPQ/realtime/AXI_Convolution_AXI_Convolution_Cont_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'm00_axis_tstrb' of module 'AXI_Convolution_AXI_Convolution_Cont_0_0' is unconnected for instance 'AXI_Convolution_Cont_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/synth/AXI_Convolution.v:197]
+WARNING: [Synth 8-7023] instance 'AXI_Convolution_Cont_0' of module 'AXI_Convolution_AXI_Convolution_Cont_0_0' has 42 connections declared, but only 41 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/synth/AXI_Convolution.v:197]
+INFO: [Synth 8-6157] synthesizing module 'AXI_Convolution_axi_dma_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1/.Xil/Vivado-20296-DESKTOP-D9F9TPQ/realtime/AXI_Convolution_axi_dma_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'AXI_Convolution_axi_dma_0_0' (2#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1/.Xil/Vivado-20296-DESKTOP-D9F9TPQ/realtime/AXI_Convolution_axi_dma_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axi_sg_awaddr' of module 'AXI_Convolution_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/synth/AXI_Convolution.v:239]
+WARNING: [Synth 8-7071] port 'm_axi_sg_awlen' of module 'AXI_Convolution_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/synth/AXI_Convolution.v:239]
+WARNING: [Synth 8-7071] port 'm_axi_sg_awsize' of module 'AXI_Convolution_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/synth/AXI_Convolution.v:239]
+WARNING: [Synth 8-7071] port 'm_axi_sg_awburst' of module 'AXI_Convolution_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/synth/AXI_Convolution.v:239]
+WARNING: [Synth 8-7071] port 'm_axi_sg_awprot' of module 'AXI_Convolution_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/synth/AXI_Convolution.v:239]
+WARNING: [Synth 8-7071] port 'm_axi_sg_awcache' of module 'AXI_Convolution_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/synth/AXI_Convolution.v:239]
+WARNING: [Synth 8-7071] port 'm_axi_sg_awvalid' of module 'AXI_Convolution_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/synth/AXI_Convolution.v:239]
+WARNING: [Synth 8-7071] port 'm_axi_sg_wdata' of module 'AXI_Convolution_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/synth/AXI_Convolution.v:239]
+WARNING: [Synth 8-7071] port 'm_axi_sg_wstrb' of module 'AXI_Convolution_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/synth/AXI_Convolution.v:239]
+WARNING: [Synth 8-7071] port 'm_axi_sg_wlast' of module 'AXI_Convolution_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/synth/AXI_Convolution.v:239]
+WARNING: [Synth 8-7071] port 'm_axi_sg_wvalid' of module 'AXI_Convolution_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/synth/AXI_Convolution.v:239]
+WARNING: [Synth 8-7071] port 'm_axi_sg_bready' of module 'AXI_Convolution_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/synth/AXI_Convolution.v:239]
+WARNING: [Synth 8-7071] port 'm_axi_sg_araddr' of module 'AXI_Convolution_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/synth/AXI_Convolution.v:239]
+WARNING: [Synth 8-7071] port 'm_axi_sg_arlen' of module 'AXI_Convolution_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/synth/AXI_Convolution.v:239]
+WARNING: [Synth 8-7071] port 'm_axi_sg_arsize' of module 'AXI_Convolution_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/synth/AXI_Convolution.v:239]
+WARNING: [Synth 8-7071] port 'm_axi_sg_arburst' of module 'AXI_Convolution_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/synth/AXI_Convolution.v:239]
+WARNING: [Synth 8-7071] port 'm_axi_sg_arprot' of module 'AXI_Convolution_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/synth/AXI_Convolution.v:239]
+WARNING: [Synth 8-7071] port 'm_axi_sg_arcache' of module 'AXI_Convolution_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/synth/AXI_Convolution.v:239]
+WARNING: [Synth 8-7071] port 'm_axi_sg_arvalid' of module 'AXI_Convolution_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/synth/AXI_Convolution.v:239]
+WARNING: [Synth 8-7071] port 'm_axi_sg_rready' of module 'AXI_Convolution_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/synth/AXI_Convolution.v:239]
+WARNING: [Synth 8-7071] port 'm_axi_mm2s_araddr' of module 'AXI_Convolution_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/synth/AXI_Convolution.v:239]
+WARNING: [Synth 8-7071] port 'm_axi_mm2s_arlen' of module 'AXI_Convolution_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/synth/AXI_Convolution.v:239]
+WARNING: [Synth 8-7071] port 'm_axi_mm2s_arsize' of module 'AXI_Convolution_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/synth/AXI_Convolution.v:239]
+WARNING: [Synth 8-7071] port 'm_axi_mm2s_arburst' of module 'AXI_Convolution_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/synth/AXI_Convolution.v:239]
+WARNING: [Synth 8-7071] port 'm_axi_mm2s_arprot' of module 'AXI_Convolution_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/synth/AXI_Convolution.v:239]
+WARNING: [Synth 8-7071] port 'm_axi_mm2s_arcache' of module 'AXI_Convolution_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/synth/AXI_Convolution.v:239]
+WARNING: [Synth 8-7071] port 'm_axi_mm2s_arvalid' of module 'AXI_Convolution_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/synth/AXI_Convolution.v:239]
+WARNING: [Synth 8-7071] port 'm_axi_mm2s_rready' of module 'AXI_Convolution_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/synth/AXI_Convolution.v:239]
+WARNING: [Synth 8-7071] port 'mm2s_prmry_reset_out_n' of module 'AXI_Convolution_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/synth/AXI_Convolution.v:239]
+WARNING: [Synth 8-7071] port 'm_axis_mm2s_tkeep' of module 'AXI_Convolution_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/synth/AXI_Convolution.v:239]
+WARNING: [Synth 8-7071] port 'm_axi_s2mm_awaddr' of module 'AXI_Convolution_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/synth/AXI_Convolution.v:239]
+WARNING: [Synth 8-7071] port 'm_axi_s2mm_awlen' of module 'AXI_Convolution_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/synth/AXI_Convolution.v:239]
+WARNING: [Synth 8-7071] port 'm_axi_s2mm_awsize' of module 'AXI_Convolution_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/synth/AXI_Convolution.v:239]
+WARNING: [Synth 8-7071] port 'm_axi_s2mm_awburst' of module 'AXI_Convolution_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/synth/AXI_Convolution.v:239]
+WARNING: [Synth 8-7071] port 'm_axi_s2mm_awprot' of module 'AXI_Convolution_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/synth/AXI_Convolution.v:239]
+WARNING: [Synth 8-7071] port 'm_axi_s2mm_awcache' of module 'AXI_Convolution_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/synth/AXI_Convolution.v:239]
+WARNING: [Synth 8-7071] port 'm_axi_s2mm_awvalid' of module 'AXI_Convolution_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/synth/AXI_Convolution.v:239]
+WARNING: [Synth 8-7071] port 'm_axi_s2mm_wdata' of module 'AXI_Convolution_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/synth/AXI_Convolution.v:239]
+WARNING: [Synth 8-7071] port 'm_axi_s2mm_wstrb' of module 'AXI_Convolution_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/synth/AXI_Convolution.v:239]
+WARNING: [Synth 8-7071] port 'm_axi_s2mm_wlast' of module 'AXI_Convolution_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/synth/AXI_Convolution.v:239]
+WARNING: [Synth 8-7071] port 'm_axi_s2mm_wvalid' of module 'AXI_Convolution_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/synth/AXI_Convolution.v:239]
+WARNING: [Synth 8-7071] port 'm_axi_s2mm_bready' of module 'AXI_Convolution_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/synth/AXI_Convolution.v:239]
+WARNING: [Synth 8-7071] port 's2mm_prmry_reset_out_n' of module 'AXI_Convolution_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/synth/AXI_Convolution.v:239]
+WARNING: [Synth 8-7071] port 'mm2s_introut' of module 'AXI_Convolution_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/synth/AXI_Convolution.v:239]
+WARNING: [Synth 8-7071] port 's2mm_introut' of module 'AXI_Convolution_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/synth/AXI_Convolution.v:239]
+WARNING: [Synth 8-7071] port 'axi_dma_tstvec' of module 'AXI_Convolution_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/synth/AXI_Convolution.v:239]
+WARNING: [Synth 8-7023] instance 'axi_dma_0' of module 'AXI_Convolution_axi_dma_0_0' has 94 connections declared, but only 48 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/synth/AXI_Convolution.v:239]
+INFO: [Synth 8-6157] synthesizing module 'AXI_Convolution_processing_system7_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1/.Xil/Vivado-20296-DESKTOP-D9F9TPQ/realtime/AXI_Convolution_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'AXI_Convolution_processing_system7_0_0' (3#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1/.Xil/Vivado-20296-DESKTOP-D9F9TPQ/realtime/AXI_Convolution_processing_system7_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'USB0_PORT_INDCTL' of module 'AXI_Convolution_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/synth/AXI_Convolution.v:288]
+WARNING: [Synth 8-7071] port 'USB0_VBUS_PWRSELECT' of module 'AXI_Convolution_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/synth/AXI_Convolution.v:288]
+WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'AXI_Convolution_processing_system7_0_0' has 65 connections declared, but only 63 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/synth/AXI_Convolution.v:288]
+INFO: [Synth 8-6157] synthesizing module 'AXI_Convolution_ps7_0_axi_periph_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/synth/AXI_Convolution.v:443]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_9J0ZFQ' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/synth/AXI_Convolution.v:1000]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_9J0ZFQ' (4#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/synth/AXI_Convolution.v:1000]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_11P3L2G' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/synth/AXI_Convolution.v:1125]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_11P3L2G' (5#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/synth/AXI_Convolution.v:1125]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_TNYBI' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/synth/AXI_Convolution.v:1271]
+INFO: [Synth 8-6157] synthesizing module 'AXI_Convolution_auto_pc_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1/.Xil/Vivado-20296-DESKTOP-D9F9TPQ/realtime/AXI_Convolution_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'AXI_Convolution_auto_pc_0' (6#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1/.Xil/Vivado-20296-DESKTOP-D9F9TPQ/realtime/AXI_Convolution_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_TNYBI' (7#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/synth/AXI_Convolution.v:1271]
+INFO: [Synth 8-6157] synthesizing module 'AXI_Convolution_xbar_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1/.Xil/Vivado-20296-DESKTOP-D9F9TPQ/realtime/AXI_Convolution_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'AXI_Convolution_xbar_0' (8#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1/.Xil/Vivado-20296-DESKTOP-D9F9TPQ/realtime/AXI_Convolution_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'AXI_Convolution_ps7_0_axi_periph_0' (9#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/synth/AXI_Convolution.v:443]
+INFO: [Synth 8-6157] synthesizing module 'AXI_Convolution_rst_ps7_0_50M_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1/.Xil/Vivado-20296-DESKTOP-D9F9TPQ/realtime/AXI_Convolution_rst_ps7_0_50M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'AXI_Convolution_rst_ps7_0_50M_0' (10#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1/.Xil/Vivado-20296-DESKTOP-D9F9TPQ/realtime/AXI_Convolution_rst_ps7_0_50M_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'AXI_Convolution_rst_ps7_0_50M_0' is unconnected for instance 'rst_ps7_0_50M' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/synth/AXI_Convolution.v:434]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'AXI_Convolution_rst_ps7_0_50M_0' is unconnected for instance 'rst_ps7_0_50M' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/synth/AXI_Convolution.v:434]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'AXI_Convolution_rst_ps7_0_50M_0' is unconnected for instance 'rst_ps7_0_50M' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/synth/AXI_Convolution.v:434]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'AXI_Convolution_rst_ps7_0_50M_0' is unconnected for instance 'rst_ps7_0_50M' [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/synth/AXI_Convolution.v:434]
+WARNING: [Synth 8-7023] instance 'rst_ps7_0_50M' of module 'AXI_Convolution_rst_ps7_0_50M_0' has 10 connections declared, but only 6 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/synth/AXI_Convolution.v:434]
+INFO: [Synth 8-6155] done synthesizing module 'AXI_Convolution' (11#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/synth/AXI_Convolution.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'AXI_Convolution_wrapper' (12#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/hdl/AXI_Convolution_wrapper.v:12]
+WARNING: [Synth 8-7071] port 'DDR_addr' of module 'AXI_Convolution_wrapper' is unconnected for instance 'nolabel_line23' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:23]
+WARNING: [Synth 8-7071] port 'DDR_ba' of module 'AXI_Convolution_wrapper' is unconnected for instance 'nolabel_line23' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:23]
+WARNING: [Synth 8-7071] port 'DDR_cas_n' of module 'AXI_Convolution_wrapper' is unconnected for instance 'nolabel_line23' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:23]
+WARNING: [Synth 8-7071] port 'DDR_ck_n' of module 'AXI_Convolution_wrapper' is unconnected for instance 'nolabel_line23' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:23]
+WARNING: [Synth 8-7071] port 'DDR_ck_p' of module 'AXI_Convolution_wrapper' is unconnected for instance 'nolabel_line23' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:23]
+WARNING: [Synth 8-7071] port 'DDR_cke' of module 'AXI_Convolution_wrapper' is unconnected for instance 'nolabel_line23' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:23]
+WARNING: [Synth 8-7071] port 'DDR_cs_n' of module 'AXI_Convolution_wrapper' is unconnected for instance 'nolabel_line23' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:23]
+WARNING: [Synth 8-7071] port 'DDR_dm' of module 'AXI_Convolution_wrapper' is unconnected for instance 'nolabel_line23' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:23]
+WARNING: [Synth 8-7071] port 'DDR_dq' of module 'AXI_Convolution_wrapper' is unconnected for instance 'nolabel_line23' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:23]
+WARNING: [Synth 8-7071] port 'DDR_dqs_n' of module 'AXI_Convolution_wrapper' is unconnected for instance 'nolabel_line23' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:23]
+WARNING: [Synth 8-7071] port 'DDR_dqs_p' of module 'AXI_Convolution_wrapper' is unconnected for instance 'nolabel_line23' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:23]
+WARNING: [Synth 8-7071] port 'DDR_odt' of module 'AXI_Convolution_wrapper' is unconnected for instance 'nolabel_line23' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:23]
+WARNING: [Synth 8-7071] port 'DDR_ras_n' of module 'AXI_Convolution_wrapper' is unconnected for instance 'nolabel_line23' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:23]
+WARNING: [Synth 8-7071] port 'DDR_reset_n' of module 'AXI_Convolution_wrapper' is unconnected for instance 'nolabel_line23' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:23]
+WARNING: [Synth 8-7071] port 'DDR_we_n' of module 'AXI_Convolution_wrapper' is unconnected for instance 'nolabel_line23' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:23]
+WARNING: [Synth 8-7071] port 'FIXED_IO_ddr_vrn' of module 'AXI_Convolution_wrapper' is unconnected for instance 'nolabel_line23' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:23]
+WARNING: [Synth 8-7071] port 'FIXED_IO_ddr_vrp' of module 'AXI_Convolution_wrapper' is unconnected for instance 'nolabel_line23' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:23]
+WARNING: [Synth 8-7071] port 'FIXED_IO_mio' of module 'AXI_Convolution_wrapper' is unconnected for instance 'nolabel_line23' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:23]
+WARNING: [Synth 8-7071] port 'FIXED_IO_ps_clk' of module 'AXI_Convolution_wrapper' is unconnected for instance 'nolabel_line23' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:23]
+WARNING: [Synth 8-7071] port 'FIXED_IO_ps_porb' of module 'AXI_Convolution_wrapper' is unconnected for instance 'nolabel_line23' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:23]
+WARNING: [Synth 8-7071] port 'FIXED_IO_ps_srstb' of module 'AXI_Convolution_wrapper' is unconnected for instance 'nolabel_line23' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:23]
+WARNING: [Synth 8-7023] instance 'nolabel_line23' of module 'AXI_Convolution_wrapper' has 30 connections declared, but only 9 given [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:23]
+INFO: [Synth 8-6157] synthesizing module 'matrixAccelerator' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/matrixAccelerator.v:4]
+INFO: [Synth 8-6157] synthesizing module 'multiplyComputePynq' [C:/GitHub/ReconHardware/FPGA_Files/Sources/Multiplier/multiplyComputePynq.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'multiplyComputePynq' (13#1) [C:/GitHub/ReconHardware/FPGA_Files/Sources/Multiplier/multiplyComputePynq.v:4]
+INFO: [Synth 8-6157] synthesizing module 'adder' [C:/GitHub/ReconHardware/FPGA_Files/Sources/Adder/adder.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'adder' (14#1) [C:/GitHub/ReconHardware/FPGA_Files/Sources/Adder/adder.v:5]
+INFO: [Synth 8-6157] synthesizing module 'XBar2' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/XBar2.v:19]
+WARNING: [Synth 8-567] referenced signal 'AddressSave' should be on the sensitivity list [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/XBar2.v:52]
+INFO: [Synth 8-6155] done synthesizing module 'XBar2' (15#1) [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/XBar2.v:19]
+INFO: [Synth 8-6155] done synthesizing module 'matrixAccelerator' (16#1) [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/matrixAccelerator.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'AXI_Conv_wrapper' (17#1) [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1151.566 ; gain = 71.488
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1151.566 ; gain = 71.488
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1151.566 ; gain = 71.488
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 1151.566 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/ip/AXI_Convolution_processing_system7_0_0/AXI_Convolution_processing_system7_0_0/AXI_Convolution_processing_system7_0_0_in_context.xdc] for cell 'nolabel_line23/AXI_Convolution_i/processing_system7_0'
+WARNING: [Vivado 12-584] No ports matched ''. [c:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/ip/AXI_Convolution_processing_system7_0_0/AXI_Convolution_processing_system7_0_0/AXI_Convolution_processing_system7_0_0_in_context.xdc:2]
+Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/ip/AXI_Convolution_processing_system7_0_0/AXI_Convolution_processing_system7_0_0/AXI_Convolution_processing_system7_0_0_in_context.xdc] for cell 'nolabel_line23/AXI_Convolution_i/processing_system7_0'
+Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/ip/AXI_Convolution_axi_dma_0_0/AXI_Convolution_axi_dma_0_0/AXI_Convolution_axi_dma_0_0_in_context.xdc] for cell 'nolabel_line23/AXI_Convolution_i/axi_dma_0'
+Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/ip/AXI_Convolution_axi_dma_0_0/AXI_Convolution_axi_dma_0_0/AXI_Convolution_axi_dma_0_0_in_context.xdc] for cell 'nolabel_line23/AXI_Convolution_i/axi_dma_0'
+Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/ip/AXI_Convolution_xbar_0/AXI_Convolution_xbar_0/AXI_Convolution_xbar_0_in_context.xdc] for cell 'nolabel_line23/AXI_Convolution_i/ps7_0_axi_periph/xbar'
+Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/ip/AXI_Convolution_xbar_0/AXI_Convolution_xbar_0/AXI_Convolution_xbar_0_in_context.xdc] for cell 'nolabel_line23/AXI_Convolution_i/ps7_0_axi_periph/xbar'
+Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/ip/AXI_Convolution_rst_ps7_0_50M_0/AXI_Convolution_rst_ps7_0_50M_0/design_1_rst_ps7_0_100M_0_in_context.xdc] for cell 'nolabel_line23/AXI_Convolution_i/rst_ps7_0_50M'
+Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/ip/AXI_Convolution_rst_ps7_0_50M_0/AXI_Convolution_rst_ps7_0_50M_0/design_1_rst_ps7_0_100M_0_in_context.xdc] for cell 'nolabel_line23/AXI_Convolution_i/rst_ps7_0_50M'
+Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/ip/AXI_Convolution_AXI_Convolution_Cont_0_0/AXI_Convolution_AXI_Convolution_Cont_0_0/AXI_Convolution_AXI_Convolution_Cont_0_0_in_context.xdc] for cell 'nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0'
+Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/ip/AXI_Convolution_AXI_Convolution_Cont_0_0/AXI_Convolution_AXI_Convolution_Cont_0_0/AXI_Convolution_AXI_Convolution_Cont_0_0_in_context.xdc] for cell 'nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0'
+Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/ip/AXI_Convolution_auto_pc_0/AXI_Convolution_auto_pc_0/design_1_auto_pc_0_in_context.xdc] for cell 'nolabel_line23/AXI_Convolution_i/ps7_0_axi_periph/s00_couplers/auto_pc'
+Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/AXI_Convolution/ip/AXI_Convolution_auto_pc_0/AXI_Convolution_auto_pc_0/design_1_auto_pc_0_in_context.xdc] for cell 'nolabel_line23/AXI_Convolution_i/ps7_0_axi_periph/s00_couplers/auto_pc'
+Parsing XDC File [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/constrs_1/new/makerfile.xdc]
+WARNING: [Vivado 12-584] No ports matched 'rd'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/constrs_1/new/makerfile.xdc:1]
+WARNING: [Vivado 12-584] No ports matched 'EMPTY_out'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/constrs_1/new/makerfile.xdc:2]
+WARNING: [Vivado 12-584] No ports matched 'EMPTY_in'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/constrs_1/new/makerfile.xdc:3]
+WARNING: [Vivado 12-584] No ports matched 'wr'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/constrs_1/new/makerfile.xdc:4]
+WARNING: [Vivado 12-584] No ports matched 'FULL_out'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/constrs_1/new/makerfile.xdc:5]
+WARNING: [Vivado 12-584] No ports matched 'FULL_in'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/constrs_1/new/makerfile.xdc:6]
+WARNING: [Vivado 12-584] No ports matched 'EMPTY_in'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/constrs_1/new/makerfile.xdc:7]
+WARNING: [Vivado 12-584] No ports matched 'FULL_in'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/constrs_1/new/makerfile.xdc:8]
+WARNING: [Vivado 12-584] No ports matched 'EMPTY_out'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/constrs_1/new/makerfile.xdc:9]
+WARNING: [Vivado 12-584] No ports matched 'FULL_out'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/constrs_1/new/makerfile.xdc:10]
+WARNING: [Vivado 12-584] No ports matched 'wr'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/constrs_1/new/makerfile.xdc:11]
+WARNING: [Vivado 12-584] No ports matched 'rd'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/constrs_1/new/makerfile.xdc:12]
+WARNING: [Vivado 12-584] No ports matched 'LED_signal_0'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/constrs_1/new/makerfile.xdc:14]
+WARNING: [Vivado 12-584] No ports matched 'LED_signal_0'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/constrs_1/new/makerfile.xdc:15]
+Finished Parsing XDC File [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/constrs_1/new/makerfile.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/constrs_1/new/makerfile.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/AXI_Conv_wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/constrs_1/new/makerfile.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/AXI_Conv_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/AXI_Conv_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1268.820 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1268.820 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1268.820 ; gain = 188.742
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1268.820 ; gain = 188.742
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for nolabel_line23/AXI_Convolution_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for nolabel_line23/AXI_Convolution_i/processing_system7_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for nolabel_line23/AXI_Convolution_i/axi_dma_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for nolabel_line23/AXI_Convolution_i/ps7_0_axi_periph/xbar. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for nolabel_line23/AXI_Convolution_i/ps7_0_axi_periph. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for nolabel_line23/AXI_Convolution_i/rst_ps7_0_50M. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for nolabel_line23/AXI_Convolution_i/AXI_Convolution_Cont_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for nolabel_line23/AXI_Convolution_i/ps7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1268.820 ; gain = 188.742
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-327] inferring latch for variable 'OutputSave_reg[0]' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/XBar2.v:48]
+WARNING: [Synth 8-327] inferring latch for variable 'OutputSave_reg[1]' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/XBar2.v:48]
+WARNING: [Synth 8-327] inferring latch for variable 'OutputSave_reg[2]' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/XBar2.v:48]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1268.820 ; gain = 188.742
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    5 Bit       Adders := 2     
++---Registers : 
+	                5 Bit    Registers := 1     
+	                3 Bit    Registers := 3     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 18    
+	   3 Input   32 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 10    
+	   3 Input    3 Bit        Muxes := 1     
+	  16 Input    1 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 32    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+DSP Report: Generating DSP matrixAccel/genblk3[0].inputMulti/product_reg, operation Mode is: (A*B)'.
+DSP Report: register matrixAccel/genblk3[0].inputMulti/product_reg is absorbed into DSP matrixAccel/genblk3[0].inputMulti/product_reg.
+DSP Report: operator matrixAccel/genblk3[0].inputMulti/product0 is absorbed into DSP matrixAccel/genblk3[0].inputMulti/product_reg.
+DSP Report: Generating DSP matrixAccel/genblk3[1].inputMulti/product_reg, operation Mode is: (A*B)'.
+DSP Report: register matrixAccel/genblk3[1].inputMulti/product_reg is absorbed into DSP matrixAccel/genblk3[1].inputMulti/product_reg.
+DSP Report: operator matrixAccel/genblk3[1].inputMulti/product0 is absorbed into DSP matrixAccel/genblk3[1].inputMulti/product_reg.
+DSP Report: Generating DSP matrixAccel/genblk3[2].inputMulti/product_reg, operation Mode is: (A*B)'.
+DSP Report: register matrixAccel/genblk3[2].inputMulti/product_reg is absorbed into DSP matrixAccel/genblk3[2].inputMulti/product_reg.
+DSP Report: operator matrixAccel/genblk3[2].inputMulti/product0 is absorbed into DSP matrixAccel/genblk3[2].inputMulti/product_reg.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1268.820 ; gain = 188.742
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping	Report (see note below)
++--------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name         | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++--------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|multiplyComputePynq | (A*B)'      | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|multiplyComputePynq | (A*B)'      | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|multiplyComputePynq | (A*B)'      | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 0    | 
++--------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1288.859 ; gain = 208.781
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1351.152 ; gain = 271.074
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1352.375 ; gain = 272.297
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1359.105 ; gain = 279.027
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1359.105 ; gain = 279.027
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1359.105 ; gain = 279.027
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1359.105 ; gain = 279.027
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1359.105 ; gain = 279.027
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1359.105 ; gain = 279.027
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+-----------------------------------------+----------+
+|      |BlackBox name                            |Instances |
++------+-----------------------------------------+----------+
+|1     |AXI_Convolution_xbar_0                   |         1|
+|2     |AXI_Convolution_auto_pc_0                |         1|
+|3     |AXI_Convolution_AXI_Convolution_Cont_0_0 |         1|
+|4     |AXI_Convolution_axi_dma_0_0              |         1|
+|5     |AXI_Convolution_processing_system7_0_0   |         1|
+|6     |AXI_Convolution_rst_ps7_0_50M_0          |         1|
++------+-----------------------------------------+----------+
+
+Report Cell Usage: 
++------+---------------------------------------+------+
+|      |Cell                                   |Count |
++------+---------------------------------------+------+
+|1     |AXI_Convolution_AXI_Convolution_Cont_0 |     1|
+|2     |AXI_Convolution_auto_pc                |     1|
+|3     |AXI_Convolution_axi_dma_0              |     1|
+|4     |AXI_Convolution_processing_system7_0   |     1|
+|5     |AXI_Convolution_rst_ps7_0_50M          |     1|
+|6     |AXI_Convolution_xbar                   |     1|
+|7     |DSP48E1                                |     3|
+|8     |LUT2                                   |     2|
+|9     |LUT3                                   |     4|
+|10    |LUT4                                   |    13|
+|11    |LUT5                                   |    12|
+|12    |LUT6                                   |     7|
+|13    |FDCE                                   |     3|
+|14    |FDRE                                   |     7|
+|15    |OBUF                                   |     1|
++------+---------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1359.105 ; gain = 279.027
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 1359.105 ; gain = 161.773
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1359.105 ; gain = 279.027
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 1369.406 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1369.406 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+56 Infos, 107 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1369.406 ; gain = 289.328
+INFO: [Common 17-1381] The checkpoint 'C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1/AXI_Conv_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file AXI_Conv_wrapper_utilization_synth.rpt -pb Conv_Accel_Top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Nov  4 21:43:15 2020...

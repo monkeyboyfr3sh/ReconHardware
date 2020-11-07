@@ -18,13 +18,5 @@ Compiling module xil_defaultlib.matrixAccelerator_default
 Compiling module xil_defaultlib.aFIFO
 Compiling module xil_defaultlib.ConvolutionAccelerator
 Compiling module xil_defaultlib.Image_Convolution
-WARNING: [XSIM 43-3373] "C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/Image_Convolution.v" Line 57. System function $fgets is used as system task. This system function should have a LHS e.g. x=$fgets().
-WARNING: [XSIM 43-3373] "C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/Image_Convolution.v" Line 58. System function $sscanf is used as system task. This system function should have a LHS e.g. x=$sscanf().
-WARNING: [XSIM 43-3373] "C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/Image_Convolution.v" Line 60. System function $fgets is used as system task. This system function should have a LHS e.g. x=$fgets().
-WARNING: [XSIM 43-3373] "C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/Image_Convolution.v" Line 61. System function $sscanf is used as system task. This system function should have a LHS e.g. x=$sscanf().
-WARNING: [XSIM 43-3373] "C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/Image_Convolution.v" Line 64. System function $fgets is used as system task. This system function should have a LHS e.g. x=$fgets().
-WARNING: [XSIM 43-3373] "C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/Image_Convolution.v" Line 65. System function $sscanf is used as system task. This system function should have a LHS e.g. x=$sscanf().
-WARNING: [XSIM 43-3373] "C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/Image_Convolution.v" Line 68. System function $fgets is used as system task. This system function should have a LHS e.g. x=$fgets().
-WARNING: [XSIM 43-3373] "C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/Image_Convolution.v" Line 69. System function $sscanf is used as system task. This system function should have a LHS e.g. x=$sscanf().
 Compiling module xil_defaultlib.glbl
 Built simulation snapshot Image_Convolution_behav
