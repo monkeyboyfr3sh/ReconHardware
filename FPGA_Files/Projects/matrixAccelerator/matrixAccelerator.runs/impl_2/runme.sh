@@ -41,7 +41,7 @@ EAStep()
 }
 
 # pre-commands:
-/bin/touch .init_design.begin.rst
-EAStep vivado -log AXI_Conv_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source AXI_Conv_wrapper.tcl -notrace
+/bin/touch .write_bitstream.begin.rst
+EAStep vivado -log testing_FIFO_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source testing_FIFO_wrapper.tcl -notrace
 
 

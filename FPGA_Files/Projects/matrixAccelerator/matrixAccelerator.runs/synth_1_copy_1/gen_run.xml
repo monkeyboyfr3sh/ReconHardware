@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1_copy_1" LaunchPart="xc7z020clg400-1" LaunchTime="1604547715">
-  <File Type="PA-TCL" Name="AXI_Conv_wrapper.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="AXI_Conv_wrapper_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="AXI_Conv_wrapper_reports.tcl"/>
-  <File Type="RDS-RDS" Name="AXI_Conv_wrapper.vds"/>
-  <File Type="RDS-UTIL" Name="AXI_Conv_wrapper_utilization_synth.rpt"/>
+<GenRun Id="synth_1_copy_1" LaunchPart="xc7z020clg400-1" LaunchTime="1606847542">
+  <File Type="PA-TCL" Name="testing_FIFO_wrapper.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="testing_FIFO_wrapper_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="testing_FIFO_wrapper_reports.tcl"/>
+  <File Type="RDS-RDS" Name="testing_FIFO_wrapper.vds"/>
+  <File Type="RDS-UTIL" Name="testing_FIFO_wrapper_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="Conv_Accel_Top_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="AXI_Conv_wrapper.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="AXI_Conv_wrapper_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="AXI_Conv_wrapper_timing_summary_synth.pb"/>
+  <File Type="RDS-DCP" Name="testing_FIFO_wrapper.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="testing_FIFO_wrapper_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="testing_FIFO_wrapper_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/../../Sources/definitions.h">
@@ -102,21 +102,28 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/bd/testing_FIFO/testing_FIFO.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/testing_FIFO/hdl/testing_FIFO_wrapper.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="AXI_Conv_wrapper"/>
+      <Option Name="TopModule" Val="testing_FIFO_wrapper"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
     <Filter Type="Constrs"/>
-    <File Path="$PSRCDIR/constrs_1/new/makerfile.xdc">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-      </FileInfo>
-    </File>
     <Config>
-      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/makerfile.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>
@@ -134,14 +141,21 @@
   <BlockFileSet Type="BlockSrcs" Name="processor_proc_sys_reset_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="processor_xbar_0"/>
   <BlockFileSet Type="BlockSrcs" Name="processor_clk_wiz_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="testing_FIFO_auto_pc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="testing_FIFO_xbar_0"/>
   <BlockFileSet Type="BlockSrcs" Name="processor_axi_gpio_5_0"/>
   <BlockFileSet Type="BlockSrcs" Name="processor_axi_gpio_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="processor_axi_gpio_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="processor_axi_gpio_2_0"/>
   <BlockFileSet Type="BlockSrcs" Name="processor_axi_gpio_3_0"/>
   <BlockFileSet Type="BlockSrcs" Name="processor_axi_gpio_4_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="testing_FIFO_auto_pc_2"/>
   <BlockFileSet Type="BlockSrcs" Name="AXI_Convolution_processing_system7_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="AXI_Convolution_axi_dma_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="AXI_Convolution_xbar_0"/>
   <BlockFileSet Type="BlockSrcs" Name="AXI_Convolution_AXI_Convolution_Cont_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="AXI_Convolution_axi_fifo_mm_s_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="testing_FIFO_axi_fifo_mm_s_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="testing_FIFO_processing_system7_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="testing_FIFO_auto_pc_1"/>
 </GenRun>

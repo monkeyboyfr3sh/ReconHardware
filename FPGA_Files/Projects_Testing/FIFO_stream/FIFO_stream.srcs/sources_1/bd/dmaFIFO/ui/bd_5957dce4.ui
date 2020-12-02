@@ -1,0 +1,40 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.91142",
+   "Default View_TopLeft":"881,-161",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace port DDR -pg 1 -lvl 6 -x 1930 -y 180 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 6 -x 1930 -y 200 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 5 -x 1660 -y 230 -defaultsOSRD
+preplace inst axi_dma_0 -pg 1 -lvl 3 -x 880 -y 190 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 4 -x 1260 -y 460 -defaultsOSRD
+preplace inst ps7_0_axi_periph -pg 1 -lvl 2 -x 520 -y 120 -defaultsOSRD
+preplace inst rst_ps7_0_100M -pg 1 -lvl 1 -x 170 -y 220 -defaultsOSRD
+preplace inst axi_mem_intercon -pg 1 -lvl 4 -x 1260 -y 210 -defaultsOSRD
+preplace inst axi_fifo_mm_s_0 -pg 1 -lvl 3 -x 880 -y -100 -defaultsOSRD
+preplace netloc axi_dma_0_mm2s_introut 1 3 1 1070 230n
+preplace netloc axi_dma_0_s2mm_introut 1 3 1 1060 250n
+preplace netloc xlconcat_0_dout 1 4 1 1420 270n
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 6 -10 320 340 -30 690 320 1090 530 1410 340 1890
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 6 0 540 NJ 540 NJ 540 NJ 540 NJ 540 1900
+preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 1 3 350 -20 700 310 1080
+preplace netloc processing_system7_0_DDR 1 5 1 NJ 180
+preplace netloc processing_system7_0_FIXED_IO 1 5 1 NJ 200
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 5 360 390 NJ 390 NJ 390 NJ 390 1910
+preplace netloc ps7_0_axi_periph_M00_AXI 1 2 1 680 110n
+preplace netloc axi_mem_intercon_M00_AXI 1 4 1 N 210
+preplace netloc axi_dma_0_M_AXI_MM2S 1 3 1 1070 110n
+preplace netloc axi_dma_0_M_AXI_S2MM 1 3 1 1080 130n
+preplace netloc axi_fifo_mm_s_0_AXI_STR_TXD 1 2 2 710 -210 1050
+preplace netloc axi_dma_0_M_AXIS_MM2S 1 2 2 700 -220 1060
+preplace netloc ps7_0_axi_periph_M01_AXI 1 2 1 670 -130n
+levelinfo -pg 1 -30 170 520 880 1260 1660 1930
+pagesize -pg 1 -db -bbox -sgen -30 -260 2050 550
+"
+}
+{
+   "da_axi4_cnt":"5",
+   "da_ps7_cnt":"1"
+}

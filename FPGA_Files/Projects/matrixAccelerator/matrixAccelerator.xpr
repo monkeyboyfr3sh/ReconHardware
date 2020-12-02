@@ -97,17 +97,20 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="AXI_Convolution.bd" FileRelPathName="ip/AXI_Convolution_AXI_Convolution_Cont_0_0/AXI_Convolution_AXI_Convolution_Cont_0_0.xci">
-          <Proxy FileSetName="AXI_Convolution_AXI_Convolution_Cont_0_0"/>
+        <CompFileExtendedInfo CompFileName="AXI_Convolution.bd" FileRelPathName="ip/AXI_Convolution_axi_dma_0_0/AXI_Convolution_axi_dma_0_0.xci">
+          <Proxy FileSetName="AXI_Convolution_axi_dma_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="AXI_Convolution.bd" FileRelPathName="ip/AXI_Convolution_xbar_0/AXI_Convolution_xbar_0.xci">
           <Proxy FileSetName="AXI_Convolution_xbar_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="AXI_Convolution.bd" FileRelPathName="ip/AXI_Convolution_axi_dma_0_0/AXI_Convolution_axi_dma_0_0.xci">
-          <Proxy FileSetName="AXI_Convolution_axi_dma_0_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="AXI_Convolution.bd" FileRelPathName="ip/AXI_Convolution_processing_system7_0_0/AXI_Convolution_processing_system7_0_0.xci">
           <Proxy FileSetName="AXI_Convolution_processing_system7_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="AXI_Convolution.bd" FileRelPathName="ip/AXI_Convolution_AXI_Convolution_Cont_0_0/AXI_Convolution_AXI_Convolution_Cont_0_0.xci">
+          <Proxy FileSetName="AXI_Convolution_AXI_Convolution_Cont_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="AXI_Convolution.bd" FileRelPathName="ip/AXI_Convolution_axi_fifo_mm_s_0_0/AXI_Convolution_axi_fifo_mm_s_0_0.xci">
+          <Proxy FileSetName="AXI_Convolution_axi_fifo_mm_s_0_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/AXI_Convolution/hdl/AXI_Convolution_wrapper.v">
@@ -158,35 +161,35 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
+        <CompFileExtendedInfo CompFileName="processor.bd" FileRelPathName="ip/processor_axi_gpio_2_0/processor_axi_gpio_2_0.xci">
+          <Proxy FileSetName="processor_axi_gpio_2_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="processor.bd" FileRelPathName="ip/processor_axi_gpio_5_0/processor_axi_gpio_5_0.xci">
+          <Proxy FileSetName="processor_axi_gpio_5_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="processor.bd" FileRelPathName="ip/processor_proc_sys_reset_0_0/processor_proc_sys_reset_0_0.xci">
+          <Proxy FileSetName="processor_proc_sys_reset_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="processor.bd" FileRelPathName="ip/processor_clk_wiz_0_0/processor_clk_wiz_0_0.xci">
+          <Proxy FileSetName="processor_clk_wiz_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="processor.bd" FileRelPathName="ip/processor_axi_gpio_0_0/processor_axi_gpio_0_0.xci">
+          <Proxy FileSetName="processor_axi_gpio_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="processor.bd" FileRelPathName="ip/processor_axi_gpio_3_0/processor_axi_gpio_3_0.xci">
+          <Proxy FileSetName="processor_axi_gpio_3_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="processor.bd" FileRelPathName="ip/processor_axi_gpio_0_1/processor_axi_gpio_0_1.xci">
+          <Proxy FileSetName="processor_axi_gpio_0_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="processor.bd" FileRelPathName="ip/processor_axi_gpio_4_0/processor_axi_gpio_4_0.xci">
+          <Proxy FileSetName="processor_axi_gpio_4_0"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="processor.bd" FileRelPathName="ip/processor_xbar_0/processor_xbar_0.xci">
           <Proxy FileSetName="processor_xbar_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="processor.bd" FileRelPathName="ip/processor_axi_gpio_1_0/processor_axi_gpio_1_0.xci">
           <Proxy FileSetName="processor_axi_gpio_1_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="processor.bd" FileRelPathName="ip/processor_axi_gpio_0_0/processor_axi_gpio_0_0.xci">
-          <Proxy FileSetName="processor_axi_gpio_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="processor.bd" FileRelPathName="ip/processor_proc_sys_reset_0_0/processor_proc_sys_reset_0_0.xci">
-          <Proxy FileSetName="processor_proc_sys_reset_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="processor.bd" FileRelPathName="ip/processor_axi_gpio_3_0/processor_axi_gpio_3_0.xci">
-          <Proxy FileSetName="processor_axi_gpio_3_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="processor.bd" FileRelPathName="ip/processor_axi_gpio_4_0/processor_axi_gpio_4_0.xci">
-          <Proxy FileSetName="processor_axi_gpio_4_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="processor.bd" FileRelPathName="ip/processor_axi_gpio_5_0/processor_axi_gpio_5_0.xci">
-          <Proxy FileSetName="processor_axi_gpio_5_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="processor.bd" FileRelPathName="ip/processor_axi_gpio_2_0/processor_axi_gpio_2_0.xci">
-          <Proxy FileSetName="processor_axi_gpio_2_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="processor.bd" FileRelPathName="ip/processor_axi_gpio_0_1/processor_axi_gpio_0_1.xci">
-          <Proxy FileSetName="processor_axi_gpio_0_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="processor.bd" FileRelPathName="ip/processor_clk_wiz_0_0/processor_clk_wiz_0_0.xci">
-          <Proxy FileSetName="processor_clk_wiz_0_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PPRDIR/../../Sources/General/aFIFO.v">
@@ -217,21 +220,39 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/bd/testing_FIFO/testing_FIFO.bd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+        <CompFileExtendedInfo CompFileName="testing_FIFO.bd" FileRelPathName="ip/testing_FIFO_axi_fifo_mm_s_0_0/testing_FIFO_axi_fifo_mm_s_0_0.xci">
+          <Proxy FileSetName="testing_FIFO_axi_fifo_mm_s_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="testing_FIFO.bd" FileRelPathName="ip/testing_FIFO_xbar_0/testing_FIFO_xbar_0.xci">
+          <Proxy FileSetName="testing_FIFO_xbar_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="testing_FIFO.bd" FileRelPathName="ip/testing_FIFO_processing_system7_0_0/testing_FIFO_processing_system7_0_0.xci">
+          <Proxy FileSetName="testing_FIFO_processing_system7_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="testing_FIFO.bd" FileRelPathName="ip/testing_FIFO_auto_pc_2/testing_FIFO_auto_pc_2.xci">
+          <Proxy FileSetName="testing_FIFO_auto_pc_2"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="testing_FIFO.bd" FileRelPathName="ip/testing_FIFO_auto_pc_1/testing_FIFO_auto_pc_1.xci">
+          <Proxy FileSetName="testing_FIFO_auto_pc_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="testing_FIFO.bd" FileRelPathName="ip/testing_FIFO_auto_pc_0/testing_FIFO_auto_pc_0.xci">
+          <Proxy FileSetName="testing_FIFO_auto_pc_0"/>
+        </CompFileExtendedInfo>
+      </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="AXI_Conv_wrapper"/>
+        <Option Name="TopModule" Val="testing_FIFO_wrapper"/>
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
       <Filter Type="Constrs"/>
-      <File Path="$PSRCDIR/constrs_1/new/makerfile.xdc">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-        </FileInfo>
-      </File>
       <Config>
-        <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/makerfile.xdc"/>
         <Option Name="ConstrsType" Val="XDC"/>
       </Config>
     </FileSet>
@@ -408,6 +429,48 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
+    <FileSet Name="AXI_Convolution_axi_fifo_mm_s_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/AXI_Convolution_axi_fifo_mm_s_0_0">
+      <Config>
+        <Option Name="TopModule" Val="AXI_Convolution_axi_fifo_mm_s_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="testing_FIFO_axi_fifo_mm_s_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/testing_FIFO_axi_fifo_mm_s_0_0">
+      <Config>
+        <Option Name="TopModule" Val="testing_FIFO_axi_fifo_mm_s_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="testing_FIFO_xbar_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/testing_FIFO_xbar_0">
+      <Config>
+        <Option Name="TopModule" Val="testing_FIFO_xbar_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="testing_FIFO_processing_system7_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/testing_FIFO_processing_system7_0_0">
+      <Config>
+        <Option Name="TopModule" Val="testing_FIFO_processing_system7_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="testing_FIFO_auto_pc_2" Type="BlockSrcs" RelSrcDir="$PSRCDIR/testing_FIFO_auto_pc_2">
+      <Config>
+        <Option Name="TopModule" Val="testing_FIFO_auto_pc_2"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="testing_FIFO_auto_pc_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/testing_FIFO_auto_pc_1">
+      <Config>
+        <Option Name="TopModule" Val="testing_FIFO_auto_pc_1"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="testing_FIFO_auto_pc_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/testing_FIFO_auto_pc_0">
+      <Config>
+        <Option Name="TopModule" Val="testing_FIFO_auto_pc_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
   </FileSets>
   <Simulators>
     <Simulator Name="XSim">
@@ -445,10 +508,10 @@
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019" CtrlBit="true">
-        <ReportConfig DisplayName="synthesis_report" Name="synth_1_copy_1_synth_synthesis_report_0" Spec="" RunStep="synth_design" ReportFile="AXI_Conv_wrapper.vds">
+        <ReportConfig DisplayName="synthesis_report" Name="synth_1_copy_1_synth_synthesis_report_0" Spec="" RunStep="synth_design" ReportFile="testing_FIFO_wrapper.vds">
           <ReportConfigOption Name="dummy_option" Type="string"/>
         </ReportConfig>
-        <ReportConfig DisplayName="synth_1_copy_1_synth_report_utilization_0" Name="synth_1_copy_1_synth_report_utilization_0" Spec="report_utilization" RunStep="synth_design" ReportFile="AXI_Conv_wrapper_utilization_synth.rpt" Version="1" Minor="0">
+        <ReportConfig DisplayName="synth_1_copy_1_synth_report_utilization_0" Name="synth_1_copy_1_synth_report_utilization_0" Spec="report_utilization" RunStep="synth_design" ReportFile="testing_FIFO_wrapper_utilization_synth.rpt" Version="1" Minor="0">
           <ReportConfigOption Name="dummy_option" Type="string"/>
           <ReportConfigOutputOption Name="pb" Type="string" Value="Conv_Accel_Top_utilization_synth.pb"/>
         </ReportConfig>
@@ -577,6 +640,88 @@
       <RQSFiles/>
     </Run>
     <Run Id="AXI_Convolution_AXI_Convolution_Cont_0_0_synth_1" Type="Ft3:Synth" SrcSet="AXI_Convolution_AXI_Convolution_Cont_0_0" Part="xc7z020clg400-1" ConstrsSet="AXI_Convolution_AXI_Convolution_Cont_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/AXI_Convolution_AXI_Convolution_Cont_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="AXI_Convolution_axi_fifo_mm_s_0_0_synth_1" Type="Ft3:Synth" SrcSet="AXI_Convolution_axi_fifo_mm_s_0_0" Part="xc7z020clg400-1" ConstrsSet="AXI_Convolution_axi_fifo_mm_s_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/AXI_Convolution_axi_fifo_mm_s_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="testing_FIFO_axi_fifo_mm_s_0_0_synth_1" Type="Ft3:Synth" SrcSet="testing_FIFO_axi_fifo_mm_s_0_0" Part="xc7z020clg400-1" ConstrsSet="testing_FIFO_axi_fifo_mm_s_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/testing_FIFO_axi_fifo_mm_s_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="testing_FIFO_xbar_0_synth_1" Type="Ft3:Synth" SrcSet="testing_FIFO_xbar_0" Part="xc7z020clg400-1" ConstrsSet="testing_FIFO_xbar_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/testing_FIFO_xbar_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="testing_FIFO_processing_system7_0_0_synth_1" Type="Ft3:Synth" SrcSet="testing_FIFO_processing_system7_0_0" Part="xc7z020clg400-1" ConstrsSet="testing_FIFO_processing_system7_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/testing_FIFO_processing_system7_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="testing_FIFO_auto_pc_2_synth_1" Type="Ft3:Synth" SrcSet="testing_FIFO_auto_pc_2" Part="xc7z020clg400-1" ConstrsSet="testing_FIFO_auto_pc_2" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/testing_FIFO_auto_pc_2_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="testing_FIFO_auto_pc_1_synth_1" Type="Ft3:Synth" SrcSet="testing_FIFO_auto_pc_1" Part="xc7z020clg400-1" ConstrsSet="testing_FIFO_auto_pc_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/testing_FIFO_auto_pc_1_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="testing_FIFO_auto_pc_0_synth_1" Type="Ft3:Synth" SrcSet="testing_FIFO_auto_pc_0" Part="xc7z020clg400-1" ConstrsSet="testing_FIFO_auto_pc_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/testing_FIFO_auto_pc_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -828,6 +973,137 @@
       <RQSFiles/>
     </Run>
     <Run Id="AXI_Convolution_AXI_Convolution_Cont_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="AXI_Convolution_AXI_Convolution_Cont_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="AXI_Convolution_AXI_Convolution_Cont_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="AXI_Convolution_axi_fifo_mm_s_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="AXI_Convolution_axi_fifo_mm_s_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="AXI_Convolution_axi_fifo_mm_s_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="testing_FIFO_axi_fifo_mm_s_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="testing_FIFO_axi_fifo_mm_s_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="testing_FIFO_axi_fifo_mm_s_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="testing_FIFO_xbar_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="testing_FIFO_xbar_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="testing_FIFO_xbar_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="testing_FIFO_processing_system7_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="testing_FIFO_processing_system7_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="testing_FIFO_processing_system7_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="testing_FIFO_auto_pc_2_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="testing_FIFO_auto_pc_2" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="testing_FIFO_auto_pc_2_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="testing_FIFO_auto_pc_1_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="testing_FIFO_auto_pc_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="testing_FIFO_auto_pc_1_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="testing_FIFO_auto_pc_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="testing_FIFO_auto_pc_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="testing_FIFO_auto_pc_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
           <Desc>Default settings for Implementation.</Desc>
