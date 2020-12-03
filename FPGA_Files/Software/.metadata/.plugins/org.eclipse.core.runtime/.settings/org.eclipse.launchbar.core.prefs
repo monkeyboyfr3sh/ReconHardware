@@ -6,6 +6,7 @@ eclipse.preferences.version=1
 org.eclipse.launchbar.core.descriptorType.default\:Debugger_Convolve_Image-Default/activeLaunchMode=embdebug
 org.eclipse.launchbar.core.descriptorType.default\:Debugger_int_conv_APP-Default/activeLaunchMode=embdebug
 org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_AXI_Convolution_Engine_APP_system/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_AXI_Convolution_Engine_APP_system/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
 org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_BTN_IO_APP_system/activeLaunchMode=run
 org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_BTN_IO_APP_system/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
 org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_Convolution_Accel_APP_system/activeLaunchMode=debug

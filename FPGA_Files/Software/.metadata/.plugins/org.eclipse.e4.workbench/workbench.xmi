@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="ASCII"?>
 <application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_7zuGAQA-EeuS3skmq31G_g" elementId="org.eclipse.e4.legacy.ide.application" contributorURI="platform:/plugin/org.eclipse.ui.workbench" selectedElement="_7zuGAgA-EeuS3skmq31G_g" bindingContexts="_7zuGCAA-EeuS3skmq31G_g">
-  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;_exit.c&quot; tooltip=&quot;AXI_Convolution_Engine/ps7_cortexa9_0/standalone_domain/bsp/ps7_cortexa9_0/libsrc/standalone_v7_2/src/_exit.c&quot;>&#xD;&#xA;&lt;persistable path=&quot;/AXI_Convolution_Engine/ps7_cortexa9_0/standalone_domain/bsp/ps7_cortexa9_0/libsrc/standalone_v7_2/src/_exit.c&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;helloworld.c&quot; tooltip=&quot;AXI_Convolution_Engine_APP/src/helloworld.c&quot;>&#xD;&#xA;&lt;persistable path=&quot;/AXI_Convolution_Engine_APP/src/helloworld.c&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;helloworld.c&quot; tooltip=&quot;Convolve_Image/src/helloworld.c&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Convolve_Image/src/helloworld.c&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;com.xilinx.sdx.ui.settingseditor&quot; name=&quot;AXI_Convolution_Engine_APP.prj&quot; tooltip=&quot;AXI_Convolution_Engine_APP/AXI_Convolution_Engine_APP.prj&quot;>&#xD;&#xA;&lt;persistable path=&quot;/AXI_Convolution_Engine_APP/AXI_Convolution_Engine_APP.prj&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;com.xilinx.sdx.scw.ui.editor.ScwEditor&quot; name=&quot;platform.spr&quot; tooltip=&quot;AXI_Convolution_Engine/platform.spr&quot;>&#xD;&#xA;&lt;persistable path=&quot;/AXI_Convolution_Engine/platform.spr&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;helloworld.c&quot; tooltip=&quot;Testing_Convolution/src/helloworld.c&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Testing_Convolution/src/helloworld.c&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;platform.c&quot; tooltip=&quot;Convolve_Image/src/platform.c&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Convolve_Image/src/platform.c&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.binaryEditor&quot; name=&quot;bmp.o&quot; tooltip=&quot;Convolve_Image/Debug/src/bmp.o&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Convolve_Image/Debug/src/bmp.o&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;bmp.c&quot; tooltip=&quot;Convolve_Image/src/bmp.c&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Convolve_Image/src/bmp.c&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;bmp.h&quot; tooltip=&quot;Convolve_Image/src/bmp.h&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Convolve_Image/src/bmp.h&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;helloworld.c&quot; tooltip=&quot;XBar_APP/src/helloworld.c&quot;>&#xD;&#xA;&lt;persistable path=&quot;/XBar_APP/src/helloworld.c&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.cdt.ui.ExternalEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;stdio.h&quot; tooltip=&quot;C:\Xilinx\Vitis\2019.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h&quot;>&#xD;&#xA;&lt;persistable path=&quot;C:\Xilinx\Vitis\2019.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h&quot; project=&quot;Convolve_Image&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;platform_config.h&quot; tooltip=&quot;Testing_Convolution/src/platform_config.h&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Testing_Convolution/src/platform_config.h&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.ui.browser.editor&quot; name=&quot;Sketchpad.png&quot; tooltip=&quot;Testing_Convolution/src/Sketchpad.png&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Testing_Convolution/src/Sketchpad.png&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;_exit.c&quot; tooltip=&quot;Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/ps7_cortexa9_0/libsrc/standalone_v7_1/src/_exit.c&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/ps7_cortexa9_0/libsrc/standalone_v7_1/src/_exit.c&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;com.xilinx.sdx.ui.settingseditor&quot; name=&quot;Convolve_Image.prj&quot; tooltip=&quot;Convolve_Image/Convolve_Image.prj&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Convolve_Image/Convolve_Image.prj&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;com.xilinx.sdx.scw.ui.editor.ScwEditor&quot; name=&quot;platform.spr&quot; tooltip=&quot;Convolution_Accel_HW/platform.spr&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Convolution_Accel_HW/platform.spr&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;com.xilinx.sdx.ui.settingseditor&quot; name=&quot;Testing_Convolution.prj&quot; tooltip=&quot;Testing_Convolution/Testing_Convolution.prj&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Testing_Convolution/Testing_Convolution.prj&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;helloworld.c&quot; tooltip=&quot;Convolution_Accel_APP/src/helloworld.c&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Convolution_Accel_APP/src/helloworld.c&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;com.xilinx.sdx.ui.settingseditor&quot; name=&quot;Convolution_Accel_APP.prj&quot; tooltip=&quot;Convolution_Accel_APP/Convolution_Accel_APP.prj&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Convolution_Accel_APP/Convolution_Accel_APP.prj&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;/mruList>&#xD;&#xA;&lt;/workbench>"/>
+  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;helloworld.c&quot; tooltip=&quot;Multiplier_APP/src/helloworld.c&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Multiplier_APP/src/helloworld.c&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;helloworld.c&quot; tooltip=&quot;Convolve_Image/src/helloworld.c&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Convolve_Image/src/helloworld.c&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;_exit.c&quot; tooltip=&quot;AXI_Convolution_Engine/ps7_cortexa9_0/standalone_domain/bsp/ps7_cortexa9_0/libsrc/standalone_v7_2/src/_exit.c&quot;>&#xD;&#xA;&lt;persistable path=&quot;/AXI_Convolution_Engine/ps7_cortexa9_0/standalone_domain/bsp/ps7_cortexa9_0/libsrc/standalone_v7_2/src/_exit.c&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;helloworld.c&quot; tooltip=&quot;AXI_Convolution_Engine_APP/src/helloworld.c&quot;>&#xD;&#xA;&lt;persistable path=&quot;/AXI_Convolution_Engine_APP/src/helloworld.c&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;com.xilinx.sdx.ui.settingseditor&quot; name=&quot;AXI_Convolution_Engine_APP.prj&quot; tooltip=&quot;AXI_Convolution_Engine_APP/AXI_Convolution_Engine_APP.prj&quot;>&#xD;&#xA;&lt;persistable path=&quot;/AXI_Convolution_Engine_APP/AXI_Convolution_Engine_APP.prj&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;com.xilinx.sdx.scw.ui.editor.ScwEditor&quot; name=&quot;platform.spr&quot; tooltip=&quot;AXI_Convolution_Engine/platform.spr&quot;>&#xD;&#xA;&lt;persistable path=&quot;/AXI_Convolution_Engine/platform.spr&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;helloworld.c&quot; tooltip=&quot;Testing_Convolution/src/helloworld.c&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Testing_Convolution/src/helloworld.c&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;platform.c&quot; tooltip=&quot;Convolve_Image/src/platform.c&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Convolve_Image/src/platform.c&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.binaryEditor&quot; name=&quot;bmp.o&quot; tooltip=&quot;Convolve_Image/Debug/src/bmp.o&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Convolve_Image/Debug/src/bmp.o&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;bmp.c&quot; tooltip=&quot;Convolve_Image/src/bmp.c&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Convolve_Image/src/bmp.c&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;bmp.h&quot; tooltip=&quot;Convolve_Image/src/bmp.h&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Convolve_Image/src/bmp.h&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;helloworld.c&quot; tooltip=&quot;XBar_APP/src/helloworld.c&quot;>&#xD;&#xA;&lt;persistable path=&quot;/XBar_APP/src/helloworld.c&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.cdt.ui.ExternalEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;stdio.h&quot; tooltip=&quot;C:\Xilinx\Vitis\2019.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h&quot;>&#xD;&#xA;&lt;persistable path=&quot;C:\Xilinx\Vitis\2019.2\gnu\aarch32\nt\gcc-arm-none-eabi\arm-none-eabi\libc\usr\include\stdio.h&quot; project=&quot;Convolve_Image&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;platform_config.h&quot; tooltip=&quot;Testing_Convolution/src/platform_config.h&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Testing_Convolution/src/platform_config.h&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.ui.browser.editor&quot; name=&quot;Sketchpad.png&quot; tooltip=&quot;Testing_Convolution/src/Sketchpad.png&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Testing_Convolution/src/Sketchpad.png&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;_exit.c&quot; tooltip=&quot;Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/ps7_cortexa9_0/libsrc/standalone_v7_1/src/_exit.c&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Convolution_Accel_HW/ps7_cortexa9_0/standalone_domain/bsp/ps7_cortexa9_0/libsrc/standalone_v7_1/src/_exit.c&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;com.xilinx.sdx.ui.settingseditor&quot; name=&quot;Convolve_Image.prj&quot; tooltip=&quot;Convolve_Image/Convolve_Image.prj&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Convolve_Image/Convolve_Image.prj&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;com.xilinx.sdx.scw.ui.editor.ScwEditor&quot; name=&quot;platform.spr&quot; tooltip=&quot;Convolution_Accel_HW/platform.spr&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Convolution_Accel_HW/platform.spr&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;com.xilinx.sdx.ui.settingseditor&quot; name=&quot;Testing_Convolution.prj&quot; tooltip=&quot;Testing_Convolution/Testing_Convolution.prj&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Testing_Convolution/Testing_Convolution.prj&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;helloworld.c&quot; tooltip=&quot;Convolution_Accel_APP/src/helloworld.c&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Convolution_Accel_APP/src/helloworld.c&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;/mruList>&#xD;&#xA;&lt;/workbench>"/>
   <tags>activeSchemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
   <tags>ModelMigrationProcessor.001</tags>
-  <children xsi:type="basic:TrimmedWindow" xmi:id="_7zuGAgA-EeuS3skmq31G_g" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.ui.workbench" selectedElement="_8Be1MwA-EeuS3skmq31G_g" x="1713" y="0" width="1734" height="1407">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_7zuGAgA-EeuS3skmq31G_g" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.ui.workbench" selectedElement="_8Be1MwA-EeuS3skmq31G_g" x="-8" y="-8" width="3456" height="1456">
     <persistedState key="coolBarVisible" value="true"/>
     <persistedState key="perspectiveBarVisible" value="true"/>
     <persistedState key="isRestored" value="true"/>
@@ -156,7 +156,7 @@
           <children xsi:type="basic:PartSashContainer" xmi:id="_8B0zcwA-EeuS3skmq31G_g" selectedElement="_8B0zgAA-EeuS3skmq31G_g" horizontal="true">
             <children xsi:type="basic:PartSashContainer" xmi:id="_8B0zdAA-EeuS3skmq31G_g" containerData="1787" selectedElement="_8B0zdQA-EeuS3skmq31G_g">
               <children xsi:type="basic:PartSashContainer" xmi:id="_8B0zdQA-EeuS3skmq31G_g" containerData="7819" selectedElement="_8B0zdgA-EeuS3skmq31G_g" horizontal="true">
-                <children xsi:type="basic:PartStack" xmi:id="_8B0zdgA-EeuS3skmq31G_g" elementId="org.eclipse.debug.internal.ui.NavigatorFolderView" containerData="5000" selectedElement="_8B0zdwA-EeuS3skmq31G_g">
+                <children xsi:type="basic:PartStack" xmi:id="_8B0zdgA-EeuS3skmq31G_g" elementId="org.eclipse.debug.internal.ui.NavigatorFolderView" containerData="5000" selectedElement="_8B0zfgA-EeuS3skmq31G_g">
                   <tags>org.eclipse.e4.primaryNavigationStack</tags>
                   <children xsi:type="advanced:Placeholder" xmi:id="_8B0zdwA-EeuS3skmq31G_g" elementId="org.eclipse.debug.ui.DebugView" ref="_8BpNQAA-EeuS3skmq31G_g" closeable="true">
                     <tags>View</tags>
@@ -196,8 +196,8 @@
             </children>
             <children xsi:type="basic:PartSashContainer" xmi:id="_8B0zgAA-EeuS3skmq31G_g" containerData="8213" selectedElement="_8B0zgQA-EeuS3skmq31G_g">
               <children xsi:type="basic:PartSashContainer" xmi:id="_8B0zgQA-EeuS3skmq31G_g" containerData="6885" selectedElement="_8B0zggA-EeuS3skmq31G_g" horizontal="true">
-                <children xsi:type="advanced:Placeholder" xmi:id="_8B0zggA-EeuS3skmq31G_g" elementId="org.eclipse.ui.editorss" containerData="5863" ref="_8BPkoAA-EeuS3skmq31G_g"/>
-                <children xsi:type="basic:PartSashContainer" xmi:id="_8B0zgwA-EeuS3skmq31G_g" containerData="4137" selectedElement="_8B0zkAA-EeuS3skmq31G_g">
+                <children xsi:type="advanced:Placeholder" xmi:id="_8B0zggA-EeuS3skmq31G_g" elementId="org.eclipse.ui.editorss" containerData="7756" ref="_8BPkoAA-EeuS3skmq31G_g"/>
+                <children xsi:type="basic:PartSashContainer" xmi:id="_8B0zgwA-EeuS3skmq31G_g" containerData="2244" selectedElement="_8B0zkAA-EeuS3skmq31G_g">
                   <children xsi:type="basic:PartStack" xmi:id="_8B0zhAA-EeuS3skmq31G_g" elementId="org.eclipse.debug.internal.ui.OutlineFolderView" containerData="5000" selectedElement="_8B0zhQA-EeuS3skmq31G_g">
                     <tags>org.eclipse.e4.secondaryNavigationStack</tags>
                     <children xsi:type="advanced:Placeholder" xmi:id="_8B0zhQA-EeuS3skmq31G_g" elementId="org.eclipse.debug.ui.VariableView" ref="_8BqbYgA-EeuS3skmq31G_g" closeable="true">
@@ -355,7 +355,7 @@
       </children>
     </children>
     <sharedElements xsi:type="advanced:Area" xmi:id="_8BPkoAA-EeuS3skmq31G_g" elementId="org.eclipse.ui.editorss" selectedElement="_8BPkoQA-EeuS3skmq31G_g">
-      <children xsi:type="basic:PartStack" xmi:id="_8BPkoQA-EeuS3skmq31G_g" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_4X47YBo0EeuevP33ICH2rA">
+      <children xsi:type="basic:PartStack" xmi:id="_8BPkoQA-EeuS3skmq31G_g" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_TosE0DTpEeuyQO2TxsP1nQ">
         <tags>org.eclipse.e4.primaryDataStack</tags>
         <tags>EditorStack</tags>
         <tags>active</tags>
@@ -366,7 +366,7 @@
           <tags>removeOnHide</tags>
         </children>
         <children xsi:type="basic:Part" xmi:id="_mHGgcBDEEeuK4KoWAViHIA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="helloworld.c" iconURI="platform:/plugin/org.eclipse.cdt.ui/icons/obj16/c_file_obj.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;helloworld.c&quot; partName=&quot;helloworld.c&quot; title=&quot;helloworld.c&quot; tooltip=&quot;Convolve_Image/src/helloworld.c&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Convolve_Image/src/helloworld.c&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;11958&quot; selectionTopPixel=&quot;5130&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;helloworld.c&quot; partName=&quot;helloworld.c&quot; title=&quot;helloworld.c&quot; tooltip=&quot;Convolve_Image/src/helloworld.c&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Convolve_Image/src/helloworld.c&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;11958&quot; selectionTopPixel=&quot;5374&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>org.eclipse.cdt.ui.editor.CEditor</tags>
           <tags>removeOnHide</tags>
@@ -402,7 +402,13 @@
           <tags>removeOnHide</tags>
         </children>
         <children xsi:type="basic:Part" xmi:id="_4X47YBo0EeuevP33ICH2rA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="helloworld.c" iconURI="platform:/plugin/org.eclipse.cdt.ui/icons/obj16/c_file_obj.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;helloworld.c&quot; partName=&quot;helloworld.c&quot; title=&quot;helloworld.c&quot; tooltip=&quot;AXI_Convolution_Engine_APP/src/helloworld.c&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/AXI_Convolution_Engine_APP/src/helloworld.c&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;7622&quot; selectionTopPixel=&quot;2940&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;helloworld.c&quot; partName=&quot;helloworld.c&quot; title=&quot;helloworld.c&quot; tooltip=&quot;AXI_Convolution_Engine_APP/src/helloworld.c&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/AXI_Convolution_Engine_APP/src/helloworld.c&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;7732&quot; selectionTopPixel=&quot;5905&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <tags>Editor</tags>
+          <tags>org.eclipse.cdt.ui.editor.CEditor</tags>
+          <tags>removeOnHide</tags>
+        </children>
+        <children xsi:type="basic:Part" xmi:id="_TosE0DTpEeuyQO2TxsP1nQ" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="helloworld.c" iconURI="platform:/plugin/org.eclipse.cdt.ui/icons/obj16/c_file_obj.gif" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;helloworld.c&quot; partName=&quot;helloworld.c&quot; title=&quot;helloworld.c&quot; tooltip=&quot;Multiplier_APP/src/helloworld.c&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Multiplier_APP/src/helloworld.c&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;17&quot; selectionOffset=&quot;4764&quot; selectionTopPixel=&quot;1818&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>org.eclipse.cdt.ui.editor.CEditor</tags>
           <tags>removeOnHide</tags>
@@ -501,77 +507,80 @@
       </menus>
       <menus xsi:type="menu:PopupMenu" xmi:id="_UD0h0BozEeuevP33ICH2rA" elementId="com.xilinx.ide.projectExplorer#PopupMenu">
         <tags>menuContribution:popup</tags>
-        <children xsi:type="menu:MenuSeparator" xmi:id="_Fyuv4Bo1EeuevP33ICH2rA" elementId="group.new" visible="false">
+      </menus>
+      <menus xsi:type="menu:PopupMenu" xmi:id="_JwLuoDTpEeuyQO2TxsP1nQ" elementId="com.xilinx.ide.projectExplorer#PopupMenu">
+        <tags>menuContribution:popup</tags>
+        <children xsi:type="menu:MenuSeparator" xmi:id="_gdChEDTpEeuyQO2TxsP1nQ" elementId="group.new" visible="false">
           <tags>Opaque</tags>
         </children>
-        <children xsi:type="menu:MenuSeparator" xmi:id="_Fyuv4Ro1EeuevP33ICH2rA" elementId="group.open">
+        <children xsi:type="menu:MenuSeparator" xmi:id="_gdDIIDTpEeuyQO2TxsP1nQ" elementId="group.open">
           <tags>Opaque</tags>
         </children>
-        <children xsi:type="menu:MenuSeparator" xmi:id="_Fyuv4ho1EeuevP33ICH2rA" elementId="group.openWith" visible="false">
+        <children xsi:type="menu:MenuSeparator" xmi:id="_gdDIITTpEeuyQO2TxsP1nQ" elementId="group.openWith" visible="false">
           <tags>Opaque</tags>
         </children>
-        <children xsi:type="menu:MenuSeparator" xmi:id="_Fyuv4xo1EeuevP33ICH2rA" elementId="group.edit">
+        <children xsi:type="menu:MenuSeparator" xmi:id="_gdDIIjTpEeuyQO2TxsP1nQ" elementId="group.edit">
           <tags>Opaque</tags>
         </children>
-        <children xsi:type="menu:DirectMenuItem" xmi:id="_Fyuv5Bo1EeuevP33ICH2rA" elementId="org.eclipse.ui.PasteAction">
+        <children xsi:type="menu:DirectMenuItem" xmi:id="_gdDIIzTpEeuyQO2TxsP1nQ" elementId="org.eclipse.ui.PasteAction">
           <tags>Opaque</tags>
         </children>
-        <children xsi:type="menu:DirectMenuItem" xmi:id="_FyvW8Bo1EeuevP33ICH2rA" elementId="org.eclipse.ui.DeleteResourceAction">
+        <children xsi:type="menu:DirectMenuItem" xmi:id="_gdDIJDTpEeuyQO2TxsP1nQ" elementId="org.eclipse.ui.DeleteResourceAction">
           <tags>Opaque</tags>
         </children>
-        <children xsi:type="menu:DirectMenuItem" xmi:id="_FyvW8Ro1EeuevP33ICH2rA" elementId="org.eclipse.ui.RefreshAction">
+        <children xsi:type="menu:DirectMenuItem" xmi:id="_gdDIJTTpEeuyQO2TxsP1nQ" elementId="org.eclipse.ui.RefreshAction">
           <tags>Opaque</tags>
         </children>
-        <children xsi:type="menu:MenuSeparator" xmi:id="_FyvW8ho1EeuevP33ICH2rA" elementId="group.port">
+        <children xsi:type="menu:MenuSeparator" xmi:id="_gdDIJjTpEeuyQO2TxsP1nQ" elementId="group.port">
           <tags>Opaque</tags>
         </children>
-        <children xsi:type="menu:DirectMenuItem" xmi:id="_FyvW8xo1EeuevP33ICH2rA">
+        <children xsi:type="menu:DirectMenuItem" xmi:id="_gdDIJzTpEeuyQO2TxsP1nQ">
           <tags>Opaque</tags>
         </children>
-        <children xsi:type="menu:MenuSeparator" xmi:id="_FyvW9Bo1EeuevP33ICH2rA" elementId="group.reorganize" visible="false">
+        <children xsi:type="menu:MenuSeparator" xmi:id="_gdDIKDTpEeuyQO2TxsP1nQ" elementId="group.reorganize" visible="false">
           <tags>Opaque</tags>
         </children>
-        <children xsi:type="menu:MenuSeparator" xmi:id="_FyvW9Ro1EeuevP33ICH2rA">
+        <children xsi:type="menu:MenuSeparator" xmi:id="_gdDIKTTpEeuyQO2TxsP1nQ">
           <tags>Opaque</tags>
         </children>
-        <children xsi:type="menu:DirectMenuItem" xmi:id="_FyvW9ho1EeuevP33ICH2rA">
+        <children xsi:type="menu:DirectMenuItem" xmi:id="_gdDIKjTpEeuyQO2TxsP1nQ">
           <tags>Opaque</tags>
         </children>
-        <children xsi:type="menu:MenuSeparator" xmi:id="_FyvW9xo1EeuevP33ICH2rA" elementId="group.build">
+        <children xsi:type="menu:MenuSeparator" xmi:id="_gdDIKzTpEeuyQO2TxsP1nQ" elementId="group.build">
           <tags>Opaque</tags>
         </children>
-        <children xsi:type="menu:DirectMenuItem" xmi:id="_FyvW-Bo1EeuevP33ICH2rA" elementId="org.eclipse.ui.BuildAction">
+        <children xsi:type="menu:DirectMenuItem" xmi:id="_gdDILDTpEeuyQO2TxsP1nQ" elementId="org.eclipse.ui.BuildAction">
           <tags>Opaque</tags>
         </children>
-        <children xsi:type="menu:DirectMenuItem" xmi:id="_FyvW-Ro1EeuevP33ICH2rA" elementId="org.eclipse.ui.RebuildAllAction">
+        <children xsi:type="menu:DirectMenuItem" xmi:id="_gdDILTTpEeuyQO2TxsP1nQ" elementId="org.eclipse.ui.RebuildAllAction">
           <tags>Opaque</tags>
         </children>
-        <children xsi:type="menu:MenuSeparator" xmi:id="_FyvW-xo1EeuevP33ICH2rA" elementId="end-buildGroup" visible="false">
+        <children xsi:type="menu:MenuSeparator" xmi:id="_gdDILzTpEeuyQO2TxsP1nQ" elementId="end-buildGroup" visible="false">
           <tags>Opaque</tags>
         </children>
-        <children xsi:type="menu:MenuSeparator" xmi:id="_FyvW_Bo1EeuevP33ICH2rA" elementId="group.search">
+        <children xsi:type="menu:MenuSeparator" xmi:id="_gdDIMDTpEeuyQO2TxsP1nQ" elementId="group.search">
           <tags>Opaque</tags>
         </children>
-        <children xsi:type="menu:MenuSeparator" xmi:id="_FyvW_Ro1EeuevP33ICH2rA" elementId="additions">
+        <children xsi:type="menu:MenuSeparator" xmi:id="_gdDIMTTpEeuyQO2TxsP1nQ" elementId="additions">
           <tags>Opaque</tags>
         </children>
-        <children xsi:type="menu:MenuSeparator" xmi:id="_FyvW_ho1EeuevP33ICH2rA" elementId="group.launch">
+        <children xsi:type="menu:MenuSeparator" xmi:id="_gdDIMjTpEeuyQO2TxsP1nQ" elementId="group.launch">
           <tags>Opaque</tags>
         </children>
-        <children xsi:type="menu:DirectMenuItem" xmi:id="_FyvW_xo1EeuevP33ICH2rA">
+        <children xsi:type="menu:DirectMenuItem" xmi:id="_gdDIMzTpEeuyQO2TxsP1nQ">
           <tags>Opaque</tags>
         </children>
-        <children xsi:type="menu:DirectMenuItem" xmi:id="_FyvXABo1EeuevP33ICH2rA">
+        <children xsi:type="menu:DirectMenuItem" xmi:id="_gdDINDTpEeuyQO2TxsP1nQ">
           <tags>Opaque</tags>
         </children>
-        <children xsi:type="menu:MenuSeparator" xmi:id="_FyvXARo1EeuevP33ICH2rA" elementId="group.properties">
+        <children xsi:type="menu:MenuSeparator" xmi:id="_gdDINTTpEeuyQO2TxsP1nQ" elementId="group.properties">
           <tags>Opaque</tags>
         </children>
-        <children xsi:type="menu:DirectMenuItem" xmi:id="_FyvXAho1EeuevP33ICH2rA">
+        <children xsi:type="menu:DirectMenuItem" xmi:id="_gdDINjTpEeuyQO2TxsP1nQ">
           <tags>Opaque</tags>
         </children>
       </menus>
-      <toolbar xmi:id="_8F73YQA-EeuS3skmq31G_g" elementId="com.xilinx.ide.projectExplorer" visible="false"/>
+      <toolbar xmi:id="_8F73YQA-EeuS3skmq31G_g" elementId="com.xilinx.ide.projectExplorer"/>
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_8BdAAAA-EeuS3skmq31G_g" elementId="com.xilinx.sdx.assistant.assistantView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Assistant" iconURI="platform:/plugin/com.xilinx.sdx.assistant/icons/assistant_view.png" tooltip="Assistant to manage Scout project setup, builds, and reports." closeable="true">
       <persistedState key="originalCompatibilityViewClass" value="com.xilinx.sdx.assistant.view.SDXAssistantView"/>
@@ -684,7 +693,7 @@
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
       </menus>
-      <toolbar xmi:id="__vGSQQBFEeuB9q0LNJScag" elementId="org.eclipse.debug.ui.DebugView"/>
+      <toolbar xmi:id="__vGSQQBFEeuB9q0LNJScag" elementId="org.eclipse.debug.ui.DebugView" visible="false"/>
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_8Bp0UAA-EeuS3skmq31G_g" elementId="org.eclipse.ui.navigator.ProjectExplorer" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Project Explorer" iconURI="platform:/plugin/org.eclipse.ui.navigator.resources/icons/full/eview16/resource_persp.png" tooltip="" closeable="true">
       <persistedState key="originalCompatibilityViewClass" value="org.eclipse.ui.navigator.resources.ProjectExplorer"/>
@@ -4590,7 +4599,7 @@
   <addons xmi:id="_7zuGFQA-EeuS3skmq31G_g" elementId="org.eclipse.ui.workbench.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.workbench" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
   <addons xmi:id="_7zxwYAA-EeuS3skmq31G_g" elementId="SplitterAddon" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.splitteraddon.SplitterAddon"/>
   <addons xmi:id="_70ilYAA-EeuS3skmq31G_g" elementId="com.xilinx.sdx.reports.timeline.editor.toolbar.addon" contributionURI="bundleclass://com.xilinx.sdx.reports.timeline/com.xilinx.sdx.reports.viewer.toolbar.TimelineEditorToolbarAddon"/>
-  <addons xmi:id="_IYS0IKimEeS11vbz3f9ezw" elementId="org.eclipse.ui.ide.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.ide" contributionURI="bundleclass://org.eclipse.ui.ide/org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon"/>
+  <addons xmi:id="_CX6gkTTpEeuyQO2TxsP1nQ" elementId="org.eclipse.ui.ide.addon.0" contributionURI="bundleclass://org.eclipse.ui.ide/org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon"/>
   <addons xmi:id="_dz0JgGOlEeSMMaPQU2nlzw" elementId="org.eclipse.ui.ide.application.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.ide.application" contributionURI="bundleclass://org.eclipse.ui.ide.application/org.eclipse.ui.internal.ide.application.addons.ModelCleanupAddon"/>
   <addons xmi:id="_72cp4AA-EeuS3skmq31G_g" elementId="com.xilinx.sdk.targetmanager.ui.addon.view" contributionURI="bundleclass://com.xilinx.sdk.targetmanager/com.xilinx.sdk.targetmanager.ui.ViewVisibilityAdapterAddon"/>
   <addons xmi:id="_zB5RwQBDEeuB9q0LNJScag" elementId="com.xilinx.sdx.reports.timeline.editor.toolbar.addon" contributionURI="bundleclass://com.xilinx.sdx.reports.timeline/com.xilinx.sdx.reports.viewer.toolbar.TimelineEditorToolbarAddon"/>
@@ -4641,6 +4650,7 @@
   <addons xmi:id="_TU5NkRDjEeuwIISBeu_e_A" elementId="com.xilinx.sdk.targetmanager.ui.addon.view" contributionURI="bundleclass://com.xilinx.sdk.targetmanager/com.xilinx.sdk.targetmanager.ui.ViewVisibilityAdapterAddon"/>
   <addons xmi:id="_etfyoBDlEeui2qqJ5eso9Q" elementId="com.xilinx.sdk.targetmanager.ui.addon.view" contributionURI="bundleclass://com.xilinx.sdk.targetmanager/com.xilinx.sdk.targetmanager.ui.ViewVisibilityAdapterAddon"/>
   <addons xmi:id="_Qw0gARozEeuevP33ICH2rA" elementId="com.xilinx.sdk.targetmanager.ui.addon.view" contributionURI="bundleclass://com.xilinx.sdk.targetmanager/com.xilinx.sdk.targetmanager.ui.ViewVisibilityAdapterAddon"/>
+  <addons xmi:id="_CYE4oDTpEeuyQO2TxsP1nQ" elementId="com.xilinx.sdk.targetmanager.ui.addon.view" contributionURI="bundleclass://com.xilinx.sdk.targetmanager/com.xilinx.sdk.targetmanager.ui.ViewVisibilityAdapterAddon"/>
   <categories xmi:id="_7z_LwAA-EeuS3skmq31G_g" elementId="org.eclipse.ui.category.edit" name="Edit"/>
   <categories xmi:id="_7z_LwQA-EeuS3skmq31G_g" elementId="org.eclipse.ui.category.textEditor" name="Text Editing" description="Text Editing Commands"/>
   <categories xmi:id="_7z_LwgA-EeuS3skmq31G_g" elementId="org.eclipse.cdt.debug.ui.category.registerGrouping" name="Register Grouping commands" description="Set of commands for Register Grouping"/>
