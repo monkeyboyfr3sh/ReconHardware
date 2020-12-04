@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Fri Dec  4 15:53:31 2020
+# Process ID: 25976
+# Current directory: C:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/resizer/resizer/resizer.runs/synth_1
+# Command line: vivado.exe -log Pixel_Inverter_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Pixel_Inverter_wrapper.tcl
+# Log file: C:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/resizer/resizer/resizer.runs/synth_1/Pixel_Inverter_wrapper.vds
+# Journal file: C:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/resizer/resizer/resizer.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source Pixel_Inverter_wrapper.tcl -notrace

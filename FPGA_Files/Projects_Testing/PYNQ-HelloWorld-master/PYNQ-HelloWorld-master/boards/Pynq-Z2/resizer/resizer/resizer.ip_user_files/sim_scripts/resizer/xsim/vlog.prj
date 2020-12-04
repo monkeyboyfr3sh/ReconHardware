@@ -1,0 +1,39 @@
+verilog xil_defaultlib --include "../../../../resizer.srcs/sources_1/bd/resizer/ipshared/8713/hdl" --include "../../../../resizer.srcs/sources_1/bd/resizer/ipshared/ec67/hdl" --include "../../../../resizer.srcs/sources_1/bd/resizer/ipshared/6b56/hdl" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ip/resizer_axis_dwidth_converter_0_0/sim/resizer_axis_dwidth_converter_0_0.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ip/resizer_axis_dwidth_converter_1_0/sim/resizer_axis_dwidth_converter_1_0.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ip/resizer_processing_system7_0_0/sim/resizer_processing_system7_0_0.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/axis2xfMat.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/Block_Mat_exit1_proc.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/fifo_w12_d2_A.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/fifo_w24_d150_A.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/fifo_w32_d3_A.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/fifo_w32_d4_A.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/regslice_core.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resize.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resize_accel_AXILiteS_s_axi.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resize_accel_mac_ibs.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resize_accel_mac_jbC.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resize_accel_mul_cud.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resize_accel_mul_g8j.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resize_accel_mul_hbi.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resize_accel_udivbkb.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resizeNNBilinear.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resizeNNBilinear_dEe.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/scaleCompute.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/start_for_resize_U0.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/start_for_xfMat2akbM.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/xfMat2axis.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/xfUDivResize.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resize_accel.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ip/resizer_resize_accel_0_0/sim/resizer_resize_accel_0_0.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ip/resizer_xbar_2/sim/resizer_xbar_2.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ip/resizer_xbar_3/sim/resizer_xbar_3.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ip/resizer_auto_pc_0/sim/resizer_auto_pc_0.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ip/resizer_auto_us_0/sim/resizer_auto_us_0.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ip/resizer_auto_us_1/sim/resizer_auto_us_1.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/ip/resizer_auto_pc_1/sim/resizer_auto_pc_1.v" \
+"../../../../resizer.srcs/sources_1/bd/resizer/sim/resizer.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

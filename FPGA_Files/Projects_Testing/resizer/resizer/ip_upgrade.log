@@ -1,0 +1,138 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Fri Dec  4 15:47:17 2020
+| Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Pixel_Inverter_Pixel_Inveter_Proc_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of Pixel_Inverter_Pixel_Inveter_Proc_0_0 (xilinx.com:user:Pixel_Inveter_Proc:1.0) from (Rev. 2) to (Rev. 3)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'Pixel_Inverter_Pixel_Inveter_Proc_0_0'. These changes may impact your design.
+
+
+-Upgrade has added port 'tkeepi'
+
+-Upgrade has added port 'tkeepo'
+
+-Upgrade has added port 'tlasti'
+
+-Upgrade has added port 'tlasto'
+
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Fri Dec  4 13:36:27 2020
+| Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'resizer_axis_dwidth_converter_1_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of resizer_axis_dwidth_converter_1_0 (xilinx.com:ip:axis_dwidth_converter:1.1) from (Rev. 19) to (Rev. 20)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Fri Dec  4 13:36:27 2020
+| Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'resizer_axis_dwidth_converter_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of resizer_axis_dwidth_converter_0_0 (xilinx.com:ip:axis_dwidth_converter:1.1) from (Rev. 19) to (Rev. 20)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Fri Dec  4 13:36:27 2020
+| Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'resizer_axi_interconnect_1_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of resizer_axi_interconnect_1_0 (xilinx.com:ip:axi_interconnect:2.1) from (Rev. 21) to (Rev. 22)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Fri Dec  4 13:36:27 2020
+| Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'resizer_axi_interconnect_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of resizer_axi_interconnect_0_0 (xilinx.com:ip:axi_interconnect:2.1) from (Rev. 21) to (Rev. 22)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Fri Dec  4 13:36:27 2020
+| Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'resizer_axi_dma_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of resizer_axi_dma_0_0 (xilinx.com:ip:axi_dma:7.1) from (Rev. 21) to (Rev. 22)
+

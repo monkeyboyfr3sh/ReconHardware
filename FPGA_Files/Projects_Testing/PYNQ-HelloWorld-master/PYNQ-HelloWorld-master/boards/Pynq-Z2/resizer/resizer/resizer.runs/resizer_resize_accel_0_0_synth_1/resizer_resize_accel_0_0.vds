@@ -1,0 +1,823 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Fri Dec  4 13:37:28 2020
+# Process ID: 24868
+# Current directory: C:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.runs/resizer_resize_accel_0_0_synth_1
+# Command line: vivado.exe -log resizer_resize_accel_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source resizer_resize_accel_0_0.tcl
+# Log file: C:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.runs/resizer_resize_accel_0_0_synth_1/resizer_resize_accel_0_0.vds
+# Journal file: C:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.runs/resizer_resize_accel_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source resizer_resize_accel_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.1/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.cache/ip 
+Command: synth_design -top resizer_resize_accel_0_0 -part xc7z020clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 21780
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1072.699 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'resizer_resize_accel_0_0' [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ip/resizer_resize_accel_0_0/synth/resizer_resize_accel_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'resize_accel' [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resize_accel.v:12]
+	Parameter C_S_AXI_AXILITES_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_AXILITES_ADDR_WIDTH bound to: 6 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_AXILITES_WSTRB_WIDTH bound to: 4 - type: integer 
+	Parameter C_S_AXI_WSTRB_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'resize_accel_AXILiteS_s_axi' [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resize_accel_AXILiteS_s_axi.v:6]
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 6 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_AP_CTRL bound to: 6'b000000 
+	Parameter ADDR_GIE bound to: 6'b000100 
+	Parameter ADDR_IER bound to: 6'b001000 
+	Parameter ADDR_ISR bound to: 6'b001100 
+	Parameter ADDR_SRC_ROWS_DATA_0 bound to: 6'b010000 
+	Parameter ADDR_SRC_ROWS_CTRL bound to: 6'b010100 
+	Parameter ADDR_SRC_COLS_DATA_0 bound to: 6'b011000 
+	Parameter ADDR_SRC_COLS_CTRL bound to: 6'b011100 
+	Parameter ADDR_DST_ROWS_DATA_0 bound to: 6'b100000 
+	Parameter ADDR_DST_ROWS_CTRL bound to: 6'b100100 
+	Parameter ADDR_DST_COLS_DATA_0 bound to: 6'b101000 
+	Parameter ADDR_DST_COLS_CTRL bound to: 6'b101100 
+	Parameter WRIDLE bound to: 2'b00 
+	Parameter WRDATA bound to: 2'b01 
+	Parameter WRRESP bound to: 2'b10 
+	Parameter WRRESET bound to: 2'b11 
+	Parameter RDIDLE bound to: 2'b00 
+	Parameter RDDATA bound to: 2'b01 
+	Parameter RDRESET bound to: 2'b10 
+	Parameter ADDR_BITS bound to: 6 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resize_accel_AXILiteS_s_axi.v:212]
+INFO: [Synth 8-6155] done synthesizing module 'resize_accel_AXILiteS_s_axi' (1#1) [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resize_accel_AXILiteS_s_axi.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Block_Mat_exit1_proc' [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/Block_Mat_exit1_proc.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 1'b1 
+INFO: [Synth 8-6155] done synthesizing module 'Block_Mat_exit1_proc' (2#1) [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/Block_Mat_exit1_proc.v:10]
+INFO: [Synth 8-6157] synthesizing module 'axis2xfMat' [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/axis2xfMat.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 4'b0001 
+	Parameter ap_ST_fsm_state2 bound to: 4'b0010 
+	Parameter ap_ST_fsm_pp0_stage0 bound to: 4'b0100 
+	Parameter ap_ST_fsm_state5 bound to: 4'b1000 
+INFO: [Synth 8-6157] synthesizing module 'regslice_both' [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/regslice_core.v:8]
+	Parameter DataWidth bound to: 24 - type: integer 
+	Parameter W bound to: 25 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'ibuf' [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/regslice_core.v:372]
+	Parameter W bound to: 25 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ibuf' (3#1) [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/regslice_core.v:372]
+INFO: [Synth 8-6157] synthesizing module 'obuf' [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/regslice_core.v:402]
+	Parameter W bound to: 25 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'obuf' (4#1) [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/regslice_core.v:402]
+INFO: [Synth 8-6155] done synthesizing module 'regslice_both' (5#1) [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/regslice_core.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'axis2xfMat' (6#1) [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/axis2xfMat.v:10]
+INFO: [Synth 8-6157] synthesizing module 'resize' [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resize.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 3'b001 
+	Parameter ap_ST_fsm_state2 bound to: 3'b010 
+	Parameter ap_ST_fsm_state3 bound to: 3'b100 
+INFO: [Synth 8-6157] synthesizing module 'resizeNNBilinear' [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resizeNNBilinear.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 11'b00000000001 
+	Parameter ap_ST_fsm_state2 bound to: 11'b00000000010 
+	Parameter ap_ST_fsm_state3 bound to: 11'b00000000100 
+	Parameter ap_ST_fsm_pp0_stage0 bound to: 11'b00000001000 
+	Parameter ap_ST_fsm_state6 bound to: 11'b00000010000 
+	Parameter ap_ST_fsm_state7 bound to: 11'b00000100000 
+	Parameter ap_ST_fsm_state8 bound to: 11'b00001000000 
+	Parameter ap_ST_fsm_state9 bound to: 11'b00010000000 
+	Parameter ap_ST_fsm_state10 bound to: 11'b00100000000 
+	Parameter ap_ST_fsm_pp1_stage0 bound to: 11'b01000000000 
+	Parameter ap_ST_fsm_state22 bound to: 11'b10000000000 
+INFO: [Synth 8-6157] synthesizing module 'resizeNNBilinear_dEe' [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resizeNNBilinear_dEe.v:48]
+	Parameter DataWidth bound to: 24 - type: integer 
+	Parameter AddressRange bound to: 3840 - type: integer 
+	Parameter AddressWidth bound to: 12 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'resizeNNBilinear_dEe_ram' [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resizeNNBilinear_dEe.v:6]
+	Parameter DWIDTH bound to: 24 - type: integer 
+	Parameter AWIDTH bound to: 12 - type: integer 
+	Parameter MEM_SIZE bound to: 3840 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'resizeNNBilinear_dEe_ram' (7#1) [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resizeNNBilinear_dEe.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'resizeNNBilinear_dEe' (8#1) [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resizeNNBilinear_dEe.v:48]
+INFO: [Synth 8-6157] synthesizing module 'xfUDivResize' [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/xfUDivResize.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 68'b00000000000000000000000000000000000000000000000000000000000000000001 
+	Parameter ap_ST_fsm_state2 bound to: 68'b00000000000000000000000000000000000000000000000000000000000000000010 
+	Parameter ap_ST_fsm_state3 bound to: 68'b00000000000000000000000000000000000000000000000000000000000000000100 
+	Parameter ap_ST_fsm_state4 bound to: 68'b00000000000000000000000000000000000000000000000000000000000000001000 
+	Parameter ap_ST_fsm_state5 bound to: 68'b00000000000000000000000000000000000000000000000000000000000000010000 
+	Parameter ap_ST_fsm_state6 bound to: 68'b00000000000000000000000000000000000000000000000000000000000000100000 
+	Parameter ap_ST_fsm_state7 bound to: 68'b00000000000000000000000000000000000000000000000000000000000001000000 
+	Parameter ap_ST_fsm_state8 bound to: 68'b00000000000000000000000000000000000000000000000000000000000010000000 
+	Parameter ap_ST_fsm_state9 bound to: 68'b00000000000000000000000000000000000000000000000000000000000100000000 
+	Parameter ap_ST_fsm_state10 bound to: 68'b00000000000000000000000000000000000000000000000000000000001000000000 
+	Parameter ap_ST_fsm_state11 bound to: 68'b00000000000000000000000000000000000000000000000000000000010000000000 
+	Parameter ap_ST_fsm_state12 bound to: 68'b00000000000000000000000000000000000000000000000000000000100000000000 
+	Parameter ap_ST_fsm_state13 bound to: 68'b00000000000000000000000000000000000000000000000000000001000000000000 
+	Parameter ap_ST_fsm_state14 bound to: 68'b00000000000000000000000000000000000000000000000000000010000000000000 
+	Parameter ap_ST_fsm_state15 bound to: 68'b00000000000000000000000000000000000000000000000000000100000000000000 
+	Parameter ap_ST_fsm_state16 bound to: 68'b00000000000000000000000000000000000000000000000000001000000000000000 
+	Parameter ap_ST_fsm_state17 bound to: 68'b00000000000000000000000000000000000000000000000000010000000000000000 
+	Parameter ap_ST_fsm_state18 bound to: 68'b00000000000000000000000000000000000000000000000000100000000000000000 
+	Parameter ap_ST_fsm_state19 bound to: 68'b00000000000000000000000000000000000000000000000001000000000000000000 
+	Parameter ap_ST_fsm_state20 bound to: 68'b00000000000000000000000000000000000000000000000010000000000000000000 
+	Parameter ap_ST_fsm_state21 bound to: 68'b00000000000000000000000000000000000000000000000100000000000000000000 
+	Parameter ap_ST_fsm_state22 bound to: 68'b00000000000000000000000000000000000000000000001000000000000000000000 
+	Parameter ap_ST_fsm_state23 bound to: 68'b00000000000000000000000000000000000000000000010000000000000000000000 
+	Parameter ap_ST_fsm_state24 bound to: 68'b00000000000000000000000000000000000000000000100000000000000000000000 
+	Parameter ap_ST_fsm_state25 bound to: 68'b00000000000000000000000000000000000000000001000000000000000000000000 
+	Parameter ap_ST_fsm_state26 bound to: 68'b00000000000000000000000000000000000000000010000000000000000000000000 
+	Parameter ap_ST_fsm_state27 bound to: 68'b00000000000000000000000000000000000000000100000000000000000000000000 
+	Parameter ap_ST_fsm_state28 bound to: 68'b00000000000000000000000000000000000000001000000000000000000000000000 
+	Parameter ap_ST_fsm_state29 bound to: 68'b00000000000000000000000000000000000000010000000000000000000000000000 
+	Parameter ap_ST_fsm_state30 bound to: 68'b00000000000000000000000000000000000000100000000000000000000000000000 
+	Parameter ap_ST_fsm_state31 bound to: 68'b00000000000000000000000000000000000001000000000000000000000000000000 
+	Parameter ap_ST_fsm_state32 bound to: 68'b00000000000000000000000000000000000010000000000000000000000000000000 
+	Parameter ap_ST_fsm_state33 bound to: 68'b00000000000000000000000000000000000100000000000000000000000000000000 
+	Parameter ap_ST_fsm_state34 bound to: 68'b00000000000000000000000000000000001000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state35 bound to: 68'b00000000000000000000000000000000010000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state36 bound to: 68'b00000000000000000000000000000000100000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state37 bound to: 68'b00000000000000000000000000000001000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state38 bound to: 68'b00000000000000000000000000000010000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state39 bound to: 68'b00000000000000000000000000000100000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state40 bound to: 68'b00000000000000000000000000001000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state41 bound to: 68'b00000000000000000000000000010000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state42 bound to: 68'b00000000000000000000000000100000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state43 bound to: 68'b00000000000000000000000001000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state44 bound to: 68'b00000000000000000000000010000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state45 bound to: 68'b00000000000000000000000100000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state46 bound to: 68'b00000000000000000000001000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state47 bound to: 68'b00000000000000000000010000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state48 bound to: 68'b00000000000000000000100000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state49 bound to: 68'b00000000000000000001000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state50 bound to: 68'b00000000000000000010000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state51 bound to: 68'b00000000000000000100000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state52 bound to: 68'b00000000000000001000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state53 bound to: 68'b00000000000000010000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state54 bound to: 68'b00000000000000100000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state55 bound to: 68'b00000000000001000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state56 bound to: 68'b00000000000010000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state57 bound to: 68'b00000000000100000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state58 bound to: 68'b00000000001000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state59 bound to: 68'b00000000010000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state60 bound to: 68'b00000000100000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state61 bound to: 68'b00000001000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state62 bound to: 68'b00000010000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state63 bound to: 68'b00000100000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state64 bound to: 68'b00001000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state65 bound to: 68'b00010000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state66 bound to: 68'b00100000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state67 bound to: 68'b01000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ap_ST_fsm_state68 bound to: 68'b10000000000000000000000000000000000000000000000000000000000000000000 
+INFO: [Synth 8-6157] synthesizing module 'resize_accel_udivbkb' [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resize_accel_udivbkb.v:154]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 68 - type: integer 
+	Parameter din0_WIDTH bound to: 64 - type: integer 
+	Parameter din1_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'resize_accel_udivbkb_div' [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resize_accel_udivbkb.v:82]
+	Parameter in0_WIDTH bound to: 64 - type: integer 
+	Parameter in1_WIDTH bound to: 16 - type: integer 
+	Parameter out_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'resize_accel_udivbkb_div_u' [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resize_accel_udivbkb.v:7]
+	Parameter in0_WIDTH bound to: 64 - type: integer 
+	Parameter in1_WIDTH bound to: 16 - type: integer 
+	Parameter out_WIDTH bound to: 64 - type: integer 
+	Parameter cal_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'resize_accel_udivbkb_div_u' (9#1) [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resize_accel_udivbkb.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'resize_accel_udivbkb_div' (10#1) [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resize_accel_udivbkb.v:82]
+INFO: [Synth 8-6155] done synthesizing module 'resize_accel_udivbkb' (11#1) [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resize_accel_udivbkb.v:154]
+INFO: [Synth 8-6155] done synthesizing module 'xfUDivResize' (12#1) [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/xfUDivResize.v:10]
+INFO: [Synth 8-6157] synthesizing module 'scaleCompute' [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/scaleCompute.v:10]
+INFO: [Synth 8-6157] synthesizing module 'resize_accel_mul_cud' [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resize_accel_mul_cud.v:25]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 42 - type: integer 
+	Parameter din1_WIDTH bound to: 48 - type: integer 
+	Parameter dout_WIDTH bound to: 74 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'resize_accel_mul_cud_MulnS_0' [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resize_accel_mul_cud.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'resize_accel_mul_cud_MulnS_0' (13#1) [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resize_accel_mul_cud.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'resize_accel_mul_cud' (14#1) [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resize_accel_mul_cud.v:25]
+INFO: [Synth 8-6155] done synthesizing module 'scaleCompute' (15#1) [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/scaleCompute.v:10]
+INFO: [Synth 8-6157] synthesizing module 'resize_accel_mul_g8j' [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resize_accel_mul_g8j.v:13]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 12 - type: integer 
+	Parameter din1_WIDTH bound to: 12 - type: integer 
+	Parameter dout_WIDTH bound to: 22 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'resize_accel_mul_g8j_DSP48_0' [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resize_accel_mul_g8j.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'resize_accel_mul_g8j_DSP48_0' (16#1) [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resize_accel_mul_g8j.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'resize_accel_mul_g8j' (17#1) [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resize_accel_mul_g8j.v:13]
+INFO: [Synth 8-6157] synthesizing module 'resize_accel_mul_hbi' [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resize_accel_mul_hbi.v:13]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 12 - type: integer 
+	Parameter din1_WIDTH bound to: 9 - type: integer 
+	Parameter dout_WIDTH bound to: 21 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'resize_accel_mul_hbi_DSP48_1' [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resize_accel_mul_hbi.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'resize_accel_mul_hbi_DSP48_1' (18#1) [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resize_accel_mul_hbi.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'resize_accel_mul_hbi' (19#1) [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resize_accel_mul_hbi.v:13]
+INFO: [Synth 8-6157] synthesizing module 'resize_accel_mac_ibs' [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resize_accel_mac_ibs.v:30]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 12 - type: integer 
+	Parameter din1_WIDTH bound to: 10 - type: integer 
+	Parameter din2_WIDTH bound to: 22 - type: integer 
+	Parameter dout_WIDTH bound to: 23 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'resize_accel_mac_ibs_DSP48_2' [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resize_accel_mac_ibs.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'resize_accel_mac_ibs_DSP48_2' (20#1) [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resize_accel_mac_ibs.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'resize_accel_mac_ibs' (21#1) [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resize_accel_mac_ibs.v:30]
+INFO: [Synth 8-6157] synthesizing module 'resize_accel_mac_jbC' [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resize_accel_mac_jbC.v:30]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 12 - type: integer 
+	Parameter din1_WIDTH bound to: 9 - type: integer 
+	Parameter din2_WIDTH bound to: 21 - type: integer 
+	Parameter dout_WIDTH bound to: 22 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'resize_accel_mac_jbC_DSP48_3' [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resize_accel_mac_jbC.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'resize_accel_mac_jbC_DSP48_3' (22#1) [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resize_accel_mac_jbC.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'resize_accel_mac_jbC' (23#1) [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resize_accel_mac_jbC.v:30]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resizeNNBilinear.v:2111]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resizeNNBilinear.v:2189]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resizeNNBilinear.v:2209]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resizeNNBilinear.v:2211]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resizeNNBilinear.v:2227]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resizeNNBilinear.v:2253]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resizeNNBilinear.v:2255]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resizeNNBilinear.v:2257]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resizeNNBilinear.v:2271]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resizeNNBilinear.v:2273]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resizeNNBilinear.v:2275]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resizeNNBilinear.v:2277]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resizeNNBilinear.v:2279]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resizeNNBilinear.v:2281]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resizeNNBilinear.v:2283]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resizeNNBilinear.v:2285]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resizeNNBilinear.v:2287]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resizeNNBilinear.v:2289]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resizeNNBilinear.v:2291]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resizeNNBilinear.v:2293]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resizeNNBilinear.v:2295]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resizeNNBilinear.v:2297]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resizeNNBilinear.v:2299]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resizeNNBilinear.v:2301]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resizeNNBilinear.v:2303]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resizeNNBilinear.v:2305]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resizeNNBilinear.v:2307]
+WARNING: [Synth 8-589] replacing case/wildcard equality operator === with logical equality operator == [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resizeNNBilinear.v:2379]
+INFO: [Synth 8-6155] done synthesizing module 'resizeNNBilinear' (24#1) [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resizeNNBilinear.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'resize' (25#1) [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resize.v:10]
+INFO: [Synth 8-6157] synthesizing module 'xfMat2axis' [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/xfMat2axis.v:10]
+	Parameter ap_ST_fsm_state1 bound to: 4'b0001 
+	Parameter ap_ST_fsm_state2 bound to: 4'b0010 
+	Parameter ap_ST_fsm_pp0_stage0 bound to: 4'b0100 
+	Parameter ap_ST_fsm_state6 bound to: 4'b1000 
+INFO: [Synth 8-6157] synthesizing module 'regslice_both__parameterized0' [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/regslice_core.v:8]
+	Parameter DataWidth bound to: 1 - type: integer 
+	Parameter W bound to: 2 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'ibuf__parameterized0' [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/regslice_core.v:372]
+	Parameter W bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ibuf__parameterized0' (25#1) [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/regslice_core.v:372]
+INFO: [Synth 8-6157] synthesizing module 'obuf__parameterized0' [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/regslice_core.v:402]
+	Parameter W bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'obuf__parameterized0' (25#1) [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/regslice_core.v:402]
+INFO: [Synth 8-6155] done synthesizing module 'regslice_both__parameterized0' (25#1) [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/regslice_core.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'xfMat2axis' (26#1) [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/xfMat2axis.v:10]
+INFO: [Synth 8-6157] synthesizing module 'fifo_w32_d4_A' [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/fifo_w32_d4_A.v:42]
+	Parameter MEM_STYLE bound to: shiftreg - type: string 
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3'b100 
+INFO: [Synth 8-6157] synthesizing module 'fifo_w32_d4_A_shiftReg' [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/fifo_w32_d4_A.v:8]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3'b100 
+INFO: [Synth 8-6155] done synthesizing module 'fifo_w32_d4_A_shiftReg' (27#1) [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/fifo_w32_d4_A.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_w32_d4_A' (28#1) [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/fifo_w32_d4_A.v:42]
+INFO: [Synth 8-6157] synthesizing module 'fifo_w32_d3_A' [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/fifo_w32_d3_A.v:42]
+	Parameter MEM_STYLE bound to: shiftreg - type: string 
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3'b011 
+INFO: [Synth 8-6157] synthesizing module 'fifo_w32_d3_A_shiftReg' [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/fifo_w32_d3_A.v:8]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3'b011 
+INFO: [Synth 8-6155] done synthesizing module 'fifo_w32_d3_A_shiftReg' (29#1) [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/fifo_w32_d3_A.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_w32_d3_A' (30#1) [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/fifo_w32_d3_A.v:42]
+INFO: [Synth 8-6157] synthesizing module 'fifo_w12_d2_A' [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/fifo_w12_d2_A.v:42]
+	Parameter MEM_STYLE bound to: shiftreg - type: string 
+	Parameter DATA_WIDTH bound to: 12 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2'b10 
+INFO: [Synth 8-6157] synthesizing module 'fifo_w12_d2_A_shiftReg' [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/fifo_w12_d2_A.v:8]
+	Parameter DATA_WIDTH bound to: 12 - type: integer 
+	Parameter ADDR_WIDTH bound to: 1 - type: integer 
+	Parameter DEPTH bound to: 2'b10 
+INFO: [Synth 8-6155] done synthesizing module 'fifo_w12_d2_A_shiftReg' (31#1) [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/fifo_w12_d2_A.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_w12_d2_A' (32#1) [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/fifo_w12_d2_A.v:42]
+INFO: [Synth 8-6157] synthesizing module 'fifo_w24_d150_A' [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/fifo_w24_d150_A.v:8]
+	Parameter MEM_STYLE bound to: block - type: string 
+	Parameter DATA_WIDTH bound to: 24 - type: integer 
+	Parameter ADDR_WIDTH bound to: 8 - type: integer 
+	Parameter DEPTH bound to: 150 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'fifo_w24_d150_A' (33#1) [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/fifo_w24_d150_A.v:8]
+INFO: [Synth 8-6157] synthesizing module 'start_for_resize_U0' [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/start_for_resize_U0.v:42]
+	Parameter MEM_STYLE bound to: shiftreg - type: string 
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3'b011 
+INFO: [Synth 8-6157] synthesizing module 'start_for_resize_U0_shiftReg' [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/start_for_resize_U0.v:8]
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3'b011 
+INFO: [Synth 8-6155] done synthesizing module 'start_for_resize_U0_shiftReg' (34#1) [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/start_for_resize_U0.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'start_for_resize_U0' (35#1) [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/start_for_resize_U0.v:42]
+INFO: [Synth 8-6157] synthesizing module 'start_for_xfMat2akbM' [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/start_for_xfMat2akbM.v:42]
+	Parameter MEM_STYLE bound to: shiftreg - type: string 
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3'b100 
+INFO: [Synth 8-6157] synthesizing module 'start_for_xfMat2akbM_shiftReg' [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/start_for_xfMat2akbM.v:8]
+	Parameter DATA_WIDTH bound to: 1 - type: integer 
+	Parameter ADDR_WIDTH bound to: 2 - type: integer 
+	Parameter DEPTH bound to: 3'b100 
+INFO: [Synth 8-6155] done synthesizing module 'start_for_xfMat2akbM_shiftReg' (36#1) [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/start_for_xfMat2akbM.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'start_for_xfMat2akbM' (37#1) [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/start_for_xfMat2akbM.v:42]
+INFO: [Synth 8-6155] done synthesizing module 'resize_accel' (38#1) [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ipshared/0f38/hdl/verilog/resize_accel.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'resizer_resize_accel_0_0' (39#1) [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ip/resizer_resize_accel_0_0/synth/resizer_resize_accel_0_0.v:58]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1153.066 ; gain = 80.367
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1153.066 ; gain = 80.367
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1153.066 ; gain = 80.367
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.126 . Memory (MB): peak = 1153.066 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ip/resizer_resize_accel_0_0/constraints/resize_accel_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.srcs/sources_1/bd/resizer/ip/resizer_resize_accel_0_0/constraints/resize_accel_ooc.xdc] for cell 'inst'
+Parsing XDC File [C:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.runs/resizer_resize_accel_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.runs/resizer_resize_accel_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1284.480 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.109 . Memory (MB): peak = 1297.633 ; gain = 13.152
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1297.633 ; gain = 224.934
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1297.633 ; gain = 224.934
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst. (constraint file  C:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.runs/resizer_resize_accel_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1297.633 ; gain = 224.934
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'wstate_reg' in module 'resize_accel_AXILiteS_s_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'rstate_reg' in module 'resize_accel_AXILiteS_s_axi'
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                             0001 |                               11
+*
+                  WRIDLE |                             0010 |                               00
+                  WRDATA |                             0100 |                               01
+                  WRRESP |                             1000 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wstate_reg' using encoding 'one-hot' in module 'resize_accel_AXILiteS_s_axi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              001 |                               10
+*
+                  RDIDLE |                              010 |                               00
+                  RDDATA |                              100 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rstate_reg' using encoding 'one-hot' in module 'resize_accel_AXILiteS_s_axi'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1297.633 ; gain = 224.934
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   74 Bit       Adders := 1     
+	   3 Input   65 Bit       Adders := 1     
+	   2 Input   43 Bit       Adders := 1     
+	   2 Input   39 Bit       Adders := 1     
+	   2 Input   32 Bit       Adders := 7     
+	   2 Input   31 Bit       Adders := 1     
+	   2 Input   24 Bit       Adders := 3     
+	   3 Input   24 Bit       Adders := 2     
+	   2 Input   20 Bit       Adders := 2     
+	   2 Input   17 Bit       Adders := 3     
+	   2 Input   12 Bit       Adders := 4     
+	   2 Input   11 Bit       Adders := 2     
+	   5 Input   10 Bit       Adders := 3     
+	   3 Input    9 Bit       Adders := 6     
+	   2 Input    8 Bit       Adders := 9     
+	   2 Input    3 Bit       Adders := 8     
+	   2 Input    2 Bit       Adders := 3     
++---XORs : 
+	   2 Input      1 Bit         XORs := 13    
++---Registers : 
+	               74 Bit    Registers := 2     
+	               68 Bit    Registers := 1     
+	               65 Bit    Registers := 1     
+	               64 Bit    Registers := 7     
+	               48 Bit    Registers := 3     
+	               42 Bit    Registers := 2     
+	               39 Bit    Registers := 2     
+	               38 Bit    Registers := 1     
+	               32 Bit    Registers := 27    
+	               31 Bit    Registers := 1     
+	               25 Bit    Registers := 4     
+	               24 Bit    Registers := 28    
+	               23 Bit    Registers := 3     
+	               22 Bit    Registers := 2     
+	               21 Bit    Registers := 3     
+	               20 Bit    Registers := 3     
+	               17 Bit    Registers := 3     
+	               16 Bit    Registers := 4     
+	               12 Bit    Registers := 17    
+	               11 Bit    Registers := 6     
+	               10 Bit    Registers := 3     
+	                9 Bit    Registers := 3     
+	                8 Bit    Registers := 16    
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
+	                3 Bit    Registers := 9     
+	                2 Bit    Registers := 17    
+	                1 Bit    Registers := 133   
++---Multipliers : 
+	              42x49  Multipliers := 1     
++---RAMs : 
+	              90K Bit	(3840 X 24 bit)          RAMs := 3     
+	               3K Bit	(150 X 24 bit)          RAMs := 2     
++---Muxes : 
+	  69 Input   68 Bit        Muxes := 1     
+	   2 Input   64 Bit        Muxes := 3     
+	   2 Input   63 Bit        Muxes := 1     
+	   2 Input   48 Bit        Muxes := 1     
+	   2 Input   42 Bit        Muxes := 3     
+	   9 Input   32 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 4     
+	   2 Input   25 Bit        Muxes := 2     
+	   2 Input   24 Bit        Muxes := 18    
+	   2 Input   16 Bit        Muxes := 1     
+	   2 Input   12 Bit        Muxes := 13    
+	   3 Input   11 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 8     
+	   2 Input    7 Bit        Muxes := 1     
+	   3 Input    5 Bit        Muxes := 1     
+	   4 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 4     
+	   3 Input    4 Bit        Muxes := 2     
+	   3 Input    3 Bit        Muxes := 2     
+	   2 Input    3 Bit        Muxes := 4     
+	   5 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 20    
+	   4 Input    2 Bit        Muxes := 3     
+	   2 Input    1 Bit        Muxes := 97    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+DSP Report: Generating DSP resize_accel_mul_cud_U20/resize_accel_mul_cud_MulnS_0_U/tmp_product, operation Mode is: A*B2.
+DSP Report: register resize_accel_mul_cud_U20/resize_accel_mul_cud_MulnS_0_U/tmp_product is absorbed into DSP resize_accel_mul_cud_U20/resize_accel_mul_cud_MulnS_0_U/tmp_product.
+DSP Report: operator resize_accel_mul_cud_U20/resize_accel_mul_cud_MulnS_0_U/tmp_product is absorbed into DSP resize_accel_mul_cud_U20/resize_accel_mul_cud_MulnS_0_U/tmp_product.
+DSP Report: operator resize_accel_mul_cud_U20/resize_accel_mul_cud_MulnS_0_U/tmp_product is absorbed into DSP resize_accel_mul_cud_U20/resize_accel_mul_cud_MulnS_0_U/tmp_product.
+DSP Report: Generating DSP resize_accel_mul_cud_U20/resize_accel_mul_cud_MulnS_0_U/p_reg, operation Mode is: (PCIN>>17)+A*B2.
+DSP Report: register resize_accel_mul_cud_U20/resize_accel_mul_cud_MulnS_0_U/p_reg is absorbed into DSP resize_accel_mul_cud_U20/resize_accel_mul_cud_MulnS_0_U/p_reg.
+DSP Report: register resize_accel_mul_cud_U20/resize_accel_mul_cud_MulnS_0_U/p_reg is absorbed into DSP resize_accel_mul_cud_U20/resize_accel_mul_cud_MulnS_0_U/p_reg.
+DSP Report: operator resize_accel_mul_cud_U20/resize_accel_mul_cud_MulnS_0_U/tmp_product is absorbed into DSP resize_accel_mul_cud_U20/resize_accel_mul_cud_MulnS_0_U/p_reg.
+DSP Report: operator resize_accel_mul_cud_U20/resize_accel_mul_cud_MulnS_0_U/tmp_product is absorbed into DSP resize_accel_mul_cud_U20/resize_accel_mul_cud_MulnS_0_U/p_reg.
+DSP Report: Generating DSP resize_accel_mul_cud_U20/resize_accel_mul_cud_MulnS_0_U/tmp_product, operation Mode is: A*B2.
+DSP Report: register resize_accel_mul_cud_U20/resize_accel_mul_cud_MulnS_0_U/tmp_product is absorbed into DSP resize_accel_mul_cud_U20/resize_accel_mul_cud_MulnS_0_U/tmp_product.
+DSP Report: operator resize_accel_mul_cud_U20/resize_accel_mul_cud_MulnS_0_U/tmp_product is absorbed into DSP resize_accel_mul_cud_U20/resize_accel_mul_cud_MulnS_0_U/tmp_product.
+DSP Report: operator resize_accel_mul_cud_U20/resize_accel_mul_cud_MulnS_0_U/tmp_product is absorbed into DSP resize_accel_mul_cud_U20/resize_accel_mul_cud_MulnS_0_U/tmp_product.
+DSP Report: Generating DSP resize_accel_mul_cud_U20/resize_accel_mul_cud_MulnS_0_U/p_reg, operation Mode is: (PCIN>>17)+A*B2.
+DSP Report: register resize_accel_mul_cud_U20/resize_accel_mul_cud_MulnS_0_U/p_reg is absorbed into DSP resize_accel_mul_cud_U20/resize_accel_mul_cud_MulnS_0_U/p_reg.
+DSP Report: register resize_accel_mul_cud_U20/resize_accel_mul_cud_MulnS_0_U/p_reg is absorbed into DSP resize_accel_mul_cud_U20/resize_accel_mul_cud_MulnS_0_U/p_reg.
+DSP Report: operator resize_accel_mul_cud_U20/resize_accel_mul_cud_MulnS_0_U/tmp_product is absorbed into DSP resize_accel_mul_cud_U20/resize_accel_mul_cud_MulnS_0_U/p_reg.
+DSP Report: operator resize_accel_mul_cud_U20/resize_accel_mul_cud_MulnS_0_U/tmp_product is absorbed into DSP resize_accel_mul_cud_U20/resize_accel_mul_cud_MulnS_0_U/p_reg.
+DSP Report: Generating DSP resize_accel_mul_cud_U20/resize_accel_mul_cud_MulnS_0_U/tmp_product, operation Mode is: A*B2.
+DSP Report: register resize_accel_mul_cud_U20/resize_accel_mul_cud_MulnS_0_U/tmp_product is absorbed into DSP resize_accel_mul_cud_U20/resize_accel_mul_cud_MulnS_0_U/tmp_product.
+DSP Report: operator resize_accel_mul_cud_U20/resize_accel_mul_cud_MulnS_0_U/tmp_product is absorbed into DSP resize_accel_mul_cud_U20/resize_accel_mul_cud_MulnS_0_U/tmp_product.
+DSP Report: operator resize_accel_mul_cud_U20/resize_accel_mul_cud_MulnS_0_U/tmp_product is absorbed into DSP resize_accel_mul_cud_U20/resize_accel_mul_cud_MulnS_0_U/tmp_product.
+DSP Report: Generating DSP resize_accel_mul_cud_U20/resize_accel_mul_cud_MulnS_0_U/p_reg, operation Mode is: (PCIN>>17)+A*B2.
+DSP Report: register resize_accel_mul_cud_U20/resize_accel_mul_cud_MulnS_0_U/p_reg is absorbed into DSP resize_accel_mul_cud_U20/resize_accel_mul_cud_MulnS_0_U/p_reg.
+DSP Report: register resize_accel_mul_cud_U20/resize_accel_mul_cud_MulnS_0_U/p_reg is absorbed into DSP resize_accel_mul_cud_U20/resize_accel_mul_cud_MulnS_0_U/p_reg.
+DSP Report: operator resize_accel_mul_cud_U20/resize_accel_mul_cud_MulnS_0_U/tmp_product is absorbed into DSP resize_accel_mul_cud_U20/resize_accel_mul_cud_MulnS_0_U/p_reg.
+DSP Report: operator resize_accel_mul_cud_U20/resize_accel_mul_cud_MulnS_0_U/tmp_product is absorbed into DSP resize_accel_mul_cud_U20/resize_accel_mul_cud_MulnS_0_U/p_reg.
+DSP Report: Generating DSP mul_ln1118_2_reg_2467_reg, operation Mode is: (A*B)'.
+DSP Report: register mul_ln1118_2_reg_2467_reg is absorbed into DSP mul_ln1118_2_reg_2467_reg.
+DSP Report: operator resize_accel_mul_hbi_U25/resize_accel_mul_hbi_DSP48_1_U/p is absorbed into DSP mul_ln1118_2_reg_2467_reg.
+DSP Report: Generating DSP resize_accel_mac_jbC_U29/resize_accel_mac_jbC_DSP48_3_U/p, operation Mode is: C+A''*B2.
+DSP Report: register resize_accel_mac_jbC_U29/resize_accel_mac_jbC_DSP48_3_U/p is absorbed into DSP resize_accel_mac_jbC_U29/resize_accel_mac_jbC_DSP48_3_U/p.
+DSP Report: register resize_accel_mac_jbC_U29/resize_accel_mac_jbC_DSP48_3_U/p is absorbed into DSP resize_accel_mac_jbC_U29/resize_accel_mac_jbC_DSP48_3_U/p.
+DSP Report: register sub_ln1354_2_reg_2462_reg is absorbed into DSP resize_accel_mac_jbC_U29/resize_accel_mac_jbC_DSP48_3_U/p.
+DSP Report: operator resize_accel_mac_jbC_U29/resize_accel_mac_jbC_DSP48_3_U/p is absorbed into DSP resize_accel_mac_jbC_U29/resize_accel_mac_jbC_DSP48_3_U/p.
+DSP Report: operator resize_accel_mac_jbC_U29/resize_accel_mac_jbC_DSP48_3_U/m is absorbed into DSP resize_accel_mac_jbC_U29/resize_accel_mac_jbC_DSP48_3_U/p.
+DSP Report: Generating DSP resize_accel_mul_g8j_U24/resize_accel_mul_g8j_DSP48_0_U/p, operation Mode is: A*B''.
+DSP Report: register trunc_ln708_1_reg_2398_pp1_iter5_reg_reg is absorbed into DSP resize_accel_mul_g8j_U24/resize_accel_mul_g8j_DSP48_0_U/p.
+DSP Report: register trunc_ln708_1_reg_2398_pp1_iter6_reg_reg is absorbed into DSP resize_accel_mul_g8j_U24/resize_accel_mul_g8j_DSP48_0_U/p.
+DSP Report: operator resize_accel_mul_g8j_U24/resize_accel_mul_g8j_DSP48_0_U/p is absorbed into DSP resize_accel_mul_g8j_U24/resize_accel_mul_g8j_DSP48_0_U/p.
+DSP Report: Generating DSP add_ln1192_1_reg_2502_reg, operation Mode is: (C+A2*B2)'.
+DSP Report: register sub_ln1354_reg_2457_reg is absorbed into DSP add_ln1192_1_reg_2502_reg.
+DSP Report: register add_ln1192_1_reg_2502_reg is absorbed into DSP add_ln1192_1_reg_2502_reg.
+DSP Report: register add_ln1192_1_reg_2502_reg is absorbed into DSP add_ln1192_1_reg_2502_reg.
+DSP Report: operator resize_accel_mac_ibs_U28/resize_accel_mac_ibs_DSP48_2_U/p is absorbed into DSP add_ln1192_1_reg_2502_reg.
+DSP Report: operator resize_accel_mac_ibs_U28/resize_accel_mac_ibs_DSP48_2_U/m is absorbed into DSP add_ln1192_1_reg_2502_reg.
+DSP Report: Generating DSP mul_ln1118_5_reg_2482_reg, operation Mode is: (A*B)'.
+DSP Report: register mul_ln1118_5_reg_2482_reg is absorbed into DSP mul_ln1118_5_reg_2482_reg.
+DSP Report: operator resize_accel_mul_hbi_U26/resize_accel_mul_hbi_DSP48_1_U/p is absorbed into DSP mul_ln1118_5_reg_2482_reg.
+DSP Report: Generating DSP resize_accel_mac_jbC_U31/resize_accel_mac_jbC_DSP48_3_U/p, operation Mode is: C+A''*B2.
+DSP Report: register resize_accel_mac_jbC_U31/resize_accel_mac_jbC_DSP48_3_U/p is absorbed into DSP resize_accel_mac_jbC_U31/resize_accel_mac_jbC_DSP48_3_U/p.
+DSP Report: register resize_accel_mac_jbC_U31/resize_accel_mac_jbC_DSP48_3_U/p is absorbed into DSP resize_accel_mac_jbC_U31/resize_accel_mac_jbC_DSP48_3_U/p.
+DSP Report: register sub_ln1354_5_reg_2477_reg is absorbed into DSP resize_accel_mac_jbC_U31/resize_accel_mac_jbC_DSP48_3_U/p.
+DSP Report: operator resize_accel_mac_jbC_U31/resize_accel_mac_jbC_DSP48_3_U/p is absorbed into DSP resize_accel_mac_jbC_U31/resize_accel_mac_jbC_DSP48_3_U/p.
+DSP Report: operator resize_accel_mac_jbC_U31/resize_accel_mac_jbC_DSP48_3_U/m is absorbed into DSP resize_accel_mac_jbC_U31/resize_accel_mac_jbC_DSP48_3_U/p.
+DSP Report: Generating DSP add_ln1192_4_reg_2507_reg, operation Mode is: (C+A2*B2)'.
+DSP Report: register sub_ln1354_3_reg_2472_reg is absorbed into DSP add_ln1192_4_reg_2507_reg.
+DSP Report: register add_ln1192_4_reg_2507_reg is absorbed into DSP add_ln1192_4_reg_2507_reg.
+DSP Report: register add_ln1192_4_reg_2507_reg is absorbed into DSP add_ln1192_4_reg_2507_reg.
+DSP Report: operator resize_accel_mac_ibs_U30/resize_accel_mac_ibs_DSP48_2_U/p is absorbed into DSP add_ln1192_4_reg_2507_reg.
+DSP Report: operator resize_accel_mac_ibs_U30/resize_accel_mac_ibs_DSP48_2_U/m is absorbed into DSP add_ln1192_4_reg_2507_reg.
+DSP Report: Generating DSP mul_ln1118_8_reg_2497_reg, operation Mode is: (A*B)'.
+DSP Report: register mul_ln1118_8_reg_2497_reg is absorbed into DSP mul_ln1118_8_reg_2497_reg.
+DSP Report: operator resize_accel_mul_hbi_U27/resize_accel_mul_hbi_DSP48_1_U/p is absorbed into DSP mul_ln1118_8_reg_2497_reg.
+DSP Report: Generating DSP resize_accel_mac_jbC_U33/resize_accel_mac_jbC_DSP48_3_U/p, operation Mode is: C+A''*B2.
+DSP Report: register resize_accel_mac_jbC_U33/resize_accel_mac_jbC_DSP48_3_U/p is absorbed into DSP resize_accel_mac_jbC_U33/resize_accel_mac_jbC_DSP48_3_U/p.
+DSP Report: register resize_accel_mac_jbC_U33/resize_accel_mac_jbC_DSP48_3_U/p is absorbed into DSP resize_accel_mac_jbC_U33/resize_accel_mac_jbC_DSP48_3_U/p.
+DSP Report: register sub_ln1354_8_reg_2492_reg is absorbed into DSP resize_accel_mac_jbC_U33/resize_accel_mac_jbC_DSP48_3_U/p.
+DSP Report: operator resize_accel_mac_jbC_U33/resize_accel_mac_jbC_DSP48_3_U/p is absorbed into DSP resize_accel_mac_jbC_U33/resize_accel_mac_jbC_DSP48_3_U/p.
+DSP Report: operator resize_accel_mac_jbC_U33/resize_accel_mac_jbC_DSP48_3_U/m is absorbed into DSP resize_accel_mac_jbC_U33/resize_accel_mac_jbC_DSP48_3_U/p.
+DSP Report: Generating DSP add_ln1192_7_reg_2512_reg, operation Mode is: (C+A2*B2)'.
+DSP Report: register sub_ln1354_6_reg_2487_reg is absorbed into DSP add_ln1192_7_reg_2512_reg.
+DSP Report: register add_ln1192_7_reg_2512_reg is absorbed into DSP add_ln1192_7_reg_2512_reg.
+DSP Report: register add_ln1192_7_reg_2512_reg is absorbed into DSP add_ln1192_7_reg_2512_reg.
+DSP Report: operator resize_accel_mac_ibs_U32/resize_accel_mac_ibs_DSP48_2_U/p is absorbed into DSP add_ln1192_7_reg_2512_reg.
+DSP Report: operator resize_accel_mac_ibs_U32/resize_accel_mac_ibs_DSP48_2_U/m is absorbed into DSP add_ln1192_7_reg_2512_reg.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1297.633 ; gain = 224.934
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping	Report (see note below)
++--------------------------------------------+--------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                                 | RTL Object                                             | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++--------------------------------------------+--------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|inst/\resize_U0/grp_resizeNNBilinear_fu_54  | line_buffer_0_0_V_U/resizeNNBilinear_dEe_ram_U/ram_reg | 3 K x 24(READ_FIRST)   | W | R | 3 K x 24(WRITE_FIRST)  |   | R | Port A and B     | 0      | 3      | 
+|inst/\resize_U0/grp_resizeNNBilinear_fu_54  | line_buffer_1_0_V_U/resizeNNBilinear_dEe_ram_U/ram_reg | 3 K x 24(READ_FIRST)   | W | R | 3 K x 24(WRITE_FIRST)  |   | R | Port A and B     | 0      | 3      | 
+|inst/\resize_U0/grp_resizeNNBilinear_fu_54  | line_buffer_2_0_V_U/resizeNNBilinear_dEe_ram_U/ram_reg | 3 K x 24(READ_FIRST)   | W | R | 3 K x 24(WRITE_FIRST)  |   | R | Port A and B     | 0      | 3      | 
+|inst                                        | src_mat_data_V_U/mem_reg                               | 150 x 24(READ_FIRST)   | W |   | 150 x 24(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|inst                                        | dst_mat_data_V_U/mem_reg                               | 150 x 24(READ_FIRST)   | W |   | 150 x 24(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
++--------------------------------------------+--------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+DSP: Preliminary Mapping	Report (see note below)
++-----------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name      | DSP Mapping     | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-----------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|scaleCompute     | A*B2            | 25     | 18     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|scaleCompute     | (PCIN>>17)+A*B2 | 25     | 15     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|scaleCompute     | A*B2            | 25     | 18     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|scaleCompute     | (PCIN>>17)+A*B2 | 18     | 15     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|scaleCompute     | A*B2            | 18     | 18     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|scaleCompute     | (PCIN>>17)+A*B2 | 18     | 18     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 1    | 
+|resizeNNBilinear | (A*B)'          | 13     | 9      | -      | -      | 22     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|resizeNNBilinear | C+A''*B2        | 13     | 9      | 21     | -      | 22     | 2    | 1    | 0    | -    | -     | 0    | 0    | 
+|resizeNNBilinear | A*B''           | 12     | 12     | -      | -      | 24     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|resizeNNBilinear | (C+A2*B2)'      | 13     | 10     | 22     | -      | 23     | 1    | 1    | 0    | -    | -     | 0    | 1    | 
+|resizeNNBilinear | (A*B)'          | 13     | 9      | -      | -      | 22     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|resizeNNBilinear | C+A''*B2        | 13     | 9      | 21     | -      | 22     | 2    | 1    | 0    | -    | -     | 0    | 0    | 
+|resizeNNBilinear | (C+A2*B2)'      | 13     | 10     | 22     | -      | 23     | 1    | 1    | 0    | -    | -     | 0    | 1    | 
+|resizeNNBilinear | (A*B)'          | 13     | 9      | -      | -      | 22     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|resizeNNBilinear | C+A''*B2        | 13     | 9      | 21     | -      | 22     | 2    | 1    | 0    | -    | -     | 0    | 0    | 
+|resizeNNBilinear | (C+A2*B2)'      | 13     | 10     | 22     | -      | 23     | 1    | 1    | 0    | -    | -     | 0    | 1    | 
++-----------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 1310.266 ; gain = 237.566
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 1324.031 ; gain = 251.332
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping	Report
++--------------------------------------------+--------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                                 | RTL Object                                             | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++--------------------------------------------+--------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|inst/\resize_U0/grp_resizeNNBilinear_fu_54  | line_buffer_0_0_V_U/resizeNNBilinear_dEe_ram_U/ram_reg | 3 K x 24(READ_FIRST)   | W | R | 3 K x 24(WRITE_FIRST)  |   | R | Port A and B     | 0      | 3      | 
+|inst/\resize_U0/grp_resizeNNBilinear_fu_54  | line_buffer_1_0_V_U/resizeNNBilinear_dEe_ram_U/ram_reg | 3 K x 24(READ_FIRST)   | W | R | 3 K x 24(WRITE_FIRST)  |   | R | Port A and B     | 0      | 3      | 
+|inst/\resize_U0/grp_resizeNNBilinear_fu_54  | line_buffer_2_0_V_U/resizeNNBilinear_dEe_ram_U/ram_reg | 3 K x 24(READ_FIRST)   | W | R | 3 K x 24(WRITE_FIRST)  |   | R | Port A and B     | 0      | 3      | 
+|inst                                        | src_mat_data_V_U/mem_reg                               | 150 x 24(READ_FIRST)   | W |   | 150 x 24(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|inst                                        | dst_mat_data_V_U/mem_reg                               | 150 x 24(READ_FIRST)   | W |   | 150 x 24(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
++--------------------------------------------+--------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance inst/resize_U0/grp_resizeNNBilinear_fu_54/line_buffer_0_0_V_U/resizeNNBilinear_dEe_ram_U/ram_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/resize_U0/grp_resizeNNBilinear_fu_54/line_buffer_0_0_V_U/resizeNNBilinear_dEe_ram_U/ram_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/resize_U0/grp_resizeNNBilinear_fu_54/line_buffer_0_0_V_U/resizeNNBilinear_dEe_ram_U/ram_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/resize_U0/grp_resizeNNBilinear_fu_54/line_buffer_1_0_V_U/resizeNNBilinear_dEe_ram_U/ram_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/resize_U0/grp_resizeNNBilinear_fu_54/line_buffer_1_0_V_U/resizeNNBilinear_dEe_ram_U/ram_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/resize_U0/grp_resizeNNBilinear_fu_54/line_buffer_1_0_V_U/resizeNNBilinear_dEe_ram_U/ram_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/resize_U0/grp_resizeNNBilinear_fu_54/line_buffer_2_0_V_U/resizeNNBilinear_dEe_ram_U/ram_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/resize_U0/grp_resizeNNBilinear_fu_54/line_buffer_2_0_V_U/resizeNNBilinear_dEe_ram_U/ram_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/resize_U0/grp_resizeNNBilinear_fu_54/line_buffer_2_0_V_U/resizeNNBilinear_dEe_ram_U/ram_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/src_mat_data_V_U/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/dst_mat_data_V_U/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 1372.605 ; gain = 299.906
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 1378.168 ; gain = 305.469
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 1378.168 ; gain = 305.469
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 1378.168 ; gain = 305.469
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 1378.168 ; gain = 305.469
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 1378.168 ; gain = 305.469
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 1378.168 ; gain = 305.469
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++-------------+----------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name  | RTL Name                                                                         | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++-------------+----------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|resize_accel | resize_U0/grp_resizeNNBilinear_fu_54/trunc_ln728_1_reg_2312_pp1_iter6_reg_reg[1] | 5      | 2     | NO           | NO                 | YES               | 2      | 0       | 
++-------------+----------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+
+Dynamic Shift Register Report:
++------------+----------------+--------+------------+--------+---------+--------+--------+--------+
+|Module Name | RTL Name       | Length | Data Width | SRL16E | SRLC32E | Mux F7 | Mux F8 | Mux F9 | 
++------------+----------------+--------+------------+--------+---------+--------+--------+--------+
+|dsrl        | SRL_SIG_reg[3] | 32     | 32         | 32     | 0       | 0      | 0      | 0      | 
+|dsrl__1     | SRL_SIG_reg[2] | 32     | 32         | 32     | 0       | 0      | 0      | 0      | 
+|dsrl__2     | SRL_SIG_reg[2] | 1      | 1          | 1      | 0       | 0      | 0      | 0      | 
+|dsrl__3     | SRL_SIG_reg[3] | 1      | 1          | 1      | 0       | 0      | 0      | 0      | 
++------------+----------------+--------+------------+--------+---------+--------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |   332|
+|2     |DSP48E1  |    16|
+|8     |LUT1     |   241|
+|9     |LUT2     |   317|
+|10    |LUT3     |   689|
+|11    |LUT4     |   528|
+|12    |LUT5     |   365|
+|13    |LUT6     |   631|
+|14    |MUXF7    |     2|
+|15    |RAMB18E1 |     2|
+|16    |RAMB36E1 |     9|
+|17    |SRL16E   |   152|
+|18    |FDRE     |  2734|
+|19    |FDSE     |    38|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 1378.168 ; gain = 305.469
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:35 ; elapsed = 00:00:44 . Memory (MB): peak = 1378.168 ; gain = 160.902
+Synthesis Optimization Complete : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 1378.168 ; gain = 305.469
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.117 . Memory (MB): peak = 1385.730 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 361 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1385.730 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+122 Infos, 29 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:50 ; elapsed = 00:00:55 . Memory (MB): peak = 1385.730 ; gain = 313.031
+INFO: [Common 17-1381] The checkpoint 'C:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.runs/resizer_resize_accel_0_0_synth_1/resizer_resize_accel_0_0.dcp' has been generated.
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP resizer_resize_accel_0_0, cache-ID = 44694f28c127177a
+INFO: [Coretcl 2-1174] Renamed 57 cell refs.
+INFO: [Common 17-1381] The checkpoint 'C:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PYNQ-HelloWorld-master/PYNQ-HelloWorld-master/boards/Pynq-Z2/resizer/resizer/resizer.runs/resizer_resize_accel_0_0_synth_1/resizer_resize_accel_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file resizer_resize_accel_0_0_utilization_synth.rpt -pb resizer_resize_accel_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Dec  4 13:38:32 2020...

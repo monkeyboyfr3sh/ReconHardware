@@ -134,20 +134,20 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="processor_proc_sys_reset_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="processor_axi_gpio_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="processor_proc_sys_reset_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="processor_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="processor_clk_wiz_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="testing_FIFO_auto_pc_0"/>
   <BlockFileSet Type="BlockSrcs" Name="testing_FIFO_xbar_0"/>
   <BlockFileSet Type="BlockSrcs" Name="processor_axi_gpio_5_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="processor_clk_wiz_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="processor_axi_gpio_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="processor_axi_gpio_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="processor_axi_gpio_2_0"/>
   <BlockFileSet Type="BlockSrcs" Name="processor_axi_gpio_3_0"/>
   <BlockFileSet Type="BlockSrcs" Name="processor_axi_gpio_4_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="AXI_Convolution_processing_system7_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="testing_FIFO_auto_pc_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="AXI_Convolution_processing_system7_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="AXI_Convolution_axi_dma_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="AXI_Convolution_xbar_0"/>
   <BlockFileSet Type="BlockSrcs" Name="AXI_Convolution_AXI_Convolution_Cont_0_0"/>
