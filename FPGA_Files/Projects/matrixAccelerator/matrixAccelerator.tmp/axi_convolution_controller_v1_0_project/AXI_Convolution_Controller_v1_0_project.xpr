@@ -6,7 +6,7 @@
 <Project Version="7" Minor="49" Path="c:/github/reconhardware/fpga_files/projects/matrixaccelerator/matrixaccelerator.tmp/axi_convolution_controller_v1_0_project/AXI_Convolution_Controller_v1_0_project.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="9213f9be586946d79e374ee087b067b3"/>
+    <Option Name="Id" Val="ea87c9e4ca994195a85dff694de90628"/>
     <Option Name="Part" Val="xc7z020clg400-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -85,9 +85,18 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PPRDIR/../../../../../../../GitHub/ReconHardware/FPGA_Files/Projects/ip_repo/AXI_Convolution_Controller_1.0/hdl/AXI_Convolution_Controller_v1_0.v">
+        <FileInfo>
+          <Attr Name="Library" Val=""/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PPRDIR/../../../../../../../GitHub/ReconHardware/FPGA_Files/Projects/ip_repo/AXI_Convolution_Controller_1.0/hdl/AXI_Convolution_Controller_v1_0_M00_AXIS.v">
         <FileInfo>
           <Attr Name="Library" Val=""/>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -96,6 +105,7 @@
       <File Path="$PPRDIR/../../../../../../../GitHub/ReconHardware/FPGA_Files/Projects/ip_repo/AXI_Convolution_Controller_1.0/hdl/AXI_Convolution_Controller_v1_0_S00_AXI.v">
         <FileInfo>
           <Attr Name="Library" Val=""/>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -104,14 +114,7 @@
       <File Path="$PPRDIR/../../../../../../../GitHub/ReconHardware/FPGA_Files/Projects/ip_repo/AXI_Convolution_Controller_1.0/hdl/AXI_Convolution_Controller_v1_0_S00_AXIS.v">
         <FileInfo>
           <Attr Name="Library" Val=""/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../../../../../GitHub/ReconHardware/FPGA_Files/Projects/ip_repo/AXI_Convolution_Controller_1.0/hdl/AXI_Convolution_Controller_v1_0.v">
-        <FileInfo>
-          <Attr Name="Library" Val=""/>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
