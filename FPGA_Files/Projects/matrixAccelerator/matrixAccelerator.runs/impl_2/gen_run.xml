@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="impl_2" LaunchPart="xc7z020clg400-1" LaunchTime="1606847585">
-  <File Type="ROUTE-PWR" Name="testing_FIFO_wrapper_power_routed.rpt"/>
   <File Type="PA-TCL" Name="testing_FIFO_wrapper.tcl"/>
-  <File Type="ROUTE-PWR-SUM" Name="testing_FIFO_wrapper_power_summary_routed.pb"/>
   <File Type="REPORTS-TCL" Name="testing_FIFO_wrapper_reports.tcl"/>
   <File Type="BITSTR-MSK" Name="testing_FIFO_wrapper.msk"/>
-  <File Type="ROUTE-CLK" Name="testing_FIFO_wrapper_clock_utilization_routed.rpt"/>
   <File Type="RDI-RDI" Name="testing_FIFO_wrapper.vdi"/>
   <File Type="BG-BIT" Name="testing_FIFO_wrapper.bit"/>
   <File Type="BG-DRC" Name="testing_FIFO_wrapper.drc"/>
@@ -14,36 +11,18 @@
   <File Type="BITSTR-RBT" Name="testing_FIFO_wrapper.rbt"/>
   <File Type="BITSTR-NKY" Name="testing_FIFO_wrapper.nky"/>
   <File Type="BITSTR-BMM" Name="testing_FIFO_wrapper_bd.bmm"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="testing_FIFO_wrapper_methodology_drc_routed.rpt"/>
   <File Type="BITSTR-MMI" Name="testing_FIFO_wrapper.mmi"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="testing_FIFO_wrapper_methodology_drc_routed.pb"/>
   <File Type="BITSTR-SYSDEF" Name="testing_FIFO_wrapper.sysdef"/>
-  <File Type="ROUTE-DRC-RPX" Name="testing_FIFO_wrapper_drc_routed.rpx"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
   <File Type="BITSTR-LTX" Name="testing_FIFO_wrapper.ltx"/>
   <File Type="RCFI_FILE" Name="testing_FIFO_wrapper.rcfi"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
-  <File Type="OPT-DRC" Name="testing_FIFO_wrapper_drc_opted.rpt"/>
   <File Type="OPT-HWDEF" Name="testing_FIFO_wrapper.hwdef"/>
-  <File Type="PLACE-IO" Name="testing_FIFO_wrapper_io_placed.rpt"/>
-  <File Type="PLACE-UTIL" Name="testing_FIFO_wrapper_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="testing_FIFO_wrapper_utilization_placed.pb"/>
-  <File Type="PLACE-CTRL" Name="testing_FIFO_wrapper_control_sets_placed.rpt"/>
   <File Type="PLACE-PRE-SIMILARITY" Name="testing_FIFO_wrapper_incremental_reuse_pre_placed.rpt"/>
-  <File Type="ROUTE-DRC" Name="testing_FIFO_wrapper_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-PB" Name="testing_FIFO_wrapper_drc_routed.pb"/>
-  <File Type="ROUTE-PWR-RPX" Name="testing_FIFO_wrapper_power_routed.rpx"/>
-  <File Type="ROUTE-STATUS" Name="testing_FIFO_wrapper_route_status.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="testing_FIFO_wrapper_route_status.pb"/>
   <File Type="ROUTE-DCP" Name="testing_FIFO_wrapper_routed.dcp"/>
   <File Type="ROUTE-ERROR-DCP" Name="testing_FIFO_wrapper_routed_error.dcp"/>
   <File Type="ROUTE-BLACKBOX-DCP" Name="testing_FIFO_wrapper_routed_bb.dcp"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="testing_FIFO_wrapper_timing_summary_routed.rpt"/>
   <File Type="ROUTE-TIMING-PB" Name="testing_FIFO_wrapper_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMING-RPX" Name="testing_FIFO_wrapper_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-BUS-SKEW" Name="testing_FIFO_wrapper_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="testing_FIFO_wrapper_bus_skew_routed.pb"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="testing_FIFO_wrapper_bus_skew_routed.rpx"/>
   <File Type="OPT-DCP" Name="testing_FIFO_wrapper_opt.dcp"/>
   <File Type="PLACE-DCP" Name="testing_FIFO_wrapper_placed.dcp"/>
   <File Type="PWROPT-DCP" Name="testing_FIFO_wrapper_pwropt.dcp"/>
@@ -51,7 +30,6 @@
   <File Type="PHYSOPT-DCP" Name="testing_FIFO_wrapper_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="testing_FIFO_wrapper_postroute_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="testing_FIFO_wrapper_postroute_physopt_bb.dcp"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="testing_FIFO_wrapper_methodology_drc_routed.rpx"/>
   <File Type="PDI-FILE" Name="testing_FIFO_wrapper.pdi"/>
   <File Type="CFI_FILE" Name="testing_FIFO_wrapper.cfi"/>
   <File Type="RNPI_FILE" Name="testing_FIFO_wrapper.rnpi"/>

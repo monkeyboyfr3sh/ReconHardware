@@ -20,8 +20,7 @@
         "m01_couplers": {},
         "m02_couplers": {}
       },
-      "rst_ps7_0_50M": "",
-      "AXI_Convolution_Cont_0": ""
+      "rst_ps7_0_50M": ""
     },
     "interface_ports": {
       "DDR": {
@@ -2165,22 +2164,10 @@
           }
         },
         "interface_nets": {
-          "ps7_0_axi_periph_to_s00_couplers": {
+          "m02_couplers_to_ps7_0_axi_periph": {
             "interface_ports": [
-              "S00_AXI",
-              "s00_couplers/S_AXI"
-            ]
-          },
-          "m00_couplers_to_ps7_0_axi_periph": {
-            "interface_ports": [
-              "M00_AXI",
-              "m00_couplers/M_AXI"
-            ]
-          },
-          "s00_couplers_to_xbar": {
-            "interface_ports": [
-              "s00_couplers/M_AXI",
-              "xbar/S00_AXI"
+              "M02_AXI",
+              "m02_couplers/M_AXI"
             ]
           },
           "xbar_to_m00_couplers": {
@@ -2189,10 +2176,16 @@
               "m00_couplers/S_AXI"
             ]
           },
-          "m01_couplers_to_ps7_0_axi_periph": {
+          "s00_couplers_to_xbar": {
             "interface_ports": [
-              "M01_AXI",
-              "m01_couplers/M_AXI"
+              "s00_couplers/M_AXI",
+              "xbar/S00_AXI"
+            ]
+          },
+          "m00_couplers_to_ps7_0_axi_periph": {
+            "interface_ports": [
+              "M00_AXI",
+              "m00_couplers/M_AXI"
             ]
           },
           "xbar_to_m01_couplers": {
@@ -2201,16 +2194,22 @@
               "m01_couplers/S_AXI"
             ]
           },
+          "m01_couplers_to_ps7_0_axi_periph": {
+            "interface_ports": [
+              "M01_AXI",
+              "m01_couplers/M_AXI"
+            ]
+          },
           "xbar_to_m02_couplers": {
             "interface_ports": [
               "xbar/M02_AXI",
               "m02_couplers/S_AXI"
             ]
           },
-          "m02_couplers_to_ps7_0_axi_periph": {
+          "ps7_0_axi_periph_to_s00_couplers": {
             "interface_ports": [
-              "M02_AXI",
-              "m02_couplers/M_AXI"
+              "S00_AXI",
+              "s00_couplers/S_AXI"
             ]
           }
         },
@@ -2248,10 +2247,6 @@
       "rst_ps7_0_50M": {
         "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
         "xci_name": "AXI_Convolution_rst_ps7_0_50M_0"
-      },
-      "AXI_Convolution_Cont_0": {
-        "vlnv": "xilinx.com:user:AXI_Convolution_Controller:1.0",
-        "xci_name": "AXI_Convolution_AXI_Convolution_Cont_0_0"
       }
     },
     "interface_nets": {
@@ -2267,22 +2262,10 @@
           "processing_system7_0/DDR"
         ]
       },
-      "AXI_Convolution_Cont_0_M00_AXIS": {
-        "interface_ports": [
-          "AXI_Convolution_Cont_0/M00_AXIS",
-          "axi_dma_0/S_AXIS_S2MM"
-        ]
-      },
       "ps7_0_axi_periph_M00_AXI": {
         "interface_ports": [
           "ps7_0_axi_periph/M00_AXI",
           "axi_dma_0/S_AXI_LITE"
-        ]
-      },
-      "ps7_0_axi_periph_M01_AXI": {
-        "interface_ports": [
-          "ps7_0_axi_periph/M01_AXI",
-          "AXI_Convolution_Cont_0/S00_AXI"
         ]
       },
       "processing_system7_0_M_AXI_GP0": {
@@ -2290,51 +2273,9 @@
           "processing_system7_0/M_AXI_GP0",
           "ps7_0_axi_periph/S00_AXI"
         ]
-      },
-      "axi_dma_0_M_AXIS_MM2S": {
-        "interface_ports": [
-          "AXI_Convolution_Cont_0/S00_AXIS",
-          "axi_dma_0/M_AXIS_MM2S"
-        ]
       }
     },
     "nets": {
-      "AXI_Convolution_Cont_0_MULTIPLIER_INPUT": {
-        "ports": [
-          "AXI_Convolution_Cont_0/MULTIPLIER_INPUT",
-          "MULTIPLIER_INPUT_0"
-        ]
-      },
-      "AXI_Convolution_Cont_0_MULTIPLICAND_INPUT": {
-        "ports": [
-          "AXI_Convolution_Cont_0/MULTIPLICAND_INPUT",
-          "MULTIPLICAND_INPUT_0"
-        ]
-      },
-      "AXI_Convolution_Cont_0_MULTIPLY_START": {
-        "ports": [
-          "AXI_Convolution_Cont_0/MULTIPLY_START",
-          "MULTIPLY_START_0"
-        ]
-      },
-      "AXI_Convolution_Cont_0_FINALADD_START": {
-        "ports": [
-          "AXI_Convolution_Cont_0/FINALADD_START",
-          "FINALADD_START_0"
-        ]
-      },
-      "cReady_0_1": {
-        "ports": [
-          "cReady_0",
-          "AXI_Convolution_Cont_0/cReady"
-        ]
-      },
-      "cSum_0_1": {
-        "ports": [
-          "cSum_0",
-          "AXI_Convolution_Cont_0/cSum"
-        ]
-      },
       "processing_system7_0_FCLK_CLK0": {
         "ports": [
           "processing_system7_0/FCLK_CLK0",
@@ -2348,9 +2289,6 @@
           "ps7_0_axi_periph/S00_ACLK",
           "ps7_0_axi_periph/ACLK",
           "rst_ps7_0_50M/slowest_sync_clk",
-          "AXI_Convolution_Cont_0/s00_axi_aclk",
-          "AXI_Convolution_Cont_0/s00_axis_aclk",
-          "AXI_Convolution_Cont_0/m00_axis_aclk",
           "ps7_0_axi_periph/M02_ACLK"
         ]
       },
@@ -2362,9 +2300,6 @@
           "ps7_0_axi_periph/M00_ARESETN",
           "ps7_0_axi_periph/ARESETN",
           "ps7_0_axi_periph/M01_ARESETN",
-          "AXI_Convolution_Cont_0/s00_axi_aresetn",
-          "AXI_Convolution_Cont_0/s00_axis_aresetn",
-          "AXI_Convolution_Cont_0/m00_axis_aresetn",
           "ps7_0_axi_periph/M02_ARESETN"
         ]
       },
@@ -2373,12 +2308,6 @@
           "processing_system7_0/FCLK_RESET0_N",
           "FCLK_RESET0_N_0",
           "rst_ps7_0_50M/ext_reset_in"
-        ]
-      },
-      "AXI_Convolution_Cont_0_debug": {
-        "ports": [
-          "AXI_Convolution_Cont_0/debug",
-          "debug_0"
         ]
       }
     },
@@ -2389,11 +2318,6 @@
             "range": "4G",
             "width": "32",
             "segments": {
-              "SEG_AXI_Convolution_Cont_0_S00_AXI_reg": {
-                "address_block": "/AXI_Convolution_Cont_0/S00_AXI/S00_AXI_reg",
-                "offset": "0x43C00000",
-                "range": "64K"
-              },
               "SEG_axi_dma_0_Reg": {
                 "address_block": "/axi_dma_0/S_AXI_LITE/Reg",
                 "offset": "0x40400000",

@@ -1,0 +1,1 @@
+-wto "e8a0372fdc934f758c8bcf4b64e3a7a8" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "unisims_ver" -L "unimacro_ver" -L "secureip" --snapshot "Convolution_Controller_behav" "xil_defaultlib.Convolution_Controller" "xil_defaultlib.glbl" -log "elaborate.log" 
