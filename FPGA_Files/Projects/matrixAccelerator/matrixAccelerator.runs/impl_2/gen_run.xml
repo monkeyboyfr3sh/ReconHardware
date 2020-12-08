@@ -1,60 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_2" LaunchPart="xc7z020clg400-1" LaunchTime="1606847585">
-  <File Type="PA-TCL" Name="testing_FIFO_wrapper.tcl"/>
-  <File Type="REPORTS-TCL" Name="testing_FIFO_wrapper_reports.tcl"/>
-  <File Type="BITSTR-MSK" Name="testing_FIFO_wrapper.msk"/>
-  <File Type="RDI-RDI" Name="testing_FIFO_wrapper.vdi"/>
-  <File Type="BG-BIT" Name="testing_FIFO_wrapper.bit"/>
-  <File Type="BG-DRC" Name="testing_FIFO_wrapper.drc"/>
-  <File Type="BG-BGN" Name="testing_FIFO_wrapper.bgn"/>
-  <File Type="BG-BIN" Name="testing_FIFO_wrapper.bin"/>
-  <File Type="BITSTR-RBT" Name="testing_FIFO_wrapper.rbt"/>
-  <File Type="BITSTR-NKY" Name="testing_FIFO_wrapper.nky"/>
-  <File Type="BITSTR-BMM" Name="testing_FIFO_wrapper_bd.bmm"/>
-  <File Type="BITSTR-MMI" Name="testing_FIFO_wrapper.mmi"/>
-  <File Type="BITSTR-SYSDEF" Name="testing_FIFO_wrapper.sysdef"/>
+<GenRun Id="impl_2" LaunchPart="xc7z020clg400-1" LaunchTime="1607391494">
+  <File Type="BITSTR-BMM" Name="AXI_Conv_wrapper_bd.bmm"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="AXI_Conv_wrapper_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="AXI_Conv_wrapper_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR" Name="AXI_Conv_wrapper_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="AXI_Conv_wrapper.tcl"/>
+  <File Type="OPT-TIMING" Name="AXI_Conv_wrapper_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="AXI_Conv_wrapper_opt.dcp"/>
+  <File Type="ROUTE-PWR-SUM" Name="AXI_Conv_wrapper_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="AXI_Conv_wrapper_reports.tcl"/>
+  <File Type="OPT-DRC" Name="AXI_Conv_wrapper_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="AXI_Conv_wrapper.hwdef"/>
+  <File Type="PWROPT-DCP" Name="AXI_Conv_wrapper_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="AXI_Conv_wrapper_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="AXI_Conv_wrapper_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="AXI_Conv_wrapper_placed.dcp"/>
+  <File Type="PLACE-IO" Name="AXI_Conv_wrapper_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="AXI_Conv_wrapper_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="AXI_Conv_wrapper_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="AXI_Conv_wrapper_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="AXI_Conv_wrapper_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="AXI_Conv_wrapper_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="AXI_Conv_wrapper_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="AXI_Conv_wrapper_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="AXI_Conv_wrapper_postplace_pwropt.dcp"/>
+  <File Type="BG-BIN" Name="AXI_Conv_wrapper.bin"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="AXI_Conv_wrapper_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="AXI_Conv_wrapper_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="AXI_Conv_wrapper_drc_physopted.rpt"/>
+  <File Type="BITSTR-MSK" Name="AXI_Conv_wrapper.msk"/>
+  <File Type="PHYSOPT-TIMING" Name="AXI_Conv_wrapper_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="AXI_Conv_wrapper_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="AXI_Conv_wrapper_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="AXI_Conv_wrapper_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="AXI_Conv_wrapper_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="AXI_Conv_wrapper_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="AXI_Conv_wrapper_drc_routed.rpx"/>
+  <File Type="BITSTR-MMI" Name="AXI_Conv_wrapper.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="AXI_Conv_wrapper_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="AXI_Conv_wrapper_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="AXI_Conv_wrapper_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="AXI_Conv_wrapper_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="AXI_Conv_wrapper_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="AXI_Conv_wrapper_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="AXI_Conv_wrapper_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="AXI_Conv_wrapper_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="AXI_Conv_wrapper_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="AXI_Conv_wrapper_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="AXI_Conv_wrapper_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="AXI_Conv_wrapper_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="AXI_Conv_wrapper_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="AXI_Conv_wrapper_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="AXI_Conv_wrapper_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="AXI_Conv_wrapper_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="AXI_Conv_wrapper_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="AXI_Conv_wrapper_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="AXI_Conv_wrapper_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="AXI_Conv_wrapper_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="AXI_Conv_wrapper_bus_skew_postroute_physopted.pb"/>
+  <File Type="BG-BIT" Name="AXI_Conv_wrapper.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="AXI_Conv_wrapper_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-RBT" Name="AXI_Conv_wrapper.rbt"/>
+  <File Type="BITSTR-NKY" Name="AXI_Conv_wrapper.nky"/>
+  <File Type="PDI-FILE" Name="AXI_Conv_wrapper.pdi"/>
+  <File Type="RCFI_FILE" Name="AXI_Conv_wrapper.rcfi"/>
+  <File Type="CFI_FILE" Name="AXI_Conv_wrapper.cfi"/>
+  <File Type="RNPI_FILE" Name="AXI_Conv_wrapper.rnpi"/>
+  <File Type="NPI_FILE" Name="AXI_Conv_wrapper.npi"/>
+  <File Type="RBD_FILE" Name="AXI_Conv_wrapper.rbd"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="testing_FIFO_wrapper.ltx"/>
-  <File Type="RCFI_FILE" Name="testing_FIFO_wrapper.rcfi"/>
+  <File Type="BITSTR-LTX" Name="AXI_Conv_wrapper.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="AXI_Conv_wrapper.sysdef"/>
+  <File Type="BG-BGN" Name="AXI_Conv_wrapper.bgn"/>
+  <File Type="BG-DRC" Name="AXI_Conv_wrapper.drc"/>
+  <File Type="RDI-RDI" Name="AXI_Conv_wrapper.vdi"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
-  <File Type="OPT-HWDEF" Name="testing_FIFO_wrapper.hwdef"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="testing_FIFO_wrapper_incremental_reuse_pre_placed.rpt"/>
-  <File Type="ROUTE-DCP" Name="testing_FIFO_wrapper_routed.dcp"/>
-  <File Type="ROUTE-ERROR-DCP" Name="testing_FIFO_wrapper_routed_error.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="testing_FIFO_wrapper_routed_bb.dcp"/>
-  <File Type="ROUTE-TIMING-PB" Name="testing_FIFO_wrapper_timing_summary_routed.pb"/>
-  <File Type="OPT-DCP" Name="testing_FIFO_wrapper_opt.dcp"/>
-  <File Type="PLACE-DCP" Name="testing_FIFO_wrapper_placed.dcp"/>
-  <File Type="PWROPT-DCP" Name="testing_FIFO_wrapper_pwropt.dcp"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="testing_FIFO_wrapper_postplace_pwropt.dcp"/>
-  <File Type="PHYSOPT-DCP" Name="testing_FIFO_wrapper_physopt.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="testing_FIFO_wrapper_postroute_physopt.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="testing_FIFO_wrapper_postroute_physopt_bb.dcp"/>
-  <File Type="PDI-FILE" Name="testing_FIFO_wrapper.pdi"/>
-  <File Type="CFI_FILE" Name="testing_FIFO_wrapper.cfi"/>
-  <File Type="RNPI_FILE" Name="testing_FIFO_wrapper.rnpi"/>
-  <File Type="NPI_FILE" Name="testing_FIFO_wrapper.npi"/>
-  <File Type="RBD_FILE" Name="testing_FIFO_wrapper.rbd"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/../../Sources/definitions.h">
       <FileInfo>
         <Attr Name="IsGlobalInclude" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/bd/AXI_Convolution/AXI_Convolution.bd">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/bd/AXI_Convolution/hdl/AXI_Convolution_wrapper.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
@@ -128,14 +154,21 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/bd/testing_FIFO/testing_FIFO.bd">
+    <File Path="$PPRDIR/../../Sources/General/Conv_Accel_Top.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/bd/testing_FIFO/hdl/testing_FIFO_wrapper.v">
+    <File Path="$PSRCDIR/sources_1/bd/Convolution_Controller/Convolution_Controller.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/Convolution_Controller/hdl/Convolution_Controller_wrapper.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -144,7 +177,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="testing_FIFO_wrapper"/>
+      <Option Name="TopModule" Val="AXI_Conv_wrapper"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -160,7 +193,9 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
+      <Desc>Default settings for Implementation.</Desc>
+    </StratHandle>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>
@@ -170,27 +205,18 @@
     <Step Id="route_design"/>
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
-    <Step Id="write_device_image"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="processor_axi_gpio_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="processor_proc_sys_reset_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="processor_xbar_0"/>
   <BlockFileSet Type="BlockSrcs" Name="processor_clk_wiz_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="testing_FIFO_auto_pc_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="testing_FIFO_xbar_0"/>
   <BlockFileSet Type="BlockSrcs" Name="processor_axi_gpio_5_0"/>
   <BlockFileSet Type="BlockSrcs" Name="processor_axi_gpio_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="processor_axi_gpio_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="processor_axi_gpio_2_0"/>
   <BlockFileSet Type="BlockSrcs" Name="processor_axi_gpio_3_0"/>
   <BlockFileSet Type="BlockSrcs" Name="processor_axi_gpio_4_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="testing_FIFO_auto_pc_2"/>
-  <BlockFileSet Type="BlockSrcs" Name="AXI_Convolution_processing_system7_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="AXI_Convolution_axi_dma_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="AXI_Convolution_xbar_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="AXI_Convolution_AXI_Convolution_Cont_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="AXI_Convolution_axi_fifo_mm_s_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="testing_FIFO_axi_fifo_mm_s_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="testing_FIFO_processing_system7_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="testing_FIFO_auto_pc_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="Convolution_Controller_xbar_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="Convolution_Controller_processing_system7_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Convolution_Controller_Convolution_Controll_0_0"/>
 </GenRun>

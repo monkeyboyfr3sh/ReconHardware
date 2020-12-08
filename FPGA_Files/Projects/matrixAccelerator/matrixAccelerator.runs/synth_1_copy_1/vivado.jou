@@ -2,11 +2,11 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Tue Dec  1 12:32:24 2020
-# Process ID: 14316
+# Start of session at: Mon Dec  7 19:37:14 2020
+# Process ID: 12576
 # Current directory: C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1
-# Command line: vivado.exe -log testing_FIFO_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source testing_FIFO_wrapper.tcl
-# Log file: C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1/testing_FIFO_wrapper.vds
+# Command line: vivado.exe -log AXI_Conv_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source AXI_Conv_wrapper.tcl
+# Log file: C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1/AXI_Conv_wrapper.vds
 # Journal file: C:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.runs/synth_1_copy_1\vivado.jou
 #-----------------------------------------------------------
-source testing_FIFO_wrapper.tcl -notrace
+source AXI_Conv_wrapper.tcl -notrace

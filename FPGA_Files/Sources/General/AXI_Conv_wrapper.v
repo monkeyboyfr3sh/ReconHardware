@@ -1,8 +1,6 @@
 `timescale 1ns / 1ps
 
-module AXI_Conv_wrapper(
-    output wire debug
-);
+module AXI_Conv_wrapper();
 wire clk,rst;
 wire cReady,finaladd_start;
 
@@ -20,16 +18,15 @@ wire    [2*`bitLength-1:0]                      cSum;
 
 assign finalsum = cSum[`bitLength-1:0];             //Slices needed bits
 
-AXI_Convolution_wrapper(
+Convolution_Controller_wrapper(
     .FCLK_CLK0_0(clk),
     .FCLK_RESET0_N_0(rst),
     .MULTIPLIER_INPUT_0(multiplier_connector),
     .MULTIPLICAND_INPUT_0(multiplicand_connector),
     .MULTIPLY_START_0(mStart_conncetor),
-    .FINALADD_START_0(finaladd_start),
+    .FINALADDOUT_0(finaladd_start),
     .cReady_0(cReady),
-    .cSum_0(finalsum),
-    .debug_0(debug)
+    .cSum_0(finalsum)
 );
  matrixAccelerator matrixAccel(   
     .Clk(clk),
