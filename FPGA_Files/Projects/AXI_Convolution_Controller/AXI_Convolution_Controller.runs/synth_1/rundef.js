@@ -23,7 +23,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log AXI_Invert_Testing_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source AXI_Invert_Testing_wrapper.tcl" );
+         "-log Convolution_Controller.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Convolution_Controller.tcl" );
 
 
 

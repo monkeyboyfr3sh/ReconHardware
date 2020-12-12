@@ -1,0 +1,111 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Sat Dec 12 12:20:59 2020
+| Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Pixel_Controller_BD_Pixel_Controller_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Pixel_Controller_BD_Pixel_Controller_0_0 (xilinx.com:user:Pixel_Controller:1.0) from (Rev. 9) to (Rev. 10)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Sat Dec 12 12:18:05 2020
+| Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Pixel_Controller_BD_Pixel_Controller_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Pixel_Controller_BD_Pixel_Controller_0_0 (xilinx.com:user:Pixel_Controller:1.0) from (Rev. 8) to (Rev. 9)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Sat Dec 12 12:09:20 2020
+| Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Pixel_Controller_BD_Pixel_Controller_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Pixel_Controller_BD_Pixel_Controller_0_0 (xilinx.com:user:Pixel_Controller:1.0) from (Rev. 7) to (Rev. 8)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Sat Dec 12 12:01:44 2020
+| Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Pixel_Controller_BD_Pixel_Controller_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of Pixel_Controller_BD_Pixel_Controller_0_0 (xilinx.com:user:Pixel_Controller:1.0) from (Rev. 6) to (Rev. 7)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'Pixel_Controller_BD_Pixel_Controller_0_0'. These changes may impact your design.
+
+
+-Upgrade has added port 'axi_reset_n'
+
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Sat Dec 12 11:50:01 2020
+| Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Pixel_Controller_BD_Pixel_Controller_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Pixel_Controller_BD_Pixel_Controller_0_0 (xilinx.com:user:Pixel_Controller:1.0) from (Rev. 5) to (Rev. 6)
+

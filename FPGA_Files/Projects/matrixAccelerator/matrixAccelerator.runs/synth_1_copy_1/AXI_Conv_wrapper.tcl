@@ -71,7 +71,6 @@ proc create_report { reportName command } {
 }
 OPTRACE "synth_1_copy_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 2
-set_msg_config -id {HDL-1065} -limit 10000
 set_msg_config  -id {VRFC 10-2989}  -string {{ERROR: [VRFC 10-2989] 'break' is not declared [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Adder/adderFloat.v:60]}}  -suppress 
 set_msg_config  -id {XSIM 43-3322}  -string {{ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.}}  -suppress 
 OPTRACE "Creating in-memory project" START { }
@@ -156,6 +155,7 @@ set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardwar
 set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_rst_ps7_0_100M_0/Convolution_Controller_rst_ps7_0_100M_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_xbar_2/Convolution_Controller_xbar_2_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_auto_pc_0/Convolution_Controller_auto_pc_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_s00_mmu_0/Convolution_Controller_s00_mmu_0_ooc.xdc]
 set_property used_in_synthesis false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_auto_us_0/Convolution_Controller_auto_us_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_auto_us_0/Convolution_Controller_auto_us_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/matrixAccelerator/matrixAccelerator.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_auto_us_0/Convolution_Controller_auto_us_0_ooc.xdc]

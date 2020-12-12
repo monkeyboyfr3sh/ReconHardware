@@ -67,37 +67,18 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PSRCDIR/sources_1/bd/Pixel_Inverter/Pixel_Inverter.bd">
+      <File Path="$PSRCDIR/sources_1/bd/Pixel_Control/Pixel_Control.bd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="Pixel_Inverter.bd" FileRelPathName="ip/Pixel_Inverter_Pixel_Inveter_Proc_0_0/Pixel_Inverter_Pixel_Inveter_Proc_0_0.xci">
-          <Proxy FileSetName="Pixel_Inverter_Pixel_Inveter_Proc_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="Pixel_Inverter.bd" FileRelPathName="ip/Pixel_Inverter_xbar_0/Pixel_Inverter_xbar_0.xci">
-          <Proxy FileSetName="Pixel_Inverter_xbar_0"/>
+        <CompFileExtendedInfo CompFileName="Pixel_Control.bd" FileRelPathName="ip/Pixel_Control_Pixel_Controller_0_0/Pixel_Control_Pixel_Controller_0_0.xci">
+          <Proxy FileSetName="Pixel_Control_Pixel_Controller_0_0"/>
         </CompFileExtendedInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/bd/Pixel_Inverter/hdl/Pixel_Inverter_wrapper.v">
+      <File Path="$PSRCDIR/sources_1/bd/Pixel_Control/hdl/Pixel_Control_wrapper.v">
         <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../Sources/Testing Design/Pixel_Inveter_Proc.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/bd/FIFO_stream/hdl/FIFO_stream_wrapper.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -110,29 +91,14 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="resizer.bd" FileRelPathName="ip/resizer_axis_dwidth_converter_0_0/resizer_axis_dwidth_converter_0_0.xci">
-          <Proxy FileSetName="resizer_axis_dwidth_converter_0_0"/>
+        <CompFileExtendedInfo CompFileName="resizer.bd" FileRelPathName="ip/resizer_axi_dma_0_0/resizer_axi_dma_0_0.xci">
+          <Proxy FileSetName="resizer_axi_dma_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="resizer.bd" FileRelPathName="ip/resizer_axis_dwidth_converter_1_0/resizer_axis_dwidth_converter_1_0.xci">
-          <Proxy FileSetName="resizer_axis_dwidth_converter_1_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="resizer.bd" FileRelPathName="ip/resizer_resize_accel_0_0/resizer_resize_accel_0_0.xci">
-          <Proxy FileSetName="resizer_resize_accel_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="resizer.bd" FileRelPathName="ip/resizer_rst_ps7_0_100M_0/resizer_rst_ps7_0_100M_0.xci">
-          <Proxy FileSetName="resizer_rst_ps7_0_100M_0"/>
+        <CompFileExtendedInfo CompFileName="resizer.bd" FileRelPathName="ip/resizer_auto_pc_1/resizer_auto_pc_1.xci">
+          <Proxy FileSetName="resizer_auto_pc_1"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="resizer.bd" FileRelPathName="ip/resizer_xbar_2/resizer_xbar_2.xci">
           <Proxy FileSetName="resizer_xbar_2"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="resizer.bd" FileRelPathName="ip/resizer_processing_system7_0_0/resizer_processing_system7_0_0.xci">
-          <Proxy FileSetName="resizer_processing_system7_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="resizer.bd" FileRelPathName="ip/resizer_xbar_3/resizer_xbar_3.xci">
-          <Proxy FileSetName="resizer_xbar_3"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="resizer.bd" FileRelPathName="ip/resizer_axi_dma_0_0/resizer_axi_dma_0_0.xci">
-          <Proxy FileSetName="resizer_axi_dma_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="resizer.bd" FileRelPathName="ip/resizer_auto_us_1/resizer_auto_us_1.xci">
           <Proxy FileSetName="resizer_auto_us_1"/>
@@ -140,11 +106,26 @@
         <CompFileExtendedInfo CompFileName="resizer.bd" FileRelPathName="ip/resizer_auto_pc_0/resizer_auto_pc_0.xci">
           <Proxy FileSetName="resizer_auto_pc_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="resizer.bd" FileRelPathName="ip/resizer_auto_pc_1/resizer_auto_pc_1.xci">
-          <Proxy FileSetName="resizer_auto_pc_1"/>
+        <CompFileExtendedInfo CompFileName="resizer.bd" FileRelPathName="ip/resizer_resize_accel_0_0/resizer_resize_accel_0_0.xci">
+          <Proxy FileSetName="resizer_resize_accel_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="resizer.bd" FileRelPathName="ip/resizer_xbar_3/resizer_xbar_3.xci">
+          <Proxy FileSetName="resizer_xbar_3"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="resizer.bd" FileRelPathName="ip/resizer_auto_us_0/resizer_auto_us_0.xci">
           <Proxy FileSetName="resizer_auto_us_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="resizer.bd" FileRelPathName="ip/resizer_rst_ps7_0_100M_0/resizer_rst_ps7_0_100M_0.xci">
+          <Proxy FileSetName="resizer_rst_ps7_0_100M_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="resizer.bd" FileRelPathName="ip/resizer_processing_system7_0_0/resizer_processing_system7_0_0.xci">
+          <Proxy FileSetName="resizer_processing_system7_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="resizer.bd" FileRelPathName="ip/resizer_axis_dwidth_converter_0_0/resizer_axis_dwidth_converter_0_0.xci">
+          <Proxy FileSetName="resizer_axis_dwidth_converter_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="resizer.bd" FileRelPathName="ip/resizer_axis_dwidth_converter_1_0/resizer_axis_dwidth_converter_1_0.xci">
+          <Proxy FileSetName="resizer_axis_dwidth_converter_1_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/resizer/hdl/resizer_wrapper.v">
@@ -155,12 +136,9 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../Sources/IP_Source/component.xml">
-        <FileInfo SFType="IPXACT"/>
-      </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="Pixel_Inverter_wrapper"/>
+        <Option Name="TopModule" Val="Pixel_Control_wrapper"/>
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -264,15 +242,9 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="Pixel_Inverter_xbar_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Pixel_Inverter_xbar_0">
+    <FileSet Name="Pixel_Control_Pixel_Controller_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Pixel_Control_Pixel_Controller_0_0">
       <Config>
-        <Option Name="TopModule" Val="Pixel_Inverter_xbar_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="Pixel_Inverter_Pixel_Inveter_Proc_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Pixel_Inverter_Pixel_Inveter_Proc_0_0">
-      <Config>
-        <Option Name="TopModule" Val="Pixel_Inverter_Pixel_Inveter_Proc_0_0"/>
+        <Option Name="TopModule" Val="Pixel_Control_Pixel_Controller_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -426,19 +398,11 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="Pixel_Inverter_xbar_0_synth_1" Type="Ft3:Synth" SrcSet="Pixel_Inverter_xbar_0" Part="xc7z020clg400-1" ConstrsSet="Pixel_Inverter_xbar_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/Pixel_Inverter_xbar_0_synth_1" IncludeInArchive="true">
+    <Run Id="Pixel_Control_Pixel_Controller_0_0_synth_1" Type="Ft3:Synth" SrcSet="Pixel_Control_Pixel_Controller_0_0" Part="xc7z020clg400-1" ConstrsSet="Pixel_Control_Pixel_Controller_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/Pixel_Control_Pixel_Controller_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="Pixel_Inverter_Pixel_Inveter_Proc_0_0_synth_1" Type="Ft3:Synth" SrcSet="Pixel_Inverter_Pixel_Inveter_Proc_0_0" Part="xc7z020clg400-1" ConstrsSet="Pixel_Inverter_Pixel_Inveter_Proc_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/Pixel_Inverter_Pixel_Inveter_Proc_0_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -668,26 +632,11 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="Pixel_Inverter_xbar_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="Pixel_Inverter_xbar_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="Pixel_Inverter_xbar_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="Pixel_Control_Pixel_Controller_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="Pixel_Control_Pixel_Controller_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="Pixel_Control_Pixel_Controller_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="Pixel_Inverter_Pixel_Inveter_Proc_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="Pixel_Inverter_Pixel_Inveter_Proc_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="Pixel_Inverter_Pixel_Inveter_Proc_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

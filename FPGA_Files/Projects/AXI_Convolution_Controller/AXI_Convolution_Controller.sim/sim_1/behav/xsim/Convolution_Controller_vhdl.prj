@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../AXI_Convolution_Controller.ip_user_files/bd/AXI_Invert_Testing/ip/AXI_Invert_Testing_axi_dma_0_0/sim/AXI_Invert_Testing_axi_dma_0_0.vhd" \
+"../../../../AXI_Convolution_Controller.ip_user_files/bd/AXI_Invert_Testing/ip/AXI_Invert_Testing_rst_ps7_0_100M_0/sim/AXI_Invert_Testing_rst_ps7_0_100M_0.vhd" \
+
+# Do not sort compile order
+nosort

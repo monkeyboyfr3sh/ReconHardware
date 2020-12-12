@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-//Date        : Mon Dec  7 19:36:22 2020
+//Date        : Sat Dec 12 14:20:12 2020
 //Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 //Command     : generate_target Convolution_Controller_wrapper.bd
 //Design      : Convolution_Controller_wrapper
@@ -38,7 +38,8 @@ module Convolution_Controller_wrapper
     MULTIPLIER_INPUT_0,
     MULTIPLY_START_0,
     cReady_0,
-    cSum_0);
+    cSum_0,
+    ip_reset_out_0);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -68,6 +69,7 @@ module Convolution_Controller_wrapper
   output [2:0]MULTIPLY_START_0;
   input cReady_0;
   input [31:0]cSum_0;
+  output ip_reset_out_0;
 
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
@@ -98,6 +100,7 @@ module Convolution_Controller_wrapper
   wire [2:0]MULTIPLY_START_0;
   wire cReady_0;
   wire [31:0]cSum_0;
+  wire ip_reset_out_0;
 
   Convolution_Controller Convolution_Controller_i
        (.DDR_addr(DDR_addr),
@@ -128,5 +131,6 @@ module Convolution_Controller_wrapper
         .MULTIPLIER_INPUT_0(MULTIPLIER_INPUT_0),
         .MULTIPLY_START_0(MULTIPLY_START_0),
         .cReady_0(cReady_0),
-        .cSum_0(cSum_0));
+        .cSum_0(cSum_0),
+        .ip_reset_out_0(ip_reset_out_0));
 endmodule

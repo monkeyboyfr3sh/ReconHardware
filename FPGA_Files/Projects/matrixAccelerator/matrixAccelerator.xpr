@@ -54,13 +54,13 @@
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="41"/>
-    <Option Name="WTModelSimExportSim" Val="41"/>
-    <Option Name="WTQuestaExportSim" Val="41"/>
-    <Option Name="WTIesExportSim" Val="41"/>
-    <Option Name="WTVcsExportSim" Val="41"/>
-    <Option Name="WTRivieraExportSim" Val="41"/>
-    <Option Name="WTActivehdlExportSim" Val="41"/>
+    <Option Name="WTXSimExportSim" Val="59"/>
+    <Option Name="WTModelSimExportSim" Val="59"/>
+    <Option Name="WTQuestaExportSim" Val="59"/>
+    <Option Name="WTIesExportSim" Val="59"/>
+    <Option Name="WTVcsExportSim" Val="59"/>
+    <Option Name="WTRivieraExportSim" Val="58"/>
+    <Option Name="WTActivehdlExportSim" Val="58"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -127,32 +127,32 @@
         <CompFileExtendedInfo CompFileName="processor.bd" FileRelPathName="ip/processor_xbar_0/processor_xbar_0.xci">
           <Proxy FileSetName="processor_xbar_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="processor.bd" FileRelPathName="ip/processor_proc_sys_reset_0_0/processor_proc_sys_reset_0_0.xci">
-          <Proxy FileSetName="processor_proc_sys_reset_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="processor.bd" FileRelPathName="ip/processor_axi_gpio_2_0/processor_axi_gpio_2_0.xci">
-          <Proxy FileSetName="processor_axi_gpio_2_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="processor.bd" FileRelPathName="ip/processor_axi_gpio_1_0/processor_axi_gpio_1_0.xci">
-          <Proxy FileSetName="processor_axi_gpio_1_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="processor.bd" FileRelPathName="ip/processor_axi_gpio_4_0/processor_axi_gpio_4_0.xci">
-          <Proxy FileSetName="processor_axi_gpio_4_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="processor.bd" FileRelPathName="ip/processor_axi_gpio_5_0/processor_axi_gpio_5_0.xci">
-          <Proxy FileSetName="processor_axi_gpio_5_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="processor.bd" FileRelPathName="ip/processor_axi_gpio_0_0/processor_axi_gpio_0_0.xci">
           <Proxy FileSetName="processor_axi_gpio_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="processor.bd" FileRelPathName="ip/processor_clk_wiz_0_0/processor_clk_wiz_0_0.xci">
-          <Proxy FileSetName="processor_clk_wiz_0_0"/>
+        <CompFileExtendedInfo CompFileName="processor.bd" FileRelPathName="ip/processor_axi_gpio_0_1/processor_axi_gpio_0_1.xci">
+          <Proxy FileSetName="processor_axi_gpio_0_1"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="processor.bd" FileRelPathName="ip/processor_axi_gpio_3_0/processor_axi_gpio_3_0.xci">
           <Proxy FileSetName="processor_axi_gpio_3_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="processor.bd" FileRelPathName="ip/processor_axi_gpio_0_1/processor_axi_gpio_0_1.xci">
-          <Proxy FileSetName="processor_axi_gpio_0_1"/>
+        <CompFileExtendedInfo CompFileName="processor.bd" FileRelPathName="ip/processor_axi_gpio_4_0/processor_axi_gpio_4_0.xci">
+          <Proxy FileSetName="processor_axi_gpio_4_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="processor.bd" FileRelPathName="ip/processor_proc_sys_reset_0_0/processor_proc_sys_reset_0_0.xci">
+          <Proxy FileSetName="processor_proc_sys_reset_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="processor.bd" FileRelPathName="ip/processor_axi_gpio_1_0/processor_axi_gpio_1_0.xci">
+          <Proxy FileSetName="processor_axi_gpio_1_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="processor.bd" FileRelPathName="ip/processor_axi_gpio_2_0/processor_axi_gpio_2_0.xci">
+          <Proxy FileSetName="processor_axi_gpio_2_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="processor.bd" FileRelPathName="ip/processor_clk_wiz_0_0/processor_clk_wiz_0_0.xci">
+          <Proxy FileSetName="processor_clk_wiz_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="processor.bd" FileRelPathName="ip/processor_axi_gpio_5_0/processor_axi_gpio_5_0.xci">
+          <Proxy FileSetName="processor_axi_gpio_5_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PPRDIR/../../Sources/General/aFIFO.v">
@@ -196,14 +196,14 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="Convolution_Controller.bd" FileRelPathName="ip/Convolution_Controller_xbar_2/Convolution_Controller_xbar_2.xci">
-          <Proxy FileSetName="Convolution_Controller_xbar_2"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="Convolution_Controller.bd" FileRelPathName="ip/Convolution_Controller_processing_system7_0_0/Convolution_Controller_processing_system7_0_0.xci">
           <Proxy FileSetName="Convolution_Controller_processing_system7_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="Convolution_Controller.bd" FileRelPathName="ip/Convolution_Controller_Convolution_Controll_0_0/Convolution_Controller_Convolution_Controll_0_0.xci">
-          <Proxy FileSetName="Convolution_Controller_Convolution_Controll_0_0"/>
+        <CompFileExtendedInfo CompFileName="Convolution_Controller.bd" FileRelPathName="ip/Convolution_Controller_xbar_0/Convolution_Controller_xbar_0.xci">
+          <Proxy FileSetName="Convolution_Controller_xbar_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="Convolution_Controller.bd" FileRelPathName="ip/Convolution_Controller_xbar_2/Convolution_Controller_xbar_2.xci">
+          <Proxy FileSetName="Convolution_Controller_xbar_2"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/Convolution_Controller/hdl/Convolution_Controller_wrapper.v">
@@ -385,9 +385,9 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="Convolution_Controller_Convolution_Controll_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Convolution_Controller_Convolution_Controll_0_0">
+    <FileSet Name="Convolution_Controller_xbar_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Convolution_Controller_xbar_0">
       <Config>
-        <Option Name="TopModule" Val="Convolution_Controller_Convolution_Controll_0_0"/>
+        <Option Name="TopModule" Val="Convolution_Controller_xbar_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -423,9 +423,7 @@
     </Run>
     <Run Id="synth_1_copy_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7z020clg400-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/synth_1_copy_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -533,9 +531,7 @@
     </Run>
     <Run Id="Convolution_Controller_xbar_2_synth_1" Type="Ft3:Synth" SrcSet="Convolution_Controller_xbar_2" Part="xc7z020clg400-1" ConstrsSet="Convolution_Controller_xbar_2" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/Convolution_Controller_xbar_2_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -545,9 +541,7 @@
     </Run>
     <Run Id="Convolution_Controller_processing_system7_0_0_synth_1" Type="Ft3:Synth" SrcSet="Convolution_Controller_processing_system7_0_0" Part="xc7z020clg400-1" ConstrsSet="Convolution_Controller_processing_system7_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/Convolution_Controller_processing_system7_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -555,7 +549,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="Convolution_Controller_Convolution_Controll_0_0_synth_1" Type="Ft3:Synth" SrcSet="Convolution_Controller_Convolution_Controll_0_0" Part="xc7z020clg400-1" ConstrsSet="Convolution_Controller_Convolution_Controll_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/Convolution_Controller_Convolution_Controll_0_0_synth_1" IncludeInArchive="true">
+    <Run Id="Convolution_Controller_xbar_0_synth_1" Type="Ft3:Synth" SrcSet="Convolution_Controller_xbar_0" Part="xc7z020clg400-1" ConstrsSet="Convolution_Controller_xbar_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/Convolution_Controller_xbar_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -586,9 +580,7 @@
     </Run>
     <Run Id="impl_2" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/impl_2" SynthRun="synth_1_copy_1" IncludeInArchive="true" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -759,9 +751,7 @@
     </Run>
     <Run Id="Convolution_Controller_xbar_2_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="Convolution_Controller_xbar_2" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="Convolution_Controller_xbar_2_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -778,9 +768,7 @@
     </Run>
     <Run Id="Convolution_Controller_processing_system7_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="Convolution_Controller_processing_system7_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="Convolution_Controller_processing_system7_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -795,7 +783,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="Convolution_Controller_Convolution_Controll_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="Convolution_Controller_Convolution_Controll_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="Convolution_Controller_Convolution_Controll_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="Convolution_Controller_xbar_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="Convolution_Controller_xbar_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="Convolution_Controller_xbar_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
           <Desc>Default settings for Implementation.</Desc>

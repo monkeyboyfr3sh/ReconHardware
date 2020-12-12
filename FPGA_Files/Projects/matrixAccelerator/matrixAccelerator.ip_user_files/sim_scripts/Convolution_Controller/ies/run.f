@@ -63,7 +63,7 @@
   "../../../bd/Convolution_Controller/ip/Convolution_Controller_axi_dma_0_0/sim/Convolution_Controller_axi_dma_0_0.vhd" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
-  "../../../bd/Convolution_Controller/ipshared/90e6/AXI_Convolution_Controller.v" \
+  "../../../bd/Convolution_Controller/ipshared/76f2/AXI_Convolution_Controller.v" \
   "../../../bd/Convolution_Controller/ip/Convolution_Controller_Convolution_Controll_0_0/sim/Convolution_Controller_Convolution_Controll_0_0.v" \
 -endlib
 -makelib ies_lib/generic_baseblocks_v2_1_0 \

@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:user:Convolution_Controller:1.0
-// IP Revision: 11
+// IP Revision: 26
 
 `timescale 1ns/1ps
 
@@ -57,6 +57,7 @@
 module Convolution_Controller_Convolution_Controll_0_0 (
   axi_clk,
   axi_reset_n,
+  ip_reset_out,
   cSum,
   cReady,
   MULTIPLIER_INPUT,
@@ -86,7 +87,8 @@ module Convolution_Controller_Convolution_Controll_0_0 (
   s_axi_rready,
   s_axi_rvalid,
   s_axi_bvalid,
-  s_axi_bready
+  s_axi_bready,
+  s_axi_rlast
 );
 
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME axi_clk, ASSOCIATED_RESET axi_reset_n, ASSOCIATED_BUSIF s_axi_CTRL:s_axis_DATA_IN:m_axis_DATA_OUT, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, INSERT_VIP 0" *)
@@ -95,6 +97,7 @@ input wire axi_clk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME axi_reset_n, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 axi_reset_n RST" *)
 input wire axi_reset_n;
+output wire ip_reset_out;
 input wire [31 : 0] cSum;
 input wire cReady;
 output wire [95 : 0] MULTIPLIER_INPUT;
@@ -149,9 +152,11 @@ input wire s_axi_rready;
 output wire s_axi_rvalid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_CTRL BVALID" *)
 output wire s_axi_bvalid;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axi_CTRL, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 10, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 0, HAS_BRESP 0, HAS_RRESP 0, SUPPORTS_NARROW_BURST 0, MAX_BURST_LENGTH 1, PHASE 0.000, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_CTRL BREADY" *)
 input wire s_axi_bready;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axi_CTRL, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 10, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 0, HAS_BRESP 0, HAS_RRESP 0, SUPPORTS_NARROW_BURST 0, MAX_BURST_LENGTH 1, PHASE 0.000, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *)
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_CTRL RLAST" *)
+output wire s_axi_rlast;
 
   Convolution_Controller #(
     .DATA_WIDTH(32),
@@ -159,6 +164,7 @@ input wire s_axi_bready;
   ) inst (
     .axi_clk(axi_clk),
     .axi_reset_n(axi_reset_n),
+    .ip_reset_out(ip_reset_out),
     .cSum(cSum),
     .cReady(cReady),
     .MULTIPLIER_INPUT(MULTIPLIER_INPUT),
@@ -188,6 +194,7 @@ input wire s_axi_bready;
     .s_axi_rready(s_axi_rready),
     .s_axi_rvalid(s_axi_rvalid),
     .s_axi_bvalid(s_axi_bvalid),
-    .s_axi_bready(s_axi_bready)
+    .s_axi_bready(s_axi_bready),
+    .s_axi_rlast(s_axi_rlast)
   );
 endmodule

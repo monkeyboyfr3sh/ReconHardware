@@ -25,7 +25,7 @@ eval( EAInclude(ISEJScriptLib) );
 // pre-commands:
 ISETouchFile( "init_design", "begin" );
 ISEStep( "vivado",
-         "-log AXI_Invert_Testing_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source AXI_Invert_Testing_wrapper.tcl -notrace" );
+         "-log Convolution_Controller.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source Convolution_Controller.tcl -notrace" );
 
 
 

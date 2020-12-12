@@ -3,9 +3,9 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Mon Dec  7 19:49:52 2020">
+<application name="pa" timeStamp="Sat Dec 12 14:19:19 2020">
 <section name="Project Information" visible="false">
-<property name="ProjectID" value="258aea12792242f6873b2828f0fcbc6b" type="ProjectID"/>
+<property name="ProjectID" value="6c726b70a16e4f51acd7930a702179f2" type="ProjectID"/>
 <property name="ProjectIteration" value="1" type="ProjectIteration"/>
 </section>
 <section name="PlanAhead Usage" visible="true">
@@ -17,25 +17,32 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="ImplStrategy" value="Vivado Implementation Defaults" type="ImplStrategy"/>
 </item>
 <item name="Java Command Handlers">
+<property name="AutoConnectPort" value="7" type="JavaHandler"/>
 <property name="CloseProject" value="1" type="JavaHandler"/>
+<property name="EditDelete" value="8" type="JavaHandler"/>
 <property name="EditInIPPackagerHandler" value="1" type="JavaHandler"/>
 <property name="IPPackagerHandler" value="1" type="JavaHandler"/>
+<property name="RegenerateRSBLayout" value="4" type="JavaHandler"/>
+<property name="SaveRSBDesign" value="1" type="JavaHandler"/>
 </item>
 <item name="Gui Handlers">
-<property name="BaseDialog_OK" value="2" type="GuiHandlerData"/>
-<property name="PACommandNames_EDIT_IN_IP_PACKAGER" value="1" type="GuiHandlerData"/>
-<property name="PackagerStepsPanel_PACKAGER_STEPS_LIST" value="1" type="GuiHandlerData"/>
-<property name="SelectMenu_HIGHLIGHT" value="1" type="GuiHandlerData"/>
-<property name="SystemBuilderMenu_IP_DOCUMENTATION" value="1" type="GuiHandlerData"/>
-<property name="SystemBuilderView_EXPAND_COLLAPSE" value="1" type="GuiHandlerData"/>
-<property name="SystemBuilderView_ORIENTATION" value="2" type="GuiHandlerData"/>
-<property name="SystemBuilderView_PINNING" value="2" type="GuiHandlerData"/>
-<property name="TclConsoleView_TCL_CONSOLE_CODE_EDITOR" value="1" type="GuiHandlerData"/>
+<property name="BaseDialog_OK" value="3" type="GuiHandlerData"/>
+<property name="CoreTreeTablePanel_CORE_TREE_TABLE" value="4" type="GuiHandlerData"/>
+<property name="FileSetPanel_FILE_SET_PANEL_TREE" value="11" type="GuiHandlerData"/>
+<property name="PACommandNames_EDIT_IN_IP_PACKAGER" value="5" type="GuiHandlerData"/>
+<property name="PACommandNames_REGENERATE_LAYOUT" value="4" type="GuiHandlerData"/>
+<property name="RSBApplyAutomationBar_RUN_CONNECTION_AUTOMATION" value="1" type="GuiHandlerData"/>
+<property name="SelectMenu_HIGHLIGHT" value="4" type="GuiHandlerData"/>
+<property name="SystemBuilderMenu_ADD_IP" value="1" type="GuiHandlerData"/>
+<property name="SystemBuilderMenu_IP_DOCUMENTATION" value="14" type="GuiHandlerData"/>
+<property name="SystemBuilderView_EXPAND_COLLAPSE" value="7" type="GuiHandlerData"/>
+<property name="SystemBuilderView_ORIENTATION" value="10" type="GuiHandlerData"/>
+<property name="SystemBuilderView_PINNING" value="13" type="GuiHandlerData"/>
 </item>
 <item name="Other">
-<property name="GuiMode" value="317" type="GuiMode"/>
+<property name="GuiMode" value="329" type="GuiMode"/>
 <property name="BatchMode" value="0" type="BatchMode"/>
-<property name="TclMode" value="223" type="TclMode"/>
+<property name="TclMode" value="230" type="TclMode"/>
 </item>
 </section>
 </application>

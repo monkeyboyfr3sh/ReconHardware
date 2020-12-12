@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date             : Mon Dec  7 19:39:47 2020
+| Date             : Sat Dec 12 14:23:06 2020
 | Host             : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 | Command          : report_power -file AXI_Conv_wrapper_power_routed.rpt -pb AXI_Conv_wrapper_power_summary_routed.pb -rpx AXI_Conv_wrapper_power_routed.rpx
 | Design           : AXI_Conv_wrapper
@@ -30,7 +30,7 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.412        |
+| Total On-Chip Power (W)  | 1.411        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
 | Dynamic (W)              | 1.277        |
@@ -52,20 +52,19 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.015 |        3 |       --- |             --- |
-| Slice Logic              |     0.003 |     9187 |       --- |             --- |
-|   LUT as Logic           |     0.002 |     3123 |     53200 |            5.87 |
-|   CARRY4                 |    <0.001 |      154 |     13300 |            1.16 |
-|   Register               |    <0.001 |     4240 |    106400 |            3.98 |
+| Clocks                   |     0.013 |        3 |       --- |             --- |
+| Slice Logic              |     0.003 |     7914 |       --- |             --- |
+|   LUT as Logic           |     0.002 |     2571 |     53200 |            4.83 |
+|   CARRY4                 |    <0.001 |       82 |     13300 |            0.62 |
+|   Register               |    <0.001 |     3722 |    106400 |            3.50 |
 |   LUT as Shift Register  |    <0.001 |      205 |     17400 |            1.18 |
-|   LUT as Distributed RAM |    <0.001 |       54 |     17400 |            0.31 |
-|   Others                 |     0.000 |      449 |       --- |             --- |
-| Signals                  |     0.003 |     6649 |       --- |             --- |
+|   Others                 |     0.000 |      438 |       --- |             --- |
+|   LUT as Distributed RAM |     0.000 |       18 |     17400 |            0.10 |
+| Signals                  |     0.004 |     5735 |       --- |             --- |
 | Block RAM                |    <0.001 |        2 |       140 |            1.43 |
-| DSPs                     |     0.000 |        3 |       220 |            1.36 |
 | PS7                      |     1.256 |        1 |       --- |             --- |
 | Static Power             |     0.135 |          |           |                 |
-| Total                    |     1.412 |          |           |                 |
+| Total                    |     1.411 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -75,7 +74,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.034 |       0.021 |      0.013 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.034 |       0.020 |      0.013 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.014 |       0.000 |      0.014 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -154,11 +153,10 @@ Table of Contents
 | AXI_Conv_wrapper             |     1.277 |
 |   nolabel_line21             |     1.277 |
 |     Convolution_Controller_i |     1.277 |
-|       Convolution_Controll_0 |     0.003 |
-|       axi_dma_0              |     0.008 |
+|       axi_dma_0              |     0.009 |
 |       axi_mem_intercon       |     0.004 |
 |       processing_system7_0   |     1.257 |
-|       ps7_0_axi_periph       |     0.005 |
+|       ps7_0_axi_periph       |     0.006 |
 +------------------------------+-----------+
 
 

@@ -1,99 +1,118 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1607382568">
-  <File Type="BITSTR-BMM" Name="AXI_Invert_Testing_wrapper_bd.bmm"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="AXI_Invert_Testing_wrapper_methodology_drc_opted.rpt"/>
-  <File Type="INIT-TIMING" Name="AXI_Invert_Testing_wrapper_timing_summary_init.rpt"/>
-  <File Type="ROUTE-PWR" Name="AXI_Invert_Testing_wrapper_power_routed.rpt"/>
-  <File Type="PA-TCL" Name="AXI_Invert_Testing_wrapper.tcl"/>
-  <File Type="OPT-TIMING" Name="AXI_Invert_Testing_wrapper_timing_summary_opted.rpt"/>
-  <File Type="OPT-DCP" Name="AXI_Invert_Testing_wrapper_opt.dcp"/>
-  <File Type="ROUTE-PWR-SUM" Name="AXI_Invert_Testing_wrapper_power_summary_routed.pb"/>
-  <File Type="REPORTS-TCL" Name="AXI_Invert_Testing_wrapper_reports.tcl"/>
-  <File Type="OPT-DRC" Name="AXI_Invert_Testing_wrapper_drc_opted.rpt"/>
-  <File Type="OPT-HWDEF" Name="AXI_Invert_Testing_wrapper.hwdef"/>
-  <File Type="PWROPT-DCP" Name="AXI_Invert_Testing_wrapper_pwropt.dcp"/>
-  <File Type="PWROPT-DRC" Name="AXI_Invert_Testing_wrapper_drc_pwropted.rpt"/>
-  <File Type="PWROPT-TIMING" Name="AXI_Invert_Testing_wrapper_timing_summary_pwropted.rpt"/>
-  <File Type="PLACE-DCP" Name="AXI_Invert_Testing_wrapper_placed.dcp"/>
-  <File Type="PLACE-IO" Name="AXI_Invert_Testing_wrapper_io_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="AXI_Invert_Testing_wrapper_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL" Name="AXI_Invert_Testing_wrapper_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="AXI_Invert_Testing_wrapper_utilization_placed.pb"/>
-  <File Type="PLACE-CTRL" Name="AXI_Invert_Testing_wrapper_control_sets_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="AXI_Invert_Testing_wrapper_incremental_reuse_placed.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="AXI_Invert_Testing_wrapper_incremental_reuse_pre_placed.rpt"/>
-  <File Type="PLACE-TIMING" Name="AXI_Invert_Testing_wrapper_timing_summary_placed.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="AXI_Invert_Testing_wrapper_postplace_pwropt.dcp"/>
-  <File Type="BG-BIN" Name="AXI_Invert_Testing_wrapper.bin"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="AXI_Invert_Testing_wrapper_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="PHYSOPT-DCP" Name="AXI_Invert_Testing_wrapper_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="AXI_Invert_Testing_wrapper_drc_physopted.rpt"/>
-  <File Type="BITSTR-MSK" Name="AXI_Invert_Testing_wrapper.msk"/>
-  <File Type="PHYSOPT-TIMING" Name="AXI_Invert_Testing_wrapper_timing_summary_physopted.rpt"/>
-  <File Type="ROUTE-ERROR-DCP" Name="AXI_Invert_Testing_wrapper_routed_error.dcp"/>
-  <File Type="ROUTE-DCP" Name="AXI_Invert_Testing_wrapper_routed.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="AXI_Invert_Testing_wrapper_routed_bb.dcp"/>
-  <File Type="ROUTE-DRC" Name="AXI_Invert_Testing_wrapper_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-PB" Name="AXI_Invert_Testing_wrapper_drc_routed.pb"/>
-  <File Type="ROUTE-DRC-RPX" Name="AXI_Invert_Testing_wrapper_drc_routed.rpx"/>
-  <File Type="BITSTR-MMI" Name="AXI_Invert_Testing_wrapper.mmi"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="AXI_Invert_Testing_wrapper_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="AXI_Invert_Testing_wrapper_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="AXI_Invert_Testing_wrapper_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-PWR-RPX" Name="AXI_Invert_Testing_wrapper_power_routed.rpx"/>
-  <File Type="ROUTE-STATUS" Name="AXI_Invert_Testing_wrapper_route_status.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="AXI_Invert_Testing_wrapper_route_status.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="AXI_Invert_Testing_wrapper_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-TIMING-PB" Name="AXI_Invert_Testing_wrapper_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMING-RPX" Name="AXI_Invert_Testing_wrapper_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-SIMILARITY" Name="AXI_Invert_Testing_wrapper_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="AXI_Invert_Testing_wrapper_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW" Name="AXI_Invert_Testing_wrapper_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="AXI_Invert_Testing_wrapper_bus_skew_routed.pb"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="AXI_Invert_Testing_wrapper_bus_skew_routed.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="AXI_Invert_Testing_wrapper_postroute_physopt.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="AXI_Invert_Testing_wrapper_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="AXI_Invert_Testing_wrapper_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="AXI_Invert_Testing_wrapper_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="AXI_Invert_Testing_wrapper_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="AXI_Invert_Testing_wrapper_bus_skew_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="AXI_Invert_Testing_wrapper_bus_skew_postroute_physopted.pb"/>
-  <File Type="BG-BIT" Name="AXI_Invert_Testing_wrapper.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="AXI_Invert_Testing_wrapper_bus_skew_postroute_physopted.rpx"/>
-  <File Type="BITSTR-RBT" Name="AXI_Invert_Testing_wrapper.rbt"/>
-  <File Type="BITSTR-NKY" Name="AXI_Invert_Testing_wrapper.nky"/>
-  <File Type="PDI-FILE" Name="AXI_Invert_Testing_wrapper.pdi"/>
-  <File Type="RCFI_FILE" Name="AXI_Invert_Testing_wrapper.rcfi"/>
-  <File Type="CFI_FILE" Name="AXI_Invert_Testing_wrapper.cfi"/>
-  <File Type="RNPI_FILE" Name="AXI_Invert_Testing_wrapper.rnpi"/>
-  <File Type="NPI_FILE" Name="AXI_Invert_Testing_wrapper.npi"/>
-  <File Type="RBD_FILE" Name="AXI_Invert_Testing_wrapper.rbd"/>
+<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1607802048">
+  <File Type="BITSTR-BMM" Name="Convolution_Controller_bd.bmm"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="Convolution_Controller_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="Convolution_Controller_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR" Name="Convolution_Controller_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="Convolution_Controller.tcl"/>
+  <File Type="OPT-TIMING" Name="Convolution_Controller_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="Convolution_Controller_opt.dcp"/>
+  <File Type="ROUTE-PWR-SUM" Name="Convolution_Controller_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="Convolution_Controller_reports.tcl"/>
+  <File Type="OPT-DRC" Name="Convolution_Controller_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="Convolution_Controller.hwdef"/>
+  <File Type="PWROPT-DCP" Name="Convolution_Controller_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="Convolution_Controller_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="Convolution_Controller_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="Convolution_Controller_placed.dcp"/>
+  <File Type="PLACE-IO" Name="Convolution_Controller_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="Convolution_Controller_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="Convolution_Controller_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="Convolution_Controller_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="Convolution_Controller_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="Convolution_Controller_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="Convolution_Controller_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="Convolution_Controller_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="Convolution_Controller_postplace_pwropt.dcp"/>
+  <File Type="BG-BIN" Name="Convolution_Controller.bin"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="Convolution_Controller_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="Convolution_Controller_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="Convolution_Controller_drc_physopted.rpt"/>
+  <File Type="BITSTR-MSK" Name="Convolution_Controller.msk"/>
+  <File Type="PHYSOPT-TIMING" Name="Convolution_Controller_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="Convolution_Controller_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="Convolution_Controller_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="Convolution_Controller_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="Convolution_Controller_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="Convolution_Controller_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="Convolution_Controller_drc_routed.rpx"/>
+  <File Type="BITSTR-MMI" Name="Convolution_Controller.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="Convolution_Controller_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="Convolution_Controller_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="Convolution_Controller_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="Convolution_Controller_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="Convolution_Controller_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="Convolution_Controller_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="Convolution_Controller_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="Convolution_Controller_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="Convolution_Controller_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="Convolution_Controller_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="Convolution_Controller_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="Convolution_Controller_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="Convolution_Controller_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="Convolution_Controller_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="Convolution_Controller_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="Convolution_Controller_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="Convolution_Controller_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="Convolution_Controller_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="Convolution_Controller_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="Convolution_Controller_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="Convolution_Controller_bus_skew_postroute_physopted.pb"/>
+  <File Type="BG-BIT" Name="Convolution_Controller.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="Convolution_Controller_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-RBT" Name="Convolution_Controller.rbt"/>
+  <File Type="BITSTR-NKY" Name="Convolution_Controller.nky"/>
+  <File Type="PDI-FILE" Name="Convolution_Controller.pdi"/>
+  <File Type="RCFI_FILE" Name="Convolution_Controller.rcfi"/>
+  <File Type="CFI_FILE" Name="Convolution_Controller.cfi"/>
+  <File Type="RNPI_FILE" Name="Convolution_Controller.rnpi"/>
+  <File Type="NPI_FILE" Name="Convolution_Controller.npi"/>
+  <File Type="RBD_FILE" Name="Convolution_Controller.rbd"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="AXI_Invert_Testing_wrapper.ltx"/>
-  <File Type="BITSTR-SYSDEF" Name="AXI_Invert_Testing_wrapper.sysdef"/>
-  <File Type="BG-BGN" Name="AXI_Invert_Testing_wrapper.bgn"/>
-  <File Type="BG-DRC" Name="AXI_Invert_Testing_wrapper.drc"/>
-  <File Type="RDI-RDI" Name="AXI_Invert_Testing_wrapper.vdi"/>
+  <File Type="BITSTR-LTX" Name="Convolution_Controller.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="Convolution_Controller.sysdef"/>
+  <File Type="BG-BGN" Name="Convolution_Controller.bgn"/>
+  <File Type="BG-DRC" Name="Convolution_Controller.drc"/>
+  <File Type="RDI-RDI" Name="Convolution_Controller.vdi"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/bd/AXI_Invert_Testing/AXI_Invert_Testing.bd">
+    <File Path="$PPRDIR/../../Sources/definitions.h">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/bd/AXI_Invert_Testing/hdl/AXI_Invert_Testing_wrapper.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <File Path="$PPRDIR/../../Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Sources/General/matrixAccelerator.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Sources/General/XBar2.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Sources/Multiplier/multiplyComputePynq.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Sources/Adder/adder.v">
+      <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -101,8 +120,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="AXI_Invert_Testing_wrapper"/>
-      <Option Name="TopAutoSet" Val="TRUE"/>
+      <Option Name="TopModule" Val="Convolution_Controller"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -118,9 +136,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
-      <Desc>Default settings for Implementation.</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>
@@ -131,10 +147,4 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="AXI_Invert_Testing_processing_system7_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="AXI_Invert_Testing_axi_dma_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="AXI_Invert_Testing_xbar_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="AXI_Invert_Testing_rst_ps7_0_100M_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="AXI_Invert_Testing_xbar_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="AXI_Invert_Testing_Convolution_Controll_0_0"/>
 </GenRun>

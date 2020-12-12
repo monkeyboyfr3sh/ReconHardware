@@ -170,6 +170,7 @@ proc create_root_design { parentCell } {
   set MULTIPLY_START_0 [ create_bd_port -dir O -from 2 -to 0 MULTIPLY_START_0 ]
   set cReady_0 [ create_bd_port -dir I cReady_0 ]
   set cSum_0 [ create_bd_port -dir I -from 31 -to 0 cSum_0 ]
+  set ip_reset_out_0 [ create_bd_port -dir O ip_reset_out_0 ]
 
   # Create instance: Convolution_Controll_0, and set properties
   set Convolution_Controll_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:Convolution_Controller:1.0 Convolution_Controll_0 ]
@@ -988,6 +989,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net Convolution_Controll_0_MULTIPLICAND_INPUT [get_bd_ports MULTIPLICAND_INPUT_0] [get_bd_pins Convolution_Controll_0/MULTIPLICAND_INPUT]
   connect_bd_net -net Convolution_Controll_0_MULTIPLIER_INPUT [get_bd_ports MULTIPLIER_INPUT_0] [get_bd_pins Convolution_Controll_0/MULTIPLIER_INPUT]
   connect_bd_net -net Convolution_Controll_0_MULTIPLY_START [get_bd_ports MULTIPLY_START_0] [get_bd_pins Convolution_Controll_0/MULTIPLY_START]
+  connect_bd_net -net Convolution_Controll_0_ip_reset_out [get_bd_ports ip_reset_out_0] [get_bd_pins Convolution_Controll_0/ip_reset_out]
   connect_bd_net -net cReady_0_1 [get_bd_ports cReady_0] [get_bd_pins Convolution_Controll_0/cReady]
   connect_bd_net -net cSum_0_1 [get_bd_ports cSum_0] [get_bd_pins Convolution_Controll_0/cSum]
   connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_ports FCLK_CLK0_0] [get_bd_pins Convolution_Controll_0/axi_clk] [get_bd_pins axi_dma_0/m_axi_mm2s_aclk] [get_bd_pins axi_dma_0/m_axi_s2mm_aclk] [get_bd_pins axi_dma_0/s_axi_lite_aclk] [get_bd_pins axi_mem_intercon/ACLK] [get_bd_pins axi_mem_intercon/M00_ACLK] [get_bd_pins axi_mem_intercon/S00_ACLK] [get_bd_pins axi_mem_intercon/S01_ACLK] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins processing_system7_0/S_AXI_HP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/M01_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_100M/slowest_sync_clk]
@@ -997,7 +999,6 @@ proc create_root_design { parentCell } {
   # Create address segments
   assign_bd_address -offset 0x00000000 -range 0x20000000 -target_address_space [get_bd_addr_spaces axi_dma_0/Data_MM2S] [get_bd_addr_segs processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM] -force
   assign_bd_address -offset 0x00000000 -range 0x20000000 -target_address_space [get_bd_addr_spaces axi_dma_0/Data_S2MM] [get_bd_addr_segs processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM] -force
-  assign_bd_address -offset 0x43C00000 -range 0x00010000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs Convolution_Controll_0/s_axi_CTRL/reg0] -force
   assign_bd_address -offset 0x40400000 -range 0x00010000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_dma_0/S_AXI_LITE/Reg] -force
 
 

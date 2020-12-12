@@ -1,0 +1,5 @@
+vhdl xil_defaultlib  \
+"../../../bd/Pixel_Controller_BD/ip/Pixel_Controller_BD_axi_dma_0_0/sim/Pixel_Controller_BD_axi_dma_0_0.vhd" \
+"../../../bd/Pixel_Controller_BD/ip/Pixel_Controller_BD_rst_ps7_0_100M_0/sim/Pixel_Controller_BD_rst_ps7_0_100M_0.vhd" \
+
+nosort

@@ -25,7 +25,7 @@ eval( EAInclude(ISEJScriptLib) );
 // pre-commands:
 ISETouchFile( "init_design", "begin" );
 ISEStep( "vivado",
-         "-log Pixel_Inverter_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source Pixel_Inverter_wrapper.tcl -notrace" );
+         "-log Pixel_Control_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source Pixel_Control_wrapper.tcl -notrace" );
 
 
 

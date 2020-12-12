@@ -1,8 +1,10 @@
 Vivado Simulator 2020.1
 Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto e8a0372fdc934f758c8bcf4b64e3a7a8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Convolution_Controller_behav xil_defaultlib.Convolution_Controller xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto e8a0372fdc934f758c8bcf4b64e3a7a8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Controller_Test_tb_behav xil_defaultlib.Controller_Test_tb xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 4 for port 'AddressSelect' [C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/Controller_Test_tb.v:117]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'direct' [C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/Controller_Test_tb.v:120]
 Completed static elaboration
 INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel

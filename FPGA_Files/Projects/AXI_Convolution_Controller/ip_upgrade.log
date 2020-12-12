@@ -1,6 +1,50 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Tue Dec  8 14:54:45 2020
+| Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'AXI_Invert_Testing_Convolution_Controll_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of AXI_Invert_Testing_Convolution_Controll_0_0 (xilinx.com:user:Convolution_Controller:1.0) from (Rev. 8) to (Rev. 18)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'AXI_Invert_Testing_Convolution_Controll_0_0'. These changes may impact your design.
+
+
+-Upgrade has added port 'FINALADDOUT'
+
+-Upgrade has added port 'MULTIPLICAND_INPUT'
+
+-Upgrade has added port 'MULTIPLIER_INPUT'
+
+-Upgrade has added port 'MULTIPLY_START'
+
+-Upgrade has added port 'cReady'
+
+-Upgrade has added port 'cSum'
+
+-Upgrade has added port 's_axi_rlast'
+
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
 | Date         : Mon Dec  7 17:08:27 2020
 | Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 | Command      : upgrade_ip

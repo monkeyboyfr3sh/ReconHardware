@@ -23,7 +23,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log Pixel_Inverter_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Pixel_Inverter_wrapper.tcl" );
+         "-log Pixel_Control_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Pixel_Control_wrapper.tcl" );
 
 
 

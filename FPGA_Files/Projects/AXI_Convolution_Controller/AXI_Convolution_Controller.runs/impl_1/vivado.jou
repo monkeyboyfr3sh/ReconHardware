@@ -2,11 +2,11 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Mon Dec  7 17:10:09 2020
-# Process ID: 9612
+# Start of session at: Sat Dec 12 13:41:24 2020
+# Process ID: 2172
 # Current directory: C:/GitHub/ReconHardware/FPGA_Files/Projects/AXI_Convolution_Controller/AXI_Convolution_Controller.runs/impl_1
-# Command line: vivado.exe -log AXI_Invert_Testing_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source AXI_Invert_Testing_wrapper.tcl -notrace
-# Log file: C:/GitHub/ReconHardware/FPGA_Files/Projects/AXI_Convolution_Controller/AXI_Convolution_Controller.runs/impl_1/AXI_Invert_Testing_wrapper.vdi
+# Command line: vivado.exe -log Convolution_Controller.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source Convolution_Controller.tcl -notrace
+# Log file: C:/GitHub/ReconHardware/FPGA_Files/Projects/AXI_Convolution_Controller/AXI_Convolution_Controller.runs/impl_1/Convolution_Controller.vdi
 # Journal file: C:/GitHub/ReconHardware/FPGA_Files/Projects/AXI_Convolution_Controller/AXI_Convolution_Controller.runs/impl_1\vivado.jou
 #-----------------------------------------------------------
-source AXI_Invert_Testing_wrapper.tcl -notrace
+source Convolution_Controller.tcl -notrace

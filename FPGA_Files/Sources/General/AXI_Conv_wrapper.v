@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 
 module AXI_Conv_wrapper();
-wire clk,rst;
+wire clk,rst,ip_reset;
 wire cReady,finaladd_start;
 
 //Matrix Accelerator signals
@@ -21,6 +21,7 @@ assign finalsum = cSum[`bitLength-1:0];             //Slices needed bits
 Convolution_Controller_wrapper(
     .FCLK_CLK0_0(clk),
     .FCLK_RESET0_N_0(rst),
+    .ip_reset_out_0(ip_reset),
     .MULTIPLIER_INPUT_0(multiplier_connector),
     .MULTIPLICAND_INPUT_0(multiplicand_connector),
     .MULTIPLY_START_0(mStart_conncetor),
@@ -30,7 +31,7 @@ Convolution_Controller_wrapper(
 );
  matrixAccelerator matrixAccel(   
     .Clk(clk),
-    .Rst(rst),
+    .Rst(~rst||ip_reset),//This is expecting reset of active high
     .multiplier_input(multiplier_connector),        //Flat input connector. Has width of `bitLength*`inputPortcount
     .multiplicand_input(multiplicand_connector),    //Flat input connector. Has width of `bitLength*`inputPortcount
     .AddressSelect(AddressSelect),                  //Controls addressSelect for internal XBar                          
