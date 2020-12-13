@@ -26,7 +26,7 @@
 `define myTimeScale         1ns / 1ps
 `define clkPeriod           10
 
-`define inputWidth          16
+`define inputWidth          32
 `define KERNELSIZE          3
 
 //If reset signal is active high, define as 1

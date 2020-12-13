@@ -10,7 +10,7 @@ module adder(   Clk,
                 );
 input Clk,Rst,Add;
 input   [(`bitLength*2)-1:0] addend;
-reg     [(`bitLength*2)-1:0] accumulate;
+reg     [(`bitLength*2)-1:0] accumulate = 0;
 output  [(`bitLength*2)-1:0] sum;
 assign sum = accumulate;
 

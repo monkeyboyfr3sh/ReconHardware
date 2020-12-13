@@ -1,80 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1607802048">
-  <File Type="BITSTR-BMM" Name="Convolution_Controller_bd.bmm"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="Convolution_Controller_methodology_drc_opted.rpt"/>
-  <File Type="INIT-TIMING" Name="Convolution_Controller_timing_summary_init.rpt"/>
-  <File Type="ROUTE-PWR" Name="Convolution_Controller_power_routed.rpt"/>
   <File Type="PA-TCL" Name="Convolution_Controller.tcl"/>
-  <File Type="OPT-TIMING" Name="Convolution_Controller_timing_summary_opted.rpt"/>
-  <File Type="OPT-DCP" Name="Convolution_Controller_opt.dcp"/>
-  <File Type="ROUTE-PWR-SUM" Name="Convolution_Controller_power_summary_routed.pb"/>
   <File Type="REPORTS-TCL" Name="Convolution_Controller_reports.tcl"/>
-  <File Type="OPT-DRC" Name="Convolution_Controller_drc_opted.rpt"/>
-  <File Type="OPT-HWDEF" Name="Convolution_Controller.hwdef"/>
-  <File Type="PWROPT-DCP" Name="Convolution_Controller_pwropt.dcp"/>
-  <File Type="PWROPT-DRC" Name="Convolution_Controller_drc_pwropted.rpt"/>
-  <File Type="PWROPT-TIMING" Name="Convolution_Controller_timing_summary_pwropted.rpt"/>
-  <File Type="PLACE-DCP" Name="Convolution_Controller_placed.dcp"/>
-  <File Type="PLACE-IO" Name="Convolution_Controller_io_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="Convolution_Controller_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL" Name="Convolution_Controller_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="Convolution_Controller_utilization_placed.pb"/>
-  <File Type="PLACE-CTRL" Name="Convolution_Controller_control_sets_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="Convolution_Controller_incremental_reuse_placed.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="Convolution_Controller_incremental_reuse_pre_placed.rpt"/>
-  <File Type="PLACE-TIMING" Name="Convolution_Controller_timing_summary_placed.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="Convolution_Controller_postplace_pwropt.dcp"/>
-  <File Type="BG-BIN" Name="Convolution_Controller.bin"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="Convolution_Controller_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="PHYSOPT-DCP" Name="Convolution_Controller_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="Convolution_Controller_drc_physopted.rpt"/>
   <File Type="BITSTR-MSK" Name="Convolution_Controller.msk"/>
-  <File Type="PHYSOPT-TIMING" Name="Convolution_Controller_timing_summary_physopted.rpt"/>
-  <File Type="ROUTE-ERROR-DCP" Name="Convolution_Controller_routed_error.dcp"/>
-  <File Type="ROUTE-DCP" Name="Convolution_Controller_routed.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="Convolution_Controller_routed_bb.dcp"/>
-  <File Type="ROUTE-DRC" Name="Convolution_Controller_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-PB" Name="Convolution_Controller_drc_routed.pb"/>
-  <File Type="ROUTE-DRC-RPX" Name="Convolution_Controller_drc_routed.rpx"/>
-  <File Type="BITSTR-MMI" Name="Convolution_Controller.mmi"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="Convolution_Controller_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="Convolution_Controller_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="Convolution_Controller_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-PWR-RPX" Name="Convolution_Controller_power_routed.rpx"/>
-  <File Type="ROUTE-STATUS" Name="Convolution_Controller_route_status.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="Convolution_Controller_route_status.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="Convolution_Controller_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-TIMING-PB" Name="Convolution_Controller_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMING-RPX" Name="Convolution_Controller_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-SIMILARITY" Name="Convolution_Controller_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="Convolution_Controller_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW" Name="Convolution_Controller_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="Convolution_Controller_bus_skew_routed.pb"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="Convolution_Controller_bus_skew_routed.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="Convolution_Controller_postroute_physopt.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="Convolution_Controller_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="Convolution_Controller_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="Convolution_Controller_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="Convolution_Controller_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="Convolution_Controller_bus_skew_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="Convolution_Controller_bus_skew_postroute_physopted.pb"/>
+  <File Type="RDI-RDI" Name="Convolution_Controller.vdi"/>
   <File Type="BG-BIT" Name="Convolution_Controller.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="Convolution_Controller_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BG-DRC" Name="Convolution_Controller.drc"/>
+  <File Type="BG-BGN" Name="Convolution_Controller.bgn"/>
+  <File Type="BG-BIN" Name="Convolution_Controller.bin"/>
   <File Type="BITSTR-RBT" Name="Convolution_Controller.rbt"/>
   <File Type="BITSTR-NKY" Name="Convolution_Controller.nky"/>
+  <File Type="BITSTR-BMM" Name="Convolution_Controller_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="Convolution_Controller.mmi"/>
+  <File Type="BITSTR-SYSDEF" Name="Convolution_Controller.sysdef"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="Convolution_Controller.ltx"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="OPT-DRC" Name="Convolution_Controller_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="Convolution_Controller.hwdef"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="Convolution_Controller_incremental_reuse_pre_placed.rpt"/>
+  <File Type="ROUTE-DCP" Name="Convolution_Controller_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="Convolution_Controller_routed_error.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="Convolution_Controller_routed_bb.dcp"/>
+  <File Type="ROUTE-TIMING-PB" Name="Convolution_Controller_timing_summary_routed.pb"/>
+  <File Type="OPT-DCP" Name="Convolution_Controller_opt.dcp"/>
+  <File Type="PLACE-DCP" Name="Convolution_Controller_placed.dcp"/>
+  <File Type="PWROPT-DCP" Name="Convolution_Controller_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="Convolution_Controller_postplace_pwropt.dcp"/>
+  <File Type="PHYSOPT-DCP" Name="Convolution_Controller_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="Convolution_Controller_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="Convolution_Controller_postroute_physopt_bb.dcp"/>
   <File Type="PDI-FILE" Name="Convolution_Controller.pdi"/>
   <File Type="RCFI_FILE" Name="Convolution_Controller.rcfi"/>
   <File Type="CFI_FILE" Name="Convolution_Controller.cfi"/>
   <File Type="RNPI_FILE" Name="Convolution_Controller.rnpi"/>
   <File Type="NPI_FILE" Name="Convolution_Controller.npi"/>
   <File Type="RBD_FILE" Name="Convolution_Controller.rbd"/>
-  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="Convolution_Controller.ltx"/>
-  <File Type="BITSTR-SYSDEF" Name="Convolution_Controller.sysdef"/>
-  <File Type="BG-BGN" Name="Convolution_Controller.bgn"/>
-  <File Type="BG-DRC" Name="Convolution_Controller.drc"/>
-  <File Type="RDI-RDI" Name="Convolution_Controller.vdi"/>
-  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/../../Sources/definitions.h">
@@ -146,5 +107,6 @@
     <Step Id="route_design"/>
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
+    <Step Id="write_device_image"/>
   </Strategy>
 </GenRun>

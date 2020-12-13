@@ -125,22 +125,23 @@ Convolution_Controller dut
 );
 
 
-integer i;
+integer i, linecnt, columncnt;
 
 initial begin
 axi_clk = 0;
-axi_reset_n = 0;
 s_axi_bready = 1;
-#`clkPeriod;
 axi_reset_n = 1;
 #`clkPeriod;
 #`clkPeriod;
+
+`define test_width 8
+`define test_height 8
 
 //Write the picture width info
 s_axi_awvalid = 1;
 s_axi_awaddr = 0;//Select Width register
 s_axi_wvalid = 1;
-s_axi_wdata = 4;
+s_axi_wdata = `test_width;
 #`clkPeriod;
 s_axi_awvalid = 0;
 s_axi_wvalid = 0;
@@ -151,7 +152,7 @@ s_axi_wvalid = 0;
 s_axi_awvalid = 1;
 s_axi_awaddr = 4;//Select Height register
 s_axi_wvalid = 1;
-s_axi_wdata = 3;
+s_axi_wdata = `test_height;
 #`clkPeriod;
 s_axi_awvalid = 0;
 s_axi_wvalid = 0;
@@ -161,7 +162,7 @@ s_axi_wvalid = 0;
 //Load the filter values into IP
 for(i = 0;i<9;i=i+1)begin
     s_axi_awvalid = 1;
-    s_axi_awaddr = (i*4)+16;
+    s_axi_awaddr = (i*4)+20;
     s_axi_wvalid = 1;
     s_axi_wdata = i;
     #`clkPeriod;
@@ -182,25 +183,47 @@ s_axi_awvalid = 0;
 s_axi_wvalid = 0;
 #`clkPeriod;
 
-//Begin data stream
-s_axis_valid = 1;
-for(i = 9;i<18;i=i+1)begin
-    s_axis_data = i;
-    if(i==17) s_axis_last = 1;
-    #`clkPeriod;
+for(linecnt = 0;linecnt<`test_height-2;linecnt=linecnt+1)begin
+    //Fill the kernel with 9 data
+    for(i = 0;i<9;i=i+1)begin
+        if(!s_axis_ready)begin
+            i = i-1;
+            s_axis_valid = 0;
+            #`clkPeriod;
+        end    
+        
+        else begin
+            s_axis_valid = 1;
+            s_axis_data = i;
+            #`clkPeriod;
+        end    
+    end
+    
+    //Finish all the other lines
+    for(columncnt = 0;columncnt<`test_width-3;columncnt=columncnt+1)begin
+    
+        //Fill the kernel with 3 data
+        for(i = 0;i<3;i=i+1)begin
+            if(!s_axis_ready)begin
+                i = i-1;
+                s_axis_valid = 0;
+                s_axis_last = 0;
+                #`clkPeriod;
+            end    
+            
+            else begin
+                if( i==2 && columncnt==`test_width-4 && linecnt==`test_height-3) s_axis_last = 1;
+                
+                s_axis_valid = 1;
+                s_axis_data = i;
+                #`clkPeriod;
+            end    
+        end
+    end    
 end
-s_axis_valid = 0;
-s_axis_last = 0;
-#(`clkPeriod*12);
 
-s_axis_valid = 1;
-for(i = 0;i<3;i=i+1)begin
-    s_axis_data = i;
-    if(i==2) s_axis_last = 1;
-    #`clkPeriod;
-end
-s_axis_valid = 0;
 s_axis_last = 0;
+s_axis_valid = 0;
 
 end
 always#(`clkPeriod/2) axi_clk = ~axi_clk;

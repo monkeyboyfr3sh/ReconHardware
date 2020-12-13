@@ -1,3 +1,4 @@
+`include "definitions.h"
 `timescale 1ns / 1ps
 
 module AXI_Conv_wrapper();

@@ -24,7 +24,7 @@ input   [`inputPortCount*`bitLength-1:0]        multiplicand_input;
 
 //Outputs
 output  mReady;
-output  reg finalReady;
+output  reg finalReady = 0;
 output  [(2*`bitLength)-1:0]                    finalAccumulate;
 
 //Internal Signals
@@ -35,7 +35,7 @@ wire    [`outputPortCount*(`bitLength*2)-1:0]   xbar_outputConnector;
 wire    [`outputPortCount*(`bitLength*2)-1:0]   addarray_inputConnector;
 wire    [(`bitLength*2)-1:0]                    sum_Connector               [`outputPortCount-1:0];
 wire    [(2*`bitLength)-1:0]                    finalAccumulateWire;
-reg     [`addressLength:0]                      addPointer;
+reg     [`addressLength:0]                      addPointer = 0;
 
 //assign  finalAccumulate = finalReady?finalAccumulateWire:0;
 assign  finalAccumulate = finalAccumulateWire;
