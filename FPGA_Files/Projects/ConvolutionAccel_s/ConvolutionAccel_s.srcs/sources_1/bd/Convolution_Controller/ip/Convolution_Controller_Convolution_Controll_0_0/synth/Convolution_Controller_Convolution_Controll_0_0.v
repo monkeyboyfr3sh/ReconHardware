@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:user:Convolution_Controller:1.0
-// IP Revision: 29
+// IP Revision: 40
 
 (* X_CORE_INFO = "Convolution_Controller,Vivado 2020.1" *)
 (* CHECK_LICENSE_TYPE = "Convolution_Controller_Convolution_Controll_0_0,Convolution_Controller,{}" *)
-(* CORE_GENERATION_INFO = "Convolution_Controller_Convolution_Controll_0_0,Convolution_Controller,{x_ipProduct=Vivado 2020.1,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=Convolution_Controller,x_ipVersion=1.0,x_ipCoreRevision=29,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,DATA_WIDTH=32,ADDR_WIDTH=10}" *)
+(* CORE_GENERATION_INFO = "Convolution_Controller_Convolution_Controll_0_0,Convolution_Controller,{x_ipProduct=Vivado 2020.1,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=Convolution_Controller,x_ipVersion=1.0,x_ipCoreRevision=40,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,DATA_WIDTH=32,ADDR_WIDTH=10}" *)
 (* IP_DEFINITION_SOURCE = "package_project" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module Convolution_Controller_Convolution_Controll_0_0 (
