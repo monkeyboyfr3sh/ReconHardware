@@ -6,8 +6,8 @@
 `define addr_width 10
 
 //Test stuff
-`define test_width 50
-`define test_height 50
+`define test_width 10
+`define test_height 10
 
 module Controller_Test_tb;
 
@@ -140,6 +140,10 @@ integer i_test;
 initial begin
 axi_clk = 0;
 s_axi_bready = 1;
+axi_reset_n = 1;
+#`clkPeriod;
+axi_reset_n = 0;
+#`clkPeriod;
 axi_reset_n = 1;
 #`clkPeriod;
 #`clkPeriod;

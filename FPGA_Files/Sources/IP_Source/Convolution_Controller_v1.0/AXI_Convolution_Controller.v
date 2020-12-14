@@ -191,36 +191,36 @@ module Convolution_Controller#(
     m_axis_last = 0;
     ip_reset_out = 0;
     
-//    //Reset
-////    if(!axi_reset_n || rs)begin
+    //Reset
+    if(!axi_reset_n || rs)begin
 //    if(rs)begin
-//        control_registers[8] = 0;
-//        rs = 0;
-////        for(MPi = 0;MPi<6*ADDR_WIDTH;MPi = MPi+1)begin
-////            control_registers[MPi] = 0;
-////        end
+        control_registers[8] = 0;
+        rs = 0;
+//        for(MPi = 0;MPi<6*ADDR_WIDTH;MPi = MPi+1)begin
+//            control_registers[MPi] = 0;
+//        end
         
-//        RDst = 0;
-//        MULTIst = 0;
-//        ADDst = 0;
+        RDst = 0;
+        MULTIst = 0;
+        ADDst = 0;
         
-//        current_x = 0;
-//        current_y = 0;
-//        newline = 0;
+        current_x = 0;
+        current_y = 0;
+        newline = 0;
         
-//        datapointer = 0;
-//        dataSetFilled = 0;
-//        currentValue = 0;
+        datapointer = 0;
+        dataSetFilled = 0;
+        currentValue = 0;
 
-//        RDloopcnt = 0;
-//        Mloopcnt = 0;
-//        MULTIPLIER_INPUT = 0;
-//        MULTIPLICAND_INPUT = 0;
+        RDloopcnt = 0;
+        Mloopcnt = 0;
+        MULTIPLIER_INPUT = 0;
+        MULTIPLICAND_INPUT = 0;
 
-//        MULTIPLY_START = 0;
-//        MPi = 0;
-//        FINALADD = 0;
-//    end
+        MULTIPLY_START = 0;
+        MPi = 0;
+        FINALADD = 0;
+    end
     if(0)begin
     end
     //Not in a reset state
@@ -287,8 +287,16 @@ module Convolution_Controller#(
 
         //In an Add state, should add all values once data set has been completely computed.
         else if(ADDst)begin
+            
+            //Signal for matrix device to add the multiply registers
+            if(!cReady) begin
+                FINALADD = 1;              
+            end
+            
             //Got the signal that the convolution is completed
-            if(cReady) begin
+            else begin
+                
+                //Reset all state flags
                 ADDst = 0;
                 RDst = 0;
                 MULTIst = 0;
@@ -300,13 +308,12 @@ module Convolution_Controller#(
                 m_axis_keep = 4'hf;
                 
                 control_registers[16] = m_axis_data;//A debugging register to see what the last value was
-                
-                ip_reset_out = 1;
-                
-                current_x=current_x+1;
+                ip_reset_out = 1;//Reset the matrix deivce registers
+                current_x=current_x+1;//Update position on image map
                 
                 //If need to update position due to end of row
                 if(current_x+`KERNELSIZE-1 >= image_width)begin
+                
                     //Trigger for data reset with newline
                     newline=1;
                     current_x = 0;
@@ -314,23 +321,20 @@ module Convolution_Controller#(
                 
                     if(current_y+`KERNELSIZE-1 >= image_height)begin
                         m_axis_last = 1;
-                        control_registers[12] = 1;
+//                        control_registers[12] = 1;
                     end
                 end
                 
+                //Return to read state and signal for data input
                 else begin
                     RDst = 1;
                     s_axis_ready = 1;
-                end                
+                end   
             end
-            else begin
-                FINALADD = 1;
-            end
-            
-            //Trigger RDst if no other states are active
-            if(s_axis_valid&&!MULTIst && !ADDst)begin
-                RDst = 1;
-            end
+        end
+        //Trigger RDst if no other states are active
+        if(s_axis_valid&&!MULTIst && !ADDst)begin
+            RDst = 1;
         end
     end
     end
