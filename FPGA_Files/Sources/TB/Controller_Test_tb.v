@@ -6,8 +6,8 @@
 `define addr_width 10
 
 //Test stuff
-`define test_width 10
-`define test_height 10
+`define test_width 500
+`define test_height 500
 
 module Controller_Test_tb;
 
@@ -129,7 +129,6 @@ Convolution_Controller dut
     .finalReady(cReady)
 );
 
-
 integer i, linecnt, columncnt;
 
 integer curr_dataSet [`KERNELSIZE*`KERNELSIZE-1:0];
@@ -213,6 +212,7 @@ for(linecnt = 0;linecnt< (`test_height-2) ;linecnt=linecnt+1)begin
         else begin
             s_axis_valid = 1;
             s_axis_data = ($urandom) % 65536;
+//            s_axis_data = i;
             curr_dataSet[i] = s_axis_data;
             #`clkPeriod;
         end    
@@ -239,6 +239,7 @@ for(linecnt = 0;linecnt< (`test_height-2) ;linecnt=linecnt+1)begin
                 //Data on the bus
                 s_axis_valid = 1;
                 s_axis_data = ($urandom) % 65536;
+//                s_axis_data = i;
                 
                 //Correcting data set
                 curr_dataSet[i-6] = curr_dataSet[i-3];

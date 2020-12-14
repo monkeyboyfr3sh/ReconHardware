@@ -234,7 +234,11 @@ module Convolution_Controller#(
     
     //cStart triggers matrixcontroller to start
     if(cStart)begin
-        
+       //Trigger RDst if no other states are active
+        if(s_axis_valid&&!MULTIst && !ADDst)begin
+            RDst = 1;
+        end
+         
         //In a read state (data still needs to be input) 
         if(RDst&&s_axis_valid)begin
             currentValue = s_axis_data;
@@ -318,11 +322,11 @@ module Convolution_Controller#(
                     newline=1;
                     current_x = 0;
                     current_y=current_y+1;
+                end
                 
-                    if(current_y+`KERNELSIZE-1 >= image_height)begin
-                        m_axis_last = 1;
+                if(current_y+`KERNELSIZE-1 >= image_height)begin
+                    m_axis_last = 1;
 //                        control_registers[12] = 1;
-                    end
                 end
                 
                 //Return to read state and signal for data input
@@ -331,10 +335,6 @@ module Convolution_Controller#(
                     s_axis_ready = 1;
                 end   
             end
-        end
-        //Trigger RDst if no other states are active
-        if(s_axis_valid&&!MULTIst && !ADDst)begin
-            RDst = 1;
         end
     end
     end
