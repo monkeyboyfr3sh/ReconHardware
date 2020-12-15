@@ -364,6 +364,7 @@
         </spirit:register>
         <spirit:register>
           <spirit:name>LKC</spirit:name>
+          <spirit:description>Last known cSum from the matrix accelerator.</spirit:description>
           <spirit:addressOffset>16</spirit:addressOffset>
           <spirit:size spirit:format="long">32</spirit:size>
         </spirit:register>
@@ -384,7 +385,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>a47bd0e6</spirit:value>
+            <spirit:value>7ca0dbfb</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -400,7 +401,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>a47bd0e6</spirit:value>
+            <spirit:value>7ca0dbfb</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -980,7 +981,7 @@
       <spirit:file>
         <spirit:name>AXI_Convolution_Controller.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_2c7e4bb4</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_40206dc4</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -1054,8 +1055,8 @@
       </xilinx:taxonomies>
       <xilinx:displayName>Convolution_Controller_v1_0</xilinx:displayName>
       <xilinx:definitionSource>package_project</xilinx:definitionSource>
-      <xilinx:coreRevision>40</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2020-12-13T22:51:40Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>49</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2020-12-14T23:51:53Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@2cc23089_ARCHIVE_LOCATION">c:/github/reconhardware/fpga_files/projects/axi_convolution_controller/axi_convolution_controller.srcs/sources_1/new</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@6af59234_ARCHIVE_LOCATION">c:/github/reconhardware/fpga_files/projects/axi_convolution_controller/axi_convolution_controller.srcs/sources_1/new</xilinx:tag>
@@ -1957,13 +1958,186 @@
         <xilinx:tag xilinx:name="ui.data.coregen.dd@2124a894_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@77cebf00_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@755d6366_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@430756_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@286cca61_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@37e6e632_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@abce8d8_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@679ae1d1_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@70e2601e_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b644002_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@29fa6c6f_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5948aceb_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2ed9a852_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d209c9f_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4475068_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@388f2627_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e9b319_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2247c985_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a024a9_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f266df8_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@61522da_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75353271_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15d83124_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@43dea36_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@498273db_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@197148c1_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@53136b8b_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@51eacc29_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73865f26_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@408fafb1_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@685c4671_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@17f15f83_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@317c14e1_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7764dc20_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a18e69a_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@22e5807d_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@bb876d3_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73e8cd8c_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5253e107_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9af3e6b_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@47896ace_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@679a9cf1_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d6e8c3e_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@72e0b0bc_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b41b63_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ba7ffbe_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7634a31b_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@95dc5e0_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4726f067_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@453544cd_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a775a08_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ce1e05e_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6af1955c_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6221a019_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@593ec71f_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@115e6a87_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@45b802cc_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@632d8d78_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@122cef41_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c8bceb3_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5899ce93_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1babef97_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@19cb4c83_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1830e79e_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f0af4c0_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a183a80_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2070fb11_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18899c57_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5da5a0ed_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@dccb82a_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@fcc334b_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2308687e_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6862aca9_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@674d8c2a_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@63ef96ff_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@427b37b_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@373f668f_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6fc20b0f_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@31faa904_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c360341_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@54751e1_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@20e2729c_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7eadc864_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@be158c5_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3236654d_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6754afe5_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@126c9505_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2077f13b_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@592c76e4_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5115eb2c_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@28dc60cd_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c0aa62c_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e373ef2_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@479d698_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@58700c29_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5409cf88_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e6a1d5b_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3bb9b8e6_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@11ed7711_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@703fd19c_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@89dd86b_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c984e81_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c780ff1_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@772d0fb0_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4db3a204_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a6af08a_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ed10b84_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32b32e32_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@439d2da0_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d45b462_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@30bafa3f_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b6171c8_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b409f69_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@21240dbc_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1de324e_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5bfc9ccd_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5329f03d_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1888e68e_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@41feba4a_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2be2cdae_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@399fd769_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f112cd4_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c21aac5_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@36eb5f79_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@778f2596_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@689c8e16_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@129f46bd_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c93c96d_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13ad45f_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9604942_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4bac3418_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d8cb97b_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@21faf748_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a967055_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66bb8516_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@29ef9e2a_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b23efee_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c0dad4b_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e3ee353_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@334475ad_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18f2b6af_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4764347_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@61c14ce8_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@448db32_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@752cc7b6_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@158a1dbd_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@dc24cb_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@74527434_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e8b388e_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42a2a6d4_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a178676_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e0cb4f0_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@68112989_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d25c767_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@21575c25_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6fd2ffa7_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ff102a6_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3fdb594b_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67409247_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e82675c_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@61f36ec5_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@713ee9a_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7737bf73_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@59a3f6b9_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@24a99cc_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@f8ccf1d_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3fd8fc9e_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44abe1c_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7829eace_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@14607a62_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a967ae7_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c3c812f_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e2b2b56_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3af14f82_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15264151_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@af69830_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2020.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="dbd459d0"/>
-      <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="56e33de3"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="c1078b9b"/>
+      <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="dfd74977"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="a7b9d2d8"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="a5a820c2"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="f5793bf3"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="2f73b234"/>

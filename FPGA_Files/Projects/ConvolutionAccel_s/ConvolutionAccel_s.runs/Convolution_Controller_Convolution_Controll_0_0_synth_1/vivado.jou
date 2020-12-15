@@ -2,8 +2,8 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Sun Dec 13 16:52:21 2020
-# Process ID: 1800
+# Start of session at: Mon Dec 14 17:53:15 2020
+# Process ID: 12456
 # Current directory: C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/Convolution_Controller_Convolution_Controll_0_0_synth_1
 # Command line: vivado.exe -log Convolution_Controller_Convolution_Controll_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Convolution_Controller_Convolution_Controll_0_0.tcl
 # Log file: C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/Convolution_Controller_Convolution_Controll_0_0_synth_1/Convolution_Controller_Convolution_Controll_0_0.vds

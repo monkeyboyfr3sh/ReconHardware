@@ -6,8 +6,8 @@
 `define addr_width 10
 
 //Test stuff
-`define test_width 500
-`define test_height 500
+`define test_width 5
+`define test_height 3
 
 module Controller_Test_tb;
 
@@ -144,6 +144,39 @@ axi_reset_n = 1;
 axi_reset_n = 0;
 #`clkPeriod;
 axi_reset_n = 1;
+#`clkPeriod;
+#`clkPeriod;
+
+//Enable the IP
+s_axi_awvalid = 1;
+s_axi_awaddr = 8;//Select Control register
+s_axi_wvalid = 1;
+s_axi_wdata = 1;
+#`clkPeriod;
+s_axi_awvalid = 0;
+s_axi_wvalid = 0;
+#`clkPeriod;
+#`clkPeriod;
+
+//Write the picture width info
+s_axi_awvalid = 1;
+s_axi_awaddr = 0;//Select Width register
+s_axi_wvalid = 1;
+s_axi_wdata = `test_width;
+#`clkPeriod;
+s_axi_awvalid = 0;
+s_axi_wvalid = 0;
+#`clkPeriod;
+#`clkPeriod;
+
+//Test the reset register
+s_axi_awvalid = 1;
+s_axi_awaddr = 56;//Select reset register
+s_axi_wvalid = 1;
+s_axi_wdata = 1;
+#`clkPeriod;
+s_axi_awvalid = 0;
+s_axi_wvalid = 0;
 #`clkPeriod;
 #`clkPeriod;
 

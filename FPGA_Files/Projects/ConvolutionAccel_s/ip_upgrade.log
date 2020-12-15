@@ -1,6 +1,174 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Mon Dec 14 17:52:17 2020
+| Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Convolution_Controller_Convolution_Controll_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Convolution_Controller_Convolution_Controll_0_0 (xilinx.com:user:Convolution_Controller:1.0) from (Rev. 48) to (Rev. 49)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Mon Dec 14 17:33:38 2020
+| Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Convolution_Controller_Convolution_Controll_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Convolution_Controller_Convolution_Controll_0_0 (xilinx.com:user:Convolution_Controller:1.0) from (Rev. 47) to (Rev. 48)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Mon Dec 14 17:14:42 2020
+| Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Convolution_Controller_Convolution_Controll_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Convolution_Controller_Convolution_Controll_0_0 (xilinx.com:user:Convolution_Controller:1.0) from (Rev. 46) to (Rev. 47)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Mon Dec 14 16:30:52 2020
+| Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Convolution_Controller_Convolution_Controll_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Convolution_Controller_Convolution_Controll_0_0 (xilinx.com:user:Convolution_Controller:1.0) from (Rev. 45) to (Rev. 46)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Mon Dec 14 13:28:02 2020
+| Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Convolution_Controller_Convolution_Controll_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Convolution_Controller_Convolution_Controll_0_0 (xilinx.com:user:Convolution_Controller:1.0) from (Rev. 44) to (Rev. 45)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Mon Dec 14 12:44:21 2020
+| Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Convolution_Controller_Convolution_Controll_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Convolution_Controller_Convolution_Controll_0_0 (xilinx.com:user:Convolution_Controller:1.0) from (Rev. 42) to (Rev. 44)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Mon Dec 14 12:00:36 2020
+| Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Convolution_Controller_Convolution_Controll_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Convolution_Controller_Convolution_Controll_0_0 (xilinx.com:user:Convolution_Controller:1.0) from (Rev. 41) to (Rev. 42)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Mon Dec 14 11:52:28 2020
+| Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Convolution_Controller_Convolution_Controll_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Convolution_Controller_Convolution_Controll_0_0 (xilinx.com:user:Convolution_Controller:1.0) from (Rev. 40) to (Rev. 41)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
 | Date         : Sun Dec 13 16:51:54 2020
 | Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 | Command      : upgrade_ip
