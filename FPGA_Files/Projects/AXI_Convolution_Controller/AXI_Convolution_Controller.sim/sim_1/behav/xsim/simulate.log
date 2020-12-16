@@ -4,18 +4,10 @@ m_axis_valid went high ...
 Expected value:      453885
 Calculated value:    453885
 
-m_axis_valid went high ... 
-Expected value:      522814
-Calculated value:    522814
-
-m_axis_valid went high ... 
-Expected value:      895797
-Calculated value:    895797
-
 ================================================
 
-Simulation completed at         915 ns
+Simulation completed at         675 ns
 
-All           3 convolutions passed!
+All           1 convolutions passed!
 
-$stop called at time : 915 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/Controller_Test_tb.v" Line 335
+$stop called at time : 675 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/Controller_Test_tb.v" Line 345

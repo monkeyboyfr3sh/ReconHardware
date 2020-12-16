@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date         : Mon Dec 14 17:54:02 2020
+| Date         : Tue Dec 15 13:47:54 2020
 | Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 | Command      : report_utilization -file Convolution_Controller_Convolution_Controll_0_0_utilization_synth.rpt -pb Convolution_Controller_Convolution_Controll_0_0_utilization_synth.pb
 | Design       : Convolution_Controller_Convolution_Controll_0_0
@@ -147,12 +147,12 @@ Table of Contents
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
 | FDRE     | 4666 |        Flop & Latch |
-| LUT6     | 1538 |                 LUT |
+| LUT6     | 1500 |                 LUT |
 | MUXF7    |  512 |               MuxFx |
-| LUT3     |  338 |                 LUT |
-| LUT5     |  231 |                 LUT |
+| LUT3     |  379 |                 LUT |
+| LUT5     |  232 |                 LUT |
 | MUXF8    |  224 |               MuxFx |
-| LUT2     |  100 |                 LUT |
+| LUT2     |   90 |                 LUT |
 | CARRY4   |   84 |          CarryLogic |
 | LUT4     |   83 |                 LUT |
 | LUT1     |    9 |                 LUT |

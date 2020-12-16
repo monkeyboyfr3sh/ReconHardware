@@ -6,10 +6,12 @@
 `define addr_width 10
 
 //Test stuff
-`define test_width 5
+`define test_width 3
 `define test_height 3
 
 module Controller_Test_tb;
+
+reg rand_test = 1;//Set test bench to use random variables
 
 reg    axi_clk;
 reg    axi_reset_n;
@@ -244,8 +246,7 @@ for(linecnt = 0;linecnt< (`test_height-2) ;linecnt=linecnt+1)begin
         //Putting data on the bus    
         else begin
             s_axis_valid = 1;
-            s_axis_data = ($urandom) % 65536;
-//            s_axis_data = i;
+            s_axis_data = (rand_test) ? ($urandom) % 65536 : i;
             curr_dataSet[i] = s_axis_data;
             #`clkPeriod;
         end    
@@ -271,8 +272,7 @@ for(linecnt = 0;linecnt< (`test_height-2) ;linecnt=linecnt+1)begin
                 if( i==8 && columncnt==`test_width-3 && linecnt==`test_height-3) s_axis_last = 1;
                 //Data on the bus
                 s_axis_valid = 1;
-                s_axis_data = ($urandom) % 65536;
-//                s_axis_data = i;
+                s_axis_data = (rand_test) ? ($urandom) % 65536 : i;
                 
                 //Correcting data set
                 curr_dataSet[i-6] = curr_dataSet[i-3];
@@ -293,11 +293,15 @@ always#(`clkPeriod/2) axi_clk = ~axi_clk;
 
 integer cCount = 0;
 integer pass_count = 0;
+integer between;
+
 always @(posedge m_axis_valid)
 begin
     curr_cSum = 0;
-    for(i_test=0;i_test<`KERNELSIZE*`KERNELSIZE;i_test=i_test+1)
-        curr_cSum = curr_cSum + (curr_filterSet[i_test]*curr_dataSet[i_test]);
+    for(i_test=0;i_test<`KERNELSIZE*`KERNELSIZE;i_test=i_test+1)begin
+        between = curr_filterSet[i_test]*curr_dataSet[i_test];
+        curr_cSum = curr_cSum + between;
+    end    
     
     cCount= cCount + 1;
     
@@ -324,12 +328,18 @@ begin
         $display("================================================\n");
         $display("Simulation completed at %d ns\n",tf);
         
-        if(pass_count==cCount)begin
-            $display("All %d convolutions passed!\n",cCount);
+        if(cCount == (`test_width-2)*(`test_height-2))begin
+            if(pass_count==cCount)begin
+                $display("All %d convolutions passed!\n",cCount);
+            end
+            
+            else begin
+                $display("Only %d out of %d tests passed\n",pass_count,cCount);
+            end
         end
         
         else begin
-            $display("Only %d out of %d tests passed\n",pass_count,cCount);
+            $display("ERROR with state machine!!!! EXPECTED %d CONVOLUTIONS, BUT COMPLETED %d. %d convoltions were a pass\n",(`test_width-2)*(`test_height-2),cCount,pass_count);
         end
         
         $stop;

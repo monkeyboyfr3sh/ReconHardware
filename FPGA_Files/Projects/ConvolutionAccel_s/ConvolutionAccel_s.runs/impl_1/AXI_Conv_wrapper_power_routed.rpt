@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date             : Mon Dec 14 17:57:27 2020
+| Date             : Tue Dec 15 13:50:31 2020
 | Host             : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 | Command          : report_power -file AXI_Conv_wrapper_power_routed.rpt -pb AXI_Conv_wrapper_power_summary_routed.pb -rpx AXI_Conv_wrapper_power_routed.rpx
 | Design           : AXI_Conv_wrapper
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.427        |
+| Total On-Chip Power (W)  | 1.429        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.292        |
+| Dynamic (W)              | 1.293        |
 | Device Static (W)        | 0.135        |
 | Effective TJA (C/W)      | 11.5         |
 | Max Ambient (C)          | 68.5         |
@@ -53,20 +53,20 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.023 |        3 |       --- |             --- |
-| Slice Logic              |     0.004 |    15513 |       --- |             --- |
-|   LUT as Logic           |     0.003 |     4591 |     53200 |            8.63 |
+| Slice Logic              |     0.005 |    15507 |       --- |             --- |
+|   LUT as Logic           |     0.004 |     4572 |     53200 |            8.59 |
 |   CARRY4                 |    <0.001 |      166 |     13300 |            1.25 |
-|   Register               |    <0.001 |     8272 |    106400 |            7.77 |
 |   F7/F8 Muxes            |    <0.001 |      736 |     53200 |            1.38 |
+|   Register               |    <0.001 |     8272 |    106400 |            7.77 |
 |   LUT as Shift Register  |    <0.001 |      205 |     17400 |            1.18 |
 |   Others                 |     0.000 |      451 |       --- |             --- |
 |   LUT as Distributed RAM |     0.000 |       18 |     17400 |            0.10 |
-| Signals                  |     0.009 |    11354 |       --- |             --- |
+| Signals                  |     0.009 |    11348 |       --- |             --- |
 | Block RAM                |    <0.001 |        2 |       140 |            1.43 |
-| DSPs                     |     0.000 |        3 |       220 |            1.36 |
+| DSPs                     |    <0.001 |        3 |       220 |            1.36 |
 | PS7                      |     1.256 |        1 |       --- |             --- |
 | Static Power             |     0.135 |          |           |                 |
-| Total                    |     1.427 |          |           |                 |
+| Total                    |     1.429 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -76,7 +76,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.049 |       0.035 |      0.013 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.050 |       0.037 |      0.013 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.014 |       0.000 |      0.014 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -152,10 +152,10 @@ Table of Contents
 +------------------------------+-----------+
 | Name                         | Power (W) |
 +------------------------------+-----------+
-| AXI_Conv_wrapper             |     1.292 |
-|   nolabel_line22             |     1.292 |
-|     Convolution_Controller_i |     1.292 |
-|       Convolution_Controll_0 |     0.016 |
+| AXI_Conv_wrapper             |     1.293 |
+|   nolabel_line22             |     1.293 |
+|     Convolution_Controller_i |     1.293 |
+|       Convolution_Controll_0 |     0.017 |
 |       axi_dma_0              |     0.007 |
 |       axi_mem_intercon       |     0.004 |
 |       processing_system7_0   |     1.261 |
