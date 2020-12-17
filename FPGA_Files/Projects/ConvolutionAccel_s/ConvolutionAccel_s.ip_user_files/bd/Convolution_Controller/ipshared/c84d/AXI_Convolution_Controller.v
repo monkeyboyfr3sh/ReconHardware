@@ -80,16 +80,16 @@ module Convolution_Controller#(
     reg ADDst = 0;
     reg FINALADD = 0;
     reg newline = 1;
-    reg reset_state_machine = 1;
+    reg reset_state_machine = 0;
     integer rCount = 0;
     integer mCount = 0;
     integer aCount = 0;
     integer cCount = 0;
+    integer resetCount = 0;
     
     integer datapointer = 0;
     integer MPi = 0;
     reg dataSetFilled = 0;     //Flag used to tell if the data set has been filled
-    reg [`bitLength-1:0] currentValue = 0;
     reg [`bitLength-1:0] dataSet [(`KERNELSIZE*`KERNELSIZE)-1:0];   
     wire     [`bitLength-1:0]    filterSet     [(`KERNELSIZE*`KERNELSIZE)-1:0];
     reg [`addressLength:0] RDloopcnt = 0;
@@ -149,6 +149,7 @@ module Convolution_Controller#(
                 end
             end
         end
+        /* WRITE STATE */
         
         /* READ STATE */
         else if(rd_st) begin
@@ -172,6 +173,7 @@ module Convolution_Controller#(
                 rd_st = 0;
             end
         end
+        /* READ STATE */
         
         //End of write or read transaction
         else begin
@@ -186,13 +188,16 @@ module Convolution_Controller#(
         
         
         /* Stuff for debugging ******************/
-        
+        control_registers[12][0] = RDst;
+        control_registers[12][1] = ADDst;
+        control_registers[12][2] = MULTIst;
         if(cReady) control_registers[16] = cSum;// A debugging register to see what the last value was
         if(control_registers[56][0]) for(j = 0;j<`register_extension*ADDR_WIDTH;j = j+1) control_registers[j] = 0; // A register that will clear the control registers
         control_registers[60] = cCount;
         control_registers[100] = rCount;
         control_registers[104] = mCount;
         control_registers[108] = aCount;
+        control_registers[112] = resetCount;
         for (j = 0;j<`KERNELSIZE*`KERNELSIZE;j=j+1) control_registers[(j*4)+`dataBase] = dataSet[j];//Assign data set to the corresponding control registers
         
         
@@ -205,18 +210,6 @@ module Convolution_Controller#(
     always @(posedge axi_clk)
     begin
     
-    //Reset the keep signal
-    if(m_axis_last) begin
-        reset_state_machine = 1;
-        m_axis_keep = 0;
-    end
-    
-    //Next clock reset signals
-    m_axis_valid = 0;
-    m_axis_data = 0;
-    m_axis_last = 0;
-    ip_reset_out = 0;
-    
     //Reset
     if(!axi_reset_n || reset_state_machine)begin
         reset_state_machine = 0;
@@ -227,13 +220,14 @@ module Convolution_Controller#(
         MULTIst = 0;
         ADDst = 0;
         
+        s_axis_ready = 1;
+        
         current_x = 0;
         current_y = 0;
         newline = 0;
         
         datapointer = 0;
         dataSetFilled = 0;
-        currentValue = 0;
 
         RDloopcnt = 0;
         Mloopcnt = 0;
@@ -245,7 +239,8 @@ module Convolution_Controller#(
         FINALADD = 0;
     end
     
-    else begin
+    else begin//!reset state
+    
     //Newline means we need to reset data buffer
     if(newline)begin
         dataSetFilled = 0;
@@ -253,22 +248,52 @@ module Convolution_Controller#(
         newline = 0;
     end
     
+    //Important to check if data on the bus was received
+    if(m_axis_valid)begin
+    
+        //This shows that data was received by slave
+        if(m_axis_ready)begin
+        
+            //Next clock reset
+            m_axis_valid = 0;
+            m_axis_data = 0;
+            ip_reset_out = 0;
+        
+            //Reset the keep signal and state machine
+            if(m_axis_last) begin
+                resetCount = resetCount + 1;
+                
+                m_axis_last = 0;
+                reset_state_machine = 1;
+                m_axis_keep = 0;
+            end
+            
+            //Return to read state and signal for data input
+            else begin
+                RDst = 1;
+                s_axis_ready = 1;
+            end
+        end        
+    end
+    
+    else begin//data was recieved by slave
+    
     //cStart triggers matrixcontroller to start
     if(cStart)begin
        //Trigger RDst if no other states are active
-        if(s_axis_valid&&!MULTIst && !ADDst)begin
+        if(s_axis_valid && !MULTIst && !ADDst)begin
             RDst = 1;
         end
          
         //In a read state (data still needs to be input) 
         if(RDst&&s_axis_valid)begin
-            rCount = rCount + 1;
-            currentValue = s_axis_data;
             
             //Need to load currentValue into dataSet
             if(!dataSetFilled)begin
-                dataSet[datapointer] = currentValue;
-                datapointer=datapointer+1;
+                rCount = rCount + 1;
+                
+                dataSet[datapointer] = s_axis_data;
+                datapointer = datapointer + 1;
                 
                 //Filled all values for data, can start multiplication
                 if(datapointer >=  (`KERNELSIZE*`KERNELSIZE))begin
@@ -278,6 +303,12 @@ module Convolution_Controller#(
                     
                     MULTIst = 1;
                 end
+            end
+            
+            //Data set has already been filled but in a rd state for some reason, just exit rd state
+            else begin
+                RDst = 0;
+                MULTIst = 1;
             end
         end
         //End of RDst
@@ -295,6 +326,7 @@ module Convolution_Controller#(
                 end
                 
                 //Indicate the next values need to be read in when reading
+                datapointer = `KERNELSIZE+`KERNELSIZE;
                 dataSetFilled = 0;
                 MULTIPLY_START = 0;
                 Mloopcnt = 0;
@@ -302,7 +334,9 @@ module Convolution_Controller#(
                 ADDst = 1;
             end
             
+            //Still have data to process
             else begin
+            
                 //Loop through each row at Mloopcnt column
                 for( MPi = 0; MPi < `KERNELSIZE; MPi=MPi+1 )begin
                    MULTIPLIER_INPUT[MPi*`bitLength+:`bitLength] = dataSet[MPi+(Mloopcnt*`KERNELSIZE)];
@@ -314,7 +348,7 @@ module Convolution_Controller#(
             end
         end
         //End of MULTIst
-
+        
         //In an Add state, should add all values once data set has been completely computed.
         else if(ADDst)begin
             aCount = aCount + 1;
@@ -335,7 +369,6 @@ module Convolution_Controller#(
                 
                 //Need to output cSum to DMA and signal for transaction
                 m_axis_data = cSum;
-//                cCount = cCount + 1;//Track the number of convolutions completed
                 
                 m_axis_valid = 1;
                 m_axis_keep = 4'hf;
@@ -353,17 +386,17 @@ module Convolution_Controller#(
                 
                 if(current_y+`KERNELSIZE-1 >= image_height)begin
                     m_axis_last = 1;
-                end
-                
-                //Return to read state and signal for data input
-                else begin
-                    RDst = 1;
-                    s_axis_ready = 1;
                 end   
             end
         end
-    end//End of ADDst
-    end
+        //End of ADDst
+        
+    end//End of cStart
+    
+    end//End of data recieved by slave    
+    
+    end//End of !reset
+    
     end//End of block
     /* CONTROLLER STATE MACHINE END ************************************************************************************************/
     

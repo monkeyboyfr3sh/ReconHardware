@@ -28,7 +28,7 @@
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/Convolution_Controller/ip/Convolution_Controller_processing_system7_0_0/sim/Convolution_Controller_processing_system7_0_0.v" \
-  "../../../bd/Convolution_Controller/ipshared/9a39/AXI_Convolution_Controller.v" \
+  "../../../bd/Convolution_Controller/ipshared/c84d/AXI_Convolution_Controller.v" \
   "../../../bd/Convolution_Controller/ip/Convolution_Controller_Convolution_Controll_0_0/sim/Convolution_Controller_Convolution_Controll_0_0.v" \
 -endlib
 -makelib xcelium_lib/lib_pkg_v1_0_2 \

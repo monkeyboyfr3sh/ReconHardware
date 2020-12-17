@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date             : Tue Dec 15 13:50:31 2020
+| Date             : Wed Dec 16 19:34:07 2020
 | Host             : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 | Command          : report_power -file AXI_Conv_wrapper_power_routed.rpt -pb AXI_Conv_wrapper_power_summary_routed.pb -rpx AXI_Conv_wrapper_power_routed.rpx
 | Design           : AXI_Conv_wrapper
@@ -53,17 +53,17 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.023 |        3 |       --- |             --- |
-| Slice Logic              |     0.005 |    15507 |       --- |             --- |
-|   LUT as Logic           |     0.004 |     4572 |     53200 |            8.59 |
-|   CARRY4                 |    <0.001 |      166 |     13300 |            1.25 |
+| Slice Logic              |     0.005 |    15584 |       --- |             --- |
+|   LUT as Logic           |     0.004 |     4622 |     53200 |            8.69 |
+|   CARRY4                 |    <0.001 |      174 |     13300 |            1.31 |
+|   Register               |    <0.001 |     8312 |    106400 |            7.81 |
 |   F7/F8 Muxes            |    <0.001 |      736 |     53200 |            1.38 |
-|   Register               |    <0.001 |     8272 |    106400 |            7.77 |
 |   LUT as Shift Register  |    <0.001 |      205 |     17400 |            1.18 |
 |   Others                 |     0.000 |      451 |       --- |             --- |
 |   LUT as Distributed RAM |     0.000 |       18 |     17400 |            0.10 |
-| Signals                  |     0.009 |    11348 |       --- |             --- |
+| Signals                  |     0.010 |    11421 |       --- |             --- |
 | Block RAM                |    <0.001 |        2 |       140 |            1.43 |
-| DSPs                     |    <0.001 |        3 |       220 |            1.36 |
+| DSPs                     |     0.000 |        3 |       220 |            1.36 |
 | PS7                      |     1.256 |        1 |       --- |             --- |
 | Static Power             |     0.135 |          |           |                 |
 | Total                    |     1.429 |          |           |                 |

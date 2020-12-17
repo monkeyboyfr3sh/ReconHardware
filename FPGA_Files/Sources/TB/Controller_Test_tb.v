@@ -6,8 +6,8 @@
 `define addr_width 10
 
 //Test stuff
-`define test_width 3
-`define test_height 3
+`define test_width 100
+`define test_height 150
 
 module Controller_Test_tb;
 
@@ -235,9 +235,11 @@ for(linecnt = 0;linecnt< (`test_height-2) ;linecnt=linecnt+1)begin
     
     //First calculation for the line, it fills the kernel with 9 data points
     for(i = 0;i<9;i=i+1)begin
-    
+        
         //IP is not ready to process data
         if(!s_axis_ready)begin
+            m_axis_ready = 1;
+            
             i = i-1;
             s_axis_valid = 0;
             #`clkPeriod;
@@ -245,6 +247,8 @@ for(linecnt = 0;linecnt< (`test_height-2) ;linecnt=linecnt+1)begin
         
         //Putting data on the bus    
         else begin
+            m_axis_ready = 0;
+            
             s_axis_valid = 1;
             s_axis_data = (rand_test) ? ($urandom) % 65536 : i;
             curr_dataSet[i] = s_axis_data;
@@ -260,6 +264,8 @@ for(linecnt = 0;linecnt< (`test_height-2) ;linecnt=linecnt+1)begin
             
             //IP is not ready to process data
             if(!s_axis_ready)begin
+                m_axis_ready = 1;
+                
                 i = i-1;
                 s_axis_valid = 0;
                 s_axis_last = 0;
@@ -270,6 +276,8 @@ for(linecnt = 0;linecnt< (`test_height-2) ;linecnt=linecnt+1)begin
             else begin
                 //Last pixel condition
                 if( i==8 && columncnt==`test_width-3 && linecnt==`test_height-3) s_axis_last = 1;
+                m_axis_ready = 0;
+                
                 //Data on the bus
                 s_axis_valid = 1;
                 s_axis_data = (rand_test) ? ($urandom) % 65536 : i;
@@ -284,6 +292,7 @@ for(linecnt = 0;linecnt< (`test_height-2) ;linecnt=linecnt+1)begin
         end
     end    
 end
+m_axis_ready = 1;
 s_axis_last = 0;
 s_axis_valid = 0;
 s_axis_keep = 0;
