@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-//Date        : Wed Dec 16 19:29:43 2020
+//Date        : Sat Dec 19 13:53:45 2020
 //Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 //Command     : generate_target Convolution_Controller.bd
 //Design      : Convolution_Controller
@@ -40,7 +40,9 @@ module Convolution_Controller
     MULTIPLY_START_0,
     cReady_0,
     cSum_0,
-    ip_reset_out_0);
+    ip_reset_out_0,
+    temp_in_data_0,
+    temp_in_sig_0);
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR ADDR" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DDR, AXI_ARBITRATION_SCHEME TDM, BURST_LENGTH 8, CAN_DEBUG false, CAS_LATENCY 11, CAS_WRITE_LATENCY 11, CS_ENABLED true, DATA_MASK_ENABLED true, DATA_WIDTH 8, MEMORY_TYPE COMPONENTS, MEM_ADDR_MAP ROW_COLUMN_BANK, SLOT Single, TIMEPERIOD_PS 1250" *) inout [14:0]DDR_addr;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR BA" *) inout [2:0]DDR_ba;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR CAS_N" *) inout DDR_cas_n;
@@ -71,6 +73,8 @@ module Convolution_Controller
   input cReady_0;
   input [31:0]cSum_0;
   output ip_reset_out_0;
+  input [31:0]temp_in_data_0;
+  input temp_in_sig_0;
 
   wire Convolution_Controll_0_FINALADDOUT;
   wire [95:0]Convolution_Controll_0_MULTIPLICAND_INPUT;
@@ -248,6 +252,8 @@ module Convolution_Controller
   wire ps7_0_axi_periph_M01_AXI_WREADY;
   wire ps7_0_axi_periph_M01_AXI_WVALID;
   wire [0:0]rst_ps7_0_100M_peripheral_aresetn;
+  wire [31:0]temp_in_data_0_1;
+  wire temp_in_sig_0_1;
 
   assign FCLK_CLK0_0 = processing_system7_0_FCLK_CLK0;
   assign FCLK_RESET0_N_0 = processing_system7_0_FCLK_RESET0_N;
@@ -258,6 +264,8 @@ module Convolution_Controller
   assign cReady_0_1 = cReady_0;
   assign cSum_0_1 = cSum_0[31:0];
   assign ip_reset_out_0 = Convolution_Controll_0_ip_reset_out;
+  assign temp_in_data_0_1 = temp_in_data_0[31:0];
+  assign temp_in_sig_0_1 = temp_in_sig_0;
   Convolution_Controller_Convolution_Controll_0_0 Convolution_Controll_0
        (.FINALADDOUT(Convolution_Controll_0_FINALADDOUT),
         .MULTIPLICAND_INPUT(Convolution_Controll_0_MULTIPLICAND_INPUT),

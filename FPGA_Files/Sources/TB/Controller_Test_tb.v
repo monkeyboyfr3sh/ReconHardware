@@ -6,12 +6,12 @@
 `define addr_width 10
 
 //Test stuff
-`define test_width 100
-`define test_height 150
+`define test_width 5
+`define test_height 5
 
 module Controller_Test_tb;
 
-reg rand_test = 1;//Set test bench to use random variables
+reg rand_test = 0;//Set test bench to use random variables
 
 reg    axi_clk;
 reg    axi_reset_n;
@@ -28,7 +28,7 @@ wire FINALADDOUT;
 reg    s_axis_valid;
 reg [`data_width-1:0] s_axis_data;
 wire s_axis_ready;
-reg s_axis_last;
+reg s_axis_last = 0;
 reg [3:0] s_axis_keep;
 
 //AXI4-S master i/f - Output Data port
@@ -64,8 +64,13 @@ wire s_axi_rvalid = 0;
 wire s_axi_bvalid = 0;
 reg s_axi_bready;
 
+wire [31:0] temp_data;
+wire temp_sig;
+
 Convolution_Controller dut
     (//IP Ports
+    temp_data,
+    temp_sig,
     axi_clk,
     axi_reset_n,
     ip_reset_out,
@@ -128,7 +133,9 @@ Convolution_Controller dut
     .Add(mReady_connector),                         //Signals Adders to Add @posedge clk
     .finalAdd(FINALADDOUT),
     .finalAccumulate(cSum),
-    .finalReady(cReady)
+    .finalReady(cReady),
+    .temp_out_data(temp_data),
+    .temp_out_sig(temp_sig)
 );
 
 integer i, linecnt, columncnt;
@@ -214,6 +221,7 @@ s_axi_awvalid = 0;
 s_axi_wvalid = 0;
 #`clkPeriod;
 #`clkPeriod;
+//490 ns in sim
 
 //Load the filter values into IP
 for(i = 0;i<`KERNELSIZE*`KERNELSIZE;i=i+1)begin

@@ -47,13 +47,13 @@
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="40"/>
-    <Option Name="WTModelSimExportSim" Val="40"/>
-    <Option Name="WTQuestaExportSim" Val="40"/>
-    <Option Name="WTIesExportSim" Val="40"/>
-    <Option Name="WTVcsExportSim" Val="40"/>
-    <Option Name="WTRivieraExportSim" Val="40"/>
-    <Option Name="WTActivehdlExportSim" Val="40"/>
+    <Option Name="WTXSimExportSim" Val="51"/>
+    <Option Name="WTModelSimExportSim" Val="51"/>
+    <Option Name="WTQuestaExportSim" Val="51"/>
+    <Option Name="WTIesExportSim" Val="51"/>
+    <Option Name="WTVcsExportSim" Val="51"/>
+    <Option Name="WTRivieraExportSim" Val="51"/>
+    <Option Name="WTActivehdlExportSim" Val="51"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -81,11 +81,11 @@
         <CompFileExtendedInfo CompFileName="Convolution_Controller.bd" FileRelPathName="ip/Convolution_Controller_rst_ps7_0_100M_0/Convolution_Controller_rst_ps7_0_100M_0.xci">
           <Proxy FileSetName="Convolution_Controller_rst_ps7_0_100M_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="Convolution_Controller.bd" FileRelPathName="ip/Convolution_Controller_Convolution_Controll_0_0/Convolution_Controller_Convolution_Controll_0_0.xci">
-          <Proxy FileSetName="Convolution_Controller_Convolution_Controll_0_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="Convolution_Controller.bd" FileRelPathName="ip/Convolution_Controller_axi_dma_0_0/Convolution_Controller_axi_dma_0_0.xci">
           <Proxy FileSetName="Convolution_Controller_axi_dma_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="Convolution_Controller.bd" FileRelPathName="ip/Convolution_Controller_Convolution_Controll_0_0/Convolution_Controller_Convolution_Controll_0_0.xci">
+          <Proxy FileSetName="Convolution_Controller_Convolution_Controll_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="Convolution_Controller.bd" FileRelPathName="ip/Convolution_Controller_xbar_0/Convolution_Controller_xbar_0.xci">
           <Proxy FileSetName="Convolution_Controller_xbar_0"/>

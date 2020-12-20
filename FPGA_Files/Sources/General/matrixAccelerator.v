@@ -12,8 +12,11 @@ module matrixAccelerator(
     Add,
     finalAdd,
     finalAccumulate,
-    finalReady
+    finalReady,
+    temp_out_data,
+    temp_out_sig
 );
+
 //Inputs
 input   Clk,Rst,direct,finalAdd;
 input   [`inputPortCount-1:0]                   mStart;
@@ -27,6 +30,9 @@ output  mReady;
 output  reg finalReady = 0;
 output  [(2*`bitLength)-1:0]                    finalAccumulate;
 
+output [31:0] temp_out_data;
+output temp_out_sig;
+
 //Internal Signals
 wire    [`inputPortCount-1:0]                   mReady;
 wire    [(`bitLength*2)-1:0]                    product_in                  [`inputPortCount-1:0];      //Product input bus, the will be fed to the input of the crossbar
@@ -37,17 +43,18 @@ wire    [(`bitLength*2)-1:0]                    sum_Connector               [`ou
 wire    [(2*`bitLength)-1:0]                    finalAccumulateWire;
 reg     [`addressLength:0]                      addPointer = 0;
 
-//assign  finalAccumulate = finalReady?finalAccumulateWire:0;
 assign  finalAccumulate = finalAccumulateWire;
+assign temp_out_data = finalAccumulate;
+assign temp_out_sig = finalReady;
 
 XBar2 xbar2(
-            .Clk(Clk),
-            .Rst(Rst),
-            .flatInputPort(xbar_inputConnector),
-            .flatOutputPort(xbar_outputConnector),
-            .AddressSelect(AddressSelect),
-            .direct(direct)
-            );
+    .Clk(Clk),
+    .Rst(Rst),
+    .flatInputPort(xbar_inputConnector),
+    .flatOutputPort(xbar_outputConnector),
+    .AddressSelect(AddressSelect),
+    .direct(direct)
+);
 
 generate
     genvar n;
@@ -55,9 +62,9 @@ generate
     for(n=0;n<`inputPortCount;n=n+1)begin
         assign xbar_inputConnector[(n+1)*(`bitLength*2)-1:n*(`bitLength*2)] = product_in[n];
     end
+    
     //Assign xbar output to adder input
     for(n=0;n<`outputPortCount;n=n+1)begin
-        //assign flatsumout[(n+1)*(`bitLength*2)-1:n*(`bitLength*2)] = sum_Connector[n];
         assign addarray_inputConnector[(n+1)*(`bitLength*2)-1:n*(`bitLength*2)] = xbar_outputConnector[(n+1)*(`bitLength*2)-1:n*(`bitLength*2)];
     end
 endgenerate
@@ -65,7 +72,9 @@ endgenerate
 
 generate
     genvar m ;
-    for(m=0;m<`inputPortCount;m=m+1)begin
+    
+    //Wire the multipliers on the input of the xbar
+    for( m = 0 ; m < `inputPortCount ; m = m + 1)begin
         //fixedmultiplyCompute inputMulti (
         multiplyComputePynq inputMulti (
             .clk(Clk),
@@ -77,7 +86,9 @@ generate
             .ready(mReady[m])
         );
     end
-    for(m=0;m<`outputPortCount;m=m+1)begin
+    
+    //Wire the addder on the output of the xbar
+    for( m=0 ; m < `outputPortCount ; m = m + 1 )begin
         adder outputAdder (   
             .Clk(Clk),
             .Rst(Rst),
@@ -101,10 +112,12 @@ adder finalAdder (
         addPointer = 0;
         finalReady = 0;
     end
-    else if(finalAdd||(addPointer!=0))begin
-        addPointer = addPointer +1;
+    
+    else if( finalAdd ||(addPointer != 0) )begin
+        addPointer = addPointer + 1;
+        
         //Computation complete
-        if(addPointer >=`outputPortCount) begin
+        if(addPointer >= `outputPortCount) begin
             finalReady = 1;
             addPointer = 0;
         end

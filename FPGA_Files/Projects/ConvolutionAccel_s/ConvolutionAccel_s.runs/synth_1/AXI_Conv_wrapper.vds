@@ -2,8 +2,8 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Wed Dec 16 19:31:29 2020
-# Process ID: 6156
+# Start of session at: Sat Dec 19 13:55:44 2020
+# Process ID: 24072
 # Current directory: C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1
 # Command line: vivado.exe -log AXI_Conv_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source AXI_Conv_wrapper.tcl
 # Log file: C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/AXI_Conv_wrapper.vds
@@ -22,19 +22,19 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 9484
+INFO: [Synth 8-7075] Helper process launched with PID 21092
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1086.051 ; gain = 6.402
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1086.426 ; gain = 5.098
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'AXI_Conv_wrapper' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:4]
 INFO: [Synth 8-6157] synthesizing module 'Convolution_Controller_wrapper' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/hdl/Convolution_Controller_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'Convolution_Controller' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:13]
-INFO: [Synth 8-6157] synthesizing module 'Convolution_Controller_Convolution_Controll_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-6156-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_Convolution_Controll_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Convolution_Controller_Convolution_Controll_0_0' (1#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-6156-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_Convolution_Controll_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Convolution_Controller_Convolution_Controll_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-24072-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_Convolution_Controll_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Convolution_Controller_Convolution_Controll_0_0' (1#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-24072-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_Convolution_Controll_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 's_axi_rlast' of module 'Convolution_Controller_Convolution_Controll_0_0' is unconnected for instance 'Convolution_Controll_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:261]
 WARNING: [Synth 8-7023] instance 'Convolution_Controll_0' of module 'Convolution_Controller_Convolution_Controll_0_0' has 34 connections declared, but only 33 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:261]
-INFO: [Synth 8-6157] synthesizing module 'Convolution_Controller_axi_dma_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-6156-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_axi_dma_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Convolution_Controller_axi_dma_0_0' (2#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-6156-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_axi_dma_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Convolution_Controller_axi_dma_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-24072-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_axi_dma_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Convolution_Controller_axi_dma_0_0' (2#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-24072-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_axi_dma_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'mm2s_prmry_reset_out_n' of module 'Convolution_Controller_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:295]
 WARNING: [Synth 8-7071] port 's2mm_prmry_reset_out_n' of module 'Convolution_Controller_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:295]
 WARNING: [Synth 8-7071] port 'mm2s_introut' of module 'Convolution_Controller_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:295]
@@ -43,23 +43,23 @@ WARNING: [Synth 8-7071] port 'axi_dma_tstvec' of module 'Convolution_Controller_
 WARNING: [Synth 8-7023] instance 'axi_dma_0' of module 'Convolution_Controller_axi_dma_0_0' has 64 connections declared, but only 59 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:295]
 INFO: [Synth 8-6157] synthesizing module 'Convolution_Controller_axi_mem_intercon_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:622]
 INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_LXGO7B' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:1863]
-INFO: [Synth 8-6157] synthesizing module 'Convolution_Controller_auto_pc_1' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-6156-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_auto_pc_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Convolution_Controller_auto_pc_1' (3#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-6156-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_auto_pc_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Convolution_Controller_auto_pc_1' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-24072-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_auto_pc_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Convolution_Controller_auto_pc_1' (3#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-24072-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_auto_pc_1_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_LXGO7B' (4#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:1863]
 INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_LVAG69' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:2684]
-INFO: [Synth 8-6157] synthesizing module 'Convolution_Controller_auto_us_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-6156-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_auto_us_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Convolution_Controller_auto_us_0' (5#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-6156-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_auto_us_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Convolution_Controller_auto_us_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-24072-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_auto_us_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Convolution_Controller_auto_us_0' (5#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-24072-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_auto_us_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'm_axi_arregion' of module 'Convolution_Controller_auto_us_0' is unconnected for instance 'auto_us' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:2811]
 WARNING: [Synth 8-7023] instance 'auto_us' of module 'Convolution_Controller_auto_us_0' has 34 connections declared, but only 33 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:2811]
 INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_LVAG69' (6#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:2684]
 INFO: [Synth 8-6157] synthesizing module 's01_couplers_imp_1H0AGNF' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:2847]
-INFO: [Synth 8-6157] synthesizing module 'Convolution_Controller_auto_us_1' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-6156-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_auto_us_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Convolution_Controller_auto_us_1' (7#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-6156-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_auto_us_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Convolution_Controller_auto_us_1' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-24072-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_auto_us_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Convolution_Controller_auto_us_1' (7#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-24072-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_auto_us_1_stub.v:6]
 WARNING: [Synth 8-7071] port 'm_axi_awregion' of module 'Convolution_Controller_auto_us_1' is unconnected for instance 'auto_us' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:2998]
 WARNING: [Synth 8-7023] instance 'auto_us' of module 'Convolution_Controller_auto_us_1' has 40 connections declared, but only 39 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:2998]
 INFO: [Synth 8-6155] done synthesizing module 's01_couplers_imp_1H0AGNF' (8#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:2847]
-INFO: [Synth 8-6157] synthesizing module 'Convolution_Controller_xbar_1' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-6156-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_xbar_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Convolution_Controller_xbar_1' (9#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-6156-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_xbar_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Convolution_Controller_xbar_1' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-24072-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_xbar_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Convolution_Controller_xbar_1' (9#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-24072-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_xbar_1_stub.v:6]
 WARNING: [Synth 8-689] width (1) of port connection 's_axi_arready' does not match port width (2) of module 'Convolution_Controller_xbar_1' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:1193]
 WARNING: [Synth 8-689] width (64) of port connection 's_axi_rdata' does not match port width (128) of module 'Convolution_Controller_xbar_1' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:1210]
 WARNING: [Synth 8-689] width (1) of port connection 's_axi_rlast' does not match port width (2) of module 'Convolution_Controller_xbar_1' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:1211]
@@ -69,8 +69,8 @@ WARNING: [Synth 8-7071] port 's_axi_bid' of module 'Convolution_Controller_xbar_
 WARNING: [Synth 8-7071] port 's_axi_rid' of module 'Convolution_Controller_xbar_1' is unconnected for instance 'xbar' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:1143]
 WARNING: [Synth 8-7023] instance 'xbar' of module 'Convolution_Controller_xbar_1' has 78 connections declared, but only 76 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:1143]
 INFO: [Synth 8-6155] done synthesizing module 'Convolution_Controller_axi_mem_intercon_0' (10#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:622]
-INFO: [Synth 8-6157] synthesizing module 'Convolution_Controller_processing_system7_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-6156-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_processing_system7_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Convolution_Controller_processing_system7_0_0' (11#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-6156-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Convolution_Controller_processing_system7_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-24072-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Convolution_Controller_processing_system7_0_0' (11#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-24072-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_processing_system7_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'USB0_PORT_INDCTL' of module 'Convolution_Controller_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:431]
 WARNING: [Synth 8-7071] port 'USB0_VBUS_PWRSELECT' of module 'Convolution_Controller_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:431]
 WARNING: [Synth 8-7071] port 'S_AXI_HP0_RCOUNT' of module 'Convolution_Controller_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:431]
@@ -84,18 +84,18 @@ INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_1MYSWF5' (12#1) 
 INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_ADAJYJ' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:2268]
 INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_ADAJYJ' (13#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:2268]
 INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1N78R0N' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:2379]
-INFO: [Synth 8-6157] synthesizing module 'Convolution_Controller_auto_pc_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-6156-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Convolution_Controller_auto_pc_0' (14#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-6156-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Convolution_Controller_auto_pc_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-24072-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Convolution_Controller_auto_pc_0' (14#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-24072-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_auto_pc_0_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1N78R0N' (15#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:2379]
-INFO: [Synth 8-6157] synthesizing module 'Convolution_Controller_xbar_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-6156-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_xbar_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Convolution_Controller_xbar_0' (16#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-6156-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_xbar_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Convolution_Controller_xbar_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-24072-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Convolution_Controller_xbar_0' (16#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-24072-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_xbar_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'Convolution_Controller_xbar_0' is unconnected for instance 'xbar' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:1698]
 WARNING: [Synth 8-7071] port 'm_axi_wstrb' of module 'Convolution_Controller_xbar_0' is unconnected for instance 'xbar' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:1698]
 WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'Convolution_Controller_xbar_0' is unconnected for instance 'xbar' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:1698]
 WARNING: [Synth 8-7023] instance 'xbar' of module 'Convolution_Controller_xbar_0' has 40 connections declared, but only 37 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:1698]
 INFO: [Synth 8-6155] done synthesizing module 'Convolution_Controller_ps7_0_axi_periph_0' (17#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:1222]
-INFO: [Synth 8-6157] synthesizing module 'Convolution_Controller_rst_ps7_0_100M_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-6156-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_rst_ps7_0_100M_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Convolution_Controller_rst_ps7_0_100M_0' (18#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-6156-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_rst_ps7_0_100M_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Convolution_Controller_rst_ps7_0_100M_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-24072-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_rst_ps7_0_100M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Convolution_Controller_rst_ps7_0_100M_0' (18#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-24072-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_rst_ps7_0_100M_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'mb_reset' of module 'Convolution_Controller_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:613]
 WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'Convolution_Controller_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:613]
 WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'Convolution_Controller_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:613]
@@ -103,28 +103,29 @@ WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'Convolution_Contr
 WARNING: [Synth 8-7023] instance 'rst_ps7_0_100M' of module 'Convolution_Controller_rst_ps7_0_100M_0' has 10 connections declared, but only 6 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:613]
 INFO: [Synth 8-6155] done synthesizing module 'Convolution_Controller' (19#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:13]
 INFO: [Synth 8-6155] done synthesizing module 'Convolution_Controller_wrapper' (20#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/hdl/Convolution_Controller_wrapper.v:12]
-WARNING: [Synth 8-7071] port 'DDR_addr' of module 'Convolution_Controller_wrapper' is unconnected for instance 'nolabel_line22' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:22]
-WARNING: [Synth 8-7071] port 'DDR_ba' of module 'Convolution_Controller_wrapper' is unconnected for instance 'nolabel_line22' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:22]
-WARNING: [Synth 8-7071] port 'DDR_cas_n' of module 'Convolution_Controller_wrapper' is unconnected for instance 'nolabel_line22' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:22]
-WARNING: [Synth 8-7071] port 'DDR_ck_n' of module 'Convolution_Controller_wrapper' is unconnected for instance 'nolabel_line22' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:22]
-WARNING: [Synth 8-7071] port 'DDR_ck_p' of module 'Convolution_Controller_wrapper' is unconnected for instance 'nolabel_line22' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:22]
-WARNING: [Synth 8-7071] port 'DDR_cke' of module 'Convolution_Controller_wrapper' is unconnected for instance 'nolabel_line22' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:22]
-WARNING: [Synth 8-7071] port 'DDR_cs_n' of module 'Convolution_Controller_wrapper' is unconnected for instance 'nolabel_line22' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:22]
-WARNING: [Synth 8-7071] port 'DDR_dm' of module 'Convolution_Controller_wrapper' is unconnected for instance 'nolabel_line22' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:22]
-WARNING: [Synth 8-7071] port 'DDR_dq' of module 'Convolution_Controller_wrapper' is unconnected for instance 'nolabel_line22' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:22]
-WARNING: [Synth 8-7071] port 'DDR_dqs_n' of module 'Convolution_Controller_wrapper' is unconnected for instance 'nolabel_line22' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:22]
-WARNING: [Synth 8-7071] port 'DDR_dqs_p' of module 'Convolution_Controller_wrapper' is unconnected for instance 'nolabel_line22' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:22]
-WARNING: [Synth 8-7071] port 'DDR_odt' of module 'Convolution_Controller_wrapper' is unconnected for instance 'nolabel_line22' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:22]
-WARNING: [Synth 8-7071] port 'DDR_ras_n' of module 'Convolution_Controller_wrapper' is unconnected for instance 'nolabel_line22' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:22]
-WARNING: [Synth 8-7071] port 'DDR_reset_n' of module 'Convolution_Controller_wrapper' is unconnected for instance 'nolabel_line22' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:22]
-WARNING: [Synth 8-7071] port 'DDR_we_n' of module 'Convolution_Controller_wrapper' is unconnected for instance 'nolabel_line22' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:22]
-WARNING: [Synth 8-7071] port 'FIXED_IO_ddr_vrn' of module 'Convolution_Controller_wrapper' is unconnected for instance 'nolabel_line22' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:22]
-WARNING: [Synth 8-7071] port 'FIXED_IO_ddr_vrp' of module 'Convolution_Controller_wrapper' is unconnected for instance 'nolabel_line22' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:22]
-WARNING: [Synth 8-7071] port 'FIXED_IO_mio' of module 'Convolution_Controller_wrapper' is unconnected for instance 'nolabel_line22' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:22]
-WARNING: [Synth 8-7071] port 'FIXED_IO_ps_clk' of module 'Convolution_Controller_wrapper' is unconnected for instance 'nolabel_line22' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:22]
-WARNING: [Synth 8-7071] port 'FIXED_IO_ps_porb' of module 'Convolution_Controller_wrapper' is unconnected for instance 'nolabel_line22' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:22]
-WARNING: [Synth 8-7071] port 'FIXED_IO_ps_srstb' of module 'Convolution_Controller_wrapper' is unconnected for instance 'nolabel_line22' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:22]
-WARNING: [Synth 8-7023] instance 'nolabel_line22' of module 'Convolution_Controller_wrapper' has 30 connections declared, but only 9 given [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:22]
+WARNING: [Synth 8-689] width (64) of port connection 'cSum_0' does not match port width (32) of module 'Convolution_Controller_wrapper' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:30]
+WARNING: [Synth 8-7071] port 'DDR_addr' of module 'Convolution_Controller_wrapper' is unconnected for instance 'nolabel_line21' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:21]
+WARNING: [Synth 8-7071] port 'DDR_ba' of module 'Convolution_Controller_wrapper' is unconnected for instance 'nolabel_line21' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:21]
+WARNING: [Synth 8-7071] port 'DDR_cas_n' of module 'Convolution_Controller_wrapper' is unconnected for instance 'nolabel_line21' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:21]
+WARNING: [Synth 8-7071] port 'DDR_ck_n' of module 'Convolution_Controller_wrapper' is unconnected for instance 'nolabel_line21' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:21]
+WARNING: [Synth 8-7071] port 'DDR_ck_p' of module 'Convolution_Controller_wrapper' is unconnected for instance 'nolabel_line21' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:21]
+WARNING: [Synth 8-7071] port 'DDR_cke' of module 'Convolution_Controller_wrapper' is unconnected for instance 'nolabel_line21' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:21]
+WARNING: [Synth 8-7071] port 'DDR_cs_n' of module 'Convolution_Controller_wrapper' is unconnected for instance 'nolabel_line21' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:21]
+WARNING: [Synth 8-7071] port 'DDR_dm' of module 'Convolution_Controller_wrapper' is unconnected for instance 'nolabel_line21' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:21]
+WARNING: [Synth 8-7071] port 'DDR_dq' of module 'Convolution_Controller_wrapper' is unconnected for instance 'nolabel_line21' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:21]
+WARNING: [Synth 8-7071] port 'DDR_dqs_n' of module 'Convolution_Controller_wrapper' is unconnected for instance 'nolabel_line21' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:21]
+WARNING: [Synth 8-7071] port 'DDR_dqs_p' of module 'Convolution_Controller_wrapper' is unconnected for instance 'nolabel_line21' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:21]
+WARNING: [Synth 8-7071] port 'DDR_odt' of module 'Convolution_Controller_wrapper' is unconnected for instance 'nolabel_line21' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:21]
+WARNING: [Synth 8-7071] port 'DDR_ras_n' of module 'Convolution_Controller_wrapper' is unconnected for instance 'nolabel_line21' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:21]
+WARNING: [Synth 8-7071] port 'DDR_reset_n' of module 'Convolution_Controller_wrapper' is unconnected for instance 'nolabel_line21' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:21]
+WARNING: [Synth 8-7071] port 'DDR_we_n' of module 'Convolution_Controller_wrapper' is unconnected for instance 'nolabel_line21' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:21]
+WARNING: [Synth 8-7071] port 'FIXED_IO_ddr_vrn' of module 'Convolution_Controller_wrapper' is unconnected for instance 'nolabel_line21' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:21]
+WARNING: [Synth 8-7071] port 'FIXED_IO_ddr_vrp' of module 'Convolution_Controller_wrapper' is unconnected for instance 'nolabel_line21' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:21]
+WARNING: [Synth 8-7071] port 'FIXED_IO_mio' of module 'Convolution_Controller_wrapper' is unconnected for instance 'nolabel_line21' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:21]
+WARNING: [Synth 8-7071] port 'FIXED_IO_ps_clk' of module 'Convolution_Controller_wrapper' is unconnected for instance 'nolabel_line21' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:21]
+WARNING: [Synth 8-7071] port 'FIXED_IO_ps_porb' of module 'Convolution_Controller_wrapper' is unconnected for instance 'nolabel_line21' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:21]
+WARNING: [Synth 8-7071] port 'FIXED_IO_ps_srstb' of module 'Convolution_Controller_wrapper' is unconnected for instance 'nolabel_line21' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:21]
+WARNING: [Synth 8-7023] instance 'nolabel_line21' of module 'Convolution_Controller_wrapper' has 30 connections declared, but only 9 given [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:21]
 INFO: [Synth 8-6157] synthesizing module 'matrixAccelerator' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/matrixAccelerator.v:4]
 INFO: [Synth 8-6157] synthesizing module 'multiplyComputePynq' [C:/GitHub/ReconHardware/FPGA_Files/Sources/Multiplier/multiplyComputePynq.v:4]
 INFO: [Synth 8-6155] done synthesizing module 'multiplyComputePynq' (21#1) [C:/GitHub/ReconHardware/FPGA_Files/Sources/Multiplier/multiplyComputePynq.v:4]
@@ -134,88 +135,91 @@ INFO: [Synth 8-6157] synthesizing module 'XBar2' [C:/GitHub/ReconHardware/FPGA_F
 WARNING: [Synth 8-567] referenced signal 'AddressSave' should be on the sensitivity list [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/XBar2.v:52]
 INFO: [Synth 8-6155] done synthesizing module 'XBar2' (23#1) [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/XBar2.v:19]
 INFO: [Synth 8-6155] done synthesizing module 'matrixAccelerator' (24#1) [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/matrixAccelerator.v:4]
+WARNING: [Synth 8-7071] port 'temp_out_data' of module 'matrixAccelerator' is unconnected for instance 'matrixAccel' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:32]
+WARNING: [Synth 8-7071] port 'temp_out_sig' of module 'matrixAccelerator' is unconnected for instance 'matrixAccel' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:32]
+WARNING: [Synth 8-7023] instance 'matrixAccel' of module 'matrixAccelerator' has 14 connections declared, but only 12 given [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:32]
 INFO: [Synth 8-6155] done synthesizing module 'AXI_Conv_wrapper' (25#1) [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v:4]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1147.953 ; gain = 68.305
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1148.238 ; gain = 66.910
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1147.953 ; gain = 68.305
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1148.238 ; gain = 66.910
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1147.953 ; gain = 68.305
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1148.238 ; gain = 66.910
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.070 . Memory (MB): peak = 1147.953 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.070 . Memory (MB): peak = 1148.238 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_processing_system7_0_0/Convolution_Controller_processing_system7_0_0/Convolution_Controller_processing_system7_0_1_in_context.xdc] for cell 'nolabel_line22/Convolution_Controller_i/processing_system7_0'
+Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_processing_system7_0_0/Convolution_Controller_processing_system7_0_0/Convolution_Controller_processing_system7_0_1_in_context.xdc] for cell 'nolabel_line21/Convolution_Controller_i/processing_system7_0'
 WARNING: [Vivado 12-584] No ports matched ''. [c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_processing_system7_0_0/Convolution_Controller_processing_system7_0_0/Convolution_Controller_processing_system7_0_1_in_context.xdc:2]
-Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_processing_system7_0_0/Convolution_Controller_processing_system7_0_0/Convolution_Controller_processing_system7_0_1_in_context.xdc] for cell 'nolabel_line22/Convolution_Controller_i/processing_system7_0'
-Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_Convolution_Controll_0_0/Convolution_Controller_Convolution_Controll_0_0/Convolution_Controller_Convolution_Controll_0_0_in_context.xdc] for cell 'nolabel_line22/Convolution_Controller_i/Convolution_Controll_0'
-Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_Convolution_Controll_0_0/Convolution_Controller_Convolution_Controll_0_0/Convolution_Controller_Convolution_Controll_0_0_in_context.xdc] for cell 'nolabel_line22/Convolution_Controller_i/Convolution_Controll_0'
-Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_axi_dma_0_0/Convolution_Controller_axi_dma_0_0/Convolution_Controller_axi_dma_0_0_in_context.xdc] for cell 'nolabel_line22/Convolution_Controller_i/axi_dma_0'
-Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_axi_dma_0_0/Convolution_Controller_axi_dma_0_0/Convolution_Controller_axi_dma_0_0_in_context.xdc] for cell 'nolabel_line22/Convolution_Controller_i/axi_dma_0'
-Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_xbar_0/Convolution_Controller_xbar_0/Convolution_Controller_xbar_0_in_context.xdc] for cell 'nolabel_line22/Convolution_Controller_i/ps7_0_axi_periph/xbar'
-Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_xbar_0/Convolution_Controller_xbar_0/Convolution_Controller_xbar_0_in_context.xdc] for cell 'nolabel_line22/Convolution_Controller_i/ps7_0_axi_periph/xbar'
-Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_rst_ps7_0_100M_0/Convolution_Controller_rst_ps7_0_100M_0/Convolution_Controller_rst_ps7_0_100M_0_in_context.xdc] for cell 'nolabel_line22/Convolution_Controller_i/rst_ps7_0_100M'
-Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_rst_ps7_0_100M_0/Convolution_Controller_rst_ps7_0_100M_0/Convolution_Controller_rst_ps7_0_100M_0_in_context.xdc] for cell 'nolabel_line22/Convolution_Controller_i/rst_ps7_0_100M'
-Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_xbar_1/Convolution_Controller_xbar_1/Convolution_Controller_xbar_1_in_context.xdc] for cell 'nolabel_line22/Convolution_Controller_i/axi_mem_intercon/xbar'
-Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_xbar_1/Convolution_Controller_xbar_1/Convolution_Controller_xbar_1_in_context.xdc] for cell 'nolabel_line22/Convolution_Controller_i/axi_mem_intercon/xbar'
-Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_auto_pc_0/Convolution_Controller_auto_pc_0/Convolution_Controller_auto_pc_0_in_context.xdc] for cell 'nolabel_line22/Convolution_Controller_i/ps7_0_axi_periph/s00_couplers/auto_pc'
-Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_auto_pc_0/Convolution_Controller_auto_pc_0/Convolution_Controller_auto_pc_0_in_context.xdc] for cell 'nolabel_line22/Convolution_Controller_i/ps7_0_axi_periph/s00_couplers/auto_pc'
-Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_auto_us_0/Convolution_Controller_auto_us_0/Convolution_Controller_auto_us_0_in_context.xdc] for cell 'nolabel_line22/Convolution_Controller_i/axi_mem_intercon/s00_couplers/auto_us'
-Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_auto_us_0/Convolution_Controller_auto_us_0/Convolution_Controller_auto_us_0_in_context.xdc] for cell 'nolabel_line22/Convolution_Controller_i/axi_mem_intercon/s00_couplers/auto_us'
-Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_auto_us_1/Convolution_Controller_auto_us_1/Convolution_Controller_auto_us_1_in_context.xdc] for cell 'nolabel_line22/Convolution_Controller_i/axi_mem_intercon/s01_couplers/auto_us'
-Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_auto_us_1/Convolution_Controller_auto_us_1/Convolution_Controller_auto_us_1_in_context.xdc] for cell 'nolabel_line22/Convolution_Controller_i/axi_mem_intercon/s01_couplers/auto_us'
-Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_auto_pc_1/Convolution_Controller_auto_pc_1/Convolution_Controller_auto_pc_1_in_context.xdc] for cell 'nolabel_line22/Convolution_Controller_i/axi_mem_intercon/m00_couplers/auto_pc'
-Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_auto_pc_1/Convolution_Controller_auto_pc_1/Convolution_Controller_auto_pc_1_in_context.xdc] for cell 'nolabel_line22/Convolution_Controller_i/axi_mem_intercon/m00_couplers/auto_pc'
+Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_processing_system7_0_0/Convolution_Controller_processing_system7_0_0/Convolution_Controller_processing_system7_0_1_in_context.xdc] for cell 'nolabel_line21/Convolution_Controller_i/processing_system7_0'
+Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_Convolution_Controll_0_0/Convolution_Controller_Convolution_Controll_0_0/Convolution_Controller_Convolution_Controll_0_0_in_context.xdc] for cell 'nolabel_line21/Convolution_Controller_i/Convolution_Controll_0'
+Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_Convolution_Controll_0_0/Convolution_Controller_Convolution_Controll_0_0/Convolution_Controller_Convolution_Controll_0_0_in_context.xdc] for cell 'nolabel_line21/Convolution_Controller_i/Convolution_Controll_0'
+Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_axi_dma_0_0/Convolution_Controller_axi_dma_0_0/Convolution_Controller_axi_dma_0_0_in_context.xdc] for cell 'nolabel_line21/Convolution_Controller_i/axi_dma_0'
+Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_axi_dma_0_0/Convolution_Controller_axi_dma_0_0/Convolution_Controller_axi_dma_0_0_in_context.xdc] for cell 'nolabel_line21/Convolution_Controller_i/axi_dma_0'
+Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_xbar_0/Convolution_Controller_xbar_0/Convolution_Controller_xbar_0_in_context.xdc] for cell 'nolabel_line21/Convolution_Controller_i/ps7_0_axi_periph/xbar'
+Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_xbar_0/Convolution_Controller_xbar_0/Convolution_Controller_xbar_0_in_context.xdc] for cell 'nolabel_line21/Convolution_Controller_i/ps7_0_axi_periph/xbar'
+Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_rst_ps7_0_100M_0/Convolution_Controller_rst_ps7_0_100M_0/Convolution_Controller_rst_ps7_0_100M_0_in_context.xdc] for cell 'nolabel_line21/Convolution_Controller_i/rst_ps7_0_100M'
+Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_rst_ps7_0_100M_0/Convolution_Controller_rst_ps7_0_100M_0/Convolution_Controller_rst_ps7_0_100M_0_in_context.xdc] for cell 'nolabel_line21/Convolution_Controller_i/rst_ps7_0_100M'
+Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_xbar_1/Convolution_Controller_xbar_1/Convolution_Controller_xbar_1_in_context.xdc] for cell 'nolabel_line21/Convolution_Controller_i/axi_mem_intercon/xbar'
+Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_xbar_1/Convolution_Controller_xbar_1/Convolution_Controller_xbar_1_in_context.xdc] for cell 'nolabel_line21/Convolution_Controller_i/axi_mem_intercon/xbar'
+Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_auto_pc_0/Convolution_Controller_auto_pc_0/Convolution_Controller_auto_pc_0_in_context.xdc] for cell 'nolabel_line21/Convolution_Controller_i/ps7_0_axi_periph/s00_couplers/auto_pc'
+Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_auto_pc_0/Convolution_Controller_auto_pc_0/Convolution_Controller_auto_pc_0_in_context.xdc] for cell 'nolabel_line21/Convolution_Controller_i/ps7_0_axi_periph/s00_couplers/auto_pc'
+Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_auto_us_0/Convolution_Controller_auto_us_0/Convolution_Controller_auto_us_0_in_context.xdc] for cell 'nolabel_line21/Convolution_Controller_i/axi_mem_intercon/s00_couplers/auto_us'
+Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_auto_us_0/Convolution_Controller_auto_us_0/Convolution_Controller_auto_us_0_in_context.xdc] for cell 'nolabel_line21/Convolution_Controller_i/axi_mem_intercon/s00_couplers/auto_us'
+Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_auto_us_1/Convolution_Controller_auto_us_1/Convolution_Controller_auto_us_1_in_context.xdc] for cell 'nolabel_line21/Convolution_Controller_i/axi_mem_intercon/s01_couplers/auto_us'
+Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_auto_us_1/Convolution_Controller_auto_us_1/Convolution_Controller_auto_us_1_in_context.xdc] for cell 'nolabel_line21/Convolution_Controller_i/axi_mem_intercon/s01_couplers/auto_us'
+Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_auto_pc_1/Convolution_Controller_auto_pc_1/Convolution_Controller_auto_pc_1_in_context.xdc] for cell 'nolabel_line21/Convolution_Controller_i/axi_mem_intercon/m00_couplers/auto_pc'
+Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_auto_pc_1/Convolution_Controller_auto_pc_1/Convolution_Controller_auto_pc_1_in_context.xdc] for cell 'nolabel_line21/Convolution_Controller_i/axi_mem_intercon/m00_couplers/auto_pc'
 Parsing XDC File [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1277.590 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1274.918 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.044 . Memory (MB): peak = 1277.590 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.044 . Memory (MB): peak = 1274.918 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1277.590 ; gain = 197.941
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1274.918 ; gain = 193.590
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1277.590 ; gain = 197.941
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1274.918 ; gain = 193.590
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for nolabel_line22/Convolution_Controller_i. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for nolabel_line22/Convolution_Controller_i/processing_system7_0. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for nolabel_line22/Convolution_Controller_i/Convolution_Controll_0. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for nolabel_line22/Convolution_Controller_i/axi_dma_0. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for nolabel_line22/Convolution_Controller_i/ps7_0_axi_periph/xbar. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for nolabel_line22/Convolution_Controller_i/ps7_0_axi_periph. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for nolabel_line22/Convolution_Controller_i/rst_ps7_0_100M. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for nolabel_line22/Convolution_Controller_i/axi_mem_intercon/xbar. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for nolabel_line22/Convolution_Controller_i/axi_mem_intercon. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for nolabel_line22/Convolution_Controller_i/ps7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for nolabel_line22/Convolution_Controller_i/axi_mem_intercon/s00_couplers/auto_us. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for nolabel_line22/Convolution_Controller_i/axi_mem_intercon/s01_couplers/auto_us. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for nolabel_line22/Convolution_Controller_i/axi_mem_intercon/m00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for nolabel_line21/Convolution_Controller_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for nolabel_line21/Convolution_Controller_i/processing_system7_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for nolabel_line21/Convolution_Controller_i/Convolution_Controll_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for nolabel_line21/Convolution_Controller_i/axi_dma_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for nolabel_line21/Convolution_Controller_i/ps7_0_axi_periph/xbar. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for nolabel_line21/Convolution_Controller_i/ps7_0_axi_periph. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for nolabel_line21/Convolution_Controller_i/rst_ps7_0_100M. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for nolabel_line21/Convolution_Controller_i/axi_mem_intercon/xbar. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for nolabel_line21/Convolution_Controller_i/axi_mem_intercon. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for nolabel_line21/Convolution_Controller_i/ps7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for nolabel_line21/Convolution_Controller_i/axi_mem_intercon/s00_couplers/auto_us. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for nolabel_line21/Convolution_Controller_i/axi_mem_intercon/s01_couplers/auto_us. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for nolabel_line21/Convolution_Controller_i/axi_mem_intercon/m00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1277.590 ; gain = 197.941
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1274.918 ; gain = 193.590
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-327] inferring latch for variable 'OutputSave_reg[0]' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/XBar2.v:48]
 WARNING: [Synth 8-327] inferring latch for variable 'OutputSave_reg[1]' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/XBar2.v:48]
 WARNING: [Synth 8-327] inferring latch for variable 'OutputSave_reg[2]' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/XBar2.v:48]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1277.590 ; gain = 197.941
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1274.918 ; gain = 193.590
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -296,7 +300,7 @@ DSP Report: register product_reg is absorbed into DSP product_reg.
 DSP Report: operator product0 is absorbed into DSP product_reg.
 DSP Report: operator product0 is absorbed into DSP product_reg.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1277.590 ; gain = 197.941
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1274.918 ; gain = 193.590
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -328,19 +332,19 @@ Finished ROM, RAM, DSP and Shift Register Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1289.820 ; gain = 210.172
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1294.871 ; gain = 213.543
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1320.656 ; gain = 241.008
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1320.793 ; gain = 239.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1325.504 ; gain = 245.855
+Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1321.605 ; gain = 240.277
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -358,37 +362,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1330.312 ; gain = 250.664
+Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1328.383 ; gain = 247.055
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1330.312 ; gain = 250.664
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1328.383 ; gain = 247.055
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1330.312 ; gain = 250.664
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1328.383 ; gain = 247.055
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1330.312 ; gain = 250.664
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1328.383 ; gain = 247.055
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1330.312 ; gain = 250.664
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1328.383 ; gain = 247.055
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1330.312 ; gain = 250.664
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1328.383 ; gain = 247.055
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -421,37 +425,38 @@ Report Cell Usage:
 |7     |Convolution_Controller_processing_system7_0   |     1|
 |8     |Convolution_Controller_rst_ps7_0_100M         |     1|
 |9     |Convolution_Controller_xbar                   |     2|
-|11    |DSP48E1                                       |     3|
-|12    |LUT2                                          |     1|
-|13    |LUT3                                          |     1|
-|14    |LUT4                                          |    25|
-|15    |LUT5                                          |    12|
-|16    |LUT6                                          |    26|
-|17    |FDCE                                          |     6|
-|18    |FDRE                                          |    10|
-|19    |LD                                            |     3|
+|11    |CARRY4                                        |    44|
+|12    |DSP48E1                                       |     9|
+|14    |LUT2                                          |   142|
+|15    |LUT3                                          |     1|
+|16    |LUT4                                          |    33|
+|17    |LUT5                                          |    12|
+|18    |LUT6                                          |    48|
+|19    |FDCE                                          |     6|
+|20    |FDRE                                          |   182|
+|21    |LD                                            |    96|
 +------+----------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1330.312 ; gain = 250.664
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1328.383 ; gain = 247.055
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:24 . Memory (MB): peak = 1330.312 ; gain = 121.027
-Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1330.312 ; gain = 250.664
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 1328.383 ; gain = 120.375
+Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1328.383 ; gain = 247.055
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.044 . Memory (MB): peak = 1342.367 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 6 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.058 . Memory (MB): peak = 1340.422 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 149 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1342.367 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1343.391 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 3 instances were transformed.
-  LD => LDCE: 3 instances
+  A total of 96 instances were transformed.
+  LD => LDCE: 96 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-67 Infos, 64 Warnings, 0 Critical Warnings and 0 Errors encountered.
+67 Infos, 68 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 1342.367 ; gain = 262.719
+synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1343.391 ; gain = 262.062
 INFO: [Common 17-1381] The checkpoint 'C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/AXI_Conv_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file AXI_Conv_wrapper_utilization_synth.rpt -pb AXI_Conv_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Dec 16 19:32:08 2020...
+INFO: [Common 17-206] Exiting Vivado at Sat Dec 19 13:56:21 2020...

@@ -16,8 +16,7 @@ wire    [`inputPortCount*`bitLength-1:0]        multiplicand_connector;
 wire                                            addClk;
 wire                                            finalAdd;
 wire    [2*`bitLength-1:0]                      cSum;
-
-assign finalsum = cSum[`bitLength-1:0];             //Slices needed bits
+wire    [`bitLength-1:0]                      finalSum;
 
 Convolution_Controller_wrapper(
     .FCLK_CLK0_0(clk),
@@ -28,7 +27,7 @@ Convolution_Controller_wrapper(
     .MULTIPLY_START_0(mStart_conncetor),
     .FINALADDOUT_0(finaladd_start),
     .cReady_0(cReady),
-    .cSum_0(finalsum)
+    .cSum_0(cSum)
 );
  matrixAccelerator matrixAccel(   
     .Clk(clk),

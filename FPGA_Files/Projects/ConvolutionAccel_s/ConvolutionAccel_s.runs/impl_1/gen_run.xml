@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1608168631">
+<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1608407680">
   <File Type="BITSTR-BMM" Name="AXI_Conv_wrapper_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="AXI_Conv_wrapper_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="AXI_Conv_wrapper_timing_summary_init.rpt"/>
