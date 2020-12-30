@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date             : Sat Dec 19 13:58:41 2020
+| Date             : Wed Dec 23 17:42:03 2020
 | Host             : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 | Command          : report_power -file AXI_Conv_wrapper_power_routed.rpt -pb AXI_Conv_wrapper_power_summary_routed.pb -rpx AXI_Conv_wrapper_power_routed.rpx
 | Design           : AXI_Conv_wrapper
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.444        |
+| Total On-Chip Power (W)  | 1.443        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.308        |
+| Dynamic (W)              | 1.307        |
 | Device Static (W)        | 0.136        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 68.3         |
-| Junction Temperature (C) | 41.7         |
+| Max Ambient (C)          | 68.4         |
+| Junction Temperature (C) | 41.6         |
 | Confidence Level         | Medium       |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,21 +52,21 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.027 |        3 |       --- |             --- |
-| Slice Logic              |     0.005 |    20225 |       --- |             --- |
-|   LUT as Logic           |     0.004 |     5705 |     53200 |           10.72 |
+| Clocks                   |     0.026 |        3 |       --- |             --- |
+| Slice Logic              |     0.006 |    20227 |       --- |             --- |
+|   LUT as Logic           |     0.005 |     5706 |     53200 |           10.73 |
 |   CARRY4                 |    <0.001 |      270 |     13300 |            2.03 |
-|   Register               |    <0.001 |    11240 |    106400 |           10.56 |
 |   F7/F8 Muxes            |    <0.001 |     1184 |     53200 |            2.23 |
+|   Register               |    <0.001 |    11239 |    106400 |           10.56 |
 |   LUT as Shift Register  |    <0.001 |      220 |     17400 |            1.26 |
 |   Others                 |     0.000 |      457 |       --- |             --- |
 |   LUT as Distributed RAM |     0.000 |       22 |     17400 |            0.13 |
-| Signals                  |     0.015 |    15136 |       --- |             --- |
+| Signals                  |     0.015 |    15140 |       --- |             --- |
 | Block RAM                |     0.002 |        5 |       140 |            3.57 |
-| DSPs                     |     0.003 |        9 |       220 |            4.09 |
+| DSPs                     |     0.002 |        9 |       220 |            4.09 |
 | PS7                      |     1.256 |        1 |       --- |             --- |
 | Static Power             |     0.136 |          |           |                 |
-| Total                    |     1.444 |          |           |                 |
+| Total                    |     1.443 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -76,7 +76,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.065 |       0.052 |      0.013 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.064 |       0.050 |      0.013 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.014 |       0.000 |      0.014 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -136,11 +136,11 @@ Table of Contents
 2.2 Clock Constraints
 ---------------------
 
-+------------+------------------------------------------------------------------------------------------+-----------------+
-| Clock      | Domain                                                                                   | Constraint (ns) |
-+------------+------------------------------------------------------------------------------------------+-----------------+
-| clk_fpga_0 | nolabel_line21/Convolution_Controller_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0] |            10.0 |
-+------------+------------------------------------------------------------------------------------------+-----------------+
++------------+--------------------------------------------------------------------------------------+-----------------+
+| Clock      | Domain                                                                               | Constraint (ns) |
++------------+--------------------------------------------------------------------------------------+-----------------+
+| clk_fpga_0 | BD_Wrapper/Convolution_Controller_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0] |            10.0 |
++------------+--------------------------------------------------------------------------------------+-----------------+
 
 
 3. Detailed Reports
@@ -152,18 +152,16 @@ Table of Contents
 +------------------------------+-----------+
 | Name                         | Power (W) |
 +------------------------------+-----------+
-| AXI_Conv_wrapper             |     1.308 |
-|   matrixAccel                |     0.004 |
-|     genblk3[0].inputMulti    |     0.001 |
-|     genblk3[1].inputMulti    |     0.001 |
-|     genblk3[2].inputMulti    |     0.001 |
-|   nolabel_line21             |     1.304 |
+| AXI_Conv_wrapper             |     1.307 |
+|   BD_Wrapper                 |     1.304 |
 |     Convolution_Controller_i |     1.304 |
 |       Convolution_Controll_0 |     0.023 |
 |       axi_dma_0              |     0.009 |
 |       axi_mem_intercon       |     0.003 |
 |       processing_system7_0   |     1.264 |
 |       ps7_0_axi_periph       |     0.004 |
+|   Convolution_Processor      |     0.003 |
+|     genblk3[2].inputMulti    |     0.002 |
 +------------------------------+-----------+
 
 

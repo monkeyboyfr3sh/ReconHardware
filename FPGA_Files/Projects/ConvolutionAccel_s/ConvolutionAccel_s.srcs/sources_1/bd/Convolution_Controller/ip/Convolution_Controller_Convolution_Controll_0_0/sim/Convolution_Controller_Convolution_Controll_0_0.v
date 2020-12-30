@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:user:Convolution_Controller:1.0
-// IP Revision: 72
+// IP Revision: 81
 
 `timescale 1ns/1ps
 
@@ -160,7 +160,11 @@ output wire s_axi_rlast;
 
   Convolution_Controller #(
     .DATA_WIDTH(32),
-    .ADDR_WIDTH(10)
+    .KERNEL_SIZE(3),
+    .CTRL_REG_SIZE(200),
+    .AXI_ADDR_WIDTH(10),
+    .CTRL_REG_ADDR_WIDTH("8"),
+    .STATE_MAC_ADDR_WIDTH(4)
   ) inst (
     .axi_clk(axi_clk),
     .axi_reset_n(axi_reset_n),

@@ -71,7 +71,6 @@ proc create_report { reportName command } {
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 2
-set_msg_config -id {HDL-1065} -limit 10000
 set_msg_config  -id {VRFC 10-2989}  -string {{ERROR: [VRFC 10-2989] 'break' is not declared [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Adder/adderFloat.v:60]}}  -suppress 
 set_msg_config  -id {XSIM 43-3322}  -string {{ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.}}  -suppress 
 set_msg_config  -id {Netlist 29-160}  -suppress 
@@ -94,8 +93,6 @@ set_property ip_output_repo c:/GitHub/ReconHardware/FPGA_Files/Projects/Convolut
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_verilog C:/GitHub/ReconHardware/FPGA_Files/Sources/definitions.h
-set_property file_type "Verilog Header" [get_files C:/GitHub/ReconHardware/FPGA_Files/Sources/definitions.h]
 read_verilog -library xil_defaultlib {
   C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/hdl/Convolution_Controller_wrapper.v
   C:/GitHub/ReconHardware/FPGA_Files/Sources/General/XBar2.v

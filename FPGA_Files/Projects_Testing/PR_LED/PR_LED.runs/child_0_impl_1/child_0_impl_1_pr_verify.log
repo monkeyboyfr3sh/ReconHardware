@@ -1,0 +1,22 @@
+Command: pr_verify -full_check -initial C:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PR_LED/PR_LED.runs/impl_1/PR_LED_PE_routed.dcp -additional C:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PR_LED/PR_LED.runs/child_0_impl_1/PR_LED_PE_routed.dcp -file child_0_impl_1_pr_verify.log
+Sat Dec 26 15:16:23 2020
+
+INFO: [Constraints 18-1020] PR Verify Summary:
+DCP1: C:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PR_LED/PR_LED.runs/impl_1/PR_LED_PE_routed.dcp
+  Number of reconfigurable modules compared = 4
+  Number of partition pins compared         = 8
+  Number of static tiles compared           = 540
+  Number of static sites compared           = 136
+  Number of static cells compared           = 136
+  Number of static routed nodes compared    = 6614
+  Number of static routed pips compared     = 6379
+
+DCP2: C:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PR_LED/PR_LED.runs/child_0_impl_1/PR_LED_PE_routed.dcp
+  Number of reconfigurable modules compared = 4
+  Number of partition pins compared         = 8
+  Number of static tiles compared           = 540
+  Number of static sites compared           = 136
+  Number of static cells compared           = 136
+  Number of static routed nodes compared    = 6614
+  Number of static routed pips compared     = 6379
+INFO: [Vivado 12-3253] PR_VERIFY: check points C:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PR_LED/PR_LED.runs/impl_1/PR_LED_PE_routed.dcp and C:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PR_LED/PR_LED.runs/child_0_impl_1/PR_LED_PE_routed.dcp are compatible

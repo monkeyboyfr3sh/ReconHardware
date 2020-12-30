@@ -1,0 +1,53 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Sat Dec 26 15:14:49 2020
+| Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
+| Command      : report_drc -file PR_LED_PE_drc_opted.rpt -pb PR_LED_PE_drc_opted.pb -rpx PR_LED_PE_drc_opted.rpx
+| Design       : PR_LED_PE
+| Device       : xc7z020clg400-1
+| Speed File   : -1
+| Design State : Synthesized
+------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 1
++----------+------------------+----------------------------+------------+
+| Rule     | Severity         | Description                | Violations |
++----------+------------------+----------------------------+------------+
+| RTSTAT-3 | Critical Warning | Unplaced terminals on nets | 1          |
++----------+------------------+----------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+RTSTAT-3#1 Critical Warning
+Unplaced terminals on nets  
+479 net(s) have unplaced terminals. The problem bus(es) and/or net(s) are nolabel_line7/design_1_i/processing_system7_0/inst/FCLK_CLK0,
+genblk1[1].toggleBlk/clear, genblk1[2].toggleBlk/clear,
+genblk1[3].toggleBlk/clear, genblk1[0].toggleBlk/clear,
+genblk1[2].toggleBlk/count[0]_i_3_n_0,
+genblk1[0].toggleBlk/count[0]_i_3_n_0,
+genblk1[3].toggleBlk/count[0]_i_3_n_0,
+genblk1[1].toggleBlk/count[0]_i_3_n_0,
+genblk1[0].toggleBlk/count[0]_i_4_n_0,
+genblk1[2].toggleBlk/count[0]_i_4_n_0,
+genblk1[1].toggleBlk/count[0]_i_4_n_0,
+genblk1[3].toggleBlk/count[0]_i_4_n_0,
+genblk1[2].toggleBlk/count[0]_i_5_n_0,
+genblk1[1].toggleBlk/count[0]_i_5_n_0 (the first 15 of 229 listed), GLOBAL_LOGIC0, GLOBAL_LOGIC1.
+Related violations: <none>
+
+

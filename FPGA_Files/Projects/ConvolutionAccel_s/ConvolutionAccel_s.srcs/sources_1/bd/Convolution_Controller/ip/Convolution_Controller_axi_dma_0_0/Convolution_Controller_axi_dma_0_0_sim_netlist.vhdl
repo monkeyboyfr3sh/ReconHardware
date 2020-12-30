@@ -1,10 +1,10 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
--- Date        : Thu Dec 17 20:43:45 2020
+-- Date        : Thu Dec 17 20:43:44 2020
 -- Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_axi_dma_0_0/Convolution_Controller_axi_dma_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top Convolution_Controller_axi_dma_0_0 -prefix
+--               Convolution_Controller_axi_dma_0_0_ Convolution_Controller_axi_dma_0_0_sim_netlist.vhdl
 -- Design      : Convolution_Controller_axi_dma_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -29,8 +29,6 @@ entity Convolution_Controller_axi_dma_0_0_axi_datamover_fifo is
     sig_input_reg_empty : in STD_LOGIC;
     \USE_SINGLE_REG.sig_regfifo_dout_reg_reg[66]_0\ : in STD_LOGIC_VECTOR ( 59 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_axi_dma_0_0_axi_datamover_fifo : entity is "axi_datamover_fifo";
 end Convolution_Controller_axi_dma_0_0_axi_datamover_fifo;
 
 architecture STRUCTURE of Convolution_Controller_axi_dma_0_0_axi_datamover_fifo is
@@ -2646,8 +2644,6 @@ entity Convolution_Controller_axi_dma_0_0_axi_datamover_ibttcc is
     CO : in STD_LOGIC_VECTOR ( 0 to 0 );
     \sig_realigner_btt2_reg[16]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_axi_dma_0_0_axi_datamover_ibttcc : entity is "axi_datamover_ibttcc";
 end Convolution_Controller_axi_dma_0_0_axi_datamover_ibttcc;
 
 architecture STRUCTURE of Convolution_Controller_axi_dma_0_0_axi_datamover_ibttcc is
@@ -8769,8 +8765,6 @@ entity Convolution_Controller_axi_dma_0_0_axi_datamover_mssai_skid_buf is
     \sig_data_skid_reg_reg[31]_0\ : in STD_LOGIC_VECTOR ( 31 downto 0 );
     \sig_mssa_index_reg_out_reg[1]_0\ : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_axi_dma_0_0_axi_datamover_mssai_skid_buf : entity is "axi_datamover_mssai_skid_buf";
 end Convolution_Controller_axi_dma_0_0_axi_datamover_mssai_skid_buf;
 
 architecture STRUCTURE of Convolution_Controller_axi_dma_0_0_axi_datamover_mssai_skid_buf is
@@ -10477,8 +10471,6 @@ entity Convolution_Controller_axi_dma_0_0_axi_datamover_rd_status_cntl is
     sig_cmd_stat_rst_user_reg_n_cdc_from : in STD_LOGIC;
     sig_data2rsc_valid : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_axi_dma_0_0_axi_datamover_rd_status_cntl : entity is "axi_datamover_rd_status_cntl";
 end Convolution_Controller_axi_dma_0_0_axi_datamover_rd_status_cntl;
 
 architecture STRUCTURE of Convolution_Controller_axi_dma_0_0_axi_datamover_rd_status_cntl is
@@ -10604,8 +10596,6 @@ entity Convolution_Controller_axi_dma_0_0_axi_datamover_reset is
     sig_init_done_2 : in STD_LOGIC;
     sig_halt_reg : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_axi_dma_0_0_axi_datamover_reset : entity is "axi_datamover_reset";
 end Convolution_Controller_axi_dma_0_0_axi_datamover_reset;
 
 architecture STRUCTURE of Convolution_Controller_axi_dma_0_0_axi_datamover_reset is
@@ -10835,8 +10825,6 @@ entity Convolution_Controller_axi_dma_0_0_axi_datamover_skid2mm_buf is
     D : in STD_LOGIC_VECTOR ( 31 downto 0 );
     \sig_strb_skid_reg_reg[3]_0\ : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_axi_dma_0_0_axi_datamover_skid2mm_buf : entity is "axi_datamover_skid2mm_buf";
 end Convolution_Controller_axi_dma_0_0_axi_datamover_skid2mm_buf;
 
 architecture STRUCTURE of Convolution_Controller_axi_dma_0_0_axi_datamover_skid2mm_buf is
@@ -12185,8 +12173,6 @@ entity Convolution_Controller_axi_dma_0_0_axi_datamover_skid_buf is
     \sig_mssa_index_reg_out_reg[1]_0\ : in STD_LOGIC;
     \sig_mssa_index_reg_out_reg[0]\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_axi_dma_0_0_axi_datamover_skid_buf : entity is "axi_datamover_skid_buf";
 end Convolution_Controller_axi_dma_0_0_axi_datamover_skid_buf;
 
 architecture STRUCTURE of Convolution_Controller_axi_dma_0_0_axi_datamover_skid_buf is
@@ -16611,8 +16597,6 @@ entity Convolution_Controller_axi_dma_0_0_axi_datamover_slice is
     SR : in STD_LOGIC_VECTOR ( 0 to 0 );
     sig_fifo_mssai : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_axi_dma_0_0_axi_datamover_slice : entity is "axi_datamover_slice";
 end Convolution_Controller_axi_dma_0_0_axi_datamover_slice;
 
 architecture STRUCTURE of Convolution_Controller_axi_dma_0_0_axi_datamover_slice is
@@ -17028,8 +17012,6 @@ entity Convolution_Controller_axi_dma_0_0_axi_datamover_strb_gen2 is
     \sig_xfer_strt_strb_ireg3_reg[3]_0\ : in STD_LOGIC;
     \sig_xfer_strt_strb_ireg3_reg[3]_1\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_axi_dma_0_0_axi_datamover_strb_gen2 : entity is "axi_datamover_strb_gen2";
 end Convolution_Controller_axi_dma_0_0_axi_datamover_strb_gen2;
 
 architecture STRUCTURE of Convolution_Controller_axi_dma_0_0_axi_datamover_strb_gen2 is
@@ -17131,8 +17113,6 @@ entity Convolution_Controller_axi_dma_0_0_axi_dma_lite_if is
     \GEN_REG_FOR_SMPL.buffer_length_wren_reg_0\ : in STD_LOGIC;
     s_axi_lite_araddr : in STD_LOGIC_VECTOR ( 9 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_axi_dma_0_0_axi_dma_lite_if : entity is "axi_dma_lite_if";
 end Convolution_Controller_axi_dma_0_0_axi_dma_lite_if;
 
 architecture STRUCTURE of Convolution_Controller_axi_dma_0_0_axi_dma_lite_if is
@@ -19676,8 +19656,6 @@ entity Convolution_Controller_axi_dma_0_0_axi_dma_mm2s_cmdsts_if is
     dma_slverr_reg : in STD_LOGIC;
     dma_interr_reg : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_axi_dma_0_0_axi_dma_mm2s_cmdsts_if : entity is "axi_dma_mm2s_cmdsts_if";
 end Convolution_Controller_axi_dma_0_0_axi_dma_mm2s_cmdsts_if;
 
 architecture STRUCTURE of Convolution_Controller_axi_dma_0_0_axi_dma_mm2s_cmdsts_if is
@@ -19837,8 +19815,6 @@ entity Convolution_Controller_axi_dma_0_0_axi_dma_mm2s_sts_mngr is
     mm2s_sts_received_clr : in STD_LOGIC;
     halted1 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_axi_dma_0_0_axi_dma_mm2s_sts_mngr : entity is "axi_dma_mm2s_sts_mngr";
 end Convolution_Controller_axi_dma_0_0_axi_dma_mm2s_sts_mngr;
 
 architecture STRUCTURE of Convolution_Controller_axi_dma_0_0_axi_dma_mm2s_sts_mngr is
@@ -19955,8 +19931,6 @@ entity Convolution_Controller_axi_dma_0_0_axi_dma_register is
     axi_dma_tstvec : in STD_LOGIC_VECTOR ( 0 to 0 );
     E : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_axi_dma_0_0_axi_dma_register : entity is "axi_dma_register";
 end Convolution_Controller_axi_dma_0_0_axi_dma_register;
 
 architecture STRUCTURE of Convolution_Controller_axi_dma_0_0_axi_dma_register is
@@ -21199,8 +21173,6 @@ entity Convolution_Controller_axi_dma_0_0_axi_dma_register_s2mm is
     \GEN_REG_FOR_SMPL.buffer_length_i_reg[25]_1\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     D : in STD_LOGIC_VECTOR ( 25 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_axi_dma_0_0_axi_dma_register_s2mm : entity is "axi_dma_register_s2mm";
 end Convolution_Controller_axi_dma_0_0_axi_dma_register_s2mm;
 
 architecture STRUCTURE of Convolution_Controller_axi_dma_0_0_axi_dma_register_s2mm is
@@ -22547,8 +22519,6 @@ entity Convolution_Controller_axi_dma_0_0_axi_dma_reset is
     mm2s_stop : in STD_LOGIC;
     sig_rst2all_stop_request : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_axi_dma_0_0_axi_dma_reset : entity is "axi_dma_reset";
 end Convolution_Controller_axi_dma_0_0_axi_dma_reset;
 
 architecture STRUCTURE of Convolution_Controller_axi_dma_0_0_axi_dma_reset is
@@ -23268,8 +23238,6 @@ entity Convolution_Controller_axi_dma_0_0_axi_dma_s2mm_cmdsts_if is
     dma_slverr_reg : in STD_LOGIC;
     \INDETERMINATE_BTT_MODE.s2mm_brcvd_reg[25]_0\ : in STD_LOGIC_VECTOR ( 25 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_axi_dma_0_0_axi_dma_s2mm_cmdsts_if : entity is "axi_dma_s2mm_cmdsts_if";
 end Convolution_Controller_axi_dma_0_0_axi_dma_s2mm_cmdsts_if;
 
 architecture STRUCTURE of Convolution_Controller_axi_dma_0_0_axi_dma_s2mm_cmdsts_if is
@@ -23947,8 +23915,6 @@ entity Convolution_Controller_axi_dma_0_0_axi_dma_s2mm_sts_mngr is
     s2mm_sts_received_clr : in STD_LOGIC;
     halted1 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_axi_dma_0_0_axi_dma_s2mm_sts_mngr : entity is "axi_dma_s2mm_sts_mngr";
 end Convolution_Controller_axi_dma_0_0_axi_dma_s2mm_sts_mngr;
 
 architecture STRUCTURE of Convolution_Controller_axi_dma_0_0_axi_dma_s2mm_sts_mngr is
@@ -24033,8 +23999,6 @@ entity Convolution_Controller_axi_dma_0_0_axi_dma_smple_sm is
     \GEN_CMD_BTT_EQL_23.cmnd_data_reg[26]_0\ : in STD_LOGIC;
     \GEN_CMD_BTT_EQL_23.cmnd_data_reg[25]_0\ : in STD_LOGIC_VECTOR ( 25 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_axi_dma_0_0_axi_dma_smple_sm : entity is "axi_dma_smple_sm";
 end Convolution_Controller_axi_dma_0_0_axi_dma_smple_sm;
 
 architecture STRUCTURE of Convolution_Controller_axi_dma_0_0_axi_dma_smple_sm is
@@ -25426,8 +25390,6 @@ entity Convolution_Controller_axi_dma_0_0_axi_dma_sofeof_gen is
     m_axis_mm2s_tlast : in STD_LOGIC;
     \out\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_axi_dma_0_0_axi_dma_sofeof_gen : entity is "axi_dma_sofeof_gen";
 end Convolution_Controller_axi_dma_0_0_axi_dma_sofeof_gen;
 
 architecture STRUCTURE of Convolution_Controller_axi_dma_0_0_axi_dma_sofeof_gen is
@@ -25762,8 +25724,6 @@ entity Convolution_Controller_axi_dma_0_0_cdc_sync is
     axi_resetn : in STD_LOGIC;
     s_axi_lite_aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_axi_dma_0_0_cdc_sync : entity is "cdc_sync";
 end Convolution_Controller_axi_dma_0_0_cdc_sync;
 
 architecture STRUCTURE of Convolution_Controller_axi_dma_0_0_cdc_sync is
@@ -25958,8 +25918,6 @@ entity Convolution_Controller_axi_dma_0_0_cntr_incr_decr_addn_f is
     SR : in STD_LOGIC_VECTOR ( 0 to 0 );
     m_axi_s2mm_aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_axi_dma_0_0_cntr_incr_decr_addn_f : entity is "cntr_incr_decr_addn_f";
 end Convolution_Controller_axi_dma_0_0_cntr_incr_decr_addn_f;
 
 architecture STRUCTURE of Convolution_Controller_axi_dma_0_0_cntr_incr_decr_addn_f is
@@ -27665,8 +27623,6 @@ entity Convolution_Controller_axi_dma_0_0_dynshreg_f is
     Q : in STD_LOGIC_VECTOR ( 1 downto 0 );
     m_axi_s2mm_aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_axi_dma_0_0_dynshreg_f : entity is "dynshreg_f";
 end Convolution_Controller_axi_dma_0_0_dynshreg_f;
 
 architecture STRUCTURE of Convolution_Controller_axi_dma_0_0_dynshreg_f is
@@ -37302,8 +37258,6 @@ entity Convolution_Controller_axi_dma_0_0_xpm_fifo_reg_bit is
     prog_full : in STD_LOGIC;
     \gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg_0\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_axi_dma_0_0_xpm_fifo_reg_bit : entity is "xpm_fifo_reg_bit";
 end Convolution_Controller_axi_dma_0_0_xpm_fifo_reg_bit;
 
 architecture STRUCTURE of Convolution_Controller_axi_dma_0_0_xpm_fifo_reg_bit is
@@ -37849,8 +37803,6 @@ entity Convolution_Controller_axi_dma_0_0_xpm_fifo_rst is
     \guf.underflow_i_reg\ : in STD_LOGIC;
     wr_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_axi_dma_0_0_xpm_fifo_rst : entity is "xpm_fifo_rst";
 end Convolution_Controller_axi_dma_0_0_xpm_fifo_rst;
 
 architecture STRUCTURE of Convolution_Controller_axi_dma_0_0_xpm_fifo_rst is
@@ -38387,8 +38339,6 @@ entity Convolution_Controller_axi_dma_0_0_xpm_memory_base is
   attribute MESSAGE_CONTROL of Convolution_Controller_axi_dma_0_0_xpm_memory_base : entity is 0;
   attribute NUM_CHAR_LOC : integer;
   attribute NUM_CHAR_LOC of Convolution_Controller_axi_dma_0_0_xpm_memory_base : entity is 0;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_axi_dma_0_0_xpm_memory_base : entity is "xpm_memory_base";
   attribute P_ECC_MODE : string;
   attribute P_ECC_MODE of Convolution_Controller_axi_dma_0_0_xpm_memory_base : entity is "no_ecc";
   attribute P_ENABLE_BYTE_WRITE_A : integer;
@@ -40781,8 +40731,6 @@ entity Convolution_Controller_axi_dma_0_0_axi_datamover_cmd_status is
     D : in STD_LOGIC_VECTOR ( 59 downto 0 );
     sig_rsc2stat_status : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_axi_dma_0_0_axi_datamover_cmd_status : entity is "axi_datamover_cmd_status";
 end Convolution_Controller_axi_dma_0_0_axi_datamover_cmd_status;
 
 architecture STRUCTURE of Convolution_Controller_axi_dma_0_0_axi_datamover_cmd_status is
@@ -40936,8 +40884,6 @@ entity Convolution_Controller_axi_dma_0_0_axi_datamover_pcc is
     sig_cmd2addr_valid_reg_0 : in STD_LOGIC;
     sig_inhibit_rdy_n_1 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_axi_dma_0_0_axi_datamover_pcc : entity is "axi_datamover_pcc";
 end Convolution_Controller_axi_dma_0_0_axi_datamover_pcc;
 
 architecture STRUCTURE of Convolution_Controller_axi_dma_0_0_axi_datamover_pcc is
@@ -46707,8 +46653,6 @@ entity Convolution_Controller_axi_dma_0_0_axi_dma_mm2s_mngr is
     \GEN_CMD_BTT_EQL_23.cmnd_data_reg[26]\ : in STD_LOGIC;
     \GEN_CMD_BTT_EQL_23.cmnd_data_reg[25]\ : in STD_LOGIC_VECTOR ( 25 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_axi_dma_0_0_axi_dma_mm2s_mngr : entity is "axi_dma_mm2s_mngr";
 end Convolution_Controller_axi_dma_0_0_axi_dma_mm2s_mngr;
 
 architecture STRUCTURE of Convolution_Controller_axi_dma_0_0_axi_dma_mm2s_mngr is
@@ -46870,8 +46814,6 @@ entity Convolution_Controller_axi_dma_0_0_axi_dma_reg_module is
     axi_dma_tstvec : in STD_LOGIC_VECTOR ( 1 downto 0 );
     D : in STD_LOGIC_VECTOR ( 25 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_axi_dma_0_0_axi_dma_reg_module : entity is "axi_dma_reg_module";
 end Convolution_Controller_axi_dma_0_0_axi_dma_reg_module;
 
 architecture STRUCTURE of Convolution_Controller_axi_dma_0_0_axi_dma_reg_module is
@@ -47300,8 +47242,6 @@ entity Convolution_Controller_axi_dma_0_0_axi_dma_rst_module is
     sig_rst2all_stop_request_0 : in STD_LOGIC;
     axi_resetn : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_axi_dma_0_0_axi_dma_rst_module : entity is "axi_dma_rst_module";
 end Convolution_Controller_axi_dma_0_0_axi_dma_rst_module;
 
 architecture STRUCTURE of Convolution_Controller_axi_dma_0_0_axi_dma_rst_module is
@@ -47464,8 +47404,6 @@ entity Convolution_Controller_axi_dma_0_0_axi_dma_s2mm_mngr is
     \GEN_CMD_BTT_EQL_23.cmnd_data_reg[25]\ : in STD_LOGIC_VECTOR ( 25 downto 0 );
     \INDETERMINATE_BTT_MODE.s2mm_brcvd_reg[25]\ : in STD_LOGIC_VECTOR ( 25 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_axi_dma_0_0_axi_dma_s2mm_mngr : entity is "axi_dma_s2mm_mngr";
 end Convolution_Controller_axi_dma_0_0_axi_dma_s2mm_mngr;
 
 architecture STRUCTURE of Convolution_Controller_axi_dma_0_0_axi_dma_s2mm_mngr is
@@ -47575,8 +47513,6 @@ entity Convolution_Controller_axi_dma_0_0_srl_fifo_rbu_f is
     sig_cmd_stat_rst_user_reg_n_cdc_from : in STD_LOGIC;
     \in\ : in STD_LOGIC_VECTOR ( 41 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_axi_dma_0_0_srl_fifo_rbu_f : entity is "srl_fifo_rbu_f";
 end Convolution_Controller_axi_dma_0_0_srl_fifo_rbu_f;
 
 architecture STRUCTURE of Convolution_Controller_axi_dma_0_0_srl_fifo_rbu_f is
@@ -48548,8 +48484,6 @@ entity Convolution_Controller_axi_dma_0_0_xpm_fifo_base is
   attribute FULL_RESET_VALUE of Convolution_Controller_axi_dma_0_0_xpm_fifo_base : entity is 1;
   attribute FULL_RST_VAL : string;
   attribute FULL_RST_VAL of Convolution_Controller_axi_dma_0_0_xpm_fifo_base : entity is "1'b1";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_axi_dma_0_0_xpm_fifo_base : entity is "xpm_fifo_base";
   attribute PE_THRESH_ADJ : integer;
   attribute PE_THRESH_ADJ of Convolution_Controller_axi_dma_0_0_xpm_fifo_base : entity is 8;
   attribute PE_THRESH_MAX : integer;
@@ -52311,8 +52245,6 @@ entity Convolution_Controller_axi_dma_0_0_srl_fifo_f is
     sig_cmd_stat_rst_user_reg_n_cdc_from : in STD_LOGIC;
     \in\ : in STD_LOGIC_VECTOR ( 41 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_axi_dma_0_0_srl_fifo_f : entity is "srl_fifo_f";
 end Convolution_Controller_axi_dma_0_0_srl_fifo_f;
 
 architecture STRUCTURE of Convolution_Controller_axi_dma_0_0_srl_fifo_f is
@@ -52899,8 +52831,6 @@ entity Convolution_Controller_axi_dma_0_0_xpm_fifo_sync is
   attribute FIFO_WRITE_DEPTH of Convolution_Controller_axi_dma_0_0_xpm_fifo_sync : entity is 2048;
   attribute FULL_RESET_VALUE : integer;
   attribute FULL_RESET_VALUE of Convolution_Controller_axi_dma_0_0_xpm_fifo_sync : entity is 1;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_axi_dma_0_0_xpm_fifo_sync : entity is "xpm_fifo_sync";
   attribute PROG_EMPTY_THRESH : integer;
   attribute PROG_EMPTY_THRESH of Convolution_Controller_axi_dma_0_0_xpm_fifo_sync : entity is 10;
   attribute PROG_FULL_THRESH : integer;
@@ -54639,8 +54569,6 @@ entity Convolution_Controller_axi_dma_0_0_sync_fifo_fg is
     sig_ok_to_post_rd_addr_reg_1 : in STD_LOGIC_VECTOR ( 3 downto 0 );
     sig_sstrb_stop_mask : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_axi_dma_0_0_sync_fifo_fg : entity is "sync_fifo_fg";
 end Convolution_Controller_axi_dma_0_0_sync_fifo_fg;
 
 architecture STRUCTURE of Convolution_Controller_axi_dma_0_0_sync_fifo_fg is
@@ -55483,8 +55411,6 @@ entity Convolution_Controller_axi_dma_0_0_axi_datamover_addr_cntl is
     m_axi_mm2s_arready : in STD_LOGIC;
     \in\ : in STD_LOGIC_VECTOR ( 41 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_axi_dma_0_0_axi_datamover_addr_cntl : entity is "axi_datamover_addr_cntl";
 end Convolution_Controller_axi_dma_0_0_axi_datamover_addr_cntl;
 
 architecture STRUCTURE of Convolution_Controller_axi_dma_0_0_axi_datamover_addr_cntl is
@@ -56748,8 +56674,6 @@ entity Convolution_Controller_axi_dma_0_0_axi_datamover_rddata_cntl is
     \in\ : in STD_LOGIC_VECTOR ( 19 downto 0 );
     \sig_addr_posted_cntr_reg[2]_0\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_axi_dma_0_0_axi_datamover_rddata_cntl : entity is "axi_datamover_rddata_cntl";
 end Convolution_Controller_axi_dma_0_0_axi_datamover_rddata_cntl;
 
 architecture STRUCTURE of Convolution_Controller_axi_dma_0_0_axi_datamover_rddata_cntl is
@@ -57686,8 +57610,6 @@ entity Convolution_Controller_axi_dma_0_0_axi_datamover_s2mm_scatter is
     \sig_data_skid_reg_reg[31]\ : in STD_LOGIC_VECTOR ( 31 downto 0 );
     \sig_mssa_index_reg_out_reg[1]\ : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_axi_dma_0_0_axi_datamover_s2mm_scatter : entity is "axi_datamover_s2mm_scatter";
 end Convolution_Controller_axi_dma_0_0_axi_datamover_s2mm_scatter;
 
 architecture STRUCTURE of Convolution_Controller_axi_dma_0_0_axi_datamover_s2mm_scatter is
@@ -60046,8 +59968,6 @@ entity Convolution_Controller_axi_dma_0_0_axi_datamover_sfifo_autord is
     sig_ok_to_post_rd_addr_reg_1 : in STD_LOGIC_VECTOR ( 3 downto 0 );
     sig_sstrb_stop_mask : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_axi_dma_0_0_axi_datamover_sfifo_autord : entity is "axi_datamover_sfifo_autord";
 end Convolution_Controller_axi_dma_0_0_axi_datamover_sfifo_autord;
 
 architecture STRUCTURE of Convolution_Controller_axi_dma_0_0_axi_datamover_sfifo_autord is
@@ -60220,8 +60140,6 @@ entity Convolution_Controller_axi_dma_0_0_axi_datamover_wr_status_cntl is
     m_axi_s2mm_bresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
     \in\ : in STD_LOGIC_VECTOR ( 28 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_axi_dma_0_0_axi_datamover_wr_status_cntl : entity is "axi_datamover_wr_status_cntl";
 end Convolution_Controller_axi_dma_0_0_axi_datamover_wr_status_cntl;
 
 architecture STRUCTURE of Convolution_Controller_axi_dma_0_0_axi_datamover_wr_status_cntl is
@@ -60912,8 +60830,6 @@ entity Convolution_Controller_axi_dma_0_0_axi_datamover_wrdata_cntl is
     E : in STD_LOGIC_VECTOR ( 0 to 0 );
     DI : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_axi_dma_0_0_axi_datamover_wrdata_cntl : entity is "axi_datamover_wrdata_cntl";
 end Convolution_Controller_axi_dma_0_0_axi_datamover_wrdata_cntl;
 
 architecture STRUCTURE of Convolution_Controller_axi_dma_0_0_axi_datamover_wrdata_cntl is
@@ -62590,8 +62506,6 @@ entity Convolution_Controller_axi_dma_0_0_axi_datamover_indet_btt is
     \sig_byte_cntr_reg[3]_3\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     \sig_byte_cntr_reg[3]_4\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_axi_dma_0_0_axi_datamover_indet_btt : entity is "axi_datamover_indet_btt";
 end Convolution_Controller_axi_dma_0_0_axi_datamover_indet_btt;
 
 architecture STRUCTURE of Convolution_Controller_axi_dma_0_0_axi_datamover_indet_btt is
@@ -63329,8 +63243,6 @@ entity Convolution_Controller_axi_dma_0_0_axi_datamover_rd_sf is
     \sig_token_cntr_reg[1]_0\ : in STD_LOGIC;
     sig_sstrb_stop_mask : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_axi_dma_0_0_axi_datamover_rd_sf : entity is "axi_datamover_rd_sf";
 end Convolution_Controller_axi_dma_0_0_axi_datamover_rd_sf;
 
 architecture STRUCTURE of Convolution_Controller_axi_dma_0_0_axi_datamover_rd_sf is
@@ -63579,8 +63491,6 @@ entity Convolution_Controller_axi_dma_0_0_axi_datamover_s2mm_realign is
     \sig_data_skid_reg_reg[31]\ : in STD_LOGIC_VECTOR ( 31 downto 0 );
     \sig_mssa_index_reg_out_reg[1]\ : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_axi_dma_0_0_axi_datamover_s2mm_realign : entity is "axi_datamover_s2mm_realign";
 end Convolution_Controller_axi_dma_0_0_axi_datamover_s2mm_realign;
 
 architecture STRUCTURE of Convolution_Controller_axi_dma_0_0_axi_datamover_s2mm_realign is
@@ -63807,8 +63717,6 @@ entity Convolution_Controller_axi_dma_0_0_axi_datamover_mm2s_full_wrap is
     m_axi_mm2s_arready : in STD_LOGIC;
     D : in STD_LOGIC_VECTOR ( 59 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_axi_dma_0_0_axi_datamover_mm2s_full_wrap : entity is "axi_datamover_mm2s_full_wrap";
 end Convolution_Controller_axi_dma_0_0_axi_datamover_mm2s_full_wrap;
 
 architecture STRUCTURE of Convolution_Controller_axi_dma_0_0_axi_datamover_mm2s_full_wrap is
@@ -64224,8 +64132,6 @@ entity Convolution_Controller_axi_dma_0_0_axi_datamover_s2mm_full_wrap is
     m_axi_s2mm_bresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
     \USE_SINGLE_REG.sig_regfifo_dout_reg_reg[66]\ : in STD_LOGIC_VECTOR ( 59 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_axi_dma_0_0_axi_datamover_s2mm_full_wrap : entity is "axi_datamover_s2mm_full_wrap";
 end Convolution_Controller_axi_dma_0_0_axi_datamover_s2mm_full_wrap;
 
 architecture STRUCTURE of Convolution_Controller_axi_dma_0_0_axi_datamover_s2mm_full_wrap is
@@ -64892,8 +64798,6 @@ entity Convolution_Controller_axi_dma_0_0_axi_datamover is
     m_axi_s2mm_bresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
     \USE_SINGLE_REG.sig_regfifo_dout_reg_reg[66]\ : in STD_LOGIC_VECTOR ( 59 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_axi_dma_0_0_axi_datamover : entity is "axi_datamover";
 end Convolution_Controller_axi_dma_0_0_axi_datamover;
 
 architecture STRUCTURE of Convolution_Controller_axi_dma_0_0_axi_datamover is
@@ -65161,8 +65065,6 @@ entity Convolution_Controller_axi_dma_0_0_axi_dma is
   attribute C_S_AXI_LITE_ADDR_WIDTH of Convolution_Controller_axi_dma_0_0_axi_dma : entity is 10;
   attribute C_S_AXI_LITE_DATA_WIDTH : integer;
   attribute C_S_AXI_LITE_DATA_WIDTH of Convolution_Controller_axi_dma_0_0_axi_dma : entity is 32;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_axi_dma_0_0_axi_dma : entity is "axi_dma";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of Convolution_Controller_axi_dma_0_0_axi_dma : entity is "yes";
 end Convolution_Controller_axi_dma_0_0_axi_dma;

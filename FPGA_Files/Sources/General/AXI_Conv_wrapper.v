@@ -1,24 +1,29 @@
-`include "definitions.h"
 `timescale 1ns / 1ps
 
-module AXI_Conv_wrapper();
+module AXI_Conv_wrapper
+#(  // Parameters, these must also be set in the BD
+    //Can probably do this automated some way
+    parameter DATA_WIDTH = 32,
+    parameter KERNEL_SIZE = 3,
+    parameter REST_ADDR = KERNEL_SIZE*KERNEL_SIZE,
+    parameter ADDR_WIDTH = $clog2(REST_ADDR)
+);
+
 wire clk,rst,ip_reset;
 wire cReady,finaladd_start;
 
 //Matrix Accelerator signals
-wire    [`addressLength-1:0]                    AddressSelect;
-wire    [`inputPortCount-1:0]                   mStart_conncetor;
-wire    [`inputPortCount-1:0]                   mReady_connector;
-wire    [`inputPortCount*`bitLength-1:0]        multiplier_connector;
-wire    [`inputPortCount*`bitLength-1:0]        multiplicand_connector;
+wire    [ADDR_WIDTH-1:0]    AddressSelect;
+wire    [KERNEL_SIZE-1:0]   mStart_conncetor;
+wire    [KERNEL_SIZE-1:0]   mReady_connector;
+wire    [KERNEL_SIZE*DATA_WIDTH-1:0]    multiplier_connector;
+wire    [KERNEL_SIZE*DATA_WIDTH-1:0]    multiplicand_connector;
 
 //Adder signals
-wire                                            addClk;
-wire                                            finalAdd;
-wire    [2*`bitLength-1:0]                      cSum;
-wire    [`bitLength-1:0]                      finalSum;
+wire    [2*DATA_WIDTH-1:0]  cSum;
 
-Convolution_Controller_wrapper(
+Convolution_Controller_wrapper BD_Wrapper
+(
     .FCLK_CLK0_0(clk),
     .FCLK_RESET0_N_0(rst),
     .ip_reset_out_0(ip_reset),
@@ -29,7 +34,13 @@ Convolution_Controller_wrapper(
     .cReady_0(cReady),
     .cSum_0(cSum)
 );
- matrixAccelerator matrixAccel(   
+
+matrixAccelerator
+#( // Parameters
+    .DATA_WIDTH(DATA_WIDTH),
+    .KERNEL_SIZE(KERNEL_SIZE)
+) Convolution_Processor
+( // Ports    
     .Clk(clk),
     .Rst(~rst||ip_reset),//This is expecting reset of active high
     .multiplier_input(multiplier_connector),        //Flat input connector. Has width of `bitLength*`inputPortcount

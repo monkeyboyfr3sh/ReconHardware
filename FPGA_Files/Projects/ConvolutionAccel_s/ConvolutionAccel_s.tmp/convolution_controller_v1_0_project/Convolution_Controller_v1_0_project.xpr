@@ -6,7 +6,7 @@
 <Project Version="7" Minor="49" Path="c:/github/reconhardware/fpga_files/projects/convolutionaccel_s/convolutionaccel_s.tmp/convolution_controller_v1_0_project/Convolution_Controller_v1_0_project.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="21dae232fb224f0289c71379c55c44a2"/>
+    <Option Name="Id" Val="a7b6607105614b6c87b4996bd6455e63"/>
     <Option Name="Part" Val="xc7z020clg400-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -69,13 +69,6 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PPRDIR/../../../../../../../GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/src/definitions.h">
-        <FileInfo>
-          <Attr Name="Library" Val=""/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PPRDIR/../../../../../../../GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v">
         <FileInfo>
           <Attr Name="Library" Val=""/>

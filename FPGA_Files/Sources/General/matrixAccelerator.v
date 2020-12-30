@@ -1,7 +1,13 @@
-`include "definitions.h"
-`timescale `myTimeScale
+`timescale 1ns / 1ps
 
-module matrixAccelerator(   
+module matrixAccelerator
+#( // Parameters
+    parameter DATA_WIDTH = 32,
+    parameter KERNEL_SIZE = 3,
+    parameter REST_ADDR = KERNEL_SIZE*KERNEL_SIZE,
+    parameter ADDR_WIDTH = $clog2(REST_ADDR)
+)
+( // Ports  
     Clk,Rst,
     multiplier_input,
     multiplicand_input,
@@ -12,36 +18,31 @@ module matrixAccelerator(
     Add,
     finalAdd,
     finalAccumulate,
-    finalReady,
-    temp_out_data,
-    temp_out_sig
+    finalReady
 );
 
 //Inputs
 input   Clk,Rst,direct,finalAdd;
-input   [`inputPortCount-1:0]                   mStart;
-input   [`outputPortCount-1:0]                  Add;
-input   [`addressLength-1:0] AddressSelect;
-input   [`inputPortCount*`bitLength-1:0]        multiplier_input;
-input   [`inputPortCount*`bitLength-1:0]        multiplicand_input;
+input   [KERNEL_SIZE-1:0]  mStart;
+input   [KERNEL_SIZE-1:0]  Add;
+input   [ADDR_WIDTH-1:0] AddressSelect;
+input   [KERNEL_SIZE*DATA_WIDTH-1:0]   multiplier_input;
+input   [KERNEL_SIZE*DATA_WIDTH-1:0]   multiplicand_input;
 
 //Outputs
 output  mReady;
 output  reg finalReady = 0;
-output  [(2*`bitLength)-1:0]                    finalAccumulate;
-
-output [31:0] temp_out_data;
-output temp_out_sig;
+output  [(2*DATA_WIDTH)-1:0]    finalAccumulate;
 
 //Internal Signals
-wire    [`inputPortCount-1:0]                   mReady;
-wire    [(`bitLength*2)-1:0]                    product_in                  [`inputPortCount-1:0];      //Product input bus, the will be fed to the input of the crossbar
-wire    [`inputPortCount*(`bitLength*2)-1:0]    xbar_inputConnector;
-wire    [`outputPortCount*(`bitLength*2)-1:0]   xbar_outputConnector;
-wire    [`outputPortCount*(`bitLength*2)-1:0]   addarray_inputConnector;
-wire    [(`bitLength*2)-1:0]                    sum_Connector               [`outputPortCount-1:0];
-wire    [(2*`bitLength)-1:0]                    finalAccumulateWire;
-reg     [`addressLength:0]                      addPointer = 0;
+wire    [KERNEL_SIZE-1:0]                  mReady;
+wire    [(DATA_WIDTH*2)-1:0]            product_in                  [KERNEL_SIZE-1:0];      //Product input bus, the will be fed to the input of the crossbar
+wire    [KERNEL_SIZE*(DATA_WIDTH*2)-1:0]   xbar_inputConnector;
+wire    [KERNEL_SIZE*(DATA_WIDTH*2)-1:0]   xbar_outputConnector;
+wire    [KERNEL_SIZE*(DATA_WIDTH*2)-1:0]   addarray_inputConnector;
+wire    [(DATA_WIDTH*2)-1:0]            sum_Connector               [KERNEL_SIZE-1:0];
+wire    [(2*DATA_WIDTH)-1:0]            finalAccumulateWire;
+reg     [ADDR_WIDTH:0]                  addPointer = 0;
 
 assign  finalAccumulate = finalAccumulateWire;
 assign temp_out_data = finalAccumulate;
@@ -59,13 +60,13 @@ XBar2 xbar2(
 generate
     genvar n;
     //Assigning Output port to corresponding saved outputs
-    for(n=0;n<`inputPortCount;n=n+1)begin
-        assign xbar_inputConnector[(n+1)*(`bitLength*2)-1:n*(`bitLength*2)] = product_in[n];
+    for(n=0;n<KERNEL_SIZE;n=n+1)begin
+        assign xbar_inputConnector[(n+1)*(DATA_WIDTH*2)-1:n*(DATA_WIDTH*2)] = product_in[n];
     end
     
     //Assign xbar output to adder input
-    for(n=0;n<`outputPortCount;n=n+1)begin
-        assign addarray_inputConnector[(n+1)*(`bitLength*2)-1:n*(`bitLength*2)] = xbar_outputConnector[(n+1)*(`bitLength*2)-1:n*(`bitLength*2)];
+    for(n=0;n<KERNEL_SIZE;n=n+1)begin
+        assign addarray_inputConnector[(n+1)*(DATA_WIDTH*2)-1:n*(DATA_WIDTH*2)] = xbar_outputConnector[(n+1)*(DATA_WIDTH*2)-1:n*(DATA_WIDTH*2)];
     end
 endgenerate
 
@@ -74,32 +75,43 @@ generate
     genvar m ;
     
     //Wire the multipliers on the input of the xbar
-    for( m = 0 ; m < `inputPortCount ; m = m + 1)begin
-        //fixedmultiplyCompute inputMulti (
-        multiplyComputePynq inputMulti (
-            .clk(Clk),
-            .reset(Rst),
-            .multiplier(multiplier_input[m*`bitLength+:`bitLength]),
-            .multiplicand(multiplicand_input[m*`bitLength+:`bitLength]),
-            .start(mStart[m]),
-            .product(product_in[m]),
-            .ready(mReady[m])
+    for( m = 0 ; m < KERNEL_SIZE ; m = m + 1)begin
+//        fixedmultiplyCompute
+        multiplyComputePynq 
+        #( // Parameters
+        .DATA_WIDTH(DATA_WIDTH)
+        )inputMulti 
+        ( // Ports
+        .clk(Clk),
+        .reset(Rst),
+        .multiplier(multiplier_input[m*DATA_WIDTH+:DATA_WIDTH]),
+        .multiplicand(multiplicand_input[m*DATA_WIDTH+:DATA_WIDTH]),
+        .start(mStart[m]),
+        .product(product_in[m]),
+        .ready(mReady[m])
         );
     end
     
     //Wire the addder on the output of the xbar
-    for( m=0 ; m < `outputPortCount ; m = m + 1 )begin
-        adder outputAdder (   
-            .Clk(Clk),
-            .Rst(Rst),
-            .addend(addarray_inputConnector[(m+1)*(`bitLength*2)-1:m*(`bitLength*2)]),
-            .Add(Add[m]),
-            .sum(sum_Connector[m])
+    for( m=0 ; m < KERNEL_SIZE ; m = m + 1 )begin
+        adder 
+        #( // Parameters
+        .DATA_WIDTH(DATA_WIDTH)
+        ) outputAdder
+        (
+        .Clk(Clk),
+        .Rst(Rst),
+        .addend(addarray_inputConnector[(m+1)*(DATA_WIDTH*2)-1:m*(DATA_WIDTH*2)]),
+        .Add(Add[m]),
+        .sum(sum_Connector[m])
         );
     end
 endgenerate
 
-adder finalAdder (
+adder
+    #( // Parameters
+    .DATA_WIDTH(DATA_WIDTH)
+    ) finalAdder (
     .Clk(Clk),
     .Rst(Rst),
     .addend(sum_Connector[addPointer]),
@@ -117,7 +129,7 @@ adder finalAdder (
         addPointer = addPointer + 1;
         
         //Computation complete
-        if(addPointer >= `outputPortCount) begin
+        if(addPointer >= KERNEL_SIZE) begin
             finalReady = 1;
             addPointer = 0;
         end

@@ -6,20 +6,20 @@
 `define addr_width 10
 
 //Test stuff
-`define test_width 5
-`define test_height 5
+`define test_width 100
+`define test_height 100
 
 module Controller_Test_tb;
 
-reg rand_test = 0;//Set test bench to use random variables
+reg rand_test = 1;//Set test bench to use random variables
 
 reg    axi_clk;
 reg    axi_reset_n;
 wire    ip_reset_out;
-wire [32-1:0] cSum;
+wire [`data_width-1:0] cSum;
 wire    cReady;
-wire [`inputPortCount*`bitLength-1:0] MULTIPLIER_INPUT;   //Flat output for data set
-wire [`inputPortCount*`bitLength-1:0] MULTIPLICAND_INPUT; //Flat output for filter set
+wire [`inputPortCount*`data_width-1:0] MULTIPLIER_INPUT;   //Flat output for data set
+wire [`inputPortCount*`data_width-1:0] MULTIPLICAND_INPUT; //Flat output for filter set
 wire [`inputPortCount-1:0] MULTIPLY_START;
 wire [`inputPortCount-1:0] mReady_connector;
 wire FINALADDOUT;
@@ -29,14 +29,14 @@ reg    s_axis_valid;
 reg [`data_width-1:0] s_axis_data;
 wire s_axis_ready;
 reg s_axis_last = 0;
-reg [3:0] s_axis_keep;
+reg [`data_width/8-1:0] s_axis_keep;
 
 //AXI4-S master i/f - Output Data port
 wire  m_axis_valid;
 wire [`data_width-1:0] m_axis_data;
 reg    m_axis_ready = 1;
 wire m_axis_last;
-wire [3:0] m_axis_keep;
+wire [`data_width/8-1:0] m_axis_keep;
 
 /////////////////////////////////////////////////////////////////////////////////////
 //AXI-4 slave i/f - Data Control port
@@ -64,13 +64,12 @@ wire s_axi_rvalid = 0;
 wire s_axi_bvalid = 0;
 reg s_axi_bready;
 
-wire [31:0] temp_data;
-wire temp_sig;
-
-Convolution_Controller dut
+Convolution_Controller 
+#( // Parameters
+    .DATA_WIDTH(`data_width),
+    .KERNEL_SIZE(3)
+)   dut
     (//IP Ports
-    temp_data,
-    temp_sig,
     axi_clk,
     axi_reset_n,
     ip_reset_out,
@@ -121,7 +120,11 @@ Convolution_Controller dut
     s_axi_bready
 );//End of ports
 
- matrixAccelerator matrixAccel(   
+ matrixAccelerator
+ #( // Parameters
+    .DATA_WIDTH(`data_width),
+    .KERNEL_SIZE(3)
+) matrixAccel(   
     .Clk(axi_clk),
     .Rst(~axi_reset_n||ip_reset_out),
     .multiplier_input(MULTIPLIER_INPUT),        //Flat input connector. Has width of `bitLength*`inputPortcount
@@ -133,9 +136,7 @@ Convolution_Controller dut
     .Add(mReady_connector),                         //Signals Adders to Add @posedge clk
     .finalAdd(FINALADDOUT),
     .finalAccumulate(cSum),
-    .finalReady(cReady),
-    .temp_out_data(temp_data),
-    .temp_out_sig(temp_sig)
+    .finalReady(cReady)
 );
 
 integer i, linecnt, columncnt;
@@ -258,7 +259,7 @@ for(linecnt = 0;linecnt< (`test_height-2) ;linecnt=linecnt+1)begin
             m_axis_ready = 0;
             
             s_axis_valid = 1;
-            s_axis_data = (rand_test) ? ($urandom) % 65536 : i;
+            s_axis_data = (rand_test) ? ($urandom) % `data_width : i;
             curr_dataSet[i] = s_axis_data;
             #`clkPeriod;
         end    
@@ -288,7 +289,7 @@ for(linecnt = 0;linecnt< (`test_height-2) ;linecnt=linecnt+1)begin
                 
                 //Data on the bus
                 s_axis_valid = 1;
-                s_axis_data = (rand_test) ? ($urandom) % 65536 : i;
+                s_axis_data = (rand_test) ? ($urandom) % (`data_width+2) : i-6;
                 
                 //Correcting data set
                 curr_dataSet[i-6] = curr_dataSet[i-3];
@@ -322,7 +323,7 @@ begin
     
     cCount= cCount + 1;
     
-    $display("m_axis_valid went high ... \nExpected value: %d\nCalculated value:%d\n",curr_cSum,m_axis_data);
+    $display("m_axis_valid went high ... \nExpected value: %d \nCalculated value: %d \n",curr_cSum,m_axis_data);
     
     if(curr_cSum==m_axis_data)begin
         pass_count=pass_count+1;

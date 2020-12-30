@@ -26,7 +26,6 @@
 `define myTimeScale         1ns / 1ps
 `define clkPeriod           10
 
-`define inputWidth          32
 `define KERNELSIZE          3
 
 //If reset signal is active high, define as 1
@@ -37,9 +36,6 @@
 `define mantissaIndex       2           //Float Multiply definitions = mantissa length-1
 `define expBias             0111        //Bias for floating point representation
 `define expWide             4
-
-//Fixed Multiply Definition
-`define fracBitCount        4           //Fixed Multiply definitions = number of bits dedicated to fraction
 
 //Testbench Definitions, data will be truncated to lowest order bits of size `inputWidth
 `define dataIn1             9
@@ -70,8 +66,5 @@
 `define bitLength           `inputWidth                         //Size of each data input/outputport for Xbar
 `define restAddress         `inputPortCount*`outputPortCount
 `define addressLength        $clog2(`restAddress)
-
-//aFIFO
-`define bufferSize          8                                   //buffer count = 2**buffersize
 /*#####################################################################################################################################################*/
 //END_Automated_Set

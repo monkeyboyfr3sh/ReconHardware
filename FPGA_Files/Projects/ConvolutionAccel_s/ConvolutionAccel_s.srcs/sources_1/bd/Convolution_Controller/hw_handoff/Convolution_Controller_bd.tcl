@@ -174,6 +174,10 @@ proc create_root_design { parentCell } {
 
   # Create instance: Convolution_Controll_0, and set properties
   set Convolution_Controll_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:Convolution_Controller:1.0 Convolution_Controll_0 ]
+  set_property -dict [ list \
+   CONFIG.DATA_WIDTH {32} \
+   CONFIG.KERNEL_SIZE {3} \
+ ] $Convolution_Controll_0
 
   # Create instance: axi_dma_0, and set properties
   set axi_dma_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_dma:7.1 axi_dma_0 ]

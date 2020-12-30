@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="child_3_impl_1" LaunchPart="xc7z020clg400-1" LaunchConfig="config_5" LaunchTime="1609017172">
+  <File Type="BITSTR-BMM" Name="PR_LED_PE_bd.bmm"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="PR_LED_PE_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="PR_LED_PE_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR" Name="PR_LED_PE_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="PR_LED_PE.tcl"/>
+  <File Type="OPT-TIMING" Name="PR_LED_PE_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="PR_LED_PE_opt.dcp"/>
+  <File Type="ROUTE-PWR-SUM" Name="PR_LED_PE_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="PR_LED_PE_reports.tcl"/>
+  <File Type="OPT-DRC" Name="PR_LED_PE_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="PR_LED_PE.hwdef"/>
+  <File Type="PWROPT-DCP" Name="PR_LED_PE_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="PR_LED_PE_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="PR_LED_PE_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="PR_LED_PE_placed.dcp"/>
+  <File Type="PLACE-IO" Name="PR_LED_PE_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="PR_LED_PE_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="PR_LED_PE_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="PR_LED_PE_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="PR_LED_PE_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="PR_LED_PE_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="PR_LED_PE_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="PR_LED_PE_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="PR_LED_PE_postplace_pwropt.dcp"/>
+  <File Type="BG-BIN" Name="PR_LED_PE.bin"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="PR_LED_PE_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="PR_LED_PE_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="PR_LED_PE_drc_physopted.rpt"/>
+  <File Type="BITSTR-MSK" Name="PR_LED_PE.msk"/>
+  <File Type="PHYSOPT-TIMING" Name="PR_LED_PE_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="PR_LED_PE_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="PR_LED_PE_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="PR_LED_PE_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="PR_LED_PE_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="PR_LED_PE_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="PR_LED_PE_drc_routed.rpx"/>
+  <File Type="BITSTR-MMI" Name="PR_LED_PE.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="PR_LED_PE_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="PR_LED_PE_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="PR_LED_PE_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="PR_LED_PE_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="PR_LED_PE_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="PR_LED_PE_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="PR_LED_PE_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="PR_LED_PE_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="PR_LED_PE_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="PR_LED_PE_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="PR_LED_PE_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="PR_LED_PE_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="PR_LED_PE_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="PR_LED_PE_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="PR_LED_PE_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="PR_LED_PE_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="PR_LED_PE_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="PR_LED_PE_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="PR_LED_PE_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="PR_LED_PE_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="PR_LED_PE_bus_skew_postroute_physopted.pb"/>
+  <File Type="BG-BIT" Name="PR_LED_PE.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="PR_LED_PE_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-RBT" Name="PR_LED_PE.rbt"/>
+  <File Type="BITSTR-NKY" Name="PR_LED_PE.nky"/>
+  <File Type="PDI-FILE" Name="PR_LED_PE.pdi"/>
+  <File Type="RCFI_FILE" Name="PR_LED_PE.rcfi"/>
+  <File Type="CFI_FILE" Name="PR_LED_PE.cfi"/>
+  <File Type="RNPI_FILE" Name="PR_LED_PE.rnpi"/>
+  <File Type="NPI_FILE" Name="PR_LED_PE.npi"/>
+  <File Type="RBD_FILE" Name="PR_LED_PE.rbd"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="PR_LED_PE.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="PR_LED_PE.sysdef"/>
+  <File Type="BG-BGN" Name="PR_LED_PE.bgn"/>
+  <File Type="BG-DRC" Name="PR_LED_PE.drc"/>
+  <File Type="RDI-RDI" Name="PR_LED_PE.vdi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="ROUTE-PARTITION-CELL-DCP" Name="genblk1_0_.toggleBlk_Toggle_1_2_routed.dcp"/>
+  <File Type="ROUTE-PARTITION-CELL-DCP" Name="genblk1_1_.toggleBlk_Toggle_1_10_routed.dcp"/>
+  <File Type="ROUTE-PARTITION-CELL-DCP" Name="genblk1_2_.toggleBlk_Toggle_1_100_routed.dcp"/>
+  <File Type="ROUTE-PARTITION-CELL-DCP" Name="genblk1_3_.toggleBlk_Toggle_1_500_routed.dcp"/>
+  <File Type="BG-PARTITION-CELL-BIT" Name="genblk1_0_.toggleBlk_Toggle_1_2_partial.bit"/>
+  <File Type="BG-PARTITION-CELL-BIT" Name="genblk1_1_.toggleBlk_Toggle_1_10_partial.bit"/>
+  <File Type="BG-PARTITION-CELL-BIT" Name="genblk1_2_.toggleBlk_Toggle_1_100_partial.bit"/>
+  <File Type="BG-PARTITION-CELL-BIT" Name="genblk1_3_.toggleBlk_Toggle_1_500_partial.bit"/>
+  <File Type="BG-PARTITION-LTX" Name="genblk1_0_.toggleBlk_Toggle_1_2.ltx"/>
+  <File Type="BG-PARTITION-LTX" Name="genblk1_1_.toggleBlk_Toggle_1_10.ltx"/>
+  <File Type="BG-PARTITION-LTX" Name="genblk1_2_.toggleBlk_Toggle_1_100.ltx"/>
+  <File Type="BG-PARTITION-LTX" Name="genblk1_3_.toggleBlk_Toggle_1_500.ltx"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/bd/design_1/design_1.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/design_1/hdl/design_1_wrapper.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/PR_LED_PE.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="PR_LED_PE"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/dang.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/dang.xdc"/>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+      <Desc>Default settings for Implementation.</Desc>
+    </StratHandle>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_processing_system7_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Toggle_1_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="Toggle_1_100"/>
+  <BlockFileSet Type="BlockSrcs" Name="Toggle_1_10"/>
+  <BlockFileSet Type="BlockSrcs" Name="Toggle_1_500"/>
+</GenRun>

@@ -854,84 +854,9 @@
       <spirit:addressBlock>
         <spirit:name>reg0</spirit:name>
         <spirit:baseAddress spirit:format="bitString" spirit:resolve="user" spirit:bitStringLength="32">0</spirit:baseAddress>
-        <spirit:range spirit:format="long" spirit:resolve="dependent" spirit:dependency="pow(2,(spirit:decode(id(&apos;MODELPARAM_VALUE.ADDR_WIDTH&apos;)) - 1) + 1)" spirit:minimum="4096" spirit:rangeType="long">4096</spirit:range>
-        <spirit:width spirit:format="long" spirit:resolve="user">32</spirit:width>
+        <spirit:range spirit:format="long" spirit:resolve="dependent" spirit:dependency="pow(2,(spirit:decode(id(&apos;MODELPARAM_VALUE.AXI_ADDR_WIDTH&apos;)) - 1) + 1)" spirit:minimum="4096" spirit:rangeType="long">4096</spirit:range>
+        <spirit:width spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.DATA_WIDTH&apos;)) - 1) + 1">32</spirit:width>
         <spirit:usage>register</spirit:usage>
-        <spirit:register>
-          <spirit:name>image_width</spirit:name>
-          <spirit:description>Width of image to process</spirit:description>
-          <spirit:addressOffset>0</spirit:addressOffset>
-          <spirit:size spirit:format="long">32</spirit:size>
-        </spirit:register>
-        <spirit:register>
-          <spirit:name>image_height</spirit:name>
-          <spirit:description>Height of image to process</spirit:description>
-          <spirit:addressOffset>4</spirit:addressOffset>
-          <spirit:size spirit:format="long">32</spirit:size>
-        </spirit:register>
-        <spirit:register>
-          <spirit:name>process_start</spirit:name>
-          <spirit:description>Signals for IP to begin processing data</spirit:description>
-          <spirit:addressOffset>8</spirit:addressOffset>
-          <spirit:size spirit:format="long">32</spirit:size>
-        </spirit:register>
-        <spirit:register>
-          <spirit:name>debug</spirit:name>
-          <spirit:description>debug</spirit:description>
-          <spirit:addressOffset>12</spirit:addressOffset>
-          <spirit:size spirit:format="long">32</spirit:size>
-        </spirit:register>
-        <spirit:register>
-          <spirit:name>filter0</spirit:name>
-          <spirit:addressOffset>20</spirit:addressOffset>
-          <spirit:size spirit:format="long">32</spirit:size>
-        </spirit:register>
-        <spirit:register>
-          <spirit:name>filter1</spirit:name>
-          <spirit:addressOffset>24</spirit:addressOffset>
-          <spirit:size spirit:format="long">32</spirit:size>
-        </spirit:register>
-        <spirit:register>
-          <spirit:name>filter2</spirit:name>
-          <spirit:addressOffset>28</spirit:addressOffset>
-          <spirit:size spirit:format="long">32</spirit:size>
-        </spirit:register>
-        <spirit:register>
-          <spirit:name>filter3</spirit:name>
-          <spirit:addressOffset>32</spirit:addressOffset>
-          <spirit:size spirit:format="long">32</spirit:size>
-        </spirit:register>
-        <spirit:register>
-          <spirit:name>filter4</spirit:name>
-          <spirit:addressOffset>36</spirit:addressOffset>
-          <spirit:size spirit:format="long">32</spirit:size>
-        </spirit:register>
-        <spirit:register>
-          <spirit:name>filter5</spirit:name>
-          <spirit:addressOffset>40</spirit:addressOffset>
-          <spirit:size spirit:format="long">32</spirit:size>
-        </spirit:register>
-        <spirit:register>
-          <spirit:name>filter6</spirit:name>
-          <spirit:addressOffset>44</spirit:addressOffset>
-          <spirit:size spirit:format="long">32</spirit:size>
-        </spirit:register>
-        <spirit:register>
-          <spirit:name>filter7</spirit:name>
-          <spirit:addressOffset>48</spirit:addressOffset>
-          <spirit:size spirit:format="long">32</spirit:size>
-        </spirit:register>
-        <spirit:register>
-          <spirit:name>filter8</spirit:name>
-          <spirit:addressOffset>52</spirit:addressOffset>
-          <spirit:size spirit:format="long">32</spirit:size>
-        </spirit:register>
-        <spirit:register>
-          <spirit:name>LKC</spirit:name>
-          <spirit:description>Last known cSum from the matrix accelerator.</spirit:description>
-          <spirit:addressOffset>16</spirit:addressOffset>
-          <spirit:size spirit:format="long">32</spirit:size>
-        </spirit:register>
       </spirit:addressBlock>
     </spirit:memoryMap>
   </spirit:memoryMaps>
@@ -948,11 +873,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Dec 19 19:53:46 UTC 2020</spirit:value>
+            <spirit:value>Wed Dec 23 23:36:48 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:a949ee9d</spirit:value>
+            <spirit:value>9:be0e3340</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -963,7 +888,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:a949ee9d</spirit:value>
+            <spirit:value>9:be0e3340</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -979,11 +904,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Dec 19 19:53:46 UTC 2020</spirit:value>
+            <spirit:value>Wed Dec 23 23:36:48 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:a949ee9d</spirit:value>
+            <spirit:value>9:be0e3340</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -998,11 +923,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Dec 19 19:53:46 UTC 2020</spirit:value>
+            <spirit:value>Wed Dec 23 23:36:48 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:be06787f</spirit:value>
+            <spirit:value>9:99e76516</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1018,11 +943,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Dec 19 19:53:46 UTC 2020</spirit:value>
+            <spirit:value>Wed Dec 23 23:36:48 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:be06787f</spirit:value>
+            <spirit:value>9:99e76516</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1036,11 +961,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Dec 19 19:55:42 UTC 2020</spirit:value>
+            <spirit:value>Wed Dec 23 23:38:12 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:a949ee9d</spirit:value>
+            <spirit:value>9:be0e3340</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1123,7 +1048,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">95</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.KERNEL_SIZE&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.DATA_WIDTH&apos;))) - 1)">95</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -1143,7 +1068,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">95</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.KERNEL_SIZE&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.DATA_WIDTH&apos;))) - 1)">95</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -1163,7 +1088,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">2</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.KERNEL_SIZE&apos;)) - 1)">2</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -1255,7 +1180,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">3</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.DATA_WIDTH&apos;)) / 8) - 1)">3</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -1334,7 +1259,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long">3</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.DATA_WIDTH&apos;)) / 8) - 1)">3</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -1354,7 +1279,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.ADDR_WIDTH&apos;)) - 1)">9</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.AXI_ADDR_WIDTH&apos;)) - 1)">9</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -1400,7 +1325,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.DATA_WIDTH&apos;)) - 1)">31</spirit:left>
+            <spirit:left spirit:format="long">31</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -1446,7 +1371,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.ADDR_WIDTH&apos;)) - 1)">9</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.AXI_ADDR_WIDTH&apos;)) - 1)">9</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -1492,7 +1417,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.DATA_WIDTH&apos;)) - 1)">31</spirit:left>
+            <spirit:left spirit:format="long">31</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -1589,9 +1514,29 @@
         <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.DATA_WIDTH">32</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
-        <spirit:name>ADDR_WIDTH</spirit:name>
-        <spirit:displayName>Addr Width</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.ADDR_WIDTH">10</spirit:value>
+        <spirit:name>KERNEL_SIZE</spirit:name>
+        <spirit:displayName>Kernel Size</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.KERNEL_SIZE">3</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>CTRL_REG_SIZE</spirit:name>
+        <spirit:displayName>Ctrl Reg Size</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.CTRL_REG_SIZE">200</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>AXI_ADDR_WIDTH</spirit:name>
+        <spirit:displayName>Axi Addr Width</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.AXI_ADDR_WIDTH">10</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter>
+        <spirit:name>CTRL_REG_ADDR_WIDTH</spirit:name>
+        <spirit:displayName>Ctrl Reg Addr Width</spirit:displayName>
+        <spirit:value spirit:resolve="dependent" spirit:id="MODELPARAM_VALUE.CTRL_REG_ADDR_WIDTH" spirit:dependency="spirit:ceil(spirit:log(2,spirit:decode(id(&apos;MODELPARAM_VALUE.CTRL_REG_SIZE&apos;))))">8</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>STATE_MAC_ADDR_WIDTH</spirit:name>
+        <spirit:displayName>State Mac Addr Width</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:id="MODELPARAM_VALUE.STATE_MAC_ADDR_WIDTH" spirit:dependency="spirit:ceil(spirit:log(2,(spirit:decode(id(&apos;MODELPARAM_VALUE.KERNEL_SIZE&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.KERNEL_SIZE&apos;)))))">4</spirit:value>
       </spirit:modelParameter>
     </spirit:modelParameters>
   </spirit:model>
@@ -1599,12 +1544,7 @@
     <spirit:fileSet>
       <spirit:name>xilinx_anylanguagesynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/509a/src/definitions.h</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:isIncludeFile>true</spirit:isIncludeFile>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/509a/AXI_Convolution_Controller.v</spirit:name>
+        <spirit:name>../../ipshared/3755/AXI_Convolution_Controller.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -1619,12 +1559,7 @@
     <spirit:fileSet>
       <spirit:name>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/509a/src/definitions.h</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:isIncludeFile>true</spirit:isIncludeFile>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>../../ipshared/509a/AXI_Convolution_Controller.v</spirit:name>
+        <spirit:name>../../ipshared/3755/AXI_Convolution_Controller.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -1685,16 +1620,36 @@
       <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">Convolution_Controller_Convolution_Controll_0_0</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
-      <spirit:name>ADDR_WIDTH</spirit:name>
-      <spirit:displayName>Addr Width</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.ADDR_WIDTH">10</spirit:value>
+      <spirit:name>KERNEL_SIZE</spirit:name>
+      <spirit:displayName>Kernel Size</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.KERNEL_SIZE">3</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>CTRL_REG_SIZE</spirit:name>
+      <spirit:displayName>Ctrl Reg Size</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.CTRL_REG_SIZE">200</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>AXI_ADDR_WIDTH</spirit:name>
+      <spirit:displayName>Axi Addr Width</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.AXI_ADDR_WIDTH">10</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>CTRL_REG_ADDR_WIDTH</spirit:name>
+      <spirit:displayName>Ctrl Reg Addr Width</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.CTRL_REG_ADDR_WIDTH">8</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>STATE_MAC_ADDR_WIDTH</spirit:name>
+      <spirit:displayName>State Mac Addr Width</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.STATE_MAC_ADDR_WIDTH">4</spirit:value>
     </spirit:parameter>
   </spirit:parameters>
   <spirit:vendorExtensions>
     <xilinx:coreExtensions>
       <xilinx:displayName>Convolution_Controller_v1_0</xilinx:displayName>
       <xilinx:definitionSource>package_project</xilinx:definitionSource>
-      <xilinx:coreRevision>72</xilinx:coreRevision>
+      <xilinx:coreRevision>81</xilinx:coreRevision>
       <xilinx:tags>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@2cc23089_ARCHIVE_LOCATION">c:/github/reconhardware/fpga_files/projects/axi_convolution_controller/axi_convolution_controller.srcs/sources_1/new</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@6af59234_ARCHIVE_LOCATION">c:/github/reconhardware/fpga_files/projects/axi_convolution_controller/axi_convolution_controller.srcs/sources_1/new</xilinx:tag>
@@ -3057,6 +3012,135 @@
         <xilinx:tag xilinx:name="ui.data.coregen.dd@311f6dee_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@4f6c31e7_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@2d12f099_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7de42917_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73f6ea84_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@221456a2_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1eaba2f1_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b10271f_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d1da23_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f20117b_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6adfd16d_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a139484_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1517da3a_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@be6a659_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@16725d4_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b53cd25_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a930fea_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e882c65_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3bb12e5d_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@31ae6b14_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@445e430_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5fa8d180_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ed1ee3_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@14dfe251_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@84e4602_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@285e2b2c_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39d9082e_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d189a1d_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@333793b7_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@339ab866_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f537b66_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@590611bf_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e31191d_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@53877b04_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@253f3104_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@51e734ba_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@359127c9_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a5508e8_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2615f1f0_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@514cf5b2_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44910fdb_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a927659_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@754bbece_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@d036a9d_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@440d495a_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3def43b1_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b0f2a01_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c75c1ea_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10fce8e_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@57cdc35f_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@26a35c2c_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@794ec985_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@41aba166_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15fca51a_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@580aaf93_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3fd0557b_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ea69506_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@400b111a_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a58a221_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@16ff2f67_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f3c8d43_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@654f576b_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@30023248_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a6a701c_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7af91eba_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@70a29c69_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42c30db9_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@ebda31e_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@650e75d3_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f9fa52f_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@55988b49_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@22d6b64_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@361fd1b8_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@518b08f3_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4edc7f0_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b9763a7_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1166440b_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d8a3038_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13862bba_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f63240f_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3676c64b_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3327ec7d_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f28aaff_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@823ad14_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b321ae7_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@76e5dcad_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@72931880_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7717e86d_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6754bcbd_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d18d118_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f36b204_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@35b42267_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3020f03b_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@521f5447_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@30a242e_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4077efeb_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e519a5d_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b475e03_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@53150125_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@43c67814_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4db0dbbd_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@60d8996_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@14c22e2_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e7b5955_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1be2095_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4161c179_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c78c42e_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9acca19_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@72cd4411_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2af8a005_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4010559f_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c4df8dc_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f01c806_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a0838cb_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@525c561c_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d6a7e8d_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d3ccd5a_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a3a8703_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1dcc908c_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e9c51db_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@f5da7d6_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@8bf2f08_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@61d69627_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@63b0cdc9_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d5edabb_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@93123a3_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@65e4b338_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@56d39889_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ec54f55_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@978d5ff_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ece725e_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@665972f4_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
       </xilinx:tags>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXI_CLK.ASSOCIATED_BUSIF" xilinx:valuePermission="bd_and_user"/>
@@ -3125,16 +3209,18 @@
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_CTRL.SUPPORTS_NARROW_BURST" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_CTRL.WUSER_BITS_PER_BYTE" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_CTRL.WUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.DATA_WIDTH" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.KERNEL_SIZE" xilinx:valueSource="user"/>
       </xilinx:configElementInfos>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2020.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="dbd459d0"/>
-      <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="dfd74977"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="1835ee28"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="a5a820c2"/>
-      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="f5793bf3"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="2f73b234"/>
+      <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="b9b7688b"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="1451970b"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="1b056a98"/>
+      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="d5af7603"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="d9c0e7a8"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

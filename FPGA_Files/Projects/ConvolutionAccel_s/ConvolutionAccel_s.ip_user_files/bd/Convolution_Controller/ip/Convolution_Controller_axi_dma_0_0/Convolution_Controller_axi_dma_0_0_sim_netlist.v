@@ -1,10 +1,10 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-// Date        : Thu Dec 17 20:43:45 2020
+// Date        : Thu Dec 17 20:43:43 2020
 // Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_axi_dma_0_0/Convolution_Controller_axi_dma_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top Convolution_Controller_axi_dma_0_0 -prefix
+//               Convolution_Controller_axi_dma_0_0_ Convolution_Controller_axi_dma_0_0_sim_netlist.v
 // Design      : Convolution_Controller_axi_dma_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -396,7 +396,6 @@ module Convolution_Controller_axi_dma_0_0
         .s_axis_s2mm_tvalid(s_axis_s2mm_tvalid));
 endmodule
 
-(* ORIG_REF_NAME = "axi_datamover" *) 
 module Convolution_Controller_axi_dma_0_0_axi_datamover
    (m_axis_mm2s_tvalid,
     m_axi_mm2s_arsize,
@@ -672,7 +671,6 @@ module Convolution_Controller_axi_dma_0_0_axi_datamover
         .sts_received_i_reg_0(sts_received_i_reg_0));
 endmodule
 
-(* ORIG_REF_NAME = "axi_datamover_addr_cntl" *) 
 module Convolution_Controller_axi_dma_0_0_axi_datamover_addr_cntl
    (out,
     sig_posted_to_axi_reg_0,
@@ -1665,7 +1663,6 @@ module Convolution_Controller_axi_dma_0_0_axi_datamover_addr_cntl__parameterized
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "axi_datamover_cmd_status" *) 
 module Convolution_Controller_axi_dma_0_0_axi_datamover_cmd_status
    (sig_reset_reg,
     sig_cmd2mstr_cmd_valid,
@@ -1909,7 +1906,6 @@ module Convolution_Controller_axi_dma_0_0_axi_datamover_cmd_status__parameterize
         .sig_psm_halt(sig_psm_halt));
 endmodule
 
-(* ORIG_REF_NAME = "axi_datamover_fifo" *) 
 module Convolution_Controller_axi_dma_0_0_axi_datamover_fifo
    (sig_init_done,
     sig_cmd2mstr_cmd_valid,
@@ -5161,7 +5157,6 @@ module Convolution_Controller_axi_dma_0_0_axi_datamover_fifo__parameterized9
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "axi_datamover_ibttcc" *) 
 module Convolution_Controller_axi_dma_0_0_axi_datamover_ibttcc
    (sig_psm_pop_input_cmd,
     sig_csm_pop_child_cmd,
@@ -9648,7 +9643,6 @@ module Convolution_Controller_axi_dma_0_0_axi_datamover_ibttcc
         .O(rd_en));
 endmodule
 
-(* ORIG_REF_NAME = "axi_datamover_indet_btt" *) 
 module Convolution_Controller_axi_dma_0_0_axi_datamover_indet_btt
    (dout,
     empty,
@@ -10303,7 +10297,6 @@ module Convolution_Controller_axi_dma_0_0_axi_datamover_indet_btt
         .R(SR));
 endmodule
 
-(* ORIG_REF_NAME = "axi_datamover_mm2s_full_wrap" *) 
 module Convolution_Controller_axi_dma_0_0_axi_datamover_mm2s_full_wrap
    (m_axis_mm2s_tvalid,
     m_axi_mm2s_arsize,
@@ -10680,7 +10673,6 @@ module Convolution_Controller_axi_dma_0_0_axi_datamover_mm2s_full_wrap
         .sig_s_h_halt_reg_reg_1(sig_s_h_halt_reg_reg));
 endmodule
 
-(* ORIG_REF_NAME = "axi_datamover_mssai_skid_buf" *) 
 module Convolution_Controller_axi_dma_0_0_axi_datamover_mssai_skid_buf
    (out,
     sig_m_valid_out_reg_0,
@@ -12052,7 +12044,6 @@ module Convolution_Controller_axi_dma_0_0_axi_datamover_mssai_skid_buf
         .O(\xpm_fifo_instance.xpm_fifo_sync_inst_i_9__0_n_0 ));
 endmodule
 
-(* ORIG_REF_NAME = "axi_datamover_pcc" *) 
 module Convolution_Controller_axi_dma_0_0_axi_datamover_pcc
    (in,
     sig_mstr2sf_cmd_valid,
@@ -16314,7 +16305,6 @@ module Convolution_Controller_axi_dma_0_0_axi_datamover_pcc
         .R(sig_reset_reg));
 endmodule
 
-(* ORIG_REF_NAME = "axi_datamover_rd_sf" *) 
 module Convolution_Controller_axi_dma_0_0_axi_datamover_rd_sf
    (full,
     dout,
@@ -16539,7 +16529,6 @@ module Convolution_Controller_axi_dma_0_0_axi_datamover_rd_sf
         .S(SR));
 endmodule
 
-(* ORIG_REF_NAME = "axi_datamover_rd_status_cntl" *) 
 module Convolution_Controller_axi_dma_0_0_axi_datamover_rd_status_cntl
    (sig_rsc2stat_status,
     sig_rsc2stat_status_valid,
@@ -16637,7 +16626,6 @@ module Convolution_Controller_axi_dma_0_0_axi_datamover_rd_status_cntl
         .R(sig_rd_sts_tag_reg0));
 endmodule
 
-(* ORIG_REF_NAME = "axi_datamover_rddata_cntl" *) 
 module Convolution_Controller_axi_dma_0_0_axi_datamover_rddata_cntl
    (FIFO_Full_reg,
     sig_data2rsc_valid,
@@ -17425,7 +17413,6 @@ module Convolution_Controller_axi_dma_0_0_axi_datamover_rddata_cntl
         .O(din[0]));
 endmodule
 
-(* ORIG_REF_NAME = "axi_datamover_reset" *) 
 module Convolution_Controller_axi_dma_0_0_axi_datamover_reset
    (sig_cmd_stat_rst_user_reg_n_cdc_from,
     s2mm_halt_cmplt,
@@ -17642,7 +17629,6 @@ module Convolution_Controller_axi_dma_0_0_axi_datamover_reset_14
         .O(SR));
 endmodule
 
-(* ORIG_REF_NAME = "axi_datamover_s2mm_full_wrap" *) 
 module Convolution_Controller_axi_dma_0_0_axi_datamover_s2mm_full_wrap
    (s_axis_s2mm_tready,
     m_axi_s2mm_awsize,
@@ -18244,7 +18230,6 @@ module Convolution_Controller_axi_dma_0_0_axi_datamover_s2mm_full_wrap
         .sig_wsc2stat_status_valid(sig_wsc2stat_status_valid));
 endmodule
 
-(* ORIG_REF_NAME = "axi_datamover_s2mm_realign" *) 
 module Convolution_Controller_axi_dma_0_0_axi_datamover_s2mm_realign
    (out,
     sig_s_ready_dup3_reg,
@@ -18501,7 +18486,6 @@ module Convolution_Controller_axi_dma_0_0_axi_datamover_s2mm_realign
         .R(SR));
 endmodule
 
-(* ORIG_REF_NAME = "axi_datamover_s2mm_scatter" *) 
 module Convolution_Controller_axi_dma_0_0_axi_datamover_s2mm_scatter
    (out,
     sig_s_ready_dup3_reg,
@@ -20319,7 +20303,6 @@ module Convolution_Controller_axi_dma_0_0_axi_datamover_s2mm_scatter
         .R(sig_eop_sent_reg0));
 endmodule
 
-(* ORIG_REF_NAME = "axi_datamover_sfifo_autord" *) 
 module Convolution_Controller_axi_dma_0_0_axi_datamover_sfifo_autord
    (full,
     dout,
@@ -20564,7 +20547,6 @@ module Convolution_Controller_axi_dma_0_0_axi_datamover_sfifo_autord__parameteri
         .sig_good_strm_dbeat1_out(sig_good_strm_dbeat1_out));
 endmodule
 
-(* ORIG_REF_NAME = "axi_datamover_skid2mm_buf" *) 
 module Convolution_Controller_axi_dma_0_0_axi_datamover_skid2mm_buf
    (out,
     sig_s_ready_out_reg_0,
@@ -21579,7 +21561,6 @@ module Convolution_Controller_axi_dma_0_0_axi_datamover_skid2mm_buf
         .R(SR));
 endmodule
 
-(* ORIG_REF_NAME = "axi_datamover_skid_buf" *) 
 module Convolution_Controller_axi_dma_0_0_axi_datamover_skid_buf
    (out,
     s_axis_s2mm_tready,
@@ -24905,7 +24886,6 @@ module Convolution_Controller_axi_dma_0_0_axi_datamover_skid_buf__parameterized0
         .O(rd_en));
 endmodule
 
-(* ORIG_REF_NAME = "axi_datamover_slice" *) 
 module Convolution_Controller_axi_dma_0_0_axi_datamover_slice
    (slice_insert_valid,
     E,
@@ -25287,7 +25267,6 @@ module Convolution_Controller_axi_dma_0_0_axi_datamover_slice
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "axi_datamover_strb_gen2" *) 
 module Convolution_Controller_axi_dma_0_0_axi_datamover_strb_gen2
    (D,
     Q,
@@ -25325,7 +25304,6 @@ module Convolution_Controller_axi_dma_0_0_axi_datamover_strb_gen2
         .O(D[0]));
 endmodule
 
-(* ORIG_REF_NAME = "axi_datamover_wr_status_cntl" *) 
 module Convolution_Controller_axi_dma_0_0_axi_datamover_wr_status_cntl
    (FIFO_Full_reg,
     sig_wsc2stat_status_valid,
@@ -25895,7 +25873,6 @@ module Convolution_Controller_axi_dma_0_0_axi_datamover_wr_status_cntl
         .R(SR));
 endmodule
 
-(* ORIG_REF_NAME = "axi_datamover_wrdata_cntl" *) 
 module Convolution_Controller_axi_dma_0_0_axi_datamover_wrdata_cntl
    (FIFO_Full_reg,
     sig_next_cmd_cmplt_reg,
@@ -27230,7 +27207,7 @@ endmodule
 (* C_PRMRY_IS_ACLK_ASYNC = "0" *) (* C_S2MM_BURST_SIZE = "256" *) (* C_SG_INCLUDE_STSCNTRL_STRM = "0" *) 
 (* C_SG_LENGTH_WIDTH = "26" *) (* C_SG_USE_STSAPP_LENGTH = "0" *) (* C_S_AXIS_S2MM_STS_TDATA_WIDTH = "32" *) 
 (* C_S_AXIS_S2MM_TDATA_WIDTH = "32" *) (* C_S_AXI_LITE_ADDR_WIDTH = "10" *) (* C_S_AXI_LITE_DATA_WIDTH = "32" *) 
-(* ORIG_REF_NAME = "axi_dma" *) (* downgradeipidentifiedwarnings = "yes" *) 
+(* downgradeipidentifiedwarnings = "yes" *) 
 module Convolution_Controller_axi_dma_0_0_axi_dma
    (s_axi_lite_aclk,
     m_axi_sg_aclk,
@@ -28168,7 +28145,6 @@ module Convolution_Controller_axi_dma_0_0_axi_dma
        (.P(\<const1> ));
 endmodule
 
-(* ORIG_REF_NAME = "axi_dma_lite_if" *) 
 module Convolution_Controller_axi_dma_0_0_axi_dma_lite_if
    (s_axi_lite_wready,
     s_axi_lite_arready,
@@ -30258,7 +30234,6 @@ module Convolution_Controller_axi_dma_0_0_axi_dma_lite_if
         .R(SR));
 endmodule
 
-(* ORIG_REF_NAME = "axi_dma_mm2s_cmdsts_if" *) 
 module Convolution_Controller_axi_dma_0_0_axi_dma_mm2s_cmdsts_if
    (s_axis_mm2s_cmd_tvalid_split,
     mm2s_sts_received,
@@ -30414,7 +30389,6 @@ module Convolution_Controller_axi_dma_0_0_axi_dma_mm2s_cmdsts_if
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "axi_dma_mm2s_mngr" *) 
 module Convolution_Controller_axi_dma_0_0_axi_dma_mm2s_mngr
    (mm2s_halted_set,
     all_is_idle_d1,
@@ -30595,7 +30569,6 @@ module Convolution_Controller_axi_dma_0_0_axi_dma_mm2s_mngr
         .R(mm2s_halted_set_reg_0));
 endmodule
 
-(* ORIG_REF_NAME = "axi_dma_mm2s_sts_mngr" *) 
 module Convolution_Controller_axi_dma_0_0_axi_dma_mm2s_sts_mngr
    (mm2s_halted_set,
     all_is_idle_d1,
@@ -30677,7 +30650,6 @@ module Convolution_Controller_axi_dma_0_0_axi_dma_mm2s_sts_mngr
         .R(mm2s_halted_set_reg_1));
 endmodule
 
-(* ORIG_REF_NAME = "axi_dma_reg_module" *) 
 module Convolution_Controller_axi_dma_0_0_axi_dma_reg_module
    (s_axi_lite_wready,
     s_axi_lite_arready,
@@ -31172,7 +31144,6 @@ module Convolution_Controller_axi_dma_0_0_axi_dma_reg_module
         .O(strm_valid_int_cdc_to));
 endmodule
 
-(* ORIG_REF_NAME = "axi_dma_register" *) 
 module Convolution_Controller_axi_dma_0_0_axi_dma_register
    (mm2s_error_out,
     mm2s_length_wren,
@@ -32166,7 +32137,6 @@ module Convolution_Controller_axi_dma_0_0_axi_dma_register
         .O(soft_reset));
 endmodule
 
-(* ORIG_REF_NAME = "axi_dma_register_s2mm" *) 
 module Convolution_Controller_axi_dma_0_0_axi_dma_register_s2mm
    (s2mm_length_wren,
     \dmacr_i_reg[0]_0 ,
@@ -33304,7 +33274,6 @@ module Convolution_Controller_axi_dma_0_0_axi_dma_register_s2mm
         .O(soft_reset_re0));
 endmodule
 
-(* ORIG_REF_NAME = "axi_dma_reset" *) 
 module Convolution_Controller_axi_dma_0_0_axi_dma_reset
    (out,
     \GNE_SYNC_RESET.prmry_resetn_reg_0 ,
@@ -33898,7 +33867,6 @@ module Convolution_Controller_axi_dma_0_0_axi_dma_reset_1
         .O(\GNE_SYNC_RESET.halt_i_reg_0 ));
 endmodule
 
-(* ORIG_REF_NAME = "axi_dma_rst_module" *) 
 module Convolution_Controller_axi_dma_0_0_axi_dma_rst_module
    (out,
     \GNE_SYNC_RESET.prmry_resetn_reg ,
@@ -34075,7 +34043,6 @@ module Convolution_Controller_axi_dma_0_0_axi_dma_rst_module
         .O(SR));
 endmodule
 
-(* ORIG_REF_NAME = "axi_dma_s2mm_cmdsts_if" *) 
 module Convolution_Controller_axi_dma_0_0_axi_dma_s2mm_cmdsts_if
    (\INDETERMINATE_BTT_MODE.s2mm_done_reg_0 ,
     s_axis_s2mm_cmd_tvalid_split,
@@ -34631,7 +34598,6 @@ module Convolution_Controller_axi_dma_0_0_axi_dma_s2mm_cmdsts_if
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "axi_dma_s2mm_mngr" *) 
 module Convolution_Controller_axi_dma_0_0_axi_dma_s2mm_mngr
    (s2mm_bytes_rcvd_wren,
     s2mm_halted_set,
@@ -34840,7 +34806,6 @@ module Convolution_Controller_axi_dma_0_0_axi_dma_s2mm_mngr
         .R(s2mm_halted_set_reg_0));
 endmodule
 
-(* ORIG_REF_NAME = "axi_dma_s2mm_sts_mngr" *) 
 module Convolution_Controller_axi_dma_0_0_axi_dma_s2mm_sts_mngr
    (s2mm_halted_set,
     all_is_idle_d1,
@@ -34922,7 +34887,6 @@ module Convolution_Controller_axi_dma_0_0_axi_dma_s2mm_sts_mngr
         .R(s2mm_halted_set_reg_1));
 endmodule
 
-(* ORIG_REF_NAME = "axi_dma_smple_sm" *) 
 module Convolution_Controller_axi_dma_0_0_axi_dma_smple_sm
    (s2mm_sts_received_clr,
     cmnds_queued,
@@ -36044,7 +36008,6 @@ module Convolution_Controller_axi_dma_0_0_axi_dma_smple_sm_31
         .O(sts_received_clr_reg_0));
 endmodule
 
-(* ORIG_REF_NAME = "axi_dma_sofeof_gen" *) 
 module Convolution_Controller_axi_dma_0_0_axi_dma_sofeof_gen
    (axi_dma_tstvec,
     \GEN_FOR_SYNC.s_sof_d1_cdc_tig_reg_0 ,
@@ -36318,7 +36281,6 @@ module Convolution_Controller_axi_dma_0_0_axi_dma_sofeof_gen_0
         .O(axi_dma_tstvec[1]));
 endmodule
 
-(* ORIG_REF_NAME = "cdc_sync" *) 
 module Convolution_Controller_axi_dma_0_0_cdc_sync
    (scndry_out,
     axi_resetn,
@@ -36442,7 +36404,6 @@ module Convolution_Controller_axi_dma_0_0_cdc_sync_2
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "cntr_incr_decr_addn_f" *) 
 module Convolution_Controller_axi_dma_0_0_cntr_incr_decr_addn_f
    (sig_first_dbeat_reg,
     sig_last_dbeat_reg,
@@ -38044,7 +38005,6 @@ module Convolution_Controller_axi_dma_0_0_cntr_incr_decr_addn_f__parameterized1
         .O(din));
 endmodule
 
-(* ORIG_REF_NAME = "dynshreg_f" *) 
 module Convolution_Controller_axi_dma_0_0_dynshreg_f
    (p_0_in,
     out,
@@ -41219,7 +41179,6 @@ module Convolution_Controller_axi_dma_0_0_dynshreg_f__parameterized6
         .O(sig_cmd_stat_rst_user_reg_n_cdc_from_reg_0));
 endmodule
 
-(* ORIG_REF_NAME = "srl_fifo_f" *) 
 module Convolution_Controller_axi_dma_0_0_srl_fifo_f
    (FIFO_Full_reg,
     sig_cmd2addr_valid_reg,
@@ -42098,7 +42057,6 @@ module Convolution_Controller_axi_dma_0_0_srl_fifo_f__parameterized6
         .\sig_xfer_addr_reg_reg[0] (\sig_xfer_addr_reg_reg[0] ));
 endmodule
 
-(* ORIG_REF_NAME = "srl_fifo_rbu_f" *) 
 module Convolution_Controller_axi_dma_0_0_srl_fifo_rbu_f
    (FIFO_Full_reg_0,
     sig_cmd2addr_valid_reg,
@@ -43205,7 +43163,6 @@ module Convolution_Controller_axi_dma_0_0_srl_fifo_rbu_f__parameterized6
         .O(FIFO_Full_reg_1));
 endmodule
 
-(* ORIG_REF_NAME = "sync_fifo_fg" *) 
 module Convolution_Controller_axi_dma_0_0_sync_fifo_fg
    (full,
     dout,
@@ -48496,19 +48453,19 @@ endmodule
 (* EN_WACK = "1'b1" *) (* EN_WDC = "1'b1" *) (* FG_EQ_ASYM_DOUT = "1'b0" *) 
 (* FIFO_MEMORY_TYPE = "2" *) (* FIFO_MEM_TYPE = "2" *) (* FIFO_READ_DEPTH = "2048" *) 
 (* FIFO_READ_LATENCY = "0" *) (* FIFO_SIZE = "79872" *) (* FIFO_WRITE_DEPTH = "2048" *) 
-(* FULL_RESET_VALUE = "1" *) (* FULL_RST_VAL = "1'b1" *) (* ORIG_REF_NAME = "xpm_fifo_base" *) 
-(* PE_THRESH_ADJ = "8" *) (* PE_THRESH_MAX = "2043" *) (* PE_THRESH_MIN = "5" *) 
-(* PF_THRESH_ADJ = "8" *) (* PF_THRESH_MAX = "2043" *) (* PF_THRESH_MIN = "5" *) 
-(* PROG_EMPTY_THRESH = "10" *) (* PROG_FULL_THRESH = "10" *) (* RD_DATA_COUNT_WIDTH = "4" *) 
-(* RD_DC_WIDTH_EXT = "12" *) (* RD_LATENCY = "2" *) (* RD_MODE = "1" *) 
-(* RD_PNTR_WIDTH = "11" *) (* READ_DATA_WIDTH = "39" *) (* READ_MODE = "1" *) 
-(* RELATED_CLOCKS = "0" *) (* REMOVE_WR_RD_PROT_LOGIC = "0" *) (* SIM_ASSERT_CHK = "0" *) 
-(* USE_ADV_FEATURES = "1F1F" *) (* VERSION = "0" *) (* WAKEUP_TIME = "0" *) 
-(* WIDTH_RATIO = "1" *) (* WRITE_DATA_WIDTH = "39" *) (* WR_DATA_COUNT_WIDTH = "12" *) 
-(* WR_DC_WIDTH_EXT = "12" *) (* WR_DEPTH_LOG = "11" *) (* WR_PNTR_WIDTH = "11" *) 
-(* WR_RD_RATIO = "0" *) (* WR_WIDTH_LOG = "6" *) (* XPM_MODULE = "TRUE" *) 
-(* both_stages_valid = "3" *) (* invalid = "0" *) (* keep_hierarchy = "soft" *) 
-(* stage1_valid = "2" *) (* stage2_valid = "1" *) 
+(* FULL_RESET_VALUE = "1" *) (* FULL_RST_VAL = "1'b1" *) (* PE_THRESH_ADJ = "8" *) 
+(* PE_THRESH_MAX = "2043" *) (* PE_THRESH_MIN = "5" *) (* PF_THRESH_ADJ = "8" *) 
+(* PF_THRESH_MAX = "2043" *) (* PF_THRESH_MIN = "5" *) (* PROG_EMPTY_THRESH = "10" *) 
+(* PROG_FULL_THRESH = "10" *) (* RD_DATA_COUNT_WIDTH = "4" *) (* RD_DC_WIDTH_EXT = "12" *) 
+(* RD_LATENCY = "2" *) (* RD_MODE = "1" *) (* RD_PNTR_WIDTH = "11" *) 
+(* READ_DATA_WIDTH = "39" *) (* READ_MODE = "1" *) (* RELATED_CLOCKS = "0" *) 
+(* REMOVE_WR_RD_PROT_LOGIC = "0" *) (* SIM_ASSERT_CHK = "0" *) (* USE_ADV_FEATURES = "1F1F" *) 
+(* VERSION = "0" *) (* WAKEUP_TIME = "0" *) (* WIDTH_RATIO = "1" *) 
+(* WRITE_DATA_WIDTH = "39" *) (* WR_DATA_COUNT_WIDTH = "12" *) (* WR_DC_WIDTH_EXT = "12" *) 
+(* WR_DEPTH_LOG = "11" *) (* WR_PNTR_WIDTH = "11" *) (* WR_RD_RATIO = "0" *) 
+(* WR_WIDTH_LOG = "6" *) (* XPM_MODULE = "TRUE" *) (* both_stages_valid = "3" *) 
+(* invalid = "0" *) (* keep_hierarchy = "soft" *) (* stage1_valid = "2" *) 
+(* stage2_valid = "1" *) 
 module Convolution_Controller_axi_dma_0_0_xpm_fifo_base
    (sleep,
     rst,
@@ -51132,7 +51089,6 @@ module Convolution_Controller_axi_dma_0_0_xpm_fifo_base__parameterized1
         .write_only_q(write_only_q));
 endmodule
 
-(* ORIG_REF_NAME = "xpm_fifo_reg_bit" *) 
 module Convolution_Controller_axi_dma_0_0_xpm_fifo_reg_bit
    (rst_d1,
     \gen_pntr_flags_cc.gaf_cc.ram_afull_i_reg ,
@@ -51711,7 +51667,6 @@ module Convolution_Controller_axi_dma_0_0_xpm_fifo_reg_bit_9
         .O(d_out_reg_0));
 endmodule
 
-(* ORIG_REF_NAME = "xpm_fifo_rst" *) 
 module Convolution_Controller_axi_dma_0_0_xpm_fifo_rst
    (\gen_pntr_flags_cc.gen_full_rst_val.ram_full_i_reg ,
     Q,
@@ -52188,13 +52143,13 @@ endmodule
 
 (* CASCADE_HEIGHT = "0" *) (* DOUT_RESET_VALUE = "0" *) (* ECC_MODE = "no_ecc" *) 
 (* EN_ADV_FEATURE_SYNC = "16'b0001111100011111" *) (* FIFO_MEMORY_TYPE = "block" *) (* FIFO_READ_LATENCY = "0" *) 
-(* FIFO_WRITE_DEPTH = "2048" *) (* FULL_RESET_VALUE = "1" *) (* ORIG_REF_NAME = "xpm_fifo_sync" *) 
-(* PROG_EMPTY_THRESH = "10" *) (* PROG_FULL_THRESH = "10" *) (* P_COMMON_CLOCK = "1" *) 
-(* P_ECC_MODE = "0" *) (* P_FIFO_MEMORY_TYPE = "2" *) (* P_READ_MODE = "1" *) 
-(* P_WAKEUP_TIME = "2" *) (* RD_DATA_COUNT_WIDTH = "4" *) (* READ_DATA_WIDTH = "39" *) 
-(* READ_MODE = "fwft" *) (* SIM_ASSERT_CHK = "0" *) (* USE_ADV_FEATURES = "1F1F" *) 
-(* WAKEUP_TIME = "0" *) (* WRITE_DATA_WIDTH = "39" *) (* WR_DATA_COUNT_WIDTH = "12" *) 
-(* XPM_MODULE = "TRUE" *) (* keep_hierarchy = "soft" *) 
+(* FIFO_WRITE_DEPTH = "2048" *) (* FULL_RESET_VALUE = "1" *) (* PROG_EMPTY_THRESH = "10" *) 
+(* PROG_FULL_THRESH = "10" *) (* P_COMMON_CLOCK = "1" *) (* P_ECC_MODE = "0" *) 
+(* P_FIFO_MEMORY_TYPE = "2" *) (* P_READ_MODE = "1" *) (* P_WAKEUP_TIME = "2" *) 
+(* RD_DATA_COUNT_WIDTH = "4" *) (* READ_DATA_WIDTH = "39" *) (* READ_MODE = "fwft" *) 
+(* SIM_ASSERT_CHK = "0" *) (* USE_ADV_FEATURES = "1F1F" *) (* WAKEUP_TIME = "0" *) 
+(* WRITE_DATA_WIDTH = "39" *) (* WR_DATA_COUNT_WIDTH = "12" *) (* XPM_MODULE = "TRUE" *) 
+(* keep_hierarchy = "soft" *) 
 module Convolution_Controller_axi_dma_0_0_xpm_fifo_sync
    (sleep,
     rst,
@@ -52743,25 +52698,24 @@ endmodule
 (* CLOCKING_MODE = "0" *) (* ECC_MODE = "0" *) (* MAX_NUM_CHAR = "0" *) 
 (* MEMORY_INIT_FILE = "none" *) (* MEMORY_INIT_PARAM = "" *) (* MEMORY_OPTIMIZATION = "true" *) 
 (* MEMORY_PRIMITIVE = "2" *) (* MEMORY_SIZE = "79872" *) (* MEMORY_TYPE = "1" *) 
-(* MESSAGE_CONTROL = "0" *) (* NUM_CHAR_LOC = "0" *) (* ORIG_REF_NAME = "xpm_memory_base" *) 
-(* P_ECC_MODE = "no_ecc" *) (* P_ENABLE_BYTE_WRITE_A = "0" *) (* P_ENABLE_BYTE_WRITE_B = "0" *) 
-(* P_MAX_DEPTH_DATA = "2048" *) (* P_MEMORY_OPT = "yes" *) (* P_MEMORY_PRIMITIVE = "block" *) 
-(* P_MIN_WIDTH_DATA = "39" *) (* P_MIN_WIDTH_DATA_A = "39" *) (* P_MIN_WIDTH_DATA_B = "39" *) 
-(* P_MIN_WIDTH_DATA_ECC = "39" *) (* P_MIN_WIDTH_DATA_LDW = "4" *) (* P_MIN_WIDTH_DATA_SHFT = "39" *) 
-(* P_NUM_COLS_WRITE_A = "1" *) (* P_NUM_COLS_WRITE_B = "1" *) (* P_NUM_ROWS_READ_A = "1" *) 
-(* P_NUM_ROWS_READ_B = "1" *) (* P_NUM_ROWS_WRITE_A = "1" *) (* P_NUM_ROWS_WRITE_B = "1" *) 
-(* P_SDP_WRITE_MODE = "no" *) (* P_WIDTH_ADDR_LSB_READ_A = "0" *) (* P_WIDTH_ADDR_LSB_READ_B = "0" *) 
-(* P_WIDTH_ADDR_LSB_WRITE_A = "0" *) (* P_WIDTH_ADDR_LSB_WRITE_B = "0" *) (* P_WIDTH_ADDR_READ_A = "11" *) 
-(* P_WIDTH_ADDR_READ_B = "11" *) (* P_WIDTH_ADDR_WRITE_A = "11" *) (* P_WIDTH_ADDR_WRITE_B = "11" *) 
-(* P_WIDTH_COL_WRITE_A = "39" *) (* P_WIDTH_COL_WRITE_B = "39" *) (* READ_DATA_WIDTH_A = "39" *) 
-(* READ_DATA_WIDTH_B = "39" *) (* READ_LATENCY_A = "2" *) (* READ_LATENCY_B = "2" *) 
-(* READ_RESET_VALUE_A = "0" *) (* READ_RESET_VALUE_B = "0" *) (* RST_MODE_A = "SYNC" *) 
-(* RST_MODE_B = "SYNC" *) (* SIM_ASSERT_CHK = "0" *) (* USE_EMBEDDED_CONSTRAINT = "0" *) 
-(* USE_MEM_INIT = "0" *) (* USE_MEM_INIT_MMI = "0" *) (* VERSION = "0" *) 
-(* WAKEUP_TIME = "0" *) (* WRITE_DATA_WIDTH_A = "39" *) (* WRITE_DATA_WIDTH_B = "39" *) 
-(* WRITE_MODE_A = "2" *) (* WRITE_MODE_B = "2" *) (* WRITE_PROTECT = "1" *) 
-(* XPM_MODULE = "TRUE" *) (* keep_hierarchy = "soft" *) (* rsta_loop_iter = "40" *) 
-(* rstb_loop_iter = "40" *) 
+(* MESSAGE_CONTROL = "0" *) (* NUM_CHAR_LOC = "0" *) (* P_ECC_MODE = "no_ecc" *) 
+(* P_ENABLE_BYTE_WRITE_A = "0" *) (* P_ENABLE_BYTE_WRITE_B = "0" *) (* P_MAX_DEPTH_DATA = "2048" *) 
+(* P_MEMORY_OPT = "yes" *) (* P_MEMORY_PRIMITIVE = "block" *) (* P_MIN_WIDTH_DATA = "39" *) 
+(* P_MIN_WIDTH_DATA_A = "39" *) (* P_MIN_WIDTH_DATA_B = "39" *) (* P_MIN_WIDTH_DATA_ECC = "39" *) 
+(* P_MIN_WIDTH_DATA_LDW = "4" *) (* P_MIN_WIDTH_DATA_SHFT = "39" *) (* P_NUM_COLS_WRITE_A = "1" *) 
+(* P_NUM_COLS_WRITE_B = "1" *) (* P_NUM_ROWS_READ_A = "1" *) (* P_NUM_ROWS_READ_B = "1" *) 
+(* P_NUM_ROWS_WRITE_A = "1" *) (* P_NUM_ROWS_WRITE_B = "1" *) (* P_SDP_WRITE_MODE = "no" *) 
+(* P_WIDTH_ADDR_LSB_READ_A = "0" *) (* P_WIDTH_ADDR_LSB_READ_B = "0" *) (* P_WIDTH_ADDR_LSB_WRITE_A = "0" *) 
+(* P_WIDTH_ADDR_LSB_WRITE_B = "0" *) (* P_WIDTH_ADDR_READ_A = "11" *) (* P_WIDTH_ADDR_READ_B = "11" *) 
+(* P_WIDTH_ADDR_WRITE_A = "11" *) (* P_WIDTH_ADDR_WRITE_B = "11" *) (* P_WIDTH_COL_WRITE_A = "39" *) 
+(* P_WIDTH_COL_WRITE_B = "39" *) (* READ_DATA_WIDTH_A = "39" *) (* READ_DATA_WIDTH_B = "39" *) 
+(* READ_LATENCY_A = "2" *) (* READ_LATENCY_B = "2" *) (* READ_RESET_VALUE_A = "0" *) 
+(* READ_RESET_VALUE_B = "0" *) (* RST_MODE_A = "SYNC" *) (* RST_MODE_B = "SYNC" *) 
+(* SIM_ASSERT_CHK = "0" *) (* USE_EMBEDDED_CONSTRAINT = "0" *) (* USE_MEM_INIT = "0" *) 
+(* USE_MEM_INIT_MMI = "0" *) (* VERSION = "0" *) (* WAKEUP_TIME = "0" *) 
+(* WRITE_DATA_WIDTH_A = "39" *) (* WRITE_DATA_WIDTH_B = "39" *) (* WRITE_MODE_A = "2" *) 
+(* WRITE_MODE_B = "2" *) (* WRITE_PROTECT = "1" *) (* XPM_MODULE = "TRUE" *) 
+(* keep_hierarchy = "soft" *) (* rsta_loop_iter = "40" *) (* rstb_loop_iter = "40" *) 
 module Convolution_Controller_axi_dma_0_0_xpm_memory_base
    (sleep,
     clka,

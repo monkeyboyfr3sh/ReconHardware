@@ -1,6 +1,6 @@
-verilog xil_defaultlib --include "../../../../ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ipshared/ec67/hdl" --include "../../../../ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ipshared/6b56/hdl" --include "../../../../ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ipshared/509a/src" \
+verilog xil_defaultlib --include "../../../../ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ipshared/ec67/hdl" --include "../../../../ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ipshared/6b56/hdl" \
 "../../../bd/Convolution_Controller/ip/Convolution_Controller_processing_system7_0_0/sim/Convolution_Controller_processing_system7_0_0.v" \
-"../../../bd/Convolution_Controller/ipshared/509a/AXI_Convolution_Controller.v" \
+"../../../bd/Convolution_Controller/ipshared/3755/AXI_Convolution_Controller.v" \
 "../../../bd/Convolution_Controller/ip/Convolution_Controller_Convolution_Controll_0_0/sim/Convolution_Controller_Convolution_Controll_0_0.v" \
 "../../../bd/Convolution_Controller/ip/Convolution_Controller_xbar_0/sim/Convolution_Controller_xbar_0.v" \
 "../../../bd/Convolution_Controller/ip/Convolution_Controller_xbar_1/sim/Convolution_Controller_xbar_1.v" \

@@ -5,15 +5,34 @@ proc init_gui { IPINST } {
   set Page_0 [ipgui::add_page $IPINST -name "Page 0"]
   ipgui::add_param $IPINST -name "DATA_WIDTH" -parent ${Page_0}
 
+  ipgui::add_param $IPINST -name "KERNEL_SIZE"
 
 }
 
-proc update_PARAM_VALUE.ADDR_WIDTH { PARAM_VALUE.ADDR_WIDTH } {
-	# Procedure called to update ADDR_WIDTH when any of the dependent parameters in the arguments change
+proc update_PARAM_VALUE.AXI_ADDR_WIDTH { PARAM_VALUE.AXI_ADDR_WIDTH } {
+	# Procedure called to update AXI_ADDR_WIDTH when any of the dependent parameters in the arguments change
 }
 
-proc validate_PARAM_VALUE.ADDR_WIDTH { PARAM_VALUE.ADDR_WIDTH } {
-	# Procedure called to validate ADDR_WIDTH
+proc validate_PARAM_VALUE.AXI_ADDR_WIDTH { PARAM_VALUE.AXI_ADDR_WIDTH } {
+	# Procedure called to validate AXI_ADDR_WIDTH
+	return true
+}
+
+proc update_PARAM_VALUE.CTRL_REG_ADDR_WIDTH { PARAM_VALUE.CTRL_REG_ADDR_WIDTH } {
+	# Procedure called to update CTRL_REG_ADDR_WIDTH when any of the dependent parameters in the arguments change
+}
+
+proc validate_PARAM_VALUE.CTRL_REG_ADDR_WIDTH { PARAM_VALUE.CTRL_REG_ADDR_WIDTH } {
+	# Procedure called to validate CTRL_REG_ADDR_WIDTH
+	return true
+}
+
+proc update_PARAM_VALUE.CTRL_REG_SIZE { PARAM_VALUE.CTRL_REG_SIZE } {
+	# Procedure called to update CTRL_REG_SIZE when any of the dependent parameters in the arguments change
+}
+
+proc validate_PARAM_VALUE.CTRL_REG_SIZE { PARAM_VALUE.CTRL_REG_SIZE } {
+	# Procedure called to validate CTRL_REG_SIZE
 	return true
 }
 
@@ -26,14 +45,52 @@ proc validate_PARAM_VALUE.DATA_WIDTH { PARAM_VALUE.DATA_WIDTH } {
 	return true
 }
 
+proc update_PARAM_VALUE.KERNEL_SIZE { PARAM_VALUE.KERNEL_SIZE } {
+	# Procedure called to update KERNEL_SIZE when any of the dependent parameters in the arguments change
+}
+
+proc validate_PARAM_VALUE.KERNEL_SIZE { PARAM_VALUE.KERNEL_SIZE } {
+	# Procedure called to validate KERNEL_SIZE
+	return true
+}
+
+proc update_PARAM_VALUE.STATE_MAC_ADDR_WIDTH { PARAM_VALUE.STATE_MAC_ADDR_WIDTH } {
+	# Procedure called to update STATE_MAC_ADDR_WIDTH when any of the dependent parameters in the arguments change
+}
+
+proc validate_PARAM_VALUE.STATE_MAC_ADDR_WIDTH { PARAM_VALUE.STATE_MAC_ADDR_WIDTH } {
+	# Procedure called to validate STATE_MAC_ADDR_WIDTH
+	return true
+}
+
 
 proc update_MODELPARAM_VALUE.DATA_WIDTH { MODELPARAM_VALUE.DATA_WIDTH PARAM_VALUE.DATA_WIDTH } {
 	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
 	set_property value [get_property value ${PARAM_VALUE.DATA_WIDTH}] ${MODELPARAM_VALUE.DATA_WIDTH}
 }
 
-proc update_MODELPARAM_VALUE.ADDR_WIDTH { MODELPARAM_VALUE.ADDR_WIDTH PARAM_VALUE.ADDR_WIDTH } {
+proc update_MODELPARAM_VALUE.KERNEL_SIZE { MODELPARAM_VALUE.KERNEL_SIZE PARAM_VALUE.KERNEL_SIZE } {
 	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
-	set_property value [get_property value ${PARAM_VALUE.ADDR_WIDTH}] ${MODELPARAM_VALUE.ADDR_WIDTH}
+	set_property value [get_property value ${PARAM_VALUE.KERNEL_SIZE}] ${MODELPARAM_VALUE.KERNEL_SIZE}
+}
+
+proc update_MODELPARAM_VALUE.CTRL_REG_SIZE { MODELPARAM_VALUE.CTRL_REG_SIZE PARAM_VALUE.CTRL_REG_SIZE } {
+	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
+	set_property value [get_property value ${PARAM_VALUE.CTRL_REG_SIZE}] ${MODELPARAM_VALUE.CTRL_REG_SIZE}
+}
+
+proc update_MODELPARAM_VALUE.AXI_ADDR_WIDTH { MODELPARAM_VALUE.AXI_ADDR_WIDTH PARAM_VALUE.AXI_ADDR_WIDTH } {
+	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
+	set_property value [get_property value ${PARAM_VALUE.AXI_ADDR_WIDTH}] ${MODELPARAM_VALUE.AXI_ADDR_WIDTH}
+}
+
+proc update_MODELPARAM_VALUE.CTRL_REG_ADDR_WIDTH { MODELPARAM_VALUE.CTRL_REG_ADDR_WIDTH PARAM_VALUE.CTRL_REG_ADDR_WIDTH } {
+	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
+	set_property value [get_property value ${PARAM_VALUE.CTRL_REG_ADDR_WIDTH}] ${MODELPARAM_VALUE.CTRL_REG_ADDR_WIDTH}
+}
+
+proc update_MODELPARAM_VALUE.STATE_MAC_ADDR_WIDTH { MODELPARAM_VALUE.STATE_MAC_ADDR_WIDTH PARAM_VALUE.STATE_MAC_ADDR_WIDTH } {
+	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
+	set_property value [get_property value ${PARAM_VALUE.STATE_MAC_ADDR_WIDTH}] ${MODELPARAM_VALUE.STATE_MAC_ADDR_WIDTH}
 }
 
