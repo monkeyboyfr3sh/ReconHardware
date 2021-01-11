@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.hw/hw_1/wave/hw_ila_data_2/hw_ila_data_2.wdb" id="1">
+         <top_modules>
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="506fs"></ZoomStartTime>
+      <ZoomEndTime time="524fs"></ZoomEndTime>
+      <Cursor1Time time="512fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="503"></NameColumnWidth>
+      <ValueColumnWidth column_width="204"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="5" />
+   <wave_markers>
+   </wave_markers>
+   <wvobject fp_name="BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_valid" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_valid</obj_property>
+      <obj_property name="ObjectShortName">Convolution_Controll_0_m_axis_valid</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_data" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Convolution_Controll_0_m_axis_data[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="BD_Wrapper/Convolution_Controller_i/axi_dma_0_s_axis_s2mm_tready" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">BD_Wrapper/Convolution_Controller_i/axi_dma_0_s_axis_s2mm_tready</obj_property>
+      <obj_property name="ObjectShortName">axi_dma_0_s_axis_s2mm_tready</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_last" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_last</obj_property>
+      <obj_property name="ObjectShortName">Convolution_Controll_0_m_axis_last</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_keep" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_keep[3:0]</obj_property>
+      <obj_property name="ObjectShortName">Convolution_Controll_0_m_axis_keep[3:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+</wave_config>

@@ -1,0 +1,22 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../20180818development5.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../20180818development5.srcs/sources_1/bd/design_1/ipshared/8c62/hdl" --include "C:/Xilinx/Vivado/2019.1/data/xilinx_vip/include" \
+"../../../../20180818development5.srcs/sources_1/imports/sources_1/imports/original/data_buffer.v" \
+"../../../../20180818development5.srcs/sources_1/imports/sources_1/imports/srcs20190817/data_interface.v" \
+"../../../../20180818development5.srcs/sources_1/imports/sources_1/imports/srcs20190817/data_interface_out.v" \
+"../../../../20180818development5.srcs/sources_1/imports/sources_1/imports/original/fifo_double_1.v" \
+"../../../../20180818development5.srcs/sources_1/imports/sources_1/imports/original/fifo_line_1.v" \
+"../../../../20180818development5.srcs/sources_1/imports/sources_1/imports/original/grey2rgb.v" \
+"../../../../20180818development5.srcs/sources_1/imports/sources_1/imports/srcs20190817/hdmi_in.v" \
+"../../../../20180818development5.srcs/sources_1/imports/sources_1/new/interface_test_mod.v" \
+"../../../../20180818development5.srcs/sources_1/imports/sources_1/imports/original/rgb2grey.v" \
+"../../../../20180818development5.srcs/sources_1/imports/sources_1/imports/original/sobel_calc.v" \
+"../../../../20180818development5.srcs/sources_1/imports/sources_1/imports/original/sobel_data_modulate.v" \
+"../../../../20180818development5.srcs/sources_1/imports/sources_1/new/sobel_kernel.v" \
+"../../../../20180818development5.srcs/sources_1/imports/sources_1/new/sobel_mod.v" \
+"../../../../20180818development5.srcs/sim_1/imports/new/interface_test_mod_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

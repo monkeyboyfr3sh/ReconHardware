@@ -28,11 +28,12 @@
 -endlib
 -makelib ies_lib/xil_defaultlib \
   "../../../bd/Convolution_Controller/ip/Convolution_Controller_processing_system7_0_0/sim/Convolution_Controller_processing_system7_0_0.v" \
-  "../../../bd/Convolution_Controller/ipshared/3755/AXI_Convolution_Controller.v" \
-  "../../../bd/Convolution_Controller/ip/Convolution_Controller_Convolution_Controll_0_0/sim/Convolution_Controller_Convolution_Controll_0_0.v" \
 -endlib
--makelib ies_lib/lib_pkg_v1_0_2 \
-  "../../../../ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ipshared/0513/hdl/lib_pkg_v1_0_rfs.vhd" \
+-makelib ies_lib/generic_baseblocks_v2_1_0 \
+  "../../../../ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v" \
+-endlib
+-makelib ies_lib/axi_register_slice_v2_1_21 \
+  "../../../../ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ipshared/2ef9/hdl/axi_register_slice_v2_1_vl_rfs.v" \
 -endlib
 -makelib ies_lib/fifo_generator_v13_2_5 \
   "../../../../ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ipshared/276e/simulation/fifo_generator_vlog_beh.v" \
@@ -43,14 +44,37 @@
 -makelib ies_lib/fifo_generator_v13_2_5 \
   "../../../../ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ipshared/276e/hdl/fifo_generator_v13_2_rfs.v" \
 -endlib
+-makelib ies_lib/axi_data_fifo_v2_1_20 \
+  "../../../../ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ipshared/47c9/hdl/axi_data_fifo_v2_1_vl_rfs.v" \
+-endlib
+-makelib ies_lib/axi_crossbar_v2_1_22 \
+  "../../../../ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ipshared/b68e/hdl/axi_crossbar_v2_1_vl_rfs.v" \
+-endlib
+-makelib ies_lib/xil_defaultlib \
+  "../../../bd/Convolution_Controller/ip/Convolution_Controller_xbar_0/sim/Convolution_Controller_xbar_0.v" \
+-endlib
+-makelib ies_lib/lib_cdc_v1_0_2 \
+  "../../../../ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd" \
+-endlib
+-makelib ies_lib/proc_sys_reset_v5_0_13 \
+  "../../../../ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd" \
+-endlib
+-makelib ies_lib/xil_defaultlib \
+  "../../../bd/Convolution_Controller/ip/Convolution_Controller_rst_ps7_0_100M_0/sim/Convolution_Controller_rst_ps7_0_100M_0.vhd" \
+-endlib
+-makelib ies_lib/xil_defaultlib \
+  "../../../bd/Convolution_Controller/ip/Convolution_Controller_xbar_1/sim/Convolution_Controller_xbar_1.v" \
+  "../../../bd/Convolution_Controller/ip/Convolution_Controller_ila_0_3/sim/Convolution_Controller_ila_0_3.v" \
+  "../../../bd/Convolution_Controller/ip/Convolution_Controller_ila_1_0/sim/Convolution_Controller_ila_1_0.v" \
+-endlib
+-makelib ies_lib/lib_pkg_v1_0_2 \
+  "../../../../ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ipshared/0513/hdl/lib_pkg_v1_0_rfs.vhd" \
+-endlib
 -makelib ies_lib/lib_fifo_v1_0_14 \
   "../../../../ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ipshared/a5cb/hdl/lib_fifo_v1_0_rfs.vhd" \
 -endlib
 -makelib ies_lib/lib_srl_fifo_v1_0_2 \
   "../../../../ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd" \
--endlib
--makelib ies_lib/lib_cdc_v1_0_2 \
-  "../../../../ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd" \
 -endlib
 -makelib ies_lib/axi_datamover_v5_1_23 \
   "../../../../ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ipshared/af86/hdl/axi_datamover_v5_1_vh_rfs.vhd" \
@@ -62,31 +86,11 @@
   "../../../../ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ipshared/0fb1/hdl/axi_dma_v7_1_vh_rfs.vhd" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
-  "../../../bd/Convolution_Controller/ip/Convolution_Controller_axi_dma_0_0/sim/Convolution_Controller_axi_dma_0_0.vhd" \
--endlib
--makelib ies_lib/generic_baseblocks_v2_1_0 \
-  "../../../../ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v" \
--endlib
--makelib ies_lib/axi_register_slice_v2_1_21 \
-  "../../../../ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ipshared/2ef9/hdl/axi_register_slice_v2_1_vl_rfs.v" \
--endlib
--makelib ies_lib/axi_data_fifo_v2_1_20 \
-  "../../../../ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ipshared/47c9/hdl/axi_data_fifo_v2_1_vl_rfs.v" \
--endlib
--makelib ies_lib/axi_crossbar_v2_1_22 \
-  "../../../../ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ipshared/b68e/hdl/axi_crossbar_v2_1_vl_rfs.v" \
+  "../../../bd/Convolution_Controller/ip/Convolution_Controller_axi_dma_0_1/sim/Convolution_Controller_axi_dma_0_1.vhd" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
-  "../../../bd/Convolution_Controller/ip/Convolution_Controller_xbar_0/sim/Convolution_Controller_xbar_0.v" \
--endlib
--makelib ies_lib/proc_sys_reset_v5_0_13 \
-  "../../../../ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd" \
--endlib
--makelib ies_lib/xil_defaultlib \
-  "../../../bd/Convolution_Controller/ip/Convolution_Controller_rst_ps7_0_100M_0/sim/Convolution_Controller_rst_ps7_0_100M_0.vhd" \
--endlib
--makelib ies_lib/xil_defaultlib \
-  "../../../bd/Convolution_Controller/ip/Convolution_Controller_xbar_1/sim/Convolution_Controller_xbar_1.v" \
+  "../../../bd/Convolution_Controller/ipshared/126d/AXI_Convolution_Controller.v" \
+  "../../../bd/Convolution_Controller/ip/Convolution_Controller_Convolution_Controll_0_1/sim/Convolution_Controller_Convolution_Controll_0_1.v" \
 -endlib
 -makelib ies_lib/axi_protocol_converter_v2_1_21 \
   "../../../../ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ipshared/8dfa/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \

@@ -1,14 +1,21 @@
 <?xml version="1.0"?>
 <Runs Version="1" Minor="0">
-	<Run Id="Toggle_1_2_synth_1" LaunchDir="C:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PR_LED/PR_LED.runs/Toggle_1_2_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
-	<Run Id="Toggle_1_10_synth_1" LaunchDir="C:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PR_LED/PR_LED.runs/Toggle_1_10_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
-	<Run Id="Toggle_1_100_synth_1" LaunchDir="C:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PR_LED/PR_LED.runs/Toggle_1_100_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
-	<Run Id="Toggle_1_500_synth_1" LaunchDir="C:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PR_LED/PR_LED.runs/Toggle_1_500_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="PR_LED_des_processing_system7_0_0_synth_1" LaunchDir="C:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PR_LED/PR_LED.runs/PR_LED_des_processing_system7_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="PR_LED_des_rst_ps7_0_100M_0_synth_1" LaunchDir="C:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PR_LED/PR_LED.runs/PR_LED_des_rst_ps7_0_100M_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="PR_LED_des_axi_gpio_0_0_synth_1" LaunchDir="C:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PR_LED/PR_LED.runs/PR_LED_des_axi_gpio_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="PR_LED_des_auto_pc_0_synth_1" LaunchDir="C:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PR_LED/PR_LED.runs/PR_LED_des_auto_pc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
 	<Run Id="synth_1" LaunchDir="C:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PR_LED/PR_LED.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
-		<Parent Id="Toggle_1_2_synth_1"/>
-		<Parent Id="Toggle_1_10_synth_1"/>
-		<Parent Id="Toggle_1_100_synth_1"/>
-		<Parent Id="Toggle_1_500_synth_1"/>
+		<Parent Id="PR_LED_des_processing_system7_0_0_synth_1"/>
+		<Parent Id="PR_LED_des_rst_ps7_0_100M_0_synth_1"/>
+		<Parent Id="PR_LED_des_axi_gpio_0_0_synth_1"/>
+		<Parent Id="PR_LED_des_auto_pc_0_synth_1"/>
+	</Run>
+	<Run Id="impl_1" LaunchDir="C:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/PR_LED/PR_LED.runs/impl_1" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="write_bitstream">
+		<Parent Id="synth_1"/>
+		<Parent Id="PR_LED_des_processing_system7_0_0_synth_1"/>
+		<Parent Id="PR_LED_des_rst_ps7_0_100M_0_synth_1"/>
+		<Parent Id="PR_LED_des_axi_gpio_0_0_synth_1"/>
+		<Parent Id="PR_LED_des_auto_pc_0_synth_1"/>
 	</Run>
 	<Parameters>
 		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>

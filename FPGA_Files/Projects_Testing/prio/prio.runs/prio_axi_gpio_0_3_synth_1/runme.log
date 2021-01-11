@@ -1,0 +1,14 @@
+
+*** Running vivado
+    with args -log prio_axi_gpio_0_3.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source prio_axi_gpio_0_3.tcl
+
+
+
+****** Vivado v2020.1 (64-bit)
+  **** SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+  **** IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source prio_axi_gpio_0_3.tcl -notrace
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP prio_axi_gpio_0_3, cache-ID = 99b7a0320315a340.
+INFO: [Common 17-206] Exiting Vivado at Sat Jan  2 12:46:46 2021...

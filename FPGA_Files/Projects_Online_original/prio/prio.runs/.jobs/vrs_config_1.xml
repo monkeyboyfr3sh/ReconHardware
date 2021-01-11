@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="prio_axi_gpio_0_0_synth_1" LaunchDir="C:/Users/monke/Downloads/PYNQ-PRIO-master/PYNQ-PRIO-master/boards/Pynq-Z1/prio/prio/prio.runs/prio_axi_gpio_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="prio_pr_0_decoupler_0_synth_1" LaunchDir="C:/Users/monke/Downloads/PYNQ-PRIO-master/PYNQ-PRIO-master/boards/Pynq-Z1/prio/prio/prio.runs/prio_pr_0_decoupler_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="prio_axi_gpio_0_1_synth_1" LaunchDir="C:/Users/monke/Downloads/PYNQ-PRIO-master/PYNQ-PRIO-master/boards/Pynq-Z1/prio/prio/prio.runs/prio_axi_gpio_0_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="prio_axi_gpio_0_0_synth_1"/>
+	</Run>
+	<Run Id="prio_pr_1_decoupler_0_synth_1" LaunchDir="C:/Users/monke/Downloads/PYNQ-PRIO-master/PYNQ-PRIO-master/boards/Pynq-Z1/prio/prio/prio.runs/prio_pr_1_decoupler_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="prio_axi_gpio_0_2_synth_1" LaunchDir="C:/Users/monke/Downloads/PYNQ-PRIO-master/PYNQ-PRIO-master/boards/Pynq-Z1/prio/prio/prio.runs/prio_axi_gpio_0_2_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="prio_axi_gpio_0_0_synth_1"/>
+	</Run>
+	<Run Id="prio_pr_2_decoupler_0_synth_1" LaunchDir="C:/Users/monke/Downloads/PYNQ-PRIO-master/PYNQ-PRIO-master/boards/Pynq-Z1/prio/prio/prio.runs/prio_pr_2_decoupler_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="prio_axi_gpio_0_3_synth_1" LaunchDir="C:/Users/monke/Downloads/PYNQ-PRIO-master/PYNQ-PRIO-master/boards/Pynq-Z1/prio/prio/prio.runs/prio_axi_gpio_0_3_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="prio_axi_gpio_0_0_synth_1"/>
+	</Run>
+	<Run Id="prio_pr_3_decoupler_0_synth_1" LaunchDir="C:/Users/monke/Downloads/PYNQ-PRIO-master/PYNQ-PRIO-master/boards/Pynq-Z1/prio/prio/prio.runs/prio_pr_3_decoupler_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="prio_axi_gpio_0_4_synth_1" LaunchDir="C:/Users/monke/Downloads/PYNQ-PRIO-master/PYNQ-PRIO-master/boards/Pynq-Z1/prio/prio/prio.runs/prio_axi_gpio_0_4_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="prio_axi_gpio_0_0_synth_1"/>
+	</Run>
+	<Run Id="prio_pr_4_decoupler_0_synth_1" LaunchDir="C:/Users/monke/Downloads/PYNQ-PRIO-master/PYNQ-PRIO-master/boards/Pynq-Z1/prio/prio/prio.runs/prio_pr_4_decoupler_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="prio_axi_gpio_0_5_synth_1" LaunchDir="C:/Users/monke/Downloads/PYNQ-PRIO-master/PYNQ-PRIO-master/boards/Pynq-Z1/prio/prio/prio.runs/prio_axi_gpio_0_5_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="prio_axi_gpio_0_0_synth_1"/>
+	</Run>
+	<Run Id="prio_pr_5_decoupler_0_synth_1" LaunchDir="C:/Users/monke/Downloads/PYNQ-PRIO-master/PYNQ-PRIO-master/boards/Pynq-Z1/prio/prio/prio.runs/prio_pr_5_decoupler_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="prio_ps7_0_0_synth_1" LaunchDir="C:/Users/monke/Downloads/PYNQ-PRIO-master/PYNQ-PRIO-master/boards/Pynq-Z1/prio/prio/prio.runs/prio_ps7_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="prio_rst_ps7_0_fclk0_0_synth_1" LaunchDir="C:/Users/monke/Downloads/PYNQ-PRIO-master/PYNQ-PRIO-master/boards/Pynq-Z1/prio/prio/prio.runs/prio_rst_ps7_0_fclk0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="prio_system_interrupts_0_synth_1" LaunchDir="C:/Users/monke/Downloads/PYNQ-PRIO-master/PYNQ-PRIO-master/boards/Pynq-Z1/prio/prio/prio.runs/prio_system_interrupts_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="prio_xbar_0_synth_1" LaunchDir="C:/Users/monke/Downloads/PYNQ-PRIO-master/PYNQ-PRIO-master/boards/Pynq-Z1/prio/prio/prio.runs/prio_xbar_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="prio_s00_regslice_0_synth_1" LaunchDir="C:/Users/monke/Downloads/PYNQ-PRIO-master/PYNQ-PRIO-master/boards/Pynq-Z1/prio/prio/prio.runs/prio_s00_regslice_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="prio_auto_pc_0_synth_1" LaunchDir="C:/Users/monke/Downloads/PYNQ-PRIO-master/PYNQ-PRIO-master/boards/Pynq-Z1/prio/prio/prio.runs/prio_auto_pc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="prio_m00_regslice_0_synth_1" LaunchDir="C:/Users/monke/Downloads/PYNQ-PRIO-master/PYNQ-PRIO-master/boards/Pynq-Z1/prio/prio/prio.runs/prio_m00_regslice_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="prio_m01_regslice_0_synth_1" LaunchDir="C:/Users/monke/Downloads/PYNQ-PRIO-master/PYNQ-PRIO-master/boards/Pynq-Z1/prio/prio/prio.runs/prio_m01_regslice_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="prio_m02_regslice_0_synth_1" LaunchDir="C:/Users/monke/Downloads/PYNQ-PRIO-master/PYNQ-PRIO-master/boards/Pynq-Z1/prio/prio/prio.runs/prio_m02_regslice_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="prio_m01_regslice_0_synth_1"/>
+	</Run>
+	<Run Id="prio_m03_regslice_0_synth_1" LaunchDir="C:/Users/monke/Downloads/PYNQ-PRIO-master/PYNQ-PRIO-master/boards/Pynq-Z1/prio/prio/prio.runs/prio_m03_regslice_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="prio_m01_regslice_0_synth_1"/>
+	</Run>
+	<Run Id="prio_m04_regslice_0_synth_1" LaunchDir="C:/Users/monke/Downloads/PYNQ-PRIO-master/PYNQ-PRIO-master/boards/Pynq-Z1/prio/prio/prio.runs/prio_m04_regslice_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="prio_m01_regslice_0_synth_1"/>
+	</Run>
+	<Run Id="prio_m05_regslice_0_synth_1" LaunchDir="C:/Users/monke/Downloads/PYNQ-PRIO-master/PYNQ-PRIO-master/boards/Pynq-Z1/prio/prio/prio.runs/prio_m05_regslice_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="prio_m01_regslice_0_synth_1"/>
+	</Run>
+	<Run Id="prio_m06_regslice_0_synth_1" LaunchDir="C:/Users/monke/Downloads/PYNQ-PRIO-master/PYNQ-PRIO-master/boards/Pynq-Z1/prio/prio/prio.runs/prio_m06_regslice_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="prio_m01_regslice_0_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

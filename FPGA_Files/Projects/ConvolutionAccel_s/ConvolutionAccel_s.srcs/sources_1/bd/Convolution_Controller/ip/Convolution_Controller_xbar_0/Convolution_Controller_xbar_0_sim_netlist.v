@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
 // Date        : Sat Dec 12 15:07:22 2020
 // Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_xbar_0/Convolution_Controller_xbar_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top Convolution_Controller_xbar_0 -prefix
+//               Convolution_Controller_xbar_0_ Convolution_Controller_xbar_0_sim_netlist.v
 // Design      : Convolution_Controller_xbar_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -305,7 +305,6 @@ module Convolution_Controller_xbar_0
         .s_axi_wvalid(s_axi_wvalid));
 endmodule
 
-(* ORIG_REF_NAME = "axi_crossbar_v2_1_22_addr_arbiter_sasd" *) 
 module Convolution_Controller_xbar_0_axi_crossbar_v2_1_22_addr_arbiter_sasd
    (m_valid_i,
     SR,
@@ -1463,13 +1462,13 @@ endmodule
 (* C_NUM_MASTER_SLOTS = "2" *) (* C_NUM_SLAVE_SLOTS = "1" *) (* C_R_REGISTER = "1" *) 
 (* C_S_AXI_ARB_PRIORITY = "0" *) (* C_S_AXI_BASE_ID = "0" *) (* C_S_AXI_READ_ACCEPTANCE = "1" *) 
 (* C_S_AXI_SINGLE_THREAD = "1" *) (* C_S_AXI_THREAD_ID_WIDTH = "0" *) (* C_S_AXI_WRITE_ACCEPTANCE = "1" *) 
-(* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "axi_crossbar_v2_1_22_axi_crossbar" *) (* P_ADDR_DECODE = "1" *) 
-(* P_AXI3 = "1" *) (* P_AXI4 = "0" *) (* P_AXILITE = "2" *) 
-(* P_AXILITE_SIZE = "3'b010" *) (* P_FAMILY = "zynq" *) (* P_INCR = "2'b01" *) 
-(* P_LEN = "8" *) (* P_LOCK = "1" *) (* P_M_AXI_ERR_MODE = "64'b0000000000000000000000000000000000000000000000000000000000000000" *) 
-(* P_M_AXI_SUPPORTS_READ = "2'b11" *) (* P_M_AXI_SUPPORTS_WRITE = "2'b11" *) (* P_ONES = "65'b11111111111111111111111111111111111111111111111111111111111111111" *) 
-(* P_RANGE_CHECK = "1" *) (* P_S_AXI_BASE_ID = "64'b0000000000000000000000000000000000000000000000000000000000000000" *) (* P_S_AXI_HIGH_ID = "64'b0000000000000000000000000000000000000000000000000000000000000000" *) 
-(* P_S_AXI_SUPPORTS_READ = "1'b1" *) (* P_S_AXI_SUPPORTS_WRITE = "1'b1" *) 
+(* DowngradeIPIdentifiedWarnings = "yes" *) (* P_ADDR_DECODE = "1" *) (* P_AXI3 = "1" *) 
+(* P_AXI4 = "0" *) (* P_AXILITE = "2" *) (* P_AXILITE_SIZE = "3'b010" *) 
+(* P_FAMILY = "zynq" *) (* P_INCR = "2'b01" *) (* P_LEN = "8" *) 
+(* P_LOCK = "1" *) (* P_M_AXI_ERR_MODE = "64'b0000000000000000000000000000000000000000000000000000000000000000" *) (* P_M_AXI_SUPPORTS_READ = "2'b11" *) 
+(* P_M_AXI_SUPPORTS_WRITE = "2'b11" *) (* P_ONES = "65'b11111111111111111111111111111111111111111111111111111111111111111" *) (* P_RANGE_CHECK = "1" *) 
+(* P_S_AXI_BASE_ID = "64'b0000000000000000000000000000000000000000000000000000000000000000" *) (* P_S_AXI_HIGH_ID = "64'b0000000000000000000000000000000000000000000000000000000000000000" *) (* P_S_AXI_SUPPORTS_READ = "1'b1" *) 
+(* P_S_AXI_SUPPORTS_WRITE = "1'b1" *) 
 module Convolution_Controller_xbar_0_axi_crossbar_v2_1_22_axi_crossbar
    (aclk,
     aresetn,
@@ -1867,7 +1866,6 @@ module Convolution_Controller_xbar_0_axi_crossbar_v2_1_22_axi_crossbar
         .s_axi_wvalid(s_axi_wvalid));
 endmodule
 
-(* ORIG_REF_NAME = "axi_crossbar_v2_1_22_crossbar_sasd" *) 
 module Convolution_Controller_xbar_0_axi_crossbar_v2_1_22_crossbar_sasd
    (Q,
     \m_payload_i_reg[34] ,
@@ -2188,7 +2186,6 @@ module Convolution_Controller_xbar_0_axi_crossbar_v2_1_22_crossbar_sasd
         .s_axi_wvalid(s_axi_wvalid));
 endmodule
 
-(* ORIG_REF_NAME = "axi_crossbar_v2_1_22_decerr_slave" *) 
 module Convolution_Controller_xbar_0_axi_crossbar_v2_1_22_decerr_slave
    (mi_bvalid,
     mi_wready,
@@ -2362,7 +2359,6 @@ module Convolution_Controller_xbar_0_axi_crossbar_v2_1_22_decerr_slave
         .O(m_axi_bvalid_1_sn_1));
 endmodule
 
-(* ORIG_REF_NAME = "axi_crossbar_v2_1_22_splitter" *) 
 module Convolution_Controller_xbar_0_axi_crossbar_v2_1_22_splitter
    (\m_ready_d_reg[0]_0 ,
     m_ready_d,
@@ -2552,7 +2548,6 @@ module Convolution_Controller_xbar_0_axi_crossbar_v2_1_22_splitter__parameterize
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "axi_register_slice_v2_1_21_axic_register_slice" *) 
 module Convolution_Controller_xbar_0_axi_register_slice_v2_1_21_axic_register_slice
    (sr_rvalid,
     aa_rready,

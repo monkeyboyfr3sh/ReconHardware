@@ -1,0 +1,25 @@
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 24ff1be29c964ee28dd3f942773278f3 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot process_mod_tb_behav xil_defaultlib.process_mod_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 24 for port 'mod_VData_out' [D:/Adam/Documents/Vivado_Projects/development20180819/development20180819.srcs/sim_1/new/process_mod_tb.v:40]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.data_interface
+Compiling module xil_defaultlib.rgb2grey
+Compiling module xil_defaultlib.fifo_line_1
+Compiling module xil_defaultlib.fifo_double_1
+Compiling module xil_defaultlib.sobel_data_modulate
+Compiling module xil_defaultlib.data_buffer
+Compiling module xil_defaultlib.sobel_calc
+Compiling module xil_defaultlib.sobel_kernel
+Compiling module xil_defaultlib.grey2rgb
+Compiling module xil_defaultlib.sobel_mod
+Compiling module xil_defaultlib.data_interface_out
+Compiling module xil_defaultlib.process_mod
+Compiling module xil_defaultlib.process_mod_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot process_mod_tb_behav

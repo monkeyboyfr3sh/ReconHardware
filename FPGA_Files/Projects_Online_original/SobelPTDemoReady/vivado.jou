@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2019.1.1 (64-bit)
+# SW Build 2580384 on Sat Jun 29 08:12:21 MDT 2019
+# IP Build 2579722 on Sat Jun 29 11:35:40 MDT 2019
+# Start of session at: Fri Feb 14 01:00:55 2020
+# Process ID: 10696
+# Current directory: D:/Adam/Documents/Vivado_Projects/Archive/SobelPTDemoReady
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13504 D:\Adam\Documents\Vivado_Projects\Archive\SobelPTDemoReady\SobelPTDemoReady.xpr
+# Log file: D:/Adam/Documents/Vivado_Projects/Archive/SobelPTDemoReady/vivado.log
+# Journal file: D:/Adam/Documents/Vivado_Projects/Archive/SobelPTDemoReady\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Adam/Documents/Vivado_Projects/Archive/SobelPTDemoReady/SobelPTDemoReady.xpr
+update_compile_order -fileset sources_1
+archive_project D:/Adam/Documents/Vivado_Projects/Archive/SobelPTDemoReady.xpr.zip -temp_dir D:/Adam/Documents/Vivado_Projects/Archive/SobelPTDemoReady/.Xil/Vivado-10696-DESKTOP-RKNG8TM -force -include_local_ip_cache -include_config_settings

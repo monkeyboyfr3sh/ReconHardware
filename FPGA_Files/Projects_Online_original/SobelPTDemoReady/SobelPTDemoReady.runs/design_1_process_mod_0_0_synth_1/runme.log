@@ -1,0 +1,530 @@
+
+*** Running vivado
+    with args -log design_1_process_mod_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_process_mod_0_0.tcl
+
+
+****** Vivado v2019.1.1 (64-bit)
+  **** SW Build 2580384 on Sat Jun 29 08:12:21 MDT 2019
+  **** IP Build 2579722 on Sat Jun 29 11:35:40 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source design_1_process_mod_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Xilinx/digilentRepo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+Command: synth_design -top design_1_process_mod_0_0 -part xc7z020clg400-1 -mode out_of_context
+Starting synth_design
+WARNING: [IP_Flow 19-3571] IP 'design_1_process_mod_0_0' is restricted:
+* Module reference is stale and needs refreshing.
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 15468 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 748.961 ; gain = 177.031
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_process_mod_0_0' [d:/Adam/Documents/Vivado_Projects/SobelPTDemoReady/SobelPTDemoReady.srcs/sources_1/bd/design_1/ip/design_1_process_mod_0_0/synth/design_1_process_mod_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'process_mod' [D:/Adam/Documents/Vivado_Projects/SobelPTDemoReady/SobelPTDemoReady.srcs/sources_1/new/process_mod.v:23]
+INFO: [Synth 8-6157] synthesizing module 'data_interface' [D:/Adam/Documents/Vivado_Projects/SobelPTDemoReady/SobelPTDemoReady.srcs/sources_1/imports/srcs20190817/data_interface.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'data_interface' (1#1) [D:/Adam/Documents/Vivado_Projects/SobelPTDemoReady/SobelPTDemoReady.srcs/sources_1/imports/srcs20190817/data_interface.v:23]
+INFO: [Synth 8-6157] synthesizing module 'sobel_mod' [D:/Adam/Documents/Vivado_Projects/SobelPTDemoReady/SobelPTDemoReady.srcs/sources_1/imports/sources/sobel_mod.v:23]
+INFO: [Synth 8-6157] synthesizing module 'rgb2grey' [D:/Adam/Documents/Vivado_Projects/SobelPTDemoReady/SobelPTDemoReady.srcs/sources_1/imports/sources/rgb2grey.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'rgb2grey' (2#1) [D:/Adam/Documents/Vivado_Projects/SobelPTDemoReady/SobelPTDemoReady.srcs/sources_1/imports/sources/rgb2grey.v:22]
+INFO: [Synth 8-6157] synthesizing module 'sobel_kernel' [D:/Adam/Documents/Vivado_Projects/SobelPTDemoReady/SobelPTDemoReady.srcs/sources_1/imports/sources/sobel_kernel.v:23]
+INFO: [Synth 8-6157] synthesizing module 'data_buffer' [D:/Adam/Documents/Vivado_Projects/SobelPTDemoReady/SobelPTDemoReady.srcs/sources_1/imports/sources/data_buffer.v:23]
+INFO: [Synth 8-6157] synthesizing module 'fifo_double_1' [D:/Adam/Documents/Vivado_Projects/SobelPTDemoReady/SobelPTDemoReady.srcs/sources_1/imports/sources/fifo_double_1.v:23]
+INFO: [Synth 8-6157] synthesizing module 'fifo_line_1' [D:/Adam/Documents/Vivado_Projects/SobelPTDemoReady/SobelPTDemoReady.srcs/sources_1/imports/sources/fifo_line_1.v:23]
+	Parameter DEPTH bound to: 1650 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'fifo_line_1' (3#1) [D:/Adam/Documents/Vivado_Projects/SobelPTDemoReady/SobelPTDemoReady.srcs/sources_1/imports/sources/fifo_line_1.v:23]
+WARNING: [Synth 8-7023] instance 'FIFO_LINE_1_2' of module 'fifo_line_1' has 7 connections declared, but only 6 given [D:/Adam/Documents/Vivado_Projects/SobelPTDemoReady/SobelPTDemoReady.srcs/sources_1/imports/sources/fifo_double_1.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_double_1' (4#1) [D:/Adam/Documents/Vivado_Projects/SobelPTDemoReady/SobelPTDemoReady.srcs/sources_1/imports/sources/fifo_double_1.v:23]
+INFO: [Synth 8-6157] synthesizing module 'sobel_data_modulate' [D:/Adam/Documents/Vivado_Projects/SobelPTDemoReady/SobelPTDemoReady.srcs/sources_1/imports/sources/sobel_data_modulate.v:23]
+	Parameter ROWS bound to: 1650 - type: integer 
+	Parameter COLS bound to: 750 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'sobel_data_modulate' (5#1) [D:/Adam/Documents/Vivado_Projects/SobelPTDemoReady/SobelPTDemoReady.srcs/sources_1/imports/sources/sobel_data_modulate.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'data_buffer' (6#1) [D:/Adam/Documents/Vivado_Projects/SobelPTDemoReady/SobelPTDemoReady.srcs/sources_1/imports/sources/data_buffer.v:23]
+INFO: [Synth 8-6157] synthesizing module 'sobel_calc' [D:/Adam/Documents/Vivado_Projects/SobelPTDemoReady/SobelPTDemoReady.srcs/sources_1/imports/sources/sobel_calc.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'sobel_calc' (7#1) [D:/Adam/Documents/Vivado_Projects/SobelPTDemoReady/SobelPTDemoReady.srcs/sources_1/imports/sources/sobel_calc.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'sobel_kernel' (8#1) [D:/Adam/Documents/Vivado_Projects/SobelPTDemoReady/SobelPTDemoReady.srcs/sources_1/imports/sources/sobel_kernel.v:23]
+INFO: [Synth 8-6157] synthesizing module 'grey2rgb' [D:/Adam/Documents/Vivado_Projects/SobelPTDemoReady/SobelPTDemoReady.srcs/sources_1/imports/sources/grey2rgb.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'grey2rgb' (9#1) [D:/Adam/Documents/Vivado_Projects/SobelPTDemoReady/SobelPTDemoReady.srcs/sources_1/imports/sources/grey2rgb.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'sobel_mod' (10#1) [D:/Adam/Documents/Vivado_Projects/SobelPTDemoReady/SobelPTDemoReady.srcs/sources_1/imports/sources/sobel_mod.v:23]
+INFO: [Synth 8-6157] synthesizing module 'data_interface_out' [D:/Adam/Documents/Vivado_Projects/SobelPTDemoReady/SobelPTDemoReady.srcs/sources_1/imports/sources_1/imports/srcs20190817/data_interface_out.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'data_interface_out' (11#1) [D:/Adam/Documents/Vivado_Projects/SobelPTDemoReady/SobelPTDemoReady.srcs/sources_1/imports/sources_1/imports/srcs20190817/data_interface_out.v:23]
+WARNING: [Synth 8-3848] Net HSync_in in module/entity process_mod does not have driver. [D:/Adam/Documents/Vivado_Projects/SobelPTDemoReady/SobelPTDemoReady.srcs/sources_1/new/process_mod.v:90]
+WARNING: [Synth 8-3848] Net VSync_in in module/entity process_mod does not have driver. [D:/Adam/Documents/Vivado_Projects/SobelPTDemoReady/SobelPTDemoReady.srcs/sources_1/new/process_mod.v:91]
+INFO: [Synth 8-6155] done synthesizing module 'process_mod' (12#1) [D:/Adam/Documents/Vivado_Projects/SobelPTDemoReady/SobelPTDemoReady.srcs/sources_1/new/process_mod.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_process_mod_0_0' (13#1) [d:/Adam/Documents/Vivado_Projects/SobelPTDemoReady/SobelPTDemoReady.srcs/sources_1/bd/design_1/ip/design_1_process_mod_0_0/synth/design_1_process_mod_0_0.v:58]
+WARNING: [Synth 8-3331] design sobel_calc has unconnected port data4_in[7]
+WARNING: [Synth 8-3331] design sobel_calc has unconnected port data4_in[6]
+WARNING: [Synth 8-3331] design sobel_calc has unconnected port data4_in[5]
+WARNING: [Synth 8-3331] design sobel_calc has unconnected port data4_in[4]
+WARNING: [Synth 8-3331] design sobel_calc has unconnected port data4_in[3]
+WARNING: [Synth 8-3331] design sobel_calc has unconnected port data4_in[2]
+WARNING: [Synth 8-3331] design sobel_calc has unconnected port data4_in[1]
+WARNING: [Synth 8-3331] design sobel_calc has unconnected port data4_in[0]
+WARNING: [Synth 8-3331] design data_interface has unconnected port reset
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 815.313 ; gain = 243.383
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 815.313 ; gain = 243.383
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 815.313 ; gain = 243.383
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 931.762 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.070 . Memory (MB): peak = 933.832 ; gain = 2.070
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 933.832 ; gain = 361.902
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 933.832 ; gain = 361.902
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 933.832 ; gain = 361.902
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [D:/Adam/Documents/Vivado_Projects/SobelPTDemoReady/SobelPTDemoReady.srcs/sources_1/imports/sources/sobel_calc.v:92]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [D:/Adam/Documents/Vivado_Projects/SobelPTDemoReady/SobelPTDemoReady.srcs/sources_1/imports/sources/sobel_calc.v:84]
+INFO: [Synth 8-4471] merging register 'green_out_reg[7:0]' into 'red_out_reg[7:0]' [D:/Adam/Documents/Vivado_Projects/SobelPTDemoReady/SobelPTDemoReady.srcs/sources_1/imports/sources/grey2rgb.v:42]
+INFO: [Synth 8-4471] merging register 'blue_out_reg[7:0]' into 'red_out_reg[7:0]' [D:/Adam/Documents/Vivado_Projects/SobelPTDemoReady/SobelPTDemoReady.srcs/sources_1/imports/sources/grey2rgb.v:43]
+WARNING: [Synth 8-327] inferring latch for variable 'data0_out_reg' [D:/Adam/Documents/Vivado_Projects/SobelPTDemoReady/SobelPTDemoReady.srcs/sources_1/imports/sources/sobel_data_modulate.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'data1_out_reg' [D:/Adam/Documents/Vivado_Projects/SobelPTDemoReady/SobelPTDemoReady.srcs/sources_1/imports/sources/sobel_data_modulate.v:84]
+WARNING: [Synth 8-327] inferring latch for variable 'data2_out_reg' [D:/Adam/Documents/Vivado_Projects/SobelPTDemoReady/SobelPTDemoReady.srcs/sources_1/imports/sources/sobel_data_modulate.v:85]
+WARNING: [Synth 8-327] inferring latch for variable 'data3_out_reg' [D:/Adam/Documents/Vivado_Projects/SobelPTDemoReady/SobelPTDemoReady.srcs/sources_1/imports/sources/sobel_data_modulate.v:86]
+WARNING: [Synth 8-327] inferring latch for variable 'data4_out_reg' [D:/Adam/Documents/Vivado_Projects/SobelPTDemoReady/SobelPTDemoReady.srcs/sources_1/imports/sources/sobel_data_modulate.v:87]
+WARNING: [Synth 8-327] inferring latch for variable 'data5_out_reg' [D:/Adam/Documents/Vivado_Projects/SobelPTDemoReady/SobelPTDemoReady.srcs/sources_1/imports/sources/sobel_data_modulate.v:88]
+WARNING: [Synth 8-327] inferring latch for variable 'data6_out_reg' [D:/Adam/Documents/Vivado_Projects/SobelPTDemoReady/SobelPTDemoReady.srcs/sources_1/imports/sources/sobel_data_modulate.v:89]
+WARNING: [Synth 8-327] inferring latch for variable 'data7_out_reg' [D:/Adam/Documents/Vivado_Projects/SobelPTDemoReady/SobelPTDemoReady.srcs/sources_1/imports/sources/sobel_data_modulate.v:90]
+WARNING: [Synth 8-327] inferring latch for variable 'data8_out_reg' [D:/Adam/Documents/Vivado_Projects/SobelPTDemoReady/SobelPTDemoReady.srcs/sources_1/imports/sources/sobel_data_modulate.v:91]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 933.832 ; gain = 361.902
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 8     
+	   3 Input     10 Bit       Adders := 6     
+	   2 Input     10 Bit       Adders := 1     
+	   6 Input      8 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               24 Bit    Registers := 1     
+	               11 Bit    Registers := 6     
+	               10 Bit    Registers := 7     
+	                8 Bit    Registers := 16    
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 10    
++---RAMs : 
+	              17K Bit         RAMs := 2     
++---Muxes : 
+	   2 Input     11 Bit        Muxes := 6     
+	   2 Input     10 Bit        Muxes := 4     
+	   8 Input      8 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 3     
+	   9 Input      8 Bit        Muxes := 2     
+	   7 Input      8 Bit        Muxes := 2     
+	   6 Input      8 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	   9 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module data_interface 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 3     
+	                1 Bit    Registers := 3     
+Module rgb2grey 
+Detailed RTL Component Info : 
++---Adders : 
+	   6 Input      8 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module fifo_line_1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 3     
++---Registers : 
+	               11 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---RAMs : 
+	              17K Bit         RAMs := 1     
++---Muxes : 
+	   2 Input     11 Bit        Muxes := 2     
+Module sobel_data_modulate 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               11 Bit    Registers := 2     
+	                8 Bit    Registers := 10    
++---Muxes : 
+	   2 Input     11 Bit        Muxes := 2     
+	   8 Input      8 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 3     
+	   9 Input      8 Bit        Muxes := 2     
+	   7 Input      8 Bit        Muxes := 2     
+	   6 Input      8 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 1     
+Module sobel_calc 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     10 Bit       Adders := 6     
+	   2 Input     10 Bit       Adders := 1     
++---Registers : 
+	               10 Bit    Registers := 7     
+	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 4     
+Module grey2rgb 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module data_interface_out 
+Detailed RTL Component Info : 
++---Registers : 
+	               24 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design design_1_process_mod_0_0 has unconnected port mod_VSync_in
+WARNING: [Synth 8-3331] design design_1_process_mod_0_0 has unconnected port mod_HSync_in
+INFO: [Synth 8-3886] merging instance 'inst/SOBEL_MOD/SOBEL_KERNEL/DATA_BUFFER/FIFO_DOUBLE_1/FIFO_LINE_1_1/rd_pointer_reg_rep[5]' (FDRE) to 'inst/SOBEL_MOD/SOBEL_KERNEL/DATA_BUFFER/FIFO_DOUBLE_1/FIFO_LINE_1_1/rd_pointer_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/SOBEL_MOD/SOBEL_KERNEL/DATA_BUFFER/FIFO_DOUBLE_1/FIFO_LINE_1_1/rd_pointer_reg_rep[4]' (FDRE) to 'inst/SOBEL_MOD/SOBEL_KERNEL/DATA_BUFFER/FIFO_DOUBLE_1/FIFO_LINE_1_1/rd_pointer_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/SOBEL_MOD/SOBEL_KERNEL/DATA_BUFFER/FIFO_DOUBLE_1/FIFO_LINE_1_1/rd_pointer_reg_rep[3]' (FDRE) to 'inst/SOBEL_MOD/SOBEL_KERNEL/DATA_BUFFER/FIFO_DOUBLE_1/FIFO_LINE_1_1/rd_pointer_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/SOBEL_MOD/SOBEL_KERNEL/DATA_BUFFER/FIFO_DOUBLE_1/FIFO_LINE_1_1/rd_pointer_reg_rep[2]' (FDRE) to 'inst/SOBEL_MOD/SOBEL_KERNEL/DATA_BUFFER/FIFO_DOUBLE_1/FIFO_LINE_1_1/rd_pointer_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/SOBEL_MOD/SOBEL_KERNEL/DATA_BUFFER/FIFO_DOUBLE_1/FIFO_LINE_1_1/rd_pointer_reg_rep[1]' (FDRE) to 'inst/SOBEL_MOD/SOBEL_KERNEL/DATA_BUFFER/FIFO_DOUBLE_1/FIFO_LINE_1_1/rd_pointer_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/SOBEL_MOD/SOBEL_KERNEL/DATA_BUFFER/FIFO_DOUBLE_1/FIFO_LINE_1_1/rd_pointer_reg_rep[0]' (FDRE) to 'inst/SOBEL_MOD/SOBEL_KERNEL/DATA_BUFFER/FIFO_DOUBLE_1/FIFO_LINE_1_1/rd_pointer_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/SOBEL_MOD/SOBEL_KERNEL/DATA_BUFFER/FIFO_DOUBLE_1/FIFO_LINE_1_1/rd_pointer_reg_rep[7]' (FDRE) to 'inst/SOBEL_MOD/SOBEL_KERNEL/DATA_BUFFER/FIFO_DOUBLE_1/FIFO_LINE_1_1/rd_pointer_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/SOBEL_MOD/SOBEL_KERNEL/DATA_BUFFER/FIFO_DOUBLE_1/FIFO_LINE_1_1/rd_pointer_reg_rep[9]' (FDRE) to 'inst/SOBEL_MOD/SOBEL_KERNEL/DATA_BUFFER/FIFO_DOUBLE_1/FIFO_LINE_1_1/rd_pointer_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst/SOBEL_MOD/SOBEL_KERNEL/DATA_BUFFER/FIFO_DOUBLE_1/FIFO_LINE_1_1/rd_pointer_reg_rep[10]' (FDRE) to 'inst/SOBEL_MOD/SOBEL_KERNEL/DATA_BUFFER/FIFO_DOUBLE_1/FIFO_LINE_1_1/rd_pointer_reg[10]'
+INFO: [Synth 8-3886] merging instance 'inst/SOBEL_MOD/SOBEL_KERNEL/DATA_BUFFER/FIFO_DOUBLE_1/FIFO_LINE_1_1/rd_pointer_reg_rep[6]' (FDRE) to 'inst/SOBEL_MOD/SOBEL_KERNEL/DATA_BUFFER/FIFO_DOUBLE_1/FIFO_LINE_1_1/rd_pointer_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/SOBEL_MOD/SOBEL_KERNEL/DATA_BUFFER/FIFO_DOUBLE_1/FIFO_LINE_1_1/rd_pointer_reg_rep[8]' (FDRE) to 'inst/SOBEL_MOD/SOBEL_KERNEL/DATA_BUFFER/FIFO_DOUBLE_1/FIFO_LINE_1_1/rd_pointer_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/SOBEL_MOD/SOBEL_KERNEL/DATA_BUFFER/FIFO_DOUBLE_1/FIFO_LINE_1_2/rd_pointer_reg_rep[7]' (FDRE) to 'inst/SOBEL_MOD/SOBEL_KERNEL/DATA_BUFFER/FIFO_DOUBLE_1/FIFO_LINE_1_2/rd_pointer_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/SOBEL_MOD/SOBEL_KERNEL/DATA_BUFFER/FIFO_DOUBLE_1/FIFO_LINE_1_2/rd_pointer_reg_rep[9]' (FDRE) to 'inst/SOBEL_MOD/SOBEL_KERNEL/DATA_BUFFER/FIFO_DOUBLE_1/FIFO_LINE_1_2/rd_pointer_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst/SOBEL_MOD/SOBEL_KERNEL/DATA_BUFFER/FIFO_DOUBLE_1/FIFO_LINE_1_2/rd_pointer_reg_rep[10]' (FDRE) to 'inst/SOBEL_MOD/SOBEL_KERNEL/DATA_BUFFER/FIFO_DOUBLE_1/FIFO_LINE_1_2/rd_pointer_reg[10]'
+INFO: [Synth 8-3886] merging instance 'inst/SOBEL_MOD/SOBEL_KERNEL/DATA_BUFFER/FIFO_DOUBLE_1/FIFO_LINE_1_2/rd_pointer_reg_rep[4]' (FDRE) to 'inst/SOBEL_MOD/SOBEL_KERNEL/DATA_BUFFER/FIFO_DOUBLE_1/FIFO_LINE_1_2/rd_pointer_reg[4]'
+INFO: [Synth 8-3886] merging instance 'inst/SOBEL_MOD/SOBEL_KERNEL/DATA_BUFFER/FIFO_DOUBLE_1/FIFO_LINE_1_2/rd_pointer_reg_rep[0]' (FDRE) to 'inst/SOBEL_MOD/SOBEL_KERNEL/DATA_BUFFER/FIFO_DOUBLE_1/FIFO_LINE_1_2/rd_pointer_reg[0]'
+INFO: [Synth 8-3886] merging instance 'inst/SOBEL_MOD/SOBEL_KERNEL/DATA_BUFFER/FIFO_DOUBLE_1/FIFO_LINE_1_2/rd_pointer_reg_rep[6]' (FDRE) to 'inst/SOBEL_MOD/SOBEL_KERNEL/DATA_BUFFER/FIFO_DOUBLE_1/FIFO_LINE_1_2/rd_pointer_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/SOBEL_MOD/SOBEL_KERNEL/DATA_BUFFER/FIFO_DOUBLE_1/FIFO_LINE_1_2/rd_pointer_reg_rep[5]' (FDRE) to 'inst/SOBEL_MOD/SOBEL_KERNEL/DATA_BUFFER/FIFO_DOUBLE_1/FIFO_LINE_1_2/rd_pointer_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/SOBEL_MOD/SOBEL_KERNEL/DATA_BUFFER/FIFO_DOUBLE_1/FIFO_LINE_1_2/rd_pointer_reg_rep[8]' (FDRE) to 'inst/SOBEL_MOD/SOBEL_KERNEL/DATA_BUFFER/FIFO_DOUBLE_1/FIFO_LINE_1_2/rd_pointer_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/SOBEL_MOD/SOBEL_KERNEL/DATA_BUFFER/FIFO_DOUBLE_1/FIFO_LINE_1_2/rd_pointer_reg_rep[3]' (FDRE) to 'inst/SOBEL_MOD/SOBEL_KERNEL/DATA_BUFFER/FIFO_DOUBLE_1/FIFO_LINE_1_2/rd_pointer_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/SOBEL_MOD/SOBEL_KERNEL/DATA_BUFFER/FIFO_DOUBLE_1/FIFO_LINE_1_2/rd_pointer_reg_rep[2]' (FDRE) to 'inst/SOBEL_MOD/SOBEL_KERNEL/DATA_BUFFER/FIFO_DOUBLE_1/FIFO_LINE_1_2/rd_pointer_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/SOBEL_MOD/SOBEL_KERNEL/DATA_BUFFER/FIFO_DOUBLE_1/FIFO_LINE_1_2/rd_pointer_reg_rep[1]' (FDRE) to 'inst/SOBEL_MOD/SOBEL_KERNEL/DATA_BUFFER/FIFO_DOUBLE_1/FIFO_LINE_1_2/rd_pointer_reg[1]'
+INFO: [Synth 8-3886] merging instance 'inst/DATA_INTERFACE_OUT/VData_out_reg[0]' (FDR) to 'inst/DATA_INTERFACE_OUT/VData_out_reg[16]'
+INFO: [Synth 8-3886] merging instance 'inst/DATA_INTERFACE_OUT/VData_out_reg[1]' (FDR) to 'inst/DATA_INTERFACE_OUT/VData_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'inst/DATA_INTERFACE_OUT/VData_out_reg[2]' (FDR) to 'inst/DATA_INTERFACE_OUT/VData_out_reg[18]'
+INFO: [Synth 8-3886] merging instance 'inst/DATA_INTERFACE_OUT/VData_out_reg[3]' (FDR) to 'inst/DATA_INTERFACE_OUT/VData_out_reg[19]'
+INFO: [Synth 8-3886] merging instance 'inst/DATA_INTERFACE_OUT/VData_out_reg[4]' (FDR) to 'inst/DATA_INTERFACE_OUT/VData_out_reg[20]'
+INFO: [Synth 8-3886] merging instance 'inst/DATA_INTERFACE_OUT/VData_out_reg[5]' (FDR) to 'inst/DATA_INTERFACE_OUT/VData_out_reg[21]'
+INFO: [Synth 8-3886] merging instance 'inst/DATA_INTERFACE_OUT/VData_out_reg[6]' (FDR) to 'inst/DATA_INTERFACE_OUT/VData_out_reg[22]'
+INFO: [Synth 8-3886] merging instance 'inst/DATA_INTERFACE_OUT/VData_out_reg[7]' (FDR) to 'inst/DATA_INTERFACE_OUT/VData_out_reg[23]'
+INFO: [Synth 8-3886] merging instance 'inst/DATA_INTERFACE_OUT/VData_out_reg[8]' (FDR) to 'inst/DATA_INTERFACE_OUT/VData_out_reg[16]'
+INFO: [Synth 8-3886] merging instance 'inst/DATA_INTERFACE_OUT/VData_out_reg[9]' (FDR) to 'inst/DATA_INTERFACE_OUT/VData_out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'inst/DATA_INTERFACE_OUT/VData_out_reg[10]' (FDR) to 'inst/DATA_INTERFACE_OUT/VData_out_reg[18]'
+INFO: [Synth 8-3886] merging instance 'inst/DATA_INTERFACE_OUT/VData_out_reg[11]' (FDR) to 'inst/DATA_INTERFACE_OUT/VData_out_reg[19]'
+INFO: [Synth 8-3886] merging instance 'inst/DATA_INTERFACE_OUT/VData_out_reg[12]' (FDR) to 'inst/DATA_INTERFACE_OUT/VData_out_reg[20]'
+INFO: [Synth 8-3886] merging instance 'inst/DATA_INTERFACE_OUT/VData_out_reg[13]' (FDR) to 'inst/DATA_INTERFACE_OUT/VData_out_reg[21]'
+INFO: [Synth 8-3886] merging instance 'inst/DATA_INTERFACE_OUT/VData_out_reg[14]' (FDR) to 'inst/DATA_INTERFACE_OUT/VData_out_reg[22]'
+INFO: [Synth 8-3886] merging instance 'inst/DATA_INTERFACE_OUT/VData_out_reg[15]' (FDR) to 'inst/DATA_INTERFACE_OUT/VData_out_reg[23]'
+INFO: [Synth 8-3332] Sequential element (inst/SOBEL_MOD/SOBEL_KERNEL/DATA_BUFFER/SOBEL_DATA_MODULATE/data4_out_reg[7]) is unused and will be removed from module design_1_process_mod_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/SOBEL_MOD/SOBEL_KERNEL/DATA_BUFFER/SOBEL_DATA_MODULATE/data4_out_reg[6]) is unused and will be removed from module design_1_process_mod_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/SOBEL_MOD/SOBEL_KERNEL/DATA_BUFFER/SOBEL_DATA_MODULATE/data4_out_reg[5]) is unused and will be removed from module design_1_process_mod_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/SOBEL_MOD/SOBEL_KERNEL/DATA_BUFFER/SOBEL_DATA_MODULATE/data4_out_reg[4]) is unused and will be removed from module design_1_process_mod_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/SOBEL_MOD/SOBEL_KERNEL/DATA_BUFFER/SOBEL_DATA_MODULATE/data4_out_reg[3]) is unused and will be removed from module design_1_process_mod_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/SOBEL_MOD/SOBEL_KERNEL/DATA_BUFFER/SOBEL_DATA_MODULATE/data4_out_reg[2]) is unused and will be removed from module design_1_process_mod_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/SOBEL_MOD/SOBEL_KERNEL/DATA_BUFFER/SOBEL_DATA_MODULATE/data4_out_reg[1]) is unused and will be removed from module design_1_process_mod_0_0.
+INFO: [Synth 8-3332] Sequential element (inst/SOBEL_MOD/SOBEL_KERNEL/DATA_BUFFER/SOBEL_DATA_MODULATE/data4_out_reg[0]) is unused and will be removed from module design_1_process_mod_0_0.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 933.832 ; gain = 361.902
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping  Report (see note below)
++-------------------------+-----------------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name              | RTL Object                                                                  | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-------------------------+-----------------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|design_1_process_mod_0_0 | inst/SOBEL_MOD/SOBEL_KERNEL/DATA_BUFFER/FIFO_DOUBLE_1/FIFO_LINE_1_2/mem_reg | 2 K x 8(READ_FIRST)    | W |   | 2 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
++-------------------------+-----------------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+Distributed RAM: Preliminary Mapping  Report (see note below)
++-------------------------+-----------------------------------------------------------------------------+-----------+----------------------+------------------------------+
+|Module Name              | RTL Object                                                                  | Inference | Size (Depth x Width) | Primitives                   | 
++-------------------------+-----------------------------------------------------------------------------+-----------+----------------------+------------------------------+
+|design_1_process_mod_0_0 | inst/SOBEL_MOD/SOBEL_KERNEL/DATA_BUFFER/FIFO_DOUBLE_1/FIFO_LINE_1_1/mem_reg | Implied   | 2 K x 8              | RAM64X1D x 52  RAM64M x 52   | 
++-------------------------+-----------------------------------------------------------------------------+-----------+----------------------+------------------------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance insti_12/inst/SOBEL_MOD/SOBEL_KERNEL/DATA_BUFFER/FIFO_DOUBLE_1/FIFO_LINE_1_2/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 933.832 ; gain = 361.902
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 933.832 ; gain = 361.902
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping  Report
++-------------------------+-----------------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name              | RTL Object                                                                  | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-------------------------+-----------------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|design_1_process_mod_0_0 | inst/SOBEL_MOD/SOBEL_KERNEL/DATA_BUFFER/FIFO_DOUBLE_1/FIFO_LINE_1_2/mem_reg | 2 K x 8(READ_FIRST)    | W |   | 2 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
++-------------------------+-----------------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+
+Distributed RAM: Final Mapping  Report
++-------------------------+-----------------------------------------------------------------------------+-----------+----------------------+------------------------------+
+|Module Name              | RTL Object                                                                  | Inference | Size (Depth x Width) | Primitives                   | 
++-------------------------+-----------------------------------------------------------------------------+-----------+----------------------+------------------------------+
+|design_1_process_mod_0_0 | inst/SOBEL_MOD/SOBEL_KERNEL/DATA_BUFFER/FIFO_DOUBLE_1/FIFO_LINE_1_1/mem_reg | Implied   | 2 K x 8              | RAM64X1D x 52  RAM64M x 52   | 
++-------------------------+-----------------------------------------------------------------------------+-----------+----------------------+------------------------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance inst/SOBEL_MOD/SOBEL_KERNEL/DATA_BUFFER/FIFO_DOUBLE_1/FIFO_LINE_1_2/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 933.973 ; gain = 362.043
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 947.867 ; gain = 375.938
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 947.867 ; gain = 375.938
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 947.867 ; gain = 375.938
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 947.867 ; gain = 375.938
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 947.867 ; gain = 375.938
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 947.867 ; gain = 375.938
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |    29|
+|2     |LUT1     |     7|
+|3     |LUT2     |    59|
+|4     |LUT3     |    82|
+|5     |LUT4     |   112|
+|6     |LUT5     |    90|
+|7     |LUT6     |   146|
+|8     |MUXF7    |    24|
+|9     |RAM64M   |    52|
+|10    |RAM64X1D |    52|
+|11    |RAMB18E1 |     1|
+|12    |FDRE     |   290|
+|13    |LDC      |    64|
++------+---------+------+
+
+Report Instance Areas: 
++------+------------------------------+--------------------+------+
+|      |Instance                      |Module              |Cells |
++------+------------------------------+--------------------+------+
+|1     |top                           |                    |  1008|
+|2     |  inst                        |process_mod         |  1008|
+|3     |    DATA_INTERFACE            |data_interface      |    38|
+|4     |    DATA_INTERFACE_OUT        |data_interface_out  |     9|
+|5     |    SOBEL_MOD                 |sobel_mod           |   961|
+|6     |      GREY2RGB                |grey2rgb            |     9|
+|7     |      RGB2GREY                |rgb2grey            |    25|
+|8     |      SOBEL_KERNEL            |sobel_kernel        |   927|
+|9     |        DATA_BUFFER           |data_buffer         |   743|
+|10    |          FIFO_DOUBLE_1       |fifo_double_1       |   396|
+|11    |            FIFO_LINE_1_1     |fifo_line_1         |   312|
+|12    |            FIFO_LINE_1_2     |fifo_line_1_0       |    84|
+|13    |          SOBEL_DATA_MODULATE |sobel_data_modulate |   347|
+|14    |        SOBEL_CALC            |sobel_calc          |   184|
++------+------------------------------+--------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 947.867 ; gain = 375.938
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 11 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:22 . Memory (MB): peak = 947.867 ; gain = 257.418
+Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 947.867 ; gain = 375.938
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 222 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 961.465 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 168 instances were transformed.
+  LDC => LDCE: 64 instances
+  RAM64M => RAM64M (RAMD64E, RAMD64E, RAMD64E, RAMD64E): 52 instances
+  RAM64X1D => RAM64X1D (RAMD64E, RAMD64E): 52 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+92 Infos, 25 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 961.465 ; gain = 664.773
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 961.465 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'D:/Adam/Documents/Vivado_Projects/SobelPTDemoReady/SobelPTDemoReady.runs/design_1_process_mod_0_0_synth_1/design_1_process_mod_0_0.dcp' has been generated.
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Coretcl 2-1174] Renamed 13 cell refs.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 961.465 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'D:/Adam/Documents/Vivado_Projects/SobelPTDemoReady/SobelPTDemoReady.runs/design_1_process_mod_0_0_synth_1/design_1_process_mod_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_process_mod_0_0_utilization_synth.rpt -pb design_1_process_mod_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Aug 21 04:26:41 2019...

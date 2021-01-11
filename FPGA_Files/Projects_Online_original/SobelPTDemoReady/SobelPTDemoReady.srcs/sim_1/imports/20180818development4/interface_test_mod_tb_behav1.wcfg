@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="process_mod_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="process_mod_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="72800000001fs"></ZoomEndTime>
+      <Cursor1Time time="1493650000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="169"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="54" />
+   <wvobject fp_name="/process_mod_tb/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/process_mod_tb/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/process_mod_tb/VData_in" type="array">
+      <obj_property name="ElementShortName">VData_in[23:0]</obj_property>
+      <obj_property name="ObjectShortName">VData_in[23:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/process_mod_tb/VDE_in" type="logic">
+      <obj_property name="ElementShortName">VDE_in</obj_property>
+      <obj_property name="ObjectShortName">VDE_in</obj_property>
+   </wvobject>
+   <wvobject fp_name="/process_mod_tb/h" type="array">
+      <obj_property name="ElementShortName">h[31:0]</obj_property>
+      <obj_property name="ObjectShortName">h[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/process_mod_tb/v" type="array">
+      <obj_property name="ElementShortName">v[31:0]</obj_property>
+      <obj_property name="ObjectShortName">v[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/process_mod_tb/i" type="array">
+      <obj_property name="ElementShortName">i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">i[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/process_mod_tb/mod_VData_out" type="logic">
+      <obj_property name="ElementShortName">mod_VData_out</obj_property>
+      <obj_property name="ObjectShortName">mod_VData_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/process_mod_tb/mod_VDE_out" type="logic">
+      <obj_property name="ElementShortName">mod_VDE_out</obj_property>
+      <obj_property name="ObjectShortName">mod_VDE_out</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider41">
+      <obj_property name="label">interfaceIn</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/process_mod_tb/PROCESS_MOD/DATA_INTERFACE/VData_in" type="array">
+      <obj_property name="ElementShortName">VData_in[23:0]</obj_property>
+      <obj_property name="ObjectShortName">VData_in[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/process_mod_tb/PROCESS_MOD/DATA_INTERFACE/VDE_in" type="logic">
+      <obj_property name="ElementShortName">VDE_in</obj_property>
+      <obj_property name="ObjectShortName">VDE_in</obj_property>
+   </wvobject>
+   <wvobject fp_name="/process_mod_tb/PROCESS_MOD/DATA_INTERFACE/r_out" type="array">
+      <obj_property name="ElementShortName">r_out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">r_out[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/process_mod_tb/PROCESS_MOD/DATA_INTERFACE/g_out" type="array">
+      <obj_property name="ElementShortName">g_out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">g_out[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/process_mod_tb/PROCESS_MOD/DATA_INTERFACE/b_out" type="array">
+      <obj_property name="ElementShortName">b_out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">b_out[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider53">
+      <obj_property name="label">r2g</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/process_mod_tb/PROCESS_MOD/SOBEL_MOD/RGB2GREY/red_in" type="array">
+      <obj_property name="ElementShortName">red_in[7:0]</obj_property>
+      <obj_property name="ObjectShortName">red_in[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/process_mod_tb/PROCESS_MOD/SOBEL_MOD/RGB2GREY/green_in" type="array">
+      <obj_property name="ElementShortName">green_in[7:0]</obj_property>
+      <obj_property name="ObjectShortName">green_in[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/process_mod_tb/PROCESS_MOD/SOBEL_MOD/RGB2GREY/blue_in" type="array">
+      <obj_property name="ElementShortName">blue_in[7:0]</obj_property>
+      <obj_property name="ObjectShortName">blue_in[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/process_mod_tb/PROCESS_MOD/SOBEL_MOD/RGB2GREY/grey_out" type="array">
+      <obj_property name="ElementShortName">grey_out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">grey_out[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/process_mod_tb/PROCESS_MOD/SOBEL_MOD/RGB2GREY/ready_out" type="logic">
+      <obj_property name="ElementShortName">ready_out</obj_property>
+      <obj_property name="ObjectShortName">ready_out</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider75">
+      <obj_property name="label">fifo_1_1</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/process_mod_tb/PROCESS_MOD/SOBEL_MOD/SOBEL_KERNEL/DATA_BUFFER/FIFO_DOUBLE_1/FIFO_LINE_1_1/we_in" type="logic">
+      <obj_property name="ElementShortName">we_in</obj_property>
+      <obj_property name="ObjectShortName">we_in</obj_property>
+   </wvobject>
+   <wvobject fp_name="/process_mod_tb/PROCESS_MOD/SOBEL_MOD/SOBEL_KERNEL/DATA_BUFFER/FIFO_DOUBLE_1/FIFO_LINE_1_1/ready_out" type="logic">
+      <obj_property name="ElementShortName">ready_out</obj_property>
+      <obj_property name="ObjectShortName">ready_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/process_mod_tb/PROCESS_MOD/SOBEL_MOD/SOBEL_KERNEL/DATA_BUFFER/FIFO_DOUBLE_1/FIFO_LINE_1_1/iCounter" type="array">
+      <obj_property name="ElementShortName">iCounter[10:0]</obj_property>
+      <obj_property name="ObjectShortName">iCounter[10:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider69">
+      <obj_property name="label">dataMod</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/process_mod_tb/PROCESS_MOD/SOBEL_MOD/SOBEL_KERNEL/DATA_BUFFER/SOBEL_DATA_MODULATE/ready_in" type="logic">
+      <obj_property name="ElementShortName">ready_in</obj_property>
+      <obj_property name="ObjectShortName">ready_in</obj_property>
+   </wvobject>
+   <wvobject fp_name="/process_mod_tb/PROCESS_MOD/SOBEL_MOD/SOBEL_KERNEL/DATA_BUFFER/SOBEL_DATA_MODULATE/ready_out" type="logic">
+      <obj_property name="ElementShortName">ready_out</obj_property>
+      <obj_property name="ObjectShortName">ready_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/process_mod_tb/PROCESS_MOD/SOBEL_MOD/SOBEL_KERNEL/DATA_BUFFER/SOBEL_DATA_MODULATE/iCounter" type="array">
+      <obj_property name="ElementShortName">iCounter[7:0]</obj_property>
+      <obj_property name="ObjectShortName">iCounter[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/process_mod_tb/PROCESS_MOD/SOBEL_MOD/SOBEL_KERNEL/DATA_BUFFER/SOBEL_DATA_MODULATE/iRows" type="array">
+      <obj_property name="ElementShortName">iRows[10:0]</obj_property>
+      <obj_property name="ObjectShortName">iRows[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/process_mod_tb/PROCESS_MOD/SOBEL_MOD/SOBEL_KERNEL/DATA_BUFFER/SOBEL_DATA_MODULATE/iCols" type="array">
+      <obj_property name="ElementShortName">iCols[10:0]</obj_property>
+      <obj_property name="ObjectShortName">iCols[10:0]</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider65">
+      <obj_property name="label">calc</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/process_mod_tb/PROCESS_MOD/SOBEL_MOD/SOBEL_KERNEL/SOBEL_CALC/ready_in" type="logic">
+      <obj_property name="ElementShortName">ready_in</obj_property>
+      <obj_property name="ObjectShortName">ready_in</obj_property>
+   </wvobject>
+   <wvobject fp_name="/process_mod_tb/PROCESS_MOD/SOBEL_MOD/SOBEL_KERNEL/SOBEL_CALC/grey_out" type="array">
+      <obj_property name="ElementShortName">grey_out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">grey_out[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/process_mod_tb/PROCESS_MOD/SOBEL_MOD/SOBEL_KERNEL/SOBEL_CALC/ready_out" type="logic">
+      <obj_property name="ElementShortName">ready_out</obj_property>
+      <obj_property name="ObjectShortName">ready_out</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider47">
+      <obj_property name="label">g2r</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/process_mod_tb/PROCESS_MOD/SOBEL_MOD/GREY2RGB/grey_in" type="array">
+      <obj_property name="ElementShortName">grey_in[7:0]</obj_property>
+      <obj_property name="ObjectShortName">grey_in[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/process_mod_tb/PROCESS_MOD/SOBEL_MOD/GREY2RGB/ready_in" type="logic">
+      <obj_property name="ElementShortName">ready_in</obj_property>
+      <obj_property name="ObjectShortName">ready_in</obj_property>
+   </wvobject>
+   <wvobject fp_name="/process_mod_tb/PROCESS_MOD/SOBEL_MOD/GREY2RGB/red_out" type="array">
+      <obj_property name="ElementShortName">red_out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">red_out[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/process_mod_tb/PROCESS_MOD/SOBEL_MOD/GREY2RGB/green_out" type="array">
+      <obj_property name="ElementShortName">green_out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">green_out[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/process_mod_tb/PROCESS_MOD/SOBEL_MOD/GREY2RGB/blue_out" type="array">
+      <obj_property name="ElementShortName">blue_out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">blue_out[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/process_mod_tb/PROCESS_MOD/SOBEL_MOD/GREY2RGB/ready_out" type="logic">
+      <obj_property name="ElementShortName">ready_out</obj_property>
+      <obj_property name="ObjectShortName">ready_out</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider54">
+      <obj_property name="label">interfaceOut</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/process_mod_tb/PROCESS_MOD/DATA_INTERFACE_OUT/r_in" type="array">
+      <obj_property name="ElementShortName">r_in[7:0]</obj_property>
+      <obj_property name="ObjectShortName">r_in[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/process_mod_tb/PROCESS_MOD/DATA_INTERFACE_OUT/g_in" type="array">
+      <obj_property name="ElementShortName">g_in[7:0]</obj_property>
+      <obj_property name="ObjectShortName">g_in[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/process_mod_tb/PROCESS_MOD/DATA_INTERFACE_OUT/b_in" type="array">
+      <obj_property name="ElementShortName">b_in[7:0]</obj_property>
+      <obj_property name="ObjectShortName">b_in[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/process_mod_tb/PROCESS_MOD/DATA_INTERFACE_OUT/HSync_in" type="logic">
+      <obj_property name="ElementShortName">HSync_in</obj_property>
+      <obj_property name="ObjectShortName">HSync_in</obj_property>
+   </wvobject>
+   <wvobject fp_name="/process_mod_tb/PROCESS_MOD/DATA_INTERFACE_OUT/VSync_in" type="logic">
+      <obj_property name="ElementShortName">VSync_in</obj_property>
+      <obj_property name="ObjectShortName">VSync_in</obj_property>
+   </wvobject>
+   <wvobject fp_name="/process_mod_tb/PROCESS_MOD/DATA_INTERFACE_OUT/VDE_in" type="logic">
+      <obj_property name="ElementShortName">VDE_in</obj_property>
+      <obj_property name="ObjectShortName">VDE_in</obj_property>
+   </wvobject>
+   <wvobject fp_name="/process_mod_tb/PROCESS_MOD/DATA_INTERFACE_OUT/VData_out" type="array">
+      <obj_property name="ElementShortName">VData_out[23:0]</obj_property>
+      <obj_property name="ObjectShortName">VData_out[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/process_mod_tb/PROCESS_MOD/DATA_INTERFACE_OUT/HSync_out" type="logic">
+      <obj_property name="ElementShortName">HSync_out</obj_property>
+      <obj_property name="ObjectShortName">HSync_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/process_mod_tb/PROCESS_MOD/DATA_INTERFACE_OUT/VSync_out" type="logic">
+      <obj_property name="ElementShortName">VSync_out</obj_property>
+      <obj_property name="ObjectShortName">VSync_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/process_mod_tb/PROCESS_MOD/DATA_INTERFACE_OUT/VDE_out" type="logic">
+      <obj_property name="ElementShortName">VDE_out</obj_property>
+      <obj_property name="ObjectShortName">VDE_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/process_mod_tb/PROCESS_MOD/sobel_VDE_out" type="logic">
+      <obj_property name="ElementShortName">sobel_VDE_out</obj_property>
+      <obj_property name="ObjectShortName">sobel_VDE_out</obj_property>
+   </wvobject>
+</wave_config>

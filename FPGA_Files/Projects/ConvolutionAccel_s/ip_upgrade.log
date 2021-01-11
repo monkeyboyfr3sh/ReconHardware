@@ -1,6 +1,69 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Mon Jan  4 13:50:48 2021
+| Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Convolution_Controller_Convolution_Controll_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Convolution_Controller_Convolution_Controll_0_1 (xilinx.com:user:Convolution_Controller:1.0) from (Rev. 82) to (Rev. 83)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Mon Jan  4 13:48:13 2021
+| Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Convolution_Controller_Convolution_Controll_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of Convolution_Controller_Convolution_Controll_0_1 (xilinx.com:user:Convolution_Controller:1.0 (Rev. 82)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Sat Jan  2 18:19:51 2021
+| Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Convolution_Controller_Convolution_Controll_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Convolution_Controller_Convolution_Controll_0_0 (xilinx.com:user:Convolution_Controller:1.0) from (Rev. 81) to (Rev. 82)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
 | Date         : Wed Dec 23 17:36:27 2020
 | Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 | Command      : upgrade_ip

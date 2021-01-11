@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log PR_LED_PE.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source PR_LED_PE.tcl
+EAStep vivado -log PR_LED_des_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source PR_LED_des_wrapper.tcl

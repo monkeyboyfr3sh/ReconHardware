@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-module AXI_Conv_wrapper
+module CPE_Wrapper
 #(  // Parameters, these must also be set in the BD
     //Can probably do this automated some way
     parameter DATA_WIDTH = 32,
