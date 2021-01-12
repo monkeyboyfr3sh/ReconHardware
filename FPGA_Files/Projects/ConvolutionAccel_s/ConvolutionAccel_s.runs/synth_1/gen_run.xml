@@ -3,8 +3,6 @@
   <File Type="PA-TCL" Name="AXI_Conv_wrapper.tcl"/>
   <File Type="REPORTS-TCL" Name="AXI_Conv_wrapper_reports.tcl"/>
   <File Type="RDS-RDS" Name="AXI_Conv_wrapper.vds"/>
-  <File Type="RDS-UTIL" Name="AXI_Conv_wrapper_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="AXI_Conv_wrapper_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="AXI_Conv_wrapper.dcp"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
@@ -87,10 +85,10 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="Convolution_Controller_rst_ps7_0_100M_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Convolution_Controller_ila_0_3"/>
+  <BlockFileSet Type="BlockSrcs" Name="Convolution_Controller_rst_ps7_0_100M_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Convolution_Controller_xbar_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="Convolution_Controller_ila_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Convolution_Controller_Convolution_Controll_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="Convolution_Controller_ila_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Convolution_Controller_axi_dma_0_1"/>
 </GenRun>
