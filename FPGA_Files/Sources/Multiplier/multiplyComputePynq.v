@@ -12,13 +12,13 @@ module multiplyComputePynq
     parameter DATA_WIDTH = 32
 )
 ( // Ports
+    clk,
+    reset,
     product,
     multiplier,
     multiplicand,
     ready,
-    start,
-    clk,
-    reset
+    start
 );
 
 input [DATA_WIDTH-1:0]  multiplier, multiplicand;

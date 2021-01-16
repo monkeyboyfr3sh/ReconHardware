@@ -38350,4 +38350,76 @@ Calculated value:        429
 
 m_axis_valid went high ... 
 Expected value:         765 
-Calculated valu
+Calculated value:        765 
+
+m_axis_valid went high ... 
+Expected value:         632 
+Calculated value:        632 
+
+m_axis_valid went high ... 
+Expected value:         676 
+Calculated value:        676 
+
+m_axis_valid went high ... 
+Expected value:         641 
+Calculated value:        641 
+
+m_axis_valid went high ... 
+Expected value:         619 
+Calculated value:        619 
+
+m_axis_valid went high ... 
+Expected value:         596 
+Calculated value:        596 
+
+m_axis_valid went high ... 
+Expected value:         430 
+Calculated value:        430 
+
+m_axis_valid went high ... 
+Expected value:         486 
+Calculated value:        486 
+
+m_axis_valid went high ... 
+Expected value:         377 
+Calculated value:        377 
+
+m_axis_valid went high ... 
+Expected value:         554 
+Calculated value:        554 
+
+m_axis_valid went high ... 
+Expected value:         524 
+Calculated value:        524 
+
+m_axis_valid went high ... 
+Expected value:         588 
+Calculated value:        588 
+
+m_axis_valid went high ... 
+Expected value:         388 
+Calculated value:        388 
+
+m_axis_valid went high ... 
+Expected value:         701 
+Calculated value:        701 
+
+m_axis_valid went high ... 
+Expected value:         525 
+Calculated value:        525 
+
+m_axis_valid went high ... 
+Expected value:         393 
+Calculated value:        393 
+
+m_axis_valid went high ... 
+Expected value:         546 
+Calculated value:        546 
+
+================================================
+
+Simulation completed at     1254885 ns
+
+All        9604 convolutions passed!
+
+$stop called at time : 1254885 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/Controller_Test_tb.v" Line 363

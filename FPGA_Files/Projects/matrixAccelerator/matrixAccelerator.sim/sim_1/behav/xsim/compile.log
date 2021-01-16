@@ -1,19 +1,16 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/FPGA_Files/Sources/definitions.h" into library xil_defaultlib
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/FPGA_Files/Sources/General/XBar2.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module XBar2
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/FPGA_Files/Sources/General/aFIFO.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module aFIFO
-WARNING: [VRFC 10-3380] identifier 'o_rdata' is used before its declaration [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/aFIFO.v:94]
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/FPGA_Files/Sources/Adder/adder.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module adder
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/FPGA_Files/Sources/General/matrixAccTopDevice.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ConvolutionAccelerator
-INFO: [VRFC 10-2458] undeclared symbol CTRL_RST, assumed default net type wire [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/matrixAccTopDevice.v:61]
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/FPGA_Files/Sources/General/matrixAccelerator.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module matrixAccelerator
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/FPGA_Files/Sources/General/matrixControl3x3.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ConvolutionController
+INFO: [VRFC 10-2458] undeclared symbol temp_out_data, assumed default net type wire [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/matrixAccelerator.v:48]
+INFO: [VRFC 10-2458] undeclared symbol temp_out_sig, assumed default net type wire [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/matrixAccelerator.v:49]
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/FPGA_Files/Sources/Multiplier/multiplyComputePynq.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module multiplyComputePynq
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/Image_Convolution.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Image_Convolution
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/Adder/adder_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module adder_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/Multiplier/multiplier_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multiplier_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/General/matrixAccelerator_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module matrixAccelerator_tb

@@ -1,5 +1,3 @@
-`timescale 1ns / 1ps
-
 /*
 *   adder.v:
 *       When add is high, addend will be addded to accumulate

@@ -4,5 +4,7 @@
 			"path": "..\\FPGA_Files"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"git.ignoreLimitWarning": true
+	}
 }
