@@ -1,13 +1,13 @@
 `include "definitions.h"
 `timescale `myTimeScale
 
-//AXI definitions
-`define data_width 32
-`define addr_width 10
-
 //Test stuff
 `define test_width 100
 `define test_height 100
+
+`define data_width 32
+`define addr_width 10
+`define kernel_size 3
 
 module Controller_Test_tb;
 
@@ -15,14 +15,11 @@ reg rand_test = 1;//Set test bench to use random variables
 
 reg    axi_clk;
 reg    axi_reset_n;
-wire    ip_reset_out;
 wire [`data_width-1:0] cSum;
 wire    cReady;
-wire [`inputPortCount*`data_width-1:0] MULTIPLIER_INPUT;   //Flat output for data set
-wire [`inputPortCount*`data_width-1:0] MULTIPLICAND_INPUT; //Flat output for filter set
-wire [`inputPortCount-1:0] MULTIPLY_START;
-wire [`inputPortCount-1:0] mReady_connector;
-wire FINALADDOUT;
+wire [`kernel_size*`kernel_size*`data_width-1:0] MULTIPLIER_INPUT;   //Flat output for data set
+wire [`kernel_size*`kernel_size*`data_width-1:0] MULTIPLICAND_INPUT; //Flat output for filter set
+wire [`kernel_size*`kernel_size-1:0] MULTIPLY_START;
 
 //AXI4-S slave i/f - Data stream port
 reg    s_axis_valid;
@@ -67,18 +64,17 @@ reg s_axi_bready;
 Convolution_Controller 
 #( // Parameters
     .DATA_WIDTH(`data_width),
-    .KERNEL_SIZE(3)
-)   dut
-    (//IP Ports
+    .KERNEL_SIZE(`kernel_size),
+    .AXI_ADDR_WIDTH(`addr_width)
+)   
+UUT (//IP Ports
     axi_clk,
     axi_reset_n,
-    ip_reset_out,
     cSum,
     cReady,
     MULTIPLIER_INPUT,   //Flat output for data set
     MULTIPLICAND_INPUT, //Flat output for filter set
     MULTIPLY_START,
-    FINALADDOUT,
     
     //AXI4-S slave i/f - Data stream port
     s_axis_valid,
@@ -123,26 +119,23 @@ Convolution_Controller
  matrixAccelerator
  #( // Parameters
     .DATA_WIDTH(`data_width),
-    .KERNEL_SIZE(3)
+    .KERNEL_SIZE(`kernel_size)
 ) matrixAccel(   
     .Clk(axi_clk),
-    .Rst(~axi_reset_n||ip_reset_out),
+    .Rst(~axi_reset_n),
     .multiplier_input(MULTIPLIER_INPUT),        //Flat input connector. Has width of `bitLength*`inputPortcount
     .multiplicand_input(MULTIPLICAND_INPUT),    //Flat input connector. Has width of `bitLength*`inputPortcount
     .AddressSelect(AddressSelect),                  //Controls addressSelect for internal XBar                          
     .mStart(MULTIPLY_START),                      //Starts multiplication for all three multipliers
-    .mReady(mReady_connector),
-    .direct(1),                                     //Controll bit to direct connect XBar IO
-    .Add(mReady_connector),                         //Signals Adders to Add @posedge clk
-    .finalAdd(FINALADDOUT),
+    .direct(1),
     .finalAccumulate(cSum),
     .finalReady(cReady)
 );
 
 integer i, linecnt, columncnt;
 
-integer curr_dataSet [`KERNELSIZE*`KERNELSIZE-1:0];
-integer curr_filterSet [`KERNELSIZE*`KERNELSIZE-1:0];
+integer curr_dataSet [`kernel_size*`kernel_size-1:0];
+integer curr_filterSet [`kernel_size*`kernel_size-1:0];
 integer curr_cSum;
 integer i_test;
 
@@ -159,7 +152,7 @@ axi_reset_n = 1;
 
 //Enable the IP
 s_axi_awvalid = 1;
-s_axi_awaddr = 8;//Select Control register
+s_axi_awaddr = 0;//Select Control register
 s_axi_wvalid = 1;
 s_axi_wdata = 1;
 #`clkPeriod;
@@ -170,7 +163,7 @@ s_axi_wvalid = 0;
 
 //Write the picture width info
 s_axi_awvalid = 1;
-s_axi_awaddr = 0;//Select Width register
+s_axi_awaddr = 16;//Select Width register
 s_axi_wvalid = 1;
 s_axi_wdata = `test_width;
 #`clkPeriod;
@@ -181,7 +174,7 @@ s_axi_wvalid = 0;
 
 //Test the reset register
 s_axi_awvalid = 1;
-s_axi_awaddr = 56;//Select reset register
+s_axi_awaddr = 4;//Select reset register
 s_axi_wvalid = 1;
 s_axi_wdata = 1;
 #`clkPeriod;
@@ -192,7 +185,7 @@ s_axi_wvalid = 0;
 
 //Enable the IP
 s_axi_awvalid = 1;
-s_axi_awaddr = 8;//Select Control register
+s_axi_awaddr = 0;//Select Control register
 s_axi_wvalid = 1;
 s_axi_wdata = 1;
 #`clkPeriod;
@@ -203,7 +196,7 @@ s_axi_wvalid = 0;
 
 //Write the picture width info
 s_axi_awvalid = 1;
-s_axi_awaddr = 0;//Select Width register
+s_axi_awaddr = 16;//Select Width register
 s_axi_wvalid = 1;
 s_axi_wdata = `test_width;
 #`clkPeriod;
@@ -214,7 +207,7 @@ s_axi_wvalid = 0;
 
 //Write the picture height info
 s_axi_awvalid = 1;
-s_axi_awaddr = 4;//Select Height register
+s_axi_awaddr = 20;//Select Height register
 s_axi_wvalid = 1;
 s_axi_wdata = `test_height;
 #`clkPeriod;
@@ -225,9 +218,9 @@ s_axi_wvalid = 0;
 //490 ns in sim
 
 //Load the filter values into IP
-for(i = 0;i<`KERNELSIZE*`KERNELSIZE;i=i+1)begin
+for(i = 0;i<`kernel_size*`kernel_size;i=i+1)begin
     s_axi_awvalid = 1;
-    s_axi_awaddr = (i*4)+20;
+    s_axi_awaddr = (i*4)+24;
     s_axi_wvalid = 1;
     s_axi_wdata = i;//Data going into filter
     curr_filterSet[i] = s_axi_wdata; //Also put the data in the test array
@@ -243,7 +236,7 @@ for(linecnt = 0;linecnt< (`test_height-2) ;linecnt=linecnt+1)begin
     s_axis_keep = 4'hf;
     
     //First calculation for the line, it fills the kernel with 9 data points
-    for(i = 0;i<9;i=i+1)begin
+    for(i = 0;i<`kernel_size*`kernel_size;i=i+1)begin
         
         //IP is not ready to process data
         if(!s_axis_ready)begin
@@ -269,7 +262,7 @@ for(linecnt = 0;linecnt< (`test_height-2) ;linecnt=linecnt+1)begin
     for(columncnt = 1;columncnt< (`test_width-2) ;columncnt=columncnt+1)begin
         
         //Fill kernel with 3 data points
-        for(i = 6;i<9;i=i+1)begin
+        for(i = `kernel_size*2;i<`kernel_size*`kernel_size;i=i+1)begin
             
             //IP is not ready to process data
             if(!s_axis_ready)begin
@@ -284,12 +277,12 @@ for(linecnt = 0;linecnt< (`test_height-2) ;linecnt=linecnt+1)begin
             //Putting data on the bus
             else begin
                 //Last pixel condition
-                if( i==8 && columncnt==`test_width-3 && linecnt==`test_height-3) s_axis_last = 1;
+                if( i==`kernel_size*`kernel_size-1 && columncnt==`test_width-`kernel_size && linecnt==`test_height-`kernel_size) s_axis_last = 1;
                 m_axis_ready = 0;
                 
                 //Data on the bus
                 s_axis_valid = 1;
-                s_axis_data = (rand_test) ? ($urandom) % (`data_width+2) : i-6;
+                s_axis_data = (rand_test) ? ($urandom) % (`data_width-2) : i-6;
                 
                 //Correcting data set
                 curr_dataSet[i-6] = curr_dataSet[i-3];
@@ -311,14 +304,13 @@ always#(`clkPeriod/2) axi_clk = ~axi_clk;
 
 integer cCount = 0;
 integer pass_count = 0;
-integer between;
+integer ovrflw_cnt = 0;
 
 always @(posedge m_axis_valid)
 begin
     curr_cSum = 0;
-    for(i_test=0;i_test<`KERNELSIZE*`KERNELSIZE;i_test=i_test+1)begin
-        between = curr_filterSet[i_test]*curr_dataSet[i_test];
-        curr_cSum = curr_cSum + between;
+    for(i_test=0;i_test<`kernel_size*`kernel_size;i_test=i_test+1)begin
+        curr_cSum = curr_cSum + curr_filterSet[i_test]*curr_dataSet[i_test];;
     end    
     
     cCount= cCount + 1;
@@ -331,8 +323,13 @@ begin
     
     //Stop the simulation to see whats the issue
     else begin
-        $display("Failed at test %d\n",cCount); 
-        $finish;//Puts simulator in user mode
+        $display("Failed at test %d\n",cCount);
+        
+        if(curr_cSum>2**(`data_width)-1)begin
+            ovrflw_cnt = ovrflw_cnt + 1;
+        end
+        else
+            $finish;//Puts simulator in user mode
     end
 end
 
@@ -346,18 +343,19 @@ begin
         $display("================================================\n");
         $display("Simulation completed at %d ns\n",tf);
         
-        if(cCount == (`test_width-2)*(`test_height-2))begin
+        if(cCount == (`test_width-`kernel_size+1)*(`test_height-`kernel_size+1))begin
             if(pass_count==cCount)begin
                 $display("All %d convolutions passed!\n",cCount);
             end
             
             else begin
                 $display("Only %d out of %d tests passed\n",pass_count,cCount);
+                $display("%d of fails were overflow\n",ovrflw_cnt);
             end
         end
         
         else begin
-            $display("ERROR with state machine!!!! EXPECTED %d CONVOLUTIONS, BUT COMPLETED %d. %d convoltions were a pass\n",(`test_width-2)*(`test_height-2),cCount,pass_count);
+            $display("ERROR with state machine!!!! EXPECTED %d CONVOLUTIONS, BUT COMPLETED %d. %d convoltions were a pass\n",(`test_width-`kernel_size+1)*(`test_height-`kernel_size+1),cCount,pass_count);
         end
         
         $stop;

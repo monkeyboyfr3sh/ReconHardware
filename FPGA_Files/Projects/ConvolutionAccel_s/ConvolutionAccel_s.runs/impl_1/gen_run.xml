@@ -1,40 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1609790300">
-  <File Type="PA-TCL" Name="AXI_Conv_wrapper.tcl"/>
-  <File Type="REPORTS-TCL" Name="AXI_Conv_wrapper_reports.tcl"/>
-  <File Type="BITSTR-MSK" Name="AXI_Conv_wrapper.msk"/>
-  <File Type="RDI-RDI" Name="AXI_Conv_wrapper.vdi"/>
-  <File Type="BG-BIT" Name="AXI_Conv_wrapper.bit"/>
-  <File Type="BG-DRC" Name="AXI_Conv_wrapper.drc"/>
-  <File Type="BG-BGN" Name="AXI_Conv_wrapper.bgn"/>
-  <File Type="BG-BIN" Name="AXI_Conv_wrapper.bin"/>
-  <File Type="BITSTR-RBT" Name="AXI_Conv_wrapper.rbt"/>
-  <File Type="BITSTR-NKY" Name="AXI_Conv_wrapper.nky"/>
-  <File Type="BITSTR-BMM" Name="AXI_Conv_wrapper_bd.bmm"/>
-  <File Type="BITSTR-MMI" Name="AXI_Conv_wrapper.mmi"/>
-  <File Type="BITSTR-SYSDEF" Name="AXI_Conv_wrapper.sysdef"/>
+<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1611017318">
+  <File Type="BITSTR-BMM" Name="CPE_Wrapper_bd.bmm"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="CPE_Wrapper_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="CPE_Wrapper_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR" Name="CPE_Wrapper_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="CPE_Wrapper.tcl"/>
+  <File Type="OPT-TIMING" Name="CPE_Wrapper_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="CPE_Wrapper_opt.dcp"/>
+  <File Type="ROUTE-PWR-SUM" Name="CPE_Wrapper_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="CPE_Wrapper_reports.tcl"/>
+  <File Type="OPT-DRC" Name="CPE_Wrapper_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="CPE_Wrapper.hwdef"/>
+  <File Type="PWROPT-DCP" Name="CPE_Wrapper_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="CPE_Wrapper_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="CPE_Wrapper_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="CPE_Wrapper_placed.dcp"/>
+  <File Type="PLACE-IO" Name="CPE_Wrapper_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="CPE_Wrapper_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="CPE_Wrapper_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="CPE_Wrapper_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="CPE_Wrapper_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="CPE_Wrapper_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="CPE_Wrapper_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="CPE_Wrapper_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="CPE_Wrapper_postplace_pwropt.dcp"/>
+  <File Type="BG-BIN" Name="CPE_Wrapper.bin"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="CPE_Wrapper_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="CPE_Wrapper_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="CPE_Wrapper_drc_physopted.rpt"/>
+  <File Type="BITSTR-MSK" Name="CPE_Wrapper.msk"/>
+  <File Type="PHYSOPT-TIMING" Name="CPE_Wrapper_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="CPE_Wrapper_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="CPE_Wrapper_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="CPE_Wrapper_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="CPE_Wrapper_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="CPE_Wrapper_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="CPE_Wrapper_drc_routed.rpx"/>
+  <File Type="BITSTR-MMI" Name="CPE_Wrapper.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="CPE_Wrapper_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="CPE_Wrapper_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="CPE_Wrapper_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="CPE_Wrapper_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="CPE_Wrapper_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="CPE_Wrapper_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="CPE_Wrapper_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="CPE_Wrapper_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="CPE_Wrapper_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="CPE_Wrapper_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="CPE_Wrapper_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="CPE_Wrapper_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="CPE_Wrapper_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="CPE_Wrapper_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="CPE_Wrapper_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="CPE_Wrapper_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="CPE_Wrapper_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="CPE_Wrapper_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="CPE_Wrapper_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="CPE_Wrapper_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="CPE_Wrapper_bus_skew_postroute_physopted.pb"/>
+  <File Type="BG-BIT" Name="CPE_Wrapper.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="CPE_Wrapper_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-RBT" Name="CPE_Wrapper.rbt"/>
+  <File Type="BITSTR-NKY" Name="CPE_Wrapper.nky"/>
+  <File Type="PDI-FILE" Name="CPE_Wrapper.pdi"/>
+  <File Type="RCFI_FILE" Name="CPE_Wrapper.rcfi"/>
+  <File Type="CFI_FILE" Name="CPE_Wrapper.cfi"/>
+  <File Type="RNPI_FILE" Name="CPE_Wrapper.rnpi"/>
+  <File Type="NPI_FILE" Name="CPE_Wrapper.npi"/>
+  <File Type="RBD_FILE" Name="CPE_Wrapper.rbd"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="AXI_Conv_wrapper.ltx"/>
-  <File Type="RCFI_FILE" Name="AXI_Conv_wrapper.rcfi"/>
+  <File Type="BITSTR-LTX" Name="CPE_Wrapper.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="CPE_Wrapper.sysdef"/>
+  <File Type="BG-BGN" Name="CPE_Wrapper.bgn"/>
+  <File Type="BG-DRC" Name="CPE_Wrapper.drc"/>
+  <File Type="RDI-RDI" Name="CPE_Wrapper.vdi"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
-  <File Type="OPT-HWDEF" Name="AXI_Conv_wrapper.hwdef"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="AXI_Conv_wrapper_incremental_reuse_pre_placed.rpt"/>
-  <File Type="ROUTE-DCP" Name="AXI_Conv_wrapper_routed.dcp"/>
-  <File Type="ROUTE-ERROR-DCP" Name="AXI_Conv_wrapper_routed_error.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="AXI_Conv_wrapper_routed_bb.dcp"/>
-  <File Type="ROUTE-TIMING-PB" Name="AXI_Conv_wrapper_timing_summary_routed.pb"/>
-  <File Type="OPT-DCP" Name="AXI_Conv_wrapper_opt.dcp"/>
-  <File Type="PLACE-DCP" Name="AXI_Conv_wrapper_placed.dcp"/>
-  <File Type="PWROPT-DCP" Name="AXI_Conv_wrapper_pwropt.dcp"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="AXI_Conv_wrapper_postplace_pwropt.dcp"/>
-  <File Type="PHYSOPT-DCP" Name="AXI_Conv_wrapper_physopt.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="AXI_Conv_wrapper_postroute_physopt.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="AXI_Conv_wrapper_postroute_physopt_bb.dcp"/>
-  <File Type="PDI-FILE" Name="AXI_Conv_wrapper.pdi"/>
-  <File Type="CFI_FILE" Name="AXI_Conv_wrapper.cfi"/>
-  <File Type="RNPI_FILE" Name="AXI_Conv_wrapper.rnpi"/>
-  <File Type="NPI_FILE" Name="AXI_Conv_wrapper.npi"/>
-  <File Type="RBD_FILE" Name="AXI_Conv_wrapper.rbd"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/bd/Convolution_Controller/Convolution_Controller.bd">
@@ -58,7 +98,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../../Sources/Adder/adder.v">
+    <File Path="$PPRDIR/../../Sources/Adder/int_adder_tree.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -96,7 +136,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="AXI_Conv_wrapper"/>
+      <Option Name="TopModule" Val="CPE_Wrapper"/>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
@@ -123,12 +163,9 @@
     <Step Id="route_design"/>
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
-    <Step Id="write_device_image"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="Convolution_Controller_ila_0_3"/>
   <BlockFileSet Type="BlockSrcs" Name="Convolution_Controller_rst_ps7_0_100M_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Convolution_Controller_xbar_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="Convolution_Controller_Convolution_Controll_0_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="Convolution_Controller_ila_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Convolution_Controller_axi_dma_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="Convolution_Controller_Convolution_Controll_0_1"/>
 </GenRun>

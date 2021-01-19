@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:user:Convolution_Controller:1.0
-// IP Revision: 83
+// IP Revision: 85
 
 `timescale 1ns/1ps
 
@@ -57,13 +57,11 @@
 module Convolution_Controller_Convolution_Controll_0_1 (
   axi_clk,
   axi_reset_n,
-  ip_reset_out,
   cSum,
   cReady,
   MULTIPLIER_INPUT,
   MULTIPLICAND_INPUT,
   MULTIPLY_START,
-  FINALADDOUT,
   s_axis_valid,
   s_axis_data,
   s_axis_ready,
@@ -97,13 +95,11 @@ input wire axi_clk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME axi_reset_n, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 axi_reset_n RST" *)
 input wire axi_reset_n;
-output wire ip_reset_out;
 input wire [31 : 0] cSum;
 input wire cReady;
-output wire [95 : 0] MULTIPLIER_INPUT;
-output wire [95 : 0] MULTIPLICAND_INPUT;
-output wire [2 : 0] MULTIPLY_START;
-output wire FINALADDOUT;
+output wire [287 : 0] MULTIPLIER_INPUT;
+output wire [287 : 0] MULTIPLICAND_INPUT;
+output wire [8 : 0] MULTIPLY_START;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis_DATA_IN TVALID" *)
 input wire s_axis_valid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis_DATA_IN TDATA" *)
@@ -164,17 +160,17 @@ output wire s_axi_rlast;
     .CTRL_REG_SIZE(200),
     .AXI_ADDR_WIDTH(10),
     .CTRL_REG_ADDR_WIDTH("8"),
-    .STATE_MAC_ADDR_WIDTH(4)
+    .STATE_MAC_ADDR_WIDTH(4),
+    .FILTER_BASE(24),
+    .DATA_BASE(60)
   ) inst (
     .axi_clk(axi_clk),
     .axi_reset_n(axi_reset_n),
-    .ip_reset_out(ip_reset_out),
     .cSum(cSum),
     .cReady(cReady),
     .MULTIPLIER_INPUT(MULTIPLIER_INPUT),
     .MULTIPLICAND_INPUT(MULTIPLICAND_INPUT),
     .MULTIPLY_START(MULTIPLY_START),
-    .FINALADDOUT(FINALADDOUT),
     .s_axis_valid(s_axis_valid),
     .s_axis_data(s_axis_data),
     .s_axis_ready(s_axis_ready),

@@ -4,8 +4,8 @@ verilog xil_defaultlib  --include "../../../../../../Sources" \
 "../../../../../../Sources/General/matrixAccelerator.v" \
 "../../../../../../Sources/General/XBar2.v" \
 "../../../../../../Sources/Multiplier/multiplyComputePynq.v" \
-"../../../../../../Sources/Adder/adder.v" \
-"../../../../../../Sources/TB/Controller_Test_tb.v" \
+"../../../../../../Sources/Adder/int_adder_tree.v" \
+"../../../../../../Sources/TB/General/Controller_Test_tb.v" \
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"

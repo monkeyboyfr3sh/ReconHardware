@@ -18,10 +18,10 @@ module adder
 );
 
 input Clk,Rst,Add;
-input   [(DATA_WIDTH*2)-1:0] addend;
-reg     [(DATA_WIDTH*2)-1:0] accumulate = 0;
+input   [DATA_WIDTH-1:0] addend;
+reg     [DATA_WIDTH-1:0] accumulate = 0;
 
-output  [(DATA_WIDTH*2)-1:0] sum;
+output  [DATA_WIDTH-1:0] sum;
 
 assign sum = accumulate;
 

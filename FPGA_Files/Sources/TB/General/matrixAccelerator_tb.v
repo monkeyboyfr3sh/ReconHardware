@@ -3,117 +3,75 @@
 
 module matrixAccelerator_tb;
 
-`define data_width 32
+`define data_width 8
+`define kernel_size 3
 `define test_cnt 100
 reg rand_test = 1; // Set test bench to use random variables
 
 //Inputs
-reg     Clk,Rst,direct,finalAdd;
-reg     [`inputPortCount-1:0]                   mStart;
-reg     [`outputPortCount-1:0]                  Add;
-reg     [`addressLength-1:0] AddressSelect;
-reg     [`inputPortCount*`data_width-1:0]        multiplier_input;
-reg     [`inputPortCount*`data_width-1:0]        multiplicand_input;
+reg     Clk,Rst,direct;
+reg     [`kernel_size*`kernel_size-1:0]                 mStart;
+reg     [`data_width-1:0]   multiplier_reg [`kernel_size*`kernel_size-1:0];
+reg     [`data_width-1:0]   multiplicand_reg [`kernel_size*`kernel_size-1:0];
+wire    [`kernel_size*`kernel_size*`data_width-1:0]     multiplier_input;
+wire    [`kernel_size*`kernel_size*`data_width-1:0]     multiplicand_input;
 
 //Outputs
-wire    [`KERNELSIZE-1:0] mReady;
 wire    finalReady;
 wire    [(2*`data_width)-1:0]   finalAccumulate;
 
+generate
+    genvar j;
+    for(j = 0;j<`kernel_size*`kernel_size;j=j+1)begin
+        assign multiplier_input[j*`data_width+:`data_width] = multiplier_reg[j];
+        assign multiplicand_input[j*`data_width+:`data_width] = multiplicand_reg[j];
+    end
+endgenerate
+
 matrixAccelerator
 #( // Parameters
-    .DATA_WIDTH(`data_width)
+    .DATA_WIDTH(`data_width),
+    .KERNEL_SIZE(`kernel_size)
 )
-UUT ( // Ports  
-    Clk,Rst,
-    multiplier_input,
-    multiplicand_input,
-    AddressSelect,
-    mStart,
-    mReady,
-    direct,
-    Add,
-    finalAdd,
+UUT (   
+    Clk,
+    Rst,
+    multiplier_input,        //Flat input connector. Has width of `bitLength*`inputPortcount
+    multiplicand_input,    //Flat input connector. Has width of `bitLength*`inputPortcount
+    AddressSelect,                  //Controls addressSelect for internal XBar                          
+    mStart,                      //Starts multiplication for all three multipliers
+    1,                                     //Controll bit to direct connect XBar IO
     finalAccumulate,
     finalReady
 );
             
 integer i;
-integer m_column;
 integer pass_cnt,test_cnt;
+reg [(2*`data_width)-1:0]   temp;
 
 initial begin
 Clk = 0;
 direct = 1;
-AddressSelect = 0;
 Rst = 1;
 #`clkPeriod;
 Rst = 0;
-multiplier_input = 0;
-multiplicand_input = 0;
-
-m_column = 0;
 mStart = 0;
-Add = 0;
-finalAdd = 0;
 pass_cnt = 0;
 test_cnt = 0;
-
-// Queue First Multiply
-for(i = 0; i < `KERNELSIZE; i = i + 1)begin
-    multiplier_input[i*`data_width+:8] = (rand_test) ? ($urandom) % 2**(`data_width-1) : i;
-    multiplicand_input[i*`data_width+:8] = (rand_test) ? ($urandom) % 2**(`data_width-3) : i;
-    mStart = 2**`KERNELSIZE-1;
-end
-m_column = m_column + 1;
+temp = 0;
 #`clkPeriod;
 end
 
-// Multiplication Completed
-always @(posedge Clk)begin
-
-    if(mReady)begin    
-        if(m_column < `KERNELSIZE)begin
-            // Queue Next Multiply
-            for(i = 0; i < `KERNELSIZE; i = i + 1)begin
-                multiplier_input[i*`data_width+:8] = (rand_test) ? ($urandom) % 2**(`data_width-1) : i;
-                multiplicand_input[i*`data_width+:8] = (rand_test) ? ($urandom) % 2**(`data_width-3) : i;
-                mStart = 2**`KERNELSIZE-1;  
-                
-                //Start adding process
-                Add = mStart;
-            end
-            m_column = m_column + 1;
-        end
-        
-        else begin
-            m_column = 0;
-            mStart = 0;
-            Add = 0;
-            
-            //Queue final add
-            finalAdd = 1;
-        end
-    end
-    #`clkPeriod;
-end
-
 // Convolution sum calculated
-always@(posedge finalReady)begin
-    finalAdd = 0;
-    Rst = 1;
-    #`clkPeriod;
-    Rst = 0;
-    
-    // Queue First Multiply
-    for(i = 0; i < `KERNELSIZE; i = i + 1)begin
-        multiplier_input[i*`data_width+:8] = (rand_test) ? ($urandom) % 2**(`data_width-1) : i;
-        multiplicand_input[i*`data_width+:8] = (rand_test) ? ($urandom) % 2**(`data_width-3) : i;
-        mStart = 2**`KERNELSIZE-1;
+always@(posedge Clk)begin
+    //Queue Next multiply
+    temp=0;
+    for(i = 0; i < `kernel_size*`kernel_size; i = i + 1)begin
+        temp = temp + multiplicand_reg[i] * multiplier_reg[i];
+        multiplier_reg[i] = (rand_test) ? ($urandom) % 2**(`data_width-1) : i;
+        multiplicand_reg[i] = (rand_test) ? ($urandom) % 2**(`data_width-1) : i;
     end
-    m_column = m_column + 1;
-    
-    test_cnt = test_cnt + 1;
+    mStart = 2**(`kernel_size*`kernel_size)-1;
     
     // Finished testing
     if(test_cnt == `test_cnt)begin
@@ -130,6 +88,14 @@ always@(posedge finalReady)begin
     end
     
     #`clkPeriod;
+    
+    // Evaluate answer
+    if(finalReady)begin
+        if(temp==finalAccumulate)begin
+            pass_cnt = pass_cnt + 1;
+        end
+        test_cnt = test_cnt + 1;
+    end
 end
 
 always #(`clkPeriod/2) Clk = ~Clk;

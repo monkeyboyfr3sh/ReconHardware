@@ -4,19 +4,22 @@ Running: C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto e8a0372fdc
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 4 for port 'AddressSelect' [C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/Controller_Test_tb.v:132]
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'direct' [C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/Controller_Test_tb.v:135]
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'finalAccumulate' [C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/Controller_Test_tb.v:138]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 7 for port 'AddressSelect' [C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/General/Controller_Test_tb.v:128]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'direct' [C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/General/Controller_Test_tb.v:130]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'finalAccumulate' [C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/General/Controller_Test_tb.v:131]
+WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 74 for port 'out_data' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/matrixAccelerator.v:70]
 Completed static elaboration
 Starting simulation data flow analysis
-WARNING: [XSIM 43-4099] "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v" Line 4. Module Convolution_Controller_default doesn't have a timescale but at least one module in design has a timescale.
-WARNING: [XSIM 43-4099] "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v" Line 4. Module Convolution_Controller_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v" Line 8. Module Convolution_Controller_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/GitHub/ReconHardware/FPGA_Files/Sources/General/matrixAccelerator.v" Line 9. Module matrixAccelerator_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v" Line 8. Module Convolution_Controller_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/GitHub/ReconHardware/FPGA_Files/Sources/General/matrixAccelerator.v" Line 9. Module matrixAccelerator_default doesn't have a timescale but at least one module in design has a timescale.
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.Convolution_Controller_default
-Compiling module xil_defaultlib.XBar2_default
+Compiling module xil_defaultlib.XBar2(IP_COUNT=9,OP_COUNT=9)
+Compiling module xil_defaultlib.int_adder_tree(DATA_WIDTH=64)
 Compiling module xil_defaultlib.multiplyComputePynq
-Compiling module xil_defaultlib.adder
 Compiling module xil_defaultlib.matrixAccelerator_default
 Compiling module xil_defaultlib.Controller_Test_tb
 Compiling module xil_defaultlib.glbl

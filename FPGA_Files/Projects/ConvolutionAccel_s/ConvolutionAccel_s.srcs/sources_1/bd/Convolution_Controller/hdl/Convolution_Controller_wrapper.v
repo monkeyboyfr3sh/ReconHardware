@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-//Date        : Mon Jan  4 13:51:14 2021
+//Date        : Mon Jan 18 18:43:57 2021
 //Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 //Command     : generate_target Convolution_Controller_wrapper.bd
 //Design      : Convolution_Controller_wrapper
@@ -27,7 +27,6 @@ module Convolution_Controller_wrapper
     DDR_we_n,
     FCLK_CLK0_0,
     FCLK_RESET0_N_0,
-    FINALADDOUT_0,
     FIXED_IO_ddr_vrn,
     FIXED_IO_ddr_vrp,
     FIXED_IO_mio,
@@ -38,8 +37,7 @@ module Convolution_Controller_wrapper
     MULTIPLIER_INPUT_0,
     MULTIPLY_START_0,
     cReady_0,
-    cSum_0,
-    ip_reset_out_0);
+    cSum_0);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -57,19 +55,17 @@ module Convolution_Controller_wrapper
   inout DDR_we_n;
   output FCLK_CLK0_0;
   output FCLK_RESET0_N_0;
-  output FINALADDOUT_0;
   inout FIXED_IO_ddr_vrn;
   inout FIXED_IO_ddr_vrp;
   inout [53:0]FIXED_IO_mio;
   inout FIXED_IO_ps_clk;
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
-  output [95:0]MULTIPLICAND_INPUT_0;
-  output [95:0]MULTIPLIER_INPUT_0;
-  output [2:0]MULTIPLY_START_0;
+  output [287:0]MULTIPLICAND_INPUT_0;
+  output [287:0]MULTIPLIER_INPUT_0;
+  output [8:0]MULTIPLY_START_0;
   input cReady_0;
   input [31:0]cSum_0;
-  output ip_reset_out_0;
 
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
@@ -88,19 +84,17 @@ module Convolution_Controller_wrapper
   wire DDR_we_n;
   wire FCLK_CLK0_0;
   wire FCLK_RESET0_N_0;
-  wire FINALADDOUT_0;
   wire FIXED_IO_ddr_vrn;
   wire FIXED_IO_ddr_vrp;
   wire [53:0]FIXED_IO_mio;
   wire FIXED_IO_ps_clk;
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
-  wire [95:0]MULTIPLICAND_INPUT_0;
-  wire [95:0]MULTIPLIER_INPUT_0;
-  wire [2:0]MULTIPLY_START_0;
+  wire [287:0]MULTIPLICAND_INPUT_0;
+  wire [287:0]MULTIPLIER_INPUT_0;
+  wire [8:0]MULTIPLY_START_0;
   wire cReady_0;
   wire [31:0]cSum_0;
-  wire ip_reset_out_0;
 
   Convolution_Controller Convolution_Controller_i
        (.DDR_addr(DDR_addr),
@@ -120,7 +114,6 @@ module Convolution_Controller_wrapper
         .DDR_we_n(DDR_we_n),
         .FCLK_CLK0_0(FCLK_CLK0_0),
         .FCLK_RESET0_N_0(FCLK_RESET0_N_0),
-        .FINALADDOUT_0(FINALADDOUT_0),
         .FIXED_IO_ddr_vrn(FIXED_IO_ddr_vrn),
         .FIXED_IO_ddr_vrp(FIXED_IO_ddr_vrp),
         .FIXED_IO_mio(FIXED_IO_mio),
@@ -131,6 +124,5 @@ module Convolution_Controller_wrapper
         .MULTIPLIER_INPUT_0(MULTIPLIER_INPUT_0),
         .MULTIPLY_START_0(MULTIPLY_START_0),
         .cReady_0(cReady_0),
-        .cSum_0(cSum_0),
-        .ip_reset_out_0(ip_reset_out_0));
+        .cSum_0(cSum_0));
 endmodule

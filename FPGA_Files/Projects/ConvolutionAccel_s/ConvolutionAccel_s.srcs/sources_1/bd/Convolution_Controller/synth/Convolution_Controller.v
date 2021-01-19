@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-//Date        : Mon Jan  4 13:51:14 2021
+//Date        : Mon Jan 18 18:43:57 2021
 //Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 //Command     : generate_target Convolution_Controller.bd
 //Design      : Convolution_Controller
@@ -9,7 +9,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "Convolution_Controller,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=Convolution_Controller,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=20,numReposBlks=12,numNonXlnxBlks=0,numHierBlks=8,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=7,da_board_cnt=1,da_clkrst_cnt=11,da_ps7_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "Convolution_Controller.hwdef" *) 
+(* CORE_GENERATION_INFO = "Convolution_Controller,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=Convolution_Controller,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=18,numReposBlks=10,numNonXlnxBlks=0,numHierBlks=8,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=7,da_board_cnt=1,da_clkrst_cnt=11,da_ps7_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "Convolution_Controller.hwdef" *) 
 module Convolution_Controller
    (DDR_addr,
     DDR_ba,
@@ -28,7 +28,6 @@ module Convolution_Controller
     DDR_we_n,
     FCLK_CLK0_0,
     FCLK_RESET0_N_0,
-    FINALADDOUT_0,
     FIXED_IO_ddr_vrn,
     FIXED_IO_ddr_vrp,
     FIXED_IO_mio,
@@ -39,8 +38,7 @@ module Convolution_Controller
     MULTIPLIER_INPUT_0,
     MULTIPLY_START_0,
     cReady_0,
-    cSum_0,
-    ip_reset_out_0);
+    cSum_0);
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR ADDR" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DDR, AXI_ARBITRATION_SCHEME TDM, BURST_LENGTH 8, CAN_DEBUG false, CAS_LATENCY 11, CAS_WRITE_LATENCY 11, CS_ENABLED true, DATA_MASK_ENABLED true, DATA_WIDTH 8, MEMORY_TYPE COMPONENTS, MEM_ADDR_MAP ROW_COLUMN_BANK, SLOT Single, TIMEPERIOD_PS 1250" *) inout [14:0]DDR_addr;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR BA" *) inout [2:0]DDR_ba;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR CAS_N" *) inout DDR_cas_n;
@@ -58,29 +56,26 @@ module Convolution_Controller
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR WE_N" *) inout DDR_we_n;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.FCLK_CLK0_0 CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.FCLK_CLK0_0, CLK_DOMAIN Convolution_Controller_processing_system7_0_0_FCLK_CLK0, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.000" *) output FCLK_CLK0_0;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.FCLK_RESET0_N_0 RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.FCLK_RESET0_N_0, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) output FCLK_RESET0_N_0;
-  output FINALADDOUT_0;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO DDR_VRN" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME FIXED_IO, CAN_DEBUG false" *) inout FIXED_IO_ddr_vrn;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO DDR_VRP" *) inout FIXED_IO_ddr_vrp;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO MIO" *) inout [53:0]FIXED_IO_mio;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_CLK" *) inout FIXED_IO_ps_clk;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_PORB" *) inout FIXED_IO_ps_porb;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_SRSTB" *) inout FIXED_IO_ps_srstb;
-  output [95:0]MULTIPLICAND_INPUT_0;
-  output [95:0]MULTIPLIER_INPUT_0;
-  output [2:0]MULTIPLY_START_0;
+  output [287:0]MULTIPLICAND_INPUT_0;
+  output [287:0]MULTIPLIER_INPUT_0;
+  output [8:0]MULTIPLY_START_0;
   input cReady_0;
   input [31:0]cSum_0;
-  output ip_reset_out_0;
 
-  wire Convolution_Controll_0_FINALADDOUT;
-  wire [95:0]Convolution_Controll_0_MULTIPLICAND_INPUT;
-  wire [95:0]Convolution_Controll_0_MULTIPLIER_INPUT;
-  wire [2:0]Convolution_Controll_0_MULTIPLY_START;
-  wire Convolution_Controll_0_ip_reset_out;
-  wire [31:0]Convolution_Controll_0_m_axis_data;
-  wire [3:0]Convolution_Controll_0_m_axis_keep;
-  wire Convolution_Controll_0_m_axis_last;
-  wire Convolution_Controll_0_m_axis_valid;
+  wire [287:0]Convolution_Controll_0_MULTIPLICAND_INPUT;
+  wire [287:0]Convolution_Controll_0_MULTIPLIER_INPUT;
+  wire [8:0]Convolution_Controll_0_MULTIPLY_START;
+  wire [31:0]Convolution_Controll_0_m_axis_DATA_OUT_TDATA;
+  wire [3:0]Convolution_Controll_0_m_axis_DATA_OUT_TKEEP;
+  wire Convolution_Controll_0_m_axis_DATA_OUT_TLAST;
+  wire Convolution_Controll_0_m_axis_DATA_OUT_TREADY;
+  wire Convolution_Controll_0_m_axis_DATA_OUT_TVALID;
   wire [31:0]axi_dma_0_M_AXIS_MM2S_TDATA;
   wire [3:0]axi_dma_0_M_AXIS_MM2S_TKEEP;
   wire axi_dma_0_M_AXIS_MM2S_TLAST;
@@ -115,7 +110,6 @@ module Convolution_Controller
   wire axi_dma_0_M_AXI_S2MM_WREADY;
   wire [3:0]axi_dma_0_M_AXI_S2MM_WSTRB;
   wire axi_dma_0_M_AXI_S2MM_WVALID;
-  wire axi_dma_0_s_axis_s2mm_tready;
   wire [31:0]axi_mem_intercon_M00_AXI_ARADDR;
   wire [1:0]axi_mem_intercon_M00_AXI_ARBURST;
   wire [3:0]axi_mem_intercon_M00_AXI_ARCACHE;
@@ -251,28 +245,24 @@ module Convolution_Controller
 
   assign FCLK_CLK0_0 = processing_system7_0_FCLK_CLK0;
   assign FCLK_RESET0_N_0 = processing_system7_0_FCLK_RESET0_N;
-  assign FINALADDOUT_0 = Convolution_Controll_0_FINALADDOUT;
-  assign MULTIPLICAND_INPUT_0[95:0] = Convolution_Controll_0_MULTIPLICAND_INPUT;
-  assign MULTIPLIER_INPUT_0[95:0] = Convolution_Controll_0_MULTIPLIER_INPUT;
-  assign MULTIPLY_START_0[2:0] = Convolution_Controll_0_MULTIPLY_START;
+  assign MULTIPLICAND_INPUT_0[287:0] = Convolution_Controll_0_MULTIPLICAND_INPUT;
+  assign MULTIPLIER_INPUT_0[287:0] = Convolution_Controll_0_MULTIPLIER_INPUT;
+  assign MULTIPLY_START_0[8:0] = Convolution_Controll_0_MULTIPLY_START;
   assign cReady_0_1 = cReady_0;
   assign cSum_0_1 = cSum_0[31:0];
-  assign ip_reset_out_0 = Convolution_Controll_0_ip_reset_out;
   Convolution_Controller_Convolution_Controll_0_1 Convolution_Controll_0
-       (.FINALADDOUT(Convolution_Controll_0_FINALADDOUT),
-        .MULTIPLICAND_INPUT(Convolution_Controll_0_MULTIPLICAND_INPUT),
+       (.MULTIPLICAND_INPUT(Convolution_Controll_0_MULTIPLICAND_INPUT),
         .MULTIPLIER_INPUT(Convolution_Controll_0_MULTIPLIER_INPUT),
         .MULTIPLY_START(Convolution_Controll_0_MULTIPLY_START),
         .axi_clk(processing_system7_0_FCLK_CLK0),
         .axi_reset_n(rst_ps7_0_100M_peripheral_aresetn),
         .cReady(cReady_0_1),
         .cSum(cSum_0_1),
-        .ip_reset_out(Convolution_Controll_0_ip_reset_out),
-        .m_axis_data(Convolution_Controll_0_m_axis_data),
-        .m_axis_keep(Convolution_Controll_0_m_axis_keep),
-        .m_axis_last(Convolution_Controll_0_m_axis_last),
-        .m_axis_ready(1'b1),
-        .m_axis_valid(Convolution_Controll_0_m_axis_valid),
+        .m_axis_data(Convolution_Controll_0_m_axis_DATA_OUT_TDATA),
+        .m_axis_keep(Convolution_Controll_0_m_axis_DATA_OUT_TKEEP),
+        .m_axis_last(Convolution_Controll_0_m_axis_DATA_OUT_TLAST),
+        .m_axis_ready(Convolution_Controll_0_m_axis_DATA_OUT_TREADY),
+        .m_axis_valid(Convolution_Controll_0_m_axis_DATA_OUT_TVALID),
         .s_axi_araddr(ps7_0_axi_periph_M01_AXI_ARADDR[9:0]),
         .s_axi_arready(ps7_0_axi_periph_M01_AXI_ARREADY),
         .s_axi_arvalid(ps7_0_axi_periph_M01_AXI_ARVALID),
@@ -347,11 +337,11 @@ module Convolution_Controller
         .s_axi_lite_wdata(ps7_0_axi_periph_M00_AXI_WDATA),
         .s_axi_lite_wready(ps7_0_axi_periph_M00_AXI_WREADY),
         .s_axi_lite_wvalid(ps7_0_axi_periph_M00_AXI_WVALID),
-        .s_axis_s2mm_tdata({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .s_axis_s2mm_tkeep({1'b1,1'b1,1'b1,1'b1}),
-        .s_axis_s2mm_tlast(1'b0),
-        .s_axis_s2mm_tready(axi_dma_0_s_axis_s2mm_tready),
-        .s_axis_s2mm_tvalid(1'b0));
+        .s_axis_s2mm_tdata(Convolution_Controll_0_m_axis_DATA_OUT_TDATA),
+        .s_axis_s2mm_tkeep(Convolution_Controll_0_m_axis_DATA_OUT_TKEEP),
+        .s_axis_s2mm_tlast(Convolution_Controll_0_m_axis_DATA_OUT_TLAST),
+        .s_axis_s2mm_tready(Convolution_Controll_0_m_axis_DATA_OUT_TREADY),
+        .s_axis_s2mm_tvalid(Convolution_Controll_0_m_axis_DATA_OUT_TVALID));
   Convolution_Controller_axi_mem_intercon_0 axi_mem_intercon
        (.ACLK(processing_system7_0_FCLK_CLK0),
         .ARESETN(rst_ps7_0_100M_peripheral_aresetn),
@@ -428,17 +418,6 @@ module Convolution_Controller
         .S01_AXI_wready(axi_dma_0_M_AXI_S2MM_WREADY),
         .S01_AXI_wstrb(axi_dma_0_M_AXI_S2MM_WSTRB),
         .S01_AXI_wvalid(axi_dma_0_M_AXI_S2MM_WVALID));
-  Convolution_Controller_ila_0_3 ila_0
-       (.clk(processing_system7_0_FCLK_CLK0),
-        .probe0(cReady_0_1),
-        .probe1(cSum_0_1));
-  Convolution_Controller_ila_1_0 ila_1
-       (.clk(processing_system7_0_FCLK_CLK0),
-        .probe0(Convolution_Controll_0_m_axis_valid),
-        .probe1(Convolution_Controll_0_m_axis_data),
-        .probe2(axi_dma_0_s_axis_s2mm_tready),
-        .probe3(Convolution_Controll_0_m_axis_last),
-        .probe4(Convolution_Controll_0_m_axis_keep));
   Convolution_Controller_processing_system7_0_0 processing_system7_0
        (.DDR_Addr(DDR_addr[14:0]),
         .DDR_BankAddr(DDR_ba[2:0]),

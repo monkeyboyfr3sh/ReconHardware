@@ -64,8 +64,6 @@
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/Convolution_Controller/ip/Convolution_Controller_xbar_1/sim/Convolution_Controller_xbar_1.v" \
-  "../../../bd/Convolution_Controller/ip/Convolution_Controller_ila_0_3/sim/Convolution_Controller_ila_0_3.v" \
-  "../../../bd/Convolution_Controller/ip/Convolution_Controller_ila_1_0/sim/Convolution_Controller_ila_1_0.v" \
 -endlib
 -makelib xcelium_lib/lib_pkg_v1_0_2 \
   "../../../../ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ipshared/0513/hdl/lib_pkg_v1_0_rfs.vhd" \
@@ -89,7 +87,7 @@
   "../../../bd/Convolution_Controller/ip/Convolution_Controller_axi_dma_0_1/sim/Convolution_Controller_axi_dma_0_1.vhd" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
-  "../../../bd/Convolution_Controller/ipshared/126d/AXI_Convolution_Controller.v" \
+  "../../../bd/Convolution_Controller/ipshared/2447/AXI_Convolution_Controller.v" \
   "../../../bd/Convolution_Controller/ip/Convolution_Controller_Convolution_Controll_0_1/sim/Convolution_Controller_Convolution_Controll_0_1.v" \
 -endlib
 -makelib xcelium_lib/axi_protocol_converter_v2_1_21 \

@@ -1,7 +1,7 @@
-Running: xsim.dir/matrixAccelerator_tb_behav/xsimk.exe -simmode gui -wdb matrixAccelerator_tb_behav.wdb -simrunnum 0 -socket 51198
+Running: xsim.dir/matrixAccelerator_tb_behav/xsimk.exe -simmode gui -wdb matrixAccelerator_tb_behav.wdb -simrunnum 0 -socket 56668
 Design successfully loaded
 Design Loading Memory Usage: 5928 KB (Peak: 5928 KB)
 Design Loading CPU Usage: 15 ms
 Simulation completed
-Simulation Memory Usage: 6908 KB (Peak: 6908 KB)
+Simulation Memory Usage: 6892 KB (Peak: 6892 KB)
 Simulation CPU Usage: 30 ms
