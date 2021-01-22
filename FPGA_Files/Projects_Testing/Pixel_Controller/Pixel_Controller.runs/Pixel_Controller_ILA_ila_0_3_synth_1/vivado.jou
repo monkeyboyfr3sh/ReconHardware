@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Thu Jan 21 21:42:08 2021
+# Process ID: 2528
+# Current directory: C:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/Pixel_Controller/Pixel_Controller.runs/Pixel_Controller_ILA_ila_0_3_synth_1
+# Command line: vivado.exe -log Pixel_Controller_ILA_ila_0_3.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Pixel_Controller_ILA_ila_0_3.tcl
+# Log file: C:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/Pixel_Controller/Pixel_Controller.runs/Pixel_Controller_ILA_ila_0_3_synth_1/Pixel_Controller_ILA_ila_0_3.vds
+# Journal file: C:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/Pixel_Controller/Pixel_Controller.runs/Pixel_Controller_ILA_ila_0_3_synth_1\vivado.jou
+#-----------------------------------------------------------
+source Pixel_Controller_ILA_ila_0_3.tcl -notrace

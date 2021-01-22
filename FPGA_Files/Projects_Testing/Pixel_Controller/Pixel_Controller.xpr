@@ -69,26 +69,50 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PSRCDIR/sources_1/bd/Pixel_Controller_BD/Pixel_Controller_BD.bd">
+      <File Path="$PSRCDIR/sources_1/bd/Pixel_Controller_ILA/Pixel_Controller_ILA.bd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="Pixel_Controller_BD.bd" FileRelPathName="ip/Pixel_Controller_BD_Pixel_Controller_0_0/Pixel_Controller_BD_Pixel_Controller_0_0.xci">
-          <Proxy FileSetName="Pixel_Controller_BD_Pixel_Controller_0_0"/>
+        <CompFileExtendedInfo CompFileName="Pixel_Controller_ILA.bd" FileRelPathName="ip/Pixel_Controller_ILA_ila_0_0/Pixel_Controller_ILA_ila_0_0.xci">
+          <Proxy FileSetName="Pixel_Controller_ILA_ila_0_0"/>
         </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="Pixel_Controller_ILA.bd" FileRelPathName="ip/Pixel_Controller_ILA_Pixel_Controller_0_0/Pixel_Controller_ILA_Pixel_Controller_0_0.xci">
+          <Proxy FileSetName="Pixel_Controller_ILA_Pixel_Controller_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="Pixel_Controller_ILA.bd" FileRelPathName="ip/Pixel_Controller_ILA_ila_0_3/Pixel_Controller_ILA_ila_0_3.xci">
+          <Proxy FileSetName="Pixel_Controller_ILA_ila_0_3"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="Pixel_Controller_ILA.bd" FileRelPathName="ip/Pixel_Controller_ILA_ila_1_0/Pixel_Controller_ILA_ila_1_0.xci">
+          <Proxy FileSetName="Pixel_Controller_ILA_ila_1_0"/>
+        </CompFileExtendedInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/bd/Pixel_Controller_ILA/hdl/Pixel_Controller_ILA_wrapper.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/bd/Pixel_Controller_BD/Pixel_Controller_BD.bd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
         <CompFileExtendedInfo CompFileName="Pixel_Controller_BD.bd" FileRelPathName="ip/Pixel_Controller_BD_processing_system7_0_0/Pixel_Controller_BD_processing_system7_0_0.xci">
           <Proxy FileSetName="Pixel_Controller_BD_processing_system7_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="Pixel_Controller_BD.bd" FileRelPathName="ip/Pixel_Controller_BD_axi_dma_0_0/Pixel_Controller_BD_axi_dma_0_0.xci">
           <Proxy FileSetName="Pixel_Controller_BD_axi_dma_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="Pixel_Controller_BD.bd" FileRelPathName="ip/Pixel_Controller_BD_rst_ps7_0_100M_0/Pixel_Controller_BD_rst_ps7_0_100M_0.xci">
-          <Proxy FileSetName="Pixel_Controller_BD_rst_ps7_0_100M_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="Pixel_Controller_BD.bd" FileRelPathName="ip/Pixel_Controller_BD_xbar_1/Pixel_Controller_BD_xbar_1.xci">
           <Proxy FileSetName="Pixel_Controller_BD_xbar_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="Pixel_Controller_BD.bd" FileRelPathName="ip/Pixel_Controller_BD_rst_ps7_0_100M_0/Pixel_Controller_BD_rst_ps7_0_100M_0.xci">
+          <Proxy FileSetName="Pixel_Controller_BD_rst_ps7_0_100M_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="Pixel_Controller_BD.bd" FileRelPathName="ip/Pixel_Controller_BD_xbar_0/Pixel_Controller_BD_xbar_0.xci">
           <Proxy FileSetName="Pixel_Controller_BD_xbar_0"/>
@@ -96,6 +120,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/bd/Pixel_Controller_BD/hdl/Pixel_Controller_BD_wrapper.v">
         <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -103,8 +128,7 @@
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="Pixel_Controller_BD_wrapper"/>
-        <Option Name="TopAutoSet" Val="TRUE"/>
+        <Option Name="TopModule" Val="Pixel_Controller_ILA_wrapper"/>
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -166,9 +190,27 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="Pixel_Controller_BD_Pixel_Controller_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Pixel_Controller_BD_Pixel_Controller_0_0">
+    <FileSet Name="Pixel_Controller_ILA_ila_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Pixel_Controller_ILA_ila_0_0">
       <Config>
-        <Option Name="TopModule" Val="Pixel_Controller_BD_Pixel_Controller_0_0"/>
+        <Option Name="TopModule" Val="Pixel_Controller_ILA_ila_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="Pixel_Controller_ILA_Pixel_Controller_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Pixel_Controller_ILA_Pixel_Controller_0_0">
+      <Config>
+        <Option Name="TopModule" Val="Pixel_Controller_ILA_Pixel_Controller_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="Pixel_Controller_ILA_ila_0_3" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Pixel_Controller_ILA_ila_0_3">
+      <Config>
+        <Option Name="TopModule" Val="Pixel_Controller_ILA_ila_0_3"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="Pixel_Controller_ILA_ila_1_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Pixel_Controller_ILA_ila_1_0">
+      <Config>
+        <Option Name="TopModule" Val="Pixel_Controller_ILA_ila_1_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -252,9 +294,47 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="Pixel_Controller_BD_Pixel_Controller_0_0_synth_1" Type="Ft3:Synth" SrcSet="Pixel_Controller_BD_Pixel_Controller_0_0" Part="xc7z020clg400-1" ConstrsSet="Pixel_Controller_BD_Pixel_Controller_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/Pixel_Controller_BD_Pixel_Controller_0_0_synth_1" IncludeInArchive="true">
+    <Run Id="Pixel_Controller_ILA_ila_0_0_synth_1" Type="Ft3:Synth" SrcSet="Pixel_Controller_ILA_ila_0_0" Part="xc7z020clg400-1" ConstrsSet="Pixel_Controller_ILA_ila_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/Pixel_Controller_ILA_ila_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="Pixel_Controller_ILA_Pixel_Controller_0_0_synth_1" Type="Ft3:Synth" SrcSet="Pixel_Controller_ILA_Pixel_Controller_0_0" Part="xc7z020clg400-1" ConstrsSet="Pixel_Controller_ILA_Pixel_Controller_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/Pixel_Controller_ILA_Pixel_Controller_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="Pixel_Controller_ILA_ila_0_3_synth_1" Type="Ft3:Synth" SrcSet="Pixel_Controller_ILA_ila_0_3" Part="xc7z020clg400-1" ConstrsSet="Pixel_Controller_ILA_ila_0_3" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/Pixel_Controller_ILA_ila_0_3_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="Pixel_Controller_ILA_ila_1_0_synth_1" Type="Ft3:Synth" SrcSet="Pixel_Controller_ILA_ila_1_0" Part="xc7z020clg400-1" ConstrsSet="Pixel_Controller_ILA_ila_1_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/Pixel_Controller_ILA_ila_1_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -365,9 +445,68 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="Pixel_Controller_BD_Pixel_Controller_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="Pixel_Controller_BD_Pixel_Controller_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="Pixel_Controller_BD_Pixel_Controller_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="Pixel_Controller_ILA_ila_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="Pixel_Controller_ILA_ila_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="Pixel_Controller_ILA_ila_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="Pixel_Controller_ILA_Pixel_Controller_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="Pixel_Controller_ILA_Pixel_Controller_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="Pixel_Controller_ILA_Pixel_Controller_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="Pixel_Controller_ILA_ila_0_3_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="Pixel_Controller_ILA_ila_0_3" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="Pixel_Controller_ILA_ila_0_3_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="Pixel_Controller_ILA_ila_1_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="Pixel_Controller_ILA_ila_1_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="Pixel_Controller_ILA_ila_1_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
