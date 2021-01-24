@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date         : Thu Jan 21 21:44:49 2021
+| Date         : Fri Jan 22 15:07:40 2021
 | Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 | Command      : report_utilization -file Pixel_Controller_ILA_wrapper_utilization_synth.rpt -pb Pixel_Controller_ILA_wrapper_utilization_synth.pb
 | Design       : Pixel_Controller_ILA_wrapper
@@ -179,8 +179,6 @@ Table of Contents
 | Pixel_Controller_ILA_xbar_0                 |    1 |
 | Pixel_Controller_ILA_rst_ps7_0_100M_0       |    1 |
 | Pixel_Controller_ILA_processing_system7_0_0 |    1 |
-| Pixel_Controller_ILA_ila_1_0                |    1 |
-| Pixel_Controller_ILA_ila_0_3                |    1 |
 | Pixel_Controller_ILA_ila_0_0                |    1 |
 | Pixel_Controller_ILA_axi_dma_0_0            |    1 |
 | Pixel_Controller_ILA_auto_us_1              |    1 |

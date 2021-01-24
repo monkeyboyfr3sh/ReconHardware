@@ -40,13 +40,13 @@ always @(posedge clk) begin
     
     else begin
         if(start)begin
-            product = multiplier*multiplicand;
-            ready = 1'b1;
+            product <= multiplier*multiplicand;
+            ready <= 1'b1;
         end
         
         else begin
-            product = 0;
-            ready = 0;
+            product <= 0;
+            ready <= 0;
         end
     end
 end

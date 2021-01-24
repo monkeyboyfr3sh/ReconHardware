@@ -31,12 +31,6 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Pixel_Controlle
 # IP: bd/Pixel_Controller_ILA/ip/Pixel_Controller_ILA_ila_0_0/Pixel_Controller_ILA_ila_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Pixel_Controller_ILA_ila_0_0 || ORIG_REF_NAME==Pixel_Controller_ILA_ila_0_0} -quiet] -quiet
 
-# IP: bd/Pixel_Controller_ILA/ip/Pixel_Controller_ILA_ila_0_3/Pixel_Controller_ILA_ila_0_3.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Pixel_Controller_ILA_ila_0_3 || ORIG_REF_NAME==Pixel_Controller_ILA_ila_0_3} -quiet] -quiet
-
-# IP: bd/Pixel_Controller_ILA/ip/Pixel_Controller_ILA_ila_1_0/Pixel_Controller_ILA_ila_1_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Pixel_Controller_ILA_ila_1_0 || ORIG_REF_NAME==Pixel_Controller_ILA_ila_1_0} -quiet] -quiet
-
 # IP: bd/Pixel_Controller_ILA/ip/Pixel_Controller_ILA_auto_us_0/Pixel_Controller_ILA_auto_us_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Pixel_Controller_ILA_auto_us_0 || ORIG_REF_NAME==Pixel_Controller_ILA_auto_us_0} -quiet] -quiet
 

@@ -2,10 +2,10 @@
 `timescale `myTimeScale
 
 //Test stuff
-`define test_width 100
-`define test_height 100
+`define test_width 25
+`define test_height 25
 
-`define data_width 32
+`define data_width 8
 `define addr_width 10
 `define kernel_size 3
 

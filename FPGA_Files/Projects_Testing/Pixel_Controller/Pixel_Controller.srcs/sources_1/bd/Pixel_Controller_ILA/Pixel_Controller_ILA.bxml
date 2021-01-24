@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="39">
   <CompositeFile CompositeFileTopName="Pixel_Controller_ILA" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1611286920"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1611286920"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1611286920"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1611286920"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1611349621"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1611349621"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1611349621"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1611349621"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\Pixel_Controller_ILA_Pixel_Controller_0_0\Pixel_Controller_ILA_Pixel_Controller_0_0.xci" Type="IP">
         <Instance HierarchyPath="Pixel_Controller_0"/>
@@ -79,20 +79,15 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\Pixel_Controller_ILA_ila_0_3\Pixel_Controller_ILA_ila_0_3.xci" Type="IP">
-        <Instance HierarchyPath="ila_1"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+      <File Name="synth\Pixel_Controller_ILA.v" Type="Verilog">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\Pixel_Controller_ILA_ila_1_0\Pixel_Controller_ILA_ila_1_0.xci" Type="IP">
-        <Instance HierarchyPath="ila_2"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+      <File Name="sim\Pixel_Controller_ILA.v" Type="Verilog">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip\Pixel_Controller_ILA_auto_us_0\Pixel_Controller_ILA_auto_us_0.xci" Type="IP">
@@ -125,17 +120,6 @@
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="synth\Pixel_Controller_ILA.v" Type="Verilog">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-      </File>
-      <File Name="sim\Pixel_Controller_ILA.v" Type="Verilog">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="Pixel_Controller_ILA_ooc.xdc" Type="XDC">

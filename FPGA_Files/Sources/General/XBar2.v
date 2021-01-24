@@ -58,7 +58,7 @@ generate
     end
 endgenerate
 
-//Update outputport
+//Update outputport, this should be re-written in a generate statement probably
 always @(flatInputPort or direct)begin
 
     //Assign matching i/o

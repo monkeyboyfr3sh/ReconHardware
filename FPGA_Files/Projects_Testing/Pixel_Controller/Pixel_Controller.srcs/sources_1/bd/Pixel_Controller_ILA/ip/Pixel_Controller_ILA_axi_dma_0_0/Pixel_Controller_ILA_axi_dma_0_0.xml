@@ -1492,7 +1492,9 @@
       <spirit:busType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="aximm" spirit:version="1.0"/>
       <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="aximm_rtl" spirit:version="1.0"/>
       <spirit:master>
-        <spirit:addressSpaceRef spirit:addressSpaceRef="Data_MM2S"/>
+        <spirit:addressSpaceRef spirit:addressSpaceRef="Data_MM2S">
+          <spirit:baseAddress spirit:format="long">0x00000000</spirit:baseAddress>
+        </spirit:addressSpaceRef>
       </spirit:master>
       <spirit:portMaps>
         <spirit:portMap>
@@ -1893,7 +1895,9 @@
       <spirit:busType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="aximm" spirit:version="1.0"/>
       <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="aximm_rtl" spirit:version="1.0"/>
       <spirit:master>
-        <spirit:addressSpaceRef spirit:addressSpaceRef="Data_S2MM"/>
+        <spirit:addressSpaceRef spirit:addressSpaceRef="Data_S2MM">
+          <spirit:baseAddress spirit:format="long">0x00000000</spirit:baseAddress>
+        </spirit:addressSpaceRef>
       </spirit:master>
       <spirit:portMaps>
         <spirit:portMap>

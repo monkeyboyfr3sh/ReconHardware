@@ -70,9 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 2
 set_param ced.repoPaths C:/Users/monke/AppData/Roaming/Xilinx/Vivado/2020.1/xhub/ced_store/Vivado_example_project
-set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config  -id {VRFC 10-2989}  -string {{ERROR: [VRFC 10-2989] 'break' is not declared [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Adder/adderFloat.v:60]}}  -suppress 
 set_msg_config  -id {XSIM 43-3322}  -string {{ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.}}  -suppress 
 set_msg_config  -id {Netlist 29-160}  -suppress 
@@ -110,14 +108,6 @@ set_property used_in_synthesis false [get_files -all c:/GitHub/ReconHardware/FPG
 set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/Pixel_Controller/Pixel_Controller.srcs/sources_1/bd/Pixel_Controller_ILA/ip/Pixel_Controller_ILA_ila_0_0/ila_v6_2/constraints/ila_impl.xdc]
 set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/Pixel_Controller/Pixel_Controller.srcs/sources_1/bd/Pixel_Controller_ILA/ip/Pixel_Controller_ILA_ila_0_0/ila_v6_2/constraints/ila.xdc]
 set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/Pixel_Controller/Pixel_Controller.srcs/sources_1/bd/Pixel_Controller_ILA/ip/Pixel_Controller_ILA_ila_0_0/Pixel_Controller_ILA_ila_0_0_ooc.xdc]
-set_property used_in_synthesis false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/Pixel_Controller/Pixel_Controller.srcs/sources_1/bd/Pixel_Controller_ILA/ip/Pixel_Controller_ILA_ila_0_3/ila_v6_2/constraints/ila_impl.xdc]
-set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/Pixel_Controller/Pixel_Controller.srcs/sources_1/bd/Pixel_Controller_ILA/ip/Pixel_Controller_ILA_ila_0_3/ila_v6_2/constraints/ila_impl.xdc]
-set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/Pixel_Controller/Pixel_Controller.srcs/sources_1/bd/Pixel_Controller_ILA/ip/Pixel_Controller_ILA_ila_0_3/ila_v6_2/constraints/ila.xdc]
-set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/Pixel_Controller/Pixel_Controller.srcs/sources_1/bd/Pixel_Controller_ILA/ip/Pixel_Controller_ILA_ila_0_3/Pixel_Controller_ILA_ila_0_3_ooc.xdc]
-set_property used_in_synthesis false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/Pixel_Controller/Pixel_Controller.srcs/sources_1/bd/Pixel_Controller_ILA/ip/Pixel_Controller_ILA_ila_1_0/ila_v6_2/constraints/ila_impl.xdc]
-set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/Pixel_Controller/Pixel_Controller.srcs/sources_1/bd/Pixel_Controller_ILA/ip/Pixel_Controller_ILA_ila_1_0/ila_v6_2/constraints/ila_impl.xdc]
-set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/Pixel_Controller/Pixel_Controller.srcs/sources_1/bd/Pixel_Controller_ILA/ip/Pixel_Controller_ILA_ila_1_0/ila_v6_2/constraints/ila.xdc]
-set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/Pixel_Controller/Pixel_Controller.srcs/sources_1/bd/Pixel_Controller_ILA/ip/Pixel_Controller_ILA_ila_1_0/Pixel_Controller_ILA_ila_1_0_ooc.xdc]
 set_property used_in_synthesis false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/Pixel_Controller/Pixel_Controller.srcs/sources_1/bd/Pixel_Controller_ILA/ip/Pixel_Controller_ILA_auto_us_0/Pixel_Controller_ILA_auto_us_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/Pixel_Controller/Pixel_Controller.srcs/sources_1/bd/Pixel_Controller_ILA/ip/Pixel_Controller_ILA_auto_us_0/Pixel_Controller_ILA_auto_us_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/Pixel_Controller/Pixel_Controller.srcs/sources_1/bd/Pixel_Controller_ILA/ip/Pixel_Controller_ILA_auto_us_0/Pixel_Controller_ILA_auto_us_0_ooc.xdc]

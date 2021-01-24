@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-//Date        : Thu Jan 21 21:41:57 2021
+//Date        : Fri Jan 22 15:06:59 2021
 //Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 //Command     : generate_target Pixel_Controller_ILA.bd
 //Design      : Pixel_Controller_ILA
@@ -9,7 +9,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "Pixel_Controller_ILA,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=Pixel_Controller_ILA,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=21,numReposBlks=13,numNonXlnxBlks=0,numHierBlks=8,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "Pixel_Controller_ILA.hwdef" *) 
+(* CORE_GENERATION_INFO = "Pixel_Controller_ILA,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=Pixel_Controller_ILA,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=19,numReposBlks=11,numNonXlnxBlks=0,numHierBlks=8,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "Pixel_Controller_ILA.hwdef" *) 
 module Pixel_Controller_ILA
    (DDR_addr,
     DDR_ba,
@@ -54,11 +54,16 @@ module Pixel_Controller_ILA
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_PORB" *) inout FIXED_IO_ps_porb;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_SRSTB" *) inout FIXED_IO_ps_srstb;
 
-  wire [31:0]Pixel_Controller_0_m_axis_data;
-  wire [3:0]Pixel_Controller_0_m_axis_keep;
-  wire Pixel_Controller_0_m_axis_last;
-  wire Pixel_Controller_0_m_axis_valid;
-  wire Pixel_Controller_0_s_axis_ready;
+  wire [31:0]Pixel_Controller_0_m_axis_TDATA;
+  wire [3:0]Pixel_Controller_0_m_axis_TKEEP;
+  wire Pixel_Controller_0_m_axis_TLAST;
+  wire Pixel_Controller_0_m_axis_TREADY;
+  wire Pixel_Controller_0_m_axis_TVALID;
+  wire [31:0]axi_dma_0_M_AXIS_MM2S_TDATA;
+  wire [3:0]axi_dma_0_M_AXIS_MM2S_TKEEP;
+  wire axi_dma_0_M_AXIS_MM2S_TLAST;
+  wire axi_dma_0_M_AXIS_MM2S_TREADY;
+  wire axi_dma_0_M_AXIS_MM2S_TVALID;
   wire [31:0]axi_dma_0_M_AXI_MM2S_ARADDR;
   wire [1:0]axi_dma_0_M_AXI_MM2S_ARBURST;
   wire [3:0]axi_dma_0_M_AXI_MM2S_ARCACHE;
@@ -88,11 +93,6 @@ module Pixel_Controller_ILA
   wire axi_dma_0_M_AXI_S2MM_WREADY;
   wire [3:0]axi_dma_0_M_AXI_S2MM_WSTRB;
   wire axi_dma_0_M_AXI_S2MM_WVALID;
-  wire [31:0]axi_dma_0_m_axis_mm2s_tdata;
-  wire [3:0]axi_dma_0_m_axis_mm2s_tkeep;
-  wire axi_dma_0_m_axis_mm2s_tlast;
-  wire axi_dma_0_m_axis_mm2s_tvalid;
-  wire axi_dma_0_s_axis_s2mm_tready;
   wire [31:0]axi_mem_intercon_M00_AXI_ARADDR;
   wire [1:0]axi_mem_intercon_M00_AXI_ARBURST;
   wire [3:0]axi_mem_intercon_M00_AXI_ARCACHE;
@@ -211,30 +211,30 @@ module Pixel_Controller_ILA
   wire [31:0]ps7_0_axi_periph_M01_AXI_ARADDR;
   wire [2:0]ps7_0_axi_periph_M01_AXI_ARPROT;
   wire ps7_0_axi_periph_M01_AXI_ARREADY;
-  wire [0:0]ps7_0_axi_periph_M01_AXI_ARVALID;
+  wire ps7_0_axi_periph_M01_AXI_ARVALID;
   wire [31:0]ps7_0_axi_periph_M01_AXI_AWADDR;
   wire [2:0]ps7_0_axi_periph_M01_AXI_AWPROT;
   wire ps7_0_axi_periph_M01_AXI_AWREADY;
-  wire [0:0]ps7_0_axi_periph_M01_AXI_AWVALID;
-  wire [0:0]ps7_0_axi_periph_M01_AXI_BREADY;
+  wire ps7_0_axi_periph_M01_AXI_AWVALID;
+  wire ps7_0_axi_periph_M01_AXI_BREADY;
   wire ps7_0_axi_periph_M01_AXI_BVALID;
   wire [31:0]ps7_0_axi_periph_M01_AXI_RDATA;
-  wire [0:0]ps7_0_axi_periph_M01_AXI_RREADY;
+  wire ps7_0_axi_periph_M01_AXI_RREADY;
   wire ps7_0_axi_periph_M01_AXI_RVALID;
   wire [31:0]ps7_0_axi_periph_M01_AXI_WDATA;
   wire ps7_0_axi_periph_M01_AXI_WREADY;
   wire [3:0]ps7_0_axi_periph_M01_AXI_WSTRB;
-  wire [0:0]ps7_0_axi_periph_M01_AXI_WVALID;
+  wire ps7_0_axi_periph_M01_AXI_WVALID;
   wire [0:0]rst_ps7_0_100M_peripheral_aresetn;
 
   Pixel_Controller_ILA_Pixel_Controller_0_0 Pixel_Controller_0
        (.axi_clk(processing_system7_0_FCLK_CLK0),
         .axi_reset_n(rst_ps7_0_100M_peripheral_aresetn),
-        .m_axis_data(Pixel_Controller_0_m_axis_data),
-        .m_axis_keep(Pixel_Controller_0_m_axis_keep),
-        .m_axis_last(Pixel_Controller_0_m_axis_last),
-        .m_axis_ready(1'b1),
-        .m_axis_valid(Pixel_Controller_0_m_axis_valid),
+        .m_axis_data(Pixel_Controller_0_m_axis_TDATA),
+        .m_axis_keep(Pixel_Controller_0_m_axis_TKEEP),
+        .m_axis_last(Pixel_Controller_0_m_axis_TLAST),
+        .m_axis_ready(Pixel_Controller_0_m_axis_TREADY),
+        .m_axis_valid(Pixel_Controller_0_m_axis_TVALID),
         .s_axi_araddr(ps7_0_axi_periph_M01_AXI_ARADDR[9:0]),
         .s_axi_arready(ps7_0_axi_periph_M01_AXI_ARREADY),
         .s_axi_arvalid(ps7_0_axi_periph_M01_AXI_ARVALID),
@@ -249,11 +249,11 @@ module Pixel_Controller_ILA
         .s_axi_wdata(ps7_0_axi_periph_M01_AXI_WDATA),
         .s_axi_wready(ps7_0_axi_periph_M01_AXI_WREADY),
         .s_axi_wvalid(ps7_0_axi_periph_M01_AXI_WVALID),
-        .s_axis_data({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .s_axis_keep({1'b1,1'b1,1'b1,1'b1}),
-        .s_axis_last(1'b0),
-        .s_axis_ready(Pixel_Controller_0_s_axis_ready),
-        .s_axis_valid(1'b0));
+        .s_axis_data(axi_dma_0_M_AXIS_MM2S_TDATA),
+        .s_axis_keep(axi_dma_0_M_AXIS_MM2S_TKEEP),
+        .s_axis_last(axi_dma_0_M_AXIS_MM2S_TLAST),
+        .s_axis_ready(axi_dma_0_M_AXIS_MM2S_TREADY),
+        .s_axis_valid(axi_dma_0_M_AXIS_MM2S_TVALID));
   Pixel_Controller_ILA_axi_dma_0_0 axi_dma_0
        (.axi_resetn(rst_ps7_0_100M_peripheral_aresetn),
         .m_axi_mm2s_aclk(processing_system7_0_FCLK_CLK0),
@@ -287,11 +287,11 @@ module Pixel_Controller_ILA
         .m_axi_s2mm_wready(axi_dma_0_M_AXI_S2MM_WREADY),
         .m_axi_s2mm_wstrb(axi_dma_0_M_AXI_S2MM_WSTRB),
         .m_axi_s2mm_wvalid(axi_dma_0_M_AXI_S2MM_WVALID),
-        .m_axis_mm2s_tdata(axi_dma_0_m_axis_mm2s_tdata),
-        .m_axis_mm2s_tkeep(axi_dma_0_m_axis_mm2s_tkeep),
-        .m_axis_mm2s_tlast(axi_dma_0_m_axis_mm2s_tlast),
-        .m_axis_mm2s_tready(1'b1),
-        .m_axis_mm2s_tvalid(axi_dma_0_m_axis_mm2s_tvalid),
+        .m_axis_mm2s_tdata(axi_dma_0_M_AXIS_MM2S_TDATA),
+        .m_axis_mm2s_tkeep(axi_dma_0_M_AXIS_MM2S_TKEEP),
+        .m_axis_mm2s_tlast(axi_dma_0_M_AXIS_MM2S_TLAST),
+        .m_axis_mm2s_tready(axi_dma_0_M_AXIS_MM2S_TREADY),
+        .m_axis_mm2s_tvalid(axi_dma_0_M_AXIS_MM2S_TVALID),
         .s_axi_lite_aclk(processing_system7_0_FCLK_CLK0),
         .s_axi_lite_araddr(ps7_0_axi_periph_M00_AXI_ARADDR[9:0]),
         .s_axi_lite_arready(ps7_0_axi_periph_M00_AXI_ARREADY),
@@ -309,11 +309,11 @@ module Pixel_Controller_ILA
         .s_axi_lite_wdata(ps7_0_axi_periph_M00_AXI_WDATA),
         .s_axi_lite_wready(ps7_0_axi_periph_M00_AXI_WREADY),
         .s_axi_lite_wvalid(ps7_0_axi_periph_M00_AXI_WVALID),
-        .s_axis_s2mm_tdata({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .s_axis_s2mm_tkeep({1'b1,1'b1,1'b1,1'b1}),
-        .s_axis_s2mm_tlast(1'b0),
-        .s_axis_s2mm_tready(axi_dma_0_s_axis_s2mm_tready),
-        .s_axis_s2mm_tvalid(1'b0));
+        .s_axis_s2mm_tdata(Pixel_Controller_0_m_axis_TDATA),
+        .s_axis_s2mm_tkeep(Pixel_Controller_0_m_axis_TKEEP),
+        .s_axis_s2mm_tlast(Pixel_Controller_0_m_axis_TLAST),
+        .s_axis_s2mm_tready(Pixel_Controller_0_m_axis_TREADY),
+        .s_axis_s2mm_tvalid(Pixel_Controller_0_m_axis_TVALID));
   Pixel_Controller_ILA_axi_mem_intercon_0 axi_mem_intercon
        (.ACLK(processing_system7_0_FCLK_CLK0),
         .ARESETN(rst_ps7_0_100M_peripheral_aresetn),
@@ -411,20 +411,6 @@ module Pixel_Controller_ILA
         .probe7(ps7_0_axi_periph_M01_AXI_WVALID),
         .probe8(ps7_0_axi_periph_M01_AXI_ARVALID),
         .probe9(ps7_0_axi_periph_M01_AXI_ARREADY));
-  Pixel_Controller_ILA_ila_0_3 ila_1
-       (.clk(processing_system7_0_FCLK_CLK0),
-        .probe0(Pixel_Controller_0_m_axis_data),
-        .probe1(Pixel_Controller_0_m_axis_keep),
-        .probe2(Pixel_Controller_0_m_axis_valid),
-        .probe3(Pixel_Controller_0_m_axis_last),
-        .probe4(axi_dma_0_s_axis_s2mm_tready));
-  Pixel_Controller_ILA_ila_1_0 ila_2
-       (.clk(processing_system7_0_FCLK_CLK0),
-        .probe0(axi_dma_0_m_axis_mm2s_tdata),
-        .probe1(axi_dma_0_m_axis_mm2s_tkeep),
-        .probe2(axi_dma_0_m_axis_mm2s_tlast),
-        .probe3(axi_dma_0_m_axis_mm2s_tvalid),
-        .probe4(Pixel_Controller_0_s_axis_ready));
   Pixel_Controller_ILA_processing_system7_0_0 processing_system7_0
        (.DDR_Addr(DDR_addr[14:0]),
         .DDR_BankAddr(DDR_ba[2:0]),
@@ -1323,21 +1309,21 @@ module Pixel_Controller_ILA_ps7_0_axi_periph_0
   input M01_ARESETN;
   output [31:0]M01_AXI_araddr;
   output [2:0]M01_AXI_arprot;
-  input [0:0]M01_AXI_arready;
-  output [0:0]M01_AXI_arvalid;
+  input M01_AXI_arready;
+  output M01_AXI_arvalid;
   output [31:0]M01_AXI_awaddr;
   output [2:0]M01_AXI_awprot;
-  input [0:0]M01_AXI_awready;
-  output [0:0]M01_AXI_awvalid;
-  output [0:0]M01_AXI_bready;
-  input [0:0]M01_AXI_bvalid;
+  input M01_AXI_awready;
+  output M01_AXI_awvalid;
+  output M01_AXI_bready;
+  input M01_AXI_bvalid;
   input [31:0]M01_AXI_rdata;
-  output [0:0]M01_AXI_rready;
-  input [0:0]M01_AXI_rvalid;
+  output M01_AXI_rready;
+  input M01_AXI_rvalid;
   output [31:0]M01_AXI_wdata;
-  input [0:0]M01_AXI_wready;
+  input M01_AXI_wready;
   output [3:0]M01_AXI_wstrb;
-  output [0:0]M01_AXI_wvalid;
+  output M01_AXI_wvalid;
   input S00_ACLK;
   input S00_ARESETN;
   input [31:0]S00_AXI_araddr;
@@ -1397,19 +1383,19 @@ module Pixel_Controller_ILA_ps7_0_axi_periph_0
   wire [0:0]m00_couplers_to_ps7_0_axi_periph_WVALID;
   wire [31:0]m01_couplers_to_ps7_0_axi_periph_ARADDR;
   wire [2:0]m01_couplers_to_ps7_0_axi_periph_ARPROT;
-  wire [0:0]m01_couplers_to_ps7_0_axi_periph_ARREADY;
+  wire m01_couplers_to_ps7_0_axi_periph_ARREADY;
   wire m01_couplers_to_ps7_0_axi_periph_ARVALID;
   wire [31:0]m01_couplers_to_ps7_0_axi_periph_AWADDR;
   wire [2:0]m01_couplers_to_ps7_0_axi_periph_AWPROT;
-  wire [0:0]m01_couplers_to_ps7_0_axi_periph_AWREADY;
+  wire m01_couplers_to_ps7_0_axi_periph_AWREADY;
   wire m01_couplers_to_ps7_0_axi_periph_AWVALID;
   wire m01_couplers_to_ps7_0_axi_periph_BREADY;
-  wire [0:0]m01_couplers_to_ps7_0_axi_periph_BVALID;
+  wire m01_couplers_to_ps7_0_axi_periph_BVALID;
   wire [31:0]m01_couplers_to_ps7_0_axi_periph_RDATA;
   wire m01_couplers_to_ps7_0_axi_periph_RREADY;
-  wire [0:0]m01_couplers_to_ps7_0_axi_periph_RVALID;
+  wire m01_couplers_to_ps7_0_axi_periph_RVALID;
   wire [31:0]m01_couplers_to_ps7_0_axi_periph_WDATA;
-  wire [0:0]m01_couplers_to_ps7_0_axi_periph_WREADY;
+  wire m01_couplers_to_ps7_0_axi_periph_WREADY;
   wire [3:0]m01_couplers_to_ps7_0_axi_periph_WSTRB;
   wire m01_couplers_to_ps7_0_axi_periph_WVALID;
   wire ps7_0_axi_periph_ACLK_net;
@@ -1518,15 +1504,15 @@ module Pixel_Controller_ILA_ps7_0_axi_periph_0
   assign M00_AXI_wvalid[0] = m00_couplers_to_ps7_0_axi_periph_WVALID;
   assign M01_AXI_araddr[31:0] = m01_couplers_to_ps7_0_axi_periph_ARADDR;
   assign M01_AXI_arprot[2:0] = m01_couplers_to_ps7_0_axi_periph_ARPROT;
-  assign M01_AXI_arvalid[0] = m01_couplers_to_ps7_0_axi_periph_ARVALID;
+  assign M01_AXI_arvalid = m01_couplers_to_ps7_0_axi_periph_ARVALID;
   assign M01_AXI_awaddr[31:0] = m01_couplers_to_ps7_0_axi_periph_AWADDR;
   assign M01_AXI_awprot[2:0] = m01_couplers_to_ps7_0_axi_periph_AWPROT;
-  assign M01_AXI_awvalid[0] = m01_couplers_to_ps7_0_axi_periph_AWVALID;
-  assign M01_AXI_bready[0] = m01_couplers_to_ps7_0_axi_periph_BREADY;
-  assign M01_AXI_rready[0] = m01_couplers_to_ps7_0_axi_periph_RREADY;
+  assign M01_AXI_awvalid = m01_couplers_to_ps7_0_axi_periph_AWVALID;
+  assign M01_AXI_bready = m01_couplers_to_ps7_0_axi_periph_BREADY;
+  assign M01_AXI_rready = m01_couplers_to_ps7_0_axi_periph_RREADY;
   assign M01_AXI_wdata[31:0] = m01_couplers_to_ps7_0_axi_periph_WDATA;
   assign M01_AXI_wstrb[3:0] = m01_couplers_to_ps7_0_axi_periph_WSTRB;
-  assign M01_AXI_wvalid[0] = m01_couplers_to_ps7_0_axi_periph_WVALID;
+  assign M01_AXI_wvalid = m01_couplers_to_ps7_0_axi_periph_WVALID;
   assign S00_AXI_arready = ps7_0_axi_periph_to_s00_couplers_ARREADY;
   assign S00_AXI_awready = ps7_0_axi_periph_to_s00_couplers_AWREADY;
   assign S00_AXI_bid[11:0] = ps7_0_axi_periph_to_s00_couplers_BID;
@@ -1546,12 +1532,12 @@ module Pixel_Controller_ILA_ps7_0_axi_periph_0
   assign m00_couplers_to_ps7_0_axi_periph_RRESP = M00_AXI_rresp[1:0];
   assign m00_couplers_to_ps7_0_axi_periph_RVALID = M00_AXI_rvalid[0];
   assign m00_couplers_to_ps7_0_axi_periph_WREADY = M00_AXI_wready[0];
-  assign m01_couplers_to_ps7_0_axi_periph_ARREADY = M01_AXI_arready[0];
-  assign m01_couplers_to_ps7_0_axi_periph_AWREADY = M01_AXI_awready[0];
-  assign m01_couplers_to_ps7_0_axi_periph_BVALID = M01_AXI_bvalid[0];
+  assign m01_couplers_to_ps7_0_axi_periph_ARREADY = M01_AXI_arready;
+  assign m01_couplers_to_ps7_0_axi_periph_AWREADY = M01_AXI_awready;
+  assign m01_couplers_to_ps7_0_axi_periph_BVALID = M01_AXI_bvalid;
   assign m01_couplers_to_ps7_0_axi_periph_RDATA = M01_AXI_rdata[31:0];
-  assign m01_couplers_to_ps7_0_axi_periph_RVALID = M01_AXI_rvalid[0];
-  assign m01_couplers_to_ps7_0_axi_periph_WREADY = M01_AXI_wready[0];
+  assign m01_couplers_to_ps7_0_axi_periph_RVALID = M01_AXI_rvalid;
+  assign m01_couplers_to_ps7_0_axi_periph_WREADY = M01_AXI_wready;
   assign ps7_0_axi_periph_ACLK_net = ACLK;
   assign ps7_0_axi_periph_ARESETN_net = ARESETN;
   assign ps7_0_axi_periph_to_s00_couplers_ARADDR = S00_AXI_araddr[31:0];
