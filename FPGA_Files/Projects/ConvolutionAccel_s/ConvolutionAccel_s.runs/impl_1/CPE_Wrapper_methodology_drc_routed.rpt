@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date         : Mon Jan 18 18:52:25 2021
+| Date         : Tue Jan 26 18:05:39 2021
 | Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 | Command      : report_methodology -file CPE_Wrapper_methodology_drc_routed.rpt -pb CPE_Wrapper_methodology_drc_routed.pb -rpx CPE_Wrapper_methodology_drc_routed.rpx
 | Design       : CPE_Wrapper
@@ -23,13 +23,15 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 30
-+----------+----------+------------------------------+------------+
-| Rule     | Severity | Description                  | Violations |
-+----------+----------+------------------------------+------------+
-| LUTAR-1  | Warning  | LUT drives async reset alert | 3          |
-| SYNTH-10 | Warning  | Wide multiplier              | 27         |
-+----------+----------+------------------------------+------------+
+             Violations found: 142
++-----------+----------+------------------------------+------------+
+| Rule      | Severity | Description                  | Violations |
++-----------+----------+------------------------------+------------+
+| LUTAR-1   | Warning  | LUT drives async reset alert | 3          |
+| SYNTH-9   | Warning  | Small multiplier             | 6          |
+| SYNTH-10  | Warning  | Wide multiplier              | 2          |
+| TIMING-16 | Warning  | Large setup violation        | 131        |
++-----------+----------+------------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
@@ -90,139 +92,699 @@ BD_Wrapper/Convolution_Controller_i/axi_mem_intercon/m00_couplers/auto_pc/inst/g
 BD_Wrapper/Convolution_Controller_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_reg[2]/CLR (the first 15 of 32 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
+SYNTH-9#1 Warning
+Small multiplier  
+Detected multiplier at Convolution_Processor/genblk1[2].inputMulti/product_reg[3]_i_1 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Related violations: <none>
+
+SYNTH-9#2 Warning
+Small multiplier  
+Detected multiplier at Convolution_Processor/genblk1[2].inputMulti/product_reg[3]_i_2 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Related violations: <none>
+
+SYNTH-9#3 Warning
+Small multiplier  
+Detected multiplier at Convolution_Processor/genblk1[2].inputMulti/product_reg[7]_i_2 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Related violations: <none>
+
+SYNTH-9#4 Warning
+Small multiplier  
+Detected multiplier at Convolution_Processor/genblk1[2].inputMulti/product_reg[7]_i_33 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Related violations: <none>
+
+SYNTH-9#5 Warning
+Small multiplier  
+Detected multiplier at Convolution_Processor/genblk1[2].inputMulti/product_reg[7]_i_4 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Related violations: <none>
+
+SYNTH-9#6 Warning
+Small multiplier  
+Detected multiplier at Convolution_Processor/genblk1[2].inputMulti/product_reg[7]_i_9 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Related violations: <none>
+
 SYNTH-10#1 Warning
 Wide multiplier  
-Detected multiplier at Convolution_Processor/genblk1[0].inputMulti/product0 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at Convolution_Processor/genblk1[0].inputMulti/product0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#2 Warning
 Wide multiplier  
-Detected multiplier at Convolution_Processor/genblk1[0].inputMulti/product0__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at Convolution_Processor/genblk1[1].inputMulti/product0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
-SYNTH-10#3 Warning
-Wide multiplier  
-Detected multiplier at Convolution_Processor/genblk1[0].inputMulti/product_reg of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+TIMING-16#1 Warning
+Large setup violation  
+There is a large setup violation of -1.057 ns between BD_Wrapper/Convolution_Controller_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/current_x_reg[18]/R (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
-SYNTH-10#4 Warning
-Wide multiplier  
-Detected multiplier at Convolution_Processor/genblk1[1].inputMulti/product0 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+TIMING-16#2 Warning
+Large setup violation  
+There is a large setup violation of -1.057 ns between BD_Wrapper/Convolution_Controller_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/current_x_reg[19]/R (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
-SYNTH-10#5 Warning
-Wide multiplier  
-Detected multiplier at Convolution_Processor/genblk1[1].inputMulti/product0__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+TIMING-16#3 Warning
+Large setup violation  
+There is a large setup violation of -1.072 ns between BD_Wrapper/Convolution_Controller_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/ENABLE_AXIS_SKID.I_S2MM_STRM_SKID_BUF/sig_s_ready_out_reg/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[1][1]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
-SYNTH-10#6 Warning
-Wide multiplier  
-Detected multiplier at Convolution_Processor/genblk1[1].inputMulti/product_reg of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+TIMING-16#4 Warning
+Large setup violation  
+There is a large setup violation of -1.091 ns between BD_Wrapper/Convolution_Controller_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[4][4]/R (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
-SYNTH-10#7 Warning
-Wide multiplier  
-Detected multiplier at Convolution_Processor/genblk1[2].inputMulti/product0 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+TIMING-16#5 Warning
+Large setup violation  
+There is a large setup violation of -1.160 ns between BD_Wrapper/Convolution_Controller_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[7][1]/R (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
-SYNTH-10#8 Warning
-Wide multiplier  
-Detected multiplier at Convolution_Processor/genblk1[2].inputMulti/product0__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+TIMING-16#6 Warning
+Large setup violation  
+There is a large setup violation of -1.160 ns between BD_Wrapper/Convolution_Controller_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[7][4]/R (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
-SYNTH-10#9 Warning
-Wide multiplier  
-Detected multiplier at Convolution_Processor/genblk1[2].inputMulti/product_reg of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+TIMING-16#7 Warning
+Large setup violation  
+There is a large setup violation of -1.186 ns between BD_Wrapper/Convolution_Controller_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[3][4]/R (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
-SYNTH-10#10 Warning
-Wide multiplier  
-Detected multiplier at Convolution_Processor/genblk1[3].inputMulti/product0 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+TIMING-16#8 Warning
+Large setup violation  
+There is a large setup violation of -1.203 ns between BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/addr_arbiter_inst/gen_no_arbiter.m_valid_i_reg/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/control_registers_reg[56][14]/R (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
-SYNTH-10#11 Warning
-Wide multiplier  
-Detected multiplier at Convolution_Processor/genblk1[3].inputMulti/product0__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+TIMING-16#9 Warning
+Large setup violation  
+There is a large setup violation of -1.203 ns between BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/addr_arbiter_inst/gen_no_arbiter.m_valid_i_reg/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/control_registers_reg[56][15]/R (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
-SYNTH-10#12 Warning
-Wide multiplier  
-Detected multiplier at Convolution_Processor/genblk1[3].inputMulti/product_reg of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+TIMING-16#10 Warning
+Large setup violation  
+There is a large setup violation of -1.208 ns between BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/addr_arbiter_inst/gen_no_arbiter.m_valid_i_reg/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/control_registers_reg[59][12]/R (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
-SYNTH-10#13 Warning
-Wide multiplier  
-Detected multiplier at Convolution_Processor/genblk1[4].inputMulti/product0 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+TIMING-16#11 Warning
+Large setup violation  
+There is a large setup violation of -1.217 ns between BD_Wrapper/Convolution_Controller_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/current_x_reg[20]/R (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
-SYNTH-10#14 Warning
-Wide multiplier  
-Detected multiplier at Convolution_Processor/genblk1[4].inputMulti/product0__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+TIMING-16#12 Warning
+Large setup violation  
+There is a large setup violation of -1.217 ns between BD_Wrapper/Convolution_Controller_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/current_x_reg[21]/R (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
-SYNTH-10#15 Warning
-Wide multiplier  
-Detected multiplier at Convolution_Processor/genblk1[4].inputMulti/product_reg of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+TIMING-16#13 Warning
+Large setup violation  
+There is a large setup violation of -1.217 ns between BD_Wrapper/Convolution_Controller_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/current_x_reg[22]/R (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
-SYNTH-10#16 Warning
-Wide multiplier  
-Detected multiplier at Convolution_Processor/genblk1[5].inputMulti/product0 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+TIMING-16#14 Warning
+Large setup violation  
+There is a large setup violation of -1.217 ns between BD_Wrapper/Convolution_Controller_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/current_x_reg[23]/R (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
-SYNTH-10#17 Warning
-Wide multiplier  
-Detected multiplier at Convolution_Processor/genblk1[5].inputMulti/product0__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+TIMING-16#15 Warning
+Large setup violation  
+There is a large setup violation of -1.255 ns between BD_Wrapper/Convolution_Controller_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[0][1]/R (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
-SYNTH-10#18 Warning
-Wide multiplier  
-Detected multiplier at Convolution_Processor/genblk1[5].inputMulti/product_reg of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+TIMING-16#16 Warning
+Large setup violation  
+There is a large setup violation of -1.266 ns between BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/addr_arbiter_inst/gen_no_arbiter.m_valid_i_reg/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/control_registers_reg[51][14]/R (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
-SYNTH-10#19 Warning
-Wide multiplier  
-Detected multiplier at Convolution_Processor/genblk1[6].inputMulti/product0 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+TIMING-16#17 Warning
+Large setup violation  
+There is a large setup violation of -1.266 ns between BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/addr_arbiter_inst/gen_no_arbiter.m_valid_i_reg/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/control_registers_reg[51][15]/R (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
-SYNTH-10#20 Warning
-Wide multiplier  
-Detected multiplier at Convolution_Processor/genblk1[6].inputMulti/product0__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+TIMING-16#18 Warning
+Large setup violation  
+There is a large setup violation of -1.328 ns between BD_Wrapper/Convolution_Controller_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/current_y_reg[0]/R (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
-SYNTH-10#21 Warning
-Wide multiplier  
-Detected multiplier at Convolution_Processor/genblk1[6].inputMulti/product_reg of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+TIMING-16#19 Warning
+Large setup violation  
+There is a large setup violation of -1.328 ns between BD_Wrapper/Convolution_Controller_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/current_y_reg[1]/R (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
-SYNTH-10#22 Warning
-Wide multiplier  
-Detected multiplier at Convolution_Processor/genblk1[7].inputMulti/product0 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+TIMING-16#20 Warning
+Large setup violation  
+There is a large setup violation of -1.328 ns between BD_Wrapper/Convolution_Controller_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/current_y_reg[2]/R (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
-SYNTH-10#23 Warning
-Wide multiplier  
-Detected multiplier at Convolution_Processor/genblk1[7].inputMulti/product0__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+TIMING-16#21 Warning
+Large setup violation  
+There is a large setup violation of -1.328 ns between BD_Wrapper/Convolution_Controller_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/current_y_reg[3]/R (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
-SYNTH-10#24 Warning
-Wide multiplier  
-Detected multiplier at Convolution_Processor/genblk1[7].inputMulti/product_reg of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+TIMING-16#22 Warning
+Large setup violation  
+There is a large setup violation of -1.379 ns between BD_Wrapper/Convolution_Controller_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/current_x_reg[24]/R (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
-SYNTH-10#25 Warning
-Wide multiplier  
-Detected multiplier at Convolution_Processor/genblk1[8].inputMulti/product0 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+TIMING-16#23 Warning
+Large setup violation  
+There is a large setup violation of -1.379 ns between BD_Wrapper/Convolution_Controller_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/current_x_reg[25]/R (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
-SYNTH-10#26 Warning
-Wide multiplier  
-Detected multiplier at Convolution_Processor/genblk1[8].inputMulti/product0__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+TIMING-16#24 Warning
+Large setup violation  
+There is a large setup violation of -1.379 ns between BD_Wrapper/Convolution_Controller_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/current_x_reg[26]/R (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
-SYNTH-10#27 Warning
-Wide multiplier  
-Detected multiplier at Convolution_Processor/genblk1[8].inputMulti/product_reg of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+TIMING-16#25 Warning
+Large setup violation  
+There is a large setup violation of -1.379 ns between BD_Wrapper/Convolution_Controller_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/current_x_reg[27]/R (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#26 Warning
+Large setup violation  
+There is a large setup violation of -1.379 ns between BD_Wrapper/Convolution_Controller_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/current_x_reg[28]/R (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#27 Warning
+Large setup violation  
+There is a large setup violation of -1.379 ns between BD_Wrapper/Convolution_Controller_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/current_x_reg[29]/R (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#28 Warning
+Large setup violation  
+There is a large setup violation of -1.468 ns between BD_Wrapper/Convolution_Controller_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[1][1]/R (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#29 Warning
+Large setup violation  
+There is a large setup violation of -1.489 ns between BD_Wrapper/Convolution_Controller_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/current_y_reg[4]/R (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#30 Warning
+Large setup violation  
+There is a large setup violation of -1.489 ns between BD_Wrapper/Convolution_Controller_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/current_y_reg[5]/R (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#31 Warning
+Large setup violation  
+There is a large setup violation of -1.489 ns between BD_Wrapper/Convolution_Controller_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/current_y_reg[6]/R (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#32 Warning
+Large setup violation  
+There is a large setup violation of -1.489 ns between BD_Wrapper/Convolution_Controller_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/current_y_reg[7]/R (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#33 Warning
+Large setup violation  
+There is a large setup violation of -1.528 ns between BD_Wrapper/Convolution_Controller_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/ENABLE_AXIS_SKID.I_S2MM_STRM_SKID_BUF/sig_s_ready_out_reg/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[1][3]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#34 Warning
+Large setup violation  
+There is a large setup violation of -1.530 ns between BD_Wrapper/Convolution_Controller_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/current_x_reg[30]/R (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#35 Warning
+Large setup violation  
+There is a large setup violation of -1.530 ns between BD_Wrapper/Convolution_Controller_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/current_x_reg[31]/R (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#36 Warning
+Large setup violation  
+There is a large setup violation of -1.563 ns between BD_Wrapper/Convolution_Controller_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[0][5]/R (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#37 Warning
+Large setup violation  
+There is a large setup violation of -1.605 ns between BD_Wrapper/Convolution_Controller_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/ENABLE_AXIS_SKID.I_S2MM_STRM_SKID_BUF/sig_s_ready_out_reg/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[1][7]/CE (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#38 Warning
+Large setup violation  
+There is a large setup violation of -1.777 ns between BD_Wrapper/Convolution_Controller_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[5][4]/R (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#39 Warning
+Large setup violation  
+There is a large setup violation of -1.782 ns between BD_Wrapper/Convolution_Controller_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[3][1]/R (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#40 Warning
+Large setup violation  
+There is a large setup violation of -1.814 ns between BD_Wrapper/Convolution_Controller_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/current_y_reg[12]/R (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#41 Warning
+Large setup violation  
+There is a large setup violation of -1.814 ns between BD_Wrapper/Convolution_Controller_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/current_y_reg[13]/R (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#42 Warning
+Large setup violation  
+There is a large setup violation of -1.814 ns between BD_Wrapper/Convolution_Controller_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/current_y_reg[14]/R (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#43 Warning
+Large setup violation  
+There is a large setup violation of -1.814 ns between BD_Wrapper/Convolution_Controller_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/current_y_reg[15]/R (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#44 Warning
+Large setup violation  
+There is a large setup violation of -1.958 ns between BD_Wrapper/Convolution_Controller_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/current_y_reg[20]/R (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#45 Warning
+Large setup violation  
+There is a large setup violation of -1.958 ns between BD_Wrapper/Convolution_Controller_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/current_y_reg[21]/R (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#46 Warning
+Large setup violation  
+There is a large setup violation of -1.958 ns between BD_Wrapper/Convolution_Controller_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/current_y_reg[22]/R (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#47 Warning
+Large setup violation  
+There is a large setup violation of -1.958 ns between BD_Wrapper/Convolution_Controller_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/current_y_reg[23]/R (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#48 Warning
+Large setup violation  
+There is a large setup violation of -1.961 ns between BD_Wrapper/Convolution_Controller_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/current_y_reg[10]/R (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#49 Warning
+Large setup violation  
+There is a large setup violation of -1.961 ns between BD_Wrapper/Convolution_Controller_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/current_y_reg[11]/R (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#50 Warning
+Large setup violation  
+There is a large setup violation of -1.961 ns between BD_Wrapper/Convolution_Controller_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/current_y_reg[8]/R (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#51 Warning
+Large setup violation  
+There is a large setup violation of -1.961 ns between BD_Wrapper/Convolution_Controller_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/current_y_reg[9]/R (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#52 Warning
+Large setup violation  
+There is a large setup violation of -10.555 ns between BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/datapointer_reg[0]/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[3][3]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#53 Warning
+Large setup violation  
+There is a large setup violation of -10.571 ns between BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/datapointer_reg[0]/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[4][1]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#54 Warning
+Large setup violation  
+There is a large setup violation of -10.608 ns between BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/datapointer_reg[0]/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[1][7]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#55 Warning
+Large setup violation  
+There is a large setup violation of -10.625 ns between BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/datapointer_reg[0]/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[4][3]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#56 Warning
+Large setup violation  
+There is a large setup violation of -10.654 ns between BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/datapointer_reg[0]/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[4][7]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#57 Warning
+Large setup violation  
+There is a large setup violation of -10.655 ns between BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/datapointer_reg[0]/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[8][6]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#58 Warning
+Large setup violation  
+There is a large setup violation of -10.661 ns between BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/datapointer_reg[0]/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[1][4]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#59 Warning
+Large setup violation  
+There is a large setup violation of -10.663 ns between BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/datapointer_reg[0]/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[7][0]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#60 Warning
+Large setup violation  
+There is a large setup violation of -10.666 ns between BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/datapointer_reg[0]/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[6][4]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#61 Warning
+Large setup violation  
+There is a large setup violation of -10.670 ns between BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/datapointer_reg[0]/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[1][5]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#62 Warning
+Large setup violation  
+There is a large setup violation of -10.673 ns between BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/datapointer_reg[0]/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[0][5]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#63 Warning
+Large setup violation  
+There is a large setup violation of -10.680 ns between BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/datapointer_reg[0]/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[1][2]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#64 Warning
+Large setup violation  
+There is a large setup violation of -10.683 ns between BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/datapointer_reg[0]/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[6][1]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#65 Warning
+Large setup violation  
+There is a large setup violation of -10.685 ns between BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/datapointer_reg[0]/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[0][4]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#66 Warning
+Large setup violation  
+There is a large setup violation of -10.714 ns between BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/datapointer_reg[0]/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[8][0]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#67 Warning
+Large setup violation  
+There is a large setup violation of -10.716 ns between BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/datapointer_reg[0]/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[8][4]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#68 Warning
+Large setup violation  
+There is a large setup violation of -10.733 ns between BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/datapointer_reg[0]/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[7][4]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#69 Warning
+Large setup violation  
+There is a large setup violation of -10.738 ns between BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/datapointer_reg[0]/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[7][3]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#70 Warning
+Large setup violation  
+There is a large setup violation of -10.744 ns between BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/datapointer_reg[0]/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[8][3]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#71 Warning
+Large setup violation  
+There is a large setup violation of -10.765 ns between BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/datapointer_reg[0]/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[1][0]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#72 Warning
+Large setup violation  
+There is a large setup violation of -10.772 ns between BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/datapointer_reg[0]/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[8][7]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#73 Warning
+Large setup violation  
+There is a large setup violation of -10.776 ns between BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/datapointer_reg[0]/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[6][0]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#74 Warning
+Large setup violation  
+There is a large setup violation of -10.777 ns between BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/datapointer_reg[0]/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[3][7]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#75 Warning
+Large setup violation  
+There is a large setup violation of -10.780 ns between BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/datapointer_reg[0]/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[5][3]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#76 Warning
+Large setup violation  
+There is a large setup violation of -10.787 ns between BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/datapointer_reg[0]/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[3][4]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#77 Warning
+Large setup violation  
+There is a large setup violation of -10.789 ns between BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/datapointer_reg[0]/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[1][6]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#78 Warning
+Large setup violation  
+There is a large setup violation of -10.792 ns between BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/datapointer_reg[0]/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[5][7]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#79 Warning
+Large setup violation  
+There is a large setup violation of -10.794 ns between BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/datapointer_reg[0]/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[6][6]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#80 Warning
+Large setup violation  
+There is a large setup violation of -10.805 ns between BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/datapointer_reg[0]/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[7][1]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#81 Warning
+Large setup violation  
+There is a large setup violation of -10.812 ns between BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/datapointer_reg[0]/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[6][3]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#82 Warning
+Large setup violation  
+There is a large setup violation of -10.818 ns between BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/datapointer_reg[0]/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[7][7]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#83 Warning
+Large setup violation  
+There is a large setup violation of -10.826 ns between BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/datapointer_reg[0]/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[0][1]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#84 Warning
+Large setup violation  
+There is a large setup violation of -10.834 ns between BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/datapointer_reg[0]/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[4][2]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#85 Warning
+Large setup violation  
+There is a large setup violation of -10.834 ns between BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/datapointer_reg[0]/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[7][6]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#86 Warning
+Large setup violation  
+There is a large setup violation of -10.835 ns between BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/datapointer_reg[0]/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[8][1]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#87 Warning
+Large setup violation  
+There is a large setup violation of -10.837 ns between BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/datapointer_reg[0]/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[4][4]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#88 Warning
+Large setup violation  
+There is a large setup violation of -10.838 ns between BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/datapointer_reg[0]/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[6][7]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#89 Warning
+Large setup violation  
+There is a large setup violation of -10.856 ns between BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/datapointer_reg[0]/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[3][6]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#90 Warning
+Large setup violation  
+There is a large setup violation of -10.880 ns between BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/datapointer_reg[0]/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[5][1]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#91 Warning
+Large setup violation  
+There is a large setup violation of -10.881 ns between BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/datapointer_reg[0]/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[3][2]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#92 Warning
+Large setup violation  
+There is a large setup violation of -10.887 ns between BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/datapointer_reg[0]/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[3][0]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#93 Warning
+Large setup violation  
+There is a large setup violation of -10.891 ns between BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/datapointer_reg[0]/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[5][4]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#94 Warning
+Large setup violation  
+There is a large setup violation of -10.892 ns between BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/datapointer_reg[0]/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[5][2]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#95 Warning
+Large setup violation  
+There is a large setup violation of -10.893 ns between BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/datapointer_reg[0]/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[0][7]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#96 Warning
+Large setup violation  
+There is a large setup violation of -10.896 ns between BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/datapointer_reg[0]/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[0][2]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#97 Warning
+Large setup violation  
+There is a large setup violation of -10.903 ns between BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/datapointer_reg[0]/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[0][3]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#98 Warning
+Large setup violation  
+There is a large setup violation of -10.908 ns between BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/datapointer_reg[0]/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[0][6]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#99 Warning
+Large setup violation  
+There is a large setup violation of -10.909 ns between BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/datapointer_reg[0]/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[0][0]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#100 Warning
+Large setup violation  
+There is a large setup violation of -10.912 ns between BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/datapointer_reg[0]/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[2][0]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#101 Warning
+Large setup violation  
+There is a large setup violation of -10.919 ns between BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/datapointer_reg[0]/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[1][1]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#102 Warning
+Large setup violation  
+There is a large setup violation of -10.926 ns between BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/datapointer_reg[0]/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[5][0]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#103 Warning
+Large setup violation  
+There is a large setup violation of -10.938 ns between BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/datapointer_reg[0]/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[4][0]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#104 Warning
+Large setup violation  
+There is a large setup violation of -10.951 ns between BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/datapointer_reg[0]/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[1][3]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#105 Warning
+Large setup violation  
+There is a large setup violation of -10.952 ns between BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/datapointer_reg[0]/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[5][5]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#106 Warning
+Large setup violation  
+There is a large setup violation of -10.960 ns between BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/datapointer_reg[0]/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[8][5]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#107 Warning
+Large setup violation  
+There is a large setup violation of -10.961 ns between BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/datapointer_reg[0]/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[8][2]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#108 Warning
+Large setup violation  
+There is a large setup violation of -10.978 ns between BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/datapointer_reg[0]/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[4][6]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#109 Warning
+Large setup violation  
+There is a large setup violation of -11.004 ns between BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/datapointer_reg[0]/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[3][1]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#110 Warning
+Large setup violation  
+There is a large setup violation of -11.010 ns between BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/datapointer_reg[0]/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[3][5]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#111 Warning
+Large setup violation  
+There is a large setup violation of -11.025 ns between BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/datapointer_reg[0]/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[5][6]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#112 Warning
+Large setup violation  
+There is a large setup violation of -11.042 ns between BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/datapointer_reg[0]/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[6][5]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#113 Warning
+Large setup violation  
+There is a large setup violation of -11.059 ns between BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/datapointer_reg[0]/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[4][5]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#114 Warning
+Large setup violation  
+There is a large setup violation of -11.089 ns between BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/datapointer_reg[0]/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[7][2]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#115 Warning
+Large setup violation  
+There is a large setup violation of -11.120 ns between BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/datapointer_reg[0]/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[7][5]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#116 Warning
+Large setup violation  
+There is a large setup violation of -11.156 ns between BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/datapointer_reg[0]/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[6][2]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#117 Warning
+Large setup violation  
+There is a large setup violation of -2.093 ns between BD_Wrapper/Convolution_Controller_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/current_y_reg[28]/R (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#118 Warning
+Large setup violation  
+There is a large setup violation of -2.093 ns between BD_Wrapper/Convolution_Controller_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/current_y_reg[29]/R (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#119 Warning
+Large setup violation  
+There is a large setup violation of -2.093 ns between BD_Wrapper/Convolution_Controller_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/current_y_reg[30]/R (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#120 Warning
+Large setup violation  
+There is a large setup violation of -2.093 ns between BD_Wrapper/Convolution_Controller_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/current_y_reg[31]/R (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#121 Warning
+Large setup violation  
+There is a large setup violation of -2.105 ns between BD_Wrapper/Convolution_Controller_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/current_y_reg[16]/R (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#122 Warning
+Large setup violation  
+There is a large setup violation of -2.105 ns between BD_Wrapper/Convolution_Controller_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/current_y_reg[17]/R (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#123 Warning
+Large setup violation  
+There is a large setup violation of -2.105 ns between BD_Wrapper/Convolution_Controller_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/current_y_reg[18]/R (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#124 Warning
+Large setup violation  
+There is a large setup violation of -2.105 ns between BD_Wrapper/Convolution_Controller_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/current_y_reg[19]/R (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#125 Warning
+Large setup violation  
+There is a large setup violation of -2.250 ns between BD_Wrapper/Convolution_Controller_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/current_y_reg[24]/R (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#126 Warning
+Large setup violation  
+There is a large setup violation of -2.250 ns between BD_Wrapper/Convolution_Controller_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/current_y_reg[25]/R (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#127 Warning
+Large setup violation  
+There is a large setup violation of -2.250 ns between BD_Wrapper/Convolution_Controller_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/current_y_reg[26]/R (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#128 Warning
+Large setup violation  
+There is a large setup violation of -2.250 ns between BD_Wrapper/Convolution_Controller_i/rst_ps7_0_50M/U0/ACTIVE_LOW_PR_OUT_DFF[0].FDRE_PER_N/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/current_y_reg[27]/R (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#129 Warning
+Large setup violation  
+There is a large setup violation of -9.321 ns between BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/datapointer_reg[0]/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/line_buffer/row_full_reg[2]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#130 Warning
+Large setup violation  
+There is a large setup violation of -9.555 ns between BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/datapointer_reg[0]/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/line_buffer/row_full_reg[0]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#131 Warning
+Large setup violation  
+There is a large setup violation of -9.653 ns between BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/datapointer_reg[0]/C (clocked by clk_fpga_0) and BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/line_buffer/row_full_reg[1]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 

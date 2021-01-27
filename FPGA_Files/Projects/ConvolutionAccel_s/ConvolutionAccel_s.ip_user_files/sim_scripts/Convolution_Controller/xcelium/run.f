@@ -17,6 +17,11 @@
 -makelib xcelium_lib/xpm \
   "C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_VCOMP.vhd" \
 -endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/Convolution_Controller/ipshared/816f/src/lb.v" \
+  "../../../bd/Convolution_Controller/ipshared/816f/AXI_Convolution_Controller.v" \
+  "../../../bd/Convolution_Controller/ip/Convolution_Controller_Convolution_Controll_0_4/sim/Convolution_Controller_Convolution_Controll_0_4.v" \
+-endlib
 -makelib xcelium_lib/axi_infrastructure_v1_1_0 \
   "../../../../ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v" \
 -endlib
@@ -27,13 +32,10 @@
   "../../../../ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ipshared/6b56/hdl/processing_system7_vip_v1_0_vl_rfs.sv" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
-  "../../../bd/Convolution_Controller/ip/Convolution_Controller_processing_system7_0_0/sim/Convolution_Controller_processing_system7_0_0.v" \
+  "../../../bd/Convolution_Controller/ip/Convolution_Controller_processing_system7_0_2/sim/Convolution_Controller_processing_system7_0_2.v" \
 -endlib
--makelib xcelium_lib/generic_baseblocks_v2_1_0 \
-  "../../../../ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v" \
--endlib
--makelib xcelium_lib/axi_register_slice_v2_1_21 \
-  "../../../../ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ipshared/2ef9/hdl/axi_register_slice_v2_1_vl_rfs.v" \
+-makelib xcelium_lib/lib_pkg_v1_0_2 \
+  "../../../../ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ipshared/0513/hdl/lib_pkg_v1_0_rfs.vhd" \
 -endlib
 -makelib xcelium_lib/fifo_generator_v13_2_5 \
   "../../../../ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ipshared/276e/simulation/fifo_generator_vlog_beh.v" \
@@ -44,35 +46,14 @@
 -makelib xcelium_lib/fifo_generator_v13_2_5 \
   "../../../../ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ipshared/276e/hdl/fifo_generator_v13_2_rfs.v" \
 -endlib
--makelib xcelium_lib/axi_data_fifo_v2_1_20 \
-  "../../../../ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ipshared/47c9/hdl/axi_data_fifo_v2_1_vl_rfs.v" \
--endlib
--makelib xcelium_lib/axi_crossbar_v2_1_22 \
-  "../../../../ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ipshared/b68e/hdl/axi_crossbar_v2_1_vl_rfs.v" \
--endlib
--makelib xcelium_lib/xil_defaultlib \
-  "../../../bd/Convolution_Controller/ip/Convolution_Controller_xbar_0/sim/Convolution_Controller_xbar_0.v" \
--endlib
--makelib xcelium_lib/lib_cdc_v1_0_2 \
-  "../../../../ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd" \
--endlib
--makelib xcelium_lib/proc_sys_reset_v5_0_13 \
-  "../../../../ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd" \
--endlib
--makelib xcelium_lib/xil_defaultlib \
-  "../../../bd/Convolution_Controller/ip/Convolution_Controller_rst_ps7_0_100M_0/sim/Convolution_Controller_rst_ps7_0_100M_0.vhd" \
--endlib
--makelib xcelium_lib/xil_defaultlib \
-  "../../../bd/Convolution_Controller/ip/Convolution_Controller_xbar_1/sim/Convolution_Controller_xbar_1.v" \
--endlib
--makelib xcelium_lib/lib_pkg_v1_0_2 \
-  "../../../../ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ipshared/0513/hdl/lib_pkg_v1_0_rfs.vhd" \
--endlib
 -makelib xcelium_lib/lib_fifo_v1_0_14 \
   "../../../../ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ipshared/a5cb/hdl/lib_fifo_v1_0_rfs.vhd" \
 -endlib
 -makelib xcelium_lib/lib_srl_fifo_v1_0_2 \
   "../../../../ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd" \
+-endlib
+-makelib xcelium_lib/lib_cdc_v1_0_2 \
+  "../../../../ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd" \
 -endlib
 -makelib xcelium_lib/axi_datamover_v5_1_23 \
   "../../../../ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ipshared/af86/hdl/axi_datamover_v5_1_vh_rfs.vhd" \
@@ -84,11 +65,31 @@
   "../../../../ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ipshared/0fb1/hdl/axi_dma_v7_1_vh_rfs.vhd" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
-  "../../../bd/Convolution_Controller/ip/Convolution_Controller_axi_dma_0_1/sim/Convolution_Controller_axi_dma_0_1.vhd" \
+  "../../../bd/Convolution_Controller/ip/Convolution_Controller_axi_dma_0_3/sim/Convolution_Controller_axi_dma_0_3.vhd" \
+-endlib
+-makelib xcelium_lib/generic_baseblocks_v2_1_0 \
+  "../../../../ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ipshared/b752/hdl/generic_baseblocks_v2_1_vl_rfs.v" \
+-endlib
+-makelib xcelium_lib/axi_register_slice_v2_1_21 \
+  "../../../../ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ipshared/2ef9/hdl/axi_register_slice_v2_1_vl_rfs.v" \
+-endlib
+-makelib xcelium_lib/axi_data_fifo_v2_1_20 \
+  "../../../../ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ipshared/47c9/hdl/axi_data_fifo_v2_1_vl_rfs.v" \
+-endlib
+-makelib xcelium_lib/axi_crossbar_v2_1_22 \
+  "../../../../ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ipshared/b68e/hdl/axi_crossbar_v2_1_vl_rfs.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
-  "../../../bd/Convolution_Controller/ipshared/2447/AXI_Convolution_Controller.v" \
-  "../../../bd/Convolution_Controller/ip/Convolution_Controller_Convolution_Controll_0_1/sim/Convolution_Controller_Convolution_Controll_0_1.v" \
+  "../../../bd/Convolution_Controller/ip/Convolution_Controller_xbar_2/sim/Convolution_Controller_xbar_2.v" \
+-endlib
+-makelib xcelium_lib/proc_sys_reset_v5_0_13 \
+  "../../../../ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/Convolution_Controller/ip/Convolution_Controller_rst_ps7_0_50M_0/sim/Convolution_Controller_rst_ps7_0_50M_0.vhd" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/Convolution_Controller/ip/Convolution_Controller_xbar_3/sim/Convolution_Controller_xbar_3.v" \
 -endlib
 -makelib xcelium_lib/axi_protocol_converter_v2_1_21 \
   "../../../../ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ipshared/8dfa/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \

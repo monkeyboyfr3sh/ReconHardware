@@ -9,7 +9,7 @@
 `define addr_width 10
 `define kernel_size 3
 
-module Controller_Test_tb;
+module Controller_wo_LB_TB;
 
 reg rand_test = 1;//Set test bench to use random variables
 

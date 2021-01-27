@@ -19,7 +19,7 @@ reg wr_en, r_en;
 reg [`data_width-1:0] data_in;
 reg [`addr_width-1:0] add_r;
 wire [`rows*`data_width-1:0] data_out;
-wire [`rows-1:0] full;
+wire full;
 
 lb 
 #(

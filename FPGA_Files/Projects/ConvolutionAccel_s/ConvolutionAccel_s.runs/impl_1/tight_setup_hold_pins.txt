@@ -1,0 +1,26 @@
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+|       Launch Clock       |      Capture Clock       |                                                 Pin                                                      |
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+|               clk_fpga_0 |               clk_fpga_0 |                       BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[5][2]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                       BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[3][6]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                       BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[4][0]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                       BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[0][2]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                       BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[5][6]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                       BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[1][2]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                       BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[4][5]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                       BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[0][1]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                       BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[1][5]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                       BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[5][5]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                       BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[1][7]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                       BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[3][2]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                       BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[5][3]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                       BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[3][5]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                       BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[4][4]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                       BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[3][0]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                       BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[5][4]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                       BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[0][0]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                       BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[4][7]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                       BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[1][4]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                       BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/dataSet_reg[3][4]/D|
+|               clk_fpga_0 |               clk_fpga_0 |             BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/line_buffer/row_full_reg[1]/D|
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+

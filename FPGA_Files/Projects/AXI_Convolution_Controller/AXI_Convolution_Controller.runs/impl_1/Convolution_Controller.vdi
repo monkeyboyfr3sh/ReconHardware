@@ -1,0 +1,294 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Tue Jan 26 17:14:14 2021
+# Process ID: 25188
+# Current directory: C:/GitHub/ReconHardware/FPGA_Files/Projects/AXI_Convolution_Controller/AXI_Convolution_Controller.runs/impl_1
+# Command line: vivado.exe -log Convolution_Controller.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source Convolution_Controller.tcl -notrace
+# Log file: C:/GitHub/ReconHardware/FPGA_Files/Projects/AXI_Convolution_Controller/AXI_Convolution_Controller.runs/impl_1/Convolution_Controller.vdi
+# Journal file: C:/GitHub/ReconHardware/FPGA_Files/Projects/AXI_Convolution_Controller/AXI_Convolution_Controller.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source Convolution_Controller.tcl -notrace
+Command: open_checkpoint C:/GitHub/ReconHardware/FPGA_Files/Projects/AXI_Convolution_Controller/AXI_Convolution_Controller.runs/impl_1/Convolution_Controller.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 1077.008 ; gain = 0.000
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 1077.008 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 705 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1077.008 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2020.1 (64-bit) build 2902540
+open_checkpoint: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1077.008 ; gain = 0.000
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.1/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is C:/GitHub/ReconHardware/FPGA_Files/Projects/AXI_Convolution_Controller/AXI_Convolution_Controller.cache/ip 
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.641 . Memory (MB): peak = 1077.008 ; gain = 0.000
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 180f6fe99
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1517.316 ; gain = 440.309
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 180f6fe99
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.268 . Memory (MB): peak = 1718.398 ; gain = 0.000
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 18650aaf0
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.315 . Memory (MB): peak = 1718.398 ; gain = 0.000
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: f5d92bb8
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.420 . Memory (MB): peak = 1718.398 ; gain = 0.000
+INFO: [Opt 31-389] Phase Sweep created 13 cells and removed 0 cells
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: f5d92bb8
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.554 . Memory (MB): peak = 1718.398 ; gain = 0.000
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 5 Shift Register Optimization | Checksum: f5d92bb8
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.623 . Memory (MB): peak = 1718.398 ; gain = 0.000
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: f5d92bb8
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.646 . Memory (MB): peak = 1718.398 ; gain = 0.000
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               0  |               0  |                                              0  |
+|  Constant propagation         |               0  |               0  |                                              0  |
+|  Sweep                        |              13  |               0  |                                              0  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1718.398 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 194b50ec9
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.758 . Memory (MB): peak = 1718.398 ; gain = 0.000
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: 194b50ec9
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1718.398 ; gain = 0.000
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 194b50ec9
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1718.398 ; gain = 0.000
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1718.398 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 194b50ec9
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1718.398 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+27 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1718.398 ; gain = 641.391
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/GitHub/ReconHardware/FPGA_Files/Projects/AXI_Convolution_Controller/AXI_Convolution_Controller.runs/impl_1/Convolution_Controller_opt.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file Convolution_Controller_drc_opted.rpt -pb Convolution_Controller_drc_opted.pb -rpx Convolution_Controller_drc_opted.rpx
+Command: report_drc -file Convolution_Controller_drc_opted.rpt -pb Convolution_Controller_drc_opted.pb -rpx Convolution_Controller_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file C:/GitHub/ReconHardware/FPGA_Files/Projects/AXI_Convolution_Controller/AXI_Convolution_Controller.runs/impl_1/Convolution_Controller_drc_opted.rpt.
+report_drc completed successfully
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1718.398 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: c133a80d
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1718.398 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1718.398 ; gain = 0.000
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+ERROR: [Place 30-415] IO Placement failed due to overutilization. This design contains 781 I/O ports
+ while the target  device: 7z020 package: clg400, contains only 255 available user I/O. The target device has 255 usable I/O pins of which 0 are already occupied by user-locked I/Os.
+ To rectify this issue:
+ 1. Ensure you are targeting the correct device and package.  Select a larger device or different package if necessary.
+ 2. Check the top-level ports of the design to ensure the correct number of ports are specified.
+ 3. Consider design changes to reduce the number of I/Os necessary.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[0]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[100]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[101]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[102]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[103]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[104]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[105]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[106]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[107]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[108]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[109]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[10]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[110]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[111]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[112]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[113]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[114]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[115]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[116]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[117]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[118]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[119]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[11]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[120]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[121]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[122]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[123]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[124]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[125]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[126]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[127]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[128]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[129]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[12]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[130]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[131]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[132]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[133]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[134]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[135]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[136]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[137]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[138]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[139]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[13]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[140]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[141]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[142]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[143]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[144]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[145]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[146]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[147]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[148]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[149]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[14]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[150]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[151]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[152]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[153]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[154]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[155]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[156]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[157]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[158]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[159]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[15]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[160]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[161]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[162]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[163]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[164]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[165]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[166]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[167]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[168]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[169]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[16]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[170]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[171]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[172]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[173]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[174]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[175]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[176]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[177]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[178]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[179]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[17]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[180]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[181]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[182]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[183]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[184]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[185]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[186]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[187]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[188]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[189]_inst (OBUF) is not placed
+ERROR: [Place 30-68] Instance MULTIPLICAND_INPUT_OBUF[18]_inst (OBUF) is not placed
+INFO: [Common 17-14] Message 'Place 30-68' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: dd57a12b
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.788 . Memory (MB): peak = 1718.398 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: dd57a12b
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.789 . Memory (MB): peak = 1718.398 ; gain = 0.000
+ERROR: [Place 30-99] Placer failed with error: 'IO Clock Placer failed'
+Please review all ERROR, CRITICAL WARNING, and WARNING messages during placement to understand the cause for failure.
+Ending Placer Task | Checksum: dd57a12b
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.791 . Memory (MB): peak = 1718.398 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+43 Infos, 2 Warnings, 0 Critical Warnings and 103 Errors encountered.
+place_design failed
+ERROR: [Common 17-69] Command failed: Placer could not place all instances
+INFO: [Common 17-206] Exiting Vivado at Tue Jan 26 17:14:38 2021...
