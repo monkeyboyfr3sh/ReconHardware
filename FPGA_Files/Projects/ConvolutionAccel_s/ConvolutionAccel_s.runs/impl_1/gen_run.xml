@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1611705644">
+<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1611801551">
   <File Type="BITSTR-BMM" Name="CPE_Wrapper_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="CPE_Wrapper_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="CPE_Wrapper_timing_summary_init.rpt"/>
@@ -98,6 +98,13 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PPRDIR/../../Sources/Multiplier/fixedmultiplyCompute.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PPRDIR/../../Sources/Adder/int_adder_tree.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -112,13 +119,6 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../../Sources/Multiplier/multiplyComputePynq.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PPRDIR/../../Sources/General/AXI_Conv_wrapper.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -126,7 +126,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../../Sources/Multiplier/fixedmultiplyCompute.v">
+    <File Path="$PPRDIR/../../Sources/Multiplier/multiplyComputePynq.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>

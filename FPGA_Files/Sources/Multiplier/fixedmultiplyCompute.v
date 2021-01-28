@@ -31,25 +31,17 @@ assign multiplier_sign = multiplier[DATA_WIDTH-1:DATA_WIDTH-1];
 always @(posedge clk)
     
     if(reset)begin 
-        //product = 0;
         ready = 0;
     end
-    
     else begin
         if(start)begin
-            if(multiplier&&multiplicand)begin      
-                ready = 0;
-                product = 0;
-                
-                for(i=0 ; i<DATA_WIDTH; i=i+1)begin
-                    if(multiplicand[i]) product = product + ((multiplier) << i);
-                end
-                
-                product = product >> FRAC_BIT_COUNT;
-                ready = 1'b1;
-             end
+            product = 0;
+            for(i=0 ; i<DATA_WIDTH; i=i+1)begin
+                if(multiplicand[i]) product = product + ((multiplier) << i);
+            end
+            product = product >> FRAC_BIT_COUNT;
+            ready = 1'b1;
          end
-         
          else ready = 0;
     end
 endmodule

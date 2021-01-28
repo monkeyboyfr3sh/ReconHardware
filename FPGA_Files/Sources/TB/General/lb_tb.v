@@ -81,10 +81,10 @@ add_r = 1;
 #`clkPeriod;
 add_r = 2;
 #`clkPeriod;
-add_r = 3;
-#`clkPeriod;
-add_r = 4;
-#`clkPeriod;
+//add_r = 3;
+//#`clkPeriod;
+//add_r = 4;
+//#`clkPeriod;
 
 $stop;
 

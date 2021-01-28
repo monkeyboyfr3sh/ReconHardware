@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:user:Convolution_Controller:1.0
-// IP Revision: 95
+// IP Revision: 96
 
 `timescale 1ns/1ps
 
@@ -95,10 +95,10 @@ input wire axi_clk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME axi_reset_n, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 axi_reset_n RST" *)
 input wire axi_reset_n;
-input wire [7 : 0] cSum;
+input wire [31 : 0] cSum;
 input wire cReady;
-output wire [71 : 0] MULTIPLIER_INPUT;
-output wire [71 : 0] MULTIPLICAND_INPUT;
+output wire [287 : 0] MULTIPLIER_INPUT;
+output wire [287 : 0] MULTIPLICAND_INPUT;
 output wire [8 : 0] MULTIPLY_START;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis_DATA_IN TVALID" *)
 input wire s_axis_valid;
@@ -155,7 +155,7 @@ input wire s_axi_bready;
 output wire s_axi_rlast;
 
   Convolution_Controller #(
-    .DATA_WIDTH(8),
+    .DATA_WIDTH(32),
     .KERNEL_SIZE(3),
     .CTRL_REG_SIZE(96),
     .AXI_ADDR_WIDTH(10),

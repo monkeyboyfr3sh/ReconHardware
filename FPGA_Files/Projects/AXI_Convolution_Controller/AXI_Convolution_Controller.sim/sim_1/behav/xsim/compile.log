@@ -22,7 +22,6 @@ INFO: [VRFC 10-311] analyzing module lb_tb
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/General/Controller_w_LB_TB.v" into library xil_defaultlib
 WARNING: [VRFC 10-3507] macro 'test_width' redefined [C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/General/Controller_w_LB_TB.v:5]
 WARNING: [VRFC 10-3507] macro 'test_height' redefined [C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/General/Controller_w_LB_TB.v:6]
-WARNING: [VRFC 10-3507] macro 'data_width' redefined [C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/General/Controller_w_LB_TB.v:8]
 WARNING: [VRFC 10-3507] macro 'addr_width' redefined [C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/General/Controller_w_LB_TB.v:9]
 INFO: [VRFC 10-311] analyzing module Controller_w_LB_TB
 INFO: [VRFC 10-2458] undeclared symbol AddressSelect, assumed default net type wire [C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/General/Controller_w_LB_TB.v:128]

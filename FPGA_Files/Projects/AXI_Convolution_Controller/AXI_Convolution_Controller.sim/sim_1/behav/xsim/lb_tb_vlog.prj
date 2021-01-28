@@ -8,6 +8,7 @@ verilog xil_defaultlib  --include "../../../../../../Sources" \
 "../../../../../../Sources/General/lb.v" \
 "../../../../../../Sources/TB/General/Controller_Test_tb.v" \
 "../../../../../../Sources/TB/General/lb_tb.v" \
+"../../../../../../Sources/TB/General/Controller_w_LB_TB.v" \
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"

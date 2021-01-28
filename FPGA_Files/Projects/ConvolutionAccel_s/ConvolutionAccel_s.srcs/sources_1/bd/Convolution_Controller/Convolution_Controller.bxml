@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="39">
   <CompositeFile CompositeFileTopName="Convolution_Controller" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1611705625"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1611705625"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1611705625"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1611705625"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1611801203"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1611801203"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1611801203"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1611801203"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\Convolution_Controller_Convolution_Controll_0_4\Convolution_Controller_Convolution_Controll_0_4.xci" Type="IP">
         <Instance HierarchyPath="Convolution_Controll_0"/>
@@ -40,7 +40,6 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip\Convolution_Controller_ps7_0_axi_periph_2\Convolution_Controller_ps7_0_axi_periph_2.xci" Type="IP">
-        <Instance HierarchyPath="ps7_0_axi_periph"/>
         <Properties IsEditable="false" IsVisible="false" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
@@ -64,11 +63,21 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip\Convolution_Controller_axi_mem_intercon_2\Convolution_Controller_axi_mem_intercon_2.xci" Type="IP">
-        <Instance HierarchyPath="axi_mem_intercon"/>
         <Properties IsEditable="false" IsVisible="false" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="synth\Convolution_Controller.v" Type="Verilog">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+      </File>
+      <File Name="sim\Convolution_Controller.v" Type="Verilog">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip\Convolution_Controller_auto_pc_0\Convolution_Controller_auto_pc_0.xci" Type="IP">
@@ -101,17 +110,6 @@
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
-        <UsedIn Val="SIMULATION"/>
-      </File>
-      <File Name="synth\Convolution_Controller.v" Type="Verilog">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
-        <UsedIn Val="SYNTHESIS"/>
-        <UsedIn Val="IMPLEMENTATION"/>
-      </File>
-      <File Name="sim\Convolution_Controller.v" Type="Verilog">
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
-        <Library Name="xil_defaultlib"/>
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="Convolution_Controller_ooc.xdc" Type="XDC">

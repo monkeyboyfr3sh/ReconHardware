@@ -47,13 +47,13 @@
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="69"/>
-    <Option Name="WTModelSimExportSim" Val="69"/>
-    <Option Name="WTQuestaExportSim" Val="69"/>
-    <Option Name="WTIesExportSim" Val="69"/>
-    <Option Name="WTVcsExportSim" Val="69"/>
-    <Option Name="WTRivieraExportSim" Val="69"/>
-    <Option Name="WTActivehdlExportSim" Val="69"/>
+    <Option Name="WTXSimExportSim" Val="70"/>
+    <Option Name="WTModelSimExportSim" Val="70"/>
+    <Option Name="WTQuestaExportSim" Val="70"/>
+    <Option Name="WTIesExportSim" Val="70"/>
+    <Option Name="WTVcsExportSim" Val="70"/>
+    <Option Name="WTRivieraExportSim" Val="70"/>
+    <Option Name="WTActivehdlExportSim" Val="70"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -93,6 +93,13 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PPRDIR/../../Sources/Multiplier/fixedmultiplyCompute.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PPRDIR/../../Sources/Adder/int_adder_tree.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -107,13 +114,6 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../Sources/Multiplier/multiplyComputePynq.v">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PPRDIR/../../Sources/General/AXI_Conv_wrapper.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -121,7 +121,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../Sources/Multiplier/fixedmultiplyCompute.v">
+      <File Path="$PPRDIR/../../Sources/Multiplier/multiplyComputePynq.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>

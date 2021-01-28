@@ -78,8 +78,8 @@ generate
         // Attatch product outputs to xbar inputs
         assign xbar_input[n*(DATA_WIDTH*2)+:(DATA_WIDTH*2)] = product_output[n];
         
-//        fixedmultiplyCompute
-        multiplyComputePynq 
+        fixedmultiplyCompute
+//        multiplyComputePynq 
         #( // Parameters
         .DATA_WIDTH(DATA_WIDTH)
         )

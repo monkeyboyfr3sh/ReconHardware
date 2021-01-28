@@ -164,16 +164,16 @@ proc create_root_design { parentCell } {
   # Create ports
   set FCLK_CLK0_0 [ create_bd_port -dir O -type clk FCLK_CLK0_0 ]
   set FCLK_RESET0_N_0 [ create_bd_port -dir O -type rst FCLK_RESET0_N_0 ]
-  set MULTIPLICAND_INPUT_0 [ create_bd_port -dir O -from 71 -to 0 MULTIPLICAND_INPUT_0 ]
-  set MULTIPLIER_INPUT_0 [ create_bd_port -dir O -from 71 -to 0 MULTIPLIER_INPUT_0 ]
+  set MULTIPLICAND_INPUT_0 [ create_bd_port -dir O -from 287 -to 0 MULTIPLICAND_INPUT_0 ]
+  set MULTIPLIER_INPUT_0 [ create_bd_port -dir O -from 287 -to 0 MULTIPLIER_INPUT_0 ]
   set MULTIPLY_START_0 [ create_bd_port -dir O -from 8 -to 0 MULTIPLY_START_0 ]
   set cReady_0 [ create_bd_port -dir I cReady_0 ]
-  set cSum_0 [ create_bd_port -dir I -from 7 -to 0 cSum_0 ]
+  set cSum_0 [ create_bd_port -dir I -from 31 -to 0 cSum_0 ]
 
   # Create instance: Convolution_Controll_0, and set properties
   set Convolution_Controll_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:Convolution_Controller:1.0 Convolution_Controll_0 ]
   set_property -dict [ list \
-   CONFIG.DATA_WIDTH {8} \
+   CONFIG.DATA_WIDTH {32} \
  ] $Convolution_Controll_0
 
   # Create instance: axi_dma_0, and set properties

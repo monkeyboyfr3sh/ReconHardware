@@ -18,8 +18,8 @@
   "C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_VCOMP.vhd" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
-  "../../../bd/Convolution_Controller/ipshared/816f/src/lb.v" \
-  "../../../bd/Convolution_Controller/ipshared/816f/AXI_Convolution_Controller.v" \
+  "../../../bd/Convolution_Controller/ipshared/ba21/src/lb.v" \
+  "../../../bd/Convolution_Controller/ipshared/ba21/AXI_Convolution_Controller.v" \
   "../../../bd/Convolution_Controller/ip/Convolution_Controller_Convolution_Controll_0_4/sim/Convolution_Controller_Convolution_Controll_0_4.v" \
 -endlib
 -makelib ies_lib/axi_infrastructure_v1_1_0 \

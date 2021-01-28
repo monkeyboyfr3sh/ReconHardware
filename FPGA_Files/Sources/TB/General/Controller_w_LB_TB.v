@@ -5,7 +5,7 @@
 `define test_width 5
 `define test_height 5
 
-`define data_width 32
+`define data_width 8
 `define addr_width 10
 `define kernel_size 3
 
@@ -138,8 +138,9 @@ integer curr_dataSet [`kernel_size*`kernel_size-1:0];
 integer curr_filterSet [`kernel_size*`kernel_size-1:0];
 integer curr_cSum;
 integer i_test;
-
+reg setup;
 initial begin
+setup = 0;
 axi_clk = 0;
 s_axi_bready = 1;
 axi_reset_n = 1;
@@ -230,45 +231,48 @@ for(i = 0;i<`kernel_size*`kernel_size;i=i+1)begin
     #`clkPeriod;
     #`clkPeriod;
 end
-
-
 linecnt = 0;
 columncnt = 0;
-s_axis_keep = 4'hf;
-s_axis_valid = 1;
+setup = 1;
 end
-always#(`clkPeriod/2) axi_clk = ~axi_clk;
 
+integer t;
+always#(`clkPeriod/2) axi_clk = ~axi_clk;
 //Begin data stream
 always @(posedge axi_clk)begin
-    if(s_axis_last)begin
-        s_axis_valid = 0;
-        m_axis_ready = 1;
-    end
-    if(s_axis_valid)begin
-         //IP is not ready to process data
-        if(!s_axis_ready)begin
+    if(setup)begin
+        if(s_axis_last)begin
+            s_axis_valid = 0;
             m_axis_ready = 1;
-        end    
+        end
         
-        //Putting data on the bus
         else begin
-            //Last pixel condition
-            m_axis_ready = 0;
+            s_axis_valid = 1;
+            s_axis_keep = 4'hf;
+             //IP is not ready to process data
+            if(!s_axis_ready)begin
+                m_axis_ready = 1;
+            end    
             
-            //Data on the 
-            s_axis_data = (rand_test) ? ($urandom) % (`data_width-2) : columncnt+linecnt*`test_width;
-            
-            columncnt = columncnt+1;
-            if(columncnt >= `test_width)begin
-                columncnt = 0;
-                linecnt = linecnt + 1;
-                if(linecnt >= `test_height)begin
-                    s_axis_last = 1;
+            //Putting data on the bus
+            else begin
+                //Last pixel condition
+                m_axis_ready = 0;
+                
+                //Data on the 
+                s_axis_data = (rand_test) ? ($urandom) % (`data_width-2) : columncnt+linecnt*`test_width;
+                
+                columncnt = columncnt+1;
+                if(columncnt >= `test_width)begin
+                    columncnt = 0;
+                    linecnt = linecnt + 1;
+                    if(linecnt >= `test_height)begin
+                        s_axis_last = 1;
+                    end
                 end
             end
         end
-    end
+    end    
 end
 integer tf;
 always @(negedge m_axis_last)begin
