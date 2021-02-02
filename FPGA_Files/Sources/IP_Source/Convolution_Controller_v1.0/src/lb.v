@@ -17,6 +17,7 @@ module lb
     input wr_en,
     input r_en,
     output wire [ROWS*DATA_WIDTH-1:0] data_out,
+//    output wire [DATA_WIDTH-1:0] data_out,
     output wire full
 );
 
@@ -66,4 +67,4 @@ for (i = 0;i<ROWS;i=i+1) begin
 end
 endgenerate
 
-endmodule
+endmodule	

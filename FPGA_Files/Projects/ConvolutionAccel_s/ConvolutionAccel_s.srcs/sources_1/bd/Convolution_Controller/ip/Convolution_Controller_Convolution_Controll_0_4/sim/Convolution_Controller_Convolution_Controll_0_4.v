@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:user:Convolution_Controller:1.0
-// IP Revision: 96
+// IP Revision: 122
 
 `timescale 1ns/1ps
 
@@ -62,6 +62,42 @@ module Convolution_Controller_Convolution_Controll_0_4 (
   MULTIPLIER_INPUT,
   MULTIPLICAND_INPUT,
   MULTIPLY_START,
+  addra_1,
+  clka_1,
+  dina_1,
+  douta_1,
+  ena_1,
+  wea_1,
+  addrb_1,
+  clkb_1,
+  dinb_1,
+  doutb_1,
+  enb_1,
+  web_1,
+  addra_2,
+  clka_2,
+  dina_2,
+  douta_2,
+  ena_2,
+  wea_2,
+  addrb_2,
+  clkb_2,
+  dinb_2,
+  doutb_2,
+  enb_2,
+  web_2,
+  addra_3,
+  clka_3,
+  dina_3,
+  douta_3,
+  ena_3,
+  wea_3,
+  addrb_3,
+  clkb_3,
+  dinb_3,
+  doutb_3,
+  enb_3,
+  web_3,
   s_axis_valid,
   s_axis_data,
   s_axis_ready,
@@ -100,6 +136,84 @@ input wire cReady;
 output wire [287 : 0] MULTIPLIER_INPUT;
 output wire [287 : 0] MULTIPLICAND_INPUT;
 output wire [8 : 0] MULTIPLY_START;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA_1 ADDR" *)
+output wire [12 : 0] addra_1;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA_1 CLK" *)
+output wire clka_1;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA_1 DIN" *)
+output wire [31 : 0] dina_1;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA_1 DOUT" *)
+input wire [31 : 0] douta_1;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA_1 EN" *)
+output wire ena_1;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME BRAM_PORTA_1, MEM_SIZE 8192, MEM_WIDTH 32, MEM_ECC NONE, MASTER_TYPE OTHER, READ_LATENCY 1" *)
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA_1 WE" *)
+output wire wea_1;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTB_1 ADDR" *)
+output wire [12 : 0] addrb_1;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTB_1 CLK" *)
+output wire clkb_1;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTB_1 DIN" *)
+output wire [31 : 0] dinb_1;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTB_1 DOUT" *)
+input wire [31 : 0] doutb_1;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTB_1 EN" *)
+output wire enb_1;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME BRAM_PORTB_1, MEM_SIZE 8192, MEM_WIDTH 32, MEM_ECC NONE, MASTER_TYPE OTHER, READ_LATENCY 1" *)
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTB_1 WE" *)
+output wire web_1;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA_2 ADDR" *)
+output wire [12 : 0] addra_2;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA_2 CLK" *)
+output wire clka_2;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA_2 DIN" *)
+output wire [31 : 0] dina_2;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA_2 DOUT" *)
+input wire [31 : 0] douta_2;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA_2 EN" *)
+output wire ena_2;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME BRAM_PORTA_2, MEM_SIZE 8192, MEM_WIDTH 32, MEM_ECC NONE, MASTER_TYPE OTHER, READ_LATENCY 1" *)
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA_2 WE" *)
+output wire wea_2;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTB_2 ADDR" *)
+output wire [12 : 0] addrb_2;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTB_2 CLK" *)
+output wire clkb_2;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTB_2 DIN" *)
+output wire [31 : 0] dinb_2;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTB_2 DOUT" *)
+input wire [31 : 0] doutb_2;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTB_2 EN" *)
+output wire enb_2;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME BRAM_PORTB_2, MEM_SIZE 8192, MEM_WIDTH 32, MEM_ECC NONE, MASTER_TYPE OTHER, READ_LATENCY 1" *)
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTB_2 WE" *)
+output wire web_2;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA_3 ADDR" *)
+output wire [12 : 0] addra_3;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA_3 CLK" *)
+output wire clka_3;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA_3 DIN" *)
+output wire [31 : 0] dina_3;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA_3 DOUT" *)
+input wire [31 : 0] douta_3;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA_3 EN" *)
+output wire ena_3;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME BRAM_PORTA_3, MEM_SIZE 8192, MEM_WIDTH 32, MEM_ECC NONE, MASTER_TYPE OTHER, READ_LATENCY 1" *)
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA_3 WE" *)
+output wire wea_3;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTB_3 ADDR" *)
+output wire [12 : 0] addrb_3;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTB_3 CLK" *)
+output wire clkb_3;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTB_3 DIN" *)
+output wire [31 : 0] dinb_3;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTB_3 DOUT" *)
+input wire [31 : 0] doutb_3;
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTB_3 EN" *)
+output wire enb_3;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME BRAM_PORTB_3, MEM_SIZE 8192, MEM_WIDTH 32, MEM_ECC NONE, MASTER_TYPE OTHER, READ_LATENCY 1" *)
+(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTB_3 WE" *)
+output wire web_3;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis_DATA_IN TVALID" *)
 input wire s_axis_valid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis_DATA_IN TDATA" *)
@@ -162,7 +276,8 @@ output wire s_axi_rlast;
     .CTRL_REG_ADDR_WIDTH("7"),
     .STATE_MAC_ADDR_WIDTH(4),
     .FILTER_BASE(24),
-    .DATA_BASE(60)
+    .DATA_BASE(60),
+    .BRAM_WIDTH(1024)
   ) inst (
     .axi_clk(axi_clk),
     .axi_reset_n(axi_reset_n),
@@ -171,6 +286,42 @@ output wire s_axi_rlast;
     .MULTIPLIER_INPUT(MULTIPLIER_INPUT),
     .MULTIPLICAND_INPUT(MULTIPLICAND_INPUT),
     .MULTIPLY_START(MULTIPLY_START),
+    .addra_1(addra_1),
+    .clka_1(clka_1),
+    .dina_1(dina_1),
+    .douta_1(douta_1),
+    .ena_1(ena_1),
+    .wea_1(wea_1),
+    .addrb_1(addrb_1),
+    .clkb_1(clkb_1),
+    .dinb_1(dinb_1),
+    .doutb_1(doutb_1),
+    .enb_1(enb_1),
+    .web_1(web_1),
+    .addra_2(addra_2),
+    .clka_2(clka_2),
+    .dina_2(dina_2),
+    .douta_2(douta_2),
+    .ena_2(ena_2),
+    .wea_2(wea_2),
+    .addrb_2(addrb_2),
+    .clkb_2(clkb_2),
+    .dinb_2(dinb_2),
+    .doutb_2(doutb_2),
+    .enb_2(enb_2),
+    .web_2(web_2),
+    .addra_3(addra_3),
+    .clka_3(clka_3),
+    .dina_3(dina_3),
+    .douta_3(douta_3),
+    .ena_3(ena_3),
+    .wea_3(wea_3),
+    .addrb_3(addrb_3),
+    .clkb_3(clkb_3),
+    .dinb_3(dinb_3),
+    .doutb_3(doutb_3),
+    .enb_3(enb_3),
+    .web_3(web_3),
     .s_axis_valid(s_axis_valid),
     .s_axis_data(s_axis_data),
     .s_axis_ready(s_axis_ready),

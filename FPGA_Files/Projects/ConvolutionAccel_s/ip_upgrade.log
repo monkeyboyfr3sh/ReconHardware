@@ -1,6 +1,419 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Mon Feb  1 16:50:45 2021
+| Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Convolution_Controller_Convolution_Controll_0_4'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Convolution_Controller_Convolution_Controll_0_4 (xilinx.com:user:Convolution_Controller:1.0) from (Rev. 121) to (Rev. 122)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Mon Feb  1 09:13:05 2021
+| Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Convolution_Controller_Convolution_Controll_0_4'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of Convolution_Controller_Convolution_Controll_0_4 (xilinx.com:user:Convolution_Controller:1.0) from (Rev. 120) to (Rev. 121)
+
+After upgrade, an IP may have parameter differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality.
+
+2. Customization warnings
+-------------------------
+
+Parameter 'LB_WIDTH' is no longer present on the upgraded IP 'Convolution_Controller_Convolution_Controll_0_4', and cannot be set to '1024'
+
+
+3. Debug Commands
+-----------------
+
+  The following debug information can be passed to Vivado as Tcl commands,
+in order to validate or debug the output of the upgrade flow.
+  You may consult any warnings from within this upgrade, and alter or remove
+the configuration parameter(s) which caused the warning; then execute the Tcl
+commands, and use the IP Customization GUI to verify the IP configuration.
+
+create_ip -vlnv xilinx.com:user:Convolution_Controller:1.0 -user_name Convolution_Controller_Convolution_Controll_0_4
+set_property -dict "\
+  CONFIG.AXI_ADDR_WIDTH {10} \
+  CONFIG.BRAM_PORTA_1.MASTER_TYPE {OTHER} \
+  CONFIG.BRAM_PORTA_1.MEM_ECC {NONE} \
+  CONFIG.BRAM_PORTA_1.MEM_SIZE {8192} \
+  CONFIG.BRAM_PORTA_1.MEM_WIDTH {32} \
+  CONFIG.BRAM_PORTA_1.READ_LATENCY {1} \
+  CONFIG.BRAM_PORTA_1.READ_WRITE_MODE {} \
+  CONFIG.BRAM_PORTA_2.MASTER_TYPE {OTHER} \
+  CONFIG.BRAM_PORTA_2.MEM_ECC {NONE} \
+  CONFIG.BRAM_PORTA_2.MEM_SIZE {8192} \
+  CONFIG.BRAM_PORTA_2.MEM_WIDTH {32} \
+  CONFIG.BRAM_PORTA_2.READ_LATENCY {1} \
+  CONFIG.BRAM_PORTA_2.READ_WRITE_MODE {} \
+  CONFIG.BRAM_PORTA_3.MASTER_TYPE {OTHER} \
+  CONFIG.BRAM_PORTA_3.MEM_ECC {NONE} \
+  CONFIG.BRAM_PORTA_3.MEM_SIZE {8192} \
+  CONFIG.BRAM_PORTA_3.MEM_WIDTH {32} \
+  CONFIG.BRAM_PORTA_3.READ_LATENCY {1} \
+  CONFIG.BRAM_PORTA_3.READ_WRITE_MODE {} \
+  CONFIG.BRAM_PORTB_1.MASTER_TYPE {OTHER} \
+  CONFIG.BRAM_PORTB_1.MEM_ECC {NONE} \
+  CONFIG.BRAM_PORTB_1.MEM_SIZE {8192} \
+  CONFIG.BRAM_PORTB_1.MEM_WIDTH {32} \
+  CONFIG.BRAM_PORTB_1.READ_LATENCY {1} \
+  CONFIG.BRAM_PORTB_1.READ_WRITE_MODE {} \
+  CONFIG.BRAM_PORTB_2.MASTER_TYPE {OTHER} \
+  CONFIG.BRAM_PORTB_2.MEM_ECC {NONE} \
+  CONFIG.BRAM_PORTB_2.MEM_SIZE {8192} \
+  CONFIG.BRAM_PORTB_2.MEM_WIDTH {32} \
+  CONFIG.BRAM_PORTB_2.NUM_READ_OUTSTANDING {} \
+  CONFIG.BRAM_PORTB_2.NUM_WRITE_OUTSTANDING {} \
+  CONFIG.BRAM_PORTB_2.READ_LATENCY {1} \
+  CONFIG.BRAM_PORTB_2.READ_WRITE_MODE {} \
+  CONFIG.BRAM_PORTB_3.MASTER_TYPE {OTHER} \
+  CONFIG.BRAM_PORTB_3.MEM_ECC {NONE} \
+  CONFIG.BRAM_PORTB_3.MEM_SIZE {8192} \
+  CONFIG.BRAM_PORTB_3.MEM_WIDTH {32} \
+  CONFIG.BRAM_PORTB_3.READ_LATENCY {1} \
+  CONFIG.BRAM_PORTB_3.READ_WRITE_MODE {} \
+  CONFIG.CTRL_REG_ADDR_WIDTH {7} \
+  CONFIG.CTRL_REG_SIZE {96} \
+  CONFIG.Component_Name {Convolution_Controller_Convolution_Controll_0_4} \
+  CONFIG.DATA_BASE {60} \
+  CONFIG.DATA_WIDTH {32} \
+  CONFIG.FILTER_BASE {24} \
+  CONFIG.KERNEL_SIZE {3} \
+  CONFIG.STATE_MAC_ADDR_WIDTH {4} \
+  CONFIG.axi_clk.ASSOCIATED_BUSIF {s_axi_CTRL:s_axis_DATA_IN:m_axis_DATA_OUT} \
+  CONFIG.axi_clk.ASSOCIATED_RESET {axi_reset_n} \
+  CONFIG.axi_clk.CLK_DOMAIN {} \
+  CONFIG.axi_clk.FREQ_HZ {100000000} \
+  CONFIG.axi_clk.FREQ_TOLERANCE_HZ {0} \
+  CONFIG.axi_clk.INSERT_VIP {0} \
+  CONFIG.axi_clk.PHASE {0.000} \
+  CONFIG.axi_reset_n.INSERT_VIP {0} \
+  CONFIG.axi_reset_n.POLARITY {ACTIVE_LOW} \
+  CONFIG.m_axis_DATA_OUT.CLK_DOMAIN {} \
+  CONFIG.m_axis_DATA_OUT.FREQ_HZ {100000000} \
+  CONFIG.m_axis_DATA_OUT.HAS_TKEEP {1} \
+  CONFIG.m_axis_DATA_OUT.HAS_TLAST {1} \
+  CONFIG.m_axis_DATA_OUT.HAS_TREADY {1} \
+  CONFIG.m_axis_DATA_OUT.HAS_TSTRB {0} \
+  CONFIG.m_axis_DATA_OUT.INSERT_VIP {0} \
+  CONFIG.m_axis_DATA_OUT.LAYERED_METADATA {undef} \
+  CONFIG.m_axis_DATA_OUT.PHASE {0.000} \
+  CONFIG.m_axis_DATA_OUT.TDATA_NUM_BYTES {4} \
+  CONFIG.m_axis_DATA_OUT.TDEST_WIDTH {0} \
+  CONFIG.m_axis_DATA_OUT.TID_WIDTH {0} \
+  CONFIG.m_axis_DATA_OUT.TUSER_WIDTH {0} \
+  CONFIG.s_axi_CTRL.ADDR_WIDTH {10} \
+  CONFIG.s_axi_CTRL.ARUSER_WIDTH {0} \
+  CONFIG.s_axi_CTRL.AWUSER_WIDTH {0} \
+  CONFIG.s_axi_CTRL.BUSER_WIDTH {0} \
+  CONFIG.s_axi_CTRL.CLK_DOMAIN {} \
+  CONFIG.s_axi_CTRL.DATA_WIDTH {32} \
+  CONFIG.s_axi_CTRL.FREQ_HZ {100000000} \
+  CONFIG.s_axi_CTRL.HAS_BRESP {0} \
+  CONFIG.s_axi_CTRL.HAS_BURST {0} \
+  CONFIG.s_axi_CTRL.HAS_CACHE {0} \
+  CONFIG.s_axi_CTRL.HAS_LOCK {0} \
+  CONFIG.s_axi_CTRL.HAS_PROT {0} \
+  CONFIG.s_axi_CTRL.HAS_QOS {0} \
+  CONFIG.s_axi_CTRL.HAS_REGION {0} \
+  CONFIG.s_axi_CTRL.HAS_RRESP {0} \
+  CONFIG.s_axi_CTRL.HAS_WSTRB {0} \
+  CONFIG.s_axi_CTRL.ID_WIDTH {0} \
+  CONFIG.s_axi_CTRL.INSERT_VIP {0} \
+  CONFIG.s_axi_CTRL.MAX_BURST_LENGTH {1} \
+  CONFIG.s_axi_CTRL.NUM_READ_OUTSTANDING {} \
+  CONFIG.s_axi_CTRL.NUM_READ_THREADS {1} \
+  CONFIG.s_axi_CTRL.NUM_WRITE_OUTSTANDING {} \
+  CONFIG.s_axi_CTRL.NUM_WRITE_THREADS {1} \
+  CONFIG.s_axi_CTRL.PHASE {0.000} \
+  CONFIG.s_axi_CTRL.PROTOCOL {AXI4LITE} \
+  CONFIG.s_axi_CTRL.READ_WRITE_MODE {READ_WRITE} \
+  CONFIG.s_axi_CTRL.RUSER_BITS_PER_BYTE {0} \
+  CONFIG.s_axi_CTRL.RUSER_WIDTH {0} \
+  CONFIG.s_axi_CTRL.SUPPORTS_NARROW_BURST {0} \
+  CONFIG.s_axi_CTRL.WUSER_BITS_PER_BYTE {0} \
+  CONFIG.s_axi_CTRL.WUSER_WIDTH {0} \
+  CONFIG.s_axis_DATA_IN.CLK_DOMAIN {} \
+  CONFIG.s_axis_DATA_IN.FREQ_HZ {100000000} \
+  CONFIG.s_axis_DATA_IN.HAS_TKEEP {1} \
+  CONFIG.s_axis_DATA_IN.HAS_TLAST {1} \
+  CONFIG.s_axis_DATA_IN.HAS_TREADY {1} \
+  CONFIG.s_axis_DATA_IN.HAS_TSTRB {0} \
+  CONFIG.s_axis_DATA_IN.INSERT_VIP {0} \
+  CONFIG.s_axis_DATA_IN.LAYERED_METADATA {undef} \
+  CONFIG.s_axis_DATA_IN.PHASE {0.000} \
+  CONFIG.s_axis_DATA_IN.TDATA_NUM_BYTES {4} \
+  CONFIG.s_axis_DATA_IN.TDEST_WIDTH {0} \
+  CONFIG.s_axis_DATA_IN.TID_WIDTH {0} \
+  CONFIG.s_axis_DATA_IN.TUSER_WIDTH {0} " [get_ips Convolution_Controller_Convolution_Controll_0_4]
+
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Mon Feb  1 09:10:36 2021
+| Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Convolution_Controller_Convolution_Controll_0_4'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of Convolution_Controller_Convolution_Controll_0_4 (xilinx.com:user:Convolution_Controller:1.0 (Rev. 120)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Mon Feb  1 09:09:48 2021
+| Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Convolution_Controller_Convolution_Controll_0_4'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Convolution_Controller_Convolution_Controll_0_4 (xilinx.com:user:Convolution_Controller:1.0) from (Rev. 119) to (Rev. 120)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Sun Jan 31 21:10:26 2021
+| Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Convolution_Controller_Convolution_Controll_0_4'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of Convolution_Controller_Convolution_Controll_0_4 (xilinx.com:user:Convolution_Controller:1.0) from (Rev. 118) to (Rev. 119)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'Convolution_Controller_Convolution_Controll_0_4'. These changes may impact your design.
+
+
+-Upgraded port order differs after port 'addra_1'
+
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Sun Jan 31 20:54:11 2021
+| Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Convolution_Controller_Convolution_Controll_0_4'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of Convolution_Controller_Convolution_Controll_0_4 (xilinx.com:user:Convolution_Controller:1.0) from (Rev. 98) to (Rev. 118)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'Convolution_Controller_Convolution_Controll_0_4'.
+
+
+-Upgrade has added interface 'BRAM_PORTA_1' (xilinx.com:interface:bram:1.0)
+
+-Upgrade has added interface 'BRAM_PORTA_2' (xilinx.com:interface:bram:1.0)
+
+-Upgrade has added interface 'BRAM_PORTA_3' (xilinx.com:interface:bram:1.0)
+
+-Upgrade has added interface 'BRAM_PORTB_1' (xilinx.com:interface:bram:1.0)
+
+-Upgrade has added interface 'BRAM_PORTB_2' (xilinx.com:interface:bram:1.0)
+
+-Upgrade has added interface 'BRAM_PORTB_3' (xilinx.com:interface:bram:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'Convolution_Controller_Convolution_Controll_0_4'. These changes may impact your design.
+
+
+-Upgrade has added port 'addra_1'
+
+-Upgrade has added port 'addra_2'
+
+-Upgrade has added port 'addra_3'
+
+-Upgrade has added port 'addrb_1'
+
+-Upgrade has added port 'addrb_2'
+
+-Upgrade has added port 'addrb_3'
+
+-Upgrade has added port 'clka_1'
+
+-Upgrade has added port 'clka_2'
+
+-Upgrade has added port 'clka_3'
+
+-Upgrade has added port 'clkb_1'
+
+-Upgrade has added port 'clkb_2'
+
+-Upgrade has added port 'clkb_3'
+
+-Upgrade has added port 'dina_1'
+
+-Upgrade has added port 'dina_2'
+
+-Upgrade has added port 'dina_3'
+
+-Upgrade has added port 'dinb_1'
+
+-Upgrade has added port 'dinb_2'
+
+-Upgrade has added port 'dinb_3'
+
+-Upgrade has added port 'douta_1'
+
+-Upgrade has added port 'douta_2'
+
+-Upgrade has added port 'douta_3'
+
+-Upgrade has added port 'doutb_1'
+
+-Upgrade has added port 'doutb_2'
+
+-Upgrade has added port 'doutb_3'
+
+-Upgrade has added port 'ena_1'
+
+-Upgrade has added port 'ena_2'
+
+-Upgrade has added port 'ena_3'
+
+-Upgrade has added port 'enb_1'
+
+-Upgrade has added port 'enb_2'
+
+-Upgrade has added port 'enb_3'
+
+-Upgrade has added port 'wea_1'
+
+-Upgrade has added port 'wea_2'
+
+-Upgrade has added port 'wea_3'
+
+-Upgrade has added port 'web_1'
+
+-Upgrade has added port 'web_2'
+
+-Upgrade has added port 'web_3'
+
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Fri Jan 29 19:41:31 2021
+| Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Convolution_Controller_Convolution_Controll_0_4'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Convolution_Controller_Convolution_Controll_0_4 (xilinx.com:user:Convolution_Controller:1.0) from (Rev. 97) to (Rev. 98)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Thu Jan 28 01:01:32 2021
+| Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Convolution_Controller_Convolution_Controll_0_4'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Convolution_Controller_Convolution_Controll_0_4 (xilinx.com:user:Convolution_Controller:1.0) from (Rev. 96) to (Rev. 97)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
 | Date         : Wed Jan 27 20:05:36 2021
 | Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 | Command      : upgrade_ip

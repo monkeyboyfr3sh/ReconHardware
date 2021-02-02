@@ -32,19 +32,20 @@ input   [KERNEL_SIZE*KERNEL_SIZE*DATA_WIDTH-1:0]   multiplier_input;
 input   [KERNEL_SIZE*KERNEL_SIZE*DATA_WIDTH-1:0]   multiplicand_input;
 
 //Outputs
-output  finalReady;
+output  reg finalReady;
 output  [(2*DATA_WIDTH)-1:0]    finalAccumulate;
 
 //Internal Signals
 wire    [KERNEL_SIZE*KERNEL_SIZE*(DATA_WIDTH*2)-1:0]    xbar_input;
 wire    [KERNEL_SIZE*KERNEL_SIZE*(DATA_WIDTH*2)-1:0]    xbar_output;
-reg     [ADDR_WIDTH:0]                                  addPointer = 0;
 wire    [KERNEL_SIZE*KERNEL_SIZE-1:0]                   mReady;
 wire    [(DATA_WIDTH*2)-1:0]                            product_output          [KERNEL_SIZE*KERNEL_SIZE-1:0];  // Bus for product outputs
 wire    [(DATA_WIDTH*2)-1:0]                            add_input               [KERNEL_SIZE*KERNEL_SIZE-1:0];  // Bus for adder inputs
 wire    [(DATA_WIDTH*2)-1:0]                            sum_Connector           [KERNEL_SIZE*KERNEL_SIZE-1:0];  // Bus for sum outputs
 
-assign finalReady = & mReady;
+always @(posedge Clk) begin
+    finalReady = & mReady; 
+end
 
 XBar2 
 #(
@@ -78,8 +79,8 @@ generate
         // Attatch product outputs to xbar inputs
         assign xbar_input[n*(DATA_WIDTH*2)+:(DATA_WIDTH*2)] = product_output[n];
         
-        fixedmultiplyCompute
-//        multiplyComputePynq 
+//        fixedmultiplyCompute
+        multiplyComputePynq 
         #( // Parameters
         .DATA_WIDTH(DATA_WIDTH)
         )

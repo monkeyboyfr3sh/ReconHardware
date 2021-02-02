@@ -1,0 +1,55 @@
+{
+	"version": "1.0",
+	"modules": {
+		"Controller_w_BRAM": {
+			"proto_instances": {
+				"/Convolution_Controll_0/m_axis_DATA_OUT": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "axi_clk"},
+						"ARESETN": { "actual": "axi_reset_n"},
+						"TDATA": { "actual": "m_axis_data"},
+						"TKEEP": { "actual": "m_axis_keep"},
+						"TLAST": { "actual": "m_axis_last"},
+						"TREADY": { "actual": "m_axis_ready"},
+						"TVALID": { "actual": "m_axis_valid"}
+					}
+				},
+				"/Convolution_Controll_0/s_axi_CTRL": {
+					"interface": "xilinx.com:interface:aximm:1.0",
+					"ports": {
+						"ACLK": { "actual": "axi_clk"},
+						"ARADDR": { "actual": "s_axi_araddr"},
+						"ARESETN": { "actual": "axi_reset_n"},
+						"ARREADY": { "actual": "s_axi_arready"},
+						"ARVALID": { "actual": "s_axi_arvalid"},
+						"AWADDR": { "actual": "s_axi_awaddr"},
+						"AWREADY": { "actual": "s_axi_awready"},
+						"AWVALID": { "actual": "s_axi_awvalid"},
+						"BREADY": { "actual": "s_axi_bready"},
+						"BVALID": { "actual": "s_axi_bvalid"},
+						"RDATA": { "actual": "s_axi_rdata"},
+						"RLAST": { "actual": "s_axi_rlast"},
+						"RREADY": { "actual": "s_axi_rready"},
+						"RVALID": { "actual": "s_axi_rvalid"},
+						"WDATA": { "actual": "s_axi_wdata"},
+						"WREADY": { "actual": "s_axi_wready"},
+						"WVALID": { "actual": "s_axi_wvalid"}
+					}
+				},
+				"/Convolution_Controll_0/s_axis_DATA_IN": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "axi_clk"},
+						"ARESETN": { "actual": "axi_reset_n"},
+						"TDATA": { "actual": "s_axis_data"},
+						"TKEEP": { "actual": "s_axis_keep"},
+						"TLAST": { "actual": "s_axis_last"},
+						"TREADY": { "actual": "s_axis_ready"},
+						"TVALID": { "actual": "s_axis_valid"}
+					}
+				}
+			}
+		}
+	}
+}

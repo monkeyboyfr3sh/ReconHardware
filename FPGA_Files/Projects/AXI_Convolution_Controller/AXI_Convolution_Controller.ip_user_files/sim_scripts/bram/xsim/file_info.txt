@@ -1,0 +1,3 @@
+bram_blk_mem_gen_0_0.v,verilog,xil_defaultlib,../../../bd/bram/ip/bram_blk_mem_gen_0_0/sim/bram_blk_mem_gen_0_0.v,
+bram.v,verilog,xil_defaultlib,../../../bd/bram/sim/bram.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

@@ -34,16 +34,16 @@ module XBar2
 
 input   Clk,Rst;
 input   [ADDR_WIDTH-1:0]      AddressSelect;
-//Creates an array of inputs = inputportCount, with size bitLength
-input   [(IP_COUNT*DATA_WIDTH*2)-1:0]    flatInputPort;
+//Creates an array of inputs = inputportCount, with size DATA_WIDTH
+input   [(IP_COUNT*DATA_WIDTH*2)-1:0]   flatInputPort;
 //Control signal. If enabled output[0] = input[0];output[1] = input[1];output[2] = input[2]... etc
 input   direct;
 //Creates an array of outputs = outputportCount, with size bitLength
 output  [(OP_COUNT*DATA_WIDTH*2)-1:0]   flatOutputPort;
 //Changing row selects input, changing colomn selects output
-reg     [OP_COUNT-1:0]                  AddressSave[IP_COUNT-1:0];
+reg [OP_COUNT-1:0] AddressSave[IP_COUNT-1:0];
 //Register array to temporarily hold outputvalues. This could probably be swapped with FIFO at some point
-reg     [(DATA_WIDTH*2)-1:0]                    OutputSave [OP_COUNT-1:0];
+reg [(DATA_WIDTH*2)-1:0] OutputSave [OP_COUNT-1:0];
 
 //Needed vars
 integer     selectColomn, selectRow,i,j,k;
@@ -59,8 +59,7 @@ generate
 endgenerate
 
 //Update outputport, this should be re-written in a generate statement probably
-always @(flatInputPort or direct)begin
-
+always @(posedge Clk)begin
     //Assign matching i/o
     if(direct)begin
         for(j=0;j<OP_COUNT;j=j+1)begin
@@ -88,7 +87,6 @@ always @(flatInputPort or direct)begin
             end
         end
     end
-    
 end
 
 //Update chosen addresses
