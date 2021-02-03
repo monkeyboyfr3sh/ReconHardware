@@ -2,6 +2,6 @@ Vivado Simulator 2020.1
 Time resolution is 1 ps
 Testing over
 
-All         100 tests pass.
+          0 of           1 tests pass.
 
-$stop called at time : 1015 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/General/matrixAccelerator_tb.v" Line 87
+$stop called at time : 20 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/Adder/adder_tree_tb.v" Line 69

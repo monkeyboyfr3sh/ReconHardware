@@ -11,7 +11,8 @@ module matrixAccelerator
     parameter DATA_WIDTH = 32,
     parameter KERNEL_SIZE = 3,
     parameter REST_ADDR = KERNEL_SIZE*KERNEL_SIZE*KERNEL_SIZE*KERNEL_SIZE,
-    parameter ADDR_WIDTH = $clog2(REST_ADDR)
+    parameter ADDR_WIDTH = $clog2(REST_ADDR),
+    parameter DOUBLE_DATA_WIDTH = 2*DATA_WIDTH
 )
 ( // Ports  
     Clk,Rst,
@@ -33,15 +34,16 @@ input   [KERNEL_SIZE*KERNEL_SIZE*DATA_WIDTH-1:0]   multiplicand_input;
 
 //Outputs
 output  reg finalReady;
-output  [(2*DATA_WIDTH)-1:0]    finalAccumulate;
+output  signed [DATA_WIDTH-1:0] finalAccumulate;
 
 //Internal Signals
-wire    [KERNEL_SIZE*KERNEL_SIZE*(DATA_WIDTH*2)-1:0]    xbar_input;
-wire    [KERNEL_SIZE*KERNEL_SIZE*(DATA_WIDTH*2)-1:0]    xbar_output;
-wire    [KERNEL_SIZE*KERNEL_SIZE-1:0]                   mReady;
-wire    [(DATA_WIDTH*2)-1:0]                            product_output          [KERNEL_SIZE*KERNEL_SIZE-1:0];  // Bus for product outputs
-wire    [(DATA_WIDTH*2)-1:0]                            add_input               [KERNEL_SIZE*KERNEL_SIZE-1:0];  // Bus for adder inputs
-wire    [(DATA_WIDTH*2)-1:0]                            sum_Connector           [KERNEL_SIZE*KERNEL_SIZE-1:0];  // Bus for sum outputs
+// wire [KERNEL_SIZE*KERNEL_SIZE*DOUBLE_DATA_WIDTH-1:0]    xbar_input;
+// wire [KERNEL_SIZE*KERNEL_SIZE*DOUBLE_DATA_WIDTH-1:0]    xbar_output;
+wire [KERNEL_SIZE*KERNEL_SIZE*DATA_WIDTH-1:0]    xbar_input;
+wire [KERNEL_SIZE*KERNEL_SIZE*DATA_WIDTH-1:0]    xbar_output;
+wire [KERNEL_SIZE*KERNEL_SIZE-1:0] mReady;
+// wire signed [DOUBLE_DATA_WIDTH-1:0] product_output [KERNEL_SIZE*KERNEL_SIZE-1:0];  // Bus for product outputs
+wire signed [DATA_WIDTH-1:0] product_output [KERNEL_SIZE*KERNEL_SIZE-1:0];  // Bus for product outputs
 
 always @(posedge Clk) begin
     finalReady = & mReady; 
@@ -64,7 +66,7 @@ xbar2(
 
 int_adder_tree
 #(
-    .DATA_WIDTH(2*DATA_WIDTH)
+    .DATA_WIDTH(DATA_WIDTH)
 )
 adder_tree(
     .in_data(xbar_output),
@@ -77,7 +79,7 @@ generate
     
     for(n=0;n<KERNEL_SIZE*KERNEL_SIZE;n=n+1)begin
         // Attatch product outputs to xbar inputs
-        assign xbar_input[n*(DATA_WIDTH*2)+:(DATA_WIDTH*2)] = product_output[n];
+        assign xbar_input[n*DATA_WIDTH+:DATA_WIDTH] = product_output[n];
         
 //        fixedmultiplyCompute
         multiplyComputePynq 

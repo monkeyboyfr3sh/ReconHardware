@@ -160,16 +160,16 @@ pagesize -pg 1 -db -bbox -sgen -140 0 1980 490
    "Reduced Jogs_TopLeft":"-450,0",
    "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:9.0 non-TLS
 #  -string -flagsOSRD
-preplace port DDR -pg 1 -lvl 7 -x 2360 -y 60 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -lvl 7 -x 2360 -y 80 -defaultsOSRD
+preplace port DDR -pg 1 -lvl 7 -x 2340 -y 60 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 7 -x 2340 -y 80 -defaultsOSRD
 preplace port cReady_0 -pg 1 -lvl 0 -x 0 -y 980 -defaultsOSRD
-preplace port FCLK_CLK0_0 -pg 1 -lvl 7 -x 2360 -y 140 -defaultsOSRD
-preplace port FCLK_RESET0_N_0 -pg 1 -lvl 7 -x 2360 -y 160 -defaultsOSRD
-preplace portBus MULTIPLY_START_0 -pg 1 -lvl 7 -x 2360 -y 780 -defaultsOSRD
-preplace portBus MULTIPLICAND_INPUT_0 -pg 1 -lvl 7 -x 2360 -y 760 -defaultsOSRD
-preplace portBus MULTIPLIER_INPUT_0 -pg 1 -lvl 7 -x 2360 -y 800 -defaultsOSRD
+preplace port FCLK_CLK0_0 -pg 1 -lvl 7 -x 2340 -y 140 -defaultsOSRD
+preplace port FCLK_RESET0_N_0 -pg 1 -lvl 7 -x 2340 -y 160 -defaultsOSRD
+preplace portBus MULTIPLY_START_0 -pg 1 -lvl 7 -x 2340 -y 780 -defaultsOSRD
+preplace portBus MULTIPLICAND_INPUT_0 -pg 1 -lvl 7 -x 2340 -y 760 -defaultsOSRD
+preplace portBus MULTIPLIER_INPUT_0 -pg 1 -lvl 7 -x 2340 -y 800 -defaultsOSRD
 preplace portBus cSum_0 -pg 1 -lvl 0 -x 0 -y 960 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 6 -x 2090 -y 110 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 6 -x 2070 -y 110 -defaultsOSRD
 preplace inst axi_dma_0 -pg 1 -lvl 4 -x 1330 -y 350 -defaultsOSRD
 preplace inst ps7_0_axi_periph -pg 1 -lvl 2 -x 530 -y 610 -defaultsOSRD
 preplace inst rst_ps7_0_50M -pg 1 -lvl 1 -x 200 -y 860 -defaultsOSRD
@@ -178,32 +178,32 @@ preplace inst blk_mem_gen_0 -pg 1 -lvl 4 -x 1330 -y 570 -defaultsOSRD
 preplace inst blk_mem_gen_1 -pg 1 -lvl 4 -x 1330 -y 890 -defaultsOSRD
 preplace inst blk_mem_gen_2 -pg 1 -lvl 4 -x 1330 -y 690 -defaultsOSRD
 preplace inst Convolution_Controll_0 -pg 1 -lvl 3 -x 930 -y 670 -defaultsOSRD
-preplace netloc rst_ps7_0_50M_peripheral_aresetn 1 1 4 380 760 700 490 1160 490 1520
-preplace netloc Convolution_Controll_0_MULTIPLY_START 1 3 4 NJ 760 NJ 760 NJ 760 2320J
-preplace netloc cReady_0_1 1 0 3 NJ 980 NJ 980 720J
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 7 30 750 370 750 690 480 1150 480 1510 230 1860 230 2340
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 7 20 220 NJ 220 NJ 220 NJ 220 NJ 220 1830J 240 2330
-preplace netloc Convolution_Controll_0_MULTIPLICAND_INPUT 1 3 4 1150J 500 1510J 750 NJ 750 2340J
-preplace netloc Convolution_Controll_0_MULTIPLIER_INPUT 1 3 4 1130J 800 NJ 800 NJ 800 NJ
-preplace netloc cSum_0_1 1 0 3 NJ 960 NJ 960 710J
-preplace netloc Convolution_Controll_0_BRAM_PORTB_2 1 3 1 1120 660n
-preplace netloc axi_dma_0_M_AXIS_MM2S 1 2 3 720 470 NJ 470 1500
+preplace netloc rst_ps7_0_50M_peripheral_aresetn 1 1 4 380 770 700 460 1160 490 1520
+preplace netloc Convolution_Controll_0_MULTIPLY_START 1 3 4 1120J 780 NJ 780 NJ 780 NJ
+preplace netloc cReady_0_1 1 0 3 NJ 980 NJ 980 730J
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 7 20 750 370 750 690 450 1150 480 1530 530 1840 220 2320
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 7 30 760 NJ 760 710J 500 NJ 500 1510J 540 NJ 540 2310
+preplace netloc Convolution_Controll_0_MULTIPLICAND_INPUT 1 3 4 1150J 760 NJ 760 NJ 760 NJ
+preplace netloc Convolution_Controll_0_MULTIPLIER_INPUT 1 3 4 1140J 800 NJ 800 NJ 800 NJ
+preplace netloc cSum_0_1 1 0 3 NJ 960 NJ 960 720J
+preplace netloc Convolution_Controll_0_BRAM_PORTB_2 1 3 1 1130 660n
 preplace netloc processing_system7_0_DDR 1 6 1 NJ 60
-preplace netloc axi_dma_0_M_AXI_S2MM 1 4 1 N 310
-preplace netloc axi_mem_intercon_M00_AXI 1 5 1 1840 100n
-preplace netloc processing_system7_0_FIXED_IO 1 6 1 NJ 80
-preplace netloc Convolution_Controll_0_BRAM_PORTB_1 1 3 1 1160 580n
-preplace netloc processing_system7_0_M_AXI_GP0 1 1 6 370 210 NJ 210 NJ 210 NJ 210 1850J 220 2320
-preplace netloc Convolution_Controll_0_BRAM_PORTB_3 1 3 1 N 700
-preplace netloc Convolution_Controll_0_m_axis_DATA_OUT 1 3 1 1120 320n
+preplace netloc axi_dma_0_M_AXIS_MM2S 1 2 3 740 820 NJ 820 1500
 preplace netloc ps7_0_axi_periph_M01_AXI 1 2 1 N 620
-preplace netloc ps7_0_axi_periph_M00_AXI 1 2 2 680 300 NJ
-preplace netloc Convolution_Controll_0_BRAM_PORTA_2 1 3 1 1140 640n
-preplace netloc Convolution_Controll_0_BRAM_PORTA_1 1 3 1 1130 560n
 preplace netloc axi_dma_0_M_AXI_MM2S 1 4 1 N 290
+preplace netloc ps7_0_axi_periph_M00_AXI 1 2 2 680 300 NJ
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 6 370 470 NJ 470 NJ 470 1510J 230 NJ 230 2300
+preplace netloc Convolution_Controll_0_BRAM_PORTA_2 1 3 1 1160 640n
 preplace netloc Convolution_Controll_0_BRAM_PORTA_3 1 3 1 N 680
-levelinfo -pg 1 0 200 530 930 1330 1680 2090 2360
-pagesize -pg 1 -db -bbox -sgen -140 0 2630 1000
+preplace netloc Convolution_Controll_0_BRAM_PORTB_3 1 3 1 N 700
+preplace netloc Convolution_Controll_0_BRAM_PORTA_1 1 3 1 1150 560n
+preplace netloc Convolution_Controll_0_m_axis_DATA_OUT 1 3 1 1120 320n
+preplace netloc axi_dma_0_M_AXI_S2MM 1 4 1 N 310
+preplace netloc axi_mem_intercon_M00_AXI 1 5 1 1830 100n
+preplace netloc Convolution_Controll_0_BRAM_PORTB_1 1 3 1 1160 580n
+preplace netloc processing_system7_0_FIXED_IO 1 6 1 NJ 80
+levelinfo -pg 1 0 200 530 930 1330 1680 2070 2340
+pagesize -pg 1 -db -bbox -sgen -140 0 2610 1000
 "
 }
 {

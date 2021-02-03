@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="Convolution_Controller_blk_mem_gen_0_0_synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1612148202">
+<GenRun Id="Convolution_Controller_blk_mem_gen_0_0_synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1612303723">
   <File Type="PA-TCL" Name="Convolution_Controller_blk_mem_gen_0_0.tcl"/>
   <File Type="REPORTS-TCL" Name="Convolution_Controller_blk_mem_gen_0_0_reports.tcl"/>
   <File Type="RDS-RDS" Name="Convolution_Controller_blk_mem_gen_0_0.vds"/>
@@ -7,9 +7,11 @@
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Convolution_Controller_blk_mem_gen_0_0">
     <File Path="$PSRCDIR/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_blk_mem_gen_0_0/Convolution_Controller_blk_mem_gen_0_0.xci">
       <FileInfo>
+        <Attr Name="Library" Val="xil_defaultlib"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
+        <Attr Name="ProcessingOrder" Val="EARLY"/>
       </FileInfo>
     </File>
     <Config>
@@ -20,9 +22,11 @@
   <FileSet Name="constrs_in" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Convolution_Controller_blk_mem_gen_0_0">
     <File Path="$PSRCDIR/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_blk_mem_gen_0_0/Convolution_Controller_blk_mem_gen_0_0.xci">
       <FileInfo>
+        <Attr Name="Library" Val="xil_defaultlib"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
+        <Attr Name="ProcessingOrder" Val="EARLY"/>
       </FileInfo>
     </File>
     <Config>

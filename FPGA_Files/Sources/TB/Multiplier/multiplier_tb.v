@@ -8,9 +8,9 @@ module multiplier_tb;
 reg rand_test = 1; // Set test bench to use random variables
 
 reg Clk,Rst;
-reg [`data_width-1:0]    multiplier,multiplicand;
+reg signed [`data_width-1:0]    multiplier,multiplicand;
 reg start;
-wire [2*`data_width-1:0]   product;
+wire signed [2*`data_width-1:0]   product;
 wire ready;
 
 //fixedmultiplyCompute
@@ -53,7 +53,7 @@ for(i = 0;i < `test_cnt; i = i+1)begin
 //        $display("False!\n");
     end
     
-    multiplier = (rand_test) ? ($urandom) % 2**(`data_width-1) : i;
+    multiplier = -((rand_test) ? ($urandom) % 2**(`data_width-1) : i);
     multiplicand = (rand_test) ? ($urandom) % 2**(`data_width-3) : i;
     #`clkPeriod;
 end

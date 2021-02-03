@@ -173,7 +173,7 @@ proc create_root_design { parentCell } {
   # Create instance: Convolution_Controll_0, and set properties
   set Convolution_Controll_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:Convolution_Controller:1.0 Convolution_Controll_0 ]
   set_property -dict [ list \
-   CONFIG.BRAM_WIDTH {1024} \
+   CONFIG.BRAM_WIDTH {1800} \
    CONFIG.DATA_WIDTH {32} \
    CONFIG.KERNEL_SIZE {3} \
  ] $Convolution_Controll_0
@@ -208,7 +208,7 @@ proc create_root_design { parentCell } {
    CONFIG.Register_PortB_Output_of_Memory_Primitives {false} \
    CONFIG.Use_Byte_Write_Enable {false} \
    CONFIG.Use_RSTA_Pin {false} \
-   CONFIG.Write_Depth_A {1024} \
+   CONFIG.Write_Depth_A {1800} \
    CONFIG.use_bram_block {Stand_Alone} \
  ] $blk_mem_gen_0
 
@@ -227,7 +227,7 @@ proc create_root_design { parentCell } {
    CONFIG.Register_PortB_Output_of_Memory_Primitives {false} \
    CONFIG.Use_Byte_Write_Enable {false} \
    CONFIG.Use_RSTA_Pin {false} \
-   CONFIG.Write_Depth_A {1024} \
+   CONFIG.Write_Depth_A {1800} \
    CONFIG.use_bram_block {Stand_Alone} \
  ] $blk_mem_gen_1
 

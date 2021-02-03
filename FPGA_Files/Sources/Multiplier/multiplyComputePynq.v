@@ -9,7 +9,8 @@
 
 module multiplyComputePynq 
 #( // Parameters
-    parameter DATA_WIDTH = 32
+    parameter DATA_WIDTH = 32,
+    parameter DOUBLE_DATA_WIDTH = 2*DATA_WIDTH
 )
 ( // Ports
     clk,
@@ -21,15 +22,10 @@ module multiplyComputePynq
     start
 );
 
-input [DATA_WIDTH-1:0]  multiplier, multiplicand;
-input         start,clk,reset;
-output        product;
-output        ready;
-
-reg                         ready;
-reg [2*DATA_WIDTH-1:0]      product;
-
-integer       i;
+input signed [DATA_WIDTH-1:0]  multiplier, multiplicand;
+input start,clk,reset;
+output reg signed [DATA_WIDTH-1:0] product;
+output reg ready;
 
 always @(posedge clk) begin
     

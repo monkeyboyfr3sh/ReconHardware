@@ -1,10 +1,10 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
--- Date        : Sat Dec 12 14:49:36 2020
+-- Date        : Tue Feb  2 16:10:11 2021
 -- Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub -rename_top Convolution_Controller_auto_us_0 -prefix
---               Convolution_Controller_auto_us_0_ Convolution_Controller_auto_us_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub
+--               c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_auto_us_0/Convolution_Controller_auto_us_0_stub.vhdl
 -- Design      : Convolution_Controller_auto_us_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg400-1

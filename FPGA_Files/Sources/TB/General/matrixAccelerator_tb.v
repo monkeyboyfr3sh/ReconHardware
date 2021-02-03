@@ -18,7 +18,7 @@ wire    [`kernel_size*`kernel_size*`data_width-1:0]     multiplicand_input;
 
 //Outputs
 wire    finalReady;
-wire    [(2*`data_width)-1:0]   finalAccumulate;
+wire    [`data_width-1:0]   finalAccumulate;
 
 generate
     genvar j;

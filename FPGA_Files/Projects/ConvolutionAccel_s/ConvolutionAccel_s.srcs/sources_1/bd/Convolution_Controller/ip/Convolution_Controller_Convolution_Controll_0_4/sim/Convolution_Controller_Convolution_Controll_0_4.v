@@ -277,7 +277,7 @@ output wire s_axi_rlast;
     .STATE_MAC_ADDR_WIDTH(4),
     .FILTER_BASE(24),
     .DATA_BASE(60),
-    .BRAM_WIDTH(1024)
+    .BRAM_WIDTH(1800)
   ) inst (
     .axi_clk(axi_clk),
     .axi_reset_n(axi_reset_n),

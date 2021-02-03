@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-//Date        : Mon Feb  1 16:51:14 2021
+//Date        : Tue Feb  2 16:08:39 2021
 //Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 //Command     : generate_target Convolution_Controller.bd
 //Design      : Convolution_Controller
@@ -491,8 +491,8 @@ module Convolution_Controller
         .S01_AXI_wstrb(axi_dma_0_M_AXI_S2MM_WSTRB),
         .S01_AXI_wvalid(axi_dma_0_M_AXI_S2MM_WVALID));
   Convolution_Controller_blk_mem_gen_0_0 blk_mem_gen_0
-       (.addra(Convolution_Controll_0_BRAM_PORTA_1_ADDR[9:0]),
-        .addrb(Convolution_Controll_0_BRAM_PORTB_1_ADDR[9:0]),
+       (.addra(Convolution_Controll_0_BRAM_PORTA_1_ADDR[10:0]),
+        .addrb(Convolution_Controll_0_BRAM_PORTB_1_ADDR[10:0]),
         .clka(Convolution_Controll_0_BRAM_PORTA_1_CLK),
         .clkb(Convolution_Controll_0_BRAM_PORTB_1_CLK),
         .dina(Convolution_Controll_0_BRAM_PORTA_1_DIN),
@@ -504,8 +504,8 @@ module Convolution_Controller
         .wea(Convolution_Controll_0_BRAM_PORTA_1_WE),
         .web(Convolution_Controll_0_BRAM_PORTB_1_WE));
   Convolution_Controller_blk_mem_gen_0_1 blk_mem_gen_1
-       (.addra(Convolution_Controll_0_BRAM_PORTA_2_ADDR[9:0]),
-        .addrb(Convolution_Controll_0_BRAM_PORTB_2_ADDR[9:0]),
+       (.addra(Convolution_Controll_0_BRAM_PORTA_2_ADDR[10:0]),
+        .addrb(Convolution_Controll_0_BRAM_PORTB_2_ADDR[10:0]),
         .clka(Convolution_Controll_0_BRAM_PORTA_2_CLK),
         .clkb(Convolution_Controll_0_BRAM_PORTB_2_CLK),
         .dina(Convolution_Controll_0_BRAM_PORTA_2_DIN),
