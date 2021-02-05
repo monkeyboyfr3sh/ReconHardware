@@ -6,38 +6,38 @@
 # Block Designs: bd/Convolution_Controller/Convolution_Controller.bd
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Convolution_Controller || ORIG_REF_NAME==Convolution_Controller} -quiet] -quiet
 
-# IP: bd/Convolution_Controller/ip/Convolution_Controller_Convolution_Controll_0_4/Convolution_Controller_Convolution_Controll_0_4.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Convolution_Controller_Convolution_Controll_0_4 || ORIG_REF_NAME==Convolution_Controller_Convolution_Controll_0_4} -quiet] -quiet
+# IP: bd/Convolution_Controller/ip/Convolution_Controller_processing_system7_0_0/Convolution_Controller_processing_system7_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Convolution_Controller_processing_system7_0_0 || ORIG_REF_NAME==Convolution_Controller_processing_system7_0_0} -quiet] -quiet
 
-# IP: bd/Convolution_Controller/ip/Convolution_Controller_processing_system7_0_2/Convolution_Controller_processing_system7_0_2.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Convolution_Controller_processing_system7_0_2 || ORIG_REF_NAME==Convolution_Controller_processing_system7_0_2} -quiet] -quiet
+# IP: bd/Convolution_Controller/ip/Convolution_Controller_axi_dma_0_0/Convolution_Controller_axi_dma_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Convolution_Controller_axi_dma_0_0 || ORIG_REF_NAME==Convolution_Controller_axi_dma_0_0} -quiet] -quiet
 
-# IP: bd/Convolution_Controller/ip/Convolution_Controller_axi_dma_0_3/Convolution_Controller_axi_dma_0_3.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Convolution_Controller_axi_dma_0_3 || ORIG_REF_NAME==Convolution_Controller_axi_dma_0_3} -quiet] -quiet
+# IP: bd/Convolution_Controller/ip/Convolution_Controller_ps7_0_axi_periph_0/Convolution_Controller_ps7_0_axi_periph_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Convolution_Controller_ps7_0_axi_periph_0 || ORIG_REF_NAME==Convolution_Controller_ps7_0_axi_periph_0} -quiet] -quiet
 
-# IP: bd/Convolution_Controller/ip/Convolution_Controller_xbar_2/Convolution_Controller_xbar_2.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Convolution_Controller_xbar_2 || ORIG_REF_NAME==Convolution_Controller_xbar_2} -quiet] -quiet
+# IP: bd/Convolution_Controller/ip/Convolution_Controller_rst_ps7_0_100M_0/Convolution_Controller_rst_ps7_0_100M_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Convolution_Controller_rst_ps7_0_100M_0 || ORIG_REF_NAME==Convolution_Controller_rst_ps7_0_100M_0} -quiet] -quiet
 
-# IP: bd/Convolution_Controller/ip/Convolution_Controller_ps7_0_axi_periph_2/Convolution_Controller_ps7_0_axi_periph_2.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Convolution_Controller_ps7_0_axi_periph_2 || ORIG_REF_NAME==Convolution_Controller_ps7_0_axi_periph_2} -quiet] -quiet
+# IP: bd/Convolution_Controller/ip/Convolution_Controller_axi_mem_intercon_0/Convolution_Controller_axi_mem_intercon_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Convolution_Controller_axi_mem_intercon_0 || ORIG_REF_NAME==Convolution_Controller_axi_mem_intercon_0} -quiet] -quiet
 
-# IP: bd/Convolution_Controller/ip/Convolution_Controller_rst_ps7_0_50M_0/Convolution_Controller_rst_ps7_0_50M_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Convolution_Controller_rst_ps7_0_50M_0 || ORIG_REF_NAME==Convolution_Controller_rst_ps7_0_50M_0} -quiet] -quiet
+# IP: bd/Convolution_Controller/ip/Convolution_Controller_Convolution_Controll_0_0/Convolution_Controller_Convolution_Controll_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Convolution_Controller_Convolution_Controll_0_0 || ORIG_REF_NAME==Convolution_Controller_Convolution_Controll_0_0} -quiet] -quiet
 
-# IP: bd/Convolution_Controller/ip/Convolution_Controller_xbar_3/Convolution_Controller_xbar_3.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Convolution_Controller_xbar_3 || ORIG_REF_NAME==Convolution_Controller_xbar_3} -quiet] -quiet
+# IP: bd/Convolution_Controller/ip/Convolution_Controller_xbar_1/Convolution_Controller_xbar_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Convolution_Controller_xbar_1 || ORIG_REF_NAME==Convolution_Controller_xbar_1} -quiet] -quiet
 
-# IP: bd/Convolution_Controller/ip/Convolution_Controller_axi_mem_intercon_2/Convolution_Controller_axi_mem_intercon_2.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Convolution_Controller_axi_mem_intercon_2 || ORIG_REF_NAME==Convolution_Controller_axi_mem_intercon_2} -quiet] -quiet
+# IP: bd/Convolution_Controller/ip/Convolution_Controller_xbar_0/Convolution_Controller_xbar_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Convolution_Controller_xbar_0 || ORIG_REF_NAME==Convolution_Controller_xbar_0} -quiet] -quiet
 
-# IP: bd/Convolution_Controller/ip/Convolution_Controller_blk_mem_gen_0_0/Convolution_Controller_blk_mem_gen_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Convolution_Controller_blk_mem_gen_0_0 || ORIG_REF_NAME==Convolution_Controller_blk_mem_gen_0_0} -quiet] -quiet
+# IP: bd/Convolution_Controller/ip/Convolution_Controller_Convolution_Controll_0_bram_0/Convolution_Controller_Convolution_Controll_0_bram_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Convolution_Controller_Convolution_Controll_0_bram_0 || ORIG_REF_NAME==Convolution_Controller_Convolution_Controll_0_bram_0} -quiet] -quiet
 
-# IP: bd/Convolution_Controller/ip/Convolution_Controller_blk_mem_gen_0_1/Convolution_Controller_blk_mem_gen_0_1.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Convolution_Controller_blk_mem_gen_0_1 || ORIG_REF_NAME==Convolution_Controller_blk_mem_gen_0_1} -quiet] -quiet
+# IP: bd/Convolution_Controller/ip/Convolution_Controller_Convolution_Controll_0_bram_0_0/Convolution_Controller_Convolution_Controll_0_bram_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Convolution_Controller_Convolution_Controll_0_bram_0_0 || ORIG_REF_NAME==Convolution_Controller_Convolution_Controll_0_bram_0_0} -quiet] -quiet
 
-# IP: bd/Convolution_Controller/ip/Convolution_Controller_blk_mem_gen_1_0/Convolution_Controller_blk_mem_gen_1_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Convolution_Controller_blk_mem_gen_1_0 || ORIG_REF_NAME==Convolution_Controller_blk_mem_gen_1_0} -quiet] -quiet
+# IP: bd/Convolution_Controller/ip/Convolution_Controller_Convolution_Controll_0_bram_1_0/Convolution_Controller_Convolution_Controll_0_bram_1_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Convolution_Controller_Convolution_Controll_0_bram_1_0 || ORIG_REF_NAME==Convolution_Controller_Convolution_Controll_0_bram_1_0} -quiet] -quiet
 
 # IP: bd/Convolution_Controller/ip/Convolution_Controller_auto_pc_0/Convolution_Controller_auto_pc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Convolution_Controller_auto_pc_0 || ORIG_REF_NAME==Convolution_Controller_auto_pc_0} -quiet] -quiet

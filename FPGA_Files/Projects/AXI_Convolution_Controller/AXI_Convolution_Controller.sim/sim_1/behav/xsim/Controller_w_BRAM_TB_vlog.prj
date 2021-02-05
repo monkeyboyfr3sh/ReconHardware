@@ -6,9 +6,10 @@ verilog xil_defaultlib  --include "../../../../../../Sources" \
 "../../../../../../Sources/General/XBar2.v" \
 "../../../../../../Sources/IP_Source/Convolution_Controller_v1.0/src/bram_coupler.v" \
 "../../../../AXI_Convolution_Controller.srcs/sources_1/bd/bram/hdl/bram_wrapper.v" \
-"../../../../../../Sources/Adder/int_adder_tree.v" \
+"../../../../../../Sources/Adder/Wrappers/integer_adder_32.v" \
 "../../../../../../Sources/General/matrixAccelerator.v" \
 "../../../../../../Sources/Multiplier/multiplyComputePynq.v" \
+"../../../../../../Sources/Adder/param_int_adder.v" \
 "../../../../../../Sources/TB/General/Controller_w_BRAM_TB.v" \
 
 # compile glbl module

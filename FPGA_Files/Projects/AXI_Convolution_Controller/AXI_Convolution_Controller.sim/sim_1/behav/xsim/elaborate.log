@@ -4,12 +4,13 @@ Running: C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto e8a0372fdc
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 3 for port 'r_add' [C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v:177]
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 3 for port 'row_width' [C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v:182]
-WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 7 for port 'AddressSelect' [C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/General/Controller_w_BRAM_TB.v:262]
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'direct' [C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/General/Controller_w_BRAM_TB.v:264]
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 64 for port 'finalAccumulate' [C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/General/Controller_w_BRAM_TB.v:265]
-WARNING: [VRFC 10-3091] actual bit length 64 differs from formal bit length 74 for port 'out_data' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/matrixAccelerator.v:71]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 10 for port 'r_add' [C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v:178]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 10 for port 'row_width' [C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v:183]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 7 for port 'AddressSelect' [C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/General/Controller_w_BRAM_TB.v:268]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'direct' [C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/General/Controller_w_BRAM_TB.v:270]
+WARNING: [VRFC 10-3091] actual bit length 72 differs from formal bit length 288 for port 'in_data' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/matrixAccelerator.v:69]
+WARNING: [VRFC 10-3091] actual bit length 8 differs from formal bit length 32 for port 'out_data' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/matrixAccelerator.v:70]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 33 for port 'out_data' [C:/GitHub/ReconHardware/FPGA_Files/Sources/Adder/Wrappers/integer_adder_32.v:17]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
@@ -22,12 +23,13 @@ Compiling module blk_mem_gen_v8_4_4.blk_mem_gen_v8_4_4(C_FAMILY="zyn...
 Compiling module xil_defaultlib.bram_blk_mem_gen_0_0
 Compiling module xil_defaultlib.bram
 Compiling module xil_defaultlib.bram_wrapper
-Compiling module xil_defaultlib.bram_coupler(MAX_ROW_WIDTH=5)
-Compiling module xil_defaultlib.Convolution_Controller_default
-Compiling module xil_defaultlib.XBar2(IP_COUNT=9,OP_COUNT=9)
-Compiling module xil_defaultlib.int_adder_tree(DATA_WIDTH=64)
-Compiling module xil_defaultlib.multiplyComputePynq
-Compiling module xil_defaultlib.matrixAccelerator_default
+Compiling module xil_defaultlib.bram_coupler(DATA_WIDTH=8)
+Compiling module xil_defaultlib.Convolution_Controller(DATA_WIDT...
+Compiling module xil_defaultlib.XBar2(DATA_WIDTH=8,IP_COUNT=9,OP...
+Compiling module xil_defaultlib.param_int_adder
+Compiling module xil_defaultlib.integer_adder_32
+Compiling module xil_defaultlib.multiplyComputePynq(DATA_WIDTH=8...
+Compiling module xil_defaultlib.matrixAccelerator(DATA_WIDTH=8)
 Compiling module xil_defaultlib.Controller_w_BRAM_TB
 Compiling module xil_defaultlib.glbl
 Built simulation snapshot Controller_w_BRAM_TB_behav

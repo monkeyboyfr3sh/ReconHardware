@@ -1,0 +1,5 @@
+vhdl xil_defaultlib  \
+"../../../bd/Convolution_Controller/ip/Convolution_Controller_axi_dma_0_3/sim/Convolution_Controller_axi_dma_0_3.vhd" \
+"../../../bd/Convolution_Controller/ip/Convolution_Controller_rst_ps7_0_50M_0/sim/Convolution_Controller_rst_ps7_0_50M_0.vhd" \
+
+nosort

@@ -164,19 +164,67 @@ proc create_root_design { parentCell } {
   # Create ports
   set FCLK_CLK0_0 [ create_bd_port -dir O -type clk FCLK_CLK0_0 ]
   set FCLK_RESET0_N_0 [ create_bd_port -dir O -type rst FCLK_RESET0_N_0 ]
-  set MULTIPLICAND_INPUT_0 [ create_bd_port -dir O -from 287 -to 0 MULTIPLICAND_INPUT_0 ]
-  set MULTIPLIER_INPUT_0 [ create_bd_port -dir O -from 287 -to 0 MULTIPLIER_INPUT_0 ]
+  set MULTIPLICAND_INPUT_0 [ create_bd_port -dir O -from 71 -to 0 MULTIPLICAND_INPUT_0 ]
+  set MULTIPLIER_INPUT_0 [ create_bd_port -dir O -from 71 -to 0 MULTIPLIER_INPUT_0 ]
   set MULTIPLY_START_0 [ create_bd_port -dir O -from 8 -to 0 MULTIPLY_START_0 ]
   set cReady_0 [ create_bd_port -dir I cReady_0 ]
   set cSum_0 [ create_bd_port -dir I -from 31 -to 0 cSum_0 ]
+  set cSum_1 [ create_bd_port -dir I -from 7 -to 0 cSum_1 ]
 
   # Create instance: Convolution_Controll_0, and set properties
   set Convolution_Controll_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:Convolution_Controller:1.0 Convolution_Controll_0 ]
   set_property -dict [ list \
    CONFIG.BRAM_WIDTH {1800} \
-   CONFIG.DATA_WIDTH {32} \
-   CONFIG.KERNEL_SIZE {3} \
+   CONFIG.DATA_WIDTH {8} \
  ] $Convolution_Controll_0
+
+  # Create instance: Convolution_Controll_0_bram, and set properties
+  set Convolution_Controll_0_bram [ create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 Convolution_Controll_0_bram ]
+  set_property -dict [ list \
+   CONFIG.Byte_Size {9} \
+   CONFIG.EN_SAFETY_CKT {false} \
+   CONFIG.Enable_32bit_Address {false} \
+   CONFIG.Memory_Type {True_Dual_Port_RAM} \
+   CONFIG.Register_PortA_Output_of_Memory_Primitives {false} \
+   CONFIG.Register_PortB_Output_of_Memory_Primitives {true} \
+   CONFIG.Use_Byte_Write_Enable {false} \
+   CONFIG.Use_RSTA_Pin {false} \
+   CONFIG.Use_RSTB_Pin {false} \
+   CONFIG.Write_Depth_A {1800} \
+   CONFIG.use_bram_block {Stand_Alone} \
+ ] $Convolution_Controll_0_bram
+
+  # Create instance: Convolution_Controll_0_bram_0, and set properties
+  set Convolution_Controll_0_bram_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 Convolution_Controll_0_bram_0 ]
+  set_property -dict [ list \
+   CONFIG.Byte_Size {9} \
+   CONFIG.EN_SAFETY_CKT {false} \
+   CONFIG.Enable_32bit_Address {false} \
+   CONFIG.Memory_Type {True_Dual_Port_RAM} \
+   CONFIG.Register_PortA_Output_of_Memory_Primitives {false} \
+   CONFIG.Register_PortB_Output_of_Memory_Primitives {true} \
+   CONFIG.Use_Byte_Write_Enable {false} \
+   CONFIG.Use_RSTA_Pin {false} \
+   CONFIG.Use_RSTB_Pin {false} \
+   CONFIG.Write_Depth_A {1800} \
+   CONFIG.use_bram_block {Stand_Alone} \
+ ] $Convolution_Controll_0_bram_0
+
+  # Create instance: Convolution_Controll_0_bram_1, and set properties
+  set Convolution_Controll_0_bram_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 Convolution_Controll_0_bram_1 ]
+  set_property -dict [ list \
+   CONFIG.Byte_Size {9} \
+   CONFIG.EN_SAFETY_CKT {false} \
+   CONFIG.Enable_32bit_Address {false} \
+   CONFIG.Memory_Type {True_Dual_Port_RAM} \
+   CONFIG.Register_PortA_Output_of_Memory_Primitives {false} \
+   CONFIG.Register_PortB_Output_of_Memory_Primitives {true} \
+   CONFIG.Use_Byte_Write_Enable {false} \
+   CONFIG.Use_RSTA_Pin {false} \
+   CONFIG.Use_RSTB_Pin {false} \
+   CONFIG.Write_Depth_A {1800} \
+   CONFIG.use_bram_block {Stand_Alone} \
+ ] $Convolution_Controll_0_bram_1
 
   # Create instance: axi_dma_0, and set properties
   set axi_dma_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_dma:7.1 axi_dma_0 ]
@@ -192,63 +240,6 @@ proc create_root_design { parentCell } {
    CONFIG.NUM_MI {1} \
    CONFIG.NUM_SI {2} \
  ] $axi_mem_intercon
-
-  # Create instance: blk_mem_gen_0, and set properties
-  set blk_mem_gen_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 blk_mem_gen_0 ]
-  set_property -dict [ list \
-   CONFIG.Byte_Size {9} \
-   CONFIG.EN_SAFETY_CKT {false} \
-   CONFIG.Enable_32bit_Address {false} \
-   CONFIG.Enable_B {Use_ENB_Pin} \
-   CONFIG.Memory_Type {True_Dual_Port_RAM} \
-   CONFIG.Port_B_Clock {100} \
-   CONFIG.Port_B_Enable_Rate {100} \
-   CONFIG.Port_B_Write_Rate {50} \
-   CONFIG.Register_PortA_Output_of_Memory_Primitives {false} \
-   CONFIG.Register_PortB_Output_of_Memory_Primitives {false} \
-   CONFIG.Use_Byte_Write_Enable {false} \
-   CONFIG.Use_RSTA_Pin {false} \
-   CONFIG.Write_Depth_A {1800} \
-   CONFIG.use_bram_block {Stand_Alone} \
- ] $blk_mem_gen_0
-
-  # Create instance: blk_mem_gen_1, and set properties
-  set blk_mem_gen_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 blk_mem_gen_1 ]
-  set_property -dict [ list \
-   CONFIG.Byte_Size {9} \
-   CONFIG.EN_SAFETY_CKT {false} \
-   CONFIG.Enable_32bit_Address {false} \
-   CONFIG.Enable_B {Use_ENB_Pin} \
-   CONFIG.Memory_Type {True_Dual_Port_RAM} \
-   CONFIG.Port_B_Clock {100} \
-   CONFIG.Port_B_Enable_Rate {100} \
-   CONFIG.Port_B_Write_Rate {50} \
-   CONFIG.Register_PortA_Output_of_Memory_Primitives {false} \
-   CONFIG.Register_PortB_Output_of_Memory_Primitives {false} \
-   CONFIG.Use_Byte_Write_Enable {false} \
-   CONFIG.Use_RSTA_Pin {false} \
-   CONFIG.Write_Depth_A {1800} \
-   CONFIG.use_bram_block {Stand_Alone} \
- ] $blk_mem_gen_1
-
-  # Create instance: blk_mem_gen_2, and set properties
-  set blk_mem_gen_2 [ create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 blk_mem_gen_2 ]
-  set_property -dict [ list \
-   CONFIG.Byte_Size {9} \
-   CONFIG.EN_SAFETY_CKT {false} \
-   CONFIG.Enable_32bit_Address {false} \
-   CONFIG.Enable_B {Use_ENB_Pin} \
-   CONFIG.Memory_Type {True_Dual_Port_RAM} \
-   CONFIG.Port_B_Clock {100} \
-   CONFIG.Port_B_Enable_Rate {100} \
-   CONFIG.Port_B_Write_Rate {50} \
-   CONFIG.Register_PortA_Output_of_Memory_Primitives {false} \
-   CONFIG.Register_PortB_Output_of_Memory_Primitives {false} \
-   CONFIG.Use_Byte_Write_Enable {false} \
-   CONFIG.Use_RSTA_Pin {false} \
-   CONFIG.Write_Depth_A {1024} \
-   CONFIG.use_bram_block {Stand_Alone} \
- ] $blk_mem_gen_2
 
   # Create instance: processing_system7_0, and set properties
   set processing_system7_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0 ]
@@ -459,7 +450,7 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_I2C1_HIGHADDR {0xE0005FFF} \
    CONFIG.PCW_I2C1_RESET_ENABLE {0} \
    CONFIG.PCW_I2C_PERIPHERAL_FREQMHZ {25} \
-   CONFIG.PCW_I2C_RESET_ENABLE {0} \
+   CONFIG.PCW_I2C_RESET_ENABLE {1} \
    CONFIG.PCW_I2C_RESET_POLARITY {Active Low} \
    CONFIG.PCW_IMPORT_BOARD_PRESET {None} \
    CONFIG.PCW_INCLUDE_ACP_TRANS_CHECK {0} \
@@ -1029,16 +1020,16 @@ proc create_root_design { parentCell } {
    CONFIG.NUM_MI {2} \
  ] $ps7_0_axi_periph
 
-  # Create instance: rst_ps7_0_50M, and set properties
-  set rst_ps7_0_50M [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 rst_ps7_0_50M ]
+  # Create instance: rst_ps7_0_100M, and set properties
+  set rst_ps7_0_100M [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 rst_ps7_0_100M ]
 
   # Create interface connections
-  connect_bd_intf_net -intf_net Convolution_Controll_0_BRAM_PORTA_1 [get_bd_intf_pins Convolution_Controll_0/BRAM_PORTA_1] [get_bd_intf_pins blk_mem_gen_0/BRAM_PORTA]
-  connect_bd_intf_net -intf_net Convolution_Controll_0_BRAM_PORTA_2 [get_bd_intf_pins Convolution_Controll_0/BRAM_PORTA_2] [get_bd_intf_pins blk_mem_gen_1/BRAM_PORTA]
-  connect_bd_intf_net -intf_net Convolution_Controll_0_BRAM_PORTA_3 [get_bd_intf_pins Convolution_Controll_0/BRAM_PORTA_3] [get_bd_intf_pins blk_mem_gen_2/BRAM_PORTA]
-  connect_bd_intf_net -intf_net Convolution_Controll_0_BRAM_PORTB_1 [get_bd_intf_pins Convolution_Controll_0/BRAM_PORTB_1] [get_bd_intf_pins blk_mem_gen_0/BRAM_PORTB]
-  connect_bd_intf_net -intf_net Convolution_Controll_0_BRAM_PORTB_2 [get_bd_intf_pins Convolution_Controll_0/BRAM_PORTB_2] [get_bd_intf_pins blk_mem_gen_1/BRAM_PORTB]
-  connect_bd_intf_net -intf_net Convolution_Controll_0_BRAM_PORTB_3 [get_bd_intf_pins Convolution_Controll_0/BRAM_PORTB_3] [get_bd_intf_pins blk_mem_gen_2/BRAM_PORTB]
+  connect_bd_intf_net -intf_net Convolution_Controll_0_BRAM_PORTA_1 [get_bd_intf_pins Convolution_Controll_0/BRAM_PORTA_1] [get_bd_intf_pins Convolution_Controll_0_bram/BRAM_PORTA]
+  connect_bd_intf_net -intf_net Convolution_Controll_0_BRAM_PORTA_2 [get_bd_intf_pins Convolution_Controll_0/BRAM_PORTA_2] [get_bd_intf_pins Convolution_Controll_0_bram_0/BRAM_PORTA]
+  connect_bd_intf_net -intf_net Convolution_Controll_0_BRAM_PORTA_3 [get_bd_intf_pins Convolution_Controll_0/BRAM_PORTA_3] [get_bd_intf_pins Convolution_Controll_0_bram_1/BRAM_PORTA]
+  connect_bd_intf_net -intf_net Convolution_Controll_0_BRAM_PORTB_1 [get_bd_intf_pins Convolution_Controll_0/BRAM_PORTB_1] [get_bd_intf_pins Convolution_Controll_0_bram/BRAM_PORTB]
+  connect_bd_intf_net -intf_net Convolution_Controll_0_BRAM_PORTB_2 [get_bd_intf_pins Convolution_Controll_0/BRAM_PORTB_2] [get_bd_intf_pins Convolution_Controll_0_bram_0/BRAM_PORTB]
+  connect_bd_intf_net -intf_net Convolution_Controll_0_BRAM_PORTB_3 [get_bd_intf_pins Convolution_Controll_0/BRAM_PORTB_3] [get_bd_intf_pins Convolution_Controll_0_bram_1/BRAM_PORTB]
   connect_bd_intf_net -intf_net Convolution_Controll_0_m_axis_DATA_OUT [get_bd_intf_pins Convolution_Controll_0/m_axis_DATA_OUT] [get_bd_intf_pins axi_dma_0/S_AXIS_S2MM]
   connect_bd_intf_net -intf_net axi_dma_0_M_AXIS_MM2S [get_bd_intf_pins Convolution_Controll_0/s_axis_DATA_IN] [get_bd_intf_pins axi_dma_0/M_AXIS_MM2S]
   connect_bd_intf_net -intf_net axi_dma_0_M_AXI_MM2S [get_bd_intf_pins axi_dma_0/M_AXI_MM2S] [get_bd_intf_pins axi_mem_intercon/S00_AXI]
@@ -1055,10 +1046,10 @@ proc create_root_design { parentCell } {
   connect_bd_net -net Convolution_Controll_0_MULTIPLIER_INPUT [get_bd_ports MULTIPLIER_INPUT_0] [get_bd_pins Convolution_Controll_0/MULTIPLIER_INPUT]
   connect_bd_net -net Convolution_Controll_0_MULTIPLY_START [get_bd_ports MULTIPLY_START_0] [get_bd_pins Convolution_Controll_0/MULTIPLY_START]
   connect_bd_net -net cReady_0_1 [get_bd_ports cReady_0] [get_bd_pins Convolution_Controll_0/cReady]
-  connect_bd_net -net cSum_0_1 [get_bd_ports cSum_0] [get_bd_pins Convolution_Controll_0/cSum]
-  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_ports FCLK_CLK0_0] [get_bd_pins Convolution_Controll_0/axi_clk] [get_bd_pins axi_dma_0/m_axi_mm2s_aclk] [get_bd_pins axi_dma_0/m_axi_s2mm_aclk] [get_bd_pins axi_dma_0/s_axi_lite_aclk] [get_bd_pins axi_mem_intercon/ACLK] [get_bd_pins axi_mem_intercon/M00_ACLK] [get_bd_pins axi_mem_intercon/S00_ACLK] [get_bd_pins axi_mem_intercon/S01_ACLK] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins processing_system7_0/S_AXI_HP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/M01_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_50M/slowest_sync_clk]
-  connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_ports FCLK_RESET0_N_0] [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_ps7_0_50M/ext_reset_in]
-  connect_bd_net -net rst_ps7_0_50M_peripheral_aresetn [get_bd_pins Convolution_Controll_0/axi_reset_n] [get_bd_pins axi_dma_0/axi_resetn] [get_bd_pins axi_mem_intercon/ARESETN] [get_bd_pins axi_mem_intercon/M00_ARESETN] [get_bd_pins axi_mem_intercon/S00_ARESETN] [get_bd_pins axi_mem_intercon/S01_ARESETN] [get_bd_pins ps7_0_axi_periph/ARESETN] [get_bd_pins ps7_0_axi_periph/M00_ARESETN] [get_bd_pins ps7_0_axi_periph/M01_ARESETN] [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps7_0_50M/peripheral_aresetn]
+  connect_bd_net -net cSum_1_1 [get_bd_ports cSum_1] [get_bd_pins Convolution_Controll_0/cSum]
+  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_ports FCLK_CLK0_0] [get_bd_pins Convolution_Controll_0/axi_clk] [get_bd_pins axi_dma_0/m_axi_mm2s_aclk] [get_bd_pins axi_dma_0/m_axi_s2mm_aclk] [get_bd_pins axi_dma_0/s_axi_lite_aclk] [get_bd_pins axi_mem_intercon/ACLK] [get_bd_pins axi_mem_intercon/M00_ACLK] [get_bd_pins axi_mem_intercon/S00_ACLK] [get_bd_pins axi_mem_intercon/S01_ACLK] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins processing_system7_0/S_AXI_HP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/M01_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_100M/slowest_sync_clk]
+  connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_ports FCLK_RESET0_N_0] [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_ps7_0_100M/ext_reset_in]
+  connect_bd_net -net rst_ps7_0_100M_peripheral_aresetn [get_bd_pins Convolution_Controll_0/axi_reset_n] [get_bd_pins axi_dma_0/axi_resetn] [get_bd_pins axi_mem_intercon/ARESETN] [get_bd_pins axi_mem_intercon/M00_ARESETN] [get_bd_pins axi_mem_intercon/S00_ARESETN] [get_bd_pins axi_mem_intercon/S01_ARESETN] [get_bd_pins ps7_0_axi_periph/ARESETN] [get_bd_pins ps7_0_axi_periph/M00_ARESETN] [get_bd_pins ps7_0_axi_periph/M01_ARESETN] [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps7_0_100M/peripheral_aresetn]
 
   # Create address segments
   assign_bd_address -offset 0x00000000 -range 0x20000000 -target_address_space [get_bd_addr_spaces axi_dma_0/Data_MM2S] [get_bd_addr_segs processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM] -force

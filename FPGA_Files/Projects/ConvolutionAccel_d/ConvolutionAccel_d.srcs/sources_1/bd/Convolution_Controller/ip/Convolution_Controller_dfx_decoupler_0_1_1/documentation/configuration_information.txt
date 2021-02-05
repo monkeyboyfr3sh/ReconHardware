@@ -1,0 +1,57 @@
+Core Configuration Properties
+=============================
+CONFIG.HAS_AXI_LITE                             0
+CONFIG.HAS_AXIS_CONTROL                         0
+CONFIG.HAS_AXIS_STATUS                          0
+CONFIG.HAS_SIGNAL_CONTROL                       1
+CONFIG.HAS_SIGNAL_STATUS                        1
+CONFIG.INTF.cSum.VLNV                           xilinx.com:signal:data_rtl:1.0
+CONFIG.INTF.cSum.MODE                           master
+CONFIG.INTF.cSum.CDC_STAGES                     0
+CONFIG.INTF.cSum.SIGNAL.DATA.PRESENT            1
+CONFIG.INTF.cSum.SIGNAL.DATA.DECOUPLED          1
+CONFIG.INTF.cSum.SIGNAL.DATA.DECOUPLED_VALUE    0x0
+CONFIG.INTF.cSum.SIGNAL.DATA.WIDTH              32
+CONFIG.INTF.cSum.SIGNAL.DATA.DIRECTION          out
+CONFIG.INTF.cSum.SIGNAL.DATA.RESOURCE           infer
+CONFIG.INTF.cSum.SIGNAL.DATA.MANAGEMENT         manual
+CONFIG.INTF.cReady.VLNV                         xilinx.com:signal:data_rtl:1.0
+CONFIG.INTF.cReady.MODE                         master
+CONFIG.INTF.cReady.CDC_STAGES                   0
+CONFIG.INTF.cReady.SIGNAL.DATA.PRESENT          1
+CONFIG.INTF.cReady.SIGNAL.DATA.DECOUPLED        1
+CONFIG.INTF.cReady.SIGNAL.DATA.DECOUPLED_VALUE  0x0
+CONFIG.INTF.cReady.SIGNAL.DATA.WIDTH            1
+CONFIG.INTF.cReady.SIGNAL.DATA.DIRECTION        out
+CONFIG.INTF.cReady.SIGNAL.DATA.RESOURCE         infer
+CONFIG.INTF.cReady.SIGNAL.DATA.MANAGEMENT       manual
+
+
+dfx_decoupler_v1_0::set_property -dict [list \
+                               CONFIG.HAS_AXI_LITE                             0 \
+                               CONFIG.HAS_AXIS_CONTROL                         0 \
+                               CONFIG.HAS_AXIS_STATUS                          0 \
+                               CONFIG.HAS_SIGNAL_CONTROL                       1 \
+                               CONFIG.HAS_SIGNAL_STATUS                        1 \
+                               CONFIG.INTF.cSum.VLNV                           xilinx.com:signal:data_rtl:1.0 \
+                               CONFIG.INTF.cSum.MODE                           master \
+                               CONFIG.INTF.cSum.CDC_STAGES                     0 \
+                               CONFIG.INTF.cSum.SIGNAL.DATA.PRESENT            1 \
+                               CONFIG.INTF.cSum.SIGNAL.DATA.DECOUPLED          1 \
+                               CONFIG.INTF.cSum.SIGNAL.DATA.DECOUPLED_VALUE    0x0 \
+                               CONFIG.INTF.cSum.SIGNAL.DATA.WIDTH              32 \
+                               CONFIG.INTF.cSum.SIGNAL.DATA.DIRECTION          out \
+                               CONFIG.INTF.cSum.SIGNAL.DATA.RESOURCE           infer \
+                               CONFIG.INTF.cSum.SIGNAL.DATA.MANAGEMENT         manual \
+                               CONFIG.INTF.cReady.VLNV                         xilinx.com:signal:data_rtl:1.0 \
+                               CONFIG.INTF.cReady.MODE                         master \
+                               CONFIG.INTF.cReady.CDC_STAGES                   0 \
+                               CONFIG.INTF.cReady.SIGNAL.DATA.PRESENT          1 \
+                               CONFIG.INTF.cReady.SIGNAL.DATA.DECOUPLED        1 \
+                               CONFIG.INTF.cReady.SIGNAL.DATA.DECOUPLED_VALUE  0x0 \
+                               CONFIG.INTF.cReady.SIGNAL.DATA.WIDTH            1 \
+                               CONFIG.INTF.cReady.SIGNAL.DATA.DIRECTION        out \
+                               CONFIG.INTF.cReady.SIGNAL.DATA.RESOURCE         infer \
+                               CONFIG.INTF.cReady.SIGNAL.DATA.MANAGEMENT       manual \
+] [get_ips Convolution_Controller_dfx_decoupler_0_1]
+

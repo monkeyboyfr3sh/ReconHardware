@@ -9,8 +9,7 @@
 
 module multiplyComputePynq 
 #( // Parameters
-    parameter DATA_WIDTH = 32,
-    parameter DOUBLE_DATA_WIDTH = 2*DATA_WIDTH
+    parameter DATA_WIDTH = 32
 )
 ( // Ports
     clk,

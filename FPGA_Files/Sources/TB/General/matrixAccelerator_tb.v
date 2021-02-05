@@ -3,7 +3,7 @@
 
 module matrixAccelerator_tb;
 
-`define data_width 8
+`define data_width 32
 `define kernel_size 3
 `define test_cnt 100
 reg rand_test = 1; // Set test bench to use random variables

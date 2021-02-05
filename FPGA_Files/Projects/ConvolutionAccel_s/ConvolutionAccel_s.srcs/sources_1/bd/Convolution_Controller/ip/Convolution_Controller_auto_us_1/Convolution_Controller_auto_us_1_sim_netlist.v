@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
 // Date        : Tue Feb  2 16:09:29 2021
 // Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_auto_us_1/Convolution_Controller_auto_us_1_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top Convolution_Controller_auto_us_1 -prefix
+//               Convolution_Controller_auto_us_1_ Convolution_Controller_auto_us_1_sim_netlist.v
 // Design      : Convolution_Controller_auto_us_1
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -262,7 +262,6 @@ module Convolution_Controller_auto_us_1
         .s_axi_wvalid(s_axi_wvalid));
 endmodule
 
-(* ORIG_REF_NAME = "axi_dwidth_converter_v2_1_21_a_upsizer" *) 
 module Convolution_Controller_auto_us_1_axi_dwidth_converter_v2_1_21_a_upsizer
    (\USE_WRITE.wr_cmd_valid ,
     s_axi_wlast_0,
@@ -469,7 +468,6 @@ module Convolution_Controller_auto_us_1_axi_dwidth_converter_v2_1_21_a_upsizer
         .R(SR));
 endmodule
 
-(* ORIG_REF_NAME = "axi_dwidth_converter_v2_1_21_axi_upsizer" *) 
 module Convolution_Controller_auto_us_1_axi_dwidth_converter_v2_1_21_axi_upsizer
    (m_axi_awlen,
     Q,
@@ -718,8 +716,8 @@ endmodule
 (* C_RATIO = "0" *) (* C_RATIO_LOG = "0" *) (* C_SUPPORTS_ID = "0" *) 
 (* C_SYNCHRONIZER_STAGE = "3" *) (* C_S_AXI_ACLK_RATIO = "1" *) (* C_S_AXI_BYTES_LOG = "2" *) 
 (* C_S_AXI_DATA_WIDTH = "32" *) (* C_S_AXI_ID_WIDTH = "1" *) (* DowngradeIPIdentifiedWarnings = "yes" *) 
-(* ORIG_REF_NAME = "axi_dwidth_converter_v2_1_21_top" *) (* P_AXI3 = "1" *) (* P_AXI4 = "0" *) 
-(* P_AXILITE = "2" *) (* P_CONVERSION = "2" *) (* P_MAX_SPLIT_BEATS = "16" *) 
+(* P_AXI3 = "1" *) (* P_AXI4 = "0" *) (* P_AXILITE = "2" *) 
+(* P_CONVERSION = "2" *) (* P_MAX_SPLIT_BEATS = "16" *) 
 module Convolution_Controller_auto_us_1_axi_dwidth_converter_v2_1_21_top
    (s_axi_aclk,
     s_axi_aresetn,
@@ -1051,7 +1049,6 @@ module Convolution_Controller_auto_us_1_axi_dwidth_converter_v2_1_21_top
         .s_axi_wvalid(s_axi_wvalid));
 endmodule
 
-(* ORIG_REF_NAME = "axi_dwidth_converter_v2_1_21_w_upsizer" *) 
 module Convolution_Controller_auto_us_1_axi_dwidth_converter_v2_1_21_w_upsizer
    (\USE_RTL_CURR_WORD.first_word_q ,
     s_axi_aresetn,
@@ -3292,7 +3289,6 @@ module Convolution_Controller_auto_us_1_axi_dwidth_converter_v2_1_21_w_upsizer
         .R(s_axi_aresetn));
 endmodule
 
-(* ORIG_REF_NAME = "axi_register_slice_v2_1_21_axi_register_slice" *) 
 module Convolution_Controller_auto_us_1_axi_register_slice_v2_1_21_axi_register_slice
    (E,
     s_axi_awready,
@@ -3359,7 +3355,6 @@ module Convolution_Controller_auto_us_1_axi_register_slice_v2_1_21_axi_register_
         .s_ready_i_reg_0(s_ready_i_reg));
 endmodule
 
-(* ORIG_REF_NAME = "axi_register_slice_v2_1_21_axic_register_slice" *) 
 module Convolution_Controller_auto_us_1_axi_register_slice_v2_1_21_axic_register_slice
    (E,
     s_axi_awready,
@@ -4594,7 +4589,6 @@ module Convolution_Controller_auto_us_1_axi_register_slice_v2_1_21_axic_register
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "generic_baseblocks_v2_1_0_command_fifo" *) 
 module Convolution_Controller_auto_us_1_generic_baseblocks_v2_1_0_command_fifo
    (\USE_FF_OUT.USE_RTL_OUTPUT_PIPELINE.M_VALID_Q_reg_0 ,
     s_axi_wlast_0,

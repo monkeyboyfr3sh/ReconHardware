@@ -10,22 +10,19 @@ reg rand_test = 1; // Set test bench to use random variables
 reg Clk,Rst;
 reg signed [`data_width-1:0]    multiplier,multiplicand;
 reg start;
-wire signed [2*`data_width-1:0]   product;
+wire signed [`data_width-1:0]   product;
 wire ready;
 
 //fixedmultiplyCompute
-multiplyComputePynq 
-#( // Parameters
-    .DATA_WIDTH(`data_width)
-)
+integer_multiplier_32
 UUT ( // Ports
-    Clk,
-    Rst,
-    product,
-    multiplier,
-    multiplicand,
-    ready,
-    start
+    .clk(Clk),
+    .reset(Rst),
+    .product(product),
+    .multiplier(multiplier),
+    .multiplicand(multiplicand),
+    .ready(ready),
+    .start(start)
 );
 
 integer i;

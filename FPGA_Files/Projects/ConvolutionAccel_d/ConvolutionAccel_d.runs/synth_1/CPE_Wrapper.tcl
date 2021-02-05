@@ -71,6 +71,9 @@ proc create_report { reportName command } {
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param ced.repoPaths C:/Users/monke/AppData/Roaming/Xilinx/Vivado/2020.1/xhub/ced_store/Vivado_example_project
+set_msg_config  -id {VRFC 10-2989}  -string {{ERROR: [VRFC 10-2989] 'break' is not declared [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Adder/adderFloat.v:60]}}  -suppress 
+set_msg_config  -id {XSIM 43-3322}  -string {{ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.}}  -suppress 
+set_msg_config  -id {Netlist 29-160}  -suppress 
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg400-1
 
@@ -84,7 +87,10 @@ set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part tul.com.tw:pynq-z2:part0:1.0 [current_project]
-set_property ip_repo_paths c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source [current_project]
+set_property ip_repo_paths {
+  c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Adder/Integer_Adder_1.0
+  c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source
+} [current_project]
 update_ip_catalog
 set_property ip_output_repo c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
@@ -93,29 +99,32 @@ OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
   C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.srcs/sources_1/bd/Convolution_Controller/hdl/Convolution_Controller_wrapper.v
   C:/GitHub/ReconHardware/FPGA_Files/Sources/General/XBar2.v
-  C:/GitHub/ReconHardware/FPGA_Files/Sources/Adder/adder.v
+  C:/GitHub/ReconHardware/FPGA_Files/Sources/Adder/int_adder_tree.v
+  C:/GitHub/ReconHardware/FPGA_Files/Sources/Adder/Wrappers/integer_adder_32.v
+  C:/GitHub/ReconHardware/FPGA_Files/Sources/Multiplier/Wrappers/integer_multiplier_32.v
   C:/GitHub/ReconHardware/FPGA_Files/Sources/General/matrixAccelerator.v
   C:/GitHub/ReconHardware/FPGA_Files/Sources/Multiplier/multiplyComputePynq.v
-  C:/GitHub/ReconHardware/FPGA_Files/Sources/General/AXI_Conv_wrapper.v
+  C:/GitHub/ReconHardware/FPGA_Files/Sources/General/Convolution_Top_d.v
 }
 add_files C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.srcs/sources_1/bd/Convolution_Controller/Convolution_Controller.bd
 set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_processing_system7_0_0/Convolution_Controller_processing_system7_0_0.xdc]
-set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_xbar_0/Convolution_Controller_xbar_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_rst_ps7_0_100M_0/Convolution_Controller_rst_ps7_0_100M_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_rst_ps7_0_100M_0/Convolution_Controller_rst_ps7_0_100M_0.xdc]
-set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_rst_ps7_0_100M_0/Convolution_Controller_rst_ps7_0_100M_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_xbar_1/Convolution_Controller_xbar_1_ooc.xdc]
-set_property used_in_synthesis false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_ila_0_3/ila_v6_2/constraints/ila_impl.xdc]
-set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_ila_0_3/ila_v6_2/constraints/ila_impl.xdc]
-set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_ila_0_3/ila_v6_2/constraints/ila.xdc]
-set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_ila_0_3/Convolution_Controller_ila_0_3_ooc.xdc]
-set_property used_in_synthesis false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_ila_1_0/ila_v6_2/constraints/ila_impl.xdc]
-set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_ila_1_0/ila_v6_2/constraints/ila_impl.xdc]
-set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_ila_1_0/ila_v6_2/constraints/ila.xdc]
-set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_ila_1_0/Convolution_Controller_ila_1_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_axi_dma_0_1/Convolution_Controller_axi_dma_0_1.xdc]
 set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_axi_dma_0_1/Convolution_Controller_axi_dma_0_1_clocks.xdc]
 set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_axi_dma_0_1/Convolution_Controller_axi_dma_0_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_rst_ps7_0_100M_0/Convolution_Controller_rst_ps7_0_100M_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_rst_ps7_0_100M_0/Convolution_Controller_rst_ps7_0_100M_0.xdc]
+set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_rst_ps7_0_100M_0/Convolution_Controller_rst_ps7_0_100M_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_Convolution_Controll_0_bram_2/Convolution_Controller_Convolution_Controll_0_bram_2_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_Convolution_Controll_0_bram_3/Convolution_Controller_Convolution_Controll_0_bram_3_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_Convolution_Controll_0_bram_4/Convolution_Controller_Convolution_Controll_0_bram_4_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_dfx_controller_0_0_1/Convolution_Controller_dfx_controller_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_dfx_controller_0_0_1/Convolution_Controller_dfx_controller_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_dfx_decoupler_0_0_1/Convolution_Controller_dfx_decoupler_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_dfx_decoupler_0_0_1/Convolution_Controller_dfx_decoupler_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_xbar_1/Convolution_Controller_xbar_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_xbar_0/Convolution_Controller_xbar_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_dfx_decoupler_0_1_1/Convolution_Controller_dfx_decoupler_0_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_dfx_decoupler_0_1_1/Convolution_Controller_dfx_decoupler_0_1.xdc]
 set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_auto_pc_0/Convolution_Controller_auto_pc_0_ooc.xdc]
 set_property used_in_synthesis false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_auto_us_0/Convolution_Controller_auto_us_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_auto_us_0/Convolution_Controller_auto_us_0_clocks.xdc]
@@ -123,6 +132,9 @@ set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardwar
 set_property used_in_synthesis false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_auto_us_1/Convolution_Controller_auto_us_1_clocks.xdc]
 set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_auto_us_1/Convolution_Controller_auto_us_1_clocks.xdc]
 set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_auto_us_1/Convolution_Controller_auto_us_1_ooc.xdc]
+set_property used_in_synthesis false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_auto_us_2/Convolution_Controller_auto_us_2_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_auto_us_2/Convolution_Controller_auto_us_2_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_auto_us_2/Convolution_Controller_auto_us_2_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_auto_pc_1/Convolution_Controller_auto_pc_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.srcs/sources_1/bd/Convolution_Controller/Convolution_Controller_ooc.xdc]
 

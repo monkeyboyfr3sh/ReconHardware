@@ -2,10 +2,10 @@
 `timescale `myTimeScale
 
 //Test stuff
-`define test_width 5
-`define test_height 5
+`define test_width 4
+`define test_height 4
 
-`define data_width 32
+`define data_width 8
 `define addr_width 10
 `define kernel_size 3
 
@@ -65,15 +65,15 @@ reg s_axi_bready;
 // BRAM_A - Write Port
 wire [12:0] addra_1;
 wire clka_1;
-wire [`data_width-1:0] dina_1;
-wire [`data_width-1:0] douta_1;
+wire [31:0] dina_1;
+wire [31:0] douta_1;
 wire ena_1;
 wire wea_1;
 // BRAM_B - Read Port
 wire [12:0] addrb_1;
 wire clkb_1;
-wire [`data_width-1:0] dinb_1;
-wire [`data_width-1:0] doutb_1;
+wire [31:0] dinb_1;
+wire [31:0] doutb_1;
 wire enb_1;
 wire web_1;
 bram_wrapper bram1 (
@@ -95,15 +95,15 @@ bram_wrapper bram1 (
 // BRAM_A - Write Port
 wire [12:0] addra_2;
 wire clka_2;
-wire [`data_width-1:0] dina_2;
-wire [`data_width-1:0] douta_2;
+wire [31:0] dina_2;
+wire [31:0] douta_2;
 wire ena_2;
 wire wea_2;
 // BRAM_B - Read Port
 wire [12:0] addrb_2;
 wire clkb_2;
-wire [`data_width-1:0] dinb_2;
-wire [`data_width-1:0] doutb_2;
+wire [31:0] dinb_2;
+wire [31:0] doutb_2;
 wire enb_2;
 wire web_2;
 bram_wrapper bram2 (
@@ -125,15 +125,15 @@ bram_wrapper bram2 (
 // BRAM_A - Write Port
 wire [12:0] addra_3;
 wire clka_3;
-wire [`data_width-1:0] dina_3;
-wire [`data_width-1:0] douta_3;
+wire [31:0] dina_3;
+wire [31:0] douta_3;
 wire ena_3;
 wire wea_3;
 // BRAM_B - Read Port
 wire [12:0] addrb_3;
 wire clkb_3;
-wire [`data_width-1:0] dinb_3;
-wire [`data_width-1:0] doutb_3;
+wire [31:0] dinb_3;
+wire [31:0] doutb_3;
 wire enb_3;
 wire web_3;
 bram_wrapper bram3 (
@@ -151,7 +151,13 @@ bram_wrapper bram3 (
     .BRAM_PORTB_0_we(web_3)
 );
 
-Convolution_Controller UUT (//IP Ports
+Convolution_Controller 
+#(
+    .DATA_WIDTH(`data_width),
+    .KERNEL_SIZE(3),
+    .BRAM_WIDTH(1024)
+)
+UUT (//IP Ports
     .axi_clk(axi_clk),
     .axi_reset_n(axi_reset_n),
     .cSum(cSum),
@@ -357,8 +363,11 @@ for(i = 0;i<`kernel_size*`kernel_size;i=i+1)begin
     s_axi_awvalid = 1;
     s_axi_awaddr = (i*4)+24;
     s_axi_wvalid = 1;
-    s_axi_wdata = i;//Data going into filter
+    if(i==0) s_axi_wdata = 1;
+    else s_axi_wdata = 0;
+//    s_axi_wdata = i;//Data going into filter
     curr_filterSet[i] = s_axi_wdata; //Also put the data in the test array
+    
     #`clkPeriod;
     s_axi_awvalid = 0;
     s_axi_wvalid = 0;
@@ -370,7 +379,7 @@ columncnt = 0;
 setup = 1;
 end
 
-integer t;
+integer t, i;
 always#(`clkPeriod/2) axi_clk = ~axi_clk;
 //Begin data stream
 always @(posedge axi_clk)begin
@@ -393,10 +402,11 @@ always @(posedge axi_clk)begin
                 //Last pixel condition
                 m_axis_ready = 0;
                 
-                //Data on the 
-                s_axis_data = (rand_test) ? ($urandom) % (`data_width-2) : columncnt+linecnt*`test_width;
-                
-                columncnt = columncnt+1;
+                //Data on the
+                for(i = 0; i<(32/`data_width);i = i+1 )begin
+                    s_axis_data[i*`data_width+:`data_width] = (rand_test) ? ($urandom) % (`data_width-2) : columncnt+linecnt*`test_width;
+                    columncnt = columncnt+1;
+                end
                 if(columncnt >= `test_width)begin
                     columncnt = 0;
                     linecnt = linecnt + 1;

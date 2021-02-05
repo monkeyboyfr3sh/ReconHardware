@@ -2,8 +2,8 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Wed Feb  3 13:17:48 2021
-# Process ID: 10304
+# Start of session at: Thu Feb  4 19:51:06 2021
+# Process ID: 15452
 # Current directory: C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1
 # Command line: vivado.exe -log CPE_Wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source CPE_Wrapper.tcl
 # Log file: C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/CPE_Wrapper.vds

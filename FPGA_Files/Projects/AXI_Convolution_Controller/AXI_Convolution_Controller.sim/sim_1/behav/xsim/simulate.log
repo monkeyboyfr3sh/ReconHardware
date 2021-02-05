@@ -1,0 +1,13 @@
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+Block Memory Generator module Controller_w_BRAM_TB.bram1.bram_i.blk_mem_gen_0.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module Controller_w_BRAM_TB.bram2.bram_i.blk_mem_gen_0.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module Controller_w_BRAM_TB.bram3.bram_i.blk_mem_gen_0.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Stopped at time : 5 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/src/bram_coupler.v" Line 137
+Stopped at time : 505 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/src/bram_coupler.v" Line 137
+Stopped at time : 505 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/src/bram_coupler.v" Line 138
+Stopped at time : 505 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/src/bram_coupler.v" Line 139
+Stopped at time : 505 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/src/bram_coupler.v" Line 141
+Stopped at time : 505 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/src/bram_coupler.v" Line 152
+Stopped at time : 505 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/src/bram_coupler.v" Line 127
+Stopped at time : 515 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/src/bram_coupler.v" Line 137

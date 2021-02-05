@@ -1,10 +1,10 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
--- Date        : Tue Feb  2 16:09:30 2021
+-- Date        : Tue Feb  2 16:09:29 2021
 -- Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_auto_pc_0/Convolution_Controller_auto_pc_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top Convolution_Controller_auto_pc_0 -prefix
+--               Convolution_Controller_auto_pc_0_ Convolution_Controller_auto_pc_0_sim_netlist.vhdl
 -- Design      : Convolution_Controller_auto_pc_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -33,8 +33,6 @@ entity Convolution_Controller_auto_pc_0_axi_protocol_converter_v2_1_21_b2s_incr_
     \m_axi_awaddr[11]_0\ : in STD_LOGIC;
     \axlen_cnt_reg[0]_1\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_auto_pc_0_axi_protocol_converter_v2_1_21_b2s_incr_cmd : entity is "axi_protocol_converter_v2_1_21_b2s_incr_cmd";
 end Convolution_Controller_auto_pc_0_axi_protocol_converter_v2_1_21_b2s_incr_cmd;
 
 architecture STRUCTURE of Convolution_Controller_auto_pc_0_axi_protocol_converter_v2_1_21_b2s_incr_cmd is
@@ -1832,8 +1830,6 @@ entity Convolution_Controller_auto_pc_0_axi_protocol_converter_v2_1_21_b2s_rd_cm
     \FSM_sequential_state_reg[1]_3\ : in STD_LOGIC;
     aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_auto_pc_0_axi_protocol_converter_v2_1_21_b2s_rd_cmd_fsm : entity is "axi_protocol_converter_v2_1_21_b2s_rd_cmd_fsm";
 end Convolution_Controller_auto_pc_0_axi_protocol_converter_v2_1_21_b2s_rd_cmd_fsm;
 
 architecture STRUCTURE of Convolution_Controller_auto_pc_0_axi_protocol_converter_v2_1_21_b2s_rd_cmd_fsm is
@@ -2431,8 +2427,6 @@ entity Convolution_Controller_auto_pc_0_axi_protocol_converter_v2_1_21_b2s_simpl
     aclk : in STD_LOGIC;
     shandshake_r : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_auto_pc_0_axi_protocol_converter_v2_1_21_b2s_simple_fifo : entity is "axi_protocol_converter_v2_1_21_b2s_simple_fifo";
 end Convolution_Controller_auto_pc_0_axi_protocol_converter_v2_1_21_b2s_simple_fifo;
 
 architecture STRUCTURE of Convolution_Controller_auto_pc_0_axi_protocol_converter_v2_1_21_b2s_simple_fifo is
@@ -4200,8 +4194,6 @@ entity Convolution_Controller_auto_pc_0_axi_protocol_converter_v2_1_21_b2s_wr_cm
     aclk : in STD_LOGIC;
     \FSM_sequential_state_reg[0]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_auto_pc_0_axi_protocol_converter_v2_1_21_b2s_wr_cmd_fsm : entity is "axi_protocol_converter_v2_1_21_b2s_wr_cmd_fsm";
 end Convolution_Controller_auto_pc_0_axi_protocol_converter_v2_1_21_b2s_wr_cmd_fsm;
 
 architecture STRUCTURE of Convolution_Controller_auto_pc_0_axi_protocol_converter_v2_1_21_b2s_wr_cmd_fsm is
@@ -4492,8 +4484,6 @@ entity Convolution_Controller_auto_pc_0_axi_protocol_converter_v2_1_21_b2s_wrap_
     \wrap_cnt_r_reg[3]_0\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
     \wrap_boundary_axaddr_r_reg[6]_0\ : in STD_LOGIC_VECTOR ( 6 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_auto_pc_0_axi_protocol_converter_v2_1_21_b2s_wrap_cmd : entity is "axi_protocol_converter_v2_1_21_b2s_wrap_cmd";
 end Convolution_Controller_auto_pc_0_axi_protocol_converter_v2_1_21_b2s_wrap_cmd;
 
 architecture STRUCTURE of Convolution_Controller_auto_pc_0_axi_protocol_converter_v2_1_21_b2s_wrap_cmd is
@@ -5842,8 +5832,6 @@ entity Convolution_Controller_auto_pc_0_axi_register_slice_v2_1_21_axic_register
     s_axi_araddr : in STD_LOGIC_VECTOR ( 31 downto 0 );
     \m_payload_i_reg[0]_1\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_auto_pc_0_axi_register_slice_v2_1_21_axic_register_slice : entity is "axi_register_slice_v2_1_21_axic_register_slice";
 end Convolution_Controller_auto_pc_0_axi_register_slice_v2_1_21_axic_register_slice;
 
 architecture STRUCTURE of Convolution_Controller_auto_pc_0_axi_register_slice_v2_1_21_axic_register_slice is
@@ -11820,8 +11808,6 @@ entity Convolution_Controller_auto_pc_0_axi_protocol_converter_v2_1_21_b2s_b_cha
     \in\ : in STD_LOGIC_VECTOR ( 15 downto 0 );
     m_axi_bresp : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_auto_pc_0_axi_protocol_converter_v2_1_21_b2s_b_channel : entity is "axi_protocol_converter_v2_1_21_b2s_b_channel";
 end Convolution_Controller_auto_pc_0_axi_protocol_converter_v2_1_21_b2s_b_channel;
 
 architecture STRUCTURE of Convolution_Controller_auto_pc_0_axi_protocol_converter_v2_1_21_b2s_b_channel is
@@ -12156,8 +12142,6 @@ entity Convolution_Controller_auto_pc_0_axi_protocol_converter_v2_1_21_b2s_cmd_t
     \wrap_cnt_r_reg[3]\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
     \wrap_boundary_axaddr_r_reg[6]\ : in STD_LOGIC_VECTOR ( 6 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_auto_pc_0_axi_protocol_converter_v2_1_21_b2s_cmd_translator : entity is "axi_protocol_converter_v2_1_21_b2s_cmd_translator";
 end Convolution_Controller_auto_pc_0_axi_protocol_converter_v2_1_21_b2s_cmd_translator;
 
 architecture STRUCTURE of Convolution_Controller_auto_pc_0_axi_protocol_converter_v2_1_21_b2s_cmd_translator is
@@ -12484,8 +12468,6 @@ entity Convolution_Controller_auto_pc_0_axi_protocol_converter_v2_1_21_b2s_r_cha
     D : in STD_LOGIC_VECTOR ( 11 downto 0 );
     areset_d1 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_auto_pc_0_axi_protocol_converter_v2_1_21_b2s_r_channel : entity is "axi_protocol_converter_v2_1_21_b2s_r_channel";
 end Convolution_Controller_auto_pc_0_axi_protocol_converter_v2_1_21_b2s_r_channel;
 
 architecture STRUCTURE of Convolution_Controller_auto_pc_0_axi_protocol_converter_v2_1_21_b2s_r_channel is
@@ -12715,8 +12697,6 @@ entity Convolution_Controller_auto_pc_0_axi_register_slice_v2_1_21_axi_register_
     E : in STD_LOGIC_VECTOR ( 0 to 0 );
     \m_payload_i_reg[0]_1\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_auto_pc_0_axi_register_slice_v2_1_21_axi_register_slice : entity is "axi_register_slice_v2_1_21_axi_register_slice";
 end Convolution_Controller_auto_pc_0_axi_register_slice_v2_1_21_axi_register_slice;
 
 architecture STRUCTURE of Convolution_Controller_auto_pc_0_axi_register_slice_v2_1_21_axi_register_slice is
@@ -12856,8 +12836,6 @@ entity Convolution_Controller_auto_pc_0_axi_protocol_converter_v2_1_21_b2s_ar_ch
     \axaddr_incr_reg[3]\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
     \wrap_boundary_axaddr_r_reg[6]\ : in STD_LOGIC_VECTOR ( 6 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_auto_pc_0_axi_protocol_converter_v2_1_21_b2s_ar_channel : entity is "axi_protocol_converter_v2_1_21_b2s_ar_channel";
 end Convolution_Controller_auto_pc_0_axi_protocol_converter_v2_1_21_b2s_ar_channel;
 
 architecture STRUCTURE of Convolution_Controller_auto_pc_0_axi_protocol_converter_v2_1_21_b2s_ar_channel is
@@ -13249,8 +13227,6 @@ entity Convolution_Controller_auto_pc_0_axi_protocol_converter_v2_1_21_b2s_aw_ch
     axaddr_incr : in STD_LOGIC_VECTOR ( 11 downto 0 );
     \wrap_boundary_axaddr_r_reg[6]\ : in STD_LOGIC_VECTOR ( 6 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_auto_pc_0_axi_protocol_converter_v2_1_21_b2s_aw_channel : entity is "axi_protocol_converter_v2_1_21_b2s_aw_channel";
 end Convolution_Controller_auto_pc_0_axi_protocol_converter_v2_1_21_b2s_aw_channel;
 
 architecture STRUCTURE of Convolution_Controller_auto_pc_0_axi_protocol_converter_v2_1_21_b2s_aw_channel is
@@ -13515,8 +13491,6 @@ entity Convolution_Controller_auto_pc_0_axi_protocol_converter_v2_1_21_b2s is
     m_axi_rvalid : in STD_LOGIC;
     aresetn : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_auto_pc_0_axi_protocol_converter_v2_1_21_b2s : entity is "axi_protocol_converter_v2_1_21_b2s";
 end Convolution_Controller_auto_pc_0_axi_protocol_converter_v2_1_21_b2s;
 
 architecture STRUCTURE of Convolution_Controller_auto_pc_0_axi_protocol_converter_v2_1_21_b2s is
@@ -14034,8 +14008,6 @@ entity Convolution_Controller_auto_pc_0_axi_protocol_converter_v2_1_21_axi_proto
   attribute C_TRANSLATION_MODE of Convolution_Controller_auto_pc_0_axi_protocol_converter_v2_1_21_axi_protocol_converter : entity is 2;
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of Convolution_Controller_auto_pc_0_axi_protocol_converter_v2_1_21_axi_protocol_converter : entity is "yes";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_auto_pc_0_axi_protocol_converter_v2_1_21_axi_protocol_converter : entity is "axi_protocol_converter_v2_1_21_axi_protocol_converter";
   attribute P_AXI3 : integer;
   attribute P_AXI3 of Convolution_Controller_auto_pc_0_axi_protocol_converter_v2_1_21_axi_protocol_converter : entity is 1;
   attribute P_AXI4 : integer;

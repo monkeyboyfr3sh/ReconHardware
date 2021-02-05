@@ -1,0 +1,27 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-456,-302",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace port clk_0 -pg 1 -lvl 0 -x -20 -y 80 -defaultsOSRD
+preplace port ready_0 -pg 1 -lvl 2 -x 300 -y 130 -defaultsOSRD
+preplace port reset_0 -pg 1 -lvl 0 -x -20 -y 100 -defaultsOSRD
+preplace port start_0 -pg 1 -lvl 0 -x -20 -y 160 -defaultsOSRD
+preplace portBus multiplicand_0 -pg 1 -lvl 0 -x -20 -y 140 -defaultsOSRD
+preplace portBus multiplier_0 -pg 1 -lvl 0 -x -20 -y 120 -defaultsOSRD
+preplace portBus product_0 -pg 1 -lvl 2 -x 300 -y 110 -defaultsOSRD
+preplace inst multiplyComputePynq_0 -pg 1 -lvl 1 -x 140 -y 120 -defaultsOSRD
+preplace netloc clk_0_1 1 0 1 NJ 80
+preplace netloc multiplicand_0_1 1 0 1 NJ 140
+preplace netloc multiplier_0_1 1 0 1 NJ 120
+preplace netloc multiplyComputePynq_0_product 1 1 1 NJ 110
+preplace netloc multiplyComputePynq_0_ready 1 1 1 NJ 130
+preplace netloc reset_0_1 1 0 1 NJ 100
+preplace netloc start_0_1 1 0 1 NJ 160
+levelinfo -pg 1 -20 140 300
+pagesize -pg 1 -db -bbox -sgen -220 0 460 220
+"
+}
+0

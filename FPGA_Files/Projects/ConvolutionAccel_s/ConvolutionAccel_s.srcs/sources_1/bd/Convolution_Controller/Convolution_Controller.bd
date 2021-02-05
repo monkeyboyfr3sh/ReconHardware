@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x8FB00EC5B31CE68E",
+      "boundary_crc": "0x8BD051DC4EF2AFA2",
       "device": "xc7z020clg400-1",
       "name": "Convolution_Controller",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
@@ -20,7 +20,7 @@
         "m00_couplers": {},
         "m01_couplers": {}
       },
-      "rst_ps7_0_50M": "",
+      "rst_ps7_0_100M": "",
       "axi_mem_intercon": {
         "xbar": "",
         "s00_couplers": {
@@ -33,10 +33,10 @@
           "auto_pc": ""
         }
       },
-      "blk_mem_gen_0": "",
-      "blk_mem_gen_1": "",
-      "blk_mem_gen_2": "",
-      "Convolution_Controll_0": ""
+      "Convolution_Controll_0": "",
+      "Convolution_Controll_0_bram": "",
+      "Convolution_Controll_0_bram_0": "",
+      "Convolution_Controll_0_bram_1": ""
     },
     "interface_ports": {
       "DDR": {
@@ -113,12 +113,17 @@
       "cReady_0": {
         "direction": "I"
       },
+      "cSum_0": {
+        "direction": "I",
+        "left": "31",
+        "right": "0"
+      },
       "FCLK_CLK0_0": {
         "type": "clk",
         "direction": "O",
         "parameters": {
           "CLK_DOMAIN": {
-            "value": "Convolution_Controller_processing_system7_0_2_FCLK_CLK0",
+            "value": "Convolution_Controller_processing_system7_0_0_FCLK_CLK0",
             "value_src": "default_prop"
           },
           "FREQ_HZ": {
@@ -155,24 +160,24 @@
       },
       "MULTIPLICAND_INPUT_0": {
         "direction": "O",
-        "left": "287",
+        "left": "71",
         "right": "0"
       },
       "MULTIPLIER_INPUT_0": {
         "direction": "O",
-        "left": "287",
+        "left": "71",
         "right": "0"
       },
-      "cSum_0": {
+      "cSum_1": {
         "direction": "I",
-        "left": "31",
+        "left": "7",
         "right": "0"
       }
     },
     "components": {
       "processing_system7_0": {
         "vlnv": "xilinx.com:ip:processing_system7:5.5",
-        "xci_name": "Convolution_Controller_processing_system7_0_2",
+        "xci_name": "Convolution_Controller_processing_system7_0_0",
         "parameters": {
           "PCW_ACT_APU_PERIPHERAL_FREQMHZ": {
             "value": "650.000000"
@@ -613,7 +618,7 @@
             "value": "0"
           },
           "PCW_I2C_RESET_ENABLE": {
-            "value": "0"
+            "value": "1"
           },
           "PCW_I2C_RESET_POLARITY": {
             "value": "Active Low"
@@ -1784,7 +1789,7 @@
       },
       "axi_dma_0": {
         "vlnv": "xilinx.com:ip:axi_dma:7.1",
-        "xci_name": "Convolution_Controller_axi_dma_0_3",
+        "xci_name": "Convolution_Controller_axi_dma_0_0",
         "parameters": {
           "c_include_sg": {
             "value": "0"
@@ -1830,7 +1835,7 @@
       },
       "ps7_0_axi_periph": {
         "vlnv": "xilinx.com:ip:axi_interconnect:2.1",
-        "xci_name": "Convolution_Controller_ps7_0_axi_periph_2",
+        "xci_name": "Convolution_Controller_ps7_0_axi_periph_0",
         "parameters": {
           "NUM_MI": {
             "value": "2"
@@ -1916,7 +1921,7 @@
         "components": {
           "xbar": {
             "vlnv": "xilinx.com:ip:axi_crossbar:2.1",
-            "xci_name": "Convolution_Controller_xbar_2",
+            "xci_name": "Convolution_Controller_xbar_1",
             "parameters": {
               "NUM_MI": {
                 "value": "2"
@@ -2010,16 +2015,16 @@
               }
             },
             "interface_nets": {
-              "auto_pc_to_s00_couplers": {
-                "interface_ports": [
-                  "M_AXI",
-                  "auto_pc/M_AXI"
-                ]
-              },
               "s00_couplers_to_auto_pc": {
                 "interface_ports": [
                   "S_AXI",
                   "auto_pc/S_AXI"
+                ]
+              },
+              "auto_pc_to_s00_couplers": {
+                "interface_ports": [
+                  "M_AXI",
+                  "auto_pc/M_AXI"
                 ]
               }
             },
@@ -2148,28 +2153,16 @@
           }
         },
         "interface_nets": {
-          "ps7_0_axi_periph_to_s00_couplers": {
-            "interface_ports": [
-              "S00_AXI",
-              "s00_couplers/S_AXI"
-            ]
-          },
           "s00_couplers_to_xbar": {
             "interface_ports": [
               "s00_couplers/M_AXI",
               "xbar/S00_AXI"
             ]
           },
-          "m00_couplers_to_ps7_0_axi_periph": {
+          "ps7_0_axi_periph_to_s00_couplers": {
             "interface_ports": [
-              "M00_AXI",
-              "m00_couplers/M_AXI"
-            ]
-          },
-          "m01_couplers_to_ps7_0_axi_periph": {
-            "interface_ports": [
-              "M01_AXI",
-              "m01_couplers/M_AXI"
+              "S00_AXI",
+              "s00_couplers/S_AXI"
             ]
           },
           "xbar_to_m00_couplers": {
@@ -2178,10 +2171,22 @@
               "m00_couplers/S_AXI"
             ]
           },
+          "m00_couplers_to_ps7_0_axi_periph": {
+            "interface_ports": [
+              "M00_AXI",
+              "m00_couplers/M_AXI"
+            ]
+          },
           "xbar_to_m01_couplers": {
             "interface_ports": [
               "xbar/M01_AXI",
               "m01_couplers/S_AXI"
+            ]
+          },
+          "m01_couplers_to_ps7_0_axi_periph": {
+            "interface_ports": [
+              "M01_AXI",
+              "m01_couplers/M_AXI"
             ]
           }
         },
@@ -2212,13 +2217,13 @@
           }
         }
       },
-      "rst_ps7_0_50M": {
+      "rst_ps7_0_100M": {
         "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
-        "xci_name": "Convolution_Controller_rst_ps7_0_50M_0"
+        "xci_name": "Convolution_Controller_rst_ps7_0_100M_0"
       },
       "axi_mem_intercon": {
         "vlnv": "xilinx.com:ip:axi_interconnect:2.1",
-        "xci_name": "Convolution_Controller_axi_mem_intercon_2",
+        "xci_name": "Convolution_Controller_axi_mem_intercon_0",
         "parameters": {
           "NUM_MI": {
             "value": "1"
@@ -2307,7 +2312,7 @@
         "components": {
           "xbar": {
             "vlnv": "xilinx.com:ip:axi_crossbar:2.1",
-            "xci_name": "Convolution_Controller_xbar_3",
+            "xci_name": "Convolution_Controller_xbar_0",
             "parameters": {
               "NUM_MI": {
                 "value": "1"
@@ -2406,16 +2411,16 @@
               }
             },
             "interface_nets": {
-              "auto_us_to_s00_couplers": {
-                "interface_ports": [
-                  "M_AXI",
-                  "auto_us/M_AXI"
-                ]
-              },
               "s00_couplers_to_auto_us": {
                 "interface_ports": [
                   "S_AXI",
                   "auto_us/S_AXI"
+                ]
+              },
+              "auto_us_to_s00_couplers": {
+                "interface_ports": [
+                  "M_AXI",
+                  "auto_us/M_AXI"
                 ]
               }
             },
@@ -2602,16 +2607,16 @@
               }
             },
             "interface_nets": {
-              "auto_pc_to_m00_couplers": {
-                "interface_ports": [
-                  "M_AXI",
-                  "auto_pc/M_AXI"
-                ]
-              },
               "m00_couplers_to_auto_pc": {
                 "interface_ports": [
                   "S_AXI",
                   "auto_pc/S_AXI"
+                ]
+              },
+              "auto_pc_to_m00_couplers": {
+                "interface_ports": [
+                  "M_AXI",
+                  "auto_pc/M_AXI"
                 ]
               }
             },
@@ -2632,16 +2637,28 @@
           }
         },
         "interface_nets": {
-          "xbar_to_m00_couplers": {
+          "axi_mem_intercon_to_s01_couplers": {
             "interface_ports": [
-              "xbar/M00_AXI",
-              "m00_couplers/S_AXI"
+              "S01_AXI",
+              "s01_couplers/S_AXI"
             ]
           },
           "m00_couplers_to_axi_mem_intercon": {
             "interface_ports": [
               "M00_AXI",
               "m00_couplers/M_AXI"
+            ]
+          },
+          "s01_couplers_to_xbar": {
+            "interface_ports": [
+              "s01_couplers/M_AXI",
+              "xbar/S01_AXI"
+            ]
+          },
+          "xbar_to_m00_couplers": {
+            "interface_ports": [
+              "xbar/M00_AXI",
+              "m00_couplers/S_AXI"
             ]
           },
           "s00_couplers_to_xbar": {
@@ -2654,18 +2671,6 @@
             "interface_ports": [
               "S00_AXI",
               "s00_couplers/S_AXI"
-            ]
-          },
-          "s01_couplers_to_xbar": {
-            "interface_ports": [
-              "s01_couplers/M_AXI",
-              "xbar/S01_AXI"
-            ]
-          },
-          "axi_mem_intercon_to_s01_couplers": {
-            "interface_ports": [
-              "S01_AXI",
-              "s01_couplers/S_AXI"
             ]
           }
         },
@@ -2696,183 +2701,123 @@
           }
         }
       },
-      "blk_mem_gen_0": {
-        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
-        "xci_name": "Convolution_Controller_blk_mem_gen_0_0",
-        "parameters": {
-          "Enable_32bit_Address": {
-            "value": "false"
-          },
-          "Enable_B": {
-            "value": "Use_ENB_Pin"
-          },
-          "Memory_Type": {
-            "value": "True_Dual_Port_RAM"
-          },
-          "Port_B_Clock": {
-            "value": "100"
-          },
-          "Port_B_Enable_Rate": {
-            "value": "100"
-          },
-          "Port_B_Write_Rate": {
-            "value": "50"
-          },
-          "Register_PortA_Output_of_Memory_Primitives": {
-            "value": "false"
-          },
-          "Register_PortB_Output_of_Memory_Primitives": {
-            "value": "false"
-          },
-          "Use_Byte_Write_Enable": {
-            "value": "false"
-          },
-          "Use_RSTA_Pin": {
-            "value": "false"
-          },
-          "Write_Depth_A": {
-            "value": "1800"
-          },
-          "use_bram_block": {
-            "value": "Stand_Alone"
-          }
-        }
-      },
-      "blk_mem_gen_1": {
-        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
-        "xci_name": "Convolution_Controller_blk_mem_gen_0_1",
-        "parameters": {
-          "Enable_32bit_Address": {
-            "value": "false"
-          },
-          "Enable_B": {
-            "value": "Use_ENB_Pin"
-          },
-          "Memory_Type": {
-            "value": "True_Dual_Port_RAM"
-          },
-          "Port_B_Clock": {
-            "value": "100"
-          },
-          "Port_B_Enable_Rate": {
-            "value": "100"
-          },
-          "Port_B_Write_Rate": {
-            "value": "50"
-          },
-          "Register_PortA_Output_of_Memory_Primitives": {
-            "value": "false"
-          },
-          "Register_PortB_Output_of_Memory_Primitives": {
-            "value": "false"
-          },
-          "Use_Byte_Write_Enable": {
-            "value": "false"
-          },
-          "Use_RSTA_Pin": {
-            "value": "false"
-          },
-          "Write_Depth_A": {
-            "value": "1800"
-          },
-          "use_bram_block": {
-            "value": "Stand_Alone"
-          }
-        }
-      },
-      "blk_mem_gen_2": {
-        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
-        "xci_name": "Convolution_Controller_blk_mem_gen_1_0",
-        "parameters": {
-          "Enable_32bit_Address": {
-            "value": "false"
-          },
-          "Enable_B": {
-            "value": "Use_ENB_Pin"
-          },
-          "Memory_Type": {
-            "value": "True_Dual_Port_RAM"
-          },
-          "Port_B_Clock": {
-            "value": "100"
-          },
-          "Port_B_Enable_Rate": {
-            "value": "100"
-          },
-          "Port_B_Write_Rate": {
-            "value": "50"
-          },
-          "Register_PortA_Output_of_Memory_Primitives": {
-            "value": "false"
-          },
-          "Register_PortB_Output_of_Memory_Primitives": {
-            "value": "false"
-          },
-          "Use_Byte_Write_Enable": {
-            "value": "false"
-          },
-          "Use_RSTA_Pin": {
-            "value": "false"
-          },
-          "Write_Depth_A": {
-            "value": "1024"
-          },
-          "use_bram_block": {
-            "value": "Stand_Alone"
-          }
-        }
-      },
       "Convolution_Controll_0": {
         "vlnv": "xilinx.com:user:Convolution_Controller:1.0",
-        "xci_name": "Convolution_Controller_Convolution_Controll_0_4",
+        "xci_name": "Convolution_Controller_Convolution_Controll_0_0",
         "parameters": {
           "BRAM_WIDTH": {
             "value": "1800"
           },
           "DATA_WIDTH": {
-            "value": "32"
+            "value": "8"
+          }
+        }
+      },
+      "Convolution_Controll_0_bram": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "Convolution_Controller_Convolution_Controll_0_bram_0",
+        "parameters": {
+          "Enable_32bit_Address": {
+            "value": "false"
           },
-          "KERNEL_SIZE": {
-            "value": "3"
+          "Memory_Type": {
+            "value": "True_Dual_Port_RAM"
+          },
+          "Register_PortA_Output_of_Memory_Primitives": {
+            "value": "false"
+          },
+          "Register_PortB_Output_of_Memory_Primitives": {
+            "value": "true"
+          },
+          "Use_Byte_Write_Enable": {
+            "value": "false"
+          },
+          "Use_RSTA_Pin": {
+            "value": "false"
+          },
+          "Use_RSTB_Pin": {
+            "value": "false"
+          },
+          "Write_Depth_A": {
+            "value": "1800"
+          },
+          "use_bram_block": {
+            "value": "Stand_Alone"
+          }
+        }
+      },
+      "Convolution_Controll_0_bram_0": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "Convolution_Controller_Convolution_Controll_0_bram_0_0",
+        "parameters": {
+          "Enable_32bit_Address": {
+            "value": "false"
+          },
+          "Memory_Type": {
+            "value": "True_Dual_Port_RAM"
+          },
+          "Register_PortA_Output_of_Memory_Primitives": {
+            "value": "false"
+          },
+          "Register_PortB_Output_of_Memory_Primitives": {
+            "value": "true"
+          },
+          "Use_Byte_Write_Enable": {
+            "value": "false"
+          },
+          "Use_RSTA_Pin": {
+            "value": "false"
+          },
+          "Use_RSTB_Pin": {
+            "value": "false"
+          },
+          "Write_Depth_A": {
+            "value": "1800"
+          },
+          "use_bram_block": {
+            "value": "Stand_Alone"
+          }
+        }
+      },
+      "Convolution_Controll_0_bram_1": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "Convolution_Controller_Convolution_Controll_0_bram_1_0",
+        "parameters": {
+          "Enable_32bit_Address": {
+            "value": "false"
+          },
+          "Memory_Type": {
+            "value": "True_Dual_Port_RAM"
+          },
+          "Register_PortA_Output_of_Memory_Primitives": {
+            "value": "false"
+          },
+          "Register_PortB_Output_of_Memory_Primitives": {
+            "value": "true"
+          },
+          "Use_Byte_Write_Enable": {
+            "value": "false"
+          },
+          "Use_RSTA_Pin": {
+            "value": "false"
+          },
+          "Use_RSTB_Pin": {
+            "value": "false"
+          },
+          "Write_Depth_A": {
+            "value": "1800"
+          },
+          "use_bram_block": {
+            "value": "Stand_Alone"
           }
         }
       }
     },
     "interface_nets": {
-      "Convolution_Controll_0_BRAM_PORTB_2": {
+      "processing_system7_0_M_AXI_GP0": {
         "interface_ports": [
-          "blk_mem_gen_1/BRAM_PORTB",
-          "Convolution_Controll_0/BRAM_PORTB_2"
-        ]
-      },
-      "Convolution_Controll_0_BRAM_PORTA_1": {
-        "interface_ports": [
-          "blk_mem_gen_0/BRAM_PORTA",
-          "Convolution_Controll_0/BRAM_PORTA_1"
-        ]
-      },
-      "axi_mem_intercon_M00_AXI": {
-        "interface_ports": [
-          "axi_mem_intercon/M00_AXI",
-          "processing_system7_0/S_AXI_HP0"
-        ]
-      },
-      "Convolution_Controll_0_BRAM_PORTB_3": {
-        "interface_ports": [
-          "Convolution_Controll_0/BRAM_PORTB_3",
-          "blk_mem_gen_2/BRAM_PORTB"
-        ]
-      },
-      "Convolution_Controll_0_BRAM_PORTA_2": {
-        "interface_ports": [
-          "Convolution_Controll_0/BRAM_PORTA_2",
-          "blk_mem_gen_1/BRAM_PORTA"
-        ]
-      },
-      "Convolution_Controll_0_BRAM_PORTB_1": {
-        "interface_ports": [
-          "blk_mem_gen_0/BRAM_PORTB",
-          "Convolution_Controll_0/BRAM_PORTB_1"
+          "processing_system7_0/M_AXI_GP0",
+          "ps7_0_axi_periph/S00_AXI"
         ]
       },
       "processing_system7_0_DDR": {
@@ -2881,22 +2826,10 @@
           "processing_system7_0/DDR"
         ]
       },
-      "Convolution_Controll_0_m_axis_DATA_OUT": {
-        "interface_ports": [
-          "Convolution_Controll_0/m_axis_DATA_OUT",
-          "axi_dma_0/S_AXIS_S2MM"
-        ]
-      },
       "axi_dma_0_M_AXIS_MM2S": {
         "interface_ports": [
           "Convolution_Controll_0/s_axis_DATA_IN",
           "axi_dma_0/M_AXIS_MM2S"
-        ]
-      },
-      "axi_dma_0_M_AXI_MM2S": {
-        "interface_ports": [
-          "axi_dma_0/M_AXI_MM2S",
-          "axi_mem_intercon/S00_AXI"
         ]
       },
       "ps7_0_axi_periph_M01_AXI": {
@@ -2905,22 +2838,22 @@
           "Convolution_Controll_0/s_axi_CTRL"
         ]
       },
-      "axi_dma_0_M_AXI_S2MM": {
+      "axi_mem_intercon_M00_AXI": {
         "interface_ports": [
-          "axi_dma_0/M_AXI_S2MM",
-          "axi_mem_intercon/S01_AXI"
+          "axi_mem_intercon/M00_AXI",
+          "processing_system7_0/S_AXI_HP0"
         ]
       },
-      "processing_system7_0_FIXED_IO": {
+      "axi_dma_0_M_AXI_MM2S": {
         "interface_ports": [
-          "FIXED_IO",
-          "processing_system7_0/FIXED_IO"
+          "axi_dma_0/M_AXI_MM2S",
+          "axi_mem_intercon/S00_AXI"
         ]
       },
       "Convolution_Controll_0_BRAM_PORTA_3": {
         "interface_ports": [
-          "Convolution_Controll_0/BRAM_PORTA_3",
-          "blk_mem_gen_2/BRAM_PORTA"
+          "Convolution_Controll_0_bram_1/BRAM_PORTA",
+          "Convolution_Controll_0/BRAM_PORTA_3"
         ]
       },
       "ps7_0_axi_periph_M00_AXI": {
@@ -2929,17 +2862,59 @@
           "axi_dma_0/S_AXI_LITE"
         ]
       },
-      "processing_system7_0_M_AXI_GP0": {
+      "Convolution_Controll_0_BRAM_PORTB_2": {
         "interface_ports": [
-          "processing_system7_0/M_AXI_GP0",
-          "ps7_0_axi_periph/S00_AXI"
+          "Convolution_Controll_0_bram_0/BRAM_PORTB",
+          "Convolution_Controll_0/BRAM_PORTB_2"
+        ]
+      },
+      "Convolution_Controll_0_BRAM_PORTA_1": {
+        "interface_ports": [
+          "Convolution_Controll_0_bram/BRAM_PORTA",
+          "Convolution_Controll_0/BRAM_PORTA_1"
+        ]
+      },
+      "Convolution_Controll_0_BRAM_PORTB_3": {
+        "interface_ports": [
+          "Convolution_Controll_0_bram_1/BRAM_PORTB",
+          "Convolution_Controll_0/BRAM_PORTB_3"
+        ]
+      },
+      "Convolution_Controll_0_m_axis_DATA_OUT": {
+        "interface_ports": [
+          "Convolution_Controll_0/m_axis_DATA_OUT",
+          "axi_dma_0/S_AXIS_S2MM"
+        ]
+      },
+      "Convolution_Controll_0_BRAM_PORTB_1": {
+        "interface_ports": [
+          "Convolution_Controll_0_bram/BRAM_PORTB",
+          "Convolution_Controll_0/BRAM_PORTB_1"
+        ]
+      },
+      "axi_dma_0_M_AXI_S2MM": {
+        "interface_ports": [
+          "axi_dma_0/M_AXI_S2MM",
+          "axi_mem_intercon/S01_AXI"
+        ]
+      },
+      "Convolution_Controll_0_BRAM_PORTA_2": {
+        "interface_ports": [
+          "Convolution_Controll_0_bram_0/BRAM_PORTA",
+          "Convolution_Controll_0/BRAM_PORTA_2"
+        ]
+      },
+      "processing_system7_0_FIXED_IO": {
+        "interface_ports": [
+          "FIXED_IO",
+          "processing_system7_0/FIXED_IO"
         ]
       }
     },
     "nets": {
-      "rst_ps7_0_50M_peripheral_aresetn": {
+      "rst_ps7_0_100M_peripheral_aresetn": {
         "ports": [
-          "rst_ps7_0_50M/peripheral_aresetn",
+          "rst_ps7_0_100M/peripheral_aresetn",
           "ps7_0_axi_periph/S00_ARESETN",
           "axi_dma_0/axi_resetn",
           "ps7_0_axi_periph/M00_ARESETN",
@@ -2947,9 +2922,9 @@
           "axi_mem_intercon/S00_ARESETN",
           "axi_mem_intercon/M00_ARESETN",
           "axi_mem_intercon/ARESETN",
-          "ps7_0_axi_periph/M01_ARESETN",
+          "Convolution_Controll_0/axi_reset_n",
           "axi_mem_intercon/S01_ARESETN",
-          "Convolution_Controll_0/axi_reset_n"
+          "ps7_0_axi_periph/M01_ARESETN"
         ]
       },
       "Convolution_Controll_0_MULTIPLY_START": {
@@ -2968,28 +2943,28 @@
         "ports": [
           "processing_system7_0/FCLK_CLK0",
           "FCLK_CLK0_0",
-          "processing_system7_0/M_AXI_GP0_ACLK",
-          "processing_system7_0/S_AXI_HP0_ACLK",
           "axi_dma_0/m_axi_mm2s_aclk",
           "axi_mem_intercon/S00_ACLK",
+          "Convolution_Controll_0/axi_clk",
           "axi_dma_0/m_axi_s2mm_aclk",
           "axi_mem_intercon/S01_ACLK",
           "axi_dma_0/s_axi_lite_aclk",
           "ps7_0_axi_periph/M00_ACLK",
           "axi_mem_intercon/ACLK",
           "axi_mem_intercon/M00_ACLK",
+          "processing_system7_0/S_AXI_HP0_ACLK",
+          "processing_system7_0/M_AXI_GP0_ACLK",
+          "ps7_0_axi_periph/S00_ACLK",
           "ps7_0_axi_periph/ACLK",
           "ps7_0_axi_periph/M01_ACLK",
-          "ps7_0_axi_periph/S00_ACLK",
-          "rst_ps7_0_50M/slowest_sync_clk",
-          "Convolution_Controll_0/axi_clk"
+          "rst_ps7_0_100M/slowest_sync_clk"
         ]
       },
       "processing_system7_0_FCLK_RESET0_N": {
         "ports": [
           "processing_system7_0/FCLK_RESET0_N",
           "FCLK_RESET0_N_0",
-          "rst_ps7_0_50M/ext_reset_in"
+          "rst_ps7_0_100M/ext_reset_in"
         ]
       },
       "Convolution_Controll_0_MULTIPLICAND_INPUT": {
@@ -3004,9 +2979,9 @@
           "MULTIPLIER_INPUT_0"
         ]
       },
-      "cSum_0_1": {
+      "cSum_1_1": {
         "ports": [
-          "cSum_0",
+          "cSum_1",
           "Convolution_Controll_0/cSum"
         ]
       }

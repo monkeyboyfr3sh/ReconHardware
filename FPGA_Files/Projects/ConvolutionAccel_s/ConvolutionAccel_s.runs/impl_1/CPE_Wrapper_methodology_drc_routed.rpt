@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date         : Wed Feb  3 13:35:24 2021
+| Date         : Thu Feb  4 20:03:26 2021
 | Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 | Command      : report_methodology -file CPE_Wrapper_methodology_drc_routed.rpt -pb CPE_Wrapper_methodology_drc_routed.pb -rpx CPE_Wrapper_methodology_drc_routed.rpx
 | Design       : CPE_Wrapper
@@ -23,13 +23,13 @@ Table of Contents
           Floorplan: checkpoint_CPE_Wrapper
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 44
+             Violations found: 71
 +----------+----------+-------------------------------------------------+------------+
 | Rule     | Severity | Description                                     | Violations |
 +----------+----------+-------------------------------------------------+------------+
 | LUTAR-1  | Warning  | LUT drives async reset alert                    | 7          |
 | PDRC-190 | Warning  | Suboptimally placed synchronized register chain | 10         |
-| SYNTH-10 | Warning  | Wide multiplier                                 | 27         |
+| SYNTH-9  | Warning  | Small multiplier                                | 54         |
 +----------+----------+-------------------------------------------------+------------+
 
 2. REPORT DETAILS
@@ -121,187 +121,322 @@ Related violations: <none>
 
 PDRC-190#1 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[0] in site SLICE_X109Y46 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[0] in site SLICE_X78Y23 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#2 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[1] in site SLICE_X110Y47 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[1] in site SLICE_X79Y21 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#3 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[2] in site SLICE_X108Y47 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[2] in site SLICE_X78Y21 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#4 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[3] in site SLICE_X109Y48 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[3] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[3] in site SLICE_X79Y23 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[3] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#5 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[0] in site SLICE_X111Y45 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[0] in site SLICE_X79Y19 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#6 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[1] in site SLICE_X112Y47 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[1] in site SLICE_X80Y19 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#7 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[2] in site SLICE_X111Y47 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[2] in site SLICE_X81Y19 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#8 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[0] in site SLICE_X112Y50 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[0] in site SLICE_X84Y23 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#9 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[1] in site SLICE_X113Y51 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[1] in site SLICE_X80Y22 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#10 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[2] in site SLICE_X111Y51 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[2] in site SLICE_X80Y24 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
 Related violations: <none>
 
-SYNTH-10#1 Warning
-Wide multiplier  
-Detected multiplier at Convolution_Processor/genblk1[0].inputMulti/product0 of size 15x18, it is decomposed from a wide multipler into 4 DSP blocks.
+SYNTH-9#1 Warning
+Small multiplier  
+Detected multiplier at Convolution_Processor/genblk1[0].inputMulti/product_reg[3]_i_1 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
 Related violations: <none>
 
-SYNTH-10#2 Warning
-Wide multiplier  
-Detected multiplier at Convolution_Processor/genblk1[0].inputMulti/product0__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+SYNTH-9#2 Warning
+Small multiplier  
+Detected multiplier at Convolution_Processor/genblk1[0].inputMulti/product_reg[3]_i_5 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
 Related violations: <none>
 
-SYNTH-10#3 Warning
-Wide multiplier  
-Detected multiplier at Convolution_Processor/genblk1[0].inputMulti/product_reg of size 18x15, it is decomposed from a wide multipler into 4 DSP blocks.
+SYNTH-9#3 Warning
+Small multiplier  
+Detected multiplier at Convolution_Processor/genblk1[0].inputMulti/product_reg[7]_i_10 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
 Related violations: <none>
 
-SYNTH-10#4 Warning
-Wide multiplier  
-Detected multiplier at Convolution_Processor/genblk1[1].inputMulti/product0 of size 15x18, it is decomposed from a wide multipler into 4 DSP blocks.
+SYNTH-9#4 Warning
+Small multiplier  
+Detected multiplier at Convolution_Processor/genblk1[0].inputMulti/product_reg[7]_i_11 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
 Related violations: <none>
 
-SYNTH-10#5 Warning
-Wide multiplier  
-Detected multiplier at Convolution_Processor/genblk1[1].inputMulti/product0__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+SYNTH-9#5 Warning
+Small multiplier  
+Detected multiplier at Convolution_Processor/genblk1[0].inputMulti/product_reg[7]_i_12 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
 Related violations: <none>
 
-SYNTH-10#6 Warning
-Wide multiplier  
-Detected multiplier at Convolution_Processor/genblk1[1].inputMulti/product_reg of size 18x15, it is decomposed from a wide multipler into 4 DSP blocks.
+SYNTH-9#6 Warning
+Small multiplier  
+Detected multiplier at Convolution_Processor/genblk1[0].inputMulti/product_reg[7]_i_2 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
 Related violations: <none>
 
-SYNTH-10#7 Warning
-Wide multiplier  
-Detected multiplier at Convolution_Processor/genblk1[2].inputMulti/product0 of size 15x18, it is decomposed from a wide multipler into 4 DSP blocks.
+SYNTH-9#7 Warning
+Small multiplier  
+Detected multiplier at Convolution_Processor/genblk1[1].inputMulti/product_reg[3]_i_1 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
 Related violations: <none>
 
-SYNTH-10#8 Warning
-Wide multiplier  
-Detected multiplier at Convolution_Processor/genblk1[2].inputMulti/product0__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+SYNTH-9#8 Warning
+Small multiplier  
+Detected multiplier at Convolution_Processor/genblk1[1].inputMulti/product_reg[3]_i_5 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
 Related violations: <none>
 
-SYNTH-10#9 Warning
-Wide multiplier  
-Detected multiplier at Convolution_Processor/genblk1[2].inputMulti/product_reg of size 18x15, it is decomposed from a wide multipler into 4 DSP blocks.
+SYNTH-9#9 Warning
+Small multiplier  
+Detected multiplier at Convolution_Processor/genblk1[1].inputMulti/product_reg[7]_i_10 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
 Related violations: <none>
 
-SYNTH-10#10 Warning
-Wide multiplier  
-Detected multiplier at Convolution_Processor/genblk1[3].inputMulti/product0 of size 15x18, it is decomposed from a wide multipler into 4 DSP blocks.
+SYNTH-9#10 Warning
+Small multiplier  
+Detected multiplier at Convolution_Processor/genblk1[1].inputMulti/product_reg[7]_i_11 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
 Related violations: <none>
 
-SYNTH-10#11 Warning
-Wide multiplier  
-Detected multiplier at Convolution_Processor/genblk1[3].inputMulti/product0__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+SYNTH-9#11 Warning
+Small multiplier  
+Detected multiplier at Convolution_Processor/genblk1[1].inputMulti/product_reg[7]_i_12 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
 Related violations: <none>
 
-SYNTH-10#12 Warning
-Wide multiplier  
-Detected multiplier at Convolution_Processor/genblk1[3].inputMulti/product_reg of size 18x15, it is decomposed from a wide multipler into 4 DSP blocks.
+SYNTH-9#12 Warning
+Small multiplier  
+Detected multiplier at Convolution_Processor/genblk1[1].inputMulti/product_reg[7]_i_2 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
 Related violations: <none>
 
-SYNTH-10#13 Warning
-Wide multiplier  
-Detected multiplier at Convolution_Processor/genblk1[4].inputMulti/product0 of size 15x18, it is decomposed from a wide multipler into 4 DSP blocks.
+SYNTH-9#13 Warning
+Small multiplier  
+Detected multiplier at Convolution_Processor/genblk1[2].inputMulti/product_reg[3]_i_1 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
 Related violations: <none>
 
-SYNTH-10#14 Warning
-Wide multiplier  
-Detected multiplier at Convolution_Processor/genblk1[4].inputMulti/product0__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+SYNTH-9#14 Warning
+Small multiplier  
+Detected multiplier at Convolution_Processor/genblk1[2].inputMulti/product_reg[3]_i_5 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
 Related violations: <none>
 
-SYNTH-10#15 Warning
-Wide multiplier  
-Detected multiplier at Convolution_Processor/genblk1[4].inputMulti/product_reg of size 18x15, it is decomposed from a wide multipler into 4 DSP blocks.
+SYNTH-9#15 Warning
+Small multiplier  
+Detected multiplier at Convolution_Processor/genblk1[2].inputMulti/product_reg[7]_i_10 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
 Related violations: <none>
 
-SYNTH-10#16 Warning
-Wide multiplier  
-Detected multiplier at Convolution_Processor/genblk1[5].inputMulti/product0 of size 15x18, it is decomposed from a wide multipler into 4 DSP blocks.
+SYNTH-9#16 Warning
+Small multiplier  
+Detected multiplier at Convolution_Processor/genblk1[2].inputMulti/product_reg[7]_i_11 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
 Related violations: <none>
 
-SYNTH-10#17 Warning
-Wide multiplier  
-Detected multiplier at Convolution_Processor/genblk1[5].inputMulti/product0__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+SYNTH-9#17 Warning
+Small multiplier  
+Detected multiplier at Convolution_Processor/genblk1[2].inputMulti/product_reg[7]_i_12 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
 Related violations: <none>
 
-SYNTH-10#18 Warning
-Wide multiplier  
-Detected multiplier at Convolution_Processor/genblk1[5].inputMulti/product_reg of size 18x15, it is decomposed from a wide multipler into 4 DSP blocks.
+SYNTH-9#18 Warning
+Small multiplier  
+Detected multiplier at Convolution_Processor/genblk1[2].inputMulti/product_reg[7]_i_2 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
 Related violations: <none>
 
-SYNTH-10#19 Warning
-Wide multiplier  
-Detected multiplier at Convolution_Processor/genblk1[6].inputMulti/product0 of size 15x18, it is decomposed from a wide multipler into 4 DSP blocks.
+SYNTH-9#19 Warning
+Small multiplier  
+Detected multiplier at Convolution_Processor/genblk1[3].inputMulti/product_reg[3]_i_1 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
 Related violations: <none>
 
-SYNTH-10#20 Warning
-Wide multiplier  
-Detected multiplier at Convolution_Processor/genblk1[6].inputMulti/product0__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+SYNTH-9#20 Warning
+Small multiplier  
+Detected multiplier at Convolution_Processor/genblk1[3].inputMulti/product_reg[3]_i_5 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
 Related violations: <none>
 
-SYNTH-10#21 Warning
-Wide multiplier  
-Detected multiplier at Convolution_Processor/genblk1[6].inputMulti/product_reg of size 18x15, it is decomposed from a wide multipler into 4 DSP blocks.
+SYNTH-9#21 Warning
+Small multiplier  
+Detected multiplier at Convolution_Processor/genblk1[3].inputMulti/product_reg[7]_i_10 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
 Related violations: <none>
 
-SYNTH-10#22 Warning
-Wide multiplier  
-Detected multiplier at Convolution_Processor/genblk1[7].inputMulti/product0 of size 15x18, it is decomposed from a wide multipler into 4 DSP blocks.
+SYNTH-9#22 Warning
+Small multiplier  
+Detected multiplier at Convolution_Processor/genblk1[3].inputMulti/product_reg[7]_i_11 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
 Related violations: <none>
 
-SYNTH-10#23 Warning
-Wide multiplier  
-Detected multiplier at Convolution_Processor/genblk1[7].inputMulti/product0__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+SYNTH-9#23 Warning
+Small multiplier  
+Detected multiplier at Convolution_Processor/genblk1[3].inputMulti/product_reg[7]_i_12 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
 Related violations: <none>
 
-SYNTH-10#24 Warning
-Wide multiplier  
-Detected multiplier at Convolution_Processor/genblk1[7].inputMulti/product_reg of size 18x15, it is decomposed from a wide multipler into 4 DSP blocks.
+SYNTH-9#24 Warning
+Small multiplier  
+Detected multiplier at Convolution_Processor/genblk1[3].inputMulti/product_reg[7]_i_2 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
 Related violations: <none>
 
-SYNTH-10#25 Warning
-Wide multiplier  
-Detected multiplier at Convolution_Processor/genblk1[8].inputMulti/product0 of size 15x18, it is decomposed from a wide multipler into 4 DSP blocks.
+SYNTH-9#25 Warning
+Small multiplier  
+Detected multiplier at Convolution_Processor/genblk1[4].inputMulti/product_reg[3]_i_1 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
 Related violations: <none>
 
-SYNTH-10#26 Warning
-Wide multiplier  
-Detected multiplier at Convolution_Processor/genblk1[8].inputMulti/product0__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+SYNTH-9#26 Warning
+Small multiplier  
+Detected multiplier at Convolution_Processor/genblk1[4].inputMulti/product_reg[3]_i_5 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
 Related violations: <none>
 
-SYNTH-10#27 Warning
-Wide multiplier  
-Detected multiplier at Convolution_Processor/genblk1[8].inputMulti/product_reg of size 18x15, it is decomposed from a wide multipler into 4 DSP blocks.
+SYNTH-9#27 Warning
+Small multiplier  
+Detected multiplier at Convolution_Processor/genblk1[4].inputMulti/product_reg[7]_i_10 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Related violations: <none>
+
+SYNTH-9#28 Warning
+Small multiplier  
+Detected multiplier at Convolution_Processor/genblk1[4].inputMulti/product_reg[7]_i_11 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Related violations: <none>
+
+SYNTH-9#29 Warning
+Small multiplier  
+Detected multiplier at Convolution_Processor/genblk1[4].inputMulti/product_reg[7]_i_12 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Related violations: <none>
+
+SYNTH-9#30 Warning
+Small multiplier  
+Detected multiplier at Convolution_Processor/genblk1[4].inputMulti/product_reg[7]_i_2 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Related violations: <none>
+
+SYNTH-9#31 Warning
+Small multiplier  
+Detected multiplier at Convolution_Processor/genblk1[5].inputMulti/product_reg[3]_i_1 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Related violations: <none>
+
+SYNTH-9#32 Warning
+Small multiplier  
+Detected multiplier at Convolution_Processor/genblk1[5].inputMulti/product_reg[3]_i_5 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Related violations: <none>
+
+SYNTH-9#33 Warning
+Small multiplier  
+Detected multiplier at Convolution_Processor/genblk1[5].inputMulti/product_reg[7]_i_10 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Related violations: <none>
+
+SYNTH-9#34 Warning
+Small multiplier  
+Detected multiplier at Convolution_Processor/genblk1[5].inputMulti/product_reg[7]_i_11 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Related violations: <none>
+
+SYNTH-9#35 Warning
+Small multiplier  
+Detected multiplier at Convolution_Processor/genblk1[5].inputMulti/product_reg[7]_i_12 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Related violations: <none>
+
+SYNTH-9#36 Warning
+Small multiplier  
+Detected multiplier at Convolution_Processor/genblk1[5].inputMulti/product_reg[7]_i_2 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Related violations: <none>
+
+SYNTH-9#37 Warning
+Small multiplier  
+Detected multiplier at Convolution_Processor/genblk1[6].inputMulti/product_reg[3]_i_1 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Related violations: <none>
+
+SYNTH-9#38 Warning
+Small multiplier  
+Detected multiplier at Convolution_Processor/genblk1[6].inputMulti/product_reg[3]_i_5 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Related violations: <none>
+
+SYNTH-9#39 Warning
+Small multiplier  
+Detected multiplier at Convolution_Processor/genblk1[6].inputMulti/product_reg[7]_i_10 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Related violations: <none>
+
+SYNTH-9#40 Warning
+Small multiplier  
+Detected multiplier at Convolution_Processor/genblk1[6].inputMulti/product_reg[7]_i_11 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Related violations: <none>
+
+SYNTH-9#41 Warning
+Small multiplier  
+Detected multiplier at Convolution_Processor/genblk1[6].inputMulti/product_reg[7]_i_12 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Related violations: <none>
+
+SYNTH-9#42 Warning
+Small multiplier  
+Detected multiplier at Convolution_Processor/genblk1[6].inputMulti/product_reg[7]_i_2 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Related violations: <none>
+
+SYNTH-9#43 Warning
+Small multiplier  
+Detected multiplier at Convolution_Processor/genblk1[7].inputMulti/product_reg[3]_i_1 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Related violations: <none>
+
+SYNTH-9#44 Warning
+Small multiplier  
+Detected multiplier at Convolution_Processor/genblk1[7].inputMulti/product_reg[3]_i_5 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Related violations: <none>
+
+SYNTH-9#45 Warning
+Small multiplier  
+Detected multiplier at Convolution_Processor/genblk1[7].inputMulti/product_reg[7]_i_10 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Related violations: <none>
+
+SYNTH-9#46 Warning
+Small multiplier  
+Detected multiplier at Convolution_Processor/genblk1[7].inputMulti/product_reg[7]_i_11 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Related violations: <none>
+
+SYNTH-9#47 Warning
+Small multiplier  
+Detected multiplier at Convolution_Processor/genblk1[7].inputMulti/product_reg[7]_i_12 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Related violations: <none>
+
+SYNTH-9#48 Warning
+Small multiplier  
+Detected multiplier at Convolution_Processor/genblk1[7].inputMulti/product_reg[7]_i_2 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Related violations: <none>
+
+SYNTH-9#49 Warning
+Small multiplier  
+Detected multiplier at Convolution_Processor/genblk1[8].inputMulti/product_reg[3]_i_1 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Related violations: <none>
+
+SYNTH-9#50 Warning
+Small multiplier  
+Detected multiplier at Convolution_Processor/genblk1[8].inputMulti/product_reg[3]_i_5 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Related violations: <none>
+
+SYNTH-9#51 Warning
+Small multiplier  
+Detected multiplier at Convolution_Processor/genblk1[8].inputMulti/product_reg[7]_i_10 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Related violations: <none>
+
+SYNTH-9#52 Warning
+Small multiplier  
+Detected multiplier at Convolution_Processor/genblk1[8].inputMulti/product_reg[7]_i_11 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Related violations: <none>
+
+SYNTH-9#53 Warning
+Small multiplier  
+Detected multiplier at Convolution_Processor/genblk1[8].inputMulti/product_reg[7]_i_12 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Related violations: <none>
+
+SYNTH-9#54 Warning
+Small multiplier  
+Detected multiplier at Convolution_Processor/genblk1[8].inputMulti/product_reg[7]_i_2 of size 8x8, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
 Related violations: <none>
 
 

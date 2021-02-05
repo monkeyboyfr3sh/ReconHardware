@@ -160,56 +160,126 @@ proc create_root_design { parentCell } {
 
   set FIXED_IO [ create_bd_intf_port -mode Master -vlnv xilinx.com:display_processing_system7:fixedio_rtl:1.0 FIXED_IO ]
 
+  set ICAP_0 [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:icap_rtl:1.0 ICAP_0 ]
+
 
   # Create ports
   set FCLK_CLK0_0 [ create_bd_port -dir O -type clk FCLK_CLK0_0 ]
   set FCLK_RESET0_N_0 [ create_bd_port -dir O -type rst FCLK_RESET0_N_0 ]
-  set FINALADDOUT_0 [ create_bd_port -dir O FINALADDOUT_0 ]
-  set MULTIPLICAND_INPUT_0 [ create_bd_port -dir O -from 95 -to 0 MULTIPLICAND_INPUT_0 ]
-  set MULTIPLIER_INPUT_0 [ create_bd_port -dir O -from 95 -to 0 MULTIPLIER_INPUT_0 ]
-  set MULTIPLY_START_0 [ create_bd_port -dir O -from 2 -to 0 MULTIPLY_START_0 ]
-  set cReady_0 [ create_bd_port -dir I cReady_0 ]
-  set cSum_0 [ create_bd_port -dir I -from 31 -to 0 cSum_0 ]
-  set ip_reset_out_0 [ create_bd_port -dir O ip_reset_out_0 ]
+  set decouple_status_global_0 [ create_bd_port -dir O -from 0 -to 0 decouple_status_global_0 ]
+  set rp_MULTIPLICAND_DATA_0 [ create_bd_port -dir O -from 287 -to 0 -type data rp_MULTIPLICAND_DATA_0 ]
+  set rp_MULTIPLIER_DATA_0 [ create_bd_port -dir O -from 287 -to 0 -type data rp_MULTIPLIER_DATA_0 ]
+  set rp_MULTIPLIY_START_DATA_0 [ create_bd_port -dir O -from 8 -to 0 -type data rp_MULTIPLIY_START_DATA_0 ]
+  set rp_cReady_DATA_0 [ create_bd_port -dir I -from 0 -to 0 -type data rp_cReady_DATA_0 ]
+  set rp_cSum_DATA_0 [ create_bd_port -dir I -from 31 -to 0 -type data rp_cSum_DATA_0 ]
 
   # Create instance: Convolution_Controll_0, and set properties
   set Convolution_Controll_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:Convolution_Controller:1.0 Convolution_Controll_0 ]
+
+  # Create instance: Convolution_Controll_0_bram, and set properties
+  set Convolution_Controll_0_bram [ create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 Convolution_Controll_0_bram ]
+  set_property -dict [ list \
+   CONFIG.Byte_Size {9} \
+   CONFIG.EN_SAFETY_CKT {false} \
+   CONFIG.Enable_32bit_Address {false} \
+   CONFIG.Memory_Type {True_Dual_Port_RAM} \
+   CONFIG.Register_PortA_Output_of_Memory_Primitives {false} \
+   CONFIG.Register_PortB_Output_of_Memory_Primitives {true} \
+   CONFIG.Use_Byte_Write_Enable {false} \
+   CONFIG.Use_RSTA_Pin {false} \
+   CONFIG.Use_RSTB_Pin {false} \
+   CONFIG.Write_Depth_A {1800} \
+   CONFIG.use_bram_block {Stand_Alone} \
+ ] $Convolution_Controll_0_bram
+
+  # Create instance: Convolution_Controll_0_bram1, and set properties
+  set Convolution_Controll_0_bram1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 Convolution_Controll_0_bram1 ]
+  set_property -dict [ list \
+   CONFIG.Byte_Size {9} \
+   CONFIG.EN_SAFETY_CKT {false} \
+   CONFIG.Enable_32bit_Address {false} \
+   CONFIG.Memory_Type {True_Dual_Port_RAM} \
+   CONFIG.Register_PortA_Output_of_Memory_Primitives {false} \
+   CONFIG.Register_PortB_Output_of_Memory_Primitives {true} \
+   CONFIG.Use_Byte_Write_Enable {false} \
+   CONFIG.Use_RSTA_Pin {false} \
+   CONFIG.Use_RSTB_Pin {false} \
+   CONFIG.Write_Depth_A {1800} \
+   CONFIG.use_bram_block {Stand_Alone} \
+ ] $Convolution_Controll_0_bram1
+
+  # Create instance: Convolution_Controll_0_bram2, and set properties
+  set Convolution_Controll_0_bram2 [ create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 Convolution_Controll_0_bram2 ]
+  set_property -dict [ list \
+   CONFIG.Byte_Size {9} \
+   CONFIG.EN_SAFETY_CKT {false} \
+   CONFIG.Enable_32bit_Address {false} \
+   CONFIG.Memory_Type {True_Dual_Port_RAM} \
+   CONFIG.Register_PortA_Output_of_Memory_Primitives {false} \
+   CONFIG.Register_PortB_Output_of_Memory_Primitives {true} \
+   CONFIG.Use_Byte_Write_Enable {false} \
+   CONFIG.Use_RSTA_Pin {false} \
+   CONFIG.Use_RSTB_Pin {false} \
+   CONFIG.Write_Depth_A {1800} \
+   CONFIG.use_bram_block {Stand_Alone} \
+ ] $Convolution_Controll_0_bram2
 
   # Create instance: axi_dma_0, and set properties
   set axi_dma_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_dma:7.1 axi_dma_0 ]
   set_property -dict [ list \
    CONFIG.c_include_sg {0} \
    CONFIG.c_sg_include_stscntrl_strm {0} \
-   CONFIG.c_sg_length_width {23} \
+   CONFIG.c_sg_length_width {26} \
  ] $axi_dma_0
 
   # Create instance: axi_mem_intercon, and set properties
   set axi_mem_intercon [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 axi_mem_intercon ]
   set_property -dict [ list \
    CONFIG.NUM_MI {1} \
-   CONFIG.NUM_SI {2} \
+   CONFIG.NUM_SI {3} \
  ] $axi_mem_intercon
 
-  # Create instance: ila_0, and set properties
-  set ila_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:ila:6.2 ila_0 ]
+  # Create instance: dfx_controller_0, and set properties
+  set dfx_controller_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:dfx_controller:1.0 dfx_controller_0 ]
   set_property -dict [ list \
-   CONFIG.C_ENABLE_ILA_AXI_MON {false} \
-   CONFIG.C_MONITOR_TYPE {Native} \
-   CONFIG.C_NUM_OF_PROBES {2} \
-   CONFIG.C_PROBE0_TYPE {2} \
-   CONFIG.C_PROBE1_TYPE {1} \
-   CONFIG.C_PROBE1_WIDTH {32} \
- ] $ila_0
+   CONFIG.ALL_PARAMS {HAS_AXI_LITE_IF 1 RESET_ACTIVE_LEVEL 0 CP_FIFO_DEPTH 32 CP_FIFO_TYPE lutram CDC_STAGES 6 VS {VS_0 {ID 0 NAME VS_0 RM {RM_0 {ID 0 NAME RM_0 BS {0 {ID 0 ADDR 0 SIZE 0 CLEAR 0}}} RM_1 {ID 1 NAME RM_1 BS {0 {ID 0 ADDR 0 SIZE 0 CLEAR 0}}}} POR_RM RM_0}} CP_FAMILY 7series DIRTY 0} \
+   CONFIG.GUI_RM_NEW_NAME {RM_1} \
+   CONFIG.GUI_SELECT_RM {1} \
+   CONFIG.GUI_SELECT_TRIGGER_1 {1} \
+   CONFIG.GUI_SELECT_TRIGGER_2 {0} \
+   CONFIG.GUI_SELECT_TRIGGER_3 {1} \
+   CONFIG.GUI_VS_NUM_RMS_ALLOCATED {2} \
+ ] $dfx_controller_0
 
-  # Create instance: ila_1, and set properties
-  set ila_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:ila:6.2 ila_1 ]
+  # Create instance: dfx_decoupler_0, and set properties
+  set dfx_decoupler_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:dfx_decoupler:1.0 dfx_decoupler_0 ]
   set_property -dict [ list \
-   CONFIG.C_ENABLE_ILA_AXI_MON {false} \
-   CONFIG.C_MONITOR_TYPE {Native} \
-   CONFIG.C_NUM_OF_PROBES {5} \
-   CONFIG.C_PROBE1_WIDTH {32} \
-   CONFIG.C_PROBE4_WIDTH {4} \
- ] $ila_1
+   CONFIG.ALL_PARAMS {INTF {MULTIPLIER {ID 0 VLNV xilinx.com:signal:data_rtl:1.0 SIGNALS {DATA {DIRECTION in MANAGEMENT manual WIDTH 288}}} MULTIPLICAND {ID 1 VLNV xilinx.com:signal:data_rtl:1.0 SIGNALS {DATA {DIRECTION in MANAGEMENT manual WIDTH 288}}} MULTIPLIY_START {ID 2 VLNV xilinx.com:signal:data_rtl:1.0 SIGNALS {DATA {DIRECTION in MANAGEMENT manual WIDTH 9}}}}} \
+   CONFIG.GUI_INTERFACE_NAME {MULTIPLIER} \
+   CONFIG.GUI_SELECT_INTERFACE {0} \
+   CONFIG.GUI_SELECT_VLNV {xilinx.com:signal:data_rtl:1.0} \
+   CONFIG.GUI_SIGNAL_DECOUPLED_0 {true} \
+   CONFIG.GUI_SIGNAL_DIRECTION_0 {in} \
+   CONFIG.GUI_SIGNAL_MANAGEMENT_0 {manual} \
+   CONFIG.GUI_SIGNAL_PRESENT_0 {true} \
+   CONFIG.GUI_SIGNAL_SELECT_0 {DATA} \
+   CONFIG.GUI_SIGNAL_WIDTH_0 {288} \
+ ] $dfx_decoupler_0
+
+  # Create instance: dfx_decoupler_1, and set properties
+  set dfx_decoupler_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:dfx_decoupler:1.0 dfx_decoupler_1 ]
+  set_property -dict [ list \
+   CONFIG.ALL_PARAMS {INTF {cSum {ID 0 VLNV xilinx.com:signal:data_rtl:1.0 SIGNALS {DATA {MANAGEMENT manual DIRECTION out WIDTH 32}}} cReady {ID 1 VLNV xilinx.com:signal:data_rtl:1.0 SIGNALS {DATA {MANAGEMENT manual DIRECTION out}}}}} \
+   CONFIG.GUI_INTERFACE_NAME {cSum} \
+   CONFIG.GUI_SELECT_INTERFACE {0} \
+   CONFIG.GUI_SELECT_VLNV {xilinx.com:signal:data_rtl:1.0} \
+   CONFIG.GUI_SIGNAL_DECOUPLED_0 {true} \
+   CONFIG.GUI_SIGNAL_DIRECTION_0 {out} \
+   CONFIG.GUI_SIGNAL_MANAGEMENT_0 {manual} \
+   CONFIG.GUI_SIGNAL_PRESENT_0 {true} \
+   CONFIG.GUI_SIGNAL_SELECT_0 {DATA} \
+   CONFIG.GUI_SIGNAL_WIDTH_0 {32} \
+ ] $dfx_decoupler_1
 
   # Create instance: processing_system7_0, and set properties
   set processing_system7_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0 ]
@@ -420,7 +490,7 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_I2C1_HIGHADDR {0xE0005FFF} \
    CONFIG.PCW_I2C1_RESET_ENABLE {0} \
    CONFIG.PCW_I2C_PERIPHERAL_FREQMHZ {25} \
-   CONFIG.PCW_I2C_RESET_ENABLE {0} \
+   CONFIG.PCW_I2C_RESET_ENABLE {1} \
    CONFIG.PCW_I2C_RESET_POLARITY {Active Low} \
    CONFIG.PCW_IMPORT_BOARD_PRESET {None} \
    CONFIG.PCW_INCLUDE_ACP_TRANS_CHECK {0} \
@@ -987,46 +1057,67 @@ proc create_root_design { parentCell } {
   # Create instance: ps7_0_axi_periph, and set properties
   set ps7_0_axi_periph [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 ps7_0_axi_periph ]
   set_property -dict [ list \
-   CONFIG.NUM_MI {2} \
+   CONFIG.NUM_MI {3} \
  ] $ps7_0_axi_periph
 
   # Create instance: rst_ps7_0_100M, and set properties
   set rst_ps7_0_100M [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 rst_ps7_0_100M ]
 
+  # Create instance: util_vector_logic_0, and set properties
+  set util_vector_logic_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:util_vector_logic:2.0 util_vector_logic_0 ]
+  set_property -dict [ list \
+   CONFIG.C_OPERATION {or} \
+   CONFIG.C_SIZE {1} \
+   CONFIG.LOGO_FILE {data/sym_orgate.png} \
+ ] $util_vector_logic_0
+
   # Create interface connections
+  connect_bd_intf_net -intf_net Convolution_Controll_0_BRAM_PORTA_1 [get_bd_intf_pins Convolution_Controll_0/BRAM_PORTA_1] [get_bd_intf_pins Convolution_Controll_0_bram/BRAM_PORTA]
+  connect_bd_intf_net -intf_net Convolution_Controll_0_BRAM_PORTA_2 [get_bd_intf_pins Convolution_Controll_0/BRAM_PORTA_2] [get_bd_intf_pins Convolution_Controll_0_bram1/BRAM_PORTA]
+  connect_bd_intf_net -intf_net Convolution_Controll_0_BRAM_PORTA_3 [get_bd_intf_pins Convolution_Controll_0/BRAM_PORTA_3] [get_bd_intf_pins Convolution_Controll_0_bram2/BRAM_PORTA]
+  connect_bd_intf_net -intf_net Convolution_Controll_0_BRAM_PORTB_1 [get_bd_intf_pins Convolution_Controll_0/BRAM_PORTB_1] [get_bd_intf_pins Convolution_Controll_0_bram/BRAM_PORTB]
+  connect_bd_intf_net -intf_net Convolution_Controll_0_BRAM_PORTB_2 [get_bd_intf_pins Convolution_Controll_0/BRAM_PORTB_2] [get_bd_intf_pins Convolution_Controll_0_bram1/BRAM_PORTB]
+  connect_bd_intf_net -intf_net Convolution_Controll_0_BRAM_PORTB_3 [get_bd_intf_pins Convolution_Controll_0/BRAM_PORTB_3] [get_bd_intf_pins Convolution_Controll_0_bram2/BRAM_PORTB]
   connect_bd_intf_net -intf_net Convolution_Controll_0_m_axis_DATA_OUT [get_bd_intf_pins Convolution_Controll_0/m_axis_DATA_OUT] [get_bd_intf_pins axi_dma_0/S_AXIS_S2MM]
   connect_bd_intf_net -intf_net axi_dma_0_M_AXIS_MM2S [get_bd_intf_pins Convolution_Controll_0/s_axis_DATA_IN] [get_bd_intf_pins axi_dma_0/M_AXIS_MM2S]
   connect_bd_intf_net -intf_net axi_dma_0_M_AXI_MM2S [get_bd_intf_pins axi_dma_0/M_AXI_MM2S] [get_bd_intf_pins axi_mem_intercon/S00_AXI]
   connect_bd_intf_net -intf_net axi_dma_0_M_AXI_S2MM [get_bd_intf_pins axi_dma_0/M_AXI_S2MM] [get_bd_intf_pins axi_mem_intercon/S01_AXI]
   connect_bd_intf_net -intf_net axi_mem_intercon_M00_AXI [get_bd_intf_pins axi_mem_intercon/M00_AXI] [get_bd_intf_pins processing_system7_0/S_AXI_HP0]
+  connect_bd_intf_net -intf_net dfx_controller_0_ICAP [get_bd_intf_ports ICAP_0] [get_bd_intf_pins dfx_controller_0/ICAP]
+  connect_bd_intf_net -intf_net dfx_controller_0_M_AXI_MEM [get_bd_intf_pins axi_mem_intercon/S02_AXI] [get_bd_intf_pins dfx_controller_0/M_AXI_MEM]
   connect_bd_intf_net -intf_net processing_system7_0_DDR [get_bd_intf_ports DDR] [get_bd_intf_pins processing_system7_0/DDR]
   connect_bd_intf_net -intf_net processing_system7_0_FIXED_IO [get_bd_intf_ports FIXED_IO] [get_bd_intf_pins processing_system7_0/FIXED_IO]
   connect_bd_intf_net -intf_net processing_system7_0_M_AXI_GP0 [get_bd_intf_pins processing_system7_0/M_AXI_GP0] [get_bd_intf_pins ps7_0_axi_periph/S00_AXI]
   connect_bd_intf_net -intf_net ps7_0_axi_periph_M00_AXI [get_bd_intf_pins axi_dma_0/S_AXI_LITE] [get_bd_intf_pins ps7_0_axi_periph/M00_AXI]
   connect_bd_intf_net -intf_net ps7_0_axi_periph_M01_AXI [get_bd_intf_pins Convolution_Controll_0/s_axi_CTRL] [get_bd_intf_pins ps7_0_axi_periph/M01_AXI]
+  connect_bd_intf_net -intf_net ps7_0_axi_periph_M02_AXI [get_bd_intf_pins dfx_controller_0/s_axi_reg] [get_bd_intf_pins ps7_0_axi_periph/M02_AXI]
 
   # Create port connections
-  connect_bd_net -net Convolution_Controll_0_FINALADDOUT [get_bd_ports FINALADDOUT_0] [get_bd_pins Convolution_Controll_0/FINALADDOUT]
-  connect_bd_net -net Convolution_Controll_0_MULTIPLICAND_INPUT [get_bd_ports MULTIPLICAND_INPUT_0] [get_bd_pins Convolution_Controll_0/MULTIPLICAND_INPUT]
-  connect_bd_net -net Convolution_Controll_0_MULTIPLIER_INPUT [get_bd_ports MULTIPLIER_INPUT_0] [get_bd_pins Convolution_Controll_0/MULTIPLIER_INPUT]
-  connect_bd_net -net Convolution_Controll_0_MULTIPLY_START [get_bd_ports MULTIPLY_START_0] [get_bd_pins Convolution_Controll_0/MULTIPLY_START]
-  connect_bd_net -net Convolution_Controll_0_ip_reset_out [get_bd_ports ip_reset_out_0] [get_bd_pins Convolution_Controll_0/ip_reset_out]
-  connect_bd_net -net Convolution_Controll_0_m_axis_data [get_bd_pins Convolution_Controll_0/m_axis_data] [get_bd_pins ila_1/probe1]
-  connect_bd_net -net Convolution_Controll_0_m_axis_keep [get_bd_pins Convolution_Controll_0/m_axis_keep] [get_bd_pins ila_1/probe4]
-  connect_bd_net -net Convolution_Controll_0_m_axis_last [get_bd_pins Convolution_Controll_0/m_axis_last] [get_bd_pins ila_1/probe3]
-  connect_bd_net -net Convolution_Controll_0_m_axis_valid [get_bd_pins Convolution_Controll_0/m_axis_valid] [get_bd_pins ila_1/probe0]
-  connect_bd_net -net axi_dma_0_s_axis_s2mm_tready [get_bd_pins axi_dma_0/s_axis_s2mm_tready] [get_bd_pins ila_1/probe2]
-  connect_bd_net -net cReady_0_1 [get_bd_ports cReady_0] [get_bd_pins Convolution_Controll_0/cReady] [get_bd_pins ila_0/probe0]
-  connect_bd_net -net cSum_0_1 [get_bd_ports cSum_0] [get_bd_pins Convolution_Controll_0/cSum] [get_bd_pins ila_0/probe1]
-  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_ports FCLK_CLK0_0] [get_bd_pins Convolution_Controll_0/axi_clk] [get_bd_pins axi_dma_0/m_axi_mm2s_aclk] [get_bd_pins axi_dma_0/m_axi_s2mm_aclk] [get_bd_pins axi_dma_0/s_axi_lite_aclk] [get_bd_pins axi_mem_intercon/ACLK] [get_bd_pins axi_mem_intercon/M00_ACLK] [get_bd_pins axi_mem_intercon/S00_ACLK] [get_bd_pins axi_mem_intercon/S01_ACLK] [get_bd_pins ila_0/clk] [get_bd_pins ila_1/clk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins processing_system7_0/S_AXI_HP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/M01_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_100M/slowest_sync_clk]
+  connect_bd_net -net Convolution_Controll_0_MULTIPLICAND_INPUT [get_bd_pins Convolution_Controll_0/MULTIPLICAND_INPUT] [get_bd_pins dfx_decoupler_0/s_MULTIPLICAND_DATA]
+  connect_bd_net -net Convolution_Controll_0_MULTIPLIER_INPUT [get_bd_pins Convolution_Controll_0/MULTIPLIER_INPUT] [get_bd_pins dfx_decoupler_0/s_MULTIPLIER_DATA]
+  connect_bd_net -net Convolution_Controll_0_MULTIPLY_START [get_bd_pins Convolution_Controll_0/MULTIPLY_START] [get_bd_pins dfx_decoupler_0/s_MULTIPLIY_START_DATA]
+  connect_bd_net -net dfx_controller_0_vsm_VS_0_rm_decouple [get_bd_pins dfx_controller_0/vsm_VS_0_rm_decouple] [get_bd_pins dfx_decoupler_0/decouple] [get_bd_pins dfx_decoupler_1/decouple]
+  connect_bd_net -net dfx_decoupler_0_decouple_status [get_bd_pins dfx_decoupler_0/decouple_status] [get_bd_pins util_vector_logic_0/Op1]
+  connect_bd_net -net dfx_decoupler_0_rp_MULTIPLICAND_DATA [get_bd_ports rp_MULTIPLICAND_DATA_0] [get_bd_pins dfx_decoupler_0/rp_MULTIPLICAND_DATA]
+  connect_bd_net -net dfx_decoupler_0_rp_MULTIPLIER_DATA [get_bd_ports rp_MULTIPLIER_DATA_0] [get_bd_pins dfx_decoupler_0/rp_MULTIPLIER_DATA]
+  connect_bd_net -net dfx_decoupler_0_rp_MULTIPLIY_START_DATA [get_bd_ports rp_MULTIPLIY_START_DATA_0] [get_bd_pins dfx_decoupler_0/rp_MULTIPLIY_START_DATA]
+  connect_bd_net -net dfx_decoupler_1_decouple_status [get_bd_pins dfx_decoupler_1/decouple_status] [get_bd_pins util_vector_logic_0/Op2]
+  connect_bd_net -net dfx_decoupler_1_s_cReady_DATA [get_bd_pins Convolution_Controll_0/cReady] [get_bd_pins dfx_decoupler_1/s_cReady_DATA]
+  connect_bd_net -net dfx_decoupler_1_s_cSum_DATA [get_bd_pins Convolution_Controll_0/cSum] [get_bd_pins dfx_decoupler_1/s_cSum_DATA]
+  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_ports FCLK_CLK0_0] [get_bd_pins Convolution_Controll_0/axi_clk] [get_bd_pins axi_dma_0/m_axi_mm2s_aclk] [get_bd_pins axi_dma_0/m_axi_s2mm_aclk] [get_bd_pins axi_dma_0/s_axi_lite_aclk] [get_bd_pins axi_mem_intercon/ACLK] [get_bd_pins axi_mem_intercon/M00_ACLK] [get_bd_pins axi_mem_intercon/S00_ACLK] [get_bd_pins axi_mem_intercon/S01_ACLK] [get_bd_pins axi_mem_intercon/S02_ACLK] [get_bd_pins dfx_controller_0/clk] [get_bd_pins dfx_controller_0/icap_clk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins processing_system7_0/S_AXI_HP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/M01_ACLK] [get_bd_pins ps7_0_axi_periph/M02_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_100M/slowest_sync_clk]
   connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_ports FCLK_RESET0_N_0] [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_ps7_0_100M/ext_reset_in]
-  connect_bd_net -net rst_ps7_0_100M_peripheral_aresetn [get_bd_pins Convolution_Controll_0/axi_reset_n] [get_bd_pins axi_dma_0/axi_resetn] [get_bd_pins axi_mem_intercon/ARESETN] [get_bd_pins axi_mem_intercon/M00_ARESETN] [get_bd_pins axi_mem_intercon/S00_ARESETN] [get_bd_pins axi_mem_intercon/S01_ARESETN] [get_bd_pins ps7_0_axi_periph/ARESETN] [get_bd_pins ps7_0_axi_periph/M00_ARESETN] [get_bd_pins ps7_0_axi_periph/M01_ARESETN] [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps7_0_100M/peripheral_aresetn]
+  connect_bd_net -net rp_cReady_DATA_0_1 [get_bd_ports rp_cReady_DATA_0] [get_bd_pins dfx_decoupler_1/rp_cReady_DATA]
+  connect_bd_net -net rp_cSum_DATA_0_1 [get_bd_ports rp_cSum_DATA_0] [get_bd_pins dfx_decoupler_1/rp_cSum_DATA]
+  connect_bd_net -net rst_ps7_0_100M_peripheral_aresetn [get_bd_pins Convolution_Controll_0/axi_reset_n] [get_bd_pins axi_dma_0/axi_resetn] [get_bd_pins axi_mem_intercon/ARESETN] [get_bd_pins axi_mem_intercon/M00_ARESETN] [get_bd_pins axi_mem_intercon/S00_ARESETN] [get_bd_pins axi_mem_intercon/S01_ARESETN] [get_bd_pins axi_mem_intercon/S02_ARESETN] [get_bd_pins dfx_controller_0/icap_reset] [get_bd_pins dfx_controller_0/reset] [get_bd_pins ps7_0_axi_periph/ARESETN] [get_bd_pins ps7_0_axi_periph/M00_ARESETN] [get_bd_pins ps7_0_axi_periph/M01_ARESETN] [get_bd_pins ps7_0_axi_periph/M02_ARESETN] [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps7_0_100M/peripheral_aresetn]
+  connect_bd_net -net util_vector_logic_0_Res [get_bd_ports decouple_status_global_0] [get_bd_pins util_vector_logic_0/Res]
 
   # Create address segments
   assign_bd_address -offset 0x00000000 -range 0x20000000 -target_address_space [get_bd_addr_spaces axi_dma_0/Data_MM2S] [get_bd_addr_segs processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM] -force
   assign_bd_address -offset 0x00000000 -range 0x20000000 -target_address_space [get_bd_addr_spaces axi_dma_0/Data_S2MM] [get_bd_addr_segs processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM] -force
-  assign_bd_address -offset 0x43C00000 -range 0x00010000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs Convolution_Controll_0/s_axi_CTRL/reg0] -force
+  assign_bd_address -offset 0x00000000 -range 0x20000000 -target_address_space [get_bd_addr_spaces dfx_controller_0/Data] [get_bd_addr_segs processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM] -force
+  assign_bd_address -offset 0x43C10000 -range 0x00010000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs Convolution_Controll_0/s_axi_CTRL/reg0] -force
   assign_bd_address -offset 0x40400000 -range 0x00010000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_dma_0/S_AXI_LITE/Reg] -force
+  assign_bd_address -offset 0x43C00000 -range 0x00010000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs dfx_controller_0/s_axi_reg/Reg] -force
 
 
   # Restore current instance

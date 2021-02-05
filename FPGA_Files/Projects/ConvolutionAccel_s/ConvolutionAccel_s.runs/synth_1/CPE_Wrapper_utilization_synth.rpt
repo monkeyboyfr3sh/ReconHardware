@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date         : Wed Feb  3 13:19:02 2021
+| Date         : Thu Feb  4 19:51:54 2021
 | Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 | Command      : report_utilization -file CPE_Wrapper_utilization_synth.rpt -pb CPE_Wrapper_utilization_synth.pb
 | Design       : CPE_Wrapper
@@ -30,13 +30,13 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |  275 |     0 |     53200 |  0.52 |
-|   LUT as Logic          |  275 |     0 |     53200 |  0.52 |
+| Slice LUTs*             |  696 |     0 |     53200 |  1.31 |
+|   LUT as Logic          |  696 |     0 |     53200 |  1.31 |
 |   LUT as Memory         |    0 |     0 |     17400 |  0.00 |
-| Slice Registers         |  451 |     0 |    106400 |  0.42 |
-|   Register as Flip Flop |  451 |     0 |    106400 |  0.42 |
+| Slice Registers         |  187 |     0 |    106400 |  0.18 |
+|   Register as Flip Flop |  187 |     0 |    106400 |  0.18 |
 |   Register as Latch     |    0 |     0 |    106400 |  0.00 |
-| F7 Muxes                |    0 |     0 |     26600 |  0.00 |
+| F7 Muxes                |    1 |     0 |     26600 | <0.01 |
 | F8 Muxes                |    0 |     0 |     13300 |  0.00 |
 +-------------------------+------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
@@ -55,9 +55,9 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
-| 0     |          Yes |           - |        Reset |
+| 81    |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 451   |          Yes |       Reset |            - |
+| 106   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -77,12 +77,11 @@ Table of Contents
 3. DSP
 ------
 
-+----------------+------+-------+-----------+-------+
-|    Site Type   | Used | Fixed | Available | Util% |
-+----------------+------+-------+-----------+-------+
-| DSPs           |   27 |     0 |       220 | 12.27 |
-|   DSP48E1 only |   27 |       |           |       |
-+----------------+------+-------+-----------+-------+
++-----------+------+-------+-----------+-------+
+| Site Type | Used | Fixed | Available | Util% |
++-----------+------+-------+-----------+-------+
+| DSPs      |    0 |     0 |       220 |  0.00 |
++-----------+------+-------+-----------+-------+
 
 
 4. IO and GT Specific
@@ -147,37 +146,39 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |  451 |        Flop & Latch |
-| LUT2     |  144 |                 LUT |
-| LUT3     |  124 |                 LUT |
-| LUT4     |  121 |                 LUT |
-| CARRY4   |   68 |          CarryLogic |
-| DSP48E1  |   27 |    Block Arithmetic |
-| LUT6     |    5 |                 LUT |
-| LUT1     |    1 |                 LUT |
+| LUT6     |  361 |                 LUT |
+| LUT5     |  146 |                 LUT |
+| LUT2     |  127 |                 LUT |
+| FDRE     |  106 |        Flop & Latch |
+| LUT4     |   85 |                 LUT |
+| FDCE     |   81 |        Flop & Latch |
+| LUT3     |   58 |                 LUT |
+| CARRY4   |   56 |          CarryLogic |
+| LUT1     |   19 |                 LUT |
+| MUXF7    |    1 |               MuxFx |
 +----------+------+---------------------+
 
 
 8. Black Boxes
 --------------
 
-+-------------------------------------------------+------+
-|                     Ref Name                    | Used |
-+-------------------------------------------------+------+
-| Convolution_Controller_xbar_3                   |    1 |
-| Convolution_Controller_xbar_2                   |    1 |
-| Convolution_Controller_rst_ps7_0_50M_0          |    1 |
-| Convolution_Controller_processing_system7_0_2   |    1 |
-| Convolution_Controller_blk_mem_gen_1_0          |    1 |
-| Convolution_Controller_blk_mem_gen_0_1          |    1 |
-| Convolution_Controller_blk_mem_gen_0_0          |    1 |
-| Convolution_Controller_axi_dma_0_3              |    1 |
-| Convolution_Controller_auto_us_1                |    1 |
-| Convolution_Controller_auto_us_0                |    1 |
-| Convolution_Controller_auto_pc_1                |    1 |
-| Convolution_Controller_auto_pc_0                |    1 |
-| Convolution_Controller_Convolution_Controll_0_4 |    1 |
-+-------------------------------------------------+------+
++--------------------------------------------------------+------+
+|                        Ref Name                        | Used |
++--------------------------------------------------------+------+
+| Convolution_Controller_xbar_1                          |    1 |
+| Convolution_Controller_xbar_0                          |    1 |
+| Convolution_Controller_rst_ps7_0_100M_0                |    1 |
+| Convolution_Controller_processing_system7_0_0          |    1 |
+| Convolution_Controller_axi_dma_0_0                     |    1 |
+| Convolution_Controller_auto_us_1                       |    1 |
+| Convolution_Controller_auto_us_0                       |    1 |
+| Convolution_Controller_auto_pc_1                       |    1 |
+| Convolution_Controller_auto_pc_0                       |    1 |
+| Convolution_Controller_Convolution_Controll_0_bram_1_0 |    1 |
+| Convolution_Controller_Convolution_Controll_0_bram_0_0 |    1 |
+| Convolution_Controller_Convolution_Controll_0_bram_0   |    1 |
+| Convolution_Controller_Convolution_Controll_0_0        |    1 |
++--------------------------------------------------------+------+
 
 
 9. Instantiated Netlists

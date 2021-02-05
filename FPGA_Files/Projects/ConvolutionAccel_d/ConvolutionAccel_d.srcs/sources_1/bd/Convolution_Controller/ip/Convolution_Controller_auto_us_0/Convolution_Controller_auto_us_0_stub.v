@@ -1,7 +1,7 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-// Date        : Sat Dec 12 14:49:36 2020
+// Date        : Thu Feb  4 14:38:09 2021
 // Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub -rename_top Convolution_Controller_auto_us_0 -prefix
 //               Convolution_Controller_auto_us_0_ Convolution_Controller_auto_us_0_stub.v

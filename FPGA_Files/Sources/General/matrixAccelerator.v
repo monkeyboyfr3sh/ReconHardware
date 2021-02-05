@@ -64,11 +64,8 @@ xbar2(
     .direct(direct)
 );
 
-int_adder_tree
-#(
-    .DATA_WIDTH(DATA_WIDTH)
-)
-adder_tree(
+integer_adder_32 
+adder(
     .in_data(xbar_output),
     .out_data(finalAccumulate)
 );
@@ -76,24 +73,28 @@ adder_tree(
 // Making Xbar connections
 generate
     genvar n;
-    
     for(n=0;n<KERNEL_SIZE*KERNEL_SIZE;n=n+1)begin
         // Attatch product outputs to xbar inputs
         assign xbar_input[n*DATA_WIDTH+:DATA_WIDTH] = product_output[n];
+        // Instantiate a reconfig multiplier wrapper for this port
+
+//        // Wrapper
+//        integer_multiplier_32
         
-//        fixedmultiplyCompute
+        // No wrapper
         multiplyComputePynq 
-        #( // Parameters
-        .DATA_WIDTH(DATA_WIDTH)
+        #(
+            .DATA_WIDTH(DATA_WIDTH)
         )
+
         inputMulti (
-        .clk(Clk),
-        .reset(Rst),
-        .multiplier(multiplier_input[n*DATA_WIDTH+:DATA_WIDTH]),
-        .multiplicand(multiplicand_input[n*DATA_WIDTH+:DATA_WIDTH]),
-        .start(mStart[n]),
-        .product(product_output[n]),
-        .ready(mReady[n])
+            .clk(Clk),
+            .reset(Rst),
+            .multiplier(multiplier_input[n*DATA_WIDTH+:DATA_WIDTH]),
+            .multiplicand(multiplicand_input[n*DATA_WIDTH+:DATA_WIDTH]),
+            .start(mStart[n]),
+            .product(product_output[n]),
+            .ready(mReady[n])
         );
     end
 endgenerate

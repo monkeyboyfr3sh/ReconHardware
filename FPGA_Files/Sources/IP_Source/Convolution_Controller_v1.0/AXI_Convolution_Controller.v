@@ -14,6 +14,7 @@ module Convolution_Controller
     parameter CTRL_REG_SIZE = DATA_BASE + (KERNEL_SIZE*KERNEL_SIZE*4),
     parameter CTRL_REG_ADDR_WIDTH = $clog2(CTRL_REG_SIZE),
     parameter STATE_MAC_ADDR_WIDTH = $clog2(KERNEL_SIZE*KERNEL_SIZE),
+    parameter AXI_BUS_WIDTH = 32,
     parameter AXI_ADDR_WIDTH = 10
 )
 ( // Ports
@@ -29,58 +30,58 @@ module Convolution_Controller
     // BRAM_A - Write Port
     output wire [12:0] addra_1,
     output wire clka_1,
-    output wire [DATA_WIDTH-1:0] dina_1,
-    input wire [DATA_WIDTH-1:0] douta_1,
+    output wire [AXI_BUS_WIDTH-1:0] dina_1,
+    input wire [AXI_BUS_WIDTH-1:0] douta_1,
     output wire ena_1,
     output wire wea_1,
     // BRAM_B - Read Port
     output wire [12:0] addrb_1,
     output wire clkb_1,
-    output wire [DATA_WIDTH-1:0] dinb_1,
-    input wire [DATA_WIDTH-1:0] doutb_1,
+    output wire [AXI_BUS_WIDTH-1:0] dinb_1,
+    input wire [AXI_BUS_WIDTH-1:0] doutb_1,
     output wire enb_1,
     output wire web_1,
     // BRAM Port - 2
     // BRAM_A - Write Port
     output wire [12:0] addra_2,
     output wire clka_2,
-    output wire [DATA_WIDTH-1:0] dina_2,
-    input wire [DATA_WIDTH-1:0] douta_2,
+    output wire [AXI_BUS_WIDTH-1:0] dina_2,
+    input wire [AXI_BUS_WIDTH-1:0] douta_2,
     output wire ena_2,
     output wire wea_2,
     // BRAM_B - Read Port
     output wire [12:0] addrb_2,
     output wire clkb_2,
-    output wire [DATA_WIDTH-1:0] dinb_2,
-    input wire [DATA_WIDTH-1:0] doutb_2,
+    output wire [AXI_BUS_WIDTH-1:0] dinb_2,
+    input wire [AXI_BUS_WIDTH-1:0] doutb_2,
     output wire enb_2,
     output wire web_2,
     // BRAM Port - 3
     // BRAM_A - Write Port
     output wire [12:0] addra_3,
     output wire clka_3,
-    output wire [DATA_WIDTH-1:0] dina_3,
-    input wire [DATA_WIDTH-1:0] douta_3,
+    output wire [AXI_BUS_WIDTH-1:0] dina_3,
+    input wire [AXI_BUS_WIDTH-1:0] douta_3,
     output wire ena_3,
     output wire wea_3,
     // BRAM_B - Read Port
     output wire [12:0] addrb_3,
     output wire clkb_3,
-    output wire [DATA_WIDTH-1:0] dinb_3,
-    input wire [DATA_WIDTH-1:0] doutb_3,
+    output wire [AXI_BUS_WIDTH-1:0] dinb_3,
+    input wire [AXI_BUS_WIDTH-1:0] doutb_3,
     output wire enb_3,
     output wire web_3,
     
     //AXI4-S slave i/f - Data stream port
     input    s_axis_valid,
-    input [31:0] s_axis_data,
+    input [AXI_BUS_WIDTH-1:0] s_axis_data,
     output wire s_axis_ready,
     input s_axis_last,
     input [3:0] s_axis_keep,
     
     //AXI4-S master i/f - Output Data port
     output wire  m_axis_valid,
-    output wire [31:0] m_axis_data,
+    output wire [AXI_BUS_WIDTH-1:0] m_axis_data,
     input    m_axis_ready,
     output reg m_axis_last,
     output reg [3:0] m_axis_keep,
@@ -94,7 +95,7 @@ module Convolution_Controller
     input s_axi_awvalid,
         
     //Write Data - Use this for controller to write data
-    input [31:0] s_axi_wdata,
+    input [AXI_BUS_WIDTH-1:0] s_axi_wdata,
     output reg s_axi_wready,
     input s_axi_wvalid,
     
@@ -104,7 +105,7 @@ module Convolution_Controller
     input s_axi_arvalid,
     
     //Read Data - Use this for controller to read data
-    output reg [31:0] s_axi_rdata,
+    output reg [AXI_BUS_WIDTH-1:0] s_axi_rdata,
     input s_axi_rready,
     output reg s_axi_rvalid,
     

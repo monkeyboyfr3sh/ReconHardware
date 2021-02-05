@@ -1,10 +1,10 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-// Date        : Tue Feb  2 16:10:12 2021
+// Date        : Tue Feb  2 16:10:11 2021
 // Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_auto_pc_1/Convolution_Controller_auto_pc_1_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top Convolution_Controller_auto_pc_1 -prefix
+//               Convolution_Controller_auto_pc_1_ Convolution_Controller_auto_pc_1_sim_netlist.v
 // Design      : Convolution_Controller_auto_pc_1
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -382,7 +382,6 @@ module Convolution_Controller_auto_pc_1
         .s_axi_wvalid(s_axi_wvalid));
 endmodule
 
-(* ORIG_REF_NAME = "axi_data_fifo_v2_1_20_axic_fifo" *) 
 module Convolution_Controller_auto_pc_1_axi_data_fifo_v2_1_20_axic_fifo
    (\goreg_dm.dout_i_reg[4] ,
     full,
@@ -907,7 +906,6 @@ module Convolution_Controller_auto_pc_1_axi_data_fifo_v2_1_20_axic_fifo__xdcDup_
         .wr_en(cmd_push));
 endmodule
 
-(* ORIG_REF_NAME = "axi_data_fifo_v2_1_20_fifo_gen" *) 
 module Convolution_Controller_auto_pc_1_axi_data_fifo_v2_1_20_fifo_gen
    (\goreg_dm.dout_i_reg[4] ,
     full,
@@ -3591,7 +3589,6 @@ module Convolution_Controller_auto_pc_1_axi_data_fifo_v2_1_20_fifo_gen__xdcDup__
         .O(split_in_progress_reg));
 endmodule
 
-(* ORIG_REF_NAME = "axi_protocol_converter_v2_1_21_a_axi3_conv" *) 
 module Convolution_Controller_auto_pc_1_axi_protocol_converter_v2_1_21_a_axi3_conv
    (dout,
     empty,
@@ -8547,7 +8544,6 @@ module Convolution_Controller_auto_pc_1_axi_protocol_converter_v2_1_21_a_axi3_co
         .R(\arststages_ff_reg[1] ));
 endmodule
 
-(* ORIG_REF_NAME = "axi_protocol_converter_v2_1_21_axi3_conv" *) 
 module Convolution_Controller_auto_pc_1_axi_protocol_converter_v2_1_21_axi3_conv
    (M_AXI_AWID,
     M_AXI_ARID,
@@ -8860,10 +8856,10 @@ endmodule
 (* C_AXI_RUSER_WIDTH = "1" *) (* C_AXI_SUPPORTS_READ = "1" *) (* C_AXI_SUPPORTS_USER_SIGNALS = "0" *) 
 (* C_AXI_SUPPORTS_WRITE = "1" *) (* C_AXI_WUSER_WIDTH = "1" *) (* C_FAMILY = "zynq" *) 
 (* C_IGNORE_ID = "0" *) (* C_M_AXI_PROTOCOL = "1" *) (* C_S_AXI_PROTOCOL = "0" *) 
-(* C_TRANSLATION_MODE = "2" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "axi_protocol_converter_v2_1_21_axi_protocol_converter" *) 
-(* P_AXI3 = "1" *) (* P_AXI4 = "0" *) (* P_AXILITE = "2" *) 
-(* P_AXILITE_SIZE = "3'b011" *) (* P_CONVERSION = "2" *) (* P_DECERR = "2'b11" *) 
-(* P_INCR = "2'b01" *) (* P_PROTECTION = "1" *) (* P_SLVERR = "2'b10" *) 
+(* C_TRANSLATION_MODE = "2" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* P_AXI3 = "1" *) 
+(* P_AXI4 = "0" *) (* P_AXILITE = "2" *) (* P_AXILITE_SIZE = "3'b011" *) 
+(* P_CONVERSION = "2" *) (* P_DECERR = "2'b11" *) (* P_INCR = "2'b01" *) 
+(* P_PROTECTION = "1" *) (* P_SLVERR = "2'b10" *) 
 module Convolution_Controller_auto_pc_1_axi_protocol_converter_v2_1_21_axi_protocol_converter
    (aclk,
     aresetn,
@@ -9215,7 +9211,6 @@ module Convolution_Controller_auto_pc_1_axi_protocol_converter_v2_1_21_axi_proto
         .s_axi_wvalid(s_axi_wvalid));
 endmodule
 
-(* ORIG_REF_NAME = "axi_protocol_converter_v2_1_21_b_downsizer" *) 
 module Convolution_Controller_auto_pc_1_axi_protocol_converter_v2_1_21_b_downsizer
    (last_word,
     rd_en,
@@ -9425,7 +9420,6 @@ module Convolution_Controller_auto_pc_1_axi_protocol_converter_v2_1_21_b_downsiz
         .O(last_word));
 endmodule
 
-(* ORIG_REF_NAME = "axi_protocol_converter_v2_1_21_w_axi3_conv" *) 
 module Convolution_Controller_auto_pc_1_axi_protocol_converter_v2_1_21_w_axi3_conv
    (m_axi_wlast,
     s_axi_wvalid_0,
@@ -9690,9 +9684,8 @@ module Convolution_Controller_auto_pc_1_axi_protocol_converter_v2_1_21_w_axi3_co
 endmodule
 
 (* DEF_VAL = "1'b0" *) (* DEST_SYNC_FF = "2" *) (* INIT_SYNC_FF = "0" *) 
-(* INV_DEF_VAL = "1'b1" *) (* ORIG_REF_NAME = "xpm_cdc_async_rst" *) (* RST_ACTIVE_HIGH = "1" *) 
-(* VERSION = "0" *) (* XPM_MODULE = "TRUE" *) (* keep_hierarchy = "true" *) 
-(* xpm_cdc = "ASYNC_RST" *) 
+(* INV_DEF_VAL = "1'b1" *) (* RST_ACTIVE_HIGH = "1" *) (* VERSION = "0" *) 
+(* XPM_MODULE = "TRUE" *) (* keep_hierarchy = "true" *) (* xpm_cdc = "ASYNC_RST" *) 
 module Convolution_Controller_auto_pc_1_xpm_cdc_async_rst
    (src_arst,
     dest_clk,
@@ -9812,7 +9805,6 @@ module Convolution_Controller_auto_pc_1_xpm_cdc_async_rst__4
         .Q(arststages_ff[1]));
 endmodule
 
-(* ORIG_REF_NAME = "dmem" *) 
 module Convolution_Controller_auto_pc_1_dmem
    (dout_i,
     clk,
@@ -10088,7 +10080,6 @@ module Convolution_Controller_auto_pc_1_dmem__parameterized0
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "fifo_generator_ramfifo" *) 
 module Convolution_Controller_auto_pc_1_fifo_generator_ramfifo
    (empty,
     full,
@@ -10338,7 +10329,6 @@ module Convolution_Controller_auto_pc_1_fifo_generator_ramfifo__xdcDup__1
         .rst(rst));
 endmodule
 
-(* ORIG_REF_NAME = "fifo_generator_top" *) 
 module Convolution_Controller_auto_pc_1_fifo_generator_top
    (empty,
     full,
@@ -10522,7 +10512,7 @@ endmodule
 (* C_WR_DEPTH_WRCH = "16" *) (* C_WR_FREQ = "1" *) (* C_WR_PNTR_WIDTH = "5" *) 
 (* C_WR_PNTR_WIDTH_AXIS = "10" *) (* C_WR_PNTR_WIDTH_RACH = "4" *) (* C_WR_PNTR_WIDTH_RDCH = "10" *) 
 (* C_WR_PNTR_WIDTH_WACH = "4" *) (* C_WR_PNTR_WIDTH_WDCH = "10" *) (* C_WR_PNTR_WIDTH_WRCH = "4" *) 
-(* C_WR_RESPONSE_LATENCY = "1" *) (* ORIG_REF_NAME = "fifo_generator_v13_2_5" *) 
+(* C_WR_RESPONSE_LATENCY = "1" *) 
 module Convolution_Controller_auto_pc_1_fifo_generator_v13_2_5
    (backup,
     backup_marker,
@@ -13926,7 +13916,6 @@ module Convolution_Controller_auto_pc_1_fifo_generator_v13_2_5__xdcDup__1
         .wr_en(wr_en));
 endmodule
 
-(* ORIG_REF_NAME = "fifo_generator_v13_2_5_synth" *) 
 module Convolution_Controller_auto_pc_1_fifo_generator_v13_2_5_synth
    (empty,
     full,
@@ -14043,7 +14032,6 @@ module Convolution_Controller_auto_pc_1_fifo_generator_v13_2_5_synth__xdcDup__1
         .wr_en(wr_en));
 endmodule
 
-(* ORIG_REF_NAME = "memory" *) 
 module Convolution_Controller_auto_pc_1_memory
    (dout,
     E,
@@ -14266,7 +14254,6 @@ module Convolution_Controller_auto_pc_1_memory__parameterized0
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "rd_bin_cntr" *) 
 module Convolution_Controller_auto_pc_1_rd_bin_cntr
    (Q,
     \gc0.count_d1_reg[4]_0 ,
@@ -14689,7 +14676,6 @@ module Convolution_Controller_auto_pc_1_rd_bin_cntr_8
         .Q(Q[4]));
 endmodule
 
-(* ORIG_REF_NAME = "rd_fwft" *) 
 module Convolution_Controller_auto_pc_1_rd_fwft
    (out,
     empty,
@@ -15252,7 +15238,6 @@ module Convolution_Controller_auto_pc_1_rd_fwft_6
         .Q(user_valid));
 endmodule
 
-(* ORIG_REF_NAME = "rd_logic" *) 
 module Convolution_Controller_auto_pc_1_rd_logic
    (out,
     \gpregsm1.curr_fwft_state_reg[1] ,
@@ -15437,7 +15422,6 @@ module Convolution_Controller_auto_pc_1_rd_logic_9
         .\gc0.count_d1_reg[4]_0 (\gc0.count_d1_reg[4] ));
 endmodule
 
-(* ORIG_REF_NAME = "rd_status_flags_ss" *) 
 module Convolution_Controller_auto_pc_1_rd_status_flags_ss
    (out,
     ram_empty_i_reg_0,
@@ -15563,7 +15547,6 @@ module Convolution_Controller_auto_pc_1_rd_status_flags_ss_7
         .Q(ram_empty_i));
 endmodule
 
-(* ORIG_REF_NAME = "reset_blk_ramfifo" *) 
 module Convolution_Controller_auto_pc_1_reset_blk_ramfifo
    (\ngwrdrst.grst.g7serrst.gnsckt_wrst.gcc_rst.sckt_wr_rst_cc_reg[1]_0 ,
     rst,
@@ -15910,7 +15893,6 @@ module Convolution_Controller_auto_pc_1_reset_blk_ramfifo__xdcDup__2
         .src_arst(rst));
 endmodule
 
-(* ORIG_REF_NAME = "wr_bin_cntr" *) 
 module Convolution_Controller_auto_pc_1_wr_bin_cntr
    (ram_full_comb,
     ram_full_fb_i_reg,
@@ -16645,7 +16627,6 @@ module Convolution_Controller_auto_pc_1_wr_bin_cntr_5
         .O(ram_full_fb_i_i_3_n_0));
 endmodule
 
-(* ORIG_REF_NAME = "wr_logic" *) 
 module Convolution_Controller_auto_pc_1_wr_logic
    (full,
     ram_full_fb_i_reg,
@@ -16831,7 +16812,6 @@ module Convolution_Controller_auto_pc_1_wr_logic_10
         .wr_en(wr_en));
 endmodule
 
-(* ORIG_REF_NAME = "wr_status_flags_ss" *) 
 module Convolution_Controller_auto_pc_1_wr_status_flags_ss
    (out,
     full,
