@@ -72,14 +72,14 @@ module Convolution_Controller
     output wire enb_3,
     output wire web_3,
     
-    //AXI4-S slave i/f - Data stream port
+    // AXI4-S slave i/f - Data stream port
     input    s_axis_valid,
     input [AXI_BUS_WIDTH-1:0] s_axis_data,
     output wire s_axis_ready,
     input s_axis_last,
     input [3:0] s_axis_keep,
     
-    //AXI4-S master i/f - Output Data port
+    // AXI4-S master i/f - Output Data port
     output wire  m_axis_valid,
     output wire [AXI_BUS_WIDTH-1:0] m_axis_data,
     input    m_axis_ready,
@@ -87,24 +87,24 @@ module Convolution_Controller
     output reg [3:0] m_axis_keep,
     
     /////////////////////////////////////////////////////////////////////////////////////
-    //AXI-4 slave i/f - Data Control port
+    // AXI-4 slave i/f - Data Control port
     
-    //Write Address - The write address gives the address of the first transfer in a write burst transaction.
+    // Write Address - The write address gives the address of the first transfer in a write burst transaction.
     input [AXI_ADDR_WIDTH-1:0] s_axi_awaddr,
     output reg s_axi_awready,
     input s_axi_awvalid,
         
-    //Write Data - Use this for controller to write data
+    // Write Data - Use this for controller to write data
     input [AXI_BUS_WIDTH-1:0] s_axi_wdata,
     output reg s_axi_wready,
     input s_axi_wvalid,
     
-    //Read Address - The read address gives the address of the first transfer in a read burst transaction.
+    // Read Address - The read address gives the address of the first transfer in a read burst transaction.
     input [AXI_ADDR_WIDTH-1:0 ] s_axi_araddr,
     output reg s_axi_arready,
     input s_axi_arvalid,
     
-    //Read Data - Use this for controller to read data
+    // Read Data - Use this for controller to read data
     output reg [AXI_BUS_WIDTH-1:0] s_axi_rdata,
     input s_axi_rready,
     output reg s_axi_rvalid,
@@ -364,9 +364,9 @@ always @(posedge axi_clk) begin
         RDst <= cStart; // Enter read state if machine is still running
     end//End of m_axis_valid
     
-    //cStart triggers matrixcontroller to start
+    // cStart triggers matrixcontroller to start
     if(cStart)begin
-        //In a read state (data still needs to be input) 
+        // In a read state (data still needs to be input) 
         if(RDst)begin
              // Linebuffer has been filled, and delay latch triggered
             if(r_delay_latch) begin

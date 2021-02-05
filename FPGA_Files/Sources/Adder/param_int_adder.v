@@ -1,8 +1,3 @@
-/*
-*   Code was structured from: https://stackoverflow.com/questions/14467617/verilog-generic-adder-tree
-*
-*/
-
 module param_int_adder
 #( 
   parameter DATA_WIDTH = 32,
