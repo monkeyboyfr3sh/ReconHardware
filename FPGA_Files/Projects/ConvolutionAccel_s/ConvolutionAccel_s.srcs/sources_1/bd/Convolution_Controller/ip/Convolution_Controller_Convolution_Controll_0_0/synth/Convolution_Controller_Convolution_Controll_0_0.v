@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:user:Convolution_Controller:1.0
-// IP Revision: 122
+// IP Revision: 124
 
 (* X_CORE_INFO = "Convolution_Controller,Vivado 2020.1" *)
 (* CHECK_LICENSE_TYPE = "Convolution_Controller_Convolution_Controll_0_0,Convolution_Controller,{}" *)
-(* CORE_GENERATION_INFO = "Convolution_Controller_Convolution_Controll_0_0,Convolution_Controller,{x_ipProduct=Vivado 2020.1,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=Convolution_Controller,x_ipVersion=1.0,x_ipCoreRevision=122,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,DATA_WIDTH=8,KERNEL_SIZE=3,CTRL_REG_SIZE=96,AXI_ADDR_WIDTH=10,CTRL_REG_ADDR_WIDTH=7,STATE_MAC_ADDR_WIDTH=4,FILTER_BASE=24,DATA_BASE=60,BRAM_WIDTH=1800}" *)
+(* CORE_GENERATION_INFO = "Convolution_Controller_Convolution_Controll_0_0,Convolution_Controller,{x_ipProduct=Vivado 2020.1,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=Convolution_Controller,x_ipVersion=1.0,x_ipCoreRevision=124,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,DATA_WIDTH=32,KERNEL_SIZE=3,CTRL_REG_SIZE=96,AXI_ADDR_WIDTH=10,CTRL_REG_ADDR_WIDTH=7,STATE_MAC_ADDR_WIDTH=4,FILTER_BASE=24,DATA_BASE=60,BRAM_WIDTH=1800,AXI_BUS_WIDTH=32}" *)
 (* IP_DEFINITION_SOURCE = "package_project" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module Convolution_Controller_Convolution_Controll_0_0 (
@@ -126,25 +126,25 @@ module Convolution_Controller_Convolution_Controll_0_0 (
   s_axi_rlast
 );
 
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME axi_clk, ASSOCIATED_RESET axi_reset_n, ASSOCIATED_BUSIF s_axi_CTRL:s_axis_DATA_IN:m_axis_DATA_OUT, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, CLK_DOMAIN Convolution_Controller_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME axi_clk, ASSOCIATED_RESET axi_reset_n, ASSOCIATED_BUSIF s_axi_CTRL:s_axis_DATA_IN:m_axis_DATA_OUT, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 axi_clk CLK" *)
 input wire axi_clk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME axi_reset_n, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 axi_reset_n RST" *)
 input wire axi_reset_n;
-input wire [7 : 0] cSum;
+input wire [31 : 0] cSum;
 input wire cReady;
-output wire [71 : 0] MULTIPLIER_INPUT;
-output wire [71 : 0] MULTIPLICAND_INPUT;
+output wire [287 : 0] MULTIPLIER_INPUT;
+output wire [287 : 0] MULTIPLICAND_INPUT;
 output wire [8 : 0] MULTIPLY_START;
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA_1 ADDR" *)
 output wire [12 : 0] addra_1;
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA_1 CLK" *)
 output wire clka_1;
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA_1 DIN" *)
-output wire [7 : 0] dina_1;
+output wire [31 : 0] dina_1;
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA_1 DOUT" *)
-input wire [7 : 0] douta_1;
+input wire [31 : 0] douta_1;
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA_1 EN" *)
 output wire ena_1;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME BRAM_PORTA_1, MEM_SIZE 8192, MEM_WIDTH 32, MEM_ECC NONE, MASTER_TYPE OTHER, READ_LATENCY 1" *)
@@ -155,9 +155,9 @@ output wire [12 : 0] addrb_1;
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTB_1 CLK" *)
 output wire clkb_1;
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTB_1 DIN" *)
-output wire [7 : 0] dinb_1;
+output wire [31 : 0] dinb_1;
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTB_1 DOUT" *)
-input wire [7 : 0] doutb_1;
+input wire [31 : 0] doutb_1;
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTB_1 EN" *)
 output wire enb_1;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME BRAM_PORTB_1, MEM_SIZE 8192, MEM_WIDTH 32, MEM_ECC NONE, MASTER_TYPE OTHER, READ_LATENCY 1" *)
@@ -168,9 +168,9 @@ output wire [12 : 0] addra_2;
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA_2 CLK" *)
 output wire clka_2;
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA_2 DIN" *)
-output wire [7 : 0] dina_2;
+output wire [31 : 0] dina_2;
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA_2 DOUT" *)
-input wire [7 : 0] douta_2;
+input wire [31 : 0] douta_2;
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA_2 EN" *)
 output wire ena_2;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME BRAM_PORTA_2, MEM_SIZE 8192, MEM_WIDTH 32, MEM_ECC NONE, MASTER_TYPE OTHER, READ_LATENCY 1" *)
@@ -181,9 +181,9 @@ output wire [12 : 0] addrb_2;
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTB_2 CLK" *)
 output wire clkb_2;
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTB_2 DIN" *)
-output wire [7 : 0] dinb_2;
+output wire [31 : 0] dinb_2;
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTB_2 DOUT" *)
-input wire [7 : 0] doutb_2;
+input wire [31 : 0] doutb_2;
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTB_2 EN" *)
 output wire enb_2;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME BRAM_PORTB_2, MEM_SIZE 8192, MEM_WIDTH 32, MEM_ECC NONE, MASTER_TYPE OTHER, READ_LATENCY 1" *)
@@ -194,9 +194,9 @@ output wire [12 : 0] addra_3;
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA_3 CLK" *)
 output wire clka_3;
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA_3 DIN" *)
-output wire [7 : 0] dina_3;
+output wire [31 : 0] dina_3;
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA_3 DOUT" *)
-input wire [7 : 0] douta_3;
+input wire [31 : 0] douta_3;
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA_3 EN" *)
 output wire ena_3;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME BRAM_PORTA_3, MEM_SIZE 8192, MEM_WIDTH 32, MEM_ECC NONE, MASTER_TYPE OTHER, READ_LATENCY 1" *)
@@ -207,9 +207,9 @@ output wire [12 : 0] addrb_3;
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTB_3 CLK" *)
 output wire clkb_3;
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTB_3 DIN" *)
-output wire [7 : 0] dinb_3;
+output wire [31 : 0] dinb_3;
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTB_3 DOUT" *)
-input wire [7 : 0] doutb_3;
+input wire [31 : 0] doutb_3;
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTB_3 EN" *)
 output wire enb_3;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME BRAM_PORTB_3, MEM_SIZE 8192, MEM_WIDTH 32, MEM_ECC NONE, MASTER_TYPE OTHER, READ_LATENCY 1" *)
@@ -223,7 +223,7 @@ input wire [31 : 0] s_axis_data;
 output wire s_axis_ready;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis_DATA_IN TLAST" *)
 input wire s_axis_last;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axis_DATA_IN, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN Convolution_Controller_processing_system7_0_0_FCLK_CLK0, LAYERED_METADATA undef, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axis_DATA_IN, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.000, LAYERED_METADATA undef, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis_DATA_IN TKEEP" *)
 input wire [3 : 0] s_axis_keep;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis_DATA_OUT TVALID" *)
@@ -234,7 +234,7 @@ output wire [31 : 0] m_axis_data;
 input wire m_axis_ready;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis_DATA_OUT TLAST" *)
 output wire m_axis_last;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_axis_DATA_OUT, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN Convolution_Controller_processing_system7_0_0_FCLK_CLK0, LAYERED_METADATA undef, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_axis_DATA_OUT, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 100000000, PHASE 0.000, LAYERED_METADATA undef, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 m_axis_DATA_OUT TKEEP" *)
 output wire [3 : 0] m_axis_keep;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_CTRL AWADDR" *)
@@ -265,13 +265,12 @@ output wire s_axi_rvalid;
 output wire s_axi_bvalid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_CTRL BREADY" *)
 input wire s_axi_bready;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axi_CTRL, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 10, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 0, HAS_BRESP 0, HAS_RRESP 0, SUPPORTS_NARROW_BURST 0, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN Convolution_Controller_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSE\
-R_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME s_axi_CTRL, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 10, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 0, HAS_BRESP 0, HAS_RRESP 0, SUPPORTS_NARROW_BURST 0, MAX_BURST_LENGTH 1, PHASE 0.000, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 s_axi_CTRL RLAST" *)
 output wire s_axi_rlast;
 
   Convolution_Controller #(
-    .DATA_WIDTH(8),
+    .DATA_WIDTH(32),
     .KERNEL_SIZE(3),
     .CTRL_REG_SIZE(96),
     .AXI_ADDR_WIDTH(10),
@@ -279,7 +278,8 @@ output wire s_axi_rlast;
     .STATE_MAC_ADDR_WIDTH(4),
     .FILTER_BASE(24),
     .DATA_BASE(60),
-    .BRAM_WIDTH(1800)
+    .BRAM_WIDTH(1800),
+    .AXI_BUS_WIDTH(32)
   ) inst (
     .axi_clk(axi_clk),
     .axi_reset_n(axi_reset_n),

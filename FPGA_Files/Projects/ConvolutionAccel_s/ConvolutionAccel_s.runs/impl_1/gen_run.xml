@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1612490340">
-  <File Type="OPT-HWDEF" Name="CPE_Wrapper.hwdef"/>
-  <File Type="ROUTE-BUS-SKEW" Name="CPE_Wrapper_bus_skew_routed.rpt"/>
-  <File Type="PA-DCP" Name="CPE_Wrapper.dcp"/>
+<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1612579709">
   <File Type="BITSTR-BMM" Name="CPE_Wrapper_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="CPE_Wrapper_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="CPE_Wrapper_timing_summary_init.rpt"/>
@@ -13,6 +10,7 @@
   <File Type="ROUTE-PWR-SUM" Name="CPE_Wrapper_power_summary_routed.pb"/>
   <File Type="REPORTS-TCL" Name="CPE_Wrapper_reports.tcl"/>
   <File Type="OPT-DRC" Name="CPE_Wrapper_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="CPE_Wrapper.hwdef"/>
   <File Type="PWROPT-DCP" Name="CPE_Wrapper_pwropt.dcp"/>
   <File Type="PWROPT-DRC" Name="CPE_Wrapper_drc_pwropted.rpt"/>
   <File Type="PWROPT-TIMING" Name="CPE_Wrapper_timing_summary_pwropted.rpt"/>
@@ -50,6 +48,7 @@
   <File Type="ROUTE-TIMING-RPX" Name="CPE_Wrapper_timing_summary_routed.rpx"/>
   <File Type="ROUTE-SIMILARITY" Name="CPE_Wrapper_incremental_reuse_routed.rpt"/>
   <File Type="ROUTE-CLK" Name="CPE_Wrapper_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="CPE_Wrapper_bus_skew_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW-PB" Name="CPE_Wrapper_bus_skew_routed.pb"/>
   <File Type="ROUTE-BUS-SKEW-RPX" Name="CPE_Wrapper_bus_skew_routed.rpx"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="CPE_Wrapper_postroute_physopt.dcp"/>
@@ -99,13 +98,6 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../../Sources/Adder/Wrappers/integer_adder_32.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PPRDIR/../../Sources/General/matrixAccelerator.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -129,6 +121,14 @@
     </File>
     <File Path="$PPRDIR/../../Sources/General/Convolution_Top_s.v">
       <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Sources/Adder/Wrappers/integer_adder_32.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -180,5 +180,9 @@
     <Step Id="write_bitstream"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="Convolution_Controller_processing_system7_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Convolution_Controller_xbar_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="Convolution_Controller_axi_dma_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Convolution_Controller_rst_ps7_0_100M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Convolution_Controller_xbar_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Convolution_Controller_Convolution_Controll_0_0"/>
 </GenRun>

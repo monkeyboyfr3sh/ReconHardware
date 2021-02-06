@@ -2,8 +2,8 @@
 `timescale `myTimeScale
 
 //Test stuff
-`define test_width 4
-`define test_height 4
+`define test_width 8
+`define test_height 8
 
 `define data_width 8
 `define addr_width 10
@@ -15,7 +15,7 @@ reg rand_test = 0;//Set test bench to use random variables
 
 reg    axi_clk;
 reg    axi_reset_n;
-wire [`data_width-1:0] cSum;
+wire [31:0] cSum;
 wire    cReady;
 wire [`kernel_size*`kernel_size*`data_width-1:0] MULTIPLIER_INPUT;   //Flat output for data set
 wire [`kernel_size*`kernel_size*`data_width-1:0] MULTIPLICAND_INPUT; //Flat output for filter set
@@ -363,7 +363,7 @@ for(i = 0;i<`kernel_size*`kernel_size;i=i+1)begin
     s_axi_awvalid = 1;
     s_axi_awaddr = (i*4)+24;
     s_axi_wvalid = 1;
-    if(i==0) s_axi_wdata = 1;
+    if(i==8) s_axi_wdata = 1;
     else s_axi_wdata = 0;
 //    s_axi_wdata = i;//Data going into filter
     curr_filterSet[i] = s_axi_wdata; //Also put the data in the test array
@@ -384,7 +384,7 @@ always#(`clkPeriod/2) axi_clk = ~axi_clk;
 //Begin data stream
 always @(posedge axi_clk)begin
     if(setup)begin
-        if(s_axis_last)begin
+        if(s_axis_last&&s_axis_ready)begin
             s_axis_valid = 0;
             m_axis_ready = 1;
         end
@@ -418,11 +418,11 @@ always @(posedge axi_clk)begin
         end
     end    
 end
-//integer tf;
-//always @(negedge m_axis_last)begin
-//    tf = $time;
-//    if(tf>0)begin
-//        $stop;
-//    end
-//end
+integer tf;
+always @(negedge m_axis_last)begin
+    tf = $time;
+    if(tf>0)begin
+        $stop;
+    end
+end
 endmodule

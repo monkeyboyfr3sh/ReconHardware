@@ -12,7 +12,7 @@ module matrixAccelerator
     parameter KERNEL_SIZE = 3,
     parameter REST_ADDR = KERNEL_SIZE*KERNEL_SIZE*KERNEL_SIZE*KERNEL_SIZE,
     parameter ADDR_WIDTH = $clog2(REST_ADDR),
-    parameter DOUBLE_DATA_WIDTH = 2*DATA_WIDTH
+    parameter AXI_BUS_WIDTH = 32
 )
 ( // Ports  
     Clk,Rst,
@@ -34,15 +34,13 @@ input   [KERNEL_SIZE*KERNEL_SIZE*DATA_WIDTH-1:0]   multiplicand_input;
 
 //Outputs
 output  reg finalReady;
-output  signed [DATA_WIDTH-1:0] finalAccumulate;
+output  signed [AXI_BUS_WIDTH-1:0] finalAccumulate;
+//assign finalAccumulate[AXI_BUS_WIDTH-1:DATA_WIDTH] = 0;
 
 //Internal Signals
-// wire [KERNEL_SIZE*KERNEL_SIZE*DOUBLE_DATA_WIDTH-1:0]    xbar_input;
-// wire [KERNEL_SIZE*KERNEL_SIZE*DOUBLE_DATA_WIDTH-1:0]    xbar_output;
 wire [KERNEL_SIZE*KERNEL_SIZE*DATA_WIDTH-1:0]    xbar_input;
 wire [KERNEL_SIZE*KERNEL_SIZE*DATA_WIDTH-1:0]    xbar_output;
 wire [KERNEL_SIZE*KERNEL_SIZE-1:0] mReady;
-// wire signed [DOUBLE_DATA_WIDTH-1:0] product_output [KERNEL_SIZE*KERNEL_SIZE-1:0];  // Bus for product outputs
 wire signed [DATA_WIDTH-1:0] product_output [KERNEL_SIZE*KERNEL_SIZE-1:0];  // Bus for product outputs
 
 always @(posedge Clk) begin
@@ -64,10 +62,19 @@ xbar2(
     .direct(direct)
 );
 
-integer_adder_32 
+// Wrapper
+//integer_adder_32 
+
+// No Wrapper
+param_int_adder
+#(
+    .DATA_WIDTH(DATA_WIDTH),
+    .NUM_INPUTS(KERNEL_SIZE*KERNEL_SIZE)
+)
+
 adder(
     .in_data(xbar_output),
-    .out_data(finalAccumulate)
+    .out_data(finalAccumulate[DATA_WIDTH-1:0])
 );
 
 // Making Xbar connections
@@ -78,7 +85,7 @@ generate
         assign xbar_input[n*DATA_WIDTH+:DATA_WIDTH] = product_output[n];
         // Instantiate a reconfig multiplier wrapper for this port
 
-//        // Wrapper
+        // Wrapper
 //        integer_multiplier_32
         
         // No wrapper

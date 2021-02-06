@@ -19,6 +19,15 @@ proc validate_PARAM_VALUE.AXI_ADDR_WIDTH { PARAM_VALUE.AXI_ADDR_WIDTH } {
 	return true
 }
 
+proc update_PARAM_VALUE.AXI_BUS_WIDTH { PARAM_VALUE.AXI_BUS_WIDTH } {
+	# Procedure called to update AXI_BUS_WIDTH when any of the dependent parameters in the arguments change
+}
+
+proc validate_PARAM_VALUE.AXI_BUS_WIDTH { PARAM_VALUE.AXI_BUS_WIDTH } {
+	# Procedure called to validate AXI_BUS_WIDTH
+	return true
+}
+
 proc update_PARAM_VALUE.BRAM_WIDTH { PARAM_VALUE.BRAM_WIDTH } {
 	# Procedure called to update BRAM_WIDTH when any of the dependent parameters in the arguments change
 }
@@ -135,5 +144,10 @@ proc update_MODELPARAM_VALUE.DATA_BASE { MODELPARAM_VALUE.DATA_BASE PARAM_VALUE.
 proc update_MODELPARAM_VALUE.BRAM_WIDTH { MODELPARAM_VALUE.BRAM_WIDTH PARAM_VALUE.BRAM_WIDTH } {
 	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
 	set_property value [get_property value ${PARAM_VALUE.BRAM_WIDTH}] ${MODELPARAM_VALUE.BRAM_WIDTH}
+}
+
+proc update_MODELPARAM_VALUE.AXI_BUS_WIDTH { MODELPARAM_VALUE.AXI_BUS_WIDTH PARAM_VALUE.AXI_BUS_WIDTH } {
+	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
+	set_property value [get_property value ${PARAM_VALUE.AXI_BUS_WIDTH}] ${MODELPARAM_VALUE.AXI_BUS_WIDTH}
 }
 

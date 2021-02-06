@@ -1,8 +1,6 @@
-`timescale 1ns / 1ps
-
 module CPE_Wrapper
 #(  // Parameters, these must also be set in the BD
-    parameter DATA_WIDTH = 8,
+    parameter DATA_WIDTH = 32,
     parameter KERNEL_SIZE = 3,
     parameter REST_ADDR = KERNEL_SIZE*KERNEL_SIZE,
     parameter ADDR_WIDTH = $clog2(REST_ADDR)
@@ -19,7 +17,7 @@ wire    [KERNEL_SIZE*KERNEL_SIZE*DATA_WIDTH-1:0]    multiplier_connector;
 wire    [KERNEL_SIZE*KERNEL_SIZE*DATA_WIDTH-1:0]    multiplicand_connector;
 
 // Adder signals
-wire    [2*DATA_WIDTH-1:0]  cSum;
+wire    [DATA_WIDTH-1:0]  cSum;
 
 //*******************************
 // Wrapper for the block diagram

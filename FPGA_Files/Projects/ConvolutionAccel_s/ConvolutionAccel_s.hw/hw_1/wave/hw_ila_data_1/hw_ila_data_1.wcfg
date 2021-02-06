@@ -9,13 +9,13 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="1043fs"></ZoomStartTime>
-      <ZoomEndTime time="1123fs"></ZoomEndTime>
-      <Cursor1Time time="1079fs"></Cursor1Time>
+      <ZoomStartTime time="1033fs"></ZoomStartTime>
+      <ZoomEndTime time="1050fs"></ZoomEndTime>
+      <Cursor1Time time="1035fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="602"></NameColumnWidth>
-      <ValueColumnWidth column_width="547"></ValueColumnWidth>
+      <ValueColumnWidth column_width="543"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="3" />
    <wave_markers>
@@ -23,7 +23,6 @@
    <wvobject fp_name="group193" type="group">
       <obj_property name="label">MM2S</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
       <wvobject fp_name="BD_Wrapper/Convolution_Controller_i/axi_dma_0_M_AXIS_MM2S_TDATA" type="array">
          <obj_property name="DisplayName">FullPathName</obj_property>
          <obj_property name="ElementShortName">BD_Wrapper/Convolution_Controller_i/axi_dma_0_M_AXIS_MM2S_TDATA[31:0]</obj_property>
@@ -71,93 +70,6 @@
          <obj_property name="label">Multiplier Out</obj_property>
          <obj_property name="DisplayName">label</obj_property>
          <obj_property name="isExpanded"></obj_property>
-         <wvobject fp_name="Convolution_Processor/genblk1[0].inputMulti/xbar_input" type="array">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">Convolution_Processor/genblk1[0].inputMulti/xbar_input[7:0]</obj_property>
-            <obj_property name="ObjectShortName">xbar_input[7:0]</obj_property>
-            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="Convolution_Processor/genblk1[1].inputMulti/xbar_input" type="array">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">Convolution_Processor/genblk1[1].inputMulti/xbar_input[7:0]</obj_property>
-            <obj_property name="ObjectShortName">xbar_input[7:0]</obj_property>
-            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="Convolution_Processor/genblk1[2].inputMulti/xbar_input" type="array">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">Convolution_Processor/genblk1[2].inputMulti/xbar_input[7:0]</obj_property>
-            <obj_property name="ObjectShortName">xbar_input[7:0]</obj_property>
-            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="Convolution_Processor/genblk1[3].inputMulti/xbar_input" type="array">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">Convolution_Processor/genblk1[3].inputMulti/xbar_input[7:0]</obj_property>
-            <obj_property name="ObjectShortName">xbar_input[7:0]</obj_property>
-            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="Convolution_Processor/genblk1[4].inputMulti/xbar_input" type="array">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">Convolution_Processor/genblk1[4].inputMulti/xbar_input[7:0]</obj_property>
-            <obj_property name="ObjectShortName">xbar_input[7:0]</obj_property>
-            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="Convolution_Processor/genblk1[5].inputMulti/xbar_input" type="array">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">Convolution_Processor/genblk1[5].inputMulti/xbar_input[7:0]</obj_property>
-            <obj_property name="ObjectShortName">xbar_input[7:0]</obj_property>
-            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="Convolution_Processor/genblk1[6].inputMulti/xbar_input" type="array">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">Convolution_Processor/genblk1[6].inputMulti/xbar_input[7:0]</obj_property>
-            <obj_property name="ObjectShortName">xbar_input[7:0]</obj_property>
-            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="Convolution_Processor/genblk1[7].inputMulti/xbar_input" type="array">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">Convolution_Processor/genblk1[7].inputMulti/xbar_input[7:0]</obj_property>
-            <obj_property name="ObjectShortName">xbar_input[7:0]</obj_property>
-            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="Convolution_Processor/genblk1[8].inputMulti/xbar_input" type="array">
-            <obj_property name="DisplayName">FullPathName</obj_property>
-            <obj_property name="ElementShortName">Convolution_Processor/genblk1[8].inputMulti/xbar_input[7:0]</obj_property>
-            <obj_property name="ObjectShortName">xbar_input[7:0]</obj_property>
-            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-      </wvobject>
-      <wvobject fp_name="cReady" type="logic">
-         <obj_property name="DisplayName">FullPathName</obj_property>
-         <obj_property name="ElementShortName">cReady</obj_property>
-         <obj_property name="ObjectShortName">cReady</obj_property>
-         <obj_property name="LABELRADIX">true</obj_property>
-         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-      </wvobject>
-      <wvobject fp_name="cSum" type="array">
-         <obj_property name="DisplayName">FullPathName</obj_property>
-         <obj_property name="ElementShortName">cSum[7:0]</obj_property>
-         <obj_property name="ObjectShortName">cSum[7:0]</obj_property>
-         <obj_property name="Radix">HEXRADIX</obj_property>
-         <obj_property name="LABELRADIX">true</obj_property>
-         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
       </wvobject>
    </wvobject>
    <wvobject fp_name="group192" type="group">
@@ -197,7 +109,7 @@
          <obj_property name="DisplayName">FullPathName</obj_property>
          <obj_property name="ElementShortName">BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TDATA[31:0]</obj_property>
          <obj_property name="ObjectShortName">Convolution_Controll_0_m_axis_DATA_OUT_TDATA[31:0]</obj_property>
-         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
          <obj_property name="LABELRADIX">true</obj_property>
          <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
       </wvobject>
