@@ -78,30 +78,23 @@
         <CompFileExtendedInfo CompFileName="Convolution_Controller.bd" FileRelPathName="ip/Convolution_Controller_processing_system7_0_0/Convolution_Controller_processing_system7_0_0.xci">
           <Proxy FileSetName="Convolution_Controller_processing_system7_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="Convolution_Controller.bd" FileRelPathName="ip/Convolution_Controller_xbar_0/Convolution_Controller_xbar_0.xci">
-          <Proxy FileSetName="Convolution_Controller_xbar_0"/>
+        <CompFileExtendedInfo CompFileName="Convolution_Controller.bd" FileRelPathName="ip/Convolution_Controller_rst_ps7_0_100M_0/Convolution_Controller_rst_ps7_0_100M_0.xci">
+          <Proxy FileSetName="Convolution_Controller_rst_ps7_0_100M_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="Convolution_Controller.bd" FileRelPathName="ip/Convolution_Controller_axi_dma_0_0/Convolution_Controller_axi_dma_0_0.xci">
           <Proxy FileSetName="Convolution_Controller_axi_dma_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="Convolution_Controller.bd" FileRelPathName="ip/Convolution_Controller_rst_ps7_0_100M_0/Convolution_Controller_rst_ps7_0_100M_0.xci">
-          <Proxy FileSetName="Convolution_Controller_rst_ps7_0_100M_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="Convolution_Controller.bd" FileRelPathName="ip/Convolution_Controller_Convolution_Controll_0_0/Convolution_Controller_Convolution_Controll_0_0.xci">
-          <Proxy FileSetName="Convolution_Controller_Convolution_Controll_0_0"/>
+        <CompFileExtendedInfo CompFileName="Convolution_Controller.bd" FileRelPathName="ip/Convolution_Controller_xbar_0/Convolution_Controller_xbar_0.xci">
+          <Proxy FileSetName="Convolution_Controller_xbar_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="Convolution_Controller.bd" FileRelPathName="ip/Convolution_Controller_xbar_1/Convolution_Controller_xbar_1.xci">
           <Proxy FileSetName="Convolution_Controller_xbar_1"/>
         </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="Convolution_Controller.bd" FileRelPathName="ip/Convolution_Controller_Convolution_Controll_0_0/Convolution_Controller_Convolution_Controll_0_0.xci">
+          <Proxy FileSetName="Convolution_Controller_Convolution_Controll_0_0"/>
+        </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/Convolution_Controller/hdl/Convolution_Controller_wrapper.v">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../Sources/General/XBar2.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -145,6 +138,14 @@
         </FileInfo>
       </File>
       <File Path="$PPRDIR/../../Sources/Multiplier/Wrappers/integer_multiplier_32.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../Sources/General/XBar2.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -312,7 +313,9 @@
     </Run>
     <Run Id="Convolution_Controller_Convolution_Controll_0_0_synth_1" Type="Ft3:Synth" SrcSet="Convolution_Controller_Convolution_Controll_0_0" Part="xc7z020clg400-1" ConstrsSet="Convolution_Controller_Convolution_Controll_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/Convolution_Controller_Convolution_Controll_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -425,7 +428,9 @@
     </Run>
     <Run Id="Convolution_Controller_Convolution_Controll_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="Convolution_Controller_Convolution_Controll_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="Convolution_Controller_Convolution_Controll_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

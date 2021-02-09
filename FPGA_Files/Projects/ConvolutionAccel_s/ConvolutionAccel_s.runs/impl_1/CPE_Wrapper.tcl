@@ -114,6 +114,7 @@ proc step_failed { step } {
   close $ch
 }
 
+set_msg_config -id {HDL-1065} -limit 10000
 set_msg_config  -id {VRFC 10-2989}  -string {{ERROR: [VRFC 10-2989] 'break' is not declared [C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/Sources/Adder/adderFloat.v:60]}}  -suppress 
 set_msg_config  -id {XSIM 43-3322}  -string {{ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.}}  -suppress 
 set_msg_config  -id {Netlist 29-160}  -suppress 
@@ -124,9 +125,7 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param tcl.collectionResultDisplayLimit 0
   set_param chipscope.maxJobs 2
-  set_param xicom.use_bs_reader 1
   set_param ced.repoPaths C:/Users/monke/AppData/Roaming/Xilinx/Vivado/2020.1/xhub/ced_store/Vivado_example_project
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7z020clg400-1

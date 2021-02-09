@@ -5,7 +5,7 @@ module param_int_adder
 )
 (
     input [NUM_INPUTS*DATA_WIDTH-1:0] in_data, 
-    output reg signed [DATA_WIDTH:0] out_data
+    output reg signed [31:0] out_data
 );
 
 integer i;

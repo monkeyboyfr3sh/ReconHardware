@@ -17,8 +17,8 @@ reg    axi_clk;
 reg    axi_reset_n;
 wire [31:0] cSum;
 wire    cReady;
-wire [`kernel_size*`kernel_size*`data_width-1:0] MULTIPLIER_INPUT;   //Flat output for data set
-wire [`kernel_size*`kernel_size*`data_width-1:0] MULTIPLICAND_INPUT; //Flat output for filter set
+wire [`kernel_size*`kernel_size*32-1:0] MULTIPLIER_INPUT;   //Flat output for data set
+wire [`kernel_size*`kernel_size*32-1:0] MULTIPLICAND_INPUT; //Flat output for filter set
 wire [`kernel_size*`kernel_size-1:0] MULTIPLY_START;
 
 //AXI4-S slave i/f - Data stream port

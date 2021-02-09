@@ -174,7 +174,7 @@ proc create_root_design { parentCell } {
   set Convolution_Controll_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:Convolution_Controller:1.0 Convolution_Controll_0 ]
   set_property -dict [ list \
    CONFIG.BRAM_WIDTH {1800} \
-   CONFIG.DATA_WIDTH {32} \
+   CONFIG.DATA_WIDTH {8} \
  ] $Convolution_Controll_0
 
   # Create instance: Convolution_Controll_0_bram, and set properties

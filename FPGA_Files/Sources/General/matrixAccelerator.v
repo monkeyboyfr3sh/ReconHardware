@@ -29,13 +29,12 @@ module matrixAccelerator
 input   Clk,Rst,direct;
 input   [KERNEL_SIZE*KERNEL_SIZE-1:0]  mStart;
 input   [ADDR_WIDTH-1:0] AddressSelect;
-input   [KERNEL_SIZE*KERNEL_SIZE*DATA_WIDTH-1:0]   multiplier_input;
-input   [KERNEL_SIZE*KERNEL_SIZE*DATA_WIDTH-1:0]   multiplicand_input;
+input   [KERNEL_SIZE*KERNEL_SIZE*AXI_BUS_WIDTH-1:0]   multiplier_input;
+input   [KERNEL_SIZE*KERNEL_SIZE*AXI_BUS_WIDTH-1:0]   multiplicand_input;
 
 //Outputs
 output  reg finalReady;
 output  signed [AXI_BUS_WIDTH-1:0] finalAccumulate;
-//assign finalAccumulate[AXI_BUS_WIDTH-1:DATA_WIDTH] = 0;
 
 //Internal Signals
 wire [KERNEL_SIZE*KERNEL_SIZE*DATA_WIDTH-1:0]    xbar_input;
@@ -47,25 +46,21 @@ always @(posedge Clk) begin
     finalReady = & mReady; 
 end
 
-XBar2 
-#(
-    .DATA_WIDTH(DATA_WIDTH),
-    .IP_COUNT(KERNEL_SIZE*KERNEL_SIZE),
-    .OP_COUNT(KERNEL_SIZE*KERNEL_SIZE)
-)
-xbar2(
-    .Clk(Clk),
-    .Rst(Rst),
-    .flatInputPort(xbar_input),
-    .flatOutputPort(xbar_output),
-    .AddressSelect(AddressSelect),
-    .direct(direct)
-);
+//XBar2 
+//#(
+//    .DATA_WIDTH(DATA_WIDTH),
+//    .IP_COUNT(KERNEL_SIZE*KERNEL_SIZE),
+//    .OP_COUNT(KERNEL_SIZE*KERNEL_SIZE)
+//)
+//xbar2(
+//    .Clk(Clk),
+//    .Rst(Rst),
+//    .flatInputPort(xbar_input),
+//    .flatOutputPort(xbar_output),
+//    .AddressSelect(AddressSelect),
+//    .direct(direct)
+//);
 
-// Wrapper
-//integer_adder_32 
-
-// No Wrapper
 param_int_adder
 #(
     .DATA_WIDTH(DATA_WIDTH),
@@ -73,22 +68,16 @@ param_int_adder
 )
 
 adder(
-    .in_data(xbar_output),
-    .out_data(finalAccumulate[DATA_WIDTH-1:0])
+    .in_data(xbar_input),   // Skipping xbar, wiring output into adder
+    .out_data(finalAccumulate)
 );
 
 // Making Xbar connections
 generate
     genvar n;
     for(n=0;n<KERNEL_SIZE*KERNEL_SIZE;n=n+1)begin
-        // Attatch product outputs to xbar inputs
-        assign xbar_input[n*DATA_WIDTH+:DATA_WIDTH] = product_output[n];
-        // Instantiate a reconfig multiplier wrapper for this port
-
-        // Wrapper
-//        integer_multiplier_32
-        
-        // No wrapper
+    
+        // Assign  multiplier
         multiplyComputePynq 
         #(
             .DATA_WIDTH(DATA_WIDTH)
@@ -97,12 +86,15 @@ generate
         inputMulti (
             .clk(Clk),
             .reset(Rst),
-            .multiplier(multiplier_input[n*DATA_WIDTH+:DATA_WIDTH]),
-            .multiplicand(multiplicand_input[n*DATA_WIDTH+:DATA_WIDTH]),
+            .multiplier(multiplier_input[n*AXI_BUS_WIDTH+:DATA_WIDTH]),
+            .multiplicand(multiplicand_input[n*AXI_BUS_WIDTH+:DATA_WIDTH]),
             .start(mStart[n]),
             .product(product_output[n]),
             .ready(mReady[n])
         );
+        
+        // Attatch product outputs to xbar inputs
+        assign xbar_input[n*DATA_WIDTH+:DATA_WIDTH] = product_output[n];
     end
 endgenerate
     

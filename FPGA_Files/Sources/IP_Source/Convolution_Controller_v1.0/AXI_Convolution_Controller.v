@@ -22,8 +22,8 @@ module Convolution_Controller
     input    axi_reset_n,
     input [AXI_BUS_WIDTH-1:0] cSum,
     input    cReady,
-    output wire [KERNEL_SIZE*KERNEL_SIZE*DATA_WIDTH-1:0] MULTIPLIER_INPUT,   //Flat output for data set
-    output wire [KERNEL_SIZE*KERNEL_SIZE*DATA_WIDTH-1:0] MULTIPLICAND_INPUT, //Flat output for filter set
+    output wire [KERNEL_SIZE*KERNEL_SIZE*AXI_BUS_WIDTH-1:0] MULTIPLIER_INPUT,   //Flat output for data set
+    output wire [KERNEL_SIZE*KERNEL_SIZE*AXI_BUS_WIDTH-1:0] MULTIPLICAND_INPUT, //Flat output for filter set
     output reg [KERNEL_SIZE*KERNEL_SIZE-1:0] MULTIPLY_START,
     
     // BRAM Port - 1
@@ -319,11 +319,10 @@ end//End of block
 generate
 genvar MPi;
     for( MPi = 0; MPi < KERNEL_SIZE*KERNEL_SIZE ; MPi=MPi+1 )begin
-       assign MULTIPLIER_INPUT[MPi*DATA_WIDTH+:DATA_WIDTH] = MULTIPLY_START[MPi] ? dataSet[MPi] : 0;
-       assign MULTIPLICAND_INPUT[MPi*DATA_WIDTH+:DATA_WIDTH] = MULTIPLY_START[MPi] ? filterSet[MPi] : 0;
+       assign MULTIPLIER_INPUT[MPi*AXI_BUS_WIDTH+:AXI_BUS_WIDTH] = MULTIPLY_START[MPi] ? {0,dataSet[MPi]} : 0;
+       assign MULTIPLICAND_INPUT[MPi*AXI_BUS_WIDTH+:AXI_BUS_WIDTH] = MULTIPLY_START[MPi] ? {0,filterSet[MPi]} : 0;
     end
 endgenerate
-
 // Re
 always @(posedge axi_clk) begin
     
