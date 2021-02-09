@@ -7,6 +7,7 @@ module top(
 wire clk,rst_n;
 
 design_1_wrapper
+BD
 (
     .FCLK_CLK0_0(clk),
     .FCLK_RESET0_N_0(rst_n)
@@ -14,6 +15,7 @@ design_1_wrapper
 
 //shift_right
 shift_left
+shifter
 (
     .clk(clk),
     .reset_n(rst_n),

@@ -70,8 +70,8 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 2
 set_param ced.repoPaths C:/Users/monke/AppData/Roaming/Xilinx/Vivado/2020.1/xhub/ced_store/Vivado_example_project
-set_msg_config -id {Common 17-41} -limit 10000000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg400-1
 
@@ -90,9 +90,12 @@ set_property ip_output_repo c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
+add_files -quiet C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/shift_left_synth_1/shift_left.dcp
+set_property used_in_implementation false [get_files C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/shift_left_synth_1/shift_left.dcp]
+read_xdc hd_reconfig.xdc
+set_property used_in_implementation false [get_files hd_reconfig.xdc]
 read_verilog -library xil_defaultlib {
   C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
-  C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/new/shift_left.v
   C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/new/top.v
 }
 add_files C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/design_1.bd
