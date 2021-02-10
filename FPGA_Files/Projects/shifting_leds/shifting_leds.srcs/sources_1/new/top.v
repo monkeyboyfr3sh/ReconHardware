@@ -1,10 +1,13 @@
 `timescale 1ns / 1ps
 
 module top(
+//    input pr_trig_btn,
     output wire [3:0] led_n
 );
 
 wire clk,rst_n;
+wire [31:0] icap_o,icap_i;
+wire icap_csib,icap_rdwrb;
 
 design_1_wrapper
 BD
