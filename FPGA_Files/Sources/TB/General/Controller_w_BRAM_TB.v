@@ -2,8 +2,8 @@
 `timescale `myTimeScale
 
 //Test stuff
-`define test_width 8
-`define test_height 8
+`define test_width 1080
+`define test_height 120
 
 `define data_width 8
 `define addr_width 10
@@ -155,7 +155,7 @@ Convolution_Controller
 #(
     .DATA_WIDTH(`data_width),
     .KERNEL_SIZE(3),
-    .BRAM_WIDTH(1024)
+    .BRAM_WIDTH(1800)
 )
 UUT (//IP Ports
     .axi_clk(axi_clk),
@@ -363,7 +363,7 @@ for(i = 0;i<`kernel_size*`kernel_size;i=i+1)begin
     s_axi_awvalid = 1;
     s_axi_awaddr = (i*4)+24;
     s_axi_wvalid = 1;
-    if(i==8) s_axi_wdata = 1;
+    if(i==0) s_axi_wdata = 1;
     else s_axi_wdata = 0;
 //    s_axi_wdata = i;//Data going into filter
     curr_filterSet[i] = s_axi_wdata; //Also put the data in the test array
@@ -404,7 +404,7 @@ always @(posedge axi_clk)begin
                 
                 //Data on the
                 for(i = 0; i<(32/`data_width);i = i+1 )begin
-                    s_axis_data[i*`data_width+:`data_width] = (rand_test) ? ($urandom) % (`data_width-2) : columncnt+linecnt*`test_width;
+                    s_axis_data[i*`data_width+:`data_width] = (rand_test) ? ($urandom) % (`data_width-2) : (columncnt+linecnt*`test_width)%(2**`data_width);
                     columncnt = columncnt+1;
                 end
                 if(columncnt >= `test_width)begin
@@ -418,11 +418,37 @@ always @(posedge axi_clk)begin
         end
     end    
 end
+
+integer count = 0;
+integer pass_cnt = 0;
+always @(posedge cReady)begin
+    $display("cSum = %d ; count = %d ; %s",cSum,count%(2**`data_width),count%(2**`data_width)!=cSum?"FAIL":"PASS");
+    if(count%(2**`data_width)!=cSum)begin
+        $display("Bad output");
+        $finish;
+    end
+    else begin
+        pass_cnt = pass_cnt+1;
+    end
+    if((count%`test_width)==`test_width-3) begin
+        count = count + 3;    
+    end
+    else begin
+        count = count + 1;
+    end
+end
+
 integer tf;
+integer fake_trig_target = 1;
+integer fake_trig_count=0;
 always @(negedge m_axis_last)begin
     tf = $time;
     if(tf>0)begin
-        $stop;
+        if(fake_trig_count>=fake_trig_target)begin
+            $display("pass_cnt=%d",pass_cnt);
+            $stop;
+        end
+        fake_trig_count = fake_trig_count+1;
     end
 end
 endmodule

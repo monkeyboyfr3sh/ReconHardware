@@ -138,8 +138,8 @@ reg     [$clog2(BRAM_WIDTH)-1:0] current_x, current_y;
 
 // Giving control registers some names
 wire cStart;
-wire [DATA_WIDTH-1:0] image_width;
-wire [DATA_WIDTH-1:0] image_height;
+wire [31:0] image_width;
+wire [31:0] image_height;
 assign cStart = control_registers[0][0];
 assign image_width = control_registers[16];
 assign image_height = control_registers[20];

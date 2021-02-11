@@ -12,7 +12,7 @@ module bram_coupler
     // Controller interfaces
     input clk,
     input rst,
-    input wire [DATA_WIDTH-1:0] row_width,
+    input wire [31:0] row_width,
     input [BUS_WIDTH-1:0] data_in,
     input [ADDR_WIDTH-1:0] r_add,
     input wr_en,
