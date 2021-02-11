@@ -8,6 +8,7 @@
 
 module matrixAccelerator
 #( // Parameters
+    parameter DATA_TYPE = "INTEGER",
     parameter DATA_WIDTH = 32,
     parameter KERNEL_SIZE = 3,
     parameter REST_ADDR = KERNEL_SIZE*KERNEL_SIZE*KERNEL_SIZE*KERNEL_SIZE,
@@ -46,6 +47,7 @@ always @(posedge Clk) begin
     finalReady = & mReady; 
 end
 
+// XBar is not being used in design as of now
 //XBar2 
 //#(
 //    .DATA_WIDTH(DATA_WIDTH),
@@ -76,22 +78,41 @@ adder(
 generate
     genvar n;
     for(n=0;n<KERNEL_SIZE*KERNEL_SIZE;n=n+1)begin
-    
-        // Assign  multiplier
-        multiplyComputePynq 
-        #(
-            .DATA_WIDTH(DATA_WIDTH)
-        )
+        
+        if(DATA_TYPE=="INTEGER") begin
+            // Assign  multiplier
+            multiplyComputePynq 
+            #(
+                .DATA_WIDTH(DATA_WIDTH)
+            )
+            inputMulti (
+                .clk(Clk),
+                .reset(Rst),
+                .multiplier(multiplier_input[n*AXI_BUS_WIDTH+:DATA_WIDTH]),
+                .multiplicand(multiplicand_input[n*AXI_BUS_WIDTH+:DATA_WIDTH]),
+                .start(mStart[n]),
+                .product(product_output[n]),
+                .ready(mReady[n])
+            );
+        end
+        
+        else if(DATA_TYPE=="FIXED") begin
+            // Assign  multiplier
+            fixedmultiplyCompute
+            #(
+                .DATA_WIDTH(DATA_WIDTH)
+            )
+            inputMulti (
+                .clk(Clk),
+                .reset(Rst),
+                .multiplier(multiplier_input[n*AXI_BUS_WIDTH+:DATA_WIDTH]),
+                .multiplicand(multiplicand_input[n*AXI_BUS_WIDTH+:DATA_WIDTH]),
+                .start(mStart[n]),
+                .product(product_output[n]),
+                .ready(mReady[n])
+            );
+        end
 
-        inputMulti (
-            .clk(Clk),
-            .reset(Rst),
-            .multiplier(multiplier_input[n*AXI_BUS_WIDTH+:DATA_WIDTH]),
-            .multiplicand(multiplicand_input[n*AXI_BUS_WIDTH+:DATA_WIDTH]),
-            .start(mStart[n]),
-            .product(product_output[n]),
-            .ready(mReady[n])
-        );
         
         // Attatch product outputs to xbar inputs
         assign xbar_input[n*DATA_WIDTH+:DATA_WIDTH] = product_output[n];

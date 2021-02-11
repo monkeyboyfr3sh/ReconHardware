@@ -1,10 +1,10 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-// Date        : Mon Feb  8 21:40:03 2021
+// Date        : Wed Feb 10 21:06:56 2021
 // Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_Convolution_Controll_0_0/Convolution_Controller_Convolution_Controll_0_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top Convolution_Controller_Convolution_Controll_0_0 -prefix
+//               Convolution_Controller_Convolution_Controll_0_0_ Convolution_Controller_Convolution_Controll_0_0_stub.v
 // Design      : Convolution_Controller_Convolution_Controll_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg400-1

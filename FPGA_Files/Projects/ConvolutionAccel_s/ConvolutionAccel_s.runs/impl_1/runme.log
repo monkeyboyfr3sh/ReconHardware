@@ -32,8 +32,8 @@ INFO: [Project 1-454] Reading design checkpoint 'c:/GitHub/ReconHardware/FPGA_Fi
 INFO: [Project 1-454] Reading design checkpoint 'c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_auto_us_1/Convolution_Controller_auto_us_1.dcp' for cell 'BD_Wrapper/Convolution_Controller_i/axi_mem_intercon/s01_couplers/auto_us'
 INFO: [Project 1-454] Reading design checkpoint 'c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_xbar_1/Convolution_Controller_xbar_1.dcp' for cell 'BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph/xbar'
 INFO: [Project 1-454] Reading design checkpoint 'c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_auto_pc_0/Convolution_Controller_auto_pc_0.dcp' for cell 'BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph/s00_couplers/auto_pc'
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.295 . Memory (MB): peak = 1080.355 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 637 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.444 . Memory (MB): peak = 1080.570 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1812 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2020.1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -69,7 +69,7 @@ Finished Sourcing Tcl File [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_fifo/tcl/xpm
 Sourcing Tcl File [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'BD_Wrapper/Convolution_Controller_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst'
 Finished Sourcing Tcl File [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'BD_Wrapper/Convolution_Controller_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst'
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1080.355 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1084.598 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 5 instances were transformed.
   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 4 instances
@@ -77,7 +77,7 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 
 23 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
 link_design completed successfully
-link_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 1080.355 ; gain = 0.000
+link_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 1084.598 ; gain = 4.027
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
@@ -88,13 +88,13 @@ INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.736 . Memory (MB): peak = 1080.355 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.777 . Memory (MB): peak = 1102.695 ; gain = 18.098
 
 Starting Cache Timing Information Task
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Ending Cache Timing Information Task | Checksum: b61de0f8
+Ending Cache Timing Information Task | Checksum: 13c2bdbfd
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1623.129 ; gain = 542.773
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1654.781 ; gain = 552.086
 
 Starting Logic Optimization Task
 
@@ -105,52 +105,52 @@ INFO: [Chipscope 16-329] Generating Script for core instance : u_ila_0
 INFO: [IP_Flow 19-3806] Processing IP xilinx.com:ip:ila:6.2 for cell u_ila_0_CV.
 INFO: [Chipscope 16-469] Using cached IP synthesis design for IP xilinx.com:ip:xsdbm:3.0, cache-ID = 7cd4d2991bc3e62f.
 INFO: [Chipscope 16-469] Using cached IP synthesis design for IP xilinx.com:ip:ila:6.2, cache-ID = 55bd043c5940a934.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.070 . Memory (MB): peak = 1894.539 ; gain = 0.000
-Phase 1 Generate And Synthesize Debug Cores | Checksum: 9ecda4a4
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.080 . Memory (MB): peak = 1925.586 ; gain = 0.000
+Phase 1 Generate And Synthesize Debug Cores | Checksum: b8d3840f
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:21 . Memory (MB): peak = 1894.539 ; gain = 57.141
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:21 . Memory (MB): peak = 1925.586 ; gain = 65.785
 
 Phase 2 Retarget
 INFO: [Opt 31-138] Pushed 2 inverter(s) to 12 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 2 Retarget | Checksum: 1dc817260
+Phase 2 Retarget | Checksum: 14db85ce4
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:21 . Memory (MB): peak = 1894.539 ; gain = 57.141
-INFO: [Opt 31-389] Phase Retarget created 37 cells and removed 119 cells
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:22 . Memory (MB): peak = 1925.586 ; gain = 65.785
+INFO: [Opt 31-389] Phase Retarget created 13 cells and removed 94 cells
 INFO: [Opt 31-1021] In phase Retarget, 87 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 3 Constant propagation
 INFO: [Opt 31-138] Pushed 2 inverter(s) to 9 load pin(s).
-Phase 3 Constant propagation | Checksum: 16166c43a
+Phase 3 Constant propagation | Checksum: 149f17a78
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:22 . Memory (MB): peak = 1894.539 ; gain = 57.141
-INFO: [Opt 31-389] Phase Constant propagation created 260 cells and removed 935 cells
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:23 . Memory (MB): peak = 1925.586 ; gain = 65.785
+INFO: [Opt 31-389] Phase Constant propagation created 260 cells and removed 767 cells
 INFO: [Opt 31-1021] In phase Constant propagation, 71 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 4 Sweep
-Phase 4 Sweep | Checksum: 1a39217fc
+Phase 4 Sweep | Checksum: f81e5658
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:22 . Memory (MB): peak = 1894.539 ; gain = 57.141
-INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 767 cells
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:24 . Memory (MB): peak = 1925.586 ; gain = 65.785
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 671 cells
 INFO: [Opt 31-1021] In phase Sweep, 1110 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 5 BUFG optimization
-Phase 5 BUFG optimization | Checksum: 1a39217fc
+Phase 5 BUFG optimization | Checksum: f81e5658
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:23 . Memory (MB): peak = 1894.539 ; gain = 57.141
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:24 . Memory (MB): peak = 1925.586 ; gain = 65.785
 INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
 
 Phase 6 Shift Register Optimization
 INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
-Phase 6 Shift Register Optimization | Checksum: 1a39217fc
+Phase 6 Shift Register Optimization | Checksum: f81e5658
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:23 . Memory (MB): peak = 1894.539 ; gain = 57.141
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:25 . Memory (MB): peak = 1925.586 ; gain = 65.785
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Phase 7 Post Processing Netlist
-Phase 7 Post Processing Netlist | Checksum: 1a39217fc
+Phase 7 Post Processing Netlist | Checksum: f81e5658
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:23 . Memory (MB): peak = 1894.539 ; gain = 57.141
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:25 . Memory (MB): peak = 1925.586 ; gain = 65.785
 INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
 INFO: [Opt 31-1021] In phase Post Processing Netlist, 90 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 Opt_design Change Summary
@@ -160,9 +160,9 @@ Opt_design Change Summary
 -------------------------------------------------------------------------------------------------------------------------
 |  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
 -------------------------------------------------------------------------------------------------------------------------
-|  Retarget                     |              37  |             119  |                                             87  |
-|  Constant propagation         |             260  |             935  |                                             71  |
-|  Sweep                        |               0  |             767  |                                           1110  |
+|  Retarget                     |              13  |              94  |                                             87  |
+|  Constant propagation         |             260  |             767  |                                             71  |
+|  Sweep                        |               0  |             671  |                                           1110  |
 |  BUFG optimization            |               0  |               0  |                                              0  |
 |  Shift Register Optimization  |               0  |               0  |                                              0  |
 |  Post Processing Netlist      |               0  |               0  |                                             90  |
@@ -172,16 +172,16 @@ Opt_design Change Summary
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 1894.539 ; gain = 0.000
-Ending Logic Optimization Task | Checksum: 137a7b104
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.052 . Memory (MB): peak = 1925.586 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 40b24f35
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:23 . Memory (MB): peak = 1894.539 ; gain = 57.141
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:26 . Memory (MB): peak = 1925.586 ; gain = 65.785
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
-INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Pwropt 34-9] Applying IDT optimizations ...
 INFO: [Pwropt 34-10] Applying ODC optimizations ...
+INFO: [Timing 38-35] Done setting XDC timing constraints.
 Running Vector-less Activity Propagation...
 
 Finished Running Vector-less Activity Propagation
@@ -191,27 +191,27 @@ Starting PowerOpt Patch Enables Task
 INFO: [Pwropt 34-162] WRITE_MODE attribute of 6 BRAM(s) out of a total of 13 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
 INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
 Number of BRAM Ports augmented: 9 newly gated: 0 Total Ports: 26
-Ending PowerOpt Patch Enables Task | Checksum: ca6c106a
+Ending PowerOpt Patch Enables Task | Checksum: a5e7b297
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.098 . Memory (MB): peak = 2044.324 ; gain = 0.000
-Ending Power Optimization Task | Checksum: ca6c106a
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.126 . Memory (MB): peak = 2129.105 ; gain = 0.000
+Ending Power Optimization Task | Checksum: a5e7b297
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2044.324 ; gain = 149.785
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:04 . Memory (MB): peak = 2129.105 ; gain = 203.520
 
 Starting Final Cleanup Task
-Ending Final Cleanup Task | Checksum: ca6c106a
+Ending Final Cleanup Task | Checksum: a5e7b297
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2044.324 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2129.105 ; gain = 0.000
 
 Starting Netlist Obfuscation Task
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.016 . Memory (MB): peak = 2044.324 ; gain = 0.000
-Ending Netlist Obfuscation Task | Checksum: 14b16304c
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 2129.105 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 253dd2fd
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.016 . Memory (MB): peak = 2044.324 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 2129.105 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
 61 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:35 . Memory (MB): peak = 2044.324 ; gain = 963.969
+opt_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:39 . Memory (MB): peak = 2129.105 ; gain = 1044.508
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Timing 38-480] Writing timing data to binary archive.
 INFO: [Common 17-1381] The checkpoint 'C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/impl_1/CPE_Wrapper_opt.dcp' has been generated.
@@ -239,43 +239,43 @@ INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 
 Phase 1 Placer Initialization
 
 Phase 1.1 Placer Initialization Netlist Sorting
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2044.324 ; gain = 0.000
-Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 71c2c28f
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2129.105 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 04941aff
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 2044.324 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 2044.324 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 2129.105 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2129.105 ; gain = 0.000
 
 Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
-Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: a81df5a1
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 101fba778
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.910 . Memory (MB): peak = 2044.324 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2129.105 ; gain = 0.000
 
 Phase 1.3 Build Placer Netlist Model
-Phase 1.3 Build Placer Netlist Model | Checksum: 183e7a142
+Phase 1.3 Build Placer Netlist Model | Checksum: 14f8501f2
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2044.324 ; gain = 0.000
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 2129.105 ; gain = 0.000
 
 Phase 1.4 Constrain Clocks/Macros
-Phase 1.4 Constrain Clocks/Macros | Checksum: 183e7a142
+Phase 1.4 Constrain Clocks/Macros | Checksum: 14f8501f2
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2044.324 ; gain = 0.000
-Phase 1 Placer Initialization | Checksum: 183e7a142
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 2129.105 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 14f8501f2
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2044.324 ; gain = 0.000
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 2129.105 ; gain = 0.000
 
 Phase 2 Global Placement
 
 Phase 2.1 Floorplanning
-Phase 2.1 Floorplanning | Checksum: c24bf2a2
+Phase 2.1 Floorplanning | Checksum: 15b161aab
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 2044.324 ; gain = 0.000
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 2129.105 ; gain = 0.000
 
 Phase 2.2 Global Placement Core
 
 Phase 2.2.1 Physical Synthesis In Placer
-INFO: [Physopt 32-1035] Found 0 LUTNM shape to break, 582 LUT instances to create LUTNM shape
-INFO: [Physopt 32-1044] Break lutnm for timing: one critical 0, two critical 0, total 0, new lutff created 0
-INFO: [Physopt 32-775] End 1 Pass. Optimized 223 nets or cells. Created 0 new cell, deleted 223 existing cells and moved 0 existing cell
+INFO: [Physopt 32-1035] Found 1336 LUTNM shape to break, 585 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1044] Break lutnm for timing: one critical 85, two critical 1251, total 1100, new lutff created 0
+INFO: [Physopt 32-775] End 1 Pass. Optimized 1322 nets or cells. Created 1100 new cells, deleted 222 existing cells and moved 0 existing cell
 INFO: [Physopt 32-65] No nets found for high-fanout optimization.
 INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
@@ -291,7 +291,7 @@ INFO: [Physopt 32-846] No candidate cells for URAM register optimization found i
 INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
 INFO: [Physopt 32-949] No candidate nets found for HD net replication
 INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2044.324 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2129.105 ; gain = 0.000
 
 Summary of Physical Synthesis Optimizations
 ============================================
@@ -300,7 +300,7 @@ Summary of Physical Synthesis Optimizations
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 |  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
-|  LUT Combining                                    |            0  |            223  |                   223  |           0  |           1  |  00:00:00  |
+|  LUT Combining                                    |         1100  |            222  |                  1322  |           0  |           1  |  00:00:01  |
 |  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  DSP Register                                     |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
@@ -308,69 +308,69 @@ Summary of Physical Synthesis Optimizations
 |  BRAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  URAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
 |  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
-|  Total                                            |            0  |            223  |                   223  |           0  |           8  |  00:00:00  |
+|  Total                                            |         1100  |            222  |                  1322  |           0  |           8  |  00:00:01  |
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-Phase 2.2.1 Physical Synthesis In Placer | Checksum: 1635d0023
+Phase 2.2.1 Physical Synthesis In Placer | Checksum: f0383553
 
-Time (s): cpu = 00:00:17 ; elapsed = 00:00:10 . Memory (MB): peak = 2044.324 ; gain = 0.000
-Phase 2.2 Global Placement Core | Checksum: 149f6c7aa
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:26 . Memory (MB): peak = 2129.105 ; gain = 0.000
+Phase 2.2 Global Placement Core | Checksum: fe047702
 
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:10 . Memory (MB): peak = 2044.324 ; gain = 0.000
-Phase 2 Global Placement | Checksum: 149f6c7aa
+Time (s): cpu = 00:00:47 ; elapsed = 00:00:27 . Memory (MB): peak = 2129.105 ; gain = 0.000
+Phase 2 Global Placement | Checksum: fe047702
 
-Time (s): cpu = 00:00:18 ; elapsed = 00:00:11 . Memory (MB): peak = 2044.324 ; gain = 0.000
+Time (s): cpu = 00:00:47 ; elapsed = 00:00:27 . Memory (MB): peak = 2129.105 ; gain = 0.000
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: 1ad40d4b5
+Phase 3.1 Commit Multi Column Macros | Checksum: a789cd5a
 
-Time (s): cpu = 00:00:19 ; elapsed = 00:00:11 . Memory (MB): peak = 2044.324 ; gain = 0.000
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:28 . Memory (MB): peak = 2129.105 ; gain = 0.000
 
 Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 10b29b500
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1d85ab8a1
 
-Time (s): cpu = 00:00:21 ; elapsed = 00:00:12 . Memory (MB): peak = 2044.324 ; gain = 0.000
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:32 . Memory (MB): peak = 2129.105 ; gain = 0.000
 
 Phase 3.3 Area Swap Optimization
-Phase 3.3 Area Swap Optimization | Checksum: 11249bebc
+Phase 3.3 Area Swap Optimization | Checksum: 138f4903e
 
-Time (s): cpu = 00:00:21 ; elapsed = 00:00:13 . Memory (MB): peak = 2044.324 ; gain = 0.000
+Time (s): cpu = 00:00:56 ; elapsed = 00:00:32 . Memory (MB): peak = 2129.105 ; gain = 0.000
 
 Phase 3.4 Pipeline Register Optimization
-Phase 3.4 Pipeline Register Optimization | Checksum: 17bf24d7b
+Phase 3.4 Pipeline Register Optimization | Checksum: f3f160e9
 
-Time (s): cpu = 00:00:21 ; elapsed = 00:00:13 . Memory (MB): peak = 2044.324 ; gain = 0.000
+Time (s): cpu = 00:00:56 ; elapsed = 00:00:32 . Memory (MB): peak = 2129.105 ; gain = 0.000
 
 Phase 3.5 Fast Optimization
-Phase 3.5 Fast Optimization | Checksum: 118f2c314
+Phase 3.5 Fast Optimization | Checksum: f7321bed
 
-Time (s): cpu = 00:00:24 ; elapsed = 00:00:14 . Memory (MB): peak = 2044.324 ; gain = 0.000
+Time (s): cpu = 00:01:04 ; elapsed = 00:00:39 . Memory (MB): peak = 2129.105 ; gain = 0.000
 
 Phase 3.6 Small Shape Detail Placement
-Phase 3.6 Small Shape Detail Placement | Checksum: 17f5146c5
+Phase 3.6 Small Shape Detail Placement | Checksum: e6dc6e28
 
-Time (s): cpu = 00:00:28 ; elapsed = 00:00:18 . Memory (MB): peak = 2044.324 ; gain = 0.000
+Time (s): cpu = 00:01:19 ; elapsed = 00:00:54 . Memory (MB): peak = 2129.105 ; gain = 0.000
 
 Phase 3.7 Re-assign LUT pins
-Phase 3.7 Re-assign LUT pins | Checksum: 12f35cb55
+Phase 3.7 Re-assign LUT pins | Checksum: ba7c6176
 
-Time (s): cpu = 00:00:29 ; elapsed = 00:00:19 . Memory (MB): peak = 2044.324 ; gain = 0.000
+Time (s): cpu = 00:01:20 ; elapsed = 00:00:55 . Memory (MB): peak = 2129.105 ; gain = 0.000
 
 Phase 3.8 Pipeline Register Optimization
-Phase 3.8 Pipeline Register Optimization | Checksum: 978e5bdf
+Phase 3.8 Pipeline Register Optimization | Checksum: 1421c7dc2
 
-Time (s): cpu = 00:00:29 ; elapsed = 00:00:19 . Memory (MB): peak = 2044.324 ; gain = 0.000
+Time (s): cpu = 00:01:21 ; elapsed = 00:00:55 . Memory (MB): peak = 2129.105 ; gain = 0.000
 
 Phase 3.9 Fast Optimization
-Phase 3.9 Fast Optimization | Checksum: 2080da963
+Phase 3.9 Fast Optimization | Checksum: 1145c8cbc
 
-Time (s): cpu = 00:00:32 ; elapsed = 00:00:21 . Memory (MB): peak = 2044.324 ; gain = 0.000
-Phase 3 Detail Placement | Checksum: 2080da963
+Time (s): cpu = 00:01:33 ; elapsed = 00:01:06 . Memory (MB): peak = 2129.105 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 1145c8cbc
 
-Time (s): cpu = 00:00:32 ; elapsed = 00:00:21 . Memory (MB): peak = 2044.324 ; gain = 0.000
+Time (s): cpu = 00:01:33 ; elapsed = 00:01:06 . Memory (MB): peak = 2129.105 ; gain = 0.000
 
 Phase 4 Post Placement Optimization and Clean-Up
 
@@ -378,7 +378,7 @@ Phase 4.1 Post Commit Optimization
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 
 Phase 4.1.1 Post Placement Optimization
-Post Placement Optimization Initialization | Checksum: 19869f5b6
+Post Placement Optimization Initialization | Checksum: 1d7510e78
 
 Phase 4.1.1.1 BUFG Insertion
 
@@ -386,81 +386,944 @@ Starting Physical Synthesis Task
 
 Phase 1 Physical Synthesis Initialization
 INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
-INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.897 | TNS=-24.040 |
-Phase 1 Physical Synthesis Initialization | Checksum: 1dac7b928
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.978 | TNS=-782.909 |
+Phase 1 Physical Synthesis Initialization | Checksum: 13373166f
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.448 . Memory (MB): peak = 2044.324 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.704 . Memory (MB): peak = 2129.105 ; gain = 0.000
 INFO: [Place 46-33] Processed net BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/control_registers[4][31]_i_1_n_0, BUFG insertion was skipped due to placement/routing conflicts.
 INFO: [Place 46-56] BUFG insertion identified 1 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 1, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
-Ending Physical Synthesis Task | Checksum: 23d5bab7e
+Ending Physical Synthesis Task | Checksum: 1c53f7cca
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.576 . Memory (MB): peak = 2044.324 ; gain = 0.000
-Phase 4.1.1.1 BUFG Insertion | Checksum: 19869f5b6
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.966 . Memory (MB): peak = 2129.105 ; gain = 0.000
+Phase 4.1.1.1 BUFG Insertion | Checksum: 1d7510e78
 
-Time (s): cpu = 00:00:36 ; elapsed = 00:00:24 . Memory (MB): peak = 2044.324 ; gain = 0.000
-INFO: [Place 30-746] Post Placement Timing Summary WNS=0.507. For the most accurate timing information please run report_timing.
-Phase 4.1.1 Post Placement Optimization | Checksum: 2173ef069
+Time (s): cpu = 00:01:41 ; elapsed = 00:01:11 . Memory (MB): peak = 2129.105 ; gain = 0.000
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-2.149. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 215df1033
 
-Time (s): cpu = 00:00:37 ; elapsed = 00:00:25 . Memory (MB): peak = 2044.324 ; gain = 0.000
-Phase 4.1 Post Commit Optimization | Checksum: 2173ef069
+Time (s): cpu = 00:02:14 ; elapsed = 00:01:42 . Memory (MB): peak = 2129.105 ; gain = 0.000
+Phase 4.1 Post Commit Optimization | Checksum: 215df1033
 
-Time (s): cpu = 00:00:37 ; elapsed = 00:00:25 . Memory (MB): peak = 2044.324 ; gain = 0.000
+Time (s): cpu = 00:02:14 ; elapsed = 00:01:43 . Memory (MB): peak = 2129.105 ; gain = 0.000
 
 Phase 4.2 Post Placement Cleanup
-Phase 4.2 Post Placement Cleanup | Checksum: 2173ef069
+Phase 4.2 Post Placement Cleanup | Checksum: 215df1033
 
-Time (s): cpu = 00:00:37 ; elapsed = 00:00:25 . Memory (MB): peak = 2044.324 ; gain = 0.000
+Time (s): cpu = 00:02:14 ; elapsed = 00:01:43 . Memory (MB): peak = 2129.105 ; gain = 0.000
 
 Phase 4.3 Placer Reporting
-Phase 4.3 Placer Reporting | Checksum: 2173ef069
+Phase 4.3 Placer Reporting | Checksum: 215df1033
 
-Time (s): cpu = 00:00:38 ; elapsed = 00:00:25 . Memory (MB): peak = 2044.324 ; gain = 0.000
+Time (s): cpu = 00:02:14 ; elapsed = 00:01:43 . Memory (MB): peak = 2129.105 ; gain = 0.000
 
 Phase 4.4 Final Placement Cleanup
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 2044.324 ; gain = 0.000
-Phase 4.4 Final Placement Cleanup | Checksum: 1f8a11b1d
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 2129.105 ; gain = 0.000
+Phase 4.4 Final Placement Cleanup | Checksum: 234eb3568
 
-Time (s): cpu = 00:00:38 ; elapsed = 00:00:25 . Memory (MB): peak = 2044.324 ; gain = 0.000
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1f8a11b1d
+Time (s): cpu = 00:02:14 ; elapsed = 00:01:43 . Memory (MB): peak = 2129.105 ; gain = 0.000
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 234eb3568
 
-Time (s): cpu = 00:00:38 ; elapsed = 00:00:25 . Memory (MB): peak = 2044.324 ; gain = 0.000
-Ending Placer Task | Checksum: 149ae25fe
+Time (s): cpu = 00:02:15 ; elapsed = 00:01:43 . Memory (MB): peak = 2129.105 ; gain = 0.000
+Ending Placer Task | Checksum: 1aa7d9c4f
 
-Time (s): cpu = 00:00:38 ; elapsed = 00:00:25 . Memory (MB): peak = 2044.324 ; gain = 0.000
+Time (s): cpu = 00:02:15 ; elapsed = 00:01:43 . Memory (MB): peak = 2129.105 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
 102 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:00:40 ; elapsed = 00:00:26 . Memory (MB): peak = 2044.324 ; gain = 0.000
+place_design: Time (s): cpu = 00:02:17 ; elapsed = 00:01:44 . Memory (MB): peak = 2129.105 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:03 ; elapsed = 00:00:00.853 . Memory (MB): peak = 2044.324 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:04 ; elapsed = 00:00:01 . Memory (MB): peak = 2129.105 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/impl_1/CPE_Wrapper_placed.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_io -file CPE_Wrapper_io_placed.rpt
-report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 2044.324 ; gain = 0.000
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 2129.105 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_utilization -file CPE_Wrapper_utilization_placed.rpt -pb CPE_Wrapper_utilization_placed.pb
 INFO: [runtcl-4] Executing : report_control_sets -verbose -file CPE_Wrapper_control_sets_placed.rpt
-report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.044 . Memory (MB): peak = 2044.324 ; gain = 0.000
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.048 . Memory (MB): peak = 2129.105 ; gain = 0.000
 Command: phys_opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
-INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.000 ns. Skipping all physical synthesis optimizations.
-INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 2129.105 ; gain = 0.000
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.149 | TNS=-596.294 |
+Phase 1 Physical Synthesis Initialization | Checksum: c1573cb0
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2129.105 ; gain = 0.000
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.149 | TNS=-596.294 |
+
+Phase 2 DSP Register Optimization
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Phase 2 DSP Register Optimization | Checksum: c1573cb0
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2129.105 ; gain = 0.000
+
+Phase 3 Critical Path Optimization
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.149 | TNS=-596.294 |
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[0].inputMulti/Q[29]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/Convolution_Controller_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[27]_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[23]_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[19]_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[15]_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[11]_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[7]_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[3]_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net Convolution_Processor/genblk1[0].inputMulti/big_product_reg[7]_i_11_0[1]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.141 | TNS=-586.487 |
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[5].inputMulti/Q[29]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[27]_i_1__4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[23]_i_1__4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[19]_i_1__4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[15]_i_1__4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[11]_i_1__4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[7]_i_1__4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[3]_i_1__4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product_reg[7]_i_11__4_0[1]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.133 | TNS=-577.047 |
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[2].inputMulti/Q[29]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[27]_i_1__1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[23]_i_1__1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[19]_i_1__1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[15]_i_1__1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[11]_i_1__1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[7]_i_1__1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[3]_i_1__1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net Convolution_Processor/genblk1[2].inputMulti/big_product_reg[7]_i_11__1_0[1]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.091 | TNS=-566.134 |
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[4].inputMulti/Q[29]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[27]_i_1__3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[23]_i_1__3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[19]_i_1__3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[15]_i_1__3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[11]_i_1__3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[7]_i_1__3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[3]_i_1__3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net Convolution_Processor/genblk1[4].inputMulti/big_product_reg[7]_i_11__3_0[1]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.089 | TNS=-561.258 |
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[3].inputMulti/Q[29]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[27]_i_1__2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[23]_i_1__2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[19]_i_1__2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[15]_i_1__2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[11]_i_1__2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[7]_i_1__2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[3]_i_1__2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net Convolution_Processor/genblk1[3].inputMulti/big_product_reg[7]_i_11__2_0[1]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.079 | TNS=-553.642 |
+INFO: [Physopt 32-735] Processed net Convolution_Processor/genblk1[4].inputMulti/big_product_reg[23]_i_12__3_0[3]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.067 | TNS=-553.354 |
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[3].inputMulti/big_product_reg[27]_i_12__2_0[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[3].inputMulti/big_product_reg[27]_i_17__2_0[1].  Did not re-place instance Convolution_Processor/genblk1[3].inputMulti/big_product[23]_i_4__2
+INFO: [Physopt 32-710] Processed net Convolution_Processor/genblk1[3].inputMulti/big_product_reg[27]_i_12__2_0[1]. Critical path length was reduced through logic transformation on cell Convolution_Processor/genblk1[3].inputMulti/big_product[23]_i_8__2_comp.
+INFO: [Physopt 32-735] Processed net Convolution_Processor/genblk1[3].inputMulti/big_product_reg[27]_i_17__2_0[1]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.063 | TNS=-553.016 |
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[6].inputMulti/Q[29]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[27]_i_1__5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[23]_i_1__5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[19]_i_1__5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[15]_i_1__5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[11]_i_1__5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[7]_i_1__5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[3]_i_1__5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net Convolution_Processor/genblk1[6].inputMulti/big_product_reg[7]_i_11__5_0[1]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.055 | TNS=-545.053 |
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[4].inputMulti/big_product_reg[23]_i_17__3_0[0].  Did not re-place instance Convolution_Processor/genblk1[4].inputMulti/big_product[19]_i_5__3
+INFO: [Physopt 32-572] Net Convolution_Processor/genblk1[4].inputMulti/big_product_reg[23]_i_17__3_0[0] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[4].inputMulti/big_product_reg[23]_i_17__3_0[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net Convolution_Processor/genblk1[4].inputMulti/big_product[19]_i_16__3_n_0.  Re-placed instance Convolution_Processor/genblk1[4].inputMulti/big_product[19]_i_16__3
+INFO: [Physopt 32-735] Processed net Convolution_Processor/genblk1[4].inputMulti/big_product[19]_i_16__3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.051 | TNS=-545.005 |
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[4].inputMulti/big_product_reg[19]_i_12__3_0[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[4].inputMulti/big_product_reg[19]_i_17__3_0[1].  Did not re-place instance Convolution_Processor/genblk1[4].inputMulti/big_product[15]_i_4__3
+INFO: [Physopt 32-572] Net Convolution_Processor/genblk1[4].inputMulti/big_product_reg[19]_i_17__3_0[1] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[4].inputMulti/big_product_reg[19]_i_17__3_0[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[4].inputMulti/big_product[15]_i_13__3_n_0.  Did not re-place instance Convolution_Processor/genblk1[4].inputMulti/big_product[15]_i_13__3
+INFO: [Physopt 32-134] Processed net Convolution_Processor/genblk1[4].inputMulti/big_product[15]_i_13__3_n_0. Rewiring did not optimize the net.
+INFO: [Physopt 32-572] Net Convolution_Processor/genblk1[4].inputMulti/big_product[15]_i_13__3_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-735] Processed net Convolution_Processor/genblk1[4].inputMulti/big_product[15]_i_13__3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.050 | TNS=-544.669 |
+INFO: [Physopt 32-735] Processed net Convolution_Processor/genblk1[3].inputMulti/big_product_reg[27]_i_12__2_0[3]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.049 | TNS=-544.541 |
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[4].inputMulti/big_product_reg[27]_i_17__3_0[0].  Did not re-place instance Convolution_Processor/genblk1[4].inputMulti/big_product[23]_i_5__3
+INFO: [Physopt 32-572] Net Convolution_Processor/genblk1[4].inputMulti/big_product_reg[27]_i_17__3_0[0] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[4].inputMulti/big_product_reg[27]_i_17__3_0[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[4].inputMulti/big_product[23]_i_16__3_n_0.  Did not re-place instance Convolution_Processor/genblk1[4].inputMulti/big_product[23]_i_16__3
+INFO: [Physopt 32-710] Processed net Convolution_Processor/genblk1[4].inputMulti/big_product_reg[27]_i_17__3_0[0]. Critical path length was reduced through logic transformation on cell Convolution_Processor/genblk1[4].inputMulti/big_product[23]_i_5__3_comp.
+INFO: [Physopt 32-735] Processed net Convolution_Processor/genblk1[4].inputMulti/big_product[23]_i_16__3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.044 | TNS=-544.501 |
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[4].inputMulti/big_product_reg[23]_i_12__3_0[2]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[4].inputMulti/big_product_reg[23]_i_17__3_0[2].  Did not re-place instance Convolution_Processor/genblk1[4].inputMulti/big_product[19]_i_3__3
+INFO: [Physopt 32-710] Processed net Convolution_Processor/genblk1[4].inputMulti/big_product_reg[23]_i_12__3_0[2]. Critical path length was reduced through logic transformation on cell Convolution_Processor/genblk1[4].inputMulti/big_product[19]_i_7__3_comp.
+INFO: [Physopt 32-735] Processed net Convolution_Processor/genblk1[4].inputMulti/big_product_reg[23]_i_17__3_0[2]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.034 | TNS=-543.709 |
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[3].inputMulti/big_product_reg[27]_i_12__2_0[2]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[3].inputMulti/big_product_reg[27]_i_17__2_0[2].  Did not re-place instance Convolution_Processor/genblk1[3].inputMulti/big_product[23]_i_3__2
+INFO: [Physopt 32-710] Processed net Convolution_Processor/genblk1[3].inputMulti/big_product_reg[27]_i_12__2_0[2]. Critical path length was reduced through logic transformation on cell Convolution_Processor/genblk1[3].inputMulti/big_product[23]_i_7__2_comp.
+INFO: [Physopt 32-735] Processed net Convolution_Processor/genblk1[3].inputMulti/big_product_reg[27]_i_17__2_0[2]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.034 | TNS=-543.337 |
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[6].inputMulti/i__i_4__43_0[2]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[6].inputMulti/big_product_reg[31]_i_12__5_0[2].  Did not re-place instance Convolution_Processor/genblk1[6].inputMulti/big_product[27]_i_3__5
+INFO: [Physopt 32-710] Processed net Convolution_Processor/genblk1[6].inputMulti/i__i_4__43_0[2]. Critical path length was reduced through logic transformation on cell Convolution_Processor/genblk1[6].inputMulti/big_product[27]_i_7__5_comp.
+INFO: [Physopt 32-735] Processed net Convolution_Processor/genblk1[6].inputMulti/big_product_reg[31]_i_12__5_0[2]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.027 | TNS=-542.929 |
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[7].inputMulti/Q[29]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[27]_i_1__6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[23]_i_1__6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[19]_i_1__6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[15]_i_1__6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[11]_i_1__6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[7]_i_1__6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[3]_i_1__6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net Convolution_Processor/genblk1[7].inputMulti/big_product_reg[7]_i_11__6_0[1]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.024 | TNS=-537.129 |
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[1].inputMulti/Q[29]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[27]_i_1__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[23]_i_1__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[19]_i_1__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[15]_i_1__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[11]_i_1__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[7]_i_1__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[3]_i_1__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net Convolution_Processor/genblk1[1].inputMulti/big_product_reg[7]_i_11__0_0[1]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.016 | TNS=-531.095 |
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product_reg[19]_i_12__4_0[2]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product_reg[19]_i_17__4_0[2].  Did not re-place instance Convolution_Processor/genblk1[5].inputMulti/big_product[15]_i_3__4
+INFO: [Physopt 32-572] Net Convolution_Processor/genblk1[5].inputMulti/big_product_reg[19]_i_17__4_0[2] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product_reg[19]_i_17__4_0[2]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product[15]_i_11__4_n_0.  Re-placed instance Convolution_Processor/genblk1[5].inputMulti/big_product[15]_i_11__4
+INFO: [Physopt 32-735] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product[15]_i_11__4_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-2.001 | TNS=-530.825 |
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product[15]_i_11__4_n_0.  Did not re-place instance Convolution_Processor/genblk1[5].inputMulti/big_product[15]_i_11__4
+INFO: [Physopt 32-134] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product[15]_i_11__4_n_0. Rewiring did not optimize the net.
+INFO: [Physopt 32-572] Net Convolution_Processor/genblk1[5].inputMulti/big_product[15]_i_11__4_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product[15]_i_11__4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product_reg[19]_i_17__4_n_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product_reg[15]_i_17__4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product[15]_i_42__4_n_0.  Did not re-place instance Convolution_Processor/genblk1[5].inputMulti/big_product[15]_i_42__4
+INFO: [Physopt 32-571] Net Convolution_Processor/genblk1[5].inputMulti/big_product[15]_i_42__4_n_0 was not replicated.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product[15]_i_42__4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product[15]_i_96__4_0[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[11]_i_49__4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product[11]_i_78__4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net BD_Wrapper/Convolution_Processor/genblk1[5].inputMulti/p_8_in[20].  Did not re-place instance BD_Wrapper/big_product[11]_i_98__4
+INFO: [Physopt 32-710] Processed net BD_Wrapper/big_product[11]_i_78__4_n_0. Critical path length was reduced through logic transformation on cell BD_Wrapper/big_product[11]_i_78__4_comp.
+INFO: [Physopt 32-735] Processed net BD_Wrapper/Convolution_Processor/genblk1[5].inputMulti/p_8_in[20]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.996 | TNS=-530.750 |
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product_reg[19]_i_14__4_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product_reg[15]_i_14__4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product[15]_i_27__4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product[15]_i_23__4_n_0.  Did not re-place instance Convolution_Processor/genblk1[5].inputMulti/big_product[15]_i_23__4
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product[15]_i_23__4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product[15]_i_64__4_0[3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[11]_i_42__4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net BD_Wrapper/big_product[11]_i_58__4_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.990 | TNS=-529.350 |
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[1].inputMulti/big_product_reg[23]_i_12__0_0[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[1].inputMulti/big_product_reg[23]_i_17__0_0[1].  Did not re-place instance Convolution_Processor/genblk1[1].inputMulti/big_product[19]_i_4__0
+INFO: [Physopt 32-710] Processed net Convolution_Processor/genblk1[1].inputMulti/big_product_reg[23]_i_12__0_0[1]. Critical path length was reduced through logic transformation on cell Convolution_Processor/genblk1[1].inputMulti/big_product[19]_i_8__0_comp.
+INFO: [Physopt 32-735] Processed net Convolution_Processor/genblk1[1].inputMulti/big_product_reg[23]_i_17__0_0[1]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.990 | TNS=-528.574 |
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[3].inputMulti/i__i_4__22_0[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[3].inputMulti/big_product_reg[31]_i_12__2_0[0].  Did not re-place instance Convolution_Processor/genblk1[3].inputMulti/big_product[27]_i_5__2
+INFO: [Physopt 32-572] Net Convolution_Processor/genblk1[3].inputMulti/big_product_reg[31]_i_12__2_0[0] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[3].inputMulti/big_product_reg[31]_i_12__2_0[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[3].inputMulti/big_product[27]_i_16__2_n_0.  Did not re-place instance Convolution_Processor/genblk1[3].inputMulti/big_product[27]_i_16__2
+INFO: [Physopt 32-134] Processed net Convolution_Processor/genblk1[3].inputMulti/big_product[27]_i_16__2_n_0. Rewiring did not optimize the net.
+INFO: [Physopt 32-572] Net Convolution_Processor/genblk1[3].inputMulti/big_product[27]_i_16__2_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-735] Processed net Convolution_Processor/genblk1[3].inputMulti/big_product[27]_i_16__2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.988 | TNS=-528.554 |
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[0].inputMulti/big_product_reg[19]_i_12_0[2]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[0].inputMulti/big_product_reg[19]_i_17_0[2].  Did not re-place instance Convolution_Processor/genblk1[0].inputMulti/big_product[15]_i_3
+INFO: [Physopt 32-572] Net Convolution_Processor/genblk1[0].inputMulti/big_product_reg[19]_i_17_0[2] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[0].inputMulti/big_product_reg[19]_i_17_0[2]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[0].inputMulti/big_product[15]_i_11_n_0.  Did not re-place instance Convolution_Processor/genblk1[0].inputMulti/big_product[15]_i_11
+INFO: [Physopt 32-134] Processed net Convolution_Processor/genblk1[0].inputMulti/big_product[15]_i_11_n_0. Rewiring did not optimize the net.
+INFO: [Physopt 32-572] Net Convolution_Processor/genblk1[0].inputMulti/big_product[15]_i_11_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[0].inputMulti/big_product[15]_i_11_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[0].inputMulti/big_product_reg[19]_i_17_n_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[0].inputMulti/big_product_reg[15]_i_17_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[0].inputMulti/big_product[15]_i_45_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[0].inputMulti/big_product[15]_i_41_n_0.  Did not re-place instance Convolution_Processor/genblk1[0].inputMulti/big_product[15]_i_41
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[0].inputMulti/big_product[15]_i_41_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product[15]_i_88_0[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[11]_i_48_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net BD_Wrapper/big_product[11]_i_73_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.985 | TNS=-527.218 |
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[3].inputMulti/big_product_reg[27]_i_12__2_0[3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[3].inputMulti/big_product_reg[27]_i_17__2_0[3].  Did not re-place instance Convolution_Processor/genblk1[3].inputMulti/big_product[23]_i_2__2
+INFO: [Physopt 32-710] Processed net Convolution_Processor/genblk1[3].inputMulti/big_product_reg[27]_i_12__2_0[3]. Critical path length was reduced through logic transformation on cell Convolution_Processor/genblk1[3].inputMulti/big_product[23]_i_6__2_comp.
+INFO: [Physopt 32-735] Processed net Convolution_Processor/genblk1[3].inputMulti/big_product_reg[27]_i_17__2_0[3]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.978 | TNS=-526.902 |
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[4].inputMulti/big_product_reg[23]_i_12__3_0[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[4].inputMulti/big_product_reg[23]_i_17__3_0[1].  Did not re-place instance Convolution_Processor/genblk1[4].inputMulti/big_product[19]_i_4__3
+INFO: [Physopt 32-572] Net Convolution_Processor/genblk1[4].inputMulti/big_product_reg[23]_i_17__3_0[1] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[4].inputMulti/big_product_reg[23]_i_17__3_0[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net Convolution_Processor/genblk1[4].inputMulti/big_product[19]_i_13__3_n_0.  Re-placed instance Convolution_Processor/genblk1[4].inputMulti/big_product[19]_i_13__3
+INFO: [Physopt 32-735] Processed net Convolution_Processor/genblk1[4].inputMulti/big_product[19]_i_13__3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.978 | TNS=-526.902 |
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[4].inputMulti/big_product[15]_i_13__3_n_0.  Did not re-place instance Convolution_Processor/genblk1[4].inputMulti/big_product[15]_i_13__3
+INFO: [Physopt 32-134] Processed net Convolution_Processor/genblk1[4].inputMulti/big_product[15]_i_13__3_n_0. Rewiring did not optimize the net.
+INFO: [Physopt 32-572] Net Convolution_Processor/genblk1[4].inputMulti/big_product[15]_i_13__3_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[4].inputMulti/big_product[15]_i_13__3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[4].inputMulti/big_product_reg[19]_i_14__3_n_7. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[4].inputMulti/big_product_reg[15]_i_14__3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[4].inputMulti/big_product[15]_i_26__3_n_0.  Did not re-place instance Convolution_Processor/genblk1[4].inputMulti/big_product[15]_i_26__3
+INFO: [Physopt 32-571] Net Convolution_Processor/genblk1[4].inputMulti/big_product[15]_i_26__3_n_0 was not replicated.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[4].inputMulti/big_product[15]_i_26__3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product[15]_i_72__3_0[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[11]_i_43__3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[4].inputMulti/bbstub_MULTIPLIER_INPUT[128]_5[0].  Did not re-place instance Convolution_Processor/genblk1[4].inputMulti/big_product[11]_i_60
+INFO: [Physopt 32-735] Processed net Convolution_Processor/genblk1[4].inputMulti/bbstub_MULTIPLIER_INPUT[128]_5[0]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.972 | TNS=-526.662 |
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[1].inputMulti/i__i_4__8_0[2]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[1].inputMulti/big_product_reg[31]_i_12__0_0[2].  Did not re-place instance Convolution_Processor/genblk1[1].inputMulti/big_product[27]_i_3__0
+INFO: [Physopt 32-710] Processed net Convolution_Processor/genblk1[1].inputMulti/i__i_4__8_0[2]. Critical path length was reduced through logic transformation on cell Convolution_Processor/genblk1[1].inputMulti/big_product[27]_i_7__0_comp.
+INFO: [Physopt 32-735] Processed net Convolution_Processor/genblk1[1].inputMulti/big_product_reg[31]_i_12__0_0[2]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.966 | TNS=-526.382 |
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[2].inputMulti/Q[31]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net Convolution_Processor/genblk1[2].inputMulti/i___9_0[1]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.963 | TNS=-526.287 |
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[4].inputMulti/big_product_reg[15]_i_12__3_0[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net BD_Wrapper/big_product_reg[15]_i_17__3[0].  Did not re-place instance BD_Wrapper/big_product[11]_i_4__3
+INFO: [Physopt 32-572] Net BD_Wrapper/big_product_reg[15]_i_17__3[0] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[15]_i_17__3[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net BD_Wrapper/big_product[11]_i_12__3_n_0.  Re-placed instance BD_Wrapper/big_product[11]_i_12__3
+INFO: [Physopt 32-735] Processed net BD_Wrapper/big_product[11]_i_12__3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.958 | TNS=-525.935 |
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[8].inputMulti/Q[29]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[27]_i_1__7_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[23]_i_1__7_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[19]_i_1__7_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[15]_i_1__7_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[11]_i_1__7_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[7]_i_1__7_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[3]_i_1__7_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net Convolution_Processor/genblk1[8].inputMulti/big_product_reg[7]_i_11__7_0[1]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.949 | TNS=-515.696 |
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[3].inputMulti/i__i_4__22_0[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[3].inputMulti/big_product_reg[31]_i_12__2_0[1].  Did not re-place instance Convolution_Processor/genblk1[3].inputMulti/big_product[27]_i_4__2
+INFO: [Physopt 32-710] Processed net Convolution_Processor/genblk1[3].inputMulti/i__i_4__22_0[1]. Critical path length was reduced through logic transformation on cell Convolution_Processor/genblk1[3].inputMulti/big_product[27]_i_8__2_comp.
+INFO: [Physopt 32-735] Processed net Convolution_Processor/genblk1[3].inputMulti/big_product_reg[31]_i_12__2_0[1]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.947 | TNS=-515.668 |
+INFO: [Physopt 32-662] Processed net BD_Wrapper/big_product[11]_i_12__3_n_0.  Did not re-place instance BD_Wrapper/big_product[11]_i_12__3
+INFO: [Physopt 32-134] Processed net BD_Wrapper/big_product[11]_i_12__3_n_0. Rewiring did not optimize the net.
+INFO: [Physopt 32-572] Net BD_Wrapper/big_product[11]_i_12__3_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product[11]_i_12__3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[4].inputMulti/big_product[15]_i_46__3_0[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[4].inputMulti/big_product_reg[11]_i_16__3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[4].inputMulti/big_product[11]_i_37__3_n_0.  Did not re-place instance Convolution_Processor/genblk1[4].inputMulti/big_product[11]_i_37__3
+INFO: [Physopt 32-571] Net Convolution_Processor/genblk1[4].inputMulti/big_product[11]_i_37__3_n_0 was not replicated.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[4].inputMulti/big_product[11]_i_37__3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product[11]_i_81__3_0[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/i__0_i_11__3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net BD_Wrapper/i__0_i_27__3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.942 | TNS=-514.996 |
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[3].inputMulti/big_product_reg[27]_i_17__2_0[2].  Did not re-place instance Convolution_Processor/genblk1[3].inputMulti/big_product[23]_i_3__2
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[3].inputMulti/big_product_reg[27]_i_17__2_0[2]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[3].inputMulti/big_product[23]_i_11__2_n_0.  Did not re-place instance Convolution_Processor/genblk1[3].inputMulti/big_product[23]_i_11__2
+INFO: [Physopt 32-134] Processed net Convolution_Processor/genblk1[3].inputMulti/big_product[23]_i_11__2_n_0. Rewiring did not optimize the net.
+INFO: [Physopt 32-572] Net Convolution_Processor/genblk1[3].inputMulti/big_product[23]_i_11__2_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-735] Processed net Convolution_Processor/genblk1[3].inputMulti/big_product[23]_i_11__2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.938 | TNS=-514.504 |
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product_reg[27]_i_17__4_0[1].  Did not re-place instance Convolution_Processor/genblk1[5].inputMulti/big_product[23]_i_4__4
+INFO: [Physopt 32-572] Net Convolution_Processor/genblk1[5].inputMulti/big_product_reg[27]_i_17__4_0[1] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product_reg[27]_i_17__4_0[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product[23]_i_13__4_n_0.  Re-placed instance Convolution_Processor/genblk1[5].inputMulti/big_product[23]_i_13__4
+INFO: [Physopt 32-735] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product[23]_i_13__4_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.938 | TNS=-514.452 |
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[7].inputMulti/big_product_reg[23]_i_12__6_0[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[7].inputMulti/big_product_reg[23]_i_17__6_0[1].  Did not re-place instance Convolution_Processor/genblk1[7].inputMulti/big_product[19]_i_4__6
+INFO: [Physopt 32-710] Processed net Convolution_Processor/genblk1[7].inputMulti/big_product_reg[23]_i_12__6_0[1]. Critical path length was reduced through logic transformation on cell Convolution_Processor/genblk1[7].inputMulti/big_product[19]_i_8__6_comp.
+INFO: [Physopt 32-735] Processed net Convolution_Processor/genblk1[7].inputMulti/big_product_reg[23]_i_17__6_0[1]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.932 | TNS=-513.952 |
+INFO: [Physopt 32-735] Processed net Convolution_Processor/genblk1[5].inputMulti/i__i_4__36_0[3]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.932 | TNS=-513.948 |
+INFO: [Physopt 32-735] Processed net Convolution_Processor/genblk1[2].inputMulti/i__i_4__15_0[3]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.932 | TNS=-513.904 |
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[6].inputMulti/big_product_reg[31]_i_12__5_0[2].  Did not re-place instance Convolution_Processor/genblk1[6].inputMulti/big_product[27]_i_3__5
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[6].inputMulti/big_product_reg[31]_i_12__5_0[2]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[6].inputMulti/big_product[27]_i_11__5_n_0.  Did not re-place instance Convolution_Processor/genblk1[6].inputMulti/big_product[27]_i_11__5
+INFO: [Physopt 32-134] Processed net Convolution_Processor/genblk1[6].inputMulti/big_product[27]_i_11__5_n_0. Rewiring did not optimize the net.
+INFO: [Physopt 32-572] Net Convolution_Processor/genblk1[6].inputMulti/big_product[27]_i_11__5_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[6].inputMulti/big_product[27]_i_11__5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[6].inputMulti/i__i_10__35_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[6].inputMulti/big_product_reg[27]_i_14__5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[6].inputMulti/big_product[27]_i_30__5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[6].inputMulti/big_product[27]_i_26__5_n_0.  Did not re-place instance Convolution_Processor/genblk1[6].inputMulti/big_product[27]_i_26__5
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[6].inputMulti/big_product[27]_i_26__5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product[27]_i_91__5_0[3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[23]_i_50__5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[19]_i_52__5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[15]_i_47__5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[11]_i_42__5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net BD_Wrapper/big_product[11]_i_58__5_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.931 | TNS=-513.676 |
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product_reg[27]_i_12__4_0[2]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product_reg[27]_i_17__4_0[2].  Did not re-place instance Convolution_Processor/genblk1[5].inputMulti/big_product[23]_i_3__4
+INFO: [Physopt 32-572] Net Convolution_Processor/genblk1[5].inputMulti/big_product_reg[27]_i_17__4_0[2] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product_reg[27]_i_17__4_0[2]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product[23]_i_11__4_n_0.  Did not re-place instance Convolution_Processor/genblk1[5].inputMulti/big_product[23]_i_11__4
+INFO: [Physopt 32-134] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product[23]_i_11__4_n_0. Rewiring did not optimize the net.
+INFO: [Physopt 32-572] Net Convolution_Processor/genblk1[5].inputMulti/big_product[23]_i_11__4_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product[23]_i_11__4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product_reg[27]_i_14__4_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product_reg[23]_i_14__4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product[23]_i_30__4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product[23]_i_26__4_n_0.  Did not re-place instance Convolution_Processor/genblk1[5].inputMulti/big_product[23]_i_26__4
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product[23]_i_26__4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product[23]_i_85__4_0[3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[19]_i_52__4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net BD_Wrapper/big_product[19]_i_79__4_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.921 | TNS=-513.564 |
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[2].inputMulti/big_product_reg[23]_i_12__1_0[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[2].inputMulti/big_product_reg[23]_i_17__1_0[1].  Did not re-place instance Convolution_Processor/genblk1[2].inputMulti/big_product[19]_i_4__1
+INFO: [Physopt 32-710] Processed net Convolution_Processor/genblk1[2].inputMulti/big_product_reg[23]_i_12__1_0[1]. Critical path length was reduced through logic transformation on cell Convolution_Processor/genblk1[2].inputMulti/big_product[19]_i_8__1_comp.
+INFO: [Physopt 32-735] Processed net Convolution_Processor/genblk1[2].inputMulti/big_product_reg[23]_i_17__1_0[1]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.919 | TNS=-513.480 |
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[4].inputMulti/big_product[11]_i_38__3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[4].inputMulti/big_product[11]_i_34__3_n_0.  Did not re-place instance Convolution_Processor/genblk1[4].inputMulti/big_product[11]_i_34__3
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[4].inputMulti/big_product[11]_i_34__3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product[11]_i_73__3_0[3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/i__0_i_12__3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/i__0_i_35__3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net BD_Wrapper/i__0_i_31__3_n_0.  Did not re-place instance BD_Wrapper/i__0_i_31__3
+INFO: [Physopt 32-572] Net BD_Wrapper/i__0_i_31__3_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-735] Processed net BD_Wrapper/i__0_i_31__3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.918 | TNS=-512.880 |
+INFO: [Physopt 32-735] Processed net Convolution_Processor/genblk1[0].inputMulti/big_product_reg[23]_i_12_0[3]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.917 | TNS=-512.736 |
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product[11]_i_55__4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net BD_Wrapper/Convolution_Processor/genblk1[5].inputMulti/p_14_in[22].  Re-placed instance BD_Wrapper/big_product[11]_i_90__4
+INFO: [Physopt 32-735] Processed net BD_Wrapper/Convolution_Processor/genblk1[5].inputMulti/p_14_in[22]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.915 | TNS=-512.424 |
+INFO: [Physopt 32-735] Processed net BD_Wrapper/big_product[19]_i_78__5_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.915 | TNS=-512.344 |
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[2].inputMulti/big_product_reg[23]_i_17__1_0[1]_repN.  Did not re-place instance Convolution_Processor/genblk1[2].inputMulti/big_product[19]_i_4__1_comp
+INFO: [Physopt 32-735] Processed net Convolution_Processor/genblk1[2].inputMulti/big_product_reg[23]_i_17__1_0[1]_repN. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.907 | TNS=-511.872 |
+INFO: [Physopt 32-735] Processed net Convolution_Processor/genblk1[7].inputMulti/i__i_4__50_0[3]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.906 | TNS=-511.808 |
+INFO: [Physopt 32-702] Processed net big_product[19]_i_48_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net big_product[19]_i_44_n_0.  Did not re-place instance big_product[19]_i_44
+INFO: [Physopt 32-735] Processed net big_product[19]_i_44_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.905 | TNS=-511.680 |
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product_reg[31]_i_12__4_0[1].  Did not re-place instance Convolution_Processor/genblk1[5].inputMulti/big_product[27]_i_4__4
+INFO: [Physopt 32-572] Net Convolution_Processor/genblk1[5].inputMulti/big_product_reg[31]_i_12__4_0[1] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product_reg[31]_i_12__4_0[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product[27]_i_13__4_n_0.  Re-placed instance Convolution_Processor/genblk1[5].inputMulti/big_product[27]_i_13__4
+INFO: [Physopt 32-735] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product[27]_i_13__4_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.902 | TNS=-511.656 |
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[1].inputMulti/big_product_reg[19]_i_12__0_0[2]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[1].inputMulti/big_product_reg[19]_i_17__0_0[2].  Did not re-place instance Convolution_Processor/genblk1[1].inputMulti/big_product[15]_i_3__0
+INFO: [Physopt 32-572] Net Convolution_Processor/genblk1[1].inputMulti/big_product_reg[19]_i_17__0_0[2] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[1].inputMulti/big_product_reg[19]_i_17__0_0[2]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net Convolution_Processor/genblk1[1].inputMulti/big_product[15]_i_11__0_n_0.  Re-placed instance Convolution_Processor/genblk1[1].inputMulti/big_product[15]_i_11__0
+INFO: [Physopt 32-735] Processed net Convolution_Processor/genblk1[1].inputMulti/big_product[15]_i_11__0_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.899 | TNS=-511.428 |
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product_reg[23]_i_12__4_0[3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product_reg[23]_i_17__4_0[3].  Did not re-place instance Convolution_Processor/genblk1[5].inputMulti/big_product[19]_i_2__4
+INFO: [Physopt 32-572] Net Convolution_Processor/genblk1[5].inputMulti/big_product_reg[23]_i_17__4_0[3] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product_reg[23]_i_17__4_0[3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product[19]_i_10__4_n_0.  Did not re-place instance Convolution_Processor/genblk1[5].inputMulti/big_product[19]_i_10__4
+INFO: [Physopt 32-134] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product[19]_i_10__4_n_0. Rewiring did not optimize the net.
+INFO: [Physopt 32-572] Net Convolution_Processor/genblk1[5].inputMulti/big_product[19]_i_10__4_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-735] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product[19]_i_10__4_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.898 | TNS=-511.356 |
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[0].inputMulti/big_product_reg[19]_i_12_0[3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[0].inputMulti/big_product_reg[19]_i_17_0[3].  Did not re-place instance Convolution_Processor/genblk1[0].inputMulti/big_product[15]_i_2
+INFO: [Physopt 32-572] Net Convolution_Processor/genblk1[0].inputMulti/big_product_reg[19]_i_17_0[3] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[0].inputMulti/big_product_reg[19]_i_17_0[3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[0].inputMulti/big_product[15]_i_10_n_0.  Did not re-place instance Convolution_Processor/genblk1[0].inputMulti/big_product[15]_i_10
+INFO: [Physopt 32-134] Processed net Convolution_Processor/genblk1[0].inputMulti/big_product[15]_i_10_n_0. Rewiring did not optimize the net.
+INFO: [Physopt 32-572] Net Convolution_Processor/genblk1[0].inputMulti/big_product[15]_i_10_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[0].inputMulti/big_product[15]_i_10_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[0].inputMulti/big_product_reg[19]_i_14_n_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[0].inputMulti/big_product_reg[15]_i_14_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[0].inputMulti/big_product[15]_i_30_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[0].inputMulti/big_product[15]_i_26_n_0.  Did not re-place instance Convolution_Processor/genblk1[0].inputMulti/big_product[15]_i_26
+INFO: [Physopt 32-571] Net Convolution_Processor/genblk1[0].inputMulti/big_product[15]_i_26_n_0 was not replicated.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[0].inputMulti/big_product[15]_i_26_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product[15]_i_80_0[3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/i__i_3__1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net BD_Wrapper/i__i_25__0_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.897 | TNS=-510.788 |
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[3].inputMulti/i__i_4__22_0[3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[3].inputMulti/big_product_reg[31]_i_12__2_0[3].  Did not re-place instance Convolution_Processor/genblk1[3].inputMulti/big_product[27]_i_2__2
+INFO: [Physopt 32-572] Net Convolution_Processor/genblk1[3].inputMulti/big_product_reg[31]_i_12__2_0[3] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[3].inputMulti/big_product_reg[31]_i_12__2_0[3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[3].inputMulti/big_product[27]_i_10__2_n_0.  Did not re-place instance Convolution_Processor/genblk1[3].inputMulti/big_product[27]_i_10__2
+INFO: [Physopt 32-710] Processed net Convolution_Processor/genblk1[3].inputMulti/big_product_reg[31]_i_12__2_0[3]. Critical path length was reduced through logic transformation on cell Convolution_Processor/genblk1[3].inputMulti/big_product[27]_i_2__2_comp.
+INFO: [Physopt 32-735] Processed net Convolution_Processor/genblk1[3].inputMulti/big_product[27]_i_10__2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.895 | TNS=-510.720 |
+INFO: [Physopt 32-735] Processed net Convolution_Processor/genblk1[6].inputMulti/big_product_reg[19]_i_12__5_0[3]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.894 | TNS=-510.008 |
+INFO: [Physopt 32-702] Processed net BD_Wrapper/i__0_i_28__3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net BD_Wrapper/i__0_i_24__3_n_0.  Did not re-place instance BD_Wrapper/i__0_i_24__3
+INFO: [Physopt 32-572] Net BD_Wrapper/i__0_i_24__3_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-735] Processed net BD_Wrapper/i__0_i_24__3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.893 | TNS=-509.912 |
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[0].inputMulti/i__i_4__1_0[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[0].inputMulti/big_product_reg[31]_i_12_0[1].  Did not re-place instance Convolution_Processor/genblk1[0].inputMulti/big_product[27]_i_4
+INFO: [Physopt 32-572] Net Convolution_Processor/genblk1[0].inputMulti/big_product_reg[31]_i_12_0[1] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[0].inputMulti/big_product_reg[31]_i_12_0[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[0].inputMulti/big_product[27]_i_13_n_0.  Did not re-place instance Convolution_Processor/genblk1[0].inputMulti/big_product[27]_i_13
+INFO: [Physopt 32-134] Processed net Convolution_Processor/genblk1[0].inputMulti/big_product[27]_i_13_n_0. Rewiring did not optimize the net.
+INFO: [Physopt 32-572] Net Convolution_Processor/genblk1[0].inputMulti/big_product[27]_i_13_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[0].inputMulti/big_product[27]_i_13_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[0].inputMulti/i__i_10_n_7. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[0].inputMulti/big_product_reg[27]_i_14_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[0].inputMulti/big_product[27]_i_33_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[0].inputMulti/big_product[27]_i_29_n_0.  Did not re-place instance Convolution_Processor/genblk1[0].inputMulti/big_product[27]_i_29
+INFO: [Physopt 32-571] Net Convolution_Processor/genblk1[0].inputMulti/big_product[27]_i_29_n_0 was not replicated.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[0].inputMulti/big_product[27]_i_29_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product[27]_i_99_0[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[23]_i_51_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net BD_Wrapper/big_product[23]_i_92_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.893 | TNS=-509.876 |
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[5].inputMulti/Q[29]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/Convolution_Controller_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product_reg[19]_i_12__4_0[2]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product_reg[19]_i_17__4_0[2].  Did not re-place instance Convolution_Processor/genblk1[5].inputMulti/big_product[15]_i_3__4
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product_reg[19]_i_17__4_0[2]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product[15]_i_11__4_n_0.  Did not re-place instance Convolution_Processor/genblk1[5].inputMulti/big_product[15]_i_11__4
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product[15]_i_11__4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product_reg[19]_i_17__4_n_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product[15]_i_45__4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product[15]_i_41__4_n_0.  Did not re-place instance Convolution_Processor/genblk1[5].inputMulti/big_product[15]_i_41__4
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product[15]_i_41__4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product[15]_i_88__4_0[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product[11]_i_72__4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net BD_Wrapper/Convolution_Processor/genblk1[5].inputMulti/p_5_in[19].  Did not re-place instance BD_Wrapper/big_product[11]_i_96__4
+INFO: [Physopt 32-702] Processed net BD_Wrapper/Convolution_Processor/genblk1[5].inputMulti/p_5_in[19]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/MULTIPLIER_INPUT[173].  Did not re-place instance BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/MULTIPLIER_INPUT[173]_INST_0
+INFO: [Physopt 32-735] Processed net BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0/inst/MULTIPLIER_INPUT[173]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.893 | TNS=-509.650 |
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[6].inputMulti/Q[29]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[6].inputMulti/big_product_reg[31]_i_12__5_0[2].  Did not re-place instance Convolution_Processor/genblk1[6].inputMulti/big_product[27]_i_3__5
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[6].inputMulti/big_product_reg[31]_i_12__5_0[2]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[6].inputMulti/big_product[27]_i_11__5_n_0.  Did not re-place instance Convolution_Processor/genblk1[6].inputMulti/big_product[27]_i_11__5
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[6].inputMulti/big_product[27]_i_11__5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[6].inputMulti/i__i_10__35_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[6].inputMulti/big_product[27]_i_30__5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[6].inputMulti/big_product[27]_i_26__5_n_0.  Did not re-place instance Convolution_Processor/genblk1[6].inputMulti/big_product[27]_i_26__5
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[6].inputMulti/big_product[27]_i_26__5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product[27]_i_91__5_0[3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net BD_Wrapper/i__i_4__45_n_0.  Re-placed instance BD_Wrapper/i__i_4__45
+INFO: [Physopt 32-735] Processed net BD_Wrapper/i__i_4__45_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.892 | TNS=-509.338 |
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[2].inputMulti/Q[29]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[2].inputMulti/big_product_reg[27]_i_12__1_0[3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[2].inputMulti/big_product_reg[27]_i_17__1_0[3].  Did not re-place instance Convolution_Processor/genblk1[2].inputMulti/big_product[23]_i_2__1
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[2].inputMulti/big_product_reg[27]_i_17__1_0[3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[2].inputMulti/big_product[23]_i_10__1_n_0.  Did not re-place instance Convolution_Processor/genblk1[2].inputMulti/big_product[23]_i_10__1
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[2].inputMulti/big_product[23]_i_10__1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[2].inputMulti/big_product_reg[27]_i_17__1_n_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net big_product[23]_i_42__1_n_0.  Did not re-place instance big_product[23]_i_42__1
+INFO: [Physopt 32-702] Processed net big_product[23]_i_42__1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/i__i_47__6_0[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net BD_Wrapper/i__i_70__4_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.891 | TNS=-509.322 |
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[7].inputMulti/Q[29]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net Convolution_Processor/genblk1[7].inputMulti/big_product_reg[23]_i_12__6_0[1]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.890 | TNS=-508.926 |
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[4].inputMulti/Q[29]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[4].inputMulti/big_product_reg[15]_i_12__3_0[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net BD_Wrapper/big_product_reg[15]_i_17__3[0].  Did not re-place instance BD_Wrapper/big_product[11]_i_4__3
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[15]_i_17__3[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net BD_Wrapper/big_product[11]_i_12__3_n_0.  Did not re-place instance BD_Wrapper/big_product[11]_i_12__3
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product[11]_i_12__3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[4].inputMulti/big_product[15]_i_46__3_0[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[4].inputMulti/big_product[11]_i_37__3_n_0.  Did not re-place instance Convolution_Processor/genblk1[4].inputMulti/big_product[11]_i_37__3
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[4].inputMulti/big_product[11]_i_37__3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product[11]_i_81__3_0[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/i__0_i_27__3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net BD_Wrapper/i__0_i_23__3_n_0.  Did not re-place instance BD_Wrapper/i__0_i_23__3
+INFO: [Physopt 32-735] Processed net BD_Wrapper/i__0_i_23__3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.890 | TNS=-508.218 |
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[1].inputMulti/Q[29]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[1].inputMulti/big_product_reg[31]_i_12__0_0[2].  Did not re-place instance Convolution_Processor/genblk1[1].inputMulti/big_product[27]_i_3__0
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[1].inputMulti/big_product_reg[31]_i_12__0_0[2]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[1].inputMulti/big_product[27]_i_11__0_n_0.  Did not re-place instance Convolution_Processor/genblk1[1].inputMulti/big_product[27]_i_11__0
+INFO: [Physopt 32-735] Processed net Convolution_Processor/genblk1[1].inputMulti/big_product[27]_i_11__0_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.890 | TNS=-508.206 |
+INFO: [Physopt 32-702] Processed net big_product[19]_i_46__1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net big_product[19]_i_42__1_n_0.  Did not re-place instance big_product[19]_i_42__1
+INFO: [Physopt 32-702] Processed net big_product[19]_i_42__1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/i__i_84__4_0[3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product[15]_i_87__1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net BD_Wrapper/Convolution_Processor/genblk1[2].inputMulti/p_5_in[23].  Re-placed instance BD_Wrapper/big_product[15]_i_119__1
+INFO: [Physopt 32-735] Processed net BD_Wrapper/Convolution_Processor/genblk1[2].inputMulti/p_5_in[23]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.887 | TNS=-508.022 |
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[1].inputMulti/big_product_reg[19]_i_12__0_0[2]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[1].inputMulti/big_product_reg[19]_i_17__0_0[2].  Did not re-place instance Convolution_Processor/genblk1[1].inputMulti/big_product[15]_i_3__0
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[1].inputMulti/big_product_reg[19]_i_17__0_0[2]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[1].inputMulti/big_product[15]_i_11__0_n_0.  Did not re-place instance Convolution_Processor/genblk1[1].inputMulti/big_product[15]_i_11__0
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[1].inputMulti/big_product[15]_i_11__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[1].inputMulti/big_product_reg[19]_i_14__0_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[1].inputMulti/big_product[15]_i_29__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[1].inputMulti/big_product[15]_i_25__0_n_0.  Did not re-place instance Convolution_Processor/genblk1[1].inputMulti/big_product[15]_i_25__0
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[1].inputMulti/big_product[15]_i_25__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product[15]_i_64__0_0[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product[11]_i_57__0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net BD_Wrapper/Convolution_Processor/genblk1[1].inputMulti/p_14_in[20].  Re-placed instance BD_Wrapper/big_product[11]_i_92__0
+INFO: [Physopt 32-735] Processed net BD_Wrapper/Convolution_Processor/genblk1[1].inputMulti/p_14_in[20]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.884 | TNS=-505.940 |
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[0].inputMulti/Q[29]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[0].inputMulti/i__i_4__1_0[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[0].inputMulti/big_product_reg[31]_i_12_0[0].  Did not re-place instance Convolution_Processor/genblk1[0].inputMulti/big_product[27]_i_5
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[0].inputMulti/big_product_reg[31]_i_12_0[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[0].inputMulti/big_product[27]_i_16_n_0.  Did not re-place instance Convolution_Processor/genblk1[0].inputMulti/big_product[27]_i_16
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[0].inputMulti/big_product[27]_i_16_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[0].inputMulti/big_product_reg[27]_i_14_n_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[0].inputMulti/big_product[23]_i_33_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[0].inputMulti/big_product[23]_i_29_n_0.  Did not re-place instance Convolution_Processor/genblk1[0].inputMulti/big_product[23]_i_29
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[0].inputMulti/big_product[23]_i_29_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product[23]_i_93_0[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net BD_Wrapper/big_product[15]_i_70_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.880 | TNS=-505.888 |
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[3].inputMulti/Q[29]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[3].inputMulti/i__i_4__22_0[3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[3].inputMulti/big_product_reg[31]_i_12__2_0[3].  Did not re-place instance Convolution_Processor/genblk1[3].inputMulti/big_product[27]_i_2__2_comp
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[3].inputMulti/big_product_reg[31]_i_12__2_0[3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[3].inputMulti/big_product[27]_i_10__2_n_0_repN.  Did not re-place instance Convolution_Processor/genblk1[3].inputMulti/big_product[27]_i_10__2_comp
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[3].inputMulti/big_product[27]_i_10__2_n_0_repN. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[3].inputMulti/big_product_reg[31]_i_12__2_n_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net big_product[27]_i_42__2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net big_product[27]_i_38__2_n_0.  Did not re-place instance big_product[27]_i_38__2
+INFO: [Physopt 32-702] Processed net big_product[27]_i_38__2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/i__i_25__19_0[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/i__i_70__6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net BD_Wrapper/Convolution_Processor/genblk1[3].inputMulti/p_8_in[27].  Re-placed instance BD_Wrapper/i__i_90__6
+INFO: [Physopt 32-735] Processed net BD_Wrapper/Convolution_Processor/genblk1[3].inputMulti/p_8_in[27]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.879 | TNS=-505.840 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.879 | TNS=-505.840 |
+Phase 3 Critical Path Optimization | Checksum: c1573cb0
+
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:12 . Memory (MB): peak = 2129.105 ; gain = 0.000
+
+Phase 4 Critical Path Optimization
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.879 | TNS=-505.840 |
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[5].inputMulti/Q[29]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/Convolution_Controller_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[27]_i_1__4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product_reg[31]_i_12__4_0[1].  Did not re-place instance Convolution_Processor/genblk1[5].inputMulti/big_product[27]_i_4__4
+INFO: [Physopt 32-572] Net Convolution_Processor/genblk1[5].inputMulti/big_product_reg[31]_i_12__4_0[1] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product_reg[31]_i_12__4_0[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product[27]_i_13__4_n_0.  Did not re-place instance Convolution_Processor/genblk1[5].inputMulti/big_product[27]_i_13__4
+INFO: [Physopt 32-134] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product[27]_i_13__4_n_0. Rewiring did not optimize the net.
+INFO: [Physopt 32-572] Net Convolution_Processor/genblk1[5].inputMulti/big_product[27]_i_13__4_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product[27]_i_13__4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product_reg[31]_i_12__4_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product_reg[27]_i_17__4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net big_product[27]_i_40__4_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.879 | TNS=-505.840 |
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[23]_i_1__4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[19]_i_1__4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[15]_i_1__4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product_reg[19]_i_12__4_0[2]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product_reg[19]_i_17__4_0[2].  Did not re-place instance Convolution_Processor/genblk1[5].inputMulti/big_product[15]_i_3__4
+INFO: [Physopt 32-572] Net Convolution_Processor/genblk1[5].inputMulti/big_product_reg[19]_i_17__4_0[2] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product_reg[19]_i_17__4_0[2]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product[15]_i_11__4_n_0.  Did not re-place instance Convolution_Processor/genblk1[5].inputMulti/big_product[15]_i_11__4
+INFO: [Physopt 32-134] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product[15]_i_11__4_n_0. Rewiring did not optimize the net.
+INFO: [Physopt 32-572] Net Convolution_Processor/genblk1[5].inputMulti/big_product[15]_i_11__4_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product[15]_i_11__4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product_reg[19]_i_14__4_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product_reg[15]_i_14__4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product[15]_i_27__4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product[15]_i_23__4_n_0.  Did not re-place instance Convolution_Processor/genblk1[5].inputMulti/big_product[15]_i_23__4
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product[15]_i_23__4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product[15]_i_64__4_0[3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[11]_i_42__4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product[11]_i_58__4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net BD_Wrapper/big_product[11]_i_54__4_n_0.  Did not re-place instance BD_Wrapper/big_product[11]_i_54__4
+INFO: [Physopt 32-572] Net BD_Wrapper/big_product[11]_i_54__4_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-735] Processed net BD_Wrapper/big_product[11]_i_54__4_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.879 | TNS=-505.744 |
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[6].inputMulti/Q[29]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[27]_i_1__5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[6].inputMulti/big_product_reg[31]_i_12__5_0[2].  Did not re-place instance Convolution_Processor/genblk1[6].inputMulti/big_product[27]_i_3__5
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[6].inputMulti/big_product_reg[31]_i_12__5_0[2]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[6].inputMulti/big_product[27]_i_11__5_n_0.  Did not re-place instance Convolution_Processor/genblk1[6].inputMulti/big_product[27]_i_11__5
+INFO: [Physopt 32-134] Processed net Convolution_Processor/genblk1[6].inputMulti/big_product[27]_i_11__5_n_0. Rewiring did not optimize the net.
+INFO: [Physopt 32-572] Net Convolution_Processor/genblk1[6].inputMulti/big_product[27]_i_11__5_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[6].inputMulti/big_product[27]_i_11__5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[6].inputMulti/i__i_10__35_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[6].inputMulti/big_product_reg[27]_i_14__5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[6].inputMulti/big_product[27]_i_30__5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[6].inputMulti/big_product[27]_i_26__5_n_0.  Did not re-place instance Convolution_Processor/genblk1[6].inputMulti/big_product[27]_i_26__5
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[6].inputMulti/big_product[27]_i_26__5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product[27]_i_91__5_0[3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[23]_i_50__5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[19]_i_52__5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[15]_i_47__5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[11]_i_42__5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net BD_Wrapper/big_product[11]_i_55__5_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.873 | TNS=-505.588 |
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product[19]_i_95__4_0[2]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net BD_Wrapper/big_product[19]_i_95__4_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.872 | TNS=-505.444 |
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[4].inputMulti/Q[29]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[27]_i_1__3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[23]_i_1__3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[19]_i_1__3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[4].inputMulti/big_product_reg[23]_i_17__3_0[3].  Did not re-place instance Convolution_Processor/genblk1[4].inputMulti/big_product[19]_i_2__3
+INFO: [Physopt 32-572] Net Convolution_Processor/genblk1[4].inputMulti/big_product_reg[23]_i_17__3_0[3] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[4].inputMulti/big_product_reg[23]_i_17__3_0[3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[4].inputMulti/big_product[19]_i_10__3_n_0.  Did not re-place instance Convolution_Processor/genblk1[4].inputMulti/big_product[19]_i_10__3
+INFO: [Physopt 32-134] Processed net Convolution_Processor/genblk1[4].inputMulti/big_product[19]_i_10__3_n_0. Rewiring did not optimize the net.
+INFO: [Physopt 32-572] Net Convolution_Processor/genblk1[4].inputMulti/big_product[19]_i_10__3_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-735] Processed net Convolution_Processor/genblk1[4].inputMulti/big_product[19]_i_10__3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.871 | TNS=-505.168 |
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[0].inputMulti/Q[29]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[27]_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[23]_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[0].inputMulti/big_product_reg[27]_i_12_0[2]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[0].inputMulti/big_product_reg[27]_i_17_0[2].  Did not re-place instance Convolution_Processor/genblk1[0].inputMulti/big_product[23]_i_3
+INFO: [Physopt 32-572] Net Convolution_Processor/genblk1[0].inputMulti/big_product_reg[27]_i_17_0[2] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[0].inputMulti/big_product_reg[27]_i_17_0[2]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[0].inputMulti/big_product[23]_i_11_n_0.  Did not re-place instance Convolution_Processor/genblk1[0].inputMulti/big_product[23]_i_11
+INFO: [Physopt 32-134] Processed net Convolution_Processor/genblk1[0].inputMulti/big_product[23]_i_11_n_0. Rewiring did not optimize the net.
+INFO: [Physopt 32-572] Net Convolution_Processor/genblk1[0].inputMulti/big_product[23]_i_11_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[0].inputMulti/big_product[23]_i_11_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[0].inputMulti/big_product_reg[27]_i_17_n_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[0].inputMulti/big_product_reg[23]_i_17_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net big_product[23]_i_43_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net big_product[23]_i_39_n_0.  Did not re-place instance big_product[23]_i_39
+INFO: [Physopt 32-735] Processed net big_product[23]_i_39_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.871 | TNS=-505.168 |
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[0].inputMulti/big_product_reg[19]_i_17_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net big_product[19]_i_46_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net big_product[19]_i_42_n_0.  Did not re-place instance big_product[19]_i_42
+INFO: [Physopt 32-735] Processed net big_product[19]_i_42_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.870 | TNS=-505.104 |
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[0].inputMulti/i__i_4__1_0[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[0].inputMulti/big_product_reg[31]_i_12_0[0].  Did not re-place instance Convolution_Processor/genblk1[0].inputMulti/big_product[27]_i_5
+INFO: [Physopt 32-572] Net Convolution_Processor/genblk1[0].inputMulti/big_product_reg[31]_i_12_0[0] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[0].inputMulti/big_product_reg[31]_i_12_0[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[0].inputMulti/big_product[27]_i_16_n_0.  Did not re-place instance Convolution_Processor/genblk1[0].inputMulti/big_product[27]_i_16
+INFO: [Physopt 32-134] Processed net Convolution_Processor/genblk1[0].inputMulti/big_product[27]_i_16_n_0. Rewiring did not optimize the net.
+INFO: [Physopt 32-572] Net Convolution_Processor/genblk1[0].inputMulti/big_product[27]_i_16_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[0].inputMulti/big_product[27]_i_16_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[0].inputMulti/big_product_reg[27]_i_14_n_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[0].inputMulti/big_product_reg[23]_i_14_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[0].inputMulti/big_product[23]_i_33_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[0].inputMulti/big_product[23]_i_29_n_0.  Did not re-place instance Convolution_Processor/genblk1[0].inputMulti/big_product[23]_i_29
+INFO: [Physopt 32-571] Net Convolution_Processor/genblk1[0].inputMulti/big_product[23]_i_29_n_0 was not replicated.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[0].inputMulti/big_product[23]_i_29_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product[23]_i_93_0[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[19]_i_53_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product[19]_i_84_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net BD_Wrapper/Convolution_Processor/genblk1[0].inputMulti/p_17_in[29].  Re-placed instance BD_Wrapper/big_product[19]_i_112
+INFO: [Physopt 32-735] Processed net BD_Wrapper/Convolution_Processor/genblk1[0].inputMulti/p_17_in[29]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.868 | TNS=-505.048 |
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[3].inputMulti/Q[29]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[27]_i_1__2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[3].inputMulti/i__i_4__22_0[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[3].inputMulti/big_product_reg[31]_i_12__2_0[1]_repN.  Did not re-place instance Convolution_Processor/genblk1[3].inputMulti/big_product[27]_i_4__2_comp
+INFO: [Physopt 32-710] Processed net Convolution_Processor/genblk1[3].inputMulti/i__i_4__22_0[1]. Critical path length was reduced through logic transformation on cell Convolution_Processor/genblk1[3].inputMulti/big_product[27]_i_8__2_comp_1.
+INFO: [Physopt 32-735] Processed net Convolution_Processor/genblk1[3].inputMulti/big_product_reg[31]_i_12__2_0[1]_repN. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.868 | TNS=-505.048 |
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[3].inputMulti/i__i_4__22_0[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[3].inputMulti/big_product_reg[31]_i_12__2_0[0].  Did not re-place instance Convolution_Processor/genblk1[3].inputMulti/big_product[27]_i_5__2
+INFO: [Physopt 32-572] Net Convolution_Processor/genblk1[3].inputMulti/big_product_reg[31]_i_12__2_0[0] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[3].inputMulti/big_product_reg[31]_i_12__2_0[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[3].inputMulti/big_product[27]_i_16__2_n_0.  Did not re-place instance Convolution_Processor/genblk1[3].inputMulti/big_product[27]_i_16__2
+INFO: [Physopt 32-134] Processed net Convolution_Processor/genblk1[3].inputMulti/big_product[27]_i_16__2_n_0. Rewiring did not optimize the net.
+INFO: [Physopt 32-572] Net Convolution_Processor/genblk1[3].inputMulti/big_product[27]_i_16__2_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[3].inputMulti/big_product[27]_i_16__2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[3].inputMulti/big_product_reg[27]_i_14__2_n_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[3].inputMulti/big_product_reg[23]_i_14__2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[3].inputMulti/big_product[23]_i_33__2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[3].inputMulti/big_product[23]_i_29__2_n_0.  Did not re-place instance Convolution_Processor/genblk1[3].inputMulti/big_product[23]_i_29__2
+INFO: [Physopt 32-571] Net Convolution_Processor/genblk1[3].inputMulti/big_product[23]_i_29__2_n_0 was not replicated.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[3].inputMulti/big_product[23]_i_29__2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product[23]_i_93__2_0[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[19]_i_53__2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[15]_i_48__2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net BD_Wrapper/big_product[15]_i_69__2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.867 | TNS=-505.032 |
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[2].inputMulti/Q[29]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/Convolution_Controller_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net Convolution_Processor/genblk1[2].inputMulti/big_product_reg[23]_i_12__1_0[1]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.865 | TNS=-504.347 |
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[6].inputMulti/Q[29]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[6].inputMulti/big_product_reg[31]_i_12__5_0[2].  Did not re-place instance Convolution_Processor/genblk1[6].inputMulti/big_product[27]_i_3__5
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[6].inputMulti/big_product_reg[31]_i_12__5_0[2]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[6].inputMulti/big_product[27]_i_11__5_n_0.  Did not re-place instance Convolution_Processor/genblk1[6].inputMulti/big_product[27]_i_11__5
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[6].inputMulti/big_product[27]_i_11__5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[6].inputMulti/i__i_10__35_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[6].inputMulti/big_product[27]_i_30__5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[6].inputMulti/big_product[27]_i_26__5_n_0.  Did not re-place instance Convolution_Processor/genblk1[6].inputMulti/big_product[27]_i_26__5
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[6].inputMulti/big_product[27]_i_26__5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product[27]_i_91__5_0[3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product[11]_i_57__5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net BD_Wrapper/big_product[11]_i_53__5_n_0.  Did not re-place instance BD_Wrapper/big_product[11]_i_53__5
+INFO: [Physopt 32-735] Processed net BD_Wrapper/big_product[11]_i_53__5_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.864 | TNS=-504.314 |
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[3].inputMulti/Q[29]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[3].inputMulti/big_product_reg[23]_i_12__2_0[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[3].inputMulti/big_product_reg[23]_i_17__2_0[0].  Did not re-place instance Convolution_Processor/genblk1[3].inputMulti/big_product[19]_i_5__2
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[3].inputMulti/big_product_reg[23]_i_17__2_0[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[3].inputMulti/big_product[19]_i_16__2_n_0.  Did not re-place instance Convolution_Processor/genblk1[3].inputMulti/big_product[19]_i_16__2
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[3].inputMulti/big_product[19]_i_16__2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[3].inputMulti/big_product_reg[19]_i_12__2_n_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[3].inputMulti/big_product[19]_i_24__2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[3].inputMulti/big_product[19]_i_20__2_n_0.  Did not re-place instance Convolution_Processor/genblk1[3].inputMulti/big_product[19]_i_20__2
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[3].inputMulti/big_product[19]_i_20__2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product[19]_i_64__2_0[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net Convolution_Processor/genblk1[3].inputMulti/bbstub_MULTIPLIER_INPUT[96]_7[0].  Re-placed instance Convolution_Processor/genblk1[3].inputMulti/i__i_5__0
+INFO: [Physopt 32-735] Processed net Convolution_Processor/genblk1[3].inputMulti/bbstub_MULTIPLIER_INPUT[96]_7[0]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.864 | TNS=-504.086 |
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[5].inputMulti/Q[29]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product_reg[19]_i_12__4_0[2]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product_reg[19]_i_17__4_0[2].  Did not re-place instance Convolution_Processor/genblk1[5].inputMulti/big_product[15]_i_3__4
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product_reg[19]_i_17__4_0[2]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product[15]_i_11__4_n_0.  Did not re-place instance Convolution_Processor/genblk1[5].inputMulti/big_product[15]_i_11__4
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product[15]_i_11__4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product_reg[19]_i_17__4_n_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product[15]_i_42__4_n_0.  Did not re-place instance Convolution_Processor/genblk1[5].inputMulti/big_product[15]_i_42__4
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[5].inputMulti/big_product[15]_i_42__4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product[15]_i_104__4_0[3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net BD_Wrapper/big_product[11]_i_89__4_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.859 | TNS=-503.945 |
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product[15]_i_96__4_0[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net BD_Wrapper/big_product[11]_i_78__4_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.858 | TNS=-503.593 |
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[7].inputMulti/Q[29]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net Convolution_Processor/genblk1[7].inputMulti/big_product_reg[19]_i_12__6_0[3]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.856 | TNS=-502.449 |
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[0].inputMulti/Q[29]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[0].inputMulti/big_product_reg[19]_i_12_0[2]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[0].inputMulti/big_product_reg[19]_i_17_0[2].  Did not re-place instance Convolution_Processor/genblk1[0].inputMulti/big_product[15]_i_3
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[0].inputMulti/big_product_reg[19]_i_17_0[2]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[0].inputMulti/big_product[15]_i_11_n_0.  Did not re-place instance Convolution_Processor/genblk1[0].inputMulti/big_product[15]_i_11
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[0].inputMulti/big_product[15]_i_11_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[0].inputMulti/big_product_reg[19]_i_17_n_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net big_product[19]_i_49_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.851 | TNS=-502.305 |
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[6].inputMulti/big_product_reg[23]_i_12__5_0[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[6].inputMulti/big_product_reg[23]_i_17__5_0[1].  Did not re-place instance Convolution_Processor/genblk1[6].inputMulti/big_product[19]_i_4__5
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[6].inputMulti/big_product_reg[23]_i_17__5_0[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[6].inputMulti/big_product[19]_i_13__5_n_0.  Did not re-place instance Convolution_Processor/genblk1[6].inputMulti/big_product[19]_i_13__5
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[6].inputMulti/big_product[19]_i_13__5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[6].inputMulti/big_product_reg[23]_i_17__5_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net big_product[19]_i_46__5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net big_product[19]_i_42__5_n_0.  Did not re-place instance big_product[19]_i_42__5
+INFO: [Physopt 32-702] Processed net big_product[19]_i_42__5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/i__i_84__12_0[3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net BD_Wrapper/i__0_i_35__5_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.850 | TNS=-501.057 |
+INFO: [Physopt 32-735] Processed net BD_Wrapper/big_product[15]_i_64__5_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.849 | TNS=-500.835 |
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[4].inputMulti/Q[29]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[4].inputMulti/big_product_reg[15]_i_12__3_0[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net BD_Wrapper/big_product_reg[15]_i_17__3[0].  Did not re-place instance BD_Wrapper/big_product[11]_i_4__3
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product_reg[15]_i_17__3[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net BD_Wrapper/big_product[11]_i_12__3_n_0.  Did not re-place instance BD_Wrapper/big_product[11]_i_12__3
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product[11]_i_12__3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[4].inputMulti/big_product[15]_i_46__3_0[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[4].inputMulti/big_product[11]_i_38__3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net Convolution_Processor/genblk1[4].inputMulti/big_product[11]_i_34__3_n_0.  Did not re-place instance Convolution_Processor/genblk1[4].inputMulti/big_product[11]_i_34__3
+INFO: [Physopt 32-702] Processed net Convolution_Processor/genblk1[4].inputMulti/big_product[11]_i_34__3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/big_product[11]_i_73__3_0[3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net BD_Wrapper/i__0_i_35__3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net BD_Wrapper/Convolution_Processor/genblk1[4].inputMulti/p_5_in[15].  Did not re-place instance BD_Wrapper/i__0_i_47__3
+INFO: [Physopt 32-735] Processed net BD_Wrapper/Convolution_Processor/genblk1[4].inputMulti/p_5_in[15]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.849 | TNS=-500.331 |
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-1.849 | TNS=-500.331 |
+Phase 4 Critical Path Optimization | Checksum: c1573cb0
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:15 . Memory (MB): peak = 2129.105 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.086 . Memory (MB): peak = 2129.105 ; gain = 0.000
+INFO: [Physopt 32-603] Post Physical Optimization Timing Summary | WNS=-1.849 | TNS=-500.331 |
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization   |  WNS Gain (ns)  |  TNS Gain (ns)  |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  DSP Register   |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Critical Path  |          0.300  |         95.963  |            0  |              0  |                    85  |           0  |           2  |  00:00:14  |
+|  Total          |          0.300  |         95.963  |            0  |              0  |                    85  |           0  |           3  |  00:00:14  |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 2129.105 ; gain = 0.000
+Ending Physical Synthesis Task | Checksum: 1595f7f64
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:16 . Memory (MB): peak = 2129.105 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
-111 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
+884 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
 phys_opt_design completed successfully
+phys_opt_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:19 . Memory (MB): peak = 2129.105 ; gain = 0.000
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:03 ; elapsed = 00:00:00.847 . Memory (MB): peak = 2044.324 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:05 ; elapsed = 00:00:01 . Memory (MB): peak = 2129.105 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/impl_1/CPE_Wrapper_physopt.dcp' has been generated.
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
 Running DRC as a precondition to command route_design
 INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
@@ -469,53 +1332,53 @@ INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more in
 
 Starting Routing Task
 INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
-Checksum: PlaceDB: 9b3967d4 ConstDB: 0 ShapeSum: ae74be2a RouteDB: 0
+Checksum: PlaceDB: 12d91cec ConstDB: 0 ShapeSum: 7ff725df RouteDB: 0
 
 Phase 1 Build RT Design
-Phase 1 Build RT Design | Checksum: db293686
+Phase 1 Build RT Design | Checksum: 1bcece49e
 
-Time (s): cpu = 00:00:29 ; elapsed = 00:00:16 . Memory (MB): peak = 2131.508 ; gain = 87.184
-Post Restoration Checksum: NetGraph: b27de23 NumContArr: d0015863 Constraints: 0 Timing: 0
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:16 . Memory (MB): peak = 2213.855 ; gain = 84.750
+Post Restoration Checksum: NetGraph: bf345f3b NumContArr: fdb88563 Constraints: 0 Timing: 0
 
 Phase 2 Router Initialization
 
 Phase 2.1 Create Timer
-Phase 2.1 Create Timer | Checksum: db293686
+Phase 2.1 Create Timer | Checksum: 1bcece49e
 
-Time (s): cpu = 00:00:29 ; elapsed = 00:00:16 . Memory (MB): peak = 2131.508 ; gain = 87.184
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:17 . Memory (MB): peak = 2213.855 ; gain = 84.750
 
 Phase 2.2 Fix Topology Constraints
-Phase 2.2 Fix Topology Constraints | Checksum: db293686
+Phase 2.2 Fix Topology Constraints | Checksum: 1bcece49e
 
-Time (s): cpu = 00:00:29 ; elapsed = 00:00:16 . Memory (MB): peak = 2138.156 ; gain = 93.832
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:17 . Memory (MB): peak = 2213.855 ; gain = 84.750
 
 Phase 2.3 Pre Route Cleanup
-Phase 2.3 Pre Route Cleanup | Checksum: db293686
+Phase 2.3 Pre Route Cleanup | Checksum: 1bcece49e
 
-Time (s): cpu = 00:00:29 ; elapsed = 00:00:16 . Memory (MB): peak = 2138.156 ; gain = 93.832
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:17 . Memory (MB): peak = 2213.855 ; gain = 84.750
  Number of Nodes with overlaps = 0
 
 Phase 2.4 Update Timing
-Phase 2.4 Update Timing | Checksum: 1c02d0590
+Phase 2.4 Update Timing | Checksum: 1941995a1
 
-Time (s): cpu = 00:00:34 ; elapsed = 00:00:19 . Memory (MB): peak = 2162.410 ; gain = 118.086
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.728  | TNS=0.000  | WHS=-0.262 | THS=-181.398|
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:22 . Memory (MB): peak = 2255.902 ; gain = 126.797
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.870 | TNS=-415.408| WHS=-0.345 | THS=-167.437|
 
 
 Phase 2.5 Update Timing for Bus Skew
 
 Phase 2.5.1 Update Timing
-Phase 2.5.1 Update Timing | Checksum: dc78745f
+Phase 2.5.1 Update Timing | Checksum: 1ae417491
 
-Time (s): cpu = 00:00:37 ; elapsed = 00:00:21 . Memory (MB): peak = 2175.223 ; gain = 130.898
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.728  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:00:49 ; elapsed = 00:00:25 . Memory (MB): peak = 2290.938 ; gain = 161.832
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-1.870 | TNS=-377.083| WHS=N/A    | THS=N/A    |
 
-Phase 2.5 Update Timing for Bus Skew | Checksum: f1031dd6
+Phase 2.5 Update Timing for Bus Skew | Checksum: 1bb785a25
 
-Time (s): cpu = 00:00:37 ; elapsed = 00:00:21 . Memory (MB): peak = 2187.598 ; gain = 143.273
-Phase 2 Router Initialization | Checksum: d8fd1e84
+Time (s): cpu = 00:00:49 ; elapsed = 00:00:25 . Memory (MB): peak = 2299.953 ; gain = 170.848
+Phase 2 Router Initialization | Checksum: 1de27d4f3
 
-Time (s): cpu = 00:00:37 ; elapsed = 00:00:21 . Memory (MB): peak = 2187.598 ; gain = 143.273
+Time (s): cpu = 00:00:49 ; elapsed = 00:00:25 . Memory (MB): peak = 2299.953 ; gain = 170.848
 
 Router Utilization Summary
   Global Vertical Routing Utilization    = 0 %
@@ -523,95 +1386,119 @@ Router Utilization Summary
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
-  Number of Failed Nets               = 13075
+  Number of Failed Nets               = 25405
     (Failed Nets is the sum of unrouted and partially routed nets)
-  Number of Unrouted Nets             = 13075
+  Number of Unrouted Nets             = 25405
   Number of Partially Routed Nets     = 0
   Number of Node Overlaps             = 0
 
 
 Phase 3 Initial Routing
-Phase 3 Initial Routing | Checksum: 20b404271
+Phase 3 Initial Routing | Checksum: 17f1c50d5
 
-Time (s): cpu = 00:00:39 ; elapsed = 00:00:23 . Memory (MB): peak = 2195.582 ; gain = 151.258
+Time (s): cpu = 00:00:57 ; elapsed = 00:00:30 . Memory (MB): peak = 2326.348 ; gain = 197.242
 
 Phase 4 Rip-up And Reroute
 
 Phase 4.1 Global Iteration 0
- Number of Nodes with overlaps = 1101
- Number of Nodes with overlaps = 123
- Number of Nodes with overlaps = 33
- Number of Nodes with overlaps = 11
- Number of Nodes with overlaps = 6
- Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 12892
+ Number of Nodes with overlaps = 6297
+ Number of Nodes with overlaps = 3069
+ Number of Nodes with overlaps = 1657
+ Number of Nodes with overlaps = 814
+ Number of Nodes with overlaps = 454
+ Number of Nodes with overlaps = 152
+ Number of Nodes with overlaps = 61
+ Number of Nodes with overlaps = 35
+ Number of Nodes with overlaps = 24
+ Number of Nodes with overlaps = 10
+ Number of Nodes with overlaps = 8
+ Number of Nodes with overlaps = 4
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.198  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-3.153 | TNS=-1329.352| WHS=N/A    | THS=N/A    |
 
-Phase 4.1 Global Iteration 0 | Checksum: 1748461da
+Phase 4.1 Global Iteration 0 | Checksum: 10933490e
 
-Time (s): cpu = 00:00:46 ; elapsed = 00:00:27 . Memory (MB): peak = 2195.582 ; gain = 151.258
+Time (s): cpu = 00:03:20 ; elapsed = 00:01:51 . Memory (MB): peak = 2326.348 ; gain = 197.242
 
 Phase 4.2 Global Iteration 1
- Number of Nodes with overlaps = 2
- Number of Nodes with overlaps = 1
- Number of Nodes with overlaps = 1
- Number of Nodes with overlaps = 1
- Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 1695
+ Number of Nodes with overlaps = 2443
+ Number of Nodes with overlaps = 1539
+ Number of Nodes with overlaps = 1059
+ Number of Nodes with overlaps = 627
+ Number of Nodes with overlaps = 340
+ Number of Nodes with overlaps = 199
+ Number of Nodes with overlaps = 113
+ Number of Nodes with overlaps = 81
+ Number of Nodes with overlaps = 49
+ Number of Nodes with overlaps = 27
+ Number of Nodes with overlaps = 20
+ Number of Nodes with overlaps = 9
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 3
  Number of Nodes with overlaps = 1
  Number of Nodes with overlaps = 0
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.198  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-3.039 | TNS=-1410.094| WHS=N/A    | THS=N/A    |
 
-Phase 4.2 Global Iteration 1 | Checksum: 19301c4d1
+Phase 4.2 Global Iteration 1 | Checksum: 21252a6ae
 
-Time (s): cpu = 00:00:48 ; elapsed = 00:00:29 . Memory (MB): peak = 2195.582 ; gain = 151.258
-Phase 4 Rip-up And Reroute | Checksum: 19301c4d1
+Time (s): cpu = 00:04:55 ; elapsed = 00:02:49 . Memory (MB): peak = 2326.348 ; gain = 197.242
 
-Time (s): cpu = 00:00:48 ; elapsed = 00:00:29 . Memory (MB): peak = 2195.582 ; gain = 151.258
+Phase 4.3 Global Iteration 2
+ Number of Nodes with overlaps = 2147
+Phase 4.3 Global Iteration 2 | Checksum: db6bc42a
+
+Time (s): cpu = 00:04:58 ; elapsed = 00:02:52 . Memory (MB): peak = 2326.348 ; gain = 197.242
+Phase 4 Rip-up And Reroute | Checksum: db6bc42a
+
+Time (s): cpu = 00:04:58 ; elapsed = 00:02:52 . Memory (MB): peak = 2326.348 ; gain = 197.242
 
 Phase 5 Delay and Skew Optimization
 
 Phase 5.1 Delay CleanUp
 
 Phase 5.1.1 Update Timing
-Phase 5.1.1 Update Timing | Checksum: 1c5a8942b
+Phase 5.1.1 Update Timing | Checksum: 183d5cac3
 
-Time (s): cpu = 00:00:49 ; elapsed = 00:00:30 . Memory (MB): peak = 2195.582 ; gain = 151.258
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.212  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+Time (s): cpu = 00:04:59 ; elapsed = 00:02:53 . Memory (MB): peak = 2326.348 ; gain = 197.242
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-2.949 | TNS=-1372.167| WHS=N/A    | THS=N/A    |
 
-Phase 5.1 Delay CleanUp | Checksum: 1aec0d5cb
+ Number of Nodes with overlaps = 0
+Phase 5.1 Delay CleanUp | Checksum: 11fb470e6
 
-Time (s): cpu = 00:00:49 ; elapsed = 00:00:30 . Memory (MB): peak = 2195.582 ; gain = 151.258
+Time (s): cpu = 00:05:01 ; elapsed = 00:02:54 . Memory (MB): peak = 2326.348 ; gain = 197.242
 
 Phase 5.2 Clock Skew Optimization
-Phase 5.2 Clock Skew Optimization | Checksum: 1aec0d5cb
+Phase 5.2 Clock Skew Optimization | Checksum: 11fb470e6
 
-Time (s): cpu = 00:00:49 ; elapsed = 00:00:30 . Memory (MB): peak = 2195.582 ; gain = 151.258
-Phase 5 Delay and Skew Optimization | Checksum: 1aec0d5cb
+Time (s): cpu = 00:05:01 ; elapsed = 00:02:54 . Memory (MB): peak = 2326.348 ; gain = 197.242
+Phase 5 Delay and Skew Optimization | Checksum: 11fb470e6
 
-Time (s): cpu = 00:00:49 ; elapsed = 00:00:30 . Memory (MB): peak = 2195.582 ; gain = 151.258
+Time (s): cpu = 00:05:01 ; elapsed = 00:02:54 . Memory (MB): peak = 2326.348 ; gain = 197.242
 
 Phase 6 Post Hold Fix
 
 Phase 6.1 Hold Fix Iter
 
 Phase 6.1.1 Update Timing
-Phase 6.1.1 Update Timing | Checksum: 1f509fe5d
+Phase 6.1.1 Update Timing | Checksum: 171982f1a
 
-Time (s): cpu = 00:00:50 ; elapsed = 00:00:30 . Memory (MB): peak = 2195.582 ; gain = 151.258
-INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.212  | TNS=0.000  | WHS=0.005  | THS=0.000  |
+Time (s): cpu = 00:05:02 ; elapsed = 00:02:55 . Memory (MB): peak = 2326.348 ; gain = 197.242
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-2.949 | TNS=-783.240| WHS=0.018  | THS=0.000  |
 
-Phase 6.1 Hold Fix Iter | Checksum: 170c40442
+Phase 6.1 Hold Fix Iter | Checksum: 1639acd0f
 
-Time (s): cpu = 00:00:50 ; elapsed = 00:00:30 . Memory (MB): peak = 2195.582 ; gain = 151.258
-Phase 6 Post Hold Fix | Checksum: 170c40442
+Time (s): cpu = 00:05:02 ; elapsed = 00:02:55 . Memory (MB): peak = 2326.348 ; gain = 197.242
+Phase 6 Post Hold Fix | Checksum: 1639acd0f
 
-Time (s): cpu = 00:00:50 ; elapsed = 00:00:30 . Memory (MB): peak = 2195.582 ; gain = 151.258
+Time (s): cpu = 00:05:02 ; elapsed = 00:02:55 . Memory (MB): peak = 2326.348 ; gain = 197.242
 
 Phase 7 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 2.91395 %
-  Global Horizontal Routing Utilization  = 3.23732 %
+  Global Vertical Routing Utilization    = 9.35762 %
+  Global Horizontal Routing Utilization  = 12.2934 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -621,44 +1508,87 @@ Router Utilization Summary
   Number of Partially Routed Nets     = 0
   Number of Node Overlaps             = 0
 
-Phase 7 Route finalize | Checksum: 17e156829
+Congestion Report
+North Dir 1x1 Area, Max Cong = 90.0901%, Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+   INT_L_X24Y34 -> INT_L_X24Y34
+   INT_L_X24Y18 -> INT_L_X24Y18
+   INT_R_X27Y13 -> INT_R_X27Y13
+South Dir 1x1 Area, Max Cong = 95.4955%, Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+   INT_L_X24Y27 -> INT_L_X24Y27
+   INT_R_X29Y23 -> INT_R_X29Y23
+   INT_R_X25Y21 -> INT_R_X25Y21
+   INT_R_X27Y20 -> INT_R_X27Y20
+   INT_L_X26Y19 -> INT_L_X26Y19
+East Dir 2x2 Area, Max Cong = 93.3824%, Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+   INT_L_X28Y18 -> INT_R_X29Y19
+   INT_L_X36Y18 -> INT_R_X37Y19
+   INT_L_X32Y16 -> INT_R_X33Y17
+   INT_L_X36Y16 -> INT_R_X37Y17
+   INT_L_X32Y14 -> INT_R_X33Y15
+West Dir 4x4 Area, Max Cong = 91.636%, Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+   INT_L_X20Y30 -> INT_R_X23Y33
+   INT_L_X20Y26 -> INT_R_X23Y29
+   INT_L_X20Y14 -> INT_R_X23Y17
 
-Time (s): cpu = 00:00:50 ; elapsed = 00:00:30 . Memory (MB): peak = 2195.582 ; gain = 151.258
+------------------------------
+Reporting congestion hotspots
+------------------------------
+Direction: North
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 1 Aspect Ratio: 0.5 Sparse Ratio: 0.5
+Direction: South
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 1 Aspect Ratio: 1 Sparse Ratio: 0.75
+Direction: East
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 2 Aspect Ratio: 0.5 Sparse Ratio: 1.3125
+Direction: West
+----------------
+Congested clusters found at Level 2
+Effective congestion level: 3 Aspect Ratio: 0.2 Sparse Ratio: 1.25
+
+Phase 7 Route finalize | Checksum: 1838d0137
+
+Time (s): cpu = 00:05:03 ; elapsed = 00:02:55 . Memory (MB): peak = 2326.348 ; gain = 197.242
 
 Phase 8 Verifying routed nets
 
  Verification completed successfully
-Phase 8 Verifying routed nets | Checksum: 17e156829
+Phase 8 Verifying routed nets | Checksum: 1838d0137
 
-Time (s): cpu = 00:00:50 ; elapsed = 00:00:30 . Memory (MB): peak = 2195.582 ; gain = 151.258
+Time (s): cpu = 00:05:03 ; elapsed = 00:02:55 . Memory (MB): peak = 2326.348 ; gain = 197.242
 
 Phase 9 Depositing Routes
-Phase 9 Depositing Routes | Checksum: 1f6b22c4e
+Phase 9 Depositing Routes | Checksum: 17f409a4f
 
-Time (s): cpu = 00:00:51 ; elapsed = 00:00:31 . Memory (MB): peak = 2195.582 ; gain = 151.258
+Time (s): cpu = 00:05:05 ; elapsed = 00:02:57 . Memory (MB): peak = 2326.348 ; gain = 197.242
 
 Phase 10 Post Router Timing
-INFO: [Route 35-57] Estimated Timing Summary | WNS=0.212  | TNS=0.000  | WHS=0.005  | THS=0.000  |
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-2.949 | TNS=-783.240| WHS=0.018  | THS=0.000  |
 
-INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
-Phase 10 Post Router Timing | Checksum: 1f6b22c4e
+WARNING: [Route 35-328] Router estimated timing not met.
+Resolution: For a complete and accurate timing signoff, report_timing_summary must be run after route_design. Alternatively, route_design can be run with the -timing_summary option to enable a complete timing signoff at the end of route_design.
+Phase 10 Post Router Timing | Checksum: 17f409a4f
 
-Time (s): cpu = 00:00:51 ; elapsed = 00:00:31 . Memory (MB): peak = 2195.582 ; gain = 151.258
+Time (s): cpu = 00:05:05 ; elapsed = 00:02:58 . Memory (MB): peak = 2326.348 ; gain = 197.242
 INFO: [Route 35-16] Router Completed Successfully
 
-Time (s): cpu = 00:00:51 ; elapsed = 00:00:31 . Memory (MB): peak = 2195.582 ; gain = 151.258
+Time (s): cpu = 00:05:05 ; elapsed = 00:02:58 . Memory (MB): peak = 2326.348 ; gain = 197.242
 
 Routing Is Done.
 INFO: [Common 17-83] Releasing license: Implementation
-128 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
+903 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:00:53 ; elapsed = 00:00:32 . Memory (MB): peak = 2195.582 ; gain = 151.258
+route_design: Time (s): cpu = 00:05:08 ; elapsed = 00:02:59 . Memory (MB): peak = 2326.348 ; gain = 197.242
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing placer database...
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 2195.582 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:06 ; elapsed = 00:00:02 . Memory (MB): peak = 2326.348 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/impl_1/CPE_Wrapper_routed.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file CPE_Wrapper_drc_routed.rpt -pb CPE_Wrapper_drc_routed.pb -rpx CPE_Wrapper_drc_routed.rpx
 Command: report_drc -file CPE_Wrapper_drc_routed.rpt -pb CPE_Wrapper_drc_routed.pb -rpx CPE_Wrapper_drc_routed.rpx
@@ -672,6 +1602,7 @@ INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [DRC 23-133] Running Methodology with 2 threads
 INFO: [Coretcl 2-1520] The results of Report Methodology are in file C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/impl_1/CPE_Wrapper_methodology_drc_routed.rpt.
 report_methodology completed successfully
+report_methodology: Time (s): cpu = 00:00:11 ; elapsed = 00:00:06 . Memory (MB): peak = 2365.836 ; gain = 39.488
 INFO: [runtcl-4] Executing : report_power -file CPE_Wrapper_power_routed.rpt -pb CPE_Wrapper_power_summary_routed.pb -rpx CPE_Wrapper_power_routed.rpx
 Command: report_power -file CPE_Wrapper_power_routed.rpt -pb CPE_Wrapper_power_summary_routed.pb -rpx CPE_Wrapper_power_routed.rpx
 INFO: [Timing 38-35] Done setting XDC timing constraints.
@@ -680,12 +1611,14 @@ Running Vector-less Activity Propagation...
 Finished Running Vector-less Activity Propagation
 WARNING: [Power 33-332] Found switching activity that implies high-fanout reset nets being asserted for excessive periods of time which may result in inaccurate power analysis.
 Resolution: To review and fix problems, please run Power Constraints Advisor in the GUI from Tools > Power Constraints Advisor or run report_power with the -advisory option to generate a text report.
-140 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
+915 Infos, 6 Warnings, 0 Critical Warnings and 0 Errors encountered.
 report_power completed successfully
+report_power: Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 2376.957 ; gain = 11.121
 INFO: [runtcl-4] Executing : report_route_status -file CPE_Wrapper_route_status.rpt -pb CPE_Wrapper_route_status.pb
 INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file CPE_Wrapper_timing_summary_routed.rpt -pb CPE_Wrapper_timing_summary_routed.pb -rpx CPE_Wrapper_timing_summary_routed.rpx -warn_on_violation 
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
 INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
 WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
 INFO: [runtcl-4] Executing : report_incremental_reuse -file CPE_Wrapper_incremental_reuse_routed.rpt
 INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
@@ -702,7 +1635,7 @@ INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc
 Running DRC as a precondition to command write_bitstream
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
 INFO: [DRC 23-27] Running DRC with 2 threads
-WARNING: [DRC RTSTAT-10] No routable loads: 58 net(s) have no routable loads. The problem bus(es) and/or net(s) are BD_Wrapper/Convolution_Controller_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, BD_Wrapper/Convolution_Controller_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, BD_Wrapper/Convolution_Controller_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg[2:0], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg_en_2[1], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD1/ctl_reg_en_2[1], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_capture[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_drck[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_runtest[0], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwhf.whf/overflow, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwhf.whf/overflow, BD_Wrapper/Convolution_Controller_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, BD_Wrapper/Convolution_Controller_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, BD_Wrapper/Convolution_Controller_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb... and (the first 15 of 44 listed).
+WARNING: [DRC RTSTAT-10] No routable loads: 58 net(s) have no routable loads. The problem bus(es) and/or net(s) are BD_Wrapper/Convolution_Controller_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, BD_Wrapper/Convolution_Controller_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, BD_Wrapper/Convolution_Controller_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg[2:0], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg_en_2[1], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD1/ctl_reg_en_2[1], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_capture[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_drck[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_runtest[0], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwhf.whf/overflow, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwhf.whf/overflow, BD_Wrapper/Convolution_Controller_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, BD_Wrapper/Convolution_Controller_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb, BD_Wrapper/Convolution_Controller_i/axi_mem_intercon/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb... and (the first 15 of 44 listed).
 INFO: [DRC REQP-181] writefirst: Synchronous clocking is detected for BRAM (BD_Wrapper/Convolution_Controller_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg) in SDP mode with WRITE_FIRST write-mode. This is the preferred mode for best power characteristics, however it may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
 INFO: [DRC REQP-181] writefirst: Synchronous clocking is detected for BRAM (BD_Wrapper/Convolution_Controller_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg) in SDP mode with WRITE_FIRST write-mode. This is the preferred mode for best power characteristics, however it may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
 INFO: [Vivado 12-3199] DRC finished with 0 Errors, 1 Warnings, 2 Advisories
@@ -717,9 +1650,9 @@ Creating bitstream...
 Writing bitstream ./CPE_Wrapper.bit...
 INFO: [Vivado 12-1842] Bitgen Completed Successfully.
 INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
-INFO: [Common 17-186] 'C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Mon Feb  8 22:05:15 2021. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2020.1/doc/webtalk_introduction.html.
+INFO: [Common 17-186] 'C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Thu Feb 11 11:51:28 2021. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2020.1/doc/webtalk_introduction.html.
 INFO: [Common 17-83] Releasing license: Implementation
-165 Infos, 7 Warnings, 0 Critical Warnings and 0 Errors encountered.
+940 Infos, 8 Warnings, 1 Critical Warnings and 0 Errors encountered.
 write_bitstream completed successfully
-write_bitstream: Time (s): cpu = 00:00:18 ; elapsed = 00:00:17 . Memory (MB): peak = 2687.305 ; gain = 435.230
-INFO: [Common 17-206] Exiting Vivado at Mon Feb  8 22:05:15 2021...
+write_bitstream: Time (s): cpu = 00:00:23 ; elapsed = 00:00:20 . Memory (MB): peak = 2833.422 ; gain = 456.465
+INFO: [Common 17-206] Exiting Vivado at Thu Feb 11 11:51:28 2021...
