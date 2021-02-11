@@ -1,0 +1,25 @@
+#
+#   z means not complete
+#   x means complete
+#   - are notes
+#
+
+2/8/21
+-------
+ x send omar the pynq jupyter-notebook
+ x Implement simple PR with LED
+ x Change Figure 1 to be smaller
+ z Focus on performance discussion
+ x Look at adam's JN for insight on triggering PR
+  - Adams notebook code structure does not work for me.
+
+ z Performance Metrics
+  - frames per second
+  - Multiplier latency (simulation), help determine many frequencies
+  - Eventually determine reconfiguration time
+
+
+2/9/21
+-------
+ z Revise the abstract before thursday
+ x Revise introduction to begin more abstract(don't jump directly into CNNs)
