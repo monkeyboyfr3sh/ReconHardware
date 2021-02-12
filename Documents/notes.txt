@@ -9,11 +9,11 @@
  x send omar the pynq jupyter-notebook
  x Implement simple PR with LED
  x Change Figure 1 to be smaller
- z Focus on performance discussion
+ x Focus on performance discussion
  x Look at adam's JN for insight on triggering PR
   - Adams notebook code structure does not work for me.
 
- z Performance Metrics
+ x Performance Metrics
   - frames per second
   - Multiplier latency (simulation), help determine many frequencies
   - Eventually determine reconfiguration time
