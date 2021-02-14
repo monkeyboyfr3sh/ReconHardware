@@ -1,0 +1,69 @@
+timestamp=[2021-02-12 15:51:30], mode=WORKBENCH_START, duration=0:00:04.380, duration_ms=4380, data={}
+timestamp=[2021-02-12 15:51:30], mode=WORKBENCH_UI_INIT, duration=0:00:00.394, duration_ms=394, data={editors_count=0, platform_editors_count=0, projects_count=0, platform_projects_count=0, active_platform_editor=false, projects=}
+timestamp=[2021-02-12 15:51:33], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:02.008, duration_ms=2008, data={}
+timestamp=[2021-02-12 16:40:30], mode=WORKBENCH_START, duration=0:00:03.852, duration_ms=3852, data={}
+timestamp=[2021-02-12 16:40:30], mode=WORKBENCH_UI_INIT, duration=0:00:00.401, duration_ms=401, data={editors_count=0, platform_editors_count=0, projects_count=1, platform_projects_count=0, active_platform_editor=false, projects=RemoteSystemsTempFiles}
+timestamp=[2021-02-12 16:40:32], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:01.822, duration_ms=1822, data={}
+timestamp=[2021-02-12 16:42:36], mode=APP_CREATION, duration=0:00:35.129, duration_ms=35129, data={name=hghh, project_type=sdk, os=standalone, processor=psu_cortexa53, runtime=cpp, platform=zcu102, application_type=application}
+timestamp=[2021-02-12 16:52:51], mode=WORKBENCH_START, duration=0:00:05.073, duration_ms=5073, data={}
+timestamp=[2021-02-12 16:52:52], mode=WORKBENCH_UI_INIT, duration=0:00:00.795, duration_ms=795, data={editors_count=1, platform_editors_count=1, projects_count=2, platform_projects_count=1, active_platform_editor=true, projects=RemoteSystemsTempFiles,zcu102}
+timestamp=[2021-02-12 16:52:55], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:02.178, duration_ms=2178, data={}
+timestamp=[2021-02-12 16:54:15], mode=PLATFORM_CREATION, duration=0:00:15.035, duration_ms=15035, data={platform_source=dsa, os=standalone, processor=ps7_cortexa9, platform=null}
+timestamp=[2021-02-12 16:55:36], mode=APP_CREATION, duration=0:00:07.950, duration_ms=7950, data={name=xhwicap_intr_example_1, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=shifting_led, application_type=application}
+timestamp=[2021-02-12 16:56:48], mode=PLATFORM_GENERATION, duration=0:00:29.741, duration_ms=29741, data={name=shifting_led}
+timestamp=[2021-02-12 16:57:38], mode=BUILD, duration=0:00:00.569, duration_ms=569, data={name=xhwicap_intr_example_1, configuration=Debug, clean_build=false}
+timestamp=[2021-02-12 16:57:40], mode=BUILD, duration=0:00:02.468, duration_ms=2468, data={name=xhwicap_intr_example_1_system, configuration=Debug, clean_build=false}
+timestamp=[2021-02-12 16:58:18], mode=BUILD, duration=0:00:00.502, duration_ms=502, data={name=xhwicap_intr_example_1, configuration=Debug, clean_build=false}
+timestamp=[2021-02-12 16:58:20], mode=BUILD, duration=0:00:02.398, duration_ms=2398, data={name=xhwicap_intr_example_1_system, configuration=Debug, clean_build=false}
+timestamp=[2021-02-12 17:05:07], mode=PLATFORM_CREATION, duration=0:00:14.304, duration_ms=14304, data={platform_source=dsa, os=standalone, processor=ps7_cortexa9, platform=null}
+timestamp=[2021-02-12 17:05:46], mode=APP_CREATION, duration=0:00:08.335, duration_ms=8335, data={name=xhwicap_testapp_example_1, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=leds, application_type=application}
+timestamp=[2021-02-12 17:06:24], mode=PLATFORM_GENERATION, duration=0:00:30.710, duration_ms=30710, data={name=leds}
+timestamp=[2021-02-12 17:07:21], mode=PLATFORM_GENERATION, duration=0:00:02.713, duration_ms=2713, data={name=leds}
+timestamp=[2021-02-12 17:07:56], mode=PLATFORM_GENERATION, duration=0:00:29.997, duration_ms=29997, data={name=leds}
+timestamp=[2021-02-12 17:07:56], mode=BUILD, duration=0:00:00.622, duration_ms=622, data={name=xhwicap_testapp_example_1, configuration=Debug, clean_build=false}
+timestamp=[2021-02-12 17:08:02], mode=BUILD, duration=0:00:04.877, duration_ms=4877, data={name=xhwicap_testapp_example_1_system, configuration=Debug, clean_build=false}
+timestamp=[2021-02-12 17:10:37], mode=PLATFORM_GENERATION, duration=0:00:15.593, duration_ms=15593, data={name=leds}
+timestamp=[2021-02-12 17:10:42], mode=BUILD, duration=0:00:00.612, duration_ms=612, data={name=xhwicap_testapp_example_1, configuration=Debug, clean_build=false}
+timestamp=[2021-02-12 17:10:47], mode=BUILD, duration=0:00:04.663, duration_ms=4663, data={name=xhwicap_testapp_example_1_system, configuration=Debug, clean_build=false}
+timestamp=[2021-02-12 17:13:58], mode=PLATFORM_GENERATION, duration=0:00:02.096, duration_ms=2096, data={name=leds}
+timestamp=[2021-02-12 17:14:38], mode=PLATFORM_GENERATION, duration=0:00:15.261, duration_ms=15261, data={name=leds}
+timestamp=[2021-02-12 17:14:45], mode=BUILD, duration=0:00:00.561, duration_ms=561, data={name=xhwicap_testapp_example_1, configuration=Debug, clean_build=false}
+timestamp=[2021-02-12 17:14:49], mode=BUILD, duration=0:00:04.693, duration_ms=4693, data={name=xhwicap_testapp_example_1_system, configuration=Debug, clean_build=false}
+timestamp=[2021-02-12 17:18:35], mode=APP_CREATION, duration=0:00:06.363, duration_ms=6363, data={name=xhwicap_low_level_example_1, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=leds, application_type=application}
+timestamp=[2021-02-12 17:19:02], mode=BUILD, duration=0:00:00.552, duration_ms=552, data={name=xhwicap_low_level_example_1, configuration=Debug, clean_build=false}
+timestamp=[2021-02-12 17:19:07], mode=BUILD, duration=0:00:04.676, duration_ms=4676, data={name=xhwicap_low_level_example_1_system, configuration=Debug, clean_build=false}
+timestamp=[2021-02-12 17:21:40], mode=WORKBENCH_START, duration=0:00:07.295, duration_ms=7295, data={}
+timestamp=[2021-02-12 17:21:40], mode=WORKBENCH_UI_INIT, duration=0:00:00.691, duration_ms=691, data={editors_count=5, platform_editors_count=2, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,leds,xhwicap_low_level_example_1,xhwicap_low_level_example_1_system}
+timestamp=[2021-02-12 17:21:41], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.041, duration_ms=41, data={}
+timestamp=[2021-02-12 17:23:49], mode=APP_CREATION, duration=0:00:05.471, duration_ms=5471, data={name=hello_world, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=leds, application_type=application}
+timestamp=[2021-02-12 17:24:42], mode=PLATFORM_GENERATION, duration=0:00:02.050, duration_ms=2050, data={name=leds}
+timestamp=[2021-02-12 17:24:43], mode=BUILD, duration=0:00:00.752, duration_ms=752, data={name=hello_world, configuration=Debug, clean_build=false}
+timestamp=[2021-02-12 17:24:48], mode=BUILD, duration=0:00:04.707, duration_ms=4707, data={name=hello_world_system, configuration=Debug, clean_build=false}
+timestamp=[2021-02-12 17:26:18], mode=WORKBENCH_START, duration=0:00:07.174, duration_ms=7174, data={}
+timestamp=[2021-02-12 17:26:19], mode=WORKBENCH_UI_INIT, duration=0:00:00.728, duration_ms=728, data={editors_count=4, platform_editors_count=1, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,hello_world,hello_world_system,leds}
+timestamp=[2021-02-12 17:26:19], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.034, duration_ms=34, data={}
+timestamp=[2021-02-12 17:26:48], mode=PLATFORM_GENERATION, duration=0:00:06.076, duration_ms=6076, data={name=leds}
+timestamp=[2021-02-12 17:29:44], mode=PLATFORM_GENERATION, duration=0:00:17.677, duration_ms=17677, data={name=leds}
+timestamp=[2021-02-12 17:32:17], mode=PLATFORM_GENERATION, duration=0:00:17.559, duration_ms=17559, data={name=leds}
+timestamp=[2021-02-12 17:32:27], mode=BUILD, duration=0:00:00.241, duration_ms=241, data={name=hello_world, configuration=Debug, clean_build=false}
+timestamp=[2021-02-12 17:32:32], mode=BUILD, duration=0:00:04.675, duration_ms=4675, data={name=hello_world_system, configuration=Debug, clean_build=false}
+timestamp=[2021-02-12 17:49:04], mode=WORKBENCH_START, duration=0:00:08.404, duration_ms=8404, data={}
+timestamp=[2021-02-12 17:49:05], mode=WORKBENCH_UI_INIT, duration=0:00:00.822, duration_ms=822, data={editors_count=7, platform_editors_count=4, projects_count=4, platform_projects_count=1, active_platform_editor=true, projects=RemoteSystemsTempFiles,hello_world,hello_world_system,leds}
+timestamp=[2021-02-12 17:49:05], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.037, duration_ms=37, data={}
+timestamp=[2021-02-13 17:22:42], mode=WORKBENCH_START, duration=0:00:09.831, duration_ms=9831, data={}
+timestamp=[2021-02-13 17:22:43], mode=WORKBENCH_UI_INIT, duration=0:00:00.665, duration_ms=665, data={editors_count=7, platform_editors_count=4, projects_count=4, platform_projects_count=1, active_platform_editor=true, projects=RemoteSystemsTempFiles,hello_world,hello_world_system,leds}
+timestamp=[2021-02-13 17:22:43], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.059, duration_ms=59, data={}
+timestamp=[2021-02-13 17:24:10], mode=PLATFORM_CREATION, duration=0:00:21.291, duration_ms=21291, data={platform_source=dsa, os=standalone, processor=ps7_cortexa9, platform=null}
+timestamp=[2021-02-13 17:28:44], mode=APP_CREATION, duration=0:00:05.447, duration_ms=5447, data={name=hello_world, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=shifting, application_type=application}
+timestamp=[2021-02-13 17:30:56], mode=PLATFORM_GENERATION, duration=0:00:33.450, duration_ms=33450, data={name=shifting}
+timestamp=[2021-02-13 17:31:04], mode=BUILD, duration=0:00:00.832, duration_ms=832, data={name=hello_world, configuration=Debug, clean_build=false}
+timestamp=[2021-02-13 17:31:07], mode=BUILD, duration=0:00:02.532, duration_ms=2532, data={name=hello_world_system, configuration=Debug, clean_build=false}
+timestamp=[2021-02-13 17:33:39], mode=APP_CREATION, duration=0:00:05.934, duration_ms=5934, data={name=hello_world, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=shifting, application_type=application}
+timestamp=[2021-02-13 17:34:00], mode=BUILD, duration=0:00:00.749, duration_ms=749, data={name=hello_world, configuration=Debug, clean_build=false}
+timestamp=[2021-02-13 17:34:05], mode=BUILD, duration=0:00:04.864, duration_ms=4864, data={name=hello_world_system, configuration=Debug, clean_build=false}
+timestamp=[2021-02-13 17:56:11], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.052, duration_ms=52, data={}
+timestamp=[2021-02-13 17:56:12], mode=WORKBENCH_START, duration=0:00:08.275, duration_ms=8275, data={}
+timestamp=[2021-02-13 17:56:13], mode=WORKBENCH_UI_INIT, duration=0:00:01.037, duration_ms=1037, data={editors_count=3, platform_editors_count=1, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,hello_world,hello_world_system,shifting}
+timestamp=[2021-02-13 17:56:54], mode=PLATFORM_GENERATION, duration=0:00:22.000, duration_ms=22000, data={name=shifting}
+timestamp=[2021-02-13 17:56:56], mode=BUILD, duration=0:00:00.944, duration_ms=944, data={name=hello_world, configuration=Debug, clean_build=false}
+timestamp=[2021-02-13 17:57:01], mode=BUILD, duration=0:00:05.410, duration_ms=5410, data={name=hello_world_system, configuration=Debug, clean_build=false}

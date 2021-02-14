@@ -1,0 +1,25 @@
+17:14:44 **** Incremental Build of configuration Debug for project xhwicap_testapp_example_1 ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/xhwicap_testapp_example.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xhwicap_testapp_example.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/GitHub/ReconHardware/FPGA_Files/Software/leds/export/leds/sw/leds/standalone_domain/bspinclude/include -MMD -MP -MF"src/xhwicap_testapp_example.d" -MT"src/xhwicap_testapp_example.o" -o "src/xhwicap_testapp_example.o" "../src/xhwicap_testapp_example.c"
+'Finished building: ../src/xhwicap_testapp_example.c'
+' '
+'Building target: xhwicap_testapp_example_1.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/GitHub/ReconHardware/FPGA_Files/Software/leds/export/leds/sw/leds/standalone_domain/bsplib/lib -o "xhwicap_testapp_example_1.elf"  ./src/xhwicap_testapp_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: xhwicap_testapp_example_1.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size xhwicap_testapp_example_1.elf  |tee "xhwicap_testapp_example_1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25464	   1160	  22648	  49272	   c078	xhwicap_testapp_example_1.elf
+'Finished building: xhwicap_testapp_example_1.elf.size'
+' '
+
+17:14:45 Build Finished (took 550ms)
+

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="hello_world" location="C:/GitHub/ReconHardware/FPGA_Files/Software/hello_world" platform="C:/GitHub/ReconHardware/FPGA_Files/Software/leds/export/leds/leds.xpfm" platformUID="xilinx:pynq-z2::0.0(custom)" systemProject="hello_world_system" sysConfig="leds" runtime="C/C++" cpu="standalone_domain" cpuInstance="ps7_cortexa9_0" os="standalone" mssSignature="50b504f511c6f42d254ec029d3d82a52">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.329999172">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.1147335286" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="hello_world"/>
+</sdkproject:SdkProject>
