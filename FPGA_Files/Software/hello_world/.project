@@ -3,7 +3,7 @@
 	<name>hello_world</name>
 	<comment>Created by Vitis v2020.1</comment>
 	<projects>
-		<project>shifting</project>
+		<project>pr_led</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

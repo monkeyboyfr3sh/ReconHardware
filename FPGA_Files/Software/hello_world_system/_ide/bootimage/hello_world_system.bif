@@ -1,0 +1,9 @@
+//arch = zynq; split = false; format = BIN
+the_ROM_image:
+{
+	[bootloader]C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/sw/pr_led/boot/fsbl.elf
+	C:/GitHub/ReconHardware/FPGA_Files/Software/hello_world/_ide/bitstream/top.bit
+	C:/GitHub/ReconHardware/FPGA_Files/Software/hello_world/Debug/hello_world.elf
+	C:\GitHub\ReconHardware\FPGA_Files\Projects\shifting_leds\shifting_leds.runs\impl_1\shifter_shift_left_partial.bit
+	C:\GitHub\ReconHardware\FPGA_Files\Projects\shifting_leds\shifting_leds.runs\child_0_impl_1\shifter_shift_right_partial.bit
+}

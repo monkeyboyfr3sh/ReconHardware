@@ -1,11 +1,11 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-// Date        : Fri Feb 12 16:46:34 2021
+// Date        : Thu Feb 18 10:28:45 2021
 // Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub -rename_top design_1_rst_ps7_0_100M_1 -prefix
-//               design_1_rst_ps7_0_100M_1_ design_1_rst_ps7_0_100M_0_stub.v
-// Design      : design_1_rst_ps7_0_100M_0
+// Command     : write_verilog -force -mode synth_stub
+//               c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_1/design_1_rst_ps7_0_100M_1_stub.v
+// Design      : design_1_rst_ps7_0_100M_1
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg400-1
 // --------------------------------------------------------------------------------

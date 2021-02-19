@@ -61,24 +61,20 @@
 
 #list of all the clock needed for AXI Quad SPI core
 
-	create_clock -name all_clock -period 20 [get_ports {s_axi_aclk ext_spi_clk}] 
+	create_clock -name all_clock -period 20 [get_ports {s_axi_aclk s_axi4_aclk ext_spi_clk}] 
 ##			 set_property HD.CLK_SRC BUFGCTRL_X0Y0 [get_ports s_axi_aclk]
 
-##			 set_property HD.CLK_SRC BUFGCTRL_X0Y1 [get_ports ext_spi_clk]
+##			 set_property HD.CLK_SRC BUFGCTRL_X0Y1 [get_ports s_axi4_aclk]
 
-
-set_false_path -through [get_pins -of [get_cells -hier -filter name=~*U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.*_pntr_cdc_*inst/src_gray_ff_reg[*]] -filter {REF_PIN_NAME == C}] -to [get_pins -of [get_cells -hier -filter name=~*U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.*_pntr_cdc_*inst/dest_graysync_ff_reg[0][*]] -filter {REF_PIN_NAME == D}]
-set_false_path -through [get_pins -of [get_cells -hier -filter name=~*U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.*_reg[*]] -filter {REF_PIN_NAME == C}] -to [get_pins -of [get_cells -hier -filter name=~*U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.*_reg[0][*]] -filter {REF_PIN_NAME == D}]
-set_false_path -through [get_pins -of [get_cells -hier -filter name=~*U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.TX_FIFO_II/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.*_pntr_cdc_*inst/src_gray_ff_reg[*]] -filter {REF_PIN_NAME == C}] -to [get_pins -of [get_cells -hier -filter name=~*U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.TX_FIFO_II/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.*_pntr_cdc_*inst/dest_graysync_ff_reg[0][*]] -filter {REF_PIN_NAME == D}]
-set_false_path -through [get_pins -of [get_cells -hier -filter name=~*U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/*] -filter {REF_PIN_NAME == C}] -to [get_pins -of [get_cells -hier -filter name=~*U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.*/*_CDC*] -filter {REF_PIN_NAME == D}]
-set_false_path -through [get_pins -of [get_cells -hier -filter name=~*U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/SOFT_RESET_I/RESET_FLOPS[15].RST_FLOPS] -filter {REF_PIN_NAME == C}] -to [get_pins -of [get_cells -hier -filter name=~*U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/RESET_SYNC_AXI_SPI_CLK_INST/RESET_SYNC_AX2S_1] -filter {REF_PIN_NAME == D}]
-set_false_path -through [get_pins -of [get_cells -hier -filter name=~*U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/rst_reg] -filter {REF_PIN_NAME ==C}] -to [get_pins -of [get_cells -hier -filter name=~*U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/RESET_SYNC_AXI_SPI_CLK_INST/RESET_SYNC_AX2S_1] -filter {REF_PIN_NAME == D}]
+##		 set_property HD.CLK_SRC BUFGCTRL_X0Y2 [get_ports ext_spi_clk]
+	
+set_false_path -to [get_pins -of [get_cells -hier -filter name=~*U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/XIP_MODE_GEN.AXI_QSPI_XIP_I/XIP_CLK_DOMAIN_SIGNALS/LOGIC_GENERATION_FDR.*2SPI] -filter {REF_PIN_NAME == D}]
+set_false_path -to [get_pins -of [get_cells -hier -filter name=~*U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/XIP_MODE_GEN.AXI_QSPI_XIP_I/XIP_CLK_DOMAIN_SIGNALS/LOGIC_GENERATION_FDR.*SPI2*] -filter {REF_PIN_NAME == D}]
+set_false_path -through [get_pins -of [get_cells -hier -filter name=~*U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/XIP_MODE_GEN.AXI_QSPI_XIP_I/XIP_RECEIVE_FIFO_II/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_*] -filter {REF_PIN_NAME == C}] -to [get_pins -of [get_cells -hier -filter name=~*U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/XIP_MODE_GEN.AXI_QSPI_XIP_I/*] -filter {REF_PIN_NAME == D}]
+set_false_path -to [get_pins -of [get_cells -hier -filter name=~*U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/XIP_MODE_GEN.RESET_SYNC_AXI_SPI_CLK_INST/RESET_SYNC_AX2S_1] -filter {REF_PIN_NAME == D}]
 	
 
-	
-	
-
-
+set_false_path -to [get_pins -of [get_cells -hier -filter name=~*U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/XIP_MODE_GEN.*/*_CDC*] -filter {REF_PIN_NAME == D}]
 	
 
 

@@ -2,8 +2,8 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Sat Feb 13 23:39:09 2021
-# Process ID: 11240
+# Start of session at: Thu Feb 18 15:20:05 2021
+# Process ID: 6604
 # Current directory: C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/design_1_axi_quad_spi_0_0_synth_1
 # Command line: vivado.exe -log design_1_axi_quad_spi_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_axi_quad_spi_0_0.tcl
 # Log file: C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/design_1_axi_quad_spi_0_0_synth_1/design_1_axi_quad_spi_0_0.vds

@@ -3944,3 +3944,196 @@ TRACE::2021-02-13.17:57:53::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardwar
 
 TRACE::2021-02-13.17:57:53::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/ps7_cortexa9_0/standalone_domain/bsp/system.mss
 TRACE::2021-02-13.17:57:53::SCWMssOS::Removing the swdes entry for  C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-02-15.14:23:21::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw/top.xsa
+TRACE::2021-02-15.14:23:21::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw/top.xsa
+TRACE::2021-02-15.14:23:21::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw/top.xsa
+TRACE::2021-02-15.14:23:23::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw
+TRACE::2021-02-15.14:23:23::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw/top.xsa
+TRACE::2021-02-15.14:23:23::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-02-15.14:23:23::SCWPlatform::Do not have an existing db opened. 
+TRACE::2021-02-15.14:23:26::SCWPlatform::Opened new HwDB with name top
+TRACE::2021-02-15.14:23:26::SCWReader::Active system found as  shifting
+TRACE::2021-02-15.14:23:26::SCWReader::Handling sysconfig shifting
+TRACE::2021-02-15.14:23:26::SCWDomain::checking for install qemu data   : 
+TRACE::2021-02-15.14:23:26::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/
+TRACE::2021-02-15.14:23:26::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt
+TRACE::2021-02-15.14:23:26::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw/top.xsa
+TRACE::2021-02-15.14:23:26::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw/top.xsa
+TRACE::2021-02-15.14:23:26::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw/top.xsa
+TRACE::2021-02-15.14:23:26::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw
+TRACE::2021-02-15.14:23:26::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw/top.xsa
+TRACE::2021-02-15.14:23:26::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-02-15.14:23:26::SCWPlatform::Trying to set the existing hwdb with name top
+TRACE::2021-02-15.14:23:26::SCWPlatform::Opened existing hwdb top
+TRACE::2021-02-15.14:23:26::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-02-15.14:23:26::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw/top.xsa
+TRACE::2021-02-15.14:23:26::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw/top.xsa
+TRACE::2021-02-15.14:23:26::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw/top.xsa
+TRACE::2021-02-15.14:23:26::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw
+TRACE::2021-02-15.14:23:26::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw/top.xsa
+TRACE::2021-02-15.14:23:26::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-02-15.14:23:26::SCWPlatform::Trying to set the existing hwdb with name top
+TRACE::2021-02-15.14:23:26::SCWPlatform::Opened existing hwdb top
+TRACE::2021-02-15.14:23:26::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-02-15.14:23:26::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw/top.xsa
+TRACE::2021-02-15.14:23:26::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw/top.xsa
+TRACE::2021-02-15.14:23:26::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw/top.xsa
+TRACE::2021-02-15.14:23:26::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw
+TRACE::2021-02-15.14:23:26::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw/top.xsa
+TRACE::2021-02-15.14:23:26::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-02-15.14:23:26::SCWPlatform::Trying to set the existing hwdb with name top
+TRACE::2021-02-15.14:23:26::SCWPlatform::Opened existing hwdb top
+TRACE::2021-02-15.14:23:26::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-02-15.14:23:26::SCWReader::Boot application domain added for zynq_fsbl
+TRACE::2021-02-15.14:23:26::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw/top.xsa
+TRACE::2021-02-15.14:23:26::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw/top.xsa
+TRACE::2021-02-15.14:23:26::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw/top.xsa
+TRACE::2021-02-15.14:23:26::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw
+TRACE::2021-02-15.14:23:26::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw/top.xsa
+TRACE::2021-02-15.14:23:26::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-02-15.14:23:26::SCWPlatform::Trying to set the existing hwdb with name top
+TRACE::2021-02-15.14:23:26::SCWPlatform::Opened existing hwdb top
+TRACE::2021-02-15.14:23:26::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-02-15.14:23:26::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-02-15.14:23:26::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2021-02-15.14:23:26::SCWMssOS::No sw design opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-02-15.14:23:26::SCWMssOS::mss exists loading the mss file  C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-02-15.14:23:26::SCWMssOS::Opened the sw design from mss  C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-02-15.14:23:26::SCWMssOS::Adding the swdes entry C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/zynq_fsbl/zynq_fsbl_bsp/system.mss with des name system
+TRACE::2021-02-15.14:23:26::SCWMssOS::updating the scw layer about changes
+TRACE::2021-02-15.14:23:26::SCWMssOS::Opened the sw design.  C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-02-15.14:23:26::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw/top.xsa
+TRACE::2021-02-15.14:23:26::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw/top.xsa
+TRACE::2021-02-15.14:23:26::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw/top.xsa
+TRACE::2021-02-15.14:23:26::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw
+TRACE::2021-02-15.14:23:26::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw/top.xsa
+TRACE::2021-02-15.14:23:26::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-02-15.14:23:26::SCWPlatform::Trying to set the existing hwdb with name top
+TRACE::2021-02-15.14:23:26::SCWPlatform::Opened existing hwdb top
+TRACE::2021-02-15.14:23:26::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-02-15.14:23:26::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-02-15.14:23:26::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-02-15.14:23:26::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-02-15.14:23:26::SCWMssOS:: library already available in sw design:  xilffs:4.3
+TRACE::2021-02-15.14:23:26::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw/top.xsa
+TRACE::2021-02-15.14:23:26::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw/top.xsa
+TRACE::2021-02-15.14:23:26::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw/top.xsa
+TRACE::2021-02-15.14:23:26::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw
+TRACE::2021-02-15.14:23:26::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw/top.xsa
+TRACE::2021-02-15.14:23:26::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-02-15.14:23:26::SCWPlatform::Trying to set the existing hwdb with name top
+TRACE::2021-02-15.14:23:26::SCWPlatform::Opened existing hwdb top
+TRACE::2021-02-15.14:23:26::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-02-15.14:23:26::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-02-15.14:23:26::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-02-15.14:23:26::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-02-15.14:23:26::SCWMssOS:: library already available in sw design:  xilrsa:1.6
+TRACE::2021-02-15.14:23:26::SCWMssOS::Saving the mss changes C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-02-15.14:23:26::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2021-02-15.14:23:26::SCWMssOS::Completed writemss as part of save.
+TRACE::2021-02-15.14:23:26::SCWMssOS::Commit changes completed.
+TRACE::2021-02-15.14:23:26::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2021-02-15.14:23:26::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2021-02-15.14:23:26::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw/top.xsa
+TRACE::2021-02-15.14:23:26::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw/top.xsa
+TRACE::2021-02-15.14:23:26::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw/top.xsa
+TRACE::2021-02-15.14:23:26::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw
+TRACE::2021-02-15.14:23:26::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw/top.xsa
+TRACE::2021-02-15.14:23:26::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-02-15.14:23:26::SCWPlatform::Trying to set the existing hwdb with name top
+TRACE::2021-02-15.14:23:26::SCWPlatform::Opened existing hwdb top
+TRACE::2021-02-15.14:23:26::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-02-15.14:23:26::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-02-15.14:23:26::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-02-15.14:23:26::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-02-15.14:23:26::SCWReader::No isolation master present  
+TRACE::2021-02-15.14:23:26::SCWDomain::checking for install qemu data   : 
+TRACE::2021-02-15.14:23:26::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/
+TRACE::2021-02-15.14:23:26::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt
+TRACE::2021-02-15.14:23:26::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw/top.xsa
+TRACE::2021-02-15.14:23:26::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw/top.xsa
+TRACE::2021-02-15.14:23:26::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw/top.xsa
+TRACE::2021-02-15.14:23:26::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw
+TRACE::2021-02-15.14:23:26::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw/top.xsa
+TRACE::2021-02-15.14:23:26::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-02-15.14:23:26::SCWPlatform::Trying to set the existing hwdb with name top
+TRACE::2021-02-15.14:23:26::SCWPlatform::Opened existing hwdb top
+TRACE::2021-02-15.14:23:26::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-02-15.14:23:26::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw/top.xsa
+TRACE::2021-02-15.14:23:26::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw/top.xsa
+TRACE::2021-02-15.14:23:26::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw/top.xsa
+TRACE::2021-02-15.14:23:26::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw
+TRACE::2021-02-15.14:23:26::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw/top.xsa
+TRACE::2021-02-15.14:23:26::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-02-15.14:23:26::SCWPlatform::Trying to set the existing hwdb with name top
+TRACE::2021-02-15.14:23:26::SCWPlatform::Opened existing hwdb top
+TRACE::2021-02-15.14:23:26::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-02-15.14:23:26::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw/top.xsa
+TRACE::2021-02-15.14:23:26::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw/top.xsa
+TRACE::2021-02-15.14:23:26::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw/top.xsa
+TRACE::2021-02-15.14:23:26::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw
+TRACE::2021-02-15.14:23:26::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw/top.xsa
+TRACE::2021-02-15.14:23:26::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-02-15.14:23:26::SCWPlatform::Trying to set the existing hwdb with name top
+TRACE::2021-02-15.14:23:26::SCWPlatform::Opened existing hwdb top
+TRACE::2021-02-15.14:23:26::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-02-15.14:23:26::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-02-15.14:23:26::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-02-15.14:23:26::SCWMssOS::No sw design opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-02-15.14:23:26::SCWMssOS::mss exists loading the mss file  C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-02-15.14:23:26::SCWMssOS::Opened the sw design from mss  C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-02-15.14:23:26::SCWMssOS::Adding the swdes entry C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/ps7_cortexa9_0/standalone_domain/bsp/system.mss with des name system_0
+TRACE::2021-02-15.14:23:26::SCWMssOS::updating the scw layer about changes
+TRACE::2021-02-15.14:23:26::SCWMssOS::Opened the sw design.  C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-02-15.14:23:26::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw/top.xsa
+TRACE::2021-02-15.14:23:27::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw/top.xsa
+TRACE::2021-02-15.14:23:27::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw/top.xsa
+TRACE::2021-02-15.14:23:27::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw
+TRACE::2021-02-15.14:23:27::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw/top.xsa
+TRACE::2021-02-15.14:23:27::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-02-15.14:23:27::SCWPlatform::Trying to set the existing hwdb with name top
+TRACE::2021-02-15.14:23:27::SCWPlatform::Opened existing hwdb top
+TRACE::2021-02-15.14:23:27::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-02-15.14:23:27::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-02-15.14:23:27::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-02-15.14:23:27::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-02-15.14:23:27::SCWMssOS:: library already available in sw design:  xilffs:4.3
+TRACE::2021-02-15.14:23:27::SCWMssOS::Saving the mss changes C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-02-15.14:23:27::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2021-02-15.14:23:27::SCWMssOS::Completed writemss as part of save.
+TRACE::2021-02-15.14:23:27::SCWMssOS::Commit changes completed.
+TRACE::2021-02-15.14:23:27::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2021-02-15.14:23:27::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2021-02-15.14:23:27::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw/top.xsa
+TRACE::2021-02-15.14:23:27::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw/top.xsa
+TRACE::2021-02-15.14:23:27::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw/top.xsa
+TRACE::2021-02-15.14:23:27::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw
+TRACE::2021-02-15.14:23:27::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw/top.xsa
+TRACE::2021-02-15.14:23:27::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-02-15.14:23:27::SCWPlatform::Trying to set the existing hwdb with name top
+TRACE::2021-02-15.14:23:27::SCWPlatform::Opened existing hwdb top
+TRACE::2021-02-15.14:23:27::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-02-15.14:23:27::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-02-15.14:23:27::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-02-15.14:23:27::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-02-15.14:23:27::SCWReader::No isolation master present  
+TRACE::2021-02-15.14:23:47::SCWPlatform::Clearing the existing platform
+TRACE::2021-02-15.14:23:47::SCWSystem::Clearing the existing sysconfig
+TRACE::2021-02-15.14:23:47::SCWBDomain::clearing the fsbl build
+TRACE::2021-02-15.14:23:47::SCWMssOS::Removing the swdes entry for  C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-02-15.14:23:47::SCWMssOS::Removing the swdes entry for  C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-02-15.14:23:47::SCWSystem::Clearing the domains completed.
+TRACE::2021-02-15.14:23:47::SCWPlatform::Clearing the opened hw db.
+TRACE::2021-02-15.14:23:47::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw/top.xsa
+TRACE::2021-02-15.14:23:47::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw/top.xsa
+TRACE::2021-02-15.14:23:47::SCWPlatform:: Platform location is C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw
+TRACE::2021-02-15.14:23:47::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/shifting/hw/top.xsa
+TRACE::2021-02-15.14:23:47::SCWPlatform:: Unique name xilinx:pynq-z2::0.0

@@ -6,6 +6,7 @@ module top(
 );
 
 wire clk,rst_n;
+wire [31:0] ps_count;
 wire [31:0] icap_o,icap_i;
 wire icap_csib,icap_rdwrb;
 
@@ -15,6 +16,7 @@ BD
     .FCLK_CLK0_0(clk),
     .FCLK_RESET0_N_0(rst_n),
     .vsm_shifter_hw_triggers_0(pr_btn),
+    .COUNT_0_tri_o(ps_count),
     .ICAP_0_csib(icap_csib),
     .ICAP_0_i(icap_i),
     .ICAP_0_o(icap_o),
@@ -48,7 +50,7 @@ shifter
 (
     .clk(clk),
     .reset_n(rst_n),
-    .count(100000000),
+    .count(ps_count),
     .led_n(led_n)
 );
 

@@ -1,7 +1,7 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
--- Date        : Sat Feb 13 14:16:22 2021
+-- Date        : Thu Feb 18 15:20:55 2021
 -- Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
 --               c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/ip/design_1_dfx_controller_0_0/design_1_dfx_controller_0_0_stub.vhdl
@@ -44,6 +44,9 @@ entity design_1_dfx_controller_0_0 is
     vsm_shifter_event_error : out STD_LOGIC;
     vsm_shifter_sw_shutdown_req : out STD_LOGIC;
     vsm_shifter_sw_startup_req : out STD_LOGIC;
+    cap_req : out STD_LOGIC;
+    cap_gnt : in STD_LOGIC;
+    cap_rel : in STD_LOGIC;
     s_axi_reg_awaddr : in STD_LOGIC_VECTOR ( 31 downto 0 );
     s_axi_reg_awvalid : in STD_LOGIC;
     s_axi_reg_awready : out STD_LOGIC;
@@ -68,7 +71,7 @@ architecture stub of design_1_dfx_controller_0_0 is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
-attribute black_box_pad_pin of stub : architecture is "m_axi_mem_araddr[31:0],m_axi_mem_arlen[7:0],m_axi_mem_arsize[2:0],m_axi_mem_arburst[1:0],m_axi_mem_arprot[2:0],m_axi_mem_arcache[3:0],m_axi_mem_aruser[3:0],m_axi_mem_arvalid,m_axi_mem_arready,m_axi_mem_rdata[31:0],m_axi_mem_rresp[1:0],m_axi_mem_rlast,m_axi_mem_rvalid,m_axi_mem_rready,clk,reset,icap_clk,icap_reset,icap_csib,icap_rdwrb,icap_i[31:0],icap_o[31:0],vsm_shifter_hw_triggers[1:0],vsm_shifter_rm_shutdown_req,vsm_shifter_rm_shutdown_ack,vsm_shifter_rm_decouple,vsm_shifter_rm_reset,vsm_shifter_event_error,vsm_shifter_sw_shutdown_req,vsm_shifter_sw_startup_req,s_axi_reg_awaddr[31:0],s_axi_reg_awvalid,s_axi_reg_awready,s_axi_reg_wdata[31:0],s_axi_reg_wvalid,s_axi_reg_wready,s_axi_reg_bresp[1:0],s_axi_reg_bvalid,s_axi_reg_bready,s_axi_reg_araddr[31:0],s_axi_reg_arvalid,s_axi_reg_arready,s_axi_reg_rdata[31:0],s_axi_reg_rresp[1:0],s_axi_reg_rvalid,s_axi_reg_rready";
+attribute black_box_pad_pin of stub : architecture is "m_axi_mem_araddr[31:0],m_axi_mem_arlen[7:0],m_axi_mem_arsize[2:0],m_axi_mem_arburst[1:0],m_axi_mem_arprot[2:0],m_axi_mem_arcache[3:0],m_axi_mem_aruser[3:0],m_axi_mem_arvalid,m_axi_mem_arready,m_axi_mem_rdata[31:0],m_axi_mem_rresp[1:0],m_axi_mem_rlast,m_axi_mem_rvalid,m_axi_mem_rready,clk,reset,icap_clk,icap_reset,icap_csib,icap_rdwrb,icap_i[31:0],icap_o[31:0],vsm_shifter_hw_triggers[1:0],vsm_shifter_rm_shutdown_req,vsm_shifter_rm_shutdown_ack,vsm_shifter_rm_decouple,vsm_shifter_rm_reset,vsm_shifter_event_error,vsm_shifter_sw_shutdown_req,vsm_shifter_sw_startup_req,cap_req,cap_gnt,cap_rel,s_axi_reg_awaddr[31:0],s_axi_reg_awvalid,s_axi_reg_awready,s_axi_reg_wdata[31:0],s_axi_reg_wvalid,s_axi_reg_wready,s_axi_reg_bresp[1:0],s_axi_reg_bvalid,s_axi_reg_bready,s_axi_reg_araddr[31:0],s_axi_reg_arvalid,s_axi_reg_arready,s_axi_reg_rdata[31:0],s_axi_reg_rresp[1:0],s_axi_reg_rvalid,s_axi_reg_rready";
 attribute x_core_info : string;
 attribute x_core_info of stub : architecture is "dfx_controller_design_1_dfx_controller_0_0,Vivado 2020.1";
 begin

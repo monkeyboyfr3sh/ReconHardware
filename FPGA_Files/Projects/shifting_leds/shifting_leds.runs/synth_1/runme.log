@@ -20,130 +20,211 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 22020
+INFO: [Synth 8-7075] Helper process launched with PID 19492
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1121.648 ; gain = 44.938
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1128.410 ; gain = 47.664
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'top' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/new/top.v:3]
 INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'design_1' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:13]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_quad_spi_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-1968-DESKTOP-D9F9TPQ/realtime/design_1_axi_quad_spi_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_quad_spi_0_0' (1#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-1968-DESKTOP-D9F9TPQ/realtime/design_1_axi_quad_spi_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'ip2intc_irpt' of module 'design_1_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:272]
-WARNING: [Synth 8-7023] instance 'axi_quad_spi_0' of module 'design_1_axi_quad_spi_0_0' has 33 connections declared, but only 32 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:272]
-INFO: [Synth 8-6157] synthesizing module 'design_1_dfx_controller_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-1968-DESKTOP-D9F9TPQ/realtime/design_1_dfx_controller_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_dfx_controller_0_0' (2#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-1968-DESKTOP-D9F9TPQ/realtime/design_1_dfx_controller_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'vsm_shifter_rm_shutdown_req' of module 'design_1_dfx_controller_0_0' is unconnected for instance 'dfx_controller_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:305]
-WARNING: [Synth 8-7071] port 'vsm_shifter_rm_decouple' of module 'design_1_dfx_controller_0_0' is unconnected for instance 'dfx_controller_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:305]
-WARNING: [Synth 8-7071] port 'vsm_shifter_rm_reset' of module 'design_1_dfx_controller_0_0' is unconnected for instance 'dfx_controller_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:305]
-WARNING: [Synth 8-7071] port 'vsm_shifter_event_error' of module 'design_1_dfx_controller_0_0' is unconnected for instance 'dfx_controller_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:305]
-WARNING: [Synth 8-7071] port 'vsm_shifter_sw_shutdown_req' of module 'design_1_dfx_controller_0_0' is unconnected for instance 'dfx_controller_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:305]
-WARNING: [Synth 8-7071] port 'vsm_shifter_sw_startup_req' of module 'design_1_dfx_controller_0_0' is unconnected for instance 'dfx_controller_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:305]
-WARNING: [Synth 8-7023] instance 'dfx_controller_0' of module 'design_1_dfx_controller_0_0' has 46 connections declared, but only 40 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:305]
-INFO: [Synth 8-6157] synthesizing module 'design_1_ila_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-1968-DESKTOP-D9F9TPQ/realtime/design_1_ila_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_ila_0_0' (3#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-1968-DESKTOP-D9F9TPQ/realtime/design_1_ila_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_ila_0_1' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-1968-DESKTOP-D9F9TPQ/realtime/design_1_ila_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_ila_0_1' (4#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-1968-DESKTOP-D9F9TPQ/realtime/design_1_ila_0_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_ila_0_2' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-1968-DESKTOP-D9F9TPQ/realtime/design_1_ila_0_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_ila_0_2' (5#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-1968-DESKTOP-D9F9TPQ/realtime/design_1_ila_0_2_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_ila_2_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-1968-DESKTOP-D9F9TPQ/realtime/design_1_ila_2_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_ila_2_0' (6#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-1968-DESKTOP-D9F9TPQ/realtime/design_1_ila_2_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_processing_system7_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-1968-DESKTOP-D9F9TPQ/realtime/design_1_processing_system7_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_processing_system7_0_0' (7#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-1968-DESKTOP-D9F9TPQ/realtime/design_1_processing_system7_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'USB0_PORT_INDCTL' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:453]
-WARNING: [Synth 8-7071] port 'USB0_VBUS_PWRSELECT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:453]
-WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'design_1_processing_system7_0_0' has 65 connections declared, but only 63 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:453]
-INFO: [Synth 8-6157] synthesizing module 'design_1_ps7_0_axi_periph_1' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:631]
-INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_15SPJYW' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:1321]
-INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_15SPJYW' (8#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:1321]
-INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_XU9C55' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:1467]
-INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_XU9C55' (9#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:1467]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_UYSKKA' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:1613]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-1968-DESKTOP-D9F9TPQ/realtime/design_1_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_0' (10#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-1968-DESKTOP-D9F9TPQ/realtime/design_1_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_UYSKKA' (11#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:1613]
-INFO: [Synth 8-6157] synthesizing module 's01_couplers_imp_ZQDCSB' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:1918]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_1' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-1968-DESKTOP-D9F9TPQ/realtime/design_1_auto_pc_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_1' (12#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-1968-DESKTOP-D9F9TPQ/realtime/design_1_auto_pc_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 's01_couplers_imp_ZQDCSB' (13#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:1918]
-INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-1968-DESKTOP-D9F9TPQ/realtime/design_1_xbar_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_0' (14#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-1968-DESKTOP-D9F9TPQ/realtime/design_1_xbar_0_stub.v:6]
-WARNING: [Synth 8-689] width (1) of port connection 's_axi_awready' does not match port width (2) of module 'design_1_xbar_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:1306]
-WARNING: [Synth 8-689] width (2) of port connection 's_axi_bresp' does not match port width (4) of module 'design_1_xbar_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:1309]
-WARNING: [Synth 8-689] width (1) of port connection 's_axi_bvalid' does not match port width (2) of module 'design_1_xbar_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:1310]
-WARNING: [Synth 8-689] width (1) of port connection 's_axi_wready' does not match port width (2) of module 'design_1_xbar_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:1316]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_ps7_0_axi_periph_1' (15#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:631]
-INFO: [Synth 8-6157] synthesizing module 'design_1_rst_ps7_0_100M_1' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-1968-DESKTOP-D9F9TPQ/realtime/design_1_rst_ps7_0_100M_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_rst_ps7_0_100M_1' (16#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-1968-DESKTOP-D9F9TPQ/realtime/design_1_rst_ps7_0_100M_1_stub.v:6]
-WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_rst_ps7_0_100M_1' is unconnected for instance 'rst_ps7_0_100M' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:622]
-WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_1_rst_ps7_0_100M_1' is unconnected for instance 'rst_ps7_0_100M' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:622]
-WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_1_rst_ps7_0_100M_1' is unconnected for instance 'rst_ps7_0_100M' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:622]
-WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'design_1_rst_ps7_0_100M_1' is unconnected for instance 'rst_ps7_0_100M' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:622]
-WARNING: [Synth 8-7023] instance 'rst_ps7_0_100M' of module 'design_1_rst_ps7_0_100M_1' has 10 connections declared, but only 6 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:622]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'dfx_controller_0'. This will prevent further optimization [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:305]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ps7_0_axi_periph'. This will prevent further optimization [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:517]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_0'. This will prevent further optimization [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:346]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_1'. This will prevent further optimization [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:371]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'axi_quad_spi_0'. This will prevent further optimization [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:272]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_2'. This will prevent further optimization [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:380]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_3'. This will prevent further optimization [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:405]
-INFO: [Synth 8-6155] done synthesizing module 'design_1' (17#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:13]
-INFO: [Synth 8-6157] synthesizing module 'IOBUF' [C:/Xilinx/Vivado/2020.1/scripts/rt/data/unisim_comp.v:36238]
-	Parameter DRIVE bound to: 12 - type: integer 
-	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
-	Parameter IOSTANDARD bound to: DEFAULT - type: string 
-	Parameter SLEW bound to: SLOW - type: string 
-INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (18#1) [C:/Xilinx/Vivado/2020.1/scripts/rt/data/unisim_comp.v:36238]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (19#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
-WARNING: [Synth 8-7071] port 'DDR_addr' of module 'design_1_wrapper' is unconnected for instance 'BD' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/new/top.v:13]
-WARNING: [Synth 8-7071] port 'DDR_ba' of module 'design_1_wrapper' is unconnected for instance 'BD' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/new/top.v:13]
-WARNING: [Synth 8-7071] port 'DDR_cas_n' of module 'design_1_wrapper' is unconnected for instance 'BD' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/new/top.v:13]
-WARNING: [Synth 8-7071] port 'DDR_ck_n' of module 'design_1_wrapper' is unconnected for instance 'BD' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/new/top.v:13]
-WARNING: [Synth 8-7071] port 'DDR_ck_p' of module 'design_1_wrapper' is unconnected for instance 'BD' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/new/top.v:13]
-WARNING: [Synth 8-7071] port 'DDR_cke' of module 'design_1_wrapper' is unconnected for instance 'BD' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/new/top.v:13]
-WARNING: [Synth 8-7071] port 'DDR_cs_n' of module 'design_1_wrapper' is unconnected for instance 'BD' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/new/top.v:13]
-WARNING: [Synth 8-7071] port 'DDR_dm' of module 'design_1_wrapper' is unconnected for instance 'BD' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/new/top.v:13]
-WARNING: [Synth 8-7071] port 'DDR_dq' of module 'design_1_wrapper' is unconnected for instance 'BD' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/new/top.v:13]
-WARNING: [Synth 8-7071] port 'DDR_dqs_n' of module 'design_1_wrapper' is unconnected for instance 'BD' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/new/top.v:13]
-WARNING: [Synth 8-7071] port 'DDR_dqs_p' of module 'design_1_wrapper' is unconnected for instance 'BD' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/new/top.v:13]
-WARNING: [Synth 8-7071] port 'DDR_odt' of module 'design_1_wrapper' is unconnected for instance 'BD' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/new/top.v:13]
-WARNING: [Synth 8-7071] port 'DDR_ras_n' of module 'design_1_wrapper' is unconnected for instance 'BD' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/new/top.v:13]
-WARNING: [Synth 8-7071] port 'DDR_reset_n' of module 'design_1_wrapper' is unconnected for instance 'BD' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/new/top.v:13]
-WARNING: [Synth 8-7071] port 'DDR_we_n' of module 'design_1_wrapper' is unconnected for instance 'BD' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/new/top.v:13]
-WARNING: [Synth 8-7071] port 'FIXED_IO_ddr_vrn' of module 'design_1_wrapper' is unconnected for instance 'BD' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/new/top.v:13]
-WARNING: [Synth 8-7071] port 'FIXED_IO_ddr_vrp' of module 'design_1_wrapper' is unconnected for instance 'BD' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/new/top.v:13]
-WARNING: [Synth 8-7071] port 'FIXED_IO_mio' of module 'design_1_wrapper' is unconnected for instance 'BD' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/new/top.v:13]
-WARNING: [Synth 8-7071] port 'FIXED_IO_ps_clk' of module 'design_1_wrapper' is unconnected for instance 'BD' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/new/top.v:13]
-WARNING: [Synth 8-7071] port 'FIXED_IO_ps_porb' of module 'design_1_wrapper' is unconnected for instance 'BD' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/new/top.v:13]
-WARNING: [Synth 8-7071] port 'FIXED_IO_ps_srstb' of module 'design_1_wrapper' is unconnected for instance 'BD' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/new/top.v:13]
-WARNING: [Synth 8-7071] port 'spi_io0_io' of module 'design_1_wrapper' is unconnected for instance 'BD' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/new/top.v:13]
-WARNING: [Synth 8-7071] port 'spi_io1_io' of module 'design_1_wrapper' is unconnected for instance 'BD' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/new/top.v:13]
-WARNING: [Synth 8-7071] port 'spi_sck_io' of module 'design_1_wrapper' is unconnected for instance 'BD' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/new/top.v:13]
-WARNING: [Synth 8-7071] port 'spi_ss_io' of module 'design_1_wrapper' is unconnected for instance 'BD' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/new/top.v:13]
-WARNING: [Synth 8-7023] instance 'BD' of module 'design_1_wrapper' has 36 connections declared, but only 11 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/new/top.v:13]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_dma_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-11884-DESKTOP-D9F9TPQ/realtime/design_1_axi_dma_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_dma_0_0' (1#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-11884-DESKTOP-D9F9TPQ/realtime/design_1_axi_dma_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mm2s_prmry_reset_out_n' of module 'design_1_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:356]
+WARNING: [Synth 8-7071] port 's2mm_prmry_reset_out_n' of module 'design_1_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:356]
+WARNING: [Synth 8-7071] port 'mm2s_introut' of module 'design_1_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:356]
+WARNING: [Synth 8-7071] port 's2mm_introut' of module 'design_1_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:356]
+WARNING: [Synth 8-7071] port 'axi_dma_tstvec' of module 'design_1_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:356]
+WARNING: [Synth 8-7023] instance 'axi_dma_0' of module 'design_1_axi_dma_0_0' has 64 connections declared, but only 59 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:356]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-11884-DESKTOP-D9F9TPQ/realtime/design_1_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_0_0' (2#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-11884-DESKTOP-D9F9TPQ/realtime/design_1_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_quad_spi_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-11884-DESKTOP-D9F9TPQ/realtime/design_1_axi_quad_spi_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_quad_spi_0_0' (3#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-11884-DESKTOP-D9F9TPQ/realtime/design_1_axi_quad_spi_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'io0_o' of module 'design_1_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:437]
+WARNING: [Synth 8-7071] port 'io0_t' of module 'design_1_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:437]
+WARNING: [Synth 8-7071] port 'io1_o' of module 'design_1_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:437]
+WARNING: [Synth 8-7071] port 'io1_t' of module 'design_1_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:437]
+WARNING: [Synth 8-7071] port 'io2_o' of module 'design_1_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:437]
+WARNING: [Synth 8-7071] port 'io2_t' of module 'design_1_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:437]
+WARNING: [Synth 8-7071] port 'io3_o' of module 'design_1_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:437]
+WARNING: [Synth 8-7071] port 'io3_t' of module 'design_1_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:437]
+WARNING: [Synth 8-7071] port 'ss_o' of module 'design_1_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:437]
+WARNING: [Synth 8-7071] port 'ss_t' of module 'design_1_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:437]
+WARNING: [Synth 8-7071] port 'cfgclk' of module 'design_1_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:437]
+WARNING: [Synth 8-7071] port 'cfgmclk' of module 'design_1_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:437]
+WARNING: [Synth 8-7071] port 'eos' of module 'design_1_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:437]
+WARNING: [Synth 8-7071] port 'preq' of module 'design_1_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:437]
+WARNING: [Synth 8-7071] port 'ip2intc_irpt' of module 'design_1_axi_quad_spi_0_0' is unconnected for instance 'axi_quad_spi_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:437]
+WARNING: [Synth 8-7023] instance 'axi_quad_spi_0' of module 'design_1_axi_quad_spi_0_0' has 80 connections declared, but only 65 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:437]
+INFO: [Synth 8-6157] synthesizing module 'design_1_dfx_controller_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-11884-DESKTOP-D9F9TPQ/realtime/design_1_dfx_controller_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_dfx_controller_0_0' (4#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-11884-DESKTOP-D9F9TPQ/realtime/design_1_dfx_controller_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'vsm_shifter_rm_shutdown_req' of module 'design_1_dfx_controller_0_0' is unconnected for instance 'dfx_controller_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:503]
+WARNING: [Synth 8-7071] port 'vsm_shifter_rm_decouple' of module 'design_1_dfx_controller_0_0' is unconnected for instance 'dfx_controller_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:503]
+WARNING: [Synth 8-7071] port 'vsm_shifter_rm_reset' of module 'design_1_dfx_controller_0_0' is unconnected for instance 'dfx_controller_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:503]
+WARNING: [Synth 8-7071] port 'vsm_shifter_event_error' of module 'design_1_dfx_controller_0_0' is unconnected for instance 'dfx_controller_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:503]
+WARNING: [Synth 8-7071] port 'vsm_shifter_sw_shutdown_req' of module 'design_1_dfx_controller_0_0' is unconnected for instance 'dfx_controller_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:503]
+WARNING: [Synth 8-7071] port 'vsm_shifter_sw_startup_req' of module 'design_1_dfx_controller_0_0' is unconnected for instance 'dfx_controller_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:503]
+WARNING: [Synth 8-7071] port 'cap_req' of module 'design_1_dfx_controller_0_0' is unconnected for instance 'dfx_controller_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:503]
+WARNING: [Synth 8-7023] instance 'dfx_controller_0' of module 'design_1_dfx_controller_0_0' has 49 connections declared, but only 42 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:503]
+INFO: [Synth 8-6157] synthesizing module 'design_1_ila_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-11884-DESKTOP-D9F9TPQ/realtime/design_1_ila_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_ila_0_0' (5#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-11884-DESKTOP-D9F9TPQ/realtime/design_1_ila_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_ila_0_1' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-11884-DESKTOP-D9F9TPQ/realtime/design_1_ila_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_ila_0_1' (6#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-11884-DESKTOP-D9F9TPQ/realtime/design_1_ila_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_ila_0_2' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-11884-DESKTOP-D9F9TPQ/realtime/design_1_ila_0_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_ila_0_2' (7#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-11884-DESKTOP-D9F9TPQ/realtime/design_1_ila_0_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_ila_2_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-11884-DESKTOP-D9F9TPQ/realtime/design_1_ila_2_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_ila_2_0' (8#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-11884-DESKTOP-D9F9TPQ/realtime/design_1_ila_2_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_processing_system7_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-11884-DESKTOP-D9F9TPQ/realtime/design_1_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_processing_system7_0_0' (9#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-11884-DESKTOP-D9F9TPQ/realtime/design_1_processing_system7_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'USB0_PORT_INDCTL' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:653]
+WARNING: [Synth 8-7071] port 'USB0_VBUS_PWRSELECT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:653]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_BID' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:653]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_RID' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:653]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_RCOUNT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:653]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_WCOUNT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:653]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_RACOUNT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:653]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_WACOUNT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:653]
+WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'design_1_processing_system7_0_0' has 110 connections declared, but only 102 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:653]
+INFO: [Synth 8-6157] synthesizing module 'design_1_ps7_0_axi_periph_1' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:1005]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_15SPJYW' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:2852]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_ds_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-11884-DESKTOP-D9F9TPQ/realtime/design_1_auto_ds_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_ds_0' (10#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-11884-DESKTOP-D9F9TPQ/realtime/design_1_auto_ds_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-11884-DESKTOP-D9F9TPQ/realtime/design_1_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_0' (11#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-11884-DESKTOP-D9F9TPQ/realtime/design_1_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_15SPJYW' (12#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:2852]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_XU9C55' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:3250]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_ds_1' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-11884-DESKTOP-D9F9TPQ/realtime/design_1_auto_ds_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_ds_1' (13#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-11884-DESKTOP-D9F9TPQ/realtime/design_1_auto_ds_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_1' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-11884-DESKTOP-D9F9TPQ/realtime/design_1_auto_pc_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_1' (14#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-11884-DESKTOP-D9F9TPQ/realtime/design_1_auto_pc_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_XU9C55' (15#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:3250]
+INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_14WQB4R' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:3648]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_2' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-11884-DESKTOP-D9F9TPQ/realtime/design_1_auto_pc_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_2' (16#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-11884-DESKTOP-D9F9TPQ/realtime/design_1_auto_pc_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_14WQB4R' (17#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:3648]
+INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_YFYJ3U' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:4008]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_ds_2' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-11884-DESKTOP-D9F9TPQ/realtime/design_1_auto_ds_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_ds_2' (18#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-11884-DESKTOP-D9F9TPQ/realtime/design_1_auto_ds_2_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_3' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-11884-DESKTOP-D9F9TPQ/realtime/design_1_auto_pc_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_3' (19#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-11884-DESKTOP-D9F9TPQ/realtime/design_1_auto_pc_3_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'design_1_auto_pc_3' is unconnected for instance 'auto_pc' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:4339]
+WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'design_1_auto_pc_3' is unconnected for instance 'auto_pc' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:4339]
+WARNING: [Synth 8-7023] instance 'auto_pc' of module 'design_1_auto_pc_3' has 56 connections declared, but only 54 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:4339]
+INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_YFYJ3U' (20#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:4008]
+INFO: [Synth 8-6157] synthesizing module 'm04_couplers_imp_17KQ732' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:4396]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_ds_3' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-11884-DESKTOP-D9F9TPQ/realtime/design_1_auto_ds_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_ds_3' (21#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-11884-DESKTOP-D9F9TPQ/realtime/design_1_auto_ds_3_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axi_awregion' of module 'design_1_auto_ds_3' is unconnected for instance 'auto_ds' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:4675]
+WARNING: [Synth 8-7071] port 'm_axi_awqos' of module 'design_1_auto_ds_3' is unconnected for instance 'auto_ds' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:4675]
+WARNING: [Synth 8-7071] port 'm_axi_arregion' of module 'design_1_auto_ds_3' is unconnected for instance 'auto_ds' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:4675]
+WARNING: [Synth 8-7071] port 'm_axi_arqos' of module 'design_1_auto_ds_3' is unconnected for instance 'auto_ds' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:4675]
+WARNING: [Synth 8-7023] instance 'auto_ds' of module 'design_1_auto_ds_3' has 72 connections declared, but only 68 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:4675]
+INFO: [Synth 8-6155] done synthesizing module 'm04_couplers_imp_17KQ732' (22#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:4396]
+INFO: [Synth 8-6157] synthesizing module 'm05_couplers_imp_VQEDA7' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:4746]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_ds_4' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-11884-DESKTOP-D9F9TPQ/realtime/design_1_auto_ds_4_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_ds_4' (23#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-11884-DESKTOP-D9F9TPQ/realtime/design_1_auto_ds_4_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_4' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-11884-DESKTOP-D9F9TPQ/realtime/design_1_auto_pc_4_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_4' (24#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-11884-DESKTOP-D9F9TPQ/realtime/design_1_auto_pc_4_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'design_1_auto_pc_4' is unconnected for instance 'auto_pc' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:5077]
+WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'design_1_auto_pc_4' is unconnected for instance 'auto_pc' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:5077]
+WARNING: [Synth 8-7023] instance 'auto_pc' of module 'design_1_auto_pc_4' has 56 connections declared, but only 54 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:5077]
+INFO: [Synth 8-6155] done synthesizing module 'm05_couplers_imp_VQEDA7' (25#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:4746]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_UYSKKA' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:5134]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_5' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-11884-DESKTOP-D9F9TPQ/realtime/design_1_auto_pc_5_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_5' (26#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-11884-DESKTOP-D9F9TPQ/realtime/design_1_auto_pc_5_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_us_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-11884-DESKTOP-D9F9TPQ/realtime/design_1_auto_us_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_us_0' (27#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-11884-DESKTOP-D9F9TPQ/realtime/design_1_auto_us_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axi_awregion' of module 'design_1_auto_us_0' is unconnected for instance 'auto_us' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:5552]
+WARNING: [Synth 8-7071] port 'm_axi_arregion' of module 'design_1_auto_us_0' is unconnected for instance 'auto_us' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:5552]
+WARNING: [Synth 8-7023] instance 'auto_us' of module 'design_1_auto_us_0' has 76 connections declared, but only 74 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:5552]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_UYSKKA' (28#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:5134]
+INFO: [Synth 8-6157] synthesizing module 's01_couplers_imp_ZQDCSB' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:5629]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_us_1' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-11884-DESKTOP-D9F9TPQ/realtime/design_1_auto_us_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_us_1' (29#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-11884-DESKTOP-D9F9TPQ/realtime/design_1_auto_us_1_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axi_arregion' of module 'design_1_auto_us_1' is unconnected for instance 'auto_us' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:5758]
+WARNING: [Synth 8-7023] instance 'auto_us' of module 'design_1_auto_us_1' has 34 connections declared, but only 33 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:5758]
+INFO: [Synth 8-6155] done synthesizing module 's01_couplers_imp_ZQDCSB' (30#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:5629]
+INFO: [Synth 8-6157] synthesizing module 's02_couplers_imp_THVDEH' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:5794]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_us_2' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-11884-DESKTOP-D9F9TPQ/realtime/design_1_auto_us_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_us_2' (31#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-11884-DESKTOP-D9F9TPQ/realtime/design_1_auto_us_2_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axi_arregion' of module 'design_1_auto_us_2' is unconnected for instance 'auto_us' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:5921]
+WARNING: [Synth 8-7023] instance 'auto_us' of module 'design_1_auto_us_2' has 34 connections declared, but only 33 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:5921]
+INFO: [Synth 8-6155] done synthesizing module 's02_couplers_imp_THVDEH' (32#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:5794]
+INFO: [Synth 8-6157] synthesizing module 's03_couplers_imp_10XLKL4' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:5957]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_us_3' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-11884-DESKTOP-D9F9TPQ/realtime/design_1_auto_us_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_us_3' (33#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-11884-DESKTOP-D9F9TPQ/realtime/design_1_auto_us_3_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axi_awregion' of module 'design_1_auto_us_3' is unconnected for instance 'auto_us' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:6108]
+WARNING: [Synth 8-7023] instance 'auto_us' of module 'design_1_auto_us_3' has 40 connections declared, but only 39 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:6108]
+INFO: [Synth 8-6155] done synthesizing module 's03_couplers_imp_10XLKL4' (34#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:5957]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-11884-DESKTOP-D9F9TPQ/realtime/design_1_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_0' (35#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-11884-DESKTOP-D9F9TPQ/realtime/design_1_xbar_0_stub.v:6]
+WARNING: [Synth 8-689] width (3) of port connection 's_axi_arready' does not match port width (4) of module 'design_1_xbar_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:2823]
+WARNING: [Synth 8-689] width (192) of port connection 's_axi_rdata' does not match port width (256) of module 'design_1_xbar_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:2840]
+WARNING: [Synth 8-689] width (3) of port connection 's_axi_rlast' does not match port width (4) of module 'design_1_xbar_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:2841]
+WARNING: [Synth 8-689] width (6) of port connection 's_axi_rresp' does not match port width (8) of module 'design_1_xbar_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:2843]
+WARNING: [Synth 8-689] width (3) of port connection 's_axi_rvalid' does not match port width (4) of module 'design_1_xbar_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:2844]
+WARNING: [Synth 8-7071] port 's_axi_bid' of module 'design_1_xbar_0' is unconnected for instance 'xbar' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:2777]
+WARNING: [Synth 8-7071] port 's_axi_rid' of module 'design_1_xbar_0' is unconnected for instance 'xbar' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:2777]
+WARNING: [Synth 8-7023] instance 'xbar' of module 'design_1_xbar_0' has 74 connections declared, but only 72 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:2777]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_ps7_0_axi_periph_1' (36#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:1005]
+INFO: [Synth 8-6157] synthesizing module 'design_1_rst_ps7_0_100M_1' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-11884-DESKTOP-D9F9TPQ/realtime/design_1_rst_ps7_0_100M_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_rst_ps7_0_100M_1' (37#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-11884-DESKTOP-D9F9TPQ/realtime/design_1_rst_ps7_0_100M_1_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_rst_ps7_0_100M_1' is unconnected for instance 'rst_ps7_0_100M' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:996]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_1_rst_ps7_0_100M_1' is unconnected for instance 'rst_ps7_0_100M' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:996]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_1_rst_ps7_0_100M_1' is unconnected for instance 'rst_ps7_0_100M' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:996]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'design_1_rst_ps7_0_100M_1' is unconnected for instance 'rst_ps7_0_100M' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:996]
+WARNING: [Synth 8-7023] instance 'rst_ps7_0_100M' of module 'design_1_rst_ps7_0_100M_1' has 10 connections declared, but only 6 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:996]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'dfx_controller_0'. This will prevent further optimization [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:503]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ps7_0_axi_periph'. This will prevent further optimization [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:756]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_0'. This will prevent further optimization [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:546]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_1'. This will prevent further optimization [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:571]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'axi_dma_0'. This will prevent further optimization [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:356]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_2'. This will prevent further optimization [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:580]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_3'. This will prevent further optimization [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:605]
+INFO: [Synth 8-6155] done synthesizing module 'design_1' (38#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (39#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+WARNING: [Synth 8-7071] port 'DDR_addr' of module 'design_1_wrapper' is unconnected for instance 'BD' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/new/top.v:14]
+WARNING: [Synth 8-7071] port 'DDR_ba' of module 'design_1_wrapper' is unconnected for instance 'BD' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/new/top.v:14]
+WARNING: [Synth 8-7071] port 'DDR_cas_n' of module 'design_1_wrapper' is unconnected for instance 'BD' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/new/top.v:14]
+WARNING: [Synth 8-7071] port 'DDR_ck_n' of module 'design_1_wrapper' is unconnected for instance 'BD' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/new/top.v:14]
+WARNING: [Synth 8-7071] port 'DDR_ck_p' of module 'design_1_wrapper' is unconnected for instance 'BD' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/new/top.v:14]
+WARNING: [Synth 8-7071] port 'DDR_cke' of module 'design_1_wrapper' is unconnected for instance 'BD' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/new/top.v:14]
+WARNING: [Synth 8-7071] port 'DDR_cs_n' of module 'design_1_wrapper' is unconnected for instance 'BD' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/new/top.v:14]
+WARNING: [Synth 8-7071] port 'DDR_dm' of module 'design_1_wrapper' is unconnected for instance 'BD' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/new/top.v:14]
+WARNING: [Synth 8-7071] port 'DDR_dq' of module 'design_1_wrapper' is unconnected for instance 'BD' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/new/top.v:14]
+WARNING: [Synth 8-7071] port 'DDR_dqs_n' of module 'design_1_wrapper' is unconnected for instance 'BD' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/new/top.v:14]
+WARNING: [Synth 8-7071] port 'DDR_dqs_p' of module 'design_1_wrapper' is unconnected for instance 'BD' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/new/top.v:14]
+WARNING: [Synth 8-7071] port 'DDR_odt' of module 'design_1_wrapper' is unconnected for instance 'BD' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/new/top.v:14]
+WARNING: [Synth 8-7071] port 'DDR_ras_n' of module 'design_1_wrapper' is unconnected for instance 'BD' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/new/top.v:14]
+WARNING: [Synth 8-7071] port 'DDR_reset_n' of module 'design_1_wrapper' is unconnected for instance 'BD' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/new/top.v:14]
+WARNING: [Synth 8-7071] port 'DDR_we_n' of module 'design_1_wrapper' is unconnected for instance 'BD' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/new/top.v:14]
+WARNING: [Synth 8-7071] port 'FIXED_IO_ddr_vrn' of module 'design_1_wrapper' is unconnected for instance 'BD' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/new/top.v:14]
+WARNING: [Synth 8-7071] port 'FIXED_IO_ddr_vrp' of module 'design_1_wrapper' is unconnected for instance 'BD' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/new/top.v:14]
+WARNING: [Synth 8-7071] port 'FIXED_IO_mio' of module 'design_1_wrapper' is unconnected for instance 'BD' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/new/top.v:14]
+WARNING: [Synth 8-7071] port 'FIXED_IO_ps_clk' of module 'design_1_wrapper' is unconnected for instance 'BD' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/new/top.v:14]
+WARNING: [Synth 8-7071] port 'FIXED_IO_ps_porb' of module 'design_1_wrapper' is unconnected for instance 'BD' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/new/top.v:14]
+WARNING: [Synth 8-7071] port 'FIXED_IO_ps_srstb' of module 'design_1_wrapper' is unconnected for instance 'BD' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/new/top.v:14]
+WARNING: [Synth 8-7023] instance 'BD' of module 'design_1_wrapper' has 33 connections declared, but only 12 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/new/top.v:14]
 INFO: [Synth 8-6157] synthesizing module 'ICAPE2' [C:/Xilinx/Vivado/2020.1/scripts/rt/data/unisim_comp.v:34797]
 	Parameter DEVICE_ID bound to: 32'b00000011011001010001000010010011 
 	Parameter ICAP_WIDTH bound to: X32 - type: string 
 	Parameter SIM_CFG_FILE_NAME bound to: NONE - type: string 
-INFO: [Synth 8-6155] done synthesizing module 'ICAPE2' (20#1) [C:/Xilinx/Vivado/2020.1/scripts/rt/data/unisim_comp.v:34797]
-INFO: [Synth 8-6157] synthesizing module 'shift_left' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-1968-DESKTOP-D9F9TPQ/realtime/shift_left_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'shift_left' (21#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-1968-DESKTOP-D9F9TPQ/realtime/shift_left_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'top' (22#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/new/top.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'ICAPE2' (40#1) [C:/Xilinx/Vivado/2020.1/scripts/rt/data/unisim_comp.v:34797]
+INFO: [Synth 8-6157] synthesizing module 'shift_left' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-11884-DESKTOP-D9F9TPQ/realtime/shift_left_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'shift_left' (41#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/.Xil/Vivado-11884-DESKTOP-D9F9TPQ/realtime/shift_left_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'top' (42#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/new/top.v:3]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1179.637 ; gain = 102.926
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1196.020 ; gain = 115.273
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1179.637 ; gain = 102.926
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1196.020 ; gain = 115.273
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1179.637 ; gain = 102.926
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1196.020 ; gain = 115.273
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 1179.637 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.087 . Memory (MB): peak = 1196.020 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -155,8 +236,8 @@ WARNING: [Vivado 12-584] No ports matched ''. [c:/GitHub/ReconHardware/FPGA_File
 Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc] for cell 'BD/design_1_i/processing_system7_0'
 Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/ip/design_1_dfx_controller_0_0/design_1_dfx_controller_0_0/design_1_dfx_controller_0_0_in_context.xdc] for cell 'BD/design_1_i/dfx_controller_0'
 Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/ip/design_1_dfx_controller_0_0/design_1_dfx_controller_0_0/design_1_dfx_controller_0_0_in_context.xdc] for cell 'BD/design_1_i/dfx_controller_0'
-Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_1/design_1_rst_ps7_0_100M_1/design_1_rst_ps7_0_100M_0_in_context.xdc] for cell 'BD/design_1_i/rst_ps7_0_100M'
-Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_1/design_1_rst_ps7_0_100M_1/design_1_rst_ps7_0_100M_0_in_context.xdc] for cell 'BD/design_1_i/rst_ps7_0_100M'
+Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_1/design_1_rst_ps7_0_100M_1/design_1_rst_ps7_0_100M_1_in_context.xdc] for cell 'BD/design_1_i/rst_ps7_0_100M'
+Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_1/design_1_rst_ps7_0_100M_1/design_1_rst_ps7_0_100M_1_in_context.xdc] for cell 'BD/design_1_i/rst_ps7_0_100M'
 Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/ip/design_1_ila_0_0/design_1_ila_0_0/design_1_ila_0_0_in_context.xdc] for cell 'BD/design_1_i/ila_0'
 Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/ip/design_1_ila_0_0/design_1_ila_0_0/design_1_ila_0_0_in_context.xdc] for cell 'BD/design_1_i/ila_0'
 Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/ip/design_1_ila_0_1/design_1_ila_0_1/design_1_ila_0_1_in_context.xdc] for cell 'BD/design_1_i/ila_1'
@@ -165,14 +246,44 @@ Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shif
 Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0/design_1_xbar_0_in_context.xdc] for cell 'BD/design_1_i/ps7_0_axi_periph/xbar'
 Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/ip/design_1_ila_0_2/design_1_ila_0_2/design_1_ila_0_2_in_context.xdc] for cell 'BD/design_1_i/ila_2'
 Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/ip/design_1_ila_0_2/design_1_ila_0_2/design_1_ila_0_2_in_context.xdc] for cell 'BD/design_1_i/ila_2'
-Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/ip/design_1_axi_quad_spi_0_0/design_1_axi_quad_spi_0_0/design_1_axi_quad_spi_0_0_in_context.xdc] for cell 'BD/design_1_i/axi_quad_spi_0'
-Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/ip/design_1_axi_quad_spi_0_0/design_1_axi_quad_spi_0_0/design_1_axi_quad_spi_0_0_in_context.xdc] for cell 'BD/design_1_i/axi_quad_spi_0'
 Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/ip/design_1_ila_2_0/design_1_ila_2_0/design_1_ila_2_0_in_context.xdc] for cell 'BD/design_1_i/ila_3'
 Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/ip/design_1_ila_2_0/design_1_ila_2_0/design_1_ila_2_0_in_context.xdc] for cell 'BD/design_1_i/ila_3'
-Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0/design_1_auto_pc_0_in_context.xdc] for cell 'BD/design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc'
-Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0/design_1_auto_pc_0_in_context.xdc] for cell 'BD/design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc'
-Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1/design_1_auto_pc_1_in_context.xdc] for cell 'BD/design_1_i/ps7_0_axi_periph/s01_couplers/auto_pc'
-Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1/design_1_auto_pc_1_in_context.xdc] for cell 'BD/design_1_i/ps7_0_axi_periph/s01_couplers/auto_pc'
+Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0/design_1_axi_dma_0_0_in_context.xdc] for cell 'BD/design_1_i/axi_dma_0'
+Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0/design_1_axi_dma_0_0_in_context.xdc] for cell 'BD/design_1_i/axi_dma_0'
+Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0_in_context.xdc] for cell 'BD/design_1_i/axi_gpio_0'
+Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0_in_context.xdc] for cell 'BD/design_1_i/axi_gpio_0'
+Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/ip/design_1_axi_quad_spi_0_0/design_1_axi_quad_spi_0_0/design_1_axi_quad_spi_0_0_in_context.xdc] for cell 'BD/design_1_i/axi_quad_spi_0'
+Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/ip/design_1_axi_quad_spi_0_0/design_1_axi_quad_spi_0_0/design_1_axi_quad_spi_0_0_in_context.xdc] for cell 'BD/design_1_i/axi_quad_spi_0'
+Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_5/design_1_auto_pc_5/design_1_auto_pc_4_in_context.xdc] for cell 'BD/design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc'
+Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_5/design_1_auto_pc_5/design_1_auto_pc_4_in_context.xdc] for cell 'BD/design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc'
+Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0/design_1_auto_us_0_in_context.xdc] for cell 'BD/design_1_i/ps7_0_axi_periph/s00_couplers/auto_us'
+Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/ip/design_1_auto_us_0/design_1_auto_us_0/design_1_auto_us_0_in_context.xdc] for cell 'BD/design_1_i/ps7_0_axi_periph/s00_couplers/auto_us'
+Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/ip/design_1_auto_us_1/design_1_auto_us_1/design_1_auto_us_1_in_context.xdc] for cell 'BD/design_1_i/ps7_0_axi_periph/s01_couplers/auto_us'
+Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/ip/design_1_auto_us_1/design_1_auto_us_1/design_1_auto_us_1_in_context.xdc] for cell 'BD/design_1_i/ps7_0_axi_periph/s01_couplers/auto_us'
+Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/ip/design_1_auto_us_2/design_1_auto_us_2/design_1_auto_us_1_in_context.xdc] for cell 'BD/design_1_i/ps7_0_axi_periph/s02_couplers/auto_us'
+Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/ip/design_1_auto_us_2/design_1_auto_us_2/design_1_auto_us_1_in_context.xdc] for cell 'BD/design_1_i/ps7_0_axi_periph/s02_couplers/auto_us'
+Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/ip/design_1_auto_us_3/design_1_auto_us_3/design_1_auto_us_3_in_context.xdc] for cell 'BD/design_1_i/ps7_0_axi_periph/s03_couplers/auto_us'
+Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/ip/design_1_auto_us_3/design_1_auto_us_3/design_1_auto_us_3_in_context.xdc] for cell 'BD/design_1_i/ps7_0_axi_periph/s03_couplers/auto_us'
+Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0/design_1_auto_ds_0_in_context.xdc] for cell 'BD/design_1_i/ps7_0_axi_periph/m00_couplers/auto_ds'
+Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0/design_1_auto_ds_0_in_context.xdc] for cell 'BD/design_1_i/ps7_0_axi_periph/m00_couplers/auto_ds'
+Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0/design_1_auto_pc_1_in_context.xdc] for cell 'BD/design_1_i/ps7_0_axi_periph/m00_couplers/auto_pc'
+Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0/design_1_auto_pc_1_in_context.xdc] for cell 'BD/design_1_i/ps7_0_axi_periph/m00_couplers/auto_pc'
+Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_1/design_1_auto_ds_1/design_1_auto_ds_0_in_context.xdc] for cell 'BD/design_1_i/ps7_0_axi_periph/m01_couplers/auto_ds'
+Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_1/design_1_auto_ds_1/design_1_auto_ds_0_in_context.xdc] for cell 'BD/design_1_i/ps7_0_axi_periph/m01_couplers/auto_ds'
+Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1/design_1_auto_pc_1_in_context.xdc] for cell 'BD/design_1_i/ps7_0_axi_periph/m01_couplers/auto_pc'
+Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1/design_1_auto_pc_1_in_context.xdc] for cell 'BD/design_1_i/ps7_0_axi_periph/m01_couplers/auto_pc'
+Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_2/design_1_auto_pc_2/design_1_auto_pc_2_in_context.xdc] for cell 'BD/design_1_i/ps7_0_axi_periph/m02_couplers/auto_pc'
+Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_2/design_1_auto_pc_2/design_1_auto_pc_2_in_context.xdc] for cell 'BD/design_1_i/ps7_0_axi_periph/m02_couplers/auto_pc'
+Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_2/design_1_auto_ds_2/design_1_auto_ds_0_in_context.xdc] for cell 'BD/design_1_i/ps7_0_axi_periph/m03_couplers/auto_ds'
+Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_2/design_1_auto_ds_2/design_1_auto_ds_0_in_context.xdc] for cell 'BD/design_1_i/ps7_0_axi_periph/m03_couplers/auto_ds'
+Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_3/design_1_auto_pc_3/design_1_auto_pc_1_in_context.xdc] for cell 'BD/design_1_i/ps7_0_axi_periph/m03_couplers/auto_pc'
+Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_3/design_1_auto_pc_3/design_1_auto_pc_1_in_context.xdc] for cell 'BD/design_1_i/ps7_0_axi_periph/m03_couplers/auto_pc'
+Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_3/design_1_auto_ds_3/design_1_auto_ds_0_in_context.xdc] for cell 'BD/design_1_i/ps7_0_axi_periph/m04_couplers/auto_ds'
+Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_3/design_1_auto_ds_3/design_1_auto_ds_0_in_context.xdc] for cell 'BD/design_1_i/ps7_0_axi_periph/m04_couplers/auto_ds'
+Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_4/design_1_auto_ds_4/design_1_auto_ds_0_in_context.xdc] for cell 'BD/design_1_i/ps7_0_axi_periph/m05_couplers/auto_ds'
+Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/ip/design_1_auto_ds_4/design_1_auto_ds_4/design_1_auto_ds_0_in_context.xdc] for cell 'BD/design_1_i/ps7_0_axi_periph/m05_couplers/auto_ds'
+Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_4/design_1_auto_pc_4/design_1_auto_pc_1_in_context.xdc] for cell 'BD/design_1_i/ps7_0_axi_periph/m05_couplers/auto_pc'
+Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_4/design_1_auto_pc_4/design_1_auto_pc_1_in_context.xdc] for cell 'BD/design_1_i/ps7_0_axi_periph/m05_couplers/auto_pc'
 Parsing XDC File [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/hd_reconfig.xdc]
 Finished Parsing XDC File [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/hd_reconfig.xdc]
 Parsing XDC File [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/constrs_1/new/leds.xdc]
@@ -183,22 +294,21 @@ Parsing XDC File [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shif
 Finished Parsing XDC File [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1260.125 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1309.082 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 4 instances were transformed.
-  IOBUF => IOBUF (IBUF, OBUFT): 4 instances
+No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1260.125 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1309.082 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'BD/design_1_i/axi_quad_spi_0' at clock pin 'ext_spi_clk' is different from the actual clock period '10.000', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1263.098 ; gain = 186.387
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1310.512 ; gain = 229.766
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1263.098 ; gain = 186.387
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1310.512 ; gain = 229.766
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -214,15 +324,30 @@ Applied set_property DONT_TOUCH = true for BD/design_1_i/ila_0. (constraint file
 Applied set_property DONT_TOUCH = true for BD/design_1_i/ila_1. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for BD/design_1_i/ps7_0_axi_periph/xbar. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for BD/design_1_i/ila_2. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for BD/design_1_i/axi_quad_spi_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for BD/design_1_i/ila_3. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for BD/design_1_i/axi_dma_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for BD/design_1_i/axi_gpio_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for BD/design_1_i/axi_quad_spi_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for BD/design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for BD/design_1_i/ps7_0_axi_periph/s01_couplers/auto_pc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for BD/design_1_i/ps7_0_axi_periph/s00_couplers/auto_us. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for BD/design_1_i/ps7_0_axi_periph/s01_couplers/auto_us. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for BD/design_1_i/ps7_0_axi_periph/s02_couplers/auto_us. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for BD/design_1_i/ps7_0_axi_periph/s03_couplers/auto_us. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for BD/design_1_i/ps7_0_axi_periph/m00_couplers/auto_ds. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for BD/design_1_i/ps7_0_axi_periph/m00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for BD/design_1_i/ps7_0_axi_periph/m01_couplers/auto_ds. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for BD/design_1_i/ps7_0_axi_periph/m01_couplers/auto_pc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for BD/design_1_i/ps7_0_axi_periph/m02_couplers/auto_pc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for BD/design_1_i/ps7_0_axi_periph/m03_couplers/auto_ds. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for BD/design_1_i/ps7_0_axi_periph/m03_couplers/auto_pc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for BD/design_1_i/ps7_0_axi_periph/m04_couplers/auto_ds. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for BD/design_1_i/ps7_0_axi_periph/m05_couplers/auto_ds. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for BD/design_1_i/ps7_0_axi_periph/m05_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1263.098 ; gain = 186.387
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1310.512 ; gain = 229.766
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1263.098 ; gain = 186.387
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1310.512 ; gain = 229.766
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -244,25 +369,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1263.098 ; gain = 186.387
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1310.512 ; gain = 229.766
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1265.223 ; gain = 188.512
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1310.512 ; gain = 229.766
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1265.520 ; gain = 188.809
+Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1310.512 ; gain = 229.766
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1284.621 ; gain = 207.910
+Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1310.512 ; gain = 229.766
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -280,37 +405,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1289.484 ; gain = 212.773
+Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1310.512 ; gain = 229.766
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1289.484 ; gain = 212.773
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1310.512 ; gain = 229.766
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1289.484 ; gain = 212.773
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1310.512 ; gain = 229.766
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1289.484 ; gain = 212.773
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1310.512 ; gain = 229.766
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1289.484 ; gain = 212.773
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1310.512 ; gain = 229.766
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1289.484 ; gain = 212.773
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1310.512 ; gain = 229.766
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -322,80 +447,73 @@ Report BlackBoxes:
 +------+--------------------------------+----------+
 |1     |shift_left                      |         1|
 |2     |design_1_xbar_0                 |         1|
-|3     |design_1_auto_pc_0              |         1|
-|4     |design_1_auto_pc_1              |         1|
-|5     |design_1_axi_quad_spi_0_0       |         1|
-|6     |design_1_dfx_controller_0_0     |         1|
-|7     |design_1_ila_0_0                |         1|
-|8     |design_1_ila_0_1                |         1|
-|9     |design_1_ila_0_2                |         1|
-|10    |design_1_ila_2_0                |         1|
-|11    |design_1_processing_system7_0_0 |         1|
-|12    |design_1_rst_ps7_0_100M_1       |         1|
+|3     |design_1_auto_ds_0              |         1|
+|4     |design_1_auto_pc_0              |         1|
+|5     |design_1_auto_ds_1              |         1|
+|6     |design_1_auto_pc_1              |         1|
+|7     |design_1_auto_pc_2              |         1|
+|8     |design_1_auto_ds_2              |         1|
+|9     |design_1_auto_pc_3              |         1|
+|10    |design_1_auto_ds_3              |         1|
+|11    |design_1_auto_ds_4              |         1|
+|12    |design_1_auto_pc_4              |         1|
+|13    |design_1_auto_pc_5              |         1|
+|14    |design_1_auto_us_0              |         1|
+|15    |design_1_auto_us_1              |         1|
+|16    |design_1_auto_us_2              |         1|
+|17    |design_1_auto_us_3              |         1|
+|18    |design_1_axi_dma_0_0            |         1|
+|19    |design_1_axi_gpio_0_0           |         1|
+|20    |design_1_axi_quad_spi_0_0       |         1|
+|21    |design_1_dfx_controller_0_0     |         1|
+|22    |design_1_ila_0_0                |         1|
+|23    |design_1_ila_0_1                |         1|
+|24    |design_1_ila_0_2                |         1|
+|25    |design_1_ila_2_0                |         1|
+|26    |design_1_processing_system7_0_0 |         1|
+|27    |design_1_rst_ps7_0_100M_1       |         1|
 +------+--------------------------------+----------+
 
 Report Cell Usage: 
 +------+------------------------------+------+
 |      |Cell                          |Count |
 +------+------------------------------+------+
-|1     |design_1_auto_pc              |     2|
-|3     |design_1_axi_quad_spi_0       |     1|
-|4     |design_1_dfx_controller_0     |     1|
-|5     |design_1_ila_0                |     3|
-|8     |design_1_ila_2                |     1|
-|9     |design_1_processing_system7_0 |     1|
-|10    |design_1_rst_ps7_0_100M       |     1|
-|11    |design_1_xbar                 |     1|
-|12    |shift_left                    |     1|
-|13    |ICAPE2                        |     1|
-|14    |IBUF                          |     2|
-|15    |IOBUF                         |     4|
+|1     |design_1_auto_ds              |     5|
+|6     |design_1_auto_pc              |     6|
+|12    |design_1_auto_us              |     4|
+|16    |design_1_axi_dma_0            |     1|
+|17    |design_1_axi_gpio_0           |     1|
+|18    |design_1_axi_quad_spi_0       |     1|
+|19    |design_1_dfx_controller_0     |     1|
+|20    |design_1_ila_0                |     3|
+|23    |design_1_ila_2                |     1|
+|24    |design_1_processing_system7_0 |     1|
+|25    |design_1_rst_ps7_0_100M       |     1|
+|26    |design_1_xbar                 |     1|
+|27    |shift_left                    |     1|
+|28    |ICAPE2                        |     1|
+|29    |IBUF                          |     2|
 +------+------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1289.484 ; gain = 212.773
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1310.512 ; gain = 229.766
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 1289.484 ; gain = 129.312
-Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1289.484 ; gain = 212.773
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:19 . Memory (MB): peak = 1310.512 ; gain = 115.273
+Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1310.512 ; gain = 229.766
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 1289.484 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.087 . Memory (MB): peak = 1310.512 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
-WARNING: [Constraints 18-549] Could not create 'SLEW' constraint because cell 'BD/spi_io0_iobuf' is not directly connected to top level port. 'SLEW' is ignored by Vivado but preserved inside the database.
-Resolution: It is recommended to apply the I/O constraint directly to the top level port instead of applying the constraint to the cell connected to the port.
-WARNING: [Constraints 18-549] Could not create 'DRIVE' constraint because cell 'BD/spi_io0_iobuf' is not directly connected to top level port. 'DRIVE' is ignored by Vivado but preserved inside the database.
-Resolution: It is recommended to apply the I/O constraint directly to the top level port instead of applying the constraint to the cell connected to the port.
-WARNING: [Constraints 18-549] Could not create 'IBUF_LOW_PWR' constraint because cell 'BD/spi_io0_iobuf' is not directly connected to top level port. 'IBUF_LOW_PWR' is ignored by Vivado but preserved inside the database.
-Resolution: It is recommended to apply the I/O constraint directly to the top level port instead of applying the constraint to the cell connected to the port.
-WARNING: [Constraints 18-549] Could not create 'SLEW' constraint because cell 'BD/spi_io1_iobuf' is not directly connected to top level port. 'SLEW' is ignored by Vivado but preserved inside the database.
-Resolution: It is recommended to apply the I/O constraint directly to the top level port instead of applying the constraint to the cell connected to the port.
-WARNING: [Constraints 18-549] Could not create 'DRIVE' constraint because cell 'BD/spi_io1_iobuf' is not directly connected to top level port. 'DRIVE' is ignored by Vivado but preserved inside the database.
-Resolution: It is recommended to apply the I/O constraint directly to the top level port instead of applying the constraint to the cell connected to the port.
-WARNING: [Constraints 18-549] Could not create 'IBUF_LOW_PWR' constraint because cell 'BD/spi_io1_iobuf' is not directly connected to top level port. 'IBUF_LOW_PWR' is ignored by Vivado but preserved inside the database.
-Resolution: It is recommended to apply the I/O constraint directly to the top level port instead of applying the constraint to the cell connected to the port.
-WARNING: [Constraints 18-549] Could not create 'SLEW' constraint because cell 'BD/spi_sck_iobuf' is not directly connected to top level port. 'SLEW' is ignored by Vivado but preserved inside the database.
-Resolution: It is recommended to apply the I/O constraint directly to the top level port instead of applying the constraint to the cell connected to the port.
-WARNING: [Constraints 18-549] Could not create 'DRIVE' constraint because cell 'BD/spi_sck_iobuf' is not directly connected to top level port. 'DRIVE' is ignored by Vivado but preserved inside the database.
-Resolution: It is recommended to apply the I/O constraint directly to the top level port instead of applying the constraint to the cell connected to the port.
-WARNING: [Constraints 18-549] Could not create 'IBUF_LOW_PWR' constraint because cell 'BD/spi_sck_iobuf' is not directly connected to top level port. 'IBUF_LOW_PWR' is ignored by Vivado but preserved inside the database.
-Resolution: It is recommended to apply the I/O constraint directly to the top level port instead of applying the constraint to the cell connected to the port.
-WARNING: [Constraints 18-549] Could not create 'SLEW' constraint because cell 'BD/spi_ss_iobuf' is not directly connected to top level port. 'SLEW' is ignored by Vivado but preserved inside the database.
-Resolution: It is recommended to apply the I/O constraint directly to the top level port instead of applying the constraint to the cell connected to the port.
-WARNING: [Constraints 18-549] Could not create 'DRIVE' constraint because cell 'BD/spi_ss_iobuf' is not directly connected to top level port. 'DRIVE' is ignored by Vivado but preserved inside the database.
-Resolution: It is recommended to apply the I/O constraint directly to the top level port instead of applying the constraint to the cell connected to the port.
-WARNING: [Constraints 18-549] Could not create 'IBUF_LOW_PWR' constraint because cell 'BD/spi_ss_iobuf' is not directly connected to top level port. 'IBUF_LOW_PWR' is ignored by Vivado but preserved inside the database.
-Resolution: It is recommended to apply the I/O constraint directly to the top level port instead of applying the constraint to the cell connected to the port.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1315.066 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1325.520 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 4 instances were transformed.
-  IOBUF => IOBUF (IBUF, OBUFT): 4 instances
+No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-71 Infos, 61 Warnings, 0 Critical Warnings and 0 Errors encountered.
+107 Infos, 96 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1315.066 ; gain = 238.355
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1325.520 ; gain = 244.773
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.collectionResultDisplayLimit
 INFO: [Common 17-1381] The checkpoint 'C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/synth_1/top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat Feb 13 23:41:21 2021...
+INFO: [Common 17-206] Exiting Vivado at Thu Feb 18 15:21:36 2021...

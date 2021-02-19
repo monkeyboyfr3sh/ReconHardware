@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;hello_world/src/dfx_loading&apos; to &apos;dfx_loading.h&apos;" description="Rename resource &apos;dfx_loading&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/dfx_loading" name="dfx_loading.h" stamp="1613490792474" updateReferences="true"/>
+</session>

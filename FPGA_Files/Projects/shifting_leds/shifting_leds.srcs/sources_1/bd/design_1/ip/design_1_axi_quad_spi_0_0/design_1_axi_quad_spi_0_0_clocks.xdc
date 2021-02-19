@@ -47,8 +47,9 @@
 
 
 
-			set clk_domain_axi_lite [get_clocks -of_objects [get_ports s_axi_aclk]]
-			set clk_domain_ext_spi_clk [get_clocks -of_objects [get_ports ext_spi_clk]]
+		set clk_domain_axi_full [get_clocks -of_objects [get_ports s_axi4_aclk]]
+		set clk_domain_ext_spi_clk [get_clocks -of_objects [get_ports ext_spi_clk]]
+
 # Set max delay on cross clock domain path for Block/Distributed RAM based FIFO
 	
 	

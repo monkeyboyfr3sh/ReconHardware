@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Sun Feb 14 12:43:19 2021
+# Process ID: 13404
+# Current directory: c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/dfxc_usp/dfxc_vcu118
+# Command line: vivado.exe -mode tcl -source project_dfxc_vcu118.tcl
+# Log file: c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/dfxc_usp/dfxc_vcu118/vivado.log
+# Journal file: c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/dfxc_usp/dfxc_vcu118\vivado.jou
+#-----------------------------------------------------------
+source project_dfxc_vcu118.tcl

@@ -1,0 +1,9 @@
+TRACE::2021-02-18.16:51:56::SCWBifWriter::Found the complete platform C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+TRACE::2021-02-18.16:51:56::SCWBifWriter::hardware databse : top_6
+TRACE::2021-02-18.16:51:56::SCWBifWriter::bitstream found in the design
+TRACE::2021-02-18.16:51:56::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-02-18.16:51:56::SCWBifWriter::proc type : 
+TRACE::2021-02-18.16:51:56::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-02-18.16:51:56::SCWBifWriter::Device type is : zynq
+TRACE::2021-02-18.16:51:56::SCWBifWriter::Writing BIF to file : C:/GitHub/ReconHardware/FPGA_Files/Software/hello_world/_ide/bootimage/template_hello_world.bif
+TRACE::2021-02-18.16:51:56::SCWBifWriter::Writing the Zynq Baremetal bif 

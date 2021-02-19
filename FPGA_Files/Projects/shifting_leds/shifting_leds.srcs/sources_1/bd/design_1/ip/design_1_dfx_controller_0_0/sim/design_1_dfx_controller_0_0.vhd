@@ -85,6 +85,9 @@ ENTITY design_1_dfx_controller_0_0 IS
     vsm_shifter_event_error : OUT STD_LOGIC;
     vsm_shifter_sw_shutdown_req : OUT STD_LOGIC;
     vsm_shifter_sw_startup_req : OUT STD_LOGIC;
+    cap_req : OUT STD_LOGIC;
+    cap_gnt : IN STD_LOGIC;
+    cap_rel : IN STD_LOGIC;
     s_axi_reg_awaddr : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     s_axi_reg_awvalid : IN STD_LOGIC;
     s_axi_reg_awready : OUT STD_LOGIC;
@@ -142,6 +145,9 @@ ARCHITECTURE design_1_dfx_controller_0_0_arch OF design_1_dfx_controller_0_0 IS
       vsm_shifter_event_error : OUT STD_LOGIC;
       vsm_shifter_sw_shutdown_req : OUT STD_LOGIC;
       vsm_shifter_sw_startup_req : OUT STD_LOGIC;
+      cap_req : OUT STD_LOGIC;
+      cap_gnt : IN STD_LOGIC;
+      cap_rel : IN STD_LOGIC;
       s_axi_reg_awaddr : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
       s_axi_reg_awvalid : IN STD_LOGIC;
       s_axi_reg_awready : OUT STD_LOGIC;
@@ -177,20 +183,23 @@ ARCHITECTURE design_1_dfx_controller_0_0_arch OF design_1_dfx_controller_0_0 IS
   ATTRIBUTE X_INTERFACE_INFO OF s_axi_reg_wdata: SIGNAL IS "xilinx.com:interface:aximm:1.0 s_axi_reg WDATA";
   ATTRIBUTE X_INTERFACE_INFO OF s_axi_reg_awready: SIGNAL IS "xilinx.com:interface:aximm:1.0 s_axi_reg AWREADY";
   ATTRIBUTE X_INTERFACE_INFO OF s_axi_reg_awvalid: SIGNAL IS "xilinx.com:interface:aximm:1.0 s_axi_reg AWVALID";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF s_axi_reg_awaddr: SIGNAL IS "XIL_INTERFACENAME s_axi_reg, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 0, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 8, NUM_WRITE_OUTSTANDING 8, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, NUM_READ_TH" & 
-"READS 4, NUM_WRITE_THREADS 4, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF s_axi_reg_awaddr: SIGNAL IS "XIL_INTERFACENAME s_axi_reg, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 1e+08, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 0, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREAD" & 
+"S 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF s_axi_reg_awaddr: SIGNAL IS "xilinx.com:interface:aximm:1.0 s_axi_reg AWADDR";
+  ATTRIBUTE X_INTERFACE_INFO OF cap_rel: SIGNAL IS "xilinx.com:interface:cap:1.0 icap_arbiter REL";
+  ATTRIBUTE X_INTERFACE_INFO OF cap_gnt: SIGNAL IS "xilinx.com:interface:cap:1.0 icap_arbiter GNT";
+  ATTRIBUTE X_INTERFACE_INFO OF cap_req: SIGNAL IS "xilinx.com:interface:cap:1.0 icap_arbiter REQ";
   ATTRIBUTE X_INTERFACE_INFO OF icap_o: SIGNAL IS "xilinx.com:interface:icap:1.0 ICAP i";
   ATTRIBUTE X_INTERFACE_INFO OF icap_i: SIGNAL IS "xilinx.com:interface:icap:1.0 ICAP o";
   ATTRIBUTE X_INTERFACE_INFO OF icap_rdwrb: SIGNAL IS "xilinx.com:interface:icap:1.0 ICAP rdwrb";
   ATTRIBUTE X_INTERFACE_INFO OF icap_csib: SIGNAL IS "xilinx.com:interface:icap:1.0 ICAP csib";
   ATTRIBUTE X_INTERFACE_PARAMETER OF icap_reset: SIGNAL IS "XIL_INTERFACENAME icap_reset, POLARITY ACTIVE_LOW, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF icap_reset: SIGNAL IS "xilinx.com:signal:reset:1.0 icap_reset RST";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF icap_clk: SIGNAL IS "XIL_INTERFACENAME ICAP_CLK, ASSOCIATED_BUSIF ICAP, ASSOCIATED_RESET icap_reset, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF icap_clk: SIGNAL IS "XIL_INTERFACENAME ICAP_CLK, ASSOCIATED_BUSIF ICAP, ASSOCIATED_RESET icap_reset, FREQ_HZ 1e+08, FREQ_TOLERANCE_HZ 0, PHASE 0.000, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF icap_clk: SIGNAL IS "xilinx.com:signal:clock:1.0 ICAP_CLK CLK";
   ATTRIBUTE X_INTERFACE_PARAMETER OF reset: SIGNAL IS "XIL_INTERFACENAME reset, POLARITY ACTIVE_LOW, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF reset: SIGNAL IS "xilinx.com:signal:reset:1.0 reset RST";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF clk: SIGNAL IS "XIL_INTERFACENAME CLK, ASSOCIATED_BUSIF M_AXI_MEM:s_axi_reg, ASSOCIATED_RESET reset, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF clk: SIGNAL IS "XIL_INTERFACENAME CLK, ASSOCIATED_BUSIF M_AXI_MEM:s_axi_reg, ASSOCIATED_RESET reset, FREQ_HZ 1e+08, FREQ_TOLERANCE_HZ 0, PHASE 0.000, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF clk: SIGNAL IS "xilinx.com:signal:clock:1.0 CLK CLK";
   ATTRIBUTE X_INTERFACE_INFO OF m_axi_mem_rready: SIGNAL IS "xilinx.com:interface:aximm:1.0 M_AXI_MEM RREADY";
   ATTRIBUTE X_INTERFACE_INFO OF m_axi_mem_rvalid: SIGNAL IS "xilinx.com:interface:aximm:1.0 M_AXI_MEM RVALID";
@@ -205,8 +214,8 @@ ARCHITECTURE design_1_dfx_controller_0_0_arch OF design_1_dfx_controller_0_0 IS
   ATTRIBUTE X_INTERFACE_INFO OF m_axi_mem_arburst: SIGNAL IS "xilinx.com:interface:aximm:1.0 M_AXI_MEM ARBURST";
   ATTRIBUTE X_INTERFACE_INFO OF m_axi_mem_arsize: SIGNAL IS "xilinx.com:interface:aximm:1.0 M_AXI_MEM ARSIZE";
   ATTRIBUTE X_INTERFACE_INFO OF m_axi_mem_arlen: SIGNAL IS "xilinx.com:interface:aximm:1.0 M_AXI_MEM ARLEN";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF m_axi_mem_araddr: SIGNAL IS "XIL_INTERFACENAME M_AXI_MEM, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 4, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_ONLY, HAS_BURST 1, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 0, HAS_BRESP 0, HAS_RRESP 1, SUPPORTS_NARROW_BURST 1, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 256, PHASE 0.000, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREA" & 
-"DS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF m_axi_mem_araddr: SIGNAL IS "XIL_INTERFACENAME M_AXI_MEM, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 1e+08, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 4, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_ONLY, HAS_BURST 1, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 0, HAS_BRESP 0, HAS_RRESP 1, SUPPORTS_NARROW_BURST 1, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 256, PHASE 0.000, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1" & 
+", NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF m_axi_mem_araddr: SIGNAL IS "xilinx.com:interface:aximm:1.0 M_AXI_MEM ARADDR";
 BEGIN
   U0 : dfx_controller_design_1_dfx_controller_0_0
@@ -244,6 +253,9 @@ BEGIN
       vsm_shifter_event_error => vsm_shifter_event_error,
       vsm_shifter_sw_shutdown_req => vsm_shifter_sw_shutdown_req,
       vsm_shifter_sw_startup_req => vsm_shifter_sw_startup_req,
+      cap_req => cap_req,
+      cap_gnt => cap_gnt,
+      cap_rel => cap_rel,
       s_axi_reg_awaddr => s_axi_reg_awaddr,
       s_axi_reg_awvalid => s_axi_reg_awvalid,
       s_axi_reg_awready => s_axi_reg_awready,

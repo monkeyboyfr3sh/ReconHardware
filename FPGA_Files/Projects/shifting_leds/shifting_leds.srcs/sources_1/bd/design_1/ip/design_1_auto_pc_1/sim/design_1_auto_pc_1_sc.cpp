@@ -67,7 +67,7 @@ design_1_auto_pc_1_sc::design_1_auto_pc_1_sc(const sc_core::sc_module_name& nm) 
     model_param_props.addLong("C_AXI_ID_WIDTH", "1");
     model_param_props.addLong("C_AXI_ADDR_WIDTH", "32");
     model_param_props.addLong("C_AXI_DATA_WIDTH", "32");
-    model_param_props.addLong("C_AXI_SUPPORTS_WRITE", "0");
+    model_param_props.addLong("C_AXI_SUPPORTS_WRITE", "1");
     model_param_props.addLong("C_AXI_SUPPORTS_READ", "1");
     model_param_props.addLong("C_AXI_SUPPORTS_USER_SIGNALS", "0");
     model_param_props.addLong("C_AXI_AWUSER_WIDTH", "1");

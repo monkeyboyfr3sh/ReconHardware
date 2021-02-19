@@ -70,6 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "design_1_processing_system7_0_0_synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 2
 set_param ced.repoPaths C:/Users/monke/AppData/Roaming/Xilinx/Vivado/2020.1/xhub/ced_store/Vivado_example_project
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run

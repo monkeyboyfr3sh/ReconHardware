@@ -1,0 +1,12 @@
+/* C:/Users/monke/AppData/Local/Temp/bootgen_sd_reading_system14649698436590371361/sd_card_temp/boot.bif */
+/* Command to create bitstream .bin file:       */
+/*   bootgen -image <bif_file> -split bin -w    */
+/* Command to create BOOT.BIN file:             */
+/*   bootgen  -image <bif_file> -w -o i BOOT.BIN */
+/*pr_led*/
+the_ROM_image:
+{
+ [bootloader] C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/sw/pr_led/boot/fsbl.elf
+ C:/GitHub/ReconHardware/FPGA_Files/Software/sd_reading/_ide/bitstream/top.bit
+ C:/GitHub/ReconHardware/FPGA_Files/Software/sd_reading/Debug/sd_reading.elf
+}

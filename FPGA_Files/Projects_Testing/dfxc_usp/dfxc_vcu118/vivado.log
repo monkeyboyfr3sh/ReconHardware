@@ -1,0 +1,1518 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Sun Feb 14 12:43:19 2021
+# Process ID: 13404
+# Current directory: c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/dfxc_usp/dfxc_vcu118
+# Command line: vivado.exe -mode tcl -source project_dfxc_vcu118.tcl
+# Log file: c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/dfxc_usp/dfxc_vcu118/vivado.log
+# Journal file: c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/dfxc_usp/dfxc_vcu118\vivado.jou
+#-----------------------------------------------------------
+source project_dfxc_vcu118.tcl
+# set origin_dir "."
+# if { [info exists ::origin_dir_loc] } {
+#   set origin_dir $::origin_dir_loc
+# }
+# set _xil_proj_name_ "project_dfxc_vcu118"
+# if { [info exists ::user_project_name] } {
+#   set _xil_proj_name_ $::user_project_name
+# }
+# variable script_file
+# set script_file "project_dfxc_vcu118.tcl"
+# proc print_help {} {
+#   variable script_file
+#   puts "\nDescription:"
+#   puts "Recreate a Vivado project from this script. The created project will be"
+#   puts "functionally equivalent to the original project for which this script was"
+#   puts "generated. The script contains commands for creating a project, filesets,"
+#   puts "runs, adding/importing sources and setting properties on various objects.\n"
+#   puts "Syntax:"
+#   puts "$script_file"
+#   puts "$script_file -tclargs \[--origin_dir <path>\]"
+#   puts "$script_file -tclargs \[--project_name <name>\]"
+#   puts "$script_file -tclargs \[--help\]\n"
+#   puts "Usage:"
+#   puts "Name                   Description"
+#   puts "-------------------------------------------------------------------------"
+#   puts "\[--origin_dir <path>\]  Determine source file paths wrt this path. Default"
+#   puts "                       origin_dir path value is \".\", otherwise, the value"
+#   puts "                       that was set with the \"-paths_relative_to\" switch"
+#   puts "                       when this script was generated.\n"
+#   puts "\[--project_name <name>\] Create project with the specified name. Default"
+#   puts "                       name is the name of the project from where this"
+#   puts "                       script was generated.\n"
+#   puts "\[--help\]               Print help information for this script"
+#   puts "-------------------------------------------------------------------------\n"
+#   exit 0
+# }
+# if { $::argc > 0 } {
+#   for {set i 0} {$i < $::argc} {incr i} {
+#     set option [string trim [lindex $::argv $i]]
+#     switch -regexp -- $option {
+#       "--origin_dir"   { incr i; set origin_dir [lindex $::argv $i] }
+#       "--project_name" { incr i; set _xil_proj_name_ [lindex $::argv $i] }
+#       "--help"         { print_help }
+#       default {
+#         if { [regexp {^-} $option] } {
+#           puts "ERROR: Unknown option '$option' specified, please type '$script_file -tclargs --help' for usage info.\n"
+#           return 1
+#         }
+#       }
+#     }
+#   }
+# }
+# set orig_proj_dir "[file normalize "$origin_dir/project_dfxc_vcu118"]"
+# create_project ${_xil_proj_name_} ./${_xil_proj_name_} -part xcvu9p-flga2104-2L-e
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'c:/GitHub/ReconHardware/FPGA_Files/Projects_Testing/dfxc_usp/dfxc_vcu118/project_dfxc_vcu118'
+# set proj_dir [get_property directory [current_project]]
+# set obj [current_project]
+# set_property -name "board_part" -value "xilinx.com:vcu118:part0:2.3" -objects $obj
+# set_property -name "default_lib" -value "xil_defaultlib" -objects $obj
+# set_property -name "enable_vhdl_2008" -value "1" -objects $obj
+# set_property -name "ip_cache_permissions" -value "read write" -objects $obj
+# set_property -name "ip_output_repo" -value "$proj_dir/${_xil_proj_name_}.cache/ip" -objects $obj
+# set_property -name "mem.enable_memory_map_generation" -value "1" -objects $obj
+# set_property -name "platform.board_id" -value "vcu118" -objects $obj
+# set_property -name "pr_flow" -value "1" -objects $obj
+# set_property -name "sim.central_dir" -value "$proj_dir/${_xil_proj_name_}.ip_user_files" -objects $obj
+# set_property -name "sim.ip.auto_export_scripts" -value "1" -objects $obj
+# set_property -name "simulator_language" -value "Mixed" -objects $obj
+# set_property -name "xpm_libraries" -value "XPM_CDC XPM_FIFO XPM_MEMORY" -objects $obj
+# if {[string equal [get_filesets -quiet sources_1] ""]} {
+#   create_fileset -srcset sources_1
+# }
+# set obj [get_filesets sources_1]
+# set files [list \
+#  [file normalize "${origin_dir}/sources/icap_mux.v"]\
+#  [file normalize "${origin_dir}/sources/edge_det.v"]\
+#  [file normalize "${origin_dir}/sources/timer_flag.v"]\
+#  [file normalize "${origin_dir}/sources/icap_wrapper.v"]\
+#  [file normalize "${origin_dir}/sources/bd/mb_dfxc/mb_dfxc.bd"]\
+#  [file normalize "${origin_dir}/sources/bd/mb_dfxc/hdl/mb_dfxc_wrapper.v"]\
+#  [file normalize "${origin_dir}/sources/sem_command.v"]\
+#  [file normalize "${origin_dir}/sources/sem_monitor_fifo.v"]\
+#  [file normalize "${origin_dir}/sources/sem_wrapper_ssi.v"]\
+#  [file normalize "${origin_dir}/sources/debouncer.vhd"]\
+#  [file normalize "${origin_dir}/sources/top.v"]\
+# ]
+# set imported_files [import_files -fileset sources_1 $files]
+# set file "mb_dfxc/mb_dfxc.bd"
+# set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
+# set_property -name "registered_with_manager" -value "1" -objects $file_obj
+# set file "sources/debouncer.vhd"
+# set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
+# set_property -name "file_type" -value "VHDL" -objects $file_obj
+# set obj [get_filesets sources_1]
+# set_property -name "top" -value "top" -objects $obj
+# set_property -name "top_auto_set" -value "0" -objects $obj
+# set obj [get_filesets sources_1]
+# set files [list \
+#  [file normalize "${origin_dir}/sources/ip/dfx_decoupler/dfx_decoupler.xci"]\
+# ]
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.1/data/ip'.
+# set imported_files [import_files -fileset sources_1 $files]
+# set file "dfx_decoupler/dfx_decoupler.xci"
+# set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
+# set_property -name "generate_files_for_reference" -value "0" -objects $file_obj
+# set_property -name "registered_with_manager" -value "1" -objects $file_obj
+# if { ![get_property "is_locked" $file_obj] } {
+#   set_property -name "synth_checkpoint_mode" -value "Singular" -objects $file_obj
+# }
+# set obj [get_filesets sources_1]
+# set files [list \
+#  [file normalize "${origin_dir}/sources/ip/vio_sem_command/vio_sem_command.xci"]\
+# ]
+# set imported_files [import_files -fileset sources_1 $files]
+# set file "vio_sem_command/vio_sem_command.xci"
+# set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
+# set_property -name "generate_files_for_reference" -value "0" -objects $file_obj
+# set_property -name "registered_with_manager" -value "1" -objects $file_obj
+# if { ![get_property "is_locked" $file_obj] } {
+#   set_property -name "synth_checkpoint_mode" -value "Singular" -objects $file_obj
+# }
+# set obj [get_filesets sources_1]
+# set files [list \
+#  [file normalize "${origin_dir}/sources/ip/ila_sem_ssi/ila_sem_ssi.xci"]\
+# ]
+import_files: Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 1073.344 ; gain = 0.000
+# set imported_files [import_files -fileset sources_1 $files]
+# set file "ila_sem_ssi/ila_sem_ssi.xci"
+# set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
+# set_property -name "generate_files_for_reference" -value "0" -objects $file_obj
+# set_property -name "registered_with_manager" -value "1" -objects $file_obj
+# if { ![get_property "is_locked" $file_obj] } {
+#   set_property -name "synth_checkpoint_mode" -value "Singular" -objects $file_obj
+# }
+# set obj [get_filesets sources_1]
+# set files [list \
+#  [file normalize "${origin_dir}/sources/ip/sem_ultra_ssi/sem_ultra_ssi.xci"]\
+# ]
+INFO: [xilinx.com:ip:sem_ultra:3.1-333] sem_ultra_ssi: c_board xilinx.com:vcu118:part0:2.3
+INFO: [xilinx.com:ip:sem_ultra:3.1-333] sem_ultra_ssi: c_board xilinx.com:vcu118:part0:2.3
+# set imported_files [import_files -fileset sources_1 $files]
+# set file "sem_ultra_ssi/sem_ultra_ssi.xci"
+# set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
+# set_property -name "generate_files_for_reference" -value "0" -objects $file_obj
+# set_property -name "registered_with_manager" -value "1" -objects $file_obj
+# if { ![get_property "is_locked" $file_obj] } {
+#   set_property -name "synth_checkpoint_mode" -value "Singular" -objects $file_obj
+# }
+# if {[string equal [get_filesets -quiet constrs_1] ""]} {
+#   create_fileset -constrset constrs_1
+# }
+# set obj [get_filesets constrs_1]
+# set file "[file normalize ${origin_dir}/sources/top.xdc]"
+# set file_imported [import_files -fileset constrs_1 [list $file]]
+# set file "sources/top.xdc"
+# set file_obj [get_files -of_objects [get_filesets constrs_1] [list "*$file"]]
+# set_property -name "file_type" -value "XDC" -objects $file_obj
+# set obj [get_filesets constrs_1]
+# set_property -name "target_constrs_file" -value "$proj_dir/${_xil_proj_name_}.srcs/constrs_1/imports/sources/top.xdc" -objects $obj
+# set_property -name "target_ucf" -value "$proj_dir/${_xil_proj_name_}.srcs/constrs_1/imports/sources/top.xdc" -objects $obj
+# if {[string equal [get_filesets -quiet sim_1] ""]} {
+#   create_fileset -simset sim_1
+# }
+# set obj [get_filesets sim_1]
+# set obj [get_filesets sim_1]
+# set_property -name "hbs.configure_design_for_hier_access" -value "1" -objects $obj
+# set_property -name "top" -value "top" -objects $obj
+# set_property -name "top_auto_set" -value "0" -objects $obj
+# set obj [get_filesets utils_1]
+# set obj [get_filesets utils_1]
+# create_partition_def -name count -module count
+# set obj [get_partition_defs count]
+# set_property -name "name" -value "count" -objects $obj
+# set_property -name "use_blackbox_stub" -value "1" -objects $obj
+# create_partition_def -name shift -module shift
+# set obj [get_partition_defs shift]
+# set_property -name "name" -value "shift" -objects $obj
+# set_property -name "use_blackbox_stub" -value "1" -objects $obj
+# set partitionDef [get_partition_defs count]
+# create_reconfig_module -name count_down -partition_def $partitionDef
+# set obj [get_reconfig_modules count_down]
+# set_property -name "module_name" -value "count" -objects $obj
+# set files [list \
+#  "[file normalize "$origin_dir/sources/ip/ila_count_down/ila_count_down.xci"]"\
+#  "[file normalize "$origin_dir/sources/count_down/count_down.v"]"\
+# ]
+# import_files -of_objects [get_reconfig_modules count_down] $files
+import_files: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1073.344 ; gain = 0.000
+# set file "ila_count_down/ila_count_down.xci"
+# set obj [get_files -of_objects [get_reconfig_modules count_down] [list "*$file"]]
+# set_property -name "generate_files_for_reference" -value "0" -objects $obj
+# set_property -name "registered_with_manager" -value "1" -objects $obj
+# set partitionDef [get_partition_defs count]
+# create_reconfig_module -name count_up -partition_def $partitionDef
+# set_property default_rm count_up $partitionDef
+# set obj [get_reconfig_modules count_up]
+# set_property -name "module_name" -value "count" -objects $obj
+# set files [list \
+#  "[file normalize "$origin_dir/sources/ip/ila_count_up/ila_count_up.xci"]"\
+#  "[file normalize "$origin_dir/sources/count_up/count_up.v"]"\
+# ]
+# import_files -of_objects [get_reconfig_modules count_up] $files
+import_files: Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1073.344 ; gain = 0.000
+# set file "ila_count_up/ila_count_up.xci"
+# set obj [get_files -of_objects [get_reconfig_modules count_up] [list "*$file"]]
+# set_property -name "generate_files_for_reference" -value "0" -objects $obj
+# set_property -name "registered_with_manager" -value "1" -objects $obj
+# set partitionDef [get_partition_defs shift]
+# create_reconfig_module -name shift_left -partition_def $partitionDef
+# set obj [get_reconfig_modules shift_left]
+# set_property -name "module_name" -value "shift" -objects $obj
+# set files [list \
+#  "[file normalize "$origin_dir/sources/shift_left/shift_left.v"]"\
+# ]
+# import_files -of_objects [get_reconfig_modules shift_left] $files
+# set partitionDef [get_partition_defs shift]
+# create_reconfig_module -name shift_right -partition_def $partitionDef
+# set_property default_rm shift_right $partitionDef
+# set obj [get_reconfig_modules shift_right]
+# set_property -name "module_name" -value "shift" -objects $obj
+# set files [list \
+#  "[file normalize "$origin_dir/sources/shift_right/shift_right.v"]"\
+# ]
+# import_files -of_objects [get_reconfig_modules shift_right] $files
+# create_pr_configuration -name config_1
+create_pr_configuration: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 1073.344 ; gain = 0.000
+# set obj [get_pr_configurations config_1]
+# set_property -name "auto_import" -value "1" -objects $obj
+# set_property -name "partition_cell_rms" -value "u_count:count_up u_shift:shift_right" -objects $obj
+# set_property -name "use_blackbox" -value "1" -objects $obj
+# create_pr_configuration -name config_2
+# set obj [get_pr_configurations config_2]
+# set_property -name "auto_import" -value "1" -objects $obj
+# set_property -name "partition_cell_rms" -value "u_count:count_down u_shift:shift_left" -objects $obj
+# set_property -name "use_blackbox" -value "1" -objects $obj
+# if {[string equal [get_runs -quiet synth_1] ""]} {
+#     create_run -name synth_1 -part xcvu9p-flga2104-2L-e -flow {Vivado Synthesis 2017} -strategy "Vivado Synthesis Defaults" -report_strategy {No Reports} -constrset constrs_1
+# } else {
+#   set_property strategy "Vivado Synthesis Defaults" [get_runs synth_1]
+#   set_property flow "Vivado Synthesis 2017" [get_runs synth_1]
+# }
+# set obj [get_runs synth_1]
+# set_property set_report_strategy_name 1 $obj
+# set_property report_strategy {Vivado Synthesis Default Reports} $obj
+# set_property set_report_strategy_name 0 $obj
+# if { [ string equal [get_report_configs -of_objects [get_runs synth_1] synth_1_synth_report_utilization_0] "" ] } {
+#   create_report_config -report_name synth_1_synth_report_utilization_0 -report_type report_utilization:1.0 -steps synth_design -runs synth_1
+# }
+# set obj [get_report_configs -of_objects [get_runs synth_1] synth_1_synth_report_utilization_0]
+# if { $obj != "" } {
+# 
+# }
+# set obj [get_runs synth_1]
+# set_property -name "strategy" -value "Vivado Synthesis Defaults" -objects $obj
+# if {[string equal [get_runs -quiet count_down_synth_1] ""]} {
+#     create_run -name count_down_synth_1 -part xcvu9p-flga2104-2L-e -flow {Vivado Synthesis 2017} -strategy "Vivado Synthesis Defaults" -report_strategy {No Reports} -constrset count_down
+# } else {
+#   set_property strategy "Vivado Synthesis Defaults" [get_runs count_down_synth_1]
+#   set_property flow "Vivado Synthesis 2017" [get_runs count_down_synth_1]
+# }
+# set obj [get_runs count_down_synth_1]
+# set_property set_report_strategy_name 1 $obj
+# set_property report_strategy {Vivado Synthesis Default Reports} $obj
+# set_property set_report_strategy_name 0 $obj
+# if { [ string equal [get_report_configs -of_objects [get_runs count_down_synth_1] count_down_synth_1_synth_report_utilization_0] "" ] } {
+#   create_report_config -report_name count_down_synth_1_synth_report_utilization_0 -report_type report_utilization:1.0 -steps synth_design -runs count_down_synth_1
+# }
+# set obj [get_report_configs -of_objects [get_runs count_down_synth_1] count_down_synth_1_synth_report_utilization_0]
+# if { $obj != "" } {
+# 
+# }
+# set obj [get_runs count_down_synth_1]
+# set_property -name "constrset" -value "count_down" -objects $obj
+# set_property -name "strategy" -value "Vivado Synthesis Defaults" -objects $obj
+# if {[string equal [get_runs -quiet count_up_synth_1] ""]} {
+#     create_run -name count_up_synth_1 -part xcvu9p-flga2104-2L-e -flow {Vivado Synthesis 2017} -strategy "Vivado Synthesis Defaults" -report_strategy {No Reports} -constrset count_up
+# } else {
+#   set_property strategy "Vivado Synthesis Defaults" [get_runs count_up_synth_1]
+#   set_property flow "Vivado Synthesis 2017" [get_runs count_up_synth_1]
+# }
+# set obj [get_runs count_up_synth_1]
+# set_property set_report_strategy_name 1 $obj
+# set_property report_strategy {Vivado Synthesis Default Reports} $obj
+# set_property set_report_strategy_name 0 $obj
+# if { [ string equal [get_report_configs -of_objects [get_runs count_up_synth_1] count_up_synth_1_synth_report_utilization_0] "" ] } {
+#   create_report_config -report_name count_up_synth_1_synth_report_utilization_0 -report_type report_utilization:1.0 -steps synth_design -runs count_up_synth_1
+# }
+# set obj [get_report_configs -of_objects [get_runs count_up_synth_1] count_up_synth_1_synth_report_utilization_0]
+# if { $obj != "" } {
+# 
+# }
+# set obj [get_runs count_up_synth_1]
+# set_property -name "constrset" -value "count_up" -objects $obj
+# set_property -name "strategy" -value "Vivado Synthesis Defaults" -objects $obj
+# if {[string equal [get_runs -quiet shift_left_synth_1] ""]} {
+#     create_run -name shift_left_synth_1 -part xcvu9p-flga2104-2L-e -flow {Vivado Synthesis 2017} -strategy "Vivado Synthesis Defaults" -report_strategy {No Reports} -constrset shift_left
+# } else {
+#   set_property strategy "Vivado Synthesis Defaults" [get_runs shift_left_synth_1]
+#   set_property flow "Vivado Synthesis 2017" [get_runs shift_left_synth_1]
+# }
+# set obj [get_runs shift_left_synth_1]
+# set_property set_report_strategy_name 1 $obj
+# set_property report_strategy {Vivado Synthesis Default Reports} $obj
+# set_property set_report_strategy_name 0 $obj
+# if { [ string equal [get_report_configs -of_objects [get_runs shift_left_synth_1] shift_left_synth_1_synth_report_utilization_0] "" ] } {
+#   create_report_config -report_name shift_left_synth_1_synth_report_utilization_0 -report_type report_utilization:1.0 -steps synth_design -runs shift_left_synth_1
+# }
+# set obj [get_report_configs -of_objects [get_runs shift_left_synth_1] shift_left_synth_1_synth_report_utilization_0]
+# if { $obj != "" } {
+# 
+# }
+# set obj [get_runs shift_left_synth_1]
+# set_property -name "constrset" -value "shift_left" -objects $obj
+# set_property -name "strategy" -value "Vivado Synthesis Defaults" -objects $obj
+# if {[string equal [get_runs -quiet shift_right_synth_1] ""]} {
+#     create_run -name shift_right_synth_1 -part xcvu9p-flga2104-2L-e -flow {Vivado Synthesis 2017} -strategy "Vivado Synthesis Defaults" -report_strategy {No Reports} -constrset shift_right
+# } else {
+#   set_property strategy "Vivado Synthesis Defaults" [get_runs shift_right_synth_1]
+#   set_property flow "Vivado Synthesis 2017" [get_runs shift_right_synth_1]
+# }
+# set obj [get_runs shift_right_synth_1]
+# set_property set_report_strategy_name 1 $obj
+# set_property report_strategy {Vivado Synthesis Default Reports} $obj
+# set_property set_report_strategy_name 0 $obj
+# if { [ string equal [get_report_configs -of_objects [get_runs shift_right_synth_1] shift_right_synth_1_synth_report_utilization_0] "" ] } {
+#   create_report_config -report_name shift_right_synth_1_synth_report_utilization_0 -report_type report_utilization:1.0 -steps synth_design -runs shift_right_synth_1
+# }
+# set obj [get_report_configs -of_objects [get_runs shift_right_synth_1] shift_right_synth_1_synth_report_utilization_0]
+# if { $obj != "" } {
+# 
+# }
+# set obj [get_runs shift_right_synth_1]
+# set_property -name "constrset" -value "shift_right" -objects $obj
+# set_property -name "strategy" -value "Vivado Synthesis Defaults" -objects $obj
+# current_run -synthesis [get_runs synth_1]
+# if {[string equal [get_runs -quiet impl_1] ""]} {
+#     create_run -name impl_1 -part xcvu9p-flga2104-2L-e -flow {Vivado Implementation 2017} -strategy "Vivado Implementation Defaults" -report_strategy {No Reports} -constrset constrs_1 -parent_run synth_1
+# } else {
+#   set_property strategy "Vivado Implementation Defaults" [get_runs impl_1]
+#   set_property flow "Vivado Implementation 2017" [get_runs impl_1]
+# }
+# set_property pr_configuration config_1 [get_runs impl_1]
+# set obj [get_runs impl_1]
+# set_property set_report_strategy_name 1 $obj
+# set_property report_strategy {Vivado Implementation Default Reports} $obj
+# set_property set_report_strategy_name 0 $obj
+# if { [ string equal [get_report_configs -of_objects [get_runs impl_1] impl_1_init_report_timing_summary_0] "" ] } {
+#   create_report_config -report_name impl_1_init_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps init_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_init_report_timing_summary_0]
+# if { $obj != "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs impl_1] impl_1_opt_report_drc_0] "" ] } {
+#   create_report_config -report_name impl_1_opt_report_drc_0 -report_type report_drc:1.0 -steps opt_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_opt_report_drc_0]
+# if { $obj != "" } {
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs impl_1] impl_1_opt_report_timing_summary_0] "" ] } {
+#   create_report_config -report_name impl_1_opt_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps opt_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_opt_report_timing_summary_0]
+# if { $obj != "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs impl_1] impl_1_power_opt_report_timing_summary_0] "" ] } {
+#   create_report_config -report_name impl_1_power_opt_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps power_opt_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_power_opt_report_timing_summary_0]
+# if { $obj != "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs impl_1] impl_1_place_report_io_0] "" ] } {
+#   create_report_config -report_name impl_1_place_report_io_0 -report_type report_io:1.0 -steps place_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_place_report_io_0]
+# if { $obj != "" } {
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs impl_1] impl_1_place_report_utilization_0] "" ] } {
+#   create_report_config -report_name impl_1_place_report_utilization_0 -report_type report_utilization:1.0 -steps place_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_place_report_utilization_0]
+# if { $obj != "" } {
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs impl_1] impl_1_place_report_control_sets_0] "" ] } {
+#   create_report_config -report_name impl_1_place_report_control_sets_0 -report_type report_control_sets:1.0 -steps place_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_place_report_control_sets_0]
+# if { $obj != "" } {
+# set_property -name "options.verbose" -value "1" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs impl_1] impl_1_place_report_incremental_reuse_0] "" ] } {
+#   create_report_config -report_name impl_1_place_report_incremental_reuse_0 -report_type report_incremental_reuse:1.0 -steps place_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_place_report_incremental_reuse_0]
+# if { $obj != "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs impl_1] impl_1_place_report_incremental_reuse_1] "" ] } {
+#   create_report_config -report_name impl_1_place_report_incremental_reuse_1 -report_type report_incremental_reuse:1.0 -steps place_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_place_report_incremental_reuse_1]
+# if { $obj != "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs impl_1] impl_1_place_report_timing_summary_0] "" ] } {
+#   create_report_config -report_name impl_1_place_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps place_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_place_report_timing_summary_0]
+# if { $obj != "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs impl_1] impl_1_post_place_power_opt_report_timing_summary_0] "" ] } {
+#   create_report_config -report_name impl_1_post_place_power_opt_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps post_place_power_opt_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_post_place_power_opt_report_timing_summary_0]
+# if { $obj != "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs impl_1] impl_1_phys_opt_report_timing_summary_0] "" ] } {
+#   create_report_config -report_name impl_1_phys_opt_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps phys_opt_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_phys_opt_report_timing_summary_0]
+# if { $obj != "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs impl_1] impl_1_route_report_drc_0] "" ] } {
+#   create_report_config -report_name impl_1_route_report_drc_0 -report_type report_drc:1.0 -steps route_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_route_report_drc_0]
+# if { $obj != "" } {
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs impl_1] impl_1_route_report_methodology_0] "" ] } {
+#   create_report_config -report_name impl_1_route_report_methodology_0 -report_type report_methodology:1.0 -steps route_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_route_report_methodology_0]
+# if { $obj != "" } {
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs impl_1] impl_1_route_report_power_0] "" ] } {
+#   create_report_config -report_name impl_1_route_report_power_0 -report_type report_power:1.0 -steps route_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_route_report_power_0]
+# if { $obj != "" } {
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs impl_1] impl_1_route_report_route_status_0] "" ] } {
+#   create_report_config -report_name impl_1_route_report_route_status_0 -report_type report_route_status:1.0 -steps route_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_route_report_route_status_0]
+# if { $obj != "" } {
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs impl_1] impl_1_route_report_timing_summary_0] "" ] } {
+#   create_report_config -report_name impl_1_route_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps route_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_route_report_timing_summary_0]
+# if { $obj != "" } {
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs impl_1] impl_1_route_report_incremental_reuse_0] "" ] } {
+#   create_report_config -report_name impl_1_route_report_incremental_reuse_0 -report_type report_incremental_reuse:1.0 -steps route_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_route_report_incremental_reuse_0]
+# if { $obj != "" } {
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs impl_1] impl_1_route_report_clock_utilization_0] "" ] } {
+#   create_report_config -report_name impl_1_route_report_clock_utilization_0 -report_type report_clock_utilization:1.0 -steps route_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_route_report_clock_utilization_0]
+# if { $obj != "" } {
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs impl_1] impl_1_route_report_bus_skew_0] "" ] } {
+#   create_report_config -report_name impl_1_route_report_bus_skew_0 -report_type report_bus_skew:1.1 -steps route_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_route_report_bus_skew_0]
+# if { $obj != "" } {
+# set_property -name "options.warn_on_violation" -value "1" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs impl_1] impl_1_post_route_phys_opt_report_timing_summary_0] "" ] } {
+#   create_report_config -report_name impl_1_post_route_phys_opt_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps post_route_phys_opt_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_post_route_phys_opt_report_timing_summary_0]
+# if { $obj != "" } {
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# set_property -name "options.warn_on_violation" -value "1" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs impl_1] impl_1_post_route_phys_opt_report_bus_skew_0] "" ] } {
+#   create_report_config -report_name impl_1_post_route_phys_opt_report_bus_skew_0 -report_type report_bus_skew:1.1 -steps post_route_phys_opt_design -runs impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs impl_1] impl_1_post_route_phys_opt_report_bus_skew_0]
+# if { $obj != "" } {
+# set_property -name "options.warn_on_violation" -value "1" -objects $obj
+# 
+# }
+# set obj [get_runs impl_1]
+# set_property -name "needs_refresh" -value "1" -objects $obj
+# set_property -name "strategy" -value "Vivado Implementation Defaults" -objects $obj
+# set_property -name "steps.place_design.args.directive" -value "ExtraTimingOpt" -objects $obj
+# set_property -name "steps.route_design.args.directive" -value "AggressiveExplore" -objects $obj
+# set_property -name "steps.write_bitstream.args.readback_file" -value "0" -objects $obj
+# set_property -name "steps.write_bitstream.args.verbose" -value "0" -objects $obj
+# if {[string equal [get_runs -quiet count_down_impl_1] ""]} {
+#     create_run -name count_down_impl_1 -part xcvu9p-flga2104-2L-e -flow {Vivado Implementation 2017} -strategy "Vivado Implementation Defaults" -report_strategy {No Reports} -constrset count_down -parent_run count_down_synth_1
+# } else {
+#   set_property strategy "Vivado Implementation Defaults" [get_runs count_down_impl_1]
+#   set_property flow "Vivado Implementation 2017" [get_runs count_down_impl_1]
+# }
+# set obj [get_runs count_down_impl_1]
+# set_property set_report_strategy_name 1 $obj
+# set_property report_strategy {Vivado Implementation Default Reports} $obj
+# set_property set_report_strategy_name 0 $obj
+# if { [ string equal [get_report_configs -of_objects [get_runs count_down_impl_1] count_down_impl_1_init_report_timing_summary_0] "" ] } {
+#   create_report_config -report_name count_down_impl_1_init_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps init_design -runs count_down_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs count_down_impl_1] count_down_impl_1_init_report_timing_summary_0]
+# if { $obj != "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs count_down_impl_1] count_down_impl_1_opt_report_drc_0] "" ] } {
+#   create_report_config -report_name count_down_impl_1_opt_report_drc_0 -report_type report_drc:1.0 -steps opt_design -runs count_down_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs count_down_impl_1] count_down_impl_1_opt_report_drc_0]
+# if { $obj != "" } {
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs count_down_impl_1] count_down_impl_1_opt_report_timing_summary_0] "" ] } {
+#   create_report_config -report_name count_down_impl_1_opt_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps opt_design -runs count_down_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs count_down_impl_1] count_down_impl_1_opt_report_timing_summary_0]
+# if { $obj != "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs count_down_impl_1] count_down_impl_1_power_opt_report_timing_summary_0] "" ] } {
+#   create_report_config -report_name count_down_impl_1_power_opt_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps power_opt_design -runs count_down_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs count_down_impl_1] count_down_impl_1_power_opt_report_timing_summary_0]
+# if { $obj != "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs count_down_impl_1] count_down_impl_1_place_report_io_0] "" ] } {
+#   create_report_config -report_name count_down_impl_1_place_report_io_0 -report_type report_io:1.0 -steps place_design -runs count_down_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs count_down_impl_1] count_down_impl_1_place_report_io_0]
+# if { $obj != "" } {
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs count_down_impl_1] count_down_impl_1_place_report_utilization_0] "" ] } {
+#   create_report_config -report_name count_down_impl_1_place_report_utilization_0 -report_type report_utilization:1.0 -steps place_design -runs count_down_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs count_down_impl_1] count_down_impl_1_place_report_utilization_0]
+# if { $obj != "" } {
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs count_down_impl_1] count_down_impl_1_place_report_control_sets_0] "" ] } {
+#   create_report_config -report_name count_down_impl_1_place_report_control_sets_0 -report_type report_control_sets:1.0 -steps place_design -runs count_down_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs count_down_impl_1] count_down_impl_1_place_report_control_sets_0]
+# if { $obj != "" } {
+# set_property -name "options.verbose" -value "1" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs count_down_impl_1] count_down_impl_1_place_report_incremental_reuse_0] "" ] } {
+#   create_report_config -report_name count_down_impl_1_place_report_incremental_reuse_0 -report_type report_incremental_reuse:1.0 -steps place_design -runs count_down_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs count_down_impl_1] count_down_impl_1_place_report_incremental_reuse_0]
+# if { $obj != "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs count_down_impl_1] count_down_impl_1_place_report_incremental_reuse_1] "" ] } {
+#   create_report_config -report_name count_down_impl_1_place_report_incremental_reuse_1 -report_type report_incremental_reuse:1.0 -steps place_design -runs count_down_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs count_down_impl_1] count_down_impl_1_place_report_incremental_reuse_1]
+# if { $obj != "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs count_down_impl_1] count_down_impl_1_place_report_timing_summary_0] "" ] } {
+#   create_report_config -report_name count_down_impl_1_place_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps place_design -runs count_down_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs count_down_impl_1] count_down_impl_1_place_report_timing_summary_0]
+# if { $obj != "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs count_down_impl_1] count_down_impl_1_post_place_power_opt_report_timing_summary_0] "" ] } {
+#   create_report_config -report_name count_down_impl_1_post_place_power_opt_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps post_place_power_opt_design -runs count_down_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs count_down_impl_1] count_down_impl_1_post_place_power_opt_report_timing_summary_0]
+# if { $obj != "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs count_down_impl_1] count_down_impl_1_phys_opt_report_timing_summary_0] "" ] } {
+#   create_report_config -report_name count_down_impl_1_phys_opt_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps phys_opt_design -runs count_down_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs count_down_impl_1] count_down_impl_1_phys_opt_report_timing_summary_0]
+# if { $obj != "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs count_down_impl_1] count_down_impl_1_route_report_drc_0] "" ] } {
+#   create_report_config -report_name count_down_impl_1_route_report_drc_0 -report_type report_drc:1.0 -steps route_design -runs count_down_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs count_down_impl_1] count_down_impl_1_route_report_drc_0]
+# if { $obj != "" } {
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs count_down_impl_1] count_down_impl_1_route_report_methodology_0] "" ] } {
+#   create_report_config -report_name count_down_impl_1_route_report_methodology_0 -report_type report_methodology:1.0 -steps route_design -runs count_down_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs count_down_impl_1] count_down_impl_1_route_report_methodology_0]
+# if { $obj != "" } {
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs count_down_impl_1] count_down_impl_1_route_report_power_0] "" ] } {
+#   create_report_config -report_name count_down_impl_1_route_report_power_0 -report_type report_power:1.0 -steps route_design -runs count_down_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs count_down_impl_1] count_down_impl_1_route_report_power_0]
+# if { $obj != "" } {
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs count_down_impl_1] count_down_impl_1_route_report_route_status_0] "" ] } {
+#   create_report_config -report_name count_down_impl_1_route_report_route_status_0 -report_type report_route_status:1.0 -steps route_design -runs count_down_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs count_down_impl_1] count_down_impl_1_route_report_route_status_0]
+# if { $obj != "" } {
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs count_down_impl_1] count_down_impl_1_route_report_timing_summary_0] "" ] } {
+#   create_report_config -report_name count_down_impl_1_route_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps route_design -runs count_down_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs count_down_impl_1] count_down_impl_1_route_report_timing_summary_0]
+# if { $obj != "" } {
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs count_down_impl_1] count_down_impl_1_route_report_incremental_reuse_0] "" ] } {
+#   create_report_config -report_name count_down_impl_1_route_report_incremental_reuse_0 -report_type report_incremental_reuse:1.0 -steps route_design -runs count_down_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs count_down_impl_1] count_down_impl_1_route_report_incremental_reuse_0]
+# if { $obj != "" } {
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs count_down_impl_1] count_down_impl_1_route_report_clock_utilization_0] "" ] } {
+#   create_report_config -report_name count_down_impl_1_route_report_clock_utilization_0 -report_type report_clock_utilization:1.0 -steps route_design -runs count_down_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs count_down_impl_1] count_down_impl_1_route_report_clock_utilization_0]
+# if { $obj != "" } {
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs count_down_impl_1] count_down_impl_1_route_report_bus_skew_0] "" ] } {
+#   create_report_config -report_name count_down_impl_1_route_report_bus_skew_0 -report_type report_bus_skew:1.1 -steps route_design -runs count_down_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs count_down_impl_1] count_down_impl_1_route_report_bus_skew_0]
+# if { $obj != "" } {
+# set_property -name "options.warn_on_violation" -value "1" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs count_down_impl_1] count_down_impl_1_post_route_phys_opt_report_timing_summary_0] "" ] } {
+#   create_report_config -report_name count_down_impl_1_post_route_phys_opt_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps post_route_phys_opt_design -runs count_down_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs count_down_impl_1] count_down_impl_1_post_route_phys_opt_report_timing_summary_0]
+# if { $obj != "" } {
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# set_property -name "options.warn_on_violation" -value "1" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs count_down_impl_1] count_down_impl_1_post_route_phys_opt_report_bus_skew_0] "" ] } {
+#   create_report_config -report_name count_down_impl_1_post_route_phys_opt_report_bus_skew_0 -report_type report_bus_skew:1.1 -steps post_route_phys_opt_design -runs count_down_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs count_down_impl_1] count_down_impl_1_post_route_phys_opt_report_bus_skew_0]
+# if { $obj != "" } {
+# set_property -name "options.warn_on_violation" -value "1" -objects $obj
+# 
+# }
+# set obj [get_runs count_down_impl_1]
+# set_property -name "constrset" -value "count_down" -objects $obj
+# set_property -name "include_in_archive" -value "0" -objects $obj
+# set_property -name "strategy" -value "Vivado Implementation Defaults" -objects $obj
+# set_property -name "steps.write_bitstream.args.readback_file" -value "0" -objects $obj
+# set_property -name "steps.write_bitstream.args.verbose" -value "0" -objects $obj
+# if {[string equal [get_runs -quiet count_up_impl_1] ""]} {
+#     create_run -name count_up_impl_1 -part xcvu9p-flga2104-2L-e -flow {Vivado Implementation 2017} -strategy "Vivado Implementation Defaults" -report_strategy {No Reports} -constrset count_up -parent_run count_up_synth_1
+# } else {
+#   set_property strategy "Vivado Implementation Defaults" [get_runs count_up_impl_1]
+#   set_property flow "Vivado Implementation 2017" [get_runs count_up_impl_1]
+# }
+# set obj [get_runs count_up_impl_1]
+# set_property set_report_strategy_name 1 $obj
+# set_property report_strategy {Vivado Implementation Default Reports} $obj
+# set_property set_report_strategy_name 0 $obj
+# if { [ string equal [get_report_configs -of_objects [get_runs count_up_impl_1] count_up_impl_1_init_report_timing_summary_0] "" ] } {
+#   create_report_config -report_name count_up_impl_1_init_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps init_design -runs count_up_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs count_up_impl_1] count_up_impl_1_init_report_timing_summary_0]
+# if { $obj != "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs count_up_impl_1] count_up_impl_1_opt_report_drc_0] "" ] } {
+#   create_report_config -report_name count_up_impl_1_opt_report_drc_0 -report_type report_drc:1.0 -steps opt_design -runs count_up_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs count_up_impl_1] count_up_impl_1_opt_report_drc_0]
+# if { $obj != "" } {
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs count_up_impl_1] count_up_impl_1_opt_report_timing_summary_0] "" ] } {
+#   create_report_config -report_name count_up_impl_1_opt_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps opt_design -runs count_up_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs count_up_impl_1] count_up_impl_1_opt_report_timing_summary_0]
+# if { $obj != "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs count_up_impl_1] count_up_impl_1_power_opt_report_timing_summary_0] "" ] } {
+#   create_report_config -report_name count_up_impl_1_power_opt_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps power_opt_design -runs count_up_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs count_up_impl_1] count_up_impl_1_power_opt_report_timing_summary_0]
+# if { $obj != "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs count_up_impl_1] count_up_impl_1_place_report_io_0] "" ] } {
+#   create_report_config -report_name count_up_impl_1_place_report_io_0 -report_type report_io:1.0 -steps place_design -runs count_up_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs count_up_impl_1] count_up_impl_1_place_report_io_0]
+# if { $obj != "" } {
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs count_up_impl_1] count_up_impl_1_place_report_utilization_0] "" ] } {
+#   create_report_config -report_name count_up_impl_1_place_report_utilization_0 -report_type report_utilization:1.0 -steps place_design -runs count_up_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs count_up_impl_1] count_up_impl_1_place_report_utilization_0]
+# if { $obj != "" } {
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs count_up_impl_1] count_up_impl_1_place_report_control_sets_0] "" ] } {
+#   create_report_config -report_name count_up_impl_1_place_report_control_sets_0 -report_type report_control_sets:1.0 -steps place_design -runs count_up_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs count_up_impl_1] count_up_impl_1_place_report_control_sets_0]
+# if { $obj != "" } {
+# set_property -name "options.verbose" -value "1" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs count_up_impl_1] count_up_impl_1_place_report_incremental_reuse_0] "" ] } {
+#   create_report_config -report_name count_up_impl_1_place_report_incremental_reuse_0 -report_type report_incremental_reuse:1.0 -steps place_design -runs count_up_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs count_up_impl_1] count_up_impl_1_place_report_incremental_reuse_0]
+# if { $obj != "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs count_up_impl_1] count_up_impl_1_place_report_incremental_reuse_1] "" ] } {
+#   create_report_config -report_name count_up_impl_1_place_report_incremental_reuse_1 -report_type report_incremental_reuse:1.0 -steps place_design -runs count_up_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs count_up_impl_1] count_up_impl_1_place_report_incremental_reuse_1]
+# if { $obj != "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs count_up_impl_1] count_up_impl_1_place_report_timing_summary_0] "" ] } {
+#   create_report_config -report_name count_up_impl_1_place_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps place_design -runs count_up_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs count_up_impl_1] count_up_impl_1_place_report_timing_summary_0]
+# if { $obj != "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs count_up_impl_1] count_up_impl_1_post_place_power_opt_report_timing_summary_0] "" ] } {
+#   create_report_config -report_name count_up_impl_1_post_place_power_opt_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps post_place_power_opt_design -runs count_up_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs count_up_impl_1] count_up_impl_1_post_place_power_opt_report_timing_summary_0]
+# if { $obj != "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs count_up_impl_1] count_up_impl_1_phys_opt_report_timing_summary_0] "" ] } {
+#   create_report_config -report_name count_up_impl_1_phys_opt_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps phys_opt_design -runs count_up_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs count_up_impl_1] count_up_impl_1_phys_opt_report_timing_summary_0]
+# if { $obj != "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs count_up_impl_1] count_up_impl_1_route_report_drc_0] "" ] } {
+#   create_report_config -report_name count_up_impl_1_route_report_drc_0 -report_type report_drc:1.0 -steps route_design -runs count_up_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs count_up_impl_1] count_up_impl_1_route_report_drc_0]
+# if { $obj != "" } {
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs count_up_impl_1] count_up_impl_1_route_report_methodology_0] "" ] } {
+#   create_report_config -report_name count_up_impl_1_route_report_methodology_0 -report_type report_methodology:1.0 -steps route_design -runs count_up_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs count_up_impl_1] count_up_impl_1_route_report_methodology_0]
+# if { $obj != "" } {
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs count_up_impl_1] count_up_impl_1_route_report_power_0] "" ] } {
+#   create_report_config -report_name count_up_impl_1_route_report_power_0 -report_type report_power:1.0 -steps route_design -runs count_up_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs count_up_impl_1] count_up_impl_1_route_report_power_0]
+# if { $obj != "" } {
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs count_up_impl_1] count_up_impl_1_route_report_route_status_0] "" ] } {
+#   create_report_config -report_name count_up_impl_1_route_report_route_status_0 -report_type report_route_status:1.0 -steps route_design -runs count_up_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs count_up_impl_1] count_up_impl_1_route_report_route_status_0]
+# if { $obj != "" } {
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs count_up_impl_1] count_up_impl_1_route_report_timing_summary_0] "" ] } {
+#   create_report_config -report_name count_up_impl_1_route_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps route_design -runs count_up_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs count_up_impl_1] count_up_impl_1_route_report_timing_summary_0]
+# if { $obj != "" } {
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs count_up_impl_1] count_up_impl_1_route_report_incremental_reuse_0] "" ] } {
+#   create_report_config -report_name count_up_impl_1_route_report_incremental_reuse_0 -report_type report_incremental_reuse:1.0 -steps route_design -runs count_up_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs count_up_impl_1] count_up_impl_1_route_report_incremental_reuse_0]
+# if { $obj != "" } {
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs count_up_impl_1] count_up_impl_1_route_report_clock_utilization_0] "" ] } {
+#   create_report_config -report_name count_up_impl_1_route_report_clock_utilization_0 -report_type report_clock_utilization:1.0 -steps route_design -runs count_up_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs count_up_impl_1] count_up_impl_1_route_report_clock_utilization_0]
+# if { $obj != "" } {
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs count_up_impl_1] count_up_impl_1_route_report_bus_skew_0] "" ] } {
+#   create_report_config -report_name count_up_impl_1_route_report_bus_skew_0 -report_type report_bus_skew:1.1 -steps route_design -runs count_up_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs count_up_impl_1] count_up_impl_1_route_report_bus_skew_0]
+# if { $obj != "" } {
+# set_property -name "options.warn_on_violation" -value "1" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs count_up_impl_1] count_up_impl_1_post_route_phys_opt_report_timing_summary_0] "" ] } {
+#   create_report_config -report_name count_up_impl_1_post_route_phys_opt_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps post_route_phys_opt_design -runs count_up_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs count_up_impl_1] count_up_impl_1_post_route_phys_opt_report_timing_summary_0]
+# if { $obj != "" } {
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# set_property -name "options.warn_on_violation" -value "1" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs count_up_impl_1] count_up_impl_1_post_route_phys_opt_report_bus_skew_0] "" ] } {
+#   create_report_config -report_name count_up_impl_1_post_route_phys_opt_report_bus_skew_0 -report_type report_bus_skew:1.1 -steps post_route_phys_opt_design -runs count_up_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs count_up_impl_1] count_up_impl_1_post_route_phys_opt_report_bus_skew_0]
+# if { $obj != "" } {
+# set_property -name "options.warn_on_violation" -value "1" -objects $obj
+# 
+# }
+# set obj [get_runs count_up_impl_1]
+# set_property -name "constrset" -value "count_up" -objects $obj
+# set_property -name "include_in_archive" -value "0" -objects $obj
+# set_property -name "strategy" -value "Vivado Implementation Defaults" -objects $obj
+# set_property -name "steps.write_bitstream.args.readback_file" -value "0" -objects $obj
+# set_property -name "steps.write_bitstream.args.verbose" -value "0" -objects $obj
+# if {[string equal [get_runs -quiet shift_left_impl_1] ""]} {
+#     create_run -name shift_left_impl_1 -part xcvu9p-flga2104-2L-e -flow {Vivado Implementation 2017} -strategy "Vivado Implementation Defaults" -report_strategy {No Reports} -constrset shift_left -parent_run shift_left_synth_1
+# } else {
+#   set_property strategy "Vivado Implementation Defaults" [get_runs shift_left_impl_1]
+#   set_property flow "Vivado Implementation 2017" [get_runs shift_left_impl_1]
+# }
+# set obj [get_runs shift_left_impl_1]
+# set_property set_report_strategy_name 1 $obj
+# set_property report_strategy {Vivado Implementation Default Reports} $obj
+# set_property set_report_strategy_name 0 $obj
+# if { [ string equal [get_report_configs -of_objects [get_runs shift_left_impl_1] shift_left_impl_1_init_report_timing_summary_0] "" ] } {
+#   create_report_config -report_name shift_left_impl_1_init_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps init_design -runs shift_left_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs shift_left_impl_1] shift_left_impl_1_init_report_timing_summary_0]
+# if { $obj != "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs shift_left_impl_1] shift_left_impl_1_opt_report_drc_0] "" ] } {
+#   create_report_config -report_name shift_left_impl_1_opt_report_drc_0 -report_type report_drc:1.0 -steps opt_design -runs shift_left_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs shift_left_impl_1] shift_left_impl_1_opt_report_drc_0]
+# if { $obj != "" } {
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs shift_left_impl_1] shift_left_impl_1_opt_report_timing_summary_0] "" ] } {
+#   create_report_config -report_name shift_left_impl_1_opt_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps opt_design -runs shift_left_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs shift_left_impl_1] shift_left_impl_1_opt_report_timing_summary_0]
+# if { $obj != "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs shift_left_impl_1] shift_left_impl_1_power_opt_report_timing_summary_0] "" ] } {
+#   create_report_config -report_name shift_left_impl_1_power_opt_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps power_opt_design -runs shift_left_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs shift_left_impl_1] shift_left_impl_1_power_opt_report_timing_summary_0]
+# if { $obj != "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs shift_left_impl_1] shift_left_impl_1_place_report_io_0] "" ] } {
+#   create_report_config -report_name shift_left_impl_1_place_report_io_0 -report_type report_io:1.0 -steps place_design -runs shift_left_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs shift_left_impl_1] shift_left_impl_1_place_report_io_0]
+# if { $obj != "" } {
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs shift_left_impl_1] shift_left_impl_1_place_report_utilization_0] "" ] } {
+#   create_report_config -report_name shift_left_impl_1_place_report_utilization_0 -report_type report_utilization:1.0 -steps place_design -runs shift_left_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs shift_left_impl_1] shift_left_impl_1_place_report_utilization_0]
+# if { $obj != "" } {
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs shift_left_impl_1] shift_left_impl_1_place_report_control_sets_0] "" ] } {
+#   create_report_config -report_name shift_left_impl_1_place_report_control_sets_0 -report_type report_control_sets:1.0 -steps place_design -runs shift_left_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs shift_left_impl_1] shift_left_impl_1_place_report_control_sets_0]
+# if { $obj != "" } {
+# set_property -name "options.verbose" -value "1" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs shift_left_impl_1] shift_left_impl_1_place_report_incremental_reuse_0] "" ] } {
+#   create_report_config -report_name shift_left_impl_1_place_report_incremental_reuse_0 -report_type report_incremental_reuse:1.0 -steps place_design -runs shift_left_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs shift_left_impl_1] shift_left_impl_1_place_report_incremental_reuse_0]
+# if { $obj != "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs shift_left_impl_1] shift_left_impl_1_place_report_incremental_reuse_1] "" ] } {
+#   create_report_config -report_name shift_left_impl_1_place_report_incremental_reuse_1 -report_type report_incremental_reuse:1.0 -steps place_design -runs shift_left_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs shift_left_impl_1] shift_left_impl_1_place_report_incremental_reuse_1]
+# if { $obj != "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs shift_left_impl_1] shift_left_impl_1_place_report_timing_summary_0] "" ] } {
+#   create_report_config -report_name shift_left_impl_1_place_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps place_design -runs shift_left_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs shift_left_impl_1] shift_left_impl_1_place_report_timing_summary_0]
+# if { $obj != "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs shift_left_impl_1] shift_left_impl_1_post_place_power_opt_report_timing_summary_0] "" ] } {
+#   create_report_config -report_name shift_left_impl_1_post_place_power_opt_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps post_place_power_opt_design -runs shift_left_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs shift_left_impl_1] shift_left_impl_1_post_place_power_opt_report_timing_summary_0]
+# if { $obj != "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs shift_left_impl_1] shift_left_impl_1_phys_opt_report_timing_summary_0] "" ] } {
+#   create_report_config -report_name shift_left_impl_1_phys_opt_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps phys_opt_design -runs shift_left_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs shift_left_impl_1] shift_left_impl_1_phys_opt_report_timing_summary_0]
+# if { $obj != "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs shift_left_impl_1] shift_left_impl_1_route_report_drc_0] "" ] } {
+#   create_report_config -report_name shift_left_impl_1_route_report_drc_0 -report_type report_drc:1.0 -steps route_design -runs shift_left_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs shift_left_impl_1] shift_left_impl_1_route_report_drc_0]
+# if { $obj != "" } {
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs shift_left_impl_1] shift_left_impl_1_route_report_methodology_0] "" ] } {
+#   create_report_config -report_name shift_left_impl_1_route_report_methodology_0 -report_type report_methodology:1.0 -steps route_design -runs shift_left_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs shift_left_impl_1] shift_left_impl_1_route_report_methodology_0]
+# if { $obj != "" } {
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs shift_left_impl_1] shift_left_impl_1_route_report_power_0] "" ] } {
+#   create_report_config -report_name shift_left_impl_1_route_report_power_0 -report_type report_power:1.0 -steps route_design -runs shift_left_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs shift_left_impl_1] shift_left_impl_1_route_report_power_0]
+# if { $obj != "" } {
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs shift_left_impl_1] shift_left_impl_1_route_report_route_status_0] "" ] } {
+#   create_report_config -report_name shift_left_impl_1_route_report_route_status_0 -report_type report_route_status:1.0 -steps route_design -runs shift_left_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs shift_left_impl_1] shift_left_impl_1_route_report_route_status_0]
+# if { $obj != "" } {
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs shift_left_impl_1] shift_left_impl_1_route_report_timing_summary_0] "" ] } {
+#   create_report_config -report_name shift_left_impl_1_route_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps route_design -runs shift_left_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs shift_left_impl_1] shift_left_impl_1_route_report_timing_summary_0]
+# if { $obj != "" } {
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs shift_left_impl_1] shift_left_impl_1_route_report_incremental_reuse_0] "" ] } {
+#   create_report_config -report_name shift_left_impl_1_route_report_incremental_reuse_0 -report_type report_incremental_reuse:1.0 -steps route_design -runs shift_left_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs shift_left_impl_1] shift_left_impl_1_route_report_incremental_reuse_0]
+# if { $obj != "" } {
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs shift_left_impl_1] shift_left_impl_1_route_report_clock_utilization_0] "" ] } {
+#   create_report_config -report_name shift_left_impl_1_route_report_clock_utilization_0 -report_type report_clock_utilization:1.0 -steps route_design -runs shift_left_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs shift_left_impl_1] shift_left_impl_1_route_report_clock_utilization_0]
+# if { $obj != "" } {
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs shift_left_impl_1] shift_left_impl_1_route_report_bus_skew_0] "" ] } {
+#   create_report_config -report_name shift_left_impl_1_route_report_bus_skew_0 -report_type report_bus_skew:1.1 -steps route_design -runs shift_left_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs shift_left_impl_1] shift_left_impl_1_route_report_bus_skew_0]
+# if { $obj != "" } {
+# set_property -name "options.warn_on_violation" -value "1" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs shift_left_impl_1] shift_left_impl_1_post_route_phys_opt_report_timing_summary_0] "" ] } {
+#   create_report_config -report_name shift_left_impl_1_post_route_phys_opt_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps post_route_phys_opt_design -runs shift_left_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs shift_left_impl_1] shift_left_impl_1_post_route_phys_opt_report_timing_summary_0]
+# if { $obj != "" } {
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# set_property -name "options.warn_on_violation" -value "1" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs shift_left_impl_1] shift_left_impl_1_post_route_phys_opt_report_bus_skew_0] "" ] } {
+#   create_report_config -report_name shift_left_impl_1_post_route_phys_opt_report_bus_skew_0 -report_type report_bus_skew:1.1 -steps post_route_phys_opt_design -runs shift_left_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs shift_left_impl_1] shift_left_impl_1_post_route_phys_opt_report_bus_skew_0]
+# if { $obj != "" } {
+# set_property -name "options.warn_on_violation" -value "1" -objects $obj
+# 
+# }
+# set obj [get_runs shift_left_impl_1]
+# set_property -name "constrset" -value "shift_left" -objects $obj
+# set_property -name "include_in_archive" -value "0" -objects $obj
+# set_property -name "strategy" -value "Vivado Implementation Defaults" -objects $obj
+# set_property -name "steps.write_bitstream.args.readback_file" -value "0" -objects $obj
+# set_property -name "steps.write_bitstream.args.verbose" -value "0" -objects $obj
+# if {[string equal [get_runs -quiet shift_right_impl_1] ""]} {
+#     create_run -name shift_right_impl_1 -part xcvu9p-flga2104-2L-e -flow {Vivado Implementation 2017} -strategy "Vivado Implementation Defaults" -report_strategy {No Reports} -constrset shift_right -parent_run shift_right_synth_1
+# } else {
+#   set_property strategy "Vivado Implementation Defaults" [get_runs shift_right_impl_1]
+#   set_property flow "Vivado Implementation 2017" [get_runs shift_right_impl_1]
+# }
+# set obj [get_runs shift_right_impl_1]
+# set_property set_report_strategy_name 1 $obj
+# set_property report_strategy {Vivado Implementation Default Reports} $obj
+# set_property set_report_strategy_name 0 $obj
+# if { [ string equal [get_report_configs -of_objects [get_runs shift_right_impl_1] shift_right_impl_1_init_report_timing_summary_0] "" ] } {
+#   create_report_config -report_name shift_right_impl_1_init_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps init_design -runs shift_right_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs shift_right_impl_1] shift_right_impl_1_init_report_timing_summary_0]
+# if { $obj != "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs shift_right_impl_1] shift_right_impl_1_opt_report_drc_0] "" ] } {
+#   create_report_config -report_name shift_right_impl_1_opt_report_drc_0 -report_type report_drc:1.0 -steps opt_design -runs shift_right_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs shift_right_impl_1] shift_right_impl_1_opt_report_drc_0]
+# if { $obj != "" } {
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs shift_right_impl_1] shift_right_impl_1_opt_report_timing_summary_0] "" ] } {
+#   create_report_config -report_name shift_right_impl_1_opt_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps opt_design -runs shift_right_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs shift_right_impl_1] shift_right_impl_1_opt_report_timing_summary_0]
+# if { $obj != "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs shift_right_impl_1] shift_right_impl_1_power_opt_report_timing_summary_0] "" ] } {
+#   create_report_config -report_name shift_right_impl_1_power_opt_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps power_opt_design -runs shift_right_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs shift_right_impl_1] shift_right_impl_1_power_opt_report_timing_summary_0]
+# if { $obj != "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs shift_right_impl_1] shift_right_impl_1_place_report_io_0] "" ] } {
+#   create_report_config -report_name shift_right_impl_1_place_report_io_0 -report_type report_io:1.0 -steps place_design -runs shift_right_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs shift_right_impl_1] shift_right_impl_1_place_report_io_0]
+# if { $obj != "" } {
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs shift_right_impl_1] shift_right_impl_1_place_report_utilization_0] "" ] } {
+#   create_report_config -report_name shift_right_impl_1_place_report_utilization_0 -report_type report_utilization:1.0 -steps place_design -runs shift_right_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs shift_right_impl_1] shift_right_impl_1_place_report_utilization_0]
+# if { $obj != "" } {
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs shift_right_impl_1] shift_right_impl_1_place_report_control_sets_0] "" ] } {
+#   create_report_config -report_name shift_right_impl_1_place_report_control_sets_0 -report_type report_control_sets:1.0 -steps place_design -runs shift_right_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs shift_right_impl_1] shift_right_impl_1_place_report_control_sets_0]
+# if { $obj != "" } {
+# set_property -name "options.verbose" -value "1" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs shift_right_impl_1] shift_right_impl_1_place_report_incremental_reuse_0] "" ] } {
+#   create_report_config -report_name shift_right_impl_1_place_report_incremental_reuse_0 -report_type report_incremental_reuse:1.0 -steps place_design -runs shift_right_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs shift_right_impl_1] shift_right_impl_1_place_report_incremental_reuse_0]
+# if { $obj != "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs shift_right_impl_1] shift_right_impl_1_place_report_incremental_reuse_1] "" ] } {
+#   create_report_config -report_name shift_right_impl_1_place_report_incremental_reuse_1 -report_type report_incremental_reuse:1.0 -steps place_design -runs shift_right_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs shift_right_impl_1] shift_right_impl_1_place_report_incremental_reuse_1]
+# if { $obj != "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs shift_right_impl_1] shift_right_impl_1_place_report_timing_summary_0] "" ] } {
+#   create_report_config -report_name shift_right_impl_1_place_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps place_design -runs shift_right_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs shift_right_impl_1] shift_right_impl_1_place_report_timing_summary_0]
+# if { $obj != "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs shift_right_impl_1] shift_right_impl_1_post_place_power_opt_report_timing_summary_0] "" ] } {
+#   create_report_config -report_name shift_right_impl_1_post_place_power_opt_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps post_place_power_opt_design -runs shift_right_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs shift_right_impl_1] shift_right_impl_1_post_place_power_opt_report_timing_summary_0]
+# if { $obj != "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs shift_right_impl_1] shift_right_impl_1_phys_opt_report_timing_summary_0] "" ] } {
+#   create_report_config -report_name shift_right_impl_1_phys_opt_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps phys_opt_design -runs shift_right_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs shift_right_impl_1] shift_right_impl_1_phys_opt_report_timing_summary_0]
+# if { $obj != "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs shift_right_impl_1] shift_right_impl_1_route_report_drc_0] "" ] } {
+#   create_report_config -report_name shift_right_impl_1_route_report_drc_0 -report_type report_drc:1.0 -steps route_design -runs shift_right_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs shift_right_impl_1] shift_right_impl_1_route_report_drc_0]
+# if { $obj != "" } {
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs shift_right_impl_1] shift_right_impl_1_route_report_methodology_0] "" ] } {
+#   create_report_config -report_name shift_right_impl_1_route_report_methodology_0 -report_type report_methodology:1.0 -steps route_design -runs shift_right_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs shift_right_impl_1] shift_right_impl_1_route_report_methodology_0]
+# if { $obj != "" } {
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs shift_right_impl_1] shift_right_impl_1_route_report_power_0] "" ] } {
+#   create_report_config -report_name shift_right_impl_1_route_report_power_0 -report_type report_power:1.0 -steps route_design -runs shift_right_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs shift_right_impl_1] shift_right_impl_1_route_report_power_0]
+# if { $obj != "" } {
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs shift_right_impl_1] shift_right_impl_1_route_report_route_status_0] "" ] } {
+#   create_report_config -report_name shift_right_impl_1_route_report_route_status_0 -report_type report_route_status:1.0 -steps route_design -runs shift_right_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs shift_right_impl_1] shift_right_impl_1_route_report_route_status_0]
+# if { $obj != "" } {
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs shift_right_impl_1] shift_right_impl_1_route_report_timing_summary_0] "" ] } {
+#   create_report_config -report_name shift_right_impl_1_route_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps route_design -runs shift_right_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs shift_right_impl_1] shift_right_impl_1_route_report_timing_summary_0]
+# if { $obj != "" } {
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs shift_right_impl_1] shift_right_impl_1_route_report_incremental_reuse_0] "" ] } {
+#   create_report_config -report_name shift_right_impl_1_route_report_incremental_reuse_0 -report_type report_incremental_reuse:1.0 -steps route_design -runs shift_right_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs shift_right_impl_1] shift_right_impl_1_route_report_incremental_reuse_0]
+# if { $obj != "" } {
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs shift_right_impl_1] shift_right_impl_1_route_report_clock_utilization_0] "" ] } {
+#   create_report_config -report_name shift_right_impl_1_route_report_clock_utilization_0 -report_type report_clock_utilization:1.0 -steps route_design -runs shift_right_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs shift_right_impl_1] shift_right_impl_1_route_report_clock_utilization_0]
+# if { $obj != "" } {
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs shift_right_impl_1] shift_right_impl_1_route_report_bus_skew_0] "" ] } {
+#   create_report_config -report_name shift_right_impl_1_route_report_bus_skew_0 -report_type report_bus_skew:1.1 -steps route_design -runs shift_right_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs shift_right_impl_1] shift_right_impl_1_route_report_bus_skew_0]
+# if { $obj != "" } {
+# set_property -name "options.warn_on_violation" -value "1" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs shift_right_impl_1] shift_right_impl_1_post_route_phys_opt_report_timing_summary_0] "" ] } {
+#   create_report_config -report_name shift_right_impl_1_post_route_phys_opt_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps post_route_phys_opt_design -runs shift_right_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs shift_right_impl_1] shift_right_impl_1_post_route_phys_opt_report_timing_summary_0]
+# if { $obj != "" } {
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# set_property -name "options.warn_on_violation" -value "1" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs shift_right_impl_1] shift_right_impl_1_post_route_phys_opt_report_bus_skew_0] "" ] } {
+#   create_report_config -report_name shift_right_impl_1_post_route_phys_opt_report_bus_skew_0 -report_type report_bus_skew:1.1 -steps post_route_phys_opt_design -runs shift_right_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs shift_right_impl_1] shift_right_impl_1_post_route_phys_opt_report_bus_skew_0]
+# if { $obj != "" } {
+# set_property -name "options.warn_on_violation" -value "1" -objects $obj
+# 
+# }
+# set obj [get_runs shift_right_impl_1]
+# set_property -name "constrset" -value "shift_right" -objects $obj
+# set_property -name "include_in_archive" -value "0" -objects $obj
+# set_property -name "strategy" -value "Vivado Implementation Defaults" -objects $obj
+# set_property -name "steps.write_bitstream.args.readback_file" -value "0" -objects $obj
+# set_property -name "steps.write_bitstream.args.verbose" -value "0" -objects $obj
+# if {[string equal [get_runs -quiet child_0_impl_1] ""]} {
+#       create_run -name child_0_impl_1 -part xcvu9p-flga2104-2L-e -flow {Vivado Implementation 2017} -strategy "Vivado Implementation Defaults" -report_strategy {No Reports} -pr_config config_2 -constrset constrs_1 -parent_run impl_1
+# } else {
+#   set_property strategy "Vivado Implementation Defaults" [get_runs child_0_impl_1]
+#   set_property flow "Vivado Implementation 2017" [get_runs child_0_impl_1]
+# }
+Run is defaulting to parent run srcset: sources_1
+# set obj [get_runs child_0_impl_1]
+# set_property set_report_strategy_name 1 $obj
+# set_property report_strategy {Vivado Implementation Default Reports} $obj
+# set_property set_report_strategy_name 0 $obj
+# if { [ string equal [get_report_configs -of_objects [get_runs child_0_impl_1] child_0_impl_1_init_report_timing_summary_0] "" ] } {
+#   create_report_config -report_name child_0_impl_1_init_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps init_design -runs child_0_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs child_0_impl_1] child_0_impl_1_init_report_timing_summary_0]
+# if { $obj != "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs child_0_impl_1] child_0_impl_1_opt_report_drc_0] "" ] } {
+#   create_report_config -report_name child_0_impl_1_opt_report_drc_0 -report_type report_drc:1.0 -steps opt_design -runs child_0_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs child_0_impl_1] child_0_impl_1_opt_report_drc_0]
+# if { $obj != "" } {
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs child_0_impl_1] child_0_impl_1_opt_report_timing_summary_0] "" ] } {
+#   create_report_config -report_name child_0_impl_1_opt_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps opt_design -runs child_0_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs child_0_impl_1] child_0_impl_1_opt_report_timing_summary_0]
+# if { $obj != "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs child_0_impl_1] child_0_impl_1_power_opt_report_timing_summary_0] "" ] } {
+#   create_report_config -report_name child_0_impl_1_power_opt_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps power_opt_design -runs child_0_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs child_0_impl_1] child_0_impl_1_power_opt_report_timing_summary_0]
+# if { $obj != "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs child_0_impl_1] child_0_impl_1_place_report_io_0] "" ] } {
+#   create_report_config -report_name child_0_impl_1_place_report_io_0 -report_type report_io:1.0 -steps place_design -runs child_0_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs child_0_impl_1] child_0_impl_1_place_report_io_0]
+# if { $obj != "" } {
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs child_0_impl_1] child_0_impl_1_place_report_utilization_0] "" ] } {
+#   create_report_config -report_name child_0_impl_1_place_report_utilization_0 -report_type report_utilization:1.0 -steps place_design -runs child_0_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs child_0_impl_1] child_0_impl_1_place_report_utilization_0]
+# if { $obj != "" } {
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs child_0_impl_1] child_0_impl_1_place_report_control_sets_0] "" ] } {
+#   create_report_config -report_name child_0_impl_1_place_report_control_sets_0 -report_type report_control_sets:1.0 -steps place_design -runs child_0_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs child_0_impl_1] child_0_impl_1_place_report_control_sets_0]
+# if { $obj != "" } {
+# set_property -name "options.verbose" -value "1" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs child_0_impl_1] child_0_impl_1_place_report_incremental_reuse_0] "" ] } {
+#   create_report_config -report_name child_0_impl_1_place_report_incremental_reuse_0 -report_type report_incremental_reuse:1.0 -steps place_design -runs child_0_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs child_0_impl_1] child_0_impl_1_place_report_incremental_reuse_0]
+# if { $obj != "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs child_0_impl_1] child_0_impl_1_place_report_incremental_reuse_1] "" ] } {
+#   create_report_config -report_name child_0_impl_1_place_report_incremental_reuse_1 -report_type report_incremental_reuse:1.0 -steps place_design -runs child_0_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs child_0_impl_1] child_0_impl_1_place_report_incremental_reuse_1]
+# if { $obj != "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs child_0_impl_1] child_0_impl_1_place_report_timing_summary_0] "" ] } {
+#   create_report_config -report_name child_0_impl_1_place_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps place_design -runs child_0_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs child_0_impl_1] child_0_impl_1_place_report_timing_summary_0]
+# if { $obj != "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs child_0_impl_1] child_0_impl_1_post_place_power_opt_report_timing_summary_0] "" ] } {
+#   create_report_config -report_name child_0_impl_1_post_place_power_opt_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps post_place_power_opt_design -runs child_0_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs child_0_impl_1] child_0_impl_1_post_place_power_opt_report_timing_summary_0]
+# if { $obj != "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs child_0_impl_1] child_0_impl_1_phys_opt_report_timing_summary_0] "" ] } {
+#   create_report_config -report_name child_0_impl_1_phys_opt_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps phys_opt_design -runs child_0_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs child_0_impl_1] child_0_impl_1_phys_opt_report_timing_summary_0]
+# if { $obj != "" } {
+# set_property -name "is_enabled" -value "0" -objects $obj
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs child_0_impl_1] child_0_impl_1_route_report_drc_0] "" ] } {
+#   create_report_config -report_name child_0_impl_1_route_report_drc_0 -report_type report_drc:1.0 -steps route_design -runs child_0_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs child_0_impl_1] child_0_impl_1_route_report_drc_0]
+# if { $obj != "" } {
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs child_0_impl_1] child_0_impl_1_route_report_methodology_0] "" ] } {
+#   create_report_config -report_name child_0_impl_1_route_report_methodology_0 -report_type report_methodology:1.0 -steps route_design -runs child_0_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs child_0_impl_1] child_0_impl_1_route_report_methodology_0]
+# if { $obj != "" } {
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs child_0_impl_1] child_0_impl_1_route_report_power_0] "" ] } {
+#   create_report_config -report_name child_0_impl_1_route_report_power_0 -report_type report_power:1.0 -steps route_design -runs child_0_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs child_0_impl_1] child_0_impl_1_route_report_power_0]
+# if { $obj != "" } {
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs child_0_impl_1] child_0_impl_1_route_report_route_status_0] "" ] } {
+#   create_report_config -report_name child_0_impl_1_route_report_route_status_0 -report_type report_route_status:1.0 -steps route_design -runs child_0_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs child_0_impl_1] child_0_impl_1_route_report_route_status_0]
+# if { $obj != "" } {
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs child_0_impl_1] child_0_impl_1_route_report_timing_summary_0] "" ] } {
+#   create_report_config -report_name child_0_impl_1_route_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps route_design -runs child_0_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs child_0_impl_1] child_0_impl_1_route_report_timing_summary_0]
+# if { $obj != "" } {
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs child_0_impl_1] child_0_impl_1_route_report_incremental_reuse_0] "" ] } {
+#   create_report_config -report_name child_0_impl_1_route_report_incremental_reuse_0 -report_type report_incremental_reuse:1.0 -steps route_design -runs child_0_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs child_0_impl_1] child_0_impl_1_route_report_incremental_reuse_0]
+# if { $obj != "" } {
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs child_0_impl_1] child_0_impl_1_route_report_clock_utilization_0] "" ] } {
+#   create_report_config -report_name child_0_impl_1_route_report_clock_utilization_0 -report_type report_clock_utilization:1.0 -steps route_design -runs child_0_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs child_0_impl_1] child_0_impl_1_route_report_clock_utilization_0]
+# if { $obj != "" } {
+# 
+# }
+# if { [ string equal [get_report_configs -of_objects [get_runs child_0_impl_1] child_0_impl_1_post_route_phys_opt_report_timing_summary_0] "" ] } {
+#   create_report_config -report_name child_0_impl_1_post_route_phys_opt_report_timing_summary_0 -report_type report_timing_summary:1.0 -steps post_route_phys_opt_design -runs child_0_impl_1
+# }
+# set obj [get_report_configs -of_objects [get_runs child_0_impl_1] child_0_impl_1_post_route_phys_opt_report_timing_summary_0]
+# if { $obj != "" } {
+# set_property -name "options.max_paths" -value "10" -objects $obj
+# set_property -name "options.warn_on_violation" -value "1" -objects $obj
+# 
+# }
+# set obj [get_runs child_0_impl_1]
+# set_property -name "needs_refresh" -value "1" -objects $obj
+# set_property -name "strategy" -value "Vivado Implementation Defaults" -objects $obj
+# set_property -name "steps.write_bitstream.args.readback_file" -value "0" -objects $obj
+# set_property -name "steps.write_bitstream.args.verbose" -value "0" -objects $obj
+# current_run -implementation [get_runs impl_1]
+# puts "INFO: Project created:${_xil_proj_name_}"
+INFO: Project created:project_dfxc_vcu118
+# if {[string equal [get_dashboard_gadgets  [ list "drc_1" ] ] ""]} {
+# create_dashboard_gadget -name {drc_1} -type drc
+# }
+# set obj [get_dashboard_gadgets [ list "drc_1" ] ]
+# set_property -name "reports" -value "impl_1#impl_1_route_report_drc_0" -objects $obj
+# if {[string equal [get_dashboard_gadgets  [ list "methodology_1" ] ] ""]} {
+# create_dashboard_gadget -name {methodology_1} -type methodology
+# }
+# set obj [get_dashboard_gadgets [ list "methodology_1" ] ]
+# set_property -name "reports" -value "impl_1#impl_1_route_report_methodology_0" -objects $obj
+# if {[string equal [get_dashboard_gadgets  [ list "power_1" ] ] ""]} {
+# create_dashboard_gadget -name {power_1} -type power
+# }
+# set obj [get_dashboard_gadgets [ list "power_1" ] ]
+# set_property -name "reports" -value "impl_1#impl_1_route_report_power_0" -objects $obj
+# if {[string equal [get_dashboard_gadgets  [ list "timing_1" ] ] ""]} {
+# create_dashboard_gadget -name {timing_1} -type timing
+# }
+# set obj [get_dashboard_gadgets [ list "timing_1" ] ]
+# set_property -name "reports" -value "impl_1#impl_1_route_report_timing_summary_0" -objects $obj
+# if {[string equal [get_dashboard_gadgets  [ list "utilization_1" ] ] ""]} {
+# create_dashboard_gadget -name {utilization_1} -type utilization
+# }
+# set obj [get_dashboard_gadgets [ list "utilization_1" ] ]
+# set_property -name "reports" -value "synth_1#synth_1_synth_report_utilization_0" -objects $obj
+# set_property -name "run.step" -value "synth_design" -objects $obj
+# set_property -name "run.type" -value "synthesis" -objects $obj
+# if {[string equal [get_dashboard_gadgets  [ list "utilization_2" ] ] ""]} {
+# create_dashboard_gadget -name {utilization_2} -type utilization
+# }
+# set obj [get_dashboard_gadgets [ list "utilization_2" ] ]
+# set_property -name "reports" -value "impl_1#impl_1_place_report_utilization_0" -objects $obj
+# move_dashboard_gadget -name {utilization_1} -row 0 -col 0
+# move_dashboard_gadget -name {power_1} -row 1 -col 0
+# move_dashboard_gadget -name {drc_1} -row 2 -col 0
+# move_dashboard_gadget -name {timing_1} -row 0 -col 1
+# move_dashboard_gadget -name {utilization_2} -row 1 -col 1
+# move_dashboard_gadget -name {methodology_1} -row 2 -col 1
+Vivado% 

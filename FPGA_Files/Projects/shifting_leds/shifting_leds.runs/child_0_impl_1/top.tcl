@@ -121,7 +121,9 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
+  set_param tcl.collectionResultDisplayLimit 0
   set_param chipscope.maxJobs 2
+  set_param xicom.use_bs_reader 1
   set_param ced.repoPaths C:/Users/monke/AppData/Roaming/Xilinx/Vivado/2020.1/xhub/ced_store/Vivado_example_project
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7z020clg400-1
@@ -296,4 +298,38 @@ if {$rc} {
 
 OPTRACE "route_design misc" END { }
 OPTRACE "Phase: Route Design" END { }
+OPTRACE "Phase: Write Bitstream" START { ROLLUP_AUTO }
+OPTRACE "write_bitstream setup" START { }
+start_step write_bitstream
+set ACTIVE_STEP write_bitstream
+set rc [catch {
+  create_msg_db write_bitstream.pb
+  pr_verify -full_check -initial C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/impl_1/top_routed.dcp -additional C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/child_0_impl_1/top_routed.dcp -file child_0_impl_1_pr_verify.log
+OPTRACE "read constraints: write_bitstream" START { }
+OPTRACE "read constraints: write_bitstream" END { }
+  set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
+  catch { write_mem_info -force top.mmi }
+OPTRACE "write_bitstream setup" END { }
+OPTRACE "write_bitstream" START { }
+  write_bitstream -force -no_partial_bitfile top.bit 
+  write_bitstream -force -cell shifter shifter_shift_right_partial.bit 
+OPTRACE "write_bitstream" END { }
+OPTRACE "write_bitstream misc" START { }
+OPTRACE "read constraints: write_bitstream_post" START { }
+OPTRACE "read constraints: write_bitstream_post" END { }
+  catch {write_debug_probes -no_partial_ltxfile -quiet -force top}
+  catch {file copy -force top.ltx debug_nets.ltx}
+  catch {write_debug_probes -quiet -force -cell shifter -file shifter_shift_right_partial.ltx}
+  close_msg_db -file write_bitstream.pb
+} RESULT]
+if {$rc} {
+  step_failed write_bitstream
+  return -code error $RESULT
+} else {
+  end_step write_bitstream
+  unset ACTIVE_STEP 
+}
+
+OPTRACE "write_bitstream misc" END { }
+OPTRACE "Phase: Write Bitstream" END { }
 OPTRACE "Implementation" END { }

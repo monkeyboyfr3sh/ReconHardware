@@ -1,0 +1,68 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Sat Feb 13 23:08:20 2021
+# Process ID: 22404
+# Current directory: C:/Users/monke/Downloads/ug947-vivado-partial-reconfiguration-tutorial(1)/dfxc_usp/dfxc_vcu118
+# Command line: vivado.exe -mode tcl -source project_dfxc_vcu118.tcl
+# Log file: C:/Users/monke/Downloads/ug947-vivado-partial-reconfiguration-tutorial(1)/dfxc_usp/dfxc_vcu118/vivado.log
+# Journal file: C:/Users/monke/Downloads/ug947-vivado-partial-reconfiguration-tutorial(1)/dfxc_usp/dfxc_vcu118\vivado.jou
+#-----------------------------------------------------------
+source project_dfxc_vcu118.tcl
+# set origin_dir "."
+# if { [info exists ::origin_dir_loc] } {
+#   set origin_dir $::origin_dir_loc
+# }
+# set _xil_proj_name_ "project_dfxc_vcu118"
+# if { [info exists ::user_project_name] } {
+#   set _xil_proj_name_ $::user_project_name
+# }
+# variable script_file
+# set script_file "project_dfxc_vcu118.tcl"
+# proc print_help {} {
+#   variable script_file
+#   puts "\nDescription:"
+#   puts "Recreate a Vivado project from this script. The created project will be"
+#   puts "functionally equivalent to the original project for which this script was"
+#   puts "generated. The script contains commands for creating a project, filesets,"
+#   puts "runs, adding/importing sources and setting properties on various objects.\n"
+#   puts "Syntax:"
+#   puts "$script_file"
+#   puts "$script_file -tclargs \[--origin_dir <path>\]"
+#   puts "$script_file -tclargs \[--project_name <name>\]"
+#   puts "$script_file -tclargs \[--help\]\n"
+#   puts "Usage:"
+#   puts "Name                   Description"
+#   puts "-------------------------------------------------------------------------"
+#   puts "\[--origin_dir <path>\]  Determine source file paths wrt this path. Default"
+#   puts "                       origin_dir path value is \".\", otherwise, the value"
+#   puts "                       that was set with the \"-paths_relative_to\" switch"
+#   puts "                       when this script was generated.\n"
+#   puts "\[--project_name <name>\] Create project with the specified name. Default"
+#   puts "                       name is the name of the project from where this"
+#   puts "                       script was generated.\n"
+#   puts "\[--help\]               Print help information for this script"
+#   puts "-------------------------------------------------------------------------\n"
+#   exit 0
+# }
+# if { $::argc > 0 } {
+#   for {set i 0} {$i < $::argc} {incr i} {
+#     set option [string trim [lindex $::argv $i]]
+#     switch -regexp -- $option {
+#       "--origin_dir"   { incr i; set origin_dir [lindex $::argv $i] }
+#       "--project_name" { incr i; set _xil_proj_name_ [lindex $::argv $i] }
+#       "--help"         { print_help }
+#       default {
+#         if { [regexp {^-} $option] } {
+#           puts "ERROR: Unknown option '$option' specified, please type '$script_file -tclargs --help' for usage info.\n"
+#           return 1
+#         }
+#       }
+#     }
+#   }
+# }
+# set orig_proj_dir "[file normalize "$origin_dir/project_dfxc_vcu118"]"
+# create_project ${_xil_proj_name_} ./${_xil_proj_name_} -part xcvu9p-flga2104-2L-e
+ERROR: [ProjectBase 2-104] Project name 'C:/Users/monke/Downloads/ug947-vivado-partial-reconfiguration-tutorial(1)/dfxc_usp/dfxc_vcu118/project_dfxc_vcu118/project_dfxc_vcu118.xpr' is illegal.
+Vivado% 
