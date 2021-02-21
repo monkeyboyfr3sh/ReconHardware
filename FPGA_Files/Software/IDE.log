@@ -5612,3 +5612,19 @@ con
 
 17:10:04 INFO  : Launch script is exported to file 'C:\GitHub\ReconHardware\FPGA_Files\Software\.sdk\launch_scripts\single_application_debug\systemdebugger_hello_world_system_standalone.tcl'
 17:12:42 INFO  : Disconnected from the channel tcfchan#12.
+13:08:01 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\GitHub\ReconHardware\FPGA_Files\Software\temp_xsdb_launch_script.tcl
+13:08:16 INFO  : XSCT server has started successfully.
+13:08:16 INFO  : Successfully done setting XSCT server connection channel  
+13:08:16 INFO  : plnx-install-location is set to ''
+13:08:16 INFO  : Successfully done setting workspace for the tool. 
+13:08:24 WARN  : Failed to identify the type of project 'RemoteSystemsTempFiles'. Skipping...
+13:08:24 WARN  : The following projects could not be identified as Vitis projects and will not be managed by the tool:
+	RemoteSystemsTempFiles
+13:08:25 INFO  : Registering command handlers for Vitis TCF services
+13:08:26 INFO  : Platform repository initialization has completed.
+13:08:37 INFO  : Successfully done query RDI_DATADIR 
+13:09:17 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\GitHub\ReconHardware\FPGA_Files\Software\temp_xsdb_launch_script.tcl
+13:09:19 INFO  : XSCT server has started successfully.
+13:09:19 INFO  : plnx-install-location is set to ''
+13:09:19 INFO  : Successfully done setting XSCT server connection channel  
+13:09:19 INFO  : Successfully done setting workspace for the tool. 

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<webTalkData  fileName='usage_statistics_webtalk.xml'  majorVersion='1' minorVersion='0' timeStamp='Thu Feb 18 15:27:44 2021'>
+<webTalkData  fileName='usage_statistics_webtalk.xml'  majorVersion='1' minorVersion='0' timeStamp='Sat Feb 20 12:55:45 2021'>
 <section name="__ROOT__" level="0" order="1" description="">
  <section name="software_version_and_target_device" level="1" order="1" description="">
   <keyValuePair key="beta" value="FALSE" description="" />
   <keyValuePair key="build_version" value="2902540" description="" />
-  <keyValuePair key="date_generated" value="Thu Feb 18 15:27:38 2021" description="" />
+  <keyValuePair key="date_generated" value="Sat Feb 20 12:55:39 2021" description="" />
   <keyValuePair key="os_platform" value="WIN64" description="" />
   <keyValuePair key="product_version" value="Vivado v2020.1 (64-bit)" description="" />
   <keyValuePair key="project_id" value="9f74e9078eee4a90b2b90dae7e6e488d" description="" />
-  <keyValuePair key="project_iteration" value="34" description="" />
+  <keyValuePair key="project_iteration" value="38" description="" />
   <keyValuePair key="random_id" value="6dbdc1e3dbf35448a576b96e41f626d8" description="" />
   <keyValuePair key="registration_id" value="211906792_0_0_107" description="" />
   <keyValuePair key="route_design" value="TRUE" description="" />
@@ -13699,7 +13699,7 @@
    <keyValuePair key="output_load" value="5.000000" description="" />
    <keyValuePair key="output_toggle" value="12.500000" description="" />
    <keyValuePair key="package" value="clg400" description="" />
-   <keyValuePair key="pct_clock_constrained" value="12.000000" description="" />
+   <keyValuePair key="pct_clock_constrained" value="11.000000" description="" />
    <keyValuePair key="pct_inputs_defined" value="0" description="" />
    <keyValuePair key="platform" value="nt64" description="" />
    <keyValuePair key="process" value="typical" description="" />
@@ -13834,8 +13834,8 @@
   <section name="usage" level="2" order="2" description="">
    <keyValuePair key="elapsed" value="00:00:26s" description="" />
    <keyValuePair key="hls_ip" value="0" description="" />
-   <keyValuePair key="memory_gain" value="229.766MB" description="" />
-   <keyValuePair key="memory_peak" value="1310.512MB" description="" />
+   <keyValuePair key="memory_gain" value="238.203MB" description="" />
+   <keyValuePair key="memory_peak" value="1311.746MB" description="" />
   </section>
  </section>
  <section name="unisim_transformation" level="1" order="9" description="">
@@ -13907,12 +13907,12 @@
   <section name="gui_handlers" level="2" order="1" description="">
    <keyValuePair key="abstractcombinedpanel_add_element" value="1" description="" />
    <keyValuePair key="abstractsearchablepanel_show_search" value="3" description="" />
-   <keyValuePair key="abstractselectabletablepanel_export_to_spreadsheet" value="2" description="" />
+   <keyValuePair key="abstractselectabletablepanel_export_to_spreadsheet" value="3" description="" />
    <keyValuePair key="applyrsbmultiautomationdialog_checkbox_tree" value="21" description="" />
-   <keyValuePair key="basedialog_apply" value="4" description="" />
-   <keyValuePair key="basedialog_cancel" value="18" description="" />
+   <keyValuePair key="basedialog_apply" value="8" description="" />
+   <keyValuePair key="basedialog_cancel" value="22" description="" />
    <keyValuePair key="basedialog_close" value="1" description="" />
-   <keyValuePair key="basedialog_ok" value="116" description="" />
+   <keyValuePair key="basedialog_ok" value="122" description="" />
    <keyValuePair key="basedialog_yes" value="6" description="" />
    <keyValuePair key="basereporttab_rerun" value="1" description="" />
    <keyValuePair key="boardchooser_board_table" value="2" description="" />
@@ -13922,22 +13922,24 @@
    <keyValuePair key="cfgmempartchooser_table" value="1" description="" />
    <keyValuePair key="cfgmempartchooser_type_chooser" value="3" description="" />
    <keyValuePair key="cmdmsgdialog_messages" value="3" description="" />
-   <keyValuePair key="cmdmsgdialog_ok" value="29" description="" />
+   <keyValuePair key="cmdmsgdialog_ok" value="37" description="" />
    <keyValuePair key="commandsinput_type_tcl_command_here" value="77" description="" />
    <keyValuePair key="coretreetablepanel_core_tree_table" value="10" description="" />
    <keyValuePair key="createconstraintsfilepanel_file_name" value="1" description="" />
    <keyValuePair key="createpartitiondefinition_partition_definition_name" value="1" description="" />
    <keyValuePair key="creatersbportdialog_port_name" value="1" description="" />
+   <keyValuePair key="exporttospreadsheetdialog_choose_microsoft_excel_file_to_export" value="2" description="" />
    <keyValuePair key="expruntreepanel_exp_run_tree_table" value="3" description="" />
    <keyValuePair key="filesetpanel_delete_from_project" value="1" description="" />
    <keyValuePair key="filesetpanel_file_set_panel_tree" value="274" description="" />
-   <keyValuePair key="flownavigatortreepanel_flow_navigator_tree" value="76" description="" />
+   <keyValuePair key="flownavigatortreepanel_flow_navigator_tree" value="97" description="" />
    <keyValuePair key="fpgachooser_reset_all_filters" value="1" description="" />
    <keyValuePair key="gensettingtreetablepanel_gen_setting_tree_table" value="8" description="" />
    <keyValuePair key="gettingstartedview_clear_list" value="1" description="" />
+   <keyValuePair key="gettingstartedview_open_project" value="1" description="" />
    <keyValuePair key="hacgctabbedpane_tabbed_pane" value="2" description="" />
    <keyValuePair key="hardwareilawaveformview_run_trigger_immediate_for_this_ila_core" value="3" description="" />
-   <keyValuePair key="hardwaretreepanel_hardware_tree_table" value="10" description="" />
+   <keyValuePair key="hardwaretreepanel_hardware_tree_table" value="46" description="" />
    <keyValuePair key="hcodeeditor_close" value="1" description="" />
    <keyValuePair key="hcodeeditor_search_text_combo_box" value="7" description="" />
    <keyValuePair key="hexceptiondialog_continue" value="1" description="" />
@@ -13947,20 +13949,20 @@
    <keyValuePair key="ipstatussectionpanel_upgrade_selected" value="1" description="" />
    <keyValuePair key="ipstatustablepanel_ip_status_table" value="4" description="" />
    <keyValuePair key="languagetemplatesdialog_templates_tree" value="37" description="" />
-   <keyValuePair key="mainmenumgr_checkpoint" value="11" description="" />
+   <keyValuePair key="mainmenumgr_checkpoint" value="12" description="" />
    <keyValuePair key="mainmenumgr_edit" value="12" description="" />
-   <keyValuePair key="mainmenumgr_export" value="10" description="" />
-   <keyValuePair key="mainmenumgr_file" value="38" description="" />
-   <keyValuePair key="mainmenumgr_flow" value="16" description="" />
-   <keyValuePair key="mainmenumgr_ip" value="11" description="" />
+   <keyValuePair key="mainmenumgr_export" value="12" description="" />
+   <keyValuePair key="mainmenumgr_file" value="42" description="" />
+   <keyValuePair key="mainmenumgr_flow" value="18" description="" />
+   <keyValuePair key="mainmenumgr_ip" value="12" description="" />
    <keyValuePair key="mainmenumgr_open" value="1" description="" />
    <keyValuePair key="mainmenumgr_open_block_design" value="4" description="" />
    <keyValuePair key="mainmenumgr_open_recent_project" value="13" description="" />
-   <keyValuePair key="mainmenumgr_project" value="27" description="" />
-   <keyValuePair key="mainmenumgr_reports" value="16" description="" />
+   <keyValuePair key="mainmenumgr_project" value="29" description="" />
+   <keyValuePair key="mainmenumgr_reports" value="20" description="" />
    <keyValuePair key="mainmenumgr_settings" value="4" description="" />
-   <keyValuePair key="mainmenumgr_text_editor" value="8" description="" />
-   <keyValuePair key="mainmenumgr_tools" value="58" description="" />
+   <keyValuePair key="mainmenumgr_text_editor" value="9" description="" />
+   <keyValuePair key="mainmenumgr_tools" value="64" description="" />
    <keyValuePair key="mainmenumgr_view" value="2" description="" />
    <keyValuePair key="mainmenumgr_window" value="4" description="" />
    <keyValuePair key="mainwinmenumgr_layout" value="4" description="" />
@@ -13972,7 +13974,7 @@
    <keyValuePair key="msgtreepanel_discard_user_created_messages" value="1" description="" />
    <keyValuePair key="msgtreepanel_message_severity" value="1" description="" />
    <keyValuePair key="msgtreepanel_message_view_tree" value="8" description="" />
-   <keyValuePair key="msgview_clear_messages_resulting_from_user_executed" value="2" description="" />
+   <keyValuePair key="msgview_clear_messages_resulting_from_user_executed" value="3" description="" />
    <keyValuePair key="msgview_critical_warnings" value="2" description="" />
    <keyValuePair key="msgview_information_messages" value="2" description="" />
    <keyValuePair key="msgview_warning_messages" value="2" description="" />
@@ -13982,14 +13984,14 @@
    <keyValuePair key="pacommandnames_add_module_to_bd" value="1" description="" />
    <keyValuePair key="pacommandnames_add_sources" value="7" description="" />
    <keyValuePair key="pacommandnames_auto_assign_address" value="5" description="" />
-   <keyValuePair key="pacommandnames_auto_connect_target" value="5" description="" />
+   <keyValuePair key="pacommandnames_auto_connect_target" value="6" description="" />
    <keyValuePair key="pacommandnames_auto_update_hier" value="36" description="" />
    <keyValuePair key="pacommandnames_close_project" value="1" description="" />
    <keyValuePair key="pacommandnames_collapse_all_rsb_block" value="2" description="" />
    <keyValuePair key="pacommandnames_create_partition_definition" value="6" description="" />
    <keyValuePair key="pacommandnames_create_top_hdl" value="6" description="" />
    <keyValuePair key="pacommandnames_draw_pblock_mode" value="1" description="" />
-   <keyValuePair key="pacommandnames_export_hardware" value="4" description="" />
+   <keyValuePair key="pacommandnames_export_hardware" value="5" description="" />
    <keyValuePair key="pacommandnames_generate_composite_file" value="1" description="" />
    <keyValuePair key="pacommandnames_import_all_srcs" value="1" description="" />
    <keyValuePair key="pacommandnames_ip_settings" value="2" description="" />
@@ -13998,11 +14000,13 @@
    <keyValuePair key="pacommandnames_open_example_project" value="2" description="" />
    <keyValuePair key="pacommandnames_open_hierarchy_block" value="1" description="" />
    <keyValuePair key="pacommandnames_open_target_wizard" value="1" description="" />
-   <keyValuePair key="pacommandnames_program_config_memory" value="2" description="" />
+   <keyValuePair key="pacommandnames_program_config_memory" value="6" description="" />
    <keyValuePair key="pacommandnames_program_fpga" value="8" description="" />
+   <keyValuePair key="pacommandnames_readback_config_memory" value="1" description="" />
    <keyValuePair key="pacommandnames_regenerate_layout" value="56" description="" />
    <keyValuePair key="pacommandnames_report_ip_status" value="1" description="" />
    <keyValuePair key="pacommandnames_run_bitgen" value="1" description="" />
+   <keyValuePair key="pacommandnames_run_trigger" value="9" description="" />
    <keyValuePair key="pacommandnames_set_as_top" value="1" description="" />
    <keyValuePair key="pacommandnames_show_product_guide_src" value="1" description="" />
    <keyValuePair key="pacommandnames_simulation_run" value="4" description="" />
@@ -14010,29 +14014,32 @@
    <keyValuePair key="pacommandnames_src_enable" value="2" description="" />
    <keyValuePair key="pacommandnames_validate_rsb_design" value="11" description="" />
    <keyValuePair key="pacommandnames_zoom_fit" value="2" description="" />
+   <keyValuePair key="partitionconfigurationpanel_make_active" value="3" description="" />
+   <keyValuePair key="partitionconfigurationpanel_modify_configurations" value="1" description="" />
+   <keyValuePair key="partitionconfigurationpanel_partition_configuration_table" value="5" description="" />
    <keyValuePair key="paviews_address_editor" value="1" description="" />
    <keyValuePair key="paviews_code" value="4" description="" />
-   <keyValuePair key="paviews_dashboard" value="32" description="" />
+   <keyValuePair key="paviews_dashboard" value="56" description="" />
    <keyValuePair key="paviews_device" value="4" description="" />
-   <keyValuePair key="paviews_project_summary" value="20" description="" />
+   <keyValuePair key="paviews_project_summary" value="21" description="" />
    <keyValuePair key="paviews_system" value="1" description="" />
    <keyValuePair key="prconfigrunstreetablepanel_automatically_create_configuration_run" value="1" description="" />
    <keyValuePair key="prconfigurationstablepanel_automatically_create_configurations" value="1" description="" />
    <keyValuePair key="primitivesmenu_highlight_leaf_cells" value="1" description="" />
-   <keyValuePair key="programcfgmemdialog_address_range_used_for_erase_blank" value="3" description="" />
-   <keyValuePair key="programcfgmemdialog_contents_of_configuration_file" value="1" description="" />
+   <keyValuePair key="programcfgmemdialog_address_range_used_for_erase_blank" value="5" description="" />
+   <keyValuePair key="programcfgmemdialog_contents_of_configuration_file" value="2" description="" />
    <keyValuePair key="programcfgmemdialog_specify_elf_file" value="2" description="" />
-   <keyValuePair key="programdebugtab_open_target" value="5" description="" />
-   <keyValuePair key="programdebugtab_program_device" value="5" description="" />
-   <keyValuePair key="programdebugtab_refresh_device" value="2" description="" />
-   <keyValuePair key="programfpgadialog_program" value="7" description="" />
-   <keyValuePair key="programfpgadialog_specify_bitstream_file" value="1" description="" />
+   <keyValuePair key="programdebugtab_open_target" value="6" description="" />
+   <keyValuePair key="programdebugtab_program_device" value="6" description="" />
+   <keyValuePair key="programdebugtab_refresh_device" value="3" description="" />
+   <keyValuePair key="programfpgadialog_program" value="13" description="" />
+   <keyValuePair key="programfpgadialog_specify_bitstream_file" value="5" description="" />
    <keyValuePair key="progressdialog_background" value="1" description="" />
    <keyValuePair key="progressdialog_cancel" value="2" description="" />
    <keyValuePair key="projectnamechooser_project_name" value="2" description="" />
    <keyValuePair key="projecttab_close_design" value="1" description="" />
    <keyValuePair key="rdicommands_copy" value="2" description="" />
-   <keyValuePair key="rdicommands_custom_commands" value="28" description="" />
+   <keyValuePair key="rdicommands_custom_commands" value="30" description="" />
    <keyValuePair key="rdicommands_delete" value="8" description="" />
    <keyValuePair key="rdicommands_properties" value="5" description="" />
    <keyValuePair key="rdicommands_settings" value="2" description="" />
@@ -14047,8 +14054,9 @@
    <keyValuePair key="saveprojectutils_cancel" value="1" description="" />
    <keyValuePair key="saveprojectutils_save" value="4" description="" />
    <keyValuePair key="selectmenu_highlight" value="21" description="" />
-   <keyValuePair key="settingsdialog_options_tree" value="8" description="" />
-   <keyValuePair key="settingsdialog_project_tree" value="5" description="" />
+   <keyValuePair key="settingsdialog_options_tree" value="18" description="" />
+   <keyValuePair key="settingsdialog_project_tree" value="14" description="" />
+   <keyValuePair key="settingsthemepanel_select_colors_and_font_that_have" value="2" description="" />
    <keyValuePair key="signaltreepanel_signal_tree_table" value="15" description="" />
    <keyValuePair key="simpleoutputproductdialog_close_dialog_unsaved_changes_will" value="5" description="" />
    <keyValuePair key="srcchooserpanel_add_directories" value="5" description="" />
@@ -14068,12 +14076,12 @@
    <keyValuePair key="systembuilderview_orientation" value="23" description="" />
    <keyValuePair key="systembuilderview_pin_blocks_and_ports_to_location" value="2" description="" />
    <keyValuePair key="systembuilderview_pinning" value="40" description="" />
-   <keyValuePair key="taskbanner_close" value="1" description="" />
+   <keyValuePair key="taskbanner_close" value="2" description="" />
    <keyValuePair key="tclconsoleview_clear_all_output" value="1" description="" />
    <keyValuePair key="tclconsoleview_copy" value="2" description="" />
    <keyValuePair key="tclconsoleview_pause_automatic_scroll_to_bottom" value="1" description="" />
    <keyValuePair key="tclconsoleview_select_all" value="1" description="" />
-   <keyValuePair key="tclconsoleview_tcl_console_code_editor" value="33" description="" />
+   <keyValuePair key="tclconsoleview_tcl_console_code_editor" value="34" description="" />
    <keyValuePair key="upgradeip_convert_ip_to_core_container_and_set" value="1" description="" />
    <keyValuePair key="upgradeip_ok" value="1" description="" />
    <keyValuePair key="waveformnametree_waveform_name_tree" value="1" description="" />
@@ -14084,40 +14092,44 @@
    <keyValuePair key="addsources" value="6" description="" />
    <keyValuePair key="autoassignaddress" value="5" description="" />
    <keyValuePair key="autoconnectport" value="12" description="" />
-   <keyValuePair key="autoconnecttarget" value="6" description="" />
+   <keyValuePair key="autoconnecttarget" value="7" description="" />
    <keyValuePair key="cedstore" value="1" description="" />
    <keyValuePair key="closeproject" value="2" description="" />
    <keyValuePair key="createblockdesign" value="2" description="" />
    <keyValuePair key="createpartitiondefinition" value="7" description="" />
    <keyValuePair key="createtophdl" value="7" description="" />
    <keyValuePair key="customizersbblock" value="47" description="" />
-   <keyValuePair key="dynamic function exchange wizard" value="1" description="" />
+   <keyValuePair key="dynamic function exchange wizard" value="2" description="" />
    <keyValuePair key="editcopy" value="4" description="" />
    <keyValuePair key="editdelete" value="62" description="" />
    <keyValuePair key="editpaste" value="3" description="" />
    <keyValuePair key="editproperties" value="6" description="" />
    <keyValuePair key="editredo" value="1" description="" />
    <keyValuePair key="editundo" value="4" description="" />
-   <keyValuePair key="fileexit" value="11" description="" />
+   <keyValuePair key="fileexit" value="12" description="" />
    <keyValuePair key="generateoutputforbdfile" value="1" description="" />
-   <keyValuePair key="launchprogramfpga" value="8" description="" />
-   <keyValuePair key="launchvitis" value="16" description="" />
+   <keyValuePair key="launchprogramfpga" value="15" description="" />
+   <keyValuePair key="launchvitis" value="17" description="" />
    <keyValuePair key="managecompositetargets" value="3" description="" />
-   <keyValuePair key="newexporthardware" value="4" description="" />
+   <keyValuePair key="newexporthardware" value="5" description="" />
+   <keyValuePair key="newhardwaredashboard" value="1" description="" />
    <keyValuePair key="newproject" value="2" description="" />
    <keyValuePair key="openblockdesign" value="3" description="" />
    <keyValuePair key="openexampleproject" value="1" description="" />
-   <keyValuePair key="openhardwaremanager" value="15" description="" />
-   <keyValuePair key="openrecenttarget" value="3" description="" />
+   <keyValuePair key="openhardwaredashboard" value="1" description="" />
+   <keyValuePair key="openhardwaremanager" value="23" description="" />
+   <keyValuePair key="openproject" value="1" description="" />
+   <keyValuePair key="openrecenttarget" value="6" description="" />
    <keyValuePair key="openrsbhierarchyblock" value="1" description="" />
-   <keyValuePair key="programcfgmem" value="3" description="" />
-   <keyValuePair key="programdevice" value="5" description="" />
+   <keyValuePair key="programcfgmem" value="7" description="" />
+   <keyValuePair key="programdevice" value="15" description="" />
    <keyValuePair key="refreshdevice" value="2" description="" />
    <keyValuePair key="regeneratersblayout" value="55" description="" />
    <keyValuePair key="reportipstatus" value="1" description="" />
-   <keyValuePair key="runbitgen" value="12" description="" />
+   <keyValuePair key="runbitgen" value="13" description="" />
    <keyValuePair key="runimplementation" value="9" description="" />
    <keyValuePair key="runsynthesis" value="7" description="" />
+   <keyValuePair key="runtrigger" value="8" description="" />
    <keyValuePair key="runtriggerimmediate" value="3" description="" />
    <keyValuePair key="savedesign" value="3" description="" />
    <keyValuePair key="saversbdesign" value="41" description="" />
@@ -14125,7 +14137,7 @@
    <keyValuePair key="showproductguide" value="1" description="" />
    <keyValuePair key="showview" value="2" description="" />
    <keyValuePair key="togglecreatepblockmode" value="1" description="" />
-   <keyValuePair key="toolssettings" value="5" description="" />
+   <keyValuePair key="toolssettings" value="8" description="" />
    <keyValuePair key="toolstemplates" value="5" description="" />
    <keyValuePair key="unassignaddress" value="4" description="" />
    <keyValuePair key="upgradeip" value="1" description="" />
@@ -14138,7 +14150,7 @@
    <keyValuePair key="zoomfit" value="2" description="" />
   </section>
   <section name="other_data" level="2" order="3" description="">
-   <keyValuePair key="guimode" value="17" description="" />
+   <keyValuePair key="guimode" value="18" description="" />
   </section>
   <section name="project_data" level="2" order="4" description="">
    <keyValuePair key="configurations_count" value="2" description="" />

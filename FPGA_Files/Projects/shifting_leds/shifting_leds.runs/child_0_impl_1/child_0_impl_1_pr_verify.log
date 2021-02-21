@@ -1,5 +1,5 @@
 Command: pr_verify -full_check -initial C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/impl_1/top_routed.dcp -additional C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/child_0_impl_1/top_routed.dcp -file child_0_impl_1_pr_verify.log
-Thu Feb 18 15:31:55 2021
+Sat Feb 20 12:59:52 2021
 
 INFO: [Constraints 18-1020] PR Verify Summary:
 DCP1: C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/impl_1/top_routed.dcp

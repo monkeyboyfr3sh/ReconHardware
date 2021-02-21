@@ -2,10 +2,10 @@
 `timescale `myTimeScale
 
 //Test stuff
-`define test_width 1080
-`define test_height 120
+`define test_width 8
+`define test_height 8
 
-`define data_width 8
+`define data_width 32
 `define addr_width 10
 `define kernel_size 3
 
@@ -61,96 +61,6 @@ wire s_axi_rlast;
 wire s_axi_bvalid;
 reg s_axi_bready;
 
-// BRAM Port - 1
-// BRAM_A - Write Port
-wire [12:0] addra_1;
-wire clka_1;
-wire [31:0] dina_1;
-wire [31:0] douta_1;
-wire ena_1;
-wire wea_1;
-// BRAM_B - Read Port
-wire [12:0] addrb_1;
-wire clkb_1;
-wire [31:0] dinb_1;
-wire [31:0] doutb_1;
-wire enb_1;
-wire web_1;
-bram_wrapper bram1 (
-    .BRAM_PORTA_0_addr(addra_1),
-    .BRAM_PORTA_0_clk(clka_1),
-    .BRAM_PORTA_0_din(dina_1),
-    .BRAM_PORTA_0_dout(douta_1),
-    .BRAM_PORTA_0_en(ena_1),
-    .BRAM_PORTA_0_we(wea_1),
-    .BRAM_PORTB_0_addr(addrb_1),
-    .BRAM_PORTB_0_clk(clkb_1),
-    .BRAM_PORTB_0_din(dinb_1),
-    .BRAM_PORTB_0_dout(doutb_1),
-    .BRAM_PORTB_0_en(enb_1),
-    .BRAM_PORTB_0_we(web_1)
-);
-
-// BRAM Port - 2
-// BRAM_A - Write Port
-wire [12:0] addra_2;
-wire clka_2;
-wire [31:0] dina_2;
-wire [31:0] douta_2;
-wire ena_2;
-wire wea_2;
-// BRAM_B - Read Port
-wire [12:0] addrb_2;
-wire clkb_2;
-wire [31:0] dinb_2;
-wire [31:0] doutb_2;
-wire enb_2;
-wire web_2;
-bram_wrapper bram2 (
-    .BRAM_PORTA_0_addr(addra_2),
-    .BRAM_PORTA_0_clk(clka_2),
-    .BRAM_PORTA_0_din(dina_2),
-    .BRAM_PORTA_0_dout(douta_2),
-    .BRAM_PORTA_0_en(ena_2),
-    .BRAM_PORTA_0_we(wea_2),
-    .BRAM_PORTB_0_addr(addrb_2),
-    .BRAM_PORTB_0_clk(clkb_2),
-    .BRAM_PORTB_0_din(dinb_2),
-    .BRAM_PORTB_0_dout(doutb_2),
-    .BRAM_PORTB_0_en(enb_2),
-    .BRAM_PORTB_0_we(web_2)
-);
-
-// BRAM Port - 3
-// BRAM_A - Write Port
-wire [12:0] addra_3;
-wire clka_3;
-wire [31:0] dina_3;
-wire [31:0] douta_3;
-wire ena_3;
-wire wea_3;
-// BRAM_B - Read Port
-wire [12:0] addrb_3;
-wire clkb_3;
-wire [31:0] dinb_3;
-wire [31:0] doutb_3;
-wire enb_3;
-wire web_3;
-bram_wrapper bram3 (
-    .BRAM_PORTA_0_addr(addra_3),
-    .BRAM_PORTA_0_clk(clka_3),
-    .BRAM_PORTA_0_din(dina_3),
-    .BRAM_PORTA_0_dout(douta_3),
-    .BRAM_PORTA_0_en(ena_3),
-    .BRAM_PORTA_0_we(wea_3),
-    .BRAM_PORTB_0_addr(addrb_3),
-    .BRAM_PORTB_0_clk(clkb_3),
-    .BRAM_PORTB_0_din(dinb_3),
-    .BRAM_PORTB_0_dout(doutb_3),
-    .BRAM_PORTB_0_en(enb_3),
-    .BRAM_PORTB_0_we(web_3)
-);
-
 Convolution_Controller 
 #(
     .DATA_WIDTH(`data_width),
@@ -165,54 +75,6 @@ UUT (//IP Ports
     .MULTIPLIER_INPUT(MULTIPLIER_INPUT),   //Flat output for data set
     .MULTIPLICAND_INPUT(MULTIPLICAND_INPUT), //Flat output for filter set
     .MULTIPLY_START(MULTIPLY_START),
-    
-    // BRAM Port - 1
-    // BRAM_A - Write Port
-    .addra_1(addra_1),
-    .clka_1(clka_1),
-    .dina_1(dina_1),
-    .douta_1(douta_1),
-    .ena_1(ena_1),
-    .wea_1(wea_1),
-    // BRAM_B - Read Port
-    .addrb_1(addrb_1),
-    .clkb_1(clkb_1),
-    .dinb_1(dinb_1),
-    .doutb_1(doutb_1),
-    .enb_1(enb_1),
-    .web_1(web_1),
-    
-    // BRAM Port - 2
-    // BRAM_A - Write Port
-    .addra_2(addra_2),
-    .clka_2(clka_2),
-    .dina_2(dina_2),
-    .douta_2(douta_2),
-    .ena_2(ena_2),
-    .wea_2(wea_2),
-    // BRAM_B - Read Port
-    .addrb_2(addrb_2),
-    .clkb_2(clkb_2),
-    .dinb_2(dinb_2),
-    .doutb_2(doutb_2),
-    .enb_2(enb_2),
-    .web_2(web_2),
-    
-    // BRAM Port - 3
-    // BRAM_A - Write Port
-    .addra_3(addra_3),
-    .clka_3(clka_3),
-    .dina_3(dina_3),
-    .douta_3(douta_3),
-    .ena_3(ena_3),
-    .wea_3(wea_3),
-    // BRAM_B - Read Port
-    .addrb_3(addrb_3),
-    .clkb_3(clkb_3),
-    .dinb_3(dinb_3),
-    .doutb_3(doutb_3),
-    .enb_3(enb_3),
-    .web_3(web_3),
     
     //AXI4-S slave i/f - Data stream port
     .s_axis_valid(s_axis_valid),
@@ -403,10 +265,10 @@ always @(posedge axi_clk)begin
                 m_axis_ready = 0;
                 
                 //Data on the
-                for(i = 0; i<(32/`data_width);i = i+1 )begin
-                    s_axis_data[i*`data_width+:`data_width] = (rand_test) ? ($urandom) % (`data_width-2) : (columncnt+linecnt*`test_width)%(2**`data_width);
-                    columncnt = columncnt+1;
-                end
+                s_axis_data = (rand_test) ? ($urandom) % (`data_width-2) : (columncnt+linecnt*`test_width);
+//                s_axis_data = 1;
+                columncnt = columncnt+1;
+
                 if(columncnt >= `test_width)begin
                     columncnt = 0;
                     linecnt = linecnt + 1;

@@ -26,52 +26,6 @@ module Convolution_Controller
     output wire [KERNEL_SIZE*KERNEL_SIZE*AXI_BUS_WIDTH-1:0] MULTIPLICAND_INPUT, //Flat output for filter set
     output reg [KERNEL_SIZE*KERNEL_SIZE-1:0] MULTIPLY_START,
     
-    // BRAM Port - 1
-    // BRAM_A - Write Port
-    output wire [12:0] addra_1,
-    output wire clka_1,
-    output wire [AXI_BUS_WIDTH-1:0] dina_1,
-    input wire [AXI_BUS_WIDTH-1:0] douta_1,
-    output wire ena_1,
-    output wire wea_1,
-    // BRAM_B - Read Port
-    output wire [12:0] addrb_1,
-    output wire clkb_1,
-    output wire [AXI_BUS_WIDTH-1:0] dinb_1,
-    input wire [AXI_BUS_WIDTH-1:0] doutb_1,
-    output wire enb_1,
-    output wire web_1,
-    // BRAM Port - 2
-    // BRAM_A - Write Port
-    output wire [12:0] addra_2,
-    output wire clka_2,
-    output wire [AXI_BUS_WIDTH-1:0] dina_2,
-    input wire [AXI_BUS_WIDTH-1:0] douta_2,
-    output wire ena_2,
-    output wire wea_2,
-    // BRAM_B - Read Port
-    output wire [12:0] addrb_2,
-    output wire clkb_2,
-    output wire [AXI_BUS_WIDTH-1:0] dinb_2,
-    input wire [AXI_BUS_WIDTH-1:0] doutb_2,
-    output wire enb_2,
-    output wire web_2,
-    // BRAM Port - 3
-    // BRAM_A - Write Port
-    output wire [12:0] addra_3,
-    output wire clka_3,
-    output wire [AXI_BUS_WIDTH-1:0] dina_3,
-    input wire [AXI_BUS_WIDTH-1:0] douta_3,
-    output wire ena_3,
-    output wire wea_3,
-    // BRAM_B - Read Port
-    output wire [12:0] addrb_3,
-    output wire clkb_3,
-    output wire [AXI_BUS_WIDTH-1:0] dinb_3,
-    input wire [AXI_BUS_WIDTH-1:0] doutb_3,
-    output wire enb_3,
-    output wire web_3,
-    
     // AXI4-S slave i/f - Data stream port
     input    s_axis_valid,
     input [AXI_BUS_WIDTH-1:0] s_axis_data,
@@ -161,6 +115,7 @@ wire lb_wr_en_comb;
 assign lb_wr_en_comb = lb_wr_en & s_axis_valid & ~lb_full;
 wire lb_rst;
 reg lb_force_rst;
+
 assign lb_rst = ~axi_reset_n||lb_force_rst;
 assign r_add = current_x+KERNEL_SIZE-newline_cnt; 
 bram_coupler
@@ -179,57 +134,7 @@ br_coupler (
     .r_en(lb_r_en),
     .data_out(lb_data_out),
     .full(lb_full),
-    .row_width(image_width),
-    
-    // BRAM interfaces
-    
-    // Port - 1
-    // Writing port
-    .addra_1(addra_1),
-    .clka_1(clka_1),
-    .dina_1(dina_1),
-    .douta_1(douta_1),
-    .ena_1(ena_1),
-    .wea_1(wea_1),
-    // Reading port
-    .addrb_1(addrb_1),
-    .clkb_1(clkb_1),
-    .dinb_1(dinb_1),
-    .doutb_1(doutb_1),
-    .enb_1(enb_1),
-    .web_1(web_1),
-    
-    // Port - 2
-    // Writing port
-    .addra_2(addra_2),
-    .clka_2(clka_2),
-    .dina_2(dina_2),
-    .douta_2(douta_2),
-    .ena_2(ena_2),
-    .wea_2(wea_2),
-    // Reading port
-    .addrb_2(addrb_2),
-    .clkb_2(clkb_2),
-    .dinb_2(dinb_2),
-    .doutb_2(doutb_2),
-    .enb_2(enb_2),
-    .web_2(web_2),
-    
-    // Port - 3
-    // Writing port
-    .addra_3(addra_3),
-    .clka_3(clka_3),
-    .dina_3(dina_3),
-    .douta_3(douta_3),
-    .ena_3(ena_3),
-    .wea_3(wea_3),
-    // Reading port
-    .addrb_3(addrb_3),
-    .clkb_3(clkb_3),
-    .dinb_3(dinb_3),
-    .doutb_3(doutb_3),
-    .enb_3(enb_3),
-    .web_3(web_3)
+    .row_width(image_width)
 );
 /* LINE BUFFER END ************************************************************************************************/
 
@@ -380,8 +285,10 @@ always @(posedge axi_clk) begin
                     else dataSet[RDi] = lb_data_out[(RDi-(KERNEL_SIZE*KERNEL_SIZE-KERNEL_SIZE))*DATA_WIDTH+:DATA_WIDTH];
                 end
             end
+            
+            newline_cnt = r_delay_latch ? newline_cnt-1 : newline_cnt;
             r_delay_latch = lb_r_en;
-            newline_cnt = newline_cnt-r_delay_latch;
+            
             // Continue reading data into line buffer until full
             if(!lb_full)begin
                 lb_r_en = 0; lb_wr_en = 1;

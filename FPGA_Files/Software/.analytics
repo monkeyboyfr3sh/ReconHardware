@@ -380,3 +380,6 @@ timestamp=[2021-02-18 16:51:59], mode=MISC, duration=0:00:03.674, duration_ms=36
 timestamp=[2021-02-18 17:08:55], mode=PLATFORM_GENERATION, duration=0:00:02.139, duration_ms=2139, data={name=pr_led}
 timestamp=[2021-02-18 17:08:55], mode=BUILD, duration=0:00:00.243, duration_ms=243, data={name=hello_world, configuration=Debug, clean_build=false}
 timestamp=[2021-02-18 17:09:00], mode=BUILD, duration=0:00:04.900, duration_ms=4900, data={name=hello_world_system, configuration=Debug, clean_build=false}
+timestamp=[2021-02-20 13:08:22], mode=WORKBENCH_START, duration=0:00:42.134, duration_ms=42134, data={}
+timestamp=[2021-02-20 13:08:24], mode=WORKBENCH_UI_INIT, duration=0:00:01.572, duration_ms=1572, data={editors_count=7, platform_editors_count=2, projects_count=14, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,hello_world,hello_world_system,pr_led,sd_reading,sd_reading_system,xaxidma_example_selftest_1,xaxidma_example_selftest_1_system,xaxidma_example_simple_intr_1,xaxidma_example_simple_intr_1_system,xilffs_polled_example_1,xilffs_polled_example_1_system,xprc_example_1,xprc_example_1_system}
+timestamp=[2021-02-20 13:08:26], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:01.127, duration_ms=1127, data={}

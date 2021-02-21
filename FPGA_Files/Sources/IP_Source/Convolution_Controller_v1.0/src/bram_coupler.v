@@ -5,7 +5,6 @@ module bram_coupler
     parameter MAX_ROW_WIDTH = 1024,
     parameter MUXS_WIDTH = $clog2(ROWS),
     parameter ADDR_WIDTH = $clog2(MAX_ROW_WIDTH),
-    parameter BYTE_PER_CLK = 32/DATA_WIDTH,
     parameter BUS_WIDTH = 32
 )
 (
@@ -18,59 +17,73 @@ module bram_coupler
     input wr_en,
     input r_en,
     output wire [ROWS*DATA_WIDTH-1:0] data_out,
-    output wire full,
-    
-    // BRAM Port - 1
-    // BRAM_A - Write Port
-    output wire [12:0] addra_1,
-    output wire clka_1,
-    output wire [BUS_WIDTH-1:0] dina_1,
-    input wire [BUS_WIDTH-1:0] douta_1,//DC
-    output wire ena_1,
-    output wire wea_1,
-    // BRAM_B - Read Port
-    output wire [12:0] addrb_1,
-    output wire clkb_1,
-    output wire [BUS_WIDTH-1:0] dinb_1,//DC
-    input wire [BUS_WIDTH-1:0] doutb_1,
-    output wire enb_1,
-    output wire web_1,
-    // BRAM Port - 2
-    // BRAM_A - Write Port
-    output wire [12:0] addra_2,
-    output wire clka_2,
-    output wire [BUS_WIDTH-1:0] dina_2,
-    input wire [BUS_WIDTH-1:0] douta_2,//DC
-    output wire ena_2,
-    output wire wea_2,
-    // BRAM_B - Read Port
-    output wire [12:0] addrb_2,
-    output wire clkb_2,
-    output wire [BUS_WIDTH-1:0] dinb_2,//DC
-    input wire [BUS_WIDTH-1:0] doutb_2,
-    output wire enb_2,
-    output wire web_2,
-    // BRAM Port - 3
-    // BRAM_A - Write Port
-    output wire [12:0] addra_3,
-    output wire clka_3,
-    output wire [BUS_WIDTH-1:0] dina_3,
-    input wire [BUS_WIDTH-1:0] douta_3,//DC
-    output wire ena_3,
-    output wire wea_3,
-    // BRAM_B - Read Port
-    output wire [12:0] addrb_3,
-    output wire clkb_3,
-    output wire [BUS_WIDTH-1:0] dinb_3,//DC
-    input wire [BUS_WIDTH-1:0] doutb_3,
-    output wire enb_3,
-    output wire web_3
+    output wire full
 );
-// Signals for handling lower data precision io
-wire [ADDR_WIDTH-1:0] bram_wr_add,bram_r_add,r_bit_silce_cnt;
-assign bram_wr_add = wr_add/BYTE_PER_CLK;
-assign bram_r_add = r_add/BYTE_PER_CLK;
-assign r_bit_silce_cnt = (r_add-1)%BYTE_PER_CLK;
+
+// BRAM Channel 1 Ports
+// BRAM_A - Write Ports
+wire [12:0]             addra_1     [ROWS-1:0];
+wire                    clka_1      [ROWS-1:0];
+wire [BUS_WIDTH-1:0]    dina_1      [ROWS-1:0];
+wire [BUS_WIDTH-1:0]    douta_1     [ROWS-1:0];//DC
+wire                    ena_1       [ROWS-1:0];
+wire                    wea_1       [ROWS-1:0];
+// BRAM_B - Read Ports
+wire [12:0]             addrb_1     [ROWS-1:0];
+wire                    clkb_1      [ROWS-1:0];
+wire [BUS_WIDTH-1:0]    dinb_1      [ROWS-1:0];//DC
+wire [BUS_WIDTH-1:0]    doutb_1     [ROWS-1:0];
+wire                    enb_1       [ROWS-1:0];
+wire                    web_1       [ROWS-1:0];
+
+BRAM_HIER_wrapper
+BRAM_HIER
+(
+    // BRAMA C1R1
+  .BRAM_PORTA_C1R1_0_addr   (addra_1[0]),
+  .BRAM_PORTA_C1R1_0_clk    (clka_1[0]),
+  .BRAM_PORTA_C1R1_0_din    (dina_1[0]),
+  .BRAM_PORTA_C1R1_0_dout   (douta_1[0]),
+  .BRAM_PORTA_C1R1_0_en     (ena_1[0]),
+  .BRAM_PORTA_C1R1_0_we     (wea_1[0]),
+    // BRAMB C1R1
+  .BRAM_PORTB_C1R1_0_addr   (addrb_1[0]),
+  .BRAM_PORTB_C1R1_0_clk    (clkb_1[0]),
+  .BRAM_PORTB_C1R1_0_din    (dinb_1[0]),
+  .BRAM_PORTB_C1R1_0_dout   (doutb_1[0]),
+  .BRAM_PORTB_C1R1_0_en     (enb_1[0]),
+  .BRAM_PORTB_C1R1_0_we     (web_1[0]),
+
+    // BRAMA C1R2
+  .BRAM_PORTA_C1R2_0_addr   (addra_1[1]),
+  .BRAM_PORTA_C1R2_0_clk    (clka_1[1]),
+  .BRAM_PORTA_C1R2_0_din    (dina_1[1]),
+  .BRAM_PORTA_C1R2_0_dout   (douta_1[1]),
+  .BRAM_PORTA_C1R2_0_en     (ena_1[1]),
+  .BRAM_PORTA_C1R2_0_we     (wea_1[1]),
+    // BRAMB C1R2
+  .BRAM_PORTB_C1R2_0_addr   (addrb_1[1]),
+  .BRAM_PORTB_C1R2_0_clk    (clkb_1[1]),
+  .BRAM_PORTB_C1R2_0_din    (dinb_1[1]),
+  .BRAM_PORTB_C1R2_0_dout   (doutb_1[1]),
+  .BRAM_PORTB_C1R2_0_en     (enb_1[1]),
+  .BRAM_PORTB_C1R2_0_we     (web_1[1]),
+
+    // BRAMA C1R3
+  .BRAM_PORTA_C1R3_0_addr   (addra_1[2]),
+  .BRAM_PORTA_C1R3_0_clk    (clka_1[2]),
+  .BRAM_PORTA_C1R3_0_din    (dina_1[2]),
+  .BRAM_PORTA_C1R3_0_dout   (douta_1[2]),
+  .BRAM_PORTA_C1R3_0_en     (ena_1[2]),
+  .BRAM_PORTA_C1R3_0_we     (wea_1[2]),
+    // BRAMB C1R3
+  .BRAM_PORTB_C1R3_0_addr   (addrb_1[2]),
+  .BRAM_PORTB_C1R3_0_clk    (clkb_1[2]),
+  .BRAM_PORTB_C1R3_0_din    (dinb_1[2]),
+  .BRAM_PORTB_C1R3_0_dout   (doutb_1[2]),
+  .BRAM_PORTB_C1R3_0_en     (enb_1[2]),
+  .BRAM_PORTB_C1R3_0_we     (web_1[2])
+);
 
 // Decoupler regs
 reg [ADDR_WIDTH-1:0] wr_add;
@@ -80,54 +93,31 @@ reg [ROWS-1:0] row_full;
 assign full = & row_full;
 
 // BRAM Signals ***************************************************
-// BRAMA1 assigns
-assign addra_1 = wr_en ? bram_wr_add : 0;
-assign addrb_1 = r_en ? bram_r_add : 0;
-assign clka_1 = clk;
-assign dina_1 = (wr_order==0) ? data_in : 0;
-assign ena_1 = wr_en ? (wr_order==0) : 0;
-assign wea_1 = wr_en ? (wr_order==0) : 0;
-// BRAMB1 assigns
-assign clkb_1 = clk;
-assign enb_1 = r_en;
-assign web_1 = ~r_en;
 
-// BRAMA2 assigns
-assign addra_2 = wr_en ? bram_wr_add : 0;
-assign addrb_2 = r_en ? bram_r_add : 0;
-assign clka_2 = clk;
-assign dina_2 = (wr_order==1) ? data_in : 0;
-assign ena_2 = wr_en ? (wr_order==1) : 0;
-assign wea_2 = wr_en ? (wr_order==1) : 0;
-// BRAMB1 assigns
-assign clkb_2 = clk;
-assign enb_2 = r_en;
-assign web_2 = ~r_en;
-
-// BRAMA3 assigns
-assign addra_3 = wr_en ? bram_wr_add : 0;
-assign addrb_3 = r_en ? bram_r_add : 0;
-assign clka_3 = clk;
-assign dina_3 = (wr_order==2) ? data_in : 0;
-assign ena_3 = wr_en ? (wr_order==2) : 0;
-assign wea_3 = wr_en ? (wr_order==2) : 0;
-// BRAMB1 assigns
-assign clkb_3 = clk;
-assign enb_3 = r_en;
-assign web_3 = ~r_en;
-
-wire [DATA_WIDTH-1:0] temp1,temp2,temp3;
 // Dirty way to put output data on mux bus, but whatever
-assign temp1 = doutb_1[(r_bit_silce_cnt)*DATA_WIDTH+:DATA_WIDTH];
-assign temp2 = doutb_2[(r_bit_silce_cnt)*DATA_WIDTH+:DATA_WIDTH];
-assign temp3 = doutb_3[(r_bit_silce_cnt)*DATA_WIDTH+:DATA_WIDTH];
-assign mux_data[0*DATA_WIDTH+:DATA_WIDTH] = temp1;
-assign mux_data[1*DATA_WIDTH+:DATA_WIDTH] = temp2;
-assign mux_data[2*DATA_WIDTH+:DATA_WIDTH] = temp3;
+assign mux_data[0*DATA_WIDTH+:DATA_WIDTH] = doutb_1[0];
+assign mux_data[1*DATA_WIDTH+:DATA_WIDTH] = doutb_1[1];
+assign mux_data[2*DATA_WIDTH+:DATA_WIDTH] = doutb_1[2];
 
-//assign mux_data[0*DATA_WIDTH+:DATA_WIDTH] = r_en ? doutb_1[(r_bit_silce_cnt)*DATA_WIDTH+:DATA_WIDTH] : 0;
-//assign mux_data[1*DATA_WIDTH+:DATA_WIDTH] = r_en ? doutb_2[(r_bit_silce_cnt)*DATA_WIDTH+:DATA_WIDTH] : 0;
-//assign mux_data[2*DATA_WIDTH+:DATA_WIDTH] = r_en ? doutb_3[(r_bit_silce_cnt)*DATA_WIDTH+:DATA_WIDTH] : 0;
+genvar i;
+generate
+
+for(i=0;i<ROWS;i=i+1)begin
+    // BRAMA1 assigns
+    assign addra_1[i] = wr_en ? wr_add : 0;
+    assign addrb_1[i] = r_en ? r_add : 0;
+    assign clka_1[i] = clk;
+    assign dina_1[i] = (wr_order==i) ? data_in : 0;
+    assign ena_1[i] = wr_en ? (wr_order==i) : 0;
+    assign wea_1[i] = wr_en ? (wr_order==i) : 0;
+    // BRAMB1 assigns
+    assign clkb_1[i] = clk;
+    assign enb_1[i] = r_en;
+    assign web_1[i] = ~r_en;
+    // Channel data output mux
+    assign data_out[i*DATA_WIDTH+:DATA_WIDTH] = mux_data[((i+wr_order)%ROWS)*DATA_WIDTH+:DATA_WIDTH];
+end
+endgenerate
 // BRAM Signals ***************************************************
 
 always @(posedge clk)
@@ -141,7 +131,7 @@ end
 
 // Writing data
 if (wr_en) begin
-wr_add = wr_add + BYTE_PER_CLK;
+wr_add = wr_add + 1;
 row_full[wr_order] = 0;
 // End of row
 if(wr_add>=row_width)begin
@@ -158,13 +148,6 @@ end
 if(r_en)begin
     row_full[wr_order] = (r_add==row_width-1) ? 0 : row_full[wr_order];
 end
-end
 
-// Assigning output based of mux order
-genvar i;
-generate
-for (i = 0;i<ROWS;i=i+1) begin
-    assign data_out[i*DATA_WIDTH+:DATA_WIDTH] = mux_data[((i+wr_order)%ROWS)*DATA_WIDTH+:DATA_WIDTH];
 end
-endgenerate
 endmodule

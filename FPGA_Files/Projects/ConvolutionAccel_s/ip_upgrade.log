@@ -1,6 +1,190 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Sat Feb 20 19:42:37 2021
+| Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Convolution_Controller_Convolution_Controll_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Convolution_Controller_Convolution_Controll_0_0 (xilinx.com:user:Convolution_Controller:1.0) from (Rev. 130) to (Rev. 131)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Sat Feb 20 19:38:03 2021
+| Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Convolution_Controller_Convolution_Controll_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Convolution_Controller_Convolution_Controll_0_0 (xilinx.com:user:Convolution_Controller:1.0) from (Rev. 129) to (Rev. 130)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Sat Feb 20 19:31:42 2021
+| Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Convolution_Controller_Convolution_Controll_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of Convolution_Controller_Convolution_Controll_0_0 (xilinx.com:user:Convolution_Controller:1.0) from (Rev. 127) to (Rev. 129)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'Convolution_Controller_Convolution_Controll_0_0'.
+
+
+-Upgrade has removed interface 'BRAM_PORTA_1'
+
+-Upgrade has removed interface 'BRAM_PORTA_2'
+
+-Upgrade has removed interface 'BRAM_PORTA_3'
+
+-Upgrade has removed interface 'BRAM_PORTB_1'
+
+-Upgrade has removed interface 'BRAM_PORTB_2'
+
+-Upgrade has removed interface 'BRAM_PORTB_3'
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'Convolution_Controller_Convolution_Controll_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'addra_1'
+
+-Upgrade has removed port 'addra_2'
+
+-Upgrade has removed port 'addra_3'
+
+-Upgrade has removed port 'addrb_1'
+
+-Upgrade has removed port 'addrb_2'
+
+-Upgrade has removed port 'addrb_3'
+
+-Upgrade has removed port 'clka_1'
+
+-Upgrade has removed port 'clka_2'
+
+-Upgrade has removed port 'clka_3'
+
+-Upgrade has removed port 'clkb_1'
+
+-Upgrade has removed port 'clkb_2'
+
+-Upgrade has removed port 'clkb_3'
+
+-Upgrade has removed port 'dina_1'
+
+-Upgrade has removed port 'dina_2'
+
+-Upgrade has removed port 'dina_3'
+
+-Upgrade has removed port 'dinb_1'
+
+-Upgrade has removed port 'dinb_2'
+
+-Upgrade has removed port 'dinb_3'
+
+-Upgrade has removed port 'douta_1'
+
+-Upgrade has removed port 'douta_2'
+
+-Upgrade has removed port 'douta_3'
+
+-Upgrade has removed port 'doutb_1'
+
+-Upgrade has removed port 'doutb_2'
+
+-Upgrade has removed port 'doutb_3'
+
+-Upgrade has removed port 'ena_1'
+
+-Upgrade has removed port 'ena_2'
+
+-Upgrade has removed port 'ena_3'
+
+-Upgrade has removed port 'enb_1'
+
+-Upgrade has removed port 'enb_2'
+
+-Upgrade has removed port 'enb_3'
+
+-Upgrade has removed port 'wea_1'
+
+-Upgrade has removed port 'wea_2'
+
+-Upgrade has removed port 'wea_3'
+
+-Upgrade has removed port 'web_1'
+
+-Upgrade has removed port 'web_2'
+
+-Upgrade has removed port 'web_3'
+
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Sat Feb 20 17:03:55 2021
+| Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Convolution_Controller_Convolution_Controll_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Convolution_Controller_Convolution_Controll_0_0 (xilinx.com:user:Convolution_Controller:1.0) from (Rev. 126) to (Rev. 127)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
 | Date         : Wed Feb 10 20:56:36 2021
 | Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 | Command      : upgrade_ip
