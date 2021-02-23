@@ -2,7 +2,7 @@
 `timescale `myTimeScale
 
 //Test stuff
-`define test_width 8
+`define test_width 10
 `define test_height 8
 
 `define data_width 32

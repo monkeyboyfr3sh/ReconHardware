@@ -3,15 +3,101 @@ Time resolution is 1 ps
 Block Memory Generator module Controller_w_BRAM_TB.UUT.br_coupler.BRAM_HIER.BRAM_HIER_i.bram_hier_C1.blk_mem_gen_0.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
 Block Memory Generator module Controller_w_BRAM_TB.UUT.br_coupler.BRAM_HIER.BRAM_HIER_i.bram_hier_C1.blk_mem_gen_1.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
 Block Memory Generator module Controller_w_BRAM_TB.UUT.br_coupler.BRAM_HIER.BRAM_HIER_i.bram_hier_C1.blk_mem_gen_2.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
-Stopped at time : 745 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v" Line 297
-Stopped at time : 745 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v" Line 297
-Stopped at time : 745 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v" Line 232
-Stopped at time : 755 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v" Line 297
-Stopped at time : 765 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v" Line 276
-Stopped at time : 775 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v" Line 276
-Stopped at time : 785 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v" Line 276
-Stopped at time : 795 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v" Line 276
 cSum =          0 ; count =           x ; @AA@
-Stopped at time : 845 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v" Line 276
-cSum =          0 ; count =           x ; @AA@
+Stopped at time : 915 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v" Line 261
 cSum =          1 ; count =           x ; @AA@
+Stopped at time : 975 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v" Line 261
+cSum =          2 ; count =           x ; @AA@
+Stopped at time : 1035 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v" Line 261
+cSum =          3 ; count =           x ; @AA@
+Stopped at time : 1095 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v" Line 261
+cSum =          4 ; count =           x ; @AA@
+Stopped at time : 1155 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v" Line 261
+cSum =          5 ; count =           x ; @AA@
+Stopped at time : 1215 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v" Line 261
+cSum =          6 ; count =           x ; @AA@
+Stopped at time : 1275 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v" Line 261
+cSum =          7 ; count =           x ; @AA@
+Stopped at time : 1335 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v" Line 261
+cSum =         10 ; count =           x ; @AA@
+Stopped at time : 1555 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v" Line 261
+cSum =         11 ; count =           x ; @AA@
+Stopped at time : 1615 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v" Line 261
+cSum =         12 ; count =           x ; @AA@
+Stopped at time : 1675 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v" Line 261
+cSum =         13 ; count =           x ; @AA@
+Stopped at time : 1735 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v" Line 261
+cSum =         14 ; count =           x ; @AA@
+Stopped at time : 1795 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v" Line 261
+cSum =         15 ; count =           x ; @AA@
+Stopped at time : 1855 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v" Line 261
+cSum =         16 ; count =           x ; @AA@
+Stopped at time : 1915 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v" Line 261
+cSum =         17 ; count =           x ; @AA@
+Stopped at time : 1975 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v" Line 261
+cSum =         20 ; count =           x ; @AA@
+Stopped at time : 2195 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v" Line 261
+cSum =         21 ; count =           x ; @AA@
+Stopped at time : 2255 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v" Line 261
+cSum =         22 ; count =           x ; @AA@
+Stopped at time : 2315 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v" Line 261
+cSum =         23 ; count =           x ; @AA@
+Stopped at time : 2375 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v" Line 261
+cSum =         24 ; count =           x ; @AA@
+Stopped at time : 2435 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v" Line 261
+cSum =         25 ; count =           x ; @AA@
+Stopped at time : 2495 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v" Line 261
+cSum =         26 ; count =           x ; @AA@
+Stopped at time : 2555 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v" Line 261
+cSum =         27 ; count =           x ; @AA@
+Stopped at time : 2615 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v" Line 261
+cSum =         30 ; count =           x ; @AA@
+Stopped at time : 2835 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v" Line 261
+cSum =         31 ; count =           x ; @AA@
+Stopped at time : 2895 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v" Line 261
+cSum =         32 ; count =           x ; @AA@
+Stopped at time : 2955 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v" Line 261
+cSum =         33 ; count =           x ; @AA@
+Stopped at time : 3015 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v" Line 261
+cSum =         34 ; count =           x ; @AA@
+Stopped at time : 3075 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v" Line 261
+cSum =         35 ; count =           x ; @AA@
+Stopped at time : 3135 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v" Line 261
+cSum =         36 ; count =           x ; @AA@
+Stopped at time : 3195 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v" Line 261
+cSum =         37 ; count =           x ; @AA@
+Stopped at time : 3255 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v" Line 261
+cSum =         40 ; count =           x ; @AA@
+Stopped at time : 3475 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v" Line 261
+cSum =         41 ; count =           x ; @AA@
+Stopped at time : 3535 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v" Line 261
+cSum =         42 ; count =           x ; @AA@
+Stopped at time : 3595 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v" Line 261
+cSum =         43 ; count =           x ; @AA@
+Stopped at time : 3655 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v" Line 261
+cSum =         44 ; count =           x ; @AA@
+Stopped at time : 3715 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v" Line 261
+cSum =         45 ; count =           x ; @AA@
+Stopped at time : 3775 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v" Line 261
+cSum =         46 ; count =           x ; @AA@
+Stopped at time : 3835 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v" Line 261
+cSum =         47 ; count =           x ; @AA@
+Stopped at time : 3895 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v" Line 261
+cSum =         50 ; count =           x ; @AA@
+Stopped at time : 4115 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v" Line 261
+cSum =         51 ; count =           x ; @AA@
+Stopped at time : 4175 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v" Line 261
+cSum =         52 ; count =           x ; @AA@
+Stopped at time : 4235 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v" Line 261
+cSum =         53 ; count =           x ; @AA@
+Stopped at time : 4295 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v" Line 261
+cSum =         54 ; count =           x ; @AA@
+Stopped at time : 4355 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v" Line 261
+cSum =         55 ; count =           x ; @AA@
+Stopped at time : 4415 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v" Line 261
+cSum =         56 ; count =           x ; @AA@
+Stopped at time : 4475 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v" Line 261
+cSum =         57 ; count =           x ; @AA@
+Stopped at time : 4535 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v" Line 261
+pass_cnt=         48
+$stop called at time : 4535 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/General/Controller_w_BRAM_TB.v" Line 311

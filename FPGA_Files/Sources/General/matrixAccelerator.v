@@ -47,7 +47,6 @@ always @(posedge Clk) begin
     finalReady = & mReady; 
 end
 
-// XBar is not being used in design as of now
 //XBar2 
 //#(
 //    .DATA_WIDTH(DATA_WIDTH),

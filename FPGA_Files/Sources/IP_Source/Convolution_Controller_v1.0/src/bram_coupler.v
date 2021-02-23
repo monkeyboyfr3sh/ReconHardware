@@ -1,11 +1,11 @@
 module bram_coupler
 #(
-    parameter DATA_WIDTH = 32,
+    parameter BUS_WIDTH = 32,
     parameter ROWS = 3,
     parameter MAX_ROW_WIDTH = 1024,
+    parameter FIFO_LENGTH = 2,
     parameter MUXS_WIDTH = $clog2(ROWS),
-    parameter ADDR_WIDTH = $clog2(MAX_ROW_WIDTH),
-    parameter BUS_WIDTH = 32
+    parameter ADDR_WIDTH = $clog2(MAX_ROW_WIDTH)
 )
 (
     // Controller interfaces
@@ -16,7 +16,8 @@ module bram_coupler
     input [ADDR_WIDTH-1:0] r_add,
     input wr_en,
     input r_en,
-    output wire [ROWS*DATA_WIDTH-1:0] data_out,
+    output wire [ROWS*BUS_WIDTH-1:0] data_out,
+    output wire valid,
     output wire full
 );
 
@@ -88,34 +89,32 @@ BRAM_HIER
 // Decoupler regs
 reg [ADDR_WIDTH-1:0] wr_add;
 reg [MUXS_WIDTH-1:0] wr_order;
-wire [ROWS*DATA_WIDTH-1:0] mux_data;
+wire [ROWS*BUS_WIDTH-1:0] mux_data;
 reg [ROWS-1:0] row_full;
+reg [FIFO_LENGTH-1:0] valid_fifo;
+reg primed;
 assign full = & row_full;
-
+assign valid = valid_fifo[1];
 // BRAM Signals ***************************************************
-
-// Dirty way to put output data on mux bus, but whatever
-assign mux_data[0*DATA_WIDTH+:DATA_WIDTH] = doutb_1[0];
-assign mux_data[1*DATA_WIDTH+:DATA_WIDTH] = doutb_1[1];
-assign mux_data[2*DATA_WIDTH+:DATA_WIDTH] = doutb_1[2];
 
 genvar i;
 generate
 
 for(i=0;i<ROWS;i=i+1)begin
-    // BRAMA1 assigns
+    // BRAMA assigns
     assign addra_1[i] = wr_en ? wr_add : 0;
-    assign addrb_1[i] = r_en ? r_add : 0;
     assign clka_1[i] = clk;
     assign dina_1[i] = (wr_order==i) ? data_in : 0;
     assign ena_1[i] = wr_en ? (wr_order==i) : 0;
     assign wea_1[i] = wr_en ? (wr_order==i) : 0;
-    // BRAMB1 assigns
+    // BRAMB assigns
+    assign addrb_1[i] = r_en ? r_add : 0;
     assign clkb_1[i] = clk;
     assign enb_1[i] = r_en;
     assign web_1[i] = ~r_en;
     // Channel data output mux
-    assign data_out[i*DATA_WIDTH+:DATA_WIDTH] = mux_data[((i+wr_order)%ROWS)*DATA_WIDTH+:DATA_WIDTH];
+    assign mux_data[i*BUS_WIDTH+:BUS_WIDTH] = doutb_1[i];
+    assign data_out[i*BUS_WIDTH+:BUS_WIDTH] = mux_data[((i+wr_order)%ROWS)*BUS_WIDTH+:BUS_WIDTH];
 end
 endgenerate
 // BRAM Signals ***************************************************
@@ -127,10 +126,12 @@ if(rst)begin
     wr_add = 0;    
     wr_order = 0;
     row_full = 0;
+    primed = 0;
 end
 
 // Writing data
 if (wr_en) begin
+primed = 0;
 wr_add = wr_add + 1;
 row_full[wr_order] = 0;
 // End of row
@@ -148,6 +149,11 @@ end
 if(r_en)begin
     row_full[wr_order] = (r_add==row_width-1) ? 0 : row_full[wr_order];
 end
+
+valid_fifo[1] = primed ? r_en : valid_fifo[0];
+valid_fifo[0] = primed ? 0 : r_en;
+
+primed = valid_fifo[1] ? 1 : primed;
 
 end
 endmodule
