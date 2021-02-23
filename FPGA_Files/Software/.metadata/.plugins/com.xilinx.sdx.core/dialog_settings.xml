@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<item key="sdx.custom.platform.repository.locations" value="C:\GitHub\ReconHardware\FPGA_Files\Software\pr_led\export\pr_led"/>
+	<item value="" key="sdx.custom.platform.repository.locations"/>
 </section>

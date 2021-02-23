@@ -2,7 +2,7 @@
 `timescale `myTimeScale
 
 //Test stuff
-`define test_width 10
+`define test_width 8
 `define test_height 8
 
 `define data_width 32
@@ -225,7 +225,7 @@ for(i = 0;i<`kernel_size*`kernel_size;i=i+1)begin
     s_axi_awvalid = 1;
     s_axi_awaddr = (i*4)+24;
     s_axi_wvalid = 1;
-    if(i==0) s_axi_wdata = 1;
+    if(i==8) s_axi_wdata = 1;
     else s_axi_wdata = 0;
 //    s_axi_wdata = i;//Data going into filter
     curr_filterSet[i] = s_axi_wdata; //Also put the data in the test array
