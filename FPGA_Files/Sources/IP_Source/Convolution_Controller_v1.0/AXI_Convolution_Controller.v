@@ -8,23 +8,26 @@ module Convolution_Controller
 #( // Parameters
     parameter DATA_WIDTH = 32,
     parameter KERNEL_SIZE = 3,
+    parameter K_SQUARED = KERNEL_SIZE*KERNEL_SIZE,
     parameter FILTER_BASE = 24,
     parameter BRAM_WIDTH = 5,
-    parameter DATA_BASE = FILTER_BASE + (KERNEL_SIZE*KERNEL_SIZE*4),
-    parameter CTRL_REG_SIZE = DATA_BASE + (KERNEL_SIZE*KERNEL_SIZE*4),
+    parameter CHANNELS = 3,
+    parameter FINAL_CHANNEL = 2**(CHANNELS-1),
+    parameter DATA_BASE = FILTER_BASE + (K_SQUARED*4),
+    parameter CTRL_REG_SIZE = DATA_BASE + (K_SQUARED*4),
     parameter CTRL_REG_ADDR_WIDTH = $clog2(CTRL_REG_SIZE),
-    parameter STATE_MAC_ADDR_WIDTH = $clog2(KERNEL_SIZE*KERNEL_SIZE),
+    parameter STATE_MAC_ADDR_WIDTH = $clog2(K_SQUARED),
     parameter AXI_BUS_WIDTH = 32,
     parameter AXI_ADDR_WIDTH = 10
 )
 ( // Ports
     input    axi_clk,
     input    axi_reset_n,
-    input [AXI_BUS_WIDTH-1:0] cSum,
-    input    cReady,
-    output wire [KERNEL_SIZE*KERNEL_SIZE*AXI_BUS_WIDTH-1:0] MULTIPLIER_INPUT,   //Flat output for data set
-    output wire [KERNEL_SIZE*KERNEL_SIZE*AXI_BUS_WIDTH-1:0] MULTIPLICAND_INPUT, //Flat output for filter set
-    output reg [KERNEL_SIZE*KERNEL_SIZE-1:0] MULTIPLY_START,
+    input [CHANNELS*AXI_BUS_WIDTH-1:0] cSum,
+    input cReady,
+    output wire [CHANNELS*K_SQUARED*AXI_BUS_WIDTH-1:0] MULTIPLIER_INPUT,   //Flat output for data set
+    output wire [CHANNELS*K_SQUARED*AXI_BUS_WIDTH-1:0] MULTIPLICAND_INPUT, //Flat output for filter set
+    output reg [K_SQUARED-1:0] MULTIPLY_START,
     
     // AXI4-S slave i/f - Data stream port
     input    s_axis_valid,
@@ -72,7 +75,7 @@ reg rd_st, wr_st;
 reg [CTRL_REG_ADDR_WIDTH-1:0] curr_wr_addr;
 reg [CTRL_REG_ADDR_WIDTH-1:0] curr_rd_addr;
 integer control_registers[CTRL_REG_SIZE-1:0];//Array of registers for controlling ip
-integer j;
+integer i,j;
     
 // State flags
 reg RDst, MULTIst,RSTst;
@@ -80,15 +83,15 @@ reg RDst, MULTIst,RSTst;
 reg [$clog2(KERNEL_SIZE):0] lb_q_cnt,lb_r_cnt;
 reg lb_wr_en, lb_r_en;
 reg memory_read;
-wire lb_full;
-wire [KERNEL_SIZE*DATA_WIDTH-1:0] lb_data_out;
+wire [CHANNELS-1:0] lb_full;
+wire [KERNEL_SIZE*DATA_WIDTH-1:0] lb_data_out [CHANNELS-1:0];
 wire [31:0] r_add;
 // Counters
-integer cCount,RDi;
+integer cCount,RDi,RDj;
 
 // Controller data buffers
-reg     [DATA_WIDTH-1:0]    dataSet     [(KERNEL_SIZE*KERNEL_SIZE)-1:0];   
-wire    [DATA_WIDTH-1:0]    filterSet   [(KERNEL_SIZE*KERNEL_SIZE)-1:0];
+reg     [DATA_WIDTH-1:0]    dataSet     [CHANNELS-1:0][(K_SQUARED)-1:0];   
+wire    [DATA_WIDTH-1:0]    filterSet   [(K_SQUARED)-1:0];
 reg     [$clog2(BRAM_WIDTH)-1:0] current_x, current_y;
 
 
@@ -101,44 +104,56 @@ assign image_width = control_registers[16];
 assign image_height = control_registers[20];
 
 // Assign filter set to the corresponding control registers
-generate
-genvar i;
-for (i = 0;i<KERNEL_SIZE*KERNEL_SIZE;i=i+1)begin
-    assign filterSet[i] = control_registers[(i*4)+FILTER_BASE];
-end
-endgenerate
-
-assign s_axis_ready = ~lb_full & lb_wr_en & memory_read;
-assign m_axis_valid = cReady & MULTIPLY_START;
-assign m_axis_data = m_axis_valid ? cSum : 0;
-
 /* LINE BUFFER BEGIN ************************************************************************************************/
+reg [$clog2(CHANNELS)-1:0] channel_sel;
+wire [CHANNELS-1:0] lb_valid;
 wire lb_wr_en_comb;
-assign lb_wr_en_comb = lb_wr_en & s_axis_valid & ~lb_full;
 wire lb_rst;
 reg lb_force_rst;
-wire lb_valid;
+wire bram_full;
+wire m_axis_rx_stat;
 
-assign lb_rst = ~axi_reset_n||lb_force_rst;
-assign r_add = current_x+KERNEL_SIZE-lb_q_cnt; 
-bram_coupler
-#(
-    .BUS_WIDTH(AXI_BUS_WIDTH),
-    .ROWS(KERNEL_SIZE),
-    .MAX_ROW_WIDTH(BRAM_WIDTH)
-)
-br_coupler (
-    .clk(axi_clk),
-    .rst(lb_rst),
-    .row_width(image_width),
-    .data_in(s_axis_data),
-    .r_add(r_add),
-    .wr_en(lb_wr_en_comb),
-    .r_en(lb_r_en),
-    .data_out(lb_data_out),
-    .valid(lb_valid),
-    .full(lb_full)
-);
+assign bram_full        = &lb_full;
+assign s_axis_ready     = !bram_full & lb_wr_en & memory_read;
+assign m_axis_valid     = cReady & MULTIPLY_START;
+assign lb_wr_en_comb    = lb_wr_en & s_axis_valid & !bram_full;
+assign lb_rst           = ~axi_reset_n||lb_force_rst;
+assign r_add            = current_x+KERNEL_SIZE-lb_q_cnt; 
+assign m_axis_rx_stat   = m_axis_ready & m_axis_valid;
+
+genvar gi,gj;
+generate
+for(gi=0;gi<CHANNELS;gi=gi+1)begin
+    assign m_axis_data = (gi==channel_sel) ? cSum[gi*32+:32] : 0;
+    
+    bram_coupler
+    #(
+        .BUS_WIDTH  (AXI_BUS_WIDTH),
+        .ROWS       (KERNEL_SIZE),
+        .MAX_ROW_WIDTH(BRAM_WIDTH)
+    )
+    br_coupler (
+        .clk        (axi_clk),
+        .rst        (lb_rst),
+        .row_width  (image_width),
+        .data_in    (s_axis_data),
+        .r_add      (r_add),
+        .wr_en      (lb_wr_en_comb & (channel_sel==gi)),
+        .r_en       (lb_r_en),
+        .data_out   (lb_data_out[gi]),
+        .valid      (lb_valid[gi]),
+        .full       (lb_full[gi])
+    );
+    
+    // Attatch multiplier inputs for each channel
+    for (gj = 0;gj<K_SQUARED;gj=gj+1)begin
+        assign filterSet[gj] = control_registers[(gj*4)+FILTER_BASE];
+        assign MULTIPLIER_INPUT[(gi*AXI_BUS_WIDTH*K_SQUARED)    +(gj*AXI_BUS_WIDTH)+:AXI_BUS_WIDTH] = MULTIPLY_START[gj] ? {0,dataSet[gi][gj]} : 0;
+        assign MULTIPLICAND_INPUT[(gi*AXI_BUS_WIDTH*K_SQUARED)  +(gj*AXI_BUS_WIDTH)+:AXI_BUS_WIDTH] = MULTIPLY_START[gj] ? {0,filterSet[gj]} : 0;
+    end
+end
+
+endgenerate
 /* LINE BUFFER END ************************************************************************************************/
 
 /* AXI READ/WRITE TRANSACTIONS BEGIN ************************************************************************************************/
@@ -224,21 +239,25 @@ end//End of block
 
 
 /* CONTROLLER STATE MACHINE BEGIN ************************************************************************************************/
-generate
-genvar MPi;
-    for( MPi = 0; MPi < KERNEL_SIZE*KERNEL_SIZE ; MPi=MPi+1 )begin
-       assign MULTIPLIER_INPUT[MPi*AXI_BUS_WIDTH+:AXI_BUS_WIDTH] = MULTIPLY_START[MPi] ? {0,dataSet[MPi]} : 0;
-       assign MULTIPLICAND_INPUT[MPi*AXI_BUS_WIDTH+:AXI_BUS_WIDTH] = MULTIPLY_START[MPi] ? {0,filterSet[MPi]} : 0;
-    end
-endgenerate
-// Re
+
+always @(posedge axi_clk)begin
+
+// Update channel select after writing
+if(lb_wr_en_comb|m_axis_rx_stat)begin
+    channel_sel = channel_sel + 1;
+    channel_sel= !channel_sel ? 1 : channel_sel;
+end
+end
+
 always @(posedge axi_clk) begin
     
     //Reset
     if(!axi_reset_n||RSTst)begin
         RSTst = 0;
         lb_force_rst = 0;
-        for (j = 0;j<KERNEL_SIZE*KERNEL_SIZE;j=j+1) dataSet[j] = 0;
+        for (i=0;i<CHANNELS;i=i+1)begin
+            for (j = 0;j<K_SQUARED;j=j+1) dataSet[i][j] = 0;
+        end
         RDst = 1;
         MULTIst = 0;
         current_x = 0;
@@ -252,12 +271,13 @@ always @(posedge axi_clk) begin
         memory_read = 1;
         m_axis_last = 0;
         m_axis_keep = 0;
+        channel_sel = 1;
     end
     
     else begin//!reset state
     
     // This condition is met after the controller has put data on the bus and the slave has recieved it
-    if(m_axis_valid&m_axis_ready)begin
+    if(m_axis_rx_stat)begin
         cCount = cCount + 1;//Track the number of convolutions completed
         //Reset the keep signal and state machine
         if(m_axis_last) begin
@@ -285,20 +305,19 @@ always @(posedge axi_clk) begin
                     memory_read = 0;
                 end
                 
-                else begin
-                    // Update read address
-                    lb_q_cnt = lb_q_cnt-1;
-                end
-                
+                // Update read address
+                lb_q_cnt = lb_q_cnt-1;
                 lb_r_en = 0;
             end
             
             // Data is ready from BRAM
             if(lb_valid)begin
                 // Shift and then load data
-                for(RDi=0;RDi<KERNEL_SIZE*KERNEL_SIZE;RDi = RDi + 1)begin
-                    if(RDi<KERNEL_SIZE*KERNEL_SIZE-KERNEL_SIZE) dataSet[RDi] = dataSet[RDi+KERNEL_SIZE];
-                    else dataSet[RDi] = lb_data_out[(RDi-(KERNEL_SIZE*KERNEL_SIZE-KERNEL_SIZE))*DATA_WIDTH+:DATA_WIDTH];
+                for(RDi=0;RDi<CHANNELS;RDi = RDi + 1)begin
+                    for(RDj=0;RDj<K_SQUARED;RDj = RDj + 1)begin
+                        if(RDj<K_SQUARED-KERNEL_SIZE) dataSet[RDi][RDj] = dataSet[RDi][RDj+KERNEL_SIZE];
+                        else dataSet[RDi][RDj] = lb_data_out[RDi][(RDj-(K_SQUARED-KERNEL_SIZE))*DATA_WIDTH+:DATA_WIDTH];
+                    end
                 end
                 
                 lb_r_cnt = lb_r_cnt + 1;                
@@ -311,16 +330,15 @@ always @(posedge axi_clk) begin
             
             // Need to write or read some data
             else begin
-                // Continue writing data into line buffer until full
-                lb_wr_en = memory_read ? !lb_full : 0;
-                lb_r_en = memory_read ? lb_full : 1;
+                // Continue writing data into line buffers until full
+                lb_wr_en = memory_read ? !bram_full : 0;
+                lb_r_en = memory_read ? bram_full : 1;
             end
-        end
-        //End of RDst
+        end// End of RDst
     
         //In a multiply state, dataSet and filterSet should be filled with needed values
         else if(MULTIst) begin
-            MULTIPLY_START = 2**(KERNEL_SIZE*KERNEL_SIZE)-1;
+            MULTIPLY_START = (2**K_SQUARED)-1;
             MULTIst = 0;
             m_axis_keep = 1023;
         
@@ -339,11 +357,11 @@ always @(posedge axi_clk) begin
                 lb_q_cnt = 1;
                 lb_r_cnt = KERNEL_SIZE - 1; 
             end
-        end//End of MULTIst
+        end// End of MULTIst
         
-    end//End of cStart
-    end//End of !reset
-end//End of block
+    end// End of cStart
+    end// End of !reset
+end// End of block
 /* CONTROLLER STATE MACHINE END ************************************************************************************************/
     
 endmodule

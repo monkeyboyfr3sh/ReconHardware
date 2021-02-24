@@ -1,43 +1,22 @@
 Vivado Simulator 2020.1
 Time resolution is 1 ps
-Block Memory Generator module Controller_w_BRAM_TB.UUT.br_coupler.BRAM_HIER.BRAM_HIER_i.bram_hier_C1.blk_mem_gen_0.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
-Block Memory Generator module Controller_w_BRAM_TB.UUT.br_coupler.BRAM_HIER.BRAM_HIER_i.bram_hier_C1.blk_mem_gen_1.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
-Block Memory Generator module Controller_w_BRAM_TB.UUT.br_coupler.BRAM_HIER.BRAM_HIER_i.bram_hier_C1.blk_mem_gen_2.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module Controller_w_BRAM_TB.UUT.\genblk1[0].br_coupler .BRAM_HIER.BRAM_HIER_i.bram_hier_C1.blk_mem_gen_0.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module Controller_w_BRAM_TB.UUT.\genblk1[0].br_coupler .BRAM_HIER.BRAM_HIER_i.bram_hier_C1.blk_mem_gen_1.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module Controller_w_BRAM_TB.UUT.\genblk1[0].br_coupler .BRAM_HIER.BRAM_HIER_i.bram_hier_C1.blk_mem_gen_2.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module Controller_w_BRAM_TB.UUT.\genblk1[1].br_coupler .BRAM_HIER.BRAM_HIER_i.bram_hier_C1.blk_mem_gen_0.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module Controller_w_BRAM_TB.UUT.\genblk1[1].br_coupler .BRAM_HIER.BRAM_HIER_i.bram_hier_C1.blk_mem_gen_1.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module Controller_w_BRAM_TB.UUT.\genblk1[1].br_coupler .BRAM_HIER.BRAM_HIER_i.bram_hier_C1.blk_mem_gen_2.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module Controller_w_BRAM_TB.UUT.\genblk1[2].br_coupler .BRAM_HIER.BRAM_HIER_i.bram_hier_C1.blk_mem_gen_0.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module Controller_w_BRAM_TB.UUT.\genblk1[2].br_coupler .BRAM_HIER.BRAM_HIER_i.bram_hier_C1.blk_mem_gen_1.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module Controller_w_BRAM_TB.UUT.\genblk1[2].br_coupler .BRAM_HIER.BRAM_HIER_i.bram_hier_C1.blk_mem_gen_2.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Stopped at time : 1235 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v" Line 307
+blk_mem_gen_v8_4_4 WARNING: Address 7fc is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 7fc is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 7fc is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 7fc is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 7fc is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 7fc is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 7fc is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 7fc is outside range for B Read
+blk_mem_gen_v8_4_4 WARNING: Address 7fc is outside range for B Read
 cSum =         18 ; count =           x ; @AA@
-cSum =         19 ; count =           x ; @AA@
-cSum =         20 ; count =           x ; @AA@
-cSum =         21 ; count =           x ; @AA@
-cSum =         22 ; count =           x ; @AA@
-cSum =         23 ; count =           x ; @AA@
-cSum =         26 ; count =           x ; @AA@
-cSum =         27 ; count =           x ; @AA@
-cSum =         28 ; count =           x ; @AA@
-cSum =         29 ; count =           x ; @AA@
-cSum =         30 ; count =           x ; @AA@
-cSum =         31 ; count =           x ; @AA@
-cSum =         34 ; count =           x ; @AA@
-cSum =         35 ; count =           x ; @AA@
-cSum =         36 ; count =           x ; @AA@
-cSum =         37 ; count =           x ; @AA@
-cSum =         38 ; count =           x ; @AA@
-cSum =         39 ; count =           x ; @AA@
-cSum =         42 ; count =           x ; @AA@
-cSum =         43 ; count =           x ; @AA@
-cSum =         44 ; count =           x ; @AA@
-cSum =         45 ; count =           x ; @AA@
-cSum =         46 ; count =           x ; @AA@
-cSum =         47 ; count =           x ; @AA@
-cSum =         50 ; count =           x ; @AA@
-cSum =         51 ; count =           x ; @AA@
-cSum =         52 ; count =           x ; @AA@
-cSum =         53 ; count =           x ; @AA@
-cSum =         54 ; count =           x ; @AA@
-cSum =         55 ; count =           x ; @AA@
-cSum =         58 ; count =           x ; @AA@
-cSum =         59 ; count =           x ; @AA@
-cSum =         60 ; count =           x ; @AA@
-cSum =         61 ; count =           x ; @AA@
-cSum =         62 ; count =           x ; @AA@
-cSum =         63 ; count =           x ; @AA@
-pass_cnt=         36
-$stop called at time : 3655 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/General/Controller_w_BRAM_TB.v" Line 311

@@ -9,8 +9,8 @@ INFO: [VRFC 10-311] analyzing module BRAM_HIER
 INFO: [VRFC 10-311] analyzing module bram_hier_C1_imp_NUKJR4
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module Convolution_Controller
-WARNING: [VRFC 10-526] concatenation with unsized literal; will interpret as 32 bits [C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v:230]
-WARNING: [VRFC 10-526] concatenation with unsized literal; will interpret as 32 bits [C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v:231]
+WARNING: [VRFC 10-526] concatenation with unsized literal; will interpret as 32 bits [C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v:149]
+WARNING: [VRFC 10-526] concatenation with unsized literal; will interpret as 32 bits [C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v:150]
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/src/BRAM_HIER/hdl/BRAM_HIER_wrapper.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module BRAM_HIER_wrapper
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/src/bram_coupler.v" into library xil_defaultlib
@@ -27,6 +27,6 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/FPGA_Files/
 INFO: [VRFC 10-311] analyzing module param_int_adder
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/General/Controller_w_BRAM_TB.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module Controller_w_BRAM_TB
-INFO: [VRFC 10-2458] undeclared symbol AddressSelect, assumed default net type wire [C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/General/Controller_w_BRAM_TB.v:130]
-WARNING: [VRFC 10-3248] data object 'i' is already declared [C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/General/Controller_w_BRAM_TB.v:244]
-WARNING: [VRFC 10-3703] second declaration of 'i' ignored [C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/General/Controller_w_BRAM_TB.v:244]
+INFO: [VRFC 10-2458] undeclared symbol AddressSelect, assumed default net type wire [C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/General/Controller_w_BRAM_TB.v:137]
+WARNING: [VRFC 10-3248] data object 'i' is already declared [C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/General/Controller_w_BRAM_TB.v:254]
+WARNING: [VRFC 10-3703] second declaration of 'i' ignored [C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/General/Controller_w_BRAM_TB.v:254]

@@ -4,6 +4,7 @@
 //Test stuff
 `define test_width 8
 `define test_height 8
+`define test_channels 3
 
 `define data_width 32
 `define addr_width 10
@@ -15,10 +16,10 @@ reg rand_test = 0;//Set test bench to use random variables
 
 reg    axi_clk;
 reg    axi_reset_n;
-wire [31:0] cSum;
-wire    cReady;
-wire [`kernel_size*`kernel_size*32-1:0] MULTIPLIER_INPUT;   //Flat output for data set
-wire [`kernel_size*`kernel_size*32-1:0] MULTIPLICAND_INPUT; //Flat output for filter set
+wire [`test_channels*32-1:0] cSum;
+wire [`test_channels-1:0] cReady;
+wire [`test_channels*`kernel_size*`kernel_size*32-1:0] MULTIPLIER_INPUT;   //Flat output for data set
+wire [`test_channels*`kernel_size*`kernel_size*32-1:0] MULTIPLICAND_INPUT; //Flat output for filter set
 wire [`kernel_size*`kernel_size-1:0] MULTIPLY_START;
 
 //AXI4-S slave i/f - Data stream port
@@ -65,13 +66,14 @@ Convolution_Controller
 #(
     .DATA_WIDTH(`data_width),
     .KERNEL_SIZE(3),
+    .CHANNELS(`test_channels),
     .BRAM_WIDTH(1800)
 )
 UUT (//IP Ports
     .axi_clk(axi_clk),
     .axi_reset_n(axi_reset_n),
     .cSum(cSum),
-    .cReady(cReady),
+    .cReady(&cReady),
     .MULTIPLIER_INPUT(MULTIPLIER_INPUT),   //Flat output for data set
     .MULTIPLICAND_INPUT(MULTIPLICAND_INPUT), //Flat output for filter set
     .MULTIPLY_START(MULTIPLY_START),
@@ -118,6 +120,11 @@ UUT (//IP Ports
     .s_axi_rlast(s_axi_rlast)
 );//End of ports
 
+genvar n;
+
+generate
+
+for(n=0;n<`test_channels;n=n+1)begin
 matrixAccelerator
 #( // Parameters
     .DATA_WIDTH(`data_width),
@@ -125,14 +132,17 @@ matrixAccelerator
 ) matrixAccel(   
     .Clk(axi_clk),
     .Rst(~axi_reset_n),
-    .multiplier_input(MULTIPLIER_INPUT),        //Flat input connector. Has width of `bitLength*`inputPortcount
-    .multiplicand_input(MULTIPLICAND_INPUT),    //Flat input connector. Has width of `bitLength*`inputPortcount
+    .multiplier_input       (MULTIPLIER_INPUT[(n*`kernel_size*`kernel_size*32)+:`kernel_size*`kernel_size*32]),        //Flat input connector. Has width of `bitLength*`inputPortcount
+    .multiplicand_input     (MULTIPLICAND_INPUT[(n*`kernel_size*`kernel_size*32)+:`kernel_size*`kernel_size*32]),    //Flat input connector. Has width of `bitLength*`inputPortcount
     .AddressSelect(AddressSelect),                  //Controls addressSelect for internal XBar                          
     .mStart(MULTIPLY_START),                      //Starts multiplication for all three multipliers
     .direct(1),
-    .finalAccumulate(cSum),
-    .finalReady(cReady)
+    .finalAccumulate(cSum[(n*32)+:32]),
+    .finalReady(cReady[n])
 );
+end
+
+endgenerate
 
 integer i, linecnt, columncnt;
 
@@ -242,6 +252,7 @@ setup = 1;
 end
 
 integer t, i;
+integer channel_cnt = 0;
 always#(`clkPeriod/2) axi_clk = ~axi_clk;
 //Begin data stream
 always @(posedge axi_clk)begin
@@ -267,15 +278,20 @@ always @(posedge axi_clk)begin
                 //Data on the
                 s_axis_data = (rand_test) ? ($urandom) % (`data_width-2) : (columncnt+linecnt*`test_width);
 //                s_axis_data = 1;
-                columncnt = columncnt+1;
 
-                if(columncnt >= `test_width)begin
-                    columncnt = 0;
-                    linecnt = linecnt + 1;
-                    if(linecnt >= `test_height)begin
-                        s_axis_last = 1;
+                channel_cnt = channel_cnt + 1;
+                if(channel_cnt>=`test_channels)begin
+                    channel_cnt = 0;
+                    columncnt = columncnt+1;
+                    if(columncnt >= `test_width)begin
+                        columncnt = 0;
+                        linecnt = linecnt + 1;
+                        if(linecnt >= `test_height)begin
+                            s_axis_last = 1;
+                        end
                     end
                 end
+                
             end
         end
     end    
