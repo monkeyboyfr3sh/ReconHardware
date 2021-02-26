@@ -37,54 +37,29 @@ wire [BUS_WIDTH-1:0]    doutb_1     [ROWS-1:0];
 wire                    enb_1       [ROWS-1:0];
 wire                    web_1       [ROWS-1:0];
 
-BRAM_HIER_wrapper
-BRAM_HIER
-(
-    // BRAMA C1R1
-  .BRAM_PORTA_C1R1_0_addr   (addra_1[0]),
-  .BRAM_PORTA_C1R1_0_clk    (clka_1[0]),
-  .BRAM_PORTA_C1R1_0_din    (dina_1[0]),
-  .BRAM_PORTA_C1R1_0_dout   (douta_1[0]),
-  .BRAM_PORTA_C1R1_0_en     (ena_1[0]),
-  .BRAM_PORTA_C1R1_0_we     (wea_1[0]),
-    // BRAMB C1R1
-  .BRAM_PORTB_C1R1_0_addr   (addrb_1[0]),
-  .BRAM_PORTB_C1R1_0_clk    (clkb_1[0]),
-  .BRAM_PORTB_C1R1_0_din    (dinb_1[0]),
-  .BRAM_PORTB_C1R1_0_dout   (doutb_1[0]),
-  .BRAM_PORTB_C1R1_0_en     (enb_1[0]),
-  .BRAM_PORTB_C1R1_0_we     (web_1[0]),
-
-    // BRAMA C1R2
-  .BRAM_PORTA_C1R2_0_addr   (addra_1[1]),
-  .BRAM_PORTA_C1R2_0_clk    (clka_1[1]),
-  .BRAM_PORTA_C1R2_0_din    (dina_1[1]),
-  .BRAM_PORTA_C1R2_0_dout   (douta_1[1]),
-  .BRAM_PORTA_C1R2_0_en     (ena_1[1]),
-  .BRAM_PORTA_C1R2_0_we     (wea_1[1]),
-    // BRAMB C1R2
-  .BRAM_PORTB_C1R2_0_addr   (addrb_1[1]),
-  .BRAM_PORTB_C1R2_0_clk    (clkb_1[1]),
-  .BRAM_PORTB_C1R2_0_din    (dinb_1[1]),
-  .BRAM_PORTB_C1R2_0_dout   (doutb_1[1]),
-  .BRAM_PORTB_C1R2_0_en     (enb_1[1]),
-  .BRAM_PORTB_C1R2_0_we     (web_1[1]),
-
-    // BRAMA C1R3
-  .BRAM_PORTA_C1R3_0_addr   (addra_1[2]),
-  .BRAM_PORTA_C1R3_0_clk    (clka_1[2]),
-  .BRAM_PORTA_C1R3_0_din    (dina_1[2]),
-  .BRAM_PORTA_C1R3_0_dout   (douta_1[2]),
-  .BRAM_PORTA_C1R3_0_en     (ena_1[2]),
-  .BRAM_PORTA_C1R3_0_we     (wea_1[2]),
-    // BRAMB C1R3
-  .BRAM_PORTB_C1R3_0_addr   (addrb_1[2]),
-  .BRAM_PORTB_C1R3_0_clk    (clkb_1[2]),
-  .BRAM_PORTB_C1R3_0_din    (dinb_1[2]),
-  .BRAM_PORTB_C1R3_0_dout   (doutb_1[2]),
-  .BRAM_PORTB_C1R3_0_en     (enb_1[2]),
-  .BRAM_PORTB_C1R3_0_we     (web_1[2])
-);
+genvar i;
+generate
+for(i=0;i<ROWS;i=i+1)begin
+    BRAM_wrapper
+    BRAM
+    (
+        // BRAMA
+      .BRAM_PORTA_0_addr   (addra_1[i]),
+      .BRAM_PORTA_0_clk    (clka_1[i]),
+      .BRAM_PORTA_0_din    (dina_1[i]),
+      .BRAM_PORTA_0_dout   (douta_1[i]),
+      .BRAM_PORTA_0_en     (ena_1[i]),
+      .BRAM_PORTA_0_we     (wea_1[i]),
+        // BRAMB
+      .BRAM_PORTB_0_addr   (addrb_1[i]),
+      .BRAM_PORTB_0_clk    (clkb_1[i]),
+      .BRAM_PORTB_0_din    (dinb_1[i]),
+      .BRAM_PORTB_0_dout   (doutb_1[i]),
+      .BRAM_PORTB_0_en     (enb_1[i]),
+      .BRAM_PORTB_0_we     (web_1[i])
+    );
+end
+endgenerate
 
 // Decoupler regs
 reg [ADDR_WIDTH-1:0] wr_add;
@@ -97,7 +72,6 @@ assign full = & row_full;
 assign valid = valid_fifo[1];
 // BRAM Signals ***************************************************
 
-genvar i;
 generate
 
 for(i=0;i<ROWS;i=i+1)begin

@@ -313,7 +313,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>7f4ac560</spirit:value>
+            <spirit:value>faed7289</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -332,7 +332,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>9770b90f</spirit:value>
+            <spirit:value>45bbfdfd</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -346,7 +346,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>a07606d5</spirit:value>
+            <spirit:value>18afe8da</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -383,7 +383,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.AXI_BUS_WIDTH&apos;)) - 1)">31</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.CHANNELS&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.AXI_BUS_WIDTH&apos;))) - 1)">95</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -413,7 +413,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.KERNEL_SIZE&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.KERNEL_SIZE&apos;))) * spirit:decode(id(&apos;MODELPARAM_VALUE.AXI_BUS_WIDTH&apos;))) - 1)">287</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.CHANNELS&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.K_SQUARED&apos;))) * spirit:decode(id(&apos;MODELPARAM_VALUE.AXI_BUS_WIDTH&apos;))) - 1)">863</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -433,7 +433,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.KERNEL_SIZE&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.KERNEL_SIZE&apos;))) * spirit:decode(id(&apos;MODELPARAM_VALUE.AXI_BUS_WIDTH&apos;))) - 1)">287</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.CHANNELS&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.K_SQUARED&apos;))) * spirit:decode(id(&apos;MODELPARAM_VALUE.AXI_BUS_WIDTH&apos;))) - 1)">863</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -453,7 +453,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.KERNEL_SIZE&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.KERNEL_SIZE&apos;))) - 1)">8</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.K_SQUARED&apos;)) - 1)">8</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -873,7 +873,7 @@
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>CTRL_REG_SIZE</spirit:name>
         <spirit:displayName>Ctrl Reg Size</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:id="MODELPARAM_VALUE.CTRL_REG_SIZE" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.DATA_BASE&apos;)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.KERNEL_SIZE&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.KERNEL_SIZE&apos;))) * 4))">96</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:id="MODELPARAM_VALUE.CTRL_REG_SIZE" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.DATA_BASE&apos;)) + (spirit:decode(id(&apos;MODELPARAM_VALUE.K_SQUARED&apos;)) * 4))">96</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>AXI_ADDR_WIDTH</spirit:name>
@@ -888,7 +888,7 @@
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>STATE_MAC_ADDR_WIDTH</spirit:name>
         <spirit:displayName>State Mac Addr Width</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:id="MODELPARAM_VALUE.STATE_MAC_ADDR_WIDTH" spirit:dependency="spirit:ceil(spirit:log(2,(spirit:decode(id(&apos;MODELPARAM_VALUE.KERNEL_SIZE&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.KERNEL_SIZE&apos;)))))">4</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:id="MODELPARAM_VALUE.STATE_MAC_ADDR_WIDTH" spirit:dependency="spirit:ceil(spirit:log(2,spirit:decode(id(&apos;MODELPARAM_VALUE.K_SQUARED&apos;))))">4</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>FILTER_BASE</spirit:name>
@@ -898,7 +898,7 @@
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>DATA_BASE</spirit:name>
         <spirit:displayName>Data Base</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:id="MODELPARAM_VALUE.DATA_BASE" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.FILTER_BASE&apos;)) + ((spirit:decode(id(&apos;MODELPARAM_VALUE.KERNEL_SIZE&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.KERNEL_SIZE&apos;))) * 4))">60</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="dependent" spirit:id="MODELPARAM_VALUE.DATA_BASE" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.FILTER_BASE&apos;)) + (spirit:decode(id(&apos;MODELPARAM_VALUE.K_SQUARED&apos;)) * 4))">60</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>BRAM_WIDTH</spirit:name>
@@ -910,55 +910,43 @@
         <spirit:displayName>Axi Bus Width</spirit:displayName>
         <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.AXI_BUS_WIDTH">32</spirit:value>
       </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>K_SQUARED</spirit:name>
+        <spirit:displayName>K Squared</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.K_SQUARED" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.KERNEL_SIZE&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.KERNEL_SIZE&apos;)))">9</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>CHANNELS</spirit:name>
+        <spirit:displayName>Channels</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.CHANNELS">3</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>FINAL_CHANNEL</spirit:name>
+        <spirit:displayName>Final Channel</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.FINAL_CHANNEL" spirit:dependency="(2 ** (spirit:decode(id(&apos;MODELPARAM_VALUE.CHANNELS&apos;)) - 1))">4</spirit:value>
+      </spirit:modelParameter>
     </spirit:modelParameters>
   </spirit:model>
   <spirit:fileSets>
     <spirit:fileSet>
       <spirit:name>xilinx_anylanguagesynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>src/BRAM_HIER/BRAM_HIER_ooc.xdc</spirit:name>
-        <spirit:userFileType>xdc</spirit:userFileType>
-        <spirit:userFileType>SCOPED_TO_REF_BRAM_HIER</spirit:userFileType>
-        <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
-        <spirit:define>
-          <spirit:name>processing_order</spirit:name>
-          <spirit:value>early</spirit:value>
-        </spirit:define>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/BRAM_HIER/ip/BRAM_HIER_blk_mem_gen_0_2/BRAM_HIER_blk_mem_gen_0_2.xci</spirit:name>
+        <spirit:name>src/BRAM/ip/BRAM_blk_mem_gen_0_0/BRAM_blk_mem_gen_0_0.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
-        <spirit:define>
-          <spirit:name>processing_order</spirit:name>
-          <spirit:value>early</spirit:value>
-        </spirit:define>
+        <spirit:userFileType>CELL_NAME_blk_mem_gen_0</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/BRAM_HIER/ip/BRAM_HIER_blk_mem_gen_0_1/BRAM_HIER_blk_mem_gen_0_1.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-        <spirit:define>
-          <spirit:name>processing_order</spirit:name>
-          <spirit:value>early</spirit:value>
-        </spirit:define>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/BRAM_HIER/ip/BRAM_HIER_blk_mem_gen_0_0/BRAM_HIER_blk_mem_gen_0_0.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-        <spirit:define>
-          <spirit:name>processing_order</spirit:name>
-          <spirit:value>early</spirit:value>
-        </spirit:define>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/BRAM_HIER/synth/BRAM_HIER.v</spirit:name>
+        <spirit:name>src/BRAM/synth/BRAM.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:define>
-          <spirit:name>processing_order</spirit:name>
-          <spirit:value>early</spirit:value>
-        </spirit:define>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/BRAM_HIER/hdl/BRAM_HIER_wrapper.v</spirit:name>
+        <spirit:name>src/BRAM/BRAM_ooc.xdc</spirit:name>
+        <spirit:userFileType>xdc</spirit:userFileType>
+        <spirit:userFileType>SCOPED_TO_REF_BRAM</spirit:userFileType>
+        <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>src/BRAM/hdl/BRAM_wrapper.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -968,14 +956,14 @@
       <spirit:file>
         <spirit:name>AXI_Convolution_Controller.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_405976ac</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_a03fbfce</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
       <spirit:name>xilinx_anylanguagesynthesis_xilinx_com_ip_blk_mem_gen_8_4__ref_view_fileset</spirit:name>
       <spirit:vendorExtensions>
         <xilinx:subCoreRef>
-          <xilinx:componentRef xsi:type="xilinx:componentRefType" xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="blk_mem_gen" xilinx:version="8.4">
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="blk_mem_gen" xilinx:version="8.4">
             <xilinx:mode xilinx:name="create_mode"/>
           </xilinx:componentRef>
         </xilinx:subCoreRef>
@@ -984,44 +972,21 @@
     <spirit:fileSet>
       <spirit:name>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>src/BRAM_HIER/ip/BRAM_HIER_blk_mem_gen_0_2/BRAM_HIER_blk_mem_gen_0_2.xci</spirit:name>
+        <spirit:name>src/BRAM/ip/BRAM_blk_mem_gen_0_0/BRAM_blk_mem_gen_0_0.xci</spirit:name>
         <spirit:userFileType>xci</spirit:userFileType>
-        <spirit:define>
-          <spirit:name>processing_order</spirit:name>
-          <spirit:value>early</spirit:value>
-        </spirit:define>
+        <spirit:userFileType>CELL_NAME_blk_mem_gen_0</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/BRAM_HIER/ip/BRAM_HIER_blk_mem_gen_0_1/BRAM_HIER_blk_mem_gen_0_1.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-        <spirit:define>
-          <spirit:name>processing_order</spirit:name>
-          <spirit:value>early</spirit:value>
-        </spirit:define>
+        <spirit:name>src/BRAM/sim/BRAM.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/BRAM_HIER/ip/BRAM_HIER_blk_mem_gen_0_0/BRAM_HIER_blk_mem_gen_0_0.xci</spirit:name>
-        <spirit:userFileType>xci</spirit:userFileType>
-        <spirit:define>
-          <spirit:name>processing_order</spirit:name>
-          <spirit:value>early</spirit:value>
-        </spirit:define>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/BRAM_HIER/hdl/BRAM_HIER_wrapper.v</spirit:name>
+        <spirit:name>src/BRAM/hdl/BRAM_wrapper.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>src/bram_coupler.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>src/BRAM_HIER/sim/BRAM_HIER.protoinst</spirit:name>
-        <spirit:fileType>unknown</spirit:fileType>
-        <spirit:define>
-          <spirit:name>processing_order</spirit:name>
-          <spirit:value>early</spirit:value>
-        </spirit:define>
       </spirit:file>
       <spirit:file>
         <spirit:name>AXI_Convolution_Controller.v</spirit:name>
@@ -1032,7 +997,7 @@
       <spirit:name>xilinx_anylanguagebehavioralsimulation_xilinx_com_ip_blk_mem_gen_8_4__ref_view_fileset</spirit:name>
       <spirit:vendorExtensions>
         <xilinx:subCoreRef>
-          <xilinx:componentRef xsi:type="xilinx:componentRefType" xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="blk_mem_gen" xilinx:version="8.4">
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="blk_mem_gen" xilinx:version="8.4">
             <xilinx:mode xilinx:name="create_mode"/>
           </xilinx:componentRef>
         </xilinx:subCoreRef>
@@ -1104,6 +1069,21 @@
       <spirit:displayName>Axi Bus Width</spirit:displayName>
       <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.AXI_BUS_WIDTH">32</spirit:value>
     </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>K_SQUARED</spirit:name>
+      <spirit:displayName>K Squared</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.K_SQUARED">9</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>CHANNELS</spirit:name>
+      <spirit:displayName>Channels</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.CHANNELS">3</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>FINAL_CHANNEL</spirit:name>
+      <spirit:displayName>Final Channel</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.FINAL_CHANNEL">4</spirit:value>
+    </spirit:parameter>
   </spirit:parameters>
   <spirit:vendorExtensions>
     <xilinx:coreExtensions>
@@ -1140,8 +1120,8 @@
       <xilinx:xpmLibraries>
         <xilinx:xpmLibrary>XPM_MEMORY</xilinx:xpmLibrary>
       </xilinx:xpmLibraries>
-      <xilinx:coreRevision>133</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2021-02-23T16:56:25Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>137</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2021-02-25T00:17:41Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@2cc23089_ARCHIVE_LOCATION">c:/github/reconhardware/fpga_files/projects/axi_convolution_controller/axi_convolution_controller.srcs/sources_1/new</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@6af59234_ARCHIVE_LOCATION">c:/github/reconhardware/fpga_files/projects/axi_convolution_controller/axi_convolution_controller.srcs/sources_1/new</xilinx:tag>
@@ -3564,16 +3544,68 @@
         <xilinx:tag xilinx:name="ui.data.coregen.dd@21d50bbb_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@4abbad9_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@63d64644_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1c76f4cf_ARCHIVE_LOCATION">/media/david/8c28c226-49fc-48fe-8ea0-9d8a16d4b685/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@498a449b_ARCHIVE_LOCATION">/media/david/8c28c226-49fc-48fe-8ea0-9d8a16d4b685/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@303ec43_ARCHIVE_LOCATION">/media/david/8c28c226-49fc-48fe-8ea0-9d8a16d4b685/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@62d91080_ARCHIVE_LOCATION">/media/david/8c28c226-49fc-48fe-8ea0-9d8a16d4b685/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f6bcb63_ARCHIVE_LOCATION">/media/david/8c28c226-49fc-48fe-8ea0-9d8a16d4b685/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@63fc638d_ARCHIVE_LOCATION">/media/david/8c28c226-49fc-48fe-8ea0-9d8a16d4b685/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a9f87c4_ARCHIVE_LOCATION">/media/david/8c28c226-49fc-48fe-8ea0-9d8a16d4b685/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@16d28a11_ARCHIVE_LOCATION">/media/david/8c28c226-49fc-48fe-8ea0-9d8a16d4b685/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ed70ed9_ARCHIVE_LOCATION">/media/david/8c28c226-49fc-48fe-8ea0-9d8a16d4b685/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5dd5c6fd_ARCHIVE_LOCATION">/media/david/8c28c226-49fc-48fe-8ea0-9d8a16d4b685/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4fb168fe_ARCHIVE_LOCATION">/media/david/8c28c226-49fc-48fe-8ea0-9d8a16d4b685/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2786b89c_ARCHIVE_LOCATION">/media/david/8c28c226-49fc-48fe-8ea0-9d8a16d4b685/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4790e068_ARCHIVE_LOCATION">/media/david/8c28c226-49fc-48fe-8ea0-9d8a16d4b685/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a555ec0_ARCHIVE_LOCATION">/media/david/8c28c226-49fc-48fe-8ea0-9d8a16d4b685/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@cbb0d9b_ARCHIVE_LOCATION">/media/david/8c28c226-49fc-48fe-8ea0-9d8a16d4b685/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@693f21b6_ARCHIVE_LOCATION">/media/david/8c28c226-49fc-48fe-8ea0-9d8a16d4b685/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@78fcfa35_ARCHIVE_LOCATION">/media/david/8c28c226-49fc-48fe-8ea0-9d8a16d4b685/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c1d79a8_ARCHIVE_LOCATION">/media/david/8c28c226-49fc-48fe-8ea0-9d8a16d4b685/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4fad24e1_ARCHIVE_LOCATION">/media/david/8c28c226-49fc-48fe-8ea0-9d8a16d4b685/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@464f4c73_ARCHIVE_LOCATION">/media/david/8c28c226-49fc-48fe-8ea0-9d8a16d4b685/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@46dc13c7_ARCHIVE_LOCATION">/media/david/8c28c226-49fc-48fe-8ea0-9d8a16d4b685/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@309e510b_ARCHIVE_LOCATION">/media/david/8c28c226-49fc-48fe-8ea0-9d8a16d4b685/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@217be9d0_ARCHIVE_LOCATION">/media/david/8c28c226-49fc-48fe-8ea0-9d8a16d4b685/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7de7f5a3_ARCHIVE_LOCATION">/media/david/8c28c226-49fc-48fe-8ea0-9d8a16d4b685/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1386c5ea_ARCHIVE_LOCATION">/media/david/8c28c226-49fc-48fe-8ea0-9d8a16d4b685/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18d3d90b_ARCHIVE_LOCATION">/media/david/8c28c226-49fc-48fe-8ea0-9d8a16d4b685/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1414b2a5_ARCHIVE_LOCATION">/media/david/8c28c226-49fc-48fe-8ea0-9d8a16d4b685/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@61a23bc0_ARCHIVE_LOCATION">/media/david/8c28c226-49fc-48fe-8ea0-9d8a16d4b685/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@35a93d3b_ARCHIVE_LOCATION">/media/david/8c28c226-49fc-48fe-8ea0-9d8a16d4b685/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ff9b8a5_ARCHIVE_LOCATION">/media/david/8c28c226-49fc-48fe-8ea0-9d8a16d4b685/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7621e766_ARCHIVE_LOCATION">/media/david/8c28c226-49fc-48fe-8ea0-9d8a16d4b685/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27b2ccf7_ARCHIVE_LOCATION">/media/david/8c28c226-49fc-48fe-8ea0-9d8a16d4b685/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15b2a42a_ARCHIVE_LOCATION">/media/david/8c28c226-49fc-48fe-8ea0-9d8a16d4b685/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b83b291_ARCHIVE_LOCATION">/media/david/8c28c226-49fc-48fe-8ea0-9d8a16d4b685/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b0b4d7e_ARCHIVE_LOCATION">/media/david/8c28c226-49fc-48fe-8ea0-9d8a16d4b685/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6609e49f_ARCHIVE_LOCATION">/media/david/8c28c226-49fc-48fe-8ea0-9d8a16d4b685/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@24f3dc27_ARCHIVE_LOCATION">/media/david/8c28c226-49fc-48fe-8ea0-9d8a16d4b685/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@550274c8_ARCHIVE_LOCATION">/media/david/8c28c226-49fc-48fe-8ea0-9d8a16d4b685/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@538be9b9_ARCHIVE_LOCATION">/media/david/8c28c226-49fc-48fe-8ea0-9d8a16d4b685/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c08844_ARCHIVE_LOCATION">/media/david/8c28c226-49fc-48fe-8ea0-9d8a16d4b685/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6554e0a_ARCHIVE_LOCATION">/media/david/8c28c226-49fc-48fe-8ea0-9d8a16d4b685/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f59c5e7_ARCHIVE_LOCATION">/media/david/8c28c226-49fc-48fe-8ea0-9d8a16d4b685/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2824f13a_ARCHIVE_LOCATION">/media/david/8c28c226-49fc-48fe-8ea0-9d8a16d4b685/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@57bdbab8_ARCHIVE_LOCATION">/media/david/8c28c226-49fc-48fe-8ea0-9d8a16d4b685/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13bb93b6_ARCHIVE_LOCATION">/media/david/8c28c226-49fc-48fe-8ea0-9d8a16d4b685/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@318dd756_ARCHIVE_LOCATION">/media/david/8c28c226-49fc-48fe-8ea0-9d8a16d4b685/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@45c150db_ARCHIVE_LOCATION">/media/david/8c28c226-49fc-48fe-8ea0-9d8a16d4b685/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40a5ab79_ARCHIVE_LOCATION">/media/david/8c28c226-49fc-48fe-8ea0-9d8a16d4b685/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@791deb21_ARCHIVE_LOCATION">/media/david/8c28c226-49fc-48fe-8ea0-9d8a16d4b685/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@482581f1_ARCHIVE_LOCATION">/media/david/8c28c226-49fc-48fe-8ea0-9d8a16d4b685/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b82b937_ARCHIVE_LOCATION">/media/david/8c28c226-49fc-48fe-8ea0-9d8a16d4b685/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@205464e6_ARCHIVE_LOCATION">/media/david/8c28c226-49fc-48fe-8ea0-9d8a16d4b685/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2020.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="dbd459d0"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="b9b7688b"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="92d74570"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="a89fbdd2"/>
-      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="44590387"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="7ca938b5"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="3311eb2b"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="980d86e9"/>
+      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="a7edacfb"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="fbe942a3"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

@@ -1,15 +1,15 @@
 Vivado Simulator 2020.1
 Time resolution is 1 ps
-Block Memory Generator module Controller_w_BRAM_TB.UUT.\genblk1[0].br_coupler .BRAM_HIER.BRAM_HIER_i.bram_hier_C1.blk_mem_gen_0.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
-Block Memory Generator module Controller_w_BRAM_TB.UUT.\genblk1[0].br_coupler .BRAM_HIER.BRAM_HIER_i.bram_hier_C1.blk_mem_gen_1.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
-Block Memory Generator module Controller_w_BRAM_TB.UUT.\genblk1[0].br_coupler .BRAM_HIER.BRAM_HIER_i.bram_hier_C1.blk_mem_gen_2.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
-Block Memory Generator module Controller_w_BRAM_TB.UUT.\genblk1[1].br_coupler .BRAM_HIER.BRAM_HIER_i.bram_hier_C1.blk_mem_gen_0.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
-Block Memory Generator module Controller_w_BRAM_TB.UUT.\genblk1[1].br_coupler .BRAM_HIER.BRAM_HIER_i.bram_hier_C1.blk_mem_gen_1.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
-Block Memory Generator module Controller_w_BRAM_TB.UUT.\genblk1[1].br_coupler .BRAM_HIER.BRAM_HIER_i.bram_hier_C1.blk_mem_gen_2.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
-Block Memory Generator module Controller_w_BRAM_TB.UUT.\genblk1[2].br_coupler .BRAM_HIER.BRAM_HIER_i.bram_hier_C1.blk_mem_gen_0.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
-Block Memory Generator module Controller_w_BRAM_TB.UUT.\genblk1[2].br_coupler .BRAM_HIER.BRAM_HIER_i.bram_hier_C1.blk_mem_gen_1.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
-Block Memory Generator module Controller_w_BRAM_TB.UUT.\genblk1[2].br_coupler .BRAM_HIER.BRAM_HIER_i.bram_hier_C1.blk_mem_gen_2.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
-Stopped at time : 1235 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v" Line 307
+Block Memory Generator module Controller_w_BRAM_TB.UUT.\genblk1[0].br_coupler .\genblk1[0].BRAM .BRAM_i.blk_mem_gen_0.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module Controller_w_BRAM_TB.UUT.\genblk1[0].br_coupler .\genblk1[1].BRAM .BRAM_i.blk_mem_gen_0.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module Controller_w_BRAM_TB.UUT.\genblk1[0].br_coupler .\genblk1[2].BRAM .BRAM_i.blk_mem_gen_0.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module Controller_w_BRAM_TB.UUT.\genblk1[1].br_coupler .\genblk1[0].BRAM .BRAM_i.blk_mem_gen_0.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module Controller_w_BRAM_TB.UUT.\genblk1[1].br_coupler .\genblk1[1].BRAM .BRAM_i.blk_mem_gen_0.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module Controller_w_BRAM_TB.UUT.\genblk1[1].br_coupler .\genblk1[2].BRAM .BRAM_i.blk_mem_gen_0.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module Controller_w_BRAM_TB.UUT.\genblk1[2].br_coupler .\genblk1[0].BRAM .BRAM_i.blk_mem_gen_0.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module Controller_w_BRAM_TB.UUT.\genblk1[2].br_coupler .\genblk1[1].BRAM .BRAM_i.blk_mem_gen_0.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module Controller_w_BRAM_TB.UUT.\genblk1[2].br_coupler .\genblk1[2].BRAM .BRAM_i.blk_mem_gen_0.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Stopped at time : 495 ns : File "/media/david/8c28c226-49fc-48fe-8ea0-9d8a16d4b685/GitHub/ReconHardware/FPGA_Files/Sources/TB/General/Controller_w_BRAM_TB.v" Line 266
 blk_mem_gen_v8_4_4 WARNING: Address 7fc is outside range for B Read
 blk_mem_gen_v8_4_4 WARNING: Address 7fc is outside range for B Read
 blk_mem_gen_v8_4_4 WARNING: Address 7fc is outside range for B Read
@@ -19,4 +19,6 @@ blk_mem_gen_v8_4_4 WARNING: Address 7fc is outside range for B Read
 blk_mem_gen_v8_4_4 WARNING: Address 7fc is outside range for B Read
 blk_mem_gen_v8_4_4 WARNING: Address 7fc is outside range for B Read
 blk_mem_gen_v8_4_4 WARNING: Address 7fc is outside range for B Read
-cSum =         18 ; count =           x ; @AA@
+cSum =         332041393404081340434 ; count =           x ; FAIL
+Bad output
+$finish called at time : 1325 ns : File "/media/david/8c28c226-49fc-48fe-8ea0-9d8a16d4b685/GitHub/ReconHardware/FPGA_Files/Sources/TB/General/Controller_w_BRAM_TB.v" Line 306

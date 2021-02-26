@@ -1,12 +1,10 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  --include "../../../../../../Sources" \
-"../../../../AXI_Convolution_Controller.ip_user_files/bd/BRAM_HIER/ip/BRAM_HIER_blk_mem_gen_0_0/sim/BRAM_HIER_blk_mem_gen_0_0.v" \
-"../../../../AXI_Convolution_Controller.ip_user_files/bd/BRAM_HIER/ip/BRAM_HIER_blk_mem_gen_0_1/sim/BRAM_HIER_blk_mem_gen_0_1.v" \
-"../../../../AXI_Convolution_Controller.ip_user_files/bd/BRAM_HIER/ip/BRAM_HIER_blk_mem_gen_0_2/sim/BRAM_HIER_blk_mem_gen_0_2.v" \
-"../../../../AXI_Convolution_Controller.ip_user_files/bd/BRAM_HIER/sim/BRAM_HIER.v" \
-"../../../../../../Sources/IP_Source/Convolution_Controller_v1.0/src/BRAM_HIER/hdl/BRAM_HIER_wrapper.v" \
+"../../../../AXI_Convolution_Controller.ip_user_files/bd/BRAM/ip/BRAM_blk_mem_gen_0_0/sim/BRAM_blk_mem_gen_0_0.v" \
+"../../../../AXI_Convolution_Controller.ip_user_files/bd/BRAM/sim/BRAM.v" \
+"../../../../../../Sources/IP_Source/Convolution_Controller_v1.0/src/BRAM/hdl/BRAM_wrapper.v" \
 "../../../../../../Sources/IP_Source/Convolution_Controller_v1.0/src/bram_coupler.v" \
-"../../../../../../Sources/TB/General/lb_tb.v" \
+"../../../../../../Sources/TB/General/BRAM_tb.v" \
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"

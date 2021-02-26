@@ -1,7 +1,4 @@
-Running: xsim.dir/bram_tb_behav/xsimk.exe -simmode gui -wdb bram_tb_behav.wdb -simrunnum 0 -socket 51219
+Running: xsim.dir/bram_tb_behav/xsimk -simmode gui -wdb bram_tb_behav.wdb -simrunnum 0 -socket 33795
 Design successfully loaded
-Design Loading Memory Usage: 6408 KB (Peak: 6408 KB)
-Design Loading CPU Usage: 0 ms
-Simulation completed
-Simulation Memory Usage: 7020 KB (Peak: 7020 KB)
-Simulation CPU Usage: 0 ms
+Design Loading Memory Usage: 44360 KB (Peak: 44360 KB)
+Design Loading CPU Usage: 30 ms

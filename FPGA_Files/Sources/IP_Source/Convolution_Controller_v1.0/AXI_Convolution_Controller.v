@@ -245,7 +245,10 @@ always @(posedge axi_clk)begin
 // Update channel select after writing
 if(lb_wr_en_comb|m_axis_rx_stat)begin
     channel_sel = channel_sel + 1;
-    channel_sel= !channel_sel ? 1 : channel_sel;
+    if(channel_sel>=CHANNELS)begin
+        channel_sel = 0;
+    end
+//    channel_sel= !channel_sel ? 1 : channel_sel;
 end
 end
 
@@ -271,7 +274,7 @@ always @(posedge axi_clk) begin
         memory_read = 1;
         m_axis_last = 0;
         m_axis_keep = 0;
-        channel_sel = 1;
+        channel_sel = 0;
     end
     
     else begin//!reset state

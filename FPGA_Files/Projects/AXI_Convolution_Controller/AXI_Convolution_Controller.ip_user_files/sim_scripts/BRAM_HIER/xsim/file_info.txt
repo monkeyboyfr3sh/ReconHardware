@@ -1,5 +1,0 @@
-BRAM_HIER_blk_mem_gen_0_0.v,verilog,xil_defaultlib,../../../bd/BRAM_HIER/ip/BRAM_HIER_blk_mem_gen_0_0/sim/BRAM_HIER_blk_mem_gen_0_0.v,
-BRAM_HIER_blk_mem_gen_0_1.v,verilog,xil_defaultlib,../../../bd/BRAM_HIER/ip/BRAM_HIER_blk_mem_gen_0_1/sim/BRAM_HIER_blk_mem_gen_0_1.v,
-BRAM_HIER_blk_mem_gen_0_2.v,verilog,xil_defaultlib,../../../bd/BRAM_HIER/ip/BRAM_HIER_blk_mem_gen_0_2/sim/BRAM_HIER_blk_mem_gen_0_2.v,
-BRAM_HIER.v,verilog,xil_defaultlib,../../../bd/BRAM_HIER/sim/BRAM_HIER.v,
-glbl.v,Verilog,xil_defaultlib,glbl.v

@@ -1,9 +1,0 @@
-verilog xil_defaultlib  \
-"../../../bd/BRAM_HIER/ip/BRAM_HIER_blk_mem_gen_0_0/sim/BRAM_HIER_blk_mem_gen_0_0.v" \
-"../../../bd/BRAM_HIER/ip/BRAM_HIER_blk_mem_gen_0_1/sim/BRAM_HIER_blk_mem_gen_0_1.v" \
-"../../../bd/BRAM_HIER/ip/BRAM_HIER_blk_mem_gen_0_2/sim/BRAM_HIER_blk_mem_gen_0_2.v" \
-"../../../bd/BRAM_HIER/sim/BRAM_HIER.v" \
-
-verilog xil_defaultlib "glbl.v"
-
-nosort
