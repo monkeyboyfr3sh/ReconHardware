@@ -1,0 +1,12 @@
+
+{ 
+    crc :  631708880088222388  , 
+    ccp_crc :  0  , 
+    cmdline : " -wto e8a0372fdc934f758c8bcf4b64e3a7a8 --incr --debug typical --relax --mt 8 -L blk_mem_gen_v8_4_4 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot BRAM_Coupler_TB_behav xil_defaultlib.BRAM_Coupler_TB xil_defaultlib.glbl" , 
+    buildDate : "May 27 2020" , 
+    buildTime : "19:59:15" , 
+    linkCmd : "/usr/bin/gcc -Wa,-W  -O -fPIC  -m64  -Wl,--no-as-needed  -Wl,--unresolved-symbols=ignore-all  -o \"xsim.dir/BRAM_Coupler_TB_behav/xsimk\"   \"xsim.dir/BRAM_Coupler_TB_behav/obj/xsim_0.lnx64.o\" \"xsim.dir/BRAM_Coupler_TB_behav/obj/xsim_1.lnx64.o\" -L\"/opt/Xilinx/Vivado/2020.1/lib/lnx64.o\" -lrdi_simulator_kernel   -lrdi_simbridge_kernel" , 
+    aggregate_nets : 
+    [ 
+    ] 
+} 

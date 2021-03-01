@@ -23,72 +23,68 @@ module bram_coupler
 
 // BRAM Channel 1 Ports
 // BRAM_A - Write Ports
-wire [12:0]             addra_1     [ROWS-1:0];
-wire                    clka_1      [ROWS-1:0];
-wire [BUS_WIDTH-1:0]    dina_1      [ROWS-1:0];
-wire [BUS_WIDTH-1:0]    douta_1     [ROWS-1:0];//DC
-wire                    ena_1       [ROWS-1:0];
-wire                    wea_1       [ROWS-1:0];
+wire [12:0]             addra     [ROWS-1:0];
+wire                    clka      [ROWS-1:0];
+wire [BUS_WIDTH-1:0]    dina      [ROWS-1:0];
+wire [BUS_WIDTH-1:0]    douta     [ROWS-1:0];//DC
+wire                    ena       [ROWS-1:0];
+wire                    wea       [ROWS-1:0];
 // BRAM_B - Read Ports
-wire [12:0]             addrb_1     [ROWS-1:0];
-wire                    clkb_1      [ROWS-1:0];
-wire [BUS_WIDTH-1:0]    dinb_1      [ROWS-1:0];//DC
-wire [BUS_WIDTH-1:0]    doutb_1     [ROWS-1:0];
-wire                    enb_1       [ROWS-1:0];
-wire                    web_1       [ROWS-1:0];
+wire [12:0]             addrb     [ROWS-1:0];
+wire                    clkb      [ROWS-1:0];
+wire [BUS_WIDTH-1:0]    dinb      [ROWS-1:0];//DC
+wire [BUS_WIDTH-1:0]    doutb     [ROWS-1:0];
+wire                    enb       [ROWS-1:0];
+wire                    web       [ROWS-1:0];
+
+// Decoupler regs
+reg [ADDR_WIDTH-1:0]        wr_add;
+reg [MUXS_WIDTH-1:0]        wr_order;
+wire [ROWS*BUS_WIDTH-1:0]   mux_data;
+reg [ROWS-1:0]              row_full;
+reg [1:0] valid_buff;
+
+assign full = & row_full;
+assign valid = valid_buff[1];
 
 genvar i;
 generate
 for(i=0;i<ROWS;i=i+1)begin
+    // BRAMA assigns
+    assign addra[i] = wr_add;
+    assign clka[i] = clk;
+    assign dina[i] = data_in;
+    assign ena[i] = wr_en ? (wr_order==i) : 0;
+    assign wea[i] = wr_en ? (wr_order==i) : 0;
+    // BRAMB assigns
+    assign addrb[i] = r_add;    
+//    assign addrb[i] = r_add-1;
+    assign clkb[i] = clk;
+    assign enb[i] = r_en;
+    assign web[i] = 0;
+    // Channel data output mux
+    assign mux_data[i*BUS_WIDTH+:BUS_WIDTH] = doutb[i];
+    assign data_out[i*BUS_WIDTH+:BUS_WIDTH] = mux_data[((i+wr_order)%ROWS)*BUS_WIDTH+:BUS_WIDTH];
+
+    // BRAM Wrapper Instantiation
     BRAM_wrapper
     BRAM
     (
         // BRAMA
-      .BRAM_PORTA_0_addr   (addra_1[i]),
-      .BRAM_PORTA_0_clk    (clka_1[i]),
-      .BRAM_PORTA_0_din    (dina_1[i]),
-      .BRAM_PORTA_0_dout   (douta_1[i]),
-      .BRAM_PORTA_0_en     (ena_1[i]),
-      .BRAM_PORTA_0_we     (wea_1[i]),
+      .BRAM_PORTA_0_addr   (addra[i]),
+      .BRAM_PORTA_0_clk    (clka[i]),
+      .BRAM_PORTA_0_din    (dina[i]),
+      .BRAM_PORTA_0_dout   (douta[i]),
+      .BRAM_PORTA_0_en     (ena[i]),
+      .BRAM_PORTA_0_we     (wea[i]),
         // BRAMB
-      .BRAM_PORTB_0_addr   (addrb_1[i]),
-      .BRAM_PORTB_0_clk    (clkb_1[i]),
-      .BRAM_PORTB_0_din    (dinb_1[i]),
-      .BRAM_PORTB_0_dout   (doutb_1[i]),
-      .BRAM_PORTB_0_en     (enb_1[i]),
-      .BRAM_PORTB_0_we     (web_1[i])
+      .BRAM_PORTB_0_addr   (addrb[i]),
+      .BRAM_PORTB_0_clk    (clkb[i]),
+      .BRAM_PORTB_0_din    (dinb[i]),
+      .BRAM_PORTB_0_dout   (doutb[i]),
+      .BRAM_PORTB_0_en     (enb[i]),
+      .BRAM_PORTB_0_we     (web[i])
     );
-end
-endgenerate
-
-// Decoupler regs
-reg [ADDR_WIDTH-1:0] wr_add;
-reg [MUXS_WIDTH-1:0] wr_order;
-wire [ROWS*BUS_WIDTH-1:0] mux_data;
-reg [ROWS-1:0] row_full;
-reg [FIFO_LENGTH-1:0] valid_fifo;
-reg primed;
-assign full = & row_full;
-assign valid = valid_fifo[1];
-// BRAM Signals ***************************************************
-
-generate
-
-for(i=0;i<ROWS;i=i+1)begin
-    // BRAMA assigns
-    assign addra_1[i] = wr_en ? wr_add : 0;
-    assign clka_1[i] = clk;
-    assign dina_1[i] = (wr_order==i) ? data_in : 0;
-    assign ena_1[i] = wr_en ? (wr_order==i) : 0;
-    assign wea_1[i] = wr_en ? (wr_order==i) : 0;
-    // BRAMB assigns
-    assign addrb_1[i] = r_en ? r_add : 0;
-    assign clkb_1[i] = clk;
-    assign enb_1[i] = r_en;
-    assign web_1[i] = ~r_en;
-    // Channel data output mux
-    assign mux_data[i*BUS_WIDTH+:BUS_WIDTH] = doutb_1[i];
-    assign data_out[i*BUS_WIDTH+:BUS_WIDTH] = mux_data[((i+wr_order)%ROWS)*BUS_WIDTH+:BUS_WIDTH];
 end
 endgenerate
 // BRAM Signals ***************************************************
@@ -100,34 +96,32 @@ if(rst)begin
     wr_add = 0;    
     wr_order = 0;
     row_full = 0;
-    primed = 0;
 end
 
 // Writing data
 if (wr_en) begin
-primed = 0;
-wr_add = wr_add + 1;
-row_full[wr_order] = 0;
-// End of row
-if(wr_add>=row_width)begin
-    wr_add = 0;
-    row_full[wr_order] = 1;
-    wr_order = wr_order + 1;
-    // Correct mux for rollover
-    if(wr_order >= ROWS)begin
-        wr_order = 0;    
+    wr_add = wr_add + 1;
+    row_full[wr_order] = 0;
+    
+    // End of row
+    if(wr_add>=row_width)begin
+        wr_add = 0;
+        row_full[wr_order] = 1;
+        wr_order = wr_order + 1;
+        
+        // Correct mux for rollover
+        if(wr_order >= ROWS)begin
+            wr_order = 0;    
+        end
     end
 end
-end
 
+// Reading data
 if(r_en)begin
     row_full[wr_order] = (r_add==row_width-1) ? 0 : row_full[wr_order];
 end
-
-valid_fifo[1] = primed ? r_en : valid_fifo[0];
-valid_fifo[0] = primed ? 0 : r_en;
-
-primed = valid_fifo[1] ? 1 : primed;
+    valid_buff = valid_buff << 1;
+    valid_buff[0] = r_en;
 
 end
 endmodule

@@ -37,9 +37,9 @@ module Convolution_Controller
     input [3:0] s_axis_keep,
     
     // AXI4-S master i/f - Output Data port
-    output wire  m_axis_valid,
-    output wire [AXI_BUS_WIDTH-1:0] m_axis_data,
-    input    m_axis_ready,
+    output reg  m_axis_valid,
+    output reg [AXI_BUS_WIDTH-1:0] m_axis_data,
+    input   m_axis_ready,
     output reg m_axis_last,
     output reg [3:0] m_axis_keep,
     
@@ -79,7 +79,6 @@ integer i,j;
     
 // State flags
 reg RDst, MULTIst,RSTst;
-//reg [$clog2(KERNEL_SIZE):0] newline_cnt;
 reg [$clog2(KERNEL_SIZE):0] lb_q_cnt,lb_r_cnt;
 reg lb_wr_en, lb_r_en;
 reg memory_read;
@@ -115,16 +114,15 @@ wire m_axis_rx_stat;
 
 assign bram_full        = &lb_full;
 assign s_axis_ready     = !bram_full & lb_wr_en & memory_read;
-assign m_axis_valid     = cReady & MULTIPLY_START;
+assign cSum_ready       = cReady & MULTIPLY_START;
 assign lb_wr_en_comb    = lb_wr_en & s_axis_valid & !bram_full;
 assign lb_rst           = ~axi_reset_n||lb_force_rst;
-assign r_add            = current_x+KERNEL_SIZE-lb_q_cnt; 
+assign r_add            = 1+current_x+KERNEL_SIZE-lb_q_cnt; 
 assign m_axis_rx_stat   = m_axis_ready & m_axis_valid;
 
 genvar gi,gj;
 generate
 for(gi=0;gi<CHANNELS;gi=gi+1)begin
-    assign m_axis_data = (gi==channel_sel) ? cSum[gi*32+:32] : 0;
     
     bram_coupler
     #(
@@ -243,13 +241,44 @@ end//End of block
 always @(posedge axi_clk)begin
 
 // Update channel select after writing
-if(lb_wr_en_comb|m_axis_rx_stat)begin
+if(lb_wr_en_comb)begin
     channel_sel = channel_sel + 1;
     if(channel_sel>=CHANNELS)begin
         channel_sel = 0;
     end
-//    channel_sel= !channel_sel ? 1 : channel_sel;
 end
+end
+
+integer cSum_i;
+integer cSum_buff_cnt;
+reg [AXI_BUS_WIDTH-1:0] cSum_buff [CHANNELS-1:0];
+
+always @(posedge axi_clk)begin
+    
+    // Data is recieved from matrix accelerators and none is waiting to be recieved
+    if(cSum_ready & !(cSum_buff_cnt))begin
+        for(cSum_i=0;cSum_i<CHANNELS;cSum_i=cSum_i+1)begin
+            cSum_buff[cSum_i] = cSum[cSum_i*AXI_BUS_WIDTH+:AXI_BUS_WIDTH];
+        end
+        cSum_buff_cnt = CHANNELS;
+    end
+end
+
+always @(posedge axi_clk)begin
+    
+    // Have put data on the bus and it was recieved
+    if(m_axis_rx_stat)begin
+        m_axis_valid = 0;
+        m_axis_data = 0;
+    end
+    
+    // Need to put data on the bus from cSum buffer
+    if((|cSum_buff_cnt) & (!m_axis_valid))begin
+        cSum_buff_cnt = cSum_buff_cnt - 1;
+        m_axis_valid = 1;
+        m_axis_keep = 1023;
+        m_axis_data = cSum_buff[cSum_buff_cnt];
+    end
 end
 
 always @(posedge axi_clk) begin
@@ -265,30 +294,37 @@ always @(posedge axi_clk) begin
         MULTIst = 0;
         current_x = 0;
         current_y = 0;
-        lb_q_cnt = KERNEL_SIZE;
+        lb_q_cnt = KERNEL_SIZE+1;
         lb_r_cnt = 0;
         MULTIPLY_START = 0;
         RDi = 0;
         lb_r_en = 0;
         lb_wr_en = 0;
         memory_read = 1;
+        channel_sel = 0;
+        
         m_axis_last = 0;
         m_axis_keep = 0;
-        channel_sel = 0;
+        m_axis_valid = 0;
+        m_axis_data = 0;
+        
+        cSum_buff_cnt = 0;
     end
     
     else begin//!reset state
     
-    // This condition is met after the controller has put data on the bus and the slave has recieved it
-    if(m_axis_rx_stat)begin
-        cCount = cCount + 1;//Track the number of convolutions completed
-        //Reset the keep signal and state machine
-        if(m_axis_last) begin
-            m_axis_last = 0;
-            m_axis_keep = 0;
-            lb_force_rst = 0;
-            RSTst = 1;
-        end
+    // This condition is met when matrix accelerator is outputting valid data
+    if(cSum_ready)begin
+        cCount = cCount + CHANNELS;//Track the number of convolutions completed
+        
+//        //Reset the keep signal and state machine
+//        if(m_axis_last) begin
+//            m_axis_last = 0;
+//            m_axis_keep = 0;
+//            lb_force_rst = 0;
+//            RSTst = 1;
+//        end
+        
         memory_read = (current_x==0) ? 1 : 0;
         MULTIPLY_START = 0;
         RDst = cStart; // Enter read state if machine is still running
@@ -307,10 +343,10 @@ always @(posedge axi_clk) begin
                     lb_wr_en = 0;
                     memory_read = 0;
                 end
-                
-                // Update read address
-                lb_q_cnt = lb_q_cnt-1;
-                lb_r_en = 0;
+                else begin
+                    // Update read address
+                    lb_q_cnt = lb_q_cnt-1;
+                end
             end
             
             // Data is ready from BRAM
@@ -343,11 +379,10 @@ always @(posedge axi_clk) begin
         else if(MULTIst) begin
             MULTIPLY_START = (2**K_SQUARED)-1;
             MULTIst = 0;
-            m_axis_keep = 1023;
         
             current_x = current_x+1;// Update position on image map
             if(current_x+KERNEL_SIZE > image_width)begin// End of row
-                lb_q_cnt = KERNEL_SIZE;
+                lb_q_cnt = KERNEL_SIZE+1;
                 lb_r_cnt = 0;
                 current_x = 0;
                 current_y = current_y+1;
@@ -357,7 +392,7 @@ always @(posedge axi_clk) begin
                 end
             end
             else begin
-                lb_q_cnt = 1;
+                lb_q_cnt = 2;
                 lb_r_cnt = KERNEL_SIZE - 1; 
             end
         end// End of MULTIst

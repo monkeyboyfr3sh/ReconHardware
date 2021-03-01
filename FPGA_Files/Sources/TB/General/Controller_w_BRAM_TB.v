@@ -4,8 +4,7 @@
 //Test stuff
 `define test_width 8
 `define test_height 8
-`define test_channels 3
-
+`define test_channels 2
 `define data_width 32
 `define addr_width 10
 `define kernel_size 3
@@ -297,36 +296,36 @@ always @(posedge axi_clk)begin
     end    
 end
 
-integer count = 0;
-integer pass_cnt = 0;
-always @(posedge cReady)begin
-    $display("cSum = %d ; count = %d ; %s",cSum,count%(2**`data_width),count%(2**`data_width)!=cSum?"FAIL":"PASS");
-    if(count%(2**`data_width)!=cSum)begin
-        $display("Bad output");
-        $finish;
-    end
-    else begin
-        pass_cnt = pass_cnt+1;
-    end
-    if((count%`test_width)==`test_width-3) begin
-        count = count + 3;    
-    end
-    else begin
-        count = count + 1;
-    end
-end
+//integer count = 0;
+//integer pass_cnt = 0;
+//always @(posedge cReady)begin
+//    $display("cSum = %d ; count = %d ; %s",cSum,count%(2**`data_width),count%(2**`data_width)!=cSum?"FAIL":"PASS");
+//    if(count%(2**`data_width)!=cSum)begin
+//        $display("Bad output");
+//        $finish;
+//    end
+//    else begin
+//        pass_cnt = pass_cnt+1;
+//    end
+//    if((count%`test_width)==`test_width-3) begin
+//        count = count + 3;    
+//    end
+//    else begin
+//        count = count + 1;
+//    end
+//end
 
-integer tf;
-integer fake_trig_target = 1;
-integer fake_trig_count=0;
-always @(negedge m_axis_last)begin
-    tf = $time;
-    if(tf>0)begin
-        if(fake_trig_count>=fake_trig_target)begin
-            $display("pass_cnt=%d",pass_cnt);
-            $stop;
-        end
-        fake_trig_count = fake_trig_count+1;
-    end
-end
+//integer tf;
+//integer fake_trig_target = 1;
+//integer fake_trig_count=0;
+//always @(negedge m_axis_last)begin
+//    tf = $time;
+//    if(tf>0)begin
+//        if(fake_trig_count>=fake_trig_target)begin
+//            $display("pass_cnt=%d",pass_cnt);
+//            $stop;
+//        end
+//        fake_trig_count = fake_trig_count+1;
+//    end
+//end
 endmodule
