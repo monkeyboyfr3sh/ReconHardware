@@ -1,7 +1,4 @@
-Running: xsim.dir/BRAM_Coupler_TB_behav/xsimk -simmode gui -wdb BRAM_Coupler_TB_behav.wdb -simrunnum 0 -socket 57359
+Running: xsim.dir/BRAM_Coupler_TB_behav/xsimk.exe -simmode gui -wdb BRAM_Coupler_TB_behav.wdb -simrunnum 0 -socket 51076
 Design successfully loaded
-Design Loading Memory Usage: 44536 KB (Peak: 44536 KB)
-Design Loading CPU Usage: 30 ms
-Simulation completed
-Simulation Memory Usage: 130632 KB (Peak: 183804 KB)
-Simulation CPU Usage: 90 ms
+Design Loading Memory Usage: 6212 KB (Peak: 6212 KB)
+Design Loading CPU Usage: 31 ms

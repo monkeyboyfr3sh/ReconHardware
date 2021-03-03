@@ -1,6 +1,0 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/FPGA_Files/Projects/AXI_Convolution_Controller/AXI_Convolution_Controller.sim/sim_1/synth/timing/xsim/Controller_Test_tb_time_synth.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Convolution_Controller
-INFO: [VRFC 10-311] analyzing module glbl
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/Controller_Test_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module Controller_Test_tb
-INFO: [VRFC 10-2458] undeclared symbol AddressSelect, assumed default net type wire [C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/Controller_Test_tb.v:124]

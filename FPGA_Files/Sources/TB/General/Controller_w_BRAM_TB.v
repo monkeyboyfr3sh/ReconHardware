@@ -4,7 +4,7 @@
 //Test stuff
 `define test_width 8
 `define test_height 8
-`define test_channels 2
+`define test_channels 1
 `define data_width 32
 `define addr_width 10
 `define kernel_size 3
@@ -63,10 +63,8 @@ reg s_axi_bready;
 
 Convolution_Controller 
 #(
-    .DATA_WIDTH(`data_width),
     .KERNEL_SIZE(3),
-    .CHANNELS(`test_channels),
-    .BRAM_WIDTH(1800)
+    .CHANNELS(`test_channels)
 )
 UUT (//IP Ports
     .axi_clk(axi_clk),
