@@ -50,8 +50,7 @@ module design_1_ila_0_0 (
 clk,
 trig_out,
 trig_out_ack,
-trig_in,
-trig_in_ack,
+
 probe0,
 probe1,
 probe2,
@@ -76,8 +75,7 @@ probe18
 input clk;
 output trig_out;
 input trig_out_ack;
-input trig_in;
-output trig_in_ack;
+
 input [0 : 0] probe0;
 input [31 : 0] probe1;
 input [1 : 0] probe2;

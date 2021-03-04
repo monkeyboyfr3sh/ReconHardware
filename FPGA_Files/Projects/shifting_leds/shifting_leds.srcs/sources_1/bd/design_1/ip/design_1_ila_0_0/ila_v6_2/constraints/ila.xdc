@@ -89,11 +89,6 @@ set_false_path -from [get_pins -filter {REF_PIN_NAME=~CLK} -of_objects [get_cell
 set_false_path -from [get_pins -filter {REF_PIN_NAME=~CLK} -of_objects [get_cells -hierarchical -filter { NAME =~  "*ila_core_inst/u_ila_cap_ctrl/U_NS1/I_YESLUT6.U_SRL32_*" }]] -to [get_cells -hierarchical -filter { NAME =~ "*ila_core_inst/u_ila_cap_ctrl/U_NS1/I_YESLUT6.I_YES_OREG.O_reg*" && IS_SEQUENTIAL} ]
 
 
-##
-## TRIGIN False Paths
-##
-set_false_path -from [get_cells -hierarchical -filter { NAME =~  "*ila_core_inst/u_ila_regs/reg_7/I_EN_CTL_EQ1.U_CTL/xsdb_reg_reg[2]*" && IS_SEQUENTIAL}] -to [get_cells -hierarchical -filter { NAME =~  "*ila_core_inst/I_EN_TRIGIN.shifted_trig_in_reg[*]" && IS_SEQUENTIAL}]
-set_false_path -to [get_cells -hierarchical -filter {NAME =~ "*sync_reg1_reg*"}]
 
 ##
 ## TRIGOUT False Paths

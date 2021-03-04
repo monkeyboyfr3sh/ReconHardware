@@ -1,0 +1,18 @@
+set_property SRC_FILE_INFO {cfile:c:/GitHub/ReconHardware/FPGA_Files/Projects/audio/audio.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc rfile:../../../audio.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc id:1 order:EARLY scoped_inst:design_1_i/processing_system7_0} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/GitHub/ReconHardware/FPGA_Files/Projects/audio/audio.srcs/constrs_1/new/gh.xdc rfile:../../../audio.srcs/constrs_1/new/gh.xdc id:2} [current_design]
+current_instance design_1_i/processing_system7_0
+set_property src_info {type:SCOPED_XDC file:1 line:2 export:INPUT save:INPUT read:READ} [current_design]
+create_clock -period 10.000 [get_ports {}]
+current_instance
+set_property src_info {type:XDC file:2 line:1 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN K9 [get_ports Vp_Vn_0_v_p]
+set_property src_info {type:XDC file:2 line:2 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN R14 [get_ports {leds_0[0]}]
+set_property src_info {type:XDC file:2 line:3 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN P14 [get_ports {leds_0[1]}]
+set_property src_info {type:XDC file:2 line:4 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN N16 [get_ports {leds_0[2]}]
+set_property src_info {type:XDC file:2 line:5 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN M14 [get_ports {leds_0[3]}]
+set_property src_info {type:XDC file:2 line:6 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN D19 [get_ports convst_in_0]

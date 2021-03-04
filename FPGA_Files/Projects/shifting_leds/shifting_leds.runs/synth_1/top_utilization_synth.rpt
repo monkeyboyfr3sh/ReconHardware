@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date         : Thu Feb 18 15:21:36 2021
+| Date         : Wed Mar  3 20:52:32 2021
 | Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 | Command      : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
 | Design       : top
@@ -158,32 +158,18 @@ Table of Contents
 |             Ref Name            | Used |
 +---------------------------------+------+
 | shift_left                      |    1 |
-| design_1_xbar_0                 |    1 |
+| design_1_xbar_3                 |    1 |
 | design_1_rst_ps7_0_100M_1       |    1 |
 | design_1_processing_system7_0_0 |    1 |
-| design_1_ila_2_0                |    1 |
-| design_1_ila_0_2                |    1 |
-| design_1_ila_0_1                |    1 |
+| design_1_ila_2_1                |    1 |
+| design_1_ila_1_0                |    1 |
+| design_1_ila_0_3                |    1 |
 | design_1_ila_0_0                |    1 |
 | design_1_dfx_controller_0_0     |    1 |
-| design_1_axi_quad_spi_0_0       |    1 |
 | design_1_axi_gpio_0_0           |    1 |
-| design_1_axi_dma_0_0            |    1 |
-| design_1_auto_us_3              |    1 |
-| design_1_auto_us_2              |    1 |
-| design_1_auto_us_1              |    1 |
-| design_1_auto_us_0              |    1 |
-| design_1_auto_pc_5              |    1 |
-| design_1_auto_pc_4              |    1 |
-| design_1_auto_pc_3              |    1 |
-| design_1_auto_pc_2              |    1 |
-| design_1_auto_pc_1              |    1 |
-| design_1_auto_pc_0              |    1 |
-| design_1_auto_ds_4              |    1 |
-| design_1_auto_ds_3              |    1 |
-| design_1_auto_ds_2              |    1 |
-| design_1_auto_ds_1              |    1 |
-| design_1_auto_ds_0              |    1 |
+| design_1_auto_us_4              |    1 |
+| design_1_auto_pc_7              |    1 |
+| design_1_auto_pc_6              |    1 |
 +---------------------------------+------+
 
 

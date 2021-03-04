@@ -20,13 +20,7 @@ BD
     .ICAP_0_csib(icap_csib),
     .ICAP_0_i(icap_i),
     .ICAP_0_o(icap_o),
-    .ICAP_0_rdwrb(icap_rdwrb),
-    
-    // Debugging
-    .probe_icap_csib_0(icap_csib),
-    .probe_icap_i_0(icap_i),
-    .probe_icap_o_0(icap_o),
-    .probe_icap_rdwrb_0(icap_rdwrb)
+    .ICAP_0_rdwrb(icap_rdwrb)
 );
 
 ICAPE2 #(

@@ -70,7 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "shift_right_synth_1" START { ROLLUP_AUTO }
-set_param ced.repoPaths C:/Users/monke/AppData/Roaming/Xilinx/Vivado/2020.1/xhub/ced_store/Vivado_example_project
 set_param project.vivado.isBlockSynthRun true
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg400-1

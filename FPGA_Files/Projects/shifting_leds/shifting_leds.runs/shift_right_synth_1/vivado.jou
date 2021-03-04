@@ -2,8 +2,8 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Fri Feb 12 16:46:00 2021
-# Process ID: 12500
+# Start of session at: Wed Mar  3 17:43:28 2021
+# Process ID: 9516
 # Current directory: C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/shift_right_synth_1
 # Command line: vivado.exe -log shift_right.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source shift_right.tcl
 # Log file: C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.runs/shift_right_synth_1/shift_right.vds

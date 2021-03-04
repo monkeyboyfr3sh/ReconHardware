@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchConfig="config_1" LaunchTime="1613683333">
+<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchConfig="config_1" LaunchTime="1614826370">
   <File Type="BITSTR-BMM" Name="top_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="top_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="top_timing_summary_init.rpt"/>
@@ -127,9 +127,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
-      <Desc>Default settings for Implementation.</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>
@@ -142,16 +140,17 @@
       <Option Id="BinFile">1</Option>
     </Step>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_dma_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_dfx_controller_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_ila_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_ila_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_processing_system7_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_ila_0_2"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_ila_2_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_auto_pc_6"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_rst_ps7_0_100M_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_quad_spi_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_ila_0_3"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_ila_2_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_auto_pc_7"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_auto_us_4"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_ila_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_xbar_3"/>
   <BlockFileSet Type="BlockSrcs" Name="shift_left"/>
 </GenRun>

@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-//Date        : Thu Feb 18 15:19:51 2021
+//Date        : Wed Mar  3 17:43:10 2021
 //Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
@@ -38,10 +38,6 @@ module design_1_wrapper
     ICAP_0_i,
     ICAP_0_o,
     ICAP_0_rdwrb,
-    probe_icap_csib_0,
-    probe_icap_i_0,
-    probe_icap_o_0,
-    probe_icap_rdwrb_0,
     vsm_shifter_hw_triggers_0);
   output [31:0]COUNT_0_tri_o;
   inout [14:0]DDR_addr;
@@ -71,10 +67,6 @@ module design_1_wrapper
   output [31:0]ICAP_0_i;
   input [31:0]ICAP_0_o;
   output ICAP_0_rdwrb;
-  input [0:0]probe_icap_csib_0;
-  input [31:0]probe_icap_i_0;
-  input [31:0]probe_icap_o_0;
-  input [0:0]probe_icap_rdwrb_0;
   input [1:0]vsm_shifter_hw_triggers_0;
 
   wire [31:0]COUNT_0_tri_o;
@@ -105,10 +97,6 @@ module design_1_wrapper
   wire [31:0]ICAP_0_i;
   wire [31:0]ICAP_0_o;
   wire ICAP_0_rdwrb;
-  wire [0:0]probe_icap_csib_0;
-  wire [31:0]probe_icap_i_0;
-  wire [31:0]probe_icap_o_0;
-  wire [0:0]probe_icap_rdwrb_0;
   wire [1:0]vsm_shifter_hw_triggers_0;
 
   design_1 design_1_i
@@ -140,9 +128,5 @@ module design_1_wrapper
         .ICAP_0_i(ICAP_0_i),
         .ICAP_0_o(ICAP_0_o),
         .ICAP_0_rdwrb(ICAP_0_rdwrb),
-        .probe_icap_csib_0(probe_icap_csib_0),
-        .probe_icap_i_0(probe_icap_i_0),
-        .probe_icap_o_0(probe_icap_o_0),
-        .probe_icap_rdwrb_0(probe_icap_rdwrb_0),
         .vsm_shifter_hw_triggers_0(vsm_shifter_hw_triggers_0));
 endmodule

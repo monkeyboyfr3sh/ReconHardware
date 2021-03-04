@@ -1,0 +1,24 @@
+Design Route Status
+                                               :      # nets :
+   ------------------------------------------- : ----------- :
+   # of logical nets.......................... :        4094 :
+       # of nets not needing routing.......... :        1162 :
+           # of internally routed nets........ :        1121 :
+           # of nets with no loads............ :          41 :
+       # of routable nets..................... :        2932 :
+           # of fully routed nets............. :        2930 :
+       # of nets with routing errors.......... :           2 :
+           # of nets with some unrouted pins.. :           2 :
+   ------------------------------------------- : ----------- :
+
+
+Nets with Routing Errors:
+  Vp_Vn_0_v_n_IBUF
+    Unrouted Pins:
+      u_ila_0/inst/ila_core_inst/shifted_data_in_reg[7][17]_srl8/D
+      u_ila_0/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[2].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[0]/D
+  Vp_Vn_0_v_p_IBUF
+    Unrouted Pins:
+      u_ila_0/inst/ila_core_inst/shifted_data_in_reg[7][18]_srl8/D
+      u_ila_0/inst/ila_core_inst/u_trig/U_TM/N_DDR_MODE.G_NMU[3].U_M/allx_typeA_match_detection.ltlib_v1_0_0_allx_typeA_inst/probeDelay1_reg[0]/D
+
