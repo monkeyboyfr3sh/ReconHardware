@@ -1,7 +1,0 @@
-17:24:15 **** Clean-only build of configuration Debug for project xprc_example_1 ****
-make clean 
-rm -rf  ./src/xprc_example.o  ./src/xprc_example.d  xprc_example_1.elf.size  xprc_example_1.elf
-' '
-
-17:24:15 Build Finished (took 105ms)
-

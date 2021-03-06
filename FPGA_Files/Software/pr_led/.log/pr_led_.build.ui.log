@@ -1,6 +1,2 @@
-2021-02-18T17:08:53.144446900255-17:08:53 **** Incremental Build of project pr_led ****
-000-buildplatform.bat 50503 pr_led no_domain_build 
-000-XSDB Server Channel: tcfchan#13
-00255-
-17:08:55 Build Finished (took 2s.58ms)
+2021-03-05T18:18:26.2454098000-Nothing to build in platform 'pr_led'
 

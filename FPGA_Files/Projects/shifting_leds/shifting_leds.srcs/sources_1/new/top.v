@@ -10,7 +10,7 @@ wire [31:0] ps_count;
 wire [31:0] icap_o,icap_i;
 wire icap_csib,icap_rdwrb;
 
-design_1_wrapper
+design_2_wrapper
 BD
 (
     .FCLK_CLK0_0(clk),

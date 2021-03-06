@@ -1,0 +1,44 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Fri Mar  5 16:15:11 2021
+| Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
+| Command      : report_drc -file top_drc_opted.rpt -pb top_drc_opted.pb -rpx top_drc_opted.rpx
+| Design       : top
+| Device       : xc7z020clg400-1
+| Speed File   : -1
+| Design State : Synthesized
+------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 1
++---------+----------+---------------------------------+------------+
+| Rule    | Severity | Description                     | Violations |
++---------+----------+---------------------------------+------------+
+| HDPR-26 | Warning  | Improper Pblock column boundary | 1          |
++---------+----------+---------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+HDPR-26#1 Warning
+Improper Pblock column boundary  
+The Reconfigurable Pblock 'pblock_shifter' has a 'right' edge that terminates on an improper column boundary at tile 'CLBLL_L_X32Y49' (SLICE_X49Y49 SLICE_X48Y49).
+Resolution: Set the Pblock property SNAPPING_MODE to value of ON using the following constraint, or modify the X specification of the pblock to avoid this edge.
+Example: set_property SNAPPING_MODE ON [get_pblocks 'pblock_shifter']
+Please refer to the Xilinx Dynamic Function eXchange User Guide.
+Related violations: <none>
+
+
