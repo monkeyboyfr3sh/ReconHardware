@@ -1,29 +1,10 @@
-18:18:26 **** Incremental Build of configuration Debug for project pr_led_sw ****
+19:40:48 **** Incremental Build of configuration Debug for project pr_led_sw ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 make --no-print-directory main-build
-'Building file: ../src/helloworld.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/sw/pr_led/standalone_domain/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:62:5: warning: implicit declaration of function 'SD_Init' [-Wimplicit-function-declaration]
-   62 |     SD_Init();
-      |     ^~~~~~~
-'Finished building: ../src/helloworld.c'
-' '
-'Building target: pr_led_sw.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/sw/pr_led/standalone_domain/bsplib/lib -o "pr_led_sw.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
-'Finished building target: pr_led_sw.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size pr_led_sw.elf  |tee "pr_led_sw.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  52300	   1188	  25584	  79072	  134e0	pr_led_sw.elf
-'Finished building: pr_led_sw.elf.size'
-' '
+make[1]: Nothing to be done for 'main-build'.
 
-18:18:26 Build Finished (took 609ms)
+19:40:48 Build Finished (took 231ms)
 

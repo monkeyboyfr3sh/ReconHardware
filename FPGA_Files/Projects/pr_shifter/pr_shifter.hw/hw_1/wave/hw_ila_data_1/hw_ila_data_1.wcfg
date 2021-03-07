@@ -10,7 +10,7 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="1025fs"></ZoomEndTime>
+      <ZoomEndTime time="8560fs"></ZoomEndTime>
       <Cursor1Time time="0fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
@@ -18,8 +18,6 @@
       <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="136" />
-   <wave_markers>
-   </wave_markers>
    <wvobject fp_name="BD/design_2_i/dfx_controller_0_M_AXI_MEM_WREADY" type="logic">
       <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">BD/design_2_i/dfx_controller_0_M_AXI_MEM_WREADY</obj_property>

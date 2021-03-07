@@ -31,42 +31,185 @@
 ******************************************************************************/
 
 /*
- * helloworld.c: simple test application
+ * prc_demo.c: simple prc_demo application
  *
- * This application configures UART 16550 to baud rate 9600.
- * PS7 UART (Zynq) is not initialized by this application, since
- * bootrom/bsp configures it to baud rate 115200
- *
- * ------------------------------------------------
- * | UART TYPE   BAUD RATE                        |
- * ------------------------------------------------
- *   uartns550   9600
- *   uartlite    Configurable only in HW design
- *   ps7_uart    115200 (configured by bootrom/bsp)
+ * This application configures UART 16550 to baud rate 115200.
  */
 
 #include <stdio.h>
+#include <stdbool.h>
 #include "platform.h"
-#include "xil_printf.h"
 #include "xparameters.h"
 #include "xil_printf.h"
-#include "xgpio.h"
-#include "xil_io.h"
-#include "xil_types.h"
 #include "ff.h"
+#include "xil_io.h"
+#include "xgpio.h"
+#include "xprc.h"
+#include "xdevcfg.h"
+
+/* Prototype start */
+
+unsigned short extract_bits(unsigned short value, int begin, int end);
+void PrintStatusReg(XPrc* Prc, u16 VS_ID);
+int SD_Transfer(char *FileName, u32 distAddr, u32 size);
+int SD_Init();
+
+/* Prototype end */
+
+#define XDCFG_DEVICE_ID XPAR_PS7_DEV_CFG_0_DEVICE_ID
+
+// GPIO DEVICE ID
+#define GPIO_DEVICE_ID  XPAR_AXI_GPIO_0_DEVICE_ID
+#define COUNT_INIT		25000000
+
+// VSM IDs
+#define XPRC_VS_SHIFT_ID 0
+
+// RM IDs
+#define XPRC_VS_SHIFT_RM_SHIFT_LEFT_ID 0
+#define XPRC_VS_SHIFT_RM_SHIFT_RIGHT_ID 1
+
+// RM Mem Addr
+#define PARTIAL_SPI_SHIFT_LEFT_ADDR		XPAR_PS7_RAM_0_S_AXI_BASEADDR+0x1A3A00
+#define PARTIAL_SPI_SHIFT_RIGHT_ADDR	XPAR_PS7_RAM_0_S_AXI_BASEADDR+0x1A8E80
+
+// RM Sizes
+#define PARTIAL_SHIFT_LEFT_RM_SIZE 146536
+#define PARTIAL_SHIFT_RIGHT_RM_SIZE 146536
 
 int main()
 {
-    init_platform();
+//	u32 Exit   = 0;
+//	u32 Option = 1;
 
-    SD_Init();
-//    SD_Transfer(filename.bin, Addr, Size);
+	// Status vars
+	u32 copy_status;
+	u32 gpio_init;
+	u32 sd_init;
+	u32 dcfg_init;
+	u32 prc_init;
+	u32 prc_status;
+	u32 prc_status_state;
+	u32 prc_status_last_state;
+	u32 prc_status_err;
 
-    print("Hello World\n\r");
-    print("Successfully ran Hello World application");
-    cleanup_platform();
-    return 0;
+	// Device objects
+	XGpio Gpio;
+	XPrc Prc;
+	XPrc_Config *XPrcCfgPtr;
+	XDcfg XDcfg;
+	XDcfg_Config *XDcfgCfgPtr;
+
+	init_platform();
+
+	/* Initialize the GPIO driver */
+	gpio_init = XGpio_Initialize(&Gpio, GPIO_DEVICE_ID);
+	if (gpio_init != XST_SUCCESS) {
+	xil_printf("Gpio Initialization Failed\r\n");
+		return XST_FAILURE;
+	}
+
+	/* Set count channel to output */
+	XGpio_SetDataDirection(&Gpio, 1, 0);
+
+	/* Intialize count value */
+	XGpio_DiscreteWrite(&Gpio, 1, COUNT_INIT);
+
+	// Initialize SD card
+	sd_init = SD_Init();
+	if(sd_init != XST_SUCCESS){
+	  xil_printf("SD Initialization Failed\r\n");
+	  return XST_FAILURE;
+	}
+
+	// Copy SD data to DDR4
+	print("\r\nCopying SD content to DDR4...\r\n");
+	copy_status = SD_Transfer("left.bin", PARTIAL_SPI_SHIFT_LEFT_ADDR, PARTIAL_SHIFT_LEFT_RM_SIZE);
+	if (copy_status != XST_SUCCESS) {
+	return XST_FAILURE;
+	}
+
+	// Lookup device config pointer
+	XDcfgCfgPtr = XDcfg_LookupConfig(XDCFG_DEVICE_ID);
+	if (NULL == XDcfgCfgPtr) {
+	  xil_printf("Config Driver Initialization Failed\r\n");
+	  return XST_FAILURE;
+	}
+
+	// Initialize device config
+	dcfg_init = XDcfg_CfgInitialize(&XDcfg, XDcfgCfgPtr, XDcfgCfgPtr->BaseAddr);
+	if (dcfg_init != XST_SUCCESS) {
+	  xil_printf("Device Config Initialization Failed\r\n");
+	  return XST_FAILURE;
+	}
+
+	XDcfg_SelectIcapInterface(&XDcfg);
+
+	// Lookup DFX Config Pointer
+	XPrcCfgPtr = XPrc_LookupConfig(XPAR_DFX_CONTROLLER_0_DEVICE_ID);
+	if (NULL == XPrcCfgPtr) {
+	  xil_printf("DFX Config Pointer Initialization Failed\r\n");
+	  return XST_FAILURE;
+	}
+
+	// Init DFX controller
+	prc_init = XPrc_CfgInitialize(&Prc, XPrcCfgPtr, XPrcCfgPtr->BaseAddress);
+	if (prc_init != XST_SUCCESS) {
+	  xil_printf("DFX Controller Initialization Failed\r\n");
+	  return XST_FAILURE;
+	}
+
+	xil_printf("DFX Controller initialized.\r\n");
+	PrintStatusReg(&Prc,XPRC_VS_SHIFT_ID);
+
+	xil_printf("Putting VS into shutdown.\r\n");
+	XPrc_SendShutdownCommand(&Prc, XPRC_VS_SHIFT_ID);
+	while(XPrc_IsVsmInShutdown(&Prc, XPRC_VS_SHIFT_ID)==XPRC_SR_SHUTDOWN_OFF);
+	PrintStatusReg(&Prc,XPRC_VS_SHIFT_ID);
+
+	// Setting shift RMs
+	XPrc_SetBsSize   (&Prc, XPRC_VS_SHIFT_ID, XPRC_VS_SHIFT_RM_SHIFT_LEFT_ID,  PARTIAL_SHIFT_LEFT_RM_SIZE);
+	XPrc_SetBsSize   (&Prc, XPRC_VS_SHIFT_ID, XPRC_VS_SHIFT_RM_SHIFT_RIGHT_ID, PARTIAL_SHIFT_RIGHT_RM_SIZE);
+	XPrc_SetBsAddress(&Prc, XPRC_VS_SHIFT_ID, XPRC_VS_SHIFT_RM_SHIFT_LEFT_ID,  PARTIAL_SPI_SHIFT_LEFT_ADDR);
+	XPrc_SetBsAddress(&Prc, XPRC_VS_SHIFT_ID, XPRC_VS_SHIFT_RM_SHIFT_RIGHT_ID, PARTIAL_SPI_SHIFT_RIGHT_ADDR);
+
+	xil_printf("VS 0, RM %d set to address 0x%x with size 0x%x bytes.\r\n",XPRC_VS_SHIFT_RM_SHIFT_LEFT_ID,
+				PARTIAL_SPI_SHIFT_LEFT_ADDR,PARTIAL_SHIFT_LEFT_RM_SIZE);
+	xil_printf("VS 0, RM %d set to address 0x%x with size 0x%x bytes.\r\n",XPRC_VS_SHIFT_RM_SHIFT_RIGHT_ID,
+				PARTIAL_SPI_SHIFT_RIGHT_ADDR,PARTIAL_SHIFT_RIGHT_RM_SIZE);
+	PrintStatusReg(&Prc,XPRC_VS_SHIFT_ID);
+
+	xil_printf("Restarting DFX without status.");
+	// Restart shift VS
+	XPrc_SendRestartWithNoStatusCommand(&Prc, XPRC_VS_SHIFT_ID);
+	while(XPrc_IsVsmInShutdown(&Prc, XPRC_VS_SHIFT_ID)==XPRC_SR_SHUTDOWN_ON);
+	PrintStatusReg(&Prc,XPRC_VS_SHIFT_ID);
+
+	cleanup_platform();
+	return 0;
 }
+
+unsigned short extract_bits(unsigned short value, int begin, int end)
+{
+    unsigned short mask = (1 << (end - begin)) - 1;
+    return (value >> begin) & mask;
+}
+
+void PrintStatusReg(XPrc* Prc, u16 VS_ID){
+	u32 prc_status = XPrc_ReadStatusReg(Prc, VS_ID);
+
+	// Printing DFX status reg
+	u8 STATE = extract_bits(prc_status,0,3);
+	u8 ERROR = extract_bits(prc_status,3,7);
+	bool SHUTDOWN = extract_bits(prc_status,7,8);
+	u16 RM_ID = extract_bits(prc_status,8,24);
+
+	xil_printf("\nVS %d, RM %d STATUS register:\r\n",VS_ID,RM_ID);
+	xil_printf("   -STATE = %x\r\n",STATE);
+	xil_printf("   -ERROR = %x\r\n",ERROR);
+	xil_printf("   -SHUTDOWN = %x\r\n",SHUTDOWN);
+}
+
 int SD_Transfer(char *FileName, u32 distAddr, u32 size){
     FIL fil;
     UINT br;
