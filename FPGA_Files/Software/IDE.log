@@ -2216,3 +2216,12 @@ con
 12:32:34 INFO  : Invoking Bootgen: bootgen -image pr_led_sw_system.bif -arch zynq -o C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/_ide/bootimage/BOOT.bin -w on
 12:32:36 INFO  : Bootgen command execution is done.
 12:33:01 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:50:52 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\GitHub\ReconHardware\FPGA_Files\Software\temp_xsdb_launch_script.tcl
+12:50:54 INFO  : XSCT server has started successfully.
+12:50:54 INFO  : Successfully done setting XSCT server connection channel  
+12:50:54 INFO  : plnx-install-location is set to ''
+12:50:54 INFO  : Successfully done setting workspace for the tool. 
+12:50:57 INFO  : Registering command handlers for Vitis TCF services
+12:50:57 INFO  : Platform repository initialization has completed.
+12:50:57 INFO  : Successfully done query RDI_DATADIR 
+12:51:22 INFO  : Projects exported to 'C:\GitHub\ReconHardware\FPGA_Files\pr_led_sw_system.ide.zip'

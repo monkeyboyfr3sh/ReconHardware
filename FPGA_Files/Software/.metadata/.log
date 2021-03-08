@@ -20193,3 +20193,68 @@ java.lang.Error
 	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
 	at org.eclipse.tcf.EventQueue.run(EventQueue.java:96)
 	at java.base/java.lang.Thread.run(Unknown Source)
+!SESSION 2021-03-08 12:50:47.296 -----------------------------------------------
+eclipse.buildId=2020.1
+java.version=9.0.4
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.launchbar.core 2 0 2021-03-08 12:50:50.891
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2021-03-08 12:50:50.898
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2021-03-08 12:50:50.902
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.ui 4 4 2021-03-08 12:50:51.124
+!MESSAGE Plug-in 'org.eclipse.ui.editors' contributed an invalid Menu Extension (Path: 'navigate' is invalid): org.eclipse.ui.edit.text.gotoLastEditPosition
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-08 12:50:54.404
+!MESSAGE XSCT Command: [set sdk::sdk_chan tcfchan#0], Thread: Thread-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-08 12:50:54.408
+!MESSAGE XSCT Command: [plnx-install-path  ; ::scw::scw_mode gui], Thread: Thread-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-08 12:50:54.420
+!MESSAGE XSCT command with result: [set sdk::sdk_chan tcfchan#0], Result: [null, tcfchan#0]. Thread: Thread-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-08 12:50:54.425
+!MESSAGE XSCT command with result: [plnx-install-path  ; ::scw::scw_mode gui], Result: [null, ]. Thread: Thread-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-08 12:50:54.430
+!MESSAGE XSCT Command: [setws C:/GitHub/ReconHardware/FPGA_Files/Software], Thread: Thread-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-08 12:50:54.437
+!MESSAGE XSCT command with result: [setws C:/GitHub/ReconHardware/FPGA_Files/Software], Result: [null, ]. Thread: Thread-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-08 12:50:57.415
+!MESSAGE XSCT Command: [::hsi::utils::init_repo], Thread: Worker-0: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-08 12:50:57.636
+!MESSAGE XSCT command with result: [::hsi::utils::init_repo], Result: [null, ]. Thread: Worker-0: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-08 12:50:57.641
+!MESSAGE XSCT Command: [set query_var1 $::env(RDI_DATADIR)], Thread: Worker-0: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-08 12:50:57.647
+!MESSAGE XSCT command with result: [set query_var1 $::env(RDI_DATADIR)], Result: [null, C:/Xilinx/Vitis/2020.1/data]. Thread: Worker-0: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-08 12:51:04.458
+!MESSAGE XSCT Command: [::hsi::utils::openhw C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/hw/top.xsa], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-08 12:51:07.965
+!MESSAGE XSCT command with result: [::hsi::utils::openhw C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/hw/top.xsa], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-08 12:51:07.969
+!MESSAGE XSCT Command: [::hsi::utils::get_design_properties -json C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/hw/top.xsa], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-08 12:51:07.973
+!MESSAGE XSCT command with result: [::hsi::utils::get_design_properties -json C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/hw/top.xsa], Result: [null, {"device": "7z020",
+"family": "zynq",
+"timestamp": "Mon Mar  8 10:34:38 2021",
+"vivado_version": "2020.1",
+"part": "xc7z020clg400-1",
+}]. Thread: main
