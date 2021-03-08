@@ -31,11 +31,20 @@ ICAPE2 #(
                               // model.
 )
 ICAPE2_inst (
-  .O(icap_o),         // 32-bit output: Configuration data output bus
-  .CLK(clk),     // 1-bit input: Clock Input
-  .CSIB(icap_csib),   // 1-bit input: Active-Low ICAP Enable
-  .I(icap_i),         // 32-bit input: Configuration data input bus
-  .RDWRB(icap_rdwrb)  // 1-bit input: Read/Write Select input
+  .O(icap_o),           // 32-bit output: Configuration data output bus
+  .CLK(clk),            // 1-bit input: Clock Input
+  .CSIB(icap_csib),     // 1-bit input: Active-Low ICAP Enable
+  .I(icap_i),           // 32-bit input: Configuration data input bus
+  .RDWRB(icap_rdwrb)    // 1-bit input: Read/Write Select input
+);
+
+icap_ila_wrapper
+(
+  .clk_0(clk),
+  .probe0_0(icap_o),
+  .probe1_0(icap_i),
+  .probe2_0(icap_csib),
+  .probe3_0(icap_rdwrb)
 );
 
 //shift_right

@@ -1,22 +1,22 @@
 Command: pr_verify -full_check -initial C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/impl_1/top_routed.dcp -additional C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/child_1_impl_1/top_routed.dcp -file child_1_impl_1_pr_verify.log
-Fri Mar  5 16:21:06 2021
+Mon Mar  8 10:46:01 2021
 
 INFO: [Constraints 18-1020] PR Verify Summary:
 DCP1: C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/impl_1/top_routed.dcp
   Number of reconfigurable modules compared = 1
   Number of partition pins compared         = 38
   Number of static tiles compared           = 561
-  Number of static sites compared           = 5327
-  Number of static cells compared           = 29902
-  Number of static routed nodes compared    = 326156
-  Number of static routed pips compared     = 300539
+  Number of static sites compared           = 6238
+  Number of static cells compared           = 35796
+  Number of static routed nodes compared    = 388964
+  Number of static routed pips compared     = 358075
 
 DCP2: C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/child_1_impl_1/top_routed.dcp
   Number of reconfigurable modules compared = 1
   Number of partition pins compared         = 38
   Number of static tiles compared           = 561
-  Number of static sites compared           = 5327
-  Number of static cells compared           = 29902
-  Number of static routed nodes compared    = 326156
-  Number of static routed pips compared     = 300539
+  Number of static sites compared           = 6238
+  Number of static cells compared           = 35796
+  Number of static routed nodes compared    = 388964
+  Number of static routed pips compared     = 358075
 INFO: [Vivado 12-3253] PR_VERIFY: check points C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/impl_1/top_routed.dcp and C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/child_1_impl_1/top_routed.dcp are compatible

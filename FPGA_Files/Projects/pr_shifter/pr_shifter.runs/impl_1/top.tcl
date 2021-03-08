@@ -114,7 +114,6 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {Common 17-41} -limit 10000000
 
 OPTRACE "Implementation" START { ROLLUP_1 }
 OPTRACE "Phase: Init Design" START { ROLLUP_AUTO }
@@ -123,7 +122,6 @@ set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
   set_param chipscope.maxJobs 2
-  set_param xicom.use_bs_reader 1
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7z020clg400-1
   set_property board_part tul.com.tw:pynq-z2:part0:1.0 [current_project]
@@ -141,6 +139,7 @@ OPTRACE "add files" START { }
   add_files -quiet C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/top.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
+  add_files C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.srcs/sources_1/bd/icap_ila/icap_ila.bd
   add_files C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_2/design_2.bd
   set_param project.isImplRun false
   add_files -quiet C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/shift_left_synth_1/shift_left.dcp

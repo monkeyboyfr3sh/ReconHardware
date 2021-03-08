@@ -1,16 +1,47 @@
 Nothing to build in platform 'pr_led'
 
-19:40:48 **** Incremental Build of configuration Debug for project pr_led_sw ****
+12:27:40 **** Incremental Build of configuration Debug for project pr_led_sw ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 make --no-print-directory main-build
-make[1]: Nothing to be done for 'main-build'.
-19:40:53 **** Incremental Build of configuration Debug for project pr_led_sw_system ****
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/sw/pr_led/standalone_domain/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:107:14: warning: implicit declaration of function 'initGPIO' [-Wimplicit-function-declaration]
+  107 |  gpio_init = initGPIO();
+      |              ^~~~~~~~
+../src/helloworld.c:102:6: warning: unused variable 'prc_status_err' [-Wunused-variable]
+  102 |  u32 prc_status_err;
+      |      ^~~~~~~~~~~~~~
+../src/helloworld.c:101:6: warning: unused variable 'prc_status_last_state' [-Wunused-variable]
+  101 |  u32 prc_status_last_state;
+      |      ^~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:100:6: warning: unused variable 'prc_status_state' [-Wunused-variable]
+  100 |  u32 prc_status_state;
+      |      ^~~~~~~~~~~~~~~~
+../src/helloworld.c:99:6: warning: unused variable 'prc_status' [-Wunused-variable]
+   99 |  u32 prc_status;
+      |      ^~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: pr_led_sw.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/sw/pr_led/standalone_domain/bsplib/lib -o "pr_led_sw.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: pr_led_sw.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size pr_led_sw.elf  |tee "pr_led_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  65292	   1872	  26272	  93436	  16cfc	pr_led_sw.elf
+'Finished building: pr_led_sw.elf.size'
+' '
+12:27:41 **** Incremental Build of configuration Debug for project pr_led_sw_system ****
 make all 
 Generating bif file for the system project
-generate_system_bif.bat 57669 C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm standalone_domain C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
+generate_system_bif.bat 55801 C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm standalone_domain C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
 sdcard_gen --xpfm C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm --sys_config pr_led --bif C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif --bitstream C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw/_ide/bitstream/top.bit --elf C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw/Debug/pr_led_sw.elf,ps7_cortexa9_0
 creating BOOT.BIN using C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw/_ide/bitstream/top.bit
 Running C:/Xilinx/Vitis/2020.1/bin/bootgen  -image C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN

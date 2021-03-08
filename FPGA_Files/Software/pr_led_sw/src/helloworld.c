@@ -51,6 +51,7 @@
 
 unsigned short extract_bits(unsigned short value, int begin, int end);
 void PrintStatusReg(XPrc* Prc, u16 VS_ID);
+int ReadStatusReg(XPrc* Prc, u16 VS_ID);
 int SD_Transfer(char *FileName, u32 distAddr, u32 size);
 int SD_Init();
 
@@ -59,7 +60,8 @@ int SD_Init();
 #define XDCFG_DEVICE_ID XPAR_PS7_DEV_CFG_0_DEVICE_ID
 
 // GPIO DEVICE ID
-#define GPIO_DEVICE_ID  XPAR_AXI_GPIO_0_DEVICE_ID
+#define COUNT_GPIO_DEVICE_ID  XPAR_AXI_GPIO_0_DEVICE_ID
+#define BS_MONITOR_GPIO_DEVICE_ID XPAR_BS_MONITOR_GPIO_1_DEVICE_ID
 #define COUNT_INIT		25000000
 
 // VSM IDs
@@ -70,18 +72,24 @@ int SD_Init();
 #define XPRC_VS_SHIFT_RM_SHIFT_RIGHT_ID 1
 
 // RM Mem Addr
-#define PARTIAL_SPI_SHIFT_LEFT_ADDR		XPAR_PS7_RAM_0_S_AXI_BASEADDR+0x1A3A00
-#define PARTIAL_SPI_SHIFT_RIGHT_ADDR	XPAR_PS7_RAM_0_S_AXI_BASEADDR+0x1A8E80
+#define PARTIAL_DDR_SHIFT_LEFT_ADDR		XPAR_PS7_RAM_0_S_AXI_BASEADDR+0x100
+#define PARTIAL_DDR_SHIFT_RIGHT_ADDR	PARTIAL_DDR_SHIFT_LEFT_ADDR
+//#define PARTIAL_DDR_SHIFT_RIGHT_ADDR	XPAR_PS7_RAM_0_S_AXI_BASEADDR+0x20000
 
 // RM Sizes
-#define PARTIAL_SHIFT_LEFT_RM_SIZE 146536
+#define PARTIAL_SHIFT_LEFT_RM_SIZE 	146536
 #define PARTIAL_SHIFT_RIGHT_RM_SIZE 146536
+#define PARTIAL_SHIFT_GREY_RM_SIZE 	146536
 
+XGpio count_Gpio,bs_monitor_Gpio;
+XPrc Prc;
+XPrc_Config *XPrcCfgPtr;
+XDcfg Dcfg;
+XDcfg_Config *XDcfgCfgPtr;
+
+/* PROGRAM START */
 int main()
 {
-//	u32 Exit   = 0;
-//	u32 Option = 1;
-
 	// Status vars
 	u32 copy_status;
 	u32 gpio_init;
@@ -93,41 +101,38 @@ int main()
 	u32 prc_status_last_state;
 	u32 prc_status_err;
 
-	// Device objects
-	XGpio Gpio;
-	XPrc Prc;
-	XPrc_Config *XPrcCfgPtr;
-	XDcfg XDcfg;
-	XDcfg_Config *XDcfgCfgPtr;
-
+	xil_printf("\r\nPartial Reconfiguration Test starting...\r\n");
 	init_platform();
 
-	/* Initialize the GPIO driver */
-	gpio_init = XGpio_Initialize(&Gpio, GPIO_DEVICE_ID);
-	if (gpio_init != XST_SUCCESS) {
-	xil_printf("Gpio Initialization Failed\r\n");
-		return XST_FAILURE;
+	gpio_init = initGPIO();
+	if(gpio_init != XST_SUCCESS){
+	  return XST_FAILURE;
 	}
-
-	/* Set count channel to output */
-	XGpio_SetDataDirection(&Gpio, 1, 0);
-
-	/* Intialize count value */
-	XGpio_DiscreteWrite(&Gpio, 1, COUNT_INIT);
 
 	// Initialize SD card
 	sd_init = SD_Init();
 	if(sd_init != XST_SUCCESS){
-	  xil_printf("SD Initialization Failed\r\n");
 	  return XST_FAILURE;
 	}
 
 	// Copy SD data to DDR4
 	print("\r\nCopying SD content to DDR4...\r\n");
-	copy_status = SD_Transfer("left.bin", PARTIAL_SPI_SHIFT_LEFT_ADDR, PARTIAL_SHIFT_LEFT_RM_SIZE);
+	copy_status = SD_Transfer("leftP.bin", PARTIAL_DDR_SHIFT_LEFT_ADDR, PARTIAL_SHIFT_LEFT_RM_SIZE);
 	if (copy_status != XST_SUCCESS) {
-	return XST_FAILURE;
+		return XST_FAILURE;
 	}
+	copy_status = SD_Transfer("leftP.bin", PARTIAL_DDR_SHIFT_RIGHT_ADDR, PARTIAL_SHIFT_LEFT_RM_SIZE);
+	if (copy_status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+//	copy_status = SD_Transfer("rightP.bin", PARTIAL_DDR_SHIFT_RIGHT_ADDR, PARTIAL_SHIFT_LEFT_RM_SIZE);
+//	if (copy_status != XST_SUCCESS) {
+//		return XST_FAILURE;
+//	}
+//	copy_status = SD_Transfer("greyP.bin", PARTIAL_SPI_SHIFT_LEFT_ADDR, PARTIAL_SHIFT_LEFT_RM_SIZE);
+//	if (copy_status != XST_SUCCESS) {
+//		return XST_FAILURE;
+//	}
 
 	// Lookup device config pointer
 	XDcfgCfgPtr = XDcfg_LookupConfig(XDCFG_DEVICE_ID);
@@ -137,13 +142,13 @@ int main()
 	}
 
 	// Initialize device config
-	dcfg_init = XDcfg_CfgInitialize(&XDcfg, XDcfgCfgPtr, XDcfgCfgPtr->BaseAddr);
+	dcfg_init = XDcfg_CfgInitialize(&Dcfg, XDcfgCfgPtr, XDcfgCfgPtr->BaseAddr);
 	if (dcfg_init != XST_SUCCESS) {
 	  xil_printf("Device Config Initialization Failed\r\n");
 	  return XST_FAILURE;
 	}
 
-	XDcfg_SelectIcapInterface(&XDcfg);
+	XDcfg_SelectIcapInterface(&Dcfg);
 
 	// Lookup DFX Config Pointer
 	XPrcCfgPtr = XPrc_LookupConfig(XPAR_DFX_CONTROLLER_0_DEVICE_ID);
@@ -170,25 +175,69 @@ int main()
 	// Setting shift RMs
 	XPrc_SetBsSize   (&Prc, XPRC_VS_SHIFT_ID, XPRC_VS_SHIFT_RM_SHIFT_LEFT_ID,  PARTIAL_SHIFT_LEFT_RM_SIZE);
 	XPrc_SetBsSize   (&Prc, XPRC_VS_SHIFT_ID, XPRC_VS_SHIFT_RM_SHIFT_RIGHT_ID, PARTIAL_SHIFT_RIGHT_RM_SIZE);
-	XPrc_SetBsAddress(&Prc, XPRC_VS_SHIFT_ID, XPRC_VS_SHIFT_RM_SHIFT_LEFT_ID,  PARTIAL_SPI_SHIFT_LEFT_ADDR);
-	XPrc_SetBsAddress(&Prc, XPRC_VS_SHIFT_ID, XPRC_VS_SHIFT_RM_SHIFT_RIGHT_ID, PARTIAL_SPI_SHIFT_RIGHT_ADDR);
+	XPrc_SetBsAddress(&Prc, XPRC_VS_SHIFT_ID, XPRC_VS_SHIFT_RM_SHIFT_LEFT_ID,  PARTIAL_DDR_SHIFT_LEFT_ADDR);
+	XPrc_SetBsAddress(&Prc, XPRC_VS_SHIFT_ID, XPRC_VS_SHIFT_RM_SHIFT_RIGHT_ID, PARTIAL_DDR_SHIFT_RIGHT_ADDR);
 
-	xil_printf("VS 0, RM %d set to address 0x%x with size 0x%x bytes.\r\n",XPRC_VS_SHIFT_RM_SHIFT_LEFT_ID,
-				PARTIAL_SPI_SHIFT_LEFT_ADDR,PARTIAL_SHIFT_LEFT_RM_SIZE);
-	xil_printf("VS 0, RM %d set to address 0x%x with size 0x%x bytes.\r\n",XPRC_VS_SHIFT_RM_SHIFT_RIGHT_ID,
-				PARTIAL_SPI_SHIFT_RIGHT_ADDR,PARTIAL_SHIFT_RIGHT_RM_SIZE);
+	xil_printf("VS 0, RM %d set to DDR address 0x%x with size 0x%x bytes.\r\n",XPRC_VS_SHIFT_RM_SHIFT_LEFT_ID,
+				PARTIAL_DDR_SHIFT_LEFT_ADDR,PARTIAL_SHIFT_LEFT_RM_SIZE);
+	xil_printf("VS 0, RM %d set to DDR address 0x%x with size 0x%x bytes.\r\n",XPRC_VS_SHIFT_RM_SHIFT_RIGHT_ID,
+				PARTIAL_DDR_SHIFT_RIGHT_ADDR,PARTIAL_SHIFT_RIGHT_RM_SIZE);
 	PrintStatusReg(&Prc,XPRC_VS_SHIFT_ID);
 
-	xil_printf("Restarting DFX without status.");
+	xil_printf("Restarting DFX without status.\r\n");
 	// Restart shift VS
 	XPrc_SendRestartWithNoStatusCommand(&Prc, XPRC_VS_SHIFT_ID);
 	while(XPrc_IsVsmInShutdown(&Prc, XPRC_VS_SHIFT_ID)==XPRC_SR_SHUTDOWN_ON);
 	PrintStatusReg(&Prc,XPRC_VS_SHIFT_ID);
 
+	u32 last_val,curr_val;
+	while(1){
+		last_val = curr_val;
+		curr_val = ReadStatusReg(&Prc,XPRC_VS_SHIFT_ID);
+		if(curr_val!=last_val){
+			PrintStatusReg(&Prc,XPRC_VS_SHIFT_ID);
+		}
+	}
+
 	cleanup_platform();
 	return 0;
 }
 
+/* GPIO Stuff */
+int initGPIO(){
+	u32 init_status;
+
+	xil_printf("GPIO Initialization ... ");
+
+	/* Initialize the count GPIO drivers */
+	init_status = XGpio_Initialize(&count_Gpio, COUNT_GPIO_DEVICE_ID);
+	if (init_status != XST_SUCCESS) {
+	xil_printf("Count Gpio Initialization Failed!\r\n");
+		return XST_FAILURE;
+	}
+
+	/* Initialize the bs monitor GPIO drivers */
+	init_status = XGpio_Initialize(&bs_monitor_Gpio, BS_MONITOR_GPIO_DEVICE_ID);
+	if (init_status != XST_SUCCESS) {
+	xil_printf("BS Gpio Initialization Failed!\r\n");
+		return XST_FAILURE;
+	}
+
+	/* COUNT AXI GPIO */
+	XGpio_SetDataDirection(&count_Gpio, 1, 0); 			// Channel 1 output
+	XGpio_DiscreteWrite(&count_Gpio, 1, COUNT_INIT); 	// Initialize to defined value, can be updated
+
+	/* BS Monitor AXI GPIO */
+	XGpio_SetDataDirection(&bs_monitor_Gpio, 1, 0); 	// Channel 1 output
+	XGpio_SetDataDirection(&bs_monitor_Gpio, 2, 1); 	// Channel 2 input
+	XGpio_DiscreteWrite(&bs_monitor_Gpio, 1, 1); 		// Set to continuous arm mode
+
+	xil_printf("Success!\r\n");
+	// Made it here so we're good to go.
+	return XST_SUCCESS;
+}
+
+/* DFX Controller Stuff */
 unsigned short extract_bits(unsigned short value, int begin, int end)
 {
     unsigned short mask = (1 << (end - begin)) - 1;
@@ -209,7 +258,12 @@ void PrintStatusReg(XPrc* Prc, u16 VS_ID){
 	xil_printf("   -ERROR = %x\r\n",ERROR);
 	xil_printf("   -SHUTDOWN = %x\r\n",SHUTDOWN);
 }
+int ReadStatusReg(XPrc* Prc, u16 VS_ID){
+	u32 prc_status = XPrc_ReadStatusReg(Prc, VS_ID);
+	return prc_status;
+}
 
+/* SD Card Stuff */
 int SD_Transfer(char *FileName, u32 distAddr, u32 size){
     FIL fil;
     UINT br;

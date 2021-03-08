@@ -2,21 +2,28 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="XPAR_PS7_DEV_CFG_0_DEVICE_ID" key="selection"/>
-		<item value="false" key="casesensitive"/>
+		<item value="XDcfg" key="selection"/>
+		<item value="true" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="XDcfg"/>
+			<item value="Gpio"/>
+			<item value="XPAR_AXI_GPIO_0_DEVICE_ID"/>
+			<item value=" XPAR_AXI_GPIO"/>
+			<item value="gpio"/>
+			<item value="GPIO_DEVICE_ID"/>
 			<item value="XPAR_PS7_DEV_CFG_0_DEVICE_ID"/>
 			<item value="XDCFG"/>
 			<item value="dcfg"/>
 			<item value="status"/>
 			<item value="read"/>
-			<item value="XPAR_AXI_GPIO_0_DEVICE_ID"/>
 			<item value="XPAR_GPIO_0_DEVICE_ID"/>
 		</list>
 		<list key="replacehistory">
+			<item value="count_Gpio"/>
+			<item value="COUNT_GPIO_DEVICE_ID"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

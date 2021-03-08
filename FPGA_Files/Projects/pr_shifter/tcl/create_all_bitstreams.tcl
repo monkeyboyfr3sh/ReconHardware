@@ -1,58 +1,68 @@
-set prjDir "C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter"
-set bitDir  "./Bitstreams"
+# File locations
+set prjDir      "C:/GitHub/ReconHardware/FPGA_Files/Projects"
+set prjName     "pr_shifter"
+set bitDir      "./Bitstreams"
+cd $prjDir/$prjName
+
+# Config settings
+# set final_target    "-format BIN"
+# set options         "-force -checksum FF -size 32 -disablebitswap"
+# set bpi_options     "-interface SMAPx32"
+
+set final_target    "-format BIN"
+set options         "-force -checksum FF -size 32 -disablebitswap"
+set bpi_options     "-interface SMAPx32"
+set static_top          "top"
+
+# Must set the partial configs in the same order as Vivado
+set partials    {\
+                shifter_shift_left_partial\
+                shifter_shift_right_partial\
+                shifter_grey_partial\
+                }
 
 if { ![file exists "./Bitstreams"]} { 
-   exec mkdir Bitstreams
+    exec mkdir Bitstreams
 }
 
-#includes BIN file generation for all partials
+# Copy full bitstream from vivado into $bitDir
+exec cp -f "$prjName.runs/impl_1/top.bit" $bitDir
 
-exec cp -f "C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/impl_1/top.bit" $bitDir
+set i -1
+foreach partial $partials {
+    # Load checkpoint
+    if { $i == -1 } {
+        open_checkpoint "$prjName.runs/impl_1/top_routed.dcp"
+    } else {
+        open_checkpoint "$prjName.runs/child_${i}_impl_1/top_routed.dcp"
+    }
 
-open_checkpoint "C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/impl_1/top_routed.dcp"
-set_property bitstream.general.compress false [current_design]
-#write_bitstream -force -no_partial_bitfile $bitDir/top.bit
-set_property CONFIG_MODE "B_SCAN" [current_design]
-write_bitstream -force -cell shifter $bitDir/shifter_shift_left_partial.bit
-write_debug_probes -force $bitDir/shifter_shift_left_partial.ltx
-close_project
+    # Generate bitfile and debug probes
+    set_property bitstream.general.compress false [current_design]
+    set_property CONFIG_MODE "B_SCAN" [current_design]
+    write_bitstream -force -cell shifter $bitDir/$partial.bit
+    write_debug_probes -force $bitDir/$partial.ltx
+    close_project
 
-open_checkpoint "C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/child_0_impl_1/top_routed.dcp"
-set_property bitstream.general.compress false [current_design]
-#write_bitstream -force -no_partial_bitfile $bitDir/top.bit
-set_property CONFIG_MODE "B_SCAN" [current_design]
-write_bitstream -force -cell shifter $bitDir/shifter_shift_right_partial.bit
-write_debug_probes -force $bitDir/shifter_shift_right_partial.ltx
-close_project
+    incr i
+}
 
-open_checkpoint "C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/child_1_impl_1/top_routed.dcp"
-set_property bitstream.general.compress false [current_design]
-#write_bitstream -force -no_partial_bitfile $bitDir/top.bit
-set_property CONFIG_MODE "B_SCAN" [current_design]
-write_bitstream -force -cell shifter $bitDir/shifter_gery_partial.bit
-write_debug_probes -force $bitDir/shifter_gery_partial.ltx
-close_project
-
-set final_target    "-format MCS"
-set options         "-force -checksum FF -size 32"
-set bpi_options     "-interface SPIx4"
-set static  "top"
-
-set partials  { \
-                    shifter_shift_left_partial\
-                    shifter_shift_right_partial\
-                    shifter_gery_partial}
-
+# Convert static bit file into a bin file formatted for the ICAP port
+set cmd "write_cfgmem $options $final_target $bpi_options -loadbit \"up 0 $bitDir/$static_top.bit\" $bitDir/$static_top"
+eval $cmd 
 
 # Convert each partial bit file into a bin file formatted for the ICAP port
-#
 foreach p $partials {
-    set cmd "write_cfgmem -force -format BIN -interface SMAPx32 -disablebitswap -loadbit \"up 0 Bitstreams/$p.bit\" Bitstreams/$p"
+    set cmd "write_cfgmem $options $final_target $bpi_options -loadbit \"up 0 $bitDir/$p.bit\" $bitDir/$p"
     eval $cmd 
 }
 
 # Now do the static and pack the partials as datafiles
-set    cmd "write_cfgmem $options $final_target $bpi_options -loaddata \"up 0 Bitstreams/${static}.bit"
-append cmd " up 01C9C400 Bitstreams/shifter_shift_left_partial.bin"
-append cmd " up 01CF0C00 Bitstreams/shifter_shift_right_partial.bin"
-append cmd " up 01D9BC00 Bitstreams/shifter_gery_partial.bin" 
+set    cmd "write_cfgmem $options $final_target $bpi_options -loaddata \"up 0 $bitDir/${static_top}.bit"
+append cmd " up 0x0 $bitDir/shifter_shift_left_partial.bin"
+append cmd " up 0x0 $bitDir/shifter_shift_right_partial.bin"
+append cmd " up 0x0 $bitDir/shifter_gery_partial.bin" 
+
+# Create XSA file for vitis
+set_property pfm_name {} [get_files -all {C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_2/design_2.bd}]
+write_hw_platform -fixed -include_bit -force -file $bitDir/$static_top.xsa
