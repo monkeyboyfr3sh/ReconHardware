@@ -1,10 +1,10 @@
-15:51:32 **** Incremental Build of configuration Debug for project pr_led_sw_system ****
+11:46:55 **** Incremental Build of configuration Debug for project pr_led_sw_system ****
 make all 
 Generating bif file for the system project
-generate_system_bif.bat 59535 C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm standalone_domain C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
+generate_system_bif.bat 58639 C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm standalone_domain C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
 sdcard_gen --xpfm C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm --sys_config pr_led --bif C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif --bitstream C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw/_ide/bitstream/top.bit --elf C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw/Debug/pr_led_sw.elf,ps7_cortexa9_0
 creating BOOT.BIN using C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw/_ide/bitstream/top.bit
 Running C:/Xilinx/Vitis/2020.1/bin/bootgen  -image C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
 
-15:51:37 Build Finished (took 4s.727ms)
+11:47:00 Build Finished (took 4s.804ms)
 

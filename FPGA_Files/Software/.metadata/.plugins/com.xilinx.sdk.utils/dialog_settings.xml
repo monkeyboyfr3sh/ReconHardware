@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<item value="C:\GitHub\ReconHardware\FPGA_Files\Projects\PRwithZycap\bitstreams\config1" key="bootgen_files_selection"/>
 	<item value="C:\GitHub\ReconHardware\FPGA_Files\Projects\pr_shifter\Bitstreams" key="scw_hwspec_file_selection"/>
-	<item value="C:\GitHub\ReconHardware\FPGA_Files\Projects\pr_shifter" key="scw_hwspec"/>
+	<item value="C:\GitHub\ReconHardware\FPGA_Files\Projects\PRwithZycap\imageProcessingVideoDisplay.vitis" key="scw_hwspec"/>
 </section>

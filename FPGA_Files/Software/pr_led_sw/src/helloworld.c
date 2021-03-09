@@ -117,11 +117,11 @@ int main()
 
 	// Copy SD data to DDR4
 	print("\r\nCopying SD content to DDR4...\r\n");
-	copy_status = SD_Transfer("rightP.bin", PARTIAL_DDR_SHIFT_LEFT_ADDR, PARTIAL_SHIFT_RM_SIZE);
+	copy_status = SD_Transfer("leftP.bin", PARTIAL_DDR_SHIFT_LEFT_ADDR, PARTIAL_SHIFT_RM_SIZE);
 	if (copy_status != XST_SUCCESS) {
 		return XST_FAILURE;
 	}
-	copy_status = SD_Transfer("rightP.bin", PARTIAL_DDR_SHIFT_RIGHT_ADDR, PARTIAL_SHIFT_RM_SIZE);
+	copy_status = SD_Transfer("leftP.bin", PARTIAL_DDR_SHIFT_RIGHT_ADDR, PARTIAL_SHIFT_RM_SIZE);
 	if (copy_status != XST_SUCCESS) {
 		return XST_FAILURE;
 	}

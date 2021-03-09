@@ -1,4 +1,4 @@
-15:51:31 **** Incremental Build of configuration Debug for project pr_led_sw ****
+11:46:54 **** Incremental Build of configuration Debug for project pr_led_sw ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -57,5 +57,5 @@ arm-none-eabi-size pr_led_sw.elf  |tee "pr_led_sw.elf.size"
 'Finished building: pr_led_sw.elf.size'
 ' '
 
-15:51:32 Build Finished (took 613ms)
+11:46:55 Build Finished (took 617ms)
 

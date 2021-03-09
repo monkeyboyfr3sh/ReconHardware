@@ -2588,3 +2588,746 @@ con
 
 15:52:20 INFO  : Launch script is exported to file 'C:\GitHub\ReconHardware\FPGA_Files\Software\.sdk\launch_scripts\single_application_debug\systemdebugger_pr_led_sw_system_standalone.tcl'
 15:53:53 INFO  : Disconnected from the channel tcfchan#10.
+20:28:14 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\GitHub\ReconHardware\FPGA_Files\Software\temp_xsdb_launch_script.tcl
+20:28:16 INFO  : XSCT server has started successfully.
+20:28:16 INFO  : plnx-install-location is set to ''
+20:28:16 INFO  : Successfully done setting XSCT server connection channel  
+20:28:16 INFO  : Successfully done setting workspace for the tool. 
+20:28:19 INFO  : Platform repository initialization has completed.
+20:28:20 INFO  : Registering command handlers for Vitis TCF services
+20:28:22 INFO  : Successfully done query RDI_DATADIR 
+20:57:07 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\GitHub\ReconHardware\FPGA_Files\Software\temp_xsdb_launch_script.tcl
+20:57:09 INFO  : XSCT server has started successfully.
+20:57:09 INFO  : Successfully done setting XSCT server connection channel  
+20:57:09 INFO  : plnx-install-location is set to ''
+20:57:09 INFO  : Successfully done setting workspace for the tool. 
+20:57:12 INFO  : Platform repository initialization has completed.
+20:57:12 INFO  : Registering command handlers for Vitis TCF services
+20:57:12 INFO  : Successfully done query RDI_DATADIR 
+20:58:17 INFO  : Result from executing command 'getProjects': PRwithZycap;pr_led
+20:58:17 INFO  : Result from executing command 'getPlatforms': pr_led|C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+20:59:02 INFO  : Result from executing command 'getProjects': PRwithZycap;pr_led
+20:59:02 INFO  : Result from executing command 'getPlatforms': PRwithZycap|C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/export/PRwithZycap/PRwithZycap.xpfm;pr_led|C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+20:59:03 INFO  : Successfully done sdx_reload_mss "C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/zynq_fsbl/zynq_fsbl_bsp/system.mss"
+21:01:57 INFO  : Checking for BSP changes to sync application flags for project 'zycapTest'...
+21:02:36 INFO  : Successfully done sdx_reload_mss "C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss"
+21:02:37 INFO  : Successfully done sdx_reload_mss "C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss"
+21:02:48 INFO  : Successfully done sdx_reload_mss "C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss"
+21:02:48 INFO  : No changes in MSS file content so sources will not be generated.
+21:06:55 INFO  : Checking for BSP changes to sync application flags for project 'zycapTest'...
+21:09:10 INFO  : Checking for BSP changes to sync application flags for project 'zycapTest'...
+21:10:05 INFO  : Checking for BSP changes to sync application flags for project 'zycapTest'...
+21:11:47 INFO  : Result from executing command 'getProjects': PRwithZycap;pr_led
+21:11:47 INFO  : Result from executing command 'getPlatforms': PRwithZycap|C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/export/PRwithZycap/PRwithZycap.xpfm;pr_led|C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+21:11:47 INFO  : Checking for BSP changes to sync application flags for project 'zycapTest'...
+21:24:19 INFO  : Checking for BSP changes to sync application flags for project 'zycapTest'...
+21:24:36 INFO  : Checking for BSP changes to sync application flags for project 'zycapTest'...
+21:26:05 INFO  : Checking for BSP changes to sync application flags for project 'zycapTest1'...
+21:26:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}' command is executed.
+21:26:22 INFO  : 'fpga -state' command is executed.
+21:27:46 INFO  : Generated template bif file for zycapTest1_system
+21:28:51 INFO  : Invoking Bootgen: bootgen -image zycapTest1_system.bif -arch zynq -o C:/GitHub/ReconHardware/FPGA_Files/Software/zycapTest1_system/_ide/bootimage/BOOT.bin
+21:28:51 INFO  : Overwriting existing bif file C:/GitHub/ReconHardware/FPGA_Files/Software/zycapTest1_system/_ide/bootimage/zycapTest1_system.bif
+21:28:52 INFO  : Bootgen command execution is done.
+21:29:00 INFO  : Checking for BSP changes to sync application flags for project 'zycapTest1'...
+21:53:21 INFO  : Result from executing command 'getProjects': pr_led;system_wrapper
+21:53:21 INFO  : Result from executing command 'getPlatforms': pr_led|C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+21:53:23 INFO  : Platform 'system_wrapper' is added to custom repositories.
+21:53:32 INFO  : Platform 'system_wrapper' is added to custom repositories.
+21:53:56 INFO  : Successfully done sdx_reload_mss "C:/GitHub/ReconHardware/FPGA_Files/Software/system_wrapper/ps7_cortexa9_0/domain_ps7_cortexa9_0/bsp/system.mss"
+21:53:57 INFO  : Successfully done sdx_reload_mss "C:/GitHub/ReconHardware/FPGA_Files/Software/system_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss"
+21:54:07 INFO  : (SwPlatform) Successfully done removeLibrary 
+21:54:09 INFO  : (SwPlatform) Successfully done update_mss 
+21:54:10 INFO  : Successfully done sdx_reload_mss "C:/GitHub/ReconHardware/FPGA_Files/Software/system_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss"
+21:54:13 ERROR : Error occurred while generating bsp sources for the domain 'zynq_fsbl'.
+21:54:18 INFO  : (SwPlatform)  Successfully done add_library 
+21:54:27 INFO  : (SwPlatform) Successfully done update_mss 
+21:54:28 INFO  : Successfully done sdx_reload_mss "C:/GitHub/ReconHardware/FPGA_Files/Software/system_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss"
+21:54:35 ERROR : (XSDB Server)rm: cannot lstat `*.o': Invalid argument
+
+21:54:35 ERROR : (XSDB Server)make: *** [Makefile:42: clean] Error 1
+
+21:55:12 INFO  : Result from executing command 'getProjects': pr_led;system_wrapper
+21:55:12 INFO  : Result from executing command 'getPlatforms': pr_led|C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm;system_wrapper|C:/GitHub/ReconHardware/FPGA_Files/Software/system_wrapper/export/system_wrapper/system_wrapper.xpfm
+21:55:23 INFO  : Checking for BSP changes to sync application flags for project 'zycapTest'...
+21:56:42 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}' command is executed.
+21:56:42 INFO  : 'fpga -state' command is executed.
+21:56:42 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:56:43 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+21:56:43 INFO  : 'jtag frequency' command is executed.
+21:56:43 INFO  : Context for 'APU' is selected.
+21:56:43 INFO  : System reset is completed.
+21:56:46 INFO  : 'after 3000' command is executed.
+21:56:46 INFO  : Context for 'APU' is selected.
+21:56:46 INFO  : Hardware design and registers information is loaded from 'C:/GitHub/ReconHardware/FPGA_Files/Software/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa'.
+21:56:46 INFO  : 'configparams force-mem-access 1' command is executed.
+21:56:46 INFO  : Context for 'APU' is selected.
+21:56:46 INFO  : Sourcing of 'C:/GitHub/ReconHardware/FPGA_Files/Software/zycapTest/_ide/psinit/ps7_init.tcl' is done.
+21:56:46 INFO  : 'ps7_init' command is executed.
+21:56:46 INFO  : 'ps7_post_config' command is executed.
+21:56:46 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:56:46 INFO  : The application 'C:/GitHub/ReconHardware/FPGA_Files/Software/zycapTest/Debug/zycapTest.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:56:46 INFO  : 'configparams force-mem-access 0' command is executed.
+21:56:46 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/GitHub/ReconHardware/FPGA_Files/Software/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/GitHub/ReconHardware/FPGA_Files/Software/zycapTest/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/GitHub/ReconHardware/FPGA_Files/Software/zycapTest/Debug/zycapTest.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:56:47 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:56:47 INFO  : 'con' command is executed.
+21:56:47 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+21:56:47 INFO  : Launch script is exported to file 'C:\GitHub\ReconHardware\FPGA_Files\Software\.sdk\launch_scripts\single_application_debug\systemdebugger_zycaptest_system_standalone.tcl'
+21:57:15 INFO  : Disconnected from the channel tcfchan#12.
+21:58:25 INFO  : Checking for BSP changes to sync application flags for project 'zycapTest'...
+22:00:33 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}' command is executed.
+22:00:33 INFO  : 'fpga -state' command is executed.
+22:00:40 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}' command is executed.
+22:00:40 INFO  : 'fpga -state' command is executed.
+22:00:41 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:00:41 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+22:00:41 INFO  : 'jtag frequency' command is executed.
+22:00:41 INFO  : Context for 'APU' is selected.
+22:00:41 INFO  : System reset is completed.
+22:00:44 INFO  : 'after 3000' command is executed.
+22:00:44 INFO  : Context for 'APU' is selected.
+22:00:44 INFO  : Hardware design and registers information is loaded from 'C:/GitHub/ReconHardware/FPGA_Files/Software/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa'.
+22:00:44 INFO  : 'configparams force-mem-access 1' command is executed.
+22:00:44 INFO  : Context for 'APU' is selected.
+22:00:44 INFO  : Sourcing of 'C:/GitHub/ReconHardware/FPGA_Files/Software/zycapTest/_ide/psinit/ps7_init.tcl' is done.
+22:00:45 INFO  : 'ps7_init' command is executed.
+22:00:45 INFO  : 'ps7_post_config' command is executed.
+22:00:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:00:45 INFO  : The application 'C:/GitHub/ReconHardware/FPGA_Files/Software/zycapTest/Debug/zycapTest.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:00:45 INFO  : 'configparams force-mem-access 0' command is executed.
+22:00:45 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/GitHub/ReconHardware/FPGA_Files/Software/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/GitHub/ReconHardware/FPGA_Files/Software/zycapTest/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/GitHub/ReconHardware/FPGA_Files/Software/zycapTest/Debug/zycapTest.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:00:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:00:45 INFO  : 'con' command is executed.
+22:00:45 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+22:00:45 INFO  : Launch script is exported to file 'C:\GitHub\ReconHardware\FPGA_Files\Software\.sdk\launch_scripts\single_application_debug\systemdebugger_zycaptest_system_standalone.tcl'
+22:02:00 INFO  : (SwPlaform) Successfully done setParamInSpec 
+22:02:04 INFO  : (SwPlaform) Successfully done setParamInSpec 
+22:02:05 INFO  : (SwPlatform) Successfully done update_mss 
+22:02:06 INFO  : Successfully done sdx_reload_mss "C:/GitHub/ReconHardware/FPGA_Files/Software/system_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss"
+22:02:36 INFO  : Result from executing command 'getProjects': pr_led;system_wrapper
+22:02:36 INFO  : Result from executing command 'getPlatforms': pr_led|C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm;system_wrapper|C:/GitHub/ReconHardware/FPGA_Files/Software/system_wrapper/export/system_wrapper/system_wrapper.xpfm
+22:02:54 INFO  : Disconnected from the channel tcfchan#17.
+22:02:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}' command is executed.
+22:02:55 INFO  : 'fpga -state' command is executed.
+22:02:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:02:55 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+22:02:55 INFO  : 'jtag frequency' command is executed.
+22:02:55 INFO  : Context for 'APU' is selected.
+22:02:55 INFO  : System reset is completed.
+22:02:58 INFO  : 'after 3000' command is executed.
+22:02:58 INFO  : Context for 'APU' is selected.
+22:02:58 INFO  : Hardware design and registers information is loaded from 'C:/GitHub/ReconHardware/FPGA_Files/Software/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa'.
+22:02:58 INFO  : 'configparams force-mem-access 1' command is executed.
+22:02:58 INFO  : Context for 'APU' is selected.
+22:02:58 INFO  : Sourcing of 'C:/GitHub/ReconHardware/FPGA_Files/Software/zycapTest/_ide/psinit/ps7_init.tcl' is done.
+22:02:58 INFO  : 'ps7_init' command is executed.
+22:02:58 INFO  : 'ps7_post_config' command is executed.
+22:02:59 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:02:59 INFO  : The application 'C:/GitHub/ReconHardware/FPGA_Files/Software/zycapTest/Debug/zycapTest.elf' is downloaded to processor 'ps7_cortexa9_0'.
+22:02:59 INFO  : 'configparams force-mem-access 0' command is executed.
+22:02:59 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/GitHub/ReconHardware/FPGA_Files/Software/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/GitHub/ReconHardware/FPGA_Files/Software/zycapTest/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/GitHub/ReconHardware/FPGA_Files/Software/zycapTest/Debug/zycapTest.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+22:02:59 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+22:02:59 INFO  : 'con' command is executed.
+22:02:59 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+22:02:59 INFO  : Launch script is exported to file 'C:\GitHub\ReconHardware\FPGA_Files\Software\.sdk\launch_scripts\single_application_debug\systemdebugger_zycaptest_system_standalone.tcl'
+22:03:20 INFO  : Disconnected from the channel tcfchan#19.
+10:41:20 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\GitHub\ReconHardware\FPGA_Files\Software\temp_xsdb_launch_script.tcl
+10:41:23 INFO  : XSCT server has started successfully.
+10:41:23 INFO  : plnx-install-location is set to ''
+10:41:23 INFO  : Successfully done setting XSCT server connection channel  
+10:41:23 INFO  : Successfully done setting workspace for the tool. 
+10:41:26 INFO  : Platform repository initialization has completed.
+10:41:26 INFO  : Registering command handlers for Vitis TCF services
+10:41:29 INFO  : Successfully done query RDI_DATADIR 
+10:43:15 INFO  : Result from executing command 'getProjects': PRwithZycap;pr_led
+10:43:15 INFO  : Result from executing command 'getPlatforms': pr_led|C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+10:43:24 INFO  : Successfully done sdx_reload_mss "C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/zynq_fsbl/zynq_fsbl_bsp/system.mss"
+10:43:46 INFO  : (SwPlaform) Successfully done setParamInSpec 
+10:43:46 INFO  : (SwPlatform) Successfully done update_mss 
+10:43:46 INFO  : No changes in MSS file content so sources will not be generated.
+10:44:22 INFO  : Result from executing command 'getProjects': PRwithZycap;pr_led
+10:44:22 INFO  : Result from executing command 'getPlatforms': PRwithZycap|C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/export/PRwithZycap/PRwithZycap.xpfm;pr_led|C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+10:45:58 INFO  : Checking for BSP changes to sync application flags for project 'zycapTest'...
+10:46:09 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}' command is executed.
+10:46:09 INFO  : 'fpga -state' command is executed.
+10:46:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:46:10 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+10:46:10 INFO  : 'jtag frequency' command is executed.
+10:46:10 INFO  : Context for 'APU' is selected.
+10:46:10 INFO  : System reset is completed.
+10:46:13 INFO  : 'after 3000' command is executed.
+10:46:13 INFO  : Context for 'APU' is selected.
+10:46:13 INFO  : Hardware design and registers information is loaded from 'C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/export/PRwithZycap/hw/system_wrapper.xsa'.
+10:46:13 INFO  : 'configparams force-mem-access 1' command is executed.
+10:46:13 INFO  : Context for 'APU' is selected.
+10:46:13 INFO  : Sourcing of 'C:/GitHub/ReconHardware/FPGA_Files/Software/zycapTest/_ide/psinit/ps7_init.tcl' is done.
+10:46:13 INFO  : 'ps7_init' command is executed.
+10:46:13 INFO  : 'ps7_post_config' command is executed.
+10:46:13 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:46:15 ERROR : Memory write error at 0x100000. APB Memory access port is disabled
+10:46:15 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/export/PRwithZycap/hw/system_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/GitHub/ReconHardware/FPGA_Files/Software/zycapTest/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/GitHub/ReconHardware/FPGA_Files/Software/zycapTest/Debug/zycapTest.elf
+----------------End of Script----------------
+
+10:46:15 ERROR : Memory write error at 0x100000. APB Memory access port is disabled
+10:47:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:47:57 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+10:47:57 INFO  : 'jtag frequency' command is executed.
+10:47:57 INFO  : Context for 'APU' is selected.
+10:47:57 ERROR : Cannot reset APU. AP transaction error, DAP status 0xF0000021
+10:47:57 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+----------------End of Script----------------
+
+10:47:57 ERROR : Cannot reset APU. AP transaction error, DAP status 0xF0000021
+10:48:03 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:48:10 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+10:48:10 INFO  : 'jtag frequency' command is executed.
+10:48:10 INFO  : Context for 'APU' is selected.
+10:48:10 INFO  : System reset is completed.
+10:48:13 INFO  : 'after 3000' command is executed.
+10:48:14 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}' command is executed.
+10:48:16 INFO  : FPGA configured successfully with bitstream "C:/GitHub/ReconHardware/FPGA_Files/Projects/PRwithZycap/bitstreams/config2/config2.bit"
+10:48:16 INFO  : Context for 'APU' is selected.
+10:48:16 INFO  : Hardware design and registers information is loaded from 'C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/export/PRwithZycap/hw/system_wrapper.xsa'.
+10:48:16 INFO  : 'configparams force-mem-access 1' command is executed.
+10:48:16 INFO  : Context for 'APU' is selected.
+10:48:16 INFO  : Sourcing of 'C:/GitHub/ReconHardware/FPGA_Files/Software/zycapTest/_ide/psinit/ps7_init.tcl' is done.
+10:48:17 INFO  : 'ps7_init' command is executed.
+10:48:17 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:48:19 ERROR : Memory write error at 0x100000. APB Memory access port is disabled
+10:48:19 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}
+fpga -file C:/GitHub/ReconHardware/FPGA_Files/Projects/PRwithZycap/bitstreams/config2/config2.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/export/PRwithZycap/hw/system_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/GitHub/ReconHardware/FPGA_Files/Software/zycapTest/_ide/psinit/ps7_init.tcl
+ps7_init
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/GitHub/ReconHardware/FPGA_Files/Software/zycapTest/Debug/zycapTest.elf
+----------------End of Script----------------
+
+10:48:19 ERROR : Memory write error at 0x100000. APB Memory access port is disabled
+11:34:39 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:34:40 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+11:34:40 INFO  : 'jtag frequency' command is executed.
+11:34:40 INFO  : Context for 'APU' is selected.
+11:34:40 ERROR : Cannot reset APU. AP transaction error, DAP status 0xF0000021
+11:34:40 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+----------------End of Script----------------
+
+11:34:40 ERROR : Cannot reset APU. AP transaction error, DAP status 0xF0000021
+11:36:29 INFO  : Result from executing command 'getProjects': PRwithZycap;pr_led
+11:36:29 INFO  : Result from executing command 'getPlatforms': PRwithZycap|C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/export/PRwithZycap/PRwithZycap.xpfm;pr_led|C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+11:36:29 INFO  : Checking for BSP changes to sync application flags for project 'pr_led_sw'...
+11:36:30 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:36:30 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+11:36:30 INFO  : 'jtag frequency' command is executed.
+11:36:30 INFO  : Context for 'APU' is selected.
+11:36:31 INFO  : System reset is completed.
+11:36:34 INFO  : 'after 3000' command is executed.
+11:36:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}' command is executed.
+11:36:36 INFO  : FPGA configured successfully with bitstream "C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw/_ide/bitstream/top.bit"
+11:36:36 INFO  : Context for 'APU' is selected.
+11:36:36 INFO  : Hardware design and registers information is loaded from 'C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/hw/top.xsa'.
+11:36:36 INFO  : 'configparams force-mem-access 1' command is executed.
+11:36:36 INFO  : Context for 'APU' is selected.
+11:36:36 INFO  : Sourcing of 'C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw/_ide/psinit/ps7_init.tcl' is done.
+11:36:36 INFO  : 'ps7_init' command is executed.
+11:36:36 INFO  : 'ps7_post_config' command is executed.
+11:36:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:36:37 INFO  : The application 'C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw/Debug/pr_led_sw.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:36:37 INFO  : 'configparams force-mem-access 0' command is executed.
+11:36:37 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}
+fpga -file C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw/_ide/bitstream/top.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/hw/top.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw/Debug/pr_led_sw.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:36:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:36:37 INFO  : 'con' command is executed.
+11:36:37 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+11:36:37 INFO  : Launch script is exported to file 'C:\GitHub\ReconHardware\FPGA_Files\Software\.sdk\launch_scripts\single_application_debug\systemdebugger_pr_led_sw_system_standalone.tcl'
+11:37:37 INFO  : Disconnected from the channel tcfchan#3.
+11:37:41 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:37:41 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+11:37:41 INFO  : 'jtag frequency' command is executed.
+11:37:41 INFO  : Context for 'APU' is selected.
+11:37:41 INFO  : System reset is completed.
+11:37:44 INFO  : 'after 3000' command is executed.
+11:37:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}' command is executed.
+11:37:47 INFO  : FPGA configured successfully with bitstream "C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw/_ide/bitstream/top.bit"
+11:37:47 INFO  : Context for 'APU' is selected.
+11:37:47 INFO  : Hardware design and registers information is loaded from 'C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/hw/top.xsa'.
+11:37:47 INFO  : 'configparams force-mem-access 1' command is executed.
+11:37:47 INFO  : Context for 'APU' is selected.
+11:37:47 INFO  : Sourcing of 'C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw/_ide/psinit/ps7_init.tcl' is done.
+11:37:47 INFO  : 'ps7_init' command is executed.
+11:37:47 INFO  : 'ps7_post_config' command is executed.
+11:37:47 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:37:48 INFO  : The application 'C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw/Debug/pr_led_sw.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:37:48 INFO  : 'configparams force-mem-access 0' command is executed.
+11:37:48 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}
+fpga -file C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw/_ide/bitstream/top.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/hw/top.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw/Debug/pr_led_sw.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:37:48 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:37:48 INFO  : 'con' command is executed.
+11:37:48 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+11:37:48 INFO  : Launch script is exported to file 'C:\GitHub\ReconHardware\FPGA_Files\Software\.sdk\launch_scripts\single_application_debug\systemdebugger_pr_led_sw_system_standalone.tcl'
+11:43:58 INFO  : Disconnected from the channel tcfchan#5.
+11:44:02 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:44:03 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+11:44:03 INFO  : 'jtag frequency' command is executed.
+11:44:03 INFO  : Context for 'APU' is selected.
+11:44:03 INFO  : System reset is completed.
+11:44:06 INFO  : 'after 3000' command is executed.
+11:44:06 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}' command is executed.
+11:44:08 INFO  : FPGA configured successfully with bitstream "C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw/_ide/bitstream/top.bit"
+11:44:09 INFO  : Context for 'APU' is selected.
+11:44:09 INFO  : Hardware design and registers information is loaded from 'C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/hw/top.xsa'.
+11:44:09 INFO  : 'configparams force-mem-access 1' command is executed.
+11:44:09 INFO  : Context for 'APU' is selected.
+11:44:09 INFO  : Sourcing of 'C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw/_ide/psinit/ps7_init.tcl' is done.
+11:44:09 INFO  : 'ps7_init' command is executed.
+11:44:09 INFO  : 'ps7_post_config' command is executed.
+11:44:09 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:44:09 INFO  : The application 'C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw/Debug/pr_led_sw.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:44:09 INFO  : 'configparams force-mem-access 0' command is executed.
+11:44:09 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}
+fpga -file C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw/_ide/bitstream/top.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/hw/top.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw/Debug/pr_led_sw.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:44:09 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:44:09 INFO  : 'con' command is executed.
+11:44:09 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+11:44:09 INFO  : Launch script is exported to file 'C:\GitHub\ReconHardware\FPGA_Files\Software\.sdk\launch_scripts\single_application_debug\systemdebugger_pr_led_sw_system_standalone.tcl'
+11:44:50 INFO  : Checking for BSP changes to sync application flags for project 'pr_led_sw'...
+11:45:08 INFO  : Disconnected from the channel tcfchan#6.
+11:45:11 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:45:11 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+11:45:11 INFO  : 'jtag frequency' command is executed.
+11:45:11 INFO  : Context for 'APU' is selected.
+11:45:11 INFO  : System reset is completed.
+11:45:14 INFO  : 'after 3000' command is executed.
+11:45:14 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}' command is executed.
+11:45:17 INFO  : FPGA configured successfully with bitstream "C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw/_ide/bitstream/top.bit"
+11:45:17 INFO  : Context for 'APU' is selected.
+11:45:17 INFO  : Hardware design and registers information is loaded from 'C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/hw/top.xsa'.
+11:45:17 INFO  : 'configparams force-mem-access 1' command is executed.
+11:45:17 INFO  : Context for 'APU' is selected.
+11:45:17 INFO  : Sourcing of 'C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw/_ide/psinit/ps7_init.tcl' is done.
+11:45:17 INFO  : 'ps7_init' command is executed.
+11:45:17 INFO  : 'ps7_post_config' command is executed.
+11:45:17 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:45:17 INFO  : The application 'C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw/Debug/pr_led_sw.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:45:17 INFO  : 'configparams force-mem-access 0' command is executed.
+11:45:17 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}
+fpga -file C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw/_ide/bitstream/top.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/hw/top.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw/Debug/pr_led_sw.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:45:17 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:45:17 INFO  : 'con' command is executed.
+11:45:17 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+11:45:17 INFO  : Launch script is exported to file 'C:\GitHub\ReconHardware\FPGA_Files\Software\.sdk\launch_scripts\single_application_debug\systemdebugger_pr_led_sw_system_standalone.tcl'
+11:45:36 INFO  : Disconnected from the channel tcfchan#8.
+11:45:39 INFO  : Checking for BSP changes to sync application flags for project 'pr_led_sw'...
+11:45:47 INFO  : Checking for BSP changes to sync application flags for project 'pr_led_sw'...
+11:45:52 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:45:52 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+11:45:52 INFO  : 'jtag frequency' command is executed.
+11:45:52 INFO  : Context for 'APU' is selected.
+11:45:52 INFO  : System reset is completed.
+11:45:55 INFO  : 'after 3000' command is executed.
+11:45:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}' command is executed.
+11:45:58 INFO  : FPGA configured successfully with bitstream "C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw/_ide/bitstream/top.bit"
+11:45:58 INFO  : Context for 'APU' is selected.
+11:45:58 INFO  : Hardware design and registers information is loaded from 'C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/hw/top.xsa'.
+11:45:58 INFO  : 'configparams force-mem-access 1' command is executed.
+11:45:58 INFO  : Context for 'APU' is selected.
+11:45:58 INFO  : Sourcing of 'C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw/_ide/psinit/ps7_init.tcl' is done.
+11:45:58 INFO  : 'ps7_init' command is executed.
+11:45:58 INFO  : 'ps7_post_config' command is executed.
+11:45:58 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:45:58 INFO  : The application 'C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw/Debug/pr_led_sw.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:45:58 INFO  : 'configparams force-mem-access 0' command is executed.
+11:45:58 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}
+fpga -file C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw/_ide/bitstream/top.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/hw/top.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw/Debug/pr_led_sw.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:45:58 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:45:58 INFO  : 'con' command is executed.
+11:45:58 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+11:45:58 INFO  : Launch script is exported to file 'C:\GitHub\ReconHardware\FPGA_Files\Software\.sdk\launch_scripts\single_application_debug\systemdebugger_pr_led_sw_system_standalone.tcl'
+11:46:50 INFO  : Disconnected from the channel tcfchan#10.
+11:46:54 INFO  : Checking for BSP changes to sync application flags for project 'pr_led_sw'...
+11:47:03 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:47:04 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+11:47:04 INFO  : 'jtag frequency' command is executed.
+11:47:04 INFO  : Context for 'APU' is selected.
+11:47:04 INFO  : System reset is completed.
+11:47:07 INFO  : 'after 3000' command is executed.
+11:47:07 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}' command is executed.
+11:47:09 INFO  : FPGA configured successfully with bitstream "C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw/_ide/bitstream/top.bit"
+11:47:09 INFO  : Context for 'APU' is selected.
+11:47:09 INFO  : Hardware design and registers information is loaded from 'C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/hw/top.xsa'.
+11:47:09 INFO  : 'configparams force-mem-access 1' command is executed.
+11:47:09 INFO  : Context for 'APU' is selected.
+11:47:09 INFO  : Sourcing of 'C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw/_ide/psinit/ps7_init.tcl' is done.
+11:47:10 INFO  : 'ps7_init' command is executed.
+11:47:10 INFO  : 'ps7_post_config' command is executed.
+11:47:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:47:10 INFO  : The application 'C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw/Debug/pr_led_sw.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:47:10 INFO  : 'configparams force-mem-access 0' command is executed.
+11:47:10 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}
+fpga -file C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw/_ide/bitstream/top.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/hw/top.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw/Debug/pr_led_sw.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:47:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:47:10 INFO  : 'con' command is executed.
+11:47:10 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+11:47:10 INFO  : Launch script is exported to file 'C:\GitHub\ReconHardware\FPGA_Files\Software\.sdk\launch_scripts\single_application_debug\systemdebugger_pr_led_sw_system_standalone.tcl'
+11:47:36 INFO  : Disconnected from the channel tcfchan#12.
+11:49:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:49:07 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+11:49:07 INFO  : 'jtag frequency' command is executed.
+11:49:07 INFO  : Context for 'APU' is selected.
+11:49:07 INFO  : System reset is completed.
+11:49:10 INFO  : 'after 3000' command is executed.
+11:49:11 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}' command is executed.
+11:49:13 INFO  : FPGA configured successfully with bitstream "C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw/_ide/bitstream/top.bit"
+11:49:13 INFO  : Context for 'APU' is selected.
+11:49:13 INFO  : Hardware design and registers information is loaded from 'C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/hw/top.xsa'.
+11:49:13 INFO  : 'configparams force-mem-access 1' command is executed.
+11:49:13 INFO  : Context for 'APU' is selected.
+11:49:13 INFO  : Sourcing of 'C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw/_ide/psinit/ps7_init.tcl' is done.
+11:49:13 INFO  : 'ps7_init' command is executed.
+11:49:13 INFO  : 'ps7_post_config' command is executed.
+11:49:13 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:49:14 INFO  : The application 'C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw/Debug/pr_led_sw.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:49:14 INFO  : 'configparams force-mem-access 0' command is executed.
+11:49:14 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}
+fpga -file C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw/_ide/bitstream/top.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/hw/top.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw/Debug/pr_led_sw.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:49:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:49:14 INFO  : 'con' command is executed.
+11:49:14 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+11:49:14 INFO  : Launch script is exported to file 'C:\GitHub\ReconHardware\FPGA_Files\Software\.sdk\launch_scripts\single_application_debug\systemdebugger_pr_led_sw_system_standalone.tcl'
+11:57:04 WARN  : channel "tcfchan#13" closed
+12:01:30 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\GitHub\ReconHardware\FPGA_Files\Software\temp_xsdb_launch_script.tcl
+12:01:32 INFO  : XSCT server has started successfully.
+12:01:32 INFO  : Successfully done setting XSCT server connection channel  
+12:01:32 INFO  : plnx-install-location is set to ''
+12:01:32 INFO  : Successfully done setting workspace for the tool. 
+12:01:35 INFO  : Platform repository initialization has completed.
+12:01:35 INFO  : Registering command handlers for Vitis TCF services
+12:01:38 INFO  : Successfully done query RDI_DATADIR 
+12:02:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:02:35 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+12:02:35 INFO  : 'jtag frequency' command is executed.
+12:02:36 INFO  : Context for 'APU' is selected.
+12:02:36 INFO  : System reset is completed.
+12:02:39 INFO  : 'after 3000' command is executed.
+12:02:39 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}' command is executed.
+12:02:42 INFO  : FPGA configured successfully with bitstream "C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw/_ide/bitstream/top.bit"
+12:02:42 INFO  : Context for 'APU' is selected.
+12:02:42 INFO  : Hardware design and registers information is loaded from 'C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/hw/top.xsa'.
+12:02:42 INFO  : 'configparams force-mem-access 1' command is executed.
+12:02:42 INFO  : Context for 'APU' is selected.
+12:02:42 INFO  : Sourcing of 'C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw/_ide/psinit/ps7_init.tcl' is done.
+12:02:43 INFO  : 'ps7_init' command is executed.
+12:02:43 INFO  : 'ps7_post_config' command is executed.
+12:02:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:02:43 INFO  : The application 'C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw/Debug/pr_led_sw.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:02:43 INFO  : 'configparams force-mem-access 0' command is executed.
+12:02:43 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}
+fpga -file C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw/_ide/bitstream/top.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/hw/top.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw/Debug/pr_led_sw.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:02:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:02:44 INFO  : 'con' command is executed.
+12:02:44 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+12:02:44 INFO  : Launch script is exported to file 'C:\GitHub\ReconHardware\FPGA_Files\Software\.sdk\launch_scripts\single_application_debug\systemdebugger_pr_led_sw_system_standalone.tcl'
+12:07:31 INFO  : Disconnected from the channel tcfchan#1.
+12:07:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:07:32 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+12:07:32 INFO  : 'jtag frequency' command is executed.
+12:07:32 INFO  : Context for 'APU' is selected.
+12:07:32 INFO  : System reset is completed.
+12:07:35 INFO  : 'after 3000' command is executed.
+12:07:35 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}' command is executed.
+12:07:37 INFO  : FPGA configured successfully with bitstream "C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw/_ide/bitstream/top.bit"
+12:07:37 INFO  : Context for 'APU' is selected.
+12:07:42 INFO  : Hardware design and registers information is loaded from 'C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/hw/top.xsa'.
+12:07:42 INFO  : 'configparams force-mem-access 1' command is executed.
+12:07:42 INFO  : Context for 'APU' is selected.
+12:07:42 INFO  : Sourcing of 'C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw/_ide/psinit/ps7_init.tcl' is done.
+12:07:42 INFO  : 'ps7_init' command is executed.
+12:07:42 INFO  : 'ps7_post_config' command is executed.
+12:07:42 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:07:42 INFO  : The application 'C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw/Debug/pr_led_sw.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:07:42 INFO  : 'configparams force-mem-access 0' command is executed.
+12:07:42 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}
+fpga -file C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw/_ide/bitstream/top.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/hw/top.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw/Debug/pr_led_sw.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:07:42 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:07:42 INFO  : 'con' command is executed.
+12:07:42 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+12:07:42 INFO  : Launch script is exported to file 'C:\GitHub\ReconHardware\FPGA_Files\Software\.sdk\launch_scripts\single_application_debug\systemdebugger_pr_led_sw_system_standalone.tcl'
+16:07:54 INFO  : Disconnected from the channel tcfchan#2.

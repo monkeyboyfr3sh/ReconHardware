@@ -1,7 +1,7 @@
 set projLoc "C:/GitHub/ReconHardware/FPGA_Files/Projects"
 
 #Before running the script the block design should have been already created and floorplanning should have been already saved in the xdc file
-open_project imageProcessingVideoDisplay.xpr
+# open_project imageProcessingVideoDisplay.xpr
 
 # Create 'synth_1' run (if not found)
 if {[string equal [get_runs -quiet synth_1] ""]} {
@@ -16,6 +16,11 @@ if {![file exists ./imageProcessingVideoDisplay.sdk]} {
       file mkdir imageProcessingVideoDisplay.sdk
 }
 write_hwdef -force  -file ./imageProcessingVideoDisplay.sdk/system_wrapper.hdf
+
+if {![file exists ./imageProcessingVideoDisplay.vitis]} {
+      file mkdir imageProcessingVideoDisplay.vitis
+}
+
 reset_run synth_1
 launch_runs synth_1
 wait_on_run synth_1
@@ -65,20 +70,29 @@ if {![file exists ./bitstreams]} {
 if {![file exists ./bitstreams/config3]} {
       file mkdir ./bitstreams/config3
 }
+
+# Bitstream generation with .bin for ICAP 
 write_bitstream -force -bin_file ./bitstreams/config3/config3.bit
+
+# write_hw_platform -fixed -force ‑include_bit -file ./imageProcessingVideoDisplay.vitis/system_wrapper.xsa
+# write_hw_platform -fixed -force ‑include_bit
+
 open_checkpoint ./netlists/config1/config1Routed.dcp
 if {![file exists ./bitstreams/config1]} {
       file mkdir ./bitstreams/config1
 }
 write_bitstream -force -bin_file ./bitstreams/config1/config1.bit
 close_design
+
 if {![file exists ./bitstreams/config2]} {
       file mkdir ./bitstreams/config2
 }
+
 open_checkpoint ./netlists/config2/config2Routed.dcp
 write_bitstream -force -bin_file ./bitstreams/config2/config2.bit
 close_design
 
+# .bin files for PCAP
 write_cfgmem -force -format BIN -interface SMAPx32 -loadbit "up 0x0 ./bitstreams/config1/config1_pblock_conv_partial.bit" "./bitstreams/config1/pconfig1.bin"
 write_cfgmem -force -format BIN -interface SMAPx32 -loadbit "up 0x0 ./bitstreams/config2/config2_pblock_conv_partial.bit" "./bitstreams/config2/pconfig2.bin"
 write_cfgmem -force -format BIN -interface SMAPx32 -loadbit "up 0x0 ./bitstreams/config3/config3_pblock_conv_partial.bit" "./bitstreams/config3/pconfig3.bin"

@@ -126,7 +126,7 @@
             "value_src": "default"
           },
           "CLK_DOMAIN": {
-            "value": "system_processing_system7_0_0_FCLK_CLK0",
+            "value": "system_processing_system7_0_1_FCLK_CLK0",
             "value_src": "default_prop"
           },
           "NUM_READ_THREADS": {
@@ -164,7 +164,7 @@
             "value": "resetn"
           },
           "CLK_DOMAIN": {
-            "value": "system_processing_system7_0_0_FCLK_CLK0",
+            "value": "system_processing_system7_0_1_FCLK_CLK0",
             "value_src": "default_prop"
           },
           "FREQ_HZ": {

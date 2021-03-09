@@ -2,12 +2,14 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="" key="selection"/>
+		<item value="imageData" key="selection"/>
 		<item value="true" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="imageData"/>
+			<item value="XAxiVdma"/>
 			<item value="mask"/>
 			<item value="icap"/>
 			<item value="XPAR_XDCFG_0_DEVICE_ID"/>
@@ -21,8 +23,6 @@
 			<item value="XDCFG"/>
 			<item value="dcfg"/>
 			<item value="status"/>
-			<item value="read"/>
-			<item value="XPAR_GPIO_0_DEVICE_ID"/>
 		</list>
 		<list key="replacehistory">
 			<item value="count_Gpio"/>

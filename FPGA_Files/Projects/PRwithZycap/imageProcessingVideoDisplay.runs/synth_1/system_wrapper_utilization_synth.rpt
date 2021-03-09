@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date         : Mon Mar  8 18:51:46 2021
+| Date         : Tue Mar  9 15:49:59 2021
 | Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 | Command      : report_utilization -file system_wrapper_utilization_synth.rpt -pb system_wrapper_utilization_synth.pb
 | Design       : system_wrapper
@@ -176,22 +176,15 @@ Table of Contents
 |             Ref Name             | Used |
 +----------------------------------+------+
 | system_zycap_0_1                 |    1 |
-| system_xbar_0                    |    1 |
 | system_system_ila_0_0            |    1 |
 | system_rst_ps7_0_100M_1_0        |    1 |
-| system_rst_ps7_0_100M_1          |    1 |
-| system_rst_ps7_0_100M_0          |    1 |
-| system_processing_system7_0_0    |    1 |
+| system_processing_system7_0_1    |    1 |
 | system_imageProcess_0_0          |    1 |
 | system_axis_dwidth_converter_0_0 |    1 |
-| system_axi_smc_1_0               |    1 |
+| system_axi_smc_2                 |    1 |
 | system_axi_smc_0                 |    1 |
 | system_axi_gpio_0_0              |    1 |
 | system_axi_dma_0_0               |    1 |
-| system_auto_pc_3                 |    1 |
-| system_auto_pc_2                 |    1 |
-| system_auto_pc_1                 |    1 |
-| system_auto_pc_0                 |    1 |
 +----------------------------------+------+
 
 
