@@ -11077,3 +11077,1856 @@ TRACE::2021-03-08.11:14:14::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardwar
 C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
 
 TRACE::2021-03-08.11:14:14::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-08.13:28:41::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:28:41::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:28:41::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:28:43::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw
+TRACE::2021-03-08.13:28:43::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:28:43::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-08.13:28:43::SCWPlatform::Do not have an existing db opened. 
+TRACE::2021-03-08.13:28:47::SCWPlatform::Opened new HwDB with name top
+TRACE::2021-03-08.13:28:47::SCWReader::Active system found as  pr_led
+TRACE::2021-03-08.13:28:47::SCWReader::Handling sysconfig pr_led
+TRACE::2021-03-08.13:28:47::SCWDomain::checking for install qemu data   : 
+TRACE::2021-03-08.13:28:47::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/
+TRACE::2021-03-08.13:28:47::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt
+TRACE::2021-03-08.13:28:47::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:28:47::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:28:47::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:28:47::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw
+TRACE::2021-03-08.13:28:47::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:28:47::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-08.13:28:47::SCWPlatform::Trying to set the existing hwdb with name top
+TRACE::2021-03-08.13:28:47::SCWPlatform::Opened existing hwdb top
+TRACE::2021-03-08.13:28:47::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-08.13:28:47::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:28:47::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:28:47::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:28:47::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw
+TRACE::2021-03-08.13:28:47::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:28:47::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-08.13:28:47::SCWPlatform::Trying to set the existing hwdb with name top
+TRACE::2021-03-08.13:28:47::SCWPlatform::Opened existing hwdb top
+TRACE::2021-03-08.13:28:47::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-08.13:28:47::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:28:47::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:28:47::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:28:47::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw
+TRACE::2021-03-08.13:28:47::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:28:47::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-08.13:28:47::SCWPlatform::Trying to set the existing hwdb with name top
+TRACE::2021-03-08.13:28:47::SCWPlatform::Opened existing hwdb top
+TRACE::2021-03-08.13:28:47::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-08.13:28:47::SCWReader::Boot application domain added for zynq_fsbl
+TRACE::2021-03-08.13:28:47::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:28:47::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:28:47::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:28:47::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw
+TRACE::2021-03-08.13:28:47::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:28:47::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-08.13:28:47::SCWPlatform::Trying to set the existing hwdb with name top
+TRACE::2021-03-08.13:28:47::SCWPlatform::Opened existing hwdb top
+TRACE::2021-03-08.13:28:47::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-08.13:28:47::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-08.13:28:47::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2021-03-08.13:28:47::SCWMssOS::No sw design opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-08.13:28:47::SCWMssOS::mss exists loading the mss file  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-08.13:28:47::SCWMssOS::Opened the sw design from mss  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-08.13:28:47::SCWMssOS::Adding the swdes entry C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss with des name system
+TRACE::2021-03-08.13:28:47::SCWMssOS::updating the scw layer about changes
+TRACE::2021-03-08.13:28:47::SCWMssOS::Opened the sw design.  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-08.13:28:47::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:28:47::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:28:47::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:28:47::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw
+TRACE::2021-03-08.13:28:47::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:28:47::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-08.13:28:47::SCWPlatform::Trying to set the existing hwdb with name top
+TRACE::2021-03-08.13:28:47::SCWPlatform::Opened existing hwdb top
+TRACE::2021-03-08.13:28:47::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-08.13:28:47::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-08.13:28:47::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-08.13:28:47::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-08.13:28:47::SCWMssOS:: library already available in sw design:  xilffs:4.3
+TRACE::2021-03-08.13:28:47::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:28:47::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:28:47::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:28:47::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw
+TRACE::2021-03-08.13:28:47::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:28:47::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-08.13:28:47::SCWPlatform::Trying to set the existing hwdb with name top
+TRACE::2021-03-08.13:28:47::SCWPlatform::Opened existing hwdb top
+TRACE::2021-03-08.13:28:47::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-08.13:28:47::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-08.13:28:47::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-08.13:28:47::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-08.13:28:47::SCWMssOS::Adding Library:  xilrsa:1.6
+TRACE::2021-03-08.13:28:47::SCWMssOS::Added Library:  xilrsa
+TRACE::2021-03-08.13:28:47::SCWMssOS::Saving the mss changes C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-08.13:28:47::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2021-03-08.13:28:48::SCWMssOS::Completed writemss as part of save.
+TRACE::2021-03-08.13:28:48::SCWMssOS::Commit changes completed.
+TRACE::2021-03-08.13:28:48::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2021-03-08.13:28:48::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2021-03-08.13:28:48::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:28:48::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:28:48::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:28:48::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw
+TRACE::2021-03-08.13:28:48::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:28:48::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-08.13:28:48::SCWPlatform::Trying to set the existing hwdb with name top
+TRACE::2021-03-08.13:28:48::SCWPlatform::Opened existing hwdb top
+TRACE::2021-03-08.13:28:48::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-08.13:28:48::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-08.13:28:48::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-08.13:28:48::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-08.13:28:48::SCWReader::No isolation master present  
+TRACE::2021-03-08.13:28:48::SCWDomain::checking for install qemu data   : 
+TRACE::2021-03-08.13:28:48::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/
+TRACE::2021-03-08.13:28:48::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt
+TRACE::2021-03-08.13:28:48::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:28:48::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:28:48::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:28:48::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw
+TRACE::2021-03-08.13:28:48::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:28:48::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-08.13:28:48::SCWPlatform::Trying to set the existing hwdb with name top
+TRACE::2021-03-08.13:28:48::SCWPlatform::Opened existing hwdb top
+TRACE::2021-03-08.13:28:48::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-08.13:28:48::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:28:48::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:28:48::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:28:48::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw
+TRACE::2021-03-08.13:28:48::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:28:48::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-08.13:28:48::SCWPlatform::Trying to set the existing hwdb with name top
+TRACE::2021-03-08.13:28:48::SCWPlatform::Opened existing hwdb top
+TRACE::2021-03-08.13:28:48::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-08.13:28:48::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:28:48::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:28:48::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:28:48::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw
+TRACE::2021-03-08.13:28:48::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:28:48::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-08.13:28:48::SCWPlatform::Trying to set the existing hwdb with name top
+TRACE::2021-03-08.13:28:48::SCWPlatform::Opened existing hwdb top
+TRACE::2021-03-08.13:28:48::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-08.13:28:48::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-08.13:28:48::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-08.13:28:48::SCWMssOS::No sw design opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-08.13:28:48::SCWMssOS::mss exists loading the mss file  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-08.13:28:48::SCWMssOS::Opened the sw design from mss  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-08.13:28:48::SCWMssOS::Adding the swdes entry C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss with des name system_0
+TRACE::2021-03-08.13:28:48::SCWMssOS::updating the scw layer about changes
+TRACE::2021-03-08.13:28:48::SCWMssOS::Opened the sw design.  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-08.13:28:48::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:28:48::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:28:48::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:28:48::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw
+TRACE::2021-03-08.13:28:48::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:28:48::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-08.13:28:48::SCWPlatform::Trying to set the existing hwdb with name top
+TRACE::2021-03-08.13:28:48::SCWPlatform::Opened existing hwdb top
+TRACE::2021-03-08.13:28:48::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-08.13:28:48::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-08.13:28:48::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-08.13:28:48::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-08.13:28:48::SCWMssOS:: library already available in sw design:  xilffs:4.3
+TRACE::2021-03-08.13:28:48::SCWMssOS::Saving the mss changes C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-08.13:28:48::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2021-03-08.13:28:48::SCWMssOS::Completed writemss as part of save.
+TRACE::2021-03-08.13:28:48::SCWMssOS::Commit changes completed.
+TRACE::2021-03-08.13:28:48::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2021-03-08.13:28:48::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2021-03-08.13:28:48::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:28:48::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:28:48::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:28:48::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw
+TRACE::2021-03-08.13:28:48::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:28:48::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-08.13:28:48::SCWPlatform::Trying to set the existing hwdb with name top
+TRACE::2021-03-08.13:28:48::SCWPlatform::Opened existing hwdb top
+TRACE::2021-03-08.13:28:48::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-08.13:28:48::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-08.13:28:48::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-08.13:28:48::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-08.13:28:48::SCWReader::No isolation master present  
+TRACE::2021-03-08.13:35:28::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:35:28::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:35:28::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:35:28::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw
+TRACE::2021-03-08.13:35:28::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:35:28::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-08.13:35:28::SCWPlatform::Trying to set the existing hwdb with name top
+TRACE::2021-03-08.13:35:28::SCWPlatform::Opened existing hwdb top
+TRACE::2021-03-08.13:35:28::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-08.13:35:28::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/tempdsa/top.xsa
+TRACE::2021-03-08.13:35:28::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/tempdsa/top.xsa
+TRACE::2021-03-08.13:35:28::SCWPlatform:: Platform location is C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/tempdsa
+TRACE::2021-03-08.13:35:28::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/tempdsa/top.xsa
+TRACE::2021-03-08.13:35:28::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-08.13:35:32::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-08.13:35:32::SCWMssOS::Doing hw sync for the mss in domain: zynq_fsbl
+TRACE::2021-03-08.13:35:32::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:35:32::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:35:32::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:35:32::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw
+TRACE::2021-03-08.13:35:32::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:35:32::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-08.13:35:32::SCWPlatform::Trying to set the existing hwdb with name top
+TRACE::2021-03-08.13:35:32::SCWPlatform::Opened existing hwdb top
+TRACE::2021-03-08.13:35:32::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-08.13:35:32::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:35:32::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:35:32::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:35:32::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw
+TRACE::2021-03-08.13:35:32::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:35:32::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-08.13:35:32::SCWPlatform::Trying to set the existing hwdb with name top
+TRACE::2021-03-08.13:35:32::SCWPlatform::Opened existing hwdb top
+TRACE::2021-03-08.13:35:32::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-08.13:35:32::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-08.13:35:32::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-08.13:35:32::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-08.13:35:32::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/tempdsa/top.xsa
+TRACE::2021-03-08.13:35:32::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/tempdsa/top.xsa
+TRACE::2021-03-08.13:35:32::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/tempdsa/top.xsa
+TRACE::2021-03-08.13:35:32::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/tempdsa
+TRACE::2021-03-08.13:35:32::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/tempdsa/top.xsa
+TRACE::2021-03-08.13:35:32::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-08.13:35:32::SCWPlatform::update - Opened existing hwdb top_0
+TRACE::2021-03-08.13:35:32::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-08.13:35:32::SCWMssOS::Doing hw sync for the mss in domain: standalone_domain
+TRACE::2021-03-08.13:35:32::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:35:32::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:35:32::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:35:32::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw
+TRACE::2021-03-08.13:35:32::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:35:32::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-08.13:35:32::SCWPlatform::Trying to set the existing hwdb with name top
+TRACE::2021-03-08.13:35:32::SCWPlatform::Opened existing hwdb top
+TRACE::2021-03-08.13:35:32::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-08.13:35:32::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:35:32::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:35:32::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:35:32::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw
+TRACE::2021-03-08.13:35:32::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:35:32::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-08.13:35:32::SCWPlatform::Trying to set the existing hwdb with name top
+TRACE::2021-03-08.13:35:32::SCWPlatform::Opened existing hwdb top
+TRACE::2021-03-08.13:35:32::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-08.13:35:32::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-08.13:35:32::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-08.13:35:32::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-08.13:35:32::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/tempdsa/top.xsa
+TRACE::2021-03-08.13:35:32::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/tempdsa/top.xsa
+TRACE::2021-03-08.13:35:32::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/tempdsa/top.xsa
+TRACE::2021-03-08.13:35:32::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/tempdsa
+TRACE::2021-03-08.13:35:32::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/tempdsa/top.xsa
+TRACE::2021-03-08.13:35:32::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-08.13:35:32::SCWPlatform::update - Opened existing hwdb top_0
+TRACE::2021-03-08.13:35:32::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-08.13:35:32::SCWMssOS::Saving the mss changes C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-08.13:35:32::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2021-03-08.13:35:33::SCWMssOS::Completed writemss as part of save.
+TRACE::2021-03-08.13:35:33::SCWMssOS::Commit changes completed.
+TRACE::2021-03-08.13:35:33::SCWMssOS::Completed hw sync for the mss in domain: zynq_fsbl
+TRACE::2021-03-08.13:35:33::SCWMssOS::Removing the swdes entry for  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-08.13:35:33::SCWMssOS::Saving the mss changes C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-08.13:35:33::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2021-03-08.13:35:33::SCWMssOS::Completed writemss as part of save.
+TRACE::2021-03-08.13:35:33::SCWMssOS::Commit changes completed.
+TRACE::2021-03-08.13:35:33::SCWMssOS::Completed hw sync for the mss in domain: standalone_domain
+TRACE::2021-03-08.13:35:33::SCWMssOS::Removing the swdes entry for  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-08.13:35:33::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:35:33::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:35:33::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:35:33::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw
+TRACE::2021-03-08.13:35:33::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:35:33::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-08.13:35:33::SCWPlatform::Do not have an existing db opened. 
+TRACE::2021-03-08.13:35:37::SCWPlatform::Opened new HwDB with name top_1
+TRACE::2021-03-08.13:35:37::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:35:37::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:35:37::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:35:37::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw
+TRACE::2021-03-08.13:35:37::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:35:37::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-08.13:35:37::SCWPlatform::Trying to set the existing hwdb with name top_1
+TRACE::2021-03-08.13:35:37::SCWPlatform::Opened existing hwdb top_1
+TRACE::2021-03-08.13:35:37::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-08.13:35:37::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-08.13:35:37::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2021-03-08.13:35:37::SCWMssOS::No sw design opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-08.13:35:37::SCWMssOS::mss exists loading the mss file  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-08.13:35:37::SCWMssOS::Opened the sw design from mss  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-08.13:35:37::SCWMssOS::Adding the swdes entry C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss with des name system
+TRACE::2021-03-08.13:35:37::SCWMssOS::updating the scw layer about changes
+TRACE::2021-03-08.13:35:37::SCWMssOS::Opened the sw design.  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-08.13:35:37::SCWMssOS::Saving the mss changes C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-08.13:35:37::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2021-03-08.13:35:37::SCWMssOS::Completed writemss as part of save.
+TRACE::2021-03-08.13:35:37::SCWMssOS::Commit changes completed.
+TRACE::2021-03-08.13:35:37::SCWMssOS::Saving the mss changes C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-08.13:35:37::SCWMssOS::Adding the swdes entry, mss present, able to open swdb C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss with des name system_0
+TRACE::2021-03-08.13:35:37::SCWMssOS::Writing the mss file completed C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-08.13:35:37::SCWMssOS::Commit changes completed.
+TRACE::2021-03-08.13:35:37::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:35:37::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:35:37::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:35:37::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw
+TRACE::2021-03-08.13:35:37::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:35:37::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-08.13:35:37::SCWPlatform::Trying to set the existing hwdb with name top_1
+TRACE::2021-03-08.13:35:37::SCWPlatform::Opened existing hwdb top_1
+TRACE::2021-03-08.13:35:37::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-08.13:35:37::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-08.13:35:37::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-08.13:35:37::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-08.13:35:37::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:35:37::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:35:37::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:35:37::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw
+TRACE::2021-03-08.13:35:37::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:35:37::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-08.13:35:37::SCWPlatform::Trying to set the existing hwdb with name top_1
+TRACE::2021-03-08.13:35:37::SCWPlatform::Opened existing hwdb top_1
+TRACE::2021-03-08.13:35:37::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-08.13:35:37::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-08.13:35:37::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-08.13:35:37::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-08.13:35:37::SCWWriter::formatted JSON is {
+	"platformName":	"pr_led",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"pr_led",
+	"platHandOff":	"C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/Bitstreams/top.xsa",
+	"platIntHandOff":	"<platformDir>/hw/top.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"pr_led",
+	"systems":	[{
+			"systemName":	"pr_led",
+			"systemDesc":	"pr_led",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"pr_led",
+			"sysActiveDom":	"standalone_domain",
+			"sysDefaultDom":	"standalone_domain",
+			"domains":	[{
+					"domainName":	"zynq_fsbl",
+					"domainDispName":	"zynq_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"a48b732fbf58f272bb926b80b57f75a9",
+					"compatibleApp":	"zynq_fsbl",
+					"domType":	"bootDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.3", "xilrsa:1.6"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"standalone_domain",
+					"domainDispName":	"standalone on ps7_cortexa9_0",
+					"domainDesc":	"standalone_domain",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt",
+					"qemuData":	"C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"a6646d3be70fb92e65ee262a46a07cfb",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.3"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+LOG::2021-03-08.13:35:49::SCWPlatform::Started generating the artifacts platform pr_led
+TRACE::2021-03-08.13:35:49::SCWPlatform::Sanity checking of platform is completed
+LOG::2021-03-08.13:35:49::SCWPlatform::Started generating the artifacts for system configuration pr_led
+LOG::2021-03-08.13:35:49::SCWSystem::Checking the domain zynq_fsbl
+LOG::2021-03-08.13:35:49::SCWSystem::Doing application build for :  zynq_fsbl
+TRACE::2021-03-08.13:35:49::SCWBDomain::Not a forced makefile updation, No changes are present. 
+TRACE::2021-03-08.13:35:49::SCWDomain::Building the domain as part of full build :  zynq_fsbl
+TRACE::2021-03-08.13:35:49::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:35:49::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:35:49::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:35:49::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw
+TRACE::2021-03-08.13:35:49::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:35:49::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-08.13:35:49::SCWPlatform::Trying to set the existing hwdb with name top_1
+TRACE::2021-03-08.13:35:49::SCWPlatform::Opened existing hwdb top_1
+TRACE::2021-03-08.13:35:49::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-08.13:35:49::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-08.13:35:49::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-08.13:35:49::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-08.13:35:49::SCWBDomain::Completed writing the mss file at C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp
+TRACE::2021-03-08.13:35:49::SCWBDomain::bsp generated is upto date with the mss file. Skipping bsp generation.
+TRACE::2021-03-08.13:35:49::SCWBDomain::Not a forced makefile updation, No changes are present. 
+TRACE::2021-03-08.13:35:49::SCWBDomain::System Command Ran  C:&  cd  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl & make 
+TRACE::2021-03-08.13:35:49::SCWBDomain::arm-none-eabi-gcc -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -O2 -c -c sd.c -o sd.o -Izynq_fsbl_bsp/ps7_cort
+TRACE::2021-03-08.13:35:49::SCWBDomain::exa9_0/include -I.
+
+TRACE::2021-03-08.13:35:50::SCWBDomain::arm-none-eabi-gcc -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -O2 -c -c nand.c -o nand.o -Izynq_fsbl_bsp/ps7_
+TRACE::2021-03-08.13:35:50::SCWBDomain::cortexa9_0/include -I.
+
+TRACE::2021-03-08.13:35:50::SCWBDomain::arm-none-eabi-gcc -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -O2 -c -c image_mover.c -o image_mover.o -Izynq
+TRACE::2021-03-08.13:35:50::SCWBDomain::_fsbl_bsp/ps7_cortexa9_0/include -I.
+
+TRACE::2021-03-08.13:35:50::SCWBDomain::arm-none-eabi-gcc -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -O2 -c -c fsbl_hooks.c -o fsbl_hooks.o -Izynq_f
+TRACE::2021-03-08.13:35:50::SCWBDomain::sbl_bsp/ps7_cortexa9_0/include -I.
+
+TRACE::2021-03-08.13:35:50::SCWBDomain::arm-none-eabi-gcc -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -O2 -c -c main.c -o main.o -Izynq_fsbl_bsp/ps7_
+TRACE::2021-03-08.13:35:50::SCWBDomain::cortexa9_0/include -I.
+
+TRACE::2021-03-08.13:35:50::SCWBDomain::arm-none-eabi-gcc -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -O2 -c -c nor.c -o nor.o -Izynq_fsbl_bsp/ps7_co
+TRACE::2021-03-08.13:35:50::SCWBDomain::rtexa9_0/include -I.
+
+TRACE::2021-03-08.13:35:50::SCWBDomain::arm-none-eabi-gcc -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -O2 -c -c qspi.c -o qspi.o -Izynq_fsbl_bsp/ps7_
+TRACE::2021-03-08.13:35:50::SCWBDomain::cortexa9_0/include -I.
+
+TRACE::2021-03-08.13:35:50::SCWBDomain::arm-none-eabi-gcc -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -O2 -c -c ps7_init.c -o ps7_init.o -Izynq_fsbl_
+TRACE::2021-03-08.13:35:50::SCWBDomain::bsp/ps7_cortexa9_0/include -I.
+
+TRACE::2021-03-08.13:35:50::SCWBDomain::arm-none-eabi-gcc -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -O2 -c -c pcap.c -o pcap.o -Izynq_fsbl_bsp/ps7_
+TRACE::2021-03-08.13:35:50::SCWBDomain::cortexa9_0/include -I.
+
+TRACE::2021-03-08.13:35:50::SCWBDomain::arm-none-eabi-gcc -o executable.elf  sd.o  nand.o  image_mover.o  md5.o  fsbl_hooks.o  main.o  nor.o  qspi.o  rsa.o  ps7_init.o
+TRACE::2021-03-08.13:35:50::SCWBDomain::  pcap.o  fsbl_handoff.o -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=
+TRACE::2021-03-08.13:35:50::SCWBDomain::hard -Wl,-build-id=none -specs=Xilinx.spec  -lrsa -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxi
+TRACE::2021-03-08.13:35:50::SCWBDomain::l,-lgcc,-lc,--end-group -Wl,--start-group,-lrsa,-lxil,-lgcc,-lc,--end-group                                      -Wl,--gc-secti
+TRACE::2021-03-08.13:35:50::SCWBDomain::ons -Lzynq_fsbl_bsp/ps7_cortexa9_0/lib -L./ -Tlscript.ld
+
+LOG::2021-03-08.13:35:51::SCWSystem::Checking the domain standalone_domain
+LOG::2021-03-08.13:35:51::SCWSystem::Not a boot domain 
+LOG::2021-03-08.13:35:51::SCWSystem::Started Processing the domain standalone_domain
+TRACE::2021-03-08.13:35:51::SCWDomain::Generating domain artifcats
+TRACE::2021-03-08.13:35:51::SCWMssOS::Generating standalone artifcats
+TRACE::2021-03-08.13:35:51::SCWMssOS::Copying the qemu file from  C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt To C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/sw/pr_led/qemu/
+TRACE::2021-03-08.13:35:51::SCWMssOS::Copying the qemu file from  C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt To C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/sw/pr_led/standalone_domain/qemu/
+TRACE::2021-03-08.13:35:51::SCWMssOS:: Copying the user libraries. 
+TRACE::2021-03-08.13:35:51::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:35:51::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:35:51::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:35:51::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw
+TRACE::2021-03-08.13:35:51::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:35:51::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-08.13:35:51::SCWPlatform::Trying to set the existing hwdb with name top_1
+TRACE::2021-03-08.13:35:51::SCWPlatform::Opened existing hwdb top_1
+TRACE::2021-03-08.13:35:51::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-08.13:35:51::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-08.13:35:51::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-08.13:35:51::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-08.13:35:51::SCWMssOS::Completed writing the mss file at C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp
+TRACE::2021-03-08.13:35:51::SCWMssOS::Mss edits present, copying mssfile into export location C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-08.13:35:51::SCWMssOS::bsp generated is upto date with the mss file. Skipping bsp generation.
+TRACE::2021-03-08.13:35:51::SCWMssOS::BSP is already built. skipping the bsp build ... 
+TRACE::2021-03-08.13:35:51::SCWDomain::Building the domain as part of full build :  standalone_domain
+TRACE::2021-03-08.13:35:51::SCWMssOS::doing bsp build ... 
+TRACE::2021-03-08.13:35:51::SCWMssOS::System Command Ran  C: & cd  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp & make 
+TRACE::2021-03-08.13:35:51::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_7/src"
+
+TRACE::2021-03-08.13:35:51::SCWMssOS::make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none
+TRACE::2021-03-08.13:35:51::SCWMssOS::-eabi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=h
+TRACE::2021-03-08.13:35:51::SCWMssOS::ard -nostartfiles -g -Wall -Wextra"
+
+TRACE::2021-03-08.13:35:51::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_9/src"
+
+TRACE::2021-03-08.13:35:51::SCWMssOS::make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-ea
+TRACE::2021-03-08.13:35:51::SCWMssOS::bi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard
+TRACE::2021-03-08.13:35:51::SCWMssOS:: -nostartfiles -g -Wall -Wextra"
+
+TRACE::2021-03-08.13:35:51::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_1/src"
+
+TRACE::2021-03-08.13:35:51::SCWMssOS::make -C ps7_cortexa9_0/libsrc/ddrps_v1_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+TRACE::2021-03-08.13:35:51::SCWMssOS::"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+TRACE::2021-03-08.13:35:51::SCWMssOS::rtfiles -g -Wall -Wextra"
+
+TRACE::2021-03-08.13:35:51::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_6/src"
+
+TRACE::2021-03-08.13:35:51::SCWMssOS::make -C ps7_cortexa9_0/libsrc/devcfg_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2021-03-08.13:35:51::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2021-03-08.13:35:51::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2021-03-08.13:35:51::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_6/src"
+
+TRACE::2021-03-08.13:35:51::SCWMssOS::make -C ps7_cortexa9_0/libsrc/dmaps_v2_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+TRACE::2021-03-08.13:35:51::SCWMssOS::"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+TRACE::2021-03-08.13:35:51::SCWMssOS::rtfiles -g -Wall -Wextra"
+
+TRACE::2021-03-08.13:35:51::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_11/src"
+
+TRACE::2021-03-08.13:35:51::SCWMssOS::make -C ps7_cortexa9_0/libsrc/emacps_v3_11/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as
+TRACE::2021-03-08.13:35:51::SCWMssOS::" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nos
+TRACE::2021-03-08.13:35:51::SCWMssOS::tartfiles -g -Wall -Wextra"
+
+TRACE::2021-03-08.13:35:51::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_7/src"
+
+TRACE::2021-03-08.13:35:51::SCWMssOS::make -C ps7_cortexa9_0/libsrc/gpiops_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2021-03-08.13:35:51::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2021-03-08.13:35:51::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2021-03-08.13:35:51::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_6/src"
+
+TRACE::2021-03-08.13:35:51::SCWMssOS::make -C ps7_cortexa9_0/libsrc/gpio_v4_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "
+TRACE::2021-03-08.13:35:51::SCWMssOS::ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostar
+TRACE::2021-03-08.13:35:51::SCWMssOS::tfiles -g -Wall -Wextra"
+
+TRACE::2021-03-08.13:35:51::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/prc_v2_0/src"
+
+TRACE::2021-03-08.13:35:51::SCWMssOS::make -C ps7_cortexa9_0/libsrc/prc_v2_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2021-03-08.13:35:51::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2021-03-08.13:35:51::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2021-03-08.13:35:51::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_7/src"
+
+TRACE::2021-03-08.13:35:51::SCWMssOS::make -C ps7_cortexa9_0/libsrc/qspips_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2021-03-08.13:35:51::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2021-03-08.13:35:51::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2021-03-08.13:35:51::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/scugic_v4_2/src"
+
+TRACE::2021-03-08.13:35:51::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scugic_v4_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2021-03-08.13:35:51::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2021-03-08.13:35:51::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2021-03-08.13:35:51::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_2/src"
+
+TRACE::2021-03-08.13:35:51::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scutimer_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-a
+TRACE::2021-03-08.13:35:51::SCWMssOS::s" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -no
+TRACE::2021-03-08.13:35:51::SCWMssOS::startfiles -g -Wall -Wextra"
+
+TRACE::2021-03-08.13:35:51::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_2/src"
+
+TRACE::2021-03-08.13:35:51::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scuwdt_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2021-03-08.13:35:51::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2021-03-08.13:35:51::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2021-03-08.13:35:51::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_9/src"
+
+TRACE::2021-03-08.13:35:51::SCWMssOS::make -C ps7_cortexa9_0/libsrc/sdps_v3_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "
+TRACE::2021-03-08.13:35:51::SCWMssOS::ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostar
+TRACE::2021-03-08.13:35:51::SCWMssOS::tfiles -g -Wall -Wextra"
+
+TRACE::2021-03-08.13:35:52::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/standalone_v7_2/src"
+
+TRACE::2021-03-08.13:35:52::SCWMssOS::make -C ps7_cortexa9_0/libsrc/standalone_v7_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi
+TRACE::2021-03-08.13:35:52::SCWMssOS::-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -
+TRACE::2021-03-08.13:35:52::SCWMssOS::nostartfiles -g -Wall -Wextra"
+
+TRACE::2021-03-08.13:35:52::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_9/src"
+
+TRACE::2021-03-08.13:35:52::SCWMssOS::make -C ps7_cortexa9_0/libsrc/uartps_v3_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2021-03-08.13:35:52::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2021-03-08.13:35:52::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2021-03-08.13:35:52::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_5/src"
+
+TRACE::2021-03-08.13:35:52::SCWMssOS::make -C ps7_cortexa9_0/libsrc/usbps_v2_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+TRACE::2021-03-08.13:35:52::SCWMssOS::"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+TRACE::2021-03-08.13:35:52::SCWMssOS::rtfiles -g -Wall -Wextra"
+
+TRACE::2021-03-08.13:35:52::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_4/src"
+
+TRACE::2021-03-08.13:35:52::SCWMssOS::make -C ps7_cortexa9_0/libsrc/xadcps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2021-03-08.13:35:52::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2021-03-08.13:35:52::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2021-03-08.13:35:52::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/xilffs_v4_3/src"
+
+TRACE::2021-03-08.13:35:52::SCWMssOS::make -C ps7_cortexa9_0/libsrc/xilffs_v4_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2021-03-08.13:35:52::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2021-03-08.13:35:52::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2021-03-08.13:35:52::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_7/src"
+
+TRACE::2021-03-08.13:35:52::SCWMssOS::make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-ea
+TRACE::2021-03-08.13:35:52::SCWMssOS::bi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard
+TRACE::2021-03-08.13:35:52::SCWMssOS:: -nostartfiles -g -Wall -Wextra"
+
+TRACE::2021-03-08.13:35:52::SCWMssOS::"Compiling coresightps_dcc"
+
+TRACE::2021-03-08.13:35:52::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_9/src"
+
+TRACE::2021-03-08.13:35:52::SCWMssOS::make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-
+TRACE::2021-03-08.13:35:52::SCWMssOS::as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -n
+TRACE::2021-03-08.13:35:52::SCWMssOS::ostartfiles -g -Wall -Wextra"
+
+TRACE::2021-03-08.13:35:52::SCWMssOS::"Compiling cpu_cortexa9"
+
+TRACE::2021-03-08.13:35:52::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_1/src"
+
+TRACE::2021-03-08.13:35:52::SCWMssOS::make -C ps7_cortexa9_0/libsrc/ddrps_v1_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "AR
+TRACE::2021-03-08.13:35:52::SCWMssOS::CHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartf
+TRACE::2021-03-08.13:35:52::SCWMssOS::iles -g -Wall -Wextra"
+
+TRACE::2021-03-08.13:35:52::SCWMssOS::"Compiling ddrps"
+
+TRACE::2021-03-08.13:35:52::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_6/src"
+
+TRACE::2021-03-08.13:35:52::SCWMssOS::make -C ps7_cortexa9_0/libsrc/devcfg_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2021-03-08.13:35:52::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2021-03-08.13:35:52::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2021-03-08.13:35:52::SCWMssOS::"Compiling devcfg"
+
+TRACE::2021-03-08.13:35:53::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_6/src"
+
+TRACE::2021-03-08.13:35:53::SCWMssOS::make -C ps7_cortexa9_0/libsrc/dmaps_v2_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "AR
+TRACE::2021-03-08.13:35:53::SCWMssOS::CHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartf
+TRACE::2021-03-08.13:35:53::SCWMssOS::iles -g -Wall -Wextra"
+
+TRACE::2021-03-08.13:35:53::SCWMssOS::"Compiling dmaps"
+
+TRACE::2021-03-08.13:35:54::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_11/src"
+
+TRACE::2021-03-08.13:35:54::SCWMssOS::make -C ps7_cortexa9_0/libsrc/emacps_v3_11/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "
+TRACE::2021-03-08.13:35:54::SCWMssOS::ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostar
+TRACE::2021-03-08.13:35:54::SCWMssOS::tfiles -g -Wall -Wextra"
+
+TRACE::2021-03-08.13:35:54::SCWMssOS::"Compiling emacps"
+
+TRACE::2021-03-08.13:35:55::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_7/src"
+
+TRACE::2021-03-08.13:35:55::SCWMssOS::make -C ps7_cortexa9_0/libsrc/gpiops_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2021-03-08.13:35:55::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2021-03-08.13:35:55::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2021-03-08.13:35:55::SCWMssOS::"Compiling gpiops"
+
+TRACE::2021-03-08.13:35:55::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_6/src"
+
+TRACE::2021-03-08.13:35:55::SCWMssOS::make -C ps7_cortexa9_0/libsrc/gpio_v4_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "ARC
+TRACE::2021-03-08.13:35:55::SCWMssOS::HIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfi
+TRACE::2021-03-08.13:35:55::SCWMssOS::les -g -Wall -Wextra"
+
+TRACE::2021-03-08.13:35:56::SCWMssOS::"Compiling gpio"
+
+TRACE::2021-03-08.13:35:56::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/prc_v2_0/src"
+
+TRACE::2021-03-08.13:35:56::SCWMssOS::make -C ps7_cortexa9_0/libsrc/prc_v2_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "ARCH
+TRACE::2021-03-08.13:35:56::SCWMssOS::IVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfil
+TRACE::2021-03-08.13:35:56::SCWMssOS::es -g -Wall -Wextra"
+
+TRACE::2021-03-08.13:35:56::SCWMssOS::"Compiling prc"
+
+TRACE::2021-03-08.13:35:57::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_7/src"
+
+TRACE::2021-03-08.13:35:57::SCWMssOS::make -C ps7_cortexa9_0/libsrc/qspips_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2021-03-08.13:35:57::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2021-03-08.13:35:57::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2021-03-08.13:35:57::SCWMssOS::"Compiling qspips"
+
+TRACE::2021-03-08.13:35:58::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v4_2/src"
+
+TRACE::2021-03-08.13:35:58::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scugic_v4_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2021-03-08.13:35:58::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2021-03-08.13:35:58::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2021-03-08.13:35:58::SCWMssOS::"Compiling scugic"
+
+TRACE::2021-03-08.13:35:58::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_2/src"
+
+TRACE::2021-03-08.13:35:58::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scutimer_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+TRACE::2021-03-08.13:35:58::SCWMssOS::"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+TRACE::2021-03-08.13:35:58::SCWMssOS::rtfiles -g -Wall -Wextra"
+
+TRACE::2021-03-08.13:35:58::SCWMssOS::"Compiling scutimer"
+
+TRACE::2021-03-08.13:35:59::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_2/src"
+
+TRACE::2021-03-08.13:35:59::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scuwdt_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2021-03-08.13:35:59::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2021-03-08.13:35:59::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2021-03-08.13:35:59::SCWMssOS::"Compiling scuwdt"
+
+TRACE::2021-03-08.13:35:59::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_9/src"
+
+TRACE::2021-03-08.13:35:59::SCWMssOS::make -C ps7_cortexa9_0/libsrc/sdps_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "ARC
+TRACE::2021-03-08.13:35:59::SCWMssOS::HIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfi
+TRACE::2021-03-08.13:35:59::SCWMssOS::les -g -Wall -Wextra"
+
+TRACE::2021-03-08.13:35:59::SCWMssOS::"Compiling sdps"
+
+TRACE::2021-03-08.13:36:00::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v7_2/src"
+
+TRACE::2021-03-08.13:36:00::SCWMssOS::make -C ps7_cortexa9_0/libsrc/standalone_v7_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as
+TRACE::2021-03-08.13:36:00::SCWMssOS::" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nos
+TRACE::2021-03-08.13:36:00::SCWMssOS::tartfiles -g -Wall -Wextra"
+
+TRACE::2021-03-08.13:36:00::SCWMssOS::"Compiling standalone"
+
+TRACE::2021-03-08.13:36:03::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_9/src"
+
+TRACE::2021-03-08.13:36:03::SCWMssOS::make -C ps7_cortexa9_0/libsrc/uartps_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2021-03-08.13:36:03::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2021-03-08.13:36:03::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2021-03-08.13:36:03::SCWMssOS::"Compiling uartps"
+
+TRACE::2021-03-08.13:36:04::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_5/src"
+
+TRACE::2021-03-08.13:36:04::SCWMssOS::make -C ps7_cortexa9_0/libsrc/usbps_v2_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "AR
+TRACE::2021-03-08.13:36:04::SCWMssOS::CHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartf
+TRACE::2021-03-08.13:36:04::SCWMssOS::iles -g -Wall -Wextra"
+
+TRACE::2021-03-08.13:36:04::SCWMssOS::"Compiling usbps"
+
+TRACE::2021-03-08.13:36:04::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_4/src"
+
+TRACE::2021-03-08.13:36:04::SCWMssOS::make -C ps7_cortexa9_0/libsrc/xadcps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2021-03-08.13:36:04::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2021-03-08.13:36:04::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2021-03-08.13:36:04::SCWMssOS::"Compiling xadcps"
+
+TRACE::2021-03-08.13:36:05::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/xilffs_v4_3/src"
+
+TRACE::2021-03-08.13:36:05::SCWMssOS::make -C ps7_cortexa9_0/libsrc/xilffs_v4_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2021-03-08.13:36:05::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2021-03-08.13:36:05::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2021-03-08.13:36:05::SCWMssOS::"Compiling XilFFs Library"
+
+TRACE::2021-03-08.13:36:05::SCWMssOS::'Finished building libraries'
+
+TRACE::2021-03-08.13:36:05::SCWMssOS::Copying to export directory.
+TRACE::2021-03-08.13:36:05::SCWMssOS:: Checking if to create the Supporting Applications
+TRACE::2021-03-08.13:36:05::SCWMssOS:: No Linux domain exists, trying to generate FSBL 
+LOG::2021-03-08.13:36:05::SCWSystem::Completed Processing the domain standalone_domain
+LOG::2021-03-08.13:36:05::SCWSystem::Completed Processing the sysconfig pr_led
+LOG::2021-03-08.13:36:05::SCWPlatform::Completed generating the artifacts for system configuration pr_led
+TRACE::2021-03-08.13:36:05::SCWPlatform::Started preparing the platform 
+TRACE::2021-03-08.13:36:05::SCWSystem::Writing the bif file for system config pr_led
+TRACE::2021-03-08.13:36:05::SCWSystem::dir created 
+TRACE::2021-03-08.13:36:05::SCWSystem::Writing the bif 
+TRACE::2021-03-08.13:36:05::SCWPlatform::Started writing the spfm file 
+TRACE::2021-03-08.13:36:05::SCWPlatform::Started writing the xpfm file 
+TRACE::2021-03-08.13:36:05::SCWPlatform::Completed generating the platform
+TRACE::2021-03-08.13:36:05::SCWMssOS::Saving the mss changes C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-08.13:36:05::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2021-03-08.13:36:05::SCWMssOS::Completed writemss as part of save.
+TRACE::2021-03-08.13:36:05::SCWMssOS::Commit changes completed.
+TRACE::2021-03-08.13:36:05::SCWMssOS::Saving the mss changes C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-08.13:36:05::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2021-03-08.13:36:05::SCWMssOS::Completed writemss as part of save.
+TRACE::2021-03-08.13:36:05::SCWMssOS::Commit changes completed.
+TRACE::2021-03-08.13:36:05::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:36:05::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:36:05::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:36:05::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw
+TRACE::2021-03-08.13:36:05::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:36:05::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-08.13:36:05::SCWPlatform::Trying to set the existing hwdb with name top_1
+TRACE::2021-03-08.13:36:05::SCWPlatform::Opened existing hwdb top_1
+TRACE::2021-03-08.13:36:05::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-08.13:36:05::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-08.13:36:05::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-08.13:36:05::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-08.13:36:05::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:36:05::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:36:05::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:36:05::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw
+TRACE::2021-03-08.13:36:05::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:36:06::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-08.13:36:06::SCWPlatform::Trying to set the existing hwdb with name top_1
+TRACE::2021-03-08.13:36:06::SCWPlatform::Opened existing hwdb top_1
+TRACE::2021-03-08.13:36:06::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-08.13:36:06::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-08.13:36:06::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-08.13:36:06::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-08.13:36:06::SCWWriter::formatted JSON is {
+	"platformName":	"pr_led",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"pr_led",
+	"platHandOff":	"C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/Bitstreams/top.xsa",
+	"platIntHandOff":	"<platformDir>/hw/top.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"pr_led",
+	"systems":	[{
+			"systemName":	"pr_led",
+			"systemDesc":	"pr_led",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"pr_led",
+			"sysActiveDom":	"standalone_domain",
+			"sysDefaultDom":	"standalone_domain",
+			"domains":	[{
+					"domainName":	"zynq_fsbl",
+					"domainDispName":	"zynq_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"a48b732fbf58f272bb926b80b57f75a9",
+					"compatibleApp":	"zynq_fsbl",
+					"domType":	"bootDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.3", "xilrsa:1.6"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"standalone_domain",
+					"domainDispName":	"standalone on ps7_cortexa9_0",
+					"domainDesc":	"standalone_domain",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt",
+					"qemuData":	"C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"a6646d3be70fb92e65ee262a46a07cfb",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.3"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+KEYINFO::2021-03-08.13:36:06::SCWPlatform::updated the xpfm file.
+TRACE::2021-03-08.13:36:06::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:36:06::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:36:06::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:36:06::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw
+TRACE::2021-03-08.13:36:06::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.13:36:06::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-08.13:36:06::SCWPlatform::Trying to set the existing hwdb with name top_1
+TRACE::2021-03-08.13:36:06::SCWPlatform::Opened existing hwdb top_1
+TRACE::2021-03-08.13:36:06::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-08.13:36:06::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-08.13:36:06::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-08.13:36:06::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-08.15:30:28::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:28::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:28::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:30::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw
+TRACE::2021-03-08.15:30:30::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:30::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-08.15:30:30::SCWPlatform::Do not have an existing db opened. 
+TRACE::2021-03-08.15:30:34::SCWPlatform::Opened new HwDB with name top_0
+TRACE::2021-03-08.15:30:34::SCWReader::Active system found as  pr_led
+TRACE::2021-03-08.15:30:34::SCWReader::Handling sysconfig pr_led
+TRACE::2021-03-08.15:30:34::SCWDomain::checking for install qemu data   : 
+TRACE::2021-03-08.15:30:34::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/
+TRACE::2021-03-08.15:30:34::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt
+TRACE::2021-03-08.15:30:34::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:34::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:34::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:34::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw
+TRACE::2021-03-08.15:30:34::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:34::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-08.15:30:34::SCWPlatform::Trying to set the existing hwdb with name top_0
+TRACE::2021-03-08.15:30:34::SCWPlatform::Opened existing hwdb top_0
+TRACE::2021-03-08.15:30:34::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-08.15:30:34::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:34::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:34::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:34::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw
+TRACE::2021-03-08.15:30:34::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:34::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-08.15:30:34::SCWPlatform::Trying to set the existing hwdb with name top_0
+TRACE::2021-03-08.15:30:34::SCWPlatform::Opened existing hwdb top_0
+TRACE::2021-03-08.15:30:34::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-08.15:30:34::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:34::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:34::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:34::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw
+TRACE::2021-03-08.15:30:34::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:34::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-08.15:30:34::SCWPlatform::Trying to set the existing hwdb with name top_0
+TRACE::2021-03-08.15:30:34::SCWPlatform::Opened existing hwdb top_0
+TRACE::2021-03-08.15:30:34::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-08.15:30:34::SCWReader::Boot application domain added for zynq_fsbl
+TRACE::2021-03-08.15:30:34::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:34::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:34::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:34::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw
+TRACE::2021-03-08.15:30:34::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:34::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-08.15:30:34::SCWPlatform::Trying to set the existing hwdb with name top_0
+TRACE::2021-03-08.15:30:34::SCWPlatform::Opened existing hwdb top_0
+TRACE::2021-03-08.15:30:34::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-08.15:30:34::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-08.15:30:34::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2021-03-08.15:30:34::SCWMssOS::No sw design opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-08.15:30:34::SCWMssOS::mss exists loading the mss file  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-08.15:30:34::SCWMssOS::Opened the sw design from mss  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-08.15:30:34::SCWMssOS::Adding the swdes entry C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss with des name system
+TRACE::2021-03-08.15:30:34::SCWMssOS::updating the scw layer about changes
+TRACE::2021-03-08.15:30:34::SCWMssOS::Opened the sw design.  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-08.15:30:34::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:34::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:34::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:34::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw
+TRACE::2021-03-08.15:30:34::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:34::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-08.15:30:34::SCWPlatform::Trying to set the existing hwdb with name top_0
+TRACE::2021-03-08.15:30:34::SCWPlatform::Opened existing hwdb top_0
+TRACE::2021-03-08.15:30:34::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-08.15:30:34::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-08.15:30:34::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-08.15:30:34::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-08.15:30:34::SCWMssOS:: library already available in sw design:  xilffs:4.3
+TRACE::2021-03-08.15:30:34::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:34::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:34::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:34::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw
+TRACE::2021-03-08.15:30:34::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:34::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-08.15:30:34::SCWPlatform::Trying to set the existing hwdb with name top_0
+TRACE::2021-03-08.15:30:34::SCWPlatform::Opened existing hwdb top_0
+TRACE::2021-03-08.15:30:34::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-08.15:30:34::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-08.15:30:34::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-08.15:30:34::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-08.15:30:34::SCWMssOS:: library already available in sw design:  xilrsa:1.6
+TRACE::2021-03-08.15:30:34::SCWMssOS::Saving the mss changes C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-08.15:30:34::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2021-03-08.15:30:34::SCWMssOS::Completed writemss as part of save.
+TRACE::2021-03-08.15:30:34::SCWMssOS::Commit changes completed.
+TRACE::2021-03-08.15:30:34::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2021-03-08.15:30:34::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2021-03-08.15:30:34::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:34::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:34::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:34::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw
+TRACE::2021-03-08.15:30:34::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:34::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-08.15:30:34::SCWPlatform::Trying to set the existing hwdb with name top_0
+TRACE::2021-03-08.15:30:34::SCWPlatform::Opened existing hwdb top_0
+TRACE::2021-03-08.15:30:34::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-08.15:30:34::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-08.15:30:34::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-08.15:30:34::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-08.15:30:34::SCWReader::No isolation master present  
+TRACE::2021-03-08.15:30:34::SCWDomain::checking for install qemu data   : 
+TRACE::2021-03-08.15:30:34::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/
+TRACE::2021-03-08.15:30:34::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt
+TRACE::2021-03-08.15:30:34::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:34::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:34::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:34::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw
+TRACE::2021-03-08.15:30:34::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:34::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-08.15:30:34::SCWPlatform::Trying to set the existing hwdb with name top_0
+TRACE::2021-03-08.15:30:34::SCWPlatform::Opened existing hwdb top_0
+TRACE::2021-03-08.15:30:34::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-08.15:30:34::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:34::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:34::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:34::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw
+TRACE::2021-03-08.15:30:34::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:34::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-08.15:30:34::SCWPlatform::Trying to set the existing hwdb with name top_0
+TRACE::2021-03-08.15:30:34::SCWPlatform::Opened existing hwdb top_0
+TRACE::2021-03-08.15:30:34::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-08.15:30:34::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:34::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:34::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:34::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw
+TRACE::2021-03-08.15:30:34::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:34::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-08.15:30:34::SCWPlatform::Trying to set the existing hwdb with name top_0
+TRACE::2021-03-08.15:30:34::SCWPlatform::Opened existing hwdb top_0
+TRACE::2021-03-08.15:30:34::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-08.15:30:34::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-08.15:30:34::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-08.15:30:34::SCWMssOS::No sw design opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-08.15:30:34::SCWMssOS::mss exists loading the mss file  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-08.15:30:34::SCWMssOS::Opened the sw design from mss  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-08.15:30:34::SCWMssOS::Adding the swdes entry C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss with des name system_0
+TRACE::2021-03-08.15:30:34::SCWMssOS::updating the scw layer about changes
+TRACE::2021-03-08.15:30:34::SCWMssOS::Opened the sw design.  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-08.15:30:34::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:34::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:34::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:34::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw
+TRACE::2021-03-08.15:30:34::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:34::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-08.15:30:34::SCWPlatform::Trying to set the existing hwdb with name top_0
+TRACE::2021-03-08.15:30:34::SCWPlatform::Opened existing hwdb top_0
+TRACE::2021-03-08.15:30:34::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-08.15:30:34::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-08.15:30:34::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-08.15:30:34::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-08.15:30:34::SCWMssOS:: library already available in sw design:  xilffs:4.3
+TRACE::2021-03-08.15:30:34::SCWMssOS::Saving the mss changes C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-08.15:30:34::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2021-03-08.15:30:34::SCWMssOS::Completed writemss as part of save.
+TRACE::2021-03-08.15:30:34::SCWMssOS::Commit changes completed.
+TRACE::2021-03-08.15:30:34::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2021-03-08.15:30:34::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2021-03-08.15:30:34::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:34::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:34::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:34::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw
+TRACE::2021-03-08.15:30:34::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:34::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-08.15:30:34::SCWPlatform::Trying to set the existing hwdb with name top_0
+TRACE::2021-03-08.15:30:34::SCWPlatform::Opened existing hwdb top_0
+TRACE::2021-03-08.15:30:34::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-08.15:30:34::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-08.15:30:34::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-08.15:30:34::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-08.15:30:34::SCWReader::No isolation master present  
+TRACE::2021-03-08.15:30:42::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:42::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:42::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:42::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw
+TRACE::2021-03-08.15:30:42::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:42::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-08.15:30:42::SCWPlatform::Trying to set the existing hwdb with name top_0
+TRACE::2021-03-08.15:30:42::SCWPlatform::Opened existing hwdb top_0
+TRACE::2021-03-08.15:30:42::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-08.15:30:42::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/tempdsa/top.xsa
+TRACE::2021-03-08.15:30:42::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/tempdsa/top.xsa
+TRACE::2021-03-08.15:30:42::SCWPlatform:: Platform location is C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/tempdsa
+TRACE::2021-03-08.15:30:42::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/tempdsa/top.xsa
+TRACE::2021-03-08.15:30:42::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-08.15:30:46::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-08.15:30:46::SCWMssOS::Doing hw sync for the mss in domain: zynq_fsbl
+TRACE::2021-03-08.15:30:46::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:46::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:46::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:46::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw
+TRACE::2021-03-08.15:30:46::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:46::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-08.15:30:46::SCWPlatform::Trying to set the existing hwdb with name top_0
+TRACE::2021-03-08.15:30:47::SCWPlatform::Opened existing hwdb top_0
+TRACE::2021-03-08.15:30:47::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-08.15:30:47::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:47::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:47::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:47::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw
+TRACE::2021-03-08.15:30:47::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:47::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-08.15:30:47::SCWPlatform::Trying to set the existing hwdb with name top_0
+TRACE::2021-03-08.15:30:47::SCWPlatform::Opened existing hwdb top_0
+TRACE::2021-03-08.15:30:47::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-08.15:30:47::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-08.15:30:47::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-08.15:30:47::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-08.15:30:47::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/tempdsa/top.xsa
+TRACE::2021-03-08.15:30:47::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/tempdsa/top.xsa
+TRACE::2021-03-08.15:30:47::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/tempdsa/top.xsa
+TRACE::2021-03-08.15:30:47::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/tempdsa
+TRACE::2021-03-08.15:30:47::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/tempdsa/top.xsa
+TRACE::2021-03-08.15:30:47::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-08.15:30:47::SCWPlatform::update - Opened existing hwdb top_1
+TRACE::2021-03-08.15:30:47::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-08.15:30:47::SCWMssOS::Doing hw sync for the mss in domain: standalone_domain
+TRACE::2021-03-08.15:30:47::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:47::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:47::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:47::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw
+TRACE::2021-03-08.15:30:47::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:47::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-08.15:30:47::SCWPlatform::Trying to set the existing hwdb with name top_0
+TRACE::2021-03-08.15:30:47::SCWPlatform::Opened existing hwdb top_0
+TRACE::2021-03-08.15:30:47::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-08.15:30:47::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:47::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:47::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:47::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw
+TRACE::2021-03-08.15:30:47::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:47::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-08.15:30:47::SCWPlatform::Trying to set the existing hwdb with name top_0
+TRACE::2021-03-08.15:30:47::SCWPlatform::Opened existing hwdb top_0
+TRACE::2021-03-08.15:30:47::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-08.15:30:47::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-08.15:30:47::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-08.15:30:47::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-08.15:30:47::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/tempdsa/top.xsa
+TRACE::2021-03-08.15:30:47::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/tempdsa/top.xsa
+TRACE::2021-03-08.15:30:47::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/tempdsa/top.xsa
+TRACE::2021-03-08.15:30:47::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/tempdsa
+TRACE::2021-03-08.15:30:47::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/tempdsa/top.xsa
+TRACE::2021-03-08.15:30:47::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-08.15:30:47::SCWPlatform::update - Opened existing hwdb top_1
+TRACE::2021-03-08.15:30:47::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-08.15:30:47::SCWMssOS::Saving the mss changes C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-08.15:30:47::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2021-03-08.15:30:47::SCWMssOS::Completed writemss as part of save.
+TRACE::2021-03-08.15:30:47::SCWMssOS::Commit changes completed.
+TRACE::2021-03-08.15:30:47::SCWMssOS::Completed hw sync for the mss in domain: zynq_fsbl
+TRACE::2021-03-08.15:30:47::SCWMssOS::Removing the swdes entry for  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-08.15:30:47::SCWMssOS::Saving the mss changes C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-08.15:30:47::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2021-03-08.15:30:47::SCWMssOS::Completed writemss as part of save.
+TRACE::2021-03-08.15:30:47::SCWMssOS::Commit changes completed.
+TRACE::2021-03-08.15:30:47::SCWMssOS::Completed hw sync for the mss in domain: standalone_domain
+TRACE::2021-03-08.15:30:47::SCWMssOS::Removing the swdes entry for  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-08.15:30:47::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:47::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:47::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:47::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw
+TRACE::2021-03-08.15:30:47::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:47::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-08.15:30:47::SCWPlatform::Do not have an existing db opened. 
+TRACE::2021-03-08.15:30:51::SCWPlatform::Opened new HwDB with name top_2
+TRACE::2021-03-08.15:30:51::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:51::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:51::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:51::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw
+TRACE::2021-03-08.15:30:51::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:51::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-08.15:30:51::SCWPlatform::Trying to set the existing hwdb with name top_2
+TRACE::2021-03-08.15:30:51::SCWPlatform::Opened existing hwdb top_2
+TRACE::2021-03-08.15:30:51::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-08.15:30:51::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-08.15:30:51::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2021-03-08.15:30:51::SCWMssOS::No sw design opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-08.15:30:51::SCWMssOS::mss exists loading the mss file  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-08.15:30:51::SCWMssOS::Opened the sw design from mss  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-08.15:30:51::SCWMssOS::Adding the swdes entry C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss with des name system
+TRACE::2021-03-08.15:30:51::SCWMssOS::updating the scw layer about changes
+TRACE::2021-03-08.15:30:51::SCWMssOS::Opened the sw design.  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-08.15:30:51::SCWMssOS::Saving the mss changes C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-08.15:30:51::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2021-03-08.15:30:51::SCWMssOS::Completed writemss as part of save.
+TRACE::2021-03-08.15:30:51::SCWMssOS::Commit changes completed.
+TRACE::2021-03-08.15:30:51::SCWMssOS::Saving the mss changes C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-08.15:30:51::SCWMssOS::Adding the swdes entry, mss present, able to open swdb C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss with des name system_0
+TRACE::2021-03-08.15:30:51::SCWMssOS::Writing the mss file completed C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-08.15:30:51::SCWMssOS::Commit changes completed.
+TRACE::2021-03-08.15:30:51::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:51::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:51::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:51::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw
+TRACE::2021-03-08.15:30:51::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:51::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-08.15:30:51::SCWPlatform::Trying to set the existing hwdb with name top_2
+TRACE::2021-03-08.15:30:51::SCWPlatform::Opened existing hwdb top_2
+TRACE::2021-03-08.15:30:51::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-08.15:30:51::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-08.15:30:51::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-08.15:30:51::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-08.15:30:51::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:51::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:51::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:51::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw
+TRACE::2021-03-08.15:30:51::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:30:51::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-08.15:30:51::SCWPlatform::Trying to set the existing hwdb with name top_2
+TRACE::2021-03-08.15:30:51::SCWPlatform::Opened existing hwdb top_2
+TRACE::2021-03-08.15:30:51::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-08.15:30:51::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-08.15:30:51::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-08.15:30:51::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-08.15:30:51::SCWWriter::formatted JSON is {
+	"platformName":	"pr_led",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"pr_led",
+	"platHandOff":	"C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/Bitstreams/top.xsa",
+	"platIntHandOff":	"<platformDir>/hw/top.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"pr_led",
+	"systems":	[{
+			"systemName":	"pr_led",
+			"systemDesc":	"pr_led",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"pr_led",
+			"sysActiveDom":	"standalone_domain",
+			"sysDefaultDom":	"standalone_domain",
+			"domains":	[{
+					"domainName":	"zynq_fsbl",
+					"domainDispName":	"zynq_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"a48b732fbf58f272bb926b80b57f75a9",
+					"compatibleApp":	"zynq_fsbl",
+					"domType":	"bootDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.3", "xilrsa:1.6"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"standalone_domain",
+					"domainDispName":	"standalone on ps7_cortexa9_0",
+					"domainDesc":	"standalone_domain",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt",
+					"qemuData":	"C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"a6646d3be70fb92e65ee262a46a07cfb",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.3"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+LOG::2021-03-08.15:31:11::SCWPlatform::Started generating the artifacts platform pr_led
+TRACE::2021-03-08.15:31:11::SCWPlatform::Sanity checking of platform is completed
+LOG::2021-03-08.15:31:11::SCWPlatform::Started generating the artifacts for system configuration pr_led
+LOG::2021-03-08.15:31:11::SCWSystem::Checking the domain zynq_fsbl
+LOG::2021-03-08.15:31:11::SCWSystem::Doing application build for :  zynq_fsbl
+TRACE::2021-03-08.15:31:11::SCWBDomain::Not a forced makefile updation, No changes are present. 
+TRACE::2021-03-08.15:31:11::SCWDomain::Building the domain as part of full build :  zynq_fsbl
+TRACE::2021-03-08.15:31:11::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:31:11::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:31:11::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:31:11::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw
+TRACE::2021-03-08.15:31:11::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:31:11::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-08.15:31:11::SCWPlatform::Trying to set the existing hwdb with name top_2
+TRACE::2021-03-08.15:31:11::SCWPlatform::Opened existing hwdb top_2
+TRACE::2021-03-08.15:31:11::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-08.15:31:11::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-08.15:31:11::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-08.15:31:11::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-08.15:31:11::SCWBDomain::Completed writing the mss file at C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp
+TRACE::2021-03-08.15:31:11::SCWBDomain::bsp generated is upto date with the mss file. Skipping bsp generation.
+TRACE::2021-03-08.15:31:11::SCWBDomain::Not a forced makefile updation, No changes are present. 
+TRACE::2021-03-08.15:31:11::SCWBDomain::System Command Ran  C:&  cd  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl & make 
+TRACE::2021-03-08.15:31:12::SCWBDomain::arm-none-eabi-gcc -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -O2 -c -c sd.c -o sd.o -Izynq_fsbl_bsp/ps7_cort
+TRACE::2021-03-08.15:31:12::SCWBDomain::exa9_0/include -I.
+
+TRACE::2021-03-08.15:31:12::SCWBDomain::arm-none-eabi-gcc -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -O2 -c -c nand.c -o nand.o -Izynq_fsbl_bsp/ps7_
+TRACE::2021-03-08.15:31:12::SCWBDomain::cortexa9_0/include -I.
+
+TRACE::2021-03-08.15:31:12::SCWBDomain::arm-none-eabi-gcc -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -O2 -c -c image_mover.c -o image_mover.o -Izynq
+TRACE::2021-03-08.15:31:12::SCWBDomain::_fsbl_bsp/ps7_cortexa9_0/include -I.
+
+TRACE::2021-03-08.15:31:12::SCWBDomain::arm-none-eabi-gcc -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -O2 -c -c fsbl_hooks.c -o fsbl_hooks.o -Izynq_f
+TRACE::2021-03-08.15:31:12::SCWBDomain::sbl_bsp/ps7_cortexa9_0/include -I.
+
+TRACE::2021-03-08.15:31:12::SCWBDomain::arm-none-eabi-gcc -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -O2 -c -c main.c -o main.o -Izynq_fsbl_bsp/ps7_
+TRACE::2021-03-08.15:31:12::SCWBDomain::cortexa9_0/include -I.
+
+TRACE::2021-03-08.15:31:12::SCWBDomain::arm-none-eabi-gcc -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -O2 -c -c nor.c -o nor.o -Izynq_fsbl_bsp/ps7_co
+TRACE::2021-03-08.15:31:12::SCWBDomain::rtexa9_0/include -I.
+
+TRACE::2021-03-08.15:31:13::SCWBDomain::arm-none-eabi-gcc -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -O2 -c -c qspi.c -o qspi.o -Izynq_fsbl_bsp/ps7_
+TRACE::2021-03-08.15:31:13::SCWBDomain::cortexa9_0/include -I.
+
+TRACE::2021-03-08.15:31:13::SCWBDomain::arm-none-eabi-gcc -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -O2 -c -c ps7_init.c -o ps7_init.o -Izynq_fsbl_
+TRACE::2021-03-08.15:31:13::SCWBDomain::bsp/ps7_cortexa9_0/include -I.
+
+TRACE::2021-03-08.15:31:13::SCWBDomain::arm-none-eabi-gcc -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -O2 -c -c pcap.c -o pcap.o -Izynq_fsbl_bsp/ps7_
+TRACE::2021-03-08.15:31:13::SCWBDomain::cortexa9_0/include -I.
+
+TRACE::2021-03-08.15:31:13::SCWBDomain::arm-none-eabi-gcc -o executable.elf  sd.o  nand.o  image_mover.o  md5.o  fsbl_hooks.o  main.o  nor.o  qspi.o  rsa.o  ps7_init.o
+TRACE::2021-03-08.15:31:13::SCWBDomain::  pcap.o  fsbl_handoff.o -MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard   -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=
+TRACE::2021-03-08.15:31:13::SCWBDomain::hard -Wl,-build-id=none -specs=Xilinx.spec  -lrsa -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxi
+TRACE::2021-03-08.15:31:13::SCWBDomain::l,-lgcc,-lc,--end-group -Wl,--start-group,-lrsa,-lxil,-lgcc,-lc,--end-group                                      -Wl,--gc-secti
+TRACE::2021-03-08.15:31:13::SCWBDomain::ons -Lzynq_fsbl_bsp/ps7_cortexa9_0/lib -L./ -Tlscript.ld
+
+LOG::2021-03-08.15:31:13::SCWSystem::Checking the domain standalone_domain
+LOG::2021-03-08.15:31:13::SCWSystem::Not a boot domain 
+LOG::2021-03-08.15:31:13::SCWSystem::Started Processing the domain standalone_domain
+TRACE::2021-03-08.15:31:13::SCWDomain::Generating domain artifcats
+TRACE::2021-03-08.15:31:13::SCWMssOS::Generating standalone artifcats
+TRACE::2021-03-08.15:31:13::SCWMssOS::Copying the qemu file from  C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt To C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/sw/pr_led/qemu/
+TRACE::2021-03-08.15:31:13::SCWMssOS::Copying the qemu file from  C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt To C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/sw/pr_led/standalone_domain/qemu/
+TRACE::2021-03-08.15:31:13::SCWMssOS:: Copying the user libraries. 
+TRACE::2021-03-08.15:31:13::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:31:13::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:31:13::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:31:13::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw
+TRACE::2021-03-08.15:31:13::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:31:13::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-08.15:31:13::SCWPlatform::Trying to set the existing hwdb with name top_2
+TRACE::2021-03-08.15:31:13::SCWPlatform::Opened existing hwdb top_2
+TRACE::2021-03-08.15:31:13::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-08.15:31:13::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-08.15:31:13::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-08.15:31:13::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-08.15:31:13::SCWMssOS::Completed writing the mss file at C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp
+TRACE::2021-03-08.15:31:13::SCWMssOS::Mss edits present, copying mssfile into export location C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-08.15:31:13::SCWMssOS::bsp generated is upto date with the mss file. Skipping bsp generation.
+TRACE::2021-03-08.15:31:13::SCWMssOS::BSP is already built. skipping the bsp build ... 
+TRACE::2021-03-08.15:31:13::SCWDomain::Building the domain as part of full build :  standalone_domain
+TRACE::2021-03-08.15:31:13::SCWMssOS::doing bsp build ... 
+TRACE::2021-03-08.15:31:13::SCWMssOS::System Command Ran  C: & cd  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp & make 
+TRACE::2021-03-08.15:31:13::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_7/src"
+
+TRACE::2021-03-08.15:31:13::SCWMssOS::make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none
+TRACE::2021-03-08.15:31:13::SCWMssOS::-eabi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=h
+TRACE::2021-03-08.15:31:13::SCWMssOS::ard -nostartfiles -g -Wall -Wextra"
+
+TRACE::2021-03-08.15:31:13::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_9/src"
+
+TRACE::2021-03-08.15:31:13::SCWMssOS::make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-ea
+TRACE::2021-03-08.15:31:13::SCWMssOS::bi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard
+TRACE::2021-03-08.15:31:13::SCWMssOS:: -nostartfiles -g -Wall -Wextra"
+
+TRACE::2021-03-08.15:31:13::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_1/src"
+
+TRACE::2021-03-08.15:31:13::SCWMssOS::make -C ps7_cortexa9_0/libsrc/ddrps_v1_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+TRACE::2021-03-08.15:31:13::SCWMssOS::"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+TRACE::2021-03-08.15:31:13::SCWMssOS::rtfiles -g -Wall -Wextra"
+
+TRACE::2021-03-08.15:31:13::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_6/src"
+
+TRACE::2021-03-08.15:31:13::SCWMssOS::make -C ps7_cortexa9_0/libsrc/devcfg_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2021-03-08.15:31:13::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2021-03-08.15:31:13::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2021-03-08.15:31:13::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_6/src"
+
+TRACE::2021-03-08.15:31:13::SCWMssOS::make -C ps7_cortexa9_0/libsrc/dmaps_v2_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+TRACE::2021-03-08.15:31:14::SCWMssOS::"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+TRACE::2021-03-08.15:31:14::SCWMssOS::rtfiles -g -Wall -Wextra"
+
+TRACE::2021-03-08.15:31:14::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_11/src"
+
+TRACE::2021-03-08.15:31:14::SCWMssOS::make -C ps7_cortexa9_0/libsrc/emacps_v3_11/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as
+TRACE::2021-03-08.15:31:14::SCWMssOS::" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nos
+TRACE::2021-03-08.15:31:14::SCWMssOS::tartfiles -g -Wall -Wextra"
+
+TRACE::2021-03-08.15:31:14::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_7/src"
+
+TRACE::2021-03-08.15:31:14::SCWMssOS::make -C ps7_cortexa9_0/libsrc/gpiops_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2021-03-08.15:31:14::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2021-03-08.15:31:14::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2021-03-08.15:31:14::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_6/src"
+
+TRACE::2021-03-08.15:31:14::SCWMssOS::make -C ps7_cortexa9_0/libsrc/gpio_v4_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "
+TRACE::2021-03-08.15:31:14::SCWMssOS::ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostar
+TRACE::2021-03-08.15:31:14::SCWMssOS::tfiles -g -Wall -Wextra"
+
+TRACE::2021-03-08.15:31:14::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/prc_v2_0/src"
+
+TRACE::2021-03-08.15:31:14::SCWMssOS::make -C ps7_cortexa9_0/libsrc/prc_v2_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2021-03-08.15:31:14::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2021-03-08.15:31:14::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2021-03-08.15:31:14::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_7/src"
+
+TRACE::2021-03-08.15:31:14::SCWMssOS::make -C ps7_cortexa9_0/libsrc/qspips_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2021-03-08.15:31:14::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2021-03-08.15:31:14::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2021-03-08.15:31:14::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/scugic_v4_2/src"
+
+TRACE::2021-03-08.15:31:14::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scugic_v4_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2021-03-08.15:31:14::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2021-03-08.15:31:14::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2021-03-08.15:31:14::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_2/src"
+
+TRACE::2021-03-08.15:31:14::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scutimer_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-a
+TRACE::2021-03-08.15:31:14::SCWMssOS::s" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -no
+TRACE::2021-03-08.15:31:14::SCWMssOS::startfiles -g -Wall -Wextra"
+
+TRACE::2021-03-08.15:31:14::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_2/src"
+
+TRACE::2021-03-08.15:31:14::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scuwdt_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2021-03-08.15:31:14::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2021-03-08.15:31:14::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2021-03-08.15:31:14::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_9/src"
+
+TRACE::2021-03-08.15:31:14::SCWMssOS::make -C ps7_cortexa9_0/libsrc/sdps_v3_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "
+TRACE::2021-03-08.15:31:14::SCWMssOS::ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostar
+TRACE::2021-03-08.15:31:14::SCWMssOS::tfiles -g -Wall -Wextra"
+
+TRACE::2021-03-08.15:31:14::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/standalone_v7_2/src"
+
+TRACE::2021-03-08.15:31:14::SCWMssOS::make -C ps7_cortexa9_0/libsrc/standalone_v7_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi
+TRACE::2021-03-08.15:31:14::SCWMssOS::-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -
+TRACE::2021-03-08.15:31:14::SCWMssOS::nostartfiles -g -Wall -Wextra"
+
+TRACE::2021-03-08.15:31:14::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_9/src"
+
+TRACE::2021-03-08.15:31:14::SCWMssOS::make -C ps7_cortexa9_0/libsrc/uartps_v3_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2021-03-08.15:31:14::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2021-03-08.15:31:14::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2021-03-08.15:31:14::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_5/src"
+
+TRACE::2021-03-08.15:31:14::SCWMssOS::make -C ps7_cortexa9_0/libsrc/usbps_v2_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+TRACE::2021-03-08.15:31:14::SCWMssOS::"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+TRACE::2021-03-08.15:31:14::SCWMssOS::rtfiles -g -Wall -Wextra"
+
+TRACE::2021-03-08.15:31:14::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_4/src"
+
+TRACE::2021-03-08.15:31:14::SCWMssOS::make -C ps7_cortexa9_0/libsrc/xadcps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2021-03-08.15:31:14::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2021-03-08.15:31:14::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2021-03-08.15:31:14::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/xilffs_v4_3/src"
+
+TRACE::2021-03-08.15:31:15::SCWMssOS::make -C ps7_cortexa9_0/libsrc/xilffs_v4_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2021-03-08.15:31:15::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2021-03-08.15:31:15::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2021-03-08.15:31:15::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_7/src"
+
+TRACE::2021-03-08.15:31:15::SCWMssOS::make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-ea
+TRACE::2021-03-08.15:31:15::SCWMssOS::bi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard
+TRACE::2021-03-08.15:31:15::SCWMssOS:: -nostartfiles -g -Wall -Wextra"
+
+TRACE::2021-03-08.15:31:15::SCWMssOS::"Compiling coresightps_dcc"
+
+TRACE::2021-03-08.15:31:15::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_9/src"
+
+TRACE::2021-03-08.15:31:15::SCWMssOS::make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-
+TRACE::2021-03-08.15:31:15::SCWMssOS::as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -n
+TRACE::2021-03-08.15:31:15::SCWMssOS::ostartfiles -g -Wall -Wextra"
+
+TRACE::2021-03-08.15:31:15::SCWMssOS::"Compiling cpu_cortexa9"
+
+TRACE::2021-03-08.15:31:15::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_1/src"
+
+TRACE::2021-03-08.15:31:15::SCWMssOS::make -C ps7_cortexa9_0/libsrc/ddrps_v1_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "AR
+TRACE::2021-03-08.15:31:15::SCWMssOS::CHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartf
+TRACE::2021-03-08.15:31:15::SCWMssOS::iles -g -Wall -Wextra"
+
+TRACE::2021-03-08.15:31:15::SCWMssOS::"Compiling ddrps"
+
+TRACE::2021-03-08.15:31:15::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_6/src"
+
+TRACE::2021-03-08.15:31:15::SCWMssOS::make -C ps7_cortexa9_0/libsrc/devcfg_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2021-03-08.15:31:15::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2021-03-08.15:31:15::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2021-03-08.15:31:15::SCWMssOS::"Compiling devcfg"
+
+TRACE::2021-03-08.15:31:16::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_6/src"
+
+TRACE::2021-03-08.15:31:16::SCWMssOS::make -C ps7_cortexa9_0/libsrc/dmaps_v2_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "AR
+TRACE::2021-03-08.15:31:16::SCWMssOS::CHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartf
+TRACE::2021-03-08.15:31:16::SCWMssOS::iles -g -Wall -Wextra"
+
+TRACE::2021-03-08.15:31:16::SCWMssOS::"Compiling dmaps"
+
+TRACE::2021-03-08.15:31:16::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_11/src"
+
+TRACE::2021-03-08.15:31:16::SCWMssOS::make -C ps7_cortexa9_0/libsrc/emacps_v3_11/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "
+TRACE::2021-03-08.15:31:16::SCWMssOS::ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostar
+TRACE::2021-03-08.15:31:16::SCWMssOS::tfiles -g -Wall -Wextra"
+
+TRACE::2021-03-08.15:31:16::SCWMssOS::"Compiling emacps"
+
+TRACE::2021-03-08.15:31:17::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_7/src"
+
+TRACE::2021-03-08.15:31:17::SCWMssOS::make -C ps7_cortexa9_0/libsrc/gpiops_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2021-03-08.15:31:17::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2021-03-08.15:31:17::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2021-03-08.15:31:17::SCWMssOS::"Compiling gpiops"
+
+TRACE::2021-03-08.15:31:18::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_6/src"
+
+TRACE::2021-03-08.15:31:18::SCWMssOS::make -C ps7_cortexa9_0/libsrc/gpio_v4_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "ARC
+TRACE::2021-03-08.15:31:18::SCWMssOS::HIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfi
+TRACE::2021-03-08.15:31:18::SCWMssOS::les -g -Wall -Wextra"
+
+TRACE::2021-03-08.15:31:18::SCWMssOS::"Compiling gpio"
+
+TRACE::2021-03-08.15:31:19::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/prc_v2_0/src"
+
+TRACE::2021-03-08.15:31:19::SCWMssOS::make -C ps7_cortexa9_0/libsrc/prc_v2_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "ARCH
+TRACE::2021-03-08.15:31:19::SCWMssOS::IVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfil
+TRACE::2021-03-08.15:31:19::SCWMssOS::es -g -Wall -Wextra"
+
+TRACE::2021-03-08.15:31:19::SCWMssOS::"Compiling prc"
+
+TRACE::2021-03-08.15:31:19::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_7/src"
+
+TRACE::2021-03-08.15:31:19::SCWMssOS::make -C ps7_cortexa9_0/libsrc/qspips_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2021-03-08.15:31:19::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2021-03-08.15:31:19::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2021-03-08.15:31:19::SCWMssOS::"Compiling qspips"
+
+TRACE::2021-03-08.15:31:20::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v4_2/src"
+
+TRACE::2021-03-08.15:31:20::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scugic_v4_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2021-03-08.15:31:20::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2021-03-08.15:31:20::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2021-03-08.15:31:20::SCWMssOS::"Compiling scugic"
+
+TRACE::2021-03-08.15:31:21::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_2/src"
+
+TRACE::2021-03-08.15:31:21::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scutimer_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+TRACE::2021-03-08.15:31:21::SCWMssOS::"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+TRACE::2021-03-08.15:31:21::SCWMssOS::rtfiles -g -Wall -Wextra"
+
+TRACE::2021-03-08.15:31:21::SCWMssOS::"Compiling scutimer"
+
+TRACE::2021-03-08.15:31:21::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_2/src"
+
+TRACE::2021-03-08.15:31:21::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scuwdt_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2021-03-08.15:31:21::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2021-03-08.15:31:21::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2021-03-08.15:31:21::SCWMssOS::"Compiling scuwdt"
+
+TRACE::2021-03-08.15:31:22::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_9/src"
+
+TRACE::2021-03-08.15:31:22::SCWMssOS::make -C ps7_cortexa9_0/libsrc/sdps_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "ARC
+TRACE::2021-03-08.15:31:22::SCWMssOS::HIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfi
+TRACE::2021-03-08.15:31:22::SCWMssOS::les -g -Wall -Wextra"
+
+TRACE::2021-03-08.15:31:22::SCWMssOS::"Compiling sdps"
+
+TRACE::2021-03-08.15:31:23::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v7_2/src"
+
+TRACE::2021-03-08.15:31:23::SCWMssOS::make -C ps7_cortexa9_0/libsrc/standalone_v7_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as
+TRACE::2021-03-08.15:31:23::SCWMssOS::" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nos
+TRACE::2021-03-08.15:31:23::SCWMssOS::tartfiles -g -Wall -Wextra"
+
+TRACE::2021-03-08.15:31:23::SCWMssOS::"Compiling standalone"
+
+TRACE::2021-03-08.15:31:26::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_9/src"
+
+TRACE::2021-03-08.15:31:26::SCWMssOS::make -C ps7_cortexa9_0/libsrc/uartps_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2021-03-08.15:31:26::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2021-03-08.15:31:26::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2021-03-08.15:31:26::SCWMssOS::"Compiling uartps"
+
+TRACE::2021-03-08.15:31:26::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_5/src"
+
+TRACE::2021-03-08.15:31:26::SCWMssOS::make -C ps7_cortexa9_0/libsrc/usbps_v2_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "AR
+TRACE::2021-03-08.15:31:26::SCWMssOS::CHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartf
+TRACE::2021-03-08.15:31:26::SCWMssOS::iles -g -Wall -Wextra"
+
+TRACE::2021-03-08.15:31:26::SCWMssOS::"Compiling usbps"
+
+TRACE::2021-03-08.15:31:27::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_4/src"
+
+TRACE::2021-03-08.15:31:27::SCWMssOS::make -C ps7_cortexa9_0/libsrc/xadcps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2021-03-08.15:31:27::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2021-03-08.15:31:27::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2021-03-08.15:31:27::SCWMssOS::"Compiling xadcps"
+
+TRACE::2021-03-08.15:31:28::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/xilffs_v4_3/src"
+
+TRACE::2021-03-08.15:31:28::SCWMssOS::make -C ps7_cortexa9_0/libsrc/xilffs_v4_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2021-03-08.15:31:28::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2021-03-08.15:31:28::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2021-03-08.15:31:28::SCWMssOS::"Compiling XilFFs Library"
+
+TRACE::2021-03-08.15:31:28::SCWMssOS::'Finished building libraries'
+
+TRACE::2021-03-08.15:31:28::SCWMssOS::Copying to export directory.
+TRACE::2021-03-08.15:31:28::SCWMssOS:: Checking if to create the Supporting Applications
+TRACE::2021-03-08.15:31:28::SCWMssOS:: No Linux domain exists, trying to generate FSBL 
+LOG::2021-03-08.15:31:28::SCWSystem::Completed Processing the domain standalone_domain
+LOG::2021-03-08.15:31:28::SCWSystem::Completed Processing the sysconfig pr_led
+LOG::2021-03-08.15:31:28::SCWPlatform::Completed generating the artifacts for system configuration pr_led
+TRACE::2021-03-08.15:31:28::SCWPlatform::Started preparing the platform 
+TRACE::2021-03-08.15:31:28::SCWSystem::Writing the bif file for system config pr_led
+TRACE::2021-03-08.15:31:28::SCWSystem::dir created 
+TRACE::2021-03-08.15:31:28::SCWSystem::Writing the bif 
+TRACE::2021-03-08.15:31:28::SCWPlatform::Started writing the spfm file 
+TRACE::2021-03-08.15:31:28::SCWPlatform::Started writing the xpfm file 
+TRACE::2021-03-08.15:31:28::SCWPlatform::Completed generating the platform
+TRACE::2021-03-08.15:31:28::SCWMssOS::Saving the mss changes C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-08.15:31:28::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2021-03-08.15:31:28::SCWMssOS::Completed writemss as part of save.
+TRACE::2021-03-08.15:31:28::SCWMssOS::Commit changes completed.
+TRACE::2021-03-08.15:31:28::SCWMssOS::Saving the mss changes C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-08.15:31:28::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2021-03-08.15:31:28::SCWMssOS::Completed writemss as part of save.
+TRACE::2021-03-08.15:31:28::SCWMssOS::Commit changes completed.
+TRACE::2021-03-08.15:31:28::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:31:28::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:31:28::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:31:28::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw
+TRACE::2021-03-08.15:31:28::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:31:28::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-08.15:31:28::SCWPlatform::Trying to set the existing hwdb with name top_2
+TRACE::2021-03-08.15:31:28::SCWPlatform::Opened existing hwdb top_2
+TRACE::2021-03-08.15:31:28::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-08.15:31:28::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-08.15:31:28::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-08.15:31:28::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-08.15:31:28::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:31:28::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:31:28::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:31:28::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw
+TRACE::2021-03-08.15:31:28::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:31:28::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-08.15:31:28::SCWPlatform::Trying to set the existing hwdb with name top_2
+TRACE::2021-03-08.15:31:28::SCWPlatform::Opened existing hwdb top_2
+TRACE::2021-03-08.15:31:28::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-08.15:31:28::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-08.15:31:28::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-08.15:31:28::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-08.15:31:28::SCWWriter::formatted JSON is {
+	"platformName":	"pr_led",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"pr_led",
+	"platHandOff":	"C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/Bitstreams/top.xsa",
+	"platIntHandOff":	"<platformDir>/hw/top.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"pr_led",
+	"systems":	[{
+			"systemName":	"pr_led",
+			"systemDesc":	"pr_led",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"pr_led",
+			"sysActiveDom":	"standalone_domain",
+			"sysDefaultDom":	"standalone_domain",
+			"domains":	[{
+					"domainName":	"zynq_fsbl",
+					"domainDispName":	"zynq_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"a48b732fbf58f272bb926b80b57f75a9",
+					"compatibleApp":	"zynq_fsbl",
+					"domType":	"bootDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.3", "xilrsa:1.6"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"standalone_domain",
+					"domainDispName":	"standalone on ps7_cortexa9_0",
+					"domainDesc":	"standalone_domain",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt",
+					"qemuData":	"C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"a6646d3be70fb92e65ee262a46a07cfb",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.3"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+KEYINFO::2021-03-08.15:31:28::SCWPlatform::updated the xpfm file.
+TRACE::2021-03-08.15:31:28::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:31:28::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:31:28::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:31:28::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw
+TRACE::2021-03-08.15:31:28::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/hw/top.xsa
+TRACE::2021-03-08.15:31:28::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-08.15:31:28::SCWPlatform::Trying to set the existing hwdb with name top_2
+TRACE::2021-03-08.15:31:28::SCWPlatform::Opened existing hwdb top_2
+TRACE::2021-03-08.15:31:28::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-08.15:31:28::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-08.15:31:28::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-08.15:31:28::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/ps7_cortexa9_0/standalone_domain/bsp/system.mss

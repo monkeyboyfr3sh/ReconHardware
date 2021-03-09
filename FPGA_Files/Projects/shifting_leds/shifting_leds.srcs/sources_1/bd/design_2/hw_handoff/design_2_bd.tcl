@@ -225,8 +225,8 @@ proc create_root_design { parentCell } {
    CONFIG.CTRL_INTERFACE_TYPE {0} \
    CONFIG.DP_DATA_FORMAT {le_bs} \
    CONFIG.DP_PROTOCOL {ICAP} \
-   CONFIG.HAS_REF_SP_ID_I {true} \
-   CONFIG.HAS_USR_ACCESS {false} \
+   CONFIG.HAS_REF_SP_ID_I {false} \
+   CONFIG.HAS_USR_ACCESS {true} \
  ] $dfx_bitstream_monitor_0
 
   # Create instance: dfx_controller_0, and set properties
@@ -1094,13 +1094,6 @@ proc create_root_design { parentCell } {
    CONFIG.NUM_PORTS {2} \
  ] $xlconcat_0
 
-  # Create instance: xlconstant_0, and set properties
-  set xlconstant_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0 ]
-  set_property -dict [ list \
-   CONFIG.CONST_VAL {0} \
-   CONFIG.CONST_WIDTH {32} \
- ] $xlconstant_0
-
   # Create interface connections
   connect_bd_intf_net -intf_net axi_gpio_0_GPIO [get_bd_intf_ports COUNT_0] [get_bd_intf_pins axi_gpio_0/GPIO]
   connect_bd_intf_net -intf_net axi_mem_intercon_M00_AXI [get_bd_intf_pins axi_mem_intercon/M00_AXI] [get_bd_intf_pins processing_system7_0/S_AXI_HP0]
@@ -1136,7 +1129,6 @@ connect_bd_intf_net -intf_net [get_bd_intf_nets ps7_0_axi_periph_M01_AXI] [get_b
   connect_bd_net -net rst_ps7_0_100M_peripheral_aresetn [get_bd_pins axi_gpio_0/s_axi_aresetn] [get_bd_pins axi_mem_intercon/ARESETN] [get_bd_pins axi_mem_intercon/M00_ARESETN] [get_bd_pins axi_mem_intercon/S00_ARESETN] [get_bd_pins bs_monitor_gpio_1/s_axi_aresetn] [get_bd_pins dfx_bitstream_monitor_0/resetn] [get_bd_pins dfx_controller_0/icap_reset] [get_bd_pins dfx_controller_0/reset] [get_bd_pins ps7_0_axi_periph/ARESETN] [get_bd_pins ps7_0_axi_periph/M00_ARESETN] [get_bd_pins ps7_0_axi_periph/M01_ARESETN] [get_bd_pins ps7_0_axi_periph/M02_ARESETN] [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps7_0_100M/peripheral_aresetn]
   connect_bd_net -net vsm_shifter_hw_triggers_0_1 [get_bd_ports vsm_shifter_hw_triggers_0] [get_bd_pins dfx_controller_0/vsm_shifter_hw_triggers]
   connect_bd_net -net xlconcat_0_dout [get_bd_pins bs_monitor_gpio_1/gpio2_io_i] [get_bd_pins xlconcat_0/dout]
-  connect_bd_net -net xlconstant_0_dout [get_bd_pins dfx_bitstream_monitor_0/ref_sp_id_i] [get_bd_pins xlconstant_0/dout]
   connect_bd_net -net xlslice_0_Dout [get_bd_pins arm/Dout] [get_bd_pins dfx_bitstream_monitor_0/arm]
   connect_bd_net -net xlslice_1_Dout [get_bd_pins dfx_bitstream_monitor_0/one_shot] [get_bd_pins one_shot_arm/Dout]
   connect_bd_net -net xlslice_2_Dout [get_bd_pins dfx_bitstream_monitor_0/protocol_abort] [get_bd_pins protocol_abort/Dout]

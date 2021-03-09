@@ -1,7 +1,7 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-// Date        : Mon Mar  8 10:35:25 2021
+// Date        : Mon Mar  8 13:11:11 2021
 // Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_2/ip/design_2_dfx_bitstream_monitor_0_0/design_2_dfx_bitstream_monitor_0_0_sim_netlist.v
@@ -40,7 +40,6 @@ module design_2_dfx_bitstream_monitor_0_0
     hi_err_unexpected,
     arm,
     one_shot,
-    ref_sp_id_i,
     ref_sp_id_o,
     protocol_abort,
     icap_csib,
@@ -71,7 +70,6 @@ module design_2_dfx_bitstream_monitor_0_0
   (* x_interface_info = "xilinx.com:display_dfx_bitstream_monitor:hi:1.0 HISTORIC_INFO err_unexpected" *) output hi_err_unexpected;
   input arm;
   input one_shot;
-  input [31:0]ref_sp_id_i;
   output [31:0]ref_sp_id_o;
   input protocol_abort;
   (* x_interface_info = "xilinx.com:interface:icap:1.0 ICAP csib" *) input icap_csib;
@@ -106,7 +104,6 @@ module design_2_dfx_bitstream_monitor_0_0
   wire [31:0]li_sp_id;
   wire one_shot;
   wire protocol_abort;
-  wire [31:0]ref_sp_id_i;
   wire [31:0]ref_sp_id_o;
   wire resetn;
   wire NLW_U0_protocol_clock_out_UNCONNECTED;
@@ -136,9 +133,9 @@ module design_2_dfx_bitstream_monitor_0_0
   (* C_DP_HAS_CDC = "0" *) 
   (* C_DP_PROTOCOL = "ICAP" *) 
   (* C_FAMILY = "zynq" *) 
-  (* C_HAS_REF_SP_ID_I = "1" *) 
+  (* C_HAS_REF_SP_ID_I = "0" *) 
   (* C_HAS_REF_SP_ID_O = "1" *) 
-  (* C_HAS_USR_ACCESS = "0" *) 
+  (* C_HAS_USR_ACCESS = "1" *) 
   (* C_PROTOCOL_RESET_ACTIVE_LEVEL = "1'b0" *) 
   (* C_RESET_ACTIVE_LEVEL = "1'b0" *) 
   (* C_STS_BS_ID_WIDTH = "32" *) 
@@ -185,7 +182,7 @@ module design_2_dfx_bitstream_monitor_0_0
         .protocol_clock_out(NLW_U0_protocol_clock_out_UNCONNECTED),
         .protocol_reset(1'b0),
         .protocol_resetn(1'b1),
-        .ref_sp_id_i(ref_sp_id_i),
+        .ref_sp_id_i({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .ref_sp_id_o(ref_sp_id_o),
         .reset(1'b0),
         .resetn(resetn),
@@ -2768,7 +2765,7 @@ module design_2_dfx_bitstream_monitor_0_0_detect_block
     SR,
     S,
     \sp_id_reg[21]_0 ,
-    \ref_sp_id_i[31] ,
+    \gen_sp_id.resolved_sp_id_reg[31] ,
     \rp_id_reg[9]_0 ,
     \rp_id_reg[21]_0 ,
     \rp_id_reg[31]_0 ,
@@ -2786,7 +2783,7 @@ module design_2_dfx_bitstream_monitor_0_0_detect_block
     CO,
     li_end_i_reg,
     arm_current_state,
-    ref_sp_id_i,
+    ref_sp_id_o,
     rp_id_error1_carry__1,
     rm_id_error1_carry__1,
     sp_id_error1_carry__1,
@@ -2803,7 +2800,7 @@ module design_2_dfx_bitstream_monitor_0_0_detect_block
   output [0:0]SR;
   output [3:0]S;
   output [3:0]\sp_id_reg[21]_0 ;
-  output [2:0]\ref_sp_id_i[31] ;
+  output [2:0]\gen_sp_id.resolved_sp_id_reg[31] ;
   output [3:0]\rp_id_reg[9]_0 ;
   output [3:0]\rp_id_reg[21]_0 ;
   output [2:0]\rp_id_reg[31]_0 ;
@@ -2821,7 +2818,7 @@ module design_2_dfx_bitstream_monitor_0_0_detect_block
   input [0:0]CO;
   input li_end_i_reg;
   input [1:0]arm_current_state;
-  input [31:0]ref_sp_id_i;
+  input [31:0]ref_sp_id_o;
   input [31:0]rp_id_error1_carry__1;
   input [31:0]rm_id_error1_carry__1;
   input [10:0]sp_id_error1_carry__1;
@@ -2893,6 +2890,7 @@ module design_2_dfx_bitstream_monitor_0_0_detect_block
   wire \data_buffer_reg_n_0_[8] ;
   wire \data_buffer_reg_n_0_[9] ;
   wire [130:0]din;
+  wire [2:0]\gen_sp_id.resolved_sp_id_reg[31] ;
   wire icap_csib;
   wire icap_csib_0;
   wire [31:0]icap_i;
@@ -2902,8 +2900,7 @@ module design_2_dfx_bitstream_monitor_0_0_detect_block
   wire li_avail_i0;
   wire li_end_i_reg;
   wire protocol_abort;
-  wire [31:0]ref_sp_id_i;
-  wire [2:0]\ref_sp_id_i[31] ;
+  wire [31:0]ref_sp_id_o;
   wire resetn;
   wire \rm_id[31]_i_1_n_0 ;
   wire [31:0]rm_id_error1_carry__1;
@@ -4569,108 +4566,108 @@ module design_2_dfx_bitstream_monitor_0_0_detect_block
     .INIT(64'h9009000000009009)) 
     sp_id_mismatch1_carry__0_i_1
        (.I0(din[22]),
-        .I1(ref_sp_id_i[21]),
+        .I1(ref_sp_id_o[21]),
         .I2(din[23]),
-        .I3(ref_sp_id_i[22]),
-        .I4(ref_sp_id_i[23]),
+        .I3(ref_sp_id_o[22]),
+        .I4(ref_sp_id_o[23]),
         .I5(din[24]),
         .O(\sp_id_reg[21]_0 [3]));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     sp_id_mismatch1_carry__0_i_2
        (.I0(din[19]),
-        .I1(ref_sp_id_i[18]),
+        .I1(ref_sp_id_o[18]),
         .I2(din[20]),
-        .I3(ref_sp_id_i[19]),
-        .I4(ref_sp_id_i[20]),
+        .I3(ref_sp_id_o[19]),
+        .I4(ref_sp_id_o[20]),
         .I5(din[21]),
         .O(\sp_id_reg[21]_0 [2]));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     sp_id_mismatch1_carry__0_i_3
        (.I0(din[16]),
-        .I1(ref_sp_id_i[15]),
+        .I1(ref_sp_id_o[15]),
         .I2(din[17]),
-        .I3(ref_sp_id_i[16]),
-        .I4(ref_sp_id_i[17]),
+        .I3(ref_sp_id_o[16]),
+        .I4(ref_sp_id_o[17]),
         .I5(din[18]),
         .O(\sp_id_reg[21]_0 [1]));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     sp_id_mismatch1_carry__0_i_4
        (.I0(din[13]),
-        .I1(ref_sp_id_i[12]),
+        .I1(ref_sp_id_o[12]),
         .I2(din[14]),
-        .I3(ref_sp_id_i[13]),
-        .I4(ref_sp_id_i[14]),
+        .I3(ref_sp_id_o[13]),
+        .I4(ref_sp_id_o[14]),
         .I5(din[15]),
         .O(\sp_id_reg[21]_0 [0]));
   LUT4 #(
     .INIT(16'h9009)) 
     sp_id_mismatch1_carry__1_i_1
-       (.I0(ref_sp_id_i[31]),
+       (.I0(ref_sp_id_o[31]),
         .I1(din[32]),
-        .I2(ref_sp_id_i[30]),
+        .I2(ref_sp_id_o[30]),
         .I3(din[31]),
-        .O(\ref_sp_id_i[31] [2]));
+        .O(\gen_sp_id.resolved_sp_id_reg[31] [2]));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     sp_id_mismatch1_carry__1_i_2
-       (.I0(ref_sp_id_i[28]),
+       (.I0(ref_sp_id_o[28]),
         .I1(din[29]),
-        .I2(ref_sp_id_i[27]),
+        .I2(ref_sp_id_o[27]),
         .I3(din[28]),
-        .I4(ref_sp_id_i[29]),
+        .I4(ref_sp_id_o[29]),
         .I5(din[30]),
-        .O(\ref_sp_id_i[31] [1]));
+        .O(\gen_sp_id.resolved_sp_id_reg[31] [1]));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     sp_id_mismatch1_carry__1_i_3
-       (.I0(ref_sp_id_i[24]),
+       (.I0(ref_sp_id_o[24]),
         .I1(din[25]),
-        .I2(ref_sp_id_i[26]),
+        .I2(ref_sp_id_o[26]),
         .I3(din[27]),
-        .I4(ref_sp_id_i[25]),
+        .I4(ref_sp_id_o[25]),
         .I5(din[26]),
-        .O(\ref_sp_id_i[31] [0]));
+        .O(\gen_sp_id.resolved_sp_id_reg[31] [0]));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     sp_id_mismatch1_carry_i_1
        (.I0(din[12]),
-        .I1(ref_sp_id_i[11]),
+        .I1(ref_sp_id_o[11]),
         .I2(din[10]),
-        .I3(ref_sp_id_i[9]),
-        .I4(ref_sp_id_i[10]),
+        .I3(ref_sp_id_o[9]),
+        .I4(ref_sp_id_o[10]),
         .I5(din[11]),
         .O(S[3]));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     sp_id_mismatch1_carry_i_2
-       (.I0(ref_sp_id_i[6]),
+       (.I0(ref_sp_id_o[6]),
         .I1(din[7]),
-        .I2(ref_sp_id_i[8]),
+        .I2(ref_sp_id_o[8]),
         .I3(din[9]),
-        .I4(ref_sp_id_i[7]),
+        .I4(ref_sp_id_o[7]),
         .I5(din[8]),
         .O(S[2]));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     sp_id_mismatch1_carry_i_3
        (.I0(din[4]),
-        .I1(ref_sp_id_i[3]),
+        .I1(ref_sp_id_o[3]),
         .I2(din[5]),
-        .I3(ref_sp_id_i[4]),
-        .I4(ref_sp_id_i[5]),
+        .I3(ref_sp_id_o[4]),
+        .I4(ref_sp_id_o[5]),
         .I5(din[6]),
         .O(S[1]));
   LUT6 #(
     .INIT(64'h9009000000009009)) 
     sp_id_mismatch1_carry_i_4
        (.I0(din[1]),
-        .I1(ref_sp_id_i[0]),
+        .I1(ref_sp_id_o[0]),
         .I2(din[2]),
-        .I3(ref_sp_id_i[1]),
-        .I4(ref_sp_id_i[2]),
+        .I3(ref_sp_id_o[1]),
+        .I4(ref_sp_id_o[2]),
         .I5(din[3]),
         .O(S[0]));
   FDRE #(
@@ -4936,8 +4933,8 @@ endmodule
 (* C_DP_AXI_CHAN_TO_MONITOR = "READ" *) (* C_DP_AXI_ID_WIDTH = "1" *) (* C_DP_AXI_RUSER_WIDTH = "1" *) 
 (* C_DP_AXI_WUSER_WIDTH = "1" *) (* C_DP_CDC_FIFO_DEPTH = "32" *) (* C_DP_CDC_FIFO_TYPE = "distributed" *) 
 (* C_DP_CDC_STAGES = "2" *) (* C_DP_DATA_FORMAT = "le_bs" *) (* C_DP_HAS_CDC = "0" *) 
-(* C_DP_PROTOCOL = "ICAP" *) (* C_FAMILY = "zynq" *) (* C_HAS_REF_SP_ID_I = "1" *) 
-(* C_HAS_REF_SP_ID_O = "1" *) (* C_HAS_USR_ACCESS = "0" *) (* C_PROTOCOL_RESET_ACTIVE_LEVEL = "1'b0" *) 
+(* C_DP_PROTOCOL = "ICAP" *) (* C_FAMILY = "zynq" *) (* C_HAS_REF_SP_ID_I = "0" *) 
+(* C_HAS_REF_SP_ID_O = "1" *) (* C_HAS_USR_ACCESS = "1" *) (* C_PROTOCOL_RESET_ACTIVE_LEVEL = "1'b0" *) 
 (* C_RESET_ACTIVE_LEVEL = "1'b0" *) (* C_STS_BS_ID_WIDTH = "32" *) (* C_STS_HIST_BUFFER_DEPTH = "16" *) 
 (* C_STS_HIST_BUFFER_TYPE = "distributed" *) (* C_STS_HIST_BUFFER_WHEN_FULL = "discard_new" *) (* C_STS_RM_ID_WIDTH = "32" *) 
 (* C_STS_RP_ID_WIDTH = "32" *) (* C_STS_SP_ID_WIDTH = "32" *) (* ORIG_REF_NAME = "dfx_bitstream_monitor_v1_0_0" *) 
@@ -5119,11 +5116,10 @@ module design_2_dfx_bitstream_monitor_0_0_dfx_bitstream_monitor_v1_0_0
   wire [31:0]li_sp_id;
   wire one_shot;
   wire protocol_abort;
-  wire [31:0]ref_sp_id_i;
+  wire [31:0]ref_sp_id_o;
   wire resetn;
 
   assign protocol_clock_out = \<const0> ;
-  assign ref_sp_id_o[31:0] = ref_sp_id_i;
   assign s_axi_ctrl_arready = \<const0> ;
   assign s_axi_ctrl_awready = \<const0> ;
   assign s_axi_ctrl_bresp[1] = \<const0> ;
@@ -5189,7 +5185,7 @@ module design_2_dfx_bitstream_monitor_0_0_dfx_bitstream_monitor_v1_0_0
         .li_sp_id(li_sp_id),
         .one_shot(one_shot),
         .protocol_abort(protocol_abort),
-        .ref_sp_id_i(ref_sp_id_i),
+        .ref_sp_id_o(ref_sp_id_o),
         .resetn(resetn));
 endmodule
 
@@ -5205,6 +5201,7 @@ module design_2_dfx_bitstream_monitor_0_0_dfx_bitstream_monitor_v1_0_0_top
     li_err_abort,
     li_err_unexpected,
     li_avail,
+    ref_sp_id_o,
     armed,
     armed_oneshot,
     hi_avail,
@@ -5216,8 +5213,7 @@ module design_2_dfx_bitstream_monitor_0_0_dfx_bitstream_monitor_v1_0_0_top
     hi_read,
     one_shot,
     arm,
-    resetn,
-    ref_sp_id_i);
+    resetn);
   output [131:0]dout;
   output li_end;
   output [31:0]li_sp_id;
@@ -5228,6 +5224,7 @@ module design_2_dfx_bitstream_monitor_0_0_dfx_bitstream_monitor_v1_0_0_top
   output li_err_abort;
   output li_err_unexpected;
   output li_avail;
+  output [31:0]ref_sp_id_o;
   output armed;
   output armed_oneshot;
   output hi_avail;
@@ -5240,7 +5237,6 @@ module design_2_dfx_bitstream_monitor_0_0_dfx_bitstream_monitor_v1_0_0_top
   input one_shot;
   input arm;
   input resetn;
-  input [31:0]ref_sp_id_i;
 
   wire arm;
   wire [1:0]arm_current_state;
@@ -5316,16 +5312,289 @@ module design_2_dfx_bitstream_monitor_0_0_dfx_bitstream_monitor_v1_0_0_top
   wire [31:0]li_rp_id;
   wire [31:0]li_sp_id;
   wire one_shot;
+  wire power_on;
   wire protocol_abort;
-  wire [31:0]ref_sp_id_i;
+  wire [31:0]ref_sp_id_o;
   wire resetn;
+  wire [31:0]resolved_usr_access_data;
   wire [31:0]rm_id;
   wire [31:0]rp_id;
   wire [31:0]sp_id;
   wire sp_id_mismatch;
   wire sp_id_mismatch1;
   wire store_data7_out;
+  wire \NLW_gen_usr_access.i_usr_access_CFGCLK_UNCONNECTED ;
+  wire \NLW_gen_usr_access.i_usr_access_DATAVALID_UNCONNECTED ;
 
+  FDRE #(
+    .INIT(1'b1)) 
+    \gen_sp_id.power_on_reg 
+       (.C(clk),
+        .CE(power_on),
+        .D(1'b0),
+        .Q(power_on),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_sp_id.resolved_sp_id_reg[0] 
+       (.C(clk),
+        .CE(power_on),
+        .D(resolved_usr_access_data[0]),
+        .Q(ref_sp_id_o[0]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_sp_id.resolved_sp_id_reg[10] 
+       (.C(clk),
+        .CE(power_on),
+        .D(resolved_usr_access_data[10]),
+        .Q(ref_sp_id_o[10]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_sp_id.resolved_sp_id_reg[11] 
+       (.C(clk),
+        .CE(power_on),
+        .D(resolved_usr_access_data[11]),
+        .Q(ref_sp_id_o[11]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_sp_id.resolved_sp_id_reg[12] 
+       (.C(clk),
+        .CE(power_on),
+        .D(resolved_usr_access_data[12]),
+        .Q(ref_sp_id_o[12]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_sp_id.resolved_sp_id_reg[13] 
+       (.C(clk),
+        .CE(power_on),
+        .D(resolved_usr_access_data[13]),
+        .Q(ref_sp_id_o[13]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_sp_id.resolved_sp_id_reg[14] 
+       (.C(clk),
+        .CE(power_on),
+        .D(resolved_usr_access_data[14]),
+        .Q(ref_sp_id_o[14]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_sp_id.resolved_sp_id_reg[15] 
+       (.C(clk),
+        .CE(power_on),
+        .D(resolved_usr_access_data[15]),
+        .Q(ref_sp_id_o[15]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_sp_id.resolved_sp_id_reg[16] 
+       (.C(clk),
+        .CE(power_on),
+        .D(resolved_usr_access_data[16]),
+        .Q(ref_sp_id_o[16]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_sp_id.resolved_sp_id_reg[17] 
+       (.C(clk),
+        .CE(power_on),
+        .D(resolved_usr_access_data[17]),
+        .Q(ref_sp_id_o[17]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_sp_id.resolved_sp_id_reg[18] 
+       (.C(clk),
+        .CE(power_on),
+        .D(resolved_usr_access_data[18]),
+        .Q(ref_sp_id_o[18]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_sp_id.resolved_sp_id_reg[19] 
+       (.C(clk),
+        .CE(power_on),
+        .D(resolved_usr_access_data[19]),
+        .Q(ref_sp_id_o[19]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_sp_id.resolved_sp_id_reg[1] 
+       (.C(clk),
+        .CE(power_on),
+        .D(resolved_usr_access_data[1]),
+        .Q(ref_sp_id_o[1]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_sp_id.resolved_sp_id_reg[20] 
+       (.C(clk),
+        .CE(power_on),
+        .D(resolved_usr_access_data[20]),
+        .Q(ref_sp_id_o[20]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_sp_id.resolved_sp_id_reg[21] 
+       (.C(clk),
+        .CE(power_on),
+        .D(resolved_usr_access_data[21]),
+        .Q(ref_sp_id_o[21]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_sp_id.resolved_sp_id_reg[22] 
+       (.C(clk),
+        .CE(power_on),
+        .D(resolved_usr_access_data[22]),
+        .Q(ref_sp_id_o[22]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_sp_id.resolved_sp_id_reg[23] 
+       (.C(clk),
+        .CE(power_on),
+        .D(resolved_usr_access_data[23]),
+        .Q(ref_sp_id_o[23]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_sp_id.resolved_sp_id_reg[24] 
+       (.C(clk),
+        .CE(power_on),
+        .D(resolved_usr_access_data[24]),
+        .Q(ref_sp_id_o[24]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_sp_id.resolved_sp_id_reg[25] 
+       (.C(clk),
+        .CE(power_on),
+        .D(resolved_usr_access_data[25]),
+        .Q(ref_sp_id_o[25]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_sp_id.resolved_sp_id_reg[26] 
+       (.C(clk),
+        .CE(power_on),
+        .D(resolved_usr_access_data[26]),
+        .Q(ref_sp_id_o[26]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_sp_id.resolved_sp_id_reg[27] 
+       (.C(clk),
+        .CE(power_on),
+        .D(resolved_usr_access_data[27]),
+        .Q(ref_sp_id_o[27]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_sp_id.resolved_sp_id_reg[28] 
+       (.C(clk),
+        .CE(power_on),
+        .D(resolved_usr_access_data[28]),
+        .Q(ref_sp_id_o[28]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_sp_id.resolved_sp_id_reg[29] 
+       (.C(clk),
+        .CE(power_on),
+        .D(resolved_usr_access_data[29]),
+        .Q(ref_sp_id_o[29]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_sp_id.resolved_sp_id_reg[2] 
+       (.C(clk),
+        .CE(power_on),
+        .D(resolved_usr_access_data[2]),
+        .Q(ref_sp_id_o[2]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_sp_id.resolved_sp_id_reg[30] 
+       (.C(clk),
+        .CE(power_on),
+        .D(resolved_usr_access_data[30]),
+        .Q(ref_sp_id_o[30]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_sp_id.resolved_sp_id_reg[31] 
+       (.C(clk),
+        .CE(power_on),
+        .D(resolved_usr_access_data[31]),
+        .Q(ref_sp_id_o[31]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_sp_id.resolved_sp_id_reg[3] 
+       (.C(clk),
+        .CE(power_on),
+        .D(resolved_usr_access_data[3]),
+        .Q(ref_sp_id_o[3]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_sp_id.resolved_sp_id_reg[4] 
+       (.C(clk),
+        .CE(power_on),
+        .D(resolved_usr_access_data[4]),
+        .Q(ref_sp_id_o[4]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_sp_id.resolved_sp_id_reg[5] 
+       (.C(clk),
+        .CE(power_on),
+        .D(resolved_usr_access_data[5]),
+        .Q(ref_sp_id_o[5]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_sp_id.resolved_sp_id_reg[6] 
+       (.C(clk),
+        .CE(power_on),
+        .D(resolved_usr_access_data[6]),
+        .Q(ref_sp_id_o[6]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_sp_id.resolved_sp_id_reg[7] 
+       (.C(clk),
+        .CE(power_on),
+        .D(resolved_usr_access_data[7]),
+        .Q(ref_sp_id_o[7]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_sp_id.resolved_sp_id_reg[8] 
+       (.C(clk),
+        .CE(power_on),
+        .D(resolved_usr_access_data[8]),
+        .Q(ref_sp_id_o[8]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \gen_sp_id.resolved_sp_id_reg[9] 
+       (.C(clk),
+        .CE(power_on),
+        .D(resolved_usr_access_data[9]),
+        .Q(ref_sp_id_o[9]),
+        .R(1'b0));
+  (* box_type = "PRIMITIVE" *) 
+  USR_ACCESSE2 \gen_usr_access.i_usr_access 
+       (.CFGCLK(\NLW_gen_usr_access.i_usr_access_CFGCLK_UNCONNECTED ),
+        .DATA(resolved_usr_access_data),
+        .DATAVALID(\NLW_gen_usr_access.i_usr_access_DATAVALID_UNCONNECTED ));
   design_2_dfx_bitstream_monitor_0_0_detect_block i_detect
        (.CO(sp_id_mismatch1),
         .E(last_sp_id0),
@@ -5337,6 +5606,7 @@ module design_2_dfx_bitstream_monitor_0_0_dfx_bitstream_monitor_v1_0_0_top
         .\command_reg[0]_0 (i_detect_n_1),
         .\command_reg[1]_0 (i_detect_n_2),
         .din({i_detect_n_5,sp_id_mismatch,input_bs_id,rm_id,rp_id,sp_id,end_of_bs}),
+        .\gen_sp_id.resolved_sp_id_reg[31] ({i_detect_n_148,i_detect_n_149,i_detect_n_150}),
         .icap_csib(icap_csib),
         .icap_csib_0(i_detect_n_3),
         .icap_i(icap_i),
@@ -5346,8 +5616,7 @@ module design_2_dfx_bitstream_monitor_0_0_dfx_bitstream_monitor_v1_0_0_top
         .li_avail_i0(li_avail_i0),
         .li_end_i_reg(i_report_n_141),
         .protocol_abort(protocol_abort),
-        .ref_sp_id_i(ref_sp_id_i),
-        .\ref_sp_id_i[31] ({i_detect_n_148,i_detect_n_149,i_detect_n_150}),
+        .ref_sp_id_o(ref_sp_id_o),
         .resetn(resetn),
         .rm_id_error1_carry__1(last_rm_id),
         .\rm_id_reg[22]_0 ({i_detect_n_166,i_detect_n_167,i_detect_n_168,i_detect_n_169}),

@@ -1,0 +1,11 @@
+===================================
+Configuration Memory information
+===================================
+File Format        BIN
+Interface          SMAPX32
+Size               256K
+Start Address      0x00000000
+End Address        0x0003FFFF
+
+Addr1         Addr2         Date                    File(s)
+0x00000000    0x00023C67    Mar  8 15:09:45 2021    ././Bitstreams/shifter_greybox_partial.bit

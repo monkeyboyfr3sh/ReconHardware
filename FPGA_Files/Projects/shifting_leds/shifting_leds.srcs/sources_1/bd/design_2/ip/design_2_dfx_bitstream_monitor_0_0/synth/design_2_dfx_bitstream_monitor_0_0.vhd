@@ -83,7 +83,6 @@ ENTITY design_2_dfx_bitstream_monitor_0_0 IS
     hi_err_unexpected : OUT STD_LOGIC;
     arm : IN STD_LOGIC;
     one_shot : IN STD_LOGIC;
-    ref_sp_id_i : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     ref_sp_id_o : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
     protocol_abort : IN STD_LOGIC;
     icap_csib : IN STD_LOGIC;
@@ -208,8 +207,8 @@ ARCHITECTURE design_2_dfx_bitstream_monitor_0_0_arch OF design_2_dfx_bitstream_m
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF design_2_dfx_bitstream_monitor_0_0_arch : ARCHITECTURE IS "design_2_dfx_bitstream_monitor_0_0,dfx_bitstream_monitor_v1_0_0,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF design_2_dfx_bitstream_monitor_0_0_arch: ARCHITECTURE IS "design_2_dfx_bitstream_monitor_0_0,dfx_bitstream_monitor_v1_0_0,{x_ipProduct=Vivado 2020.1,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=dfx_bitstream_monitor,x_ipVersion=1.0,x_ipCoreRevision=0,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_FAMILY=zynq,C_RESET_ACTIVE_LEVEL=0,C_CTRL_INTERFACE_TYPE=0,C_CTRL_ADDR_WIDTH=32,C_CTRL_DATA_WIDTH=32,C_HAS_REF_SP_ID_I=1,C_HAS_REF_SP_ID_O=1,C_STS_SP_ID_WIDTH=32,C_STS_RP_ID_WIDTH=32,C_STS_RM_ID_WIDTH=32,C_STS_BS_ID_WIDTH=32,C_STS_HIST_BUFFER_DEPTH=16,C_STS_HIS" & 
-"T_BUFFER_TYPE=distributed,C_STS_HIST_BUFFER_WHEN_FULL=discard_new,C_DP_PROTOCOL=ICAP,C_PROTOCOL_RESET_ACTIVE_LEVEL=0,C_DP_DATA_FORMAT=le_bs,C_DP_HAS_CDC=0,C_DP_CDC_FIFO_DEPTH=32,C_DP_CDC_FIFO_TYPE=distributed,C_DP_CDC_STAGES=2,C_DP_AXI_CHAN_TO_MONITOR=READ,C_DP_AXI_ID_WIDTH=1,C_DP_AXI_AWUSER_WIDTH=1,C_DP_AXI_WUSER_WIDTH=1,C_DP_AXI_BUSER_WIDTH=1,C_DP_AXI_ARUSER_WIDTH=1,C_DP_AXI_RUSER_WIDTH=1,C_HAS_USR_ACCESS=0}";
+  ATTRIBUTE CORE_GENERATION_INFO OF design_2_dfx_bitstream_monitor_0_0_arch: ARCHITECTURE IS "design_2_dfx_bitstream_monitor_0_0,dfx_bitstream_monitor_v1_0_0,{x_ipProduct=Vivado 2020.1,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=dfx_bitstream_monitor,x_ipVersion=1.0,x_ipCoreRevision=0,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_FAMILY=zynq,C_RESET_ACTIVE_LEVEL=0,C_CTRL_INTERFACE_TYPE=0,C_CTRL_ADDR_WIDTH=32,C_CTRL_DATA_WIDTH=32,C_HAS_REF_SP_ID_I=0,C_HAS_REF_SP_ID_O=1,C_STS_SP_ID_WIDTH=32,C_STS_RP_ID_WIDTH=32,C_STS_RM_ID_WIDTH=32,C_STS_BS_ID_WIDTH=32,C_STS_HIST_BUFFER_DEPTH=16,C_STS_HIS" & 
+"T_BUFFER_TYPE=distributed,C_STS_HIST_BUFFER_WHEN_FULL=discard_new,C_DP_PROTOCOL=ICAP,C_PROTOCOL_RESET_ACTIVE_LEVEL=0,C_DP_DATA_FORMAT=le_bs,C_DP_HAS_CDC=0,C_DP_CDC_FIFO_DEPTH=32,C_DP_CDC_FIFO_TYPE=distributed,C_DP_CDC_STAGES=2,C_DP_AXI_CHAN_TO_MONITOR=READ,C_DP_AXI_ID_WIDTH=1,C_DP_AXI_AWUSER_WIDTH=1,C_DP_AXI_WUSER_WIDTH=1,C_DP_AXI_BUSER_WIDTH=1,C_DP_AXI_ARUSER_WIDTH=1,C_DP_AXI_RUSER_WIDTH=1,C_HAS_USR_ACCESS=1}";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
   ATTRIBUTE X_INTERFACE_INFO OF icap_i: SIGNAL IS "xilinx.com:interface:icap:1.0 ICAP i";
@@ -246,7 +245,7 @@ BEGIN
       C_CTRL_INTERFACE_TYPE => 0,
       C_CTRL_ADDR_WIDTH => 32,
       C_CTRL_DATA_WIDTH => 32,
-      C_HAS_REF_SP_ID_I => 1,
+      C_HAS_REF_SP_ID_I => 0,
       C_HAS_REF_SP_ID_O => 1,
       C_STS_SP_ID_WIDTH => 32,
       C_STS_RP_ID_WIDTH => 32,
@@ -269,7 +268,7 @@ BEGIN
       C_DP_AXI_BUSER_WIDTH => 1,
       C_DP_AXI_ARUSER_WIDTH => 1,
       C_DP_AXI_RUSER_WIDTH => 1,
-      C_HAS_USR_ACCESS => 0
+      C_HAS_USR_ACCESS => 1
     )
     PORT MAP (
       clk => clk,
@@ -298,7 +297,7 @@ BEGIN
       hi_err_unexpected => hi_err_unexpected,
       arm => arm,
       one_shot => one_shot,
-      ref_sp_id_i => ref_sp_id_i,
+      ref_sp_id_i => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 32)),
       ref_sp_id_o => ref_sp_id_o,
       s_axi_ctrl_awvalid => '0',
       s_axi_ctrl_awaddr => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 32)),

@@ -3,12 +3,9 @@ Configuration Memory information
 ===================================
 File Format        BIN
 Interface          SMAPX32
-Size               32M
+Size               256K
 Start Address      0x00000000
-End Address        0x01FFFFFF
-Checksum           0xFBD86131
-Fill Value         0xFF
+End Address        0x0003FFFF
 
-Addr1         Addr2         Date                    File(s)                                        Checksum
-0x00000000    0x00023C67    Mar  8 11:00:08 2021    ./Bitstreams/shifter_shift_left_partial.bit    0x00128CC9
-File Checksum Total                                                                                0x00128CC9
+Addr1         Addr2         Date                    File(s)
+0x00000000    0x00023C67    Mar  8 15:01:51 2021    ././Bitstreams/shifter_shift_left_partial.bit

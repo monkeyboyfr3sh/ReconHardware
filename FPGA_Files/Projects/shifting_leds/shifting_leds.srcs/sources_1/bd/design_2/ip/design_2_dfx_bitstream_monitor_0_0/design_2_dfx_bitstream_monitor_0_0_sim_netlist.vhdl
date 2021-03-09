@@ -1,7 +1,7 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
--- Date        : Mon Mar  8 10:35:25 2021
+-- Date        : Mon Mar  8 13:11:11 2021
 -- Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_2/ip/design_2_dfx_bitstream_monitor_0_0/design_2_dfx_bitstream_monitor_0_0_sim_netlist.vhdl
@@ -2264,7 +2264,7 @@ entity design_2_dfx_bitstream_monitor_0_0_detect_block is
     SR : out STD_LOGIC_VECTOR ( 0 to 0 );
     S : out STD_LOGIC_VECTOR ( 3 downto 0 );
     \sp_id_reg[21]_0\ : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    \ref_sp_id_i[31]\ : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    \gen_sp_id.resolved_sp_id_reg[31]\ : out STD_LOGIC_VECTOR ( 2 downto 0 );
     \rp_id_reg[9]_0\ : out STD_LOGIC_VECTOR ( 3 downto 0 );
     \rp_id_reg[21]_0\ : out STD_LOGIC_VECTOR ( 3 downto 0 );
     \rp_id_reg[31]_0\ : out STD_LOGIC_VECTOR ( 2 downto 0 );
@@ -2282,7 +2282,7 @@ entity design_2_dfx_bitstream_monitor_0_0_detect_block is
     CO : in STD_LOGIC_VECTOR ( 0 to 0 );
     li_end_i_reg : in STD_LOGIC;
     arm_current_state : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    ref_sp_id_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    ref_sp_id_o : in STD_LOGIC_VECTOR ( 31 downto 0 );
     \rp_id_error1_carry__1\ : in STD_LOGIC_VECTOR ( 31 downto 0 );
     \rm_id_error1_carry__1\ : in STD_LOGIC_VECTOR ( 31 downto 0 );
     \sp_id_error1_carry__1\ : in STD_LOGIC_VECTOR ( 10 downto 0 );
@@ -4627,10 +4627,10 @@ sp_id_error1_carry_i_2: unisim.vcomponents.LUT6
     )
         port map (
       I0 => \^din\(22),
-      I1 => ref_sp_id_i(21),
+      I1 => ref_sp_id_o(21),
       I2 => \^din\(23),
-      I3 => ref_sp_id_i(22),
-      I4 => ref_sp_id_i(23),
+      I3 => ref_sp_id_o(22),
+      I4 => ref_sp_id_o(23),
       I5 => \^din\(24),
       O => \sp_id_reg[21]_0\(3)
     );
@@ -4640,10 +4640,10 @@ sp_id_error1_carry_i_2: unisim.vcomponents.LUT6
     )
         port map (
       I0 => \^din\(19),
-      I1 => ref_sp_id_i(18),
+      I1 => ref_sp_id_o(18),
       I2 => \^din\(20),
-      I3 => ref_sp_id_i(19),
-      I4 => ref_sp_id_i(20),
+      I3 => ref_sp_id_o(19),
+      I4 => ref_sp_id_o(20),
       I5 => \^din\(21),
       O => \sp_id_reg[21]_0\(2)
     );
@@ -4653,10 +4653,10 @@ sp_id_error1_carry_i_2: unisim.vcomponents.LUT6
     )
         port map (
       I0 => \^din\(16),
-      I1 => ref_sp_id_i(15),
+      I1 => ref_sp_id_o(15),
       I2 => \^din\(17),
-      I3 => ref_sp_id_i(16),
-      I4 => ref_sp_id_i(17),
+      I3 => ref_sp_id_o(16),
+      I4 => ref_sp_id_o(17),
       I5 => \^din\(18),
       O => \sp_id_reg[21]_0\(1)
     );
@@ -4666,10 +4666,10 @@ sp_id_error1_carry_i_2: unisim.vcomponents.LUT6
     )
         port map (
       I0 => \^din\(13),
-      I1 => ref_sp_id_i(12),
+      I1 => ref_sp_id_o(12),
       I2 => \^din\(14),
-      I3 => ref_sp_id_i(13),
-      I4 => ref_sp_id_i(14),
+      I3 => ref_sp_id_o(13),
+      I4 => ref_sp_id_o(14),
       I5 => \^din\(15),
       O => \sp_id_reg[21]_0\(0)
     );
@@ -4678,37 +4678,37 @@ sp_id_error1_carry_i_2: unisim.vcomponents.LUT6
       INIT => X"9009"
     )
         port map (
-      I0 => ref_sp_id_i(31),
+      I0 => ref_sp_id_o(31),
       I1 => \^din\(32),
-      I2 => ref_sp_id_i(30),
+      I2 => ref_sp_id_o(30),
       I3 => \^din\(31),
-      O => \ref_sp_id_i[31]\(2)
+      O => \gen_sp_id.resolved_sp_id_reg[31]\(2)
     );
 \sp_id_mismatch1_carry__1_i_2\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"9009000000009009"
     )
         port map (
-      I0 => ref_sp_id_i(28),
+      I0 => ref_sp_id_o(28),
       I1 => \^din\(29),
-      I2 => ref_sp_id_i(27),
+      I2 => ref_sp_id_o(27),
       I3 => \^din\(28),
-      I4 => ref_sp_id_i(29),
+      I4 => ref_sp_id_o(29),
       I5 => \^din\(30),
-      O => \ref_sp_id_i[31]\(1)
+      O => \gen_sp_id.resolved_sp_id_reg[31]\(1)
     );
 \sp_id_mismatch1_carry__1_i_3\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"9009000000009009"
     )
         port map (
-      I0 => ref_sp_id_i(24),
+      I0 => ref_sp_id_o(24),
       I1 => \^din\(25),
-      I2 => ref_sp_id_i(26),
+      I2 => ref_sp_id_o(26),
       I3 => \^din\(27),
-      I4 => ref_sp_id_i(25),
+      I4 => ref_sp_id_o(25),
       I5 => \^din\(26),
-      O => \ref_sp_id_i[31]\(0)
+      O => \gen_sp_id.resolved_sp_id_reg[31]\(0)
     );
 sp_id_mismatch1_carry_i_1: unisim.vcomponents.LUT6
     generic map(
@@ -4716,10 +4716,10 @@ sp_id_mismatch1_carry_i_1: unisim.vcomponents.LUT6
     )
         port map (
       I0 => \^din\(12),
-      I1 => ref_sp_id_i(11),
+      I1 => ref_sp_id_o(11),
       I2 => \^din\(10),
-      I3 => ref_sp_id_i(9),
-      I4 => ref_sp_id_i(10),
+      I3 => ref_sp_id_o(9),
+      I4 => ref_sp_id_o(10),
       I5 => \^din\(11),
       O => S(3)
     );
@@ -4728,11 +4728,11 @@ sp_id_mismatch1_carry_i_2: unisim.vcomponents.LUT6
       INIT => X"9009000000009009"
     )
         port map (
-      I0 => ref_sp_id_i(6),
+      I0 => ref_sp_id_o(6),
       I1 => \^din\(7),
-      I2 => ref_sp_id_i(8),
+      I2 => ref_sp_id_o(8),
       I3 => \^din\(9),
-      I4 => ref_sp_id_i(7),
+      I4 => ref_sp_id_o(7),
       I5 => \^din\(8),
       O => S(2)
     );
@@ -4742,10 +4742,10 @@ sp_id_mismatch1_carry_i_3: unisim.vcomponents.LUT6
     )
         port map (
       I0 => \^din\(4),
-      I1 => ref_sp_id_i(3),
+      I1 => ref_sp_id_o(3),
       I2 => \^din\(5),
-      I3 => ref_sp_id_i(4),
-      I4 => ref_sp_id_i(5),
+      I3 => ref_sp_id_o(4),
+      I4 => ref_sp_id_o(5),
       I5 => \^din\(6),
       O => S(1)
     );
@@ -4755,10 +4755,10 @@ sp_id_mismatch1_carry_i_4: unisim.vcomponents.LUT6
     )
         port map (
       I0 => \^din\(1),
-      I1 => ref_sp_id_i(0),
+      I1 => ref_sp_id_o(0),
       I2 => \^din\(2),
-      I3 => ref_sp_id_i(1),
-      I4 => ref_sp_id_i(2),
+      I3 => ref_sp_id_o(1),
+      I4 => ref_sp_id_o(2),
       I5 => \^din\(3),
       O => S(0)
     );
@@ -9904,6 +9904,7 @@ entity design_2_dfx_bitstream_monitor_0_0_dfx_bitstream_monitor_v1_0_0_top is
     li_err_abort : out STD_LOGIC;
     li_err_unexpected : out STD_LOGIC;
     li_avail : out STD_LOGIC;
+    ref_sp_id_o : out STD_LOGIC_VECTOR ( 31 downto 0 );
     armed : out STD_LOGIC;
     armed_oneshot : out STD_LOGIC;
     hi_avail : out STD_LOGIC;
@@ -9915,8 +9916,7 @@ entity design_2_dfx_bitstream_monitor_0_0_dfx_bitstream_monitor_v1_0_0_top is
     hi_read : in STD_LOGIC;
     one_shot : in STD_LOGIC;
     arm : in STD_LOGIC;
-    resetn : in STD_LOGIC;
-    ref_sp_id_i : in STD_LOGIC_VECTOR ( 31 downto 0 )
+    resetn : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of design_2_dfx_bitstream_monitor_0_0_dfx_bitstream_monitor_v1_0_0_top : entity is "dfx_bitstream_monitor_v1_0_0_top";
@@ -9977,13 +9977,390 @@ architecture STRUCTURE of design_2_dfx_bitstream_monitor_0_0_dfx_bitstream_monit
   signal last_sp_id : STD_LOGIC_VECTOR ( 31 downto 6 );
   signal last_sp_id0 : STD_LOGIC;
   signal li_avail_i0 : STD_LOGIC;
+  signal power_on : STD_LOGIC;
+  signal \^ref_sp_id_o\ : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal resolved_usr_access_data : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal rm_id : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal rp_id : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal sp_id : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal sp_id_mismatch : STD_LOGIC;
   signal sp_id_mismatch1 : STD_LOGIC;
   signal store_data7_out : STD_LOGIC;
+  signal \NLW_gen_usr_access.i_usr_access_CFGCLK_UNCONNECTED\ : STD_LOGIC;
+  signal \NLW_gen_usr_access.i_usr_access_DATAVALID_UNCONNECTED\ : STD_LOGIC;
+  attribute box_type : string;
+  attribute box_type of \gen_usr_access.i_usr_access\ : label is "PRIMITIVE";
 begin
+  ref_sp_id_o(31 downto 0) <= \^ref_sp_id_o\(31 downto 0);
+\gen_sp_id.power_on_reg\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '1'
+    )
+        port map (
+      C => clk,
+      CE => power_on,
+      D => '0',
+      Q => power_on,
+      R => '0'
+    );
+\gen_sp_id.resolved_sp_id_reg[0]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk,
+      CE => power_on,
+      D => resolved_usr_access_data(0),
+      Q => \^ref_sp_id_o\(0),
+      R => '0'
+    );
+\gen_sp_id.resolved_sp_id_reg[10]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk,
+      CE => power_on,
+      D => resolved_usr_access_data(10),
+      Q => \^ref_sp_id_o\(10),
+      R => '0'
+    );
+\gen_sp_id.resolved_sp_id_reg[11]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk,
+      CE => power_on,
+      D => resolved_usr_access_data(11),
+      Q => \^ref_sp_id_o\(11),
+      R => '0'
+    );
+\gen_sp_id.resolved_sp_id_reg[12]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk,
+      CE => power_on,
+      D => resolved_usr_access_data(12),
+      Q => \^ref_sp_id_o\(12),
+      R => '0'
+    );
+\gen_sp_id.resolved_sp_id_reg[13]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk,
+      CE => power_on,
+      D => resolved_usr_access_data(13),
+      Q => \^ref_sp_id_o\(13),
+      R => '0'
+    );
+\gen_sp_id.resolved_sp_id_reg[14]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk,
+      CE => power_on,
+      D => resolved_usr_access_data(14),
+      Q => \^ref_sp_id_o\(14),
+      R => '0'
+    );
+\gen_sp_id.resolved_sp_id_reg[15]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk,
+      CE => power_on,
+      D => resolved_usr_access_data(15),
+      Q => \^ref_sp_id_o\(15),
+      R => '0'
+    );
+\gen_sp_id.resolved_sp_id_reg[16]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk,
+      CE => power_on,
+      D => resolved_usr_access_data(16),
+      Q => \^ref_sp_id_o\(16),
+      R => '0'
+    );
+\gen_sp_id.resolved_sp_id_reg[17]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk,
+      CE => power_on,
+      D => resolved_usr_access_data(17),
+      Q => \^ref_sp_id_o\(17),
+      R => '0'
+    );
+\gen_sp_id.resolved_sp_id_reg[18]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk,
+      CE => power_on,
+      D => resolved_usr_access_data(18),
+      Q => \^ref_sp_id_o\(18),
+      R => '0'
+    );
+\gen_sp_id.resolved_sp_id_reg[19]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk,
+      CE => power_on,
+      D => resolved_usr_access_data(19),
+      Q => \^ref_sp_id_o\(19),
+      R => '0'
+    );
+\gen_sp_id.resolved_sp_id_reg[1]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk,
+      CE => power_on,
+      D => resolved_usr_access_data(1),
+      Q => \^ref_sp_id_o\(1),
+      R => '0'
+    );
+\gen_sp_id.resolved_sp_id_reg[20]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk,
+      CE => power_on,
+      D => resolved_usr_access_data(20),
+      Q => \^ref_sp_id_o\(20),
+      R => '0'
+    );
+\gen_sp_id.resolved_sp_id_reg[21]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk,
+      CE => power_on,
+      D => resolved_usr_access_data(21),
+      Q => \^ref_sp_id_o\(21),
+      R => '0'
+    );
+\gen_sp_id.resolved_sp_id_reg[22]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk,
+      CE => power_on,
+      D => resolved_usr_access_data(22),
+      Q => \^ref_sp_id_o\(22),
+      R => '0'
+    );
+\gen_sp_id.resolved_sp_id_reg[23]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk,
+      CE => power_on,
+      D => resolved_usr_access_data(23),
+      Q => \^ref_sp_id_o\(23),
+      R => '0'
+    );
+\gen_sp_id.resolved_sp_id_reg[24]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk,
+      CE => power_on,
+      D => resolved_usr_access_data(24),
+      Q => \^ref_sp_id_o\(24),
+      R => '0'
+    );
+\gen_sp_id.resolved_sp_id_reg[25]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk,
+      CE => power_on,
+      D => resolved_usr_access_data(25),
+      Q => \^ref_sp_id_o\(25),
+      R => '0'
+    );
+\gen_sp_id.resolved_sp_id_reg[26]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk,
+      CE => power_on,
+      D => resolved_usr_access_data(26),
+      Q => \^ref_sp_id_o\(26),
+      R => '0'
+    );
+\gen_sp_id.resolved_sp_id_reg[27]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk,
+      CE => power_on,
+      D => resolved_usr_access_data(27),
+      Q => \^ref_sp_id_o\(27),
+      R => '0'
+    );
+\gen_sp_id.resolved_sp_id_reg[28]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk,
+      CE => power_on,
+      D => resolved_usr_access_data(28),
+      Q => \^ref_sp_id_o\(28),
+      R => '0'
+    );
+\gen_sp_id.resolved_sp_id_reg[29]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk,
+      CE => power_on,
+      D => resolved_usr_access_data(29),
+      Q => \^ref_sp_id_o\(29),
+      R => '0'
+    );
+\gen_sp_id.resolved_sp_id_reg[2]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk,
+      CE => power_on,
+      D => resolved_usr_access_data(2),
+      Q => \^ref_sp_id_o\(2),
+      R => '0'
+    );
+\gen_sp_id.resolved_sp_id_reg[30]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk,
+      CE => power_on,
+      D => resolved_usr_access_data(30),
+      Q => \^ref_sp_id_o\(30),
+      R => '0'
+    );
+\gen_sp_id.resolved_sp_id_reg[31]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk,
+      CE => power_on,
+      D => resolved_usr_access_data(31),
+      Q => \^ref_sp_id_o\(31),
+      R => '0'
+    );
+\gen_sp_id.resolved_sp_id_reg[3]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk,
+      CE => power_on,
+      D => resolved_usr_access_data(3),
+      Q => \^ref_sp_id_o\(3),
+      R => '0'
+    );
+\gen_sp_id.resolved_sp_id_reg[4]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk,
+      CE => power_on,
+      D => resolved_usr_access_data(4),
+      Q => \^ref_sp_id_o\(4),
+      R => '0'
+    );
+\gen_sp_id.resolved_sp_id_reg[5]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk,
+      CE => power_on,
+      D => resolved_usr_access_data(5),
+      Q => \^ref_sp_id_o\(5),
+      R => '0'
+    );
+\gen_sp_id.resolved_sp_id_reg[6]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk,
+      CE => power_on,
+      D => resolved_usr_access_data(6),
+      Q => \^ref_sp_id_o\(6),
+      R => '0'
+    );
+\gen_sp_id.resolved_sp_id_reg[7]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk,
+      CE => power_on,
+      D => resolved_usr_access_data(7),
+      Q => \^ref_sp_id_o\(7),
+      R => '0'
+    );
+\gen_sp_id.resolved_sp_id_reg[8]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk,
+      CE => power_on,
+      D => resolved_usr_access_data(8),
+      Q => \^ref_sp_id_o\(8),
+      R => '0'
+    );
+\gen_sp_id.resolved_sp_id_reg[9]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clk,
+      CE => power_on,
+      D => resolved_usr_access_data(9),
+      Q => \^ref_sp_id_o\(9),
+      R => '0'
+    );
+\gen_usr_access.i_usr_access\: unisim.vcomponents.USR_ACCESSE2
+     port map (
+      CFGCLK => \NLW_gen_usr_access.i_usr_access_CFGCLK_UNCONNECTED\,
+      DATA(31 downto 0) => resolved_usr_access_data(31 downto 0),
+      DATAVALID => \NLW_gen_usr_access.i_usr_access_DATAVALID_UNCONNECTED\
+    );
 i_detect: entity work.design_2_dfx_bitstream_monitor_0_0_detect_block
      port map (
       CO(0) => sp_id_mismatch1,
@@ -10005,6 +10382,9 @@ i_detect: entity work.design_2_dfx_bitstream_monitor_0_0_detect_block
       din(64 downto 33) => rp_id(31 downto 0),
       din(32 downto 1) => sp_id(31 downto 0),
       din(0) => end_of_bs,
+      \gen_sp_id.resolved_sp_id_reg[31]\(2) => i_detect_n_148,
+      \gen_sp_id.resolved_sp_id_reg[31]\(1) => i_detect_n_149,
+      \gen_sp_id.resolved_sp_id_reg[31]\(0) => i_detect_n_150,
       icap_csib => icap_csib,
       icap_csib_0 => i_detect_n_3,
       icap_i(31 downto 0) => icap_i(31 downto 0),
@@ -10014,10 +10394,7 @@ i_detect: entity work.design_2_dfx_bitstream_monitor_0_0_detect_block
       li_avail_i0 => li_avail_i0,
       li_end_i_reg => i_report_n_141,
       protocol_abort => protocol_abort,
-      ref_sp_id_i(31 downto 0) => ref_sp_id_i(31 downto 0),
-      \ref_sp_id_i[31]\(2) => i_detect_n_148,
-      \ref_sp_id_i[31]\(1) => i_detect_n_149,
-      \ref_sp_id_i[31]\(0) => i_detect_n_150,
+      ref_sp_id_o(31 downto 0) => \^ref_sp_id_o\(31 downto 0),
       resetn => resetn,
       \rm_id_error1_carry__1\(31 downto 0) => last_rm_id(31 downto 0),
       \rm_id_reg[22]_0\(3) => i_detect_n_166,
@@ -10254,11 +10631,11 @@ entity design_2_dfx_bitstream_monitor_0_0_dfx_bitstream_monitor_v1_0_0 is
   attribute C_FAMILY : string;
   attribute C_FAMILY of design_2_dfx_bitstream_monitor_0_0_dfx_bitstream_monitor_v1_0_0 : entity is "zynq";
   attribute C_HAS_REF_SP_ID_I : integer;
-  attribute C_HAS_REF_SP_ID_I of design_2_dfx_bitstream_monitor_0_0_dfx_bitstream_monitor_v1_0_0 : entity is 1;
+  attribute C_HAS_REF_SP_ID_I of design_2_dfx_bitstream_monitor_0_0_dfx_bitstream_monitor_v1_0_0 : entity is 0;
   attribute C_HAS_REF_SP_ID_O : integer;
   attribute C_HAS_REF_SP_ID_O of design_2_dfx_bitstream_monitor_0_0_dfx_bitstream_monitor_v1_0_0 : entity is 1;
   attribute C_HAS_USR_ACCESS : integer;
-  attribute C_HAS_USR_ACCESS of design_2_dfx_bitstream_monitor_0_0_dfx_bitstream_monitor_v1_0_0 : entity is 0;
+  attribute C_HAS_USR_ACCESS of design_2_dfx_bitstream_monitor_0_0_dfx_bitstream_monitor_v1_0_0 : entity is 1;
   attribute C_PROTOCOL_RESET_ACTIVE_LEVEL : string;
   attribute C_PROTOCOL_RESET_ACTIVE_LEVEL of design_2_dfx_bitstream_monitor_0_0_dfx_bitstream_monitor_v1_0_0 : entity is "1'b0";
   attribute C_RESET_ACTIVE_LEVEL : string;
@@ -10285,11 +10662,8 @@ end design_2_dfx_bitstream_monitor_0_0_dfx_bitstream_monitor_v1_0_0;
 
 architecture STRUCTURE of design_2_dfx_bitstream_monitor_0_0_dfx_bitstream_monitor_v1_0_0 is
   signal \<const0>\ : STD_LOGIC;
-  signal \^ref_sp_id_i\ : STD_LOGIC_VECTOR ( 31 downto 0 );
 begin
-  \^ref_sp_id_i\(31 downto 0) <= ref_sp_id_i(31 downto 0);
   protocol_clock_out <= \<const0>\;
-  ref_sp_id_o(31 downto 0) <= \^ref_sp_id_i\(31 downto 0);
   s_axi_ctrl_arready <= \<const0>\;
   s_axi_ctrl_awready <= \<const0>\;
   s_axi_ctrl_bresp(1) <= \<const0>\;
@@ -10365,7 +10739,7 @@ i_top: entity work.design_2_dfx_bitstream_monitor_0_0_dfx_bitstream_monitor_v1_0
       li_sp_id(31 downto 0) => li_sp_id(31 downto 0),
       one_shot => one_shot,
       protocol_abort => protocol_abort,
-      ref_sp_id_i(31 downto 0) => \^ref_sp_id_i\(31 downto 0),
+      ref_sp_id_o(31 downto 0) => ref_sp_id_o(31 downto 0),
       resetn => resetn
     );
 end STRUCTURE;
@@ -10400,7 +10774,6 @@ entity design_2_dfx_bitstream_monitor_0_0 is
     hi_err_unexpected : out STD_LOGIC;
     arm : in STD_LOGIC;
     one_shot : in STD_LOGIC;
-    ref_sp_id_i : in STD_LOGIC_VECTOR ( 31 downto 0 );
     ref_sp_id_o : out STD_LOGIC_VECTOR ( 31 downto 0 );
     protocol_abort : in STD_LOGIC;
     icap_csib : in STD_LOGIC;
@@ -10462,11 +10835,11 @@ architecture STRUCTURE of design_2_dfx_bitstream_monitor_0_0 is
   attribute C_FAMILY : string;
   attribute C_FAMILY of U0 : label is "zynq";
   attribute C_HAS_REF_SP_ID_I : integer;
-  attribute C_HAS_REF_SP_ID_I of U0 : label is 1;
+  attribute C_HAS_REF_SP_ID_I of U0 : label is 0;
   attribute C_HAS_REF_SP_ID_O : integer;
   attribute C_HAS_REF_SP_ID_O of U0 : label is 1;
   attribute C_HAS_USR_ACCESS : integer;
-  attribute C_HAS_USR_ACCESS of U0 : label is 0;
+  attribute C_HAS_USR_ACCESS of U0 : label is 1;
   attribute C_PROTOCOL_RESET_ACTIVE_LEVEL : string;
   attribute C_PROTOCOL_RESET_ACTIVE_LEVEL of U0 : label is "1'b0";
   attribute C_RESET_ACTIVE_LEVEL : string;
@@ -10553,7 +10926,7 @@ U0: entity work.design_2_dfx_bitstream_monitor_0_0_dfx_bitstream_monitor_v1_0_0
       protocol_clock_out => NLW_U0_protocol_clock_out_UNCONNECTED,
       protocol_reset => '0',
       protocol_resetn => '1',
-      ref_sp_id_i(31 downto 0) => ref_sp_id_i(31 downto 0),
+      ref_sp_id_i(31 downto 0) => B"00000000000000000000000000000000",
       ref_sp_id_o(31 downto 0) => ref_sp_id_o(31 downto 0),
       reset => '0',
       resetn => resetn,

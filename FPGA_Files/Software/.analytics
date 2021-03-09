@@ -166,3 +166,27 @@ timestamp=[2021-03-08 12:30:04], mode=MISC, duration=0:00:04.075, duration_ms=40
 timestamp=[2021-03-08 12:50:56], mode=WORKBENCH_START, duration=0:00:07.645, duration_ms=7645, data={}
 timestamp=[2021-03-08 12:50:56], mode=WORKBENCH_UI_INIT, duration=0:00:00.669, duration_ms=669, data={editors_count=5, platform_editors_count=2, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,pr_led,pr_led_sw,pr_led_sw_system}
 timestamp=[2021-03-08 12:50:57], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.034, duration_ms=34, data={}
+timestamp=[2021-03-08 13:27:22], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.028, duration_ms=28, data={}
+timestamp=[2021-03-08 13:27:23], mode=WORKBENCH_START, duration=0:00:08.709, duration_ms=8709, data={}
+timestamp=[2021-03-08 13:27:24], mode=WORKBENCH_UI_INIT, duration=0:00:00.906, duration_ms=906, data={editors_count=6, platform_editors_count=2, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,pr_led,pr_led_sw,pr_led_sw_system}
+timestamp=[2021-03-08 13:36:06], mode=PLATFORM_GENERATION, duration=0:00:18.170, duration_ms=18170, data={name=pr_led}
+timestamp=[2021-03-08 14:08:52], mode=BUILD, duration=0:00:00.886, duration_ms=886, data={name=pr_led_sw, configuration=Debug, clean_build=false}
+timestamp=[2021-03-08 14:09:02], mode=BUILD, duration=0:00:04.891, duration_ms=4891, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
+timestamp=[2021-03-08 14:11:09], mode=BUILD, duration=0:00:00.393, duration_ms=393, data={name=pr_led_sw, configuration=Debug, clean_build=false}
+timestamp=[2021-03-08 14:11:14], mode=BUILD, duration=0:00:04.840, duration_ms=4840, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
+timestamp=[2021-03-08 14:11:31], mode=BUILD, duration=0:00:00.380, duration_ms=380, data={name=pr_led_sw, configuration=Debug, clean_build=false}
+timestamp=[2021-03-08 14:11:36], mode=BUILD, duration=0:00:04.797, duration_ms=4797, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
+timestamp=[2021-03-08 14:11:45], mode=BUILD, duration=0:00:00.625, duration_ms=625, data={name=pr_led_sw, configuration=Debug, clean_build=false}
+timestamp=[2021-03-08 14:11:50], mode=BUILD, duration=0:00:04.789, duration_ms=4789, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
+timestamp=[2021-03-08 15:30:11], mode=WORKBENCH_START, duration=0:00:09.795, duration_ms=9795, data={}
+timestamp=[2021-03-08 15:30:12], mode=WORKBENCH_UI_INIT, duration=0:00:00.762, duration_ms=762, data={editors_count=7, platform_editors_count=3, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,pr_led,pr_led_sw,pr_led_sw_system}
+timestamp=[2021-03-08 15:30:13], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.068, duration_ms=68, data={}
+timestamp=[2021-03-08 15:31:29], mode=PLATFORM_GENERATION, duration=0:00:18.853, duration_ms=18853, data={name=pr_led}
+timestamp=[2021-03-08 15:44:32], mode=BUILD, duration=0:00:00.750, duration_ms=750, data={name=pr_led_sw, configuration=Debug, clean_build=false}
+timestamp=[2021-03-08 15:44:38], mode=BUILD, duration=0:00:05.066, duration_ms=5066, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
+timestamp=[2021-03-08 15:46:18], mode=BUILD, duration=0:00:00.628, duration_ms=628, data={name=pr_led_sw, configuration=Debug, clean_build=false}
+timestamp=[2021-03-08 15:46:23], mode=BUILD, duration=0:00:04.695, duration_ms=4695, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
+timestamp=[2021-03-08 15:50:43], mode=BUILD, duration=0:00:00.632, duration_ms=632, data={name=pr_led_sw, configuration=Debug, clean_build=false}
+timestamp=[2021-03-08 15:50:48], mode=BUILD, duration=0:00:04.814, duration_ms=4814, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
+timestamp=[2021-03-08 15:51:32], mode=BUILD, duration=0:00:00.626, duration_ms=626, data={name=pr_led_sw, configuration=Debug, clean_build=false}
+timestamp=[2021-03-08 15:51:37], mode=BUILD, duration=0:00:04.739, duration_ms=4739, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}

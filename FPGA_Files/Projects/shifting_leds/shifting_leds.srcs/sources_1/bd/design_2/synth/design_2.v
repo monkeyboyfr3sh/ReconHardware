@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-//Date        : Mon Mar  8 10:34:34 2021
+//Date        : Mon Mar  8 13:10:26 2021
 //Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 //Command     : generate_target design_2.bd
 //Design      : design_2
@@ -9,7 +9,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "design_2,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_2,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=27,numReposBlks=20,numNonXlnxBlks=0,numHierBlks=7,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_2.hwdef" *) 
+(* CORE_GENERATION_INFO = "design_2,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_2,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=26,numReposBlks=19,numNonXlnxBlks=0,numHierBlks=7,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_2.hwdef" *) 
 module design_2
    (COUNT_0_tri_o,
     DDR_addr,
@@ -261,7 +261,6 @@ module design_2
   wire [0:0]rst_ps7_0_100M_peripheral_aresetn;
   wire [1:0]vsm_shifter_hw_triggers_0_1;
   wire [1:0]xlconcat_0_dout;
-  wire [31:0]xlconstant_0_dout;
   wire [0:0]xlslice_0_Dout;
   wire [0:0]xlslice_1_Dout;
   wire [0:0]xlslice_2_Dout;
@@ -407,7 +406,6 @@ module design_2
         .li_sp_id(dfx_bitstream_monitor_0_li_sp_id),
         .one_shot(xlslice_1_Dout),
         .protocol_abort(xlslice_2_Dout),
-        .ref_sp_id_i(xlconstant_0_dout),
         .resetn(rst_ps7_0_100M_peripheral_aresetn));
   design_2_dfx_controller_0_0 dfx_controller_0
        (.cap_gnt(1'b1),
@@ -813,8 +811,6 @@ module design_2
        (.In0(dfx_bitstream_monitor_0_armed),
         .In1(dfx_bitstream_monitor_0_armed_oneshot),
         .dout(xlconcat_0_dout));
-  design_2_xlconstant_0_0 xlconstant_0
-       (.dout(xlconstant_0_dout));
 endmodule
 
 module design_2_axi_mem_intercon_0

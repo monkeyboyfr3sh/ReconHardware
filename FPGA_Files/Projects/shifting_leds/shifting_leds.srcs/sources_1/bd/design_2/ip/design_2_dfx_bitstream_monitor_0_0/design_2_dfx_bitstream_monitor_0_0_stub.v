@@ -1,7 +1,7 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-// Date        : Mon Mar  8 10:35:25 2021
+// Date        : Mon Mar  8 13:11:11 2021
 // Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
 //               c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_2/ip/design_2_dfx_bitstream_monitor_0_0/design_2_dfx_bitstream_monitor_0_0_stub.v
@@ -17,9 +17,9 @@
 module design_2_dfx_bitstream_monitor_0_0(clk, resetn, armed, armed_oneshot, li_avail, 
   li_end, li_sp_id, li_rp_id, li_rm_id, li_bs_id, li_err_sp_id_mismatch, li_err_abort, 
   li_err_unexpected, hi_avail, hi_read, hi_end, hi_sp_id, hi_rp_id, hi_rm_id, hi_bs_id, 
-  hi_err_sp_id_mismatch, hi_err_abort, hi_err_unexpected, arm, one_shot, ref_sp_id_i, 
-  ref_sp_id_o, protocol_abort, icap_csib, icap_rdwrb, icap_i)
-/* synthesis syn_black_box black_box_pad_pin="clk,resetn,armed,armed_oneshot,li_avail,li_end,li_sp_id[31:0],li_rp_id[31:0],li_rm_id[31:0],li_bs_id[31:0],li_err_sp_id_mismatch,li_err_abort,li_err_unexpected,hi_avail,hi_read,hi_end,hi_sp_id[31:0],hi_rp_id[31:0],hi_rm_id[31:0],hi_bs_id[31:0],hi_err_sp_id_mismatch,hi_err_abort,hi_err_unexpected,arm,one_shot,ref_sp_id_i[31:0],ref_sp_id_o[31:0],protocol_abort,icap_csib,icap_rdwrb,icap_i[31:0]" */;
+  hi_err_sp_id_mismatch, hi_err_abort, hi_err_unexpected, arm, one_shot, ref_sp_id_o, 
+  protocol_abort, icap_csib, icap_rdwrb, icap_i)
+/* synthesis syn_black_box black_box_pad_pin="clk,resetn,armed,armed_oneshot,li_avail,li_end,li_sp_id[31:0],li_rp_id[31:0],li_rm_id[31:0],li_bs_id[31:0],li_err_sp_id_mismatch,li_err_abort,li_err_unexpected,hi_avail,hi_read,hi_end,hi_sp_id[31:0],hi_rp_id[31:0],hi_rm_id[31:0],hi_bs_id[31:0],hi_err_sp_id_mismatch,hi_err_abort,hi_err_unexpected,arm,one_shot,ref_sp_id_o[31:0],protocol_abort,icap_csib,icap_rdwrb,icap_i[31:0]" */;
   input clk;
   input resetn;
   output armed;
@@ -45,7 +45,6 @@ module design_2_dfx_bitstream_monitor_0_0(clk, resetn, armed, armed_oneshot, li_
   output hi_err_unexpected;
   input arm;
   input one_shot;
-  input [31:0]ref_sp_id_i;
   output [31:0]ref_sp_id_o;
   input protocol_abort;
   input icap_csib;

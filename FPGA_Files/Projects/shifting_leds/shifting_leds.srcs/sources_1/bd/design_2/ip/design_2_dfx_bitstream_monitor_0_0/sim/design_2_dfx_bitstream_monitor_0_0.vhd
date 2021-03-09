@@ -83,7 +83,6 @@ ENTITY design_2_dfx_bitstream_monitor_0_0 IS
     hi_err_unexpected : OUT STD_LOGIC;
     arm : IN STD_LOGIC;
     one_shot : IN STD_LOGIC;
-    ref_sp_id_i : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     ref_sp_id_o : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
     protocol_abort : IN STD_LOGIC;
     icap_csib : IN STD_LOGIC;
@@ -239,7 +238,7 @@ BEGIN
       C_CTRL_INTERFACE_TYPE => 0,
       C_CTRL_ADDR_WIDTH => 32,
       C_CTRL_DATA_WIDTH => 32,
-      C_HAS_REF_SP_ID_I => 1,
+      C_HAS_REF_SP_ID_I => 0,
       C_HAS_REF_SP_ID_O => 1,
       C_STS_SP_ID_WIDTH => 32,
       C_STS_RP_ID_WIDTH => 32,
@@ -262,7 +261,7 @@ BEGIN
       C_DP_AXI_BUSER_WIDTH => 1,
       C_DP_AXI_ARUSER_WIDTH => 1,
       C_DP_AXI_RUSER_WIDTH => 1,
-      C_HAS_USR_ACCESS => 0
+      C_HAS_USR_ACCESS => 1
     )
     PORT MAP (
       clk => clk,
@@ -291,7 +290,7 @@ BEGIN
       hi_err_unexpected => hi_err_unexpected,
       arm => arm,
       one_shot => one_shot,
-      ref_sp_id_i => ref_sp_id_i,
+      ref_sp_id_i => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 32)),
       ref_sp_id_o => ref_sp_id_o,
       s_axi_ctrl_awvalid => '0',
       s_axi_ctrl_awaddr => STD_LOGIC_VECTOR(TO_UNSIGNED(0, 32)),

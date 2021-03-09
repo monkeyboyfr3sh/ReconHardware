@@ -1375,7 +1375,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:3d09028a</spirit:value>
+            <spirit:value>9:d5e026b9</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1389,11 +1389,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Mar 08 16:34:36 UTC 2021</spirit:value>
+            <spirit:value>Mon Mar 08 19:10:27 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:3d09028a</spirit:value>
+            <spirit:value>9:d5e026b9</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1409,11 +1409,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Mar 08 16:34:36 UTC 2021</spirit:value>
+            <spirit:value>Mon Mar 08 19:10:27 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:3d09028a</spirit:value>
+            <spirit:value>9:d5e026b9</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1436,7 +1436,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:562a2a07</spirit:value>
+            <spirit:value>9:8b8ae4d9</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1452,11 +1452,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Mar 08 16:34:36 UTC 2021</spirit:value>
+            <spirit:value>Mon Mar 08 19:10:27 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:562a2a07</spirit:value>
+            <spirit:value>9:8b8ae4d9</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1470,11 +1470,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Mar 08 16:35:25 UTC 2021</spirit:value>
+            <spirit:value>Mon Mar 08 19:11:11 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:3d09028a</spirit:value>
+            <spirit:value>9:d5e026b9</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1978,7 +1978,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.ref_sp_id_i" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_HAS_REF_SP_ID_I&apos;)) = 1)">true</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.ref_sp_id_i" xilinx:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_HAS_REF_SP_ID_I&apos;)) = 1)">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -3154,7 +3154,7 @@
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_HAS_REF_SP_ID_I</spirit:name>
         <spirit:displayName>C_HAS_REF_SP_ID_O</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_HAS_REF_SP_ID_I">1</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_HAS_REF_SP_ID_I">0</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_HAS_REF_SP_ID_O</spirit:name>
@@ -3269,7 +3269,7 @@
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_HAS_USR_ACCESS</spirit:name>
         <spirit:displayName>C_HAS_USR_ACCESS</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_HAS_USR_ACCESS">0</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_HAS_USR_ACCESS">1</spirit:value>
       </spirit:modelParameter>
     </spirit:modelParameters>
   </spirit:model>
@@ -3486,7 +3486,7 @@
     <spirit:parameter>
       <spirit:name>HAS_REF_SP_ID_I</spirit:name>
       <spirit:displayName>Has User Settable Reference SP ID Input</spirit:displayName>
-      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.HAS_REF_SP_ID_I" spirit:order="3">true</spirit:value>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.HAS_REF_SP_ID_I" spirit:order="3">false</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -3600,7 +3600,7 @@
     <spirit:parameter>
       <spirit:name>HAS_USR_ACCESS</spirit:name>
       <spirit:displayName>Instantiate the USR_ACCESS Primitive</spirit:displayName>
-      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.HAS_USR_ACCESS" spirit:order="5">false</spirit:value>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.HAS_USR_ACCESS" spirit:order="5">true</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>

@@ -3,12 +3,9 @@ Configuration Memory information
 ===================================
 File Format        BIN
 Interface          SMAPX32
-Size               32M
+Size               4M
 Start Address      0x00000000
-End Address        0x01FFFFFF
-Checksum           0xC24D9358
-Fill Value         0xFF
+End Address        0x003FFFFF
 
-Addr1         Addr2         Date                    File(s)                 Checksum
-0x00000000    0x003DBAFB    Mar  8 10:59:24 2021    ./Bitstreams/top.bit    0x01CAD45C
-File Checksum Total                                                         0x01CAD45C
+Addr1         Addr2         Date                    File(s)
+0x00000000    0x003DBAFB    Mar  8 14:32:16 2021    ./Bitstreams/top.bit

@@ -1,4 +1,4 @@
-12:27:40 **** Incremental Build of configuration Debug for project pr_led_sw ****
+15:51:31 **** Incremental Build of configuration Debug for project pr_led_sw ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -23,6 +23,26 @@ arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcp
 ../src/helloworld.c:99:6: warning: unused variable 'prc_status' [-Wunused-variable]
    99 |  u32 prc_status;
       |      ^~~~~~~~~~
+../src/helloworld.c:97:6: warning: unused variable 'dcfg_init' [-Wunused-variable]
+   97 |  u32 dcfg_init;
+      |      ^~~~~~~~~
+../src/helloworld.c: In function 'XDcfg_Initialize':
+../src/helloworld.c:211:20: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+  211 |  XDcfg *Instance = malloc(sizeof *Instance);
+      |                    ^~~~~~
+../src/helloworld.c:211:20: warning: incompatible implicit declaration of built-in function 'malloc'
+../src/helloworld.c:49:1: note: include '<stdlib.h>' or provide a declaration of 'malloc'
+   48 | #include "xdevcfg.h"
+  +++ |+#include <stdlib.h>
+   49 | 
+../src/helloworld.c:216:3: warning: implicit declaration of function 'exit' [-Wimplicit-function-declaration]
+  216 |   exit(0);
+      |   ^~~~
+../src/helloworld.c:216:3: warning: incompatible implicit declaration of built-in function 'exit'
+../src/helloworld.c:216:3: note: include '<stdlib.h>' or provide a declaration of 'exit'
+../src/helloworld.c:209:6: warning: variable 'CtrlReg' set but not used [-Wunused-but-set-variable]
+  209 |  u32 CtrlReg;
+      |      ^~~~~~~
 'Finished building: ../src/helloworld.c'
 ' '
 'Building target: pr_led_sw.elf'
@@ -33,9 +53,9 @@ arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size pr_led_sw.elf  |tee "pr_led_sw.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  65292	   1872	  26272	  93436	  16cfc	pr_led_sw.elf
+  67284	   2912	  26336	  96532	  17914	pr_led_sw.elf
 'Finished building: pr_led_sw.elf.size'
 ' '
 
-12:27:41 Build Finished (took 598ms)
+15:51:32 Build Finished (took 613ms)
 
