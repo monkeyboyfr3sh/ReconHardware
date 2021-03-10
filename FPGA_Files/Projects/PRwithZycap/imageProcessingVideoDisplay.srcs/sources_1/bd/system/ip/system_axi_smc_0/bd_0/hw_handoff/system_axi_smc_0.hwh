@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Mar  9 15:45:00 2021" VIVADOVERSION="2020.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Mar  9 20:31:40 2021" VIVADOVERSION="2020.1">
 
   <SYSTEMINFO ARCH="zynq" BOARD="tul.com.tw:pynq-z2:part0:1.0" DEVICE="7z020" NAME="bd_44e3" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -722,7 +722,7 @@
         <PARAMETER NAME="C_FAMILY" VALUE="zynq"/>
         <PARAMETER NAME="C_EXT_RST_WIDTH" VALUE="4"/>
         <PARAMETER NAME="C_AUX_RST_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="C_EXT_RESET_HIGH" VALUE="1"/>
+        <PARAMETER NAME="C_EXT_RESET_HIGH" VALUE="0"/>
         <PARAMETER NAME="C_AUX_RESET_HIGH" VALUE="0"/>
         <PARAMETER NAME="C_NUM_BUS_RST" VALUE="1"/>
         <PARAMETER NAME="C_NUM_PERP_RST" VALUE="1"/>
@@ -1117,11 +1117,11 @@
         <PARAMETER NAME="SSC253_ROUTE" VALUE="0x1"/>
         <PARAMETER NAME="SSC254_ROUTE" VALUE="0x1"/>
         <PARAMETER NAME="SSC255_ROUTE" VALUE="0x1"/>
-        <PARAMETER NAME="Component_Name" VALUE="bd_44e3_m00_exit_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="bd_44e3_m00e_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="10000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="External_Ports_aclk">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="External_Ports_aclk">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="aclk"/>
           </CONNECTIONS>
@@ -1514,7 +1514,7 @@
           <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="2"/>
           <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="256"/>
           <PARAMETER NAME="PHASE" VALUE="0.000"/>
-          <PARAMETER NAME="CLK_DOMAIN"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="system_processing_system7_0_1_FCLK_CLK0"/>
           <PARAMETER NAME="NUM_READ_THREADS" VALUE="1"/>
           <PARAMETER NAME="NUM_WRITE_THREADS" VALUE="1"/>
           <PARAMETER NAME="RUSER_BITS_PER_BYTE" VALUE="0"/>
@@ -1587,7 +1587,7 @@
           <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="16"/>
           <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="16"/>
           <PARAMETER NAME="PHASE" VALUE="0.000"/>
-          <PARAMETER NAME="CLK_DOMAIN"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="system_processing_system7_0_1_FCLK_CLK0"/>
           <PARAMETER NAME="NUM_READ_THREADS" VALUE="1"/>
           <PARAMETER NAME="NUM_WRITE_THREADS" VALUE="1"/>
           <PARAMETER NAME="RUSER_BITS_PER_BYTE" VALUE="0"/>
@@ -1721,7 +1721,7 @@
         <PARAMETER NAME="M13_NUM_BYTES" VALUE="8"/>
         <PARAMETER NAME="M14_NUM_BYTES" VALUE="8"/>
         <PARAMETER NAME="M15_NUM_BYTES" VALUE="8"/>
-        <PARAMETER NAME="Component_Name" VALUE="bd_44e3_m00_ar_node_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="bd_44e3_m00arn_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
@@ -1817,7 +1817,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="11" FULLNAME="/m00_nodes/m00_aw_node" HWVERSION="1.0" INSTANCE="m00_nodes_m00_aw_node" IPTYPE="BUS" IS_ENABLE="1" MODCLASS="BUS" MODTYPE="sc_node" VLNV="xilinx.com:ip:sc_node:1.0">
+    <MODULE COREREVISION="11" FULLNAME="/m00_nodes/m00_aw_node" HWVERSION="1.0" INSTANCE="m00_nodes_m00_aw_node" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="sc_node" VLNV="xilinx.com:ip:sc_node:1.0">
       <DOCUMENTS>
         <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=smartconnect;v=v1_0;d=pg247-smartconnect.pdf"/>
       </DOCUMENTS>
@@ -1907,8 +1907,8 @@
         <PARAMETER NAME="M13_NUM_BYTES" VALUE="8"/>
         <PARAMETER NAME="M14_NUM_BYTES" VALUE="8"/>
         <PARAMETER NAME="M15_NUM_BYTES" VALUE="8"/>
-        <PARAMETER NAME="Component_Name" VALUE="bd_44e3_m00_aw_node_0"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
+        <PARAMETER NAME="Component_Name" VALUE="bd_44e3_m00awn_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
         <PORT CLKFREQUENCY="100000000" DIR="I" NAME="s_sc_aclk" SIGIS="clk" SIGNAME="External_Ports_aclk">
@@ -1998,7 +1998,7 @@
         </PORT>
       </PORTS>
       <BUSINTERFACES>
-        <BUSINTERFACE BUSNAME="switchboards_aw_switchboard_M00_SC" NAME="S_SC" TYPE="SLAVE" VLNV="xilinx.com:interface:sc:1.0">
+        <BUSINTERFACE BUSNAME="switchboards_aw_switchboard_M00_SC" NAME="S_SC" TYPE="TARGET" VLNV="xilinx.com:interface:sc:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="INFO" PHYSICAL="s_sc_info"/>
             <PORTMAP LOGICAL="PAYLD" PHYSICAL="s_sc_payld"/>
@@ -2007,7 +2007,7 @@
             <PORTMAP LOGICAL="SEND" PHYSICAL="s_sc_send"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="m00_nodes_m00_aw_node_M_SC" NAME="M_SC" TYPE="MASTER" VLNV="xilinx.com:interface:sc:1.0">
+        <BUSINTERFACE BUSNAME="m00_nodes_m00_aw_node_M_SC" NAME="M_SC" TYPE="INITIATOR" VLNV="xilinx.com:interface:sc:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="INFO" PHYSICAL="m_sc_info"/>
             <PORTMAP LOGICAL="PAYLD" PHYSICAL="m_sc_payld"/>
@@ -2016,7 +2016,7 @@
             <PORTMAP LOGICAL="SEND" PHYSICAL="m_sc_send"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="m00_nodes_m00_aw_node_M_AXIS_ARB" NAME="M_AXIS_ARB" TYPE="MASTER" VLNV="xilinx.com:interface:axis:1.0">
+        <BUSINTERFACE BUSNAME="m00_nodes_m00_aw_node_M_AXIS_ARB" NAME="M_AXIS_ARB" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="2"/>
           <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
           <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
@@ -2027,7 +2027,7 @@
           <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
           <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
           <PARAMETER NAME="PHASE" VALUE="0.000"/>
-          <PARAMETER NAME="CLK_DOMAIN"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="system_processing_system7_0_1_FCLK_CLK0"/>
           <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
           <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
           <PORTMAPS>
@@ -2128,7 +2128,7 @@
         <PARAMETER NAME="M13_NUM_BYTES" VALUE="8"/>
         <PARAMETER NAME="M14_NUM_BYTES" VALUE="8"/>
         <PARAMETER NAME="M15_NUM_BYTES" VALUE="8"/>
-        <PARAMETER NAME="Component_Name" VALUE="bd_44e3_m00_b_node_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="bd_44e3_m00bn_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
@@ -2314,7 +2314,7 @@
         <PARAMETER NAME="M13_NUM_BYTES" VALUE="8"/>
         <PARAMETER NAME="M14_NUM_BYTES" VALUE="8"/>
         <PARAMETER NAME="M15_NUM_BYTES" VALUE="8"/>
-        <PARAMETER NAME="Component_Name" VALUE="bd_44e3_m00_r_node_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="bd_44e3_m00rn_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
@@ -2410,7 +2410,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="11" FULLNAME="/m00_nodes/m00_w_node" HWVERSION="1.0" INSTANCE="m00_nodes_m00_w_node" IPTYPE="BUS" IS_ENABLE="1" MODCLASS="BUS" MODTYPE="sc_node" VLNV="xilinx.com:ip:sc_node:1.0">
+    <MODULE COREREVISION="11" FULLNAME="/m00_nodes/m00_w_node" HWVERSION="1.0" INSTANCE="m00_nodes_m00_w_node" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="sc_node" VLNV="xilinx.com:ip:sc_node:1.0">
       <DOCUMENTS>
         <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=smartconnect;v=v1_0;d=pg247-smartconnect.pdf"/>
       </DOCUMENTS>
@@ -2500,8 +2500,8 @@
         <PARAMETER NAME="M13_NUM_BYTES" VALUE="8"/>
         <PARAMETER NAME="M14_NUM_BYTES" VALUE="8"/>
         <PARAMETER NAME="M15_NUM_BYTES" VALUE="8"/>
-        <PARAMETER NAME="Component_Name" VALUE="bd_44e3_m00_w_node_0"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
+        <PARAMETER NAME="Component_Name" VALUE="bd_44e3_m00wn_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
         <PORT CLKFREQUENCY="100000000" DIR="I" NAME="s_sc_aclk" SIGIS="clk" SIGNAME="External_Ports_aclk">
@@ -2591,7 +2591,7 @@
         </PORT>
       </PORTS>
       <BUSINTERFACES>
-        <BUSINTERFACE BUSNAME="switchboards_w_switchboard_M00_SC" NAME="S_SC" TYPE="SLAVE" VLNV="xilinx.com:interface:sc:1.0">
+        <BUSINTERFACE BUSNAME="switchboards_w_switchboard_M00_SC" NAME="S_SC" TYPE="TARGET" VLNV="xilinx.com:interface:sc:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="INFO" PHYSICAL="s_sc_info"/>
             <PORTMAP LOGICAL="PAYLD" PHYSICAL="s_sc_payld"/>
@@ -2600,7 +2600,7 @@
             <PORTMAP LOGICAL="SEND" PHYSICAL="s_sc_send"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="m00_nodes_m00_w_node_M_SC" NAME="M_SC" TYPE="MASTER" VLNV="xilinx.com:interface:sc:1.0">
+        <BUSINTERFACE BUSNAME="m00_nodes_m00_w_node_M_SC" NAME="M_SC" TYPE="INITIATOR" VLNV="xilinx.com:interface:sc:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="INFO" PHYSICAL="m_sc_info"/>
             <PORTMAP LOGICAL="PAYLD" PHYSICAL="m_sc_payld"/>
@@ -2609,7 +2609,7 @@
             <PORTMAP LOGICAL="SEND" PHYSICAL="m_sc_send"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="m00_nodes_m00_aw_node_M_AXIS_ARB" NAME="S_AXIS_ARB" TYPE="SLAVE" VLNV="xilinx.com:interface:axis:1.0">
+        <BUSINTERFACE BUSNAME="m00_nodes_m00_aw_node_M_AXIS_ARB" NAME="S_AXIS_ARB" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="2"/>
           <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
           <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
@@ -2620,7 +2620,7 @@
           <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
           <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
           <PARAMETER NAME="PHASE" VALUE="0.000"/>
-          <PARAMETER NAME="CLK_DOMAIN"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="system_processing_system7_0_1_FCLK_CLK0"/>
           <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
           <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
           <PORTMAPS>
@@ -2672,7 +2672,7 @@
         <PARAMETER NAME="SC_RUSER_BITS_PER_BYTE" VALUE="0"/>
         <PARAMETER NAME="MSC_ROUTE_WIDTH" VALUE="1"/>
         <PARAMETER NAME="SSC_ROUTE_WIDTH" VALUE="3"/>
-        <PARAMETER NAME="Component_Name" VALUE="bd_44e3_m00_sc2axi_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="bd_44e3_m00s2a_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
@@ -3025,7 +3025,7 @@
             <PORTMAP LOGICAL="SEND" PHYSICAL="s_sc_ar_send"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="m00_nodes_m00_aw_node_M_SC" NAME="S_SC_AW" TYPE="SLAVE" VLNV="xilinx.com:interface:sc:1.0">
+        <BUSINTERFACE BUSNAME="m00_nodes_m00_aw_node_M_SC" NAME="S_SC_AW" TYPE="TARGET" VLNV="xilinx.com:interface:sc:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="INFO" PHYSICAL="s_sc_aw_info"/>
             <PORTMAP LOGICAL="PAYLD" PHYSICAL="s_sc_aw_payld"/>
@@ -3034,7 +3034,7 @@
             <PORTMAP LOGICAL="SEND" PHYSICAL="s_sc_aw_send"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="m00_nodes_m00_w_node_M_SC" NAME="S_SC_W" TYPE="SLAVE" VLNV="xilinx.com:interface:sc:1.0">
+        <BUSINTERFACE BUSNAME="m00_nodes_m00_w_node_M_SC" NAME="S_SC_W" TYPE="TARGET" VLNV="xilinx.com:interface:sc:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="INFO" PHYSICAL="s_sc_w_info"/>
             <PORTMAP LOGICAL="PAYLD" PHYSICAL="s_sc_w_payld"/>
@@ -3069,7 +3069,7 @@
           <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="2"/>
           <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="256"/>
           <PARAMETER NAME="PHASE" VALUE="0.000"/>
-          <PARAMETER NAME="CLK_DOMAIN"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="system_processing_system7_0_1_FCLK_CLK0"/>
           <PARAMETER NAME="NUM_READ_THREADS" VALUE="1"/>
           <PARAMETER NAME="NUM_WRITE_THREADS" VALUE="1"/>
           <PARAMETER NAME="RUSER_BITS_PER_BYTE" VALUE="0"/>
@@ -3159,7 +3159,7 @@
         <PARAMETER NAME="SC_RUSER_BITS_PER_BYTE" VALUE="0"/>
         <PARAMETER NAME="MSC_ROUTE_WIDTH" VALUE="1"/>
         <PARAMETER NAME="SSC_ROUTE_WIDTH" VALUE="3"/>
-        <PARAMETER NAME="Component_Name" VALUE="bd_44e3_s00_axi2sc_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="bd_44e3_s00a2s_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
@@ -3349,7 +3349,7 @@
           <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="2"/>
           <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="256"/>
           <PARAMETER NAME="PHASE" VALUE="0.000"/>
-          <PARAMETER NAME="CLK_DOMAIN"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="system_processing_system7_0_1_FCLK_CLK0"/>
           <PARAMETER NAME="NUM_READ_THREADS" VALUE="1"/>
           <PARAMETER NAME="NUM_WRITE_THREADS" VALUE="1"/>
           <PARAMETER NAME="RUSER_BITS_PER_BYTE" VALUE="0"/>
@@ -3391,8 +3391,8 @@
         <PARAMETER NAME="C_SEG_SEP_ROUTE_ARRAY" VALUE="0x0000000000000000"/>
         <PARAMETER NAME="C_SEG_SUPPORTS_READ_ARRAY" VALUE="0x1"/>
         <PARAMETER NAME="C_SEG_SUPPORTS_WRITE_ARRAY" VALUE="0x1"/>
-        <PARAMETER NAME="C_SEG_SECURE_READ_ARRAY" VALUE="0x0"/>
-        <PARAMETER NAME="C_SEG_SECURE_WRITE_ARRAY" VALUE="0x0"/>
+        <PARAMETER NAME="C_SEG_SECURE_READ_ARRAY" VALUE="0b0"/>
+        <PARAMETER NAME="C_SEG_SECURE_WRITE_ARRAY" VALUE="0b0"/>
         <PARAMETER NAME="C_NUM_MSC" VALUE="1"/>
         <PARAMETER NAME="C_MSC_ROUTE_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_MSC_ROUTE_ARRAY" VALUE="0b1"/>
@@ -5297,11 +5297,11 @@
         <PARAMETER NAME="MSC061_ROUTE" VALUE="0x1"/>
         <PARAMETER NAME="MSC062_ROUTE" VALUE="0x1"/>
         <PARAMETER NAME="MSC063_ROUTE" VALUE="0x1"/>
-        <PARAMETER NAME="Component_Name" VALUE="bd_44e3_s00_mmu_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="bd_44e3_s00mmu_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="10000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="External_Ports_aclk">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="External_Ports_aclk">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="aclk"/>
           </CONNECTIONS>
@@ -5494,12 +5494,12 @@
           <PARAMETER NAME="HAS_WSTRB" VALUE="0"/>
           <PARAMETER NAME="HAS_BRESP" VALUE="0"/>
           <PARAMETER NAME="HAS_RRESP" VALUE="1"/>
-          <PARAMETER NAME="SUPPORTS_NARROW_BURST" VALUE="1"/>
+          <PARAMETER NAME="SUPPORTS_NARROW_BURST" VALUE="0"/>
           <PARAMETER NAME="NUM_READ_OUTSTANDING" VALUE="16"/>
           <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="2"/>
-          <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="256"/>
+          <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="16"/>
           <PARAMETER NAME="PHASE" VALUE="0.000"/>
-          <PARAMETER NAME="CLK_DOMAIN"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="system_processing_system7_0_1_FCLK_CLK0"/>
           <PARAMETER NAME="NUM_READ_THREADS" VALUE="1"/>
           <PARAMETER NAME="NUM_WRITE_THREADS" VALUE="1"/>
           <PARAMETER NAME="RUSER_BITS_PER_BYTE" VALUE="0"/>
@@ -5549,7 +5549,7 @@
           <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="2"/>
           <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="256"/>
           <PARAMETER NAME="PHASE" VALUE="0.000"/>
-          <PARAMETER NAME="CLK_DOMAIN"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="system_processing_system7_0_1_FCLK_CLK0"/>
           <PARAMETER NAME="NUM_READ_THREADS" VALUE="1"/>
           <PARAMETER NAME="NUM_WRITE_THREADS" VALUE="1"/>
           <PARAMETER NAME="RUSER_BITS_PER_BYTE" VALUE="0"/>
@@ -6539,11 +6539,11 @@
         <PARAMETER NAME="MSC062_WDATA_WIDTH" VALUE="32"/>
         <PARAMETER NAME="MSC063_RDATA_WIDTH" VALUE="32"/>
         <PARAMETER NAME="MSC063_WDATA_WIDTH" VALUE="32"/>
-        <PARAMETER NAME="Component_Name" VALUE="bd_44e3_s00_si_converter_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="bd_44e3_s00sic_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="10000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="External_Ports_aclk">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="External_Ports_aclk">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="aclk"/>
           </CONNECTIONS>
@@ -6757,7 +6757,7 @@
           <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="2"/>
           <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="256"/>
           <PARAMETER NAME="PHASE" VALUE="0.000"/>
-          <PARAMETER NAME="CLK_DOMAIN"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="system_processing_system7_0_1_FCLK_CLK0"/>
           <PARAMETER NAME="NUM_READ_THREADS" VALUE="1"/>
           <PARAMETER NAME="NUM_WRITE_THREADS" VALUE="1"/>
           <PARAMETER NAME="RUSER_BITS_PER_BYTE" VALUE="0"/>
@@ -6810,7 +6810,7 @@
           <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="2"/>
           <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="256"/>
           <PARAMETER NAME="PHASE" VALUE="0.000"/>
-          <PARAMETER NAME="CLK_DOMAIN"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="system_processing_system7_0_1_FCLK_CLK0"/>
           <PARAMETER NAME="NUM_READ_THREADS" VALUE="1"/>
           <PARAMETER NAME="NUM_WRITE_THREADS" VALUE="1"/>
           <PARAMETER NAME="RUSER_BITS_PER_BYTE" VALUE="0"/>
@@ -6884,11 +6884,11 @@
         <PARAMETER NAME="SUPPORTS_READ_DEADLOCK" VALUE="0"/>
         <PARAMETER NAME="SUPPORTS_WRITE_DEADLOCK" VALUE="0"/>
         <PARAMETER NAME="SINGLE_ISSUING" VALUE="0"/>
-        <PARAMETER NAME="Component_Name" VALUE="bd_44e3_s00_transaction_regulator_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="bd_44e3_s00tr_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="10000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="External_Ports_aclk">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="External_Ports_aclk">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="aclk"/>
           </CONNECTIONS>
@@ -7103,7 +7103,7 @@
           <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="2"/>
           <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="256"/>
           <PARAMETER NAME="PHASE" VALUE="0.000"/>
-          <PARAMETER NAME="CLK_DOMAIN"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="system_processing_system7_0_1_FCLK_CLK0"/>
           <PARAMETER NAME="NUM_READ_THREADS" VALUE="1"/>
           <PARAMETER NAME="NUM_WRITE_THREADS" VALUE="1"/>
           <PARAMETER NAME="RUSER_BITS_PER_BYTE" VALUE="0"/>
@@ -7155,7 +7155,7 @@
           <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="2"/>
           <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="256"/>
           <PARAMETER NAME="PHASE" VALUE="0.000"/>
-          <PARAMETER NAME="CLK_DOMAIN"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="system_processing_system7_0_1_FCLK_CLK0"/>
           <PARAMETER NAME="NUM_READ_THREADS" VALUE="1"/>
           <PARAMETER NAME="NUM_WRITE_THREADS" VALUE="1"/>
           <PARAMETER NAME="RUSER_BITS_PER_BYTE" VALUE="0"/>
@@ -7275,7 +7275,7 @@
         <PARAMETER NAME="M13_NUM_BYTES" VALUE="8"/>
         <PARAMETER NAME="M14_NUM_BYTES" VALUE="8"/>
         <PARAMETER NAME="M15_NUM_BYTES" VALUE="8"/>
-        <PARAMETER NAME="Component_Name" VALUE="bd_44e3_s00_ar_node_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="bd_44e3_sarn_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
@@ -7461,7 +7461,7 @@
         <PARAMETER NAME="M13_NUM_BYTES" VALUE="4"/>
         <PARAMETER NAME="M14_NUM_BYTES" VALUE="4"/>
         <PARAMETER NAME="M15_NUM_BYTES" VALUE="4"/>
-        <PARAMETER NAME="Component_Name" VALUE="bd_44e3_s00_r_node_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="bd_44e3_srn_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
@@ -7598,7 +7598,7 @@
         <PARAMETER NAME="SC_RUSER_BITS_PER_BYTE" VALUE="0"/>
         <PARAMETER NAME="MSC_ROUTE_WIDTH" VALUE="1"/>
         <PARAMETER NAME="SSC_ROUTE_WIDTH" VALUE="3"/>
-        <PARAMETER NAME="Component_Name" VALUE="bd_44e3_s01_axi2sc_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="bd_44e3_s01a2s_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
@@ -7842,7 +7842,7 @@
           <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="2"/>
           <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="256"/>
           <PARAMETER NAME="PHASE" VALUE="0.000"/>
-          <PARAMETER NAME="CLK_DOMAIN"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="system_processing_system7_0_1_FCLK_CLK0"/>
           <PARAMETER NAME="NUM_READ_THREADS" VALUE="1"/>
           <PARAMETER NAME="NUM_WRITE_THREADS" VALUE="1"/>
           <PARAMETER NAME="RUSER_BITS_PER_BYTE" VALUE="0"/>
@@ -7888,8 +7888,8 @@
         <PARAMETER NAME="C_SEG_SEP_ROUTE_ARRAY" VALUE="0x0000000000000000"/>
         <PARAMETER NAME="C_SEG_SUPPORTS_READ_ARRAY" VALUE="0x1"/>
         <PARAMETER NAME="C_SEG_SUPPORTS_WRITE_ARRAY" VALUE="0x1"/>
-        <PARAMETER NAME="C_SEG_SECURE_READ_ARRAY" VALUE="0x0"/>
-        <PARAMETER NAME="C_SEG_SECURE_WRITE_ARRAY" VALUE="0x0"/>
+        <PARAMETER NAME="C_SEG_SECURE_READ_ARRAY" VALUE="0b0"/>
+        <PARAMETER NAME="C_SEG_SECURE_WRITE_ARRAY" VALUE="0b0"/>
         <PARAMETER NAME="C_NUM_MSC" VALUE="1"/>
         <PARAMETER NAME="C_MSC_ROUTE_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_MSC_ROUTE_ARRAY" VALUE="0b1"/>
@@ -9794,11 +9794,11 @@
         <PARAMETER NAME="MSC061_ROUTE" VALUE="0x1"/>
         <PARAMETER NAME="MSC062_ROUTE" VALUE="0x1"/>
         <PARAMETER NAME="MSC063_ROUTE" VALUE="0x1"/>
-        <PARAMETER NAME="Component_Name" VALUE="bd_44e3_s01_mmu_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="bd_44e3_s01mmu_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="10000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="External_Ports_aclk">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="External_Ports_aclk">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="aclk"/>
           </CONNECTIONS>
@@ -10026,12 +10026,12 @@
           <PARAMETER NAME="HAS_WSTRB" VALUE="1"/>
           <PARAMETER NAME="HAS_BRESP" VALUE="1"/>
           <PARAMETER NAME="HAS_RRESP" VALUE="0"/>
-          <PARAMETER NAME="SUPPORTS_NARROW_BURST" VALUE="1"/>
+          <PARAMETER NAME="SUPPORTS_NARROW_BURST" VALUE="0"/>
           <PARAMETER NAME="NUM_READ_OUTSTANDING" VALUE="2"/>
           <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="16"/>
-          <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="256"/>
+          <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="16"/>
           <PARAMETER NAME="PHASE" VALUE="0.000"/>
-          <PARAMETER NAME="CLK_DOMAIN"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="system_processing_system7_0_1_FCLK_CLK0"/>
           <PARAMETER NAME="NUM_READ_THREADS" VALUE="1"/>
           <PARAMETER NAME="NUM_WRITE_THREADS" VALUE="1"/>
           <PARAMETER NAME="RUSER_BITS_PER_BYTE" VALUE="0"/>
@@ -10084,7 +10084,7 @@
           <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="2"/>
           <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="256"/>
           <PARAMETER NAME="PHASE" VALUE="0.000"/>
-          <PARAMETER NAME="CLK_DOMAIN"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="system_processing_system7_0_1_FCLK_CLK0"/>
           <PARAMETER NAME="NUM_READ_THREADS" VALUE="1"/>
           <PARAMETER NAME="NUM_WRITE_THREADS" VALUE="1"/>
           <PARAMETER NAME="RUSER_BITS_PER_BYTE" VALUE="0"/>
@@ -11078,11 +11078,11 @@
         <PARAMETER NAME="MSC062_WDATA_WIDTH" VALUE="32"/>
         <PARAMETER NAME="MSC063_RDATA_WIDTH" VALUE="32"/>
         <PARAMETER NAME="MSC063_WDATA_WIDTH" VALUE="32"/>
-        <PARAMETER NAME="Component_Name" VALUE="bd_44e3_s01_si_converter_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="bd_44e3_s01sic_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="10000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="External_Ports_aclk">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="External_Ports_aclk">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="aclk"/>
           </CONNECTIONS>
@@ -11336,7 +11336,7 @@
           <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="2"/>
           <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="256"/>
           <PARAMETER NAME="PHASE" VALUE="0.000"/>
-          <PARAMETER NAME="CLK_DOMAIN"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="system_processing_system7_0_1_FCLK_CLK0"/>
           <PARAMETER NAME="NUM_READ_THREADS" VALUE="1"/>
           <PARAMETER NAME="NUM_WRITE_THREADS" VALUE="1"/>
           <PARAMETER NAME="RUSER_BITS_PER_BYTE" VALUE="0"/>
@@ -11393,7 +11393,7 @@
           <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="2"/>
           <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="256"/>
           <PARAMETER NAME="PHASE" VALUE="0.000"/>
-          <PARAMETER NAME="CLK_DOMAIN"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="system_processing_system7_0_1_FCLK_CLK0"/>
           <PARAMETER NAME="NUM_READ_THREADS" VALUE="1"/>
           <PARAMETER NAME="NUM_WRITE_THREADS" VALUE="1"/>
           <PARAMETER NAME="RUSER_BITS_PER_BYTE" VALUE="0"/>
@@ -11471,11 +11471,11 @@
         <PARAMETER NAME="SUPPORTS_READ_DEADLOCK" VALUE="0"/>
         <PARAMETER NAME="SUPPORTS_WRITE_DEADLOCK" VALUE="0"/>
         <PARAMETER NAME="SINGLE_ISSUING" VALUE="0"/>
-        <PARAMETER NAME="Component_Name" VALUE="bd_44e3_s01_transaction_regulator_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="bd_44e3_s01tr_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="10000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="External_Ports_aclk">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="External_Ports_aclk">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="aclk"/>
           </CONNECTIONS>
@@ -11730,7 +11730,7 @@
           <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="2"/>
           <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="256"/>
           <PARAMETER NAME="PHASE" VALUE="0.000"/>
-          <PARAMETER NAME="CLK_DOMAIN"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="system_processing_system7_0_1_FCLK_CLK0"/>
           <PARAMETER NAME="NUM_READ_THREADS" VALUE="1"/>
           <PARAMETER NAME="NUM_WRITE_THREADS" VALUE="1"/>
           <PARAMETER NAME="RUSER_BITS_PER_BYTE" VALUE="0"/>
@@ -11786,7 +11786,7 @@
           <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="2"/>
           <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="256"/>
           <PARAMETER NAME="PHASE" VALUE="0.000"/>
-          <PARAMETER NAME="CLK_DOMAIN"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="system_processing_system7_0_1_FCLK_CLK0"/>
           <PARAMETER NAME="NUM_READ_THREADS" VALUE="1"/>
           <PARAMETER NAME="NUM_WRITE_THREADS" VALUE="1"/>
           <PARAMETER NAME="RUSER_BITS_PER_BYTE" VALUE="0"/>
@@ -11910,7 +11910,7 @@
         <PARAMETER NAME="M13_NUM_BYTES" VALUE="8"/>
         <PARAMETER NAME="M14_NUM_BYTES" VALUE="8"/>
         <PARAMETER NAME="M15_NUM_BYTES" VALUE="8"/>
-        <PARAMETER NAME="Component_Name" VALUE="bd_44e3_s01_aw_node_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="bd_44e3_sawn_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
@@ -12096,7 +12096,7 @@
         <PARAMETER NAME="M13_NUM_BYTES" VALUE="4"/>
         <PARAMETER NAME="M14_NUM_BYTES" VALUE="4"/>
         <PARAMETER NAME="M15_NUM_BYTES" VALUE="4"/>
-        <PARAMETER NAME="Component_Name" VALUE="bd_44e3_s01_b_node_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="bd_44e3_sbn_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
@@ -12282,7 +12282,7 @@
         <PARAMETER NAME="M13_NUM_BYTES" VALUE="8"/>
         <PARAMETER NAME="M14_NUM_BYTES" VALUE="8"/>
         <PARAMETER NAME="M15_NUM_BYTES" VALUE="8"/>
-        <PARAMETER NAME="Component_Name" VALUE="bd_44e3_s01_w_node_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="bd_44e3_swn_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
@@ -12419,7 +12419,7 @@
         <PARAMETER NAME="SC_RUSER_BITS_PER_BYTE" VALUE="0"/>
         <PARAMETER NAME="MSC_ROUTE_WIDTH" VALUE="1"/>
         <PARAMETER NAME="SSC_ROUTE_WIDTH" VALUE="3"/>
-        <PARAMETER NAME="Component_Name" VALUE="bd_44e3_s02_axi2sc_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="bd_44e3_s02a2s_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
@@ -12609,7 +12609,7 @@
           <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="2"/>
           <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="256"/>
           <PARAMETER NAME="PHASE" VALUE="0.000"/>
-          <PARAMETER NAME="CLK_DOMAIN"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="system_processing_system7_0_1_FCLK_CLK0"/>
           <PARAMETER NAME="NUM_READ_THREADS" VALUE="1"/>
           <PARAMETER NAME="NUM_WRITE_THREADS" VALUE="1"/>
           <PARAMETER NAME="RUSER_BITS_PER_BYTE" VALUE="0"/>
@@ -12651,8 +12651,8 @@
         <PARAMETER NAME="C_SEG_SEP_ROUTE_ARRAY" VALUE="0x0000000000000000"/>
         <PARAMETER NAME="C_SEG_SUPPORTS_READ_ARRAY" VALUE="0x1"/>
         <PARAMETER NAME="C_SEG_SUPPORTS_WRITE_ARRAY" VALUE="0x1"/>
-        <PARAMETER NAME="C_SEG_SECURE_READ_ARRAY" VALUE="0x0"/>
-        <PARAMETER NAME="C_SEG_SECURE_WRITE_ARRAY" VALUE="0x0"/>
+        <PARAMETER NAME="C_SEG_SECURE_READ_ARRAY" VALUE="0b0"/>
+        <PARAMETER NAME="C_SEG_SECURE_WRITE_ARRAY" VALUE="0b0"/>
         <PARAMETER NAME="C_NUM_MSC" VALUE="1"/>
         <PARAMETER NAME="C_MSC_ROUTE_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_MSC_ROUTE_ARRAY" VALUE="0b1"/>
@@ -14557,11 +14557,11 @@
         <PARAMETER NAME="MSC061_ROUTE" VALUE="0x1"/>
         <PARAMETER NAME="MSC062_ROUTE" VALUE="0x1"/>
         <PARAMETER NAME="MSC063_ROUTE" VALUE="0x1"/>
-        <PARAMETER NAME="Component_Name" VALUE="bd_44e3_s02_mmu_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="bd_44e3_s02mmu_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="10000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="External_Ports_aclk">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="External_Ports_aclk">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="aclk"/>
           </CONNECTIONS>
@@ -14759,7 +14759,7 @@
           <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="2"/>
           <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="256"/>
           <PARAMETER NAME="PHASE" VALUE="0.000"/>
-          <PARAMETER NAME="CLK_DOMAIN"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="system_processing_system7_0_1_FCLK_CLK0"/>
           <PARAMETER NAME="NUM_READ_THREADS" VALUE="1"/>
           <PARAMETER NAME="NUM_WRITE_THREADS" VALUE="1"/>
           <PARAMETER NAME="RUSER_BITS_PER_BYTE" VALUE="0"/>
@@ -14809,7 +14809,7 @@
           <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="2"/>
           <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="256"/>
           <PARAMETER NAME="PHASE" VALUE="0.000"/>
-          <PARAMETER NAME="CLK_DOMAIN"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="system_processing_system7_0_1_FCLK_CLK0"/>
           <PARAMETER NAME="NUM_READ_THREADS" VALUE="1"/>
           <PARAMETER NAME="NUM_WRITE_THREADS" VALUE="1"/>
           <PARAMETER NAME="RUSER_BITS_PER_BYTE" VALUE="0"/>
@@ -15799,11 +15799,11 @@
         <PARAMETER NAME="MSC062_WDATA_WIDTH" VALUE="32"/>
         <PARAMETER NAME="MSC063_RDATA_WIDTH" VALUE="32"/>
         <PARAMETER NAME="MSC063_WDATA_WIDTH" VALUE="32"/>
-        <PARAMETER NAME="Component_Name" VALUE="bd_44e3_s02_si_converter_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="bd_44e3_s02sic_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="10000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="External_Ports_aclk">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="External_Ports_aclk">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="aclk"/>
           </CONNECTIONS>
@@ -16022,7 +16022,7 @@
           <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="2"/>
           <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="256"/>
           <PARAMETER NAME="PHASE" VALUE="0.000"/>
-          <PARAMETER NAME="CLK_DOMAIN"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="system_processing_system7_0_1_FCLK_CLK0"/>
           <PARAMETER NAME="NUM_READ_THREADS" VALUE="1"/>
           <PARAMETER NAME="NUM_WRITE_THREADS" VALUE="1"/>
           <PARAMETER NAME="RUSER_BITS_PER_BYTE" VALUE="0"/>
@@ -16076,7 +16076,7 @@
           <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="2"/>
           <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="256"/>
           <PARAMETER NAME="PHASE" VALUE="0.000"/>
-          <PARAMETER NAME="CLK_DOMAIN"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="system_processing_system7_0_1_FCLK_CLK0"/>
           <PARAMETER NAME="NUM_READ_THREADS" VALUE="1"/>
           <PARAMETER NAME="NUM_WRITE_THREADS" VALUE="1"/>
           <PARAMETER NAME="RUSER_BITS_PER_BYTE" VALUE="0"/>
@@ -16150,11 +16150,11 @@
         <PARAMETER NAME="SUPPORTS_READ_DEADLOCK" VALUE="0"/>
         <PARAMETER NAME="SUPPORTS_WRITE_DEADLOCK" VALUE="0"/>
         <PARAMETER NAME="SINGLE_ISSUING" VALUE="0"/>
-        <PARAMETER NAME="Component_Name" VALUE="bd_44e3_s02_transaction_regulator_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="bd_44e3_s02tr_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
-        <PORT CLKFREQUENCY="10000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="External_Ports_aclk">
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="External_Ports_aclk">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="aclk"/>
           </CONNECTIONS>
@@ -16373,7 +16373,7 @@
           <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="2"/>
           <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="256"/>
           <PARAMETER NAME="PHASE" VALUE="0.000"/>
-          <PARAMETER NAME="CLK_DOMAIN"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="system_processing_system7_0_1_FCLK_CLK0"/>
           <PARAMETER NAME="NUM_READ_THREADS" VALUE="1"/>
           <PARAMETER NAME="NUM_WRITE_THREADS" VALUE="1"/>
           <PARAMETER NAME="RUSER_BITS_PER_BYTE" VALUE="0"/>
@@ -16425,7 +16425,7 @@
           <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="2"/>
           <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="256"/>
           <PARAMETER NAME="PHASE" VALUE="0.000"/>
-          <PARAMETER NAME="CLK_DOMAIN"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="system_processing_system7_0_1_FCLK_CLK0"/>
           <PARAMETER NAME="NUM_READ_THREADS" VALUE="1"/>
           <PARAMETER NAME="NUM_WRITE_THREADS" VALUE="1"/>
           <PARAMETER NAME="RUSER_BITS_PER_BYTE" VALUE="0"/>
@@ -16545,7 +16545,7 @@
         <PARAMETER NAME="M13_NUM_BYTES" VALUE="8"/>
         <PARAMETER NAME="M14_NUM_BYTES" VALUE="8"/>
         <PARAMETER NAME="M15_NUM_BYTES" VALUE="8"/>
-        <PARAMETER NAME="Component_Name" VALUE="bd_44e3_s02_ar_node_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="bd_44e3_sarn_1"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
@@ -16731,7 +16731,7 @@
         <PARAMETER NAME="M13_NUM_BYTES" VALUE="4"/>
         <PARAMETER NAME="M14_NUM_BYTES" VALUE="4"/>
         <PARAMETER NAME="M15_NUM_BYTES" VALUE="4"/>
-        <PARAMETER NAME="Component_Name" VALUE="bd_44e3_s02_r_node_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="bd_44e3_srn_1"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
@@ -17104,7 +17104,7 @@
         <PARAMETER NAME="M15_S13_CONNECTIVITY" VALUE="1"/>
         <PARAMETER NAME="M15_S14_CONNECTIVITY" VALUE="1"/>
         <PARAMETER NAME="M15_S15_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="Component_Name" VALUE="bd_44e3_ar_switchboard_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="bd_44e3_arsw_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
@@ -17499,7 +17499,7 @@
         <PARAMETER NAME="M15_S13_CONNECTIVITY" VALUE="1"/>
         <PARAMETER NAME="M15_S14_CONNECTIVITY" VALUE="1"/>
         <PARAMETER NAME="M15_S15_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="Component_Name" VALUE="bd_44e3_aw_switchboard_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="bd_44e3_awsw_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
@@ -17571,7 +17571,7 @@
             <PORTMAP LOGICAL="RECV" PHYSICAL="s_sc_recv"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="switchboards_aw_switchboard_M00_SC" NAME="M00_SC" TYPE="MASTER" VLNV="xilinx.com:interface:sc:1.0">
+        <BUSINTERFACE BUSNAME="switchboards_aw_switchboard_M00_SC" NAME="M00_SC" TYPE="INITIATOR" VLNV="xilinx.com:interface:sc:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="RECV" PHYSICAL="m_sc_recv"/>
             <PORTMAP LOGICAL="SEND" PHYSICAL="m_sc_send"/>
@@ -17879,7 +17879,7 @@
         <PARAMETER NAME="M15_S13_CONNECTIVITY" VALUE="1"/>
         <PARAMETER NAME="M15_S14_CONNECTIVITY" VALUE="1"/>
         <PARAMETER NAME="M15_S15_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="Component_Name" VALUE="bd_44e3_b_switchboard_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="bd_44e3_bsw_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
@@ -18257,7 +18257,7 @@
         <PARAMETER NAME="M15_S13_CONNECTIVITY" VALUE="1"/>
         <PARAMETER NAME="M15_S14_CONNECTIVITY" VALUE="1"/>
         <PARAMETER NAME="M15_S15_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="Component_Name" VALUE="bd_44e3_r_switchboard_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="bd_44e3_rsw_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
@@ -18650,7 +18650,7 @@
         <PARAMETER NAME="M15_S13_CONNECTIVITY" VALUE="1"/>
         <PARAMETER NAME="M15_S14_CONNECTIVITY" VALUE="1"/>
         <PARAMETER NAME="M15_S15_CONNECTIVITY" VALUE="1"/>
-        <PARAMETER NAME="Component_Name" VALUE="bd_44e3_w_switchboard_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="bd_44e3_wsw_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
@@ -18722,7 +18722,7 @@
             <PORTMAP LOGICAL="RECV" PHYSICAL="s_sc_recv"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="switchboards_w_switchboard_M00_SC" NAME="M00_SC" TYPE="MASTER" VLNV="xilinx.com:interface:sc:1.0">
+        <BUSINTERFACE BUSNAME="switchboards_w_switchboard_M00_SC" NAME="M00_SC" TYPE="INITIATOR" VLNV="xilinx.com:interface:sc:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="RECV" PHYSICAL="m_sc_recv"/>
             <PORTMAP LOGICAL="SEND" PHYSICAL="m_sc_send"/>

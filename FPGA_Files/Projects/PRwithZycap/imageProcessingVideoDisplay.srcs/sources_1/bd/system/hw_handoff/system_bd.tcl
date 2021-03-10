@@ -203,6 +203,15 @@ proc create_root_design { parentCell } {
    CONFIG.M_TDATA_NUM_BYTES {4} \
  ] $axis_dwidth_converter_0
 
+  # Create instance: ila_0, and set properties
+  set ila_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:ila:6.2 ila_0 ]
+  set_property -dict [ list \
+   CONFIG.C_ENABLE_ILA_AXI_MON {false} \
+   CONFIG.C_MONITOR_TYPE {Native} \
+   CONFIG.C_NUM_OF_PROBES {1} \
+   CONFIG.C_PROBE0_WIDTH {3} \
+ ] $ila_0
+
   # Create instance: imageProcess_0, and set properties
   set imageProcess_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:imageProcess:1.0 imageProcess_0 ]
 
@@ -1032,11 +1041,11 @@ connect_bd_intf_net -intf_net [get_bd_intf_nets zycap_0_M_AXI_MM2S] [get_bd_intf
   connect_bd_net -net axi_dma_0_s2mm_introut [get_bd_pins axi_dma_0/s2mm_introut] [get_bd_pins xlconcat_0/In2]
   connect_bd_net -net axi_gpio_0_gpio_io_o [get_bd_pins axi_gpio_0/gpio_io_o] [get_bd_pins imageProcess_0/axi_reset_n]
   connect_bd_net -net imageProcess_0_o_intr [get_bd_pins imageProcess_0/o_intr] [get_bd_pins xlconcat_0/In1]
-  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins axi_dma_0/m_axi_mm2s_aclk] [get_bd_pins axi_dma_0/m_axi_s2mm_aclk] [get_bd_pins axi_dma_0/s_axi_lite_aclk] [get_bd_pins axi_gpio_0/s_axi_aclk] [get_bd_pins axi_smc/aclk] [get_bd_pins axi_smc/aclk1] [get_bd_pins axi_smc/aclk2] [get_bd_pins axi_smc1/aclk] [get_bd_pins axis_dwidth_converter_0/aclk] [get_bd_pins imageProcess_0/axi_clk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins processing_system7_0/S_AXI_HP0_ACLK] [get_bd_pins rst_ps7_0_100M_1/slowest_sync_clk] [get_bd_pins system_ila_0/clk] [get_bd_pins zycap_0/s_axi_lite_aclk]
+  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins axi_dma_0/m_axi_mm2s_aclk] [get_bd_pins axi_dma_0/m_axi_s2mm_aclk] [get_bd_pins axi_dma_0/s_axi_lite_aclk] [get_bd_pins axi_gpio_0/s_axi_aclk] [get_bd_pins axi_smc/aclk] [get_bd_pins axi_smc/aclk1] [get_bd_pins axi_smc/aclk2] [get_bd_pins axi_smc1/aclk] [get_bd_pins axis_dwidth_converter_0/aclk] [get_bd_pins ila_0/clk] [get_bd_pins imageProcess_0/axi_clk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins processing_system7_0/S_AXI_HP0_ACLK] [get_bd_pins rst_ps7_0_100M_1/slowest_sync_clk] [get_bd_pins system_ila_0/clk] [get_bd_pins zycap_0/s_axi_lite_aclk]
   connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_ps7_0_100M_1/ext_reset_in]
   connect_bd_net -net rst_ps7_0_100M_1_interconnect_aresetn [get_bd_pins axi_smc/aresetn] [get_bd_pins axi_smc1/aresetn] [get_bd_pins rst_ps7_0_100M_1/interconnect_aresetn]
   connect_bd_net -net rst_ps7_0_100M_1_peripheral_aresetn [get_bd_pins axi_dma_0/axi_resetn] [get_bd_pins axi_gpio_0/s_axi_aresetn] [get_bd_pins axis_dwidth_converter_0/aresetn] [get_bd_pins rst_ps7_0_100M_1/peripheral_aresetn] [get_bd_pins system_ila_0/resetn] [get_bd_pins zycap_0/axi_resetn]
-  connect_bd_net -net xlconcat_0_dout [get_bd_pins processing_system7_0/IRQ_F2P] [get_bd_pins xlconcat_0/dout]
+  connect_bd_net -net xlconcat_0_dout [get_bd_pins ila_0/probe0] [get_bd_pins processing_system7_0/IRQ_F2P] [get_bd_pins xlconcat_0/dout]
   connect_bd_net -net zycap_0_mm2s_introut [get_bd_pins xlconcat_0/In0] [get_bd_pins zycap_0/mm2s_introut]
 
   # Create address segments

@@ -2,8 +2,8 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Tue Mar  9 15:46:51 2021
-# Process ID: 7656
+# Start of session at: Tue Mar  9 20:32:31 2021
+# Process ID: 4384
 # Current directory: C:/GitHub/ReconHardware/FPGA_Files/Projects/PRwithZycap/imageProcessingVideoDisplay.runs/system_axi_smc_0_synth_1
 # Command line: vivado.exe -log system_axi_smc_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_axi_smc_0.tcl
 # Log file: C:/GitHub/ReconHardware/FPGA_Files/Projects/PRwithZycap/imageProcessingVideoDisplay.runs/system_axi_smc_0_synth_1/system_axi_smc_0.vds

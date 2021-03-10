@@ -1,10 +1,10 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
--- Date        : Sun Mar  7 10:54:05 2021
+-- Date        : Sun Mar  7 10:54:03 2021
 -- Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               c:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.srcs/sources_1/bd/icap_ila/ip/icap_ila_ila_0_0/icap_ila_ila_0_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top icap_ila_ila_0_0 -prefix
+--               icap_ila_ila_0_0_ icap_ila_ila_0_0_stub.vhdl
 -- Design      : icap_ila_ila_0_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg400-1

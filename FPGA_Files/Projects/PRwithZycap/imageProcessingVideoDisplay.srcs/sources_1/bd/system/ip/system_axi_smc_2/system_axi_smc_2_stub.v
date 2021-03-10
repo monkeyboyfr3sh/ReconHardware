@@ -1,10 +1,10 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-// Date        : Tue Mar  9 15:46:47 2021
+// Date        : Tue Mar  9 15:46:45 2021
 // Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               c:/GitHub/ReconHardware/FPGA_Files/Projects/PRwithZycap/imageProcessingVideoDisplay.srcs/sources_1/bd/system/ip/system_axi_smc_2/system_axi_smc_2_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top system_axi_smc_2 -prefix
+//               system_axi_smc_2_ system_axi_smc_2_stub.v
 // Design      : system_axi_smc_2
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg400-1

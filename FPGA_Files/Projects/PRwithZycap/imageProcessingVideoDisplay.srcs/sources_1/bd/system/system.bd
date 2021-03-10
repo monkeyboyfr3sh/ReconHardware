@@ -20,7 +20,8 @@
       "xlconcat_0": "",
       "zycap_0": "",
       "processing_system7_0": "",
-      "axi_smc1": ""
+      "axi_smc1": "",
+      "ila_0": ""
     },
     "interface_ports": {
       "DDR": {
@@ -2162,39 +2163,27 @@
             }
           }
         }
+      },
+      "ila_0": {
+        "vlnv": "xilinx.com:ip:ila:6.2",
+        "xci_name": "system_ila_0_0",
+        "parameters": {
+          "C_ENABLE_ILA_AXI_MON": {
+            "value": "false"
+          },
+          "C_MONITOR_TYPE": {
+            "value": "Native"
+          },
+          "C_NUM_OF_PROBES": {
+            "value": "1"
+          },
+          "C_PROBE0_WIDTH": {
+            "value": "3"
+          }
+        }
       }
     },
     "interface_nets": {
-      "axi_dma_0_M_AXIS_MM2S": {
-        "interface_ports": [
-          "imageProcess_0/s_axis",
-          "axi_dma_0/M_AXIS_MM2S"
-        ]
-      },
-      "processing_system7_0_FIXED_IO": {
-        "interface_ports": [
-          "FIXED_IO",
-          "processing_system7_0/FIXED_IO"
-        ]
-      },
-      "imageProcess_0_m_axis": {
-        "interface_ports": [
-          "imageProcess_0/m_axis",
-          "axis_dwidth_converter_0/S_AXIS"
-        ]
-      },
-      "axi_dma_0_M_AXI_MM2S": {
-        "interface_ports": [
-          "axi_dma_0/M_AXI_MM2S",
-          "axi_smc/S00_AXI"
-        ]
-      },
-      "axi_smc_M00_AXI": {
-        "interface_ports": [
-          "axi_smc/M00_AXI",
-          "processing_system7_0/S_AXI_HP0"
-        ]
-      },
       "zycap_0_M_AXI_MM2S": {
         "interface_ports": [
           "zycap_0/M_AXI_MM2S",
@@ -2210,10 +2199,10 @@
           }
         }
       },
-      "processing_system7_0_DDR": {
+      "axi_smc1_M00_AXI": {
         "interface_ports": [
-          "DDR",
-          "processing_system7_0/DDR"
+          "axi_smc1/M00_AXI",
+          "axi_dma_0/S_AXI_LITE"
         ]
       },
       "axi_dma_0_M_AXI_S2MM": {
@@ -2222,10 +2211,16 @@
           "axi_smc/S01_AXI"
         ]
       },
-      "axis_dwidth_converter_0_M_AXIS": {
+      "axi_smc1_M02_AXI": {
         "interface_ports": [
-          "axis_dwidth_converter_0/M_AXIS",
-          "axi_dma_0/S_AXIS_S2MM"
+          "axi_smc1/M02_AXI",
+          "zycap_0/S_AXI_LITE"
+        ]
+      },
+      "axi_smc_M00_AXI": {
+        "interface_ports": [
+          "axi_smc/M00_AXI",
+          "processing_system7_0/S_AXI_HP0"
         ]
       },
       "processing_system7_0_M_AXI_GP0": {
@@ -2234,22 +2229,46 @@
           "axi_smc1/S00_AXI"
         ]
       },
-      "axi_smc1_M02_AXI": {
-        "interface_ports": [
-          "axi_smc1/M02_AXI",
-          "zycap_0/S_AXI_LITE"
-        ]
-      },
       "axi_smc1_M01_AXI": {
         "interface_ports": [
           "axi_smc1/M01_AXI",
           "axi_gpio_0/S_AXI"
         ]
       },
-      "axi_smc1_M00_AXI": {
+      "processing_system7_0_FIXED_IO": {
         "interface_ports": [
-          "axi_smc1/M00_AXI",
-          "axi_dma_0/S_AXI_LITE"
+          "FIXED_IO",
+          "processing_system7_0/FIXED_IO"
+        ]
+      },
+      "axi_dma_0_M_AXIS_MM2S": {
+        "interface_ports": [
+          "imageProcess_0/s_axis",
+          "axi_dma_0/M_AXIS_MM2S"
+        ]
+      },
+      "imageProcess_0_m_axis": {
+        "interface_ports": [
+          "imageProcess_0/m_axis",
+          "axis_dwidth_converter_0/S_AXIS"
+        ]
+      },
+      "axis_dwidth_converter_0_M_AXIS": {
+        "interface_ports": [
+          "axis_dwidth_converter_0/M_AXIS",
+          "axi_dma_0/S_AXIS_S2MM"
+        ]
+      },
+      "axi_dma_0_M_AXI_MM2S": {
+        "interface_ports": [
+          "axi_dma_0/M_AXI_MM2S",
+          "axi_smc/S00_AXI"
+        ]
+      },
+      "processing_system7_0_DDR": {
+        "interface_ports": [
+          "DDR",
+          "processing_system7_0/DDR"
         ]
       }
     },
@@ -2295,13 +2314,15 @@
           "processing_system7_0/S_AXI_HP0_ACLK",
           "axi_smc1/aclk",
           "axi_smc/aclk1",
-          "axi_smc/aclk2"
+          "axi_smc/aclk2",
+          "ila_0/clk"
         ]
       },
       "xlconcat_0_dout": {
         "ports": [
           "xlconcat_0/dout",
-          "processing_system7_0/IRQ_F2P"
+          "processing_system7_0/IRQ_F2P",
+          "ila_0/probe0"
         ]
       },
       "processing_system7_0_FCLK_RESET0_N": {

@@ -1,5 +1,5 @@
 Command: pr_verify -full_check -initial C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/impl_1/top_routed.dcp -additional C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/child_1_impl_1/top_routed.dcp -file child_1_impl_1_pr_verify.log
-Mon Mar  8 14:36:12 2021
+Wed Mar 10 09:56:13 2021
 
 INFO: [Constraints 18-1020] PR Verify Summary:
 DCP1: C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/impl_1/top_routed.dcp

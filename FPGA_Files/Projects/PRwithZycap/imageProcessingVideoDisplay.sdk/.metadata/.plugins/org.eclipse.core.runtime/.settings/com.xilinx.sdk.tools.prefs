@@ -1,0 +1,16 @@
+com.xilinx.sdk.linkgen.prefs.zycapTest\:.bss=ps7_ddr_0
+com.xilinx.sdk.linkgen.prefs.zycapTest\:.data=ps7_ddr_0
+com.xilinx.sdk.linkgen.prefs.zycapTest\:.data1=ps7_ddr_0
+com.xilinx.sdk.linkgen.prefs.zycapTest\:.fixup=ps7_ddr_0
+com.xilinx.sdk.linkgen.prefs.zycapTest\:.rodata=ps7_ddr_0
+com.xilinx.sdk.linkgen.prefs.zycapTest\:.rodata1=ps7_ddr_0
+com.xilinx.sdk.linkgen.prefs.zycapTest\:.sbss=ps7_ddr_0
+com.xilinx.sdk.linkgen.prefs.zycapTest\:.sbss2=ps7_ddr_0
+com.xilinx.sdk.linkgen.prefs.zycapTest\:.sdata=ps7_ddr_0
+com.xilinx.sdk.linkgen.prefs.zycapTest\:.sdata2=ps7_ddr_0
+com.xilinx.sdk.linkgen.prefs.zycapTest\:.text=ps7_ddr_0
+com.xilinx.sdk.linkgen.prefs.zycapTest\:heap=ps7_ddr_0
+com.xilinx.sdk.linkgen.prefs.zycapTest\:heap-size=1024
+com.xilinx.sdk.linkgen.prefs.zycapTest\:stack=ps7_ddr_0
+com.xilinx.sdk.linkgen.prefs.zycapTest\:stack-size=1024
+eclipse.preferences.version=1

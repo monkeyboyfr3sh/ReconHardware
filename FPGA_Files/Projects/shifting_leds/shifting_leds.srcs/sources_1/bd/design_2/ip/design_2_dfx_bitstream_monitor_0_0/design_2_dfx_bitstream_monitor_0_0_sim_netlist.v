@@ -1,10 +1,10 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-// Date        : Mon Mar  8 13:11:11 2021
+// Date        : Mon Mar  8 13:11:10 2021
 // Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_2/ip/design_2_dfx_bitstream_monitor_0_0/design_2_dfx_bitstream_monitor_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top design_2_dfx_bitstream_monitor_0_0 -prefix
+//               design_2_dfx_bitstream_monitor_0_0_ design_2_dfx_bitstream_monitor_0_0_sim_netlist.v
 // Design      : design_2_dfx_bitstream_monitor_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -223,7 +223,6 @@ module design_2_dfx_bitstream_monitor_0_0
         .usr_access_datavalid(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "xpm_counter_updn" *) 
 module design_2_dfx_bitstream_monitor_0_0_xpm_counter_updn
    (D,
     \count_value_i_reg[3]_0 ,
@@ -940,19 +939,19 @@ endmodule
 (* EN_WACK = "1'b0" *) (* EN_WDC = "1'b1" *) (* FG_EQ_ASYM_DOUT = "1'b0" *) 
 (* FIFO_MEMORY_TYPE = "1" *) (* FIFO_MEM_TYPE = "1" *) (* FIFO_READ_DEPTH = "16" *) 
 (* FIFO_READ_LATENCY = "0" *) (* FIFO_SIZE = "2112" *) (* FIFO_WRITE_DEPTH = "16" *) 
-(* FULL_RESET_VALUE = "0" *) (* FULL_RST_VAL = "1'b0" *) (* ORIG_REF_NAME = "xpm_fifo_base" *) 
-(* PE_THRESH_ADJ = "3" *) (* PE_THRESH_MAX = "13" *) (* PE_THRESH_MIN = "3" *) 
-(* PF_THRESH_ADJ = "5" *) (* PF_THRESH_MAX = "13" *) (* PF_THRESH_MIN = "3" *) 
-(* PROG_EMPTY_THRESH = "3" *) (* PROG_FULL_THRESH = "5" *) (* RD_DATA_COUNT_WIDTH = "4" *) 
-(* RD_DC_WIDTH_EXT = "5" *) (* RD_LATENCY = "0" *) (* RD_MODE = "0" *) 
-(* RD_PNTR_WIDTH = "4" *) (* READ_DATA_WIDTH = "132" *) (* READ_MODE = "0" *) 
-(* RELATED_CLOCKS = "0" *) (* REMOVE_WR_RD_PROT_LOGIC = "0" *) (* SIM_ASSERT_CHK = "0" *) 
-(* USE_ADV_FEATURES = "0707" *) (* VERSION = "0" *) (* WAKEUP_TIME = "0" *) 
-(* WIDTH_RATIO = "1" *) (* WRITE_DATA_WIDTH = "132" *) (* WR_DATA_COUNT_WIDTH = "4" *) 
-(* WR_DC_WIDTH_EXT = "5" *) (* WR_DEPTH_LOG = "4" *) (* WR_PNTR_WIDTH = "4" *) 
-(* WR_RD_RATIO = "0" *) (* WR_WIDTH_LOG = "8" *) (* XPM_MODULE = "TRUE" *) 
-(* both_stages_valid = "3" *) (* invalid = "0" *) (* keep_hierarchy = "soft" *) 
-(* stage1_valid = "2" *) (* stage2_valid = "1" *) 
+(* FULL_RESET_VALUE = "0" *) (* FULL_RST_VAL = "1'b0" *) (* PE_THRESH_ADJ = "3" *) 
+(* PE_THRESH_MAX = "13" *) (* PE_THRESH_MIN = "3" *) (* PF_THRESH_ADJ = "5" *) 
+(* PF_THRESH_MAX = "13" *) (* PF_THRESH_MIN = "3" *) (* PROG_EMPTY_THRESH = "3" *) 
+(* PROG_FULL_THRESH = "5" *) (* RD_DATA_COUNT_WIDTH = "4" *) (* RD_DC_WIDTH_EXT = "5" *) 
+(* RD_LATENCY = "0" *) (* RD_MODE = "0" *) (* RD_PNTR_WIDTH = "4" *) 
+(* READ_DATA_WIDTH = "132" *) (* READ_MODE = "0" *) (* RELATED_CLOCKS = "0" *) 
+(* REMOVE_WR_RD_PROT_LOGIC = "0" *) (* SIM_ASSERT_CHK = "0" *) (* USE_ADV_FEATURES = "0707" *) 
+(* VERSION = "0" *) (* WAKEUP_TIME = "0" *) (* WIDTH_RATIO = "1" *) 
+(* WRITE_DATA_WIDTH = "132" *) (* WR_DATA_COUNT_WIDTH = "4" *) (* WR_DC_WIDTH_EXT = "5" *) 
+(* WR_DEPTH_LOG = "4" *) (* WR_PNTR_WIDTH = "4" *) (* WR_RD_RATIO = "0" *) 
+(* WR_WIDTH_LOG = "8" *) (* XPM_MODULE = "TRUE" *) (* both_stages_valid = "3" *) 
+(* invalid = "0" *) (* keep_hierarchy = "soft" *) (* stage1_valid = "2" *) 
+(* stage2_valid = "1" *) 
 module design_2_dfx_bitstream_monitor_0_0_xpm_fifo_base
    (sleep,
     rst,
@@ -1440,7 +1439,6 @@ module design_2_dfx_bitstream_monitor_0_0_xpm_fifo_base
         .write_only_q(write_only_q));
 endmodule
 
-(* ORIG_REF_NAME = "xpm_fifo_reg_bit" *) 
 module design_2_dfx_bitstream_monitor_0_0_xpm_fifo_reg_bit
    (rst_d1,
     overflow_i0,
@@ -1498,7 +1496,6 @@ module design_2_dfx_bitstream_monitor_0_0_xpm_fifo_reg_bit
         .O(overflow_i0));
 endmodule
 
-(* ORIG_REF_NAME = "xpm_fifo_rst" *) 
 module design_2_dfx_bitstream_monitor_0_0_xpm_fifo_rst
    (\gen_pntr_flags_cc.wrp_eq_rdp_pf_cc.gpf_cc_sym.prog_full_i_reg ,
     read_only,
@@ -1681,13 +1678,13 @@ endmodule
 
 (* CASCADE_HEIGHT = "0" *) (* DOUT_RESET_VALUE = "0" *) (* ECC_MODE = "no_ecc" *) 
 (* EN_ADV_FEATURE_SYNC = "16'b0000011100000111" *) (* FIFO_MEMORY_TYPE = "distributed" *) (* FIFO_READ_LATENCY = "0" *) 
-(* FIFO_WRITE_DEPTH = "16" *) (* FULL_RESET_VALUE = "0" *) (* ORIG_REF_NAME = "xpm_fifo_sync" *) 
-(* PROG_EMPTY_THRESH = "3" *) (* PROG_FULL_THRESH = "5" *) (* P_COMMON_CLOCK = "1" *) 
-(* P_ECC_MODE = "0" *) (* P_FIFO_MEMORY_TYPE = "1" *) (* P_READ_MODE = "0" *) 
-(* P_WAKEUP_TIME = "2" *) (* RD_DATA_COUNT_WIDTH = "4" *) (* READ_DATA_WIDTH = "132" *) 
-(* READ_MODE = "std" *) (* SIM_ASSERT_CHK = "0" *) (* USE_ADV_FEATURES = "0707" *) 
-(* WAKEUP_TIME = "0" *) (* WRITE_DATA_WIDTH = "132" *) (* WR_DATA_COUNT_WIDTH = "4" *) 
-(* XPM_MODULE = "TRUE" *) (* keep_hierarchy = "soft" *) 
+(* FIFO_WRITE_DEPTH = "16" *) (* FULL_RESET_VALUE = "0" *) (* PROG_EMPTY_THRESH = "3" *) 
+(* PROG_FULL_THRESH = "5" *) (* P_COMMON_CLOCK = "1" *) (* P_ECC_MODE = "0" *) 
+(* P_FIFO_MEMORY_TYPE = "1" *) (* P_READ_MODE = "0" *) (* P_WAKEUP_TIME = "2" *) 
+(* RD_DATA_COUNT_WIDTH = "4" *) (* READ_DATA_WIDTH = "132" *) (* READ_MODE = "std" *) 
+(* SIM_ASSERT_CHK = "0" *) (* USE_ADV_FEATURES = "0707" *) (* WAKEUP_TIME = "0" *) 
+(* WRITE_DATA_WIDTH = "132" *) (* WR_DATA_COUNT_WIDTH = "4" *) (* XPM_MODULE = "TRUE" *) 
+(* keep_hierarchy = "soft" *) 
 module design_2_dfx_bitstream_monitor_0_0_xpm_fifo_sync
    (sleep,
     rst,
@@ -1871,25 +1868,24 @@ endmodule
 (* CLOCKING_MODE = "0" *) (* ECC_MODE = "0" *) (* MAX_NUM_CHAR = "0" *) 
 (* MEMORY_INIT_FILE = "none" *) (* MEMORY_INIT_PARAM = "" *) (* MEMORY_OPTIMIZATION = "true" *) 
 (* MEMORY_PRIMITIVE = "1" *) (* MEMORY_SIZE = "2112" *) (* MEMORY_TYPE = "1" *) 
-(* MESSAGE_CONTROL = "0" *) (* NUM_CHAR_LOC = "0" *) (* ORIG_REF_NAME = "xpm_memory_base" *) 
-(* P_ECC_MODE = "no_ecc" *) (* P_ENABLE_BYTE_WRITE_A = "0" *) (* P_ENABLE_BYTE_WRITE_B = "0" *) 
-(* P_MAX_DEPTH_DATA = "16" *) (* P_MEMORY_OPT = "yes" *) (* P_MEMORY_PRIMITIVE = "distributed" *) 
-(* P_MIN_WIDTH_DATA = "132" *) (* P_MIN_WIDTH_DATA_A = "132" *) (* P_MIN_WIDTH_DATA_B = "132" *) 
-(* P_MIN_WIDTH_DATA_ECC = "132" *) (* P_MIN_WIDTH_DATA_LDW = "4" *) (* P_MIN_WIDTH_DATA_SHFT = "132" *) 
-(* P_NUM_COLS_WRITE_A = "1" *) (* P_NUM_COLS_WRITE_B = "1" *) (* P_NUM_ROWS_READ_A = "1" *) 
-(* P_NUM_ROWS_READ_B = "1" *) (* P_NUM_ROWS_WRITE_A = "1" *) (* P_NUM_ROWS_WRITE_B = "1" *) 
-(* P_SDP_WRITE_MODE = "yes" *) (* P_WIDTH_ADDR_LSB_READ_A = "0" *) (* P_WIDTH_ADDR_LSB_READ_B = "0" *) 
-(* P_WIDTH_ADDR_LSB_WRITE_A = "0" *) (* P_WIDTH_ADDR_LSB_WRITE_B = "0" *) (* P_WIDTH_ADDR_READ_A = "4" *) 
-(* P_WIDTH_ADDR_READ_B = "4" *) (* P_WIDTH_ADDR_WRITE_A = "4" *) (* P_WIDTH_ADDR_WRITE_B = "4" *) 
-(* P_WIDTH_COL_WRITE_A = "132" *) (* P_WIDTH_COL_WRITE_B = "132" *) (* READ_DATA_WIDTH_A = "132" *) 
-(* READ_DATA_WIDTH_B = "132" *) (* READ_LATENCY_A = "2" *) (* READ_LATENCY_B = "0" *) 
-(* READ_RESET_VALUE_A = "0" *) (* READ_RESET_VALUE_B = "0" *) (* RST_MODE_A = "SYNC" *) 
-(* RST_MODE_B = "SYNC" *) (* SIM_ASSERT_CHK = "0" *) (* USE_EMBEDDED_CONSTRAINT = "0" *) 
-(* USE_MEM_INIT = "0" *) (* USE_MEM_INIT_MMI = "0" *) (* VERSION = "0" *) 
-(* WAKEUP_TIME = "0" *) (* WRITE_DATA_WIDTH_A = "132" *) (* WRITE_DATA_WIDTH_B = "132" *) 
-(* WRITE_MODE_A = "2" *) (* WRITE_MODE_B = "1" *) (* WRITE_PROTECT = "1" *) 
-(* XPM_MODULE = "TRUE" *) (* keep_hierarchy = "soft" *) (* rsta_loop_iter = "132" *) 
-(* rstb_loop_iter = "132" *) 
+(* MESSAGE_CONTROL = "0" *) (* NUM_CHAR_LOC = "0" *) (* P_ECC_MODE = "no_ecc" *) 
+(* P_ENABLE_BYTE_WRITE_A = "0" *) (* P_ENABLE_BYTE_WRITE_B = "0" *) (* P_MAX_DEPTH_DATA = "16" *) 
+(* P_MEMORY_OPT = "yes" *) (* P_MEMORY_PRIMITIVE = "distributed" *) (* P_MIN_WIDTH_DATA = "132" *) 
+(* P_MIN_WIDTH_DATA_A = "132" *) (* P_MIN_WIDTH_DATA_B = "132" *) (* P_MIN_WIDTH_DATA_ECC = "132" *) 
+(* P_MIN_WIDTH_DATA_LDW = "4" *) (* P_MIN_WIDTH_DATA_SHFT = "132" *) (* P_NUM_COLS_WRITE_A = "1" *) 
+(* P_NUM_COLS_WRITE_B = "1" *) (* P_NUM_ROWS_READ_A = "1" *) (* P_NUM_ROWS_READ_B = "1" *) 
+(* P_NUM_ROWS_WRITE_A = "1" *) (* P_NUM_ROWS_WRITE_B = "1" *) (* P_SDP_WRITE_MODE = "yes" *) 
+(* P_WIDTH_ADDR_LSB_READ_A = "0" *) (* P_WIDTH_ADDR_LSB_READ_B = "0" *) (* P_WIDTH_ADDR_LSB_WRITE_A = "0" *) 
+(* P_WIDTH_ADDR_LSB_WRITE_B = "0" *) (* P_WIDTH_ADDR_READ_A = "4" *) (* P_WIDTH_ADDR_READ_B = "4" *) 
+(* P_WIDTH_ADDR_WRITE_A = "4" *) (* P_WIDTH_ADDR_WRITE_B = "4" *) (* P_WIDTH_COL_WRITE_A = "132" *) 
+(* P_WIDTH_COL_WRITE_B = "132" *) (* READ_DATA_WIDTH_A = "132" *) (* READ_DATA_WIDTH_B = "132" *) 
+(* READ_LATENCY_A = "2" *) (* READ_LATENCY_B = "0" *) (* READ_RESET_VALUE_A = "0" *) 
+(* READ_RESET_VALUE_B = "0" *) (* RST_MODE_A = "SYNC" *) (* RST_MODE_B = "SYNC" *) 
+(* SIM_ASSERT_CHK = "0" *) (* USE_EMBEDDED_CONSTRAINT = "0" *) (* USE_MEM_INIT = "0" *) 
+(* USE_MEM_INIT_MMI = "0" *) (* VERSION = "0" *) (* WAKEUP_TIME = "0" *) 
+(* WRITE_DATA_WIDTH_A = "132" *) (* WRITE_DATA_WIDTH_B = "132" *) (* WRITE_MODE_A = "2" *) 
+(* WRITE_MODE_B = "1" *) (* WRITE_PROTECT = "1" *) (* XPM_MODULE = "TRUE" *) 
+(* keep_hierarchy = "soft" *) (* rsta_loop_iter = "132" *) (* rstb_loop_iter = "132" *) 
 module design_2_dfx_bitstream_monitor_0_0_xpm_memory_base
    (sleep,
     clka,
@@ -2751,7 +2747,6 @@ module design_2_dfx_bitstream_monitor_0_0_xpm_memory_base
         .WE(ena));
 endmodule
 
-(* ORIG_REF_NAME = "detect_block" *) 
 module design_2_dfx_bitstream_monitor_0_0_detect_block
    (in_bitstream_reg,
     \command_reg[0]_0 ,
@@ -4937,8 +4932,7 @@ endmodule
 (* C_HAS_REF_SP_ID_O = "1" *) (* C_HAS_USR_ACCESS = "1" *) (* C_PROTOCOL_RESET_ACTIVE_LEVEL = "1'b0" *) 
 (* C_RESET_ACTIVE_LEVEL = "1'b0" *) (* C_STS_BS_ID_WIDTH = "32" *) (* C_STS_HIST_BUFFER_DEPTH = "16" *) 
 (* C_STS_HIST_BUFFER_TYPE = "distributed" *) (* C_STS_HIST_BUFFER_WHEN_FULL = "discard_new" *) (* C_STS_RM_ID_WIDTH = "32" *) 
-(* C_STS_RP_ID_WIDTH = "32" *) (* C_STS_SP_ID_WIDTH = "32" *) (* ORIG_REF_NAME = "dfx_bitstream_monitor_v1_0_0" *) 
-(* downgradeipidentifiedwarnings = "yes" *) 
+(* C_STS_RP_ID_WIDTH = "32" *) (* C_STS_SP_ID_WIDTH = "32" *) (* downgradeipidentifiedwarnings = "yes" *) 
 module design_2_dfx_bitstream_monitor_0_0_dfx_bitstream_monitor_v1_0_0
    (clk,
     reset,
@@ -5189,7 +5183,6 @@ module design_2_dfx_bitstream_monitor_0_0_dfx_bitstream_monitor_v1_0_0
         .resetn(resetn));
 endmodule
 
-(* ORIG_REF_NAME = "dfx_bitstream_monitor_v1_0_0_top" *) 
 module design_2_dfx_bitstream_monitor_0_0_dfx_bitstream_monitor_v1_0_0_top
    (dout,
     li_end,
@@ -5681,7 +5674,6 @@ module design_2_dfx_bitstream_monitor_0_0_dfx_bitstream_monitor_v1_0_0_top
         .store_data7_out(store_data7_out));
 endmodule
 
-(* ORIG_REF_NAME = "history_buffer" *) 
 module design_2_dfx_bitstream_monitor_0_0_history_buffer
    (dout,
     din,
@@ -5846,7 +5838,6 @@ module design_2_dfx_bitstream_monitor_0_0_history_buffer
         .O(li_err_unexpected_i_i_3_n_0));
 endmodule
 
-(* ORIG_REF_NAME = "report_block" *) 
 module design_2_dfx_bitstream_monitor_0_0_report_block
    (dout,
     li_end,

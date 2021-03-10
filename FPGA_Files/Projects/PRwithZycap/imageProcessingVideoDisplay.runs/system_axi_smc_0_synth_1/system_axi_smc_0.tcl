@@ -70,6 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "system_axi_smc_0_synth_1" START { ROLLUP_AUTO }
+set_param xicom.use_bs_reader 1
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 OPTRACE "Creating in-memory project" START { }
@@ -94,27 +95,27 @@ OPTRACE "Adding files" START { }
 read_ip -quiet C:/GitHub/ReconHardware/FPGA_Files/Projects/PRwithZycap/imageProcessingVideoDisplay.srcs/sources_1/bd/system/ip/system_axi_smc_0/system_axi_smc_0.xci
 set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/PRwithZycap/imageProcessingVideoDisplay.srcs/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_1/bd_44e3_psr_aclk_0_board.xdc]
 set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/PRwithZycap/imageProcessingVideoDisplay.srcs/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_1/bd_44e3_psr_aclk_0.xdc]
-set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/PRwithZycap/imageProcessingVideoDisplay.srcs/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_2/bd_44e3_ar_switchboard_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/PRwithZycap/imageProcessingVideoDisplay.srcs/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_3/bd_44e3_r_switchboard_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/PRwithZycap/imageProcessingVideoDisplay.srcs/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_4/bd_44e3_aw_switchboard_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/PRwithZycap/imageProcessingVideoDisplay.srcs/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_5/bd_44e3_w_switchboard_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/PRwithZycap/imageProcessingVideoDisplay.srcs/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_6/bd_44e3_b_switchboard_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/PRwithZycap/imageProcessingVideoDisplay.srcs/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_10/bd_44e3_s00_axi2sc_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/PRwithZycap/imageProcessingVideoDisplay.srcs/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_11/bd_44e3_s00_ar_node_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/PRwithZycap/imageProcessingVideoDisplay.srcs/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_12/bd_44e3_s00_r_node_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/PRwithZycap/imageProcessingVideoDisplay.srcs/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_16/bd_44e3_s01_axi2sc_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/PRwithZycap/imageProcessingVideoDisplay.srcs/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_17/bd_44e3_s01_aw_node_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/PRwithZycap/imageProcessingVideoDisplay.srcs/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_18/bd_44e3_s01_w_node_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/PRwithZycap/imageProcessingVideoDisplay.srcs/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_19/bd_44e3_s01_b_node_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/PRwithZycap/imageProcessingVideoDisplay.srcs/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_23/bd_44e3_s02_axi2sc_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/PRwithZycap/imageProcessingVideoDisplay.srcs/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_24/bd_44e3_s02_ar_node_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/PRwithZycap/imageProcessingVideoDisplay.srcs/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_25/bd_44e3_s02_r_node_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/PRwithZycap/imageProcessingVideoDisplay.srcs/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_26/bd_44e3_m00_sc2axi_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/PRwithZycap/imageProcessingVideoDisplay.srcs/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_27/bd_44e3_m00_ar_node_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/PRwithZycap/imageProcessingVideoDisplay.srcs/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_28/bd_44e3_m00_r_node_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/PRwithZycap/imageProcessingVideoDisplay.srcs/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_29/bd_44e3_m00_aw_node_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/PRwithZycap/imageProcessingVideoDisplay.srcs/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_30/bd_44e3_m00_w_node_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/PRwithZycap/imageProcessingVideoDisplay.srcs/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_31/bd_44e3_m00_b_node_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/PRwithZycap/imageProcessingVideoDisplay.srcs/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_2/bd_44e3_arsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/PRwithZycap/imageProcessingVideoDisplay.srcs/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_3/bd_44e3_rsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/PRwithZycap/imageProcessingVideoDisplay.srcs/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_4/bd_44e3_awsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/PRwithZycap/imageProcessingVideoDisplay.srcs/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_5/bd_44e3_wsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/PRwithZycap/imageProcessingVideoDisplay.srcs/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_6/bd_44e3_bsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/PRwithZycap/imageProcessingVideoDisplay.srcs/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_10/bd_44e3_s00a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/PRwithZycap/imageProcessingVideoDisplay.srcs/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_11/bd_44e3_sarn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/PRwithZycap/imageProcessingVideoDisplay.srcs/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_12/bd_44e3_srn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/PRwithZycap/imageProcessingVideoDisplay.srcs/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_16/bd_44e3_s01a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/PRwithZycap/imageProcessingVideoDisplay.srcs/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_17/bd_44e3_sawn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/PRwithZycap/imageProcessingVideoDisplay.srcs/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_18/bd_44e3_swn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/PRwithZycap/imageProcessingVideoDisplay.srcs/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_19/bd_44e3_sbn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/PRwithZycap/imageProcessingVideoDisplay.srcs/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_23/bd_44e3_s02a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/PRwithZycap/imageProcessingVideoDisplay.srcs/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_24/bd_44e3_sarn_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/PRwithZycap/imageProcessingVideoDisplay.srcs/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_25/bd_44e3_srn_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/PRwithZycap/imageProcessingVideoDisplay.srcs/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_26/bd_44e3_m00s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/PRwithZycap/imageProcessingVideoDisplay.srcs/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_27/bd_44e3_m00arn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/PRwithZycap/imageProcessingVideoDisplay.srcs/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_28/bd_44e3_m00rn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/PRwithZycap/imageProcessingVideoDisplay.srcs/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_29/bd_44e3_m00awn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/PRwithZycap/imageProcessingVideoDisplay.srcs/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_30/bd_44e3_m00wn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/PRwithZycap/imageProcessingVideoDisplay.srcs/sources_1/bd/system/ip/system_axi_smc_0/bd_0/ip/ip_31/bd_44e3_m00bn_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/GitHub/ReconHardware/FPGA_Files/Projects/PRwithZycap/imageProcessingVideoDisplay.srcs/sources_1/bd/system/ip/system_axi_smc_0/ooc.xdc]
 
 OPTRACE "Adding files" END { }

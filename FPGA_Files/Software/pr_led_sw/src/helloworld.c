@@ -37,6 +37,7 @@
  */
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <stdbool.h>
 #include "platform.h"
 #include "xparameters.h"
@@ -65,6 +66,9 @@ int SD_Init();
 #define BS_MONITOR_GPIO_DEVICE_ID XPAR_BS_MONITOR_GPIO_1_DEVICE_ID
 #define COUNT_INIT		25000000
 
+// RM Sizes
+#define PARTIAL_SHIFT_RM_SIZE 	146536
+
 // VSM IDs
 #define XPRC_VS_SHIFT_ID 0
 
@@ -74,11 +78,9 @@ int SD_Init();
 
 // RM Mem Addr
 #define PARTIAL_DDR_SHIFT_LEFT_ADDR		XPAR_PS7_RAM_0_S_AXI_BASEADDR+0x100
-#define PARTIAL_DDR_SHIFT_RIGHT_ADDR	PARTIAL_DDR_SHIFT_LEFT_ADDR
-//#define PARTIAL_DDR_SHIFT_RIGHT_ADDR	XPAR_PS7_RAM_0_S_AXI_BASEADDR+0x20000
+#define PARTIAL_DDR_SHIFT_RIGHT_ADDR	XPAR_PS7_RAM_0_S_AXI_BASEADDR+PARTIAL_SHIFT_RM_SIZE+0x100
 
-// RM Sizes
-#define PARTIAL_SHIFT_RM_SIZE 	146536
+#define XDCFG_CTRL_ICAP_PR_MASK	  	0xF7FFFFFF /**< Disable PCAP for PR */
 
 XGpio count_Gpio,bs_monitor_Gpio;
 XPrc Prc;
@@ -117,39 +119,18 @@ int main()
 
 	// Copy SD data to DDR4
 	print("\r\nCopying SD content to DDR4...\r\n");
-	copy_status = SD_Transfer("leftP.bin", PARTIAL_DDR_SHIFT_LEFT_ADDR, PARTIAL_SHIFT_RM_SIZE);
+	u8* addr1 = malloc(PARTIAL_SHIFT_RM_SIZE);
+	copy_status = SD_Transfer("leftP.bin", addr1, PARTIAL_SHIFT_RM_SIZE);
 	if (copy_status != XST_SUCCESS) {
 		return XST_FAILURE;
 	}
-	copy_status = SD_Transfer("leftP.bin", PARTIAL_DDR_SHIFT_RIGHT_ADDR, PARTIAL_SHIFT_RM_SIZE);
+	u8* addr2 = malloc(PARTIAL_SHIFT_RM_SIZE);
+	copy_status = SD_Transfer("rightP.bin", addr2, PARTIAL_SHIFT_RM_SIZE);
 	if (copy_status != XST_SUCCESS) {
 		return XST_FAILURE;
 	}
-//	copy_status = SD_Transfer("rightP.bin", PARTIAL_DDR_SHIFT_RIGHT_ADDR, PARTIAL_SHIFT_RM_SIZE);
-//	if (copy_status != XST_SUCCESS) {
-//		return XST_FAILURE;
-//	}
-//	copy_status = SD_Transfer("greyP.bin", PARTIAL_SPI_SHIFT_LEFT_ADDR, PARTIAL_SHIFT_RM_SIZE);
-//	if (copy_status != XST_SUCCESS) {
-//		return XST_FAILURE;
-//	}
 
-//	// Lookup device config pointer
-//	XDcfgCfgPtr = XDcfg_LookupConfig(XDCFG_DEVICE_ID);
-//	if (NULL == XDcfgCfgPtr) {
-//	  xil_printf("Config Driver Initialization Failed\r\n");
-//	  return XST_FAILURE;
-//	}
-
-//	// Initialize device config
-//	dcfg_init = XDcfg_CfgInitialize(&Dcfg, XDcfgCfgPtr, XDcfgCfgPtr->BaseAddr);
-//	if (dcfg_init != XST_SUCCESS) {
-//	  xil_printf("Device Config Initialization Failed\r\n");
-//	  return XST_FAILURE;
-//	}
-//
-//	XDcfg_SelectIcapInterface(&Dcfg);
-
+	// Init DCFG device, disable PCAP, enable ICAP
 	XDcfg_0 = XDcfg_Initialize(XPAR_XDCFG_0_DEVICE_ID);
 
 	// Lookup DFX Config Pointer
@@ -177,13 +158,13 @@ int main()
 	// Setting shift RMs
 	XPrc_SetBsSize   (&Prc, XPRC_VS_SHIFT_ID, XPRC_VS_SHIFT_RM_SHIFT_LEFT_ID,  PARTIAL_SHIFT_RM_SIZE);
 	XPrc_SetBsSize   (&Prc, XPRC_VS_SHIFT_ID, XPRC_VS_SHIFT_RM_SHIFT_RIGHT_ID, PARTIAL_SHIFT_RM_SIZE);
-	XPrc_SetBsAddress(&Prc, XPRC_VS_SHIFT_ID, XPRC_VS_SHIFT_RM_SHIFT_LEFT_ID,  PARTIAL_DDR_SHIFT_LEFT_ADDR);
-	XPrc_SetBsAddress(&Prc, XPRC_VS_SHIFT_ID, XPRC_VS_SHIFT_RM_SHIFT_RIGHT_ID, PARTIAL_DDR_SHIFT_RIGHT_ADDR);
+	XPrc_SetBsAddress(&Prc, XPRC_VS_SHIFT_ID, XPRC_VS_SHIFT_RM_SHIFT_LEFT_ID,  addr1);
+	XPrc_SetBsAddress(&Prc, XPRC_VS_SHIFT_ID, XPRC_VS_SHIFT_RM_SHIFT_RIGHT_ID, addr2);
 
 	xil_printf("VS 0, RM %d set to DDR address 0x%x with size 0x%x bytes.\r\n",XPRC_VS_SHIFT_RM_SHIFT_LEFT_ID,
-				PARTIAL_DDR_SHIFT_LEFT_ADDR,PARTIAL_SHIFT_RM_SIZE);
+			addr1,PARTIAL_SHIFT_RM_SIZE);
 	xil_printf("VS 0, RM %d set to DDR address 0x%x with size 0x%x bytes.\r\n",XPRC_VS_SHIFT_RM_SHIFT_RIGHT_ID,
-				PARTIAL_DDR_SHIFT_RIGHT_ADDR,PARTIAL_SHIFT_RM_SIZE);
+			addr2,PARTIAL_SHIFT_RM_SIZE);
 	PrintStatusReg(&Prc,XPRC_VS_SHIFT_ID);
 
 	xil_printf("Restarting DFX without status.\r\n");
@@ -192,6 +173,7 @@ int main()
 	while(XPrc_IsVsmInShutdown(&Prc, XPRC_VS_SHIFT_ID)==XPRC_SR_SHUTDOWN_ON);
 	PrintStatusReg(&Prc,XPRC_VS_SHIFT_ID);
 
+	// Print values from DFX status reg when the status reg changes.
 	u32 last_val,curr_val;
 	while(1){
 		last_val = curr_val;
@@ -215,11 +197,7 @@ static XDcfg *XDcfg_Initialize(u16 DeviceId)
 		print("Device configuration initialisation failed\n\r");
 		exit(0);
 	}
-	// Disable PCAP interface for partial reconfiguration
-	XDcfg_DisablePCAP(Instance);
-	CtrlReg = XDcfg_ReadReg(Instance->Config.BaseAddr,XDCFG_CTRL_OFFSET);
 	XDcfg_SelectIcapInterface(Instance);
-//	XDcfg_WriteReg(Instance->Config.BaseAddr, XDCFG_CTRL_OFFSET,(CtrlReg & XDCFG_CTRL_ICAP_PR_MASK));
 	return Instance;
 }
 /* GPIO Stuff */
@@ -272,7 +250,7 @@ unsigned short extract_bits(unsigned short value, int begin, int end)
 void PrintStatusReg(XPrc* Prc, u16 VS_ID){
 	u32 prc_status = XPrc_ReadStatusReg(Prc, VS_ID);
 
-	// Printing DFX status reg
+	// Extracting bits from DFX status reg
 	u8 STATE = extract_bits(prc_status,0,3);
 	u8 ERROR = extract_bits(prc_status,3,7);
 	bool SHUTDOWN = extract_bits(prc_status,7,8);

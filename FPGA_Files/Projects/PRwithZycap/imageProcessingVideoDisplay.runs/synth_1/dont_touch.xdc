@@ -41,4 +41,7 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_processi
 # IP: bd/system/ip/system_axi_smc_2/system_axi_smc_2.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_axi_smc_2 || ORIG_REF_NAME==system_axi_smc_2} -quiet] -quiet
 
+# IP: bd/system/ip/system_ila_0_0/system_ila_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==system_ila_0_0 || ORIG_REF_NAME==system_ila_0_0} -quiet] -quiet
+
 # XDC: bd/system/system_ooc.xdc

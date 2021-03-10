@@ -2,8 +2,8 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Mon Mar  8 13:11:13 2021
-# Process ID: 20056
+# Start of session at: Wed Mar 10 09:47:01 2021
+# Process ID: 3176
 # Current directory: C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1
 # Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
 # Log file: C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/top.vds
@@ -20,9 +20,9 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 24488
+INFO: [Synth 8-7075] Helper process launched with PID 20040
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1136.812 ; gain = 56.809
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1136.285 ; gain = 55.527
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'top' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/new/top.v:3]
 INFO: [Synth 8-6157] synthesizing module 'design_2_wrapper' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_2/hdl/design_2_wrapper.v:12]
@@ -34,25 +34,25 @@ INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice' [c:/GitHub/Rec
 	Parameter DIN_TO bound to: 0 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice' (1#1) [c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_2/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
 INFO: [Synth 8-6155] done synthesizing module 'design_2_xlslice_0_0' (2#1) [c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_2/ip/design_2_xlslice_0_0/synth/design_2_xlslice_0_0.v:57]
-INFO: [Synth 8-6157] synthesizing module 'design_2_axi_gpio_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/.Xil/Vivado-20056-DESKTOP-D9F9TPQ/realtime/design_2_axi_gpio_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_2_axi_gpio_0_0' (3#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/.Xil/Vivado-20056-DESKTOP-D9F9TPQ/realtime/design_2_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_2_axi_gpio_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/.Xil/Vivado-3176-DESKTOP-D9F9TPQ/realtime/design_2_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_2_axi_gpio_0_0' (3#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/.Xil/Vivado-3176-DESKTOP-D9F9TPQ/realtime/design_2_axi_gpio_0_0_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'design_2_axi_mem_intercon_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_2/synth/design_2.v:816]
 INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_10M4U6J' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_2/synth/design_2.v:2218]
-INFO: [Synth 8-6157] synthesizing module 'design_2_auto_pc_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/.Xil/Vivado-20056-DESKTOP-D9F9TPQ/realtime/design_2_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_2_auto_pc_0' (4#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/.Xil/Vivado-20056-DESKTOP-D9F9TPQ/realtime/design_2_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_2_auto_pc_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/.Xil/Vivado-3176-DESKTOP-D9F9TPQ/realtime/design_2_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_2_auto_pc_0' (4#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/.Xil/Vivado-3176-DESKTOP-D9F9TPQ/realtime/design_2_auto_pc_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'm_axi_aruser' of module 'design_2_auto_pc_0' is unconnected for instance 'auto_pc' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_2/synth/design_2.v:2404]
 WARNING: [Synth 8-7023] instance 'auto_pc' of module 'design_2_auto_pc_0' has 35 connections declared, but only 34 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_2/synth/design_2.v:2404]
-INFO: [Synth 8-6157] synthesizing module 'design_2_auto_us_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/.Xil/Vivado-20056-DESKTOP-D9F9TPQ/realtime/design_2_auto_us_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_2_auto_us_0' (5#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/.Xil/Vivado-20056-DESKTOP-D9F9TPQ/realtime/design_2_auto_us_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_2_auto_us_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/.Xil/Vivado-3176-DESKTOP-D9F9TPQ/realtime/design_2_auto_us_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_2_auto_us_0' (5#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/.Xil/Vivado-3176-DESKTOP-D9F9TPQ/realtime/design_2_auto_us_0_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_10M4U6J' (6#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_2/synth/design_2.v:2218]
 INFO: [Synth 8-6155] done synthesizing module 'design_2_axi_mem_intercon_0' (7#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_2/synth/design_2.v:816]
-INFO: [Synth 8-6157] synthesizing module 'design_2_axi_gpio_0_1' [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/.Xil/Vivado-20056-DESKTOP-D9F9TPQ/realtime/design_2_axi_gpio_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_2_axi_gpio_0_1' (8#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/.Xil/Vivado-20056-DESKTOP-D9F9TPQ/realtime/design_2_axi_gpio_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_2_axi_gpio_0_1' [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/.Xil/Vivado-3176-DESKTOP-D9F9TPQ/realtime/design_2_axi_gpio_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_2_axi_gpio_0_1' (8#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/.Xil/Vivado-3176-DESKTOP-D9F9TPQ/realtime/design_2_axi_gpio_0_1_stub.v:6]
 WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_2/synth/design_2.v:378]
-INFO: [Synth 8-6157] synthesizing module 'design_2_ila_0_1' [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/.Xil/Vivado-20056-DESKTOP-D9F9TPQ/realtime/design_2_ila_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_2_ila_0_1' (9#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/.Xil/Vivado-20056-DESKTOP-D9F9TPQ/realtime/design_2_ila_0_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_2_dfx_bitstream_monitor_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/.Xil/Vivado-20056-DESKTOP-D9F9TPQ/realtime/design_2_dfx_bitstream_monitor_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_2_dfx_bitstream_monitor_0_0' (10#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/.Xil/Vivado-20056-DESKTOP-D9F9TPQ/realtime/design_2_dfx_bitstream_monitor_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_2_ila_0_1' [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/.Xil/Vivado-3176-DESKTOP-D9F9TPQ/realtime/design_2_ila_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_2_ila_0_1' (9#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/.Xil/Vivado-3176-DESKTOP-D9F9TPQ/realtime/design_2_ila_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_2_dfx_bitstream_monitor_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/.Xil/Vivado-3176-DESKTOP-D9F9TPQ/realtime/design_2_dfx_bitstream_monitor_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_2_dfx_bitstream_monitor_0_0' (10#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/.Xil/Vivado-3176-DESKTOP-D9F9TPQ/realtime/design_2_dfx_bitstream_monitor_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'hi_avail' of module 'design_2_dfx_bitstream_monitor_0_0' is unconnected for instance 'dfx_bitstream_monitor_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_2/synth/design_2.v:389]
 WARNING: [Synth 8-7071] port 'hi_end' of module 'design_2_dfx_bitstream_monitor_0_0' is unconnected for instance 'dfx_bitstream_monitor_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_2/synth/design_2.v:389]
 WARNING: [Synth 8-7071] port 'hi_sp_id' of module 'design_2_dfx_bitstream_monitor_0_0' is unconnected for instance 'dfx_bitstream_monitor_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_2/synth/design_2.v:389]
@@ -64,8 +64,8 @@ WARNING: [Synth 8-7071] port 'hi_err_abort' of module 'design_2_dfx_bitstream_mo
 WARNING: [Synth 8-7071] port 'hi_err_unexpected' of module 'design_2_dfx_bitstream_monitor_0_0' is unconnected for instance 'dfx_bitstream_monitor_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_2/synth/design_2.v:389]
 WARNING: [Synth 8-7071] port 'ref_sp_id_o' of module 'design_2_dfx_bitstream_monitor_0_0' is unconnected for instance 'dfx_bitstream_monitor_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_2/synth/design_2.v:389]
 WARNING: [Synth 8-7023] instance 'dfx_bitstream_monitor_0' of module 'design_2_dfx_bitstream_monitor_0_0' has 30 connections declared, but only 20 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_2/synth/design_2.v:389]
-INFO: [Synth 8-6157] synthesizing module 'design_2_dfx_controller_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/.Xil/Vivado-20056-DESKTOP-D9F9TPQ/realtime/design_2_dfx_controller_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_2_dfx_controller_0_0' (11#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/.Xil/Vivado-20056-DESKTOP-D9F9TPQ/realtime/design_2_dfx_controller_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_2_dfx_controller_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/.Xil/Vivado-3176-DESKTOP-D9F9TPQ/realtime/design_2_dfx_controller_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_2_dfx_controller_0_0' (11#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/.Xil/Vivado-3176-DESKTOP-D9F9TPQ/realtime/design_2_dfx_controller_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'vsm_shifter_rm_shutdown_req' of module 'design_2_dfx_controller_0_0' is unconnected for instance 'dfx_controller_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_2/synth/design_2.v:410]
 WARNING: [Synth 8-7071] port 'vsm_shifter_rm_decouple' of module 'design_2_dfx_controller_0_0' is unconnected for instance 'dfx_controller_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_2/synth/design_2.v:410]
 WARNING: [Synth 8-7071] port 'vsm_shifter_rm_reset' of module 'design_2_dfx_controller_0_0' is unconnected for instance 'dfx_controller_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_2/synth/design_2.v:410]
@@ -75,17 +75,17 @@ WARNING: [Synth 8-7071] port 'vsm_shifter_sw_startup_req' of module 'design_2_df
 WARNING: [Synth 8-7071] port 'cap_req' of module 'design_2_dfx_controller_0_0' is unconnected for instance 'dfx_controller_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_2/synth/design_2.v:410]
 WARNING: [Synth 8-7023] instance 'dfx_controller_0' of module 'design_2_dfx_controller_0_0' has 49 connections declared, but only 42 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_2/synth/design_2.v:410]
 WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_2/synth/design_2.v:453]
-INFO: [Synth 8-6157] synthesizing module 'design_2_dfx_s_ila_1_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/.Xil/Vivado-20056-DESKTOP-D9F9TPQ/realtime/design_2_dfx_s_ila_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_2_dfx_s_ila_1_0' (12#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/.Xil/Vivado-20056-DESKTOP-D9F9TPQ/realtime/design_2_dfx_s_ila_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_2_dfx_s_ila_1_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/.Xil/Vivado-3176-DESKTOP-D9F9TPQ/realtime/design_2_dfx_s_ila_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_2_dfx_s_ila_1_0' (12#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/.Xil/Vivado-3176-DESKTOP-D9F9TPQ/realtime/design_2_dfx_s_ila_1_0_stub.v:6]
 WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_2/synth/design_2.v:499]
-INFO: [Synth 8-6157] synthesizing module 'design_2_gpio_ila_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/.Xil/Vivado-20056-DESKTOP-D9F9TPQ/realtime/design_2_gpio_ila_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_2_gpio_ila_0_0' (13#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/.Xil/Vivado-20056-DESKTOP-D9F9TPQ/realtime/design_2_gpio_ila_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_2_gpio_ila_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/.Xil/Vivado-3176-DESKTOP-D9F9TPQ/realtime/design_2_gpio_ila_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_2_gpio_ila_0_0' (13#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/.Xil/Vivado-3176-DESKTOP-D9F9TPQ/realtime/design_2_gpio_ila_0_0_stub.v:6]
 WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_2/synth/design_2.v:520]
-INFO: [Synth 8-6157] synthesizing module 'design_2_ila_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/.Xil/Vivado-20056-DESKTOP-D9F9TPQ/realtime/design_2_ila_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_2_ila_0_0' (14#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/.Xil/Vivado-20056-DESKTOP-D9F9TPQ/realtime/design_2_ila_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_2_ila_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/.Xil/Vivado-3176-DESKTOP-D9F9TPQ/realtime/design_2_ila_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_2_ila_0_0' (14#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/.Xil/Vivado-3176-DESKTOP-D9F9TPQ/realtime/design_2_ila_0_0_stub.v:6]
 WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_2/synth/design_2.v:541]
-INFO: [Synth 8-6157] synthesizing module 'design_2_dfx_m_ila_2_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/.Xil/Vivado-20056-DESKTOP-D9F9TPQ/realtime/design_2_dfx_m_ila_2_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_2_dfx_m_ila_2_0' (15#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/.Xil/Vivado-20056-DESKTOP-D9F9TPQ/realtime/design_2_dfx_m_ila_2_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_2_dfx_m_ila_2_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/.Xil/Vivado-3176-DESKTOP-D9F9TPQ/realtime/design_2_dfx_m_ila_2_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_2_dfx_m_ila_2_0' (15#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/.Xil/Vivado-3176-DESKTOP-D9F9TPQ/realtime/design_2_dfx_m_ila_2_0_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'design_2_xlslice_0_1' [c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_2/ip/design_2_xlslice_0_1/synth/design_2_xlslice_0_1.v:57]
 INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized0' [c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_2/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
 	Parameter DIN_WIDTH bound to: 3 - type: integer 
@@ -93,8 +93,8 @@ INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized0
 	Parameter DIN_TO bound to: 1 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized0' (15#1) [c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_2/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
 INFO: [Synth 8-6155] done synthesizing module 'design_2_xlslice_0_1' (16#1) [c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_2/ip/design_2_xlslice_0_1/synth/design_2_xlslice_0_1.v:57]
-INFO: [Synth 8-6157] synthesizing module 'design_2_processing_system7_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/.Xil/Vivado-20056-DESKTOP-D9F9TPQ/realtime/design_2_processing_system7_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_2_processing_system7_0_0' (17#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/.Xil/Vivado-20056-DESKTOP-D9F9TPQ/realtime/design_2_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_2_processing_system7_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/.Xil/Vivado-3176-DESKTOP-D9F9TPQ/realtime/design_2_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_2_processing_system7_0_0' (17#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/.Xil/Vivado-3176-DESKTOP-D9F9TPQ/realtime/design_2_processing_system7_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'USB0_PORT_INDCTL' of module 'design_2_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_2/synth/design_2.v:591]
 WARNING: [Synth 8-7071] port 'USB0_VBUS_PWRSELECT' of module 'design_2_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_2/synth/design_2.v:591]
 WARNING: [Synth 8-7071] port 'S_AXI_HP0_RCOUNT' of module 'design_2_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_2/synth/design_2.v:591]
@@ -117,16 +117,16 @@ INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_1QFGL4Z' (20#1) 
 INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_2WM541' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_2/synth/design_2.v:2086]
 INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_2WM541' (21#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_2/synth/design_2.v:2086]
 INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1WEZHCW' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_2/synth/design_2.v:2474]
-INFO: [Synth 8-6157] synthesizing module 'design_2_auto_pc_1' [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/.Xil/Vivado-20056-DESKTOP-D9F9TPQ/realtime/design_2_auto_pc_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_2_auto_pc_1' (22#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/.Xil/Vivado-20056-DESKTOP-D9F9TPQ/realtime/design_2_auto_pc_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_2_auto_pc_1' [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/.Xil/Vivado-3176-DESKTOP-D9F9TPQ/realtime/design_2_auto_pc_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_2_auto_pc_1' (22#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/.Xil/Vivado-3176-DESKTOP-D9F9TPQ/realtime/design_2_auto_pc_1_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1WEZHCW' (23#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_2/synth/design_2.v:2474]
-INFO: [Synth 8-6157] synthesizing module 'design_2_xbar_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/.Xil/Vivado-20056-DESKTOP-D9F9TPQ/realtime/design_2_xbar_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_2_xbar_0' (24#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/.Xil/Vivado-20056-DESKTOP-D9F9TPQ/realtime/design_2_xbar_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_2_xbar_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/.Xil/Vivado-3176-DESKTOP-D9F9TPQ/realtime/design_2_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_2_xbar_0' (24#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/.Xil/Vivado-3176-DESKTOP-D9F9TPQ/realtime/design_2_xbar_0_stub.v:6]
 WARNING: [Synth 8-689] width (6) of port connection 'm_axi_arprot' does not match port width (9) of module 'design_2_xbar_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_2/synth/design_2.v:1755]
 WARNING: [Synth 8-689] width (6) of port connection 'm_axi_awprot' does not match port width (9) of module 'design_2_xbar_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_2/synth/design_2.v:1759]
 INFO: [Synth 8-6155] done synthesizing module 'design_2_ps7_0_axi_periph_0' (25#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_2/synth/design_2.v:1091]
-INFO: [Synth 8-6157] synthesizing module 'design_2_rst_ps7_0_100M_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/.Xil/Vivado-20056-DESKTOP-D9F9TPQ/realtime/design_2_rst_ps7_0_100M_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_2_rst_ps7_0_100M_0' (26#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/.Xil/Vivado-20056-DESKTOP-D9F9TPQ/realtime/design_2_rst_ps7_0_100M_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_2_rst_ps7_0_100M_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/.Xil/Vivado-3176-DESKTOP-D9F9TPQ/realtime/design_2_rst_ps7_0_100M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_2_rst_ps7_0_100M_0' (26#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/.Xil/Vivado-3176-DESKTOP-D9F9TPQ/realtime/design_2_rst_ps7_0_100M_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_2_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_2/synth/design_2.v:803]
 WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_2_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_2/synth/design_2.v:803]
 WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_2_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_2/synth/design_2.v:803]
@@ -215,27 +215,27 @@ INFO: [Synth 8-6157] synthesizing module 'icap_ila_wrapper' [C:/GitHub/ReconHard
 WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.srcs/sources_1/bd/icap_ila/hdl/icap_ila_wrapper.v:30]
 INFO: [Synth 8-6157] synthesizing module 'icap_ila' [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.srcs/sources_1/bd/icap_ila/synth/icap_ila.v:13]
 WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.srcs/sources_1/bd/icap_ila/synth/icap_ila.v:36]
-INFO: [Synth 8-6157] synthesizing module 'icap_ila_ila_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/.Xil/Vivado-20056-DESKTOP-D9F9TPQ/realtime/icap_ila_ila_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'icap_ila_ila_0_0' (32#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/.Xil/Vivado-20056-DESKTOP-D9F9TPQ/realtime/icap_ila_ila_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'icap_ila_ila_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/.Xil/Vivado-3176-DESKTOP-D9F9TPQ/realtime/icap_ila_ila_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'icap_ila_ila_0_0' (32#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/.Xil/Vivado-3176-DESKTOP-D9F9TPQ/realtime/icap_ila_ila_0_0_stub.v:6]
 INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_0'. This will prevent further optimization [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.srcs/sources_1/bd/icap_ila/synth/icap_ila.v:36]
 INFO: [Synth 8-6155] done synthesizing module 'icap_ila' (33#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.srcs/sources_1/bd/icap_ila/synth/icap_ila.v:13]
 INFO: [Synth 8-6155] done synthesizing module 'icap_ila_wrapper' (34#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.srcs/sources_1/bd/icap_ila/hdl/icap_ila_wrapper.v:12]
-INFO: [Synth 8-6157] synthesizing module 'shift_left' [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/.Xil/Vivado-20056-DESKTOP-D9F9TPQ/realtime/shift_left_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'shift_left' (35#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/.Xil/Vivado-20056-DESKTOP-D9F9TPQ/realtime/shift_left_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'shift_left' [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/.Xil/Vivado-3176-DESKTOP-D9F9TPQ/realtime/shift_left_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'shift_left' (35#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/.Xil/Vivado-3176-DESKTOP-D9F9TPQ/realtime/shift_left_stub.v:5]
 INFO: [Synth 8-6155] done synthesizing module 'top' (36#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/new/top.v:3]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1197.156 ; gain = 117.152
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1196.973 ; gain = 116.215
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1197.156 ; gain = 117.152
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1196.973 ; gain = 116.215
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1197.156 ; gain = 117.152
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1196.973 ; gain = 116.215
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.041 . Memory (MB): peak = 1197.156 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 1196.973 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -285,20 +285,20 @@ Parsing XDC File [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shif
 Finished Parsing XDC File [C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1278.168 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1278.422 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1278.168 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1278.422 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1278.168 ; gain = 198.164
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1278.422 ; gain = 197.664
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1278.168 ; gain = 198.164
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1278.422 ; gain = 197.664
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -330,10 +330,10 @@ Applied set_property DONT_TOUCH = true for BD/design_2_i/axi_mem_intercon/s00_co
 Applied set_property DONT_TOUCH = true for BD/design_2_i/axi_mem_intercon/s00_couplers/auto_us. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for BD/design_2_i/ps7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1278.168 ; gain = 198.164
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1278.422 ; gain = 197.664
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1278.168 ; gain = 198.164
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1278.422 ; gain = 197.664
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -355,25 +355,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1278.168 ; gain = 198.164
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1278.422 ; gain = 197.664
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1283.598 ; gain = 203.594
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1283.566 ; gain = 202.809
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1284.047 ; gain = 204.043
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1284.016 ; gain = 203.258
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1304.109 ; gain = 224.105
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1303.781 ; gain = 223.023
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -391,37 +391,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1310.898 ; gain = 230.895
+Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1310.578 ; gain = 229.820
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1310.898 ; gain = 230.895
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1310.578 ; gain = 229.820
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1310.898 ; gain = 230.895
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1310.578 ; gain = 229.820
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1310.898 ; gain = 230.895
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1310.578 ; gain = 229.820
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1310.898 ; gain = 230.895
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1310.578 ; gain = 229.820
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1310.898 ; gain = 230.895
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1310.578 ; gain = 229.820
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -472,23 +472,23 @@ Report Cell Usage:
 |19    |IBUF                             |     2|
 +------+---------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1310.898 ; gain = 230.895
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1310.578 ; gain = 229.820
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 1310.898 ; gain = 149.883
-Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1310.898 ; gain = 230.895
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:17 . Memory (MB): peak = 1310.578 ; gain = 148.371
+Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1310.578 ; gain = 229.820
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 1310.898 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 1310.578 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1325.914 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1325.684 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
 104 Infos, 66 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1325.914 ; gain = 245.910
+synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1325.684 ; gain = 244.926
 INFO: [Common 17-1381] The checkpoint 'C:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.runs/synth_1/top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Mar  8 13:11:48 2021...
+INFO: [Common 17-206] Exiting Vivado at Wed Mar 10 09:47:36 2021...

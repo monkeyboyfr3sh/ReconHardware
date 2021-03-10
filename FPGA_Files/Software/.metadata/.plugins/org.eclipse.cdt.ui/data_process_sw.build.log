@@ -1,0 +1,36 @@
+23:40:41 **** Incremental Build of configuration Debug for project data_process_sw ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/GitHub/ReconHardware/FPGA_Files/Software/data_process_hw/export/data_process_hw/sw/data_process_hw/standalone_domain/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:99:2: warning: #warning CHECK FOR THE VALID DDR ADDRESS IN XPARAMETERS.H, DEFAULT SET TO 0x01000000 [-Wcpp]
+   99 | #warning CHECK FOR THE VALID DDR ADDRESS IN XPARAMETERS.H, \
+      |  ^~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:111:21: error: 'XPAR_FABRIC_AXIDMA_0_MM2S_INTROUT_VEC_ID' undeclared (first use in this function)
+  111 | #define TX_INTR_ID  XPAR_FABRIC_AXIDMA_0_MM2S_INTROUT_VEC_ID
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:111:21: note: in definition of macro 'TX_INTR_ID'
+  111 | #define TX_INTR_ID  XPAR_FABRIC_AXIDMA_0_MM2S_INTROUT_VEC_ID
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:111:21: note: each undeclared identifier is reported only once for each function it appears in
+  111 | #define TX_INTR_ID  XPAR_FABRIC_AXIDMA_0_MM2S_INTROUT_VEC_ID
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:111:21: note: in definition of macro 'TX_INTR_ID'
+  111 | #define TX_INTR_ID  XPAR_FABRIC_AXIDMA_0_MM2S_INTROUT_VEC_ID
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:110:21: error: 'XPAR_FABRIC_AXIDMA_0_S2MM_INTROUT_VEC_ID' undeclared (first use in this function)
+  110 | #define RX_INTR_ID  XPAR_FABRIC_AXIDMA_0_S2MM_INTROUT_VEC_ID
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:110:21: note: in definition of macro 'RX_INTR_ID'
+  110 | #define RX_INTR_ID  XPAR_FABRIC_AXIDMA_0_S2MM_INTROUT_VEC_ID
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+
+23:40:41 Build Finished (took 420ms)
+

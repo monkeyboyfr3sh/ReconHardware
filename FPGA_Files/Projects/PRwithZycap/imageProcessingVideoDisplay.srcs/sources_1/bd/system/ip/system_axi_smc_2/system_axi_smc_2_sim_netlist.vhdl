@@ -1,10 +1,10 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
--- Date        : Tue Mar  9 15:46:48 2021
+-- Date        : Tue Mar  9 15:46:46 2021
 -- Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               c:/GitHub/ReconHardware/FPGA_Files/Projects/PRwithZycap/imageProcessingVideoDisplay.srcs/sources_1/bd/system/ip/system_axi_smc_2/system_axi_smc_2_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top system_axi_smc_2 -prefix
+--               system_axi_smc_2_ system_axi_smc_2_sim_netlist.vhdl
 -- Design      : system_axi_smc_2
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -20,8 +20,6 @@ entity system_axi_smc_2_cdc_sync is
     aresetn : in STD_LOGIC;
     aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_cdc_sync : entity is "cdc_sync";
 end system_axi_smc_2_cdc_sync;
 
 architecture STRUCTURE of system_axi_smc_2_cdc_sync is
@@ -109,8 +107,6 @@ entity system_axi_smc_2_upcnt_n is
     seq_cnt_en : in STD_LOGIC;
     aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_upcnt_n : entity is "upcnt_n";
 end system_axi_smc_2_upcnt_n;
 
 architecture STRUCTURE of system_axi_smc_2_upcnt_n is
@@ -383,8 +379,6 @@ entity system_axi_smc_2_sc_axi2sc_v1_0_7_top is
   attribute LP_RUSER_INDEX of system_axi_smc_2_sc_axi2sc_v1_0_7_top : entity is 0;
   attribute LP_WUSER_INDEX : integer;
   attribute LP_WUSER_INDEX of system_axi_smc_2_sc_axi2sc_v1_0_7_top : entity is 0;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_sc_axi2sc_v1_0_7_top : entity is "sc_axi2sc_v1_0_7_top";
   attribute T_SC_ADDR_WIDTH : integer;
   attribute T_SC_ADDR_WIDTH of system_axi_smc_2_sc_axi2sc_v1_0_7_top : entity is 32;
   attribute T_SC_ARUSER_WIDTH : integer;
@@ -2841,8 +2835,6 @@ entity system_axi_smc_2_sc_exit_v1_0_10_exit is
     s_axi_arvalid : in STD_LOGIC;
     m_axi_arready : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_sc_exit_v1_0_10_exit : entity is "sc_exit_v1_0_10_exit";
 end system_axi_smc_2_sc_exit_v1_0_10_exit;
 
 architecture STRUCTURE of system_axi_smc_2_sc_exit_v1_0_10_exit is
@@ -3483,8 +3475,6 @@ entity system_axi_smc_2_sc_mmu_v1_0_9_decerr_slave is
     m_axi_awid : in STD_LOGIC_VECTOR ( 11 downto 0 );
     m_axi_arid : in STD_LOGIC_VECTOR ( 11 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_sc_mmu_v1_0_9_decerr_slave : entity is "sc_mmu_v1_0_9_decerr_slave";
 end system_axi_smc_2_sc_mmu_v1_0_9_decerr_slave;
 
 architecture STRUCTURE of system_axi_smc_2_sc_mmu_v1_0_9_decerr_slave is
@@ -4779,8 +4769,6 @@ entity system_axi_smc_2_sc_node_v1_0_11_arb_alg_rr is
     s_sc_aclk : in STD_LOGIC;
     \grant_i_reg[2]_1\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_sc_node_v1_0_11_arb_alg_rr : entity is "sc_node_v1_0_11_arb_alg_rr";
 end system_axi_smc_2_sc_node_v1_0_11_arb_alg_rr;
 
 architecture STRUCTURE of system_axi_smc_2_sc_node_v1_0_11_arb_alg_rr is
@@ -5242,8 +5230,6 @@ entity system_axi_smc_2_sc_node_v1_0_11_fi_regulator is
     \gen_normal_area.m_sc_handshake0__0\ : in STD_LOGIC;
     areset_r : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_sc_node_v1_0_11_fi_regulator : entity is "sc_node_v1_0_11_fi_regulator";
 end system_axi_smc_2_sc_node_v1_0_11_fi_regulator;
 
 architecture STRUCTURE of system_axi_smc_2_sc_node_v1_0_11_fi_regulator is
@@ -5490,8 +5476,6 @@ entity system_axi_smc_2_sc_node_v1_0_11_mi_handler is
     s_sc_aclk : in STD_LOGIC;
     s_sc_send : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_sc_node_v1_0_11_mi_handler : entity is "sc_node_v1_0_11_mi_handler";
 end system_axi_smc_2_sc_node_v1_0_11_mi_handler;
 
 architecture STRUCTURE of system_axi_smc_2_sc_node_v1_0_11_mi_handler is
@@ -6608,8 +6592,6 @@ entity system_axi_smc_2_sc_sc2axi_v1_0_7_top is
   attribute LP_RUSER_INDEX of system_axi_smc_2_sc_sc2axi_v1_0_7_top : entity is 0;
   attribute LP_WUSER_INDEX : integer;
   attribute LP_WUSER_INDEX of system_axi_smc_2_sc_sc2axi_v1_0_7_top : entity is 0;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_sc_sc2axi_v1_0_7_top : entity is "sc_sc2axi_v1_0_7_top";
   attribute T_SC_ADDR_WIDTH : integer;
   attribute T_SC_ADDR_WIDTH of system_axi_smc_2_sc_sc2axi_v1_0_7_top : entity is 32;
   attribute T_SC_ARUSER_WIDTH : integer;
@@ -16638,8 +16620,6 @@ entity system_axi_smc_2_sc_si_converter_v1_0_9_axilite_conv is
     m_axi_rdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 9 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_sc_si_converter_v1_0_9_axilite_conv : entity is "sc_si_converter_v1_0_9_axilite_conv";
 end system_axi_smc_2_sc_si_converter_v1_0_9_axilite_conv;
 
 architecture STRUCTURE of system_axi_smc_2_sc_si_converter_v1_0_9_axilite_conv is
@@ -20727,8 +20707,6 @@ entity system_axi_smc_2_sc_switchboard_v1_0_6_top is
   attribute LP_MUX_IMPL of system_axi_smc_2_sc_switchboard_v1_0_6_top : entity is "32'b00000000000000000000000000000000";
   attribute LP_M_SC_SEL_MI_PIPELINE_DEPTH : string;
   attribute LP_M_SC_SEL_MI_PIPELINE_DEPTH of system_axi_smc_2_sc_switchboard_v1_0_6_top : entity is "32'b00000000000000000000000000000000";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_sc_switchboard_v1_0_6_top : entity is "sc_switchboard_v1_0_6_top";
 end system_axi_smc_2_sc_switchboard_v1_0_6_top;
 
 architecture STRUCTURE of system_axi_smc_2_sc_switchboard_v1_0_6_top is
@@ -22514,8 +22492,6 @@ entity system_axi_smc_2_sc_transaction_regulator_v1_0_8_singleorder is
     areset : in STD_LOGIC;
     s_axi_arid : in STD_LOGIC_VECTOR ( 11 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_sc_transaction_regulator_v1_0_8_singleorder : entity is "sc_transaction_regulator_v1_0_8_singleorder";
 end system_axi_smc_2_sc_transaction_regulator_v1_0_8_singleorder;
 
 architecture STRUCTURE of system_axi_smc_2_sc_transaction_regulator_v1_0_8_singleorder is
@@ -25237,8 +25213,6 @@ entity system_axi_smc_2_sc_util_v1_0_4_axi_splitter is
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 0 to 0 );
     aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_sc_util_v1_0_4_axi_splitter : entity is "sc_util_v1_0_4_axi_splitter";
 end system_axi_smc_2_sc_util_v1_0_4_axi_splitter;
 
 architecture STRUCTURE of system_axi_smc_2_sc_util_v1_0_4_axi_splitter is
@@ -27233,8 +27207,6 @@ entity system_axi_smc_2_bd_8562_arinsw_0 is
     S00_SC_AR_send : in STD_LOGIC_VECTOR ( 0 to 0 );
     S00_SC_AR_payld : in STD_LOGIC_VECTOR ( 15 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_bd_8562_arinsw_0 : entity is "bd_8562_arinsw_0";
 end system_axi_smc_2_bd_8562_arinsw_0;
 
 architecture STRUCTURE of system_axi_smc_2_bd_8562_arinsw_0 is
@@ -27307,8 +27279,6 @@ entity system_axi_smc_2_bd_8562_aroutsw_0 is
     M_SC_AR_send : in STD_LOGIC_VECTOR ( 0 to 0 );
     M_SC_AR_payld : in STD_LOGIC_VECTOR ( 11 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_bd_8562_aroutsw_0 : entity is "bd_8562_aroutsw_0";
 end system_axi_smc_2_bd_8562_aroutsw_0;
 
 architecture STRUCTURE of system_axi_smc_2_bd_8562_aroutsw_0 is
@@ -27382,8 +27352,6 @@ entity system_axi_smc_2_bd_8562_awinsw_0 is
     S00_SC_AW_recv : out STD_LOGIC_VECTOR ( 0 to 0 );
     S_SC_AW_recv : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_bd_8562_awinsw_0 : entity is "bd_8562_awinsw_0";
 end system_axi_smc_2_bd_8562_awinsw_0;
 
 architecture STRUCTURE of system_axi_smc_2_bd_8562_awinsw_0 is
@@ -27446,8 +27414,6 @@ entity system_axi_smc_2_bd_8562_awoutsw_0 is
     M_SC_AW_send : in STD_LOGIC_VECTOR ( 0 to 0 );
     M_SC_AW_payld : in STD_LOGIC_VECTOR ( 11 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_bd_8562_awoutsw_0 : entity is "bd_8562_awoutsw_0";
 end system_axi_smc_2_bd_8562_awoutsw_0;
 
 architecture STRUCTURE of system_axi_smc_2_bd_8562_awoutsw_0 is
@@ -27525,8 +27491,6 @@ entity system_axi_smc_2_bd_8562_binsw_0 is
     M_SC_B_payld : in STD_LOGIC_VECTOR ( 1 downto 0 );
     M00_SC_B_recv : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_bd_8562_binsw_0 : entity is "bd_8562_binsw_0";
 end system_axi_smc_2_bd_8562_binsw_0;
 
 architecture STRUCTURE of system_axi_smc_2_bd_8562_binsw_0 is
@@ -27607,8 +27571,6 @@ entity system_axi_smc_2_bd_8562_m00s2a_0 is
     M_SC_W_send : in STD_LOGIC_VECTOR ( 0 to 0 );
     M_SC_W_payld : in STD_LOGIC_VECTOR ( 35 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_bd_8562_m00s2a_0 : entity is "bd_8562_m00s2a_0";
 end system_axi_smc_2_bd_8562_m00s2a_0;
 
 architecture STRUCTURE of system_axi_smc_2_bd_8562_m00s2a_0 is
@@ -27830,8 +27792,6 @@ entity system_axi_smc_2_bd_8562_m01s2a_0 is
     s_axi_rresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
     s_axi_rvalid : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_bd_8562_m01s2a_0 : entity is "bd_8562_m01s2a_0";
 end system_axi_smc_2_bd_8562_m01s2a_0;
 
 architecture STRUCTURE of system_axi_smc_2_bd_8562_m01s2a_0 is
@@ -28037,8 +27997,6 @@ entity system_axi_smc_2_bd_8562_m02s2a_0 is
     M_SC_W_send : in STD_LOGIC_VECTOR ( 0 to 0 );
     M_SC_W_payld : in STD_LOGIC_VECTOR ( 35 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_bd_8562_m02s2a_0 : entity is "bd_8562_m02s2a_0";
 end system_axi_smc_2_bd_8562_m02s2a_0;
 
 architecture STRUCTURE of system_axi_smc_2_bd_8562_m02s2a_0 is
@@ -28230,8 +28188,6 @@ entity system_axi_smc_2_bd_8562_rinsw_0 is
     M_SC_R_send : in STD_LOGIC_VECTOR ( 0 to 0 );
     M_SC_R_payld : in STD_LOGIC_VECTOR ( 33 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_bd_8562_rinsw_0 : entity is "bd_8562_rinsw_0";
 end system_axi_smc_2_bd_8562_rinsw_0;
 
 architecture STRUCTURE of system_axi_smc_2_bd_8562_rinsw_0 is
@@ -28335,8 +28291,6 @@ entity system_axi_smc_2_bd_8562_s00a2s_0 is
     m_axi_arvalid : in STD_LOGIC;
     m_axi_rready : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_bd_8562_s00a2s_0 : entity is "bd_8562_s00a2s_0";
 end system_axi_smc_2_bd_8562_s00a2s_0;
 
 architecture STRUCTURE of system_axi_smc_2_bd_8562_s00a2s_0 is
@@ -28537,8 +28491,6 @@ entity system_axi_smc_2_bd_8562_winsw_0 is
     M_SC_W_payld : in STD_LOGIC_VECTOR ( 36 downto 0 );
     S_SC_W_recv : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_bd_8562_winsw_0 : entity is "bd_8562_winsw_0";
 end system_axi_smc_2_bd_8562_winsw_0;
 
 architecture STRUCTURE of system_axi_smc_2_bd_8562_winsw_0 is
@@ -28608,8 +28560,6 @@ entity system_axi_smc_2_bd_8562_woutsw_0 is
     M_SC_W_payld : in STD_LOGIC_VECTOR ( 35 downto 0 );
     m_sc_recv : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_bd_8562_woutsw_0 : entity is "bd_8562_woutsw_0";
 end system_axi_smc_2_bd_8562_woutsw_0;
 
 architecture STRUCTURE of system_axi_smc_2_bd_8562_woutsw_0 is
@@ -28676,8 +28626,6 @@ entity system_axi_smc_2_lpf is
     aclk : in STD_LOGIC;
     aresetn : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_lpf : entity is "lpf";
 end system_axi_smc_2_lpf;
 
 architecture STRUCTURE of system_axi_smc_2_lpf is
@@ -28754,8 +28702,6 @@ entity system_axi_smc_2_sequence_psr is
     lpf_int : in STD_LOGIC;
     aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_sequence_psr : entity is "sequence_psr";
 end system_axi_smc_2_sequence_psr;
 
 architecture STRUCTURE of system_axi_smc_2_sequence_psr is
@@ -29132,8 +29078,6 @@ entity system_axi_smc_2_sc_exit_v1_0_10_top is
   attribute C_WRITE_ACCEPTANCE of system_axi_smc_2_sc_exit_v1_0_10_top : entity is 32;
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of system_axi_smc_2_sc_exit_v1_0_10_top : entity is "yes";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_sc_exit_v1_0_10_top : entity is "sc_exit_v1_0_10_top";
   attribute P_BYPASS : integer;
   attribute P_BYPASS of system_axi_smc_2_sc_exit_v1_0_10_top : entity is 0;
   attribute P_FULLY_PIPELINED : integer;
@@ -36355,8 +36299,6 @@ entity system_axi_smc_2_sc_mmu_v1_0_9_top is
   attribute C_WRITE_ACCEPTANCE of system_axi_smc_2_sc_mmu_v1_0_9_top : entity is 32;
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of system_axi_smc_2_sc_mmu_v1_0_9_top : entity is "yes";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_sc_mmu_v1_0_9_top : entity is "sc_mmu_v1_0_9_top";
   attribute P_AXI3 : integer;
   attribute P_AXI3 of system_axi_smc_2_sc_mmu_v1_0_9_top : entity is 1;
   attribute P_AXI4 : integer;
@@ -40704,8 +40646,6 @@ entity system_axi_smc_2_sc_node_v1_0_11_reg_fifo is
     s_sc_payld : in STD_LOGIC_VECTOR ( 15 downto 0 );
     m_sc_areset_r : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_sc_node_v1_0_11_reg_fifo : entity is "sc_node_v1_0_11_reg_fifo";
 end system_axi_smc_2_sc_node_v1_0_11_reg_fifo;
 
 architecture STRUCTURE of system_axi_smc_2_sc_node_v1_0_11_reg_fifo is
@@ -42352,8 +42292,6 @@ entity system_axi_smc_2_sc_node_v1_0_11_top is
   attribute LP_S_STATIC_DWIDTH of system_axi_smc_2_sc_node_v1_0_11_top : entity is 1;
   attribute LP_ZERO_ROUTE_WIDTH : integer;
   attribute LP_ZERO_ROUTE_WIDTH of system_axi_smc_2_sc_node_v1_0_11_top : entity is 0;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_sc_node_v1_0_11_top : entity is "sc_node_v1_0_11_top";
   attribute P_NUM_OUTSTANDING : integer;
   attribute P_NUM_OUTSTANDING of system_axi_smc_2_sc_node_v1_0_11_top : entity is 16;
 end system_axi_smc_2_sc_node_v1_0_11_top;
@@ -48386,8 +48324,6 @@ entity system_axi_smc_2_sc_si_converter_v1_0_9_top is
   attribute C_WRITE_ACCEPTANCE of system_axi_smc_2_sc_si_converter_v1_0_9_top : entity is 32;
   attribute C_WRITE_WATERMARK : integer;
   attribute C_WRITE_WATERMARK of system_axi_smc_2_sc_si_converter_v1_0_9_top : entity is 0;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_sc_si_converter_v1_0_9_top : entity is "sc_si_converter_v1_0_9_top";
   attribute P_EXOK : string;
   attribute P_EXOK of system_axi_smc_2_sc_si_converter_v1_0_9_top : entity is "2'b01";
   attribute P_FULLY_PIPELINED : integer;
@@ -54036,8 +53972,6 @@ entity system_axi_smc_2_sc_transaction_regulator_v1_0_8_top is
   attribute C_WRITE_ACCEPTANCE of system_axi_smc_2_sc_transaction_regulator_v1_0_8_top : entity is 32;
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of system_axi_smc_2_sc_transaction_regulator_v1_0_8_top : entity is "yes";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_sc_transaction_regulator_v1_0_8_top : entity is "sc_transaction_regulator_v1_0_8_top";
   attribute P_FULLY_PIPELINED : integer;
   attribute P_FULLY_PIPELINED of system_axi_smc_2_sc_transaction_regulator_v1_0_8_top : entity is 2;
   attribute P_ID_BUFFER_WIDTH : integer;
@@ -59400,8 +59334,6 @@ entity system_axi_smc_2_bd_8562_boutsw_0 is
     s_sc_payld : in STD_LOGIC_VECTOR ( 5 downto 0 );
     S_SC_B_recv : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_bd_8562_boutsw_0 : entity is "bd_8562_boutsw_0";
 end system_axi_smc_2_bd_8562_boutsw_0;
 
 architecture STRUCTURE of system_axi_smc_2_bd_8562_boutsw_0 is
@@ -59472,8 +59404,6 @@ entity system_axi_smc_2_bd_8562_m00arn_0 is
     M00_AXI_arvalid : in STD_LOGIC_VECTOR ( 0 to 0 );
     \M00_AXI_arprot[2]\ : in STD_LOGIC_VECTOR ( 12 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_bd_8562_m00arn_0 : entity is "bd_8562_m00arn_0";
 end system_axi_smc_2_bd_8562_m00arn_0;
 
 architecture STRUCTURE of system_axi_smc_2_bd_8562_m00arn_0 is
@@ -59644,8 +59574,6 @@ entity system_axi_smc_2_bd_8562_m00awn_0 is
     M00_AXI_awvalid : in STD_LOGIC_VECTOR ( 0 to 0 );
     \M00_AXI_awprot[2]\ : in STD_LOGIC_VECTOR ( 12 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_bd_8562_m00awn_0 : entity is "bd_8562_m00awn_0";
 end system_axi_smc_2_bd_8562_m00awn_0;
 
 architecture STRUCTURE of system_axi_smc_2_bd_8562_m00awn_0 is
@@ -59817,8 +59745,6 @@ entity system_axi_smc_2_bd_8562_m00bn_0 is
     M00_AXI_bvalid : in STD_LOGIC;
     S00_SC_B_recv : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_bd_8562_m00bn_0 : entity is "bd_8562_m00bn_0";
 end system_axi_smc_2_bd_8562_m00bn_0;
 
 architecture STRUCTURE of system_axi_smc_2_bd_8562_m00bn_0 is
@@ -60005,8 +59931,6 @@ entity system_axi_smc_2_bd_8562_m00e_0 is
     M00_AXI_arready : in STD_LOGIC;
     M00_AXI_rvalid : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_bd_8562_m00e_0 : entity is "bd_8562_m00e_0";
 end system_axi_smc_2_bd_8562_m00e_0;
 
 architecture STRUCTURE of system_axi_smc_2_bd_8562_m00e_0 is
@@ -60216,8 +60140,6 @@ entity system_axi_smc_2_bd_8562_m00rn_0 is
     M00_AXI_rvalid : in STD_LOGIC;
     S00_SC_R_recv : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_bd_8562_m00rn_0 : entity is "bd_8562_m00rn_0";
 end system_axi_smc_2_bd_8562_m00rn_0;
 
 architecture STRUCTURE of system_axi_smc_2_bd_8562_m00rn_0 is
@@ -60378,8 +60300,6 @@ entity system_axi_smc_2_bd_8562_m00wn_0 is
     M00_SC_W_send : in STD_LOGIC_VECTOR ( 0 to 0 );
     M00_SC_W_payld : in STD_LOGIC_VECTOR ( 35 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_bd_8562_m00wn_0 : entity is "bd_8562_m00wn_0";
 end system_axi_smc_2_bd_8562_m00wn_0;
 
 architecture STRUCTURE of system_axi_smc_2_bd_8562_m00wn_0 is
@@ -60544,8 +60464,6 @@ entity system_axi_smc_2_bd_8562_m01arn_0 is
     M01_SC_AR_send : in STD_LOGIC_VECTOR ( 0 to 0 );
     M01_SC_AR_payld : in STD_LOGIC_VECTOR ( 11 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_bd_8562_m01arn_0 : entity is "bd_8562_m01arn_0";
 end system_axi_smc_2_bd_8562_m01arn_0;
 
 architecture STRUCTURE of system_axi_smc_2_bd_8562_m01arn_0 is
@@ -60716,8 +60634,6 @@ entity system_axi_smc_2_bd_8562_m01awn_0 is
     M01_SC_AW_send : in STD_LOGIC_VECTOR ( 0 to 0 );
     M01_SC_AW_payld : in STD_LOGIC_VECTOR ( 11 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_bd_8562_m01awn_0 : entity is "bd_8562_m01awn_0";
 end system_axi_smc_2_bd_8562_m01awn_0;
 
 architecture STRUCTURE of system_axi_smc_2_bd_8562_m01awn_0 is
@@ -60889,8 +60805,6 @@ entity system_axi_smc_2_bd_8562_m01bn_0 is
     S_SC_B_send : in STD_LOGIC_VECTOR ( 0 to 0 );
     S01_SC_B_recv : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_bd_8562_m01bn_0 : entity is "bd_8562_m01bn_0";
 end system_axi_smc_2_bd_8562_m01bn_0;
 
 architecture STRUCTURE of system_axi_smc_2_bd_8562_m01bn_0 is
@@ -61085,8 +60999,6 @@ entity system_axi_smc_2_bd_8562_m01e_0 is
     M01_AXI_rresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
     M01_AXI_rvalid : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_bd_8562_m01e_0 : entity is "bd_8562_m01e_0";
 end system_axi_smc_2_bd_8562_m01e_0;
 
 architecture STRUCTURE of system_axi_smc_2_bd_8562_m01e_0 is
@@ -61291,8 +61203,6 @@ entity system_axi_smc_2_bd_8562_m01rn_0 is
     S_SC_R_send : in STD_LOGIC_VECTOR ( 0 to 0 );
     S01_SC_R_recv : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_bd_8562_m01rn_0 : entity is "bd_8562_m01rn_0";
 end system_axi_smc_2_bd_8562_m01rn_0;
 
 architecture STRUCTURE of system_axi_smc_2_bd_8562_m01rn_0 is
@@ -61453,8 +61363,6 @@ entity system_axi_smc_2_bd_8562_m01wn_0 is
     M01_SC_W_send : in STD_LOGIC_VECTOR ( 0 to 0 );
     M01_SC_W_payld : in STD_LOGIC_VECTOR ( 35 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_bd_8562_m01wn_0 : entity is "bd_8562_m01wn_0";
 end system_axi_smc_2_bd_8562_m01wn_0;
 
 architecture STRUCTURE of system_axi_smc_2_bd_8562_m01wn_0 is
@@ -61619,8 +61527,6 @@ entity system_axi_smc_2_bd_8562_m02arn_0 is
     M02_AXI_arvalid : in STD_LOGIC_VECTOR ( 0 to 0 );
     M_SC_AR_recv : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_bd_8562_m02arn_0 : entity is "bd_8562_m02arn_0";
 end system_axi_smc_2_bd_8562_m02arn_0;
 
 architecture STRUCTURE of system_axi_smc_2_bd_8562_m02arn_0 is
@@ -61782,8 +61688,6 @@ entity system_axi_smc_2_bd_8562_m02awn_0 is
     M02_AXI_awvalid : in STD_LOGIC_VECTOR ( 0 to 0 );
     M_SC_AW_recv : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_bd_8562_m02awn_0 : entity is "bd_8562_m02awn_0";
 end system_axi_smc_2_bd_8562_m02awn_0;
 
 architecture STRUCTURE of system_axi_smc_2_bd_8562_m02awn_0 is
@@ -61946,8 +61850,6 @@ entity system_axi_smc_2_bd_8562_m02bn_0 is
     M02_AXI_bvalid : in STD_LOGIC;
     S02_SC_B_recv : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_bd_8562_m02bn_0 : entity is "bd_8562_m02bn_0";
 end system_axi_smc_2_bd_8562_m02bn_0;
 
 architecture STRUCTURE of system_axi_smc_2_bd_8562_m02bn_0 is
@@ -62134,8 +62036,6 @@ entity system_axi_smc_2_bd_8562_m02e_0 is
     M02_AXI_arready : in STD_LOGIC;
     M02_AXI_rvalid : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_bd_8562_m02e_0 : entity is "bd_8562_m02e_0";
 end system_axi_smc_2_bd_8562_m02e_0;
 
 architecture STRUCTURE of system_axi_smc_2_bd_8562_m02e_0 is
@@ -62345,8 +62245,6 @@ entity system_axi_smc_2_bd_8562_m02rn_0 is
     M02_AXI_rvalid : in STD_LOGIC;
     S02_SC_R_recv : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_bd_8562_m02rn_0 : entity is "bd_8562_m02rn_0";
 end system_axi_smc_2_bd_8562_m02rn_0;
 
 architecture STRUCTURE of system_axi_smc_2_bd_8562_m02rn_0 is
@@ -62509,8 +62407,6 @@ entity system_axi_smc_2_bd_8562_m02wn_0 is
     M02_SC_W_payld : in STD_LOGIC_VECTOR ( 35 downto 0 );
     M_SC_W_recv : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_bd_8562_m02wn_0 : entity is "bd_8562_m02wn_0";
 end system_axi_smc_2_bd_8562_m02wn_0;
 
 architecture STRUCTURE of system_axi_smc_2_bd_8562_m02wn_0 is
@@ -62676,8 +62572,6 @@ entity system_axi_smc_2_bd_8562_routsw_0 is
     \gen_single_rank.data_reg[53]\ : in STD_LOGIC_VECTOR ( 101 downto 0 );
     S_SC_R_recv : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_bd_8562_routsw_0 : entity is "bd_8562_routsw_0";
 end system_axi_smc_2_bd_8562_routsw_0;
 
 architecture STRUCTURE of system_axi_smc_2_bd_8562_routsw_0 is
@@ -62814,8 +62708,6 @@ entity system_axi_smc_2_bd_8562_s00mmu_0 is
     s_axi_rlast : in STD_LOGIC;
     s_axi_rvalid : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_bd_8562_s00mmu_0 : entity is "bd_8562_s00mmu_0";
 end system_axi_smc_2_bd_8562_s00mmu_0;
 
 architecture STRUCTURE of system_axi_smc_2_bd_8562_s00mmu_0 is
@@ -63110,8 +63002,6 @@ entity system_axi_smc_2_bd_8562_s00sic_0 is
     m_axi_rresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
     m_axi_rvalid : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_bd_8562_s00sic_0 : entity is "bd_8562_s00sic_0";
 end system_axi_smc_2_bd_8562_s00sic_0;
 
 architecture STRUCTURE of system_axi_smc_2_bd_8562_s00sic_0 is
@@ -63402,8 +63292,6 @@ entity system_axi_smc_2_bd_8562_s00tr_0 is
     S00_AXI_rlast : in STD_LOGIC;
     S00_AXI_rvalid : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_bd_8562_s00tr_0 : entity is "bd_8562_s00tr_0";
 end system_axi_smc_2_bd_8562_s00tr_0;
 
 architecture STRUCTURE of system_axi_smc_2_bd_8562_s00tr_0 is
@@ -63617,8 +63505,6 @@ entity system_axi_smc_2_bd_8562_sarn_0 is
     S_SC_AR_payld : in STD_LOGIC_VECTOR ( 15 downto 0 );
     m_axi_arvalid_i_reg : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_bd_8562_sarn_0 : entity is "bd_8562_sarn_0";
 end system_axi_smc_2_bd_8562_sarn_0;
 
 architecture STRUCTURE of system_axi_smc_2_bd_8562_sarn_0 is
@@ -63793,8 +63679,6 @@ entity system_axi_smc_2_bd_8562_sawn_0 is
     S_SC_AW_payld : in STD_LOGIC_VECTOR ( 15 downto 0 );
     S00_SC_AW_recv : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_bd_8562_sawn_0 : entity is "bd_8562_sawn_0";
 end system_axi_smc_2_bd_8562_sawn_0;
 
 architecture STRUCTURE of system_axi_smc_2_bd_8562_sawn_0 is
@@ -63969,8 +63853,6 @@ entity system_axi_smc_2_bd_8562_sbn_0 is
     M00_SC_B_payld : in STD_LOGIC_VECTOR ( 1 downto 0 );
     M_SC_B_recv : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_bd_8562_sbn_0 : entity is "bd_8562_sbn_0";
 end system_axi_smc_2_bd_8562_sbn_0;
 
 architecture STRUCTURE of system_axi_smc_2_bd_8562_sbn_0 is
@@ -64138,8 +64020,6 @@ entity system_axi_smc_2_bd_8562_srn_0 is
     M00_SC_R_payld : in STD_LOGIC_VECTOR ( 33 downto 0 );
     M_SC_R_recv : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_bd_8562_srn_0 : entity is "bd_8562_srn_0";
 end system_axi_smc_2_bd_8562_srn_0;
 
 architecture STRUCTURE of system_axi_smc_2_bd_8562_srn_0 is
@@ -64311,8 +64191,6 @@ entity system_axi_smc_2_bd_8562_swn_0 is
     S_SC_W_payld : in STD_LOGIC_VECTOR ( 38 downto 0 );
     S00_SC_W_recv : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_bd_8562_swn_0 : entity is "bd_8562_swn_0";
 end system_axi_smc_2_bd_8562_swn_0;
 
 architecture STRUCTURE of system_axi_smc_2_bd_8562_swn_0 is
@@ -64476,8 +64354,6 @@ entity system_axi_smc_2_proc_sys_reset is
     aclk : in STD_LOGIC;
     aresetn : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_proc_sys_reset : entity is "proc_sys_reset";
 end system_axi_smc_2_proc_sys_reset;
 
 architecture STRUCTURE of system_axi_smc_2_proc_sys_reset is
@@ -64529,8 +64405,6 @@ entity system_axi_smc_2_sc_node_v1_0_11_fifo is
     s_sc_payld : in STD_LOGIC_VECTOR ( 15 downto 0 );
     m_sc_areset_r : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_sc_node_v1_0_11_fifo : entity is "sc_node_v1_0_11_fifo";
 end system_axi_smc_2_sc_node_v1_0_11_fifo;
 
 architecture STRUCTURE of system_axi_smc_2_sc_node_v1_0_11_fifo is
@@ -64722,8 +64596,6 @@ entity system_axi_smc_2_bd_8562_psr_aclk_0 is
     aclk : in STD_LOGIC;
     aresetn : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_bd_8562_psr_aclk_0 : entity is "bd_8562_psr_aclk_0";
 end system_axi_smc_2_bd_8562_psr_aclk_0;
 
 architecture STRUCTURE of system_axi_smc_2_bd_8562_psr_aclk_0 is
@@ -64774,8 +64646,6 @@ entity system_axi_smc_2_m00_exit_pipeline_imp_115JXI9 is
     M00_AXI_arready : in STD_LOGIC;
     M00_AXI_rvalid : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_m00_exit_pipeline_imp_115JXI9 : entity is "m00_exit_pipeline_imp_115JXI9";
 end system_axi_smc_2_m00_exit_pipeline_imp_115JXI9;
 
 architecture STRUCTURE of system_axi_smc_2_m00_exit_pipeline_imp_115JXI9 is
@@ -64849,8 +64719,6 @@ entity system_axi_smc_2_m00_nodes_imp_1NC8JF1 is
     M00_SC_W_send : in STD_LOGIC_VECTOR ( 0 to 0 );
     M00_SC_W_payld : in STD_LOGIC_VECTOR ( 35 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_m00_nodes_imp_1NC8JF1 : entity is "m00_nodes_imp_1NC8JF1";
 end system_axi_smc_2_m00_nodes_imp_1NC8JF1;
 
 architecture STRUCTURE of system_axi_smc_2_m00_nodes_imp_1NC8JF1 is
@@ -64956,8 +64824,6 @@ entity system_axi_smc_2_m01_exit_pipeline_imp_14PV0KH is
     M01_AXI_rresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
     M01_AXI_rvalid : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_m01_exit_pipeline_imp_14PV0KH : entity is "m01_exit_pipeline_imp_14PV0KH";
 end system_axi_smc_2_m01_exit_pipeline_imp_14PV0KH;
 
 architecture STRUCTURE of system_axi_smc_2_m01_exit_pipeline_imp_14PV0KH is
@@ -65039,8 +64905,6 @@ entity system_axi_smc_2_m01_nodes_imp_K7EIPN is
     M01_SC_W_send : in STD_LOGIC_VECTOR ( 0 to 0 );
     M01_SC_W_payld : in STD_LOGIC_VECTOR ( 35 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_m01_nodes_imp_K7EIPN : entity is "m01_nodes_imp_K7EIPN";
 end system_axi_smc_2_m01_nodes_imp_K7EIPN;
 
 architecture STRUCTURE of system_axi_smc_2_m01_nodes_imp_K7EIPN is
@@ -65138,8 +65002,6 @@ entity system_axi_smc_2_m02_exit_pipeline_imp_1BNA31D is
     M02_AXI_arready : in STD_LOGIC;
     M02_AXI_rvalid : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_m02_exit_pipeline_imp_1BNA31D : entity is "m02_exit_pipeline_imp_1BNA31D";
 end system_axi_smc_2_m02_exit_pipeline_imp_1BNA31D;
 
 architecture STRUCTURE of system_axi_smc_2_m02_exit_pipeline_imp_1BNA31D is
@@ -65215,8 +65077,6 @@ entity system_axi_smc_2_m02_nodes_imp_EMF8WW is
     M02_SC_W_payld : in STD_LOGIC_VECTOR ( 35 downto 0 );
     M_SC_W_recv : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_m02_nodes_imp_EMF8WW : entity is "m02_nodes_imp_EMF8WW";
 end system_axi_smc_2_m02_nodes_imp_EMF8WW;
 
 architecture STRUCTURE of system_axi_smc_2_m02_nodes_imp_EMF8WW is
@@ -65339,8 +65199,6 @@ entity system_axi_smc_2_s00_entry_pipeline_imp_1VHY02 is
     m_axi_rresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
     m_axi_rvalid : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_s00_entry_pipeline_imp_1VHY02 : entity is "s00_entry_pipeline_imp_1VHY02";
 end system_axi_smc_2_s00_entry_pipeline_imp_1VHY02;
 
 architecture STRUCTURE of system_axi_smc_2_s00_entry_pipeline_imp_1VHY02 is
@@ -65631,8 +65489,6 @@ entity system_axi_smc_2_s00_nodes_imp_5EHQWO is
     S_SC_W_payld : in STD_LOGIC_VECTOR ( 38 downto 0 );
     S00_SC_W_recv : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_s00_nodes_imp_5EHQWO : entity is "s00_nodes_imp_5EHQWO";
 end system_axi_smc_2_s00_nodes_imp_5EHQWO;
 
 architecture STRUCTURE of system_axi_smc_2_s00_nodes_imp_5EHQWO is
@@ -66073,8 +65929,6 @@ entity system_axi_smc_2_clk_map_imp_YRD60Q is
     aclk : in STD_LOGIC;
     aresetn : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_clk_map_imp_YRD60Q : entity is "clk_map_imp_YRD60Q";
 end system_axi_smc_2_clk_map_imp_YRD60Q;
 
 architecture STRUCTURE of system_axi_smc_2_clk_map_imp_YRD60Q is
@@ -67643,8 +67497,6 @@ entity system_axi_smc_2_bd_8562_arni_0 is
     S_SC_AR_payld : in STD_LOGIC_VECTOR ( 15 downto 0 );
     M_SC_AR_recv : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_bd_8562_arni_0 : entity is "bd_8562_arni_0";
 end system_axi_smc_2_bd_8562_arni_0;
 
 architecture STRUCTURE of system_axi_smc_2_bd_8562_arni_0 is
@@ -67817,8 +67669,6 @@ entity system_axi_smc_2_bd_8562_awni_0 is
     S_SC_AW_payld : in STD_LOGIC_VECTOR ( 15 downto 0 );
     M_SC_AW_recv : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_bd_8562_awni_0 : entity is "bd_8562_awni_0";
 end system_axi_smc_2_bd_8562_awni_0;
 
 architecture STRUCTURE of system_axi_smc_2_bd_8562_awni_0 is
@@ -67992,8 +67842,6 @@ entity system_axi_smc_2_bd_8562_bni_0 is
     S_SC_B_payld : in STD_LOGIC_VECTOR ( 1 downto 0 );
     M_SC_B_recv : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_bd_8562_bni_0 : entity is "bd_8562_bni_0";
 end system_axi_smc_2_bd_8562_bni_0;
 
 architecture STRUCTURE of system_axi_smc_2_bd_8562_bni_0 is
@@ -68162,8 +68010,6 @@ entity system_axi_smc_2_bd_8562_rni_0 is
     S_SC_R_payld : in STD_LOGIC_VECTOR ( 33 downto 0 );
     M_SC_R_recv : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_bd_8562_rni_0 : entity is "bd_8562_rni_0";
 end system_axi_smc_2_bd_8562_rni_0;
 
 architecture STRUCTURE of system_axi_smc_2_bd_8562_rni_0 is
@@ -68335,8 +68181,6 @@ entity system_axi_smc_2_bd_8562_wni_0 is
     S_SC_W_payld : in STD_LOGIC_VECTOR ( 38 downto 0 );
     M_SC_W_recv : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_bd_8562_wni_0 : entity is "bd_8562_wni_0";
 end system_axi_smc_2_bd_8562_wni_0;
 
 architecture STRUCTURE of system_axi_smc_2_bd_8562_wni_0 is
@@ -68529,8 +68373,6 @@ entity system_axi_smc_2_i_nodes_imp_1GCHTG4 is
     S_SC_W_payld : in STD_LOGIC_VECTOR ( 38 downto 0 );
     M_SC_W_recv : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_i_nodes_imp_1GCHTG4 : entity is "i_nodes_imp_1GCHTG4";
 end system_axi_smc_2_i_nodes_imp_1GCHTG4;
 
 architecture STRUCTURE of system_axi_smc_2_i_nodes_imp_1GCHTG4 is
@@ -68644,8 +68486,6 @@ entity system_axi_smc_2_switchboards_imp_XG8DBG is
     S00_SC_W_send : in STD_LOGIC_VECTOR ( 0 to 0 );
     m_sc_recv : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_switchboards_imp_XG8DBG : entity is "switchboards_imp_XG8DBG";
 end system_axi_smc_2_switchboards_imp_XG8DBG;
 
 architecture STRUCTURE of system_axi_smc_2_switchboards_imp_XG8DBG is
@@ -68934,8 +68774,6 @@ entity system_axi_smc_2_bd_8562 is
   );
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of system_axi_smc_2_bd_8562 : entity is "system_axi_smc_2.hwdef";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of system_axi_smc_2_bd_8562 : entity is "bd_8562";
 end system_axi_smc_2_bd_8562;
 
 architecture STRUCTURE of system_axi_smc_2_bd_8562 is

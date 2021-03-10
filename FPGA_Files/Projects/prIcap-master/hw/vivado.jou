@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Mar  9 20:21:56 2021
+# Process ID: 1824
+# Current directory: C:/GitHub/ReconHardware/FPGA_Files/Projects/prIcap-master/hw
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8860 C:\GitHub\ReconHardware\FPGA_Files\Projects\prIcap-master\hw\imageProcessingVideoDisplay.xpr
+# Log file: C:/GitHub/ReconHardware/FPGA_Files/Projects/prIcap-master/hw/vivado.log
+# Journal file: C:/GitHub/ReconHardware/FPGA_Files/Projects/prIcap-master/hw\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/GitHub/ReconHardware/FPGA_Files/Projects/prIcap-master/hw/imageProcessingVideoDisplay.xpr
+update_compile_order -fileset sources_1
+open_bd_design {C:/GitHub/ReconHardware/FPGA_Files/Projects/prIcap-master/hw/imageProcessingVideoDisplay.srcs/sources_1/bd/system/system.bd}

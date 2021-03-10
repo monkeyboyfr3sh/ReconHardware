@@ -1,10 +1,10 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
--- Date        : Mon Mar  8 13:11:11 2021
+-- Date        : Mon Mar  8 13:11:10 2021
 -- Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_2/ip/design_2_dfx_bitstream_monitor_0_0/design_2_dfx_bitstream_monitor_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top design_2_dfx_bitstream_monitor_0_0 -prefix
+--               design_2_dfx_bitstream_monitor_0_0_ design_2_dfx_bitstream_monitor_0_0_sim_netlist.vhdl
 -- Design      : design_2_dfx_bitstream_monitor_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -35,8 +35,6 @@ entity design_2_dfx_bitstream_monitor_0_0_xpm_counter_updn is
     \count_value_i_reg[4]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     wr_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_2_dfx_bitstream_monitor_0_0_xpm_counter_updn : entity is "xpm_counter_updn";
 end design_2_dfx_bitstream_monitor_0_0_xpm_counter_updn;
 
 architecture STRUCTURE of design_2_dfx_bitstream_monitor_0_0_xpm_counter_updn is
@@ -875,8 +873,6 @@ entity design_2_dfx_bitstream_monitor_0_0_xpm_fifo_reg_bit is
     \gen_pntr_flags_cc.wrp_eq_rdp_pf_cc.gpe_cc_sym.write_only_q_reg\ : in STD_LOGIC;
     rd_en : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_2_dfx_bitstream_monitor_0_0_xpm_fifo_reg_bit : entity is "xpm_fifo_reg_bit";
 end design_2_dfx_bitstream_monitor_0_0_xpm_fifo_reg_bit;
 
 architecture STRUCTURE of design_2_dfx_bitstream_monitor_0_0_xpm_fifo_reg_bit is
@@ -947,8 +943,6 @@ entity design_2_dfx_bitstream_monitor_0_0_xpm_fifo_rst is
     read_only_q : in STD_LOGIC;
     wr_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_2_dfx_bitstream_monitor_0_0_xpm_fifo_rst : entity is "xpm_fifo_rst";
 end design_2_dfx_bitstream_monitor_0_0_xpm_fifo_rst;
 
 architecture STRUCTURE of design_2_dfx_bitstream_monitor_0_0_xpm_fifo_rst is
@@ -1171,8 +1165,6 @@ entity design_2_dfx_bitstream_monitor_0_0_xpm_memory_base is
   attribute MESSAGE_CONTROL of design_2_dfx_bitstream_monitor_0_0_xpm_memory_base : entity is 0;
   attribute NUM_CHAR_LOC : integer;
   attribute NUM_CHAR_LOC of design_2_dfx_bitstream_monitor_0_0_xpm_memory_base : entity is 0;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_2_dfx_bitstream_monitor_0_0_xpm_memory_base : entity is "xpm_memory_base";
   attribute P_ECC_MODE : string;
   attribute P_ECC_MODE of design_2_dfx_bitstream_monitor_0_0_xpm_memory_base : entity is "no_ecc";
   attribute P_ENABLE_BYTE_WRITE_A : integer;
@@ -2288,8 +2280,6 @@ entity design_2_dfx_bitstream_monitor_0_0_detect_block is
     \sp_id_error1_carry__1\ : in STD_LOGIC_VECTOR ( 10 downto 0 );
     clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_2_dfx_bitstream_monitor_0_0_detect_block : entity is "detect_block";
 end design_2_dfx_bitstream_monitor_0_0_detect_block;
 
 architecture STRUCTURE of design_2_dfx_bitstream_monitor_0_0_detect_block is
@@ -5201,8 +5191,6 @@ entity design_2_dfx_bitstream_monitor_0_0_xpm_fifo_base is
   attribute FULL_RESET_VALUE of design_2_dfx_bitstream_monitor_0_0_xpm_fifo_base : entity is 0;
   attribute FULL_RST_VAL : string;
   attribute FULL_RST_VAL of design_2_dfx_bitstream_monitor_0_0_xpm_fifo_base : entity is "1'b0";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_2_dfx_bitstream_monitor_0_0_xpm_fifo_base : entity is "xpm_fifo_base";
   attribute PE_THRESH_ADJ : integer;
   attribute PE_THRESH_ADJ of design_2_dfx_bitstream_monitor_0_0_xpm_fifo_base : entity is 3;
   attribute PE_THRESH_MAX : integer;
@@ -5903,8 +5891,6 @@ entity design_2_dfx_bitstream_monitor_0_0_xpm_fifo_sync is
   attribute FIFO_WRITE_DEPTH of design_2_dfx_bitstream_monitor_0_0_xpm_fifo_sync : entity is 16;
   attribute FULL_RESET_VALUE : integer;
   attribute FULL_RESET_VALUE of design_2_dfx_bitstream_monitor_0_0_xpm_fifo_sync : entity is 0;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_2_dfx_bitstream_monitor_0_0_xpm_fifo_sync : entity is "xpm_fifo_sync";
   attribute PROG_EMPTY_THRESH : integer;
   attribute PROG_EMPTY_THRESH of design_2_dfx_bitstream_monitor_0_0_xpm_fifo_sync : entity is 3;
   attribute PROG_FULL_THRESH : integer;
@@ -6129,8 +6115,6 @@ entity design_2_dfx_bitstream_monitor_0_0_history_buffer is
     li_err_unexpected_i_reg_7 : in STD_LOGIC_VECTOR ( 0 to 0 );
     li_err_unexpected_i_reg_8 : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_2_dfx_bitstream_monitor_0_0_history_buffer : entity is "history_buffer";
 end design_2_dfx_bitstream_monitor_0_0_history_buffer;
 
 architecture STRUCTURE of design_2_dfx_bitstream_monitor_0_0_history_buffer is
@@ -6333,8 +6317,6 @@ entity design_2_dfx_bitstream_monitor_0_0_report_block is
     arm : in STD_LOGIC;
     E : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_2_dfx_bitstream_monitor_0_0_report_block : entity is "report_block";
 end design_2_dfx_bitstream_monitor_0_0_report_block;
 
 architecture STRUCTURE of design_2_dfx_bitstream_monitor_0_0_report_block is
@@ -9918,8 +9900,6 @@ entity design_2_dfx_bitstream_monitor_0_0_dfx_bitstream_monitor_v1_0_0_top is
     arm : in STD_LOGIC;
     resetn : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_2_dfx_bitstream_monitor_0_0_dfx_bitstream_monitor_v1_0_0_top : entity is "dfx_bitstream_monitor_v1_0_0_top";
 end design_2_dfx_bitstream_monitor_0_0_dfx_bitstream_monitor_v1_0_0_top;
 
 architecture STRUCTURE of design_2_dfx_bitstream_monitor_0_0_dfx_bitstream_monitor_v1_0_0_top is
@@ -10654,8 +10634,6 @@ entity design_2_dfx_bitstream_monitor_0_0_dfx_bitstream_monitor_v1_0_0 is
   attribute C_STS_RP_ID_WIDTH of design_2_dfx_bitstream_monitor_0_0_dfx_bitstream_monitor_v1_0_0 : entity is 32;
   attribute C_STS_SP_ID_WIDTH : integer;
   attribute C_STS_SP_ID_WIDTH of design_2_dfx_bitstream_monitor_0_0_dfx_bitstream_monitor_v1_0_0 : entity is 32;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_2_dfx_bitstream_monitor_0_0_dfx_bitstream_monitor_v1_0_0 : entity is "dfx_bitstream_monitor_v1_0_0";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of design_2_dfx_bitstream_monitor_0_0_dfx_bitstream_monitor_v1_0_0 : entity is "yes";
 end design_2_dfx_bitstream_monitor_0_0_dfx_bitstream_monitor_v1_0_0;

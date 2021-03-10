@@ -4,7 +4,7 @@
 	<item value="pr_led_sw_system" key="programflash.hwplatform"/>
 	<item value="true" key="pr_led_sw_system-verifyFlash"/>
 	<item value="false" key="pr_led_sw_system-blankCheck"/>
-	<item value="qspi-x2-single" key="pr_led_sw_system-flashType"/>
+	<item value="qspi-x4-single" key="pr_led_sw_system-flashType"/>
 	<item value="" key="pr_led_sw_system-offSet"/>
 	<item value="C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/sw/pr_led/boot/fsbl.elf" key="pr_led_sw_system-fsblFile"/>
 	<item value="Local" key="pr_led_sw_system-target"/>

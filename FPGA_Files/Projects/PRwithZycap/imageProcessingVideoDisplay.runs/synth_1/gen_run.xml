@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1615326326">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1615389282">
   <File Type="PA-TCL" Name="system_wrapper.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="system_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="system_wrapper_reports.tcl"/>
@@ -43,6 +43,22 @@
         <Attr Name="ScopedToCell" Val="system_i/imageProcess_0/inst/conv"/>
       </FileInfo>
     </File>
+    <File Path="$PPRDIR/netlists/sharpen/conv.dcp">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="ScopedToCell" Val="system_i/imageProcess_0/inst/conv"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/netlists/blur/conv.dcp">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="ScopedToCell" Val="system_i/imageProcess_0/inst/conv"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="system_wrapper"/>
@@ -77,6 +93,7 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="system_axi_smc_2"/>
   <BlockFileSet Type="BlockSrcs" Name="system_axi_smc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_processing_system7_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="system_ila_0_0"/>
 </GenRun>

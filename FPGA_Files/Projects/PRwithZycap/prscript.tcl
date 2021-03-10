@@ -73,6 +73,7 @@ if {![file exists ./bitstreams/config3]} {
 
 # Bitstream generation with .bin for ICAP 
 write_bitstream -force -bin_file ./bitstreams/config3/config3.bit
+write_debug_probes -force ./bitstreams/config3/config3.ltx
 
 # write_hw_platform -fixed -force ‑include_bit -file ./imageProcessingVideoDisplay.vitis/system_wrapper.xsa
 # write_hw_platform -fixed -force ‑include_bit
@@ -82,6 +83,7 @@ if {![file exists ./bitstreams/config1]} {
       file mkdir ./bitstreams/config1
 }
 write_bitstream -force -bin_file ./bitstreams/config1/config1.bit
+write_debug_probes -force ./bitstreams/config1/config1.ltx
 close_design
 
 if {![file exists ./bitstreams/config2]} {
@@ -90,6 +92,7 @@ if {![file exists ./bitstreams/config2]} {
 
 open_checkpoint ./netlists/config2/config2Routed.dcp
 write_bitstream -force -bin_file ./bitstreams/config2/config2.bit
+write_debug_probes -force ./bitstreams/config2/config2.ltx
 close_design
 
 # .bin files for PCAP

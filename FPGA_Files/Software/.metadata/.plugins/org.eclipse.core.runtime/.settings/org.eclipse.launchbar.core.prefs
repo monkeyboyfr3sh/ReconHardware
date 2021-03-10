@@ -1,9 +1,12 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
-configDescList=org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_zycapTest_system,org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_pr_led_sw_system
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_zycapTest_system,org.eclipse.launchbar.core.descriptorType.default\:Debugger_data_process_sw-Default,org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_data_process_sw_system,org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_pr_led_sw_system
 eclipse.preferences.version=1
-org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_pr_led_sw_system/activeLaunchMode=systemdebug
+org.eclipse.launchbar.core.descriptorType.default\:Debugger_data_process_sw-Default/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:Debugger_data_process_sw-Default/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_data_process_sw_system/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_pr_led_sw_system/activeLaunchMode=run
 org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_pr_led_sw_system/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
 org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_zycapTest1_system/activeLaunchMode=systemdebug
 org.eclipse.launchbar.core.descriptorType.default\:SystemDebugger_zycapTest_system/activeLaunchMode=systemrun

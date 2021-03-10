@@ -2824,3 +2824,181 @@ TRACE::2021-03-09.10:44:23::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardwar
 C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
 
 TRACE::2021-03-09.10:44:23::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-09.23:32:07::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/hw/system_wrapper.xsa
+TRACE::2021-03-09.23:32:07::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/hw/system_wrapper.xsa
+TRACE::2021-03-09.23:32:07::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/hw/system_wrapper.xsa
+TRACE::2021-03-09.23:32:07::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/hw
+TRACE::2021-03-09.23:32:07::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/hw/system_wrapper.xsa
+TRACE::2021-03-09.23:32:07::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2021-03-09.23:32:07::SCWPlatform::Do not have an existing db opened. 
+TRACE::2021-03-09.23:32:10::SCWPlatform::Opened new HwDB with name system_wrapper
+TRACE::2021-03-09.23:32:10::SCWReader::Active system found as  PRwithZycap
+TRACE::2021-03-09.23:32:10::SCWReader::Handling sysconfig PRwithZycap
+TRACE::2021-03-09.23:32:10::SCWDomain::checking for install qemu data   : 
+TRACE::2021-03-09.23:32:10::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/
+TRACE::2021-03-09.23:32:10::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt
+TRACE::2021-03-09.23:32:10::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/hw/system_wrapper.xsa
+TRACE::2021-03-09.23:32:10::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/hw/system_wrapper.xsa
+TRACE::2021-03-09.23:32:10::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/hw/system_wrapper.xsa
+TRACE::2021-03-09.23:32:10::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/hw
+TRACE::2021-03-09.23:32:10::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/hw/system_wrapper.xsa
+TRACE::2021-03-09.23:32:10::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2021-03-09.23:32:10::SCWPlatform::Trying to set the existing hwdb with name system_wrapper
+TRACE::2021-03-09.23:32:10::SCWPlatform::Opened existing hwdb system_wrapper
+TRACE::2021-03-09.23:32:10::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-09.23:32:10::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/hw/system_wrapper.xsa
+TRACE::2021-03-09.23:32:10::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/hw/system_wrapper.xsa
+TRACE::2021-03-09.23:32:10::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/hw/system_wrapper.xsa
+TRACE::2021-03-09.23:32:10::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/hw
+TRACE::2021-03-09.23:32:10::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/hw/system_wrapper.xsa
+TRACE::2021-03-09.23:32:10::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2021-03-09.23:32:10::SCWPlatform::Trying to set the existing hwdb with name system_wrapper
+TRACE::2021-03-09.23:32:10::SCWPlatform::Opened existing hwdb system_wrapper
+TRACE::2021-03-09.23:32:10::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-09.23:32:10::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/hw/system_wrapper.xsa
+TRACE::2021-03-09.23:32:10::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/hw/system_wrapper.xsa
+TRACE::2021-03-09.23:32:10::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/hw/system_wrapper.xsa
+TRACE::2021-03-09.23:32:10::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/hw
+TRACE::2021-03-09.23:32:10::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/hw/system_wrapper.xsa
+TRACE::2021-03-09.23:32:10::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2021-03-09.23:32:10::SCWPlatform::Trying to set the existing hwdb with name system_wrapper
+TRACE::2021-03-09.23:32:10::SCWPlatform::Opened existing hwdb system_wrapper
+TRACE::2021-03-09.23:32:10::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-09.23:32:10::SCWReader::Boot application domain added for zynq_fsbl
+TRACE::2021-03-09.23:32:10::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/hw/system_wrapper.xsa
+TRACE::2021-03-09.23:32:10::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/hw/system_wrapper.xsa
+TRACE::2021-03-09.23:32:10::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/hw/system_wrapper.xsa
+TRACE::2021-03-09.23:32:10::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/hw
+TRACE::2021-03-09.23:32:10::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/hw/system_wrapper.xsa
+TRACE::2021-03-09.23:32:10::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2021-03-09.23:32:10::SCWPlatform::Trying to set the existing hwdb with name system_wrapper
+TRACE::2021-03-09.23:32:10::SCWPlatform::Opened existing hwdb system_wrapper
+TRACE::2021-03-09.23:32:10::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-09.23:32:10::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-09.23:32:10::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/data_process_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/data_process_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-09.23:32:10::SCWMssOS::No sw design opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-09.23:32:10::SCWMssOS::mss exists loading the mss file  C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-09.23:32:10::SCWMssOS::Opened the sw design from mss  C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-09.23:32:10::SCWMssOS::Adding the swdes entry C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/zynq_fsbl/zynq_fsbl_bsp/system.mss with des name system_1
+TRACE::2021-03-09.23:32:10::SCWMssOS::updating the scw layer about changes
+TRACE::2021-03-09.23:32:10::SCWMssOS::Opened the sw design.  C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-09.23:32:10::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/hw/system_wrapper.xsa
+TRACE::2021-03-09.23:32:10::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/hw/system_wrapper.xsa
+TRACE::2021-03-09.23:32:10::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/hw/system_wrapper.xsa
+TRACE::2021-03-09.23:32:10::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/hw
+TRACE::2021-03-09.23:32:10::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/hw/system_wrapper.xsa
+TRACE::2021-03-09.23:32:10::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2021-03-09.23:32:10::SCWPlatform::Trying to set the existing hwdb with name system_wrapper
+TRACE::2021-03-09.23:32:10::SCWPlatform::Opened existing hwdb system_wrapper
+TRACE::2021-03-09.23:32:10::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-09.23:32:10::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-09.23:32:10::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+C:/GitHub/ReconHardware/FPGA_Files/Software/data_process_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/data_process_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-09.23:32:10::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-09.23:32:10::SCWMssOS:: library already available in sw design:  xilffs:4.3
+TRACE::2021-03-09.23:32:10::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/hw/system_wrapper.xsa
+TRACE::2021-03-09.23:32:10::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/hw/system_wrapper.xsa
+TRACE::2021-03-09.23:32:10::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/hw/system_wrapper.xsa
+TRACE::2021-03-09.23:32:10::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/hw
+TRACE::2021-03-09.23:32:10::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/hw/system_wrapper.xsa
+TRACE::2021-03-09.23:32:10::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2021-03-09.23:32:10::SCWPlatform::Trying to set the existing hwdb with name system_wrapper
+TRACE::2021-03-09.23:32:10::SCWPlatform::Opened existing hwdb system_wrapper
+TRACE::2021-03-09.23:32:10::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-09.23:32:10::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-09.23:32:10::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+C:/GitHub/ReconHardware/FPGA_Files/Software/data_process_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/data_process_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-09.23:32:10::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-09.23:32:10::SCWMssOS:: library already available in sw design:  xilrsa:1.6
+TRACE::2021-03-09.23:32:10::SCWMssOS::Saving the mss changes C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-09.23:32:10::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2021-03-09.23:32:10::SCWMssOS::Completed writemss as part of save.
+TRACE::2021-03-09.23:32:10::SCWMssOS::Commit changes completed.
+TRACE::2021-03-09.23:32:10::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2021-03-09.23:32:10::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2021-03-09.23:32:10::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/hw/system_wrapper.xsa
+TRACE::2021-03-09.23:32:10::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/hw/system_wrapper.xsa
+TRACE::2021-03-09.23:32:10::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/hw/system_wrapper.xsa
+TRACE::2021-03-09.23:32:10::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/hw
+TRACE::2021-03-09.23:32:11::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/hw/system_wrapper.xsa
+TRACE::2021-03-09.23:32:11::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2021-03-09.23:32:11::SCWPlatform::Trying to set the existing hwdb with name system_wrapper
+TRACE::2021-03-09.23:32:11::SCWPlatform::Opened existing hwdb system_wrapper
+TRACE::2021-03-09.23:32:11::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-09.23:32:11::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-09.23:32:11::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+C:/GitHub/ReconHardware/FPGA_Files/Software/data_process_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/data_process_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-09.23:32:11::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-09.23:32:11::SCWReader::No isolation master present  
+TRACE::2021-03-09.23:32:11::SCWDomain::checking for install qemu data   : 
+TRACE::2021-03-09.23:32:11::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/
+TRACE::2021-03-09.23:32:11::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt
+TRACE::2021-03-09.23:32:11::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/hw/system_wrapper.xsa
+TRACE::2021-03-09.23:32:11::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/hw/system_wrapper.xsa
+TRACE::2021-03-09.23:32:11::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/hw/system_wrapper.xsa
+TRACE::2021-03-09.23:32:11::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/hw
+TRACE::2021-03-09.23:32:11::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/hw/system_wrapper.xsa
+TRACE::2021-03-09.23:32:11::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2021-03-09.23:32:11::SCWPlatform::Trying to set the existing hwdb with name system_wrapper
+TRACE::2021-03-09.23:32:11::SCWPlatform::Opened existing hwdb system_wrapper
+TRACE::2021-03-09.23:32:11::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-09.23:32:11::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/hw/system_wrapper.xsa
+TRACE::2021-03-09.23:32:11::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/hw/system_wrapper.xsa
+TRACE::2021-03-09.23:32:11::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/hw/system_wrapper.xsa
+TRACE::2021-03-09.23:32:11::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/hw
+TRACE::2021-03-09.23:32:11::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/hw/system_wrapper.xsa
+TRACE::2021-03-09.23:32:11::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2021-03-09.23:32:11::SCWPlatform::Trying to set the existing hwdb with name system_wrapper
+TRACE::2021-03-09.23:32:11::SCWPlatform::Opened existing hwdb system_wrapper
+TRACE::2021-03-09.23:32:11::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-09.23:32:11::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/hw/system_wrapper.xsa
+TRACE::2021-03-09.23:32:11::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/hw/system_wrapper.xsa
+TRACE::2021-03-09.23:32:11::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/hw/system_wrapper.xsa
+TRACE::2021-03-09.23:32:11::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/hw
+TRACE::2021-03-09.23:32:11::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/hw/system_wrapper.xsa
+TRACE::2021-03-09.23:32:11::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2021-03-09.23:32:11::SCWPlatform::Trying to set the existing hwdb with name system_wrapper
+TRACE::2021-03-09.23:32:11::SCWPlatform::Opened existing hwdb system_wrapper
+TRACE::2021-03-09.23:32:11::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-09.23:32:11::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-09.23:32:11::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+C:/GitHub/ReconHardware/FPGA_Files/Software/data_process_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/data_process_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-09.23:32:11::SCWMssOS::No sw design opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-09.23:32:11::SCWMssOS::mss exists loading the mss file  C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-09.23:32:11::SCWMssOS::Opened the sw design from mss  C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-09.23:32:11::SCWMssOS::Adding the swdes entry C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/ps7_cortexa9_0/standalone_domain/bsp/system.mss with des name system_2
+TRACE::2021-03-09.23:32:11::SCWMssOS::updating the scw layer about changes
+TRACE::2021-03-09.23:32:11::SCWMssOS::Opened the sw design.  C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-09.23:32:11::SCWMssOS::Saving the mss changes C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-09.23:32:11::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2021-03-09.23:32:11::SCWMssOS::Completed writemss as part of save.
+TRACE::2021-03-09.23:32:11::SCWMssOS::Commit changes completed.
+TRACE::2021-03-09.23:32:11::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2021-03-09.23:32:11::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2021-03-09.23:32:11::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/hw/system_wrapper.xsa
+TRACE::2021-03-09.23:32:11::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/hw/system_wrapper.xsa
+TRACE::2021-03-09.23:32:11::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/hw/system_wrapper.xsa
+TRACE::2021-03-09.23:32:11::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/hw
+TRACE::2021-03-09.23:32:11::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/hw/system_wrapper.xsa
+TRACE::2021-03-09.23:32:11::SCWPlatform:: Unique name xilinx:zed::0.0
+TRACE::2021-03-09.23:32:11::SCWPlatform::Trying to set the existing hwdb with name system_wrapper
+TRACE::2021-03-09.23:32:11::SCWPlatform::Opened existing hwdb system_wrapper
+TRACE::2021-03-09.23:32:11::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-09.23:32:11::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-09.23:32:11::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_2||
+C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/zynq_fsbl/zynq_fsbl_bsp/system.mss|system_1||
+C:/GitHub/ReconHardware/FPGA_Files/Software/data_process_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/data_process_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-09.23:32:11::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/PRwithZycap/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-09.23:32:11::SCWReader::No isolation master present  
