@@ -3,19 +3,21 @@
 set prjDir      "C:/GitHub/ReconHardware/FPGA_Files/Projects"
 set prjName     "pr_shifter"
 set bitDir      "./Bitstreams"
+set static_top  "top"
 set genBit      0
-set genXsa      0
+set genBin      0
+set genXsa      1
 
 # Change to prjDir and open project
 cd $prjDir/$prjName
-open_project $prjName.xpr
+# open_project $prjName.xpr
 
 # Copy full bitstream from vivado into $bitDir
 exec cp -f "$prjName.runs/impl_1/top.bit" $bitDir
 
 # Must set the partial configs in the same order as Vivado
 set partials {\
-    shifter_shift_left_partial\
+    shifter_shift_left_partial\`
     shifter_shift_right_partial\
     shifter_greybox_partial\
 }
@@ -47,13 +49,15 @@ if { $genBit == 1 } {
     }
 }
 
-# Generate bin for each bitstream
-foreach partial $partials {
-    write_cfgmem -force -interface SMAPx32 -format BIN -disablebitswap -loadbit "up 0x0 ./$bitDir/$partial.bit" "./$bitDir/${partial}.bin"
-}
+if { $genBit == 1 } {
+    # Generate bin for each bitstream
+    foreach partial $partials {
+        write_cfgmem -force -interface SMAPx32 -format BIN -disablebitswap -loadbit "up 0x0 ./$bitDir/$partial.bit" "./$bitDir/${partial}.bin"
+    }
 
-# Don't need these atm
-eval file delete [glob nocomplain $bitDir/*.prm]
+    # Don't need these atm
+    eval file delete [glob nocomplain $bitDir/*.prm]
+}
 
 # Generate xsa for project
 if { $genXsa == 1 } {

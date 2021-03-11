@@ -1,11 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<item value="false" key="data_process_sw-skip_rev_check"/>
 	<item value="{&quot;cables&quot;:[{&quot;name&quot;:&quot;Xilinx TUL 1234-tulA&quot;,&quot;indexContextMap&quot;:{&quot;2&quot;:&quot;jsn-TUL-1234-tulA-4ba00477-0&quot;,&quot;3&quot;:&quot;jsn-TUL-1234-tulA-23727093-0&quot;}}]}" key="devices_info_Local"/>
-	<item value="C:\GitHub\ReconHardware\FPGA_Files\Projects\pr_shifter\Bitstreams\shifter_shift_right_partial.bit" key="data_process_sw-bitFile"/>
-	<item value="false" key="data_process_sw-partial_bit"/>
-	<item value="Local" key="data_process_sw-target"/>
-	<item value="data_process_sw" key="programfpga.sdxproject"/>
-	<item value="Auto Detect" key="data_process_sw-device"/>
-	<item value="" key="data_process_sw-bmmFile"/>
 </section>

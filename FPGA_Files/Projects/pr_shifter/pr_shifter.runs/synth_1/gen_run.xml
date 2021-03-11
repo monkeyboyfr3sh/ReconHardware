@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1615391172">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1615481488">
   <File Type="PA-TCL" Name="top.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="top_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="top_reports.tcl"/>
   <File Type="RDS-RDS" Name="top.vds"/>
   <File Type="RDS-UTIL" Name="top_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="top_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="top.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="top_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="top_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/bd/icap_ila/icap_ila.bd">
@@ -80,13 +83,14 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="design_2_ila_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_2_xbar_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_2_gpio_ila_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_2_ila_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_2_dfx_s_ila_1_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_2_dfx_m_ila_2_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_2_gpio_ila_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="icap_ila_ila_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_2_dfx_m_ila_2_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_2_axi_gpio_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="design_2_ila_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="design_2_dfx_bitstream_monitor_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_2_dfx_controller_0_0"/>
 </GenRun>

@@ -1,349 +1,51 @@
-timestamp=[2021-03-05 17:47:37], mode=WORKBENCH_START, duration=0:00:04.102, duration_ms=4102, data={}
-timestamp=[2021-03-05 17:47:37], mode=WORKBENCH_UI_INIT, duration=0:00:00.380, duration_ms=380, data={editors_count=0, platform_editors_count=0, projects_count=0, platform_projects_count=0, active_platform_editor=false, projects=}
-timestamp=[2021-03-05 17:47:40], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:02.091, duration_ms=2091, data={}
-timestamp=[2021-03-05 17:52:43], mode=PLATFORM_CREATION, duration=0:00:21.561, duration_ms=21561, data={platform_source=dsa, os=standalone, processor=ps7_cortexa9, platform=null}
-timestamp=[2021-03-05 17:53:22], mode=PLATFORM_GENERATION, duration=0:00:31.858, duration_ms=31858, data={name=pr_led}
-timestamp=[2021-03-05 17:55:31], mode=APP_CREATION, duration=0:00:05.880, duration_ms=5880, data={name=pr_led_sw, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=pr_led, application_type=application}
-timestamp=[2021-03-05 17:55:52], mode=PLATFORM_GENERATION, duration=0:00:02.127, duration_ms=2127, data={name=pr_led}
-timestamp=[2021-03-05 17:55:53], mode=BUILD, duration=0:00:00.811, duration_ms=811, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-05 17:55:59], mode=BUILD, duration=0:00:05.208, duration_ms=5208, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-05 17:56:06], mode=BUILD, duration=0:00:00.239, duration_ms=239, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-05 17:56:11], mode=BUILD, duration=0:00:04.902, duration_ms=4902, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-05 18:06:38], mode=PLATFORM_GENERATION, duration=0:00:16.103, duration_ms=16103, data={name=pr_led}
-timestamp=[2021-03-05 18:06:55], mode=BUILD, duration=0:00:00.621, duration_ms=621, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-05 18:06:57], mode=BUILD, duration=0:00:02.370, duration_ms=2370, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-05 18:14:54], mode=BUILD, duration=0:00:00.505, duration_ms=505, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-05 18:14:57], mode=BUILD, duration=0:00:02.362, duration_ms=2362, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-05 18:16:52], mode=BUILD, duration=0:00:00.606, duration_ms=606, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-05 18:16:57], mode=BUILD, duration=0:00:04.785, duration_ms=4785, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-05 18:18:05], mode=BUILD, duration=0:00:00.368, duration_ms=368, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-05 18:18:10], mode=BUILD, duration=0:00:04.759, duration_ms=4759, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-05 18:18:26], mode=BUILD, duration=0:00:00.620, duration_ms=620, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-05 18:18:31], mode=BUILD, duration=0:00:04.778, duration_ms=4778, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 12:41:58], mode=WORKBENCH_START, duration=0:00:08.945, duration_ms=8945, data={}
-timestamp=[2021-03-06 12:41:59], mode=WORKBENCH_UI_INIT, duration=0:00:00.708, duration_ms=708, data={editors_count=4, platform_editors_count=2, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,pr_led,pr_led_sw,pr_led_sw_system}
-timestamp=[2021-03-06 12:42:00], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.086, duration_ms=86, data={}
-timestamp=[2021-03-06 13:01:34], mode=BUILD, duration=0:00:01.441, duration_ms=1441, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 13:01:41], mode=BUILD, duration=0:00:06.897, duration_ms=6897, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 13:07:21], mode=BUILD, duration=0:00:00.627, duration_ms=627, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 13:07:26], mode=BUILD, duration=0:00:04.874, duration_ms=4874, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 13:07:43], mode=BUILD, duration=0:00:00.245, duration_ms=245, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 13:07:49], mode=BUILD, duration=0:00:04.806, duration_ms=4806, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 13:08:02], mode=PLATFORM_GENERATION, duration=0:00:07.132, duration_ms=7132, data={name=pr_led}
-timestamp=[2021-03-06 13:08:02], mode=BUILD, duration=0:00:00.111, duration_ms=111, data={name=pr_led_sw, configuration=Debug, clean_build=true}
-timestamp=[2021-03-06 13:08:02], mode=BUILD, duration=0:00:00.107, duration_ms=107, data={name=pr_led_sw_system, configuration=Debug, clean_build=true}
-timestamp=[2021-03-06 13:08:39], mode=PLATFORM_GENERATION, duration=0:00:33.222, duration_ms=33222, data={name=pr_led}
-timestamp=[2021-03-06 13:08:40], mode=BUILD, duration=0:00:00.749, duration_ms=749, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 13:08:45], mode=BUILD, duration=0:00:05.130, duration_ms=5130, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 13:22:15], mode=PLATFORM_GENERATION, duration=0:00:02.146, duration_ms=2146, data={name=pr_led}
-timestamp=[2021-03-06 13:22:15], mode=BUILD, duration=0:00:00.428, duration_ms=428, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 13:22:20], mode=BUILD, duration=0:00:04.947, duration_ms=4947, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 15:22:50], mode=BUILD, duration=0:00:00.371, duration_ms=371, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 15:22:55], mode=BUILD, duration=0:00:04.812, duration_ms=4812, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 15:23:07], mode=BUILD, duration=0:00:00.388, duration_ms=388, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 15:23:12], mode=BUILD, duration=0:00:04.832, duration_ms=4832, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 15:23:17], mode=BUILD, duration=0:00:00.382, duration_ms=382, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 15:23:22], mode=BUILD, duration=0:00:04.760, duration_ms=4760, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 15:23:46], mode=BUILD, duration=0:00:00.363, duration_ms=363, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 15:23:51], mode=BUILD, duration=0:00:04.834, duration_ms=4834, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 15:24:21], mode=BUILD, duration=0:00:00.694, duration_ms=694, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 15:24:26], mode=BUILD, duration=0:00:04.812, duration_ms=4812, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 15:32:58], mode=BUILD, duration=0:00:00.376, duration_ms=376, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 15:33:03], mode=BUILD, duration=0:00:04.831, duration_ms=4831, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 15:35:37], mode=BUILD, duration=0:00:00.360, duration_ms=360, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 15:35:42], mode=BUILD, duration=0:00:04.811, duration_ms=4811, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 15:41:53], mode=BUILD, duration=0:00:00.369, duration_ms=369, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 15:41:58], mode=BUILD, duration=0:00:04.801, duration_ms=4801, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 15:42:17], mode=BUILD, duration=0:00:00.374, duration_ms=374, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 15:42:22], mode=BUILD, duration=0:00:04.829, duration_ms=4829, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 15:42:38], mode=BUILD, duration=0:00:00.634, duration_ms=634, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 15:42:43], mode=BUILD, duration=0:00:04.802, duration_ms=4802, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 16:45:07], mode=WORKBENCH_START, duration=0:00:08.410, duration_ms=8410, data={}
-timestamp=[2021-03-06 16:45:08], mode=WORKBENCH_UI_INIT, duration=0:00:00.714, duration_ms=714, data={editors_count=6, platform_editors_count=4, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,pr_led,pr_led_sw,pr_led_sw_system}
-timestamp=[2021-03-06 16:45:09], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.047, duration_ms=47, data={}
-timestamp=[2021-03-06 16:52:12], mode=PLATFORM_GENERATION, duration=0:00:22.233, duration_ms=22233, data={name=pr_led}
-timestamp=[2021-03-06 16:52:13], mode=BUILD, duration=0:00:00.768, duration_ms=768, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 16:52:18], mode=BUILD, duration=0:00:05.015, duration_ms=5015, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 16:52:47], mode=BUILD, duration=0:00:00.632, duration_ms=632, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 16:52:52], mode=BUILD, duration=0:00:04.827, duration_ms=4827, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 16:54:42], mode=BUILD, duration=0:00:00.638, duration_ms=638, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 16:54:47], mode=BUILD, duration=0:00:04.934, duration_ms=4934, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 16:56:06], mode=BUILD, duration=0:00:00.625, duration_ms=625, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 16:56:11], mode=BUILD, duration=0:00:04.881, duration_ms=4881, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 16:56:48], mode=BUILD, duration=0:00:00.614, duration_ms=614, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 16:56:53], mode=BUILD, duration=0:00:04.877, duration_ms=4877, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 16:57:39], mode=PLATFORM_GENERATION, duration=0:00:02.019, duration_ms=2019, data={name=pr_led}
-timestamp=[2021-03-06 16:57:40], mode=BUILD, duration=0:00:00.684, duration_ms=684, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 16:57:45], mode=BUILD, duration=0:00:04.879, duration_ms=4879, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 17:02:22], mode=APP_CREATION, duration=0:00:07.018, duration_ms=7018, data={name=hallow, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=pr_led, application_type=application}
-timestamp=[2021-03-06 17:21:24], mode=BUILD, duration=0:00:00.626, duration_ms=626, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 17:21:29], mode=BUILD, duration=0:00:04.997, duration_ms=4997, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 17:22:47], mode=BUILD, duration=0:00:00.627, duration_ms=627, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 17:22:53], mode=BUILD, duration=0:00:04.998, duration_ms=4998, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 17:24:10], mode=BUILD, duration=0:00:00.627, duration_ms=627, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 17:24:15], mode=BUILD, duration=0:00:05.063, duration_ms=5063, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 17:25:27], mode=BUILD, duration=0:00:00.625, duration_ms=625, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 17:25:32], mode=BUILD, duration=0:00:04.902, duration_ms=4902, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 17:26:31], mode=BUILD, duration=0:00:00.633, duration_ms=633, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 17:26:36], mode=BUILD, duration=0:00:05.003, duration_ms=5003, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 17:30:10], mode=BUILD, duration=0:00:00.627, duration_ms=627, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 17:30:15], mode=BUILD, duration=0:00:04.995, duration_ms=4995, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 17:34:54], mode=BUILD, duration=0:00:00.625, duration_ms=625, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 17:34:59], mode=BUILD, duration=0:00:04.936, duration_ms=4936, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 17:45:34], mode=BUILD, duration=0:00:00.380, duration_ms=380, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 17:45:39], mode=BUILD, duration=0:00:05.012, duration_ms=5012, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 17:46:15], mode=BUILD, duration=0:00:00.618, duration_ms=618, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 17:46:20], mode=BUILD, duration=0:00:04.953, duration_ms=4953, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 17:47:40], mode=BUILD, duration=0:00:00.630, duration_ms=630, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 17:47:46], mode=BUILD, duration=0:00:05.096, duration_ms=5096, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 17:55:02], mode=BUILD, duration=0:00:00.689, duration_ms=689, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 17:55:08], mode=BUILD, duration=0:00:05.091, duration_ms=5091, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 17:56:10], mode=BUILD, duration=0:00:00.624, duration_ms=624, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 17:56:15], mode=BUILD, duration=0:00:05.057, duration_ms=5057, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 17:57:03], mode=BUILD, duration=0:00:00.619, duration_ms=619, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 17:57:08], mode=BUILD, duration=0:00:05.047, duration_ms=5047, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 17:59:22], mode=BUILD, duration=0:00:00.697, duration_ms=697, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 17:59:27], mode=BUILD, duration=0:00:05.106, duration_ms=5106, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 19:24:32], mode=BUILD, duration=0:00:00.660, duration_ms=660, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 19:24:38], mode=BUILD, duration=0:00:05.199, duration_ms=5199, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 19:25:08], mode=BUILD, duration=0:00:00.369, duration_ms=369, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 19:25:13], mode=BUILD, duration=0:00:04.997, duration_ms=4997, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 19:26:47], mode=BUILD, duration=0:00:00.369, duration_ms=369, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 19:26:53], mode=BUILD, duration=0:00:04.930, duration_ms=4930, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 19:27:43], mode=WORKBENCH_START, duration=0:00:08.465, duration_ms=8465, data={}
-timestamp=[2021-03-06 19:27:43], mode=WORKBENCH_UI_INIT, duration=0:00:00.727, duration_ms=727, data={editors_count=9, platform_editors_count=6, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,pr_led,pr_led_sw,pr_led_sw_system}
-timestamp=[2021-03-06 19:27:44], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.035, duration_ms=35, data={}
-timestamp=[2021-03-06 19:27:59], mode=BUILD, duration=0:00:00.402, duration_ms=402, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 19:28:06], mode=BUILD, duration=0:00:06.832, duration_ms=6832, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 19:29:00], mode=BUILD, duration=0:00:00.763, duration_ms=763, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 19:29:03], mode=BUILD, duration=0:00:02.395, duration_ms=2395, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 19:30:04], mode=BUILD, duration=0:00:00.630, duration_ms=630, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 19:30:09], mode=BUILD, duration=0:00:05.008, duration_ms=5008, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 19:40:30], mode=PLATFORM_GENERATION, duration=0:00:02.048, duration_ms=2048, data={name=pr_led}
-timestamp=[2021-03-06 19:40:48], mode=BUILD, duration=0:00:00.244, duration_ms=244, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-06 19:40:58], mode=BUILD, duration=0:00:04.939, duration_ms=4939, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-07 10:18:49], mode=WORKBENCH_START, duration=0:00:08.237, duration_ms=8237, data={}
-timestamp=[2021-03-07 10:18:50], mode=WORKBENCH_UI_INIT, duration=0:00:00.607, duration_ms=607, data={editors_count=10, platform_editors_count=7, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,pr_led,pr_led_sw,pr_led_sw_system}
-timestamp=[2021-03-07 10:18:50], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.061, duration_ms=61, data={}
-timestamp=[2021-03-07 12:56:23], mode=PLATFORM_GENERATION, duration=0:00:02.503, duration_ms=2503, data={name=pr_led}
-timestamp=[2021-03-07 12:56:36], mode=BUILD, duration=0:00:01.319, duration_ms=1319, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-07 12:56:46], mode=BUILD, duration=0:00:05.025, duration_ms=5025, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-07 12:58:36], mode=PLATFORM_GENERATION, duration=0:00:04.009, duration_ms=4009, data={name=pr_led}
-timestamp=[2021-03-08 10:57:10], mode=WORKBENCH_START, duration=0:00:08.318, duration_ms=8318, data={}
-timestamp=[2021-03-08 10:57:11], mode=WORKBENCH_UI_INIT, duration=0:00:00.713, duration_ms=713, data={editors_count=13, platform_editors_count=10, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,pr_led,pr_led_sw,pr_led_sw_system}
-timestamp=[2021-03-08 10:57:11], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.062, duration_ms=62, data={}
-timestamp=[2021-03-08 11:02:51], mode=PLATFORM_GENERATION, duration=0:00:20.339, duration_ms=20339, data={name=pr_led}
-timestamp=[2021-03-08 11:14:14], mode=PLATFORM_GENERATION, duration=0:00:24.530, duration_ms=24530, data={name=pr_led}
-timestamp=[2021-03-08 11:38:58], mode=BUILD, duration=0:00:00.817, duration_ms=817, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-08 11:39:06], mode=BUILD, duration=0:00:02.460, duration_ms=2460, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-08 11:41:21], mode=BUILD, duration=0:00:00.486, duration_ms=486, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-08 11:41:24], mode=BUILD, duration=0:00:02.372, duration_ms=2372, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-08 11:41:44], mode=BUILD, duration=0:00:00.505, duration_ms=505, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-08 11:41:47], mode=BUILD, duration=0:00:02.356, duration_ms=2356, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-08 11:41:59], mode=BUILD, duration=0:00:00.501, duration_ms=501, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-08 11:42:02], mode=BUILD, duration=0:00:02.366, duration_ms=2366, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-08 11:42:13], mode=BUILD, duration=0:00:00.615, duration_ms=615, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-08 11:42:19], mode=BUILD, duration=0:00:04.910, duration_ms=4910, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-08 11:45:15], mode=BUILD, duration=0:00:00.237, duration_ms=237, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-08 11:45:20], mode=BUILD, duration=0:00:04.995, duration_ms=4995, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-08 11:46:12], mode=BUILD, duration=0:00:00.618, duration_ms=618, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-08 11:46:17], mode=BUILD, duration=0:00:04.836, duration_ms=4836, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-08 11:47:12], mode=BUILD, duration=0:00:00.628, duration_ms=628, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-08 11:47:17], mode=BUILD, duration=0:00:04.823, duration_ms=4823, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-08 11:48:11], mode=BUILD, duration=0:00:00.629, duration_ms=629, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-08 11:48:16], mode=BUILD, duration=0:00:04.829, duration_ms=4829, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-08 11:50:32], mode=BUILD, duration=0:00:00.616, duration_ms=616, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-08 11:50:37], mode=BUILD, duration=0:00:04.878, duration_ms=4878, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-08 12:13:06], mode=BUILD, duration=0:00:00.682, duration_ms=682, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-08 12:13:11], mode=BUILD, duration=0:00:04.930, duration_ms=4930, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-08 12:22:00], mode=BUILD, duration=0:00:00.682, duration_ms=682, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-08 12:22:05], mode=BUILD, duration=0:00:04.986, duration_ms=4986, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-08 12:27:13], mode=BUILD, duration=0:00:00.380, duration_ms=380, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-08 12:27:18], mode=BUILD, duration=0:00:04.946, duration_ms=4946, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-08 12:27:41], mode=BUILD, duration=0:00:00.611, duration_ms=611, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-08 12:27:46], mode=BUILD, duration=0:00:04.864, duration_ms=4864, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-08 12:30:04], mode=MISC, duration=0:00:04.075, duration_ms=4075, data={name=pr_led_sw_system, type=bif_creation}
-timestamp=[2021-03-08 12:50:56], mode=WORKBENCH_START, duration=0:00:07.645, duration_ms=7645, data={}
-timestamp=[2021-03-08 12:50:56], mode=WORKBENCH_UI_INIT, duration=0:00:00.669, duration_ms=669, data={editors_count=5, platform_editors_count=2, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,pr_led,pr_led_sw,pr_led_sw_system}
-timestamp=[2021-03-08 12:50:57], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.034, duration_ms=34, data={}
-timestamp=[2021-03-08 13:27:22], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.028, duration_ms=28, data={}
-timestamp=[2021-03-08 13:27:23], mode=WORKBENCH_START, duration=0:00:08.709, duration_ms=8709, data={}
-timestamp=[2021-03-08 13:27:24], mode=WORKBENCH_UI_INIT, duration=0:00:00.906, duration_ms=906, data={editors_count=6, platform_editors_count=2, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,pr_led,pr_led_sw,pr_led_sw_system}
-timestamp=[2021-03-08 13:36:06], mode=PLATFORM_GENERATION, duration=0:00:18.170, duration_ms=18170, data={name=pr_led}
-timestamp=[2021-03-08 14:08:52], mode=BUILD, duration=0:00:00.886, duration_ms=886, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-08 14:09:02], mode=BUILD, duration=0:00:04.891, duration_ms=4891, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-08 14:11:09], mode=BUILD, duration=0:00:00.393, duration_ms=393, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-08 14:11:14], mode=BUILD, duration=0:00:04.840, duration_ms=4840, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-08 14:11:31], mode=BUILD, duration=0:00:00.380, duration_ms=380, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-08 14:11:36], mode=BUILD, duration=0:00:04.797, duration_ms=4797, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-08 14:11:45], mode=BUILD, duration=0:00:00.625, duration_ms=625, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-08 14:11:50], mode=BUILD, duration=0:00:04.789, duration_ms=4789, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-08 15:30:11], mode=WORKBENCH_START, duration=0:00:09.795, duration_ms=9795, data={}
-timestamp=[2021-03-08 15:30:12], mode=WORKBENCH_UI_INIT, duration=0:00:00.762, duration_ms=762, data={editors_count=7, platform_editors_count=3, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,pr_led,pr_led_sw,pr_led_sw_system}
-timestamp=[2021-03-08 15:30:13], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.068, duration_ms=68, data={}
-timestamp=[2021-03-08 15:31:29], mode=PLATFORM_GENERATION, duration=0:00:18.853, duration_ms=18853, data={name=pr_led}
-timestamp=[2021-03-08 15:44:32], mode=BUILD, duration=0:00:00.750, duration_ms=750, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-08 15:44:38], mode=BUILD, duration=0:00:05.066, duration_ms=5066, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-08 15:46:18], mode=BUILD, duration=0:00:00.628, duration_ms=628, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-08 15:46:23], mode=BUILD, duration=0:00:04.695, duration_ms=4695, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-08 15:50:43], mode=BUILD, duration=0:00:00.632, duration_ms=632, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-08 15:50:48], mode=BUILD, duration=0:00:04.814, duration_ms=4814, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-08 15:51:32], mode=BUILD, duration=0:00:00.626, duration_ms=626, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-08 15:51:37], mode=BUILD, duration=0:00:04.739, duration_ms=4739, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-08 20:28:18], mode=WORKBENCH_START, duration=0:00:08.564, duration_ms=8564, data={}
-timestamp=[2021-03-08 20:28:19], mode=WORKBENCH_UI_INIT, duration=0:00:00.729, duration_ms=729, data={editors_count=7, platform_editors_count=3, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,pr_led,pr_led_sw,pr_led_sw_system}
-timestamp=[2021-03-08 20:28:19], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.040, duration_ms=40, data={}
-timestamp=[2021-03-08 20:57:11], mode=WORKBENCH_START, duration=0:00:07.889, duration_ms=7889, data={}
-timestamp=[2021-03-08 20:57:12], mode=WORKBENCH_UI_INIT, duration=0:00:00.675, duration_ms=675, data={editors_count=7, platform_editors_count=3, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,pr_led,pr_led_sw,pr_led_sw_system}
-timestamp=[2021-03-08 20:57:12], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.029, duration_ms=29, data={}
-timestamp=[2021-03-08 20:58:19], mode=PLATFORM_CREATION, duration=0:00:17.851, duration_ms=17851, data={platform_source=dsa, os=standalone, processor=ps7_cortexa9, platform=null}
-timestamp=[2021-03-08 20:59:02], mode=PLATFORM_GENERATION, duration=0:00:32.770, duration_ms=32770, data={name=PRwithZycap}
-timestamp=[2021-03-08 20:59:54], mode=APP_CREATION, duration=0:00:06.351, duration_ms=6351, data={name=zycapTest, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=PRwithZycap, application_type=application}
-timestamp=[2021-03-08 21:01:58], mode=BUILD, duration=0:00:00.953, duration_ms=953, data={name=zycapTest, configuration=Debug, clean_build=false}
-timestamp=[2021-03-08 21:02:01], mode=BUILD, duration=0:00:02.412, duration_ms=2412, data={name=zycapTest_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-08 21:06:56], mode=BUILD, duration=0:00:00.689, duration_ms=689, data={name=zycapTest, configuration=Debug, clean_build=false}
-timestamp=[2021-03-08 21:06:58], mode=BUILD, duration=0:00:02.275, duration_ms=2275, data={name=zycapTest_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-08 21:09:11], mode=BUILD, duration=0:00:00.692, duration_ms=692, data={name=zycapTest, configuration=Debug, clean_build=false}
-timestamp=[2021-03-08 21:09:14], mode=BUILD, duration=0:00:02.222, duration_ms=2222, data={name=zycapTest_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-08 21:10:06], mode=BUILD, duration=0:00:00.751, duration_ms=751, data={name=zycapTest, configuration=Debug, clean_build=false}
-timestamp=[2021-03-08 21:10:09], mode=BUILD, duration=0:00:02.216, duration_ms=2216, data={name=zycapTest_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-08 21:11:09], mode=PLATFORM_GENERATION, duration=0:00:02.732, duration_ms=2732, data={name=PRwithZycap}
-timestamp=[2021-03-08 21:11:09], mode=BUILD, duration=0:00:00.170, duration_ms=170, data={name=zycapTest, configuration=Debug, clean_build=true}
-timestamp=[2021-03-08 21:11:09], mode=BUILD, duration=0:00:00.108, duration_ms=108, data={name=zycapTest_system, configuration=Debug, clean_build=true}
-timestamp=[2021-03-08 21:11:47], mode=PLATFORM_GENERATION, duration=0:00:31.142, duration_ms=31142, data={name=PRwithZycap}
-timestamp=[2021-03-08 21:11:48], mode=BUILD, duration=0:00:00.944, duration_ms=944, data={name=zycapTest, configuration=Debug, clean_build=false}
-timestamp=[2021-03-08 21:11:50], mode=BUILD, duration=0:00:02.341, duration_ms=2341, data={name=zycapTest_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-08 21:24:19], mode=BUILD, duration=0:00:00.124, duration_ms=124, data={name=zycapTest, configuration=Debug, clean_build=true}
-timestamp=[2021-03-08 21:24:19], mode=BUILD, duration=0:00:00.626, duration_ms=626, data={name=zycapTest, configuration=Debug, clean_build=false}
-timestamp=[2021-03-08 21:24:22], mode=BUILD, duration=0:00:02.275, duration_ms=2275, data={name=zycapTest_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-08 21:24:36], mode=BUILD, duration=0:00:00.488, duration_ms=488, data={name=zycapTest, configuration=Debug, clean_build=false}
-timestamp=[2021-03-08 21:24:39], mode=BUILD, duration=0:00:02.277, duration_ms=2277, data={name=zycapTest_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-08 21:25:35], mode=APP_CREATION, duration=0:00:06.022, duration_ms=6022, data={name=zycapTest1, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=PRwithZycap, application_type=application}
-timestamp=[2021-03-08 21:26:05], mode=BUILD, duration=0:00:00.694, duration_ms=694, data={name=zycapTest1, configuration=Debug, clean_build=false}
-timestamp=[2021-03-08 21:26:10], mode=BUILD, duration=0:00:04.747, duration_ms=4747, data={name=zycapTest1_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-08 21:27:49], mode=MISC, duration=0:00:03.389, duration_ms=3389, data={name=zycapTest1_system, type=bif_creation}
-timestamp=[2021-03-08 21:29:00], mode=BUILD, duration=0:00:00.247, duration_ms=247, data={name=zycapTest1, configuration=Debug, clean_build=false}
-timestamp=[2021-03-08 21:29:05], mode=BUILD, duration=0:00:04.575, duration_ms=4575, data={name=zycapTest1_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-08 21:53:32], mode=APP_CREATION, duration=0:00:24.206, duration_ms=24206, data={name=zycapTest, project_type=sdk, os=standalone, processor=ps7_cortexa9, runtime=cpp, platform=system_wrapper, application_type=application}
-timestamp=[2021-03-08 21:55:12], mode=PLATFORM_GENERATION, duration=0:00:32.646, duration_ms=32646, data={name=system_wrapper}
-timestamp=[2021-03-08 21:55:23], mode=BUILD, duration=0:00:00.686, duration_ms=686, data={name=zycapTest, configuration=Debug, clean_build=false}
-timestamp=[2021-03-08 21:55:28], mode=BUILD, duration=0:00:04.607, duration_ms=4607, data={name=zycapTest_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-08 21:58:25], mode=BUILD, duration=0:00:00.241, duration_ms=241, data={name=zycapTest, configuration=Debug, clean_build=false}
-timestamp=[2021-03-08 21:58:30], mode=BUILD, duration=0:00:04.630, duration_ms=4630, data={name=zycapTest_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-08 22:02:36], mode=PLATFORM_GENERATION, duration=0:00:18.258, duration_ms=18258, data={name=system_wrapper}
-timestamp=[2021-03-09 10:41:24], mode=WORKBENCH_START, duration=0:00:08.419, duration_ms=8419, data={}
-timestamp=[2021-03-09 10:41:25], mode=WORKBENCH_UI_INIT, duration=0:00:00.918, duration_ms=918, data={editors_count=4, platform_editors_count=1, projects_count=7, platform_projects_count=2, active_platform_editor=false, projects=RemoteSystemsTempFiles,pr_led,pr_led_sw,pr_led_sw_system,system_wrapper,zycapTest,zycapTest_system}
-timestamp=[2021-03-09 10:41:26], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.118, duration_ms=118, data={}
-timestamp=[2021-03-09 10:43:16], mode=PLATFORM_CREATION, duration=0:00:19.362, duration_ms=19362, data={platform_source=dsa, os=standalone, processor=ps7_cortexa9, platform=null}
-timestamp=[2021-03-09 10:44:23], mode=PLATFORM_GENERATION, duration=0:00:32.634, duration_ms=32634, data={name=PRwithZycap}
-timestamp=[2021-03-09 10:44:55], mode=APP_CREATION, duration=0:00:05.413, duration_ms=5413, data={name=zycapTest, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=PRwithZycap, application_type=application}
-timestamp=[2021-03-09 10:45:59], mode=BUILD, duration=0:00:00.752, duration_ms=752, data={name=zycapTest, configuration=Debug, clean_build=false}
-timestamp=[2021-03-09 10:46:04], mode=BUILD, duration=0:00:04.886, duration_ms=4886, data={name=zycapTest_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-09 11:36:29], mode=PLATFORM_GENERATION, duration=0:00:24.046, duration_ms=24046, data={name=pr_led}
-timestamp=[2021-03-09 11:36:30], mode=BUILD, duration=0:00:00.883, duration_ms=883, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-09 11:44:51], mode=BUILD, duration=0:00:00.690, duration_ms=690, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-09 11:44:56], mode=BUILD, duration=0:00:04.930, duration_ms=4930, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-09 11:45:40], mode=BUILD, duration=0:00:00.247, duration_ms=247, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-09 11:45:45], mode=BUILD, duration=0:00:04.802, duration_ms=4802, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-09 11:45:48], mode=BUILD, duration=0:00:00.235, duration_ms=235, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-09 11:46:55], mode=BUILD, duration=0:00:00.631, duration_ms=631, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-09 11:47:00], mode=BUILD, duration=0:00:04.814, duration_ms=4814, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-09 12:01:34], mode=WORKBENCH_START, duration=0:00:08.808, duration_ms=8808, data={}
-timestamp=[2021-03-09 12:01:35], mode=WORKBENCH_UI_INIT, duration=0:00:00.729, duration_ms=729, data={editors_count=6, platform_editors_count=2, projects_count=7, platform_projects_count=2, active_platform_editor=false, projects=PRwithZycap,RemoteSystemsTempFiles,pr_led,pr_led_sw,pr_led_sw_system,zycapTest,zycapTest_system}
-timestamp=[2021-03-09 12:01:35], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.123, duration_ms=123, data={}
-timestamp=[2021-03-09 17:30:03], mode=WORKBENCH_START, duration=0:00:08.309, duration_ms=8309, data={}
-timestamp=[2021-03-09 17:30:03], mode=WORKBENCH_UI_INIT, duration=0:00:00.673, duration_ms=673, data={editors_count=6, platform_editors_count=2, projects_count=7, platform_projects_count=2, active_platform_editor=false, projects=PRwithZycap,RemoteSystemsTempFiles,pr_led,pr_led_sw,pr_led_sw_system,zycapTest,zycapTest_system}
-timestamp=[2021-03-09 17:30:04], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.046, duration_ms=46, data={}
-timestamp=[2021-03-09 17:33:04], mode=PLATFORM_GENERATION, duration=0:00:25.124, duration_ms=25124, data={name=pr_led}
-timestamp=[2021-03-09 17:33:10], mode=BUILD, duration=0:00:01.002, duration_ms=1002, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-09 17:33:15], mode=BUILD, duration=0:00:05.032, duration_ms=5032, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-09 17:36:07], mode=BUILD, duration=0:00:00.238, duration_ms=238, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-09 17:36:12], mode=BUILD, duration=0:00:04.892, duration_ms=4892, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-09 19:36:26], mode=WORKBENCH_START, duration=0:00:08.538, duration_ms=8538, data={}
-timestamp=[2021-03-09 19:36:27], mode=WORKBENCH_UI_INIT, duration=0:00:00.696, duration_ms=696, data={editors_count=6, platform_editors_count=2, projects_count=7, platform_projects_count=2, active_platform_editor=false, projects=PRwithZycap,RemoteSystemsTempFiles,pr_led,pr_led_sw,pr_led_sw_system,zycapTest,zycapTest_system}
-timestamp=[2021-03-09 19:36:27], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.069, duration_ms=69, data={}
-timestamp=[2021-03-09 23:22:37], mode=WORKBENCH_START, duration=0:00:08.912, duration_ms=8912, data={}
-timestamp=[2021-03-09 23:22:37], mode=WORKBENCH_UI_INIT, duration=0:00:00.682, duration_ms=682, data={editors_count=7, platform_editors_count=3, projects_count=7, platform_projects_count=2, active_platform_editor=false, projects=PRwithZycap,RemoteSystemsTempFiles,pr_led,pr_led_sw,pr_led_sw_system,zycapTest,zycapTest_system}
-timestamp=[2021-03-09 23:22:38], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.083, duration_ms=83, data={}
-timestamp=[2021-03-09 23:24:30], mode=PLATFORM_CREATION, duration=0:00:18.752, duration_ms=18752, data={platform_source=dsa, os=standalone, processor=ps7_cortexa9, platform=null}
-timestamp=[2021-03-09 23:25:08], mode=PLATFORM_GENERATION, duration=0:00:30.990, duration_ms=30990, data={name=data_process_hw}
-timestamp=[2021-03-09 23:25:42], mode=APP_CREATION, duration=0:00:06.078, duration_ms=6078, data={name=data_process_sw, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=data_process_hw, application_type=application}
-timestamp=[2021-03-09 23:28:04], mode=PLATFORM_GENERATION, duration=0:00:15.748, duration_ms=15748, data={name=data_process_hw}
-timestamp=[2021-03-09 23:29:55], mode=PLATFORM_GENERATION, duration=0:00:02.626, duration_ms=2626, data={name=data_process_hw}
-timestamp=[2021-03-09 23:30:53], mode=PLATFORM_GENERATION, duration=0:00:29.853, duration_ms=29853, data={name=data_process_hw}
-timestamp=[2021-03-09 23:30:54], mode=BUILD, duration=0:00:00.888, duration_ms=888, data={name=data_process_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-09 23:30:59], mode=BUILD, duration=0:00:05.117, duration_ms=5117, data={name=data_process_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-09 23:34:02], mode=BUILD, duration=0:00:00.366, duration_ms=366, data={name=data_process_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-09 23:34:07], mode=BUILD, duration=0:00:04.919, duration_ms=4919, data={name=data_process_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-09 23:40:23], mode=PLATFORM_GENERATION, duration=0:00:02.258, duration_ms=2258, data={name=data_process_hw}
-timestamp=[2021-03-09 23:40:41], mode=BUILD, duration=0:00:00.435, duration_ms=435, data={name=data_process_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-09 23:40:51], mode=BUILD, duration=0:00:04.823, duration_ms=4823, data={name=data_process_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-10 09:48:43], mode=WORKBENCH_START, duration=0:00:08.515, duration_ms=8515, data={}
-timestamp=[2021-03-10 09:48:44], mode=WORKBENCH_UI_INIT, duration=0:00:00.645, duration_ms=645, data={editors_count=4, platform_editors_count=1, projects_count=10, platform_projects_count=3, active_platform_editor=false, projects=PRwithZycap,RemoteSystemsTempFiles,data_process_hw,data_process_sw,data_process_sw_system,pr_led,pr_led_sw,pr_led_sw_system,zycapTest,zycapTest_system}
-timestamp=[2021-03-10 09:48:45], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.221, duration_ms=221, data={}
-timestamp=[2021-03-10 09:51:37], mode=PLATFORM_GENERATION, duration=0:00:23.982, duration_ms=23982, data={name=pr_led}
-timestamp=[2021-03-10 09:51:46], mode=BUILD, duration=0:00:01.004, duration_ms=1004, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-10 09:51:51], mode=BUILD, duration=0:00:05.017, duration_ms=5017, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-10 10:03:21], mode=PLATFORM_GENERATION, duration=0:00:01.974, duration_ms=1974, data={name=pr_led}
-timestamp=[2021-03-10 10:03:32], mode=BUILD, duration=0:00:00.233, duration_ms=233, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-10 10:03:43], mode=BUILD, duration=0:00:04.821, duration_ms=4821, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-10 10:03:46], mode=PLATFORM_GENERATION, duration=0:00:02.779, duration_ms=2779, data={name=pr_led}
-timestamp=[2021-03-10 10:03:46], mode=BUILD, duration=0:00:00.170, duration_ms=170, data={name=pr_led_sw, configuration=Debug, clean_build=true}
-timestamp=[2021-03-10 10:03:46], mode=BUILD, duration=0:00:00.109, duration_ms=109, data={name=pr_led_sw_system, configuration=Debug, clean_build=true}
-timestamp=[2021-03-10 10:03:55], mode=PLATFORM_GENERATION, duration=0:00:01.589, duration_ms=1589, data={name=pr_led}
-timestamp=[2021-03-10 10:03:55], mode=BUILD, duration=0:00:00.114, duration_ms=114, data={name=pr_led_sw, configuration=Debug, clean_build=true}
-timestamp=[2021-03-10 10:03:55], mode=BUILD, duration=0:00:00.110, duration_ms=110, data={name=pr_led_sw_system, configuration=Debug, clean_build=true}
-timestamp=[2021-03-10 10:04:32], mode=PLATFORM_GENERATION, duration=0:00:31.774, duration_ms=31774, data={name=pr_led}
-timestamp=[2021-03-10 10:04:33], mode=BUILD, duration=0:00:00.757, duration_ms=757, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-10 10:04:38], mode=BUILD, duration=0:00:04.935, duration_ms=4935, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-10 10:20:35], mode=BUILD, duration=0:00:00.247, duration_ms=247, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-10 10:20:40], mode=BUILD, duration=0:00:04.880, duration_ms=4880, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-10 10:21:10], mode=PLATFORM_GENERATION, duration=0:00:02.667, duration_ms=2667, data={name=pr_led}
-timestamp=[2021-03-10 10:21:10], mode=BUILD, duration=0:00:00.112, duration_ms=112, data={name=pr_led_sw, configuration=Debug, clean_build=true}
-timestamp=[2021-03-10 10:21:10], mode=BUILD, duration=0:00:00.108, duration_ms=108, data={name=pr_led_sw_system, configuration=Debug, clean_build=true}
-timestamp=[2021-03-10 10:21:45], mode=PLATFORM_GENERATION, duration=0:00:31.203, duration_ms=31203, data={name=pr_led}
-timestamp=[2021-03-10 10:21:46], mode=BUILD, duration=0:00:00.808, duration_ms=808, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-10 10:21:51], mode=BUILD, duration=0:00:04.867, duration_ms=4867, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-10 10:24:01], mode=PLATFORM_GENERATION, duration=0:00:02.037, duration_ms=2037, data={name=pr_led}
-timestamp=[2021-03-10 10:24:36], mode=BUILD, duration=0:00:00.240, duration_ms=240, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-10 10:24:41], mode=BUILD, duration=0:00:04.828, duration_ms=4828, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-10 10:27:50], mode=PLATFORM_GENERATION, duration=0:00:02.729, duration_ms=2729, data={name=pr_led}
-timestamp=[2021-03-10 10:27:50], mode=BUILD, duration=0:00:00.124, duration_ms=124, data={name=pr_led_sw, configuration=Debug, clean_build=true}
-timestamp=[2021-03-10 10:27:50], mode=BUILD, duration=0:00:00.108, duration_ms=108, data={name=pr_led_sw_system, configuration=Debug, clean_build=true}
-timestamp=[2021-03-10 10:28:55], mode=PLATFORM_GENERATION, duration=0:00:30.939, duration_ms=30939, data={name=pr_led}
-timestamp=[2021-03-10 10:28:56], mode=BUILD, duration=0:00:00.809, duration_ms=809, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-10 10:29:01], mode=BUILD, duration=0:00:04.866, duration_ms=4866, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-10 10:30:11], mode=PLATFORM_GENERATION, duration=0:00:02.683, duration_ms=2683, data={name=pr_led}
-timestamp=[2021-03-10 10:30:11], mode=BUILD, duration=0:00:00.116, duration_ms=116, data={name=pr_led_sw, configuration=Debug, clean_build=true}
-timestamp=[2021-03-10 10:30:12], mode=BUILD, duration=0:00:00.109, duration_ms=109, data={name=pr_led_sw_system, configuration=Debug, clean_build=true}
-timestamp=[2021-03-10 10:30:45], mode=PLATFORM_GENERATION, duration=0:00:30.870, duration_ms=30870, data={name=pr_led}
-timestamp=[2021-03-10 10:30:46], mode=BUILD, duration=0:00:00.811, duration_ms=811, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-10 10:30:51], mode=BUILD, duration=0:00:04.894, duration_ms=4894, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-10 10:52:18], mode=WORKBENCH_START, duration=0:00:08.222, duration_ms=8222, data={}
-timestamp=[2021-03-10 10:52:18], mode=WORKBENCH_UI_INIT, duration=0:00:00.611, duration_ms=611, data={editors_count=1, platform_editors_count=0, projects_count=10, platform_projects_count=3, active_platform_editor=false, projects=PRwithZycap,RemoteSystemsTempFiles,data_process_hw,data_process_sw,data_process_sw_system,pr_led,pr_led_sw,pr_led_sw_system,zycapTest,zycapTest_system}
-timestamp=[2021-03-10 10:52:19], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.071, duration_ms=71, data={}
-timestamp=[2021-03-10 10:59:57], mode=BUILD, duration=0:00:00.717, duration_ms=717, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-10 11:00:05], mode=BUILD, duration=0:00:06.854, duration_ms=6854, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-10 11:03:36], mode=BUILD, duration=0:00:00.687, duration_ms=687, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-10 11:03:41], mode=BUILD, duration=0:00:04.879, duration_ms=4879, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-10 11:04:05], mode=PLATFORM_GENERATION, duration=0:00:08.238, duration_ms=8238, data={name=pr_led}
-timestamp=[2021-03-10 11:04:05], mode=BUILD, duration=0:00:00.127, duration_ms=127, data={name=pr_led_sw, configuration=Debug, clean_build=true}
-timestamp=[2021-03-10 11:04:05], mode=BUILD, duration=0:00:00.123, duration_ms=123, data={name=pr_led_sw_system, configuration=Debug, clean_build=true}
-timestamp=[2021-03-10 11:05:00], mode=PLATFORM_GENERATION, duration=0:00:31.370, duration_ms=31370, data={name=pr_led}
-timestamp=[2021-03-10 11:05:06], mode=BUILD, duration=0:00:00.761, duration_ms=761, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-10 11:05:11], mode=BUILD, duration=0:00:04.811, duration_ms=4811, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-10 15:39:37], mode=BUILD, duration=0:00:00.256, duration_ms=256, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-10 15:39:42], mode=BUILD, duration=0:00:05.052, duration_ms=5052, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-10 16:55:07], mode=BUILD, duration=0:00:00.814, duration_ms=814, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-10 16:55:12], mode=BUILD, duration=0:00:04.952, duration_ms=4952, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-10 16:56:11], mode=BUILD, duration=0:00:00.680, duration_ms=680, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-10 16:56:16], mode=BUILD, duration=0:00:04.998, duration_ms=4998, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-10 17:00:01], mode=PLATFORM_GENERATION, duration=0:00:02.107, duration_ms=2107, data={name=pr_led}
-timestamp=[2021-03-10 17:00:06], mode=BUILD, duration=0:00:00.475, duration_ms=475, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-10 17:00:11], mode=BUILD, duration=0:00:04.953, duration_ms=4953, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-10 17:03:03], mode=BUILD, duration=0:00:00.429, duration_ms=429, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-10 17:03:08], mode=BUILD, duration=0:00:04.811, duration_ms=4811, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-10 17:03:39], mode=BUILD, duration=0:00:00.375, duration_ms=375, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-10 17:03:44], mode=BUILD, duration=0:00:04.941, duration_ms=4941, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
-timestamp=[2021-03-10 17:04:07], mode=BUILD, duration=0:00:00.631, duration_ms=631, data={name=pr_led_sw, configuration=Debug, clean_build=false}
-timestamp=[2021-03-10 17:04:12], mode=BUILD, duration=0:00:04.896, duration_ms=4896, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
+timestamp=[2021-03-11 10:25:31], mode=WORKBENCH_START, duration=0:00:04.110, duration_ms=4110, data={}
+timestamp=[2021-03-11 10:25:31], mode=WORKBENCH_UI_INIT, duration=0:00:00.388, duration_ms=388, data={editors_count=0, platform_editors_count=0, projects_count=0, platform_projects_count=0, active_platform_editor=false, projects=}
+timestamp=[2021-03-11 10:25:34], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:02.154, duration_ms=2154, data={}
+timestamp=[2021-03-11 10:28:46], mode=WORKBENCH_START, duration=0:00:04.048, duration_ms=4048, data={}
+timestamp=[2021-03-11 10:28:46], mode=WORKBENCH_UI_INIT, duration=0:00:00.447, duration_ms=447, data={editors_count=0, platform_editors_count=0, projects_count=1, platform_projects_count=0, active_platform_editor=false, projects=RemoteSystemsTempFiles}
+timestamp=[2021-03-11 10:28:49], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:02.070, duration_ms=2070, data={}
+timestamp=[2021-03-11 10:31:07], mode=PLATFORM_CREATION, duration=0:00:23.527, duration_ms=23527, data={platform_source=dsa, os=standalone, processor=ps7_cortexa9, platform=null}
+timestamp=[2021-03-11 10:33:10], mode=PLATFORM_GENERATION, duration=0:00:32.082, duration_ms=32082, data={name=pr_led}
+timestamp=[2021-03-11 10:34:06], mode=APP_CREATION, duration=0:00:06.082, duration_ms=6082, data={name=pr_led_sw, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=pr_led, application_type=application}
+timestamp=[2021-03-11 10:35:12], mode=BUILD, duration=0:00:00.761, duration_ms=761, data={name=pr_led_sw, configuration=Debug, clean_build=false}
+timestamp=[2021-03-11 10:35:15], mode=BUILD, duration=0:00:02.526, duration_ms=2526, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
+timestamp=[2021-03-11 10:36:06], mode=PLATFORM_GENERATION, duration=0:00:16.830, duration_ms=16830, data={name=pr_led}
+timestamp=[2021-03-11 10:36:58], mode=PLATFORM_GENERATION, duration=0:00:32.042, duration_ms=32042, data={name=pr_led}
+timestamp=[2021-03-11 10:37:01], mode=PLATFORM_GENERATION, duration=0:00:02.688, duration_ms=2688, data={name=pr_led}
+timestamp=[2021-03-11 10:37:01], mode=BUILD, duration=0:00:00.195, duration_ms=195, data={name=pr_led_sw, configuration=Debug, clean_build=true}
+timestamp=[2021-03-11 10:37:01], mode=BUILD, duration=0:00:00.120, duration_ms=120, data={name=pr_led_sw_system, configuration=Debug, clean_build=true}
+timestamp=[2021-03-11 10:37:03], mode=PLATFORM_GENERATION, duration=0:00:01.562, duration_ms=1562, data={name=pr_led}
+timestamp=[2021-03-11 10:37:03], mode=BUILD, duration=0:00:00.115, duration_ms=115, data={name=pr_led_sw, configuration=Debug, clean_build=true}
+timestamp=[2021-03-11 10:37:03], mode=BUILD, duration=0:00:00.109, duration_ms=109, data={name=pr_led_sw_system, configuration=Debug, clean_build=true}
+timestamp=[2021-03-11 10:37:49], mode=PLATFORM_GENERATION, duration=0:00:31.040, duration_ms=31040, data={name=pr_led}
+timestamp=[2021-03-11 10:37:49], mode=BUILD, duration=0:00:00.689, duration_ms=689, data={name=pr_led_sw, configuration=Debug, clean_build=false}
+timestamp=[2021-03-11 10:37:52], mode=BUILD, duration=0:00:02.462, duration_ms=2462, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
+timestamp=[2021-03-11 10:38:40], mode=APP_CREATION, duration=0:00:06.475, duration_ms=6475, data={name=pr_led_sw, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=pr_led, application_type=application}
+timestamp=[2021-03-11 10:38:45], mode=BUILD, duration=0:00:00.759, duration_ms=759, data={name=pr_led_sw, configuration=Debug, clean_build=false}
+timestamp=[2021-03-11 10:38:51], mode=BUILD, duration=0:00:04.989, duration_ms=4989, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
+timestamp=[2021-03-11 10:39:44], mode=PLATFORM_GENERATION, duration=0:00:02.709, duration_ms=2709, data={name=pr_led}
+timestamp=[2021-03-11 10:39:44], mode=BUILD, duration=0:00:00.121, duration_ms=121, data={name=pr_led_sw, configuration=Debug, clean_build=true}
+timestamp=[2021-03-11 10:39:44], mode=BUILD, duration=0:00:00.121, duration_ms=121, data={name=pr_led_sw_system, configuration=Debug, clean_build=true}
+timestamp=[2021-03-11 10:40:18], mode=PLATFORM_GENERATION, duration=0:00:30.875, duration_ms=30875, data={name=pr_led}
+timestamp=[2021-03-11 10:40:19], mode=BUILD, duration=0:00:00.680, duration_ms=680, data={name=pr_led_sw, configuration=Debug, clean_build=false}
+timestamp=[2021-03-11 10:40:21], mode=BUILD, duration=0:00:02.447, duration_ms=2447, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
+timestamp=[2021-03-11 10:42:14], mode=PLATFORM_GENERATION, duration=0:00:18.081, duration_ms=18081, data={name=pr_led}
+timestamp=[2021-03-11 10:42:22], mode=PLATFORM_GENERATION, duration=0:00:02.721, duration_ms=2721, data={name=pr_led}
+timestamp=[2021-03-11 10:42:22], mode=BUILD, duration=0:00:00.143, duration_ms=143, data={name=pr_led_sw, configuration=Debug, clean_build=true}
+timestamp=[2021-03-11 10:42:22], mode=BUILD, duration=0:00:00.118, duration_ms=118, data={name=pr_led_sw_system, configuration=Debug, clean_build=true}
+timestamp=[2021-03-11 10:43:01], mode=PLATFORM_GENERATION, duration=0:00:30.942, duration_ms=30942, data={name=pr_led}
+timestamp=[2021-03-11 10:43:02], mode=BUILD, duration=0:00:00.683, duration_ms=683, data={name=pr_led_sw, configuration=Debug, clean_build=false}
+timestamp=[2021-03-11 10:43:05], mode=BUILD, duration=0:00:02.441, duration_ms=2441, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
+timestamp=[2021-03-11 10:46:34], mode=APP_CREATION, duration=0:00:06.202, duration_ms=6202, data={name=pr_led_sw, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=pr_led, application_type=application}
+timestamp=[2021-03-11 10:46:53], mode=BUILD, duration=0:00:00.808, duration_ms=808, data={name=pr_led_sw, configuration=Debug, clean_build=false}
+timestamp=[2021-03-11 10:46:58], mode=BUILD, duration=0:00:04.890, duration_ms=4890, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
+timestamp=[2021-03-11 10:47:07], mode=BUILD, duration=0:00:00.372, duration_ms=372, data={name=pr_led_sw, configuration=Debug, clean_build=false}
+timestamp=[2021-03-11 10:47:12], mode=BUILD, duration=0:00:04.890, duration_ms=4890, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
+timestamp=[2021-03-11 10:48:09], mode=PLATFORM_GENERATION, duration=0:00:16.796, duration_ms=16796, data={name=pr_led}
+timestamp=[2021-03-11 10:48:13], mode=BUILD, duration=0:00:00.816, duration_ms=816, data={name=pr_led_sw, configuration=Debug, clean_build=false}
+timestamp=[2021-03-11 10:48:18], mode=BUILD, duration=0:00:04.909, duration_ms=4909, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
+timestamp=[2021-03-11 10:48:43], mode=BUILD, duration=0:00:00.693, duration_ms=693, data={name=pr_led_sw, configuration=Debug, clean_build=false}
+timestamp=[2021-03-11 10:48:48], mode=BUILD, duration=0:00:04.827, duration_ms=4827, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}
+timestamp=[2021-03-11 11:07:14], mode=PLATFORM_GENERATION, duration=0:00:06.649, duration_ms=6649, data={name=pr_led}
+timestamp=[2021-03-11 11:07:28], mode=BUILD, duration=0:00:00.251, duration_ms=251, data={name=pr_led_sw, configuration=Debug, clean_build=false}
+timestamp=[2021-03-11 11:07:39], mode=BUILD, duration=0:00:05.087, duration_ms=5087, data={name=pr_led_sw_system, configuration=Debug, clean_build=false}

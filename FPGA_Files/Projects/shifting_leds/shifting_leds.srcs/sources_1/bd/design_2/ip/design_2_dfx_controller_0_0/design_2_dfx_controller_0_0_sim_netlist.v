@@ -1,7 +1,7 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-// Date        : Fri Mar  5 09:21:55 2021
+// Date        : Thu Mar 11 10:52:19 2021
 // Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_2/ip/design_2_dfx_controller_0_0/design_2_dfx_controller_0_0_sim_netlist.v
@@ -541,10 +541,9 @@ module design_2_dfx_controller_0_0_cntr_incr_decr_addn_f
     sig_last_dbeat_reg,
     Q,
     E,
-    sig_rd_sts_reg_full_reg,
+    \INFERRED_GEN.cnt_i_reg[2]_0 ,
     sig_s_ready_out_reg,
     sig_cmd_stat_rst_user_reg_n_cdc_from_reg,
-    sig_cmd_stat_rst_user_reg_n_cdc_from_reg_0,
     m_axi_mem_rlast_0,
     sig_wr_fifo,
     \INFERRED_GEN.cnt_i_reg[0]_0 ,
@@ -556,17 +555,15 @@ module design_2_dfx_controller_0_0_cntr_incr_decr_addn_f
     \sig_dbeat_cntr_reg[0] ,
     sig_cmd_stat_rst_user_reg_n_cdc_from,
     sig_ld_new_cmd_reg,
+    sig_next_calc_error_reg,
     sig_rsc2stat_status_valid,
     sig_stat2rsc_status_ready,
-    sig_next_calc_error_reg,
     sig_addr_posted_cntr,
     sig_dqual_reg_empty_reg_0,
     m_axi_mem_rvalid,
     sig_dqual_reg_empty_reg_1,
     sig_dqual_reg_empty_reg_2,
     sig_dqual_reg_full,
-    sig_last_dbeat_reg_0,
-    sig_last_dbeat_reg_1,
     m_axi_mem_rlast,
     SR,
     clk);
@@ -574,10 +571,9 @@ module design_2_dfx_controller_0_0_cntr_incr_decr_addn_f
   output sig_last_dbeat_reg;
   output [1:0]Q;
   output [0:0]E;
-  output sig_rd_sts_reg_full_reg;
+  output \INFERRED_GEN.cnt_i_reg[2]_0 ;
   output sig_s_ready_out_reg;
   output sig_cmd_stat_rst_user_reg_n_cdc_from_reg;
-  output sig_cmd_stat_rst_user_reg_n_cdc_from_reg_0;
   output m_axi_mem_rlast_0;
   input sig_wr_fifo;
   input \INFERRED_GEN.cnt_i_reg[0]_0 ;
@@ -589,17 +585,15 @@ module design_2_dfx_controller_0_0_cntr_incr_decr_addn_f
   input \sig_dbeat_cntr_reg[0] ;
   input sig_cmd_stat_rst_user_reg_n_cdc_from;
   input sig_ld_new_cmd_reg;
+  input sig_next_calc_error_reg;
   input sig_rsc2stat_status_valid;
   input sig_stat2rsc_status_ready;
-  input sig_next_calc_error_reg;
   input [2:0]sig_addr_posted_cntr;
   input sig_dqual_reg_empty_reg_0;
   input m_axi_mem_rvalid;
   input sig_dqual_reg_empty_reg_1;
   input sig_dqual_reg_empty_reg_2;
   input sig_dqual_reg_full;
-  input sig_last_dbeat_reg_0;
-  input sig_last_dbeat_reg_1;
   input m_axi_mem_rlast;
   input [0:0]SR;
   input clk;
@@ -608,6 +602,7 @@ module design_2_dfx_controller_0_0_cntr_incr_decr_addn_f
   wire \INFERRED_GEN.cnt_i[0]_i_1__0_n_0 ;
   wire \INFERRED_GEN.cnt_i_reg[0]_0 ;
   wire \INFERRED_GEN.cnt_i_reg[0]_1 ;
+  wire \INFERRED_GEN.cnt_i_reg[2]_0 ;
   wire [1:0]Q;
   wire [0:0]SR;
   wire [2:1]addr_i_p1;
@@ -619,7 +614,6 @@ module design_2_dfx_controller_0_0_cntr_incr_decr_addn_f
   wire [2:0]sig_addr_posted_cntr;
   wire sig_cmd_stat_rst_user_reg_n_cdc_from;
   wire sig_cmd_stat_rst_user_reg_n_cdc_from_reg;
-  wire sig_cmd_stat_rst_user_reg_n_cdc_from_reg_0;
   wire \sig_dbeat_cntr_reg[0] ;
   wire sig_dqual_reg_empty;
   wire sig_dqual_reg_empty_reg;
@@ -628,21 +622,18 @@ module design_2_dfx_controller_0_0_cntr_incr_decr_addn_f
   wire sig_dqual_reg_empty_reg_2;
   wire sig_dqual_reg_full;
   wire sig_last_dbeat_reg;
-  wire sig_last_dbeat_reg_0;
-  wire sig_last_dbeat_reg_1;
   wire sig_ld_new_cmd_reg;
   wire sig_mstr2data_cmd_valid;
   wire sig_next_calc_error_reg;
   wire sig_next_cmd_cmplt_reg_i_5_n_0;
   wire sig_next_sequential_reg;
   wire sig_rd_empty;
-  wire sig_rd_sts_reg_full_reg;
   wire sig_rsc2stat_status_valid;
   wire sig_s_ready_out_reg;
   wire sig_stat2rsc_status_ready;
   wire sig_wr_fifo;
 
-  (* SOFT_HLUTNM = "soft_lutpair124" *) 
+  (* SOFT_HLUTNM = "soft_lutpair123" *) 
   LUT5 #(
     .INIT(32'h01C0C010)) 
     FIFO_Full_i_1
@@ -671,7 +662,7 @@ module design_2_dfx_controller_0_0_cntr_incr_decr_addn_f
         .I4(sig_last_dbeat_reg),
         .I5(Q[1]),
         .O(addr_i_p1[1]));
-  (* SOFT_HLUTNM = "soft_lutpair124" *) 
+  (* SOFT_HLUTNM = "soft_lutpair123" *) 
   LUT5 #(
     .INIT(32'h017F0180)) 
     \INFERRED_GEN.cnt_i[2]_i_1 
@@ -702,24 +693,14 @@ module design_2_dfx_controller_0_0_cntr_incr_decr_addn_f
   LUT6 #(
     .INIT(64'h5444FFFF44444444)) 
     \sig_dbeat_cntr[7]_i_1 
-       (.I0(sig_rd_sts_reg_full_reg),
+       (.I0(\INFERRED_GEN.cnt_i_reg[2]_0 ),
         .I1(sig_dqual_reg_empty),
         .I2(sig_next_sequential_reg),
         .I3(sig_dqual_reg_empty_reg),
         .I4(\sig_dbeat_cntr_reg[0] ),
         .I5(sig_s_ready_out_reg),
         .O(E));
-  LUT6 #(
-    .INIT(64'hABFF0000AB000000)) 
-    sig_last_dbeat_i_1
-       (.I0(sig_last_dbeat_reg_0),
-        .I1(sig_last_dbeat_reg),
-        .I2(sig_last_dbeat_reg_1),
-        .I3(E),
-        .I4(sig_cmd_stat_rst_user_reg_n_cdc_from),
-        .I5(sig_dqual_reg_empty_reg),
-        .O(sig_cmd_stat_rst_user_reg_n_cdc_from_reg_0));
-  (* SOFT_HLUTNM = "soft_lutpair125" *) 
+  (* SOFT_HLUTNM = "soft_lutpair124" *) 
   LUT3 #(
     .INIT(8'h08)) 
     sig_ld_new_cmd_reg_i_1
@@ -727,7 +708,7 @@ module design_2_dfx_controller_0_0_cntr_incr_decr_addn_f
         .I1(sig_cmd_stat_rst_user_reg_n_cdc_from),
         .I2(sig_ld_new_cmd_reg),
         .O(sig_cmd_stat_rst_user_reg_n_cdc_from_reg));
-  (* SOFT_HLUTNM = "soft_lutpair125" *) 
+  (* SOFT_HLUTNM = "soft_lutpair124" *) 
   LUT4 #(
     .INIT(16'h40FF)) 
     sig_next_cmd_cmplt_reg_i_1
@@ -743,7 +724,7 @@ module design_2_dfx_controller_0_0_cntr_incr_decr_addn_f
         .I1(sig_dqual_reg_empty_reg),
         .I2(sig_next_sequential_reg),
         .I3(sig_dqual_reg_empty),
-        .I4(sig_rd_sts_reg_full_reg),
+        .I4(\INFERRED_GEN.cnt_i_reg[2]_0 ),
         .O(sig_last_dbeat_reg));
   LUT6 #(
     .INIT(64'h0000000800000000)) 
@@ -756,14 +737,14 @@ module design_2_dfx_controller_0_0_cntr_incr_decr_addn_f
         .I5(sig_dqual_reg_full),
         .O(sig_s_ready_out_reg));
   LUT5 #(
-    .INIT(32'hFFFFFFAE)) 
+    .INIT(32'hFEFEFFFE)) 
     sig_next_cmd_cmplt_reg_i_4
        (.I0(sig_next_cmd_cmplt_reg_i_5_n_0),
-        .I1(sig_rsc2stat_status_valid),
-        .I2(sig_stat2rsc_status_ready),
-        .I3(sig_rd_empty),
-        .I4(sig_next_calc_error_reg),
-        .O(sig_rd_sts_reg_full_reg));
+        .I1(sig_rd_empty),
+        .I2(sig_next_calc_error_reg),
+        .I3(sig_rsc2stat_status_valid),
+        .I4(sig_stat2rsc_status_ready),
+        .O(\INFERRED_GEN.cnt_i_reg[2]_0 ));
   LUT3 #(
     .INIT(8'h80)) 
     sig_next_cmd_cmplt_reg_i_5
@@ -815,7 +796,7 @@ module design_2_dfx_controller_0_0_cntr_incr_decr_addn_f_28
   wire sig_rd_empty;
   wire sig_wr_fifo;
 
-  (* SOFT_HLUTNM = "soft_lutpair89" *) 
+  (* SOFT_HLUTNM = "soft_lutpair88" *) 
   LUT5 #(
     .INIT(32'h10210200)) 
     FIFO_Full_i_1__0
@@ -845,7 +826,7 @@ module design_2_dfx_controller_0_0_cntr_incr_decr_addn_f_28
         .I4(\INFERRED_GEN.cnt_i_reg[1]_0 ),
         .I5(\INFERRED_GEN.cnt_i_reg[1]_1 ),
         .O(addr_i_p1[1]));
-  (* SOFT_HLUTNM = "soft_lutpair89" *) 
+  (* SOFT_HLUTNM = "soft_lutpair88" *) 
   LUT5 #(
     .INIT(32'h7708FF10)) 
     \INFERRED_GEN.cnt_i[2]_i_1__0 
@@ -873,14 +854,14 @@ module design_2_dfx_controller_0_0_cntr_incr_decr_addn_f_28
         .D(addr_i_p1[2]),
         .Q(sig_rd_empty),
         .S(SR));
-  (* SOFT_HLUTNM = "soft_lutpair90" *) 
+  (* SOFT_HLUTNM = "soft_lutpair89" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \sig_next_addr_reg[31]_i_2 
        (.I0(sig_addr_reg_empty),
         .I1(sig_rd_empty),
         .O(sig_push_addr_reg1_out));
-  (* SOFT_HLUTNM = "soft_lutpair90" *) 
+  (* SOFT_HLUTNM = "soft_lutpair89" *) 
   LUT3 #(
     .INIT(8'h40)) 
     sig_posted_to_axi_2_i_1
@@ -1498,7 +1479,7 @@ endmodule
 module design_2_dfx_controller_0_0_dynshreg_f__parameterized0
    (sig_wr_fifo,
     D,
-    sig_dqual_reg_empty_reg,
+    sig_cmd_stat_rst_user_reg_n_cdc_from_reg,
     out,
     sig_mstr2data_cmd_valid,
     sig_next_calc_error_reg_reg,
@@ -1507,17 +1488,18 @@ module design_2_dfx_controller_0_0_dynshreg_f__parameterized0
     Q,
     sig_last_dbeat_reg,
     sig_last_dbeat_reg_0,
-    sig_dqual_reg_empty,
     sig_last_dbeat_reg_1,
     \sig_dbeat_cntr_reg[6] ,
-    \sig_dbeat_cntr_reg[5] ,
     \sig_dbeat_cntr_reg[4] ,
+    E,
+    sig_cmd_stat_rst_user_reg_n_cdc_from,
+    sig_last_dbeat_reg_2,
     in,
     sig_next_calc_error_reg_reg_1,
     clk);
   output sig_wr_fifo;
   output [7:0]D;
-  output sig_dqual_reg_empty_reg;
+  output sig_cmd_stat_rst_user_reg_n_cdc_from_reg;
   output [3:0]out;
   input sig_mstr2data_cmd_valid;
   input sig_next_calc_error_reg_reg;
@@ -1526,32 +1508,35 @@ module design_2_dfx_controller_0_0_dynshreg_f__parameterized0
   input [7:0]Q;
   input sig_last_dbeat_reg;
   input sig_last_dbeat_reg_0;
-  input sig_dqual_reg_empty;
   input sig_last_dbeat_reg_1;
   input \sig_dbeat_cntr_reg[6] ;
-  input \sig_dbeat_cntr_reg[5] ;
   input \sig_dbeat_cntr_reg[4] ;
+  input [0:0]E;
+  input sig_cmd_stat_rst_user_reg_n_cdc_from;
+  input sig_last_dbeat_reg_2;
   input [11:0]in;
   input [1:0]sig_next_calc_error_reg_reg_1;
   input clk;
 
   wire [7:0]D;
+  wire [0:0]E;
   wire [7:0]Q;
   wire clk;
   wire [11:0]in;
   wire [3:0]out;
   wire [13:6]sig_cmd_fifo_data_out;
+  wire sig_cmd_stat_rst_user_reg_n_cdc_from;
+  wire sig_cmd_stat_rst_user_reg_n_cdc_from_reg;
   wire \sig_dbeat_cntr_reg[1] ;
   wire \sig_dbeat_cntr_reg[4] ;
-  wire \sig_dbeat_cntr_reg[5] ;
   wire \sig_dbeat_cntr_reg[6] ;
-  wire sig_dqual_reg_empty;
-  wire sig_dqual_reg_empty_reg;
-  wire sig_last_dbeat_i_5_n_0;
-  wire sig_last_dbeat_i_7_n_0;
+  wire sig_last_dbeat_i_2_n_0;
+  wire sig_last_dbeat_i_3_n_0;
+  wire sig_last_dbeat_i_6_n_0;
   wire sig_last_dbeat_reg;
   wire sig_last_dbeat_reg_0;
   wire sig_last_dbeat_reg_1;
+  wire sig_last_dbeat_reg_2;
   wire sig_mstr2data_cmd_valid;
   wire sig_next_calc_error_reg_reg;
   wire sig_next_calc_error_reg_reg_0;
@@ -1721,7 +1706,7 @@ module design_2_dfx_controller_0_0_dynshreg_f__parameterized0
         .CLK(clk),
         .D(in[8]),
         .Q(out[0]));
-  (* SOFT_HLUTNM = "soft_lutpair126" *) 
+  (* SOFT_HLUTNM = "soft_lutpair125" *) 
   LUT3 #(
     .INIT(8'h8B)) 
     \sig_dbeat_cntr[0]_i_1 
@@ -1729,7 +1714,7 @@ module design_2_dfx_controller_0_0_dynshreg_f__parameterized0
         .I1(\sig_dbeat_cntr_reg[1] ),
         .I2(Q[0]),
         .O(D[0]));
-  (* SOFT_HLUTNM = "soft_lutpair126" *) 
+  (* SOFT_HLUTNM = "soft_lutpair125" *) 
   LUT4 #(
     .INIT(16'hB88B)) 
     \sig_dbeat_cntr[1]_i_1 
@@ -1757,23 +1742,22 @@ module design_2_dfx_controller_0_0_dynshreg_f__parameterized0
         .I4(Q[1]),
         .I5(Q[0]),
         .O(D[3]));
-  LUT6 #(
-    .INIT(64'hB8B8B8B8B8B88BB8)) 
+  LUT4 #(
+    .INIT(16'h8BB8)) 
     \sig_dbeat_cntr[4]_i_1 
        (.I0(sig_cmd_fifo_data_out[10]),
         .I1(\sig_dbeat_cntr_reg[1] ),
         .I2(Q[4]),
         .I3(\sig_dbeat_cntr_reg[4] ),
-        .I4(Q[3]),
-        .I5(Q[2]),
         .O(D[4]));
-  LUT4 #(
-    .INIT(16'h8BB8)) 
+  LUT5 #(
+    .INIT(32'hB88BB8B8)) 
     \sig_dbeat_cntr[5]_i_1 
        (.I0(sig_cmd_fifo_data_out[11]),
         .I1(\sig_dbeat_cntr_reg[1] ),
         .I2(Q[5]),
-        .I3(\sig_dbeat_cntr_reg[5] ),
+        .I3(Q[4]),
+        .I4(\sig_dbeat_cntr_reg[4] ),
         .O(D[5]));
   LUT4 #(
     .INIT(16'h8BB8)) 
@@ -1792,32 +1776,40 @@ module design_2_dfx_controller_0_0_dynshreg_f__parameterized0
         .I3(Q[6]),
         .I4(\sig_dbeat_cntr_reg[6] ),
         .O(D[7]));
+  LUT4 #(
+    .INIT(16'h7040)) 
+    sig_last_dbeat_i_1
+       (.I0(sig_last_dbeat_i_2_n_0),
+        .I1(E),
+        .I2(sig_cmd_stat_rst_user_reg_n_cdc_from),
+        .I3(sig_last_dbeat_reg_2),
+        .O(sig_cmd_stat_rst_user_reg_n_cdc_from_reg));
   LUT6 #(
-    .INIT(64'h0000000000005504)) 
+    .INIT(64'hF0FFEEEEF0FFF0FF)) 
     sig_last_dbeat_i_2
-       (.I0(sig_cmd_fifo_data_out[13]),
-        .I1(sig_last_dbeat_reg),
-        .I2(sig_last_dbeat_reg_0),
-        .I3(sig_dqual_reg_empty),
-        .I4(sig_last_dbeat_reg_1),
-        .I5(sig_last_dbeat_i_5_n_0),
-        .O(sig_dqual_reg_empty_reg));
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    sig_last_dbeat_i_5
-       (.I0(sig_cmd_fifo_data_out[12]),
+       (.I0(sig_last_dbeat_i_3_n_0),
         .I1(sig_cmd_fifo_data_out[8]),
-        .I2(sig_cmd_fifo_data_out[7]),
-        .I3(sig_last_dbeat_i_7_n_0),
-        .O(sig_last_dbeat_i_5_n_0));
+        .I2(sig_last_dbeat_reg),
+        .I3(Q[0]),
+        .I4(sig_last_dbeat_reg_0),
+        .I5(sig_last_dbeat_reg_1),
+        .O(sig_last_dbeat_i_2_n_0));
   LUT4 #(
     .INIT(16'hFFFE)) 
-    sig_last_dbeat_i_7
+    sig_last_dbeat_i_3
        (.I0(sig_cmd_fifo_data_out[6]),
-        .I1(sig_cmd_fifo_data_out[10]),
+        .I1(sig_cmd_fifo_data_out[7]),
         .I2(sig_cmd_fifo_data_out[9]),
-        .I3(sig_cmd_fifo_data_out[11]),
-        .O(sig_last_dbeat_i_7_n_0));
+        .I3(sig_last_dbeat_i_6_n_0),
+        .O(sig_last_dbeat_i_3_n_0));
+  LUT4 #(
+    .INIT(16'hFFFE)) 
+    sig_last_dbeat_i_6
+       (.I0(sig_cmd_fifo_data_out[13]),
+        .I1(sig_cmd_fifo_data_out[11]),
+        .I2(sig_cmd_fifo_data_out[12]),
+        .I3(sig_cmd_fifo_data_out[10]),
+        .O(sig_last_dbeat_i_6_n_0));
 endmodule
 
 (* ORIG_REF_NAME = "srl_fifo_f" *) 
@@ -1895,26 +1887,25 @@ module design_2_dfx_controller_0_0_srl_fifo_f__parameterized0
     \INFERRED_GEN.cnt_i_reg[0] ,
     sig_mstr2data_cmd_valid,
     Q,
+    sig_last_dbeat_reg_0,
+    sig_last_dbeat_reg_1,
     sig_dqual_reg_empty,
     sig_next_sequential_reg,
-    sig_dqual_reg_empty_reg,
+    sig_last_dbeat_reg_2,
     \sig_dbeat_cntr_reg[0] ,
-    sig_last_dbeat_reg_0,
     \sig_dbeat_cntr_reg[6] ,
-    \sig_dbeat_cntr_reg[5] ,
     \sig_dbeat_cntr_reg[4] ,
     sig_cmd_stat_rst_user_reg_n_cdc_from,
     sig_ld_new_cmd_reg,
+    sig_next_calc_error_reg,
     sig_rsc2stat_status_valid,
     sig_stat2rsc_status_ready,
-    sig_next_calc_error_reg,
     sig_addr_posted_cntr,
-    sig_dqual_reg_empty_reg_0,
+    sig_dqual_reg_empty_reg,
     m_axi_mem_rvalid,
+    sig_dqual_reg_empty_reg_0,
     sig_dqual_reg_empty_reg_1,
-    sig_dqual_reg_empty_reg_2,
     sig_dqual_reg_full,
-    sig_last_dbeat_reg_1,
     m_axi_mem_rlast,
     in);
   output FIFO_Full_reg;
@@ -1931,26 +1922,25 @@ module design_2_dfx_controller_0_0_srl_fifo_f__parameterized0
   input \INFERRED_GEN.cnt_i_reg[0] ;
   input sig_mstr2data_cmd_valid;
   input [7:0]Q;
+  input sig_last_dbeat_reg_0;
+  input sig_last_dbeat_reg_1;
   input sig_dqual_reg_empty;
   input sig_next_sequential_reg;
-  input sig_dqual_reg_empty_reg;
+  input sig_last_dbeat_reg_2;
   input \sig_dbeat_cntr_reg[0] ;
-  input sig_last_dbeat_reg_0;
   input \sig_dbeat_cntr_reg[6] ;
-  input \sig_dbeat_cntr_reg[5] ;
   input \sig_dbeat_cntr_reg[4] ;
   input sig_cmd_stat_rst_user_reg_n_cdc_from;
   input sig_ld_new_cmd_reg;
+  input sig_next_calc_error_reg;
   input sig_rsc2stat_status_valid;
   input sig_stat2rsc_status_ready;
-  input sig_next_calc_error_reg;
   input [2:0]sig_addr_posted_cntr;
-  input sig_dqual_reg_empty_reg_0;
+  input sig_dqual_reg_empty_reg;
   input m_axi_mem_rvalid;
+  input sig_dqual_reg_empty_reg_0;
   input sig_dqual_reg_empty_reg_1;
-  input sig_dqual_reg_empty_reg_2;
   input sig_dqual_reg_full;
-  input sig_last_dbeat_reg_1;
   input m_axi_mem_rlast;
   input [11:0]in;
 
@@ -1972,17 +1962,16 @@ module design_2_dfx_controller_0_0_srl_fifo_f__parameterized0
   wire sig_cmd_stat_rst_user_reg_n_cdc_from_reg_0;
   wire \sig_dbeat_cntr_reg[0] ;
   wire \sig_dbeat_cntr_reg[4] ;
-  wire \sig_dbeat_cntr_reg[5] ;
   wire \sig_dbeat_cntr_reg[6] ;
   wire sig_dqual_reg_empty;
   wire sig_dqual_reg_empty_reg;
   wire sig_dqual_reg_empty_reg_0;
   wire sig_dqual_reg_empty_reg_1;
-  wire sig_dqual_reg_empty_reg_2;
   wire sig_dqual_reg_full;
   wire sig_last_dbeat_reg;
   wire sig_last_dbeat_reg_0;
   wire sig_last_dbeat_reg_1;
+  wire sig_last_dbeat_reg_2;
   wire sig_ld_new_cmd_reg;
   wire sig_mstr2data_cmd_valid;
   wire sig_next_calc_error_reg;
@@ -2010,17 +1999,16 @@ module design_2_dfx_controller_0_0_srl_fifo_f__parameterized0
         .sig_cmd_stat_rst_user_reg_n_cdc_from_reg_0(sig_cmd_stat_rst_user_reg_n_cdc_from_reg_0),
         .\sig_dbeat_cntr_reg[0] (\sig_dbeat_cntr_reg[0] ),
         .\sig_dbeat_cntr_reg[4] (\sig_dbeat_cntr_reg[4] ),
-        .\sig_dbeat_cntr_reg[5] (\sig_dbeat_cntr_reg[5] ),
         .\sig_dbeat_cntr_reg[6] (\sig_dbeat_cntr_reg[6] ),
         .sig_dqual_reg_empty(sig_dqual_reg_empty),
         .sig_dqual_reg_empty_reg(sig_dqual_reg_empty_reg),
         .sig_dqual_reg_empty_reg_0(sig_dqual_reg_empty_reg_0),
         .sig_dqual_reg_empty_reg_1(sig_dqual_reg_empty_reg_1),
-        .sig_dqual_reg_empty_reg_2(sig_dqual_reg_empty_reg_2),
         .sig_dqual_reg_full(sig_dqual_reg_full),
         .sig_last_dbeat_reg(sig_last_dbeat_reg),
         .sig_last_dbeat_reg_0(sig_last_dbeat_reg_0),
         .sig_last_dbeat_reg_1(sig_last_dbeat_reg_1),
+        .sig_last_dbeat_reg_2(sig_last_dbeat_reg_2),
         .sig_ld_new_cmd_reg(sig_ld_new_cmd_reg),
         .sig_mstr2data_cmd_valid(sig_mstr2data_cmd_valid),
         .sig_next_calc_error_reg(sig_next_calc_error_reg),
@@ -2130,26 +2118,25 @@ module design_2_dfx_controller_0_0_srl_fifo_rbu_f__parameterized0
     \INFERRED_GEN.cnt_i_reg[0] ,
     sig_mstr2data_cmd_valid,
     Q,
+    sig_last_dbeat_reg_0,
+    sig_last_dbeat_reg_1,
     sig_dqual_reg_empty,
     sig_next_sequential_reg,
-    sig_dqual_reg_empty_reg,
+    sig_last_dbeat_reg_2,
     \sig_dbeat_cntr_reg[0] ,
-    sig_last_dbeat_reg_0,
     \sig_dbeat_cntr_reg[6] ,
-    \sig_dbeat_cntr_reg[5] ,
     \sig_dbeat_cntr_reg[4] ,
     sig_cmd_stat_rst_user_reg_n_cdc_from,
     sig_ld_new_cmd_reg,
+    sig_next_calc_error_reg,
     sig_rsc2stat_status_valid,
     sig_stat2rsc_status_ready,
-    sig_next_calc_error_reg,
     sig_addr_posted_cntr,
-    sig_dqual_reg_empty_reg_0,
+    sig_dqual_reg_empty_reg,
     m_axi_mem_rvalid,
+    sig_dqual_reg_empty_reg_0,
     sig_dqual_reg_empty_reg_1,
-    sig_dqual_reg_empty_reg_2,
     sig_dqual_reg_full,
-    sig_last_dbeat_reg_1,
     m_axi_mem_rlast,
     in);
   output FIFO_Full_reg_0;
@@ -2166,26 +2153,25 @@ module design_2_dfx_controller_0_0_srl_fifo_rbu_f__parameterized0
   input \INFERRED_GEN.cnt_i_reg[0] ;
   input sig_mstr2data_cmd_valid;
   input [7:0]Q;
+  input sig_last_dbeat_reg_0;
+  input sig_last_dbeat_reg_1;
   input sig_dqual_reg_empty;
   input sig_next_sequential_reg;
-  input sig_dqual_reg_empty_reg;
+  input sig_last_dbeat_reg_2;
   input \sig_dbeat_cntr_reg[0] ;
-  input sig_last_dbeat_reg_0;
   input \sig_dbeat_cntr_reg[6] ;
-  input \sig_dbeat_cntr_reg[5] ;
   input \sig_dbeat_cntr_reg[4] ;
   input sig_cmd_stat_rst_user_reg_n_cdc_from;
   input sig_ld_new_cmd_reg;
+  input sig_next_calc_error_reg;
   input sig_rsc2stat_status_valid;
   input sig_stat2rsc_status_ready;
-  input sig_next_calc_error_reg;
   input [2:0]sig_addr_posted_cntr;
-  input sig_dqual_reg_empty_reg_0;
+  input sig_dqual_reg_empty_reg;
   input m_axi_mem_rvalid;
+  input sig_dqual_reg_empty_reg_0;
   input sig_dqual_reg_empty_reg_1;
-  input sig_dqual_reg_empty_reg_2;
   input sig_dqual_reg_full;
-  input sig_last_dbeat_reg_1;
   input m_axi_mem_rlast;
   input [11:0]in;
 
@@ -2193,7 +2179,6 @@ module design_2_dfx_controller_0_0_srl_fifo_rbu_f__parameterized0
   wire CNTR_INCR_DECR_ADDN_F_I_n_3;
   wire CNTR_INCR_DECR_ADDN_F_I_n_5;
   wire [7:0]D;
-  wire DYNSHREG_F_I_n_9;
   wire [0:0]E;
   wire FIFO_Full_reg_0;
   wire \INFERRED_GEN.cnt_i_reg[0] ;
@@ -2212,17 +2197,16 @@ module design_2_dfx_controller_0_0_srl_fifo_rbu_f__parameterized0
   wire sig_cmd_stat_rst_user_reg_n_cdc_from_reg_0;
   wire \sig_dbeat_cntr_reg[0] ;
   wire \sig_dbeat_cntr_reg[4] ;
-  wire \sig_dbeat_cntr_reg[5] ;
   wire \sig_dbeat_cntr_reg[6] ;
   wire sig_dqual_reg_empty;
   wire sig_dqual_reg_empty_reg;
   wire sig_dqual_reg_empty_reg_0;
   wire sig_dqual_reg_empty_reg_1;
-  wire sig_dqual_reg_empty_reg_2;
   wire sig_dqual_reg_full;
   wire sig_last_dbeat_reg;
   wire sig_last_dbeat_reg_0;
   wire sig_last_dbeat_reg_1;
+  wire sig_last_dbeat_reg_2;
   wire sig_ld_new_cmd_reg;
   wire sig_mstr2data_cmd_valid;
   wire sig_next_calc_error_reg;
@@ -2236,6 +2220,7 @@ module design_2_dfx_controller_0_0_srl_fifo_rbu_f__parameterized0
        (.E(E),
         .\INFERRED_GEN.cnt_i_reg[0]_0 (FIFO_Full_reg_0),
         .\INFERRED_GEN.cnt_i_reg[0]_1 (\INFERRED_GEN.cnt_i_reg[0] ),
+        .\INFERRED_GEN.cnt_i_reg[2]_0 (CNTR_INCR_DECR_ADDN_F_I_n_5),
         .Q({CNTR_INCR_DECR_ADDN_F_I_n_2,CNTR_INCR_DECR_ADDN_F_I_n_3}),
         .SR(SR),
         .clk(clk),
@@ -2246,41 +2231,38 @@ module design_2_dfx_controller_0_0_srl_fifo_rbu_f__parameterized0
         .sig_addr_posted_cntr(sig_addr_posted_cntr),
         .sig_cmd_stat_rst_user_reg_n_cdc_from(sig_cmd_stat_rst_user_reg_n_cdc_from),
         .sig_cmd_stat_rst_user_reg_n_cdc_from_reg(sig_cmd_stat_rst_user_reg_n_cdc_from_reg),
-        .sig_cmd_stat_rst_user_reg_n_cdc_from_reg_0(sig_cmd_stat_rst_user_reg_n_cdc_from_reg_0),
         .\sig_dbeat_cntr_reg[0] (\sig_dbeat_cntr_reg[0] ),
         .sig_dqual_reg_empty(sig_dqual_reg_empty),
-        .sig_dqual_reg_empty_reg(sig_dqual_reg_empty_reg),
-        .sig_dqual_reg_empty_reg_0(sig_dqual_reg_empty_reg_0),
-        .sig_dqual_reg_empty_reg_1(sig_dqual_reg_empty_reg_1),
-        .sig_dqual_reg_empty_reg_2(sig_dqual_reg_empty_reg_2),
+        .sig_dqual_reg_empty_reg(sig_last_dbeat_reg_2),
+        .sig_dqual_reg_empty_reg_0(sig_dqual_reg_empty_reg),
+        .sig_dqual_reg_empty_reg_1(sig_dqual_reg_empty_reg_0),
+        .sig_dqual_reg_empty_reg_2(sig_dqual_reg_empty_reg_1),
         .sig_dqual_reg_full(sig_dqual_reg_full),
         .sig_last_dbeat_reg(sig_last_dbeat_reg),
-        .sig_last_dbeat_reg_0(DYNSHREG_F_I_n_9),
-        .sig_last_dbeat_reg_1(sig_last_dbeat_reg_1),
         .sig_ld_new_cmd_reg(sig_ld_new_cmd_reg),
         .sig_mstr2data_cmd_valid(sig_mstr2data_cmd_valid),
         .sig_next_calc_error_reg(sig_next_calc_error_reg),
         .sig_next_sequential_reg(sig_next_sequential_reg),
-        .sig_rd_sts_reg_full_reg(CNTR_INCR_DECR_ADDN_F_I_n_5),
         .sig_rsc2stat_status_valid(sig_rsc2stat_status_valid),
         .sig_s_ready_out_reg(sig_s_ready_out_reg),
         .sig_stat2rsc_status_ready(sig_stat2rsc_status_ready),
         .sig_wr_fifo(sig_wr_fifo));
   design_2_dfx_controller_0_0_dynshreg_f__parameterized0 DYNSHREG_F_I
        (.D(D),
+        .E(E),
         .Q(Q),
         .clk(clk),
         .in(in),
         .out(out),
+        .sig_cmd_stat_rst_user_reg_n_cdc_from(sig_cmd_stat_rst_user_reg_n_cdc_from),
+        .sig_cmd_stat_rst_user_reg_n_cdc_from_reg(sig_cmd_stat_rst_user_reg_n_cdc_from_reg_0),
         .\sig_dbeat_cntr_reg[1] (sig_last_dbeat_reg),
         .\sig_dbeat_cntr_reg[4] (\sig_dbeat_cntr_reg[4] ),
-        .\sig_dbeat_cntr_reg[5] (\sig_dbeat_cntr_reg[5] ),
         .\sig_dbeat_cntr_reg[6] (\sig_dbeat_cntr_reg[6] ),
-        .sig_dqual_reg_empty(sig_dqual_reg_empty),
-        .sig_dqual_reg_empty_reg(DYNSHREG_F_I_n_9),
-        .sig_last_dbeat_reg(sig_s_ready_out_reg),
-        .sig_last_dbeat_reg_0(sig_last_dbeat_reg_0),
-        .sig_last_dbeat_reg_1(CNTR_INCR_DECR_ADDN_F_I_n_5),
+        .sig_last_dbeat_reg(sig_last_dbeat_reg_0),
+        .sig_last_dbeat_reg_0(CNTR_INCR_DECR_ADDN_F_I_n_5),
+        .sig_last_dbeat_reg_1(sig_last_dbeat_reg_1),
+        .sig_last_dbeat_reg_2(sig_last_dbeat_reg_2),
         .sig_mstr2data_cmd_valid(sig_mstr2data_cmd_valid),
         .sig_next_calc_error_reg_reg(\INFERRED_GEN.cnt_i_reg[0] ),
         .sig_next_calc_error_reg_reg_0(FIFO_Full_reg_0),
@@ -8232,25 +8214,23 @@ module design_2_dfx_controller_0_0_axi_lite_if
     s_axi_reg_bvalid,
     s_axi_reg_rvalid,
     s_axi_reg_awready,
-    axi_write_complete030_out,
     Q,
+    \vsm_addr_reg[5]_0 ,
+    reg_tready_d0,
+    \vsm_addr_reg[3]_0 ,
+    write_to_sw_trigger_reg_cmb,
+    \vsm_addr_reg[2]_0 ,
+    sw_ok_to_proceed_d00,
+    \vsm_wdata_reg[31]_0 ,
+    user_restarted_with_status059_out,
+    reg_write_complete_ctrl_reg_reg,
+    s_axis_ctrl_tready_i1,
+    axi_write_complete030_out,
     write_to_trigger_registers_cmb,
     axi_write_complete0,
     write_to_bs_info_registers_cmb,
     axi_write_complete026_out,
     write_to_rm_info_registers_cmb,
-    sw_ok_to_proceed_d00,
-    \vsm_wdata_reg[31]_0 ,
-    s_axis_ctrl_tready_i1,
-    user_restarted_with_status059_out,
-    vsm_rnw_reg_0,
-    reg_write_complete_ctrl_reg_reg,
-    \vsm_addr_reg[6]_0 ,
-    \vsm_tvalid_i_reg[0]_0 ,
-    \vsm_addr_reg[3]_0 ,
-    \opt_has_pipe.first_q_reg[0] ,
-    \vsm_addr_reg[3]_1 ,
-    \vsm_addr_reg[2]_0 ,
     start_axi_read032_out,
     read_from_trigger_registers_cmb,
     start_axi_read028_out,
@@ -8259,12 +8239,14 @@ module design_2_dfx_controller_0_0_axi_lite_if
     read_from_bs_info_registers_cmb,
     \rm_id_reg[0] ,
     \b_rm_info.bs_addr_reg[0] ,
+    \opt_has_pipe.first_q_reg[0] ,
+    \vsm_addr_reg[3]_1 ,
     \vsm_addr_reg[2]_1 ,
-    \vsm_addr_reg[6]_1 ,
-    in_shutdown_reg,
-    \vsm_wdata_reg[8]_0 ,
-    \vsm_wdata_reg[0]_0 ,
+    \vsm_addr_reg[2]_2 ,
+    \vsm_addr_reg[6]_0 ,
     \vsm_addr_reg[3]_2 ,
+    in_shutdown_reg,
+    \vsm_wdata_reg[0]_0 ,
     reset_0,
     \b_bs_info.reg_rdata_bs_table_size_reg[9] ,
     \b_bs_info.reg_rdata_bs_table_size_reg[10] ,
@@ -8275,36 +8257,34 @@ module design_2_dfx_controller_0_0_axi_lite_if
     clk,
     s_axi_reg_arvalid,
     vsm_reg_tready,
+    axi_write_complete,
+    out,
+    \s_axi_rresp_i_reg[1]_0 ,
+    \s_axi_rresp_i_reg[1]_1 ,
+    \s_axi_rresp_i_reg[1]_2 ,
+    reg_tready_d1_reg,
+    reg_tready_d1_reg_0,
+    in_shutdown,
+    reg_write_complete_ctrl_reg,
     \b_trigger_table.b_write_to_trigger_registers_edge.axi_write_complete_reg ,
     \b_bs_info.b_write_to_bs_info_registers_edge.axi_write_complete_reg ,
     \b_rm_info.b_write_to_rm_info_registers_edge.axi_write_complete_reg ,
-    reg_write_complete_ctrl_reg,
-    in_shutdown,
-    \s_axi_rresp_i_reg[1]_0 ,
-    \s_axi_rresp_i_reg[1]_1 ,
-    axi_write_complete,
-    out,
-    \reg_rdata_reg[9] ,
-    \reg_rdata_reg[9]_0 ,
-    \b_bs_info.reg_rdata_bs_table_address_reg[31] ,
-    \b_bs_info.reg_rdata_bs_table_address_reg[31]_0 ,
     d1,
     \b_rm_info.b_read_from_rm_info_registers_edge.start_axi_read_reg ,
     \b_bs_info.b_read_from_bs_info_registers_edge.start_axi_read_reg ,
     vsm_shifter_fetch_rm_id,
     bs_addr,
-    s_axi_reg_rready,
+    \reg_rdata_reg[9] ,
+    \b_bs_info.reg_rdata_bs_table_address_reg[31] ,
+    \b_bs_info.reg_rdata_bs_table_address_reg[31]_0 ,
     s_axi_reg_bready,
+    s_axi_reg_rready,
     reset,
     s_axi_reg_awvalid,
     s_axi_reg_wvalid,
     s_axi_reg_araddr,
     s_axi_reg_awaddr,
     shutdown_bit_reg,
-    full_flag_reg,
-    full_flag_reg_0,
-    full_flag_reg_1,
-    full_flag_reg_2,
     sw_trigger_id,
     \reg_rdata_reg[12] ,
     \reg_rdata_reg[12]_0 ,
@@ -8317,25 +8297,23 @@ module design_2_dfx_controller_0_0_axi_lite_if
   output s_axi_reg_bvalid;
   output s_axi_reg_rvalid;
   output s_axi_reg_awready;
-  output axi_write_complete030_out;
   output [2:0]Q;
+  output \vsm_addr_reg[5]_0 ;
+  output reg_tready_d0;
+  output \vsm_addr_reg[3]_0 ;
+  output write_to_sw_trigger_reg_cmb;
+  output \vsm_addr_reg[2]_0 ;
+  output sw_ok_to_proceed_d00;
+  output [31:0]\vsm_wdata_reg[31]_0 ;
+  output user_restarted_with_status059_out;
+  output reg_write_complete_ctrl_reg_reg;
+  output s_axis_ctrl_tready_i1;
+  output axi_write_complete030_out;
   output write_to_trigger_registers_cmb;
   output axi_write_complete0;
   output write_to_bs_info_registers_cmb;
   output axi_write_complete026_out;
   output write_to_rm_info_registers_cmb;
-  output sw_ok_to_proceed_d00;
-  output [31:0]\vsm_wdata_reg[31]_0 ;
-  output s_axis_ctrl_tready_i1;
-  output user_restarted_with_status059_out;
-  output vsm_rnw_reg_0;
-  output reg_write_complete_ctrl_reg_reg;
-  output \vsm_addr_reg[6]_0 ;
-  output \vsm_tvalid_i_reg[0]_0 ;
-  output \vsm_addr_reg[3]_0 ;
-  output \opt_has_pipe.first_q_reg[0] ;
-  output [0:0]\vsm_addr_reg[3]_1 ;
-  output \vsm_addr_reg[2]_0 ;
   output start_axi_read032_out;
   output read_from_trigger_registers_cmb;
   output start_axi_read028_out;
@@ -8344,12 +8322,14 @@ module design_2_dfx_controller_0_0_axi_lite_if
   output read_from_bs_info_registers_cmb;
   output \rm_id_reg[0] ;
   output \b_rm_info.bs_addr_reg[0] ;
-  output [0:0]\vsm_addr_reg[2]_1 ;
-  output \vsm_addr_reg[6]_1 ;
-  output in_shutdown_reg;
-  output \vsm_wdata_reg[8]_0 ;
-  output \vsm_wdata_reg[0]_0 ;
+  output \opt_has_pipe.first_q_reg[0] ;
+  output [0:0]\vsm_addr_reg[3]_1 ;
+  output \vsm_addr_reg[2]_1 ;
+  output [0:0]\vsm_addr_reg[2]_2 ;
+  output \vsm_addr_reg[6]_0 ;
   output \vsm_addr_reg[3]_2 ;
+  output in_shutdown_reg;
+  output \vsm_wdata_reg[0]_0 ;
   output reset_0;
   output \b_bs_info.reg_rdata_bs_table_size_reg[9] ;
   output \b_bs_info.reg_rdata_bs_table_size_reg[10] ;
@@ -8360,36 +8340,34 @@ module design_2_dfx_controller_0_0_axi_lite_if
   input clk;
   input s_axi_reg_arvalid;
   input [0:0]vsm_reg_tready;
+  input axi_write_complete;
+  input out;
+  input \s_axi_rresp_i_reg[1]_0 ;
+  input \s_axi_rresp_i_reg[1]_1 ;
+  input \s_axi_rresp_i_reg[1]_2 ;
+  input reg_tready_d1_reg;
+  input reg_tready_d1_reg_0;
+  input in_shutdown;
+  input reg_write_complete_ctrl_reg;
   input \b_trigger_table.b_write_to_trigger_registers_edge.axi_write_complete_reg ;
   input \b_bs_info.b_write_to_bs_info_registers_edge.axi_write_complete_reg ;
   input \b_rm_info.b_write_to_rm_info_registers_edge.axi_write_complete_reg ;
-  input reg_write_complete_ctrl_reg;
-  input in_shutdown;
-  input \s_axi_rresp_i_reg[1]_0 ;
-  input \s_axi_rresp_i_reg[1]_1 ;
-  input axi_write_complete;
-  input out;
-  input \reg_rdata_reg[9] ;
-  input \reg_rdata_reg[9]_0 ;
-  input \b_bs_info.reg_rdata_bs_table_address_reg[31] ;
-  input \b_bs_info.reg_rdata_bs_table_address_reg[31]_0 ;
   input d1;
   input \b_rm_info.b_read_from_rm_info_registers_edge.start_axi_read_reg ;
   input \b_bs_info.b_read_from_bs_info_registers_edge.start_axi_read_reg ;
   input vsm_shifter_fetch_rm_id;
   input bs_addr;
-  input s_axi_reg_rready;
+  input \reg_rdata_reg[9] ;
+  input \b_bs_info.reg_rdata_bs_table_address_reg[31] ;
+  input \b_bs_info.reg_rdata_bs_table_address_reg[31]_0 ;
   input s_axi_reg_bready;
+  input s_axi_reg_rready;
   input reset;
   input s_axi_reg_awvalid;
   input s_axi_reg_wvalid;
   input [4:0]s_axi_reg_araddr;
   input [4:0]s_axi_reg_awaddr;
   input shutdown_bit_reg;
-  input full_flag_reg;
-  input full_flag_reg_0;
-  input full_flag_reg_1;
-  input full_flag_reg_2;
   input sw_trigger_id;
   input [3:0]\reg_rdata_reg[12] ;
   input [3:0]\reg_rdata_reg[12]_0 ;
@@ -8432,10 +8410,6 @@ module design_2_dfx_controller_0_0_axi_lite_if
   wire bs_addr;
   wire clk;
   wire d1;
-  wire full_flag_reg;
-  wire full_flag_reg_0;
-  wire full_flag_reg_1;
-  wire full_flag_reg_2;
   wire in_shutdown;
   wire in_shutdown_reg;
   wire \opt_has_pipe.first_q_reg[0] ;
@@ -8448,8 +8422,10 @@ module design_2_dfx_controller_0_0_axi_lite_if
   wire [3:0]\reg_rdata_reg[12] ;
   wire [3:0]\reg_rdata_reg[12]_0 ;
   wire \reg_rdata_reg[9] ;
-  wire \reg_rdata_reg[9]_0 ;
   wire [3:0]reg_rdata_rm_table_ctrl1_out;
+  wire reg_tready_d0;
+  wire reg_tready_d1_reg;
+  wire reg_tready_d1_reg_0;
   wire reg_write_complete_ctrl_reg;
   wire reg_write_complete_ctrl_reg_i_2_n_0;
   wire reg_write_complete_ctrl_reg_reg;
@@ -8473,50 +8449,49 @@ module design_2_dfx_controller_0_0_axi_lite_if
   wire s_axi_reg_rvalid;
   wire [31:0]s_axi_reg_wdata;
   wire s_axi_reg_wvalid;
-  wire \s_axi_rresp_i[1]_i_2_n_0 ;
-  wire \s_axi_rresp_i[1]_i_5_n_0 ;
+  wire \s_axi_rresp_i[1]_i_3_n_0 ;
   wire \s_axi_rresp_i_reg[1]_0 ;
   wire \s_axi_rresp_i_reg[1]_1 ;
+  wire \s_axi_rresp_i_reg[1]_2 ;
   wire s_axi_rvalid_i_i_1_n_0;
   wire s_axis_ctrl_tready_i1;
-  wire shutdown_bit_i_2_n_0;
   wire shutdown_bit_reg;
   wire start_axi_read0;
   wire start_axi_read028_out;
   wire start_axi_read032_out;
   wire sw_ok_to_proceed_d00;
   wire sw_ok_to_proceed_d0_i_2_n_0;
+  wire sw_ok_to_proceed_d0_i_3_n_0;
   wire sw_shutdown_req_i_i_6_n_0;
   wire sw_shutdown_req_i_i_7_n_0;
   wire sw_shutdown_req_i_i_8_n_0;
   wire sw_trigger_id;
+  wire \sw_trigger_id[0]_i_2_n_0 ;
   wire user_restarted_with_status059_out;
-  wire user_restarted_with_status_i_2_n_0;
   wire [6:2]vsm_addr_i;
   wire \vsm_addr_reg[2]_0 ;
-  wire [0:0]\vsm_addr_reg[2]_1 ;
+  wire \vsm_addr_reg[2]_1 ;
+  wire [0:0]\vsm_addr_reg[2]_2 ;
   wire \vsm_addr_reg[3]_0 ;
   wire [0:0]\vsm_addr_reg[3]_1 ;
   wire \vsm_addr_reg[3]_2 ;
+  wire \vsm_addr_reg[5]_0 ;
   wire \vsm_addr_reg[6]_0 ;
-  wire \vsm_addr_reg[6]_1 ;
   wire [6:5]vsm_reg_addr;
   wire vsm_reg_error;
   wire vsm_reg_rnw;
   wire [0:0]vsm_reg_tready;
   wire vsm_reg_tvalid;
-  wire vsm_rnw_reg_0;
   wire vsm_shifter_fetch_rm_id;
   wire vsm_tvalid_i0;
-  wire \vsm_tvalid_i_reg[0]_0 ;
   wire \vsm_wdata_reg[0]_0 ;
   wire [31:0]\vsm_wdata_reg[31]_0 ;
-  wire \vsm_wdata_reg[8]_0 ;
   wire write_to_bs_info_registers_cmb;
   wire write_to_rm_info_registers_cmb;
+  wire write_to_sw_trigger_reg_cmb;
   wire write_to_trigger_registers_cmb;
 
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT3 #(
     .INIT(8'hFE)) 
     \FSM_onehot_current_state[0]_i_1 
@@ -8524,7 +8499,7 @@ module design_2_dfx_controller_0_0_axi_lite_if
         .I1(\FSM_onehot_current_state_reg_n_0_[1] ),
         .I2(\FSM_onehot_current_state[0]_i_2_n_0 ),
         .O(\FSM_onehot_current_state[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT5 #(
     .INIT(32'hFF8F8C8C)) 
     \FSM_onehot_current_state[0]_i_2 
@@ -8534,7 +8509,7 @@ module design_2_dfx_controller_0_0_axi_lite_if
         .I3(s_axi_reg_rready),
         .I4(\FSM_onehot_current_state_reg_n_0_[4] ),
         .O(\FSM_onehot_current_state[0]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT3 #(
     .INIT(8'h20)) 
     \FSM_onehot_current_state[1]_i_1 
@@ -8573,7 +8548,7 @@ module design_2_dfx_controller_0_0_axi_lite_if
        (.I0(s_axi_reg_arvalid),
         .I1(\FSM_onehot_current_state_reg_n_0_[0] ),
         .O(\FSM_onehot_current_state[4]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT3 #(
     .INIT(8'h07)) 
     \FSM_onehot_current_state[4]_i_3 
@@ -8581,14 +8556,14 @@ module design_2_dfx_controller_0_0_axi_lite_if
         .I1(s_axi_reg_awvalid),
         .I2(s_axi_reg_arvalid),
         .O(\FSM_onehot_current_state[4]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT4 #(
     .INIT(16'hF888)) 
     \FSM_onehot_current_state[4]_i_4 
-       (.I0(s_axi_reg_rready),
-        .I1(p_1_in),
-        .I2(s_axi_reg_bready),
-        .I3(\FSM_onehot_current_state_reg_n_0_[1] ),
+       (.I0(s_axi_reg_bready),
+        .I1(\FSM_onehot_current_state_reg_n_0_[1] ),
+        .I2(s_axi_reg_rready),
+        .I3(p_1_in),
         .O(\FSM_onehot_current_state[4]_i_4_n_0 ));
   (* FSM_ENCODED_STATES = "st_write:01000,st_read:10000,st_read_resp:00100,st_idle:00001,st_write_resp:00010" *) 
   FDSE #(
@@ -8635,7 +8610,7 @@ module design_2_dfx_controller_0_0_axi_lite_if
         .D(\FSM_onehot_current_state[4]_i_2_n_0 ),
         .Q(\FSM_onehot_current_state_reg_n_0_[4] ),
         .R(reset_ah));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT5 #(
     .INIT(32'h00008000)) 
     \b_bs_info.b_read_from_bs_info_registers_edge.start_axi_read_i_1 
@@ -8645,24 +8620,24 @@ module design_2_dfx_controller_0_0_axi_lite_if
         .I3(vsm_reg_addr[5]),
         .I4(\b_bs_info.b_read_from_bs_info_registers_edge.start_axi_read_reg ),
         .O(start_axi_read0));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT5 #(
-    .INIT(32'h00004000)) 
+    .INIT(32'h00000080)) 
     \b_bs_info.b_write_to_bs_info_registers_edge.axi_write_complete_i_1 
-       (.I0(vsm_reg_rnw),
-        .I1(vsm_reg_tvalid),
-        .I2(vsm_reg_addr[6]),
-        .I3(vsm_reg_addr[5]),
+       (.I0(vsm_reg_addr[6]),
+        .I1(vsm_reg_addr[5]),
+        .I2(vsm_reg_tvalid),
+        .I3(vsm_reg_rnw),
         .I4(\b_bs_info.b_write_to_bs_info_registers_edge.axi_write_complete_reg ),
         .O(axi_write_complete0));
   (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT4 #(
-    .INIT(16'h0080)) 
+    .INIT(16'h4000)) 
     \b_bs_info.b_write_to_bs_info_registers_edge.d1_i_1 
-       (.I0(vsm_reg_addr[5]),
-        .I1(vsm_reg_addr[6]),
-        .I2(vsm_reg_tvalid),
-        .I3(vsm_reg_rnw),
+       (.I0(vsm_reg_rnw),
+        .I1(vsm_reg_tvalid),
+        .I2(vsm_reg_addr[5]),
+        .I3(vsm_reg_addr[6]),
         .O(write_to_bs_info_registers_cmb));
   (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT2 #(
@@ -8670,7 +8645,7 @@ module design_2_dfx_controller_0_0_axi_lite_if
     \b_bs_info.bs_address_table_reg_0_1_0_0_i_2 
        (.I0(Q[0]),
         .I1(Q[1]),
-        .O(\vsm_addr_reg[2]_0 ));
+        .O(\vsm_addr_reg[2]_1 ));
   LUT6 #(
     .INIT(64'hE222222222222222)) 
     \b_bs_info.gen_address_reg.access_address_del[0]_i_1 
@@ -8681,7 +8656,7 @@ module design_2_dfx_controller_0_0_axi_lite_if
         .I4(vsm_reg_addr[6]),
         .I5(vsm_reg_addr[5]),
         .O(\b_rm_info.bs_addr_reg[0] ));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT4 #(
     .INIT(16'h0400)) 
     \b_bs_info.reg_rdata_bs_table_address[31]_i_1 
@@ -8690,7 +8665,7 @@ module design_2_dfx_controller_0_0_axi_lite_if
         .I2(\b_bs_info.reg_rdata_bs_table_address_reg[31] ),
         .I3(\b_bs_info.reg_rdata_bs_table_address_reg[31]_0 ),
         .O(\vsm_addr_reg[3]_1 ));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT4 #(
     .INIT(16'h0400)) 
     \b_bs_info.reg_rdata_bs_table_size[31]_i_2 
@@ -8698,8 +8673,8 @@ module design_2_dfx_controller_0_0_axi_lite_if
         .I1(Q[1]),
         .I2(\b_bs_info.reg_rdata_bs_table_address_reg[31] ),
         .I3(\b_bs_info.reg_rdata_bs_table_address_reg[31]_0 ),
-        .O(\vsm_addr_reg[2]_1 ));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+        .O(\vsm_addr_reg[2]_2 ));
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT5 #(
     .INIT(32'h00000080)) 
     \b_rm_info.b_read_from_rm_info_registers_edge.start_axi_read_i_1 
@@ -8709,24 +8684,24 @@ module design_2_dfx_controller_0_0_axi_lite_if
         .I3(vsm_reg_addr[5]),
         .I4(\b_rm_info.b_read_from_rm_info_registers_edge.start_axi_read_reg ),
         .O(start_axi_read028_out));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT5 #(
-    .INIT(32'h00000040)) 
+    .INIT(32'h00000020)) 
     \b_rm_info.b_write_to_rm_info_registers_edge.axi_write_complete_i_1 
-       (.I0(vsm_reg_rnw),
-        .I1(vsm_reg_tvalid),
-        .I2(vsm_reg_addr[6]),
-        .I3(vsm_reg_addr[5]),
+       (.I0(vsm_reg_addr[6]),
+        .I1(vsm_reg_addr[5]),
+        .I2(vsm_reg_tvalid),
+        .I3(vsm_reg_rnw),
         .I4(\b_rm_info.b_write_to_rm_info_registers_edge.axi_write_complete_reg ),
         .O(axi_write_complete026_out));
   (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT4 #(
-    .INIT(16'h0040)) 
+    .INIT(16'h0400)) 
     \b_rm_info.b_write_to_rm_info_registers_edge.d1_i_1 
-       (.I0(vsm_reg_addr[5]),
-        .I1(vsm_reg_addr[6]),
-        .I2(vsm_reg_tvalid),
-        .I3(vsm_reg_rnw),
+       (.I0(vsm_reg_rnw),
+        .I1(vsm_reg_tvalid),
+        .I2(vsm_reg_addr[5]),
+        .I3(vsm_reg_addr[6]),
         .O(write_to_rm_info_registers_cmb));
   LUT6 #(
     .INIT(64'h22222222E2222222)) 
@@ -8738,7 +8713,7 @@ module design_2_dfx_controller_0_0_axi_lite_if
         .I4(vsm_reg_addr[6]),
         .I5(vsm_reg_addr[5]),
         .O(\rm_id_reg[0] ));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT5 #(
     .INIT(32'h00000080)) 
     \b_trigger_table.b_read_from_trigger_registers_edge.start_axi_read_i_1 
@@ -8748,24 +8723,24 @@ module design_2_dfx_controller_0_0_axi_lite_if
         .I3(vsm_reg_addr[6]),
         .I4(d1),
         .O(start_axi_read032_out));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT5 #(
-    .INIT(32'h00000040)) 
+    .INIT(32'h00000020)) 
     \b_trigger_table.b_write_to_trigger_registers_edge.axi_write_complete_i_1 
-       (.I0(vsm_reg_rnw),
-        .I1(vsm_reg_tvalid),
-        .I2(vsm_reg_addr[5]),
-        .I3(vsm_reg_addr[6]),
+       (.I0(vsm_reg_addr[5]),
+        .I1(vsm_reg_addr[6]),
+        .I2(vsm_reg_tvalid),
+        .I3(vsm_reg_rnw),
         .I4(\b_trigger_table.b_write_to_trigger_registers_edge.axi_write_complete_reg ),
         .O(axi_write_complete030_out));
   (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT4 #(
-    .INIT(16'h0040)) 
+    .INIT(16'h0400)) 
     \b_trigger_table.b_write_to_trigger_registers_edge.d1_i_1 
-       (.I0(vsm_reg_addr[6]),
-        .I1(vsm_reg_addr[5]),
-        .I2(vsm_reg_tvalid),
-        .I3(vsm_reg_rnw),
+       (.I0(vsm_reg_rnw),
+        .I1(vsm_reg_tvalid),
+        .I2(vsm_reg_addr[6]),
+        .I3(vsm_reg_addr[5]),
         .O(write_to_trigger_registers_cmb));
   LUT5 #(
     .INIT(32'h40000000)) 
@@ -8775,17 +8750,7 @@ module design_2_dfx_controller_0_0_axi_lite_if
         .I2(Q[0]),
         .I3(vsm_reg_tvalid),
         .I4(in_shutdown),
-        .O(\vsm_addr_reg[6]_1 ));
-  LUT6 #(
-    .INIT(64'hAFA3AFAFA0A3A0A0)) 
-    full_flag_i_1
-       (.I0(\vsm_wdata_reg[31]_0 [8]),
-        .I1(full_flag_reg),
-        .I2(user_restarted_with_status059_out),
-        .I3(full_flag_reg_0),
-        .I4(full_flag_reg_1),
-        .I5(full_flag_reg_2),
-        .O(\vsm_wdata_reg[8]_0 ));
+        .O(\vsm_addr_reg[6]_0 ));
   (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT4 #(
     .INIT(16'h4000)) 
@@ -8795,7 +8760,7 @@ module design_2_dfx_controller_0_0_axi_lite_if
         .I2(vsm_reg_tvalid),
         .I3(vsm_reg_rnw),
         .O(read_from_trigger_registers_cmb));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT4 #(
     .INIT(16'h4000)) 
     \opt_has_pipe.first_q[0]_i_1__3 
@@ -8804,7 +8769,7 @@ module design_2_dfx_controller_0_0_axi_lite_if
         .I2(vsm_reg_tvalid),
         .I3(vsm_reg_rnw),
         .O(read_from_rm_info_registers_cmb));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT4 #(
     .INIT(16'h8000)) 
     \opt_has_pipe.first_q[0]_i_1__4 
@@ -8816,7 +8781,7 @@ module design_2_dfx_controller_0_0_axi_lite_if
   LUT6 #(
     .INIT(64'h54105410FFFF5410)) 
     \reg_rdata[10]_i_1 
-       (.I0(\vsm_addr_reg[3]_0 ),
+       (.I0(\vsm_addr_reg[3]_2 ),
         .I1(\opt_has_pipe.first_q_reg[0] ),
         .I2(\reg_rdata_reg[12] [1]),
         .I3(\reg_rdata_reg[12]_0 [1]),
@@ -8826,7 +8791,7 @@ module design_2_dfx_controller_0_0_axi_lite_if
   LUT6 #(
     .INIT(64'h54105410FFFF5410)) 
     \reg_rdata[11]_i_1 
-       (.I0(\vsm_addr_reg[3]_0 ),
+       (.I0(\vsm_addr_reg[3]_2 ),
         .I1(\opt_has_pipe.first_q_reg[0] ),
         .I2(\reg_rdata_reg[12] [2]),
         .I3(\reg_rdata_reg[12]_0 [2]),
@@ -8836,23 +8801,23 @@ module design_2_dfx_controller_0_0_axi_lite_if
   LUT6 #(
     .INIT(64'h54105410FFFF5410)) 
     \reg_rdata[12]_i_2 
-       (.I0(\vsm_addr_reg[3]_0 ),
+       (.I0(\vsm_addr_reg[3]_2 ),
         .I1(\opt_has_pipe.first_q_reg[0] ),
         .I2(\reg_rdata_reg[12] [3]),
         .I3(\reg_rdata_reg[12]_0 [3]),
         .I4(reg_rdata_rm_table_ctrl1_out[3]),
         .I5(\reg_rdata[12]_i_5_n_0 ),
         .O(\b_bs_info.reg_rdata_bs_table_size_reg[12] ));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT4 #(
     .INIT(16'hFF1F)) 
     \reg_rdata[12]_i_3 
        (.I0(Q[1]),
         .I1(Q[0]),
         .I2(\reg_rdata_reg[9] ),
-        .I3(\reg_rdata_reg[9]_0 ),
-        .O(\vsm_addr_reg[3]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+        .I3(\s_axi_rresp_i_reg[1]_1 ),
+        .O(\vsm_addr_reg[3]_2 ));
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT3 #(
     .INIT(8'h20)) 
     \reg_rdata[12]_i_4 
@@ -8865,81 +8830,77 @@ module design_2_dfx_controller_0_0_axi_lite_if
     .INIT(4'h7)) 
     \reg_rdata[12]_i_5 
        (.I0(Q[0]),
-        .I1(\reg_rdata_reg[9]_0 ),
+        .I1(\s_axi_rresp_i_reg[1]_1 ),
         .O(\reg_rdata[12]_i_5_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
-  LUT4 #(
-    .INIT(16'hFFF7)) 
-    \reg_rdata[31]_i_2 
-       (.I0(vsm_reg_tvalid),
-        .I1(vsm_reg_rnw),
-        .I2(vsm_reg_addr[5]),
-        .I3(vsm_reg_addr[6]),
-        .O(\vsm_tvalid_i_reg[0]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
-  LUT5 #(
-    .INIT(32'h02000000)) 
-    \reg_rdata[31]_i_4 
-       (.I0(sw_shutdown_req_i_i_6_n_0),
-        .I1(vsm_reg_addr[6]),
-        .I2(vsm_reg_addr[5]),
-        .I3(vsm_reg_rnw),
-        .I4(vsm_reg_tvalid),
-        .O(\vsm_addr_reg[6]_0 ));
+  LUT6 #(
+    .INIT(64'h0000000000004000)) 
+    \reg_rdata[31]_i_3 
+       (.I0(Q[0]),
+        .I1(reg_write_complete_ctrl_reg_i_2_n_0),
+        .I2(vsm_reg_rnw),
+        .I3(vsm_reg_tvalid),
+        .I4(vsm_reg_addr[6]),
+        .I5(vsm_reg_addr[5]),
+        .O(\vsm_addr_reg[2]_0 ));
   LUT6 #(
     .INIT(64'h54105410FFFF5410)) 
     \reg_rdata[9]_i_1 
-       (.I0(\vsm_addr_reg[3]_0 ),
+       (.I0(\vsm_addr_reg[3]_2 ),
         .I1(\opt_has_pipe.first_q_reg[0] ),
         .I2(\reg_rdata_reg[12] [0]),
         .I3(\reg_rdata_reg[12]_0 [0]),
         .I4(reg_rdata_rm_table_ctrl1_out[0]),
         .I5(\reg_rdata[12]_i_5_n_0 ),
         .O(\b_bs_info.reg_rdata_bs_table_size_reg[9] ));
+  LUT1 #(
+    .INIT(2'h1)) 
+    reg_tready_d1_i_1
+       (.I0(\vsm_addr_reg[3]_0 ),
+        .O(reg_tready_d0));
   LUT6 #(
-    .INIT(64'h0004000400040000)) 
-    reg_tready_d1_i_3
-       (.I0(vsm_reg_rnw),
-        .I1(vsm_reg_tvalid),
-        .I2(vsm_reg_addr[6]),
-        .I3(vsm_reg_addr[5]),
-        .I4(Q[2]),
-        .I5(Q[1]),
-        .O(vsm_rnw_reg_0));
-  LUT6 #(
-    .INIT(64'h0000000000000001)) 
-    reg_write_complete_ctrl_reg_i_1
+    .INIT(64'h00001F0000000000)) 
+    reg_tready_d1_i_2
        (.I0(Q[1]),
-        .I1(Q[0]),
-        .I2(vsm_reg_addr[5]),
-        .I3(vsm_reg_addr[6]),
-        .I4(reg_write_complete_ctrl_reg_i_2_n_0),
-        .I5(Q[2]),
+        .I1(Q[2]),
+        .I2(\sw_trigger_id[0]_i_2_n_0 ),
+        .I3(reg_tready_d1_reg),
+        .I4(\vsm_addr_reg[5]_0 ),
+        .I5(reg_tready_d1_reg_0),
+        .O(\vsm_addr_reg[3]_0 ));
+  LUT6 #(
+    .INIT(64'h0000001000000000)) 
+    reg_write_complete_ctrl_reg_i_1
+       (.I0(vsm_reg_addr[6]),
+        .I1(vsm_reg_addr[5]),
+        .I2(vsm_reg_tvalid),
+        .I3(vsm_reg_rnw),
+        .I4(Q[0]),
+        .I5(reg_write_complete_ctrl_reg_i_2_n_0),
         .O(s_axis_ctrl_tready_i1));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT2 #(
-    .INIT(4'hB)) 
+    .INIT(4'h1)) 
     reg_write_complete_ctrl_reg_i_2
-       (.I0(vsm_reg_rnw),
-        .I1(vsm_reg_tvalid),
+       (.I0(Q[1]),
+        .I1(Q[2]),
         .O(reg_write_complete_ctrl_reg_i_2_n_0));
   LUT6 #(
-    .INIT(64'h0000000000000004)) 
+    .INIT(64'h0010000000000000)) 
     reg_write_complete_sw_trigger_reg_i_1
-       (.I0(Q[1]),
-        .I1(Q[0]),
-        .I2(vsm_reg_addr[5]),
-        .I3(vsm_reg_addr[6]),
+       (.I0(vsm_reg_addr[6]),
+        .I1(vsm_reg_addr[5]),
+        .I2(vsm_reg_tvalid),
+        .I3(vsm_reg_rnw),
         .I4(reg_write_complete_ctrl_reg_i_2_n_0),
-        .I5(Q[2]),
-        .O(\vsm_addr_reg[3]_2 ));
+        .I5(Q[0]),
+        .O(write_to_sw_trigger_reg_cmb));
   LUT2 #(
     .INIT(4'hB)) 
     rm_shutdown_req_i_i_3
        (.I0(reg_write_complete_ctrl_reg_reg),
         .I1(reset),
         .O(reset_0));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT5 #(
     .INIT(32'hBBBF8880)) 
     \s_axi_bresp_i[1]_i_1 
@@ -9237,7 +9198,7 @@ module design_2_dfx_controller_0_0_axi_lite_if
         .I1(\FSM_onehot_current_state_reg_n_0_[4] ),
         .I2(p_1_in),
         .O(E));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT3 #(
     .INIT(8'hA8)) 
     s_axi_reg_wready_INST_0
@@ -9246,34 +9207,34 @@ module design_2_dfx_controller_0_0_axi_lite_if
         .I2(\FSM_onehot_current_state_reg_n_0_[1] ),
         .O(s_axi_reg_awready));
   LUT6 #(
-    .INIT(64'hFFFFFF75FFF0FF70)) 
+    .INIT(64'hFFFFFFFFEEEEEEE0)) 
     \s_axi_rresp_i[1]_i_1 
-       (.I0(\s_axi_rresp_i[1]_i_2_n_0 ),
-        .I1(\s_axi_rresp_i_reg[1]_0 ),
-        .I2(Q[2]),
-        .I3(\s_axi_rresp_i_reg[1]_1 ),
-        .I4(\s_axi_rresp_i[1]_i_5_n_0 ),
-        .I5(Q[1]),
+       (.I0(Q[1]),
+        .I1(Q[2]),
+        .I2(\vsm_addr_reg[5]_0 ),
+        .I3(axi_write_complete),
+        .I4(out),
+        .I5(\s_axi_rresp_i[1]_i_3_n_0 ),
         .O(vsm_reg_error));
-  LUT6 #(
-    .INIT(64'h000000000000EFFF)) 
-    \s_axi_rresp_i[1]_i_2 
-       (.I0(vsm_reg_addr[6]),
-        .I1(vsm_reg_addr[5]),
-        .I2(vsm_reg_rnw),
-        .I3(vsm_reg_tvalid),
-        .I4(axi_write_complete),
-        .I5(out),
-        .O(\s_axi_rresp_i[1]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT4 #(
-    .INIT(16'h0010)) 
-    \s_axi_rresp_i[1]_i_5 
+    .INIT(16'h1000)) 
+    \s_axi_rresp_i[1]_i_2 
        (.I0(vsm_reg_addr[5]),
         .I1(vsm_reg_addr[6]),
         .I2(vsm_reg_tvalid),
         .I3(vsm_reg_rnw),
-        .O(\s_axi_rresp_i[1]_i_5_n_0 ));
+        .O(\vsm_addr_reg[5]_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFF8F8F8C8)) 
+    \s_axi_rresp_i[1]_i_3 
+       (.I0(Q[1]),
+        .I1(\sw_trigger_id[0]_i_2_n_0 ),
+        .I2(Q[2]),
+        .I3(\s_axi_rresp_i_reg[1]_0 ),
+        .I4(\s_axi_rresp_i_reg[1]_1 ),
+        .I5(\s_axi_rresp_i_reg[1]_2 ),
+        .O(\s_axi_rresp_i[1]_i_3_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
     \s_axi_rresp_i_reg[1] 
@@ -9300,33 +9261,23 @@ module design_2_dfx_controller_0_0_axi_lite_if
         .Q(s_axi_reg_rvalid),
         .R(reset_ah));
   LUT6 #(
-    .INIT(64'hFFFFFDF700000001)) 
+    .INIT(64'hFFFBFFBF00000001)) 
     shutdown_bit_i_1
-       (.I0(in_shutdown),
-        .I1(\vsm_wdata_reg[31]_0 [0]),
-        .I2(shutdown_bit_i_2_n_0),
-        .I3(\vsm_wdata_reg[31]_0 [1]),
-        .I4(sw_ok_to_proceed_d0_i_2_n_0),
+       (.I0(sw_ok_to_proceed_d0_i_3_n_0),
+        .I1(in_shutdown),
+        .I2(\vsm_wdata_reg[31]_0 [1]),
+        .I3(sw_ok_to_proceed_d0_i_2_n_0),
+        .I4(\vsm_wdata_reg[31]_0 [0]),
         .I5(shutdown_bit_reg),
         .O(in_shutdown_reg));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
-  LUT5 #(
-    .INIT(32'hFFFFFFDF)) 
-    shutdown_bit_i_2
-       (.I0(reg_write_complete_ctrl_reg),
-        .I1(Q[2]),
-        .I2(\s_axi_rresp_i[1]_i_5_n_0 ),
-        .I3(Q[0]),
-        .I4(Q[1]),
-        .O(shutdown_bit_i_2_n_0));
-  LUT5 #(
-    .INIT(32'h40000000)) 
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT4 #(
+    .INIT(16'h0040)) 
     sw_ok_to_proceed_d0_i_1
        (.I0(sw_ok_to_proceed_d0_i_2_n_0),
         .I1(\vsm_wdata_reg[31]_0 [1]),
         .I2(\vsm_wdata_reg[31]_0 [0]),
-        .I3(reg_write_complete_ctrl_reg),
-        .I4(s_axis_ctrl_tready_i1),
+        .I3(sw_ok_to_proceed_d0_i_3_n_0),
         .O(sw_ok_to_proceed_d00));
   LUT6 #(
     .INIT(64'hFFFFFFFFFFFFFFFE)) 
@@ -9339,16 +9290,26 @@ module design_2_dfx_controller_0_0_axi_lite_if
         .I5(\vsm_wdata_reg[31]_0 [7]),
         .O(sw_ok_to_proceed_d0_i_2_n_0));
   LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFF7FF)) 
+    sw_ok_to_proceed_d0_i_3
+       (.I0(reg_write_complete_ctrl_reg),
+        .I1(sw_shutdown_req_i_i_6_n_0),
+        .I2(vsm_reg_rnw),
+        .I3(vsm_reg_tvalid),
+        .I4(vsm_reg_addr[5]),
+        .I5(vsm_reg_addr[6]),
+        .O(sw_ok_to_proceed_d0_i_3_n_0));
+  LUT6 #(
     .INIT(64'h0000000000008000)) 
     sw_shutdown_req_i_i_5
        (.I0(reg_write_complete_ctrl_reg),
         .I1(sw_shutdown_req_i_i_6_n_0),
-        .I2(\s_axi_rresp_i[1]_i_5_n_0 ),
+        .I2(\sw_trigger_id[0]_i_2_n_0 ),
         .I3(in_shutdown),
         .I4(sw_shutdown_req_i_i_7_n_0),
         .I5(sw_shutdown_req_i_i_8_n_0),
         .O(reg_write_complete_ctrl_reg_reg));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT3 #(
     .INIT(8'h01)) 
     sw_shutdown_req_i_i_6
@@ -9357,11 +9318,11 @@ module design_2_dfx_controller_0_0_axi_lite_if
         .I2(Q[0]),
         .O(sw_shutdown_req_i_i_6_n_0));
   LUT3 #(
-    .INIT(8'hFB)) 
+    .INIT(8'hFD)) 
     sw_shutdown_req_i_i_7
-       (.I0(\vsm_wdata_reg[31]_0 [1]),
-        .I1(\vsm_wdata_reg[31]_0 [2]),
-        .I2(\vsm_wdata_reg[31]_0 [0]),
+       (.I0(\vsm_wdata_reg[31]_0 [2]),
+        .I1(\vsm_wdata_reg[31]_0 [0]),
+        .I2(\vsm_wdata_reg[31]_0 [1]),
         .O(sw_shutdown_req_i_i_7_n_0));
   LUT5 #(
     .INIT(32'hFFFFFFFE)) 
@@ -9373,33 +9334,34 @@ module design_2_dfx_controller_0_0_axi_lite_if
         .I4(\vsm_wdata_reg[31]_0 [5]),
         .O(sw_shutdown_req_i_i_8_n_0));
   LUT6 #(
-    .INIT(64'hFFFFEFFF00002000)) 
+    .INIT(64'hFFFBFFFF00080000)) 
     \sw_trigger_id[0]_i_1 
        (.I0(\vsm_wdata_reg[31]_0 [0]),
-        .I1(Q[1]),
-        .I2(Q[0]),
-        .I3(\s_axi_rresp_i[1]_i_5_n_0 ),
-        .I4(Q[2]),
+        .I1(\sw_trigger_id[0]_i_2_n_0 ),
+        .I2(Q[1]),
+        .I3(Q[2]),
+        .I4(Q[0]),
         .I5(sw_trigger_id),
         .O(\vsm_wdata_reg[0]_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT4 #(
-    .INIT(16'h0400)) 
+    .INIT(16'h0004)) 
+    \sw_trigger_id[0]_i_2 
+       (.I0(vsm_reg_rnw),
+        .I1(vsm_reg_tvalid),
+        .I2(vsm_reg_addr[5]),
+        .I3(vsm_reg_addr[6]),
+        .O(\sw_trigger_id[0]_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT5 #(
+    .INIT(32'h00000040)) 
     user_restarted_with_status_i_1
-       (.I0(user_restarted_with_status_i_2_n_0),
+       (.I0(sw_ok_to_proceed_d0_i_2_n_0),
         .I1(\vsm_wdata_reg[31]_0 [1]),
-        .I2(sw_ok_to_proceed_d0_i_2_n_0),
-        .I3(in_shutdown),
+        .I2(in_shutdown),
+        .I3(sw_ok_to_proceed_d0_i_3_n_0),
+        .I4(\vsm_wdata_reg[31]_0 [0]),
         .O(user_restarted_with_status059_out));
-  LUT6 #(
-    .INIT(64'hFFFFFEFFFFFFFFFF)) 
-    user_restarted_with_status_i_2
-       (.I0(\vsm_wdata_reg[31]_0 [0]),
-        .I1(Q[1]),
-        .I2(Q[0]),
-        .I3(\s_axi_rresp_i[1]_i_5_n_0 ),
-        .I4(Q[2]),
-        .I5(reg_write_complete_ctrl_reg),
-        .O(user_restarted_with_status_i_2_n_0));
   LUT3 #(
     .INIT(8'hB8)) 
     \vsm_addr[2]_i_1 
@@ -9475,7 +9437,7 @@ module design_2_dfx_controller_0_0_axi_lite_if
         .D(s_axi_reg_arvalid),
         .Q(vsm_reg_rnw),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT4 #(
     .INIT(16'hA888)) 
     \vsm_tvalid_i[0]_i_1 
@@ -9747,7 +9709,7 @@ module design_2_dfx_controller_0_0_carry_chain
        (.I0(\CHAIN_GEN[0].CARRYS_DEL.NEED_DEL.CARRYS_FD_2 ),
         .I1(\CHAIN_GEN[0].CARRYS_DEL.NEED_DEL.CARRYS_FD_3 ),
         .O(all_zero));
-  (* SOFT_HLUTNM = "soft_lutpair147" *) 
+  (* SOFT_HLUTNM = "soft_lutpair146" *) 
   LUT5 #(
     .INIT(32'h007FF000)) 
     \FSM_sequential_current_state[1]_i_1 
@@ -9757,7 +9719,7 @@ module design_2_dfx_controller_0_0_carry_chain
         .I3(current_state[0]),
         .I4(current_state[1]),
         .O(\CHAIN_GEN[0].CARRYS_DEL.NEED_DEL.CARRYS_FD_1 ));
-  (* SOFT_HLUTNM = "soft_lutpair147" *) 
+  (* SOFT_HLUTNM = "soft_lutpair146" *) 
   LUT2 #(
     .INIT(4'h4)) 
     \b_trigger_id_to_one_hot.trigger_valid_prev_i_1 
@@ -9769,27 +9731,27 @@ endmodule
 (* ORIG_REF_NAME = "delay" *) 
 module design_2_dfx_controller_0_0_delay__parameterized1
    (vsm_shifter_event_error,
+    \current_state_reg[1] ,
     \current_state_reg[2] ,
-    \current_state_reg[3] ,
     \opt_has_pipe.first_q_reg[0] ,
     clk,
-    cp_error_flag,
     \opt_has_pipe.first_q_reg[0]_0 ,
     \opt_has_pipe.first_q_reg[0]_1 ,
     cp0_vs_id,
     p_3_in,
+    cp_error_flag,
     Q,
     p_4_in);
   output vsm_shifter_event_error;
+  output \current_state_reg[1] ;
   output \current_state_reg[2] ;
-  output \current_state_reg[3] ;
   input \opt_has_pipe.first_q_reg[0] ;
   input clk;
-  input cp_error_flag;
   input \opt_has_pipe.first_q_reg[0]_0 ;
   input \opt_has_pipe.first_q_reg[0]_1 ;
   input cp0_vs_id;
   input p_3_in;
+  input cp_error_flag;
   input [3:0]Q;
   input p_4_in;
 
@@ -9797,8 +9759,8 @@ module design_2_dfx_controller_0_0_delay__parameterized1
   wire clk;
   wire cp0_vs_id;
   wire cp_error_flag;
+  wire \current_state_reg[1] ;
   wire \current_state_reg[2] ;
-  wire \current_state_reg[3] ;
   wire \opt_has_pipe.first_q_reg[0] ;
   wire \opt_has_pipe.first_q_reg[0]_0 ;
   wire \opt_has_pipe.first_q_reg[0]_1 ;
@@ -9811,8 +9773,8 @@ module design_2_dfx_controller_0_0_delay__parameterized1
         .clk(clk),
         .cp0_vs_id(cp0_vs_id),
         .cp_error_flag(cp_error_flag),
+        .\current_state_reg[1] (\current_state_reg[1] ),
         .\current_state_reg[2] (\current_state_reg[2] ),
-        .\current_state_reg[3] (\current_state_reg[3] ),
         .\opt_has_pipe.first_q_reg[0]_0 (\opt_has_pipe.first_q_reg[0] ),
         .\opt_has_pipe.first_q_reg[0]_1 (\opt_has_pipe.first_q_reg[0]_0 ),
         .\opt_has_pipe.first_q_reg[0]_2 (\opt_has_pipe.first_q_reg[0]_1 ),
@@ -9826,53 +9788,53 @@ module design_2_dfx_controller_0_0_delay__parameterized10
    (rm_info_valid_vec,
     E,
     D,
+    \current_state_reg[3] ,
     \opt_has_pipe.first_q_reg[0] ,
     rm_id_valid,
     clk,
     Q,
     bs_info_valid_vec,
-    \reset_duration_reg[7] ,
-    \reset_duration_reg[7]_0 ,
-    ctrl_from_mem,
     \reset_duration_reg[5] ,
-    \reset_duration_reg[5]_0 ,
-    \reset_duration_reg[3] ,
     \reset_duration_reg[4] ,
-    \reset_duration_reg[7]_1 ,
-    \reset_duration_reg[5]_1 );
+    ctrl_from_mem,
+    \reset_duration_reg[5]_0 ,
+    \reset_duration_reg[5]_1 ,
+    \reset_duration_reg[3] ,
+    \reset_duration_reg[4]_0 ,
+    \reset_duration_reg[5]_2 );
   output rm_info_valid_vec;
   output [0:0]E;
-  output [6:0]D;
+  output [5:0]D;
+  output [0:0]\current_state_reg[3] ;
   input \opt_has_pipe.first_q_reg[0] ;
   input rm_id_valid;
   input clk;
   input [3:0]Q;
   input bs_info_valid_vec;
-  input [6:0]\reset_duration_reg[7] ;
-  input \reset_duration_reg[7]_0 ;
-  input [6:0]ctrl_from_mem;
-  input [3:0]\reset_duration_reg[5] ;
-  input [1:0]\reset_duration_reg[5]_0 ;
-  input \reset_duration_reg[3] ;
+  input [5:0]\reset_duration_reg[5] ;
   input \reset_duration_reg[4] ;
-  input \reset_duration_reg[7]_1 ;
-  input \reset_duration_reg[5]_1 ;
+  input [5:0]ctrl_from_mem;
+  input [3:0]\reset_duration_reg[5]_0 ;
+  input [1:0]\reset_duration_reg[5]_1 ;
+  input \reset_duration_reg[3] ;
+  input \reset_duration_reg[4]_0 ;
+  input \reset_duration_reg[5]_2 ;
 
-  wire [6:0]D;
+  wire [5:0]D;
   wire [0:0]E;
   wire [3:0]Q;
   wire bs_info_valid_vec;
   wire clk;
-  wire [6:0]ctrl_from_mem;
+  wire [5:0]ctrl_from_mem;
+  wire [0:0]\current_state_reg[3] ;
   wire \opt_has_pipe.first_q_reg[0] ;
   wire \reset_duration_reg[3] ;
   wire \reset_duration_reg[4] ;
-  wire [3:0]\reset_duration_reg[5] ;
-  wire [1:0]\reset_duration_reg[5]_0 ;
-  wire \reset_duration_reg[5]_1 ;
-  wire [6:0]\reset_duration_reg[7] ;
-  wire \reset_duration_reg[7]_0 ;
-  wire \reset_duration_reg[7]_1 ;
+  wire \reset_duration_reg[4]_0 ;
+  wire [5:0]\reset_duration_reg[5] ;
+  wire [3:0]\reset_duration_reg[5]_0 ;
+  wire [1:0]\reset_duration_reg[5]_1 ;
+  wire \reset_duration_reg[5]_2 ;
   wire rm_id_valid;
   wire rm_info_valid_vec;
 
@@ -9883,16 +9845,16 @@ module design_2_dfx_controller_0_0_delay__parameterized10
         .bs_info_valid_vec(bs_info_valid_vec),
         .clk(clk),
         .ctrl_from_mem(ctrl_from_mem),
+        .\current_state_reg[3] (\current_state_reg[3] ),
         .\opt_has_pipe.first_q_reg[0]_0 (\opt_has_pipe.first_q_reg[0] ),
         .\opt_has_pipe.i_pipe[2].pipe_reg[2][0]_0 (rm_info_valid_vec),
         .\reset_duration_reg[3] (\reset_duration_reg[3] ),
         .\reset_duration_reg[4] (\reset_duration_reg[4] ),
+        .\reset_duration_reg[4]_0 (\reset_duration_reg[4]_0 ),
         .\reset_duration_reg[5] (\reset_duration_reg[5] ),
         .\reset_duration_reg[5]_0 (\reset_duration_reg[5]_0 ),
         .\reset_duration_reg[5]_1 (\reset_duration_reg[5]_1 ),
-        .\reset_duration_reg[7] (\reset_duration_reg[7] ),
-        .\reset_duration_reg[7]_0 (\reset_duration_reg[7]_0 ),
-        .\reset_duration_reg[7]_1 (\reset_duration_reg[7]_1 ),
+        .\reset_duration_reg[5]_2 (\reset_duration_reg[5]_2 ),
         .rm_id_valid(rm_id_valid));
 endmodule
 
@@ -9900,43 +9862,44 @@ endmodule
 module design_2_dfx_controller_0_0_delay__parameterized10_8
    (bs_info_valid_vec,
     D,
-    \reset_duration_stored_reg[6] ,
-    E,
-    \current_state_reg[3] ,
-    hw_trigger_used,
-    \reset_duration_reg[7] ,
-    \reset_duration_reg[4] ,
+    \reset_duration_stored_reg[7] ,
     \opt_has_pipe.i_pipe[2].pipe_reg[2][0] ,
-    reg_write_complete_sw_trigger_reg_reg,
+    hw_trigger_used,
+    \reset_duration_reg[4] ,
     \opt_has_pipe.i_pipe[2].pipe_reg[2][0]_0 ,
+    reg_write_complete_sw_trigger_reg_reg,
     reset_0,
     \opt_has_pipe.first_q_reg[0] ,
     rm_info_valid_vec,
     clk,
     Q,
+    \current_state_reg[2] ,
+    \current_state_reg[2]_0 ,
+    ctrl_from_mem,
+    \reset_duration_reg[7] ,
+    \reset_duration_reg[7]_0 ,
+    reset,
+    \current_state_reg[3] ,
     \current_state_reg[3]_0 ,
     \current_state_reg[3]_1 ,
-    \current_state_reg[3]_2 ,
     \current_state_reg[0] ,
     \current_state_reg[0]_0 ,
     \current_state_reg[0]_1 ,
     \current_state_reg[1] ,
     \current_state_reg[1]_0 ,
-    reset,
-    \reset_duration_reg[6] ,
-    startup_required,
     using_sw_trigger,
     \current_state_reg[0]_2 ,
     \current_state_reg[0]_3 ,
-    \current_state_reg[0]_4 ,
-    \current_state_reg[0]_5 ,
     \current_state_reg[1]_1 ,
-    \current_state_reg[1]_2 ,
+    \current_state_reg[3]_2 ,
+    \current_state_reg[0]_4 ,
+    \current_state_reg[3]_3 ,
+    \reset_duration_reg[6] ,
+    \reset_duration_reg[7]_1 ,
     \reset_duration_reg[6]_0 ,
-    \reset_duration_reg[7]_0 ,
-    \reset_duration_reg[6]_1 ,
-    ctrl_from_mem,
-    sw_trigger_pending_reg,
+    \current_state[1]_i_2 ,
+    user_restarted_with_status,
+    write_to_sw_trigger_reg_cmb,
     reg_write_complete_sw_trigger_reg,
     sw_trigger_pending,
     rm_reset_i_reg,
@@ -9944,48 +9907,47 @@ module design_2_dfx_controller_0_0_delay__parameterized10_8
     rm_reset_i_reg_1,
     vsm_shifter_rm_reset,
     rm_reset_i_reg_2,
-    \current_state[1]_i_5 ,
-    \current_state[1]_i_5_0 ,
-    \current_state[1]_i_5_1 );
+    rm_reset_i_reg_3);
   output bs_info_valid_vec;
-  output [2:0]D;
-  output [0:0]\reset_duration_stored_reg[6] ;
-  output [0:0]E;
-  output \current_state_reg[3] ;
-  output hw_trigger_used;
-  output \reset_duration_reg[7] ;
-  output \reset_duration_reg[4] ;
+  output [3:0]D;
+  output [1:0]\reset_duration_stored_reg[7] ;
   output \opt_has_pipe.i_pipe[2].pipe_reg[2][0] ;
-  output reg_write_complete_sw_trigger_reg_reg;
+  output hw_trigger_used;
+  output \reset_duration_reg[4] ;
   output \opt_has_pipe.i_pipe[2].pipe_reg[2][0]_0 ;
+  output reg_write_complete_sw_trigger_reg_reg;
   output reset_0;
   input \opt_has_pipe.first_q_reg[0] ;
   input rm_info_valid_vec;
   input clk;
   input [3:0]Q;
+  input \current_state_reg[2] ;
+  input \current_state_reg[2]_0 ;
+  input [1:0]ctrl_from_mem;
+  input [1:0]\reset_duration_reg[7] ;
+  input \reset_duration_reg[7]_0 ;
+  input reset;
+  input \current_state_reg[3] ;
   input \current_state_reg[3]_0 ;
   input \current_state_reg[3]_1 ;
-  input \current_state_reg[3]_2 ;
   input \current_state_reg[0] ;
   input \current_state_reg[0]_0 ;
   input \current_state_reg[0]_1 ;
   input \current_state_reg[1] ;
   input \current_state_reg[1]_0 ;
-  input reset;
-  input [0:0]\reset_duration_reg[6] ;
-  input startup_required;
   input using_sw_trigger;
   input \current_state_reg[0]_2 ;
   input \current_state_reg[0]_3 ;
-  input \current_state_reg[0]_4 ;
-  input \current_state_reg[0]_5 ;
   input \current_state_reg[1]_1 ;
-  input \current_state_reg[1]_2 ;
+  input \current_state_reg[3]_2 ;
+  input \current_state_reg[0]_4 ;
+  input \current_state_reg[3]_3 ;
+  input \reset_duration_reg[6] ;
+  input [6:0]\reset_duration_reg[7]_1 ;
   input \reset_duration_reg[6]_0 ;
-  input [6:0]\reset_duration_reg[7]_0 ;
-  input \reset_duration_reg[6]_1 ;
-  input [0:0]ctrl_from_mem;
-  input sw_trigger_pending_reg;
+  input \current_state[1]_i_2 ;
+  input user_restarted_with_status;
+  input write_to_sw_trigger_reg_cmb;
   input reg_write_complete_sw_trigger_reg;
   input sw_trigger_pending;
   input rm_reset_i_reg;
@@ -9993,34 +9955,30 @@ module design_2_dfx_controller_0_0_delay__parameterized10_8
   input rm_reset_i_reg_1;
   input vsm_shifter_rm_reset;
   input rm_reset_i_reg_2;
-  input \current_state[1]_i_5 ;
-  input \current_state[1]_i_5_0 ;
-  input \current_state[1]_i_5_1 ;
+  input rm_reset_i_reg_3;
 
-  wire [2:0]D;
-  wire [0:0]E;
+  wire [3:0]D;
   wire [3:0]Q;
   wire bs_info_valid_vec;
   wire clk;
-  wire [0:0]ctrl_from_mem;
-  wire \current_state[1]_i_5 ;
-  wire \current_state[1]_i_5_0 ;
-  wire \current_state[1]_i_5_1 ;
+  wire [1:0]ctrl_from_mem;
+  wire \current_state[1]_i_2 ;
   wire \current_state_reg[0] ;
   wire \current_state_reg[0]_0 ;
   wire \current_state_reg[0]_1 ;
   wire \current_state_reg[0]_2 ;
   wire \current_state_reg[0]_3 ;
   wire \current_state_reg[0]_4 ;
-  wire \current_state_reg[0]_5 ;
   wire \current_state_reg[1] ;
   wire \current_state_reg[1]_0 ;
   wire \current_state_reg[1]_1 ;
-  wire \current_state_reg[1]_2 ;
+  wire \current_state_reg[2] ;
+  wire \current_state_reg[2]_0 ;
   wire \current_state_reg[3] ;
   wire \current_state_reg[3]_0 ;
   wire \current_state_reg[3]_1 ;
   wire \current_state_reg[3]_2 ;
+  wire \current_state_reg[3]_3 ;
   wire hw_trigger_used;
   wire \opt_has_pipe.first_q_reg[0] ;
   wire \opt_has_pipe.i_pipe[2].pipe_reg[2][0] ;
@@ -10030,47 +9988,46 @@ module design_2_dfx_controller_0_0_delay__parameterized10_8
   wire reset;
   wire reset_0;
   wire \reset_duration_reg[4] ;
-  wire [0:0]\reset_duration_reg[6] ;
+  wire \reset_duration_reg[6] ;
   wire \reset_duration_reg[6]_0 ;
-  wire \reset_duration_reg[6]_1 ;
-  wire \reset_duration_reg[7] ;
-  wire [6:0]\reset_duration_reg[7]_0 ;
-  wire [0:0]\reset_duration_stored_reg[6] ;
+  wire [1:0]\reset_duration_reg[7] ;
+  wire \reset_duration_reg[7]_0 ;
+  wire [6:0]\reset_duration_reg[7]_1 ;
+  wire [1:0]\reset_duration_stored_reg[7] ;
   wire rm_info_valid_vec;
   wire rm_reset_i_reg;
   wire [0:0]rm_reset_i_reg_0;
   wire rm_reset_i_reg_1;
   wire rm_reset_i_reg_2;
-  wire startup_required;
+  wire rm_reset_i_reg_3;
   wire sw_trigger_pending;
-  wire sw_trigger_pending_reg;
+  wire user_restarted_with_status;
   wire using_sw_trigger;
   wire vsm_shifter_rm_reset;
+  wire write_to_sw_trigger_reg_cmb;
 
   design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized17 i_pipe
        (.D(D),
-        .E(E),
         .Q(Q),
         .clk(clk),
         .ctrl_from_mem(ctrl_from_mem),
-        .\current_state[1]_i_5_0 (\current_state[1]_i_5 ),
-        .\current_state[1]_i_5_1 (\current_state[1]_i_5_0 ),
-        .\current_state[1]_i_5_2 (\current_state[1]_i_5_1 ),
+        .\current_state[1]_i_2_0 (\current_state[1]_i_2 ),
         .\current_state_reg[0] (\current_state_reg[0] ),
         .\current_state_reg[0]_0 (\current_state_reg[0]_0 ),
         .\current_state_reg[0]_1 (\current_state_reg[0]_1 ),
         .\current_state_reg[0]_2 (\current_state_reg[0]_2 ),
         .\current_state_reg[0]_3 (\current_state_reg[0]_3 ),
         .\current_state_reg[0]_4 (\current_state_reg[0]_4 ),
-        .\current_state_reg[0]_5 (\current_state_reg[0]_5 ),
         .\current_state_reg[1] (\current_state_reg[1] ),
         .\current_state_reg[1]_0 (\current_state_reg[1]_0 ),
         .\current_state_reg[1]_1 (\current_state_reg[1]_1 ),
-        .\current_state_reg[1]_2 (\current_state_reg[1]_2 ),
+        .\current_state_reg[2] (\current_state_reg[2] ),
+        .\current_state_reg[2]_0 (\current_state_reg[2]_0 ),
         .\current_state_reg[3] (\current_state_reg[3] ),
         .\current_state_reg[3]_0 (\current_state_reg[3]_0 ),
         .\current_state_reg[3]_1 (\current_state_reg[3]_1 ),
         .\current_state_reg[3]_2 (\current_state_reg[3]_2 ),
+        .\current_state_reg[3]_3 (\current_state_reg[3]_3 ),
         .hw_trigger_used(hw_trigger_used),
         .\opt_has_pipe.first_q_reg[0]_0 (\opt_has_pipe.first_q_reg[0] ),
         .\opt_has_pipe.i_pipe[2].pipe_reg[2][0]_0 (bs_info_valid_vec),
@@ -10083,20 +10040,21 @@ module design_2_dfx_controller_0_0_delay__parameterized10_8
         .\reset_duration_reg[4] (\reset_duration_reg[4] ),
         .\reset_duration_reg[6] (\reset_duration_reg[6] ),
         .\reset_duration_reg[6]_0 (\reset_duration_reg[6]_0 ),
-        .\reset_duration_reg[6]_1 (\reset_duration_reg[6]_1 ),
         .\reset_duration_reg[7] (\reset_duration_reg[7] ),
         .\reset_duration_reg[7]_0 (\reset_duration_reg[7]_0 ),
-        .\reset_duration_stored_reg[6] (\reset_duration_stored_reg[6] ),
+        .\reset_duration_reg[7]_1 (\reset_duration_reg[7]_1 ),
+        .\reset_duration_stored_reg[7] (\reset_duration_stored_reg[7] ),
         .rm_info_valid_vec(rm_info_valid_vec),
         .rm_reset_i_reg(rm_reset_i_reg),
         .rm_reset_i_reg_0(rm_reset_i_reg_0),
         .rm_reset_i_reg_1(rm_reset_i_reg_1),
         .rm_reset_i_reg_2(rm_reset_i_reg_2),
-        .startup_required(startup_required),
+        .rm_reset_i_reg_3(rm_reset_i_reg_3),
         .sw_trigger_pending(sw_trigger_pending),
-        .sw_trigger_pending_reg(sw_trigger_pending_reg),
+        .user_restarted_with_status(user_restarted_with_status),
         .using_sw_trigger(using_sw_trigger),
-        .vsm_shifter_rm_reset(vsm_shifter_rm_reset));
+        .vsm_shifter_rm_reset(vsm_shifter_rm_reset),
+        .write_to_sw_trigger_reg_cmb(write_to_sw_trigger_reg_cmb));
 endmodule
 
 (* ORIG_REF_NAME = "delay" *) 
@@ -10126,57 +10084,57 @@ endmodule
 module design_2_dfx_controller_0_0_delay__parameterized2_0
    (out,
     \opt_has_pipe.first_q_reg[0] ,
-    I44,
     \opt_has_pipe.first_q_reg[0]_0 ,
+    \opt_has_pipe.first_q_reg[0]_1 ,
     read_from_bs_info_registers_cmb,
     clk,
-    \b_bs_info.reg_rdata_bs_table_size_reg[0] ,
+    \b_bs_info.reg_rdata_bs_table_address_reg[0] ,
     E,
-    \b_bs_info.reg_rdata_bs_table_size_reg[0]_0 ,
+    \b_bs_info.reg_rdata_bs_table_size_reg[0] ,
     Q,
-    \b_bs_info.reg_rdata_bs_table_address_reg[31] ,
+    \b_bs_info.reg_rdata_bs_table_address_reg[0]_0 ,
     in_shutdown_d1,
-    \b_bs_info.reg_rdata_bs_table_address_reg[31]_0 );
+    \b_bs_info.reg_rdata_bs_table_address_reg[0]_1 );
   output out;
   output \opt_has_pipe.first_q_reg[0] ;
-  output I44;
-  input \opt_has_pipe.first_q_reg[0]_0 ;
+  output \opt_has_pipe.first_q_reg[0]_0 ;
+  input \opt_has_pipe.first_q_reg[0]_1 ;
   input read_from_bs_info_registers_cmb;
   input clk;
-  input \b_bs_info.reg_rdata_bs_table_size_reg[0] ;
+  input \b_bs_info.reg_rdata_bs_table_address_reg[0] ;
   input [0:0]E;
-  input \b_bs_info.reg_rdata_bs_table_size_reg[0]_0 ;
+  input \b_bs_info.reg_rdata_bs_table_size_reg[0] ;
   input [1:0]Q;
-  input \b_bs_info.reg_rdata_bs_table_address_reg[31] ;
+  input \b_bs_info.reg_rdata_bs_table_address_reg[0]_0 ;
   input in_shutdown_d1;
-  input \b_bs_info.reg_rdata_bs_table_address_reg[31]_0 ;
+  input \b_bs_info.reg_rdata_bs_table_address_reg[0]_1 ;
 
   wire [0:0]E;
-  wire I44;
   wire [1:0]Q;
-  wire \b_bs_info.reg_rdata_bs_table_address_reg[31] ;
-  wire \b_bs_info.reg_rdata_bs_table_address_reg[31]_0 ;
+  wire \b_bs_info.reg_rdata_bs_table_address_reg[0] ;
+  wire \b_bs_info.reg_rdata_bs_table_address_reg[0]_0 ;
+  wire \b_bs_info.reg_rdata_bs_table_address_reg[0]_1 ;
   wire \b_bs_info.reg_rdata_bs_table_size_reg[0] ;
-  wire \b_bs_info.reg_rdata_bs_table_size_reg[0]_0 ;
   wire clk;
   wire in_shutdown_d1;
   wire \opt_has_pipe.first_q_reg[0] ;
   wire \opt_has_pipe.first_q_reg[0]_0 ;
+  wire \opt_has_pipe.first_q_reg[0]_1 ;
   wire out;
   wire read_from_bs_info_registers_cmb;
 
   design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized5_26 i_pipe
        (.E(E),
-        .I44(I44),
         .Q(Q),
-        .\b_bs_info.reg_rdata_bs_table_address_reg[31] (\b_bs_info.reg_rdata_bs_table_address_reg[31] ),
-        .\b_bs_info.reg_rdata_bs_table_address_reg[31]_0 (\b_bs_info.reg_rdata_bs_table_address_reg[31]_0 ),
+        .\b_bs_info.reg_rdata_bs_table_address_reg[0] (\b_bs_info.reg_rdata_bs_table_address_reg[0] ),
+        .\b_bs_info.reg_rdata_bs_table_address_reg[0]_0 (\b_bs_info.reg_rdata_bs_table_address_reg[0]_0 ),
+        .\b_bs_info.reg_rdata_bs_table_address_reg[0]_1 (\b_bs_info.reg_rdata_bs_table_address_reg[0]_1 ),
         .\b_bs_info.reg_rdata_bs_table_size_reg[0] (\b_bs_info.reg_rdata_bs_table_size_reg[0] ),
-        .\b_bs_info.reg_rdata_bs_table_size_reg[0]_0 (\b_bs_info.reg_rdata_bs_table_size_reg[0]_0 ),
         .clk(clk),
         .in_shutdown_d1(in_shutdown_d1),
         .\opt_has_pipe.first_q_reg[0]_0 (\opt_has_pipe.first_q_reg[0] ),
         .\opt_has_pipe.first_q_reg[0]_1 (\opt_has_pipe.first_q_reg[0]_0 ),
+        .\opt_has_pipe.first_q_reg[0]_2 (\opt_has_pipe.first_q_reg[0]_1 ),
         .out(out),
         .read_from_bs_info_registers_cmb(read_from_bs_info_registers_cmb));
 endmodule
@@ -10222,36 +10180,36 @@ endmodule
 
 (* ORIG_REF_NAME = "delay" *) 
 module design_2_dfx_controller_0_0_delay__parameterized2_10
-   (fetch_error_flag_reg,
-    bad_config_error_flag_reg,
+   (bad_config_error_flag_reg,
+    fetch_error_flag_reg,
     cp_error_flag_reg,
     rm_id_valid,
     \opt_has_pipe.first_q_reg[0] ,
     clk,
+    bad_config_error_flag_reg_0,
+    p_0_in,
     fetch_error_flag_reg_0,
     fetch_error_flag_reg_1,
     Q,
     din,
-    bad_config_error_flag_reg_0,
-    p_0_in,
     cp_error_flag,
     cp0_vs_id,
     p_3_in,
     cp_error_flag_reg_0,
     user_restarted_with_status,
     out);
-  output fetch_error_flag_reg;
   output bad_config_error_flag_reg;
+  output fetch_error_flag_reg;
   output cp_error_flag_reg;
   output rm_id_valid;
   input \opt_has_pipe.first_q_reg[0] ;
   input clk;
+  input bad_config_error_flag_reg_0;
+  input p_0_in;
   input fetch_error_flag_reg_0;
   input fetch_error_flag_reg_1;
   input [3:0]Q;
   input [0:0]din;
-  input bad_config_error_flag_reg_0;
-  input p_0_in;
   input cp_error_flag;
   input cp0_vs_id;
   input p_3_in;
@@ -10334,8 +10292,8 @@ module design_2_dfx_controller_0_0_delay__parameterized2_12
     read_from_trigger_registers_cmb,
     clk,
     Q,
+    axi_write_complete,
     \b_trigger_table.trigger2rm_table_reg_0_1_0_0 ,
-    \b_trigger_table.trigger2rm_table_reg_0_1_0_0_0 ,
     in_shutdown_d1);
   output out;
   output \vsm_addr_reg[4] ;
@@ -10343,13 +10301,13 @@ module design_2_dfx_controller_0_0_delay__parameterized2_12
   input read_from_trigger_registers_cmb;
   input clk;
   input [1:0]Q;
+  input axi_write_complete;
   input \b_trigger_table.trigger2rm_table_reg_0_1_0_0 ;
-  input \b_trigger_table.trigger2rm_table_reg_0_1_0_0_0 ;
   input in_shutdown_d1;
 
   wire [1:0]Q;
+  wire axi_write_complete;
   wire \b_trigger_table.trigger2rm_table_reg_0_1_0_0 ;
-  wire \b_trigger_table.trigger2rm_table_reg_0_1_0_0_0 ;
   wire clk;
   wire in_shutdown_d1;
   wire \opt_has_pipe.first_q_reg[0] ;
@@ -10359,8 +10317,8 @@ module design_2_dfx_controller_0_0_delay__parameterized2_12
 
   design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized5_14 i_pipe
        (.Q(Q),
+        .axi_write_complete(axi_write_complete),
         .\b_trigger_table.trigger2rm_table_reg_0_1_0_0 (\b_trigger_table.trigger2rm_table_reg_0_1_0_0 ),
-        .\b_trigger_table.trigger2rm_table_reg_0_1_0_0_0 (\b_trigger_table.trigger2rm_table_reg_0_1_0_0_0 ),
         .clk(clk),
         .in_shutdown_d1(in_shutdown_d1),
         .\opt_has_pipe.first_q_reg[0]_0 (\opt_has_pipe.first_q_reg[0] ),
@@ -10372,9 +10330,8 @@ endmodule
 (* ORIG_REF_NAME = "delay" *) 
 module design_2_dfx_controller_0_0_delay__parameterized2_13
    (out,
+    \b_trigger_table.b_write_to_trigger_registers_edge.axi_write_complete_reg ,
     \opt_has_pipe.first_q_reg[0] ,
-    reg_tready_d0,
-    reg_tready_i0,
     \opt_has_pipe.first_q_reg[0]_0 ,
     \opt_has_pipe.first_q_reg[0]_1 ,
     \opt_has_pipe.first_q_reg[0]_2 ,
@@ -10385,17 +10342,12 @@ module design_2_dfx_controller_0_0_delay__parameterized2_13
     \opt_has_pipe.first_q_reg[0]_7 ,
     \opt_has_pipe.first_q_reg[0]_8 ,
     \opt_has_pipe.first_q_reg[0]_9 ,
-    \opt_has_pipe.first_q_reg[0]_10 ,
     clk,
-    \reg_rdata_reg[31] ,
-    \reg_rdata_reg[31]_0 ,
-    \reg_rdata_reg[31]_1 ,
-    sw_trigger_pending,
-    \reg_rdata_reg[31]_2 ,
-    reg_tready_d1_reg,
-    reg_tready_i_reg,
-    reg_tready_d1_reg_0,
-    reg_tready_d1,
+    axi_write_complete,
+    reg_write_complete_ctrl_reg,
+    reg_tready_d1_i_2,
+    reg_write_complete_sw_trigger_reg,
+    reg_tready_d1_i_2_0,
     \reg_rdata_reg[8] ,
     \reg_rdata_reg[8]_0 ,
     Q,
@@ -10410,9 +10362,8 @@ module design_2_dfx_controller_0_0_delay__parameterized2_13
     \reg_rdata_reg[1] ,
     reset);
   output out;
+  output \b_trigger_table.b_write_to_trigger_registers_edge.axi_write_complete_reg ;
   output \opt_has_pipe.first_q_reg[0] ;
-  output reg_tready_d0;
-  output reg_tready_i0;
   output \opt_has_pipe.first_q_reg[0]_0 ;
   output \opt_has_pipe.first_q_reg[0]_1 ;
   output \opt_has_pipe.first_q_reg[0]_2 ;
@@ -10421,19 +10372,14 @@ module design_2_dfx_controller_0_0_delay__parameterized2_13
   output \opt_has_pipe.first_q_reg[0]_5 ;
   output \opt_has_pipe.first_q_reg[0]_6 ;
   output \opt_has_pipe.first_q_reg[0]_7 ;
-  output \opt_has_pipe.first_q_reg[0]_8 ;
+  input \opt_has_pipe.first_q_reg[0]_8 ;
   input \opt_has_pipe.first_q_reg[0]_9 ;
-  input \opt_has_pipe.first_q_reg[0]_10 ;
   input clk;
-  input \reg_rdata_reg[31] ;
-  input \reg_rdata_reg[31]_0 ;
-  input \reg_rdata_reg[31]_1 ;
-  input sw_trigger_pending;
-  input \reg_rdata_reg[31]_2 ;
-  input reg_tready_d1_reg;
-  input reg_tready_i_reg;
-  input reg_tready_d1_reg_0;
-  input reg_tready_d1;
+  input axi_write_complete;
+  input reg_write_complete_ctrl_reg;
+  input reg_tready_d1_i_2;
+  input reg_write_complete_sw_trigger_reg;
+  input reg_tready_d1_i_2_0;
   input \reg_rdata_reg[8] ;
   input \reg_rdata_reg[8]_0 ;
   input [7:0]Q;
@@ -10449,11 +10395,12 @@ module design_2_dfx_controller_0_0_delay__parameterized2_13
   input reset;
 
   wire [7:0]Q;
+  wire axi_write_complete;
+  wire \b_trigger_table.b_write_to_trigger_registers_edge.axi_write_complete_reg ;
   wire clk;
   wire \opt_has_pipe.first_q_reg[0] ;
   wire \opt_has_pipe.first_q_reg[0]_0 ;
   wire \opt_has_pipe.first_q_reg[0]_1 ;
-  wire \opt_has_pipe.first_q_reg[0]_10 ;
   wire \opt_has_pipe.first_q_reg[0]_2 ;
   wire \opt_has_pipe.first_q_reg[0]_3 ;
   wire \opt_has_pipe.first_q_reg[0]_4 ;
@@ -10465,10 +10412,6 @@ module design_2_dfx_controller_0_0_delay__parameterized2_13
   wire out;
   wire \reg_rdata_reg[1] ;
   wire \reg_rdata_reg[2] ;
-  wire \reg_rdata_reg[31] ;
-  wire \reg_rdata_reg[31]_0 ;
-  wire \reg_rdata_reg[31]_1 ;
-  wire \reg_rdata_reg[31]_2 ;
   wire \reg_rdata_reg[3] ;
   wire \reg_rdata_reg[4] ;
   wire \reg_rdata_reg[5] ;
@@ -10478,22 +10421,20 @@ module design_2_dfx_controller_0_0_delay__parameterized2_13
   wire \reg_rdata_reg[8]_0 ;
   wire \reg_rdata_reg[8]_1 ;
   wire [7:0]\reg_rdata_reg[8]_2 ;
-  wire reg_tready_d0;
-  wire reg_tready_d1;
-  wire reg_tready_d1_reg;
-  wire reg_tready_d1_reg_0;
-  wire reg_tready_i0;
-  wire reg_tready_i_reg;
+  wire reg_tready_d1_i_2;
+  wire reg_tready_d1_i_2_0;
+  wire reg_write_complete_ctrl_reg;
+  wire reg_write_complete_sw_trigger_reg;
   wire reset;
-  wire sw_trigger_pending;
 
   design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized5 i_pipe
        (.Q(Q),
+        .axi_write_complete(axi_write_complete),
+        .\b_trigger_table.b_write_to_trigger_registers_edge.axi_write_complete_reg (\b_trigger_table.b_write_to_trigger_registers_edge.axi_write_complete_reg ),
         .clk(clk),
         .\opt_has_pipe.first_q_reg[0]_0 (\opt_has_pipe.first_q_reg[0] ),
         .\opt_has_pipe.first_q_reg[0]_1 (\opt_has_pipe.first_q_reg[0]_0 ),
         .\opt_has_pipe.first_q_reg[0]_10 (\opt_has_pipe.first_q_reg[0]_9 ),
-        .\opt_has_pipe.first_q_reg[0]_11 (\opt_has_pipe.first_q_reg[0]_10 ),
         .\opt_has_pipe.first_q_reg[0]_2 (\opt_has_pipe.first_q_reg[0]_1 ),
         .\opt_has_pipe.first_q_reg[0]_3 (\opt_has_pipe.first_q_reg[0]_2 ),
         .\opt_has_pipe.first_q_reg[0]_4 (\opt_has_pipe.first_q_reg[0]_3 ),
@@ -10505,10 +10446,6 @@ module design_2_dfx_controller_0_0_delay__parameterized2_13
         .out(out),
         .\reg_rdata_reg[1] (\reg_rdata_reg[1] ),
         .\reg_rdata_reg[2] (\reg_rdata_reg[2] ),
-        .\reg_rdata_reg[31] (\reg_rdata_reg[31] ),
-        .\reg_rdata_reg[31]_0 (\reg_rdata_reg[31]_0 ),
-        .\reg_rdata_reg[31]_1 (\reg_rdata_reg[31]_1 ),
-        .\reg_rdata_reg[31]_2 (\reg_rdata_reg[31]_2 ),
         .\reg_rdata_reg[3] (\reg_rdata_reg[3] ),
         .\reg_rdata_reg[4] (\reg_rdata_reg[4] ),
         .\reg_rdata_reg[5] (\reg_rdata_reg[5] ),
@@ -10518,31 +10455,19 @@ module design_2_dfx_controller_0_0_delay__parameterized2_13
         .\reg_rdata_reg[8]_0 (\reg_rdata_reg[8]_0 ),
         .\reg_rdata_reg[8]_1 (\reg_rdata_reg[8]_1 ),
         .\reg_rdata_reg[8]_2 (\reg_rdata_reg[8]_2 ),
-        .reg_tready_d0(reg_tready_d0),
-        .reg_tready_d1(reg_tready_d1),
-        .reg_tready_d1_reg(reg_tready_d1_reg),
-        .reg_tready_d1_reg_0(reg_tready_d1_reg_0),
-        .reg_tready_i0(reg_tready_i0),
-        .reg_tready_i_reg(reg_tready_i_reg),
-        .reset(reset),
-        .sw_trigger_pending(sw_trigger_pending));
+        .reg_tready_d1_i_2(reg_tready_d1_i_2),
+        .reg_tready_d1_i_2_0(reg_tready_d1_i_2_0),
+        .reg_write_complete_ctrl_reg(reg_write_complete_ctrl_reg),
+        .reg_write_complete_sw_trigger_reg(reg_write_complete_sw_trigger_reg),
+        .reset(reset));
 endmodule
 
 (* ORIG_REF_NAME = "delay" *) 
 module design_2_dfx_controller_0_0_delay__parameterized2_2
    (out,
-    \vsm_addr_reg[2] ,
-    \vsm_addr_reg[2]_0 ,
-    \vsm_addr_reg[2]_1 ,
-    \vsm_addr_reg[2]_2 ,
-    \vsm_addr_reg[2]_3 ,
-    \vsm_addr_reg[2]_4 ,
-    \vsm_addr_reg[2]_5 ,
-    \vsm_addr_reg[2]_6 ,
-    \b_bs_info.reg_rdata_bs_table_address_reg[0] ,
-    \b_bs_info.reg_rdata_bs_table_address_reg[31] ,
+    D,
+    \opt_has_pipe.first_q_reg[0] ,
     \b_bs_info.b_write_to_bs_info_registers_edge.axi_write_complete_reg ,
-    reset_0,
     \b_bs_info.reg_rdata_bs_table_size_reg[13] ,
     \b_bs_info.reg_rdata_bs_table_size_reg[14] ,
     \b_bs_info.reg_rdata_bs_table_size_reg[15] ,
@@ -10561,38 +10486,29 @@ module design_2_dfx_controller_0_0_delay__parameterized2_2
     \b_bs_info.reg_rdata_bs_table_size_reg[28] ,
     \b_bs_info.reg_rdata_bs_table_size_reg[29] ,
     \b_bs_info.reg_rdata_bs_table_size_reg[30] ,
-    \opt_has_pipe.first_q_reg[0] ,
+    reset_0,
     \opt_has_pipe.first_q_reg[0]_0 ,
+    \opt_has_pipe.first_q_reg[0]_1 ,
     clk,
+    reg_rdata_trigger_table,
+    \reg_rdata_reg[0] ,
+    \reg_rdata_reg[0]_0 ,
+    \reg_rdata_reg[0]_1 ,
+    \reg_rdata_reg[0]_2 ,
     Q,
     reg_rdata_rm_table_ctrl1_out,
-    \reg_rdata_reg[30] ,
-    \reg_rdata_reg[2] ,
-    \reg_rdata_reg[1] ,
-    \reg_rdata_reg[3] ,
-    \reg_rdata_reg[4] ,
-    \reg_rdata_reg[5] ,
-    \reg_rdata_reg[6] ,
-    \reg_rdata_reg[7] ,
-    in,
+    sw_trigger_id,
+    \reg_rdata[0]_i_2 ,
     \reg_rdata_reg[31] ,
+    sw_trigger_pending,
     \reg_rdata_reg[31]_0 ,
-    \s_axi_rresp_i_reg[1] ,
-    reset,
-    \reg_rdata_reg[30]_0 );
+    \reg_rdata_reg[31]_1 ,
+    \s_axi_rresp_i[1]_i_3 ,
+    reset);
   output out;
-  output \vsm_addr_reg[2] ;
-  output \vsm_addr_reg[2]_0 ;
-  output \vsm_addr_reg[2]_1 ;
-  output \vsm_addr_reg[2]_2 ;
-  output \vsm_addr_reg[2]_3 ;
-  output \vsm_addr_reg[2]_4 ;
-  output \vsm_addr_reg[2]_5 ;
-  output \vsm_addr_reg[2]_6 ;
-  output \b_bs_info.reg_rdata_bs_table_address_reg[0] ;
-  output \b_bs_info.reg_rdata_bs_table_address_reg[31] ;
+  output [1:0]D;
+  output \opt_has_pipe.first_q_reg[0] ;
   output \b_bs_info.b_write_to_bs_info_registers_edge.axi_write_complete_reg ;
-  output reset_0;
   output \b_bs_info.reg_rdata_bs_table_size_reg[13] ;
   output \b_bs_info.reg_rdata_bs_table_size_reg[14] ;
   output \b_bs_info.reg_rdata_bs_table_size_reg[15] ;
@@ -10611,30 +10527,29 @@ module design_2_dfx_controller_0_0_delay__parameterized2_2
   output \b_bs_info.reg_rdata_bs_table_size_reg[28] ;
   output \b_bs_info.reg_rdata_bs_table_size_reg[29] ;
   output \b_bs_info.reg_rdata_bs_table_size_reg[30] ;
-  input \opt_has_pipe.first_q_reg[0] ;
+  output reset_0;
   input \opt_has_pipe.first_q_reg[0]_0 ;
+  input \opt_has_pipe.first_q_reg[0]_1 ;
   input clk;
-  input [1:0]Q;
-  input [7:0]reg_rdata_rm_table_ctrl1_out;
-  input \reg_rdata_reg[30] ;
-  input [1:0]\reg_rdata_reg[2] ;
-  input \reg_rdata_reg[1] ;
-  input \reg_rdata_reg[3] ;
-  input \reg_rdata_reg[4] ;
-  input \reg_rdata_reg[5] ;
-  input \reg_rdata_reg[6] ;
-  input \reg_rdata_reg[7] ;
-  input [0:0]in;
-  input [19:0]\reg_rdata_reg[31] ;
+  input reg_rdata_trigger_table;
+  input \reg_rdata_reg[0] ;
+  input \reg_rdata_reg[0]_0 ;
+  input \reg_rdata_reg[0]_1 ;
+  input \reg_rdata_reg[0]_2 ;
+  input [2:0]Q;
+  input [0:0]reg_rdata_rm_table_ctrl1_out;
+  input sw_trigger_id;
+  input [0:0]\reg_rdata[0]_i_2 ;
+  input \reg_rdata_reg[31] ;
+  input sw_trigger_pending;
   input [19:0]\reg_rdata_reg[31]_0 ;
-  input \s_axi_rresp_i_reg[1] ;
+  input [19:0]\reg_rdata_reg[31]_1 ;
+  input \s_axi_rresp_i[1]_i_3 ;
   input reset;
-  input \reg_rdata_reg[30]_0 ;
 
-  wire [1:0]Q;
+  wire [1:0]D;
+  wire [2:0]Q;
   wire \b_bs_info.b_write_to_bs_info_registers_edge.axi_write_complete_reg ;
-  wire \b_bs_info.reg_rdata_bs_table_address_reg[0] ;
-  wire \b_bs_info.reg_rdata_bs_table_address_reg[31] ;
   wire \b_bs_info.reg_rdata_bs_table_size_reg[13] ;
   wire \b_bs_info.reg_rdata_bs_table_size_reg[14] ;
   wire \b_bs_info.reg_rdata_bs_table_size_reg[15] ;
@@ -10654,39 +10569,30 @@ module design_2_dfx_controller_0_0_delay__parameterized2_2
   wire \b_bs_info.reg_rdata_bs_table_size_reg[29] ;
   wire \b_bs_info.reg_rdata_bs_table_size_reg[30] ;
   wire clk;
-  wire [0:0]in;
   wire \opt_has_pipe.first_q_reg[0] ;
   wire \opt_has_pipe.first_q_reg[0]_0 ;
+  wire \opt_has_pipe.first_q_reg[0]_1 ;
   wire out;
-  wire \reg_rdata_reg[1] ;
-  wire [1:0]\reg_rdata_reg[2] ;
-  wire \reg_rdata_reg[30] ;
-  wire \reg_rdata_reg[30]_0 ;
-  wire [19:0]\reg_rdata_reg[31] ;
+  wire [0:0]\reg_rdata[0]_i_2 ;
+  wire \reg_rdata_reg[0] ;
+  wire \reg_rdata_reg[0]_0 ;
+  wire \reg_rdata_reg[0]_1 ;
+  wire \reg_rdata_reg[0]_2 ;
+  wire \reg_rdata_reg[31] ;
   wire [19:0]\reg_rdata_reg[31]_0 ;
-  wire \reg_rdata_reg[3] ;
-  wire \reg_rdata_reg[4] ;
-  wire \reg_rdata_reg[5] ;
-  wire \reg_rdata_reg[6] ;
-  wire \reg_rdata_reg[7] ;
-  wire [7:0]reg_rdata_rm_table_ctrl1_out;
+  wire [19:0]\reg_rdata_reg[31]_1 ;
+  wire [0:0]reg_rdata_rm_table_ctrl1_out;
+  wire reg_rdata_trigger_table;
   wire reset;
   wire reset_0;
-  wire \s_axi_rresp_i_reg[1] ;
-  wire \vsm_addr_reg[2] ;
-  wire \vsm_addr_reg[2]_0 ;
-  wire \vsm_addr_reg[2]_1 ;
-  wire \vsm_addr_reg[2]_2 ;
-  wire \vsm_addr_reg[2]_3 ;
-  wire \vsm_addr_reg[2]_4 ;
-  wire \vsm_addr_reg[2]_5 ;
-  wire \vsm_addr_reg[2]_6 ;
+  wire \s_axi_rresp_i[1]_i_3 ;
+  wire sw_trigger_id;
+  wire sw_trigger_pending;
 
   design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized5_24 i_pipe
-       (.Q(Q),
+       (.D(D),
+        .Q(Q),
         .\b_bs_info.b_write_to_bs_info_registers_edge.axi_write_complete_reg (\b_bs_info.b_write_to_bs_info_registers_edge.axi_write_complete_reg ),
-        .\b_bs_info.reg_rdata_bs_table_address_reg[0] (\b_bs_info.reg_rdata_bs_table_address_reg[0] ),
-        .\b_bs_info.reg_rdata_bs_table_address_reg[31] (\b_bs_info.reg_rdata_bs_table_address_reg[31] ),
         .\b_bs_info.reg_rdata_bs_table_size_reg[13] (\b_bs_info.reg_rdata_bs_table_size_reg[13] ),
         .\b_bs_info.reg_rdata_bs_table_size_reg[14] (\b_bs_info.reg_rdata_bs_table_size_reg[14] ),
         .\b_bs_info.reg_rdata_bs_table_size_reg[15] (\b_bs_info.reg_rdata_bs_table_size_reg[15] ),
@@ -10706,33 +10612,25 @@ module design_2_dfx_controller_0_0_delay__parameterized2_2
         .\b_bs_info.reg_rdata_bs_table_size_reg[29] (\b_bs_info.reg_rdata_bs_table_size_reg[29] ),
         .\b_bs_info.reg_rdata_bs_table_size_reg[30] (\b_bs_info.reg_rdata_bs_table_size_reg[30] ),
         .clk(clk),
-        .in(in),
         .\opt_has_pipe.first_q_reg[0]_0 (\opt_has_pipe.first_q_reg[0] ),
         .\opt_has_pipe.first_q_reg[0]_1 (\opt_has_pipe.first_q_reg[0]_0 ),
+        .\opt_has_pipe.first_q_reg[0]_2 (\opt_has_pipe.first_q_reg[0]_1 ),
         .out(out),
-        .\reg_rdata_reg[1] (\reg_rdata_reg[1] ),
-        .\reg_rdata_reg[2] (\reg_rdata_reg[2] ),
-        .\reg_rdata_reg[30] (\reg_rdata_reg[30] ),
-        .\reg_rdata_reg[30]_0 (\reg_rdata_reg[30]_0 ),
+        .\reg_rdata[0]_i_2_0 (\reg_rdata[0]_i_2 ),
+        .\reg_rdata_reg[0] (\reg_rdata_reg[0] ),
+        .\reg_rdata_reg[0]_0 (\reg_rdata_reg[0]_0 ),
+        .\reg_rdata_reg[0]_1 (\reg_rdata_reg[0]_1 ),
+        .\reg_rdata_reg[0]_2 (\reg_rdata_reg[0]_2 ),
         .\reg_rdata_reg[31] (\reg_rdata_reg[31] ),
         .\reg_rdata_reg[31]_0 (\reg_rdata_reg[31]_0 ),
-        .\reg_rdata_reg[3] (\reg_rdata_reg[3] ),
-        .\reg_rdata_reg[4] (\reg_rdata_reg[4] ),
-        .\reg_rdata_reg[5] (\reg_rdata_reg[5] ),
-        .\reg_rdata_reg[6] (\reg_rdata_reg[6] ),
-        .\reg_rdata_reg[7] (\reg_rdata_reg[7] ),
+        .\reg_rdata_reg[31]_1 (\reg_rdata_reg[31]_1 ),
         .reg_rdata_rm_table_ctrl1_out(reg_rdata_rm_table_ctrl1_out),
+        .reg_rdata_trigger_table(reg_rdata_trigger_table),
         .reset(reset),
         .reset_0(reset_0),
-        .\s_axi_rresp_i_reg[1] (\s_axi_rresp_i_reg[1] ),
-        .\vsm_addr_reg[2] (\vsm_addr_reg[2] ),
-        .\vsm_addr_reg[2]_0 (\vsm_addr_reg[2]_0 ),
-        .\vsm_addr_reg[2]_1 (\vsm_addr_reg[2]_1 ),
-        .\vsm_addr_reg[2]_2 (\vsm_addr_reg[2]_2 ),
-        .\vsm_addr_reg[2]_3 (\vsm_addr_reg[2]_3 ),
-        .\vsm_addr_reg[2]_4 (\vsm_addr_reg[2]_4 ),
-        .\vsm_addr_reg[2]_5 (\vsm_addr_reg[2]_5 ),
-        .\vsm_addr_reg[2]_6 (\vsm_addr_reg[2]_6 ));
+        .\s_axi_rresp_i[1]_i_3 (\s_axi_rresp_i[1]_i_3 ),
+        .sw_trigger_id(sw_trigger_id),
+        .sw_trigger_pending(sw_trigger_pending));
 endmodule
 
 (* ORIG_REF_NAME = "delay" *) 
@@ -10807,8 +10705,8 @@ module design_2_dfx_controller_0_0_delay__parameterized2_5
     clk,
     Q,
     \b_rm_info.reg_rdata_rm_table_ctrl_reg[0] ,
-    \b_rm_info.reg_rdata_rm_table_ctrl_reg[0]_0 ,
-    \b_rm_info.reg_rdata_rm_table_ctrl_reg[0]_1 );
+    \b_rm_info.bs_addr_reg[0] ,
+    \b_rm_info.reg_rdata_rm_table_ctrl_reg[0]_0 );
   output out;
   output \vsm_addr_reg[2] ;
   output \vsm_addr_reg[2]_0 ;
@@ -10817,13 +10715,13 @@ module design_2_dfx_controller_0_0_delay__parameterized2_5
   input clk;
   input [1:0]Q;
   input \b_rm_info.reg_rdata_rm_table_ctrl_reg[0] ;
+  input \b_rm_info.bs_addr_reg[0] ;
   input \b_rm_info.reg_rdata_rm_table_ctrl_reg[0]_0 ;
-  input \b_rm_info.reg_rdata_rm_table_ctrl_reg[0]_1 ;
 
   wire [1:0]Q;
+  wire \b_rm_info.bs_addr_reg[0] ;
   wire \b_rm_info.reg_rdata_rm_table_ctrl_reg[0] ;
   wire \b_rm_info.reg_rdata_rm_table_ctrl_reg[0]_0 ;
-  wire \b_rm_info.reg_rdata_rm_table_ctrl_reg[0]_1 ;
   wire clk;
   wire \opt_has_pipe.first_q_reg[0] ;
   wire out;
@@ -10833,9 +10731,9 @@ module design_2_dfx_controller_0_0_delay__parameterized2_5
 
   design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized5_20 i_pipe
        (.Q(Q),
+        .\b_rm_info.bs_addr_reg[0] (\b_rm_info.bs_addr_reg[0] ),
         .\b_rm_info.reg_rdata_rm_table_ctrl_reg[0] (\b_rm_info.reg_rdata_rm_table_ctrl_reg[0] ),
         .\b_rm_info.reg_rdata_rm_table_ctrl_reg[0]_0 (\b_rm_info.reg_rdata_rm_table_ctrl_reg[0]_0 ),
-        .\b_rm_info.reg_rdata_rm_table_ctrl_reg[0]_1 (\b_rm_info.reg_rdata_rm_table_ctrl_reg[0]_1 ),
         .clk(clk),
         .\opt_has_pipe.first_q_reg[0]_0 (\opt_has_pipe.first_q_reg[0] ),
         .out(out),
@@ -10906,96 +10804,100 @@ endmodule
 (* ORIG_REF_NAME = "delay" *) 
 module design_2_dfx_controller_0_0_delay__parameterized2_7
    (out,
-    D,
+    \vsm_addr_reg[2] ,
+    \vsm_addr_reg[2]_0 ,
+    \vsm_addr_reg[2]_1 ,
+    \vsm_addr_reg[2]_2 ,
+    \vsm_addr_reg[2]_3 ,
+    \vsm_addr_reg[2]_4 ,
+    \vsm_addr_reg[2]_5 ,
+    \vsm_addr_reg[2]_6 ,
     \opt_has_pipe.first_q_reg[0] ,
-    \b_rm_info.b_write_to_rm_info_registers_edge.axi_write_complete_reg ,
-    \opt_has_pipe.first_q_reg[0]_0 ,
-    \opt_has_pipe.first_q_reg[0]_1 ,
     start_axi_read,
     clk,
-    reg_rdata_trigger_table,
-    \reg_rdata_reg[0] ,
-    \reg_rdata_reg[0]_0 ,
-    \reg_rdata_reg[0]_1 ,
-    \reg_rdata_reg[0]_2 ,
-    \reg_rdata_reg[0]_3 ,
     Q,
     reg_rdata_rm_table_ctrl1_out,
-    sw_trigger_id,
-    \reg_rdata[0]_i_2 ,
-    \s_axi_rresp_i_reg[1] ,
-    reg_write_complete_ctrl_reg,
-    reg_write_complete_sw_trigger_reg,
-    reg_tready_i_reg);
+    \reg_rdata_reg[2] ,
+    \reg_rdata_reg[1] ,
+    \reg_rdata_reg[1]_0 ,
+    \reg_rdata_reg[3] ,
+    \reg_rdata_reg[4] ,
+    \reg_rdata_reg[5] ,
+    \reg_rdata_reg[6] ,
+    \reg_rdata_reg[7] ,
+    in);
   output out;
-  output [0:0]D;
-  output \opt_has_pipe.first_q_reg[0] ;
-  output \b_rm_info.b_write_to_rm_info_registers_edge.axi_write_complete_reg ;
-  output \opt_has_pipe.first_q_reg[0]_0 ;
-  input \opt_has_pipe.first_q_reg[0]_1 ;
+  output \vsm_addr_reg[2] ;
+  output \vsm_addr_reg[2]_0 ;
+  output \vsm_addr_reg[2]_1 ;
+  output \vsm_addr_reg[2]_2 ;
+  output \vsm_addr_reg[2]_3 ;
+  output \vsm_addr_reg[2]_4 ;
+  output \vsm_addr_reg[2]_5 ;
+  output \vsm_addr_reg[2]_6 ;
+  input \opt_has_pipe.first_q_reg[0] ;
   input start_axi_read;
   input clk;
-  input reg_rdata_trigger_table;
-  input \reg_rdata_reg[0] ;
-  input \reg_rdata_reg[0]_0 ;
-  input \reg_rdata_reg[0]_1 ;
-  input \reg_rdata_reg[0]_2 ;
-  input \reg_rdata_reg[0]_3 ;
-  input [2:0]Q;
-  input [0:0]reg_rdata_rm_table_ctrl1_out;
-  input sw_trigger_id;
-  input [0:0]\reg_rdata[0]_i_2 ;
-  input \s_axi_rresp_i_reg[1] ;
-  input reg_write_complete_ctrl_reg;
-  input reg_write_complete_sw_trigger_reg;
-  input reg_tready_i_reg;
+  input [0:0]Q;
+  input [7:0]reg_rdata_rm_table_ctrl1_out;
+  input [1:0]\reg_rdata_reg[2] ;
+  input \reg_rdata_reg[1] ;
+  input \reg_rdata_reg[1]_0 ;
+  input \reg_rdata_reg[3] ;
+  input \reg_rdata_reg[4] ;
+  input \reg_rdata_reg[5] ;
+  input \reg_rdata_reg[6] ;
+  input \reg_rdata_reg[7] ;
+  input [0:0]in;
 
-  wire [0:0]D;
-  wire [2:0]Q;
-  wire \b_rm_info.b_write_to_rm_info_registers_edge.axi_write_complete_reg ;
+  wire [0:0]Q;
   wire clk;
+  wire [0:0]in;
   wire \opt_has_pipe.first_q_reg[0] ;
-  wire \opt_has_pipe.first_q_reg[0]_0 ;
-  wire \opt_has_pipe.first_q_reg[0]_1 ;
   wire out;
-  wire [0:0]\reg_rdata[0]_i_2 ;
-  wire \reg_rdata_reg[0] ;
-  wire \reg_rdata_reg[0]_0 ;
-  wire \reg_rdata_reg[0]_1 ;
-  wire \reg_rdata_reg[0]_2 ;
-  wire \reg_rdata_reg[0]_3 ;
-  wire [0:0]reg_rdata_rm_table_ctrl1_out;
-  wire reg_rdata_trigger_table;
-  wire reg_tready_i_reg;
-  wire reg_write_complete_ctrl_reg;
-  wire reg_write_complete_sw_trigger_reg;
-  wire \s_axi_rresp_i_reg[1] ;
+  wire \reg_rdata_reg[1] ;
+  wire \reg_rdata_reg[1]_0 ;
+  wire [1:0]\reg_rdata_reg[2] ;
+  wire \reg_rdata_reg[3] ;
+  wire \reg_rdata_reg[4] ;
+  wire \reg_rdata_reg[5] ;
+  wire \reg_rdata_reg[6] ;
+  wire \reg_rdata_reg[7] ;
+  wire [7:0]reg_rdata_rm_table_ctrl1_out;
   wire start_axi_read;
-  wire sw_trigger_id;
+  wire \vsm_addr_reg[2] ;
+  wire \vsm_addr_reg[2]_0 ;
+  wire \vsm_addr_reg[2]_1 ;
+  wire \vsm_addr_reg[2]_2 ;
+  wire \vsm_addr_reg[2]_3 ;
+  wire \vsm_addr_reg[2]_4 ;
+  wire \vsm_addr_reg[2]_5 ;
+  wire \vsm_addr_reg[2]_6 ;
 
   design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized5_18 i_pipe
-       (.D(D),
-        .Q(Q),
-        .\b_rm_info.b_write_to_rm_info_registers_edge.axi_write_complete_reg (\b_rm_info.b_write_to_rm_info_registers_edge.axi_write_complete_reg ),
+       (.Q(Q),
         .clk(clk),
+        .in(in),
         .\opt_has_pipe.first_q_reg[0]_0 (\opt_has_pipe.first_q_reg[0] ),
-        .\opt_has_pipe.first_q_reg[0]_1 (\opt_has_pipe.first_q_reg[0]_0 ),
-        .\opt_has_pipe.first_q_reg[0]_2 (\opt_has_pipe.first_q_reg[0]_1 ),
         .out(out),
-        .\reg_rdata[0]_i_2_0 (\reg_rdata[0]_i_2 ),
-        .\reg_rdata_reg[0] (\reg_rdata_reg[0] ),
-        .\reg_rdata_reg[0]_0 (\reg_rdata_reg[0]_0 ),
-        .\reg_rdata_reg[0]_1 (\reg_rdata_reg[0]_1 ),
-        .\reg_rdata_reg[0]_2 (\reg_rdata_reg[0]_2 ),
-        .\reg_rdata_reg[0]_3 (\reg_rdata_reg[0]_3 ),
+        .\reg_rdata_reg[1] (\reg_rdata_reg[1] ),
+        .\reg_rdata_reg[1]_0 (\reg_rdata_reg[1]_0 ),
+        .\reg_rdata_reg[2] (\reg_rdata_reg[2] ),
+        .\reg_rdata_reg[3] (\reg_rdata_reg[3] ),
+        .\reg_rdata_reg[4] (\reg_rdata_reg[4] ),
+        .\reg_rdata_reg[5] (\reg_rdata_reg[5] ),
+        .\reg_rdata_reg[6] (\reg_rdata_reg[6] ),
+        .\reg_rdata_reg[7] (\reg_rdata_reg[7] ),
         .reg_rdata_rm_table_ctrl1_out(reg_rdata_rm_table_ctrl1_out),
-        .reg_rdata_trigger_table(reg_rdata_trigger_table),
-        .reg_tready_i_reg(reg_tready_i_reg),
-        .reg_write_complete_ctrl_reg(reg_write_complete_ctrl_reg),
-        .reg_write_complete_sw_trigger_reg(reg_write_complete_sw_trigger_reg),
-        .\s_axi_rresp_i_reg[1] (\s_axi_rresp_i_reg[1] ),
         .start_axi_read(start_axi_read),
-        .sw_trigger_id(sw_trigger_id));
+        .\vsm_addr_reg[2] (\vsm_addr_reg[2] ),
+        .\vsm_addr_reg[2]_0 (\vsm_addr_reg[2]_0 ),
+        .\vsm_addr_reg[2]_1 (\vsm_addr_reg[2]_1 ),
+        .\vsm_addr_reg[2]_2 (\vsm_addr_reg[2]_2 ),
+        .\vsm_addr_reg[2]_3 (\vsm_addr_reg[2]_3 ),
+        .\vsm_addr_reg[2]_4 (\vsm_addr_reg[2]_4 ),
+        .\vsm_addr_reg[2]_5 (\vsm_addr_reg[2]_5 ),
+        .\vsm_addr_reg[2]_6 (\vsm_addr_reg[2]_6 ));
 endmodule
 
 (* ORIG_REF_NAME = "delay" *) 
@@ -11217,16 +11119,13 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0
   wire fetch0_rm_id_o;
   wire first_word_seen;
   wire full;
-  wire i_axi_lite_if_n_50;
-  wire i_axi_lite_if_n_51;
-  wire i_axi_lite_if_n_52;
-  wire i_axi_lite_if_n_53;
-  wire i_axi_lite_if_n_54;
-  wire i_axi_lite_if_n_55;
-  wire i_axi_lite_if_n_57;
+  wire i_axi_lite_if_n_11;
+  wire i_axi_lite_if_n_13;
+  wire i_axi_lite_if_n_48;
+  wire i_axi_lite_if_n_62;
+  wire i_axi_lite_if_n_63;
   wire i_axi_lite_if_n_64;
-  wire i_axi_lite_if_n_65;
-  wire i_axi_lite_if_n_67;
+  wire i_axi_lite_if_n_66;
   wire i_axi_lite_if_n_68;
   wire i_axi_lite_if_n_69;
   wire i_axi_lite_if_n_70;
@@ -11236,27 +11135,24 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0
   wire i_axi_lite_if_n_74;
   wire i_axi_lite_if_n_75;
   wire i_axi_lite_if_n_76;
+  wire i_axi_lite_if_n_9;
+  wire i_cp0_n_10;
   wire i_cp0_n_11;
-  wire i_cp0_n_12;
-  wire i_cp0_n_13;
-  wire i_cp0_n_8;
   wire i_cp0_n_9;
   wire \i_dma/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/ENABLE_AXIS_SKID.I_MM2S_SKID_BUF/p_0_in2_in ;
   wire \i_dma/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/ENABLE_AXIS_SKID.I_MM2S_SKID_BUF/sig_data_reg_out_en ;
-  wire i_vsm_shifter_n_106;
-  wire i_vsm_shifter_n_107;
+  wire i_vsm_shifter_n_105;
   wire i_vsm_shifter_n_11;
-  wire i_vsm_shifter_n_13;
+  wire i_vsm_shifter_n_12;
   wire i_vsm_shifter_n_14;
-  wire i_vsm_shifter_n_16;
+  wire i_vsm_shifter_n_15;
   wire i_vsm_shifter_n_17;
-  wire i_vsm_shifter_n_19;
+  wire i_vsm_shifter_n_18;
   wire i_vsm_shifter_n_2;
   wire i_vsm_shifter_n_20;
-  wire i_vsm_shifter_n_21;
-  wire i_vsm_shifter_n_22;
   wire i_vsm_shifter_n_4;
-  wire i_vsm_shifter_n_93;
+  wire i_vsm_shifter_n_95;
+  wire i_vsm_shifter_n_96;
   wire icap_clk;
   wire icap_csib;
   wire [31:0]icap_i;
@@ -11289,6 +11185,7 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0
   wire reg_read_complete_bs_table_vec;
   wire reg_read_complete_rm_table_vec;
   wire reg_read_complete_trigger_table_vec;
+  wire reg_tready_d0;
   wire reg_write_complete_ctrl_reg;
   wire reset;
   wire reset_ah;
@@ -11333,6 +11230,7 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0
   wire wr_rst_busy;
   wire write_to_bs_info_registers_cmb;
   wire write_to_rm_info_registers_cmb;
+  wire write_to_sw_trigger_reg_cmb;
   wire write_to_trigger_registers_cmb;
   wire xpm_fifo_full;
 
@@ -11370,28 +11268,24 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0
         .axi_write_complete0(axi_write_complete0),
         .axi_write_complete026_out(axi_write_complete026_out),
         .axi_write_complete030_out(axi_write_complete030_out),
-        .\b_bs_info.b_read_from_bs_info_registers_edge.start_axi_read_reg (i_vsm_shifter_n_17),
-        .\b_bs_info.b_write_to_bs_info_registers_edge.axi_write_complete_reg (i_vsm_shifter_n_13),
+        .\b_bs_info.b_read_from_bs_info_registers_edge.start_axi_read_reg (i_vsm_shifter_n_18),
+        .\b_bs_info.b_write_to_bs_info_registers_edge.axi_write_complete_reg (i_vsm_shifter_n_14),
         .\b_bs_info.reg_rdata_bs_table_address_reg[31] (i_vsm_shifter_n_2),
         .\b_bs_info.reg_rdata_bs_table_address_reg[31]_0 (i_vsm_shifter_n_4),
         .\b_bs_info.reg_rdata_bs_table_size_reg[10] (i_axi_lite_if_n_74),
         .\b_bs_info.reg_rdata_bs_table_size_reg[11] (i_axi_lite_if_n_75),
         .\b_bs_info.reg_rdata_bs_table_size_reg[12] (i_axi_lite_if_n_76),
         .\b_bs_info.reg_rdata_bs_table_size_reg[9] (i_axi_lite_if_n_73),
-        .\b_rm_info.b_read_from_rm_info_registers_edge.start_axi_read_reg (i_vsm_shifter_n_16),
+        .\b_rm_info.b_read_from_rm_info_registers_edge.start_axi_read_reg (i_vsm_shifter_n_17),
         .\b_rm_info.b_write_to_rm_info_registers_edge.axi_write_complete_reg (i_vsm_shifter_n_11),
-        .\b_rm_info.bs_addr_reg[0] (i_axi_lite_if_n_65),
-        .\b_trigger_table.b_write_to_trigger_registers_edge.axi_write_complete_reg (i_vsm_shifter_n_14),
+        .\b_rm_info.bs_addr_reg[0] (i_axi_lite_if_n_63),
+        .\b_trigger_table.b_write_to_trigger_registers_edge.axi_write_complete_reg (i_vsm_shifter_n_15),
         .bs_addr(bs_addr),
         .clk(clk),
         .d1(d1),
-        .full_flag_reg(i_cp0_n_8),
-        .full_flag_reg_0(i_cp0_n_9),
-        .full_flag_reg_1(i_vsm_shifter_n_93),
-        .full_flag_reg_2(i_vsm_shifter_n_22),
         .in_shutdown(in_shutdown),
-        .in_shutdown_reg(i_axi_lite_if_n_68),
-        .\opt_has_pipe.first_q_reg[0] (i_axi_lite_if_n_55),
+        .in_shutdown_reg(i_axi_lite_if_n_70),
+        .\opt_has_pipe.first_q_reg[0] (i_axi_lite_if_n_64),
         .out(reg_read_complete_trigger_table_vec),
         .read_from_bs_info_registers_cmb(read_from_bs_info_registers_cmb),
         .read_from_rm_info_registers_cmb(read_from_rm_info_registers_cmb),
@@ -11399,14 +11293,16 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0
         .\reg_rdata_reg[12] (reg_rdata_bs_table_size0_out),
         .\reg_rdata_reg[12]_0 (reg_rdata_bs_table_address0_out),
         .\reg_rdata_reg[9] (reg_read_complete_bs_table_vec),
-        .\reg_rdata_reg[9]_0 (reg_read_complete_rm_table_vec),
         .reg_rdata_rm_table_ctrl1_out(reg_rdata_rm_table_ctrl1_out),
+        .reg_tready_d0(reg_tready_d0),
+        .reg_tready_d1_reg(i_vsm_shifter_n_95),
+        .reg_tready_d1_reg_0(i_vsm_shifter_n_96),
         .reg_write_complete_ctrl_reg(reg_write_complete_ctrl_reg),
-        .reg_write_complete_ctrl_reg_reg(i_axi_lite_if_n_51),
+        .reg_write_complete_ctrl_reg_reg(i_axi_lite_if_n_48),
         .reset(reset),
         .reset_0(i_axi_lite_if_n_72),
         .reset_ah(reset_ah),
-        .\rm_id_reg[0] (i_axi_lite_if_n_64),
+        .\rm_id_reg[0] (i_axi_lite_if_n_62),
         .s_axi_reg_araddr(s_axi_reg_araddr[6:2]),
         .s_axi_reg_arvalid(s_axi_reg_arvalid),
         .s_axi_reg_awaddr(s_axi_reg_awaddr[6:2]),
@@ -11421,49 +11317,45 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0
         .s_axi_reg_rvalid(s_axi_reg_rvalid),
         .s_axi_reg_wdata(s_axi_reg_wdata),
         .s_axi_reg_wvalid(s_axi_reg_wvalid),
-        .\s_axi_rresp_i_reg[1]_0 (i_vsm_shifter_n_107),
-        .\s_axi_rresp_i_reg[1]_1 (i_vsm_shifter_n_106),
+        .\s_axi_rresp_i_reg[1]_0 (i_vsm_shifter_n_12),
+        .\s_axi_rresp_i_reg[1]_1 (reg_read_complete_rm_table_vec),
+        .\s_axi_rresp_i_reg[1]_2 (i_vsm_shifter_n_105),
         .s_axis_ctrl_tready_i1(s_axis_ctrl_tready_i1),
-        .shutdown_bit_reg(i_vsm_shifter_n_19),
+        .shutdown_bit_reg(i_vsm_shifter_n_20),
         .start_axi_read0(start_axi_read0),
         .start_axi_read028_out(start_axi_read028_out),
         .start_axi_read032_out(start_axi_read032_out),
         .sw_ok_to_proceed_d00(sw_ok_to_proceed_d00),
         .sw_trigger_id(sw_trigger_id),
         .user_restarted_with_status059_out(user_restarted_with_status059_out),
-        .\vsm_addr_reg[2]_0 (i_axi_lite_if_n_57),
-        .\vsm_addr_reg[2]_1 (reg_rdata_bs_table_size),
-        .\vsm_addr_reg[3]_0 (i_axi_lite_if_n_54),
+        .\vsm_addr_reg[2]_0 (i_axi_lite_if_n_13),
+        .\vsm_addr_reg[2]_1 (i_axi_lite_if_n_66),
+        .\vsm_addr_reg[2]_2 (reg_rdata_bs_table_size),
+        .\vsm_addr_reg[3]_0 (i_axi_lite_if_n_11),
         .\vsm_addr_reg[3]_1 (reg_rdata_bs_table_address),
-        .\vsm_addr_reg[3]_2 (i_axi_lite_if_n_71),
-        .\vsm_addr_reg[6]_0 (i_axi_lite_if_n_52),
-        .\vsm_addr_reg[6]_1 (i_axi_lite_if_n_67),
+        .\vsm_addr_reg[3]_2 (i_axi_lite_if_n_69),
+        .\vsm_addr_reg[5]_0 (i_axi_lite_if_n_9),
+        .\vsm_addr_reg[6]_0 (i_axi_lite_if_n_68),
         .vsm_reg_tready(vsm_reg_tready),
-        .vsm_rnw_reg_0(i_axi_lite_if_n_50),
         .vsm_shifter_fetch_rm_id(vsm_shifter_fetch_rm_id),
-        .\vsm_tvalid_i_reg[0]_0 (i_axi_lite_if_n_53),
-        .\vsm_wdata_reg[0]_0 (i_axi_lite_if_n_70),
+        .\vsm_wdata_reg[0]_0 (i_axi_lite_if_n_71),
         .\vsm_wdata_reg[31]_0 (vsm_reg_wdata),
-        .\vsm_wdata_reg[8]_0 (i_axi_lite_if_n_69),
         .write_to_bs_info_registers_cmb(write_to_bs_info_registers_cmb),
         .write_to_rm_info_registers_cmb(write_to_rm_info_registers_cmb),
+        .write_to_sw_trigger_reg_cmb(write_to_sw_trigger_reg_cmb),
         .write_to_trigger_registers_cmb(write_to_trigger_registers_cmb));
   design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_icap_if_0 i_cp0
        (.E(\i_dma/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/ENABLE_AXIS_SKID.I_MM2S_SKID_BUF/sig_data_reg_out_en ),
-        .bad_config_error_flag_reg(i_cp0_n_9),
         .cap_gnt(cap_gnt),
         .cap_rel(cap_rel),
-        .cc_done_reg_0(i_cp0_n_8),
         .clk(clk),
         .cp0_vs_id(cp0_vs_id),
         .din({fetch0_2_decompress0_axis_bs_tdata,p_1_in,fetch0_2_decompress0_axis_bs_tlast}),
         .first_word_seen(first_word_seen),
-        .first_word_seen_reg(i_cp0_n_13),
+        .first_word_seen_reg(i_cp0_n_11),
         .full(full),
-        .full_flag_reg(i_vsm_shifter_n_20),
-        .full_flag_reg_0(i_vsm_shifter_n_21),
         .\gen_pntr_flags_cc.ngen_full_rst_val.ram_full_i_reg (xpm_fifo_full),
-        .\gen_pntr_flags_cc.ngen_full_rst_val.ram_full_i_reg_0 (i_cp0_n_12),
+        .\gen_pntr_flags_cc.ngen_full_rst_val.ram_full_i_reg_0 (i_cp0_n_10),
         .\gen_pntr_flags_cc.wrp_eq_rdp_pf_cc.gpe_cc_sym.read_only_q_reg (fetch0_2_decompress0_axis_bs_tvalid),
         .\gen_rd_b.doutb_reg_reg[1] (fetch0_rm_id_o),
         .icap_clk(icap_clk),
@@ -11477,7 +11369,7 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0
         .p_4_in(p_4_in),
         .reset(reset),
         .reset_ah(reset_ah),
-        .sig_last_reg_out_reg(i_cp0_n_11),
+        .sig_last_reg_out_reg(i_cp0_n_9),
         .wr_rst_busy(wr_rst_busy));
   design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_fetch i_fetch0
        (.E(\i_dma/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/ENABLE_AXIS_SKID.I_MM2S_SKID_BUF/sig_data_reg_out_en ),
@@ -11486,7 +11378,7 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0
         .first_word_seen(first_word_seen),
         .first_word_seen_reg_0(xpm_fifo_full),
         .full(full),
-        .id_fifo_read_d1_reg_0(i_cp0_n_13),
+        .id_fifo_read_d1_reg_0(i_cp0_n_11),
         .in({vsm_shifter_fetch_rm_id,vsm_shifter_fetch_addr,vsm_shifter_fetch_size}),
         .m_axi_mem_araddr(m_axi_mem_araddr),
         .m_axi_mem_arburst(\^m_axi_mem_arburst ),
@@ -11501,12 +11393,12 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0
         .m_axi_mem_rvalid(m_axi_mem_rvalid),
         .out(\i_dma/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/ENABLE_AXIS_SKID.I_MM2S_SKID_BUF/p_0_in2_in ),
         .p_0_in(p_0_in),
-        .recheck_id_reg_source_reg_0(i_cp0_n_11),
+        .recheck_id_reg_source_reg_0(i_cp0_n_9),
         .reset(reset),
         .reset_ah(reset_ah),
         .\rm_id_o_reg[0]_0 (fetch0_rm_id_o),
         .sig_m_valid_out_reg(fetch0_2_decompress0_axis_bs_tvalid),
-        .sig_m_valid_out_reg_0(i_cp0_n_12),
+        .sig_m_valid_out_reg_0(i_cp0_n_10),
         .vsm_shifter_fetch_req(vsm_shifter_fetch_req),
         .wr_rst_busy(wr_rst_busy));
   design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vsm_shifter i_vsm_shifter
@@ -11517,37 +11409,34 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0
         .axi_write_complete0(axi_write_complete0),
         .axi_write_complete026_out(axi_write_complete026_out),
         .axi_write_complete030_out(axi_write_complete030_out),
-        .\b_bs_info.b_read_from_bs_info_registers_edge.d1_reg_0 (i_vsm_shifter_n_17),
-        .\b_bs_info.b_write_to_bs_info_registers_edge.axi_write_complete_reg_0 (i_vsm_shifter_n_106),
-        .\b_bs_info.b_write_to_bs_info_registers_edge.d1_reg_0 (i_vsm_shifter_n_13),
-        .\b_bs_info.gen_address_reg.access_address_del_reg[0]_0 (i_axi_lite_if_n_65),
+        .\b_bs_info.b_read_from_bs_info_registers_edge.d1_reg_0 (i_vsm_shifter_n_18),
+        .\b_bs_info.b_write_to_bs_info_registers_edge.axi_write_complete_reg_0 (i_vsm_shifter_n_105),
+        .\b_bs_info.b_write_to_bs_info_registers_edge.d1_reg_0 (i_vsm_shifter_n_14),
+        .\b_bs_info.gen_address_reg.access_address_del_reg[0]_0 (i_axi_lite_if_n_63),
+        .\b_bs_info.reg_rdata_bs_table_address_reg[0]_0 (i_axi_lite_if_n_66),
         .\b_bs_info.reg_rdata_bs_table_address_reg[12]_0 (reg_rdata_bs_table_address0_out),
-        .\b_bs_info.reg_rdata_bs_table_address_reg[31]_0 (i_axi_lite_if_n_57),
-        .\b_bs_info.reg_rdata_bs_table_address_reg[31]_1 (reg_rdata_bs_table_address),
+        .\b_bs_info.reg_rdata_bs_table_address_reg[31]_0 (reg_rdata_bs_table_address),
         .\b_bs_info.reg_rdata_bs_table_size_reg[12]_0 (reg_rdata_bs_table_size0_out),
-        .\b_rm_info.b_read_from_rm_info_registers_edge.d1_reg_0 (i_vsm_shifter_n_16),
+        .\b_rm_info.b_read_from_rm_info_registers_edge.d1_reg_0 (i_vsm_shifter_n_17),
+        .\b_rm_info.b_write_to_rm_info_registers_edge.axi_write_complete_reg_0 (i_vsm_shifter_n_12),
         .\b_rm_info.b_write_to_rm_info_registers_edge.d1_reg_0 (i_vsm_shifter_n_11),
-        .\b_rm_info.gen_address_reg.access_address_del_reg[0]_0 (i_axi_lite_if_n_64),
+        .\b_rm_info.gen_address_reg.access_address_del_reg[0]_0 (i_axi_lite_if_n_62),
         .\b_rm_info.reg_rdata_rm_table_ctrl_reg[12]_0 (reg_rdata_rm_table_ctrl1_out),
-        .\b_trigger_table.b_write_to_trigger_registers_edge.d1_reg_0 (i_vsm_shifter_n_14),
-        .\b_trigger_table.gen_address_reg.access_address_del_reg[0]_0 (i_axi_lite_if_n_67),
-        .bad_config_error_flag_reg_0(i_vsm_shifter_n_20),
+        .\b_trigger_table.b_write_to_trigger_registers_edge.axi_write_complete_reg_0 (i_vsm_shifter_n_96),
+        .\b_trigger_table.b_write_to_trigger_registers_edge.d1_reg_0 (i_vsm_shifter_n_15),
+        .\b_trigger_table.gen_address_reg.access_address_del_reg[0]_0 (i_axi_lite_if_n_68),
         .bs_addr(bs_addr),
         .clk(clk),
         .cp0_vs_id(cp0_vs_id),
-        .\current_state_reg[0]_0 (i_vsm_shifter_n_93),
         .d1(d1),
         .din(p_1_in),
-        .fetch_error_flag_reg_0(i_vsm_shifter_n_21),
-        .full_flag_reg_0(i_vsm_shifter_n_22),
-        .full_flag_reg_1(i_axi_lite_if_n_69),
         .in({vsm_shifter_fetch_rm_id,vsm_shifter_fetch_addr,vsm_shifter_fetch_size}),
         .in_shutdown(in_shutdown),
         .\opt_has_pipe.first_q_reg[0] (reg_read_complete_rm_table_vec),
         .\opt_has_pipe.first_q_reg[0]_0 (i_vsm_shifter_n_2),
         .\opt_has_pipe.first_q_reg[0]_1 (reg_read_complete_bs_table_vec),
         .\opt_has_pipe.first_q_reg[0]_2 (i_vsm_shifter_n_4),
-        .\opt_has_pipe.first_q_reg[0]_3 (i_vsm_shifter_n_107),
+        .\opt_has_pipe.first_q_reg[0]_3 (i_vsm_shifter_n_95),
         .out(reg_read_complete_trigger_table_vec),
         .p_0_in(p_0_in),
         .p_3_in(p_3_in),
@@ -11555,31 +11444,31 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0
         .read_from_bs_info_registers_cmb(read_from_bs_info_registers_cmb),
         .read_from_rm_info_registers_cmb(read_from_rm_info_registers_cmb),
         .read_from_trigger_registers_cmb(read_from_trigger_registers_cmb),
+        .\reg_rdata_reg[0]_0 (i_axi_lite_if_n_9),
         .\reg_rdata_reg[10]_0 (i_axi_lite_if_n_74),
         .\reg_rdata_reg[11]_0 (i_axi_lite_if_n_75),
         .\reg_rdata_reg[12]_0 (i_axi_lite_if_n_76),
-        .\reg_rdata_reg[31]_0 (i_axi_lite_if_n_53),
-        .\reg_rdata_reg[31]_1 (i_axi_lite_if_n_52),
-        .\reg_rdata_reg[8]_0 (i_axi_lite_if_n_54),
-        .\reg_rdata_reg[8]_1 (i_axi_lite_if_n_55),
+        .\reg_rdata_reg[31]_0 (i_axi_lite_if_n_13),
+        .\reg_rdata_reg[8]_0 (i_axi_lite_if_n_69),
+        .\reg_rdata_reg[8]_1 (i_axi_lite_if_n_64),
         .\reg_rdata_reg[9]_0 (i_axi_lite_if_n_73),
-        .reg_tready_d1_reg_0(i_axi_lite_if_n_50),
+        .reg_tready_d0(reg_tready_d0),
+        .reg_tready_i_reg_0(i_axi_lite_if_n_11),
         .reg_wdata(vsm_reg_wdata),
         .reg_write_complete_ctrl_reg(reg_write_complete_ctrl_reg),
-        .reg_write_complete_sw_trigger_reg_reg_0(i_axi_lite_if_n_71),
         .reset(reset),
         .reset_ah(reset_ah),
         .rm_reset_i_reg_0(i_axi_lite_if_n_72),
         .s_axis_ctrl_tready_i1(s_axis_ctrl_tready_i1),
-        .shutdown_bit_reg_0(i_vsm_shifter_n_19),
-        .shutdown_bit_reg_1(i_axi_lite_if_n_68),
+        .shutdown_bit_reg_0(i_vsm_shifter_n_20),
+        .shutdown_bit_reg_1(i_axi_lite_if_n_70),
         .start_axi_read0(start_axi_read0),
         .start_axi_read028_out(start_axi_read028_out),
         .start_axi_read032_out(start_axi_read032_out),
         .sw_ok_to_proceed_d00(sw_ok_to_proceed_d00),
-        .sw_shutdown_req_i_reg_0(i_axi_lite_if_n_51),
+        .sw_shutdown_req_i_reg_0(i_axi_lite_if_n_48),
         .sw_trigger_id(sw_trigger_id),
-        .\sw_trigger_id_reg[0]_0 (i_axi_lite_if_n_70),
+        .\sw_trigger_id_reg[0]_0 (i_axi_lite_if_n_71),
         .user_restarted_with_status059_out(user_restarted_with_status059_out),
         .vsm_reg_tready(vsm_reg_tready),
         .vsm_shifter_event_error(vsm_shifter_event_error),
@@ -11593,6 +11482,7 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0
         .vsm_shifter_sw_startup_req(vsm_shifter_sw_startup_req),
         .write_to_bs_info_registers_cmb(write_to_bs_info_registers_cmb),
         .write_to_rm_info_registers_cmb(write_to_rm_info_registers_cmb),
+        .write_to_sw_trigger_reg_cmb(write_to_sw_trigger_reg_cmb),
         .write_to_trigger_registers_cmb(write_to_trigger_registers_cmb));
 endmodule
 
@@ -11618,8 +11508,8 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_fe
     recheck_id_reg_source_reg_0,
     sig_m_valid_out_reg_0,
     id_fifo_read_d1_reg_0,
-    m_axi_mem_rlast,
     m_axi_mem_rvalid,
+    m_axi_mem_rlast,
     m_axi_mem_rresp,
     m_axi_mem_rdata,
     full,
@@ -11647,8 +11537,8 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_fe
   input recheck_id_reg_source_reg_0;
   input sig_m_valid_out_reg_0;
   input id_fifo_read_d1_reg_0;
-  input m_axi_mem_rlast;
   input m_axi_mem_rvalid;
+  input m_axi_mem_rlast;
   input [0:0]m_axi_mem_rresp;
   input [31:0]m_axi_mem_rdata;
   input full;
@@ -11658,7 +11548,7 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_fe
   input [64:0]in;
 
   wire [0:0]E;
-  wire \FSM_sequential_b_fsm.fsm_cs[2]_i_14_n_0 ;
+  wire \FSM_sequential_b_fsm.fsm_cs[2]_i_13_n_0 ;
   wire \FSM_sequential_b_fsm.fsm_cs[2]_i_4_n_0 ;
   wire \FSM_sequential_b_fsm.fsm_cs[2]_i_5_n_0 ;
   wire \GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/sig_push_regfifo ;
@@ -11683,6 +11573,7 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_fe
   wire i_cmd_fifo_n_17;
   wire i_cmd_fifo_n_18;
   wire i_cmd_fifo_n_19;
+  wire i_cmd_fifo_n_2;
   wire i_cmd_fifo_n_20;
   wire i_cmd_fifo_n_21;
   wire i_cmd_fifo_n_22;
@@ -11693,7 +11584,6 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_fe
   wire i_cmd_fifo_n_27;
   wire i_cmd_fifo_n_28;
   wire i_cmd_fifo_n_29;
-  wire i_cmd_fifo_n_3;
   wire i_cmd_fifo_n_30;
   wire i_cmd_fifo_n_31;
   wire i_cmd_fifo_n_32;
@@ -11903,20 +11793,20 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_fe
   wire [3:2]NLW_v_dma_size0_carry__6_CO_UNCONNECTED;
   wire [3:3]NLW_v_dma_size0_carry__6_O_UNCONNECTED;
 
-  (* SOFT_HLUTNM = "soft_lutpair143" *) 
+  (* SOFT_HLUTNM = "soft_lutpair142" *) 
   LUT2 #(
     .INIT(4'h1)) 
-    \FSM_sequential_b_fsm.fsm_cs[2]_i_14 
+    \FSM_sequential_b_fsm.fsm_cs[2]_i_13 
        (.I0(fsm_cs[0]),
         .I1(fsm_cs[1]),
-        .O(\FSM_sequential_b_fsm.fsm_cs[2]_i_14_n_0 ));
+        .O(\FSM_sequential_b_fsm.fsm_cs[2]_i_13_n_0 ));
   LUT2 #(
     .INIT(4'h2)) 
     \FSM_sequential_b_fsm.fsm_cs[2]_i_4 
        (.I0(fsm_cs[0]),
         .I1(fsm_cs[1]),
         .O(\FSM_sequential_b_fsm.fsm_cs[2]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair142" *) 
+  (* SOFT_HLUTNM = "soft_lutpair141" *) 
   LUT4 #(
     .INIT(16'h1000)) 
     \FSM_sequential_b_fsm.fsm_cs[2]_i_5 
@@ -11960,7 +11850,7 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_fe
         .D(i_req_fifo_n_79),
         .Q(reqs_stored),
         .R(reset_ah));
-  (* SOFT_HLUTNM = "soft_lutpair143" *) 
+  (* SOFT_HLUTNM = "soft_lutpair142" *) 
   LUT3 #(
     .INIT(8'h20)) 
     bad_config_error_i_i_1
@@ -12244,7 +12134,7 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_fe
        (.CO(i_req_fifo_n_43),
         .DI(i_cmd_fifo_n_4),
         .E(\GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/sig_push_regfifo ),
-        .\FSM_sequential_b_fsm.fsm_cs_reg[0] (i_cmd_fifo_n_3),
+        .\FSM_sequential_b_fsm.fsm_cs_reg[0] (i_cmd_fifo_n_2),
         .\FSM_sequential_b_fsm.fsm_cs_reg[0]_0 ({i_cmd_fifo_n_11,i_cmd_fifo_n_12,i_cmd_fifo_n_13,i_cmd_fifo_n_14}),
         .\FSM_sequential_b_fsm.fsm_cs_reg[0]_1 ({i_cmd_fifo_n_15,i_cmd_fifo_n_16,i_cmd_fifo_n_17}),
         .\FSM_sequential_b_fsm.fsm_cs_reg[1] (i_cmd_fifo_n_5),
@@ -12299,7 +12189,7 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_fe
        (.\FSM_sequential_b_fsm.fsm_cs_reg[0] (i_id_fifo_n_9),
         .\FSM_sequential_b_fsm.fsm_cs_reg[0]_0 (i_cmd_fifo_n_5),
         .\FSM_sequential_b_fsm.fsm_cs_reg[0]_1 (i_dma_n_42),
-        .\FSM_sequential_b_fsm.fsm_cs_reg[0]_2 (\FSM_sequential_b_fsm.fsm_cs[2]_i_14_n_0 ),
+        .\FSM_sequential_b_fsm.fsm_cs_reg[0]_2 (\FSM_sequential_b_fsm.fsm_cs[2]_i_13_n_0 ),
         .\FSM_sequential_b_fsm.fsm_cs_reg[2] (i_id_fifo_n_8),
         .\FSM_sequential_b_fsm.fsm_cs_reg[2]_0 (i_id_fifo_n_10),
         .\FSM_sequential_b_fsm.fsm_cs_reg[2]_1 (i_req_fifo_n_17),
@@ -12342,8 +12232,8 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_fe
         .fetch_req_reg(i_req_fifo_n_79),
         .\fifo_2_reg[13]_0 ({i_req_fifo_n_35,i_req_fifo_n_36,i_req_fifo_n_37,i_req_fifo_n_38}),
         .\fifo_2_reg[17]_0 ({i_req_fifo_n_39,i_req_fifo_n_40,i_req_fifo_n_41,i_req_fifo_n_42}),
+        .\fifo_2_reg[18]_0 (i_req_fifo_n_17),
         .\fifo_2_reg[1]_0 (i_req_fifo_n_2),
-        .\fifo_2_reg[1]_1 (i_req_fifo_n_17),
         .\fifo_2_reg[21]_0 ({i_req_fifo_n_44,i_req_fifo_n_45,i_req_fifo_n_46,i_req_fifo_n_47}),
         .\fifo_2_reg[33]_0 (i_req_fifo_n_16),
         .\fifo_2_reg[61]_0 ({i_req_fifo_n_72,i_req_fifo_n_73,i_req_fifo_n_74,i_req_fifo_n_75}),
@@ -12367,7 +12257,7 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_fe
         .v_dma_size(v_dma_size),
         .v_dma_size_reg({v_dma_size_reg[22:3],v_dma_size_reg[1:0]}),
         .\v_dma_size_reg[4]_0 (i_cmd_fifo_n_18),
-        .v_dma_size_reg_4_sp_1(i_cmd_fifo_n_3),
+        .v_dma_size_reg_4_sp_1(i_cmd_fifo_n_2),
         .vsm_shifter_fetch_req(vsm_shifter_fetch_req));
   FDRE #(
     .INIT(1'b0)) 
@@ -12393,7 +12283,7 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_fe
         .D(id_fifo_read_d1),
         .Q(id_fifo_read_d2),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair142" *) 
+  (* SOFT_HLUTNM = "soft_lutpair141" *) 
   LUT3 #(
     .INIT(8'hDF)) 
     one_word_bs_detected_i_4
@@ -12859,8 +12749,6 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_ic
     p_3_in,
     icap_csib,
     icap_req_i_reg_0,
-    cc_done_reg_0,
-    bad_config_error_flag_reg,
     E,
     sig_last_reg_out_reg,
     \gen_pntr_flags_cc.ngen_full_rst_val.ram_full_i_reg_0 ,
@@ -12871,8 +12759,6 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_ic
     din,
     icap_clk,
     \gen_rd_b.doutb_reg_reg[1] ,
-    full_flag_reg,
-    full_flag_reg_0,
     out,
     \gen_pntr_flags_cc.wrp_eq_rdp_pf_cc.gpe_cc_sym.read_only_q_reg ,
     reset,
@@ -12889,8 +12775,6 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_ic
   output p_3_in;
   output icap_csib;
   output icap_req_i_reg_0;
-  output cc_done_reg_0;
-  output bad_config_error_flag_reg;
   output [0:0]E;
   output sig_last_reg_out_reg;
   output \gen_pntr_flags_cc.ngen_full_rst_val.ram_full_i_reg_0 ;
@@ -12901,8 +12785,6 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_ic
   input [33:0]din;
   input icap_clk;
   input [0:0]\gen_rd_b.doutb_reg_reg[1] ;
-  input full_flag_reg;
-  input full_flag_reg_0;
   input out;
   input \gen_pntr_flags_cc.wrp_eq_rdp_pf_cc.gpe_cc_sym.read_only_q_reg ;
   input reset;
@@ -12913,12 +12795,10 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_ic
   input [1:0]icap_i;
 
   wire [0:0]E;
-  wire bad_config_error_flag_reg;
   wire \blk_id_fifo.xpm_fifo_sync_inst_i_1_n_0 ;
   wire cap_gnt;
   wire cap_rel;
   wire cc_done_i;
-  wire cc_done_reg_0;
   wire cc_error_i;
   wire cfg_error_seen_i_1_n_0;
   wire cfg_error_seen_i_2_n_0;
@@ -12969,8 +12849,6 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_ic
   wire first_word_seen;
   wire first_word_seen_reg;
   wire full;
-  wire full_flag_reg;
-  wire full_flag_reg_0;
   wire \gen_pntr_flags_cc.ngen_full_rst_val.ram_full_i_reg ;
   wire \gen_pntr_flags_cc.ngen_full_rst_val.ram_full_i_reg_0 ;
   wire \gen_pntr_flags_cc.wrp_eq_rdp_pf_cc.gpe_cc_sym.read_only_q_reg ;
@@ -13327,7 +13205,7 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_ic
         .I2(cp_fsm_cs[2]),
         .I3(cp_fsm_cs[0]),
         .O(\cp_fsm_cs[1]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair75" *) 
+  (* SOFT_HLUTNM = "soft_lutpair74" *) 
   LUT3 #(
     .INIT(8'h10)) 
     \cp_fsm_cs[1]_i_4 
@@ -13537,7 +13415,7 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_ic
        (.I0(cp_fsm_cs[1]),
         .I1(dout[0]),
         .O(fetch_error_seen_on_first_word_i_4_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair75" *) 
+  (* SOFT_HLUTNM = "soft_lutpair74" *) 
   LUT2 #(
     .INIT(4'h1)) 
     fetch_error_seen_on_first_word_i_5
@@ -13568,24 +13446,6 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_ic
         .D(fetch_error_seen_i_1_n_0),
         .Q(fetch_error_seen),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair70" *) 
-  LUT5 #(
-    .INIT(32'hFFFFFFFD)) 
-    full_flag_i_2
-       (.I0(p_4_in),
-        .I1(p_3_in),
-        .I2(cp0_vs_id),
-        .I3(full_flag_reg),
-        .I4(full_flag_reg_0),
-        .O(cc_done_reg_0));
-  (* SOFT_HLUTNM = "soft_lutpair70" *) 
-  LUT3 #(
-    .INIT(8'h45)) 
-    full_flag_i_3
-       (.I0(full_flag_reg),
-        .I1(cp0_vs_id),
-        .I2(p_4_in),
-        .O(bad_config_error_flag_reg));
   (* CASCADE_HEIGHT = "0" *) 
   (* CDC_SYNC_STAGES = "2" *) 
   (* DOUT_RESET_VALUE = "0" *) 
@@ -13785,7 +13645,7 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_ic
         .I1(cp_fsm_cs[1]),
         .I2(cp_fsm_cs[0]),
         .O(icap_csib_i_i_8_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair74" *) 
+  (* SOFT_HLUTNM = "soft_lutpair73" *) 
   LUT3 #(
     .INIT(8'hFE)) 
     icap_csib_i_i_9
@@ -13811,7 +13671,7 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_ic
         .I4(dout[2]),
         .I5(\icap_o_preswap[0]_i_3_n_0 ),
         .O(p_1_in__0[0]));
-  (* SOFT_HLUTNM = "soft_lutpair71" *) 
+  (* SOFT_HLUTNM = "soft_lutpair70" *) 
   LUT5 #(
     .INIT(32'h0000EF00)) 
     \icap_o_preswap[0]_i_2 
@@ -13860,7 +13720,7 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_ic
         .I4(cap_gnt),
         .I5(icap_req_i_reg_0),
         .O(\icap_o_preswap[0]_i_6_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair73" *) 
+  (* SOFT_HLUTNM = "soft_lutpair72" *) 
   LUT3 #(
     .INIT(8'hF8)) 
     \icap_o_preswap[15]_i_1 
@@ -13944,7 +13804,7 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_ic
         .I3(cfg_error_seen_reg_n_0),
         .I4(fetch_error_seen_on_first_word_reg_n_0),
         .O(\icap_o_preswap[24]_i_16_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair72" *) 
+  (* SOFT_HLUTNM = "soft_lutpair71" *) 
   LUT3 #(
     .INIT(8'h02)) 
     \icap_o_preswap[24]_i_17 
@@ -13961,7 +13821,7 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_ic
         .I2(empty),
         .I3(cap_rel),
         .O(\icap_o_preswap[24]_i_18_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair74" *) 
+  (* SOFT_HLUTNM = "soft_lutpair73" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \icap_o_preswap[24]_i_19 
@@ -14048,7 +13908,7 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_ic
         .I4(icap_i[0]),
         .I5(\icap_o_preswap[24]_i_18_n_0 ),
         .O(\icap_o_preswap[24]_i_6_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair71" *) 
+  (* SOFT_HLUTNM = "soft_lutpair70" *) 
   LUT4 #(
     .INIT(16'h00EF)) 
     \icap_o_preswap[24]_i_7 
@@ -14077,7 +13937,7 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_ic
         .I4(icap_csib_i_i_5_n_0),
         .I5(cp_fsm_cs[0]),
         .O(\icap_o_preswap[24]_i_9_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair73" *) 
+  (* SOFT_HLUTNM = "soft_lutpair72" *) 
   LUT3 #(
     .INIT(8'hF8)) 
     \icap_o_preswap[28]_i_1 
@@ -14125,7 +13985,7 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_ic
         .I4(icap_csib_i_i_5_n_0),
         .I5(cp_fsm_cs[2]),
         .O(\icap_o_preswap[29]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair72" *) 
+  (* SOFT_HLUTNM = "soft_lutpair71" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \icap_o_preswap[29]_i_3 
@@ -14554,6 +14414,7 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
     vsm_shifter_fetch_req,
     vsm_reg_tready,
     \b_rm_info.b_write_to_rm_info_registers_edge.d1_reg_0 ,
+    \b_rm_info.b_write_to_rm_info_registers_edge.axi_write_complete_reg_0 ,
     bs_addr,
     \b_bs_info.b_write_to_bs_info_registers_edge.d1_reg_0 ,
     \b_trigger_table.b_write_to_trigger_registers_edge.d1_reg_0 ,
@@ -14562,21 +14423,18 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
     \b_bs_info.b_read_from_bs_info_registers_edge.d1_reg_0 ,
     d1,
     shutdown_bit_reg_0,
-    bad_config_error_flag_reg_0,
-    fetch_error_flag_reg_0,
-    full_flag_reg_0,
     vsm_shifter_rm_shutdown_req,
     vsm_shifter_rm_reset,
     vsm_shifter_sw_shutdown_req,
     vsm_shifter_sw_startup_req,
     in,
     sw_trigger_id,
-    \current_state_reg[0]_0 ,
     \b_rm_info.reg_rdata_rm_table_ctrl_reg[12]_0 ,
+    \opt_has_pipe.first_q_reg[0]_3 ,
+    \b_trigger_table.b_write_to_trigger_registers_edge.axi_write_complete_reg_0 ,
     \b_bs_info.reg_rdata_bs_table_address_reg[12]_0 ,
     \b_bs_info.reg_rdata_bs_table_size_reg[12]_0 ,
     \b_bs_info.b_write_to_bs_info_registers_edge.axi_write_complete_reg_0 ,
-    \opt_has_pipe.first_q_reg[0]_3 ,
     vsm_shifter_rm_decouple,
     D,
     clk,
@@ -14589,9 +14447,10 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
     start_axi_read0,
     read_from_bs_info_registers_cmb,
     s_axis_ctrl_tready_i1,
-    reg_write_complete_sw_trigger_reg_reg_0,
+    write_to_sw_trigger_reg_cmb,
     sw_ok_to_proceed_d00,
     \b_bs_info.gen_address_reg.access_address_del_reg[0]_0 ,
+    reg_tready_d0,
     write_to_rm_info_registers_cmb,
     axi_write_complete026_out,
     reg_wdata,
@@ -14601,27 +14460,26 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
     axi_write_complete030_out,
     shutdown_bit_reg_1,
     user_restarted_with_status059_out,
-    full_flag_reg_1,
     \sw_trigger_id_reg[0]_0 ,
     vsm_shifter_rm_shutdown_ack,
+    \b_trigger_table.gen_address_reg.access_address_del_reg[0]_0 ,
     sw_shutdown_req_i_reg_0,
+    p_0_in,
     din,
     cp0_vs_id,
     p_3_in,
-    p_4_in,
-    p_0_in,
-    \reg_rdata_reg[31]_0 ,
-    \reg_rdata_reg[31]_1 ,
     Q,
-    \b_trigger_table.gen_address_reg.access_address_del_reg[0]_0 ,
+    reg_tready_i_reg_0,
+    \reg_rdata_reg[0]_0 ,
+    \reg_rdata_reg[31]_0 ,
+    p_4_in,
+    \b_bs_info.reg_rdata_bs_table_address_reg[0]_0 ,
     vsm_shifter_hw_triggers,
     rm_reset_i_reg_0,
-    \b_bs_info.reg_rdata_bs_table_address_reg[31]_0 ,
-    reg_tready_d1_reg_0,
     \reg_rdata_reg[8]_0 ,
     \reg_rdata_reg[8]_1 ,
     E,
-    \b_bs_info.reg_rdata_bs_table_address_reg[31]_1 ,
+    \b_bs_info.reg_rdata_bs_table_address_reg[31]_0 ,
     \reg_rdata_reg[12]_0 ,
     \reg_rdata_reg[11]_0 ,
     \reg_rdata_reg[10]_0 ,
@@ -14638,6 +14496,7 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
   output vsm_shifter_fetch_req;
   output [0:0]vsm_reg_tready;
   output \b_rm_info.b_write_to_rm_info_registers_edge.d1_reg_0 ;
+  output \b_rm_info.b_write_to_rm_info_registers_edge.axi_write_complete_reg_0 ;
   output bs_addr;
   output \b_bs_info.b_write_to_bs_info_registers_edge.d1_reg_0 ;
   output \b_trigger_table.b_write_to_trigger_registers_edge.d1_reg_0 ;
@@ -14646,21 +14505,18 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
   output \b_bs_info.b_read_from_bs_info_registers_edge.d1_reg_0 ;
   output d1;
   output shutdown_bit_reg_0;
-  output bad_config_error_flag_reg_0;
-  output fetch_error_flag_reg_0;
-  output full_flag_reg_0;
   output vsm_shifter_rm_shutdown_req;
   output vsm_shifter_rm_reset;
   output vsm_shifter_sw_shutdown_req;
   output vsm_shifter_sw_startup_req;
   output [64:0]in;
   output sw_trigger_id;
-  output \current_state_reg[0]_0 ;
   output [3:0]\b_rm_info.reg_rdata_rm_table_ctrl_reg[12]_0 ;
+  output \opt_has_pipe.first_q_reg[0]_3 ;
+  output \b_trigger_table.b_write_to_trigger_registers_edge.axi_write_complete_reg_0 ;
   output [3:0]\b_bs_info.reg_rdata_bs_table_address_reg[12]_0 ;
   output [3:0]\b_bs_info.reg_rdata_bs_table_size_reg[12]_0 ;
   output \b_bs_info.b_write_to_bs_info_registers_edge.axi_write_complete_reg_0 ;
-  output \opt_has_pipe.first_q_reg[0]_3 ;
   output vsm_shifter_rm_decouple;
   output [31:0]D;
   input clk;
@@ -14673,9 +14529,10 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
   input start_axi_read0;
   input read_from_bs_info_registers_cmb;
   input s_axis_ctrl_tready_i1;
-  input reg_write_complete_sw_trigger_reg_reg_0;
+  input write_to_sw_trigger_reg_cmb;
   input sw_ok_to_proceed_d00;
   input \b_bs_info.gen_address_reg.access_address_del_reg[0]_0 ;
+  input reg_tready_d0;
   input write_to_rm_info_registers_cmb;
   input axi_write_complete026_out;
   input [31:0]reg_wdata;
@@ -14685,27 +14542,26 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
   input axi_write_complete030_out;
   input shutdown_bit_reg_1;
   input user_restarted_with_status059_out;
-  input full_flag_reg_1;
   input \sw_trigger_id_reg[0]_0 ;
   input vsm_shifter_rm_shutdown_ack;
+  input \b_trigger_table.gen_address_reg.access_address_del_reg[0]_0 ;
   input sw_shutdown_req_i_reg_0;
+  input p_0_in;
   input [0:0]din;
   input cp0_vs_id;
   input p_3_in;
-  input p_4_in;
-  input p_0_in;
-  input \reg_rdata_reg[31]_0 ;
-  input \reg_rdata_reg[31]_1 ;
   input [2:0]Q;
-  input \b_trigger_table.gen_address_reg.access_address_del_reg[0]_0 ;
+  input reg_tready_i_reg_0;
+  input \reg_rdata_reg[0]_0 ;
+  input \reg_rdata_reg[31]_0 ;
+  input p_4_in;
+  input \b_bs_info.reg_rdata_bs_table_address_reg[0]_0 ;
   input [1:0]vsm_shifter_hw_triggers;
   input rm_reset_i_reg_0;
-  input \b_bs_info.reg_rdata_bs_table_address_reg[31]_0 ;
-  input reg_tready_d1_reg_0;
   input \reg_rdata_reg[8]_0 ;
   input \reg_rdata_reg[8]_1 ;
   input [0:0]E;
-  input [0:0]\b_bs_info.reg_rdata_bs_table_address_reg[31]_1 ;
+  input [0:0]\b_bs_info.reg_rdata_bs_table_address_reg[31]_0 ;
   input \reg_rdata_reg[12]_0 ;
   input \reg_rdata_reg[11]_0 ;
   input \reg_rdata_reg[10]_0 ;
@@ -14731,6 +14587,7 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
   wire \b_bs_info.b_rm_info_valid_del.i_rm_info_valid_del_n_1 ;
   wire \b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_1 ;
   wire \b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_10 ;
+  wire \b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_11 ;
   wire \b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_12 ;
   wire \b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_13 ;
   wire \b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_14 ;
@@ -14744,15 +14601,6 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
   wire \b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_21 ;
   wire \b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_22 ;
   wire \b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_23 ;
-  wire \b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_24 ;
-  wire \b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_25 ;
-  wire \b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_26 ;
-  wire \b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_27 ;
-  wire \b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_28 ;
-  wire \b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_29 ;
-  wire \b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_3 ;
-  wire \b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_30 ;
-  wire \b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_4 ;
   wire \b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_5 ;
   wire \b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_6 ;
   wire \b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_7 ;
@@ -14763,9 +14611,9 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
   wire \b_bs_info.b_write_to_bs_info_registers_edge.d1_reg_0 ;
   wire \b_bs_info.gen_address_reg.access_address_del_reg[0]_0 ;
   wire \b_bs_info.gen_address_reg.access_address_del_reg_n_0_[0] ;
+  wire \b_bs_info.reg_rdata_bs_table_address_reg[0]_0 ;
   wire [3:0]\b_bs_info.reg_rdata_bs_table_address_reg[12]_0 ;
-  wire \b_bs_info.reg_rdata_bs_table_address_reg[31]_0 ;
-  wire [0:0]\b_bs_info.reg_rdata_bs_table_address_reg[31]_1 ;
+  wire [0:0]\b_bs_info.reg_rdata_bs_table_address_reg[31]_0 ;
   wire [3:0]\b_bs_info.reg_rdata_bs_table_size_reg[12]_0 ;
   wire \b_event_error_i_del.i_event_error_i_del_n_1 ;
   wire \b_event_error_i_del.i_event_error_i_del_n_2 ;
@@ -14789,7 +14637,12 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
   wire \b_rm_info.b_start_axi_read_del.i_start_axi_read_del_n_1 ;
   wire \b_rm_info.b_start_axi_read_del.i_start_axi_read_del_n_2 ;
   wire \b_rm_info.b_start_axi_read_del.i_start_axi_read_del_n_3 ;
-  wire \b_rm_info.b_write_to_rm_info_registers_edge.axi_write_complete_reg_n_0 ;
+  wire \b_rm_info.b_start_axi_read_del.i_start_axi_read_del_n_4 ;
+  wire \b_rm_info.b_start_axi_read_del.i_start_axi_read_del_n_5 ;
+  wire \b_rm_info.b_start_axi_read_del.i_start_axi_read_del_n_6 ;
+  wire \b_rm_info.b_start_axi_read_del.i_start_axi_read_del_n_7 ;
+  wire \b_rm_info.b_start_axi_read_del.i_start_axi_read_del_n_8 ;
+  wire \b_rm_info.b_write_to_rm_info_registers_edge.axi_write_complete_reg_0 ;
   wire \b_rm_info.b_write_to_rm_info_registers_edge.d1_reg_0 ;
   wire \b_rm_info.gen_address_reg.access_address_del_reg[0]_0 ;
   wire \b_rm_info.reg_rdata_rm_table_address_reg_n_0_[0] ;
@@ -14808,11 +14661,9 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
   wire \b_rm_info_valid_del.i_rm_info_valid_del_n_10 ;
   wire \b_rm_info_valid_del.i_rm_info_valid_del_n_11 ;
   wire \b_rm_info_valid_del.i_rm_info_valid_del_n_12 ;
-  wire \b_rm_info_valid_del.i_rm_info_valid_del_n_13 ;
-  wire \b_rm_info_valid_del.i_rm_info_valid_del_n_4 ;
   wire \b_rm_info_valid_del.i_rm_info_valid_del_n_5 ;
   wire \b_rm_info_valid_del.i_rm_info_valid_del_n_6 ;
-  wire \b_rm_info_valid_del.i_rm_info_valid_del_n_8 ;
+  wire \b_rm_info_valid_del.i_rm_info_valid_del_n_7 ;
   wire \b_rm_info_valid_del.i_rm_info_valid_del_n_9 ;
   wire \b_start_fetching_all_del.i_start_fetching_all_del_n_2 ;
   wire \b_start_fetching_all_except_rm_id_del.i_start_fetching_all_except_rm_id_del_n_0 ;
@@ -14821,19 +14672,19 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
   wire \b_trigger_table.b_in_shutdown_del.i_in_shutdown_del_n_0 ;
   wire \b_trigger_table.b_read_from_trigger_registers_del.i_read_from_trigger_registers_del_n_1 ;
   wire \b_trigger_table.b_read_from_trigger_registers_edge.start_axi_read_reg_n_0 ;
-  wire \b_trigger_table.b_start_axi_read_del.i_start_axi_read_del_n_1 ;
   wire \b_trigger_table.b_start_axi_read_del.i_start_axi_read_del_n_10 ;
-  wire \b_trigger_table.b_start_axi_read_del.i_start_axi_read_del_n_11 ;
-  wire \b_trigger_table.b_start_axi_read_del.i_start_axi_read_del_n_12 ;
+  wire \b_trigger_table.b_start_axi_read_del.i_start_axi_read_del_n_2 ;
+  wire \b_trigger_table.b_start_axi_read_del.i_start_axi_read_del_n_3 ;
   wire \b_trigger_table.b_start_axi_read_del.i_start_axi_read_del_n_4 ;
   wire \b_trigger_table.b_start_axi_read_del.i_start_axi_read_del_n_5 ;
   wire \b_trigger_table.b_start_axi_read_del.i_start_axi_read_del_n_6 ;
   wire \b_trigger_table.b_start_axi_read_del.i_start_axi_read_del_n_7 ;
   wire \b_trigger_table.b_start_axi_read_del.i_start_axi_read_del_n_8 ;
   wire \b_trigger_table.b_start_axi_read_del.i_start_axi_read_del_n_9 ;
+  wire \b_trigger_table.b_write_to_trigger_registers_edge.axi_write_complete_reg_0 ;
   wire \b_trigger_table.b_write_to_trigger_registers_edge.d1_reg_0 ;
   wire \b_trigger_table.gen_address_reg.access_address_del_reg[0]_0 ;
-  wire bad_config_error_flag_reg_0;
+  wire bad_config_error_flag_reg_n_0;
   wire bs_addr;
   wire bs_addresses_from_mem;
   wire bs_info_valid_vec;
@@ -14841,41 +14692,37 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
   wire cp0_vs_id;
   wire cp_error_flag;
   wire [3:0]current_state;
-  wire \current_state[0]_i_10_n_0 ;
-  wire \current_state[0]_i_12_n_0 ;
-  wire \current_state[0]_i_13_n_0 ;
-  wire \current_state[0]_i_2_n_0 ;
-  wire \current_state[0]_i_6_n_0 ;
-  wire \current_state[0]_i_7_n_0 ;
+  wire \current_state[0]_i_4_n_0 ;
+  wire \current_state[0]_i_5_n_0 ;
   wire \current_state[0]_i_8_n_0 ;
   wire \current_state[0]_i_9_n_0 ;
   wire \current_state[1]_i_11_n_0 ;
-  wire \current_state[1]_i_2_n_0 ;
-  wire \current_state[1]_i_6_n_0 ;
+  wire \current_state[1]_i_3_n_0 ;
+  wire \current_state[1]_i_5_n_0 ;
   wire \current_state[1]_i_7_n_0 ;
-  wire \current_state[2]_i_10_n_0 ;
-  wire \current_state[2]_i_3_n_0 ;
+  wire \current_state[1]_i_9_n_0 ;
   wire \current_state[2]_i_4_n_0 ;
   wire \current_state[2]_i_6_n_0 ;
   wire \current_state[2]_i_7_n_0 ;
   wire \current_state[2]_i_8_n_0 ;
-  wire \current_state[2]_i_9_n_0 ;
-  wire \current_state[3]_i_2_n_0 ;
+  wire \current_state[3]_i_10_n_0 ;
+  wire \current_state[3]_i_11_n_0 ;
   wire \current_state[3]_i_3_n_0 ;
+  wire \current_state[3]_i_4_n_0 ;
   wire \current_state[3]_i_5_n_0 ;
-  wire \current_state[3]_i_6_n_0 ;
   wire \current_state[3]_i_7_n_0 ;
   wire \current_state[3]_i_8_n_0 ;
   wire \current_state[3]_i_9_n_0 ;
-  wire \current_state_reg[0]_0 ;
   wire d1;
   wire [0:0]din;
-  wire fetch_error_flag_reg_0;
-  wire full_flag_reg_0;
-  wire full_flag_reg_1;
+  wire fetch_error_flag_reg_n_0;
+  wire full_flag_i_1_n_0;
+  wire full_flag_i_2_n_0;
+  wire full_flag_reg_n_0;
   wire hw_trigger_used;
   wire i_trigger_manager_n_1;
-  wire i_trigger_manager_n_2;
+  wire i_trigger_manager_n_3;
+  wire i_trigger_manager_n_4;
   wire [64:0]in;
   wire in_post_reset_startup;
   wire in_post_reset_startup_i_1_n_0;
@@ -14903,11 +14750,11 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
   wire ready_for_hw_trigger;
   wire [31:0]reg_rdata_bs_table_address0_out;
   wire [31:0]reg_rdata_bs_table_size0_out;
+  wire \reg_rdata_reg[0]_0 ;
   wire \reg_rdata_reg[10]_0 ;
   wire \reg_rdata_reg[11]_0 ;
   wire \reg_rdata_reg[12]_0 ;
   wire \reg_rdata_reg[31]_0 ;
-  wire \reg_rdata_reg[31]_1 ;
   wire \reg_rdata_reg[8]_0 ;
   wire \reg_rdata_reg[8]_1 ;
   wire \reg_rdata_reg[9]_0 ;
@@ -14916,17 +14763,16 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
   wire reg_rdata_trigger_table;
   wire reg_tready_d0;
   wire reg_tready_d1;
-  wire reg_tready_d1_reg_0;
   wire reg_tready_i0;
+  wire reg_tready_i_reg_0;
   wire [31:0]reg_wdata;
   wire reg_write_complete_ctrl_reg;
   wire reg_write_complete_sw_trigger_reg;
-  wire reg_write_complete_sw_trigger_reg_reg_0;
   wire reset;
   wire reset_ah;
   wire [7:0]reset_duration;
   wire \reset_duration[5]_i_3_n_0 ;
-  wire \reset_duration[7]_i_3_n_0 ;
+  wire \reset_duration[7]_i_4_n_0 ;
   wire \reset_duration[7]_i_5_n_0 ;
   wire \reset_duration_stored[2]_i_1_n_0 ;
   wire \reset_duration_stored[3]_i_1_n_0 ;
@@ -14998,7 +14844,6 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
   wire user_restarted_with_status059_out;
   wire using_sw_trigger;
   wire using_sw_trigger_i_1_n_0;
-  wire using_sw_trigger_i_2_n_0;
   wire vsm_read_enable_vec;
   wire [0:0]vsm_reg_tready;
   wire vsm_shifter_event_error;
@@ -15012,6 +14857,7 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
   wire vsm_shifter_sw_startup_req;
   wire write_to_bs_info_registers_cmb;
   wire write_to_rm_info_registers_cmb;
+  wire write_to_sw_trigger_reg_cmb;
   wire write_to_trigger_registers_cmb;
 
   design_2_dfx_controller_0_0_delay__parameterized2 \b_bs_info.b_in_shutdown_del.i_in_shutdown_del 
@@ -15021,16 +14867,16 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
         .out(\b_bs_info.b_in_shutdown_del.i_in_shutdown_del_n_0 ));
   design_2_dfx_controller_0_0_delay__parameterized2_0 \b_bs_info.b_read_from_bs_info_registers_del.i_read_from_bs_info_registers_del 
        (.E(\opt_has_pipe.first_q_reg[0]_0 ),
-        .I44(\b_bs_info.b_read_from_bs_info_registers_del.i_read_from_bs_info_registers_del_n_2 ),
         .Q(Q[1:0]),
-        .\b_bs_info.reg_rdata_bs_table_address_reg[31] (in_shutdown),
-        .\b_bs_info.reg_rdata_bs_table_address_reg[31]_0 (\b_bs_info.reg_rdata_bs_table_address_reg[31]_0 ),
-        .\b_bs_info.reg_rdata_bs_table_size_reg[0] (\b_bs_info.b_write_to_bs_info_registers_edge.axi_write_complete_reg_n_0 ),
-        .\b_bs_info.reg_rdata_bs_table_size_reg[0]_0 (\b_rm_info.rm_ctrl_reg_table_reg_0_1_0_0_i_2_n_0 ),
+        .\b_bs_info.reg_rdata_bs_table_address_reg[0] (\b_bs_info.b_write_to_bs_info_registers_edge.axi_write_complete_reg_n_0 ),
+        .\b_bs_info.reg_rdata_bs_table_address_reg[0]_0 (in_shutdown),
+        .\b_bs_info.reg_rdata_bs_table_address_reg[0]_1 (\b_bs_info.reg_rdata_bs_table_address_reg[0]_0 ),
+        .\b_bs_info.reg_rdata_bs_table_size_reg[0] (\b_rm_info.rm_ctrl_reg_table_reg_0_1_0_0_i_2_n_0 ),
         .clk(clk),
         .in_shutdown_d1(in_shutdown_d1),
         .\opt_has_pipe.first_q_reg[0] (\b_bs_info.b_read_from_bs_info_registers_del.i_read_from_bs_info_registers_del_n_1 ),
-        .\opt_has_pipe.first_q_reg[0]_0 (reset_ah),
+        .\opt_has_pipe.first_q_reg[0]_0 (\b_bs_info.b_read_from_bs_info_registers_del.i_read_from_bs_info_registers_del_n_2 ),
+        .\opt_has_pipe.first_q_reg[0]_1 (reset_ah),
         .out(\opt_has_pipe.first_q_reg[0]_2 ),
         .read_from_bs_info_registers_cmb(read_from_bs_info_registers_cmb));
   (* equivalent_register_removal = "no" *) 
@@ -15060,56 +14906,47 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
         .out(\b_bs_info.b_in_shutdown_del.i_in_shutdown_del_n_0 ),
         .rm_info_valid_vec(rm_info_valid_vec));
   design_2_dfx_controller_0_0_delay__parameterized2_2 \b_bs_info.b_start_axi_read_del.i_start_axi_read_del 
-       (.Q(Q[1:0]),
+       (.D({\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_1 ,\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_2 }),
+        .Q(Q),
         .\b_bs_info.b_write_to_bs_info_registers_edge.axi_write_complete_reg (\b_bs_info.b_write_to_bs_info_registers_edge.axi_write_complete_reg_0 ),
-        .\b_bs_info.reg_rdata_bs_table_address_reg[0] (\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_9 ),
-        .\b_bs_info.reg_rdata_bs_table_address_reg[31] (\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_10 ),
-        .\b_bs_info.reg_rdata_bs_table_size_reg[13] (\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_13 ),
-        .\b_bs_info.reg_rdata_bs_table_size_reg[14] (\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_14 ),
-        .\b_bs_info.reg_rdata_bs_table_size_reg[15] (\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_15 ),
-        .\b_bs_info.reg_rdata_bs_table_size_reg[16] (\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_16 ),
-        .\b_bs_info.reg_rdata_bs_table_size_reg[17] (\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_17 ),
-        .\b_bs_info.reg_rdata_bs_table_size_reg[18] (\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_18 ),
-        .\b_bs_info.reg_rdata_bs_table_size_reg[19] (\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_19 ),
-        .\b_bs_info.reg_rdata_bs_table_size_reg[20] (\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_20 ),
-        .\b_bs_info.reg_rdata_bs_table_size_reg[21] (\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_21 ),
-        .\b_bs_info.reg_rdata_bs_table_size_reg[22] (\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_22 ),
-        .\b_bs_info.reg_rdata_bs_table_size_reg[23] (\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_23 ),
-        .\b_bs_info.reg_rdata_bs_table_size_reg[24] (\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_24 ),
-        .\b_bs_info.reg_rdata_bs_table_size_reg[25] (\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_25 ),
-        .\b_bs_info.reg_rdata_bs_table_size_reg[26] (\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_26 ),
-        .\b_bs_info.reg_rdata_bs_table_size_reg[27] (\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_27 ),
-        .\b_bs_info.reg_rdata_bs_table_size_reg[28] (\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_28 ),
-        .\b_bs_info.reg_rdata_bs_table_size_reg[29] (\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_29 ),
-        .\b_bs_info.reg_rdata_bs_table_size_reg[30] (\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_30 ),
+        .\b_bs_info.reg_rdata_bs_table_size_reg[13] (\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_5 ),
+        .\b_bs_info.reg_rdata_bs_table_size_reg[14] (\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_6 ),
+        .\b_bs_info.reg_rdata_bs_table_size_reg[15] (\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_7 ),
+        .\b_bs_info.reg_rdata_bs_table_size_reg[16] (\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_8 ),
+        .\b_bs_info.reg_rdata_bs_table_size_reg[17] (\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_9 ),
+        .\b_bs_info.reg_rdata_bs_table_size_reg[18] (\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_10 ),
+        .\b_bs_info.reg_rdata_bs_table_size_reg[19] (\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_11 ),
+        .\b_bs_info.reg_rdata_bs_table_size_reg[20] (\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_12 ),
+        .\b_bs_info.reg_rdata_bs_table_size_reg[21] (\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_13 ),
+        .\b_bs_info.reg_rdata_bs_table_size_reg[22] (\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_14 ),
+        .\b_bs_info.reg_rdata_bs_table_size_reg[23] (\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_15 ),
+        .\b_bs_info.reg_rdata_bs_table_size_reg[24] (\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_16 ),
+        .\b_bs_info.reg_rdata_bs_table_size_reg[25] (\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_17 ),
+        .\b_bs_info.reg_rdata_bs_table_size_reg[26] (\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_18 ),
+        .\b_bs_info.reg_rdata_bs_table_size_reg[27] (\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_19 ),
+        .\b_bs_info.reg_rdata_bs_table_size_reg[28] (\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_20 ),
+        .\b_bs_info.reg_rdata_bs_table_size_reg[29] (\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_21 ),
+        .\b_bs_info.reg_rdata_bs_table_size_reg[30] (\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_22 ),
         .clk(clk),
-        .in(in[64]),
-        .\opt_has_pipe.first_q_reg[0] (reset_ah),
-        .\opt_has_pipe.first_q_reg[0]_0 (\b_bs_info.b_read_from_bs_info_registers_edge.start_axi_read_reg_n_0 ),
+        .\opt_has_pipe.first_q_reg[0] (\opt_has_pipe.first_q_reg[0]_3 ),
+        .\opt_has_pipe.first_q_reg[0]_0 (reset_ah),
+        .\opt_has_pipe.first_q_reg[0]_1 (\b_bs_info.b_read_from_bs_info_registers_edge.start_axi_read_reg_n_0 ),
         .out(\opt_has_pipe.first_q_reg[0]_1 ),
-        .\reg_rdata_reg[1] (\reg_rdata_reg[31]_1 ),
-        .\reg_rdata_reg[2] ({\status_encoded_field_reg_n_0_[2] ,\status_encoded_field_reg_n_0_[1] }),
-        .\reg_rdata_reg[30] (\opt_has_pipe.first_q_reg[0] ),
-        .\reg_rdata_reg[30]_0 (out),
-        .\reg_rdata_reg[31] ({reg_rdata_bs_table_address0_out[31:13],reg_rdata_bs_table_address0_out[0]}),
-        .\reg_rdata_reg[31]_0 ({reg_rdata_bs_table_size0_out[31:13],reg_rdata_bs_table_size0_out[0]}),
-        .\reg_rdata_reg[3] (\status_error_field_reg_n_0_[0] ),
-        .\reg_rdata_reg[4] (\status_error_field_reg_n_0_[1] ),
-        .\reg_rdata_reg[5] (\status_error_field_reg_n_0_[2] ),
-        .\reg_rdata_reg[6] (\status_error_field_reg_n_0_[3] ),
-        .\reg_rdata_reg[7] (\status_reg_n_0_[7] ),
-        .reg_rdata_rm_table_ctrl1_out(reg_rdata_rm_table_ctrl1_out[8:1]),
+        .\reg_rdata[0]_i_2 (\status_encoded_field_reg_n_0_[0] ),
+        .\reg_rdata_reg[0] (out),
+        .\reg_rdata_reg[0]_0 (\reg_rdata_reg[0]_0 ),
+        .\reg_rdata_reg[0]_1 (\opt_has_pipe.first_q_reg[0] ),
+        .\reg_rdata_reg[0]_2 (\b_rm_info.reg_rdata_rm_table_address_reg_n_0_[0] ),
+        .\reg_rdata_reg[31] (\reg_rdata_reg[31]_0 ),
+        .\reg_rdata_reg[31]_0 ({reg_rdata_bs_table_address0_out[31:13],reg_rdata_bs_table_address0_out[0]}),
+        .\reg_rdata_reg[31]_1 ({reg_rdata_bs_table_size0_out[31:13],reg_rdata_bs_table_size0_out[0]}),
+        .reg_rdata_rm_table_ctrl1_out(reg_rdata_rm_table_ctrl1_out[0]),
+        .reg_rdata_trigger_table(reg_rdata_trigger_table),
         .reset(reset),
-        .reset_0(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_12 ),
-        .\s_axi_rresp_i_reg[1] (\b_bs_info.b_write_to_bs_info_registers_edge.axi_write_complete_reg_n_0 ),
-        .\vsm_addr_reg[2] (\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_1 ),
-        .\vsm_addr_reg[2]_0 (\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_2 ),
-        .\vsm_addr_reg[2]_1 (\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_3 ),
-        .\vsm_addr_reg[2]_2 (\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_4 ),
-        .\vsm_addr_reg[2]_3 (\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_5 ),
-        .\vsm_addr_reg[2]_4 (\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_6 ),
-        .\vsm_addr_reg[2]_5 (\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_7 ),
-        .\vsm_addr_reg[2]_6 (\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_8 ));
+        .reset_0(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_23 ),
+        .\s_axi_rresp_i[1]_i_3 (\b_bs_info.b_write_to_bs_info_registers_edge.axi_write_complete_reg_n_0 ),
+        .sw_trigger_id(sw_trigger_id),
+        .sw_trigger_pending(sw_trigger_pending));
   FDRE #(
     .INIT(1'b0)) 
     \b_bs_info.b_write_to_bs_info_registers_edge.axi_write_complete_reg 
@@ -16992,193 +16829,193 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
         .R(1'b0));
   FDRE \b_bs_info.reg_rdata_bs_table_address_reg[0] 
        (.C(clk),
-        .CE(\b_bs_info.reg_rdata_bs_table_address_reg[31]_1 ),
+        .CE(\b_bs_info.reg_rdata_bs_table_address_reg[31]_0 ),
         .D(address_from_mem[0]),
         .Q(reg_rdata_bs_table_address0_out[0]),
         .R(\b_bs_info.b_rm_info_valid_del.i_rm_info_valid_del_n_1 ));
   FDRE \b_bs_info.reg_rdata_bs_table_address_reg[10] 
        (.C(clk),
-        .CE(\b_bs_info.reg_rdata_bs_table_address_reg[31]_1 ),
+        .CE(\b_bs_info.reg_rdata_bs_table_address_reg[31]_0 ),
         .D(address_from_mem[10]),
         .Q(\b_bs_info.reg_rdata_bs_table_address_reg[12]_0 [1]),
         .R(\b_bs_info.b_rm_info_valid_del.i_rm_info_valid_del_n_1 ));
   FDRE \b_bs_info.reg_rdata_bs_table_address_reg[11] 
        (.C(clk),
-        .CE(\b_bs_info.reg_rdata_bs_table_address_reg[31]_1 ),
+        .CE(\b_bs_info.reg_rdata_bs_table_address_reg[31]_0 ),
         .D(address_from_mem[11]),
         .Q(\b_bs_info.reg_rdata_bs_table_address_reg[12]_0 [2]),
         .R(\b_bs_info.b_rm_info_valid_del.i_rm_info_valid_del_n_1 ));
   FDRE \b_bs_info.reg_rdata_bs_table_address_reg[12] 
        (.C(clk),
-        .CE(\b_bs_info.reg_rdata_bs_table_address_reg[31]_1 ),
+        .CE(\b_bs_info.reg_rdata_bs_table_address_reg[31]_0 ),
         .D(address_from_mem[12]),
         .Q(\b_bs_info.reg_rdata_bs_table_address_reg[12]_0 [3]),
         .R(\b_bs_info.b_rm_info_valid_del.i_rm_info_valid_del_n_1 ));
   FDRE \b_bs_info.reg_rdata_bs_table_address_reg[13] 
        (.C(clk),
-        .CE(\b_bs_info.reg_rdata_bs_table_address_reg[31]_1 ),
+        .CE(\b_bs_info.reg_rdata_bs_table_address_reg[31]_0 ),
         .D(address_from_mem[13]),
         .Q(reg_rdata_bs_table_address0_out[13]),
         .R(\b_bs_info.b_rm_info_valid_del.i_rm_info_valid_del_n_1 ));
   FDRE \b_bs_info.reg_rdata_bs_table_address_reg[14] 
        (.C(clk),
-        .CE(\b_bs_info.reg_rdata_bs_table_address_reg[31]_1 ),
+        .CE(\b_bs_info.reg_rdata_bs_table_address_reg[31]_0 ),
         .D(address_from_mem[14]),
         .Q(reg_rdata_bs_table_address0_out[14]),
         .R(\b_bs_info.b_rm_info_valid_del.i_rm_info_valid_del_n_1 ));
   FDRE \b_bs_info.reg_rdata_bs_table_address_reg[15] 
        (.C(clk),
-        .CE(\b_bs_info.reg_rdata_bs_table_address_reg[31]_1 ),
+        .CE(\b_bs_info.reg_rdata_bs_table_address_reg[31]_0 ),
         .D(address_from_mem[15]),
         .Q(reg_rdata_bs_table_address0_out[15]),
         .R(\b_bs_info.b_rm_info_valid_del.i_rm_info_valid_del_n_1 ));
   FDRE \b_bs_info.reg_rdata_bs_table_address_reg[16] 
        (.C(clk),
-        .CE(\b_bs_info.reg_rdata_bs_table_address_reg[31]_1 ),
+        .CE(\b_bs_info.reg_rdata_bs_table_address_reg[31]_0 ),
         .D(address_from_mem[16]),
         .Q(reg_rdata_bs_table_address0_out[16]),
         .R(\b_bs_info.b_rm_info_valid_del.i_rm_info_valid_del_n_1 ));
   FDRE \b_bs_info.reg_rdata_bs_table_address_reg[17] 
        (.C(clk),
-        .CE(\b_bs_info.reg_rdata_bs_table_address_reg[31]_1 ),
+        .CE(\b_bs_info.reg_rdata_bs_table_address_reg[31]_0 ),
         .D(address_from_mem[17]),
         .Q(reg_rdata_bs_table_address0_out[17]),
         .R(\b_bs_info.b_rm_info_valid_del.i_rm_info_valid_del_n_1 ));
   FDRE \b_bs_info.reg_rdata_bs_table_address_reg[18] 
        (.C(clk),
-        .CE(\b_bs_info.reg_rdata_bs_table_address_reg[31]_1 ),
+        .CE(\b_bs_info.reg_rdata_bs_table_address_reg[31]_0 ),
         .D(address_from_mem[18]),
         .Q(reg_rdata_bs_table_address0_out[18]),
         .R(\b_bs_info.b_rm_info_valid_del.i_rm_info_valid_del_n_1 ));
   FDRE \b_bs_info.reg_rdata_bs_table_address_reg[19] 
        (.C(clk),
-        .CE(\b_bs_info.reg_rdata_bs_table_address_reg[31]_1 ),
+        .CE(\b_bs_info.reg_rdata_bs_table_address_reg[31]_0 ),
         .D(address_from_mem[19]),
         .Q(reg_rdata_bs_table_address0_out[19]),
         .R(\b_bs_info.b_rm_info_valid_del.i_rm_info_valid_del_n_1 ));
   FDRE \b_bs_info.reg_rdata_bs_table_address_reg[1] 
        (.C(clk),
-        .CE(\b_bs_info.reg_rdata_bs_table_address_reg[31]_1 ),
+        .CE(\b_bs_info.reg_rdata_bs_table_address_reg[31]_0 ),
         .D(address_from_mem[1]),
         .Q(reg_rdata_bs_table_address0_out[1]),
         .R(\b_bs_info.b_rm_info_valid_del.i_rm_info_valid_del_n_1 ));
   FDRE \b_bs_info.reg_rdata_bs_table_address_reg[20] 
        (.C(clk),
-        .CE(\b_bs_info.reg_rdata_bs_table_address_reg[31]_1 ),
+        .CE(\b_bs_info.reg_rdata_bs_table_address_reg[31]_0 ),
         .D(address_from_mem[20]),
         .Q(reg_rdata_bs_table_address0_out[20]),
         .R(\b_bs_info.b_rm_info_valid_del.i_rm_info_valid_del_n_1 ));
   FDRE \b_bs_info.reg_rdata_bs_table_address_reg[21] 
        (.C(clk),
-        .CE(\b_bs_info.reg_rdata_bs_table_address_reg[31]_1 ),
+        .CE(\b_bs_info.reg_rdata_bs_table_address_reg[31]_0 ),
         .D(address_from_mem[21]),
         .Q(reg_rdata_bs_table_address0_out[21]),
         .R(\b_bs_info.b_rm_info_valid_del.i_rm_info_valid_del_n_1 ));
   FDRE \b_bs_info.reg_rdata_bs_table_address_reg[22] 
        (.C(clk),
-        .CE(\b_bs_info.reg_rdata_bs_table_address_reg[31]_1 ),
+        .CE(\b_bs_info.reg_rdata_bs_table_address_reg[31]_0 ),
         .D(address_from_mem[22]),
         .Q(reg_rdata_bs_table_address0_out[22]),
         .R(\b_bs_info.b_rm_info_valid_del.i_rm_info_valid_del_n_1 ));
   FDRE \b_bs_info.reg_rdata_bs_table_address_reg[23] 
        (.C(clk),
-        .CE(\b_bs_info.reg_rdata_bs_table_address_reg[31]_1 ),
+        .CE(\b_bs_info.reg_rdata_bs_table_address_reg[31]_0 ),
         .D(address_from_mem[23]),
         .Q(reg_rdata_bs_table_address0_out[23]),
         .R(\b_bs_info.b_rm_info_valid_del.i_rm_info_valid_del_n_1 ));
   FDRE \b_bs_info.reg_rdata_bs_table_address_reg[24] 
        (.C(clk),
-        .CE(\b_bs_info.reg_rdata_bs_table_address_reg[31]_1 ),
+        .CE(\b_bs_info.reg_rdata_bs_table_address_reg[31]_0 ),
         .D(address_from_mem[24]),
         .Q(reg_rdata_bs_table_address0_out[24]),
         .R(\b_bs_info.b_rm_info_valid_del.i_rm_info_valid_del_n_1 ));
   FDRE \b_bs_info.reg_rdata_bs_table_address_reg[25] 
        (.C(clk),
-        .CE(\b_bs_info.reg_rdata_bs_table_address_reg[31]_1 ),
+        .CE(\b_bs_info.reg_rdata_bs_table_address_reg[31]_0 ),
         .D(address_from_mem[25]),
         .Q(reg_rdata_bs_table_address0_out[25]),
         .R(\b_bs_info.b_rm_info_valid_del.i_rm_info_valid_del_n_1 ));
   FDRE \b_bs_info.reg_rdata_bs_table_address_reg[26] 
        (.C(clk),
-        .CE(\b_bs_info.reg_rdata_bs_table_address_reg[31]_1 ),
+        .CE(\b_bs_info.reg_rdata_bs_table_address_reg[31]_0 ),
         .D(address_from_mem[26]),
         .Q(reg_rdata_bs_table_address0_out[26]),
         .R(\b_bs_info.b_rm_info_valid_del.i_rm_info_valid_del_n_1 ));
   FDRE \b_bs_info.reg_rdata_bs_table_address_reg[27] 
        (.C(clk),
-        .CE(\b_bs_info.reg_rdata_bs_table_address_reg[31]_1 ),
+        .CE(\b_bs_info.reg_rdata_bs_table_address_reg[31]_0 ),
         .D(address_from_mem[27]),
         .Q(reg_rdata_bs_table_address0_out[27]),
         .R(\b_bs_info.b_rm_info_valid_del.i_rm_info_valid_del_n_1 ));
   FDRE \b_bs_info.reg_rdata_bs_table_address_reg[28] 
        (.C(clk),
-        .CE(\b_bs_info.reg_rdata_bs_table_address_reg[31]_1 ),
+        .CE(\b_bs_info.reg_rdata_bs_table_address_reg[31]_0 ),
         .D(address_from_mem[28]),
         .Q(reg_rdata_bs_table_address0_out[28]),
         .R(\b_bs_info.b_rm_info_valid_del.i_rm_info_valid_del_n_1 ));
   FDRE \b_bs_info.reg_rdata_bs_table_address_reg[29] 
        (.C(clk),
-        .CE(\b_bs_info.reg_rdata_bs_table_address_reg[31]_1 ),
+        .CE(\b_bs_info.reg_rdata_bs_table_address_reg[31]_0 ),
         .D(address_from_mem[29]),
         .Q(reg_rdata_bs_table_address0_out[29]),
         .R(\b_bs_info.b_rm_info_valid_del.i_rm_info_valid_del_n_1 ));
   FDRE \b_bs_info.reg_rdata_bs_table_address_reg[2] 
        (.C(clk),
-        .CE(\b_bs_info.reg_rdata_bs_table_address_reg[31]_1 ),
+        .CE(\b_bs_info.reg_rdata_bs_table_address_reg[31]_0 ),
         .D(address_from_mem[2]),
         .Q(reg_rdata_bs_table_address0_out[2]),
         .R(\b_bs_info.b_rm_info_valid_del.i_rm_info_valid_del_n_1 ));
   FDRE \b_bs_info.reg_rdata_bs_table_address_reg[30] 
        (.C(clk),
-        .CE(\b_bs_info.reg_rdata_bs_table_address_reg[31]_1 ),
+        .CE(\b_bs_info.reg_rdata_bs_table_address_reg[31]_0 ),
         .D(address_from_mem[30]),
         .Q(reg_rdata_bs_table_address0_out[30]),
         .R(\b_bs_info.b_rm_info_valid_del.i_rm_info_valid_del_n_1 ));
   FDRE \b_bs_info.reg_rdata_bs_table_address_reg[31] 
        (.C(clk),
-        .CE(\b_bs_info.reg_rdata_bs_table_address_reg[31]_1 ),
+        .CE(\b_bs_info.reg_rdata_bs_table_address_reg[31]_0 ),
         .D(address_from_mem[31]),
         .Q(reg_rdata_bs_table_address0_out[31]),
         .R(\b_bs_info.b_rm_info_valid_del.i_rm_info_valid_del_n_1 ));
   FDRE \b_bs_info.reg_rdata_bs_table_address_reg[3] 
        (.C(clk),
-        .CE(\b_bs_info.reg_rdata_bs_table_address_reg[31]_1 ),
+        .CE(\b_bs_info.reg_rdata_bs_table_address_reg[31]_0 ),
         .D(address_from_mem[3]),
         .Q(reg_rdata_bs_table_address0_out[3]),
         .R(\b_bs_info.b_rm_info_valid_del.i_rm_info_valid_del_n_1 ));
   FDRE \b_bs_info.reg_rdata_bs_table_address_reg[4] 
        (.C(clk),
-        .CE(\b_bs_info.reg_rdata_bs_table_address_reg[31]_1 ),
+        .CE(\b_bs_info.reg_rdata_bs_table_address_reg[31]_0 ),
         .D(address_from_mem[4]),
         .Q(reg_rdata_bs_table_address0_out[4]),
         .R(\b_bs_info.b_rm_info_valid_del.i_rm_info_valid_del_n_1 ));
   FDRE \b_bs_info.reg_rdata_bs_table_address_reg[5] 
        (.C(clk),
-        .CE(\b_bs_info.reg_rdata_bs_table_address_reg[31]_1 ),
+        .CE(\b_bs_info.reg_rdata_bs_table_address_reg[31]_0 ),
         .D(address_from_mem[5]),
         .Q(reg_rdata_bs_table_address0_out[5]),
         .R(\b_bs_info.b_rm_info_valid_del.i_rm_info_valid_del_n_1 ));
   FDRE \b_bs_info.reg_rdata_bs_table_address_reg[6] 
        (.C(clk),
-        .CE(\b_bs_info.reg_rdata_bs_table_address_reg[31]_1 ),
+        .CE(\b_bs_info.reg_rdata_bs_table_address_reg[31]_0 ),
         .D(address_from_mem[6]),
         .Q(reg_rdata_bs_table_address0_out[6]),
         .R(\b_bs_info.b_rm_info_valid_del.i_rm_info_valid_del_n_1 ));
   FDRE \b_bs_info.reg_rdata_bs_table_address_reg[7] 
        (.C(clk),
-        .CE(\b_bs_info.reg_rdata_bs_table_address_reg[31]_1 ),
+        .CE(\b_bs_info.reg_rdata_bs_table_address_reg[31]_0 ),
         .D(address_from_mem[7]),
         .Q(reg_rdata_bs_table_address0_out[7]),
         .R(\b_bs_info.b_rm_info_valid_del.i_rm_info_valid_del_n_1 ));
   FDRE \b_bs_info.reg_rdata_bs_table_address_reg[8] 
        (.C(clk),
-        .CE(\b_bs_info.reg_rdata_bs_table_address_reg[31]_1 ),
+        .CE(\b_bs_info.reg_rdata_bs_table_address_reg[31]_0 ),
         .D(address_from_mem[8]),
         .Q(reg_rdata_bs_table_address0_out[8]),
         .R(\b_bs_info.b_rm_info_valid_del.i_rm_info_valid_del_n_1 ));
   FDRE \b_bs_info.reg_rdata_bs_table_address_reg[9] 
        (.C(clk),
-        .CE(\b_bs_info.reg_rdata_bs_table_address_reg[31]_1 ),
+        .CE(\b_bs_info.reg_rdata_bs_table_address_reg[31]_0 ),
         .D(address_from_mem[9]),
         .Q(\b_bs_info.reg_rdata_bs_table_address_reg[12]_0 [0]),
         .R(\b_bs_info.b_rm_info_valid_del.i_rm_info_valid_del_n_1 ));
@@ -17379,30 +17216,30 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
         .clk(clk),
         .cp0_vs_id(cp0_vs_id),
         .cp_error_flag(cp_error_flag),
-        .\current_state_reg[2] (\b_event_error_i_del.i_event_error_i_del_n_1 ),
-        .\current_state_reg[3] (\b_event_error_i_del.i_event_error_i_del_n_2 ),
+        .\current_state_reg[1] (\b_event_error_i_del.i_event_error_i_del_n_1 ),
+        .\current_state_reg[2] (\b_event_error_i_del.i_event_error_i_del_n_2 ),
         .\opt_has_pipe.first_q_reg[0] (reset_ah),
-        .\opt_has_pipe.first_q_reg[0]_0 (fetch_error_flag_reg_0),
-        .\opt_has_pipe.first_q_reg[0]_1 (bad_config_error_flag_reg_0),
+        .\opt_has_pipe.first_q_reg[0]_0 (fetch_error_flag_reg_n_0),
+        .\opt_has_pipe.first_q_reg[0]_1 (bad_config_error_flag_reg_n_0),
         .p_3_in(p_3_in),
         .p_4_in(p_4_in),
         .vsm_shifter_event_error(vsm_shifter_event_error));
   design_2_dfx_controller_0_0_delay__parameterized10 \b_rm_id_valid_del.i_rm_id_valid_del 
-       (.D({\b_rm_id_valid_del.i_rm_id_valid_del_n_2 ,\b_rm_id_valid_del.i_rm_id_valid_del_n_3 ,\b_rm_id_valid_del.i_rm_id_valid_del_n_4 ,\b_rm_id_valid_del.i_rm_id_valid_del_n_5 ,\b_rm_id_valid_del.i_rm_id_valid_del_n_6 ,\b_rm_id_valid_del.i_rm_id_valid_del_n_7 ,\b_rm_id_valid_del.i_rm_id_valid_del_n_8 }),
+       (.D({\b_rm_id_valid_del.i_rm_id_valid_del_n_2 ,\b_rm_id_valid_del.i_rm_id_valid_del_n_3 ,\b_rm_id_valid_del.i_rm_id_valid_del_n_4 ,\b_rm_id_valid_del.i_rm_id_valid_del_n_5 ,\b_rm_id_valid_del.i_rm_id_valid_del_n_6 ,\b_rm_id_valid_del.i_rm_id_valid_del_n_7 }),
         .E(\b_rm_id_valid_del.i_rm_id_valid_del_n_1 ),
         .Q(current_state),
         .bs_info_valid_vec(bs_info_valid_vec),
         .clk(clk),
-        .ctrl_from_mem({\b_rm_info.rm_ctrl_reg_table_reg_0_1_12_12_n_0 ,\b_rm_info.rm_ctrl_reg_table_reg_0_1_10_10_n_0 ,\b_rm_info.rm_ctrl_reg_table_reg_0_1_9_9_n_0 ,\b_rm_info.rm_ctrl_reg_table_reg_0_1_8_8_n_0 ,\b_rm_info.rm_ctrl_reg_table_reg_0_1_7_7_n_0 ,\b_rm_info.rm_ctrl_reg_table_reg_0_1_6_6_n_0 ,\b_rm_info.rm_ctrl_reg_table_reg_0_1_5_5_n_0 }),
+        .ctrl_from_mem({\b_rm_info.rm_ctrl_reg_table_reg_0_1_10_10_n_0 ,\b_rm_info.rm_ctrl_reg_table_reg_0_1_9_9_n_0 ,\b_rm_info.rm_ctrl_reg_table_reg_0_1_8_8_n_0 ,\b_rm_info.rm_ctrl_reg_table_reg_0_1_7_7_n_0 ,\b_rm_info.rm_ctrl_reg_table_reg_0_1_6_6_n_0 ,\b_rm_info.rm_ctrl_reg_table_reg_0_1_5_5_n_0 }),
+        .\current_state_reg[3] (\b_rm_id_valid_del.i_rm_id_valid_del_n_8 ),
         .\opt_has_pipe.first_q_reg[0] (reset_ah),
         .\reset_duration_reg[3] (\b_rm_info_valid_del.i_rm_info_valid_del_n_10 ),
-        .\reset_duration_reg[4] (\b_rm_info_valid_del.i_rm_info_valid_del_n_9 ),
-        .\reset_duration_reg[5] ({reset_duration[5],reset_duration[2:0]}),
-        .\reset_duration_reg[5]_0 ({\reset_duration_stored[5]_i_1_n_0 ,plusOp[1]}),
-        .\reset_duration_reg[5]_1 (\reset_duration[5]_i_3_n_0 ),
-        .\reset_duration_reg[7] ({reset_duration_stored__0[7],reset_duration_stored__0[5:0]}),
-        .\reset_duration_reg[7]_0 (\reset_duration[7]_i_3_n_0 ),
-        .\reset_duration_reg[7]_1 (\b_rm_info_valid_del.i_rm_info_valid_del_n_8 ),
+        .\reset_duration_reg[4] (\reset_duration[7]_i_4_n_0 ),
+        .\reset_duration_reg[4]_0 (\b_rm_info_valid_del.i_rm_info_valid_del_n_9 ),
+        .\reset_duration_reg[5] (reset_duration_stored__0[5:0]),
+        .\reset_duration_reg[5]_0 ({reset_duration[5],reset_duration[2:0]}),
+        .\reset_duration_reg[5]_1 ({\reset_duration_stored[5]_i_1_n_0 ,plusOp[1]}),
+        .\reset_duration_reg[5]_2 (\reset_duration[5]_i_3_n_0 ),
         .rm_id_valid(rm_id_valid),
         .rm_info_valid_vec(rm_info_valid_vec));
   design_2_dfx_controller_0_0_delay__parameterized2_3 \b_rm_id_valid_m1_del.i_rm_id_valid_m1_del 
@@ -17421,9 +17258,9 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
         .out(\b_rm_info.b_in_shutdown_del.i_in_shutdown_del_n_0 ));
   design_2_dfx_controller_0_0_delay__parameterized2_5 \b_rm_info.b_read_from_rm_info_registers_del.i_read_from_rm_info_registers_del 
        (.Q({Q[2],Q[0]}),
+        .\b_rm_info.bs_addr_reg[0] (\b_rm_info.b_write_to_rm_info_registers_edge.axi_write_complete_reg_0 ),
         .\b_rm_info.reg_rdata_rm_table_ctrl_reg[0] (\b_rm_info.rm_ctrl_reg_table_reg_0_1_0_0_i_2_n_0 ),
-        .\b_rm_info.reg_rdata_rm_table_ctrl_reg[0]_0 (\b_rm_info.b_write_to_rm_info_registers_edge.axi_write_complete_reg_n_0 ),
-        .\b_rm_info.reg_rdata_rm_table_ctrl_reg[0]_1 (vsm_read_enable_vec),
+        .\b_rm_info.reg_rdata_rm_table_ctrl_reg[0]_0 (vsm_read_enable_vec),
         .clk(clk),
         .\opt_has_pipe.first_q_reg[0] (reset_ah),
         .out(\b_rm_info.b_read_from_rm_info_registers_del.i_read_from_rm_info_registers_del_n_0 ),
@@ -17462,35 +17299,36 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
         .reg_rdata_rm_table_ctrl(reg_rdata_rm_table_ctrl),
         .rm_id_valid(rm_id_valid));
   design_2_dfx_controller_0_0_delay__parameterized2_7 \b_rm_info.b_start_axi_read_del.i_start_axi_read_del 
-       (.D(\b_rm_info.b_start_axi_read_del.i_start_axi_read_del_n_1 ),
-        .Q(Q),
-        .\b_rm_info.b_write_to_rm_info_registers_edge.axi_write_complete_reg (\b_rm_info.b_start_axi_read_del.i_start_axi_read_del_n_3 ),
+       (.Q(Q[0]),
         .clk(clk),
-        .\opt_has_pipe.first_q_reg[0] (\b_rm_info.b_start_axi_read_del.i_start_axi_read_del_n_2 ),
-        .\opt_has_pipe.first_q_reg[0]_0 (\opt_has_pipe.first_q_reg[0]_3 ),
-        .\opt_has_pipe.first_q_reg[0]_1 (reset_ah),
+        .in(in[64]),
+        .\opt_has_pipe.first_q_reg[0] (reset_ah),
         .out(\opt_has_pipe.first_q_reg[0] ),
-        .\reg_rdata[0]_i_2 (\status_encoded_field_reg_n_0_[0] ),
-        .\reg_rdata_reg[0] (out),
-        .\reg_rdata_reg[0]_0 (\opt_has_pipe.first_q_reg[0]_1 ),
-        .\reg_rdata_reg[0]_1 (\reg_rdata_reg[31]_0 ),
-        .\reg_rdata_reg[0]_2 (\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_9 ),
-        .\reg_rdata_reg[0]_3 (\b_rm_info.reg_rdata_rm_table_address_reg_n_0_[0] ),
-        .reg_rdata_rm_table_ctrl1_out(reg_rdata_rm_table_ctrl1_out[0]),
-        .reg_rdata_trigger_table(reg_rdata_trigger_table),
-        .reg_tready_i_reg(\b_bs_info.b_write_to_bs_info_registers_edge.axi_write_complete_reg_n_0 ),
-        .reg_write_complete_ctrl_reg(reg_write_complete_ctrl_reg),
-        .reg_write_complete_sw_trigger_reg(reg_write_complete_sw_trigger_reg),
-        .\s_axi_rresp_i_reg[1] (\b_rm_info.b_write_to_rm_info_registers_edge.axi_write_complete_reg_n_0 ),
+        .\reg_rdata_reg[1] (\opt_has_pipe.first_q_reg[0]_1 ),
+        .\reg_rdata_reg[1]_0 (\reg_rdata_reg[31]_0 ),
+        .\reg_rdata_reg[2] ({\status_encoded_field_reg_n_0_[2] ,\status_encoded_field_reg_n_0_[1] }),
+        .\reg_rdata_reg[3] (\status_error_field_reg_n_0_[0] ),
+        .\reg_rdata_reg[4] (\status_error_field_reg_n_0_[1] ),
+        .\reg_rdata_reg[5] (\status_error_field_reg_n_0_[2] ),
+        .\reg_rdata_reg[6] (\status_error_field_reg_n_0_[3] ),
+        .\reg_rdata_reg[7] (\status_reg_n_0_[7] ),
+        .reg_rdata_rm_table_ctrl1_out(reg_rdata_rm_table_ctrl1_out[8:1]),
         .start_axi_read(start_axi_read),
-        .sw_trigger_id(sw_trigger_id));
+        .\vsm_addr_reg[2] (\b_rm_info.b_start_axi_read_del.i_start_axi_read_del_n_1 ),
+        .\vsm_addr_reg[2]_0 (\b_rm_info.b_start_axi_read_del.i_start_axi_read_del_n_2 ),
+        .\vsm_addr_reg[2]_1 (\b_rm_info.b_start_axi_read_del.i_start_axi_read_del_n_3 ),
+        .\vsm_addr_reg[2]_2 (\b_rm_info.b_start_axi_read_del.i_start_axi_read_del_n_4 ),
+        .\vsm_addr_reg[2]_3 (\b_rm_info.b_start_axi_read_del.i_start_axi_read_del_n_5 ),
+        .\vsm_addr_reg[2]_4 (\b_rm_info.b_start_axi_read_del.i_start_axi_read_del_n_6 ),
+        .\vsm_addr_reg[2]_5 (\b_rm_info.b_start_axi_read_del.i_start_axi_read_del_n_7 ),
+        .\vsm_addr_reg[2]_6 (\b_rm_info.b_start_axi_read_del.i_start_axi_read_del_n_8 ));
   FDRE #(
     .INIT(1'b0)) 
     \b_rm_info.b_write_to_rm_info_registers_edge.axi_write_complete_reg 
        (.C(clk),
         .CE(reset),
         .D(axi_write_complete026_out),
-        .Q(\b_rm_info.b_write_to_rm_info_registers_edge.axi_write_complete_reg_n_0 ),
+        .Q(\b_rm_info.b_write_to_rm_info_registers_edge.axi_write_complete_reg_0 ),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
@@ -17658,7 +17496,7 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
         .O(\b_rm_info.rm_ctrl_reg_table_reg_0_1_0_0_n_0 ),
         .WCLK(clk),
         .WE(\b_rm_info.b_read_from_rm_info_registers_del.i_read_from_rm_info_registers_del_n_1 ));
-  (* SOFT_HLUTNM = "soft_lutpair164" *) 
+  (* SOFT_HLUTNM = "soft_lutpair160" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \b_rm_info.rm_ctrl_reg_table_reg_0_1_0_0_i_2 
@@ -17942,55 +17780,54 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
         .Q(startup_required),
         .R(1'b0));
   design_2_dfx_controller_0_0_delay__parameterized10_8 \b_rm_info_valid_del.i_rm_info_valid_del 
-       (.D({next_state[3],next_state[1:0]}),
-        .E(\b_rm_info_valid_del.i_rm_info_valid_del_n_5 ),
+       (.D(next_state),
         .Q(current_state),
         .bs_info_valid_vec(bs_info_valid_vec),
         .clk(clk),
-        .ctrl_from_mem(\b_rm_info.rm_ctrl_reg_table_reg_0_1_11_11_n_0 ),
-        .\current_state[1]_i_5 (\current_state[3]_i_9_n_0 ),
-        .\current_state[1]_i_5_0 (\current_state[2]_i_10_n_0 ),
-        .\current_state[1]_i_5_1 (\current_state[1]_i_11_n_0 ),
-        .\current_state_reg[0] (\current_state[0]_i_2_n_0 ),
-        .\current_state_reg[0]_0 (i_trigger_manager_n_1),
-        .\current_state_reg[0]_1 (\current_state[0]_i_6_n_0 ),
-        .\current_state_reg[0]_2 (\current_state[0]_i_7_n_0 ),
-        .\current_state_reg[0]_3 (\current_state[3]_i_7_n_0 ),
-        .\current_state_reg[0]_4 (\current_state[0]_i_8_n_0 ),
-        .\current_state_reg[0]_5 (\current_state[0]_i_9_n_0 ),
-        .\current_state_reg[1] (\current_state[1]_i_2_n_0 ),
-        .\current_state_reg[1]_0 (i_trigger_manager_n_2),
-        .\current_state_reg[1]_1 (shutdown_bit_reg_0),
-        .\current_state_reg[1]_2 (rm_reset_i_i_6_n_0),
-        .\current_state_reg[3] (\b_rm_info_valid_del.i_rm_info_valid_del_n_6 ),
-        .\current_state_reg[3]_0 (\current_state[3]_i_2_n_0 ),
-        .\current_state_reg[3]_1 (\current_state[3]_i_3_n_0 ),
-        .\current_state_reg[3]_2 (\current_state[3]_i_5_n_0 ),
+        .ctrl_from_mem({\b_rm_info.rm_ctrl_reg_table_reg_0_1_12_12_n_0 ,\b_rm_info.rm_ctrl_reg_table_reg_0_1_11_11_n_0 }),
+        .\current_state[1]_i_2 (full_flag_reg_n_0),
+        .\current_state_reg[0] (i_trigger_manager_n_4),
+        .\current_state_reg[0]_0 (\current_state[0]_i_4_n_0 ),
+        .\current_state_reg[0]_1 (\current_state[0]_i_5_n_0 ),
+        .\current_state_reg[0]_2 (\current_state[0]_i_8_n_0 ),
+        .\current_state_reg[0]_3 (\current_state[0]_i_9_n_0 ),
+        .\current_state_reg[0]_4 (rm_reset_i_i_6_n_0),
+        .\current_state_reg[1] (\current_state[1]_i_3_n_0 ),
+        .\current_state_reg[1]_0 (i_trigger_manager_n_3),
+        .\current_state_reg[1]_1 (\current_state[1]_i_5_n_0 ),
+        .\current_state_reg[2] (i_trigger_manager_n_1),
+        .\current_state_reg[2]_0 (\current_state[2]_i_4_n_0 ),
+        .\current_state_reg[3] (\current_state[3]_i_3_n_0 ),
+        .\current_state_reg[3]_0 (\current_state[3]_i_4_n_0 ),
+        .\current_state_reg[3]_1 (\current_state[3]_i_5_n_0 ),
+        .\current_state_reg[3]_2 (\current_state[3]_i_7_n_0 ),
+        .\current_state_reg[3]_3 (shutdown_bit_reg_0),
         .hw_trigger_used(hw_trigger_used),
         .\opt_has_pipe.first_q_reg[0] (reset_ah),
-        .\opt_has_pipe.i_pipe[2].pipe_reg[2][0] (\b_rm_info_valid_del.i_rm_info_valid_del_n_10 ),
-        .\opt_has_pipe.i_pipe[2].pipe_reg[2][0]_0 (\b_rm_info_valid_del.i_rm_info_valid_del_n_12 ),
+        .\opt_has_pipe.i_pipe[2].pipe_reg[2][0] (\b_rm_info_valid_del.i_rm_info_valid_del_n_7 ),
+        .\opt_has_pipe.i_pipe[2].pipe_reg[2][0]_0 (\b_rm_info_valid_del.i_rm_info_valid_del_n_10 ),
         .reg_write_complete_sw_trigger_reg(reg_write_complete_sw_trigger_reg),
         .reg_write_complete_sw_trigger_reg_reg(\b_rm_info_valid_del.i_rm_info_valid_del_n_11 ),
         .reset(reset),
-        .reset_0(\b_rm_info_valid_del.i_rm_info_valid_del_n_13 ),
+        .reset_0(\b_rm_info_valid_del.i_rm_info_valid_del_n_12 ),
         .\reset_duration_reg[4] (\b_rm_info_valid_del.i_rm_info_valid_del_n_9 ),
-        .\reset_duration_reg[6] (reset_duration_stored__0[6]),
+        .\reset_duration_reg[6] (\reset_duration_stored[7]_i_3_n_0 ),
         .\reset_duration_reg[6]_0 (\reset_duration[7]_i_5_n_0 ),
-        .\reset_duration_reg[6]_1 (\reset_duration_stored[7]_i_3_n_0 ),
-        .\reset_duration_reg[7] (\b_rm_info_valid_del.i_rm_info_valid_del_n_8 ),
-        .\reset_duration_reg[7]_0 ({reset_duration[7:6],reset_duration[4:0]}),
-        .\reset_duration_stored_reg[6] (\b_rm_info_valid_del.i_rm_info_valid_del_n_4 ),
+        .\reset_duration_reg[7] (reset_duration_stored__0[7:6]),
+        .\reset_duration_reg[7]_0 (\reset_duration[7]_i_4_n_0 ),
+        .\reset_duration_reg[7]_1 ({reset_duration[7:6],reset_duration[4:0]}),
+        .\reset_duration_stored_reg[7] ({\b_rm_info_valid_del.i_rm_info_valid_del_n_5 ,\b_rm_info_valid_del.i_rm_info_valid_del_n_6 }),
         .rm_info_valid_vec(rm_info_valid_vec),
         .rm_reset_i_reg(rm_reset_i_i_2_n_0),
         .rm_reset_i_reg_0(reset_required),
         .rm_reset_i_reg_1(rm_reset_i_reg_0),
         .rm_reset_i_reg_2(in_shutdown),
-        .startup_required(startup_required),
+        .rm_reset_i_reg_3(rm_reset_i_i_4_n_0),
         .sw_trigger_pending(sw_trigger_pending),
-        .sw_trigger_pending_reg(reg_write_complete_sw_trigger_reg_reg_0),
+        .user_restarted_with_status(user_restarted_with_status),
         .using_sw_trigger(using_sw_trigger),
-        .vsm_shifter_rm_reset(vsm_shifter_rm_reset));
+        .vsm_shifter_rm_reset(vsm_shifter_rm_reset),
+        .write_to_sw_trigger_reg_cmb(write_to_sw_trigger_reg_cmb));
   design_2_dfx_controller_0_0_delay__parameterized2_9 \b_start_fetching_all_del.i_start_fetching_all_del 
        (.Q(current_state),
         .clk(clk),
@@ -18004,16 +17841,16 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
         .\vsm_wdata_reg[16] (\b_start_fetching_all_del.i_start_fetching_all_del_n_2 ));
   design_2_dfx_controller_0_0_delay__parameterized2_10 \b_start_fetching_all_except_rm_id_del.i_start_fetching_all_except_rm_id_del 
        (.Q(current_state),
-        .bad_config_error_flag_reg(\b_start_fetching_all_except_rm_id_del.i_start_fetching_all_except_rm_id_del_n_1 ),
-        .bad_config_error_flag_reg_0(bad_config_error_flag_reg_0),
+        .bad_config_error_flag_reg(\b_start_fetching_all_except_rm_id_del.i_start_fetching_all_except_rm_id_del_n_0 ),
+        .bad_config_error_flag_reg_0(bad_config_error_flag_reg_n_0),
         .clk(clk),
         .cp0_vs_id(cp0_vs_id),
         .cp_error_flag(cp_error_flag),
         .cp_error_flag_reg(\b_start_fetching_all_except_rm_id_del.i_start_fetching_all_except_rm_id_del_n_2 ),
         .cp_error_flag_reg_0(sw_shutdown_req_i_reg_0),
         .din(din),
-        .fetch_error_flag_reg(\b_start_fetching_all_except_rm_id_del.i_start_fetching_all_except_rm_id_del_n_0 ),
-        .fetch_error_flag_reg_0(fetch_error_flag_reg_0),
+        .fetch_error_flag_reg(\b_start_fetching_all_except_rm_id_del.i_start_fetching_all_except_rm_id_del_n_1 ),
+        .fetch_error_flag_reg_0(fetch_error_flag_reg_n_0),
         .fetch_error_flag_reg_1(\b_event_error_i_del.i_event_error_i_del_n_2 ),
         .\opt_has_pipe.first_q_reg[0] (reset_ah),
         .out(\b_rm_id_valid_m1_del.i_rm_id_valid_m1_del_n_0 ),
@@ -18029,8 +17866,8 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
         .rm_id_from_mem_vec(rm_id_from_mem_vec));
   design_2_dfx_controller_0_0_delay__parameterized2_12 \b_trigger_table.b_read_from_trigger_registers_del.i_read_from_trigger_registers_del 
        (.Q(Q[2:1]),
-        .\b_trigger_table.trigger2rm_table_reg_0_1_0_0 (axi_write_complete),
-        .\b_trigger_table.trigger2rm_table_reg_0_1_0_0_0 (in_shutdown),
+        .axi_write_complete(axi_write_complete),
+        .\b_trigger_table.trigger2rm_table_reg_0_1_0_0 (in_shutdown),
         .clk(clk),
         .in_shutdown_d1(in_shutdown_d1),
         .\opt_has_pipe.first_q_reg[0] (reset_ah),
@@ -18056,43 +17893,37 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
         .R(1'b0));
   design_2_dfx_controller_0_0_delay__parameterized2_13 \b_trigger_table.b_start_axi_read_del.i_start_axi_read_del 
        (.Q(reg_rdata_bs_table_address0_out[8:1]),
+        .axi_write_complete(axi_write_complete),
+        .\b_trigger_table.b_write_to_trigger_registers_edge.axi_write_complete_reg (\b_trigger_table.b_write_to_trigger_registers_edge.axi_write_complete_reg_0 ),
         .clk(clk),
-        .\opt_has_pipe.first_q_reg[0] (\b_trigger_table.b_start_axi_read_del.i_start_axi_read_del_n_1 ),
-        .\opt_has_pipe.first_q_reg[0]_0 (\b_trigger_table.b_start_axi_read_del.i_start_axi_read_del_n_4 ),
-        .\opt_has_pipe.first_q_reg[0]_1 (\b_trigger_table.b_start_axi_read_del.i_start_axi_read_del_n_5 ),
-        .\opt_has_pipe.first_q_reg[0]_10 (\b_trigger_table.b_read_from_trigger_registers_edge.start_axi_read_reg_n_0 ),
-        .\opt_has_pipe.first_q_reg[0]_2 (\b_trigger_table.b_start_axi_read_del.i_start_axi_read_del_n_6 ),
-        .\opt_has_pipe.first_q_reg[0]_3 (\b_trigger_table.b_start_axi_read_del.i_start_axi_read_del_n_7 ),
-        .\opt_has_pipe.first_q_reg[0]_4 (\b_trigger_table.b_start_axi_read_del.i_start_axi_read_del_n_8 ),
-        .\opt_has_pipe.first_q_reg[0]_5 (\b_trigger_table.b_start_axi_read_del.i_start_axi_read_del_n_9 ),
-        .\opt_has_pipe.first_q_reg[0]_6 (\b_trigger_table.b_start_axi_read_del.i_start_axi_read_del_n_10 ),
-        .\opt_has_pipe.first_q_reg[0]_7 (\b_trigger_table.b_start_axi_read_del.i_start_axi_read_del_n_11 ),
-        .\opt_has_pipe.first_q_reg[0]_8 (\b_trigger_table.b_start_axi_read_del.i_start_axi_read_del_n_12 ),
-        .\opt_has_pipe.first_q_reg[0]_9 (reset_ah),
+        .\opt_has_pipe.first_q_reg[0] (\b_trigger_table.b_start_axi_read_del.i_start_axi_read_del_n_2 ),
+        .\opt_has_pipe.first_q_reg[0]_0 (\b_trigger_table.b_start_axi_read_del.i_start_axi_read_del_n_3 ),
+        .\opt_has_pipe.first_q_reg[0]_1 (\b_trigger_table.b_start_axi_read_del.i_start_axi_read_del_n_4 ),
+        .\opt_has_pipe.first_q_reg[0]_2 (\b_trigger_table.b_start_axi_read_del.i_start_axi_read_del_n_5 ),
+        .\opt_has_pipe.first_q_reg[0]_3 (\b_trigger_table.b_start_axi_read_del.i_start_axi_read_del_n_6 ),
+        .\opt_has_pipe.first_q_reg[0]_4 (\b_trigger_table.b_start_axi_read_del.i_start_axi_read_del_n_7 ),
+        .\opt_has_pipe.first_q_reg[0]_5 (\b_trigger_table.b_start_axi_read_del.i_start_axi_read_del_n_8 ),
+        .\opt_has_pipe.first_q_reg[0]_6 (\b_trigger_table.b_start_axi_read_del.i_start_axi_read_del_n_9 ),
+        .\opt_has_pipe.first_q_reg[0]_7 (\b_trigger_table.b_start_axi_read_del.i_start_axi_read_del_n_10 ),
+        .\opt_has_pipe.first_q_reg[0]_8 (reset_ah),
+        .\opt_has_pipe.first_q_reg[0]_9 (\b_trigger_table.b_read_from_trigger_registers_edge.start_axi_read_reg_n_0 ),
         .out(out),
-        .\reg_rdata_reg[1] (\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_1 ),
-        .\reg_rdata_reg[2] (\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_2 ),
-        .\reg_rdata_reg[31] (\reg_rdata_reg[31]_0 ),
-        .\reg_rdata_reg[31]_0 (\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_10 ),
-        .\reg_rdata_reg[31]_1 (\reg_rdata_reg[31]_1 ),
-        .\reg_rdata_reg[31]_2 (\b_rm_info.b_start_axi_read_del.i_start_axi_read_del_n_2 ),
-        .\reg_rdata_reg[3] (\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_3 ),
-        .\reg_rdata_reg[4] (\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_4 ),
-        .\reg_rdata_reg[5] (\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_5 ),
-        .\reg_rdata_reg[6] (\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_6 ),
-        .\reg_rdata_reg[7] (\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_7 ),
-        .\reg_rdata_reg[8] (\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_8 ),
+        .\reg_rdata_reg[1] (\b_rm_info.b_start_axi_read_del.i_start_axi_read_del_n_1 ),
+        .\reg_rdata_reg[2] (\b_rm_info.b_start_axi_read_del.i_start_axi_read_del_n_2 ),
+        .\reg_rdata_reg[3] (\b_rm_info.b_start_axi_read_del.i_start_axi_read_del_n_3 ),
+        .\reg_rdata_reg[4] (\b_rm_info.b_start_axi_read_del.i_start_axi_read_del_n_4 ),
+        .\reg_rdata_reg[5] (\b_rm_info.b_start_axi_read_del.i_start_axi_read_del_n_5 ),
+        .\reg_rdata_reg[6] (\b_rm_info.b_start_axi_read_del.i_start_axi_read_del_n_6 ),
+        .\reg_rdata_reg[7] (\b_rm_info.b_start_axi_read_del.i_start_axi_read_del_n_7 ),
+        .\reg_rdata_reg[8] (\b_rm_info.b_start_axi_read_del.i_start_axi_read_del_n_8 ),
         .\reg_rdata_reg[8]_0 (\reg_rdata_reg[8]_0 ),
         .\reg_rdata_reg[8]_1 (\reg_rdata_reg[8]_1 ),
         .\reg_rdata_reg[8]_2 (reg_rdata_bs_table_size0_out[8:1]),
-        .reg_tready_d0(reg_tready_d0),
-        .reg_tready_d1(reg_tready_d1),
-        .reg_tready_d1_reg(axi_write_complete),
-        .reg_tready_d1_reg_0(reg_tready_d1_reg_0),
-        .reg_tready_i0(reg_tready_i0),
-        .reg_tready_i_reg(\b_rm_info.b_start_axi_read_del.i_start_axi_read_del_n_3 ),
-        .reset(reset),
-        .sw_trigger_pending(sw_trigger_pending));
+        .reg_tready_d1_i_2(\b_rm_info.b_write_to_rm_info_registers_edge.axi_write_complete_reg_0 ),
+        .reg_tready_d1_i_2_0(\b_bs_info.b_write_to_bs_info_registers_edge.axi_write_complete_reg_n_0 ),
+        .reg_write_complete_ctrl_reg(reg_write_complete_ctrl_reg),
+        .reg_write_complete_sw_trigger_reg(reg_write_complete_sw_trigger_reg),
+        .reset(reset));
   FDRE #(
     .INIT(1'b0)) 
     \b_trigger_table.b_write_to_trigger_registers_edge.axi_write_complete_reg 
@@ -18149,8 +17980,8 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
     bad_config_error_flag_reg
        (.C(clk),
         .CE(1'b1),
-        .D(\b_start_fetching_all_except_rm_id_del.i_start_fetching_all_except_rm_id_del_n_1 ),
-        .Q(bad_config_error_flag_reg_0),
+        .D(\b_start_fetching_all_except_rm_id_del.i_start_fetching_all_except_rm_id_del_n_0 ),
+        .Q(bad_config_error_flag_reg_n_0),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
@@ -18160,236 +17991,198 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
         .D(\b_start_fetching_all_except_rm_id_del.i_start_fetching_all_except_rm_id_del_n_2 ),
         .Q(cp_error_flag),
         .R(1'b0));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFCFFFAAAA)) 
-    \current_state[0]_i_10 
-       (.I0(\current_state[0]_i_12_n_0 ),
-        .I1(sw_ok_to_proceed_d1),
-        .I2(sw_ok_to_proceed_d0),
-        .I3(\current_state[0]_i_13_n_0 ),
-        .I4(current_state[1]),
-        .I5(current_state[2]),
-        .O(\current_state[0]_i_10_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair160" *) 
-  LUT3 #(
-    .INIT(8'h2F)) 
-    \current_state[0]_i_12 
-       (.I0(shutdown_bit_reg_0),
-        .I1(full_flag_reg_0),
-        .I2(reset),
-        .O(\current_state[0]_i_12_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair155" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    \current_state[0]_i_13 
-       (.I0(shutdown_required[0]),
-        .I1(shutdown_required[1]),
-        .O(\current_state[0]_i_13_n_0 ));
-  LUT6 #(
-    .INIT(64'h0004044400440444)) 
-    \current_state[0]_i_2 
-       (.I0(current_state[2]),
-        .I1(current_state[3]),
-        .I2(current_state[0]),
-        .I3(current_state[1]),
-        .I4(shutdown_bit_reg_0),
-        .I5(rm_reset_i_i_6_n_0),
-        .O(\current_state[0]_i_2_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair150" *) 
   LUT5 #(
-    .INIT(32'h0000AAA8)) 
-    \current_state[0]_i_6 
+    .INIT(32'hAAAAEAAA)) 
+    \current_state[0]_i_4 
+       (.I0(current_state[0]),
+        .I1(shutdown_required[0]),
+        .I2(shutdown_required[1]),
+        .I3(sw_ok_to_proceed_d0),
+        .I4(sw_ok_to_proceed_d1),
+        .O(\current_state[0]_i_4_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair158" *) 
+  LUT4 #(
+    .INIT(16'hFBBB)) 
+    \current_state[0]_i_5 
+       (.I0(current_state[2]),
+        .I1(current_state[1]),
+        .I2(vsm_shifter_rm_shutdown_ack),
+        .I3(current_state[0]),
+        .O(\current_state[0]_i_5_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFF5557FFFFFFFF)) 
+    \current_state[0]_i_8 
        (.I0(current_state[1]),
         .I1(shutdown_bit_reg_0),
         .I2(reset_required__0),
         .I3(reset_required),
-        .I4(startup_required),
-        .O(\current_state[0]_i_6_n_0 ));
+        .I4(sw_ok_to_proceed_d0),
+        .I5(sw_ok_to_proceed_d1),
+        .O(\current_state[0]_i_8_n_0 ));
   LUT6 #(
-    .INIT(64'h3B3B3B3B3B3B3BBB)) 
-    \current_state[0]_i_7 
-       (.I0(current_state[0]),
-        .I1(current_state[1]),
-        .I2(sw_startup_req_i_i_3_n_0),
-        .I3(shutdown_bit_reg_0),
-        .I4(reset_required__0),
-        .I5(reset_required),
-        .O(\current_state[0]_i_7_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair148" *) 
-  LUT5 #(
-    .INIT(32'h0000AAA8)) 
-    \current_state[0]_i_8 
-       (.I0(\current_state[3]_i_6_n_0 ),
+    .INIT(64'hAAAAAAAAAAAA0002)) 
+    \current_state[0]_i_9 
+       (.I0(\current_state[3]_i_9_n_0 ),
         .I1(shutdown_bit_reg_0),
         .I2(reset_required__0),
         .I3(reset_required),
         .I4(startup_required),
-        .O(\current_state[0]_i_8_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair166" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
-    \current_state[0]_i_9 
-       (.I0(current_state[0]),
-        .I1(current_state[1]),
+        .I5(\current_state[3]_i_10_n_0 ),
         .O(\current_state[0]_i_9_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair148" *) 
+  (* SOFT_HLUTNM = "soft_lutpair156" *) 
   LUT4 #(
-    .INIT(16'h5455)) 
+    .INIT(16'h4044)) 
     \current_state[1]_i_11 
-       (.I0(startup_required),
-        .I1(reset_required),
-        .I2(reset_required__0),
+       (.I0(current_state[0]),
+        .I1(reset),
+        .I2(full_flag_reg_n_0),
         .I3(shutdown_bit_reg_0),
         .O(\current_state[1]_i_11_n_0 ));
   LUT6 #(
-    .INIT(64'h50FF5070FFFFFFFF)) 
-    \current_state[1]_i_2 
-       (.I0(\current_state[3]_i_6_n_0 ),
-        .I1(startup_required),
-        .I2(\current_state[3]_i_7_n_0 ),
-        .I3(\current_state[1]_i_6_n_0 ),
-        .I4(\current_state[1]_i_7_n_0 ),
-        .I5(current_state[1]),
-        .O(\current_state[1]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair150" *) 
-  LUT3 #(
-    .INIT(8'h02)) 
-    \current_state[1]_i_6 
-       (.I0(shutdown_bit_reg_0),
+    .INIT(64'hA8AAAAAAA8AAA8AA)) 
+    \current_state[1]_i_3 
+       (.I0(\current_state[2]_i_4_n_0 ),
         .I1(reset_required__0),
         .I2(reset_required),
-        .O(\current_state[1]_i_6_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair163" *) 
-  LUT3 #(
-    .INIT(8'h40)) 
-    \current_state[1]_i_7 
-       (.I0(sw_ok_to_proceed_d0),
-        .I1(sw_ok_to_proceed_d1),
-        .I2(current_state[0]),
-        .O(\current_state[1]_i_7_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair156" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
-    \current_state[2]_i_10 
-       (.I0(current_state[1]),
-        .I1(current_state[0]),
-        .O(\current_state[2]_i_10_n_0 ));
-  LUT6 #(
-    .INIT(64'hC7C4C4C407040404)) 
-    \current_state[2]_i_3 
-       (.I0(\current_state[2]_i_7_n_0 ),
-        .I1(current_state[1]),
-        .I2(current_state[0]),
-        .I3(full_flag_reg_0),
-        .I4(reset),
-        .I5(\current_state[2]_i_8_n_0 ),
-        .O(\current_state[2]_i_3_n_0 ));
-  LUT6 #(
-    .INIT(64'h8088888888888888)) 
-    \current_state[2]_i_4 
-       (.I0(\current_state[2]_i_9_n_0 ),
-        .I1(using_sw_trigger_i_2_n_0),
-        .I2(sw_ok_to_proceed_d0),
-        .I3(sw_ok_to_proceed_d1),
-        .I4(current_state[1]),
-        .I5(current_state[0]),
-        .O(\current_state[2]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair161" *) 
-  LUT3 #(
-    .INIT(8'hA8)) 
-    \current_state[2]_i_6 
-       (.I0(full_flag_reg_0),
-        .I1(shutdown_required[1]),
-        .I2(shutdown_required[0]),
-        .O(\current_state[2]_i_6_n_0 ));
+        .I3(shutdown_bit_reg_0),
+        .I4(current_state[0]),
+        .I5(\current_state[3]_i_10_n_0 ),
+        .O(\current_state[1]_i_3_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair155" *) 
   LUT4 #(
-    .INIT(16'hF8FF)) 
-    \current_state[2]_i_7 
-       (.I0(shutdown_required[1]),
-        .I1(shutdown_required[0]),
-        .I2(sw_ok_to_proceed_d1),
-        .I3(sw_ok_to_proceed_d0),
-        .O(\current_state[2]_i_7_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair161" *) 
-  LUT3 #(
-    .INIT(8'h8A)) 
-    \current_state[2]_i_8 
-       (.I0(vsm_shifter_rm_shutdown_ack),
+    .INIT(16'h0002)) 
+    \current_state[1]_i_5 
+       (.I0(shutdown_bit_reg_0),
+        .I1(reset_duration[6]),
+        .I2(\reset_duration[7]_i_5_n_0 ),
+        .I3(reset_duration[7]),
+        .O(\current_state[1]_i_5_n_0 ));
+  LUT6 #(
+    .INIT(64'h00000000EAFFEAAA)) 
+    \current_state[1]_i_7 
+       (.I0(current_state[0]),
         .I1(shutdown_required[0]),
         .I2(shutdown_required[1]),
-        .O(\current_state[2]_i_8_n_0 ));
+        .I3(sw_shutdown_req_i_i_4_n_0),
+        .I4(current_state[1]),
+        .I5(\current_state[1]_i_9_n_0 ),
+        .O(\current_state[1]_i_7_n_0 ));
   LUT6 #(
-    .INIT(64'h8FFF8F8F8FFF8FFF)) 
-    \current_state[2]_i_9 
-       (.I0(startup_required),
-        .I1(\current_state[3]_i_6_n_0 ),
-        .I2(\current_state[2]_i_10_n_0 ),
-        .I3(bad_config_error_flag_reg_0),
-        .I4(cp0_vs_id),
-        .I5(p_4_in),
-        .O(\current_state[2]_i_9_n_0 ));
-  LUT6 #(
-    .INIT(64'hFF00FFDFFFDFFFDF)) 
-    \current_state[3]_i_2 
-       (.I0(\current_state[3]_i_6_n_0 ),
-        .I1(startup_required),
-        .I2(\current_state[3]_i_7_n_0 ),
-        .I3(\current_state[3]_i_8_n_0 ),
-        .I4(sw_startup_req_i_i_3_n_0),
-        .I5(current_state[0]),
-        .O(\current_state[3]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFA400000)) 
-    \current_state[3]_i_3 
+    .INIT(64'hFFFFFFFF8808FFFF)) 
+    \current_state[1]_i_9 
        (.I0(current_state[0]),
-        .I1(full_flag_reg_0),
-        .I2(reset),
-        .I3(shutdown_bit_reg_0),
-        .I4(rm_reset_i_i_4_n_0),
-        .I5(current_state[3]),
-        .O(\current_state[3]_i_3_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFF00400F40)) 
-    \current_state[3]_i_5 
-       (.I0(shutdown_bit_reg_0),
-        .I1(rm_reset_i_i_6_n_0),
-        .I2(current_state[0]),
-        .I3(current_state[1]),
-        .I4(\current_state[3]_i_9_n_0 ),
+        .I1(vsm_shifter_rm_shutdown_ack),
+        .I2(shutdown_required[1]),
+        .I3(shutdown_required[0]),
+        .I4(current_state[1]),
         .I5(current_state[2]),
-        .O(\current_state[3]_i_5_n_0 ));
+        .O(\current_state[1]_i_9_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFF20FF20202020)) 
+    \current_state[2]_i_4 
+       (.I0(sw_ok_to_proceed_d1),
+        .I1(sw_ok_to_proceed_d0),
+        .I2(current_state[0]),
+        .I3(startup_required),
+        .I4(\current_state[3]_i_10_n_0 ),
+        .I5(\current_state[3]_i_9_n_0 ),
+        .O(\current_state[2]_i_4_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFB0000000)) 
+    \current_state[2]_i_6 
+       (.I0(shutdown_required[0]),
+        .I1(shutdown_required[1]),
+        .I2(vsm_shifter_rm_shutdown_ack),
+        .I3(current_state[0]),
+        .I4(current_state[1]),
+        .I5(\current_state[2]_i_8_n_0 ),
+        .O(\current_state[2]_i_6_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair150" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
+    \current_state[2]_i_7 
+       (.I0(shutdown_required[0]),
+        .I1(shutdown_required[1]),
+        .O(\current_state[2]_i_7_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair147" *) 
+  LUT5 #(
+    .INIT(32'hAAAAAAEA)) 
+    \current_state[2]_i_8 
+       (.I0(current_state[2]),
+        .I1(reset),
+        .I2(full_flag_reg_n_0),
+        .I3(current_state[0]),
+        .I4(current_state[1]),
+        .O(\current_state[2]_i_8_n_0 ));
   LUT4 #(
-    .INIT(16'h1011)) 
-    \current_state[3]_i_6 
-       (.I0(fetch_error_flag_reg_0),
-        .I1(bad_config_error_flag_reg_0),
+    .INIT(16'hEFEE)) 
+    \current_state[3]_i_10 
+       (.I0(fetch_error_flag_reg_n_0),
+        .I1(bad_config_error_flag_reg_n_0),
         .I2(cp0_vs_id),
         .I3(p_3_in),
-        .O(\current_state[3]_i_6_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair156" *) 
+        .O(\current_state[3]_i_10_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair154" *) 
+  LUT2 #(
+    .INIT(4'h2)) 
+    \current_state[3]_i_11 
+       (.I0(current_state[1]),
+        .I1(current_state[0]),
+        .O(\current_state[3]_i_11_n_0 ));
+  LUT6 #(
+    .INIT(64'h0000FA0800000000)) 
+    \current_state[3]_i_3 
+       (.I0(reset),
+        .I1(full_flag_reg_n_0),
+        .I2(current_state[0]),
+        .I3(shutdown_bit_reg_0),
+        .I4(current_state[1]),
+        .I5(\current_state[3]_i_8_n_0 ),
+        .O(\current_state[3]_i_3_n_0 ));
+  LUT6 #(
+    .INIT(64'h0202FF0202020202)) 
+    \current_state[3]_i_4 
+       (.I0(\current_state[3]_i_9_n_0 ),
+        .I1(startup_required),
+        .I2(\current_state[3]_i_10_n_0 ),
+        .I3(sw_ok_to_proceed_d1),
+        .I4(sw_ok_to_proceed_d0),
+        .I5(current_state[0]),
+        .O(\current_state[3]_i_4_n_0 ));
+  LUT4 #(
+    .INIT(16'h01FF)) 
+    \current_state[3]_i_5 
+       (.I0(reset_required),
+        .I1(reset_required__0),
+        .I2(shutdown_bit_reg_0),
+        .I3(current_state[1]),
+        .O(\current_state[3]_i_5_n_0 ));
+  LUT6 #(
+    .INIT(64'hBABFBFBFAAAAAAAA)) 
+    \current_state[3]_i_7 
+       (.I0(current_state[2]),
+        .I1(current_state[3]),
+        .I2(shutdown_bit_reg_0),
+        .I3(full_flag_reg_n_0),
+        .I4(user_restarted_with_status),
+        .I5(\current_state[3]_i_11_n_0 ),
+        .O(\current_state[3]_i_7_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair151" *) 
+  LUT2 #(
+    .INIT(4'h1)) 
+    \current_state[3]_i_8 
+       (.I0(current_state[2]),
+        .I1(current_state[3]),
+        .O(\current_state[3]_i_8_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair154" *) 
   LUT4 #(
     .INIT(16'h5504)) 
-    \current_state[3]_i_7 
+    \current_state[3]_i_9 
        (.I0(current_state[0]),
         .I1(p_4_in),
         .I2(cp0_vs_id),
-        .I3(bad_config_error_flag_reg_0),
-        .O(\current_state[3]_i_7_n_0 ));
-  LUT3 #(
-    .INIT(8'h01)) 
-    \current_state[3]_i_8 
-       (.I0(shutdown_bit_reg_0),
-        .I1(reset_required__0),
-        .I2(reset_required),
-        .O(\current_state[3]_i_8_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair160" *) 
-  LUT3 #(
-    .INIT(8'hEA)) 
-    \current_state[3]_i_9 
-       (.I0(shutdown_bit_reg_0),
-        .I1(user_restarted_with_status),
-        .I2(full_flag_reg_0),
+        .I3(bad_config_error_flag_reg_n_0),
         .O(\current_state[3]_i_9_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
@@ -18428,81 +18221,89 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
     fetch_error_flag_reg
        (.C(clk),
         .CE(1'b1),
-        .D(\b_start_fetching_all_except_rm_id_del.i_start_fetching_all_except_rm_id_del_n_0 ),
-        .Q(fetch_error_flag_reg_0),
+        .D(\b_start_fetching_all_except_rm_id_del.i_start_fetching_all_except_rm_id_del_n_1 ),
+        .Q(fetch_error_flag_reg_n_0),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
     fetch_req_reg
        (.C(clk),
         .CE(1'b1),
-        .D(\b_rm_info_valid_del.i_rm_info_valid_del_n_12 ),
+        .D(\b_rm_info_valid_del.i_rm_info_valid_del_n_7 ),
         .Q(vsm_shifter_fetch_req),
         .R(reset_ah));
-  (* SOFT_HLUTNM = "soft_lutpair157" *) 
-  LUT4 #(
-    .INIT(16'h1000)) 
-    full_flag_i_4
-       (.I0(current_state[0]),
-        .I1(current_state[3]),
-        .I2(current_state[1]),
-        .I3(current_state[2]),
-        .O(\current_state_reg[0]_0 ));
+  LUT5 #(
+    .INIT(32'hACAFACA0)) 
+    full_flag_i_1
+       (.I0(reg_wdata[8]),
+        .I1(full_flag_i_2_n_0),
+        .I2(user_restarted_with_status059_out),
+        .I3(\b_event_error_i_del.i_event_error_i_del_n_1 ),
+        .I4(full_flag_reg_n_0),
+        .O(full_flag_i_1_n_0));
+  LUT6 #(
+    .INIT(64'h0000000000002000)) 
+    full_flag_i_2
+       (.I0(current_state[1]),
+        .I1(current_state[0]),
+        .I2(\b_event_error_i_del.i_event_error_i_del_n_2 ),
+        .I3(p_4_in),
+        .I4(cp0_vs_id),
+        .I5(\current_state[3]_i_10_n_0 ),
+        .O(full_flag_i_2_n_0));
   FDRE #(
     .INIT(1'b1)) 
     full_flag_reg
        (.C(clk),
         .CE(1'b1),
-        .D(full_flag_reg_1),
-        .Q(full_flag_reg_0),
+        .D(full_flag_i_1_n_0),
+        .Q(full_flag_reg_n_0),
         .R(1'b0));
   design_2_dfx_controller_0_0_trigger_manager i_trigger_manager
-       (.D(next_state[2]),
-        .Q(current_state),
+       (.Q(current_state),
         .access_address(access_address),
         .\b_trigger_table.gen_address_reg.access_address_del_reg[0] (\b_trigger_table.gen_address_reg.access_address_del_reg[0]_0 ),
         .clk(clk),
-        .\current_state[0]_i_11 (shutdown_required),
-        .\current_state[1]_i_4 (full_flag_reg_0),
-        .\current_state_reg[0] (i_trigger_manager_n_1),
-        .\current_state_reg[0]_0 (i_trigger_manager_n_2),
-        .\current_state_reg[0]_1 (\current_state[0]_i_10_n_0 ),
-        .\current_state_reg[1] (\current_state[2]_i_7_n_0 ),
-        .\current_state_reg[1]_0 (\current_state[2]_i_8_n_0 ),
-        .\current_state_reg[2] (shutdown_bit_reg_0),
-        .\current_state_reg[2]_0 (\current_state[2]_i_3_n_0 ),
-        .\current_state_reg[2]_1 (\current_state[2]_i_4_n_0 ),
-        .\current_state_reg[2]_2 (\b_rm_info_valid_del.i_rm_info_valid_del_n_6 ),
-        .\current_state_reg[2]_3 (\current_state[2]_i_6_n_0 ),
+        .\current_state[1]_i_4 (\current_state[1]_i_11_n_0 ),
+        .\current_state[2]_i_3 (shutdown_required),
+        .\current_state_reg[0] (rm_reset_i_i_4_n_0),
+        .\current_state_reg[0]_0 (shutdown_bit_reg_0),
+        .\current_state_reg[0]_1 (full_flag_reg_n_0),
+        .\current_state_reg[1] (i_trigger_manager_n_1),
+        .\current_state_reg[1]_0 (\current_state[1]_i_7_n_0 ),
+        .\current_state_reg[2] (\current_state[2]_i_6_n_0 ),
+        .\current_state_reg[2]_0 (sw_shutdown_req_i_i_4_n_0),
+        .\current_state_reg[2]_1 (\current_state[2]_i_7_n_0 ),
+        .\current_state_reg[3] (i_trigger_manager_n_3),
         .ready_for_hw_trigger(ready_for_hw_trigger),
         .reset(reset),
         .reset_0(reset_ah),
+        .shutdown_bit_reg(i_trigger_manager_n_4),
         .start_fetching_all(start_fetching_all),
         .sw_trigger_id(sw_trigger_id),
         .sw_trigger_pending(sw_trigger_pending),
-        .vsm_shifter_hw_triggers(vsm_shifter_hw_triggers),
-        .vsm_shifter_rm_shutdown_ack(vsm_shifter_rm_shutdown_ack));
+        .vsm_shifter_hw_triggers(vsm_shifter_hw_triggers));
   LUT6 #(
-    .INIT(64'h7377777733333333)) 
+    .INIT(64'h7737777733333333)) 
     in_post_reset_startup_i_1
        (.I0(in_post_reset_startup_i_2_n_0),
         .I1(reset),
-        .I2(current_state[2]),
-        .I3(current_state[1]),
-        .I4(in_post_reset_startup_i_3_n_0),
+        .I2(in_post_reset_startup_i_3_n_0),
+        .I3(current_state[2]),
+        .I4(current_state[1]),
         .I5(in_post_reset_startup),
         .O(in_post_reset_startup_i_1_n_0));
   LUT6 #(
-    .INIT(64'h0000000002020002)) 
+    .INIT(64'h0000000020200020)) 
     in_post_reset_startup_i_2
-       (.I0(\current_state[0]_i_9_n_0 ),
-        .I1(current_state[2]),
-        .I2(current_state[3]),
+       (.I0(current_state[0]),
+        .I1(current_state[1]),
+        .I2(\current_state[3]_i_8_n_0 ),
         .I3(user_restarted_with_status),
-        .I4(full_flag_reg_0),
+        .I4(full_flag_reg_n_0),
         .I5(in_shutdown),
         .O(in_post_reset_startup_i_2_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair166" *) 
+  (* SOFT_HLUTNM = "soft_lutpair156" *) 
   LUT2 #(
     .INIT(4'h2)) 
     in_post_reset_startup_i_3
@@ -18522,10 +18323,10 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
     in_shutdown_d1_i_1
        (.I0(in_shutdown),
         .I1(reset),
-        .I2(current_state[0]),
-        .I3(current_state[3]),
+        .I2(current_state[3]),
+        .I3(current_state[2]),
         .I4(current_state[1]),
-        .I5(current_state[2]),
+        .I5(current_state[0]),
         .O(in_shutdown_d1_i_1_n_0));
   FDRE #(
     .INIT(1'b0)) 
@@ -18536,14 +18337,14 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
         .Q(in_shutdown_d1),
         .R(1'b0));
   LUT6 #(
-    .INIT(64'h0000000008000000)) 
+    .INIT(64'h0000000000800000)) 
     in_shutdown_i_1
        (.I0(shutdown_bit_reg_0),
         .I1(reset),
-        .I2(current_state[0]),
-        .I3(current_state[3]),
+        .I2(current_state[3]),
+        .I3(current_state[2]),
         .I4(current_state[1]),
-        .I5(current_state[2]),
+        .I5(current_state[0]),
         .O(in_shutdown_i_1_n_0));
   FDRE #(
     .INIT(1'b0)) 
@@ -18564,7 +18365,7 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
   FDRE \reg_rdata_reg[0] 
        (.C(clk),
         .CE(reset),
-        .D(\b_rm_info.b_start_axi_read_del.i_start_axi_read_del_n_1 ),
+        .D(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_2 ),
         .Q(D[0]),
         .R(1'b0));
   FDRE \reg_rdata_reg[10] 
@@ -18572,179 +18373,179 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
         .CE(reset),
         .D(\reg_rdata_reg[10]_0 ),
         .Q(D[10]),
-        .R(\b_trigger_table.b_start_axi_read_del.i_start_axi_read_del_n_12 ));
+        .R(\b_trigger_table.b_start_axi_read_del.i_start_axi_read_del_n_10 ));
   FDRE \reg_rdata_reg[11] 
        (.C(clk),
         .CE(reset),
         .D(\reg_rdata_reg[11]_0 ),
         .Q(D[11]),
-        .R(\b_trigger_table.b_start_axi_read_del.i_start_axi_read_del_n_12 ));
+        .R(\b_trigger_table.b_start_axi_read_del.i_start_axi_read_del_n_10 ));
   FDRE \reg_rdata_reg[12] 
        (.C(clk),
         .CE(reset),
         .D(\reg_rdata_reg[12]_0 ),
         .Q(D[12]),
-        .R(\b_trigger_table.b_start_axi_read_del.i_start_axi_read_del_n_12 ));
+        .R(\b_trigger_table.b_start_axi_read_del.i_start_axi_read_del_n_10 ));
   FDRE \reg_rdata_reg[13] 
        (.C(clk),
         .CE(reset),
-        .D(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_13 ),
+        .D(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_5 ),
         .Q(D[13]),
-        .R(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_12 ));
+        .R(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_23 ));
   FDRE \reg_rdata_reg[14] 
        (.C(clk),
         .CE(reset),
-        .D(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_14 ),
+        .D(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_6 ),
         .Q(D[14]),
-        .R(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_12 ));
+        .R(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_23 ));
   FDRE \reg_rdata_reg[15] 
        (.C(clk),
         .CE(reset),
-        .D(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_15 ),
+        .D(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_7 ),
         .Q(D[15]),
-        .R(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_12 ));
+        .R(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_23 ));
   FDRE \reg_rdata_reg[16] 
        (.C(clk),
         .CE(reset),
-        .D(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_16 ),
+        .D(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_8 ),
         .Q(D[16]),
-        .R(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_12 ));
+        .R(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_23 ));
   FDRE \reg_rdata_reg[17] 
        (.C(clk),
         .CE(reset),
-        .D(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_17 ),
+        .D(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_9 ),
         .Q(D[17]),
-        .R(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_12 ));
+        .R(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_23 ));
   FDRE \reg_rdata_reg[18] 
        (.C(clk),
         .CE(reset),
-        .D(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_18 ),
+        .D(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_10 ),
         .Q(D[18]),
-        .R(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_12 ));
+        .R(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_23 ));
   FDRE \reg_rdata_reg[19] 
        (.C(clk),
         .CE(reset),
-        .D(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_19 ),
+        .D(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_11 ),
         .Q(D[19]),
-        .R(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_12 ));
+        .R(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_23 ));
   FDRE \reg_rdata_reg[1] 
        (.C(clk),
         .CE(reset),
-        .D(\b_trigger_table.b_start_axi_read_del.i_start_axi_read_del_n_11 ),
+        .D(\b_trigger_table.b_start_axi_read_del.i_start_axi_read_del_n_9 ),
         .Q(D[1]),
         .R(1'b0));
   FDRE \reg_rdata_reg[20] 
        (.C(clk),
         .CE(reset),
-        .D(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_20 ),
+        .D(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_12 ),
         .Q(D[20]),
-        .R(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_12 ));
+        .R(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_23 ));
   FDRE \reg_rdata_reg[21] 
        (.C(clk),
         .CE(reset),
-        .D(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_21 ),
+        .D(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_13 ),
         .Q(D[21]),
-        .R(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_12 ));
+        .R(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_23 ));
   FDRE \reg_rdata_reg[22] 
        (.C(clk),
         .CE(reset),
-        .D(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_22 ),
+        .D(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_14 ),
         .Q(D[22]),
-        .R(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_12 ));
+        .R(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_23 ));
   FDRE \reg_rdata_reg[23] 
        (.C(clk),
         .CE(reset),
-        .D(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_23 ),
+        .D(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_15 ),
         .Q(D[23]),
-        .R(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_12 ));
+        .R(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_23 ));
   FDRE \reg_rdata_reg[24] 
        (.C(clk),
         .CE(reset),
-        .D(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_24 ),
+        .D(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_16 ),
         .Q(D[24]),
-        .R(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_12 ));
+        .R(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_23 ));
   FDRE \reg_rdata_reg[25] 
        (.C(clk),
         .CE(reset),
-        .D(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_25 ),
+        .D(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_17 ),
         .Q(D[25]),
-        .R(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_12 ));
+        .R(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_23 ));
   FDRE \reg_rdata_reg[26] 
        (.C(clk),
         .CE(reset),
-        .D(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_26 ),
+        .D(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_18 ),
         .Q(D[26]),
-        .R(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_12 ));
+        .R(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_23 ));
   FDRE \reg_rdata_reg[27] 
        (.C(clk),
         .CE(reset),
-        .D(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_27 ),
+        .D(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_19 ),
         .Q(D[27]),
-        .R(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_12 ));
+        .R(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_23 ));
   FDRE \reg_rdata_reg[28] 
        (.C(clk),
         .CE(reset),
-        .D(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_28 ),
+        .D(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_20 ),
         .Q(D[28]),
-        .R(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_12 ));
+        .R(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_23 ));
   FDRE \reg_rdata_reg[29] 
        (.C(clk),
         .CE(reset),
-        .D(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_29 ),
+        .D(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_21 ),
         .Q(D[29]),
-        .R(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_12 ));
+        .R(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_23 ));
   FDRE \reg_rdata_reg[2] 
        (.C(clk),
         .CE(reset),
-        .D(\b_trigger_table.b_start_axi_read_del.i_start_axi_read_del_n_10 ),
+        .D(\b_trigger_table.b_start_axi_read_del.i_start_axi_read_del_n_8 ),
         .Q(D[2]),
         .R(1'b0));
   FDRE \reg_rdata_reg[30] 
        (.C(clk),
         .CE(reset),
-        .D(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_30 ),
+        .D(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_22 ),
         .Q(D[30]),
-        .R(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_12 ));
+        .R(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_23 ));
   FDRE \reg_rdata_reg[31] 
        (.C(clk),
         .CE(reset),
-        .D(\b_trigger_table.b_start_axi_read_del.i_start_axi_read_del_n_1 ),
+        .D(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_1 ),
         .Q(D[31]),
         .R(1'b0));
   FDRE \reg_rdata_reg[3] 
        (.C(clk),
         .CE(reset),
-        .D(\b_trigger_table.b_start_axi_read_del.i_start_axi_read_del_n_9 ),
+        .D(\b_trigger_table.b_start_axi_read_del.i_start_axi_read_del_n_7 ),
         .Q(D[3]),
         .R(1'b0));
   FDRE \reg_rdata_reg[4] 
        (.C(clk),
         .CE(reset),
-        .D(\b_trigger_table.b_start_axi_read_del.i_start_axi_read_del_n_8 ),
+        .D(\b_trigger_table.b_start_axi_read_del.i_start_axi_read_del_n_6 ),
         .Q(D[4]),
         .R(1'b0));
   FDRE \reg_rdata_reg[5] 
        (.C(clk),
         .CE(reset),
-        .D(\b_trigger_table.b_start_axi_read_del.i_start_axi_read_del_n_7 ),
+        .D(\b_trigger_table.b_start_axi_read_del.i_start_axi_read_del_n_5 ),
         .Q(D[5]),
         .R(1'b0));
   FDRE \reg_rdata_reg[6] 
        (.C(clk),
         .CE(reset),
-        .D(\b_trigger_table.b_start_axi_read_del.i_start_axi_read_del_n_6 ),
+        .D(\b_trigger_table.b_start_axi_read_del.i_start_axi_read_del_n_4 ),
         .Q(D[6]),
         .R(1'b0));
   FDRE \reg_rdata_reg[7] 
        (.C(clk),
         .CE(reset),
-        .D(\b_trigger_table.b_start_axi_read_del.i_start_axi_read_del_n_5 ),
+        .D(\b_trigger_table.b_start_axi_read_del.i_start_axi_read_del_n_3 ),
         .Q(D[7]),
         .R(1'b0));
   FDRE \reg_rdata_reg[8] 
        (.C(clk),
         .CE(reset),
-        .D(\b_trigger_table.b_start_axi_read_del.i_start_axi_read_del_n_4 ),
+        .D(\b_trigger_table.b_start_axi_read_del.i_start_axi_read_del_n_2 ),
         .Q(D[8]),
         .R(1'b0));
   FDRE \reg_rdata_reg[9] 
@@ -18752,13 +18553,19 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
         .CE(reset),
         .D(\reg_rdata_reg[9]_0 ),
         .Q(D[9]),
-        .R(\b_trigger_table.b_start_axi_read_del.i_start_axi_read_del_n_12 ));
+        .R(\b_trigger_table.b_start_axi_read_del.i_start_axi_read_del_n_10 ));
   FDRE reg_tready_d1_reg
        (.C(clk),
         .CE(1'b1),
         .D(reg_tready_d0),
         .Q(reg_tready_d1),
         .R(reset_ah));
+  LUT2 #(
+    .INIT(4'h1)) 
+    reg_tready_i_i_1
+       (.I0(reg_tready_d1),
+        .I1(reg_tready_i_reg_0),
+        .O(reg_tready_i0));
   FDRE #(
     .INIT(1'b0)) 
     reg_tready_i_reg
@@ -18780,10 +18587,10 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
     reg_write_complete_sw_trigger_reg_reg
        (.C(clk),
         .CE(1'b1),
-        .D(reg_write_complete_sw_trigger_reg_reg_0),
+        .D(write_to_sw_trigger_reg_cmb),
         .Q(reg_write_complete_sw_trigger_reg),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair149" *) 
+  (* SOFT_HLUTNM = "soft_lutpair148" *) 
   LUT5 #(
     .INIT(32'hFFFFFFFE)) 
     \reset_duration[5]_i_3 
@@ -18793,15 +18600,15 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
         .I3(reset_duration[0]),
         .I4(reset_duration[3]),
         .O(\reset_duration[5]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair151" *) 
+  (* SOFT_HLUTNM = "soft_lutpair149" *) 
   LUT4 #(
     .INIT(16'h0001)) 
-    \reset_duration[7]_i_3 
-       (.I0(current_state[0]),
-        .I1(current_state[3]),
+    \reset_duration[7]_i_4 
+       (.I0(current_state[3]),
+        .I1(current_state[2]),
         .I2(current_state[1]),
-        .I3(current_state[2]),
-        .O(\reset_duration[7]_i_3_n_0 ));
+        .I3(current_state[0]),
+        .O(\reset_duration[7]_i_4_n_0 ));
   LUT6 #(
     .INIT(64'hFFFFFFFFFFFFFFFE)) 
     \reset_duration[7]_i_5 
@@ -18817,7 +18624,7 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
     \reset_duration_reg[0] 
        (.C(clk),
         .CE(\b_rm_id_valid_del.i_rm_id_valid_del_n_1 ),
-        .D(\b_rm_id_valid_del.i_rm_id_valid_del_n_8 ),
+        .D(\b_rm_id_valid_del.i_rm_id_valid_del_n_7 ),
         .Q(reset_duration[0]),
         .R(1'b0));
   FDRE #(
@@ -18825,7 +18632,7 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
     \reset_duration_reg[1] 
        (.C(clk),
         .CE(\b_rm_id_valid_del.i_rm_id_valid_del_n_1 ),
-        .D(\b_rm_id_valid_del.i_rm_id_valid_del_n_7 ),
+        .D(\b_rm_id_valid_del.i_rm_id_valid_del_n_6 ),
         .Q(reset_duration[1]),
         .R(1'b0));
   FDRE #(
@@ -18833,7 +18640,7 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
     \reset_duration_reg[2] 
        (.C(clk),
         .CE(\b_rm_id_valid_del.i_rm_id_valid_del_n_1 ),
-        .D(\b_rm_id_valid_del.i_rm_id_valid_del_n_6 ),
+        .D(\b_rm_id_valid_del.i_rm_id_valid_del_n_5 ),
         .Q(reset_duration[2]),
         .R(1'b0));
   FDRE #(
@@ -18841,7 +18648,7 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
     \reset_duration_reg[3] 
        (.C(clk),
         .CE(\b_rm_id_valid_del.i_rm_id_valid_del_n_1 ),
-        .D(\b_rm_id_valid_del.i_rm_id_valid_del_n_5 ),
+        .D(\b_rm_id_valid_del.i_rm_id_valid_del_n_4 ),
         .Q(reset_duration[3]),
         .R(1'b0));
   FDRE #(
@@ -18849,7 +18656,7 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
     \reset_duration_reg[4] 
        (.C(clk),
         .CE(\b_rm_id_valid_del.i_rm_id_valid_del_n_1 ),
-        .D(\b_rm_id_valid_del.i_rm_id_valid_del_n_4 ),
+        .D(\b_rm_id_valid_del.i_rm_id_valid_del_n_3 ),
         .Q(reset_duration[4]),
         .R(1'b0));
   FDRE #(
@@ -18857,7 +18664,7 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
     \reset_duration_reg[5] 
        (.C(clk),
         .CE(\b_rm_id_valid_del.i_rm_id_valid_del_n_1 ),
-        .D(\b_rm_id_valid_del.i_rm_id_valid_del_n_3 ),
+        .D(\b_rm_id_valid_del.i_rm_id_valid_del_n_2 ),
         .Q(reset_duration[5]),
         .R(1'b0));
   FDRE #(
@@ -18865,7 +18672,7 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
     \reset_duration_reg[6] 
        (.C(clk),
         .CE(\b_rm_id_valid_del.i_rm_id_valid_del_n_1 ),
-        .D(\b_rm_info_valid_del.i_rm_info_valid_del_n_4 ),
+        .D(\b_rm_info_valid_del.i_rm_info_valid_del_n_6 ),
         .Q(reset_duration[6]),
         .R(1'b0));
   FDRE #(
@@ -18873,16 +18680,16 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
     \reset_duration_reg[7] 
        (.C(clk),
         .CE(\b_rm_id_valid_del.i_rm_id_valid_del_n_1 ),
-        .D(\b_rm_id_valid_del.i_rm_id_valid_del_n_2 ),
+        .D(\b_rm_info_valid_del.i_rm_info_valid_del_n_5 ),
         .Q(reset_duration[7]),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair167" *) 
+  (* SOFT_HLUTNM = "soft_lutpair163" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \reset_duration_stored[0]_i_1 
        (.I0(reset_duration[0]),
         .O(minusOp));
-  (* SOFT_HLUTNM = "soft_lutpair167" *) 
+  (* SOFT_HLUTNM = "soft_lutpair163" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \reset_duration_stored[1]_i_1 
@@ -18906,7 +18713,7 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
         .I2(reset_duration[0]),
         .I3(reset_duration[1]),
         .O(\reset_duration_stored[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair149" *) 
+  (* SOFT_HLUTNM = "soft_lutpair148" *) 
   LUT5 #(
     .INIT(32'h6AAAAAAA)) 
     \reset_duration_stored[4]_i_1 
@@ -18926,13 +18733,14 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
         .I4(reset_duration[1]),
         .I5(reset_duration[3]),
         .O(\reset_duration_stored[5]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair161" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \reset_duration_stored[6]_i_1 
        (.I0(\reset_duration_stored[7]_i_3_n_0 ),
         .I1(reset_duration[6]),
         .O(plusOp[6]));
-  (* SOFT_HLUTNM = "soft_lutpair162" *) 
+  (* SOFT_HLUTNM = "soft_lutpair161" *) 
   LUT3 #(
     .INIT(8'h6A)) 
     \reset_duration_stored[7]_i_2 
@@ -18954,7 +18762,7 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
     .INIT(1'b1)) 
     \reset_duration_stored_reg[0] 
        (.C(clk),
-        .CE(\b_rm_info_valid_del.i_rm_info_valid_del_n_5 ),
+        .CE(\b_rm_id_valid_del.i_rm_id_valid_del_n_8 ),
         .D(minusOp),
         .Q(reset_duration_stored__0[0]),
         .R(1'b0));
@@ -18962,7 +18770,7 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
     .INIT(1'b0)) 
     \reset_duration_stored_reg[1] 
        (.C(clk),
-        .CE(\b_rm_info_valid_del.i_rm_info_valid_del_n_5 ),
+        .CE(\b_rm_id_valid_del.i_rm_id_valid_del_n_8 ),
         .D(plusOp[1]),
         .Q(reset_duration_stored__0[1]),
         .R(1'b0));
@@ -18970,7 +18778,7 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
     .INIT(1'b0)) 
     \reset_duration_stored_reg[2] 
        (.C(clk),
-        .CE(\b_rm_info_valid_del.i_rm_info_valid_del_n_5 ),
+        .CE(\b_rm_id_valid_del.i_rm_id_valid_del_n_8 ),
         .D(\reset_duration_stored[2]_i_1_n_0 ),
         .Q(reset_duration_stored__0[2]),
         .R(1'b0));
@@ -18978,7 +18786,7 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
     .INIT(1'b0)) 
     \reset_duration_stored_reg[3] 
        (.C(clk),
-        .CE(\b_rm_info_valid_del.i_rm_info_valid_del_n_5 ),
+        .CE(\b_rm_id_valid_del.i_rm_id_valid_del_n_8 ),
         .D(\reset_duration_stored[3]_i_1_n_0 ),
         .Q(reset_duration_stored__0[3]),
         .R(1'b0));
@@ -18986,7 +18794,7 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
     .INIT(1'b0)) 
     \reset_duration_stored_reg[4] 
        (.C(clk),
-        .CE(\b_rm_info_valid_del.i_rm_info_valid_del_n_5 ),
+        .CE(\b_rm_id_valid_del.i_rm_id_valid_del_n_8 ),
         .D(\reset_duration_stored[4]_i_1_n_0 ),
         .Q(reset_duration_stored__0[4]),
         .R(1'b0));
@@ -18994,7 +18802,7 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
     .INIT(1'b0)) 
     \reset_duration_stored_reg[5] 
        (.C(clk),
-        .CE(\b_rm_info_valid_del.i_rm_info_valid_del_n_5 ),
+        .CE(\b_rm_id_valid_del.i_rm_id_valid_del_n_8 ),
         .D(\reset_duration_stored[5]_i_1_n_0 ),
         .Q(reset_duration_stored__0[5]),
         .R(1'b0));
@@ -19002,7 +18810,7 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
     .INIT(1'b0)) 
     \reset_duration_stored_reg[6] 
        (.C(clk),
-        .CE(\b_rm_info_valid_del.i_rm_info_valid_del_n_5 ),
+        .CE(\b_rm_id_valid_del.i_rm_id_valid_del_n_8 ),
         .D(plusOp[6]),
         .Q(reset_duration_stored__0[6]),
         .R(1'b0));
@@ -19010,7 +18818,7 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
     .INIT(1'b0)) 
     \reset_duration_stored_reg[7] 
        (.C(clk),
-        .CE(\b_rm_info_valid_del.i_rm_info_valid_del_n_5 ),
+        .CE(\b_rm_id_valid_del.i_rm_id_valid_del_n_8 ),
         .D(plusOp[7]),
         .Q(reset_duration_stored__0[7]),
         .R(1'b0));
@@ -19021,14 +18829,13 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
         .I1(rm_reset_i_reg_0),
         .I2(rm_decouple_i_i_2_n_0),
         .I3(rm_decouple_i_i_3_n_0),
-        .I4(full_flag_reg_0),
+        .I4(full_flag_reg_n_0),
         .I5(reset),
         .O(rm_decouple_i_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair165" *) 
   LUT3 #(
     .INIT(8'h4F)) 
     rm_decouple_i_i_2
-       (.I0(full_flag_reg_0),
+       (.I0(full_flag_reg_n_0),
         .I1(user_restarted_with_status),
         .I2(in_shutdown),
         .O(rm_decouple_i_i_2_n_0));
@@ -19040,7 +18847,7 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
         .I2(in_post_reset_startup),
         .I3(current_state[2]),
         .I4(current_state[3]),
-        .I5(full_flag_reg_0),
+        .I5(full_flag_reg_n_0),
         .O(rm_decouple_i_i_3_n_0));
   FDRE #(
     .INIT(1'b0)) 
@@ -19068,27 +18875,27 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
         .I4(current_state[0]),
         .I5(rm_reset_i_i_4_n_0),
         .O(rm_reset_i_i_2_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair152" *) 
+  (* SOFT_HLUTNM = "soft_lutpair158" *) 
   LUT2 #(
     .INIT(4'h1)) 
     rm_reset_i_i_4
        (.I0(current_state[2]),
         .I1(current_state[1]),
         .O(rm_reset_i_i_4_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair162" *) 
+  (* SOFT_HLUTNM = "soft_lutpair155" *) 
   LUT3 #(
-    .INIT(8'h01)) 
+    .INIT(8'hFE)) 
     rm_reset_i_i_6
-       (.I0(\reset_duration[7]_i_5_n_0 ),
-        .I1(reset_duration[6]),
-        .I2(reset_duration[7]),
+       (.I0(reset_duration[7]),
+        .I1(\reset_duration[7]_i_5_n_0 ),
+        .I2(reset_duration[6]),
         .O(rm_reset_i_i_6_n_0));
   FDRE #(
     .INIT(1'b0)) 
     rm_reset_i_reg
        (.C(clk),
         .CE(1'b1),
-        .D(\b_rm_info_valid_del.i_rm_info_valid_del_n_13 ),
+        .D(\b_rm_info_valid_del.i_rm_info_valid_del_n_12 ),
         .Q(vsm_shifter_rm_reset),
         .R(1'b0));
   LUT6 #(
@@ -19109,24 +18916,24 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
         .I2(current_state[1]),
         .I3(current_state[2]),
         .I4(current_state[3]),
-        .I5(full_flag_reg_0),
+        .I5(full_flag_reg_n_0),
         .O(rm_shutdown_req_i_i_2_n_0));
   LUT6 #(
-    .INIT(64'hF0FFEEEEF000EEEE)) 
+    .INIT(64'hAAFFFCFCAA00FCFC)) 
     rm_shutdown_req_i_i_4
-       (.I0(shutdown_required[0]),
-        .I1(shutdown_required[1]),
-        .I2(reg_wdata[8]),
+       (.I0(reg_wdata[8]),
+        .I1(shutdown_required[0]),
+        .I2(shutdown_required[1]),
         .I3(sw_shutdown_req_i_reg_0),
         .I4(reset),
         .I5(rm_shutdown_req_i_i_6_n_0),
         .O(rm_shutdown_req_i));
-  (* SOFT_HLUTNM = "soft_lutpair165" *) 
+  (* SOFT_HLUTNM = "soft_lutpair147" *) 
   LUT2 #(
     .INIT(4'h1)) 
     rm_shutdown_req_i_i_5
        (.I0(reset),
-        .I1(full_flag_reg_0),
+        .I1(full_flag_reg_n_0),
         .O(rm_decouple_i11_out));
   LUT6 #(
     .INIT(64'h00001000FFFFFFFF)) 
@@ -19136,7 +18943,7 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
         .I2(current_state[1]),
         .I3(current_state[0]),
         .I4(user_restarted_with_status),
-        .I5(full_flag_reg_0),
+        .I5(full_flag_reg_n_0),
         .O(rm_shutdown_req_i_i_6_n_0));
   FDRE #(
     .INIT(1'b0)) 
@@ -19154,7 +18961,7 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
         .D(shutdown_bit_reg_1),
         .Q(shutdown_bit_reg_0),
         .R(reset_ah));
-  (* SOFT_HLUTNM = "soft_lutpair164" *) 
+  (* SOFT_HLUTNM = "soft_lutpair160" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \status_encoded_field[0]_i_1 
@@ -19162,34 +18969,34 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
         .I1(in_shutdown),
         .I2(\status_encoded_field[0]_i_2_n_0 ),
         .O(\status_encoded_field[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair151" *) 
+  (* SOFT_HLUTNM = "soft_lutpair149" *) 
   LUT5 #(
-    .INIT(32'hEBE10A00)) 
+    .INIT(32'hEB0AE100)) 
     \status_encoded_field[0]_i_2 
        (.I0(current_state[1]),
         .I1(current_state[2]),
         .I2(current_state[3]),
-        .I3(current_state[0]),
-        .I4(full_flag_reg_0),
+        .I3(full_flag_reg_n_0),
+        .I4(current_state[0]),
         .O(\status_encoded_field[0]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'h5051505500010050)) 
+    .INIT(64'h4445000444450504)) 
     \status_encoded_field[1]_i_1 
        (.I0(in_shutdown),
-        .I1(current_state[0]),
-        .I2(current_state[3]),
-        .I3(current_state[2]),
-        .I4(current_state[1]),
-        .I5(full_flag_reg_0),
+        .I1(full_flag_reg_n_0),
+        .I2(current_state[2]),
+        .I3(current_state[1]),
+        .I4(current_state[3]),
+        .I5(current_state[0]),
         .O(\status_encoded_field[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair152" *) 
+  (* SOFT_HLUTNM = "soft_lutpair151" *) 
   LUT5 #(
-    .INIT(32'h0000ABCE)) 
+    .INIT(32'h0000B8BE)) 
     \status_encoded_field[2]_i_1 
-       (.I0(full_flag_reg_0),
-        .I1(current_state[2]),
-        .I2(current_state[1]),
-        .I3(current_state[3]),
+       (.I0(full_flag_reg_n_0),
+        .I1(current_state[3]),
+        .I2(current_state[2]),
+        .I3(current_state[1]),
         .I4(in_shutdown),
         .O(\status_encoded_field[2]_i_1_n_0 ));
   FDRE #(
@@ -19220,38 +19027,38 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
   LUT5 #(
     .INIT(32'hEFEEAAAA)) 
     \status_error_field[0]_i_1 
-       (.I0(bad_config_error_flag_reg_0),
+       (.I0(bad_config_error_flag_reg_n_0),
         .I1(cp_error_flag),
         .I2(cp0_vs_id),
         .I3(p_3_in),
-        .I4(fetch_error_flag_reg_0),
+        .I4(fetch_error_flag_reg_n_0),
         .O(\status_error_field[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair153" *) 
+  (* SOFT_HLUTNM = "soft_lutpair152" *) 
   LUT5 #(
     .INIT(32'hAAAACFCC)) 
     \status_error_field[1]_i_1 
-       (.I0(bad_config_error_flag_reg_0),
+       (.I0(bad_config_error_flag_reg_n_0),
         .I1(cp_error_flag),
         .I2(cp0_vs_id),
         .I3(p_3_in),
-        .I4(fetch_error_flag_reg_0),
+        .I4(fetch_error_flag_reg_n_0),
         .O(\status_error_field[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair154" *) 
+  (* SOFT_HLUTNM = "soft_lutpair152" *) 
   LUT5 #(
     .INIT(32'hECEEECEC)) 
     \status_error_field[2]_i_1 
-       (.I0(bad_config_error_flag_reg_0),
-        .I1(fetch_error_flag_reg_0),
+       (.I0(bad_config_error_flag_reg_n_0),
+        .I1(fetch_error_flag_reg_n_0),
         .I2(cp_error_flag),
         .I3(cp0_vs_id),
         .I4(p_3_in),
         .O(\status_error_field[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair154" *) 
+  (* SOFT_HLUTNM = "soft_lutpair153" *) 
   LUT5 #(
     .INIT(32'hA8AAA8A8)) 
     \status_error_field[3]_i_1 
-       (.I0(bad_config_error_flag_reg_0),
-        .I1(fetch_error_flag_reg_0),
+       (.I0(bad_config_error_flag_reg_n_0),
+        .I1(fetch_error_flag_reg_n_0),
         .I2(cp_error_flag),
         .I3(cp0_vs_id),
         .I4(p_3_in),
@@ -19322,7 +19129,7 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
         .I4(in_shutdown),
         .I5(vsm_shifter_sw_shutdown_req),
         .O(sw_shutdown_req_i_i_2_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair158" *) 
+  (* SOFT_HLUTNM = "soft_lutpair157" *) 
   LUT4 #(
     .INIT(16'h0100)) 
     sw_shutdown_req_i_i_3
@@ -19331,6 +19138,7 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
         .I2(current_state[0]),
         .I3(current_state[1]),
         .O(sw_shutdown_req_i_i_3_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair162" *) 
   LUT2 #(
     .INIT(4'h2)) 
     sw_shutdown_req_i_i_4
@@ -19346,7 +19154,7 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
         .Q(vsm_shifter_sw_shutdown_req),
         .R(reset_ah));
   LUT6 #(
-    .INIT(64'hAAFFAA0CAA00AA0C)) 
+    .INIT(64'hAAFFAA03AA00AA03)) 
     sw_startup_req_i_i_1
        (.I0(reg_wdata[11]),
         .I1(sw_startup_req_i_i_2_n_0),
@@ -19355,21 +19163,21 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
         .I4(in_shutdown),
         .I5(vsm_shifter_sw_startup_req),
         .O(sw_startup_req_i_i_1_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair162" *) 
+  LUT2 #(
+    .INIT(4'h2)) 
+    sw_startup_req_i_i_2
+       (.I0(sw_ok_to_proceed_d1),
+        .I1(sw_ok_to_proceed_d0),
+        .O(sw_startup_req_i_i_2_n_0));
   (* SOFT_HLUTNM = "soft_lutpair157" *) 
   LUT4 #(
-    .INIT(16'h4000)) 
-    sw_startup_req_i_i_2
+    .INIT(16'hBFFF)) 
+    sw_startup_req_i_i_3
        (.I0(current_state[3]),
         .I1(current_state[2]),
         .I2(current_state[1]),
         .I3(current_state[0]),
-        .O(sw_startup_req_i_i_2_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair163" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
-    sw_startup_req_i_i_3
-       (.I0(sw_ok_to_proceed_d1),
-        .I1(sw_ok_to_proceed_d0),
         .O(sw_startup_req_i_i_3_n_0));
   FDRE #(
     .INIT(1'b0)) 
@@ -19404,22 +19212,15 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
         .Q(user_restarted_with_status),
         .R(1'b0));
   LUT6 #(
-    .INIT(64'h0200FFFF02000200)) 
+    .INIT(64'h1000FFFF10001000)) 
     using_sw_trigger_i_1
-       (.I0(sw_trigger_pending),
-        .I1(current_state[1]),
-        .I2(current_state[0]),
-        .I3(using_sw_trigger_i_2_n_0),
+       (.I0(current_state[1]),
+        .I1(current_state[0]),
+        .I2(\b_event_error_i_del.i_event_error_i_del_n_2 ),
+        .I3(sw_trigger_pending),
         .I4(\b_event_error_i_del.i_event_error_i_del_n_1 ),
         .I5(using_sw_trigger),
         .O(using_sw_trigger_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair158" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
-    using_sw_trigger_i_2
-       (.I0(current_state[2]),
-        .I1(current_state[3]),
-        .O(using_sw_trigger_i_2_n_0));
   FDRE #(
     .INIT(1'b0)) 
     using_sw_trigger_reg
@@ -19449,8 +19250,8 @@ module design_2_dfx_controller_0_0_dfx_controller_dma
     E,
     sig_m_valid_out_reg_0,
     \USE_SINGLE_REG.sig_regfifo_dout_reg_reg[0] ,
-    m_axi_mem_rlast,
     m_axi_mem_rvalid,
+    m_axi_mem_rlast,
     m_axi_mem_rresp,
     m_axi_mem_rdata,
     cmd_avail,
@@ -19477,8 +19278,8 @@ module design_2_dfx_controller_0_0_dfx_controller_dma
   input [0:0]E;
   input sig_m_valid_out_reg_0;
   input [0:0]\USE_SINGLE_REG.sig_regfifo_dout_reg_reg[0] ;
-  input m_axi_mem_rlast;
   input m_axi_mem_rvalid;
+  input m_axi_mem_rlast;
   input [0:0]m_axi_mem_rresp;
   input [31:0]m_axi_mem_rdata;
   input cmd_avail;
@@ -20723,7 +20524,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_fifo
         .I4(sig_push_input_reg11_out),
         .I5(in),
         .O(sig_calc_error_reg_reg));
-  (* SOFT_HLUTNM = "soft_lutpair91" *) 
+  (* SOFT_HLUTNM = "soft_lutpair90" *) 
   LUT4 #(
     .INIT(16'h0080)) 
     sig_init_done_i_1
@@ -20732,7 +20533,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_fifo
         .I2(sig_cmd_stat_rst_user_reg_n_cdc_from),
         .I3(sig_init_done_2),
         .O(sig_init_reg_reg_1));
-  (* SOFT_HLUTNM = "soft_lutpair91" *) 
+  (* SOFT_HLUTNM = "soft_lutpair90" *) 
   LUT4 #(
     .INIT(16'h0080)) 
     sig_init_done_i_1__0
@@ -20741,7 +20542,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_fifo
         .I2(sig_cmd_stat_rst_user_reg_n_cdc_from),
         .I3(sig_init_done_0),
         .O(sig_init_reg_reg_2));
-  (* SOFT_HLUTNM = "soft_lutpair92" *) 
+  (* SOFT_HLUTNM = "soft_lutpair91" *) 
   LUT4 #(
     .INIT(16'h0080)) 
     sig_init_done_i_1__1
@@ -20750,7 +20551,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_fifo
         .I2(sig_cmd_stat_rst_user_reg_n_cdc_from),
         .I3(sig_init_done_1),
         .O(sig_init_reg_reg_3));
-  (* SOFT_HLUTNM = "soft_lutpair92" *) 
+  (* SOFT_HLUTNM = "soft_lutpair91" *) 
   LUT4 #(
     .INIT(16'h0080)) 
     sig_init_done_i_1__2
@@ -20961,26 +20762,25 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_fifo__parameterized2
     sig_init_done_reg_0,
     sig_mstr2data_cmd_valid,
     Q,
+    sig_last_dbeat_reg,
+    sig_last_dbeat_reg_0,
     sig_dqual_reg_empty,
     sig_next_sequential_reg,
-    sig_dqual_reg_empty_reg,
+    sig_last_dbeat_reg_1,
     \sig_dbeat_cntr_reg[0] ,
-    sig_last_dbeat_reg,
     \sig_dbeat_cntr_reg[6] ,
-    \sig_dbeat_cntr_reg[5] ,
     \sig_dbeat_cntr_reg[4] ,
     sig_cmd_stat_rst_user_reg_n_cdc_from,
     sig_ld_new_cmd_reg,
+    sig_next_calc_error_reg,
     sig_rsc2stat_status_valid,
     sig_stat2rsc_status_ready,
-    sig_next_calc_error_reg,
     sig_addr_posted_cntr,
-    sig_dqual_reg_empty_reg_0,
+    sig_dqual_reg_empty_reg,
     m_axi_mem_rvalid,
+    sig_dqual_reg_empty_reg_0,
     sig_dqual_reg_empty_reg_1,
-    sig_dqual_reg_empty_reg_2,
     sig_dqual_reg_full,
-    sig_last_dbeat_reg_0,
     m_axi_mem_rlast,
     in);
   output FIFO_Full_reg;
@@ -20999,26 +20799,25 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_fifo__parameterized2
   input sig_init_done_reg_0;
   input sig_mstr2data_cmd_valid;
   input [7:0]Q;
+  input sig_last_dbeat_reg;
+  input sig_last_dbeat_reg_0;
   input sig_dqual_reg_empty;
   input sig_next_sequential_reg;
-  input sig_dqual_reg_empty_reg;
+  input sig_last_dbeat_reg_1;
   input \sig_dbeat_cntr_reg[0] ;
-  input sig_last_dbeat_reg;
   input \sig_dbeat_cntr_reg[6] ;
-  input \sig_dbeat_cntr_reg[5] ;
   input \sig_dbeat_cntr_reg[4] ;
   input sig_cmd_stat_rst_user_reg_n_cdc_from;
   input sig_ld_new_cmd_reg;
+  input sig_next_calc_error_reg;
   input sig_rsc2stat_status_valid;
   input sig_stat2rsc_status_ready;
-  input sig_next_calc_error_reg;
   input [2:0]sig_addr_posted_cntr;
-  input sig_dqual_reg_empty_reg_0;
+  input sig_dqual_reg_empty_reg;
   input m_axi_mem_rvalid;
+  input sig_dqual_reg_empty_reg_0;
   input sig_dqual_reg_empty_reg_1;
-  input sig_dqual_reg_empty_reg_2;
   input sig_dqual_reg_full;
-  input sig_last_dbeat_reg_0;
   input m_axi_mem_rlast;
   input [11:0]in;
 
@@ -21039,13 +20838,11 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_fifo__parameterized2
   wire sig_cmd_stat_rst_user_reg_n_cdc_from_reg_0;
   wire \sig_dbeat_cntr_reg[0] ;
   wire \sig_dbeat_cntr_reg[4] ;
-  wire \sig_dbeat_cntr_reg[5] ;
   wire \sig_dbeat_cntr_reg[6] ;
   wire sig_dqual_reg_empty;
   wire sig_dqual_reg_empty_reg;
   wire sig_dqual_reg_empty_reg_0;
   wire sig_dqual_reg_empty_reg_1;
-  wire sig_dqual_reg_empty_reg_2;
   wire sig_dqual_reg_full;
   wire sig_inhibit_rdy_n_i_1__0_n_0;
   wire sig_inhibit_rdy_n_reg_0;
@@ -21053,6 +20850,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_fifo__parameterized2
   wire sig_init_done_reg_0;
   wire sig_last_dbeat_reg;
   wire sig_last_dbeat_reg_0;
+  wire sig_last_dbeat_reg_1;
   wire sig_ld_new_cmd_reg;
   wire sig_mstr2data_cmd_valid;
   wire sig_next_calc_error_reg;
@@ -21081,17 +20879,16 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_fifo__parameterized2
         .sig_cmd_stat_rst_user_reg_n_cdc_from_reg_0(sig_cmd_stat_rst_user_reg_n_cdc_from_reg_0),
         .\sig_dbeat_cntr_reg[0] (\sig_dbeat_cntr_reg[0] ),
         .\sig_dbeat_cntr_reg[4] (\sig_dbeat_cntr_reg[4] ),
-        .\sig_dbeat_cntr_reg[5] (\sig_dbeat_cntr_reg[5] ),
         .\sig_dbeat_cntr_reg[6] (\sig_dbeat_cntr_reg[6] ),
         .sig_dqual_reg_empty(sig_dqual_reg_empty),
         .sig_dqual_reg_empty_reg(sig_dqual_reg_empty_reg),
         .sig_dqual_reg_empty_reg_0(sig_dqual_reg_empty_reg_0),
         .sig_dqual_reg_empty_reg_1(sig_dqual_reg_empty_reg_1),
-        .sig_dqual_reg_empty_reg_2(sig_dqual_reg_empty_reg_2),
         .sig_dqual_reg_full(sig_dqual_reg_full),
         .sig_last_dbeat_reg(sig_push_dqual_reg),
         .sig_last_dbeat_reg_0(sig_last_dbeat_reg),
         .sig_last_dbeat_reg_1(sig_last_dbeat_reg_0),
+        .sig_last_dbeat_reg_2(sig_last_dbeat_reg_1),
         .sig_ld_new_cmd_reg(sig_ld_new_cmd_reg),
         .sig_mstr2data_cmd_valid(sig_mstr2data_cmd_valid),
         .sig_next_calc_error_reg(sig_next_calc_error_reg),
@@ -21142,8 +20939,8 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_mm2s_full_wrap
     E,
     sig_m_valid_out_reg_0,
     \USE_SINGLE_REG.sig_regfifo_dout_reg_reg[0] ,
-    m_axi_mem_rlast,
     m_axi_mem_rvalid,
+    m_axi_mem_rlast,
     m_axi_mem_rresp,
     m_axi_mem_rdata,
     cmd_avail,
@@ -21170,8 +20967,8 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_mm2s_full_wrap
   input [0:0]E;
   input sig_m_valid_out_reg_0;
   input [0:0]\USE_SINGLE_REG.sig_regfifo_dout_reg_reg[0] ;
-  input m_axi_mem_rlast;
   input m_axi_mem_rvalid;
+  input m_axi_mem_rlast;
   input [0:0]m_axi_mem_rresp;
   input [31:0]m_axi_mem_rdata;
   input cmd_avail;
@@ -21865,7 +21662,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_pcc
         .I4(sig_calc_error_pushed),
         .I5(\FSM_onehot_sig_pcc_sm_state_reg_n_0_[0] ),
         .O(\FSM_onehot_sig_pcc_sm_state[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair96" *) 
+  (* SOFT_HLUTNM = "soft_lutpair95" *) 
   LUT5 #(
     .INIT(32'h88888F88)) 
     \FSM_onehot_sig_pcc_sm_state[2]_i_1 
@@ -21875,7 +21672,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_pcc
         .I3(\FSM_onehot_sig_pcc_sm_state_reg_n_0_[6] ),
         .I4(sig_parent_done),
         .O(\FSM_onehot_sig_pcc_sm_state[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair105" *) 
+  (* SOFT_HLUTNM = "soft_lutpair104" *) 
   LUT3 #(
     .INIT(8'hBA)) 
     \FSM_onehot_sig_pcc_sm_state[5]_i_1 
@@ -21883,7 +21680,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_pcc
         .I1(\FSM_onehot_sig_pcc_sm_state[6]_i_2_n_0 ),
         .I2(\FSM_onehot_sig_pcc_sm_state_reg_n_0_[5] ),
         .O(\FSM_onehot_sig_pcc_sm_state[5]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair105" *) 
+  (* SOFT_HLUTNM = "soft_lutpair104" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \FSM_onehot_sig_pcc_sm_state[6]_i_1 
@@ -21970,7 +21767,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_pcc
         .D(\FSM_onehot_sig_pcc_sm_state[7]_i_1_n_0 ),
         .Q(\FSM_onehot_sig_pcc_sm_state_reg_n_0_[7] ),
         .R(sig_reset_reg));
-  (* SOFT_HLUTNM = "soft_lutpair94" *) 
+  (* SOFT_HLUTNM = "soft_lutpair93" *) 
   LUT5 #(
     .INIT(32'hFFFE0001)) 
     \INFERRED_GEN.data_reg[2][15]_srl3_i_1 
@@ -21980,7 +21777,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_pcc
         .I3(\sig_adjusted_addr_incr_ireg2_reg_n_0_[7] ),
         .I4(\sig_adjusted_addr_incr_ireg2_reg_n_0_[9] ),
         .O(in[39]));
-  (* SOFT_HLUTNM = "soft_lutpair94" *) 
+  (* SOFT_HLUTNM = "soft_lutpair93" *) 
   LUT4 #(
     .INIT(16'hFE01)) 
     \INFERRED_GEN.data_reg[2][16]_srl3_i_1 
@@ -21989,7 +21786,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_pcc
         .I2(\sig_adjusted_addr_incr_ireg2_reg_n_0_[6] ),
         .I3(\sig_adjusted_addr_incr_ireg2_reg_n_0_[8] ),
         .O(in[38]));
-  (* SOFT_HLUTNM = "soft_lutpair104" *) 
+  (* SOFT_HLUTNM = "soft_lutpair103" *) 
   LUT3 #(
     .INIT(8'hE1)) 
     \INFERRED_GEN.data_reg[2][17]_srl3_i_1 
@@ -21997,7 +21794,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_pcc
         .I1(\sig_byte_change_minus1_im2/i__n_0 ),
         .I2(\sig_adjusted_addr_incr_ireg2_reg_n_0_[7] ),
         .O(in[37]));
-  (* SOFT_HLUTNM = "soft_lutpair104" *) 
+  (* SOFT_HLUTNM = "soft_lutpair103" *) 
   LUT2 #(
     .INIT(4'h9)) 
     \INFERRED_GEN.data_reg[2][18]_srl3_i_1 
@@ -22014,7 +21811,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_pcc
         .I4(\sig_adjusted_addr_incr_ireg2_reg_n_0_[3] ),
         .I5(\sig_adjusted_addr_incr_ireg2_reg_n_0_[5] ),
         .O(in[35]));
-  (* SOFT_HLUTNM = "soft_lutpair95" *) 
+  (* SOFT_HLUTNM = "soft_lutpair94" *) 
   LUT5 #(
     .INIT(32'hFFFE0001)) 
     \INFERRED_GEN.data_reg[2][20]_srl3_i_1 
@@ -22024,7 +21821,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_pcc
         .I3(\sig_adjusted_addr_incr_ireg2_reg_n_0_[2] ),
         .I4(\sig_adjusted_addr_incr_ireg2_reg_n_0_[4] ),
         .O(in[34]));
-  (* SOFT_HLUTNM = "soft_lutpair95" *) 
+  (* SOFT_HLUTNM = "soft_lutpair94" *) 
   LUT4 #(
     .INIT(16'hFE01)) 
     \INFERRED_GEN.data_reg[2][21]_srl3_i_1 
@@ -22040,7 +21837,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_pcc
         .I1(\sig_adjusted_addr_incr_ireg2_reg_n_0_[0] ),
         .I2(\sig_adjusted_addr_incr_ireg2_reg_n_0_[2] ),
         .O(in[32]));
-  (* SOFT_HLUTNM = "soft_lutpair106" *) 
+  (* SOFT_HLUTNM = "soft_lutpair105" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \INFERRED_GEN.data_reg[2][23]_srl3_i_1 
@@ -22048,7 +21845,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_pcc
         .I1(in[40]),
         .I2(sig_addr_cntr_lsh_kh[31]),
         .O(in[31]));
-  (* SOFT_HLUTNM = "soft_lutpair106" *) 
+  (* SOFT_HLUTNM = "soft_lutpair105" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \INFERRED_GEN.data_reg[2][24]_srl3_i_1 
@@ -22056,7 +21853,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_pcc
         .I1(in[40]),
         .I2(sig_addr_cntr_lsh_kh[30]),
         .O(in[30]));
-  (* SOFT_HLUTNM = "soft_lutpair107" *) 
+  (* SOFT_HLUTNM = "soft_lutpair106" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \INFERRED_GEN.data_reg[2][25]_srl3_i_1 
@@ -22064,7 +21861,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_pcc
         .I1(in[40]),
         .I2(sig_addr_cntr_lsh_kh[29]),
         .O(in[29]));
-  (* SOFT_HLUTNM = "soft_lutpair107" *) 
+  (* SOFT_HLUTNM = "soft_lutpair106" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \INFERRED_GEN.data_reg[2][26]_srl3_i_1 
@@ -22072,7 +21869,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_pcc
         .I1(in[40]),
         .I2(sig_addr_cntr_lsh_kh[28]),
         .O(in[28]));
-  (* SOFT_HLUTNM = "soft_lutpair108" *) 
+  (* SOFT_HLUTNM = "soft_lutpair107" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \INFERRED_GEN.data_reg[2][27]_srl3_i_1 
@@ -22080,7 +21877,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_pcc
         .I1(in[40]),
         .I2(sig_addr_cntr_lsh_kh[27]),
         .O(in[27]));
-  (* SOFT_HLUTNM = "soft_lutpair108" *) 
+  (* SOFT_HLUTNM = "soft_lutpair107" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \INFERRED_GEN.data_reg[2][28]_srl3_i_1 
@@ -22088,7 +21885,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_pcc
         .I1(in[40]),
         .I2(sig_addr_cntr_lsh_kh[26]),
         .O(in[26]));
-  (* SOFT_HLUTNM = "soft_lutpair109" *) 
+  (* SOFT_HLUTNM = "soft_lutpair108" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \INFERRED_GEN.data_reg[2][29]_srl3_i_1 
@@ -22096,7 +21893,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_pcc
         .I1(in[40]),
         .I2(sig_addr_cntr_lsh_kh[25]),
         .O(in[25]));
-  (* SOFT_HLUTNM = "soft_lutpair109" *) 
+  (* SOFT_HLUTNM = "soft_lutpair108" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \INFERRED_GEN.data_reg[2][30]_srl3_i_1 
@@ -22104,7 +21901,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_pcc
         .I1(in[40]),
         .I2(sig_addr_cntr_lsh_kh[24]),
         .O(in[24]));
-  (* SOFT_HLUTNM = "soft_lutpair110" *) 
+  (* SOFT_HLUTNM = "soft_lutpair109" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \INFERRED_GEN.data_reg[2][31]_srl3_i_1 
@@ -22112,7 +21909,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_pcc
         .I1(in[40]),
         .I2(sig_addr_cntr_lsh_kh[23]),
         .O(in[23]));
-  (* SOFT_HLUTNM = "soft_lutpair110" *) 
+  (* SOFT_HLUTNM = "soft_lutpair109" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \INFERRED_GEN.data_reg[2][32]_srl3_i_1 
@@ -22120,7 +21917,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_pcc
         .I1(in[40]),
         .I2(sig_addr_cntr_lsh_kh[22]),
         .O(in[22]));
-  (* SOFT_HLUTNM = "soft_lutpair111" *) 
+  (* SOFT_HLUTNM = "soft_lutpair110" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \INFERRED_GEN.data_reg[2][33]_srl3_i_1 
@@ -22128,7 +21925,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_pcc
         .I1(in[40]),
         .I2(sig_addr_cntr_lsh_kh[21]),
         .O(in[21]));
-  (* SOFT_HLUTNM = "soft_lutpair111" *) 
+  (* SOFT_HLUTNM = "soft_lutpair110" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \INFERRED_GEN.data_reg[2][34]_srl3_i_1 
@@ -22136,7 +21933,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_pcc
         .I1(in[40]),
         .I2(sig_addr_cntr_lsh_kh[20]),
         .O(in[20]));
-  (* SOFT_HLUTNM = "soft_lutpair112" *) 
+  (* SOFT_HLUTNM = "soft_lutpair111" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \INFERRED_GEN.data_reg[2][35]_srl3_i_1 
@@ -22144,7 +21941,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_pcc
         .I1(in[40]),
         .I2(sig_addr_cntr_lsh_kh[19]),
         .O(in[19]));
-  (* SOFT_HLUTNM = "soft_lutpair112" *) 
+  (* SOFT_HLUTNM = "soft_lutpair111" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \INFERRED_GEN.data_reg[2][36]_srl3_i_1 
@@ -22152,7 +21949,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_pcc
         .I1(in[40]),
         .I2(sig_addr_cntr_lsh_kh[18]),
         .O(in[18]));
-  (* SOFT_HLUTNM = "soft_lutpair113" *) 
+  (* SOFT_HLUTNM = "soft_lutpair112" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \INFERRED_GEN.data_reg[2][37]_srl3_i_1 
@@ -22160,7 +21957,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_pcc
         .I1(in[40]),
         .I2(sig_addr_cntr_lsh_kh[17]),
         .O(in[17]));
-  (* SOFT_HLUTNM = "soft_lutpair113" *) 
+  (* SOFT_HLUTNM = "soft_lutpair112" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \INFERRED_GEN.data_reg[2][38]_srl3_i_1 
@@ -22168,7 +21965,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_pcc
         .I1(in[40]),
         .I2(sig_addr_cntr_lsh_kh[16]),
         .O(in[16]));
-  (* SOFT_HLUTNM = "soft_lutpair114" *) 
+  (* SOFT_HLUTNM = "soft_lutpair113" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \INFERRED_GEN.data_reg[2][39]_srl3_i_1 
@@ -22176,14 +21973,14 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_pcc
         .I1(in[40]),
         .I2(sig_addr_cntr_lsh_kh[15]),
         .O(in[15]));
-  (* SOFT_HLUTNM = "soft_lutpair102" *) 
+  (* SOFT_HLUTNM = "soft_lutpair101" *) 
   LUT2 #(
     .INIT(4'hB)) 
     \INFERRED_GEN.data_reg[2][3]_srl3_i_1 
        (.I0(in[41]),
         .I1(sig_mstr2data_sequential),
         .O(sig_calc_error_reg_reg_0[1]));
-  (* SOFT_HLUTNM = "soft_lutpair114" *) 
+  (* SOFT_HLUTNM = "soft_lutpair113" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \INFERRED_GEN.data_reg[2][40]_srl3_i_1 
@@ -22191,7 +21988,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_pcc
         .I1(in[40]),
         .I2(sig_addr_cntr_lsh_kh[14]),
         .O(in[14]));
-  (* SOFT_HLUTNM = "soft_lutpair115" *) 
+  (* SOFT_HLUTNM = "soft_lutpair114" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \INFERRED_GEN.data_reg[2][41]_srl3_i_1 
@@ -22199,7 +21996,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_pcc
         .I1(in[40]),
         .I2(sig_addr_cntr_lsh_kh[13]),
         .O(in[13]));
-  (* SOFT_HLUTNM = "soft_lutpair115" *) 
+  (* SOFT_HLUTNM = "soft_lutpair114" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \INFERRED_GEN.data_reg[2][42]_srl3_i_1 
@@ -22207,7 +22004,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_pcc
         .I1(in[40]),
         .I2(sig_addr_cntr_lsh_kh[12]),
         .O(in[12]));
-  (* SOFT_HLUTNM = "soft_lutpair116" *) 
+  (* SOFT_HLUTNM = "soft_lutpair115" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \INFERRED_GEN.data_reg[2][43]_srl3_i_1 
@@ -22215,7 +22012,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_pcc
         .I1(in[40]),
         .I2(sig_addr_cntr_lsh_kh[11]),
         .O(in[11]));
-  (* SOFT_HLUTNM = "soft_lutpair116" *) 
+  (* SOFT_HLUTNM = "soft_lutpair115" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \INFERRED_GEN.data_reg[2][44]_srl3_i_1 
@@ -22223,7 +22020,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_pcc
         .I1(in[40]),
         .I2(sig_addr_cntr_lsh_kh[10]),
         .O(in[10]));
-  (* SOFT_HLUTNM = "soft_lutpair117" *) 
+  (* SOFT_HLUTNM = "soft_lutpair116" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \INFERRED_GEN.data_reg[2][45]_srl3_i_1 
@@ -22231,7 +22028,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_pcc
         .I1(in[40]),
         .I2(sig_addr_cntr_lsh_kh[9]),
         .O(in[9]));
-  (* SOFT_HLUTNM = "soft_lutpair117" *) 
+  (* SOFT_HLUTNM = "soft_lutpair116" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \INFERRED_GEN.data_reg[2][46]_srl3_i_1 
@@ -22239,7 +22036,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_pcc
         .I1(in[40]),
         .I2(sig_addr_cntr_lsh_kh[8]),
         .O(in[8]));
-  (* SOFT_HLUTNM = "soft_lutpair118" *) 
+  (* SOFT_HLUTNM = "soft_lutpair117" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \INFERRED_GEN.data_reg[2][47]_srl3_i_1 
@@ -22247,7 +22044,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_pcc
         .I1(in[40]),
         .I2(sig_addr_cntr_lsh_kh[7]),
         .O(in[7]));
-  (* SOFT_HLUTNM = "soft_lutpair119" *) 
+  (* SOFT_HLUTNM = "soft_lutpair118" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \INFERRED_GEN.data_reg[2][48]_srl3_i_1 
@@ -22255,7 +22052,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_pcc
         .I1(in[40]),
         .I2(sig_addr_cntr_lsh_kh[6]),
         .O(in[6]));
-  (* SOFT_HLUTNM = "soft_lutpair120" *) 
+  (* SOFT_HLUTNM = "soft_lutpair119" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \INFERRED_GEN.data_reg[2][49]_srl3_i_1 
@@ -22273,7 +22070,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_pcc
         .I4(sig_brst_cnt_eq_one_ireg1),
         .I5(sig_no_btt_residue_ireg1),
         .O(sig_mstr2data_sequential));
-  (* SOFT_HLUTNM = "soft_lutpair120" *) 
+  (* SOFT_HLUTNM = "soft_lutpair119" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \INFERRED_GEN.data_reg[2][50]_srl3_i_1 
@@ -22281,7 +22078,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_pcc
         .I1(in[40]),
         .I2(sig_addr_cntr_lsh_kh[4]),
         .O(in[4]));
-  (* SOFT_HLUTNM = "soft_lutpair121" *) 
+  (* SOFT_HLUTNM = "soft_lutpair120" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \INFERRED_GEN.data_reg[2][51]_srl3_i_1 
@@ -22289,7 +22086,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_pcc
         .I1(in[40]),
         .I2(sig_addr_cntr_lsh_kh[3]),
         .O(in[3]));
-  (* SOFT_HLUTNM = "soft_lutpair121" *) 
+  (* SOFT_HLUTNM = "soft_lutpair120" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \INFERRED_GEN.data_reg[2][52]_srl3_i_1 
@@ -22297,7 +22094,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_pcc
         .I1(in[40]),
         .I2(sig_addr_cntr_lsh_kh[2]),
         .O(in[2]));
-  (* SOFT_HLUTNM = "soft_lutpair122" *) 
+  (* SOFT_HLUTNM = "soft_lutpair121" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \INFERRED_GEN.data_reg[2][53]_srl3_i_1 
@@ -22700,7 +22497,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_pcc
         .I2(sig_first_xfer_im0),
         .I3(sig_bytes_to_mbaa_ireg1[0]),
         .O(\sig_addr_cntr_incr_ireg2[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair101" *) 
+  (* SOFT_HLUTNM = "soft_lutpair100" *) 
   LUT3 #(
     .INIT(8'h0D)) 
     \sig_addr_cntr_incr_ireg2[10]_i_1 
@@ -22772,7 +22569,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_pcc
         .I2(sig_first_xfer_im0),
         .I3(sig_bytes_to_mbaa_ireg1[8]),
         .O(\sig_addr_cntr_incr_ireg2[8]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair101" *) 
+  (* SOFT_HLUTNM = "soft_lutpair100" *) 
   LUT4 #(
     .INIT(16'hB888)) 
     \sig_addr_cntr_incr_ireg2[9]_i_1 
@@ -23613,7 +23410,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_pcc
         .DI({1'b0,1'b0,1'b0,1'b0}),
         .O({\NLW_sig_adjusted_addr_incr_ireg2_reg[9]_i_1_O_UNCONNECTED [3:2],sig_adjusted_addr_incr_im1[9:8]}),
         .S({1'b0,1'b0,\sig_adjusted_addr_incr_ireg2[9]_i_2_n_0 ,\sig_adjusted_addr_incr_ireg2[9]_i_3_n_0 }));
-  (* SOFT_HLUTNM = "soft_lutpair123" *) 
+  (* SOFT_HLUTNM = "soft_lutpair122" *) 
   LUT2 #(
     .INIT(4'h2)) 
     sig_brst_cnt_eq_one_ireg1_i_1
@@ -23628,7 +23425,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_pcc
         .D(sig_brst_cnt_eq_one_im0),
         .Q(sig_brst_cnt_eq_one_ireg1),
         .R(sig_reset_reg));
-  (* SOFT_HLUTNM = "soft_lutpair123" *) 
+  (* SOFT_HLUTNM = "soft_lutpair122" *) 
   LUT2 #(
     .INIT(4'h1)) 
     sig_brst_cnt_eq_zero_ireg1_i_1
@@ -24231,7 +24028,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_pcc
         .I4(\sig_addr_cntr_lsh_im0_reg_n_0_[1] ),
         .I5(\sig_btt_cntr_im0_reg_n_0_[2] ),
         .O(sig_btt_eq_b2mbaa_im01_carry_i_4_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair93" *) 
+  (* SOFT_HLUTNM = "soft_lutpair92" *) 
   LUT5 #(
     .INIT(32'h06606009)) 
     sig_btt_eq_b2mbaa_im01_carry_i_5
@@ -24250,7 +24047,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_pcc
         .I3(sig_btt_lt_b2mbaa_im01_carry_i_9_n_0),
         .I4(\sig_btt_cntr_im0_reg_n_0_[4] ),
         .O(sig_btt_eq_b2mbaa_im01_carry_i_6_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair103" *) 
+  (* SOFT_HLUTNM = "soft_lutpair102" *) 
   LUT3 #(
     .INIT(8'h10)) 
     sig_btt_eq_b2mbaa_ireg1_i_1
@@ -24309,7 +24106,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_pcc
         .I3(sig_btt_lt_b2mbaa_im01_carry__0_i_4_n_0),
         .I4(\sig_btt_cntr_im0_reg_n_0_[8] ),
         .O(sig_btt_lt_b2mbaa_im01_carry__0_i_3_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair93" *) 
+  (* SOFT_HLUTNM = "soft_lutpair92" *) 
   LUT3 #(
     .INIT(8'h01)) 
     sig_btt_lt_b2mbaa_im01_carry__0_i_4
@@ -24389,7 +24186,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_pcc
         .I2(\sig_btt_cntr_im0_reg_n_0_[0] ),
         .I3(\sig_addr_cntr_lsh_im0_reg_n_0_[0] ),
         .O(sig_btt_lt_b2mbaa_im01_carry_i_8_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair98" *) 
+  (* SOFT_HLUTNM = "soft_lutpair97" *) 
   LUT4 #(
     .INIT(16'hFFFE)) 
     sig_btt_lt_b2mbaa_im01_carry_i_9
@@ -24398,7 +24195,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_pcc
         .I2(\sig_addr_cntr_lsh_im0_reg_n_0_[0] ),
         .I3(\sig_addr_cntr_lsh_im0_reg_n_0_[2] ),
         .O(sig_btt_lt_b2mbaa_im01_carry_i_9_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair103" *) 
+  (* SOFT_HLUTNM = "soft_lutpair102" *) 
   LUT3 #(
     .INIT(8'h10)) 
     sig_btt_lt_b2mbaa_ireg1_i_1
@@ -24450,14 +24247,14 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_pcc
         .I4(\sig_adjusted_addr_incr_ireg2_reg_n_0_[3] ),
         .I5(\sig_adjusted_addr_incr_ireg2_reg_n_0_[5] ),
         .O(\sig_byte_change_minus1_im2/i__n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair122" *) 
+  (* SOFT_HLUTNM = "soft_lutpair121" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \sig_bytes_to_mbaa_ireg1[1]_i_1 
        (.I0(\sig_addr_cntr_lsh_im0_reg_n_0_[1] ),
         .I1(\sig_addr_cntr_lsh_im0_reg_n_0_[0] ),
         .O(sig_bytes_to_mbaa_im0[1]));
-  (* SOFT_HLUTNM = "soft_lutpair100" *) 
+  (* SOFT_HLUTNM = "soft_lutpair99" *) 
   LUT3 #(
     .INIT(8'h56)) 
     \sig_bytes_to_mbaa_ireg1[2]_i_1 
@@ -24465,7 +24262,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_pcc
         .I1(\sig_addr_cntr_lsh_im0_reg_n_0_[0] ),
         .I2(\sig_addr_cntr_lsh_im0_reg_n_0_[1] ),
         .O(sig_bytes_to_mbaa_im0[2]));
-  (* SOFT_HLUTNM = "soft_lutpair100" *) 
+  (* SOFT_HLUTNM = "soft_lutpair99" *) 
   LUT4 #(
     .INIT(16'h5556)) 
     \sig_bytes_to_mbaa_ireg1[3]_i_1 
@@ -24474,7 +24271,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_pcc
         .I2(\sig_addr_cntr_lsh_im0_reg_n_0_[0] ),
         .I3(\sig_addr_cntr_lsh_im0_reg_n_0_[2] ),
         .O(sig_bytes_to_mbaa_im0[3]));
-  (* SOFT_HLUTNM = "soft_lutpair98" *) 
+  (* SOFT_HLUTNM = "soft_lutpair97" *) 
   LUT5 #(
     .INIT(32'h55555556)) 
     \sig_bytes_to_mbaa_ireg1[4]_i_1 
@@ -24494,14 +24291,14 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_pcc
         .I4(\sig_addr_cntr_lsh_im0_reg_n_0_[2] ),
         .I5(\sig_addr_cntr_lsh_im0_reg_n_0_[4] ),
         .O(sig_bytes_to_mbaa_im0[5]));
-  (* SOFT_HLUTNM = "soft_lutpair119" *) 
+  (* SOFT_HLUTNM = "soft_lutpair118" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \sig_bytes_to_mbaa_ireg1[6]_i_1 
        (.I0(\sig_addr_cntr_lsh_im0_reg_n_0_[6] ),
         .I1(\sig_bytes_to_mbaa_ireg1[9]_i_2_n_0 ),
         .O(sig_bytes_to_mbaa_im0[6]));
-  (* SOFT_HLUTNM = "soft_lutpair118" *) 
+  (* SOFT_HLUTNM = "soft_lutpair117" *) 
   LUT3 #(
     .INIT(8'h56)) 
     \sig_bytes_to_mbaa_ireg1[7]_i_1 
@@ -24509,7 +24306,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_pcc
         .I1(\sig_bytes_to_mbaa_ireg1[9]_i_2_n_0 ),
         .I2(\sig_addr_cntr_lsh_im0_reg_n_0_[6] ),
         .O(sig_bytes_to_mbaa_im0[7]));
-  (* SOFT_HLUTNM = "soft_lutpair97" *) 
+  (* SOFT_HLUTNM = "soft_lutpair96" *) 
   LUT4 #(
     .INIT(16'h01FE)) 
     \sig_bytes_to_mbaa_ireg1[8]_i_1 
@@ -24518,7 +24315,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_pcc
         .I2(\sig_addr_cntr_lsh_im0_reg_n_0_[6] ),
         .I3(\sig_addr_cntr_lsh_im0_reg_n_0_[8] ),
         .O(sig_bytes_to_mbaa_im0[8]));
-  (* SOFT_HLUTNM = "soft_lutpair97" *) 
+  (* SOFT_HLUTNM = "soft_lutpair96" *) 
   LUT5 #(
     .INIT(32'h0001FFFE)) 
     \sig_bytes_to_mbaa_ireg1[9]_i_1 
@@ -24618,7 +24415,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_pcc
         .D(sig_bytes_to_mbaa_im0[9]),
         .Q(sig_bytes_to_mbaa_ireg1[9]),
         .R(sig_reset_reg));
-  (* SOFT_HLUTNM = "soft_lutpair102" *) 
+  (* SOFT_HLUTNM = "soft_lutpair101" *) 
   LUT4 #(
     .INIT(16'hFF80)) 
     sig_calc_error_pushed_i_1
@@ -24801,7 +24598,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_pcc
         .D(sig_input_reg_empty_i_1_n_0),
         .Q(sig_input_reg_empty),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair99" *) 
+  (* SOFT_HLUTNM = "soft_lutpair98" *) 
   LUT4 #(
     .INIT(16'h0544)) 
     sig_ld_xfer_reg_i_1
@@ -25128,7 +24925,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_pcc
         .D(sig_sm_ld_calc2_reg_ns),
         .Q(sig_sm_ld_calc2_reg),
         .R(sig_reset_reg));
-  (* SOFT_HLUTNM = "soft_lutpair96" *) 
+  (* SOFT_HLUTNM = "soft_lutpair95" *) 
   LUT3 #(
     .INIT(8'h08)) 
     sig_sm_pop_input_reg_i_1
@@ -25144,7 +24941,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_pcc
         .D(sig_sm_pop_input_reg_ns),
         .Q(sig_sm_pop_input_reg),
         .R(sig_reset_reg));
-  (* SOFT_HLUTNM = "soft_lutpair99" *) 
+  (* SOFT_HLUTNM = "soft_lutpair98" *) 
   LUT4 #(
     .INIT(16'hFF2E)) 
     sig_xfer_reg_empty_i_1
@@ -25187,7 +24984,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_rd_status_cntl
   wire sig_rsc2stat_status_valid;
   wire sig_stat2rsc_status_ready;
 
-  (* SOFT_HLUTNM = "soft_lutpair131" *) 
+  (* SOFT_HLUTNM = "soft_lutpair130" *) 
   LUT5 #(
     .INIT(32'hFF2F2F2F)) 
     sig_rd_sts_reg_empty_i_1
@@ -25205,7 +25002,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_rd_status_cntl
         .D(sig_rd_sts_reg_empty_i_1_n_0),
         .Q(sig_rsc2data_ready),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair131" *) 
+  (* SOFT_HLUTNM = "soft_lutpair130" *) 
   LUT5 #(
     .INIT(32'h0080F080)) 
     sig_rd_sts_reg_full_i_1
@@ -25243,8 +25040,8 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_rddata_cntl
     sig_rsc2stat_status_valid,
     sig_stat2rsc_status_ready,
     m_axi_mem_rready_0,
-    m_axi_mem_rlast,
     m_axi_mem_rvalid,
+    m_axi_mem_rlast,
     sig_rsc2data_ready,
     in,
     out);
@@ -25264,8 +25061,8 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_rddata_cntl
   input sig_rsc2stat_status_valid;
   input sig_stat2rsc_status_ready;
   input m_axi_mem_rready_0;
-  input m_axi_mem_rlast;
   input m_axi_mem_rvalid;
+  input m_axi_mem_rlast;
   input sig_rsc2data_ready;
   input [11:0]in;
   input out;
@@ -25303,7 +25100,6 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_rddata_cntl
   wire sig_coelsc_cmd_cmplt_reg_i_3_n_0;
   wire sig_data2rsc_valid;
   wire [7:0]sig_dbeat_cntr;
-  wire \sig_dbeat_cntr[4]_i_2_n_0 ;
   wire \sig_dbeat_cntr[5]_i_2_n_0 ;
   wire \sig_dbeat_cntr[7]_i_3_n_0 ;
   wire \sig_dbeat_cntr[7]_i_4_n_0 ;
@@ -25313,9 +25109,11 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_rddata_cntl
   wire sig_inhibit_rdy_n;
   wire sig_init_done;
   wire sig_init_done_reg;
-  wire sig_last_dbeat_i_3_n_0;
   wire sig_last_dbeat_i_4_n_0;
-  wire sig_last_dbeat_i_6_n_0;
+  wire sig_last_dbeat_i_5_n_0;
+  wire sig_last_dbeat_i_7_n_0;
+  wire sig_last_dbeat_i_8_n_0;
+  wire sig_last_dbeat_i_9_n_0;
   wire sig_last_dbeat_reg_n_0;
   wire sig_last_mmap_dbeat;
   wire sig_last_mmap_dbeat_reg;
@@ -25349,20 +25147,19 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_rddata_cntl
         .sig_cmd_stat_rst_user_reg_n_cdc_from_reg(\GEN_DATA_CNTL_FIFO.I_DATA_CNTL_FIFO_n_18 ),
         .sig_cmd_stat_rst_user_reg_n_cdc_from_reg_0(\GEN_DATA_CNTL_FIFO.I_DATA_CNTL_FIFO_n_19 ),
         .\sig_dbeat_cntr_reg[0] (\sig_dbeat_cntr[7]_i_3_n_0 ),
-        .\sig_dbeat_cntr_reg[4] (\sig_dbeat_cntr[4]_i_2_n_0 ),
-        .\sig_dbeat_cntr_reg[5] (\sig_dbeat_cntr[5]_i_2_n_0 ),
+        .\sig_dbeat_cntr_reg[4] (\sig_dbeat_cntr[5]_i_2_n_0 ),
         .\sig_dbeat_cntr_reg[6] (\sig_dbeat_cntr[7]_i_4_n_0 ),
         .sig_dqual_reg_empty(sig_dqual_reg_empty),
-        .sig_dqual_reg_empty_reg(sig_last_dbeat_reg_n_0),
-        .sig_dqual_reg_empty_reg_0(m_axi_mem_rready_0),
-        .sig_dqual_reg_empty_reg_1(m_axi_mem_rready_INST_0_i_1_n_0),
-        .sig_dqual_reg_empty_reg_2(sig_data2rsc_valid),
+        .sig_dqual_reg_empty_reg(m_axi_mem_rready_0),
+        .sig_dqual_reg_empty_reg_0(m_axi_mem_rready_INST_0_i_1_n_0),
+        .sig_dqual_reg_empty_reg_1(sig_data2rsc_valid),
         .sig_dqual_reg_full(sig_dqual_reg_full),
         .sig_inhibit_rdy_n_reg_0(sig_inhibit_rdy_n),
         .sig_init_done(sig_init_done),
         .sig_init_done_reg_0(sig_init_done_reg),
         .sig_last_dbeat_reg(sig_last_dbeat_i_4_n_0),
-        .sig_last_dbeat_reg_0(sig_last_dbeat_i_3_n_0),
+        .sig_last_dbeat_reg_0(sig_last_dbeat_i_5_n_0),
+        .sig_last_dbeat_reg_1(sig_last_dbeat_reg_n_0),
         .sig_ld_new_cmd_reg(sig_ld_new_cmd_reg),
         .sig_mstr2data_cmd_valid(sig_mstr2data_cmd_valid),
         .sig_next_calc_error_reg(sig_next_calc_error_reg),
@@ -25380,7 +25177,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_rddata_cntl
         .I3(sig_data2rsc_valid),
         .I4(m_axi_mem_rready_INST_0_i_1_n_0),
         .O(m_axi_mem_rready));
-  (* SOFT_HLUTNM = "soft_lutpair129" *) 
+  (* SOFT_HLUTNM = "soft_lutpair127" *) 
   LUT3 #(
     .INIT(8'h01)) 
     m_axi_mem_rready_INST_0_i_1
@@ -25388,7 +25185,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_rddata_cntl
         .I1(sig_addr_posted_cntr[0]),
         .I2(sig_addr_posted_cntr[1]),
         .O(m_axi_mem_rready_INST_0_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair129" *) 
+  (* SOFT_HLUTNM = "soft_lutpair127" *) 
   LUT5 #(
     .INIT(32'hB9996662)) 
     \sig_addr_posted_cntr[0]_i_1 
@@ -25398,7 +25195,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_rddata_cntl
         .I3(sig_addr_posted_cntr[2]),
         .I4(sig_addr_posted_cntr[0]),
         .O(\sig_addr_posted_cntr[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair128" *) 
+  (* SOFT_HLUTNM = "soft_lutpair126" *) 
   LUT5 #(
     .INIT(32'hF0BCC2F0)) 
     \sig_addr_posted_cntr[1]_i_1 
@@ -25408,7 +25205,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_rddata_cntl
         .I3(sig_last_mmap_dbeat_reg),
         .I4(out),
         .O(\sig_addr_posted_cntr[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair128" *) 
+  (* SOFT_HLUTNM = "soft_lutpair126" *) 
   LUT5 #(
     .INIT(32'hAAEAA8AA)) 
     \sig_addr_posted_cntr[2]_i_1 
@@ -25452,7 +25249,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_rddata_cntl
         .I4(sig_next_calc_error_reg),
         .I5(sig_coelsc_cmd_cmplt_reg_i_3_n_0),
         .O(sig_coelsc_cmd_cmplt_reg_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair130" *) 
+  (* SOFT_HLUTNM = "soft_lutpair129" *) 
   LUT3 #(
     .INIT(8'hEA)) 
     sig_coelsc_cmd_cmplt_reg_i_2
@@ -25477,22 +25274,15 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_rddata_cntl
         .D(sig_coelsc_cmd_cmplt_reg_i_1_n_0),
         .Q(sig_data2rsc_valid),
         .R(1'b0));
-  LUT2 #(
-    .INIT(4'h1)) 
-    \sig_dbeat_cntr[4]_i_2 
-       (.I0(sig_dbeat_cntr[1]),
-        .I1(sig_dbeat_cntr[0]),
-        .O(\sig_dbeat_cntr[4]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair127" *) 
-  LUT5 #(
-    .INIT(32'h00000001)) 
+  LUT4 #(
+    .INIT(16'h0001)) 
     \sig_dbeat_cntr[5]_i_2 
-       (.I0(sig_dbeat_cntr[4]),
+       (.I0(sig_dbeat_cntr[0]),
         .I1(sig_dbeat_cntr[1]),
-        .I2(sig_dbeat_cntr[0]),
-        .I3(sig_dbeat_cntr[3]),
-        .I4(sig_dbeat_cntr[2]),
+        .I2(sig_dbeat_cntr[3]),
+        .I3(sig_dbeat_cntr[2]),
         .O(\sig_dbeat_cntr[5]_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair128" *) 
   LUT3 #(
     .INIT(8'h02)) 
     \sig_dbeat_cntr[7]_i_3 
@@ -25505,10 +25295,10 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_rddata_cntl
     \sig_dbeat_cntr[7]_i_4 
        (.I0(sig_dbeat_cntr[2]),
         .I1(sig_dbeat_cntr[3]),
-        .I2(sig_dbeat_cntr[0]),
-        .I3(sig_dbeat_cntr[1]),
-        .I4(sig_dbeat_cntr[4]),
-        .I5(sig_dbeat_cntr[5]),
+        .I2(sig_dbeat_cntr[1]),
+        .I3(sig_dbeat_cntr[0]),
+        .I4(sig_dbeat_cntr[5]),
+        .I5(sig_dbeat_cntr[4]),
         .O(\sig_dbeat_cntr[7]_i_4_n_0 ));
   FDRE #(
     .INIT(1'b0)) 
@@ -25591,30 +25381,50 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_rddata_cntl
         .Q(sig_dqual_reg_full),
         .R(\GEN_DATA_CNTL_FIFO.I_DATA_CNTL_FIFO_n_20 ));
   LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFFD)) 
-    sig_last_dbeat_i_3
-       (.I0(\GEN_DATA_CNTL_FIFO.I_DATA_CNTL_FIFO_n_17 ),
-        .I1(sig_last_dbeat_i_6_n_0),
-        .I2(sig_dbeat_cntr[7]),
-        .I3(sig_dbeat_cntr[6]),
-        .I4(sig_dbeat_cntr[4]),
-        .I5(sig_dbeat_cntr[5]),
-        .O(sig_last_dbeat_i_3_n_0));
-  LUT2 #(
-    .INIT(4'h7)) 
+    .INIT(64'hFFFFFFFFFFFFFFBF)) 
     sig_last_dbeat_i_4
-       (.I0(sig_next_sequential_reg),
-        .I1(sig_last_dbeat_reg_n_0),
+       (.I0(sig_last_dbeat_i_7_n_0),
+        .I1(m_axi_mem_rvalid),
+        .I2(m_axi_mem_rready_0),
+        .I3(sig_last_dbeat_i_8_n_0),
+        .I4(sig_dbeat_cntr[1]),
+        .I5(sig_last_dbeat_i_9_n_0),
         .O(sig_last_dbeat_i_4_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair127" *) 
+  LUT6 #(
+    .INIT(64'hAAAAAAAAEAAAAAAA)) 
+    sig_last_dbeat_i_5
+       (.I0(sig_dqual_reg_empty),
+        .I1(sig_next_sequential_reg),
+        .I2(sig_last_dbeat_reg_n_0),
+        .I3(m_axi_mem_rready_0),
+        .I4(m_axi_mem_rvalid),
+        .I5(sig_last_dbeat_i_7_n_0),
+        .O(sig_last_dbeat_i_5_n_0));
+  LUT6 #(
+    .INIT(64'hFFFFFF01FFFFFFFF)) 
+    sig_last_dbeat_i_7
+       (.I0(sig_addr_posted_cntr[1]),
+        .I1(sig_addr_posted_cntr[0]),
+        .I2(sig_addr_posted_cntr[2]),
+        .I3(sig_data2rsc_valid),
+        .I4(sig_next_calc_error_reg),
+        .I5(sig_dqual_reg_full),
+        .O(sig_last_dbeat_i_7_n_0));
   LUT4 #(
-    .INIT(16'hFFEF)) 
-    sig_last_dbeat_i_6
-       (.I0(sig_dbeat_cntr[2]),
-        .I1(sig_dbeat_cntr[3]),
-        .I2(sig_dbeat_cntr[0]),
-        .I3(sig_dbeat_cntr[1]),
-        .O(sig_last_dbeat_i_6_n_0));
+    .INIT(16'hFFFE)) 
+    sig_last_dbeat_i_8
+       (.I0(sig_dbeat_cntr[3]),
+        .I1(sig_dbeat_cntr[2]),
+        .I2(sig_dbeat_cntr[5]),
+        .I3(sig_dbeat_cntr[4]),
+        .O(sig_last_dbeat_i_8_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair128" *) 
+  LUT2 #(
+    .INIT(4'hE)) 
+    sig_last_dbeat_i_9
+       (.I0(sig_dbeat_cntr[6]),
+        .I1(sig_dbeat_cntr[7]),
+        .O(sig_last_dbeat_i_9_n_0));
   FDRE #(
     .INIT(1'b0)) 
     sig_last_dbeat_reg
@@ -25623,7 +25433,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_rddata_cntl
         .D(\GEN_DATA_CNTL_FIFO.I_DATA_CNTL_FIFO_n_19 ),
         .Q(sig_last_dbeat_reg_n_0),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair130" *) 
+  (* SOFT_HLUTNM = "soft_lutpair129" *) 
   LUT2 #(
     .INIT(4'h8)) 
     sig_last_mmap_dbeat_reg_i_1
@@ -25814,7 +25624,7 @@ module design_2_dfx_controller_0_0_dfx_controller_dma_skid_buf
   assign sig_s_ready_out_reg_0 = sig_s_ready_out;
   LUT6 #(
     .INIT(64'h5554555555555555)) 
-    \FSM_sequential_b_fsm.fsm_cs[2]_i_13 
+    \FSM_sequential_b_fsm.fsm_cs[2]_i_12 
        (.I0(first_word_seen_reg_1),
         .I1(full),
         .I2(first_word_seen_reg_2),
@@ -26688,65 +26498,61 @@ endmodule
 module design_2_dfx_controller_0_0_glb_srl_fifo
    (reset_0,
     fifo_not_full,
-    \current_state_reg[0] ,
-    \current_state_reg[0]_0 ,
-    \current_state_reg[2] ,
+    \current_state_reg[1] ,
     access_address,
+    \current_state_reg[3] ,
+    shutdown_bit_reg,
     \FSM_sequential_current_state_reg[1] ,
     fifo_write,
     D,
     clk,
-    ready_for_hw_trigger,
-    CARRYS_OUT,
     trigger_selector_valid_out,
+    CARRYS_OUT,
+    ready_for_hw_trigger,
     reset,
-    Q,
-    \current_state_reg[0]_1 ,
+    \current_state_reg[2] ,
     \current_state_reg[2]_0 ,
-    vsm_shifter_rm_shutdown_ack,
-    \current_state_reg[1] ,
-    \current_state_reg[1]_0 ,
+    Q,
     \current_state_reg[2]_1 ,
-    \current_state_reg[2]_2 ,
-    \current_state_reg[2]_3 ,
     sw_trigger_id,
     sw_trigger_pending,
     start_fetching_all,
     \b_trigger_table.gen_address_reg.access_address_del_reg[0] ,
-    \current_state_reg[2]_4 ,
+    \current_state_reg[1]_0 ,
+    \current_state_reg[0] ,
+    \current_state_reg[0]_0 ,
+    \current_state_reg[0]_1 ,
     \current_state[1]_i_4_0 ,
-    \current_state[0]_i_11_0 ,
+    \current_state[2]_i_3_0 ,
     current_state);
   output reset_0;
   output fifo_not_full;
-  output \current_state_reg[0] ;
-  output \current_state_reg[0]_0 ;
-  output [0:0]\current_state_reg[2] ;
+  output \current_state_reg[1] ;
   output access_address;
+  output \current_state_reg[3] ;
+  output shutdown_bit_reg;
   output \FSM_sequential_current_state_reg[1] ;
   input fifo_write;
   input [0:0]D;
   input clk;
-  input ready_for_hw_trigger;
-  input [0:0]CARRYS_OUT;
   input trigger_selector_valid_out;
+  input [0:0]CARRYS_OUT;
+  input ready_for_hw_trigger;
   input reset;
-  input [3:0]Q;
-  input \current_state_reg[0]_1 ;
+  input \current_state_reg[2] ;
   input \current_state_reg[2]_0 ;
-  input vsm_shifter_rm_shutdown_ack;
-  input \current_state_reg[1] ;
-  input \current_state_reg[1]_0 ;
+  input [3:0]Q;
   input \current_state_reg[2]_1 ;
-  input \current_state_reg[2]_2 ;
-  input \current_state_reg[2]_3 ;
   input sw_trigger_id;
   input sw_trigger_pending;
   input start_fetching_all;
   input \b_trigger_table.gen_address_reg.access_address_del_reg[0] ;
-  input \current_state_reg[2]_4 ;
+  input \current_state_reg[1]_0 ;
+  input \current_state_reg[0] ;
+  input \current_state_reg[0]_0 ;
+  input \current_state_reg[0]_1 ;
   input \current_state[1]_i_4_0 ;
-  input [1:0]\current_state[0]_i_11_0 ;
+  input [1:0]\current_state[2]_i_3_0 ;
   input [1:0]current_state;
 
   wire [0:0]CARRYS_OUT;
@@ -26755,33 +26561,30 @@ module design_2_dfx_controller_0_0_glb_srl_fifo
   wire GLB_if;
   wire [3:0]Q;
   wire access_address;
-  wire \add_1[0]_i_1__1_n_0 ;
-  wire \add_1[1]_i_1__1_n_0 ;
-  wire \add_1[2]_i_1_n_0 ;
+  wire \add_1[0]_i_1_n_0 ;
+  wire \add_1[1]_i_1_n_0 ;
+  wire \add_1[2]_i_1__2_n_0 ;
   wire \add_1_reg_n_0_[0] ;
   wire \add_1_reg_n_0_[1] ;
   wire \add_1_reg_n_0_[2] ;
   wire \b_trigger_table.gen_address_reg.access_address_del_reg[0] ;
   wire clk;
   wire [1:0]current_state;
-  wire [1:0]\current_state[0]_i_11_0 ;
-  wire \current_state[0]_i_11_n_0 ;
-  wire \current_state[0]_i_14_n_0 ;
+  wire \current_state[0]_i_7_n_0 ;
   wire \current_state[1]_i_10_n_0 ;
   wire \current_state[1]_i_4_0 ;
   wire \current_state[1]_i_8_n_0 ;
-  wire \current_state[2]_i_2_n_0 ;
+  wire [1:0]\current_state[2]_i_3_0 ;
+  wire \current_state[2]_i_5_n_0 ;
   wire \current_state_reg[0] ;
   wire \current_state_reg[0]_0 ;
   wire \current_state_reg[0]_1 ;
   wire \current_state_reg[1] ;
   wire \current_state_reg[1]_0 ;
-  wire [0:0]\current_state_reg[2] ;
+  wire \current_state_reg[2] ;
   wire \current_state_reg[2]_0 ;
   wire \current_state_reg[2]_1 ;
-  wire \current_state_reg[2]_2 ;
-  wire \current_state_reg[2]_3 ;
-  wire \current_state_reg[2]_4 ;
+  wire \current_state_reg[3] ;
   wire \fifo_1_reg[3][0]_srl4_n_0 ;
   wire \fifo_2_reg_n_0_[0] ;
   wire fifo_not_full;
@@ -26791,41 +26594,41 @@ module design_2_dfx_controller_0_0_glb_srl_fifo
   wire ready_for_hw_trigger;
   wire reset;
   wire reset_0;
+  wire shutdown_bit_reg;
   wire start_fetching_all;
   wire sw_trigger_id;
   wire sw_trigger_pending;
   wire trigger_selector_valid_out;
-  wire vsm_shifter_rm_shutdown_ack;
 
   LUT5 #(
-    .INIT(32'h9A659A9A)) 
-    \add_1[0]_i_1__1 
+    .INIT(32'hA6A659A6)) 
+    \add_1[0]_i_1 
        (.I0(\add_1_reg_n_0_[0] ),
-        .I1(\add_1_reg_n_0_[2] ),
-        .I2(ready_for_hw_trigger),
-        .I3(CARRYS_OUT),
-        .I4(trigger_selector_valid_out),
-        .O(\add_1[0]_i_1__1_n_0 ));
+        .I1(ready_for_hw_trigger),
+        .I2(\add_1_reg_n_0_[2] ),
+        .I3(trigger_selector_valid_out),
+        .I4(CARRYS_OUT),
+        .O(\add_1[0]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hAA6AAA6A99A9AA6A)) 
-    \add_1[1]_i_1__1 
+    \add_1[1]_i_1 
        (.I0(\add_1_reg_n_0_[1] ),
         .I1(\add_1_reg_n_0_[0] ),
         .I2(trigger_selector_valid_out),
         .I3(CARRYS_OUT),
         .I4(ready_for_hw_trigger),
         .I5(\add_1_reg_n_0_[2] ),
-        .O(\add_1[1]_i_1__1_n_0 ));
+        .O(\add_1[1]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'hCC46CCCCDCCCDCDC)) 
-    \add_1[2]_i_1 
-       (.I0(\add_1_reg_n_0_[0] ),
-        .I1(\add_1_reg_n_0_[2] ),
-        .I2(ready_for_hw_trigger),
-        .I3(CARRYS_OUT),
-        .I4(trigger_selector_valid_out),
+    .INIT(64'hA1AAAAAAAAAAEAEE)) 
+    \add_1[2]_i_1__2 
+       (.I0(\add_1_reg_n_0_[2] ),
+        .I1(ready_for_hw_trigger),
+        .I2(CARRYS_OUT),
+        .I3(trigger_selector_valid_out),
+        .I4(\add_1_reg_n_0_[0] ),
         .I5(\add_1_reg_n_0_[1] ),
-        .O(\add_1[2]_i_1_n_0 ));
+        .O(\add_1[2]_i_1__2_n_0 ));
   (* register_duplication = "no" *) 
   (* use_carry_chain = "yes" *) 
   (* use_clock_enable = "no" *) 
@@ -26835,7 +26638,7 @@ module design_2_dfx_controller_0_0_glb_srl_fifo
     \add_1_reg[0] 
        (.C(clk),
         .CE(1'b1),
-        .D(\add_1[0]_i_1__1_n_0 ),
+        .D(\add_1[0]_i_1_n_0 ),
         .Q(\add_1_reg_n_0_[0] ),
         .S(reset_0));
   (* register_duplication = "no" *) 
@@ -26847,7 +26650,7 @@ module design_2_dfx_controller_0_0_glb_srl_fifo
     \add_1_reg[1] 
        (.C(clk),
         .CE(1'b1),
-        .D(\add_1[1]_i_1__1_n_0 ),
+        .D(\add_1[1]_i_1_n_0 ),
         .Q(\add_1_reg_n_0_[1] ),
         .S(reset_0));
   (* register_duplication = "no" *) 
@@ -26859,7 +26662,7 @@ module design_2_dfx_controller_0_0_glb_srl_fifo
     \add_1_reg[2] 
        (.C(clk),
         .CE(1'b1),
-        .D(\add_1[2]_i_1_n_0 ),
+        .D(\add_1[2]_i_1__2_n_0 ),
         .Q(\add_1_reg_n_0_[2] ),
         .S(reset_0));
   LUT5 #(
@@ -26871,26 +26674,27 @@ module design_2_dfx_controller_0_0_glb_srl_fifo
         .I3(start_fetching_all),
         .I4(\b_trigger_table.gen_address_reg.access_address_del_reg[0] ),
         .O(access_address));
+  LUT6 #(
+    .INIT(64'hF5D5FFDFFDDDFFDF)) 
+    \current_state[0]_i_2 
+       (.I0(\current_state_reg[0] ),
+        .I1(\current_state_reg[0]_0 ),
+        .I2(Q[0]),
+        .I3(\current_state[0]_i_7_n_0 ),
+        .I4(reset),
+        .I5(\current_state_reg[0]_1 ),
+        .O(shutdown_bit_reg));
+  (* SOFT_HLUTNM = "soft_lutpair144" *) 
   LUT5 #(
-    .INIT(32'hFFFFF0EE)) 
-    \current_state[0]_i_11 
-       (.I0(\current_state_reg[2]_0 ),
-        .I1(\current_state[0]_i_14_n_0 ),
-        .I2(vsm_shifter_rm_shutdown_ack),
-        .I3(Q[1]),
-        .I4(Q[2]),
-        .O(\current_state[0]_i_11_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair145" *) 
-  LUT5 #(
-    .INIT(32'hD7D7D700)) 
-    \current_state[0]_i_14 
-       (.I0(\current_state[1]_i_4_0 ),
-        .I1(\current_state[0]_i_11_0 [1]),
-        .I2(\current_state[0]_i_11_0 [0]),
-        .I3(rd_avail_2_reg_n_0),
-        .I4(sw_trigger_pending),
-        .O(\current_state[0]_i_14_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair145" *) 
+    .INIT(32'hE00EEEEE)) 
+    \current_state[0]_i_7 
+       (.I0(rd_avail_2_reg_n_0),
+        .I1(sw_trigger_pending),
+        .I2(\current_state[2]_i_3_0 [0]),
+        .I3(\current_state[2]_i_3_0 [1]),
+        .I4(\current_state_reg[0]_1 ),
+        .O(\current_state[0]_i_7_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair144" *) 
   LUT2 #(
     .INIT(4'h1)) 
     \current_state[1]_i_10 
@@ -26898,50 +26702,45 @@ module design_2_dfx_controller_0_0_glb_srl_fifo
         .I1(rd_avail_2_reg_n_0),
         .O(\current_state[1]_i_10_n_0 ));
   LUT6 #(
-    .INIT(64'h00002E2E000000FF)) 
+    .INIT(64'h1011101010111111)) 
     \current_state[1]_i_4 
-       (.I0(\current_state_reg[1] ),
-        .I1(Q[0]),
-        .I2(\current_state_reg[1]_0 ),
-        .I3(\current_state[1]_i_8_n_0 ),
-        .I4(Q[2]),
-        .I5(Q[1]),
-        .O(\current_state_reg[0]_0 ));
+       (.I0(\current_state_reg[1]_0 ),
+        .I1(Q[3]),
+        .I2(\current_state[1]_i_8_n_0 ),
+        .I3(\current_state[2]_i_5_n_0 ),
+        .I4(Q[0]),
+        .I5(reset),
+        .O(\current_state_reg[3] ));
   LUT6 #(
-    .INIT(64'h0B0B0B0BFF0FFFFF)) 
+    .INIT(64'hFFFFFFFFFFFFFF20)) 
     \current_state[1]_i_8 
        (.I0(\current_state[1]_i_10_n_0 ),
-        .I1(\current_state_reg[2]_4 ),
-        .I2(\current_state_reg[2]_0 ),
+        .I1(\current_state_reg[0]_0 ),
+        .I2(Q[0]),
         .I3(\current_state[1]_i_4_0 ),
-        .I4(reset),
-        .I5(Q[0]),
+        .I4(Q[2]),
+        .I5(Q[1]),
         .O(\current_state[1]_i_8_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFFFFFFFF000D)) 
-    \current_state[2]_i_1 
-       (.I0(\current_state[2]_i_2_n_0 ),
-        .I1(\current_state_reg[2]_1 ),
-        .I2(Q[2]),
-        .I3(Q[3]),
-        .I4(\current_state_reg[2]_2 ),
-        .I5(\current_state_reg[2]_3 ),
-        .O(\current_state_reg[2] ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFDFDFDFF)) 
-    \current_state[2]_i_2 
-       (.I0(Q[0]),
-        .I1(Q[1]),
+    .INIT(64'hCCDDCCCCCCDDFCCC)) 
+    \current_state[2]_i_3 
+       (.I0(\current_state[2]_i_5_n_0 ),
+        .I1(\current_state_reg[2] ),
         .I2(\current_state_reg[2]_0 ),
+        .I3(Q[1]),
+        .I4(Q[0]),
+        .I5(\current_state_reg[2]_1 ),
+        .O(\current_state_reg[1] ));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFA8A8A8FF)) 
+    \current_state[2]_i_5 
+       (.I0(\current_state_reg[0]_1 ),
+        .I1(\current_state[2]_i_3_0 [0]),
+        .I2(\current_state[2]_i_3_0 [1]),
         .I3(sw_trigger_pending),
         .I4(rd_avail_2_reg_n_0),
-        .I5(\current_state_reg[2]_4 ),
-        .O(\current_state[2]_i_2_n_0 ));
-  MUXF7 \current_state_reg[0]_i_4 
-       (.I0(\current_state_reg[0]_1 ),
-        .I1(\current_state[0]_i_11_n_0 ),
-        .O(\current_state_reg[0] ),
-        .S(Q[0]));
+        .I5(\current_state_reg[0]_0 ),
+        .O(\current_state[2]_i_5_n_0 ));
   (* srl_bus_name = "U0/\i_vsm_shifter/i_trigger_manager/i_trigger_fifo/fifo_1_reg[3] " *) 
   (* srl_name = "U0/\i_vsm_shifter/i_trigger_manager/i_trigger_fifo/fifo_1_reg[3][0]_srl4 " *) 
   SRL16E #(
@@ -27021,7 +26820,7 @@ module design_2_dfx_controller_0_0_glb_srl_fifo__parameterized1
     Q,
     S,
     \fifo_2_reg[33]_0 ,
-    \fifo_2_reg[1]_1 ,
+    \fifo_2_reg[18]_0 ,
     D,
     O,
     \fifo_2_reg[9]_0 ,
@@ -27058,7 +26857,7 @@ module design_2_dfx_controller_0_0_glb_srl_fifo__parameterized1
   output [10:0]Q;
   output [1:0]S;
   output \fifo_2_reg[33]_0 ;
-  output \fifo_2_reg[1]_1 ;
+  output \fifo_2_reg[18]_0 ;
   output [8:0]D;
   output [3:0]O;
   output [3:0]\fifo_2_reg[9]_0 ;
@@ -27092,7 +26891,7 @@ module design_2_dfx_controller_0_0_glb_srl_fifo__parameterized1
 
   wire [0:0]CO;
   wire [8:0]D;
-  wire \FSM_sequential_b_fsm.fsm_cs[2]_i_10_n_0 ;
+  wire \FSM_sequential_b_fsm.fsm_cs[2]_i_14_n_0 ;
   wire \FSM_sequential_b_fsm.fsm_cs[2]_i_15_n_0 ;
   wire \FSM_sequential_b_fsm.fsm_cs[2]_i_16_n_0 ;
   wire \FSM_sequential_b_fsm.fsm_cs[2]_i_17_n_0 ;
@@ -27104,9 +26903,9 @@ module design_2_dfx_controller_0_0_glb_srl_fifo__parameterized1
   wire [3:0]O;
   wire [10:0]Q;
   wire [1:0]S;
-  wire \add_1[0]_i_1_n_0 ;
-  wire \add_1[1]_i_1_n_0 ;
-  wire \add_1[2]_i_1__0_n_0 ;
+  wire \add_1[0]_i_1__0_n_0 ;
+  wire \add_1[1]_i_1__0_n_0 ;
+  wire \add_1[2]_i_1_n_0 ;
   wire \add_1[2]_i_2_n_0 ;
   wire \add_1_reg_n_0_[0] ;
   wire \add_1_reg_n_0_[1] ;
@@ -27243,8 +27042,8 @@ module design_2_dfx_controller_0_0_glb_srl_fifo__parameterized1
   wire \fifo_1_reg[3][9]_srl4_n_0 ;
   wire [3:0]\fifo_2_reg[13]_0 ;
   wire [3:0]\fifo_2_reg[17]_0 ;
+  wire \fifo_2_reg[18]_0 ;
   wire \fifo_2_reg[1]_0 ;
-  wire \fifo_2_reg[1]_1 ;
   wire [3:0]\fifo_2_reg[21]_0 ;
   wire \fifo_2_reg[33]_0 ;
   wire [3:0]\fifo_2_reg[61]_0 ;
@@ -27350,112 +27149,112 @@ module design_2_dfx_controller_0_0_glb_srl_fifo__parameterized1
   wire [3:3]\NLW_dma_addr_reg[29]_i_1_O_UNCONNECTED ;
 
   assign v_dma_size_reg_4_sn_1 = v_dma_size_reg_4_sp_1;
-  LUT5 #(
-    .INIT(32'hFFFFFFFE)) 
-    \FSM_sequential_b_fsm.fsm_cs[2]_i_10 
-       (.I0(rd_data[11]),
-        .I1(rd_data[12]),
-        .I2(rd_data[14]),
-        .I3(Q[3]),
-        .I4(\FSM_sequential_b_fsm.fsm_cs[2]_i_18_n_0 ),
-        .O(\FSM_sequential_b_fsm.fsm_cs[2]_i_10_n_0 ));
+  LUT4 #(
+    .INIT(16'hFFFE)) 
+    \FSM_sequential_b_fsm.fsm_cs[2]_i_14 
+       (.I0(rd_data[20]),
+        .I1(rd_data[14]),
+        .I2(Q[0]),
+        .I3(rd_data[2]),
+        .O(\FSM_sequential_b_fsm.fsm_cs[2]_i_14_n_0 ));
   LUT4 #(
     .INIT(16'hFFFE)) 
     \FSM_sequential_b_fsm.fsm_cs[2]_i_15 
-       (.I0(rd_data[15]),
-        .I1(Q[0]),
-        .I2(Q[8]),
-        .I3(Q[6]),
+       (.I0(Q[6]),
+        .I1(rd_data[22]),
+        .I2(rd_data[17]),
+        .I3(rd_data[16]),
         .O(\FSM_sequential_b_fsm.fsm_cs[2]_i_15_n_0 ));
   LUT4 #(
     .INIT(16'hFFFE)) 
     \FSM_sequential_b_fsm.fsm_cs[2]_i_16 
-       (.I0(Q[4]),
-        .I1(rd_data[23]),
-        .I2(rd_data[9]),
-        .I3(rd_data[6]),
+       (.I0(rd_data[21]),
+        .I1(rd_data[7]),
+        .I2(rd_data[6]),
+        .I3(rd_data[4]),
         .O(\FSM_sequential_b_fsm.fsm_cs[2]_i_16_n_0 ));
   LUT4 #(
     .INIT(16'hFFFE)) 
     \FSM_sequential_b_fsm.fsm_cs[2]_i_17 
-       (.I0(Q[5]),
-        .I1(rd_data[18]),
+       (.I0(rd_data[9]),
+        .I1(rd_data[5]),
         .I2(Q[7]),
-        .I3(rd_data[7]),
+        .I3(rd_data[13]),
         .O(\FSM_sequential_b_fsm.fsm_cs[2]_i_17_n_0 ));
   LUT4 #(
     .INIT(16'hFFFE)) 
     \FSM_sequential_b_fsm.fsm_cs[2]_i_18 
-       (.I0(rd_data[16]),
-        .I1(rd_data[10]),
-        .I2(rd_data[22]),
-        .I3(rd_data[2]),
+       (.I0(Q[4]),
+        .I1(Q[1]),
+        .I2(Q[5]),
+        .I3(Q[2]),
         .O(\FSM_sequential_b_fsm.fsm_cs[2]_i_18_n_0 ));
   LUT5 #(
-    .INIT(32'h00000010)) 
+    .INIT(32'h00000004)) 
     \FSM_sequential_b_fsm.fsm_cs[2]_i_3 
-       (.I0(\FSM_sequential_b_fsm.fsm_cs[2]_i_7_n_0 ),
-        .I1(\FSM_sequential_b_fsm.fsm_cs[2]_i_8_n_0 ),
-        .I2(id_fifo_write),
-        .I3(\FSM_sequential_b_fsm.fsm_cs[2]_i_9_n_0 ),
-        .I4(\FSM_sequential_b_fsm.fsm_cs[2]_i_10_n_0 ),
-        .O(\fifo_2_reg[1]_1 ));
-  LUT5 #(
-    .INIT(32'hFFFFFFFE)) 
+       (.I0(rd_data[18]),
+        .I1(id_fifo_write),
+        .I2(\FSM_sequential_b_fsm.fsm_cs[2]_i_7_n_0 ),
+        .I3(\FSM_sequential_b_fsm.fsm_cs[2]_i_8_n_0 ),
+        .I4(\FSM_sequential_b_fsm.fsm_cs[2]_i_9_n_0 ),
+        .O(\fifo_2_reg[18]_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFFFFFE)) 
     \FSM_sequential_b_fsm.fsm_cs[2]_i_7 
-       (.I0(rd_data[1]),
-        .I1(rd_data[8]),
-        .I2(rd_data[4]),
-        .I3(rd_data[5]),
-        .I4(\FSM_sequential_b_fsm.fsm_cs[2]_i_15_n_0 ),
+       (.I0(\FSM_sequential_b_fsm.fsm_cs[2]_i_14_n_0 ),
+        .I1(\FSM_sequential_b_fsm.fsm_cs[2]_i_15_n_0 ),
+        .I2(rd_data[19]),
+        .I3(rd_data[15]),
+        .I4(rd_data[8]),
+        .I5(\FSM_sequential_b_fsm.fsm_cs[2]_i_16_n_0 ),
         .O(\FSM_sequential_b_fsm.fsm_cs[2]_i_7_n_0 ));
   LUT5 #(
     .INIT(32'hFFFFFFFE)) 
     \FSM_sequential_b_fsm.fsm_cs[2]_i_8 
-       (.I0(rd_data[20]),
-        .I1(rd_data[21]),
-        .I2(Q[1]),
-        .I3(Q[9]),
-        .I4(\FSM_sequential_b_fsm.fsm_cs[2]_i_16_n_0 ),
+       (.I0(rd_data[23]),
+        .I1(Q[9]),
+        .I2(rd_data[1]),
+        .I3(Q[8]),
+        .I4(\FSM_sequential_b_fsm.fsm_cs[2]_i_17_n_0 ),
         .O(\FSM_sequential_b_fsm.fsm_cs[2]_i_8_n_0 ));
   LUT5 #(
     .INIT(32'hFFFFFFFE)) 
     \FSM_sequential_b_fsm.fsm_cs[2]_i_9 
-       (.I0(rd_data[13]),
-        .I1(rd_data[17]),
-        .I2(rd_data[19]),
-        .I3(Q[2]),
-        .I4(\FSM_sequential_b_fsm.fsm_cs[2]_i_17_n_0 ),
+       (.I0(rd_data[10]),
+        .I1(rd_data[12]),
+        .I2(rd_data[11]),
+        .I3(Q[3]),
+        .I4(\FSM_sequential_b_fsm.fsm_cs[2]_i_18_n_0 ),
         .O(\FSM_sequential_b_fsm.fsm_cs[2]_i_9_n_0 ));
   LUT5 #(
     .INIT(32'h666A9995)) 
-    \add_1[0]_i_1 
+    \add_1[0]_i_1__0 
        (.I0(\add_1[2]_i_2_n_0 ),
         .I1(not_full),
         .I2(vsm_shifter_fetch_req),
         .I3(reqs_stored),
         .I4(\add_1_reg_n_0_[0] ),
-        .O(\add_1[0]_i_1_n_0 ));
+        .O(\add_1[0]_i_1__0_n_0 ));
   LUT6 #(
     .INIT(64'h777EEEEE88811111)) 
-    \add_1[1]_i_1 
+    \add_1[1]_i_1__0 
        (.I0(\add_1[2]_i_2_n_0 ),
         .I1(\add_1_reg_n_0_[0] ),
         .I2(reqs_stored),
         .I3(vsm_shifter_fetch_req),
         .I4(not_full),
         .I5(\add_1_reg_n_0_[1] ),
-        .O(\add_1[1]_i_1_n_0 ));
+        .O(\add_1[1]_i_1__0_n_0 ));
   LUT5 #(
     .INIT(32'h6AAAAAA9)) 
-    \add_1[2]_i_1__0 
+    \add_1[2]_i_1 
        (.I0(\add_1_reg_n_0_[2] ),
         .I1(\add_1[2]_i_2_n_0 ),
         .I2(\add_1_reg_n_0_[0] ),
         .I3(fifo_write),
         .I4(\add_1_reg_n_0_[1] ),
-        .O(\add_1[2]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair136" *) 
+        .O(\add_1[2]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair135" *) 
   LUT5 #(
     .INIT(32'hFFFBFFFF)) 
     \add_1[2]_i_2 
@@ -27474,7 +27273,7 @@ module design_2_dfx_controller_0_0_glb_srl_fifo__parameterized1
     \add_1_reg[0] 
        (.C(clk),
         .CE(1'b1),
-        .D(\add_1[0]_i_1_n_0 ),
+        .D(\add_1[0]_i_1__0_n_0 ),
         .Q(\add_1_reg_n_0_[0] ),
         .S(reset_ah));
   (* register_duplication = "no" *) 
@@ -27486,7 +27285,7 @@ module design_2_dfx_controller_0_0_glb_srl_fifo__parameterized1
     \add_1_reg[1] 
        (.C(clk),
         .CE(1'b1),
-        .D(\add_1[1]_i_1_n_0 ),
+        .D(\add_1[1]_i_1__0_n_0 ),
         .Q(\add_1_reg_n_0_[1] ),
         .S(reset_ah));
   (* register_duplication = "no" *) 
@@ -27498,7 +27297,7 @@ module design_2_dfx_controller_0_0_glb_srl_fifo__parameterized1
     \add_1_reg[2] 
        (.C(clk),
         .CE(1'b1),
-        .D(\add_1[2]_i_1__0_n_0 ),
+        .D(\add_1[2]_i_1_n_0 ),
         .Q(\add_1_reg_n_0_[2] ),
         .S(reset_ah));
   LUT3 #(
@@ -29228,7 +29027,7 @@ module design_2_dfx_controller_0_0_glb_srl_fifo__parameterized1
         .D(not_full_1_i_1__2_n_0),
         .Q(not_full),
         .S(reset_ah));
-  (* SOFT_HLUTNM = "soft_lutpair136" *) 
+  (* SOFT_HLUTNM = "soft_lutpair135" *) 
   LUT1 #(
     .INIT(2'h1)) 
     rd_avail_2_i_1__0
@@ -29244,7 +29043,7 @@ module design_2_dfx_controller_0_0_glb_srl_fifo__parameterized1
         .D(GLB_if),
         .Q(rd_avail),
         .R(reset_ah));
-  (* SOFT_HLUTNM = "soft_lutpair141" *) 
+  (* SOFT_HLUTNM = "soft_lutpair140" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \upper_segment[0]_i_1 
@@ -29252,7 +29051,7 @@ module design_2_dfx_controller_0_0_glb_srl_fifo__parameterized1
         .I1(id_fifo_write),
         .I2(v_dma_size[0]),
         .O(D[0]));
-  (* SOFT_HLUTNM = "soft_lutpair140" *) 
+  (* SOFT_HLUTNM = "soft_lutpair139" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \upper_segment[1]_i_1 
@@ -29260,7 +29059,7 @@ module design_2_dfx_controller_0_0_glb_srl_fifo__parameterized1
         .I1(id_fifo_write),
         .I2(v_dma_size[1]),
         .O(D[1]));
-  (* SOFT_HLUTNM = "soft_lutpair140" *) 
+  (* SOFT_HLUTNM = "soft_lutpair139" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \upper_segment[2]_i_1 
@@ -29268,7 +29067,7 @@ module design_2_dfx_controller_0_0_glb_srl_fifo__parameterized1
         .I1(id_fifo_write),
         .I2(v_dma_size[2]),
         .O(D[2]));
-  (* SOFT_HLUTNM = "soft_lutpair138" *) 
+  (* SOFT_HLUTNM = "soft_lutpair137" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \upper_segment[3]_i_1 
@@ -29276,7 +29075,7 @@ module design_2_dfx_controller_0_0_glb_srl_fifo__parameterized1
         .I1(id_fifo_write),
         .I2(v_dma_size[3]),
         .O(D[3]));
-  (* SOFT_HLUTNM = "soft_lutpair139" *) 
+  (* SOFT_HLUTNM = "soft_lutpair138" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \upper_segment[4]_i_1 
@@ -29284,7 +29083,7 @@ module design_2_dfx_controller_0_0_glb_srl_fifo__parameterized1
         .I1(id_fifo_write),
         .I2(v_dma_size[4]),
         .O(D[4]));
-  (* SOFT_HLUTNM = "soft_lutpair139" *) 
+  (* SOFT_HLUTNM = "soft_lutpair138" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \upper_segment[5]_i_1 
@@ -29292,7 +29091,7 @@ module design_2_dfx_controller_0_0_glb_srl_fifo__parameterized1
         .I1(id_fifo_write),
         .I2(v_dma_size[5]),
         .O(D[5]));
-  (* SOFT_HLUTNM = "soft_lutpair138" *) 
+  (* SOFT_HLUTNM = "soft_lutpair137" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \upper_segment[6]_i_1 
@@ -29300,7 +29099,7 @@ module design_2_dfx_controller_0_0_glb_srl_fifo__parameterized1
         .I1(id_fifo_write),
         .I2(v_dma_size[6]),
         .O(D[6]));
-  (* SOFT_HLUTNM = "soft_lutpair137" *) 
+  (* SOFT_HLUTNM = "soft_lutpair136" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \upper_segment[7]_i_1 
@@ -29308,7 +29107,7 @@ module design_2_dfx_controller_0_0_glb_srl_fifo__parameterized1
         .I1(id_fifo_write),
         .I2(v_dma_size[7]),
         .O(D[7]));
-  (* SOFT_HLUTNM = "soft_lutpair137" *) 
+  (* SOFT_HLUTNM = "soft_lutpair136" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \upper_segment[8]_i_1 
@@ -29316,7 +29115,7 @@ module design_2_dfx_controller_0_0_glb_srl_fifo__parameterized1
         .I1(id_fifo_write),
         .I2(v_dma_size[8]),
         .O(D[8]));
-  (* SOFT_HLUTNM = "soft_lutpair141" *) 
+  (* SOFT_HLUTNM = "soft_lutpair140" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \v_dma_size[0]_i_1 
@@ -29588,7 +29387,7 @@ module design_2_dfx_controller_0_0_glb_srl_fifo__parameterized3
 
   wire \FSM_sequential_b_fsm.fsm_cs[0]_i_2_n_0 ;
   wire \FSM_sequential_b_fsm.fsm_cs[1]_i_2_n_0 ;
-  wire \FSM_sequential_b_fsm.fsm_cs[2]_i_12_n_0 ;
+  wire \FSM_sequential_b_fsm.fsm_cs[2]_i_11_n_0 ;
   wire \FSM_sequential_b_fsm.fsm_cs[2]_i_2_n_0 ;
   wire \FSM_sequential_b_fsm.fsm_cs[2]_i_6_n_0 ;
   wire \FSM_sequential_b_fsm.fsm_cs_reg[0] ;
@@ -29602,11 +29401,11 @@ module design_2_dfx_controller_0_0_glb_srl_fifo__parameterized3
   wire \FSM_sequential_b_fsm.fsm_cs_reg[2]_3 ;
   wire GLB_if;
   wire [0:0]Q;
-  wire \add_1[0]_i_1__0_n_0 ;
-  wire \add_1[1]_i_1__0_n_0 ;
-  wire \add_1[2]_i_1__1_n_0 ;
+  wire \add_1[0]_i_1__1_n_0 ;
+  wire \add_1[1]_i_1__1_n_0 ;
+  wire \add_1[2]_i_1__0_n_0 ;
   wire \add_1[3]_i_1_n_0 ;
-  wire \add_1[3]_i_2__0_n_0 ;
+  wire \add_1[3]_i_2_n_0 ;
   wire \add_1_reg_n_0_[0] ;
   wire \add_1_reg_n_0_[1] ;
   wire \add_1_reg_n_0_[2] ;
@@ -29698,13 +29497,13 @@ module design_2_dfx_controller_0_0_glb_srl_fifo__parameterized3
         .O(\FSM_sequential_b_fsm.fsm_cs_reg[2] ));
   LUT5 #(
     .INIT(32'hFEEEAAAA)) 
-    \FSM_sequential_b_fsm.fsm_cs[2]_i_12 
+    \FSM_sequential_b_fsm.fsm_cs[2]_i_11 
        (.I0(fsm_cs[2]),
         .I1(fsm_cs[1]),
         .I2(id_fifo_not_full),
         .I3(rd_avail),
         .I4(fsm_cs[0]),
-        .O(\FSM_sequential_b_fsm.fsm_cs[2]_i_12_n_0 ));
+        .O(\FSM_sequential_b_fsm.fsm_cs[2]_i_11_n_0 ));
   LUT4 #(
     .INIT(16'h04FF)) 
     \FSM_sequential_b_fsm.fsm_cs[2]_i_2 
@@ -29719,56 +29518,56 @@ module design_2_dfx_controller_0_0_glb_srl_fifo__parameterized3
        (.I0(\FSM_sequential_b_fsm.fsm_cs[2]_i_2_n_0 ),
         .I1(\FSM_sequential_b_fsm.fsm_cs_reg[0]_0 ),
         .I2(upper_segment_is_zero),
-        .I3(\FSM_sequential_b_fsm.fsm_cs[2]_i_12_n_0 ),
+        .I3(\FSM_sequential_b_fsm.fsm_cs[2]_i_11_n_0 ),
         .I4(\FSM_sequential_b_fsm.fsm_cs_reg[0]_1 ),
         .I5(\FSM_sequential_b_fsm.fsm_cs_reg[0]_2 ),
         .O(\FSM_sequential_b_fsm.fsm_cs[2]_i_6_n_0 ));
   LUT3 #(
     .INIT(8'h96)) 
-    \add_1[0]_i_1__0 
-       (.I0(\add_1[3]_i_2__0_n_0 ),
+    \add_1[0]_i_1__1 
+       (.I0(\add_1[3]_i_2_n_0 ),
         .I1(id_fifo_write),
         .I2(\add_1_reg_n_0_[0] ),
-        .O(\add_1[0]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair133" *) 
+        .O(\add_1[0]_i_1__1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair132" *) 
   LUT4 #(
     .INIT(16'hA69A)) 
-    \add_1[1]_i_1__0 
+    \add_1[1]_i_1__1 
        (.I0(\add_1_reg_n_0_[1] ),
         .I1(\add_1_reg_n_0_[0] ),
-        .I2(\add_1[3]_i_2__0_n_0 ),
+        .I2(\add_1[3]_i_2_n_0 ),
         .I3(id_fifo_write),
-        .O(\add_1[1]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair133" *) 
+        .O(\add_1[1]_i_1__1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair132" *) 
   LUT5 #(
     .INIT(32'hDF20FB04)) 
-    \add_1[2]_i_1__1 
+    \add_1[2]_i_1__0 
        (.I0(\add_1_reg_n_0_[0] ),
-        .I1(\add_1[3]_i_2__0_n_0 ),
+        .I1(\add_1[3]_i_2_n_0 ),
         .I2(id_fifo_write),
         .I3(\add_1_reg_n_0_[2] ),
         .I4(\add_1_reg_n_0_[1] ),
-        .O(\add_1[2]_i_1__1_n_0 ));
+        .O(\add_1[2]_i_1__0_n_0 ));
   LUT6 #(
     .INIT(64'hAA6AAAAAAAAAA9AA)) 
     \add_1[3]_i_1 
        (.I0(empty),
         .I1(\add_1_reg_n_0_[2] ),
         .I2(\add_1_reg_n_0_[1] ),
-        .I3(\add_1[3]_i_2__0_n_0 ),
+        .I3(\add_1[3]_i_2_n_0 ),
         .I4(id_fifo_write),
         .I5(\add_1_reg_n_0_[0] ),
         .O(\add_1[3]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'h4444444400400000)) 
-    \add_1[3]_i_2__0 
+    \add_1[3]_i_2 
        (.I0(empty),
         .I1(ids_avail),
         .I2(fsm_cs[0]),
         .I3(fsm_cs[2]),
         .I4(fsm_cs[1]),
         .I5(id_fifo_read_d1_reg),
-        .O(\add_1[3]_i_2__0_n_0 ));
+        .O(\add_1[3]_i_2_n_0 ));
   (* register_duplication = "no" *) 
   (* use_carry_chain = "yes" *) 
   (* use_clock_enable = "no" *) 
@@ -29778,7 +29577,7 @@ module design_2_dfx_controller_0_0_glb_srl_fifo__parameterized3
     \add_1_reg[0] 
        (.C(clk),
         .CE(1'b1),
-        .D(\add_1[0]_i_1__0_n_0 ),
+        .D(\add_1[0]_i_1__1_n_0 ),
         .Q(\add_1_reg_n_0_[0] ),
         .S(reset_ah));
   (* register_duplication = "no" *) 
@@ -29790,7 +29589,7 @@ module design_2_dfx_controller_0_0_glb_srl_fifo__parameterized3
     \add_1_reg[1] 
        (.C(clk),
         .CE(1'b1),
-        .D(\add_1[1]_i_1__0_n_0 ),
+        .D(\add_1[1]_i_1__1_n_0 ),
         .Q(\add_1_reg_n_0_[1] ),
         .S(reset_ah));
   (* register_duplication = "no" *) 
@@ -29802,7 +29601,7 @@ module design_2_dfx_controller_0_0_glb_srl_fifo__parameterized3
     \add_1_reg[2] 
        (.C(clk),
         .CE(1'b1),
-        .D(\add_1[2]_i_1__1_n_0 ),
+        .D(\add_1[2]_i_1__0_n_0 ),
         .Q(\add_1_reg_n_0_[2] ),
         .S(reset_ah));
   (* register_duplication = "no" *) 
@@ -29820,7 +29619,7 @@ module design_2_dfx_controller_0_0_glb_srl_fifo__parameterized3
   LUT6 #(
     .INIT(64'hFFFFFFFB00000020)) 
     aempty_1_i_1
-       (.I0(\add_1[3]_i_2__0_n_0 ),
+       (.I0(\add_1[3]_i_2_n_0 ),
         .I1(id_fifo_write),
         .I2(\add_1_reg_n_0_[0] ),
         .I3(\add_1_reg_n_0_[2] ),
@@ -29868,7 +29667,7 @@ module design_2_dfx_controller_0_0_glb_srl_fifo__parameterized3
         .D(\fifo_1_reg[7][1]_srl8_n_0 ),
         .Q(\fifo_2_reg_n_0_[1] ),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair135" *) 
+  (* SOFT_HLUTNM = "soft_lutpair134" *) 
   LUT5 #(
     .INIT(32'hAAAA0800)) 
     id_fifo_read_d1_i_1
@@ -29884,7 +29683,7 @@ module design_2_dfx_controller_0_0_glb_srl_fifo__parameterized3
        (.I0(\add_1_reg_n_0_[2] ),
         .I1(\add_1_reg_n_0_[1] ),
         .I2(\add_1_reg_n_0_[0] ),
-        .I3(\add_1[3]_i_2__0_n_0 ),
+        .I3(\add_1[3]_i_2_n_0 ),
         .I4(id_fifo_write),
         .I5(id_fifo_not_full),
         .O(not_full_1_i_1__0_n_0));
@@ -29909,7 +29708,7 @@ module design_2_dfx_controller_0_0_glb_srl_fifo__parameterized3
         .I4(recheck_id_reg_source_reg_0),
         .I5(aempty),
         .O(id_fifo_read_d2_reg));
-  (* SOFT_HLUTNM = "soft_lutpair132" *) 
+  (* SOFT_HLUTNM = "soft_lutpair131" *) 
   LUT5 #(
     .INIT(32'h0000BF00)) 
     one_word_bs_detected_i_2
@@ -29919,7 +29718,7 @@ module design_2_dfx_controller_0_0_glb_srl_fifo__parameterized3
         .I3(one_word_bs_detected_reg_0),
         .I4(recheck_id_reg_source_reg_0),
         .O(one_word_bs_detected_i_2_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair135" *) 
+  (* SOFT_HLUTNM = "soft_lutpair134" *) 
   LUT5 #(
     .INIT(32'h5155FFFF)) 
     one_word_bs_detected_i_3
@@ -29929,7 +29728,7 @@ module design_2_dfx_controller_0_0_glb_srl_fifo__parameterized3
         .I3(fsm_cs[0]),
         .I4(ids_avail),
         .O(one_word_bs_detected_i_3_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair134" *) 
+  (* SOFT_HLUTNM = "soft_lutpair133" *) 
   LUT1 #(
     .INIT(2'h1)) 
     rd_avail_2_i_1__1
@@ -29945,7 +29744,7 @@ module design_2_dfx_controller_0_0_glb_srl_fifo__parameterized3
         .D(GLB_if),
         .Q(ids_avail),
         .R(reset_ah));
-  (* SOFT_HLUTNM = "soft_lutpair132" *) 
+  (* SOFT_HLUTNM = "soft_lutpair131" *) 
   LUT4 #(
     .INIT(16'h0800)) 
     recheck_id_reg_source_i_1
@@ -29964,7 +29763,7 @@ module design_2_dfx_controller_0_0_glb_srl_fifo__parameterized3
         .I4(two_word_bs_detected_i_2_n_0),
         .I5(\rm_id_o_reg[0] ),
         .O(\fifo_2_reg[66] ));
-  (* SOFT_HLUTNM = "soft_lutpair134" *) 
+  (* SOFT_HLUTNM = "soft_lutpair133" *) 
   LUT5 #(
     .INIT(32'hFF40C040)) 
     \rm_id_o[0]_i_2 
@@ -29996,8 +29795,8 @@ endmodule
 module design_2_dfx_controller_0_0_glb_srl_fifo__parameterized5
    (cmd_avail,
     cmd_fifo_not_full,
-    E,
     \FSM_sequential_b_fsm.fsm_cs_reg[0] ,
+    E,
     DI,
     \FSM_sequential_b_fsm.fsm_cs_reg[1] ,
     upper_segment_is_zero,
@@ -30021,8 +29820,8 @@ module design_2_dfx_controller_0_0_glb_srl_fifo__parameterized5
     in);
   output cmd_avail;
   output cmd_fifo_not_full;
-  output [0:0]E;
   output \FSM_sequential_b_fsm.fsm_cs_reg[0] ;
+  output [0:0]E;
   output [0:0]DI;
   output \FSM_sequential_b_fsm.fsm_cs_reg[1] ;
   output upper_segment_is_zero;
@@ -30059,12 +29858,10 @@ module design_2_dfx_controller_0_0_glb_srl_fifo__parameterized5
   wire [1:0]S;
   wire \add_1[0]_i_1__2_n_0 ;
   wire \add_1[1]_i_1__2_n_0 ;
-  wire \add_1[2]_i_1__2_n_0 ;
+  wire \add_1[2]_i_1__1_n_0 ;
   wire \add_1[3]_i_1__0_n_0 ;
-  wire \add_1[3]_i_2_n_0 ;
   wire \add_1[4]_i_1_n_0 ;
   wire \add_1[4]_i_2_n_0 ;
-  wire \add_1[4]_i_3_n_0 ;
   wire \add_1_reg_n_0_[0] ;
   wire \add_1_reg_n_0_[1] ;
   wire \add_1_reg_n_0_[2] ;
@@ -30136,6 +29933,7 @@ module design_2_dfx_controller_0_0_glb_srl_fifo__parameterized5
   wire [31:0]in;
   wire not_full_1_i_1__1_n_0;
   wire not_full_1_i_2_n_0;
+  wire not_full_1_i_3_n_0;
   wire reset_ah;
   wire s_axis_mm2s_cmd_tready;
   wire upper_segment_is_zero;
@@ -30168,12 +29966,11 @@ module design_2_dfx_controller_0_0_glb_srl_fifo__parameterized5
 
   LUT3 #(
     .INIT(8'hDF)) 
-    \FSM_sequential_b_fsm.fsm_cs[2]_i_11 
+    \FSM_sequential_b_fsm.fsm_cs[2]_i_10 
        (.I0(fsm_cs[1]),
         .I1(fsm_cs[2]),
         .I2(cmd_fifo_not_full),
         .O(\FSM_sequential_b_fsm.fsm_cs_reg[1] ));
-  (* SOFT_HLUTNM = "soft_lutpair77" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \USE_SINGLE_REG.sig_regfifo_dout_reg[63]_i_1 
@@ -30194,70 +29991,51 @@ module design_2_dfx_controller_0_0_glb_srl_fifo__parameterized5
     .INIT(64'h6666A666AAAA9AAA)) 
     \add_1[1]_i_1__2 
        (.I0(\add_1_reg_n_0_[1] ),
-        .I1(\FSM_sequential_b_fsm.fsm_cs_reg[0] ),
+        .I1(\add_1_reg_n_0_[0] ),
         .I2(s_axis_mm2s_cmd_tready),
         .I3(cmd_avail),
         .I4(\add_1_reg_n_0_[4] ),
-        .I5(\add_1_reg_n_0_[0] ),
+        .I5(\FSM_sequential_b_fsm.fsm_cs_reg[0] ),
         .O(\add_1[1]_i_1__2_n_0 ));
   LUT6 #(
-    .INIT(64'h75FFFFEF8A000010)) 
-    \add_1[2]_i_1__2 
+    .INIT(64'h77F7FFEF88080010)) 
+    \add_1[2]_i_1__1 
        (.I0(\add_1_reg_n_0_[0] ),
-        .I1(\add_1_reg_n_0_[4] ),
+        .I1(\FSM_sequential_b_fsm.fsm_cs_reg[0] ),
         .I2(E),
-        .I3(\FSM_sequential_b_fsm.fsm_cs_reg[0] ),
+        .I3(\add_1_reg_n_0_[4] ),
         .I4(\add_1_reg_n_0_[1] ),
         .I5(\add_1_reg_n_0_[2] ),
-        .O(\add_1[2]_i_1__2_n_0 ));
-  LUT6 #(
-    .INIT(64'hAAAA6AAAAAA9AAAA)) 
+        .O(\add_1[2]_i_1__1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair75" *) 
+  LUT4 #(
+    .INIT(16'h9AA6)) 
     \add_1[3]_i_1__0 
        (.I0(\add_1_reg_n_0_[3] ),
-        .I1(\add_1_reg_n_0_[1] ),
-        .I2(\add_1_reg_n_0_[2] ),
-        .I3(\add_1_reg_n_0_[0] ),
-        .I4(\add_1[3]_i_2_n_0 ),
-        .I5(\FSM_sequential_b_fsm.fsm_cs_reg[0] ),
+        .I1(\add_1[4]_i_2_n_0 ),
+        .I2(\add_1_reg_n_0_[1] ),
+        .I3(\add_1_reg_n_0_[2] ),
         .O(\add_1[3]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair77" *) 
-  LUT3 #(
-    .INIT(8'h08)) 
-    \add_1[3]_i_2 
-       (.I0(s_axis_mm2s_cmd_tready),
-        .I1(cmd_avail),
-        .I2(\add_1_reg_n_0_[4] ),
-        .O(\add_1[3]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'hAAAAA9AA6A6AA9AA)) 
+  (* SOFT_HLUTNM = "soft_lutpair75" *) 
+  LUT5 #(
+    .INIT(32'h9AAAAAA6)) 
     \add_1[4]_i_1 
        (.I0(\add_1_reg_n_0_[4] ),
-        .I1(\add_1_reg_n_0_[2] ),
-        .I2(\add_1_reg_n_0_[1] ),
-        .I3(\add_1[4]_i_2_n_0 ),
+        .I1(\add_1[4]_i_2_n_0 ),
+        .I2(\add_1_reg_n_0_[2] ),
+        .I3(\add_1_reg_n_0_[1] ),
         .I4(\add_1_reg_n_0_[3] ),
-        .I5(\add_1[4]_i_3_n_0 ),
         .O(\add_1[4]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h55D5FFFF00000040)) 
+    .INIT(64'h2000AAAAAAAABAAA)) 
     \add_1[4]_i_2 
-       (.I0(\FSM_sequential_b_fsm.fsm_cs_reg[0] ),
-        .I1(s_axis_mm2s_cmd_tready),
+       (.I0(\add_1_reg_n_0_[1] ),
+        .I1(\add_1_reg_n_0_[4] ),
         .I2(cmd_avail),
-        .I3(\add_1_reg_n_0_[4] ),
-        .I4(\add_1_reg_n_0_[0] ),
-        .I5(\add_1_reg_n_0_[1] ),
+        .I3(s_axis_mm2s_cmd_tready),
+        .I4(\FSM_sequential_b_fsm.fsm_cs_reg[0] ),
+        .I5(\add_1_reg_n_0_[0] ),
         .O(\add_1[4]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair76" *) 
-  LUT5 #(
-    .INIT(32'h55D5FFFF)) 
-    \add_1[4]_i_3 
-       (.I0(\FSM_sequential_b_fsm.fsm_cs_reg[0] ),
-        .I1(s_axis_mm2s_cmd_tready),
-        .I2(cmd_avail),
-        .I3(\add_1_reg_n_0_[4] ),
-        .I4(\add_1_reg_n_0_[0] ),
-        .O(\add_1[4]_i_3_n_0 ));
   (* register_duplication = "no" *) 
   (* use_carry_chain = "yes" *) 
   (* use_clock_enable = "no" *) 
@@ -30291,7 +30069,7 @@ module design_2_dfx_controller_0_0_glb_srl_fifo__parameterized5
     \add_1_reg[2] 
        (.C(clk),
         .CE(1'b1),
-        .D(\add_1[2]_i_1__2_n_0 ),
+        .D(\add_1[2]_i_1__1_n_0 ),
         .Q(\add_1_reg_n_0_[2] ),
         .S(reset_ah));
   (* register_duplication = "no" *) 
@@ -30358,7 +30136,7 @@ module design_2_dfx_controller_0_0_glb_srl_fifo__parameterized5
         .CLK(clk),
         .D(vector_out[10]),
         .Q(\fifo_1_reg[15][10]_srl16_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair84" *) 
+  (* SOFT_HLUTNM = "soft_lutpair83" *) 
   LUT2 #(
     .INIT(4'hB)) 
     \fifo_1_reg[15][10]_srl16_i_1 
@@ -30378,7 +30156,7 @@ module design_2_dfx_controller_0_0_glb_srl_fifo__parameterized5
         .CLK(clk),
         .D(vector_out[11]),
         .Q(\fifo_1_reg[15][11]_srl16_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair83" *) 
+  (* SOFT_HLUTNM = "soft_lutpair82" *) 
   LUT2 #(
     .INIT(4'hB)) 
     \fifo_1_reg[15][11]_srl16_i_1 
@@ -30398,7 +30176,7 @@ module design_2_dfx_controller_0_0_glb_srl_fifo__parameterized5
         .CLK(clk),
         .D(vector_out[12]),
         .Q(\fifo_1_reg[15][12]_srl16_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair83" *) 
+  (* SOFT_HLUTNM = "soft_lutpair82" *) 
   LUT2 #(
     .INIT(4'hB)) 
     \fifo_1_reg[15][12]_srl16_i_1 
@@ -30418,7 +30196,7 @@ module design_2_dfx_controller_0_0_glb_srl_fifo__parameterized5
         .CLK(clk),
         .D(vector_out[13]),
         .Q(\fifo_1_reg[15][13]_srl16_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair82" *) 
+  (* SOFT_HLUTNM = "soft_lutpair81" *) 
   LUT2 #(
     .INIT(4'hB)) 
     \fifo_1_reg[15][13]_srl16_i_1 
@@ -30438,7 +30216,7 @@ module design_2_dfx_controller_0_0_glb_srl_fifo__parameterized5
         .CLK(clk),
         .D(vector_out[14]),
         .Q(\fifo_1_reg[15][14]_srl16_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair82" *) 
+  (* SOFT_HLUTNM = "soft_lutpair81" *) 
   LUT2 #(
     .INIT(4'hB)) 
     \fifo_1_reg[15][14]_srl16_i_1 
@@ -30458,7 +30236,7 @@ module design_2_dfx_controller_0_0_glb_srl_fifo__parameterized5
         .CLK(clk),
         .D(vector_out[15]),
         .Q(\fifo_1_reg[15][15]_srl16_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair81" *) 
+  (* SOFT_HLUTNM = "soft_lutpair80" *) 
   LUT2 #(
     .INIT(4'hB)) 
     \fifo_1_reg[15][15]_srl16_i_1 
@@ -30478,7 +30256,7 @@ module design_2_dfx_controller_0_0_glb_srl_fifo__parameterized5
         .CLK(clk),
         .D(vector_out[16]),
         .Q(\fifo_1_reg[15][16]_srl16_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair81" *) 
+  (* SOFT_HLUTNM = "soft_lutpair80" *) 
   LUT2 #(
     .INIT(4'hB)) 
     \fifo_1_reg[15][16]_srl16_i_1 
@@ -30498,7 +30276,7 @@ module design_2_dfx_controller_0_0_glb_srl_fifo__parameterized5
         .CLK(clk),
         .D(vector_out[17]),
         .Q(\fifo_1_reg[15][17]_srl16_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair80" *) 
+  (* SOFT_HLUTNM = "soft_lutpair79" *) 
   LUT2 #(
     .INIT(4'hB)) 
     \fifo_1_reg[15][17]_srl16_i_1 
@@ -30518,7 +30296,7 @@ module design_2_dfx_controller_0_0_glb_srl_fifo__parameterized5
         .CLK(clk),
         .D(vector_out[18]),
         .Q(\fifo_1_reg[15][18]_srl16_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair80" *) 
+  (* SOFT_HLUTNM = "soft_lutpair79" *) 
   LUT2 #(
     .INIT(4'hB)) 
     \fifo_1_reg[15][18]_srl16_i_1 
@@ -30538,7 +30316,7 @@ module design_2_dfx_controller_0_0_glb_srl_fifo__parameterized5
         .CLK(clk),
         .D(vector_out[19]),
         .Q(\fifo_1_reg[15][19]_srl16_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair79" *) 
+  (* SOFT_HLUTNM = "soft_lutpair78" *) 
   LUT2 #(
     .INIT(4'hB)) 
     \fifo_1_reg[15][19]_srl16_i_1 
@@ -30558,7 +30336,7 @@ module design_2_dfx_controller_0_0_glb_srl_fifo__parameterized5
         .CLK(clk),
         .D(vector_out[1]),
         .Q(\fifo_1_reg[15][1]_srl16_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair88" *) 
+  (* SOFT_HLUTNM = "soft_lutpair87" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \fifo_1_reg[15][1]_srl16_i_1 
@@ -30578,7 +30356,7 @@ module design_2_dfx_controller_0_0_glb_srl_fifo__parameterized5
         .CLK(clk),
         .D(vector_out[20]),
         .Q(\fifo_1_reg[15][20]_srl16_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair79" *) 
+  (* SOFT_HLUTNM = "soft_lutpair78" *) 
   LUT2 #(
     .INIT(4'hB)) 
     \fifo_1_reg[15][20]_srl16_i_1 
@@ -30598,7 +30376,7 @@ module design_2_dfx_controller_0_0_glb_srl_fifo__parameterized5
         .CLK(clk),
         .D(vector_out[21]),
         .Q(\fifo_1_reg[15][21]_srl16_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair78" *) 
+  (* SOFT_HLUTNM = "soft_lutpair77" *) 
   LUT2 #(
     .INIT(4'hB)) 
     \fifo_1_reg[15][21]_srl16_i_1 
@@ -30618,7 +30396,7 @@ module design_2_dfx_controller_0_0_glb_srl_fifo__parameterized5
         .CLK(clk),
         .D(vector_out[22]),
         .Q(\fifo_1_reg[15][22]_srl16_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair78" *) 
+  (* SOFT_HLUTNM = "soft_lutpair77" *) 
   LUT2 #(
     .INIT(4'hB)) 
     \fifo_1_reg[15][22]_srl16_i_1 
@@ -30747,7 +30525,7 @@ module design_2_dfx_controller_0_0_glb_srl_fifo__parameterized5
         .CLK(clk),
         .D(vector_out[2]),
         .Q(\fifo_1_reg[15][2]_srl16_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair88" *) 
+  (* SOFT_HLUTNM = "soft_lutpair87" *) 
   LUT2 #(
     .INIT(4'hB)) 
     \fifo_1_reg[15][2]_srl16_i_1 
@@ -30897,7 +30675,7 @@ module design_2_dfx_controller_0_0_glb_srl_fifo__parameterized5
         .CLK(clk),
         .D(vector_out[3]),
         .Q(\fifo_1_reg[15][3]_srl16_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair87" *) 
+  (* SOFT_HLUTNM = "soft_lutpair86" *) 
   LUT2 #(
     .INIT(4'hB)) 
     \fifo_1_reg[15][3]_srl16_i_1 
@@ -31047,7 +30825,7 @@ module design_2_dfx_controller_0_0_glb_srl_fifo__parameterized5
         .CLK(clk),
         .D(vector_out[4]),
         .Q(\fifo_1_reg[15][4]_srl16_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair87" *) 
+  (* SOFT_HLUTNM = "soft_lutpair86" *) 
   LUT2 #(
     .INIT(4'hB)) 
     \fifo_1_reg[15][4]_srl16_i_1 
@@ -31145,7 +30923,7 @@ module design_2_dfx_controller_0_0_glb_srl_fifo__parameterized5
         .CLK(clk),
         .D(vector_out[5]),
         .Q(\fifo_1_reg[15][5]_srl16_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair86" *) 
+  (* SOFT_HLUTNM = "soft_lutpair85" *) 
   LUT2 #(
     .INIT(4'hB)) 
     \fifo_1_reg[15][5]_srl16_i_1 
@@ -31165,7 +30943,7 @@ module design_2_dfx_controller_0_0_glb_srl_fifo__parameterized5
         .CLK(clk),
         .D(vector_out[6]),
         .Q(\fifo_1_reg[15][6]_srl16_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair86" *) 
+  (* SOFT_HLUTNM = "soft_lutpair85" *) 
   LUT2 #(
     .INIT(4'hB)) 
     \fifo_1_reg[15][6]_srl16_i_1 
@@ -31185,7 +30963,7 @@ module design_2_dfx_controller_0_0_glb_srl_fifo__parameterized5
         .CLK(clk),
         .D(vector_out[7]),
         .Q(\fifo_1_reg[15][7]_srl16_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair85" *) 
+  (* SOFT_HLUTNM = "soft_lutpair84" *) 
   LUT2 #(
     .INIT(4'hB)) 
     \fifo_1_reg[15][7]_srl16_i_1 
@@ -31205,7 +30983,7 @@ module design_2_dfx_controller_0_0_glb_srl_fifo__parameterized5
         .CLK(clk),
         .D(vector_out[8]),
         .Q(\fifo_1_reg[15][8]_srl16_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair85" *) 
+  (* SOFT_HLUTNM = "soft_lutpair84" *) 
   LUT2 #(
     .INIT(4'hB)) 
     \fifo_1_reg[15][8]_srl16_i_1 
@@ -31225,7 +31003,7 @@ module design_2_dfx_controller_0_0_glb_srl_fifo__parameterized5
         .CLK(clk),
         .D(vector_out[9]),
         .Q(\fifo_1_reg[15][9]_srl16_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair84" *) 
+  (* SOFT_HLUTNM = "soft_lutpair83" *) 
   LUT2 #(
     .INIT(4'hB)) 
     \fifo_1_reg[15][9]_srl16_i_1 
@@ -31686,7 +31464,7 @@ module design_2_dfx_controller_0_0_glb_srl_fifo__parameterized5
        (.I0(not_full_1_i_2_n_0),
         .I1(\add_1_reg_n_0_[3] ),
         .I2(\add_1_reg_n_0_[0] ),
-        .I3(\add_1[3]_i_2_n_0 ),
+        .I3(not_full_1_i_3_n_0),
         .I4(\FSM_sequential_b_fsm.fsm_cs_reg[0] ),
         .I5(cmd_fifo_not_full),
         .O(not_full_1_i_1__1_n_0));
@@ -31696,6 +31474,14 @@ module design_2_dfx_controller_0_0_glb_srl_fifo__parameterized5
        (.I0(\add_1_reg_n_0_[2] ),
         .I1(\add_1_reg_n_0_[1] ),
         .O(not_full_1_i_2_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair76" *) 
+  LUT3 #(
+    .INIT(8'h08)) 
+    not_full_1_i_3
+       (.I0(s_axis_mm2s_cmd_tready),
+        .I1(cmd_avail),
+        .I2(\add_1_reg_n_0_[4] ),
+        .O(not_full_1_i_3_n_0));
   (* register_duplication = "no" *) 
   (* use_clock_enable = "no" *) 
   (* use_sync_reset = "no" *) 
@@ -31866,57 +31652,52 @@ endmodule
 (* ORIG_REF_NAME = "trigger_manager" *) 
 module design_2_dfx_controller_0_0_trigger_manager
    (reset_0,
-    \current_state_reg[0] ,
-    \current_state_reg[0]_0 ,
-    D,
+    \current_state_reg[1] ,
     access_address,
+    \current_state_reg[3] ,
+    shutdown_bit_reg,
     clk,
     ready_for_hw_trigger,
     reset,
-    Q,
-    \current_state_reg[0]_1 ,
     \current_state_reg[2] ,
-    vsm_shifter_rm_shutdown_ack,
-    \current_state_reg[1] ,
-    \current_state_reg[1]_0 ,
     \current_state_reg[2]_0 ,
+    Q,
     \current_state_reg[2]_1 ,
-    \current_state_reg[2]_2 ,
     sw_trigger_id,
     sw_trigger_pending,
     start_fetching_all,
     \b_trigger_table.gen_address_reg.access_address_del_reg[0] ,
-    \current_state_reg[2]_3 ,
+    \current_state_reg[1]_0 ,
     vsm_shifter_hw_triggers,
+    \current_state_reg[0] ,
+    \current_state_reg[0]_0 ,
+    \current_state_reg[0]_1 ,
     \current_state[1]_i_4 ,
-    \current_state[0]_i_11 );
+    \current_state[2]_i_3 );
   output reset_0;
-  output \current_state_reg[0] ;
-  output \current_state_reg[0]_0 ;
-  output [0:0]D;
+  output \current_state_reg[1] ;
   output access_address;
+  output \current_state_reg[3] ;
+  output shutdown_bit_reg;
   input clk;
   input ready_for_hw_trigger;
   input reset;
-  input [3:0]Q;
-  input \current_state_reg[0]_1 ;
   input \current_state_reg[2] ;
-  input vsm_shifter_rm_shutdown_ack;
-  input \current_state_reg[1] ;
-  input \current_state_reg[1]_0 ;
   input \current_state_reg[2]_0 ;
+  input [3:0]Q;
   input \current_state_reg[2]_1 ;
-  input \current_state_reg[2]_2 ;
   input sw_trigger_id;
   input sw_trigger_pending;
   input start_fetching_all;
   input \b_trigger_table.gen_address_reg.access_address_del_reg[0] ;
-  input \current_state_reg[2]_3 ;
+  input \current_state_reg[1]_0 ;
   input [1:0]vsm_shifter_hw_triggers;
+  input \current_state_reg[0] ;
+  input \current_state_reg[0]_0 ;
+  input \current_state_reg[0]_1 ;
   input \current_state[1]_i_4 ;
-  input [1:0]\current_state[0]_i_11 ;
+  input [1:0]\current_state[2]_i_3 ;
 
-  wire [0:0]D;
   wire [3:0]Q;
   wire a;
   wire access_address;
@@ -31926,8 +31707,8 @@ module design_2_dfx_controller_0_0_trigger_manager
   wire \b_trigger_table.gen_address_reg.access_address_del_reg[0] ;
   wire clk;
   wire [1:0]current_state;
-  wire [1:0]\current_state[0]_i_11 ;
   wire \current_state[1]_i_4 ;
+  wire [1:0]\current_state[2]_i_3 ;
   wire \current_state_reg[0] ;
   wire \current_state_reg[0]_0 ;
   wire \current_state_reg[0]_1 ;
@@ -31936,8 +31717,7 @@ module design_2_dfx_controller_0_0_trigger_manager
   wire \current_state_reg[2] ;
   wire \current_state_reg[2]_0 ;
   wire \current_state_reg[2]_1 ;
-  wire \current_state_reg[2]_2 ;
-  wire \current_state_reg[2]_3 ;
+  wire \current_state_reg[3] ;
   wire fifo_not_full;
   wire fifo_write;
   wire [1:0]hw_triggers_prev;
@@ -31948,6 +31728,7 @@ module design_2_dfx_controller_0_0_trigger_manager
   wire ready_for_hw_trigger;
   wire reset;
   wire reset_0;
+  wire shutdown_bit_reg;
   wire start_fetching_all;
   wire sw_trigger_id;
   wire sw_trigger_pending;
@@ -31961,7 +31742,6 @@ module design_2_dfx_controller_0_0_trigger_manager
   wire \triggers_req_reg_n_0_[0] ;
   wire \triggers_req_reg_n_0_[1] ;
   wire [1:0]vsm_shifter_hw_triggers;
-  wire vsm_shifter_rm_shutdown_ack;
 
   (* FSM_ENCODED_STATES = "st_por:00,st_wait_for_selector_to_complete:10,st_remove_trigger:11,st_kick_selector:01" *) 
   FDRE #(
@@ -32038,29 +31818,27 @@ module design_2_dfx_controller_0_0_trigger_manager
         .\b_trigger_table.gen_address_reg.access_address_del_reg[0] (\b_trigger_table.gen_address_reg.access_address_del_reg[0] ),
         .clk(clk),
         .current_state(current_state),
-        .\current_state[0]_i_11_0 (\current_state[0]_i_11 ),
         .\current_state[1]_i_4_0 (\current_state[1]_i_4 ),
+        .\current_state[2]_i_3_0 (\current_state[2]_i_3 ),
         .\current_state_reg[0] (\current_state_reg[0] ),
         .\current_state_reg[0]_0 (\current_state_reg[0]_0 ),
         .\current_state_reg[0]_1 (\current_state_reg[0]_1 ),
         .\current_state_reg[1] (\current_state_reg[1] ),
         .\current_state_reg[1]_0 (\current_state_reg[1]_0 ),
-        .\current_state_reg[2] (D),
-        .\current_state_reg[2]_0 (\current_state_reg[2] ),
-        .\current_state_reg[2]_1 (\current_state_reg[2]_0 ),
-        .\current_state_reg[2]_2 (\current_state_reg[2]_1 ),
-        .\current_state_reg[2]_3 (\current_state_reg[2]_2 ),
-        .\current_state_reg[2]_4 (\current_state_reg[2]_3 ),
+        .\current_state_reg[2] (\current_state_reg[2] ),
+        .\current_state_reg[2]_0 (\current_state_reg[2]_0 ),
+        .\current_state_reg[2]_1 (\current_state_reg[2]_1 ),
+        .\current_state_reg[3] (\current_state_reg[3] ),
         .fifo_not_full(fifo_not_full),
         .fifo_write(fifo_write),
         .ready_for_hw_trigger(ready_for_hw_trigger),
         .reset(reset),
         .reset_0(reset_0),
+        .shutdown_bit_reg(shutdown_bit_reg),
         .start_fetching_all(start_fetching_all),
         .sw_trigger_id(sw_trigger_id),
         .sw_trigger_pending(sw_trigger_pending),
-        .trigger_selector_valid_out(trigger_selector_valid_out),
-        .vsm_shifter_rm_shutdown_ack(vsm_shifter_rm_shutdown_ack));
+        .trigger_selector_valid_out(trigger_selector_valid_out));
   design_2_dfx_controller_0_0_trigger_select i_trigger_selector
        (.CARRY_OUT(all_triggers_zero),
         .\CHAIN_GEN[0].CARRYS_DEL.NEED_DEL.CARRYS_FD (i_trigger_selector_n_6),
@@ -32240,7 +32018,7 @@ module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized15
   wire trigger_id_one_hot_valid0;
   wire trigger_valid_prev;
 
-  (* SOFT_HLUTNM = "soft_lutpair146" *) 
+  (* SOFT_HLUTNM = "soft_lutpair145" *) 
   LUT4 #(
     .INIT(16'hF83F)) 
     \FSM_sequential_current_state[0]_i_1 
@@ -32256,7 +32034,7 @@ module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized15
         .I1(CARRY_OUT),
         .I2(trigger_valid_prev),
         .O(trigger_id_one_hot_valid0));
-  (* SOFT_HLUTNM = "soft_lutpair146" *) 
+  (* SOFT_HLUTNM = "soft_lutpair145" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \fifo_1_reg[3][0]_srl4_i_1 
@@ -32278,43 +32056,44 @@ endmodule
 module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized17
    (\opt_has_pipe.i_pipe[2].pipe_reg[2][0]_0 ,
     D,
-    \reset_duration_stored_reg[6] ,
-    E,
-    \current_state_reg[3] ,
-    hw_trigger_used,
-    \reset_duration_reg[7] ,
-    \reset_duration_reg[4] ,
+    \reset_duration_stored_reg[7] ,
     \opt_has_pipe.i_pipe[2].pipe_reg[2][0]_1 ,
-    reg_write_complete_sw_trigger_reg_reg,
+    hw_trigger_used,
+    \reset_duration_reg[4] ,
     \opt_has_pipe.i_pipe[2].pipe_reg[2][0]_2 ,
+    reg_write_complete_sw_trigger_reg_reg,
     reset_0,
     \opt_has_pipe.first_q_reg[0]_0 ,
     rm_info_valid_vec,
     clk,
     Q,
+    \current_state_reg[2] ,
+    \current_state_reg[2]_0 ,
+    ctrl_from_mem,
+    \reset_duration_reg[7] ,
+    \reset_duration_reg[7]_0 ,
+    reset,
+    \current_state_reg[3] ,
     \current_state_reg[3]_0 ,
     \current_state_reg[3]_1 ,
-    \current_state_reg[3]_2 ,
     \current_state_reg[0] ,
     \current_state_reg[0]_0 ,
     \current_state_reg[0]_1 ,
     \current_state_reg[1] ,
     \current_state_reg[1]_0 ,
-    reset,
-    \reset_duration_reg[6] ,
-    startup_required,
     using_sw_trigger,
     \current_state_reg[0]_2 ,
     \current_state_reg[0]_3 ,
-    \current_state_reg[0]_4 ,
-    \current_state_reg[0]_5 ,
     \current_state_reg[1]_1 ,
-    \current_state_reg[1]_2 ,
+    \current_state_reg[3]_2 ,
+    \current_state_reg[0]_4 ,
+    \current_state_reg[3]_3 ,
+    \reset_duration_reg[6] ,
+    \reset_duration_reg[7]_1 ,
     \reset_duration_reg[6]_0 ,
-    \reset_duration_reg[7]_0 ,
-    \reset_duration_reg[6]_1 ,
-    ctrl_from_mem,
-    sw_trigger_pending_reg,
+    \current_state[1]_i_2_0 ,
+    user_restarted_with_status,
+    write_to_sw_trigger_reg_cmb,
     reg_write_complete_sw_trigger_reg,
     sw_trigger_pending,
     rm_reset_i_reg,
@@ -32322,48 +32101,47 @@ module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized17
     rm_reset_i_reg_1,
     vsm_shifter_rm_reset,
     rm_reset_i_reg_2,
-    \current_state[1]_i_5_0 ,
-    \current_state[1]_i_5_1 ,
-    \current_state[1]_i_5_2 );
+    rm_reset_i_reg_3);
   output \opt_has_pipe.i_pipe[2].pipe_reg[2][0]_0 ;
-  output [2:0]D;
-  output [0:0]\reset_duration_stored_reg[6] ;
-  output [0:0]E;
-  output \current_state_reg[3] ;
-  output hw_trigger_used;
-  output \reset_duration_reg[7] ;
-  output \reset_duration_reg[4] ;
+  output [3:0]D;
+  output [1:0]\reset_duration_stored_reg[7] ;
   output \opt_has_pipe.i_pipe[2].pipe_reg[2][0]_1 ;
-  output reg_write_complete_sw_trigger_reg_reg;
+  output hw_trigger_used;
+  output \reset_duration_reg[4] ;
   output \opt_has_pipe.i_pipe[2].pipe_reg[2][0]_2 ;
+  output reg_write_complete_sw_trigger_reg_reg;
   output reset_0;
   input \opt_has_pipe.first_q_reg[0]_0 ;
   input rm_info_valid_vec;
   input clk;
   input [3:0]Q;
+  input \current_state_reg[2] ;
+  input \current_state_reg[2]_0 ;
+  input [1:0]ctrl_from_mem;
+  input [1:0]\reset_duration_reg[7] ;
+  input \reset_duration_reg[7]_0 ;
+  input reset;
+  input \current_state_reg[3] ;
   input \current_state_reg[3]_0 ;
   input \current_state_reg[3]_1 ;
-  input \current_state_reg[3]_2 ;
   input \current_state_reg[0] ;
   input \current_state_reg[0]_0 ;
   input \current_state_reg[0]_1 ;
   input \current_state_reg[1] ;
   input \current_state_reg[1]_0 ;
-  input reset;
-  input [0:0]\reset_duration_reg[6] ;
-  input startup_required;
   input using_sw_trigger;
   input \current_state_reg[0]_2 ;
   input \current_state_reg[0]_3 ;
-  input \current_state_reg[0]_4 ;
-  input \current_state_reg[0]_5 ;
   input \current_state_reg[1]_1 ;
-  input \current_state_reg[1]_2 ;
+  input \current_state_reg[3]_2 ;
+  input \current_state_reg[0]_4 ;
+  input \current_state_reg[3]_3 ;
+  input \reset_duration_reg[6] ;
+  input [6:0]\reset_duration_reg[7]_1 ;
   input \reset_duration_reg[6]_0 ;
-  input [6:0]\reset_duration_reg[7]_0 ;
-  input \reset_duration_reg[6]_1 ;
-  input [0:0]ctrl_from_mem;
-  input sw_trigger_pending_reg;
+  input \current_state[1]_i_2_0 ;
+  input user_restarted_with_status;
+  input write_to_sw_trigger_reg_cmb;
   input reg_write_complete_sw_trigger_reg;
   input sw_trigger_pending;
   input rm_reset_i_reg;
@@ -32371,39 +32149,37 @@ module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized17
   input rm_reset_i_reg_1;
   input vsm_shifter_rm_reset;
   input rm_reset_i_reg_2;
-  input \current_state[1]_i_5_0 ;
-  input \current_state[1]_i_5_1 ;
-  input \current_state[1]_i_5_2 ;
+  input rm_reset_i_reg_3;
 
-  wire [2:0]D;
-  wire [0:0]E;
+  wire [3:0]D;
   wire [3:0]Q;
   wire clk;
-  wire [0:0]ctrl_from_mem;
+  wire [1:0]ctrl_from_mem;
+  wire \current_state[0]_i_10_n_0 ;
   wire \current_state[0]_i_3_n_0 ;
-  wire \current_state[0]_i_5_n_0 ;
-  wire \current_state[1]_i_3_n_0 ;
-  wire \current_state[1]_i_5_0 ;
-  wire \current_state[1]_i_5_1 ;
-  wire \current_state[1]_i_5_2 ;
-  wire \current_state[1]_i_5_n_0 ;
-  wire \current_state[1]_i_9_n_0 ;
-  wire \current_state[3]_i_4_n_0 ;
+  wire \current_state[0]_i_6_n_0 ;
+  wire \current_state[1]_i_2_0 ;
+  wire \current_state[1]_i_2_n_0 ;
+  wire \current_state[1]_i_6_n_0 ;
+  wire \current_state[2]_i_2_n_0 ;
+  wire \current_state[3]_i_2_n_0 ;
+  wire \current_state[3]_i_6_n_0 ;
   wire \current_state_reg[0] ;
   wire \current_state_reg[0]_0 ;
   wire \current_state_reg[0]_1 ;
   wire \current_state_reg[0]_2 ;
   wire \current_state_reg[0]_3 ;
   wire \current_state_reg[0]_4 ;
-  wire \current_state_reg[0]_5 ;
   wire \current_state_reg[1] ;
   wire \current_state_reg[1]_0 ;
   wire \current_state_reg[1]_1 ;
-  wire \current_state_reg[1]_2 ;
+  wire \current_state_reg[2] ;
+  wire \current_state_reg[2]_0 ;
   wire \current_state_reg[3] ;
   wire \current_state_reg[3]_0 ;
   wire \current_state_reg[3]_1 ;
   wire \current_state_reg[3]_2 ;
+  wire \current_state_reg[3]_3 ;
   (* RTL_KEEP = "true" *) wire first_q;
   wire hw_trigger_used;
   wire \opt_has_pipe.first_q_reg[0]_0 ;
@@ -32415,13 +32191,14 @@ module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized17
   wire reset;
   wire reset_0;
   wire \reset_duration[6]_i_2_n_0 ;
+  wire \reset_duration[7]_i_3_n_0 ;
   wire \reset_duration_reg[4] ;
-  wire [0:0]\reset_duration_reg[6] ;
+  wire \reset_duration_reg[6] ;
   wire \reset_duration_reg[6]_0 ;
-  wire \reset_duration_reg[6]_1 ;
-  wire \reset_duration_reg[7] ;
-  wire [6:0]\reset_duration_reg[7]_0 ;
-  wire [0:0]\reset_duration_stored_reg[6] ;
+  wire [1:0]\reset_duration_reg[7] ;
+  wire \reset_duration_reg[7]_0 ;
+  wire [6:0]\reset_duration_reg[7]_1 ;
+  wire [1:0]\reset_duration_stored_reg[7] ;
   wire rm_info_valid_vec;
   wire rm_reset_i_i_3_n_0;
   wire rm_reset_i_i_5_n_0;
@@ -32429,109 +32206,132 @@ module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized17
   wire [0:0]rm_reset_i_reg_0;
   wire rm_reset_i_reg_1;
   wire rm_reset_i_reg_2;
-  wire startup_required;
+  wire rm_reset_i_reg_3;
   wire sw_trigger_pending;
-  wire sw_trigger_pending_reg;
+  wire user_restarted_with_status;
   wire using_sw_trigger;
   wire vsm_shifter_rm_reset;
+  wire write_to_sw_trigger_reg_cmb;
 
   LUT6 #(
-    .INIT(64'hBABBBABBFFFFBABB)) 
+    .INIT(64'hFFFFFFFF0000DDFD)) 
     \current_state[0]_i_1 
        (.I0(\current_state_reg[0] ),
-        .I1(Q[3]),
-        .I2(\current_state[0]_i_3_n_0 ),
-        .I3(\current_state_reg[0]_0 ),
-        .I4(\current_state[0]_i_5_n_0 ),
-        .I5(\current_state_reg[0]_1 ),
+        .I1(\current_state[0]_i_3_n_0 ),
+        .I2(\current_state_reg[0]_0 ),
+        .I3(\current_state_reg[0]_1 ),
+        .I4(Q[3]),
+        .I5(\current_state[0]_i_6_n_0 ),
         .O(D[0]));
   LUT6 #(
-    .INIT(64'h0000AE00AE00AE00)) 
+    .INIT(64'hFFFFD0FFD0FFD0FF)) 
+    \current_state[0]_i_10 
+       (.I0(\opt_has_pipe.i_pipe[2].pipe_reg[2][0]_0 ),
+        .I1(Q[0]),
+        .I2(Q[2]),
+        .I3(Q[3]),
+        .I4(Q[1]),
+        .I5(\current_state_reg[3]_3 ),
+        .O(\current_state[0]_i_10_n_0 ));
+  LUT6 #(
+    .INIT(64'hE000C0E0E0E0C0E0)) 
     \current_state[0]_i_3 
        (.I0(\current_state_reg[0]_2 ),
         .I1(\current_state_reg[0]_3 ),
-        .I2(\current_state_reg[0]_4 ),
-        .I3(Q[2]),
-        .I4(\current_state_reg[0]_5 ),
+        .I2(Q[2]),
+        .I3(Q[1]),
+        .I4(Q[0]),
         .I5(\opt_has_pipe.i_pipe[2].pipe_reg[2][0]_0 ),
         .O(\current_state[0]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair144" *) 
-  LUT4 #(
-    .INIT(16'h4000)) 
-    \current_state[0]_i_5 
-       (.I0(Q[0]),
-        .I1(Q[3]),
-        .I2(\opt_has_pipe.i_pipe[2].pipe_reg[2][0]_0 ),
-        .I3(Q[2]),
-        .O(\current_state[0]_i_5_n_0 ));
   LUT6 #(
-    .INIT(64'h00000000FFFFFDF0)) 
-    \current_state[1]_i_1 
-       (.I0(\current_state_reg[1] ),
-        .I1(\current_state[1]_i_3_n_0 ),
-        .I2(Q[3]),
-        .I3(Q[2]),
-        .I4(\current_state_reg[1]_0 ),
-        .I5(\current_state[1]_i_5_n_0 ),
-        .O(D[1]));
-  LUT3 #(
-    .INIT(8'h40)) 
-    \current_state[1]_i_3 
-       (.I0(Q[1]),
+    .INIT(64'h00000000BFBBBFBF)) 
+    \current_state[0]_i_6 
+       (.I0(Q[2]),
         .I1(Q[0]),
-        .I2(\opt_has_pipe.i_pipe[2].pipe_reg[2][0]_0 ),
-        .O(\current_state[1]_i_3_n_0 ));
+        .I2(Q[1]),
+        .I3(\current_state_reg[0]_4 ),
+        .I4(\current_state_reg[3]_3 ),
+        .I5(\current_state[0]_i_10_n_0 ),
+        .O(\current_state[0]_i_6_n_0 ));
   LUT6 #(
-    .INIT(64'h00000000FFFF15FF)) 
-    \current_state[1]_i_5 
+    .INIT(64'hAAAABAAABBBBBBBB)) 
+    \current_state[1]_i_1 
+       (.I0(\opt_has_pipe.i_pipe[2].pipe_reg[2][0]_1 ),
+        .I1(\current_state[1]_i_2_n_0 ),
+        .I2(Q[2]),
+        .I3(Q[1]),
+        .I4(\current_state_reg[1] ),
+        .I5(\current_state_reg[1]_0 ),
+        .O(D[1]));
+  LUT6 #(
+    .INIT(64'hF0F010F0F00010F0)) 
+    \current_state[1]_i_2 
        (.I0(Q[2]),
         .I1(\current_state_reg[1]_1 ),
-        .I2(\current_state_reg[1]_2 ),
+        .I2(Q[3]),
         .I3(Q[0]),
         .I4(Q[1]),
-        .I5(\current_state[1]_i_9_n_0 ),
-        .O(\current_state[1]_i_5_n_0 ));
-  LUT6 #(
-    .INIT(64'h20E0E0E0FFFFFFFF)) 
-    \current_state[1]_i_9 
-       (.I0(\current_state[1]_i_5_0 ),
-        .I1(Q[2]),
-        .I2(\current_state[1]_i_5_1 ),
+        .I5(\current_state[1]_i_6_n_0 ),
+        .O(\current_state[1]_i_2_n_0 ));
+  LUT5 #(
+    .INIT(32'h0000F707)) 
+    \current_state[1]_i_6 
+       (.I0(\current_state[1]_i_2_0 ),
+        .I1(user_restarted_with_status),
+        .I2(Q[2]),
         .I3(\opt_has_pipe.i_pipe[2].pipe_reg[2][0]_0 ),
-        .I4(\current_state[1]_i_5_2 ),
-        .I5(Q[3]),
-        .O(\current_state[1]_i_9_n_0 ));
+        .I4(\current_state_reg[3]_3 ),
+        .O(\current_state[1]_i_6_n_0 ));
   LUT6 #(
-    .INIT(64'h2880280028882888)) 
-    \current_state[2]_i_5 
-       (.I0(Q[3]),
-        .I1(Q[2]),
-        .I2(Q[1]),
-        .I3(Q[0]),
-        .I4(startup_required),
-        .I5(\opt_has_pipe.i_pipe[2].pipe_reg[2][0]_0 ),
-        .O(\current_state_reg[3] ));
-  LUT6 #(
-    .INIT(64'hFF080000FF08FF08)) 
-    \current_state[3]_i_1 
-       (.I0(Q[1]),
-        .I1(Q[2]),
-        .I2(\current_state_reg[3]_0 ),
-        .I3(\current_state_reg[3]_1 ),
-        .I4(\current_state[3]_i_4_n_0 ),
-        .I5(\current_state_reg[3]_2 ),
-        .O(D[2]));
-  LUT6 #(
-    .INIT(64'h0B00FB00FFFFFFFF)) 
-    \current_state[3]_i_4 
-       (.I0(\current_state_reg[0]_1 ),
-        .I1(\opt_has_pipe.i_pipe[2].pipe_reg[2][0]_0 ),
-        .I2(Q[0]),
+    .INIT(64'h88B8B8B8B8B8B8B8)) 
+    \current_state[2]_i_1 
+       (.I0(\current_state[2]_i_2_n_0 ),
+        .I1(Q[3]),
+        .I2(\current_state_reg[2] ),
         .I3(Q[2]),
         .I4(Q[1]),
-        .I5(Q[3]),
-        .O(\current_state[3]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair144" *) 
+        .I5(\current_state_reg[2]_0 ),
+        .O(D[2]));
+  (* SOFT_HLUTNM = "soft_lutpair143" *) 
+  LUT4 #(
+    .INIT(16'h34C4)) 
+    \current_state[2]_i_2 
+       (.I0(\opt_has_pipe.i_pipe[2].pipe_reg[2][0]_0 ),
+        .I1(Q[2]),
+        .I2(Q[0]),
+        .I3(Q[1]),
+        .O(\current_state[2]_i_2_n_0 ));
+  LUT6 #(
+    .INIT(64'hDDDDCCCCDDDDFCCC)) 
+    \current_state[3]_i_1 
+       (.I0(\current_state[3]_i_2_n_0 ),
+        .I1(\current_state_reg[3] ),
+        .I2(\current_state_reg[3]_0 ),
+        .I3(Q[2]),
+        .I4(Q[3]),
+        .I5(\current_state_reg[3]_1 ),
+        .O(D[3]));
+  LUT6 #(
+    .INIT(64'h8888888888888A88)) 
+    \current_state[3]_i_2 
+       (.I0(\current_state[3]_i_6_n_0 ),
+        .I1(\current_state_reg[3]_2 ),
+        .I2(\current_state_reg[0]_4 ),
+        .I3(Q[0]),
+        .I4(\current_state_reg[3]_3 ),
+        .I5(Q[1]),
+        .O(\current_state[3]_i_2_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFF1BFF00FFBBFF)) 
+    \current_state[3]_i_6 
+       (.I0(\opt_has_pipe.i_pipe[2].pipe_reg[2][0]_0 ),
+        .I1(Q[3]),
+        .I2(\current_state_reg[3]_3 ),
+        .I3(Q[2]),
+        .I4(Q[0]),
+        .I5(Q[1]),
+        .O(\current_state[3]_i_6_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair143" *) 
   LUT5 #(
     .INIT(32'h00080000)) 
     fetch_req_i_1
@@ -32540,7 +32340,7 @@ module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized17
         .I2(Q[1]),
         .I3(Q[3]),
         .I4(Q[2]),
-        .O(\opt_has_pipe.i_pipe[2].pipe_reg[2][0]_2 ));
+        .O(\opt_has_pipe.i_pipe[2].pipe_reg[2][0]_1 ));
   (* KEEP = "yes" *) 
   FDRE #(
     .INIT(1'b0)) 
@@ -32572,60 +32372,59 @@ module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized17
     .INIT(32'h6CCCCCC9)) 
     \reset_duration[3]_i_2 
        (.I0(\opt_has_pipe.i_pipe[2].pipe_reg[2][0]_0 ),
-        .I1(\reset_duration_reg[7]_0 [3]),
-        .I2(\reset_duration_reg[7]_0 [0]),
-        .I3(\reset_duration_reg[7]_0 [1]),
-        .I4(\reset_duration_reg[7]_0 [2]),
-        .O(\opt_has_pipe.i_pipe[2].pipe_reg[2][0]_1 ));
+        .I1(\reset_duration_reg[7]_1 [3]),
+        .I2(\reset_duration_reg[7]_1 [0]),
+        .I3(\reset_duration_reg[7]_1 [1]),
+        .I4(\reset_duration_reg[7]_1 [2]),
+        .O(\opt_has_pipe.i_pipe[2].pipe_reg[2][0]_2 ));
   LUT6 #(
     .INIT(64'h6AAAAAAAAAAAAAA9)) 
     \reset_duration[4]_i_2 
-       (.I0(\reset_duration_reg[7]_0 [4]),
-        .I1(\reset_duration_reg[7]_0 [3]),
-        .I2(\reset_duration_reg[7]_0 [1]),
-        .I3(\reset_duration_reg[7]_0 [0]),
-        .I4(\reset_duration_reg[7]_0 [2]),
+       (.I0(\reset_duration_reg[7]_1 [4]),
+        .I1(\reset_duration_reg[7]_1 [3]),
+        .I2(\reset_duration_reg[7]_1 [1]),
+        .I3(\reset_duration_reg[7]_1 [0]),
+        .I4(\reset_duration_reg[7]_1 [2]),
         .I5(\opt_has_pipe.i_pipe[2].pipe_reg[2][0]_0 ),
         .O(\reset_duration_reg[4] ));
   LUT6 #(
     .INIT(64'hFFFFFFFE00000002)) 
     \reset_duration[6]_i_1 
-       (.I0(\reset_duration_reg[6] ),
-        .I1(Q[0]),
-        .I2(Q[3]),
+       (.I0(\reset_duration_reg[7] [0]),
+        .I1(Q[3]),
+        .I2(Q[2]),
         .I3(Q[1]),
-        .I4(Q[2]),
+        .I4(Q[0]),
         .I5(\reset_duration[6]_i_2_n_0 ),
-        .O(\reset_duration_stored_reg[6] ));
+        .O(\reset_duration_stored_reg[7] [0]));
   LUT6 #(
     .INIT(64'hAAAAAAAA3FC030CF)) 
     \reset_duration[6]_i_2 
-       (.I0(ctrl_from_mem),
-        .I1(\reset_duration_reg[6]_1 ),
+       (.I0(ctrl_from_mem[0]),
+        .I1(\reset_duration_reg[6] ),
         .I2(\opt_has_pipe.i_pipe[2].pipe_reg[2][0]_0 ),
-        .I3(\reset_duration_reg[7]_0 [5]),
+        .I3(\reset_duration_reg[7]_1 [5]),
         .I4(\reset_duration_reg[6]_0 ),
         .I5(rm_info_valid_vec),
         .O(\reset_duration[6]_i_2_n_0 ));
   LUT5 #(
-    .INIT(32'h3CCCC9C9)) 
-    \reset_duration[7]_i_4 
-       (.I0(\reset_duration_reg[6]_0 ),
-        .I1(\reset_duration_reg[7]_0 [6]),
-        .I2(\reset_duration_reg[7]_0 [5]),
-        .I3(\reset_duration_reg[6]_1 ),
+    .INIT(32'hCCCCAA0F)) 
+    \reset_duration[7]_i_2 
+       (.I0(ctrl_from_mem[1]),
+        .I1(\reset_duration_reg[7] [1]),
+        .I2(\reset_duration[7]_i_3_n_0 ),
+        .I3(rm_info_valid_vec),
+        .I4(\reset_duration_reg[7]_0 ),
+        .O(\reset_duration_stored_reg[7] [1]));
+  LUT5 #(
+    .INIT(32'h9933333C)) 
+    \reset_duration[7]_i_3 
+       (.I0(\reset_duration_reg[6] ),
+        .I1(\reset_duration_reg[7]_1 [6]),
+        .I2(\reset_duration_reg[6]_0 ),
+        .I3(\reset_duration_reg[7]_1 [5]),
         .I4(\opt_has_pipe.i_pipe[2].pipe_reg[2][0]_0 ),
-        .O(\reset_duration_reg[7] ));
-  LUT6 #(
-    .INIT(64'h00000000AAAAAAA8)) 
-    \reset_duration_stored[7]_i_1 
-       (.I0(\opt_has_pipe.i_pipe[2].pipe_reg[2][0]_0 ),
-        .I1(Q[0]),
-        .I2(Q[3]),
-        .I3(Q[1]),
-        .I4(Q[2]),
-        .I5(rm_info_valid_vec),
-        .O(E));
+        .O(\reset_duration[7]_i_3_n_0 ));
   LUT6 #(
     .INIT(64'h8B8B8BFF8B8B8B00)) 
     rm_reset_i_i_1
@@ -32637,31 +32436,31 @@ module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized17
         .I5(vsm_shifter_rm_reset),
         .O(reset_0));
   LUT6 #(
-    .INIT(64'h4444445444444444)) 
+    .INIT(64'h4544444444444444)) 
     rm_reset_i_i_3
        (.I0(rm_reset_i_reg_2),
         .I1(rm_reset_i_i_5_n_0),
-        .I2(Q[3]),
-        .I3(Q[2]),
-        .I4(Q[1]),
-        .I5(\current_state_reg[1]_2 ),
+        .I2(\current_state_reg[0]_4 ),
+        .I3(rm_reset_i_reg_3),
+        .I4(Q[3]),
+        .I5(Q[0]),
         .O(rm_reset_i_i_3_n_0));
   LUT6 #(
-    .INIT(64'h300000003C003232)) 
+    .INIT(64'h0800280F0800280C)) 
     rm_reset_i_i_5
-       (.I0(reset),
-        .I1(Q[0]),
-        .I2(Q[3]),
-        .I3(\opt_has_pipe.i_pipe[2].pipe_reg[2][0]_0 ),
-        .I4(Q[2]),
-        .I5(Q[1]),
+       (.I0(\opt_has_pipe.i_pipe[2].pipe_reg[2][0]_0 ),
+        .I1(Q[3]),
+        .I2(Q[0]),
+        .I3(Q[2]),
+        .I4(Q[1]),
+        .I5(reset),
         .O(rm_reset_i_i_5_n_0));
   LUT5 #(
     .INIT(32'h8FFF8888)) 
     sw_trigger_pending_i_1
-       (.I0(sw_trigger_pending_reg),
+       (.I0(write_to_sw_trigger_reg_cmb),
         .I1(reg_write_complete_sw_trigger_reg),
-        .I2(\opt_has_pipe.i_pipe[2].pipe_reg[2][0]_2 ),
+        .I2(\opt_has_pipe.i_pipe[2].pipe_reg[2][0]_1 ),
         .I3(using_sw_trigger),
         .I4(sw_trigger_pending),
         .O(reg_write_complete_sw_trigger_reg_reg));
@@ -32672,44 +32471,45 @@ module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized17_23
    (\opt_has_pipe.i_pipe[2].pipe_reg[2][0]_0 ,
     E,
     D,
+    \current_state_reg[3] ,
     \opt_has_pipe.first_q_reg[0]_0 ,
     rm_id_valid,
     clk,
     Q,
     bs_info_valid_vec,
-    \reset_duration_reg[7] ,
-    \reset_duration_reg[7]_0 ,
-    ctrl_from_mem,
     \reset_duration_reg[5] ,
-    \reset_duration_reg[5]_0 ,
-    \reset_duration_reg[3] ,
     \reset_duration_reg[4] ,
-    \reset_duration_reg[7]_1 ,
-    \reset_duration_reg[5]_1 );
+    ctrl_from_mem,
+    \reset_duration_reg[5]_0 ,
+    \reset_duration_reg[5]_1 ,
+    \reset_duration_reg[3] ,
+    \reset_duration_reg[4]_0 ,
+    \reset_duration_reg[5]_2 );
   output \opt_has_pipe.i_pipe[2].pipe_reg[2][0]_0 ;
   output [0:0]E;
-  output [6:0]D;
+  output [5:0]D;
+  output [0:0]\current_state_reg[3] ;
   input \opt_has_pipe.first_q_reg[0]_0 ;
   input rm_id_valid;
   input clk;
   input [3:0]Q;
   input bs_info_valid_vec;
-  input [6:0]\reset_duration_reg[7] ;
-  input \reset_duration_reg[7]_0 ;
-  input [6:0]ctrl_from_mem;
-  input [3:0]\reset_duration_reg[5] ;
-  input [1:0]\reset_duration_reg[5]_0 ;
-  input \reset_duration_reg[3] ;
+  input [5:0]\reset_duration_reg[5] ;
   input \reset_duration_reg[4] ;
-  input \reset_duration_reg[7]_1 ;
-  input \reset_duration_reg[5]_1 ;
+  input [5:0]ctrl_from_mem;
+  input [3:0]\reset_duration_reg[5]_0 ;
+  input [1:0]\reset_duration_reg[5]_1 ;
+  input \reset_duration_reg[3] ;
+  input \reset_duration_reg[4]_0 ;
+  input \reset_duration_reg[5]_2 ;
 
-  wire [6:0]D;
+  wire [5:0]D;
   wire [0:0]E;
   wire [3:0]Q;
   wire bs_info_valid_vec;
   wire clk;
-  wire [6:0]ctrl_from_mem;
+  wire [5:0]ctrl_from_mem;
+  wire [0:0]\current_state_reg[3] ;
   (* RTL_KEEP = "true" *) wire first_q;
   wire \opt_has_pipe.first_q_reg[0]_0 ;
   wire \opt_has_pipe.i_pipe[2].pipe_reg[2][0]_0 ;
@@ -32717,12 +32517,11 @@ module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized17_23
   wire \reset_duration[5]_i_2_n_0 ;
   wire \reset_duration_reg[3] ;
   wire \reset_duration_reg[4] ;
-  wire [3:0]\reset_duration_reg[5] ;
-  wire [1:0]\reset_duration_reg[5]_0 ;
-  wire \reset_duration_reg[5]_1 ;
-  wire [6:0]\reset_duration_reg[7] ;
-  wire \reset_duration_reg[7]_0 ;
-  wire \reset_duration_reg[7]_1 ;
+  wire \reset_duration_reg[4]_0 ;
+  wire [5:0]\reset_duration_reg[5] ;
+  wire [3:0]\reset_duration_reg[5]_0 ;
+  wire [1:0]\reset_duration_reg[5]_1 ;
+  wire \reset_duration_reg[5]_2 ;
   wire rm_id_valid;
 
   (* KEEP = "yes" *) 
@@ -32745,30 +32544,30 @@ module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized17_23
   LUT5 #(
     .INIT(32'hB888B8BB)) 
     \reset_duration[0]_i_1 
-       (.I0(\reset_duration_reg[7] [0]),
-        .I1(\reset_duration_reg[7]_0 ),
+       (.I0(\reset_duration_reg[5] [0]),
+        .I1(\reset_duration_reg[4] ),
         .I2(ctrl_from_mem[0]),
         .I3(\opt_has_pipe.i_pipe[2].pipe_reg[2][0]_0 ),
-        .I4(\reset_duration_reg[5] [0]),
+        .I4(\reset_duration_reg[5]_0 [0]),
         .O(D[0]));
   LUT6 #(
     .INIT(64'hB8BBB888B888B8BB)) 
     \reset_duration[1]_i_1 
-       (.I0(\reset_duration_reg[7] [1]),
-        .I1(\reset_duration_reg[7]_0 ),
+       (.I0(\reset_duration_reg[5] [1]),
+        .I1(\reset_duration_reg[4] ),
         .I2(ctrl_from_mem[1]),
         .I3(\opt_has_pipe.i_pipe[2].pipe_reg[2][0]_0 ),
         .I4(bs_info_valid_vec),
-        .I5(\reset_duration_reg[5]_0 [0]),
+        .I5(\reset_duration_reg[5]_1 [0]),
         .O(D[1]));
   LUT6 #(
     .INIT(64'hFFFFFFFE00000002)) 
     \reset_duration[2]_i_1 
-       (.I0(\reset_duration_reg[7] [2]),
-        .I1(Q[0]),
-        .I2(Q[3]),
+       (.I0(\reset_duration_reg[5] [2]),
+        .I1(Q[3]),
+        .I2(Q[2]),
         .I3(Q[1]),
-        .I4(Q[2]),
+        .I4(Q[0]),
         .I5(\reset_duration[2]_i_2_n_0 ),
         .O(D[2]));
   LUT6 #(
@@ -32777,15 +32576,15 @@ module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized17_23
        (.I0(ctrl_from_mem[2]),
         .I1(\opt_has_pipe.i_pipe[2].pipe_reg[2][0]_0 ),
         .I2(bs_info_valid_vec),
-        .I3(\reset_duration_reg[5] [2]),
-        .I4(\reset_duration_reg[5] [1]),
-        .I5(\reset_duration_reg[5] [0]),
+        .I3(\reset_duration_reg[5]_0 [2]),
+        .I4(\reset_duration_reg[5]_0 [1]),
+        .I5(\reset_duration_reg[5]_0 [0]),
         .O(\reset_duration[2]_i_2_n_0 ));
   LUT5 #(
     .INIT(32'hB8BBB888)) 
     \reset_duration[3]_i_1 
-       (.I0(\reset_duration_reg[7] [3]),
-        .I1(\reset_duration_reg[7]_0 ),
+       (.I0(\reset_duration_reg[5] [3]),
+        .I1(\reset_duration_reg[4] ),
         .I2(ctrl_from_mem[3]),
         .I3(\opt_has_pipe.i_pipe[2].pipe_reg[2][0]_0 ),
         .I4(\reset_duration_reg[3] ),
@@ -32793,20 +32592,20 @@ module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized17_23
   LUT5 #(
     .INIT(32'hB8BBB888)) 
     \reset_duration[4]_i_1 
-       (.I0(\reset_duration_reg[7] [4]),
-        .I1(\reset_duration_reg[7]_0 ),
+       (.I0(\reset_duration_reg[5] [4]),
+        .I1(\reset_duration_reg[4] ),
         .I2(ctrl_from_mem[4]),
         .I3(\opt_has_pipe.i_pipe[2].pipe_reg[2][0]_0 ),
-        .I4(\reset_duration_reg[4] ),
+        .I4(\reset_duration_reg[4]_0 ),
         .O(D[4]));
   LUT6 #(
     .INIT(64'hFFFFFFFE00000002)) 
     \reset_duration[5]_i_1 
-       (.I0(\reset_duration_reg[7] [5]),
-        .I1(Q[0]),
-        .I2(Q[3]),
+       (.I0(\reset_duration_reg[5] [5]),
+        .I1(Q[3]),
+        .I2(Q[2]),
         .I3(Q[1]),
-        .I4(Q[2]),
+        .I4(Q[0]),
         .I5(\reset_duration[5]_i_2_n_0 ),
         .O(D[5]));
   LUT6 #(
@@ -32814,9 +32613,9 @@ module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized17_23
     \reset_duration[5]_i_2 
        (.I0(ctrl_from_mem[5]),
         .I1(\opt_has_pipe.i_pipe[2].pipe_reg[2][0]_0 ),
-        .I2(\reset_duration_reg[5] [3]),
-        .I3(\reset_duration_reg[5]_1 ),
-        .I4(\reset_duration_reg[5]_0 [1]),
+        .I2(\reset_duration_reg[5]_0 [3]),
+        .I3(\reset_duration_reg[5]_2 ),
+        .I4(\reset_duration_reg[5]_1 [1]),
         .I5(bs_info_valid_vec),
         .O(\reset_duration[5]_i_2_n_0 ));
   LUT6 #(
@@ -32829,41 +32628,42 @@ module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized17_23
         .I4(Q[3]),
         .I5(bs_info_valid_vec),
         .O(E));
-  LUT5 #(
-    .INIT(32'hB8BBB888)) 
-    \reset_duration[7]_i_2 
-       (.I0(\reset_duration_reg[7] [6]),
-        .I1(\reset_duration_reg[7]_0 ),
-        .I2(ctrl_from_mem[6]),
-        .I3(\opt_has_pipe.i_pipe[2].pipe_reg[2][0]_0 ),
-        .I4(\reset_duration_reg[7]_1 ),
-        .O(D[6]));
+  LUT6 #(
+    .INIT(64'h0000FFFE00000000)) 
+    \reset_duration_stored[7]_i_1 
+       (.I0(Q[3]),
+        .I1(Q[2]),
+        .I2(Q[1]),
+        .I3(Q[0]),
+        .I4(\opt_has_pipe.i_pipe[2].pipe_reg[2][0]_0 ),
+        .I5(bs_info_valid_vec),
+        .O(\current_state_reg[3] ));
 endmodule
 
 (* ORIG_REF_NAME = "xbip_pipe_v3_0_6_viv" *) 
 module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized3
    (vsm_shifter_event_error,
+    \current_state_reg[1] ,
     \current_state_reg[2] ,
-    \current_state_reg[3] ,
     \opt_has_pipe.first_q_reg[0]_0 ,
     clk,
-    cp_error_flag,
     \opt_has_pipe.first_q_reg[0]_1 ,
     \opt_has_pipe.first_q_reg[0]_2 ,
     cp0_vs_id,
     p_3_in,
+    cp_error_flag,
     Q,
     p_4_in);
   output vsm_shifter_event_error;
+  output \current_state_reg[1] ;
   output \current_state_reg[2] ;
-  output \current_state_reg[3] ;
   input \opt_has_pipe.first_q_reg[0]_0 ;
   input clk;
-  input cp_error_flag;
   input \opt_has_pipe.first_q_reg[0]_1 ;
   input \opt_has_pipe.first_q_reg[0]_2 ;
   input cp0_vs_id;
   input p_3_in;
+  input cp_error_flag;
   input [3:0]Q;
   input p_4_in;
 
@@ -32871,8 +32671,8 @@ module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized3
   wire clk;
   wire cp0_vs_id;
   wire cp_error_flag;
+  wire \current_state_reg[1] ;
   wire \current_state_reg[2] ;
-  wire \current_state_reg[3] ;
   wire event_error_i;
   (* RTL_KEEP = "true" *) wire first_q;
   wire \opt_has_pipe.first_q_reg[0]_0 ;
@@ -32883,32 +32683,26 @@ module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized3
   wire p_4_in;
   wire vsm_shifter_event_error;
 
-  LUT2 #(
-    .INIT(4'h1)) 
-    fetch_error_flag_i_2
-       (.I0(Q[3]),
-        .I1(Q[0]),
-        .O(\current_state_reg[3] ));
   LUT6 #(
-    .INIT(64'hAAA8AAAAAAA8AAA8)) 
-    \opt_has_pipe.first_q[0]_i_1 
-       (.I0(\current_state_reg[2] ),
-        .I1(cp_error_flag),
-        .I2(\opt_has_pipe.first_q_reg[0]_1 ),
-        .I3(\opt_has_pipe.first_q_reg[0]_2 ),
-        .I4(cp0_vs_id),
-        .I5(p_3_in),
+    .INIT(64'hAAAAAAAAA8AAA8A8)) 
+    \opt_has_pipe.first_q[0]_i_1__1 
+       (.I0(\current_state_reg[1] ),
+        .I1(\opt_has_pipe.first_q_reg[0]_1 ),
+        .I2(\opt_has_pipe.first_q_reg[0]_2 ),
+        .I3(cp0_vs_id),
+        .I4(p_3_in),
+        .I5(cp_error_flag),
         .O(event_error_i));
   LUT6 #(
-    .INIT(64'h8080808000008000)) 
+    .INIT(64'h2020202000002000)) 
     \opt_has_pipe.first_q[0]_i_2 
-       (.I0(Q[2]),
-        .I1(Q[1]),
-        .I2(\current_state_reg[3] ),
+       (.I0(Q[1]),
+        .I1(Q[0]),
+        .I2(\current_state_reg[2] ),
         .I3(p_4_in),
         .I4(cp0_vs_id),
         .I5(\opt_has_pipe.first_q_reg[0]_2 ),
-        .O(\current_state_reg[2] ));
+        .O(\current_state_reg[1] ));
   (* KEEP = "yes" *) 
   FDRE #(
     .INIT(1'b0)) 
@@ -32934,14 +32728,19 @@ module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized3
         .D(\opt_has_pipe.i_pipe[2].pipe_reg_n_0_[2][0] ),
         .Q(vsm_shifter_event_error),
         .R(\opt_has_pipe.first_q_reg[0]_0 ));
+  LUT2 #(
+    .INIT(4'h2)) 
+    using_sw_trigger_i_2
+       (.I0(Q[2]),
+        .I1(Q[3]),
+        .O(\current_state_reg[2] ));
 endmodule
 
 (* ORIG_REF_NAME = "xbip_pipe_v3_0_6_viv" *) 
 module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized5
    (out,
+    \b_trigger_table.b_write_to_trigger_registers_edge.axi_write_complete_reg ,
     \opt_has_pipe.first_q_reg[0]_0 ,
-    reg_tready_d0,
-    reg_tready_i0,
     \opt_has_pipe.first_q_reg[0]_1 ,
     \opt_has_pipe.first_q_reg[0]_2 ,
     \opt_has_pipe.first_q_reg[0]_3 ,
@@ -32952,17 +32751,12 @@ module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized5
     \opt_has_pipe.first_q_reg[0]_8 ,
     \opt_has_pipe.first_q_reg[0]_9 ,
     \opt_has_pipe.first_q_reg[0]_10 ,
-    \opt_has_pipe.first_q_reg[0]_11 ,
     clk,
-    \reg_rdata_reg[31] ,
-    \reg_rdata_reg[31]_0 ,
-    \reg_rdata_reg[31]_1 ,
-    sw_trigger_pending,
-    \reg_rdata_reg[31]_2 ,
-    reg_tready_d1_reg,
-    reg_tready_i_reg,
-    reg_tready_d1_reg_0,
-    reg_tready_d1,
+    axi_write_complete,
+    reg_write_complete_ctrl_reg,
+    reg_tready_d1_i_2,
+    reg_write_complete_sw_trigger_reg,
+    reg_tready_d1_i_2_0,
     \reg_rdata_reg[8] ,
     \reg_rdata_reg[8]_0 ,
     Q,
@@ -32977,9 +32771,8 @@ module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized5
     \reg_rdata_reg[1] ,
     reset);
   output out;
+  output \b_trigger_table.b_write_to_trigger_registers_edge.axi_write_complete_reg ;
   output \opt_has_pipe.first_q_reg[0]_0 ;
-  output reg_tready_d0;
-  output reg_tready_i0;
   output \opt_has_pipe.first_q_reg[0]_1 ;
   output \opt_has_pipe.first_q_reg[0]_2 ;
   output \opt_has_pipe.first_q_reg[0]_3 ;
@@ -32988,19 +32781,14 @@ module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized5
   output \opt_has_pipe.first_q_reg[0]_6 ;
   output \opt_has_pipe.first_q_reg[0]_7 ;
   output \opt_has_pipe.first_q_reg[0]_8 ;
-  output \opt_has_pipe.first_q_reg[0]_9 ;
+  input \opt_has_pipe.first_q_reg[0]_9 ;
   input \opt_has_pipe.first_q_reg[0]_10 ;
-  input \opt_has_pipe.first_q_reg[0]_11 ;
   input clk;
-  input \reg_rdata_reg[31] ;
-  input \reg_rdata_reg[31]_0 ;
-  input \reg_rdata_reg[31]_1 ;
-  input sw_trigger_pending;
-  input \reg_rdata_reg[31]_2 ;
-  input reg_tready_d1_reg;
-  input reg_tready_i_reg;
-  input reg_tready_d1_reg_0;
-  input reg_tready_d1;
+  input axi_write_complete;
+  input reg_write_complete_ctrl_reg;
+  input reg_tready_d1_i_2;
+  input reg_write_complete_sw_trigger_reg;
+  input reg_tready_d1_i_2_0;
   input \reg_rdata_reg[8] ;
   input \reg_rdata_reg[8]_0 ;
   input [7:0]Q;
@@ -33016,12 +32804,13 @@ module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized5
   input reset;
 
   wire [7:0]Q;
+  wire axi_write_complete;
+  wire \b_trigger_table.b_write_to_trigger_registers_edge.axi_write_complete_reg ;
   wire clk;
   (* RTL_KEEP = "true" *) wire first_q;
   wire \opt_has_pipe.first_q_reg[0]_0 ;
   wire \opt_has_pipe.first_q_reg[0]_1 ;
   wire \opt_has_pipe.first_q_reg[0]_10 ;
-  wire \opt_has_pipe.first_q_reg[0]_11 ;
   wire \opt_has_pipe.first_q_reg[0]_2 ;
   wire \opt_has_pipe.first_q_reg[0]_3 ;
   wire \opt_has_pipe.first_q_reg[0]_4 ;
@@ -33032,10 +32821,6 @@ module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized5
   wire \opt_has_pipe.first_q_reg[0]_9 ;
   wire \reg_rdata_reg[1] ;
   wire \reg_rdata_reg[2] ;
-  wire \reg_rdata_reg[31] ;
-  wire \reg_rdata_reg[31]_0 ;
-  wire \reg_rdata_reg[31]_1 ;
-  wire \reg_rdata_reg[31]_2 ;
   wire \reg_rdata_reg[3] ;
   wire \reg_rdata_reg[4] ;
   wire \reg_rdata_reg[5] ;
@@ -33045,14 +32830,11 @@ module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized5
   wire \reg_rdata_reg[8]_0 ;
   wire \reg_rdata_reg[8]_1 ;
   wire [7:0]\reg_rdata_reg[8]_2 ;
-  wire reg_tready_d0;
-  wire reg_tready_d1;
-  wire reg_tready_d1_reg;
-  wire reg_tready_d1_reg_0;
-  wire reg_tready_i0;
-  wire reg_tready_i_reg;
+  wire reg_tready_d1_i_2;
+  wire reg_tready_d1_i_2_0;
+  wire reg_write_complete_ctrl_reg;
+  wire reg_write_complete_sw_trigger_reg;
   wire reset;
-  wire sw_trigger_pending;
 
   assign out = first_q;
   (* KEEP = "yes" *) 
@@ -33061,15 +32843,15 @@ module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized5
     \opt_has_pipe.first_q_reg[0] 
        (.C(clk),
         .CE(1'b1),
-        .D(\opt_has_pipe.first_q_reg[0]_11 ),
+        .D(\opt_has_pipe.first_q_reg[0]_10 ),
         .Q(first_q),
-        .R(\opt_has_pipe.first_q_reg[0]_10 ));
+        .R(\opt_has_pipe.first_q_reg[0]_9 ));
   LUT2 #(
     .INIT(4'h8)) 
     \reg_rdata[12]_i_1 
        (.I0(first_q),
         .I1(reset),
-        .O(\opt_has_pipe.first_q_reg[0]_9 ));
+        .O(\opt_has_pipe.first_q_reg[0]_8 ));
   LUT6 #(
     .INIT(64'h4544454545444444)) 
     \reg_rdata[1]_i_1 
@@ -33079,7 +32861,7 @@ module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized5
         .I3(Q[0]),
         .I4(\reg_rdata_reg[8]_1 ),
         .I5(\reg_rdata_reg[8]_2 [0]),
-        .O(\opt_has_pipe.first_q_reg[0]_8 ));
+        .O(\opt_has_pipe.first_q_reg[0]_7 ));
   LUT6 #(
     .INIT(64'h4544454545444444)) 
     \reg_rdata[2]_i_1 
@@ -33089,17 +32871,7 @@ module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized5
         .I3(Q[1]),
         .I4(\reg_rdata_reg[8]_1 ),
         .I5(\reg_rdata_reg[8]_2 [1]),
-        .O(\opt_has_pipe.first_q_reg[0]_7 ));
-  LUT6 #(
-    .INIT(64'h3030303010111010)) 
-    \reg_rdata[31]_i_1 
-       (.I0(\reg_rdata_reg[31] ),
-        .I1(first_q),
-        .I2(\reg_rdata_reg[31]_0 ),
-        .I3(\reg_rdata_reg[31]_1 ),
-        .I4(sw_trigger_pending),
-        .I5(\reg_rdata_reg[31]_2 ),
-        .O(\opt_has_pipe.first_q_reg[0]_0 ));
+        .O(\opt_has_pipe.first_q_reg[0]_6 ));
   LUT6 #(
     .INIT(64'h4544454545444444)) 
     \reg_rdata[3]_i_1 
@@ -33109,7 +32881,7 @@ module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized5
         .I3(Q[2]),
         .I4(\reg_rdata_reg[8]_1 ),
         .I5(\reg_rdata_reg[8]_2 [2]),
-        .O(\opt_has_pipe.first_q_reg[0]_6 ));
+        .O(\opt_has_pipe.first_q_reg[0]_5 ));
   LUT6 #(
     .INIT(64'h4544454545444444)) 
     \reg_rdata[4]_i_1 
@@ -33119,7 +32891,7 @@ module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized5
         .I3(Q[3]),
         .I4(\reg_rdata_reg[8]_1 ),
         .I5(\reg_rdata_reg[8]_2 [3]),
-        .O(\opt_has_pipe.first_q_reg[0]_5 ));
+        .O(\opt_has_pipe.first_q_reg[0]_4 ));
   LUT6 #(
     .INIT(64'h4544454545444444)) 
     \reg_rdata[5]_i_1 
@@ -33129,7 +32901,7 @@ module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized5
         .I3(Q[4]),
         .I4(\reg_rdata_reg[8]_1 ),
         .I5(\reg_rdata_reg[8]_2 [4]),
-        .O(\opt_has_pipe.first_q_reg[0]_4 ));
+        .O(\opt_has_pipe.first_q_reg[0]_3 ));
   LUT6 #(
     .INIT(64'h4544454545444444)) 
     \reg_rdata[6]_i_1 
@@ -33139,7 +32911,7 @@ module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized5
         .I3(Q[5]),
         .I4(\reg_rdata_reg[8]_1 ),
         .I5(\reg_rdata_reg[8]_2 [5]),
-        .O(\opt_has_pipe.first_q_reg[0]_3 ));
+        .O(\opt_has_pipe.first_q_reg[0]_2 ));
   LUT6 #(
     .INIT(64'h4544454545444444)) 
     \reg_rdata[7]_i_1 
@@ -33149,7 +32921,7 @@ module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized5
         .I3(Q[6]),
         .I4(\reg_rdata_reg[8]_1 ),
         .I5(\reg_rdata_reg[8]_2 [6]),
-        .O(\opt_has_pipe.first_q_reg[0]_2 ));
+        .O(\opt_has_pipe.first_q_reg[0]_1 ));
   LUT6 #(
     .INIT(64'h4544454545444444)) 
     \reg_rdata[8]_i_1 
@@ -33159,26 +32931,17 @@ module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized5
         .I3(Q[7]),
         .I4(\reg_rdata_reg[8]_1 ),
         .I5(\reg_rdata_reg[8]_2 [7]),
-        .O(\opt_has_pipe.first_q_reg[0]_1 ));
-  LUT5 #(
-    .INIT(32'hFFFFFFEF)) 
-    reg_tready_d1_i_1
-       (.I0(first_q),
-        .I1(reg_tready_d1_reg),
-        .I2(\reg_rdata_reg[31] ),
-        .I3(reg_tready_i_reg),
-        .I4(reg_tready_d1_reg_0),
-        .O(reg_tready_d0));
+        .O(\opt_has_pipe.first_q_reg[0]_0 ));
   LUT6 #(
-    .INIT(64'h00000000FFFFFFEF)) 
-    reg_tready_i_i_1
-       (.I0(first_q),
-        .I1(reg_tready_d1_reg),
-        .I2(\reg_rdata_reg[31] ),
-        .I3(reg_tready_i_reg),
-        .I4(reg_tready_d1_reg_0),
-        .I5(reg_tready_d1),
-        .O(reg_tready_i0));
+    .INIT(64'h0000000000000001)) 
+    reg_tready_d1_i_3
+       (.I0(axi_write_complete),
+        .I1(first_q),
+        .I2(reg_write_complete_ctrl_reg),
+        .I3(reg_tready_d1_i_2),
+        .I4(reg_write_complete_sw_trigger_reg),
+        .I5(reg_tready_d1_i_2_0),
+        .O(\b_trigger_table.b_write_to_trigger_registers_edge.axi_write_complete_reg ));
 endmodule
 
 (* ORIG_REF_NAME = "xbip_pipe_v3_0_6_viv" *) 
@@ -33189,8 +32952,8 @@ module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized5_14
     read_from_trigger_registers_cmb,
     clk,
     Q,
+    axi_write_complete,
     \b_trigger_table.trigger2rm_table_reg_0_1_0_0 ,
-    \b_trigger_table.trigger2rm_table_reg_0_1_0_0_0 ,
     in_shutdown_d1);
   output out;
   output \vsm_addr_reg[4] ;
@@ -33198,13 +32961,13 @@ module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized5_14
   input read_from_trigger_registers_cmb;
   input clk;
   input [1:0]Q;
+  input axi_write_complete;
   input \b_trigger_table.trigger2rm_table_reg_0_1_0_0 ;
-  input \b_trigger_table.trigger2rm_table_reg_0_1_0_0_0 ;
   input in_shutdown_d1;
 
   wire [1:0]Q;
+  wire axi_write_complete;
   wire \b_trigger_table.trigger2rm_table_reg_0_1_0_0 ;
-  wire \b_trigger_table.trigger2rm_table_reg_0_1_0_0_0 ;
   wire clk;
   (* RTL_KEEP = "true" *) wire first_q;
   wire in_shutdown_d1;
@@ -33218,9 +32981,9 @@ module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized5_14
     \b_trigger_table.trigger2rm_table_reg_0_1_0_0_i_1 
        (.I0(Q[1]),
         .I1(Q[0]),
-        .I2(\b_trigger_table.trigger2rm_table_reg_0_1_0_0 ),
+        .I2(axi_write_complete),
         .I3(first_q),
-        .I4(\b_trigger_table.trigger2rm_table_reg_0_1_0_0_0 ),
+        .I4(\b_trigger_table.trigger2rm_table_reg_0_1_0_0 ),
         .I5(in_shutdown_d1),
         .O(\vsm_addr_reg[4] ));
   (* KEEP = "yes" *) 
@@ -33274,36 +33037,36 @@ endmodule
 
 (* ORIG_REF_NAME = "xbip_pipe_v3_0_6_viv" *) 
 module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized5_16
-   (fetch_error_flag_reg,
-    bad_config_error_flag_reg,
+   (bad_config_error_flag_reg,
+    fetch_error_flag_reg,
     cp_error_flag_reg,
     rm_id_valid,
     \opt_has_pipe.first_q_reg[0]_0 ,
     clk,
+    bad_config_error_flag_reg_0,
+    p_0_in,
     fetch_error_flag_reg_0,
     fetch_error_flag_reg_1,
     Q,
     din,
-    bad_config_error_flag_reg_0,
-    p_0_in,
     cp_error_flag,
     cp0_vs_id,
     p_3_in,
     cp_error_flag_reg_0,
     user_restarted_with_status,
     out);
-  output fetch_error_flag_reg;
   output bad_config_error_flag_reg;
+  output fetch_error_flag_reg;
   output cp_error_flag_reg;
   output rm_id_valid;
   input \opt_has_pipe.first_q_reg[0]_0 ;
   input clk;
+  input bad_config_error_flag_reg_0;
+  input p_0_in;
   input fetch_error_flag_reg_0;
   input fetch_error_flag_reg_1;
   input [3:0]Q;
   input [0:0]din;
-  input bad_config_error_flag_reg_0;
-  input p_0_in;
   input cp_error_flag;
   input cp0_vs_id;
   input p_3_in;
@@ -33356,24 +33119,24 @@ module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized5_16
         .I3(p_3_in),
         .O(cp_error_flag_reg));
   LUT6 #(
-    .INIT(64'hF444444444444444)) 
+    .INIT(64'h44F4444444444444)) 
     fetch_error_flag_i_1
        (.I0(cp_error_flag0),
         .I1(fetch_error_flag_reg_0),
         .I2(fetch_error_flag_reg_1),
-        .I3(Q[1]),
-        .I4(Q[2]),
+        .I3(Q[0]),
+        .I4(Q[1]),
         .I5(din),
         .O(fetch_error_flag_reg));
   LUT6 #(
-    .INIT(64'h0000A0000C00A000)) 
+    .INIT(64'h0030808000008080)) 
     \opt_has_pipe.first_q[0]_i_1__0 
        (.I0(first_q),
-        .I1(out),
-        .I2(Q[3]),
-        .I3(Q[2]),
+        .I1(Q[3]),
+        .I2(Q[2]),
+        .I3(Q[1]),
         .I4(Q[0]),
-        .I5(Q[1]),
+        .I5(out),
         .O(rm_id_valid));
   LUT4 #(
     .INIT(16'h6000)) 
@@ -33431,7 +33194,7 @@ module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized5_17
   assign out = first_q;
   LUT4 #(
     .INIT(16'h0100)) 
-    \opt_has_pipe.first_q[0]_i_1__1 
+    \opt_has_pipe.first_q[0]_i_1 
        (.I0(Q[1]),
         .I1(Q[0]),
         .I2(Q[3]),
@@ -33460,74 +33223,75 @@ endmodule
 (* ORIG_REF_NAME = "xbip_pipe_v3_0_6_viv" *) 
 module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized5_18
    (out,
-    D,
+    \vsm_addr_reg[2] ,
+    \vsm_addr_reg[2]_0 ,
+    \vsm_addr_reg[2]_1 ,
+    \vsm_addr_reg[2]_2 ,
+    \vsm_addr_reg[2]_3 ,
+    \vsm_addr_reg[2]_4 ,
+    \vsm_addr_reg[2]_5 ,
+    \vsm_addr_reg[2]_6 ,
     \opt_has_pipe.first_q_reg[0]_0 ,
-    \b_rm_info.b_write_to_rm_info_registers_edge.axi_write_complete_reg ,
-    \opt_has_pipe.first_q_reg[0]_1 ,
-    \opt_has_pipe.first_q_reg[0]_2 ,
     start_axi_read,
     clk,
-    reg_rdata_trigger_table,
-    \reg_rdata_reg[0] ,
-    \reg_rdata_reg[0]_0 ,
-    \reg_rdata_reg[0]_1 ,
-    \reg_rdata_reg[0]_2 ,
-    \reg_rdata_reg[0]_3 ,
     Q,
     reg_rdata_rm_table_ctrl1_out,
-    sw_trigger_id,
-    \reg_rdata[0]_i_2_0 ,
-    \s_axi_rresp_i_reg[1] ,
-    reg_write_complete_ctrl_reg,
-    reg_write_complete_sw_trigger_reg,
-    reg_tready_i_reg);
+    \reg_rdata_reg[2] ,
+    \reg_rdata_reg[1] ,
+    \reg_rdata_reg[1]_0 ,
+    \reg_rdata_reg[3] ,
+    \reg_rdata_reg[4] ,
+    \reg_rdata_reg[5] ,
+    \reg_rdata_reg[6] ,
+    \reg_rdata_reg[7] ,
+    in);
   output out;
-  output [0:0]D;
-  output \opt_has_pipe.first_q_reg[0]_0 ;
-  output \b_rm_info.b_write_to_rm_info_registers_edge.axi_write_complete_reg ;
-  output \opt_has_pipe.first_q_reg[0]_1 ;
-  input \opt_has_pipe.first_q_reg[0]_2 ;
+  output \vsm_addr_reg[2] ;
+  output \vsm_addr_reg[2]_0 ;
+  output \vsm_addr_reg[2]_1 ;
+  output \vsm_addr_reg[2]_2 ;
+  output \vsm_addr_reg[2]_3 ;
+  output \vsm_addr_reg[2]_4 ;
+  output \vsm_addr_reg[2]_5 ;
+  output \vsm_addr_reg[2]_6 ;
+  input \opt_has_pipe.first_q_reg[0]_0 ;
   input start_axi_read;
   input clk;
-  input reg_rdata_trigger_table;
-  input \reg_rdata_reg[0] ;
-  input \reg_rdata_reg[0]_0 ;
-  input \reg_rdata_reg[0]_1 ;
-  input \reg_rdata_reg[0]_2 ;
-  input \reg_rdata_reg[0]_3 ;
-  input [2:0]Q;
-  input [0:0]reg_rdata_rm_table_ctrl1_out;
-  input sw_trigger_id;
-  input [0:0]\reg_rdata[0]_i_2_0 ;
-  input \s_axi_rresp_i_reg[1] ;
-  input reg_write_complete_ctrl_reg;
-  input reg_write_complete_sw_trigger_reg;
-  input reg_tready_i_reg;
+  input [0:0]Q;
+  input [7:0]reg_rdata_rm_table_ctrl1_out;
+  input [1:0]\reg_rdata_reg[2] ;
+  input \reg_rdata_reg[1] ;
+  input \reg_rdata_reg[1]_0 ;
+  input \reg_rdata_reg[3] ;
+  input \reg_rdata_reg[4] ;
+  input \reg_rdata_reg[5] ;
+  input \reg_rdata_reg[6] ;
+  input \reg_rdata_reg[7] ;
+  input [0:0]in;
 
-  wire [0:0]D;
-  wire [2:0]Q;
-  wire \b_rm_info.b_write_to_rm_info_registers_edge.axi_write_complete_reg ;
+  wire [0:0]Q;
   wire clk;
   (* RTL_KEEP = "true" *) wire first_q;
+  wire [0:0]in;
   wire \opt_has_pipe.first_q_reg[0]_0 ;
-  wire \opt_has_pipe.first_q_reg[0]_1 ;
-  wire \opt_has_pipe.first_q_reg[0]_2 ;
-  wire [0:0]\reg_rdata[0]_i_2_0 ;
-  wire \reg_rdata[0]_i_2_n_0 ;
-  wire \reg_rdata[0]_i_4_n_0 ;
-  wire \reg_rdata_reg[0] ;
-  wire \reg_rdata_reg[0]_0 ;
-  wire \reg_rdata_reg[0]_1 ;
-  wire \reg_rdata_reg[0]_2 ;
-  wire \reg_rdata_reg[0]_3 ;
-  wire [0:0]reg_rdata_rm_table_ctrl1_out;
-  wire reg_rdata_trigger_table;
-  wire reg_tready_i_reg;
-  wire reg_write_complete_ctrl_reg;
-  wire reg_write_complete_sw_trigger_reg;
-  wire \s_axi_rresp_i_reg[1] ;
+  wire \reg_rdata_reg[1] ;
+  wire \reg_rdata_reg[1]_0 ;
+  wire [1:0]\reg_rdata_reg[2] ;
+  wire \reg_rdata_reg[3] ;
+  wire \reg_rdata_reg[4] ;
+  wire \reg_rdata_reg[5] ;
+  wire \reg_rdata_reg[6] ;
+  wire \reg_rdata_reg[7] ;
+  wire [7:0]reg_rdata_rm_table_ctrl1_out;
   wire start_axi_read;
-  wire sw_trigger_id;
+  wire \vsm_addr_reg[2] ;
+  wire \vsm_addr_reg[2]_0 ;
+  wire \vsm_addr_reg[2]_1 ;
+  wire \vsm_addr_reg[2]_2 ;
+  wire \vsm_addr_reg[2]_3 ;
+  wire \vsm_addr_reg[2]_4 ;
+  wire \vsm_addr_reg[2]_5 ;
+  wire \vsm_addr_reg[2]_6 ;
 
   assign out = first_q;
   (* KEEP = "yes" *) 
@@ -33538,59 +33302,87 @@ module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized5_18
         .CE(1'b1),
         .D(start_axi_read),
         .Q(first_q),
-        .R(\opt_has_pipe.first_q_reg[0]_2 ));
+        .R(\opt_has_pipe.first_q_reg[0]_0 ));
   LUT6 #(
-    .INIT(64'hA3A3A3A0A3A3A3A3)) 
-    \reg_rdata[0]_i_1 
-       (.I0(reg_rdata_trigger_table),
-        .I1(\reg_rdata[0]_i_2_n_0 ),
-        .I2(\reg_rdata_reg[0] ),
+    .INIT(64'h880088F088008800)) 
+    \reg_rdata[1]_i_2 
+       (.I0(Q),
+        .I1(reg_rdata_rm_table_ctrl1_out[0]),
+        .I2(\reg_rdata_reg[2] [0]),
         .I3(first_q),
-        .I4(\reg_rdata_reg[0]_0 ),
-        .I5(\reg_rdata_reg[0]_1 ),
-        .O(D));
+        .I4(\reg_rdata_reg[1] ),
+        .I5(\reg_rdata_reg[1]_0 ),
+        .O(\vsm_addr_reg[2] ));
   LUT6 #(
-    .INIT(64'h0202022222220222)) 
-    \reg_rdata[0]_i_2 
-       (.I0(\reg_rdata_reg[0]_2 ),
-        .I1(\reg_rdata[0]_i_4_n_0 ),
-        .I2(first_q),
-        .I3(\reg_rdata_reg[0]_3 ),
-        .I4(Q[0]),
-        .I5(reg_rdata_rm_table_ctrl1_out),
-        .O(\reg_rdata[0]_i_2_n_0 ));
+    .INIT(64'h880088F088008800)) 
+    \reg_rdata[2]_i_2 
+       (.I0(Q),
+        .I1(reg_rdata_rm_table_ctrl1_out[1]),
+        .I2(\reg_rdata_reg[2] [1]),
+        .I3(first_q),
+        .I4(\reg_rdata_reg[1] ),
+        .I5(\reg_rdata_reg[1]_0 ),
+        .O(\vsm_addr_reg[2]_0 ));
   LUT6 #(
-    .INIT(64'h00000000AAABAAA8)) 
-    \reg_rdata[0]_i_4 
-       (.I0(sw_trigger_id),
-        .I1(Q[0]),
-        .I2(Q[1]),
-        .I3(Q[2]),
-        .I4(\reg_rdata[0]_i_2_0 ),
-        .I5(\opt_has_pipe.first_q_reg[0]_0 ),
-        .O(\reg_rdata[0]_i_4_n_0 ));
-  LUT2 #(
-    .INIT(4'hE)) 
-    \reg_rdata[31]_i_5 
-       (.I0(first_q),
-        .I1(\reg_rdata_reg[0]_0 ),
-        .O(\opt_has_pipe.first_q_reg[0]_0 ));
+    .INIT(64'h880088F088008800)) 
+    \reg_rdata[3]_i_2 
+       (.I0(Q),
+        .I1(reg_rdata_rm_table_ctrl1_out[2]),
+        .I2(\reg_rdata_reg[3] ),
+        .I3(first_q),
+        .I4(\reg_rdata_reg[1] ),
+        .I5(\reg_rdata_reg[1]_0 ),
+        .O(\vsm_addr_reg[2]_1 ));
   LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFFFE)) 
-    reg_tready_d1_i_2
-       (.I0(\s_axi_rresp_i_reg[1] ),
-        .I1(first_q),
-        .I2(reg_write_complete_ctrl_reg),
-        .I3(reg_write_complete_sw_trigger_reg),
-        .I4(\reg_rdata_reg[0]_0 ),
-        .I5(reg_tready_i_reg),
-        .O(\b_rm_info.b_write_to_rm_info_registers_edge.axi_write_complete_reg ));
-  LUT2 #(
-    .INIT(4'h1)) 
-    \s_axi_rresp_i[1]_i_3 
-       (.I0(first_q),
-        .I1(\s_axi_rresp_i_reg[1] ),
-        .O(\opt_has_pipe.first_q_reg[0]_1 ));
+    .INIT(64'h880088F088008800)) 
+    \reg_rdata[4]_i_2 
+       (.I0(Q),
+        .I1(reg_rdata_rm_table_ctrl1_out[3]),
+        .I2(\reg_rdata_reg[4] ),
+        .I3(first_q),
+        .I4(\reg_rdata_reg[1] ),
+        .I5(\reg_rdata_reg[1]_0 ),
+        .O(\vsm_addr_reg[2]_2 ));
+  LUT6 #(
+    .INIT(64'h880088F088008800)) 
+    \reg_rdata[5]_i_2 
+       (.I0(Q),
+        .I1(reg_rdata_rm_table_ctrl1_out[4]),
+        .I2(\reg_rdata_reg[5] ),
+        .I3(first_q),
+        .I4(\reg_rdata_reg[1] ),
+        .I5(\reg_rdata_reg[1]_0 ),
+        .O(\vsm_addr_reg[2]_3 ));
+  LUT6 #(
+    .INIT(64'h880088F088008800)) 
+    \reg_rdata[6]_i_2 
+       (.I0(Q),
+        .I1(reg_rdata_rm_table_ctrl1_out[5]),
+        .I2(\reg_rdata_reg[6] ),
+        .I3(first_q),
+        .I4(\reg_rdata_reg[1] ),
+        .I5(\reg_rdata_reg[1]_0 ),
+        .O(\vsm_addr_reg[2]_4 ));
+  LUT6 #(
+    .INIT(64'h880088F088008800)) 
+    \reg_rdata[7]_i_2 
+       (.I0(Q),
+        .I1(reg_rdata_rm_table_ctrl1_out[6]),
+        .I2(\reg_rdata_reg[7] ),
+        .I3(first_q),
+        .I4(\reg_rdata_reg[1] ),
+        .I5(\reg_rdata_reg[1]_0 ),
+        .O(\vsm_addr_reg[2]_5 ));
+  LUT6 #(
+    .INIT(64'h880088F088008800)) 
+    \reg_rdata[8]_i_2 
+       (.I0(Q),
+        .I1(reg_rdata_rm_table_ctrl1_out[7]),
+        .I2(in),
+        .I3(first_q),
+        .I4(\reg_rdata_reg[1] ),
+        .I5(\reg_rdata_reg[1]_0 ),
+        .O(\vsm_addr_reg[2]_6 ));
 endmodule
 
 (* ORIG_REF_NAME = "xbip_pipe_v3_0_6_viv" *) 
@@ -33677,8 +33469,8 @@ module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized5_20
     clk,
     Q,
     \b_rm_info.reg_rdata_rm_table_ctrl_reg[0] ,
-    \b_rm_info.reg_rdata_rm_table_ctrl_reg[0]_0 ,
-    \b_rm_info.reg_rdata_rm_table_ctrl_reg[0]_1 );
+    \b_rm_info.bs_addr_reg[0] ,
+    \b_rm_info.reg_rdata_rm_table_ctrl_reg[0]_0 );
   output out;
   output \vsm_addr_reg[2] ;
   output \vsm_addr_reg[2]_0 ;
@@ -33687,13 +33479,13 @@ module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized5_20
   input clk;
   input [1:0]Q;
   input \b_rm_info.reg_rdata_rm_table_ctrl_reg[0] ;
+  input \b_rm_info.bs_addr_reg[0] ;
   input \b_rm_info.reg_rdata_rm_table_ctrl_reg[0]_0 ;
-  input \b_rm_info.reg_rdata_rm_table_ctrl_reg[0]_1 ;
 
   wire [1:0]Q;
+  wire \b_rm_info.bs_addr_reg[0] ;
   wire \b_rm_info.reg_rdata_rm_table_ctrl_reg[0] ;
   wire \b_rm_info.reg_rdata_rm_table_ctrl_reg[0]_0 ;
-  wire \b_rm_info.reg_rdata_rm_table_ctrl_reg[0]_1 ;
   wire clk;
   (* RTL_KEEP = "true" *) wire first_q;
   wire \opt_has_pipe.first_q_reg[0]_0 ;
@@ -33708,9 +33500,9 @@ module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized5_20
        (.I0(Q[0]),
         .I1(\b_rm_info.reg_rdata_rm_table_ctrl_reg[0] ),
         .I2(first_q),
-        .I3(\b_rm_info.reg_rdata_rm_table_ctrl_reg[0]_0 ),
+        .I3(\b_rm_info.bs_addr_reg[0] ),
         .I4(Q[1]),
-        .I5(\b_rm_info.reg_rdata_rm_table_ctrl_reg[0]_1 ),
+        .I5(\b_rm_info.reg_rdata_rm_table_ctrl_reg[0]_0 ),
         .O(\vsm_addr_reg[2]_0 ));
   LUT6 #(
     .INIT(64'h0000000000000800)) 
@@ -33718,9 +33510,9 @@ module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized5_20
        (.I0(Q[0]),
         .I1(\b_rm_info.reg_rdata_rm_table_ctrl_reg[0] ),
         .I2(first_q),
-        .I3(\b_rm_info.reg_rdata_rm_table_ctrl_reg[0]_0 ),
+        .I3(\b_rm_info.bs_addr_reg[0] ),
         .I4(Q[1]),
-        .I5(\b_rm_info.reg_rdata_rm_table_ctrl_reg[0]_1 ),
+        .I5(\b_rm_info.reg_rdata_rm_table_ctrl_reg[0]_0 ),
         .O(\vsm_addr_reg[2] ));
   (* KEEP = "yes" *) 
   FDRE #(
@@ -33818,18 +33610,9 @@ endmodule
 (* ORIG_REF_NAME = "xbip_pipe_v3_0_6_viv" *) 
 module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized5_24
    (out,
-    \vsm_addr_reg[2] ,
-    \vsm_addr_reg[2]_0 ,
-    \vsm_addr_reg[2]_1 ,
-    \vsm_addr_reg[2]_2 ,
-    \vsm_addr_reg[2]_3 ,
-    \vsm_addr_reg[2]_4 ,
-    \vsm_addr_reg[2]_5 ,
-    \vsm_addr_reg[2]_6 ,
-    \b_bs_info.reg_rdata_bs_table_address_reg[0] ,
-    \b_bs_info.reg_rdata_bs_table_address_reg[31] ,
+    D,
+    \opt_has_pipe.first_q_reg[0]_0 ,
     \b_bs_info.b_write_to_bs_info_registers_edge.axi_write_complete_reg ,
-    reset_0,
     \b_bs_info.reg_rdata_bs_table_size_reg[13] ,
     \b_bs_info.reg_rdata_bs_table_size_reg[14] ,
     \b_bs_info.reg_rdata_bs_table_size_reg[15] ,
@@ -33848,38 +33631,29 @@ module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized5_24
     \b_bs_info.reg_rdata_bs_table_size_reg[28] ,
     \b_bs_info.reg_rdata_bs_table_size_reg[29] ,
     \b_bs_info.reg_rdata_bs_table_size_reg[30] ,
-    \opt_has_pipe.first_q_reg[0]_0 ,
+    reset_0,
     \opt_has_pipe.first_q_reg[0]_1 ,
+    \opt_has_pipe.first_q_reg[0]_2 ,
     clk,
+    reg_rdata_trigger_table,
+    \reg_rdata_reg[0] ,
+    \reg_rdata_reg[0]_0 ,
+    \reg_rdata_reg[0]_1 ,
+    \reg_rdata_reg[0]_2 ,
     Q,
     reg_rdata_rm_table_ctrl1_out,
-    \reg_rdata_reg[30] ,
-    \reg_rdata_reg[2] ,
-    \reg_rdata_reg[1] ,
-    \reg_rdata_reg[3] ,
-    \reg_rdata_reg[4] ,
-    \reg_rdata_reg[5] ,
-    \reg_rdata_reg[6] ,
-    \reg_rdata_reg[7] ,
-    in,
+    sw_trigger_id,
+    \reg_rdata[0]_i_2_0 ,
     \reg_rdata_reg[31] ,
+    sw_trigger_pending,
     \reg_rdata_reg[31]_0 ,
-    \s_axi_rresp_i_reg[1] ,
-    reset,
-    \reg_rdata_reg[30]_0 );
+    \reg_rdata_reg[31]_1 ,
+    \s_axi_rresp_i[1]_i_3 ,
+    reset);
   output out;
-  output \vsm_addr_reg[2] ;
-  output \vsm_addr_reg[2]_0 ;
-  output \vsm_addr_reg[2]_1 ;
-  output \vsm_addr_reg[2]_2 ;
-  output \vsm_addr_reg[2]_3 ;
-  output \vsm_addr_reg[2]_4 ;
-  output \vsm_addr_reg[2]_5 ;
-  output \vsm_addr_reg[2]_6 ;
-  output \b_bs_info.reg_rdata_bs_table_address_reg[0] ;
-  output \b_bs_info.reg_rdata_bs_table_address_reg[31] ;
+  output [1:0]D;
+  output \opt_has_pipe.first_q_reg[0]_0 ;
   output \b_bs_info.b_write_to_bs_info_registers_edge.axi_write_complete_reg ;
-  output reset_0;
   output \b_bs_info.reg_rdata_bs_table_size_reg[13] ;
   output \b_bs_info.reg_rdata_bs_table_size_reg[14] ;
   output \b_bs_info.reg_rdata_bs_table_size_reg[15] ;
@@ -33898,30 +33672,29 @@ module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized5_24
   output \b_bs_info.reg_rdata_bs_table_size_reg[28] ;
   output \b_bs_info.reg_rdata_bs_table_size_reg[29] ;
   output \b_bs_info.reg_rdata_bs_table_size_reg[30] ;
-  input \opt_has_pipe.first_q_reg[0]_0 ;
+  output reset_0;
   input \opt_has_pipe.first_q_reg[0]_1 ;
+  input \opt_has_pipe.first_q_reg[0]_2 ;
   input clk;
-  input [1:0]Q;
-  input [7:0]reg_rdata_rm_table_ctrl1_out;
-  input \reg_rdata_reg[30] ;
-  input [1:0]\reg_rdata_reg[2] ;
-  input \reg_rdata_reg[1] ;
-  input \reg_rdata_reg[3] ;
-  input \reg_rdata_reg[4] ;
-  input \reg_rdata_reg[5] ;
-  input \reg_rdata_reg[6] ;
-  input \reg_rdata_reg[7] ;
-  input [0:0]in;
-  input [19:0]\reg_rdata_reg[31] ;
+  input reg_rdata_trigger_table;
+  input \reg_rdata_reg[0] ;
+  input \reg_rdata_reg[0]_0 ;
+  input \reg_rdata_reg[0]_1 ;
+  input \reg_rdata_reg[0]_2 ;
+  input [2:0]Q;
+  input [0:0]reg_rdata_rm_table_ctrl1_out;
+  input sw_trigger_id;
+  input [0:0]\reg_rdata[0]_i_2_0 ;
+  input \reg_rdata_reg[31] ;
+  input sw_trigger_pending;
   input [19:0]\reg_rdata_reg[31]_0 ;
-  input \s_axi_rresp_i_reg[1] ;
+  input [19:0]\reg_rdata_reg[31]_1 ;
+  input \s_axi_rresp_i[1]_i_3 ;
   input reset;
-  input \reg_rdata_reg[30]_0 ;
 
-  wire [1:0]Q;
+  wire [1:0]D;
+  wire [2:0]Q;
   wire \b_bs_info.b_write_to_bs_info_registers_edge.axi_write_complete_reg ;
-  wire \b_bs_info.reg_rdata_bs_table_address_reg[0] ;
-  wire \b_bs_info.reg_rdata_bs_table_address_reg[31] ;
   wire \b_bs_info.reg_rdata_bs_table_size_reg[13] ;
   wire \b_bs_info.reg_rdata_bs_table_size_reg[14] ;
   wire \b_bs_info.reg_rdata_bs_table_size_reg[15] ;
@@ -33942,32 +33715,28 @@ module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized5_24
   wire \b_bs_info.reg_rdata_bs_table_size_reg[30] ;
   wire clk;
   (* RTL_KEEP = "true" *) wire first_q;
-  wire [0:0]in;
   wire \opt_has_pipe.first_q_reg[0]_0 ;
   wire \opt_has_pipe.first_q_reg[0]_1 ;
-  wire \reg_rdata_reg[1] ;
-  wire [1:0]\reg_rdata_reg[2] ;
-  wire \reg_rdata_reg[30] ;
-  wire \reg_rdata_reg[30]_0 ;
-  wire [19:0]\reg_rdata_reg[31] ;
+  wire \opt_has_pipe.first_q_reg[0]_2 ;
+  wire [0:0]\reg_rdata[0]_i_2_0 ;
+  wire \reg_rdata[0]_i_2_n_0 ;
+  wire \reg_rdata[0]_i_3_n_0 ;
+  wire \reg_rdata[0]_i_4_n_0 ;
+  wire \reg_rdata[31]_i_2_n_0 ;
+  wire \reg_rdata_reg[0] ;
+  wire \reg_rdata_reg[0]_0 ;
+  wire \reg_rdata_reg[0]_1 ;
+  wire \reg_rdata_reg[0]_2 ;
+  wire \reg_rdata_reg[31] ;
   wire [19:0]\reg_rdata_reg[31]_0 ;
-  wire \reg_rdata_reg[3] ;
-  wire \reg_rdata_reg[4] ;
-  wire \reg_rdata_reg[5] ;
-  wire \reg_rdata_reg[6] ;
-  wire \reg_rdata_reg[7] ;
-  wire [7:0]reg_rdata_rm_table_ctrl1_out;
+  wire [19:0]\reg_rdata_reg[31]_1 ;
+  wire [0:0]reg_rdata_rm_table_ctrl1_out;
+  wire reg_rdata_trigger_table;
   wire reset;
   wire reset_0;
-  wire \s_axi_rresp_i_reg[1] ;
-  wire \vsm_addr_reg[2] ;
-  wire \vsm_addr_reg[2]_0 ;
-  wire \vsm_addr_reg[2]_1 ;
-  wire \vsm_addr_reg[2]_2 ;
-  wire \vsm_addr_reg[2]_3 ;
-  wire \vsm_addr_reg[2]_4 ;
-  wire \vsm_addr_reg[2]_5 ;
-  wire \vsm_addr_reg[2]_6 ;
+  wire \s_axi_rresp_i[1]_i_3 ;
+  wire sw_trigger_id;
+  wire sw_trigger_pending;
 
   assign out = first_q;
   (* KEEP = "yes" *) 
@@ -33976,24 +33745,54 @@ module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized5_24
     \opt_has_pipe.first_q_reg[0] 
        (.C(clk),
         .CE(1'b1),
-        .D(\opt_has_pipe.first_q_reg[0]_1 ),
+        .D(\opt_has_pipe.first_q_reg[0]_2 ),
         .Q(first_q),
-        .R(\opt_has_pipe.first_q_reg[0]_0 ));
+        .R(\opt_has_pipe.first_q_reg[0]_1 ));
+  LUT6 #(
+    .INIT(64'hA3A3A3A3A3A3A3A0)) 
+    \reg_rdata[0]_i_1 
+       (.I0(reg_rdata_trigger_table),
+        .I1(\reg_rdata[0]_i_2_n_0 ),
+        .I2(\reg_rdata_reg[0] ),
+        .I3(\reg_rdata_reg[0]_0 ),
+        .I4(first_q),
+        .I5(\reg_rdata_reg[0]_1 ),
+        .O(D[0]));
+  LUT6 #(
+    .INIT(64'h0202022222220222)) 
+    \reg_rdata[0]_i_2 
+       (.I0(\reg_rdata[0]_i_3_n_0 ),
+        .I1(\reg_rdata[0]_i_4_n_0 ),
+        .I2(\reg_rdata_reg[0]_1 ),
+        .I3(\reg_rdata_reg[0]_2 ),
+        .I4(Q[0]),
+        .I5(reg_rdata_rm_table_ctrl1_out),
+        .O(\reg_rdata[0]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hFFFFFFFF335FFFFF)) 
     \reg_rdata[0]_i_3 
-       (.I0(\reg_rdata_reg[31] [0]),
-        .I1(\reg_rdata_reg[31]_0 [0]),
+       (.I0(\reg_rdata_reg[31]_0 [0]),
+        .I1(\reg_rdata_reg[31]_1 [0]),
         .I2(Q[0]),
         .I3(Q[1]),
         .I4(first_q),
-        .I5(\reg_rdata_reg[30] ),
-        .O(\b_bs_info.reg_rdata_bs_table_address_reg[0] ));
+        .I5(\reg_rdata_reg[0]_1 ),
+        .O(\reg_rdata[0]_i_3_n_0 ));
+  LUT6 #(
+    .INIT(64'h8888888C88888880)) 
+    \reg_rdata[0]_i_4 
+       (.I0(sw_trigger_id),
+        .I1(\opt_has_pipe.first_q_reg[0]_0 ),
+        .I2(Q[0]),
+        .I3(Q[1]),
+        .I4(Q[2]),
+        .I5(\reg_rdata[0]_i_2_0 ),
+        .O(\reg_rdata[0]_i_4_n_0 ));
   LUT5 #(
     .INIT(32'hAACAAAAA)) 
     \reg_rdata[13]_i_1 
-       (.I0(\reg_rdata_reg[31]_0 [1]),
-        .I1(\reg_rdata_reg[31] [1]),
+       (.I0(\reg_rdata_reg[31]_1 [1]),
+        .I1(\reg_rdata_reg[31]_0 [1]),
         .I2(first_q),
         .I3(Q[1]),
         .I4(Q[0]),
@@ -34001,8 +33800,8 @@ module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized5_24
   LUT5 #(
     .INIT(32'hAACAAAAA)) 
     \reg_rdata[14]_i_1 
-       (.I0(\reg_rdata_reg[31]_0 [2]),
-        .I1(\reg_rdata_reg[31] [2]),
+       (.I0(\reg_rdata_reg[31]_1 [2]),
+        .I1(\reg_rdata_reg[31]_0 [2]),
         .I2(first_q),
         .I3(Q[1]),
         .I4(Q[0]),
@@ -34010,8 +33809,8 @@ module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized5_24
   LUT5 #(
     .INIT(32'hAACAAAAA)) 
     \reg_rdata[15]_i_1 
-       (.I0(\reg_rdata_reg[31]_0 [3]),
-        .I1(\reg_rdata_reg[31] [3]),
+       (.I0(\reg_rdata_reg[31]_1 [3]),
+        .I1(\reg_rdata_reg[31]_0 [3]),
         .I2(first_q),
         .I3(Q[1]),
         .I4(Q[0]),
@@ -34019,8 +33818,8 @@ module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized5_24
   LUT5 #(
     .INIT(32'hAACAAAAA)) 
     \reg_rdata[16]_i_1 
-       (.I0(\reg_rdata_reg[31]_0 [4]),
-        .I1(\reg_rdata_reg[31] [4]),
+       (.I0(\reg_rdata_reg[31]_1 [4]),
+        .I1(\reg_rdata_reg[31]_0 [4]),
         .I2(first_q),
         .I3(Q[1]),
         .I4(Q[0]),
@@ -34028,8 +33827,8 @@ module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized5_24
   LUT5 #(
     .INIT(32'hAACAAAAA)) 
     \reg_rdata[17]_i_1 
-       (.I0(\reg_rdata_reg[31]_0 [5]),
-        .I1(\reg_rdata_reg[31] [5]),
+       (.I0(\reg_rdata_reg[31]_1 [5]),
+        .I1(\reg_rdata_reg[31]_0 [5]),
         .I2(first_q),
         .I3(Q[1]),
         .I4(Q[0]),
@@ -34037,8 +33836,8 @@ module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized5_24
   LUT5 #(
     .INIT(32'hAACAAAAA)) 
     \reg_rdata[18]_i_1 
-       (.I0(\reg_rdata_reg[31]_0 [6]),
-        .I1(\reg_rdata_reg[31] [6]),
+       (.I0(\reg_rdata_reg[31]_1 [6]),
+        .I1(\reg_rdata_reg[31]_0 [6]),
         .I2(first_q),
         .I3(Q[1]),
         .I4(Q[0]),
@@ -34046,27 +33845,17 @@ module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized5_24
   LUT5 #(
     .INIT(32'hAACAAAAA)) 
     \reg_rdata[19]_i_1 
-       (.I0(\reg_rdata_reg[31]_0 [7]),
-        .I1(\reg_rdata_reg[31] [7]),
+       (.I0(\reg_rdata_reg[31]_1 [7]),
+        .I1(\reg_rdata_reg[31]_0 [7]),
         .I2(first_q),
         .I3(Q[1]),
         .I4(Q[0]),
         .O(\b_bs_info.reg_rdata_bs_table_size_reg[19] ));
-  LUT6 #(
-    .INIT(64'h880F880088008800)) 
-    \reg_rdata[1]_i_2 
-       (.I0(Q[0]),
-        .I1(reg_rdata_rm_table_ctrl1_out[0]),
-        .I2(first_q),
-        .I3(\reg_rdata_reg[30] ),
-        .I4(\reg_rdata_reg[2] [0]),
-        .I5(\reg_rdata_reg[1] ),
-        .O(\vsm_addr_reg[2] ));
   LUT5 #(
     .INIT(32'hAACAAAAA)) 
     \reg_rdata[20]_i_1 
-       (.I0(\reg_rdata_reg[31]_0 [8]),
-        .I1(\reg_rdata_reg[31] [8]),
+       (.I0(\reg_rdata_reg[31]_1 [8]),
+        .I1(\reg_rdata_reg[31]_0 [8]),
         .I2(first_q),
         .I3(Q[1]),
         .I4(Q[0]),
@@ -34074,8 +33863,8 @@ module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized5_24
   LUT5 #(
     .INIT(32'hAACAAAAA)) 
     \reg_rdata[21]_i_1 
-       (.I0(\reg_rdata_reg[31]_0 [9]),
-        .I1(\reg_rdata_reg[31] [9]),
+       (.I0(\reg_rdata_reg[31]_1 [9]),
+        .I1(\reg_rdata_reg[31]_0 [9]),
         .I2(first_q),
         .I3(Q[1]),
         .I4(Q[0]),
@@ -34083,8 +33872,8 @@ module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized5_24
   LUT5 #(
     .INIT(32'hAACAAAAA)) 
     \reg_rdata[22]_i_1 
-       (.I0(\reg_rdata_reg[31]_0 [10]),
-        .I1(\reg_rdata_reg[31] [10]),
+       (.I0(\reg_rdata_reg[31]_1 [10]),
+        .I1(\reg_rdata_reg[31]_0 [10]),
         .I2(first_q),
         .I3(Q[1]),
         .I4(Q[0]),
@@ -34092,8 +33881,8 @@ module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized5_24
   LUT5 #(
     .INIT(32'hAACAAAAA)) 
     \reg_rdata[23]_i_1 
-       (.I0(\reg_rdata_reg[31]_0 [11]),
-        .I1(\reg_rdata_reg[31] [11]),
+       (.I0(\reg_rdata_reg[31]_1 [11]),
+        .I1(\reg_rdata_reg[31]_0 [11]),
         .I2(first_q),
         .I3(Q[1]),
         .I4(Q[0]),
@@ -34101,8 +33890,8 @@ module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized5_24
   LUT5 #(
     .INIT(32'hAACAAAAA)) 
     \reg_rdata[24]_i_1 
-       (.I0(\reg_rdata_reg[31]_0 [12]),
-        .I1(\reg_rdata_reg[31] [12]),
+       (.I0(\reg_rdata_reg[31]_1 [12]),
+        .I1(\reg_rdata_reg[31]_0 [12]),
         .I2(first_q),
         .I3(Q[1]),
         .I4(Q[0]),
@@ -34110,8 +33899,8 @@ module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized5_24
   LUT5 #(
     .INIT(32'hAACAAAAA)) 
     \reg_rdata[25]_i_1 
-       (.I0(\reg_rdata_reg[31]_0 [13]),
-        .I1(\reg_rdata_reg[31] [13]),
+       (.I0(\reg_rdata_reg[31]_1 [13]),
+        .I1(\reg_rdata_reg[31]_0 [13]),
         .I2(first_q),
         .I3(Q[1]),
         .I4(Q[0]),
@@ -34119,8 +33908,8 @@ module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized5_24
   LUT5 #(
     .INIT(32'hAACAAAAA)) 
     \reg_rdata[26]_i_1 
-       (.I0(\reg_rdata_reg[31]_0 [14]),
-        .I1(\reg_rdata_reg[31] [14]),
+       (.I0(\reg_rdata_reg[31]_1 [14]),
+        .I1(\reg_rdata_reg[31]_0 [14]),
         .I2(first_q),
         .I3(Q[1]),
         .I4(Q[0]),
@@ -34128,8 +33917,8 @@ module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized5_24
   LUT5 #(
     .INIT(32'hAACAAAAA)) 
     \reg_rdata[27]_i_1 
-       (.I0(\reg_rdata_reg[31]_0 [15]),
-        .I1(\reg_rdata_reg[31] [15]),
+       (.I0(\reg_rdata_reg[31]_1 [15]),
+        .I1(\reg_rdata_reg[31]_0 [15]),
         .I2(first_q),
         .I3(Q[1]),
         .I4(Q[0]),
@@ -34137,8 +33926,8 @@ module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized5_24
   LUT5 #(
     .INIT(32'hAACAAAAA)) 
     \reg_rdata[28]_i_1 
-       (.I0(\reg_rdata_reg[31]_0 [16]),
-        .I1(\reg_rdata_reg[31] [16]),
+       (.I0(\reg_rdata_reg[31]_1 [16]),
+        .I1(\reg_rdata_reg[31]_0 [16]),
         .I2(first_q),
         .I3(Q[1]),
         .I4(Q[0]),
@@ -34146,22 +33935,12 @@ module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized5_24
   LUT5 #(
     .INIT(32'hAACAAAAA)) 
     \reg_rdata[29]_i_1 
-       (.I0(\reg_rdata_reg[31]_0 [17]),
-        .I1(\reg_rdata_reg[31] [17]),
+       (.I0(\reg_rdata_reg[31]_1 [17]),
+        .I1(\reg_rdata_reg[31]_0 [17]),
         .I2(first_q),
         .I3(Q[1]),
         .I4(Q[0]),
         .O(\b_bs_info.reg_rdata_bs_table_size_reg[29] ));
-  LUT6 #(
-    .INIT(64'h880F880088008800)) 
-    \reg_rdata[2]_i_2 
-       (.I0(Q[0]),
-        .I1(reg_rdata_rm_table_ctrl1_out[1]),
-        .I2(first_q),
-        .I3(\reg_rdata_reg[30] ),
-        .I4(\reg_rdata_reg[2] [1]),
-        .I5(\reg_rdata_reg[1] ),
-        .O(\vsm_addr_reg[2]_0 ));
   LUT6 #(
     .INIT(64'hAAAAAAAAAAAA02AA)) 
     \reg_rdata[30]_i_1 
@@ -34169,92 +33948,48 @@ module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized5_24
         .I1(Q[1]),
         .I2(Q[0]),
         .I3(first_q),
-        .I4(\reg_rdata_reg[30] ),
-        .I5(\reg_rdata_reg[30]_0 ),
+        .I4(\reg_rdata_reg[0]_1 ),
+        .I5(\reg_rdata_reg[0] ),
         .O(reset_0));
   LUT5 #(
     .INIT(32'hAACAAAAA)) 
     \reg_rdata[30]_i_2 
-       (.I0(\reg_rdata_reg[31]_0 [18]),
-        .I1(\reg_rdata_reg[31] [18]),
+       (.I0(\reg_rdata_reg[31]_1 [18]),
+        .I1(\reg_rdata_reg[31]_0 [18]),
         .I2(first_q),
         .I3(Q[1]),
         .I4(Q[0]),
         .O(\b_bs_info.reg_rdata_bs_table_size_reg[30] ));
   LUT6 #(
+    .INIT(64'h2022303020203030)) 
+    \reg_rdata[31]_i_1 
+       (.I0(\reg_rdata_reg[0]_0 ),
+        .I1(\reg_rdata_reg[0] ),
+        .I2(\reg_rdata[31]_i_2_n_0 ),
+        .I3(\reg_rdata_reg[31] ),
+        .I4(\opt_has_pipe.first_q_reg[0]_0 ),
+        .I5(sw_trigger_pending),
+        .O(D[1]));
+  LUT6 #(
     .INIT(64'h0000EC0000002000)) 
-    \reg_rdata[31]_i_3 
-       (.I0(\reg_rdata_reg[31] [19]),
+    \reg_rdata[31]_i_2 
+       (.I0(\reg_rdata_reg[31]_0 [19]),
         .I1(Q[1]),
         .I2(Q[0]),
         .I3(first_q),
-        .I4(\reg_rdata_reg[30] ),
-        .I5(\reg_rdata_reg[31]_0 [19]),
-        .O(\b_bs_info.reg_rdata_bs_table_address_reg[31] ));
-  LUT6 #(
-    .INIT(64'h880F880088008800)) 
-    \reg_rdata[3]_i_2 
-       (.I0(Q[0]),
-        .I1(reg_rdata_rm_table_ctrl1_out[2]),
-        .I2(first_q),
-        .I3(\reg_rdata_reg[30] ),
-        .I4(\reg_rdata_reg[3] ),
-        .I5(\reg_rdata_reg[1] ),
-        .O(\vsm_addr_reg[2]_1 ));
-  LUT6 #(
-    .INIT(64'h880F880088008800)) 
-    \reg_rdata[4]_i_2 
-       (.I0(Q[0]),
-        .I1(reg_rdata_rm_table_ctrl1_out[3]),
-        .I2(first_q),
-        .I3(\reg_rdata_reg[30] ),
-        .I4(\reg_rdata_reg[4] ),
-        .I5(\reg_rdata_reg[1] ),
-        .O(\vsm_addr_reg[2]_2 ));
-  LUT6 #(
-    .INIT(64'h880F880088008800)) 
-    \reg_rdata[5]_i_2 
-       (.I0(Q[0]),
-        .I1(reg_rdata_rm_table_ctrl1_out[4]),
-        .I2(first_q),
-        .I3(\reg_rdata_reg[30] ),
-        .I4(\reg_rdata_reg[5] ),
-        .I5(\reg_rdata_reg[1] ),
-        .O(\vsm_addr_reg[2]_3 ));
-  LUT6 #(
-    .INIT(64'h880F880088008800)) 
-    \reg_rdata[6]_i_2 
-       (.I0(Q[0]),
-        .I1(reg_rdata_rm_table_ctrl1_out[5]),
-        .I2(first_q),
-        .I3(\reg_rdata_reg[30] ),
-        .I4(\reg_rdata_reg[6] ),
-        .I5(\reg_rdata_reg[1] ),
-        .O(\vsm_addr_reg[2]_4 ));
-  LUT6 #(
-    .INIT(64'h880F880088008800)) 
-    \reg_rdata[7]_i_2 
-       (.I0(Q[0]),
-        .I1(reg_rdata_rm_table_ctrl1_out[6]),
-        .I2(first_q),
-        .I3(\reg_rdata_reg[30] ),
-        .I4(\reg_rdata_reg[7] ),
-        .I5(\reg_rdata_reg[1] ),
-        .O(\vsm_addr_reg[2]_5 ));
-  LUT6 #(
-    .INIT(64'h880F880088008800)) 
-    \reg_rdata[8]_i_2 
-       (.I0(Q[0]),
-        .I1(reg_rdata_rm_table_ctrl1_out[7]),
-        .I2(first_q),
-        .I3(\reg_rdata_reg[30] ),
-        .I4(in),
-        .I5(\reg_rdata_reg[1] ),
-        .O(\vsm_addr_reg[2]_6 ));
+        .I4(\reg_rdata_reg[0]_1 ),
+        .I5(\reg_rdata_reg[31]_1 [19]),
+        .O(\reg_rdata[31]_i_2_n_0 ));
+  LUT2 #(
+    .INIT(4'h1)) 
+    \reg_rdata[31]_i_4 
+       (.I0(first_q),
+        .I1(\reg_rdata_reg[0]_1 ),
+        .O(\opt_has_pipe.first_q_reg[0]_0 ));
   LUT4 #(
     .INIT(16'hE000)) 
     \s_axi_rresp_i[1]_i_4 
-       (.I0(\s_axi_rresp_i_reg[1] ),
+       (.I0(\s_axi_rresp_i[1]_i_3 ),
         .I1(first_q),
         .I2(Q[1]),
         .I3(Q[0]),
@@ -34313,43 +34048,43 @@ endmodule
 module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized5_26
    (out,
     \opt_has_pipe.first_q_reg[0]_0 ,
-    I44,
     \opt_has_pipe.first_q_reg[0]_1 ,
+    \opt_has_pipe.first_q_reg[0]_2 ,
     read_from_bs_info_registers_cmb,
     clk,
-    \b_bs_info.reg_rdata_bs_table_size_reg[0] ,
+    \b_bs_info.reg_rdata_bs_table_address_reg[0] ,
     E,
-    \b_bs_info.reg_rdata_bs_table_size_reg[0]_0 ,
+    \b_bs_info.reg_rdata_bs_table_size_reg[0] ,
     Q,
-    \b_bs_info.reg_rdata_bs_table_address_reg[31] ,
+    \b_bs_info.reg_rdata_bs_table_address_reg[0]_0 ,
     in_shutdown_d1,
-    \b_bs_info.reg_rdata_bs_table_address_reg[31]_0 );
+    \b_bs_info.reg_rdata_bs_table_address_reg[0]_1 );
   output out;
   output \opt_has_pipe.first_q_reg[0]_0 ;
-  output I44;
-  input \opt_has_pipe.first_q_reg[0]_1 ;
+  output \opt_has_pipe.first_q_reg[0]_1 ;
+  input \opt_has_pipe.first_q_reg[0]_2 ;
   input read_from_bs_info_registers_cmb;
   input clk;
-  input \b_bs_info.reg_rdata_bs_table_size_reg[0] ;
+  input \b_bs_info.reg_rdata_bs_table_address_reg[0] ;
   input [0:0]E;
-  input \b_bs_info.reg_rdata_bs_table_size_reg[0]_0 ;
+  input \b_bs_info.reg_rdata_bs_table_size_reg[0] ;
   input [1:0]Q;
-  input \b_bs_info.reg_rdata_bs_table_address_reg[31] ;
+  input \b_bs_info.reg_rdata_bs_table_address_reg[0]_0 ;
   input in_shutdown_d1;
-  input \b_bs_info.reg_rdata_bs_table_address_reg[31]_0 ;
+  input \b_bs_info.reg_rdata_bs_table_address_reg[0]_1 ;
 
   wire [0:0]E;
-  wire I44;
   wire [1:0]Q;
-  wire \b_bs_info.reg_rdata_bs_table_address_reg[31] ;
-  wire \b_bs_info.reg_rdata_bs_table_address_reg[31]_0 ;
+  wire \b_bs_info.reg_rdata_bs_table_address_reg[0] ;
+  wire \b_bs_info.reg_rdata_bs_table_address_reg[0]_0 ;
+  wire \b_bs_info.reg_rdata_bs_table_address_reg[0]_1 ;
   wire \b_bs_info.reg_rdata_bs_table_size_reg[0] ;
-  wire \b_bs_info.reg_rdata_bs_table_size_reg[0]_0 ;
   wire clk;
   (* RTL_KEEP = "true" *) wire first_q;
   wire in_shutdown_d1;
   wire \opt_has_pipe.first_q_reg[0]_0 ;
   wire \opt_has_pipe.first_q_reg[0]_1 ;
+  wire \opt_has_pipe.first_q_reg[0]_2 ;
   wire read_from_bs_info_registers_cmb;
 
   assign out = first_q;
@@ -34357,19 +34092,19 @@ module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized5_26
     .INIT(64'h0400000000000000)) 
     \b_bs_info.bs_address_table_reg_0_1_0_0_i_1 
        (.I0(first_q),
-        .I1(\b_bs_info.reg_rdata_bs_table_size_reg[0] ),
+        .I1(\b_bs_info.reg_rdata_bs_table_address_reg[0] ),
         .I2(E),
-        .I3(\b_bs_info.reg_rdata_bs_table_address_reg[31] ),
+        .I3(\b_bs_info.reg_rdata_bs_table_address_reg[0]_0 ),
         .I4(in_shutdown_d1),
-        .I5(\b_bs_info.reg_rdata_bs_table_address_reg[31]_0 ),
-        .O(I44));
+        .I5(\b_bs_info.reg_rdata_bs_table_address_reg[0]_1 ),
+        .O(\opt_has_pipe.first_q_reg[0]_1 ));
   LUT6 #(
     .INIT(64'h0000040000000000)) 
     \b_bs_info.bs_size_table_reg_0_1_0_0_i_1 
        (.I0(first_q),
-        .I1(\b_bs_info.reg_rdata_bs_table_size_reg[0] ),
+        .I1(\b_bs_info.reg_rdata_bs_table_address_reg[0] ),
         .I2(E),
-        .I3(\b_bs_info.reg_rdata_bs_table_size_reg[0]_0 ),
+        .I3(\b_bs_info.reg_rdata_bs_table_size_reg[0] ),
         .I4(Q[0]),
         .I5(Q[1]),
         .O(\opt_has_pipe.first_q_reg[0]_0 ));
@@ -34381,7 +34116,7 @@ module design_2_dfx_controller_0_0_xbip_pipe_v3_0_6_viv__parameterized5_26
         .CE(1'b1),
         .D(read_from_bs_info_registers_cmb),
         .Q(first_q),
-        .R(\opt_has_pipe.first_q_reg[0]_1 ));
+        .R(\opt_has_pipe.first_q_reg[0]_2 ));
 endmodule
 
 (* ORIG_REF_NAME = "xbip_pipe_v3_0_6_viv" *) 

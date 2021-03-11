@@ -17,7 +17,7 @@ CONFIG.VS.shifter.HAS_AXIS_STATUS                   0
 CONFIG.VS.shifter.HAS_AXIS_CONTROL                  0
 CONFIG.VS.shifter.HAS_POR_RM                        1
 CONFIG.VS.shifter.POR_RM                            shift_left
-CONFIG.VS.shifter.SKIP_RM_STARTUP_AFTER_RESET       0
+CONFIG.VS.shifter.SKIP_RM_STARTUP_AFTER_RESET       1
 CONFIG.VS.shifter.TRIGGER0_TO_RM                    shift_left
 CONFIG.VS.shifter.TRIGGER1_TO_RM                    shift_right
 CONFIG.VS.shifter.RM.shift_left.SHUTDOWN_REQUIRED   no
@@ -54,7 +54,7 @@ dfx_controller_v1_0::set_property -dict [list \
                                CONFIG.VS.shifter.HAS_AXIS_CONTROL                  0 \
                                CONFIG.VS.shifter.HAS_POR_RM                        1 \
                                CONFIG.VS.shifter.POR_RM                            shift_left \
-                               CONFIG.VS.shifter.SKIP_RM_STARTUP_AFTER_RESET       0 \
+                               CONFIG.VS.shifter.SKIP_RM_STARTUP_AFTER_RESET       1 \
                                CONFIG.VS.shifter.TRIGGER0_TO_RM                    shift_left \
                                CONFIG.VS.shifter.TRIGGER1_TO_RM                    shift_right \
                                CONFIG.VS.shifter.RM.shift_left.SHUTDOWN_REQUIRED   no \

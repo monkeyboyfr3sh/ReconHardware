@@ -66,13 +66,13 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_2_xlconc
 # IP: C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_2/ip/design_2_ila_0_1/design_2_ila_0_1.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_2_ila_0_1 || ORIG_REF_NAME==design_2_ila_0_1} -quiet] -quiet
 
-# IP: C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_2/ip/design_2_auto_pc_0/design_2_auto_pc_0.xci
+# IP: c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_2/ip/design_2_auto_pc_0/design_2_auto_pc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_2_auto_pc_0 || ORIG_REF_NAME==design_2_auto_pc_0} -quiet] -quiet
 
-# IP: C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_2/ip/design_2_auto_us_0/design_2_auto_us_0.xci
+# IP: c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_2/ip/design_2_auto_us_0/design_2_auto_us_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_2_auto_us_0 || ORIG_REF_NAME==design_2_auto_us_0} -quiet] -quiet
 
-# IP: C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_2/ip/design_2_auto_pc_1/design_2_auto_pc_1.xci
+# IP: c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_2/ip/design_2_auto_pc_1/design_2_auto_pc_1.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_2_auto_pc_1 || ORIG_REF_NAME==design_2_auto_pc_1} -quiet] -quiet
 
 # XDC: bd/icap_ila/icap_ila_ooc.xdc

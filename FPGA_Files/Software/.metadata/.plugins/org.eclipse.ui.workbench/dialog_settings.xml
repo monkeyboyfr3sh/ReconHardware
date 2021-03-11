@@ -12,11 +12,13 @@
 		<list key="textArray">
 		</list>
 	</section>
+	<section name="NewWizardAction">
+	</section>
 	<section name="FileSystemImportWizard">
 		<item value="false" key="WizardFileSystemResourceImportPage1.STORE_CREATE_CONTAINER_STRUCTURE_ID"/>
 		<item value="false" key="WizardFileSystemResourceImportPage1.STORE_OVERWRITE_EXISTING_RESOURCES_ID"/>
 		<list key="WizardFileSystemResourceImportPage1.STORE_SOURCE_NAMES_ID">
-			<item value="C:\GitHub\ReconHardware\FPGA_Files\Projects\prIcap-master\sw"/>
+			<item value="C:\GitHub\Backup\post-reset\pr_led_sw\src"/>
 		</list>
 	</section>
 </section>
