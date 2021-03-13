@@ -85,9 +85,6 @@ ENTITY design_2_dfx_controller_0_0 IS
     vsm_shifter_event_error : OUT STD_LOGIC;
     vsm_shifter_sw_shutdown_req : OUT STD_LOGIC;
     vsm_shifter_sw_startup_req : OUT STD_LOGIC;
-    cap_req : OUT STD_LOGIC;
-    cap_gnt : IN STD_LOGIC;
-    cap_rel : IN STD_LOGIC;
     s_axi_reg_awaddr : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     s_axi_reg_awvalid : IN STD_LOGIC;
     s_axi_reg_awready : OUT STD_LOGIC;
@@ -145,9 +142,6 @@ ARCHITECTURE design_2_dfx_controller_0_0_arch OF design_2_dfx_controller_0_0 IS
       vsm_shifter_event_error : OUT STD_LOGIC;
       vsm_shifter_sw_shutdown_req : OUT STD_LOGIC;
       vsm_shifter_sw_startup_req : OUT STD_LOGIC;
-      cap_req : OUT STD_LOGIC;
-      cap_gnt : IN STD_LOGIC;
-      cap_rel : IN STD_LOGIC;
       s_axi_reg_awaddr : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
       s_axi_reg_awvalid : IN STD_LOGIC;
       s_axi_reg_awready : OUT STD_LOGIC;
@@ -186,9 +180,6 @@ ARCHITECTURE design_2_dfx_controller_0_0_arch OF design_2_dfx_controller_0_0 IS
   ATTRIBUTE X_INTERFACE_PARAMETER OF s_axi_reg_awaddr: SIGNAL IS "XIL_INTERFACENAME s_axi_reg, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 0, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN design_2_processing_system7_0_0_FCLK_CLK0, NUM_READ_TH" & 
 "READS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF s_axi_reg_awaddr: SIGNAL IS "xilinx.com:interface:aximm:1.0 s_axi_reg AWADDR";
-  ATTRIBUTE X_INTERFACE_INFO OF cap_rel: SIGNAL IS "xilinx.com:interface:cap:1.0 icap_arbiter REL";
-  ATTRIBUTE X_INTERFACE_INFO OF cap_gnt: SIGNAL IS "xilinx.com:interface:cap:1.0 icap_arbiter GNT";
-  ATTRIBUTE X_INTERFACE_INFO OF cap_req: SIGNAL IS "xilinx.com:interface:cap:1.0 icap_arbiter REQ";
   ATTRIBUTE X_INTERFACE_INFO OF icap_o: SIGNAL IS "xilinx.com:interface:icap:1.0 ICAP i";
   ATTRIBUTE X_INTERFACE_INFO OF icap_i: SIGNAL IS "xilinx.com:interface:icap:1.0 ICAP o";
   ATTRIBUTE X_INTERFACE_INFO OF icap_rdwrb: SIGNAL IS "xilinx.com:interface:icap:1.0 ICAP rdwrb";
@@ -253,9 +244,6 @@ BEGIN
       vsm_shifter_event_error => vsm_shifter_event_error,
       vsm_shifter_sw_shutdown_req => vsm_shifter_sw_shutdown_req,
       vsm_shifter_sw_startup_req => vsm_shifter_sw_startup_req,
-      cap_req => cap_req,
-      cap_gnt => cap_gnt,
-      cap_rel => cap_rel,
       s_axi_reg_awaddr => s_axi_reg_awaddr,
       s_axi_reg_awvalid => s_axi_reg_awvalid,
       s_axi_reg_awready => s_axi_reg_awready,

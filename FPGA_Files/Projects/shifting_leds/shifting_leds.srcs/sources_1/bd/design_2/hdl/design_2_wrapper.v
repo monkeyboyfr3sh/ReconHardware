@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-//Date        : Thu Mar 11 10:51:19 2021
+//Date        : Fri Mar 12 21:26:41 2021
 //Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 //Command     : generate_target design_2_wrapper.bd
 //Design      : design_2_wrapper
@@ -38,7 +38,8 @@ module design_2_wrapper
     ICAP_0_i,
     ICAP_0_o,
     ICAP_0_rdwrb,
-    vsm_shifter_hw_triggers_0);
+    vsm_shifter_hw_triggers_0,
+    vsm_shifter_rm_reset_0);
   output [31:0]COUNT_0_tri_o;
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
@@ -68,6 +69,7 @@ module design_2_wrapper
   input [31:0]ICAP_0_o;
   output ICAP_0_rdwrb;
   input [1:0]vsm_shifter_hw_triggers_0;
+  output vsm_shifter_rm_reset_0;
 
   wire [31:0]COUNT_0_tri_o;
   wire [14:0]DDR_addr;
@@ -98,6 +100,7 @@ module design_2_wrapper
   wire [31:0]ICAP_0_o;
   wire ICAP_0_rdwrb;
   wire [1:0]vsm_shifter_hw_triggers_0;
+  wire vsm_shifter_rm_reset_0;
 
   design_2 design_2_i
        (.COUNT_0_tri_o(COUNT_0_tri_o),
@@ -128,5 +131,6 @@ module design_2_wrapper
         .ICAP_0_i(ICAP_0_i),
         .ICAP_0_o(ICAP_0_o),
         .ICAP_0_rdwrb(ICAP_0_rdwrb),
-        .vsm_shifter_hw_triggers_0(vsm_shifter_hw_triggers_0));
+        .vsm_shifter_hw_triggers_0(vsm_shifter_hw_triggers_0),
+        .vsm_shifter_rm_reset_0(vsm_shifter_rm_reset_0));
 endmodule

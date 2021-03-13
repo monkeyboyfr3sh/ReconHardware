@@ -5,7 +5,7 @@ module top(
     output wire [3:0] led_n
 );
 
-wire clk,rst_n;
+wire clk,rst_n,vsm_shifter_reset;
 wire [31:0] ps_count;
 wire [31:0] icap_o,icap_i;
 wire icap_csib,icap_rdwrb;
@@ -16,6 +16,7 @@ BD
     .FCLK_CLK0_0(clk),
     .FCLK_RESET0_N_0(rst_n),
     .vsm_shifter_hw_triggers_0(pr_btn),
+    .vsm_shifter_rm_reset_0(vsm_shifter_reset),
     .COUNT_0_tri_o(ps_count),
     .ICAP_0_csib(icap_csib),
     .ICAP_0_i(icap_i),
@@ -52,7 +53,7 @@ shift_left
 shifter
 (
     .clk(clk),
-    .reset_n(rst_n),
+    .reset_n(rst_n|(!vsm_shifter_reset)),
     .count(ps_count),
     .led_n(led_n)
 );

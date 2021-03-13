@@ -1,7 +1,7 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
--- Date        : Thu Mar 11 10:52:19 2021
+-- Date        : Thu Mar 11 17:09:46 2021
 -- Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_2/ip/design_2_dfx_controller_0_0/design_2_dfx_controller_0_0_sim_netlist.vhdl
@@ -218,7 +218,7 @@ use UNISIM.VCOMPONENTS.ALL;
 entity design_2_dfx_controller_0_0_cdc_sync_29 is
   port (
     cc_error_i : out STD_LOGIC;
-    \cp_fsm_cs_reg[0]\ : out STD_LOGIC;
+    \cp_fsm_cs_reg[3]\ : out STD_LOGIC;
     icap_clk : in STD_LOGIC;
     clk : in STD_LOGIC;
     \GENERATE_PULSE_P_S_CDC_OPEN_ENDED.REG_P_IN_cdc_from_0\ : in STD_LOGIC;
@@ -230,7 +230,7 @@ entity design_2_dfx_controller_0_0_cdc_sync_29 is
 end design_2_dfx_controller_0_0_cdc_sync_29;
 
 architecture STRUCTURE of design_2_dfx_controller_0_0_cdc_sync_29 is
-  signal \^cp_fsm_cs_reg[0]\ : STD_LOGIC;
+  signal \^cp_fsm_cs_reg[3]\ : STD_LOGIC;
   signal p_in_d1_cdc_from : STD_LOGIC;
   signal prmry_in_xored : STD_LOGIC;
   signal s_out_d1_cdc_to : STD_LOGIC;
@@ -263,7 +263,7 @@ architecture STRUCTURE of design_2_dfx_controller_0_0_cdc_sync_29 is
   attribute XILINX_LEGACY_PRIM of \GENERATE_PULSE_P_S_CDC_OPEN_ENDED.s_rst_d3\ : label is "FDR";
   attribute box_type of \GENERATE_PULSE_P_S_CDC_OPEN_ENDED.s_rst_d3\ : label is "PRIMITIVE";
 begin
-  \cp_fsm_cs_reg[0]\ <= \^cp_fsm_cs_reg[0]\;
+  \cp_fsm_cs_reg[3]\ <= \^cp_fsm_cs_reg[3]\;
 \GENERATE_PULSE_P_S_CDC_OPEN_ENDED.P_IN_CROSS2SCNDRY_s_out_d2\: unisim.vcomponents.FDRE
     generic map(
       INIT => '0'
@@ -321,14 +321,14 @@ begin
     );
 \GENERATE_PULSE_P_S_CDC_OPEN_ENDED.REG_P_IN_cdc_from_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFFDFF00000200"
+      INIT => X"FFFFFFFD00000002"
     )
         port map (
       I0 => \GENERATE_PULSE_P_S_CDC_OPEN_ENDED.REG_P_IN_cdc_from_0\,
       I1 => icap_i(0),
-      I2 => Q(3),
-      I3 => Q(2),
-      I4 => \^cp_fsm_cs_reg[0]\,
+      I2 => \^cp_fsm_cs_reg[3]\,
+      I3 => Q(1),
+      I4 => Q(0),
       I5 => p_in_d1_cdc_from,
       O => prmry_in_xored
     );
@@ -365,14 +365,14 @@ begin
       Q => srst_d3,
       R => '0'
     );
-icap_csib_i_i_4: unisim.vcomponents.LUT2
+\icap_o_preswap[2]_i_2\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"E"
+      INIT => X"B"
     )
         port map (
-      I0 => Q(0),
-      I1 => Q(1),
-      O => \^cp_fsm_cs_reg[0]\
+      I0 => Q(3),
+      I1 => Q(2),
+      O => \^cp_fsm_cs_reg[3]\
     );
 s_out_re: unisim.vcomponents.LUT3
     generic map(
@@ -29367,7 +29367,6 @@ entity design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_ic
     p_4_in : out STD_LOGIC;
     p_3_in : out STD_LOGIC;
     icap_csib : out STD_LOGIC;
-    icap_req_i_reg_0 : out STD_LOGIC;
     E : out STD_LOGIC_VECTOR ( 0 to 0 );
     sig_last_reg_out_reg : out STD_LOGIC;
     \gen_pntr_flags_cc.ngen_full_rst_val.ram_full_i_reg_0\ : out STD_LOGIC;
@@ -29381,9 +29380,7 @@ entity design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_ic
     \out\ : in STD_LOGIC;
     \gen_pntr_flags_cc.wrp_eq_rdp_pf_cc.gpe_cc_sym.read_only_q_reg\ : in STD_LOGIC;
     reset : in STD_LOGIC;
-    cap_rel : in STD_LOGIC;
     first_word_seen : in STD_LOGIC;
-    cap_gnt : in STD_LOGIC;
     icap_reset : in STD_LOGIC;
     icap_i : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
@@ -29411,6 +29408,7 @@ architecture STRUCTURE of design_2_dfx_controller_0_0_dfx_controller_design_2_df
   signal \cp_fsm_cs[0]_i_4_n_0\ : STD_LOGIC;
   signal \cp_fsm_cs[0]_i_5_n_0\ : STD_LOGIC;
   signal \cp_fsm_cs[0]_i_6_n_0\ : STD_LOGIC;
+  signal \cp_fsm_cs[0]_i_7_n_0\ : STD_LOGIC;
   signal \cp_fsm_cs[1]_i_2_n_0\ : STD_LOGIC;
   signal \cp_fsm_cs[1]_i_3_n_0\ : STD_LOGIC;
   signal \cp_fsm_cs[1]_i_4_n_0\ : STD_LOGIC;
@@ -29423,19 +29421,16 @@ architecture STRUCTURE of design_2_dfx_controller_0_0_dfx_controller_design_2_df
   signal desync_needed_i_1_n_0 : STD_LOGIC;
   signal desync_needed_i_2_n_0 : STD_LOGIC;
   signal desync_needed_i_3_n_0 : STD_LOGIC;
-  signal desync_needed_i_4_n_0 : STD_LOGIC;
   signal dout : STD_LOGIC_VECTOR ( 33 downto 0 );
   signal empty : STD_LOGIC;
   signal fetch_error_seen : STD_LOGIC;
   signal fetch_error_seen_i_1_n_0 : STD_LOGIC;
   signal fetch_error_seen_i_2_n_0 : STD_LOGIC;
-  signal fetch_error_seen_i_3_n_0 : STD_LOGIC;
+  signal fetch_error_seen_on_first_word : STD_LOGIC;
+  signal fetch_error_seen_on_first_word_cmb : STD_LOGIC;
   signal fetch_error_seen_on_first_word_i_1_n_0 : STD_LOGIC;
-  signal fetch_error_seen_on_first_word_i_2_n_0 : STD_LOGIC;
-  signal fetch_error_seen_on_first_word_i_3_n_0 : STD_LOGIC;
   signal fetch_error_seen_on_first_word_i_4_n_0 : STD_LOGIC;
   signal fetch_error_seen_on_first_word_i_5_n_0 : STD_LOGIC;
-  signal fetch_error_seen_on_first_word_i_6_n_0 : STD_LOGIC;
   signal fetch_error_seen_on_first_word_reg_n_0 : STD_LOGIC;
   signal fifo_read : STD_LOGIC;
   signal \^full\ : STD_LOGIC;
@@ -29446,20 +29441,15 @@ architecture STRUCTURE of design_2_dfx_controller_0_0_dfx_controller_design_2_df
   signal i_cdc_done_n_1 : STD_LOGIC;
   signal i_cdc_done_n_2 : STD_LOGIC;
   signal i_cdc_error_n_1 : STD_LOGIC;
-  signal icap_csib_i_i_10_n_0 : STD_LOGIC;
-  signal icap_csib_i_i_11_n_0 : STD_LOGIC;
   signal icap_csib_i_i_2_n_0 : STD_LOGIC;
   signal icap_csib_i_i_3_n_0 : STD_LOGIC;
+  signal icap_csib_i_i_4_n_0 : STD_LOGIC;
   signal icap_csib_i_i_5_n_0 : STD_LOGIC;
   signal icap_csib_i_i_6_n_0 : STD_LOGIC;
   signal icap_csib_i_i_7_n_0 : STD_LOGIC;
   signal icap_csib_i_i_8_n_0 : STD_LOGIC;
-  signal icap_csib_i_i_9_n_0 : STD_LOGIC;
   signal \icap_o_preswap[0]_i_2_n_0\ : STD_LOGIC;
   signal \icap_o_preswap[0]_i_3_n_0\ : STD_LOGIC;
-  signal \icap_o_preswap[0]_i_4_n_0\ : STD_LOGIC;
-  signal \icap_o_preswap[0]_i_5_n_0\ : STD_LOGIC;
-  signal \icap_o_preswap[0]_i_6_n_0\ : STD_LOGIC;
   signal \icap_o_preswap[24]_i_10_n_0\ : STD_LOGIC;
   signal \icap_o_preswap[24]_i_11_n_0\ : STD_LOGIC;
   signal \icap_o_preswap[24]_i_12_n_0\ : STD_LOGIC;
@@ -29468,12 +29458,7 @@ architecture STRUCTURE of design_2_dfx_controller_0_0_dfx_controller_design_2_df
   signal \icap_o_preswap[24]_i_15_n_0\ : STD_LOGIC;
   signal \icap_o_preswap[24]_i_16_n_0\ : STD_LOGIC;
   signal \icap_o_preswap[24]_i_17_n_0\ : STD_LOGIC;
-  signal \icap_o_preswap[24]_i_18_n_0\ : STD_LOGIC;
-  signal \icap_o_preswap[24]_i_19_n_0\ : STD_LOGIC;
   signal \icap_o_preswap[24]_i_1_n_0\ : STD_LOGIC;
-  signal \icap_o_preswap[24]_i_20_n_0\ : STD_LOGIC;
-  signal \icap_o_preswap[24]_i_21_n_0\ : STD_LOGIC;
-  signal \icap_o_preswap[24]_i_22_n_0\ : STD_LOGIC;
   signal \icap_o_preswap[24]_i_2_n_0\ : STD_LOGIC;
   signal \icap_o_preswap[24]_i_3_n_0\ : STD_LOGIC;
   signal \icap_o_preswap[24]_i_4_n_0\ : STD_LOGIC;
@@ -29484,19 +29469,20 @@ architecture STRUCTURE of design_2_dfx_controller_0_0_dfx_controller_design_2_df
   signal \icap_o_preswap[24]_i_9_n_0\ : STD_LOGIC;
   signal \icap_o_preswap[28]_i_2_n_0\ : STD_LOGIC;
   signal \icap_o_preswap[28]_i_3_n_0\ : STD_LOGIC;
+  signal \icap_o_preswap[28]_i_4_n_0\ : STD_LOGIC;
   signal \icap_o_preswap[29]_i_2_n_0\ : STD_LOGIC;
   signal \icap_o_preswap[29]_i_3_n_0\ : STD_LOGIC;
   signal \icap_o_preswap[29]_i_4_n_0\ : STD_LOGIC;
-  signal \icap_o_preswap[2]_i_2_n_0\ : STD_LOGIC;
-  signal \icap_o_preswap[2]_i_3_n_0\ : STD_LOGIC;
   signal icap_req_i02_out : STD_LOGIC;
   signal icap_req_i_i_1_n_0 : STD_LOGIC;
   signal icap_req_i_i_2_n_0 : STD_LOGIC;
-  signal \^icap_req_i_reg_0\ : STD_LOGIC;
+  signal icap_req_i_reg_n_0 : STD_LOGIC;
   signal icap_reset_ah : STD_LOGIC;
   signal legacy_cfg_error : STD_LOGIC;
   signal legacy_cfg_error0 : STD_LOGIC;
   signal legacy_cfg_error_i_1_n_0 : STD_LOGIC;
+  signal legacy_cfg_error_i_3_n_0 : STD_LOGIC;
+  signal legacy_cfg_error_i_4_n_0 : STD_LOGIC;
   signal \p_1_in__0\ : STD_LOGIC_VECTOR ( 29 downto 0 );
   signal rd_rst_busy : STD_LOGIC;
   signal \^wr_rst_busy\ : STD_LOGIC;
@@ -29580,17 +29566,16 @@ architecture STRUCTURE of design_2_dfx_controller_0_0_dfx_controller_design_2_df
   attribute XPM_MODULE : string;
   attribute XPM_MODULE of \blk_id_fifo.xpm_fifo_sync_inst\ : label is "TRUE";
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of cfg_error_seen_i_3 : label is "soft_lutpair67";
   attribute SOFT_HLUTNM of cfg_error_seen_i_5 : label is "soft_lutpair69";
-  attribute SOFT_HLUTNM of cfg_error_seen_i_8 : label is "soft_lutpair64";
+  attribute SOFT_HLUTNM of cfg_error_seen_i_6 : label is "soft_lutpair68";
+  attribute SOFT_HLUTNM of cfg_error_seen_i_7 : label is "soft_lutpair64";
+  attribute SOFT_HLUTNM of \cp_fsm_cs[0]_i_3\ : label is "soft_lutpair59";
   attribute SOFT_HLUTNM of \cp_fsm_cs[0]_i_6\ : label is "soft_lutpair64";
+  attribute SOFT_HLUTNM of \cp_fsm_cs[0]_i_7\ : label is "soft_lutpair60";
+  attribute SOFT_HLUTNM of \cp_fsm_cs[1]_i_2\ : label is "soft_lutpair68";
   attribute SOFT_HLUTNM of \cp_fsm_cs[1]_i_3\ : label is "soft_lutpair61";
-  attribute SOFT_HLUTNM of \cp_fsm_cs[1]_i_4\ : label is "soft_lutpair74";
-  attribute SOFT_HLUTNM of \cp_fsm_cs[1]_i_5\ : label is "soft_lutpair59";
-  attribute SOFT_HLUTNM of \cp_fsm_cs[1]_i_6\ : label is "soft_lutpair60";
-  attribute SOFT_HLUTNM of \cp_fsm_cs[3]_i_1\ : label is "soft_lutpair67";
-  attribute SOFT_HLUTNM of fetch_error_seen_on_first_word_i_5 : label is "soft_lutpair74";
-  attribute SOFT_HLUTNM of fetch_error_seen_on_first_word_i_6 : label is "soft_lutpair68";
+  attribute SOFT_HLUTNM of \cp_fsm_cs[1]_i_4\ : label is "soft_lutpair63";
+  attribute SOFT_HLUTNM of fetch_error_seen_on_first_word_i_4 : label is "soft_lutpair74";
   attribute CASCADE_HEIGHT of i_bs_fifo : label is 0;
   attribute CDC_SYNC_STAGES : integer;
   attribute CDC_SYNC_STAGES of i_bs_fifo : label is 2;
@@ -29621,32 +29606,32 @@ architecture STRUCTURE of design_2_dfx_controller_0_0_dfx_controller_design_2_df
   attribute WR_DATA_COUNT_WIDTH of i_bs_fifo : label is 1;
   attribute XPM_MODULE of i_bs_fifo : label is "TRUE";
   attribute SOFT_HLUTNM of i_bs_fifo_i_1 : label is "soft_lutpair62";
-  attribute SOFT_HLUTNM of i_bs_fifo_i_5 : label is "soft_lutpair63";
-  attribute SOFT_HLUTNM of icap_csib_i_i_10 : label is "soft_lutpair68";
-  attribute SOFT_HLUTNM of icap_csib_i_i_3 : label is "soft_lutpair66";
-  attribute SOFT_HLUTNM of icap_csib_i_i_8 : label is "soft_lutpair58";
-  attribute SOFT_HLUTNM of icap_csib_i_i_9 : label is "soft_lutpair73";
-  attribute SOFT_HLUTNM of \icap_o_preswap[0]_i_2\ : label is "soft_lutpair70";
-  attribute SOFT_HLUTNM of \icap_o_preswap[15]_i_1\ : label is "soft_lutpair72";
-  attribute SOFT_HLUTNM of \icap_o_preswap[24]_i_12\ : label is "soft_lutpair59";
-  attribute SOFT_HLUTNM of \icap_o_preswap[24]_i_15\ : label is "soft_lutpair63";
-  attribute SOFT_HLUTNM of \icap_o_preswap[24]_i_16\ : label is "soft_lutpair58";
-  attribute SOFT_HLUTNM of \icap_o_preswap[24]_i_17\ : label is "soft_lutpair71";
-  attribute SOFT_HLUTNM of \icap_o_preswap[24]_i_18\ : label is "soft_lutpair66";
-  attribute SOFT_HLUTNM of \icap_o_preswap[24]_i_19\ : label is "soft_lutpair73";
-  attribute SOFT_HLUTNM of \icap_o_preswap[24]_i_5\ : label is "soft_lutpair60";
-  attribute SOFT_HLUTNM of \icap_o_preswap[24]_i_7\ : label is "soft_lutpair70";
-  attribute SOFT_HLUTNM of \icap_o_preswap[28]_i_1\ : label is "soft_lutpair72";
-  attribute SOFT_HLUTNM of \icap_o_preswap[29]_i_3\ : label is "soft_lutpair71";
-  attribute SOFT_HLUTNM of \icap_o_preswap[2]_i_2\ : label is "soft_lutpair69";
+  attribute SOFT_HLUTNM of i_bs_fifo_i_2 : label is "soft_lutpair59";
+  attribute SOFT_HLUTNM of i_bs_fifo_i_4 : label is "soft_lutpair65";
+  attribute SOFT_HLUTNM of icap_csib_i_i_6 : label is "soft_lutpair72";
+  attribute SOFT_HLUTNM of icap_csib_i_i_7 : label is "soft_lutpair58";
+  attribute SOFT_HLUTNM of \icap_o_preswap[0]_i_3\ : label is "soft_lutpair71";
+  attribute SOFT_HLUTNM of \icap_o_preswap[15]_i_1\ : label is "soft_lutpair73";
+  attribute SOFT_HLUTNM of \icap_o_preswap[24]_i_12\ : label is "soft_lutpair70";
+  attribute SOFT_HLUTNM of \icap_o_preswap[24]_i_13\ : label is "soft_lutpair63";
+  attribute SOFT_HLUTNM of \icap_o_preswap[24]_i_15\ : label is "soft_lutpair58";
+  attribute SOFT_HLUTNM of \icap_o_preswap[24]_i_16\ : label is "soft_lutpair72";
+  attribute SOFT_HLUTNM of \icap_o_preswap[24]_i_17\ : label is "soft_lutpair70";
+  attribute SOFT_HLUTNM of \icap_o_preswap[24]_i_5\ : label is "soft_lutpair67";
+  attribute SOFT_HLUTNM of \icap_o_preswap[24]_i_6\ : label is "soft_lutpair65";
+  attribute SOFT_HLUTNM of \icap_o_preswap[24]_i_8\ : label is "soft_lutpair67";
+  attribute SOFT_HLUTNM of \icap_o_preswap[28]_i_1\ : label is "soft_lutpair73";
+  attribute SOFT_HLUTNM of \icap_o_preswap[28]_i_3\ : label is "soft_lutpair60";
+  attribute SOFT_HLUTNM of \icap_o_preswap[29]_i_4\ : label is "soft_lutpair69";
   attribute SOFT_HLUTNM of icap_req_i_i_2 : label is "soft_lutpair61";
-  attribute SOFT_HLUTNM of id_fifo_read_d1_i_2 : label is "soft_lutpair65";
+  attribute SOFT_HLUTNM of id_fifo_read_d1_i_2 : label is "soft_lutpair66";
+  attribute SOFT_HLUTNM of legacy_cfg_error_i_3 : label is "soft_lutpair71";
+  attribute SOFT_HLUTNM of legacy_cfg_error_i_4 : label is "soft_lutpair74";
   attribute SOFT_HLUTNM of recheck_id_reg_source_i_2 : label is "soft_lutpair62";
-  attribute SOFT_HLUTNM of sig_s_ready_dup_i_2 : label is "soft_lutpair65";
+  attribute SOFT_HLUTNM of sig_s_ready_dup_i_2 : label is "soft_lutpair66";
 begin
   full <= \^full\;
   \gen_pntr_flags_cc.ngen_full_rst_val.ram_full_i_reg\ <= \^gen_pntr_flags_cc.ngen_full_rst_val.ram_full_i_reg\;
-  icap_req_i_reg_0 <= \^icap_req_i_reg_0\;
   wr_rst_busy <= \^wr_rst_busy\;
 \blk_id_fifo.xpm_fifo_sync_inst\: entity work.design_2_dfx_controller_0_0_xpm_fifo_sync
      port map (
@@ -29715,53 +29700,54 @@ cc_error_reg: unisim.vcomponents.FDRE
     );
 cfg_error_seen_i_1: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFFF0F0FEFCF0F0"
+      INIT => X"FFFFFFF0FFF2FFF0"
     )
         port map (
       I0 => cfg_error_seen_i_2_n_0,
-      I1 => cfg_error_seen_i_3_n_0,
-      I2 => cfg_error_seen_i_4_n_0,
-      I3 => cp_fsm_cs(1),
+      I1 => desync_needed,
+      I2 => cfg_error_seen_i_3_n_0,
+      I3 => cfg_error_seen_i_4_n_0,
       I4 => cfg_error_seen_i_5_n_0,
       I5 => cfg_error_seen_i_6_n_0,
       O => cfg_error_seen_i_1_n_0
     );
 cfg_error_seen_i_2: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFFFFFAAAAAA02"
+      INIT => X"FFFF002000200020"
     )
         port map (
-      I0 => i_bs_fifo_i_5_n_0,
-      I1 => dout(1),
-      I2 => desync_needed,
-      I3 => empty,
-      I4 => rd_rst_busy,
-      I5 => \cp_fsm_cs[0]_i_5_n_0\,
+      I0 => \icap_o_preswap[24]_i_16_n_0\,
+      I1 => cp_fsm_cs(3),
+      I2 => cp_fsm_cs(0),
+      I3 => \icap_o_preswap[29]_i_4_n_0\,
+      I4 => cfg_error_seen_i_7_n_0,
+      I5 => i_bs_fifo_i_3_n_0,
       O => cfg_error_seen_i_2_n_0
     );
-cfg_error_seen_i_3: unisim.vcomponents.LUT5
+cfg_error_seen_i_3: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"000F1100"
+      INIT => X"000000A800000000"
     )
         port map (
-      I0 => cp_fsm_cs(0),
-      I1 => cp_fsm_cs(1),
-      I2 => \icap_o_preswap[2]_i_2_n_0\,
-      I3 => cp_fsm_cs(3),
-      I4 => cp_fsm_cs(2),
+      I0 => cfg_error_seen_i_5_n_0,
+      I1 => dout(1),
+      I2 => icap_req_i_reg_n_0,
+      I3 => cp_fsm_cs(1),
+      I4 => \cp_fsm_cs[1]_i_4_n_0\,
+      I5 => \icap_o_preswap[28]_i_3_n_0\,
       O => cfg_error_seen_i_3_n_0
     );
 cfg_error_seen_i_4: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"2222000022F20000"
+      INIT => X"A0A00000A0AC0000"
     )
         port map (
-      I0 => cfg_error_seen_i_7_n_0,
-      I1 => desync_needed,
-      I2 => icap_i(0),
-      I3 => i_cdc_error_n_1,
+      I0 => cfg_error_seen_i_8_n_0,
+      I1 => icap_i(0),
+      I2 => cp_fsm_cs(1),
+      I3 => cp_fsm_cs(0),
       I4 => cfg_error_seen_i_5_n_0,
-      I5 => \icap_o_preswap[2]_i_3_n_0\,
+      I5 => i_cdc_error_n_1,
       O => cfg_error_seen_i_4_n_0
     );
 cfg_error_seen_i_5: unisim.vcomponents.LUT5
@@ -29776,39 +29762,38 @@ cfg_error_seen_i_5: unisim.vcomponents.LUT5
       I4 => cfg_error_seen_reg_n_0,
       O => cfg_error_seen_i_5_n_0
     );
-cfg_error_seen_i_6: unisim.vcomponents.LUT6
+cfg_error_seen_i_6: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"000000000000F800"
+      INIT => X"000F1100"
     )
         port map (
-      I0 => \^icap_req_i_reg_0\,
-      I1 => cap_gnt,
-      I2 => dout(1),
-      I3 => i_bs_fifo_i_5_n_0,
-      I4 => empty,
-      I5 => rd_rst_busy,
+      I0 => cp_fsm_cs(0),
+      I1 => cp_fsm_cs(1),
+      I2 => \icap_o_preswap[29]_i_4_n_0\,
+      I3 => cp_fsm_cs(3),
+      I4 => cp_fsm_cs(2),
       O => cfg_error_seen_i_6_n_0
     );
-cfg_error_seen_i_7: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFF002000200020"
-    )
-        port map (
-      I0 => \icap_o_preswap[24]_i_17_n_0\,
-      I1 => cp_fsm_cs(3),
-      I2 => cp_fsm_cs(0),
-      I3 => \icap_o_preswap[2]_i_2_n_0\,
-      I4 => desync_needed_i_3_n_0,
-      I5 => cfg_error_seen_i_8_n_0,
-      O => cfg_error_seen_i_7_n_0
-    );
-cfg_error_seen_i_8: unisim.vcomponents.LUT2
+cfg_error_seen_i_7: unisim.vcomponents.LUT2
     generic map(
       INIT => X"E"
     )
         port map (
       I0 => fetch_error_seen_on_first_word_reg_n_0,
       I1 => cfg_error_seen_reg_n_0,
+      O => cfg_error_seen_i_7_n_0
+    );
+cfg_error_seen_i_8: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFAAAAAA02"
+    )
+        port map (
+      I0 => \icap_o_preswap[28]_i_3_n_0\,
+      I1 => dout(1),
+      I2 => desync_needed,
+      I3 => empty,
+      I4 => rd_rst_busy,
+      I5 => \cp_fsm_cs[0]_i_7_n_0\,
       O => cfg_error_seen_i_8_n_0
     );
 cfg_error_seen_reg: unisim.vcomponents.FDRE
@@ -29822,69 +29807,64 @@ cfg_error_seen_reg: unisim.vcomponents.FDRE
       Q => cfg_error_seen_reg_n_0,
       R => '0'
     );
-\cp_fsm_cs[0]_i_1\: unisim.vcomponents.LUT6
+\cp_fsm_cs[0]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"FFFFFFFFFFFFBAAA"
+      INIT => X"FFFFFFAE"
     )
         port map (
       I0 => \cp_fsm_cs[0]_i_2_n_0\,
-      I1 => cp_fsm_cs(0),
-      I2 => cp_fsm_cs(1),
-      I3 => \icap_o_preswap[0]_i_2_n_0\,
-      I4 => \cp_fsm_cs[0]_i_3_n_0\,
-      I5 => \cp_fsm_cs[0]_i_4_n_0\,
+      I1 => \cp_fsm_cs[0]_i_3_n_0\,
+      I2 => \icap_o_preswap[24]_i_6_n_0\,
+      I3 => \cp_fsm_cs[0]_i_4_n_0\,
+      I4 => \cp_fsm_cs[0]_i_5_n_0\,
       O => cp_fsm_ns(0)
     );
 \cp_fsm_cs[0]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFF8C8F8C8F8C8"
+      INIT => X"FFA00000E4E40000"
     )
         port map (
-      I0 => i_bs_fifo_i_5_n_0,
-      I1 => \icap_o_preswap[29]_i_3_n_0\,
-      I2 => \cp_fsm_cs[1]_i_3_n_0\,
-      I3 => dout(1),
-      I4 => cp_fsm_cs(1),
-      I5 => \cp_fsm_cs[0]_i_5_n_0\,
-      O => \cp_fsm_cs[0]_i_2_n_0\
-    );
-\cp_fsm_cs[0]_i_3\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFC00000D1D10000"
-    )
-        port map (
-      I0 => icap_csib_i_i_5_n_0,
-      I1 => cp_fsm_cs(1),
+      I0 => cp_fsm_cs(1),
+      I1 => icap_req_i_reg_n_0,
       I2 => desync_needed,
       I3 => \cp_fsm_cs[0]_i_6_n_0\,
-      I4 => i_bs_fifo_i_5_n_0,
+      I4 => \icap_o_preswap[28]_i_3_n_0\,
       I5 => dout(1),
+      O => \cp_fsm_cs[0]_i_2_n_0\
+    );
+\cp_fsm_cs[0]_i_3\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => cp_fsm_cs(2),
+      I1 => cp_fsm_cs(3),
       O => \cp_fsm_cs[0]_i_3_n_0\
     );
 \cp_fsm_cs[0]_i_4\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"080808080808FF08"
+      INIT => X"0000005400000000"
     )
         port map (
-      I0 => fetch_error_seen_on_first_word_i_5_n_0,
-      I1 => icap_reset,
-      I2 => i_cdc_error_n_1,
-      I3 => \cp_fsm_cs[1]_i_3_n_0\,
-      I4 => icap_csib_i_i_5_n_0,
-      I5 => cap_rel,
+      I0 => cp_fsm_cs(0),
+      I1 => icap_req_i_reg_n_0,
+      I2 => dout(1),
+      I3 => icap_i(0),
+      I4 => cp_fsm_cs(3),
+      I5 => cp_fsm_cs(2),
       O => \cp_fsm_cs[0]_i_4_n_0\
     );
 \cp_fsm_cs[0]_i_5\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0000000F00000088"
+      INIT => X"FFFF88888F888888"
     )
         port map (
-      I0 => \^icap_req_i_reg_0\,
-      I1 => cap_gnt,
-      I2 => dout(0),
-      I3 => cp_fsm_cs(3),
-      I4 => cp_fsm_cs(2),
-      I5 => cp_fsm_cs(0),
+      I0 => \cp_fsm_cs[1]_i_3_n_0\,
+      I1 => \cp_fsm_cs[1]_i_4_n_0\,
+      I2 => cp_fsm_cs(0),
+      I3 => \icap_o_preswap[24]_i_5_n_0\,
+      I4 => cp_fsm_cs(1),
+      I5 => \cp_fsm_cs[0]_i_7_n_0\,
       O => \cp_fsm_cs[0]_i_5_n_0\
     );
 \cp_fsm_cs[0]_i_6\: unisim.vcomponents.LUT5
@@ -29892,70 +29872,39 @@ cfg_error_seen_reg: unisim.vcomponents.FDRE
       INIT => X"0008FFFF"
     )
         port map (
-      I0 => \icap_o_preswap[2]_i_2_n_0\,
+      I0 => \icap_o_preswap[29]_i_4_n_0\,
       I1 => cp_fsm_cs(1),
       I2 => cfg_error_seen_reg_n_0,
       I3 => fetch_error_seen_on_first_word_reg_n_0,
       I4 => dout(0),
       O => \cp_fsm_cs[0]_i_6_n_0\
     );
+\cp_fsm_cs[0]_i_7\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"0003000A"
+    )
+        port map (
+      I0 => icap_req_i_reg_n_0,
+      I1 => dout(0),
+      I2 => cp_fsm_cs(3),
+      I3 => cp_fsm_cs(2),
+      I4 => cp_fsm_cs(0),
+      O => \cp_fsm_cs[0]_i_7_n_0\
+    );
 \cp_fsm_cs[1]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFAEAAAEFFEEAAEE"
+      INIT => X"FFFFFFFFFFFFAAAE"
     )
         port map (
       I0 => \cp_fsm_cs[1]_i_2_n_0\,
       I1 => \cp_fsm_cs[1]_i_3_n_0\,
-      I2 => dout(1),
-      I3 => \icap_o_preswap[29]_i_3_n_0\,
-      I4 => \cp_fsm_cs[1]_i_4_n_0\,
-      I5 => dout(0),
+      I2 => \cp_fsm_cs[1]_i_4_n_0\,
+      I3 => dout(0),
+      I4 => \cp_fsm_cs[1]_i_5_n_0\,
+      I5 => \cp_fsm_cs[1]_i_6_n_0\,
       O => cp_fsm_ns(1)
     );
-\cp_fsm_cs[1]_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFFFFFFF222"
-    )
-        port map (
-      I0 => \icap_o_preswap[24]_i_15_n_0\,
-      I1 => dout(0),
-      I2 => \icap_o_preswap[24]_i_7_n_0\,
-      I3 => \cp_fsm_cs[1]_i_5_n_0\,
-      I4 => icap_req_i02_out,
-      I5 => \cp_fsm_cs[1]_i_6_n_0\,
-      O => \cp_fsm_cs[1]_i_2_n_0\
-    );
-\cp_fsm_cs[1]_i_3\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"0010"
-    )
-        port map (
-      I0 => icap_i(0),
-      I1 => cp_fsm_cs(3),
-      I2 => cp_fsm_cs(2),
-      I3 => cp_fsm_cs(0),
-      O => \cp_fsm_cs[1]_i_3_n_0\
-    );
-\cp_fsm_cs[1]_i_4\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"10"
-    )
-        port map (
-      I0 => cp_fsm_cs(3),
-      I1 => cp_fsm_cs(2),
-      I2 => cp_fsm_cs(1),
-      O => \cp_fsm_cs[1]_i_4_n_0\
-    );
-\cp_fsm_cs[1]_i_5\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"2"
-    )
-        port map (
-      I0 => cp_fsm_cs(1),
-      I1 => cp_fsm_cs(0),
-      O => \cp_fsm_cs[1]_i_5_n_0\
-    );
-\cp_fsm_cs[1]_i_6\: unisim.vcomponents.LUT5
+\cp_fsm_cs[1]_i_2\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"04000000"
     )
@@ -29964,7 +29913,53 @@ cfg_error_seen_reg: unisim.vcomponents.FDRE
       I1 => cp_fsm_cs(0),
       I2 => cp_fsm_cs(3),
       I3 => cp_fsm_cs(2),
-      I4 => \icap_o_preswap[2]_i_2_n_0\,
+      I4 => \icap_o_preswap[29]_i_4_n_0\,
+      O => \cp_fsm_cs[1]_i_2_n_0\
+    );
+\cp_fsm_cs[1]_i_3\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"001C"
+    )
+        port map (
+      I0 => icap_i(0),
+      I1 => cp_fsm_cs(0),
+      I2 => cp_fsm_cs(2),
+      I3 => cp_fsm_cs(3),
+      O => \cp_fsm_cs[1]_i_3_n_0\
+    );
+\cp_fsm_cs[1]_i_4\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"E"
+    )
+        port map (
+      I0 => rd_rst_busy,
+      I1 => empty,
+      O => \cp_fsm_cs[1]_i_4_n_0\
+    );
+\cp_fsm_cs[1]_i_5\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000000000004"
+    )
+        port map (
+      I0 => cp_fsm_cs(0),
+      I1 => cp_fsm_cs(2),
+      I2 => cp_fsm_cs(3),
+      I3 => icap_i(0),
+      I4 => dout(1),
+      I5 => \cp_fsm_cs[1]_i_4_n_0\,
+      O => \cp_fsm_cs[1]_i_5_n_0\
+    );
+\cp_fsm_cs[1]_i_6\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"8802FF008802AA00"
+    )
+        port map (
+      I0 => \cp_fsm_cs[0]_i_3_n_0\,
+      I1 => \cp_fsm_cs[1]_i_4_n_0\,
+      I2 => dout(1),
+      I3 => cp_fsm_cs(1),
+      I4 => cp_fsm_cs(0),
+      I5 => \icap_o_preswap[24]_i_8_n_0\,
       O => \cp_fsm_cs[1]_i_6_n_0\
     );
 \cp_fsm_cs[2]_i_1\: unisim.vcomponents.LUT6
@@ -29974,8 +29969,8 @@ cfg_error_seen_reg: unisim.vcomponents.FDRE
         port map (
       I0 => \cp_fsm_cs[2]_i_2_n_0\,
       I1 => \cp_fsm_cs[2]_i_3_n_0\,
-      I2 => i_cdc_error_n_1,
-      I3 => \icap_o_preswap[2]_i_2_n_0\,
+      I2 => \icap_o_preswap[24]_i_6_n_0\,
+      I3 => \icap_o_preswap[29]_i_4_n_0\,
       I4 => cp_fsm_cs(3),
       I5 => cp_fsm_cs(2),
       O => cp_fsm_ns(2)
@@ -29985,10 +29980,10 @@ cfg_error_seen_reg: unisim.vcomponents.FDRE
       INIT => X"888F888F88FF88F8"
     )
         port map (
-      I0 => desync_needed_i_3_n_0,
+      I0 => i_bs_fifo_i_3_n_0,
       I1 => dout(0),
       I2 => cp_fsm_cs(1),
-      I3 => \icap_o_preswap[2]_i_3_n_0\,
+      I3 => i_cdc_error_n_1,
       I4 => icap_i(0),
       I5 => cp_fsm_cs(0),
       O => \cp_fsm_cs[2]_i_2_n_0\
@@ -29998,7 +29993,7 @@ cfg_error_seen_reg: unisim.vcomponents.FDRE
       INIT => X"0100000000000000"
     )
         port map (
-      I0 => \icap_o_preswap[29]_i_3_n_0\,
+      I0 => \cp_fsm_cs[1]_i_4_n_0\,
       I1 => cp_fsm_cs(3),
       I2 => cp_fsm_cs(2),
       I3 => cp_fsm_cs(0),
@@ -30015,7 +30010,7 @@ cfg_error_seen_reg: unisim.vcomponents.FDRE
       I1 => cp_fsm_cs(0),
       I2 => cp_fsm_cs(3),
       I3 => cp_fsm_cs(2),
-      I4 => \icap_o_preswap[2]_i_2_n_0\,
+      I4 => \icap_o_preswap[29]_i_4_n_0\,
       O => cp_fsm_ns(3)
     );
 \cp_fsm_cs_reg[0]\: unisim.vcomponents.FDRE
@@ -30068,8 +30063,8 @@ desync_needed_i_1: unisim.vcomponents.LUT5
     )
         port map (
       I0 => desync_needed_i_2_n_0,
-      I1 => desync_needed_i_3_n_0,
-      I2 => desync_needed_i_4_n_0,
+      I1 => i_bs_fifo_i_3_n_0,
+      I2 => desync_needed_i_3_n_0,
       I3 => cfg_error_seen_reg_n_0,
       I4 => desync_needed,
       O => desync_needed_i_1_n_0
@@ -30089,29 +30084,16 @@ desync_needed_i_2: unisim.vcomponents.LUT6
     );
 desync_needed_i_3: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0001000000000000"
-    )
-        port map (
-      I0 => rd_rst_busy,
-      I1 => empty,
-      I2 => cp_fsm_cs(3),
-      I3 => cp_fsm_cs(2),
-      I4 => cp_fsm_cs(0),
-      I5 => dout(1),
-      O => desync_needed_i_3_n_0
-    );
-desync_needed_i_4: unisim.vcomponents.LUT6
-    generic map(
       INIT => X"57575555FF575555"
     )
         port map (
-      I0 => \icap_o_preswap[2]_i_2_n_0\,
+      I0 => \icap_o_preswap[29]_i_4_n_0\,
       I1 => cp_fsm_cs(0),
-      I2 => \icap_o_preswap[2]_i_3_n_0\,
-      I3 => desync_needed_i_3_n_0,
+      I2 => i_cdc_error_n_1,
+      I3 => i_bs_fifo_i_3_n_0,
       I4 => cp_fsm_cs(1),
       I5 => fetch_error_seen_on_first_word_reg_n_0,
-      O => desync_needed_i_4_n_0
+      O => desync_needed_i_3_n_0
     );
 desync_needed_reg: unisim.vcomponents.FDRE
     generic map(
@@ -30124,111 +30106,87 @@ desync_needed_reg: unisim.vcomponents.FDRE
       Q => desync_needed,
       R => icap_reset_ah
     );
-fetch_error_seen_i_1: unisim.vcomponents.LUT6
+fetch_error_seen_i_1: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"000000FE00FE00FE"
+      INIT => X"00FE"
     )
         port map (
       I0 => fetch_error_seen,
-      I1 => desync_needed_i_3_n_0,
+      I1 => i_bs_fifo_i_3_n_0,
       I2 => fetch_error_seen_i_2_n_0,
-      I3 => fetch_error_seen_on_first_word_i_3_n_0,
-      I4 => fetch_error_seen_i_3_n_0,
-      I5 => fetch_error_seen_on_first_word_i_6_n_0,
+      I3 => fetch_error_seen_on_first_word,
       O => fetch_error_seen_i_1_n_0
     );
 fetch_error_seen_i_2: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"10101010F0101010"
+      INIT => X"F010101010101010"
     )
         port map (
       I0 => icap_req_i_i_2_n_0,
       I1 => dout(0),
-      I2 => \icap_o_preswap[24]_i_17_n_0\,
-      I3 => cp_fsm_cs(1),
-      I4 => fetch_error_seen_on_first_word_i_5_n_0,
-      I5 => icap_csib_i_i_5_n_0,
+      I2 => \icap_o_preswap[24]_i_16_n_0\,
+      I3 => icap_req_i_reg_n_0,
+      I4 => cp_fsm_cs(1),
+      I5 => \cp_fsm_cs[0]_i_3_n_0\,
       O => fetch_error_seen_i_2_n_0
     );
-fetch_error_seen_i_3: unisim.vcomponents.LUT6
+fetch_error_seen_on_first_word_i_1: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"0001000000000000"
+      INIT => X"0E"
     )
         port map (
-      I0 => rd_rst_busy,
-      I1 => empty,
-      I2 => cp_fsm_cs(2),
-      I3 => cp_fsm_cs(3),
-      I4 => dout(0),
-      I5 => cp_fsm_cs(1),
-      O => fetch_error_seen_i_3_n_0
-    );
-fetch_error_seen_on_first_word_i_1: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"2222202222222222"
-    )
-        port map (
-      I0 => fetch_error_seen_on_first_word_i_2_n_0,
-      I1 => fetch_error_seen_on_first_word_i_3_n_0,
-      I2 => fetch_error_seen_on_first_word_i_4_n_0,
-      I3 => fetch_error_seen_on_first_word_i_5_n_0,
-      I4 => \icap_o_preswap[29]_i_3_n_0\,
-      I5 => fetch_error_seen_on_first_word_i_6_n_0,
+      I0 => fetch_error_seen_on_first_word_reg_n_0,
+      I1 => fetch_error_seen_on_first_word_cmb,
+      I2 => fetch_error_seen_on_first_word,
       O => fetch_error_seen_on_first_word_i_1_n_0
     );
 fetch_error_seen_on_first_word_i_2: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFFFFF22232222"
-    )
-        port map (
-      I0 => desync_needed_i_3_n_0,
-      I1 => cp_fsm_cs(1),
-      I2 => cp_fsm_cs(0),
-      I3 => \icap_o_preswap[2]_i_3_n_0\,
-      I4 => \icap_o_preswap[24]_i_17_n_0\,
-      I5 => fetch_error_seen_on_first_word_reg_n_0,
-      O => fetch_error_seen_on_first_word_i_2_n_0
-    );
-fetch_error_seen_on_first_word_i_3: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFF555555575555"
-    )
-        port map (
-      I0 => icap_reset,
-      I1 => icap_req_i_i_2_n_0,
-      I2 => icap_csib_i_i_5_n_0,
-      I3 => \icap_o_preswap[24]_i_18_n_0\,
-      I4 => dout(0),
-      I5 => cfg_error_seen_i_6_n_0,
-      O => fetch_error_seen_on_first_word_i_3_n_0
-    );
-fetch_error_seen_on_first_word_i_4: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"7"
+      INIT => X"0001010000000000"
     )
         port map (
       I0 => cp_fsm_cs(1),
-      I1 => dout(0),
-      O => fetch_error_seen_on_first_word_i_4_n_0
+      I1 => \cp_fsm_cs[1]_i_4_n_0\,
+      I2 => cp_fsm_cs(3),
+      I3 => cp_fsm_cs(2),
+      I4 => cp_fsm_cs(0),
+      I5 => dout(1),
+      O => fetch_error_seen_on_first_word_cmb
     );
-fetch_error_seen_on_first_word_i_5: unisim.vcomponents.LUT2
+fetch_error_seen_on_first_word_i_3: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"1"
+      INIT => X"FFFFFFFF55755555"
     )
         port map (
-      I0 => cp_fsm_cs(2),
-      I1 => cp_fsm_cs(3),
-      O => fetch_error_seen_on_first_word_i_5_n_0
+      I0 => icap_reset,
+      I1 => \icap_o_preswap[24]_i_14_n_0\,
+      I2 => fetch_error_seen_on_first_word_i_4_n_0,
+      I3 => \cp_fsm_cs[1]_i_4_n_0\,
+      I4 => \cp_fsm_cs[0]_i_3_n_0\,
+      I5 => fetch_error_seen_on_first_word_i_5_n_0,
+      O => fetch_error_seen_on_first_word
     );
-fetch_error_seen_on_first_word_i_6: unisim.vcomponents.LUT3
+fetch_error_seen_on_first_word_i_4: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"EA"
+      INIT => X"E"
     )
         port map (
       I0 => cp_fsm_cs(0),
-      I1 => cap_gnt,
-      I2 => \^icap_req_i_reg_0\,
-      O => fetch_error_seen_on_first_word_i_6_n_0
+      I1 => icap_req_i_reg_n_0,
+      O => fetch_error_seen_on_first_word_i_4_n_0
+    );
+fetch_error_seen_on_first_word_i_5: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"00000000AA00B000"
+    )
+        port map (
+      I0 => \icap_o_preswap[28]_i_3_n_0\,
+      I1 => icap_req_i_i_2_n_0,
+      I2 => icap_req_i_reg_n_0,
+      I3 => dout(0),
+      I4 => dout(1),
+      I5 => \cp_fsm_cs[1]_i_4_n_0\,
+      O => fetch_error_seen_on_first_word_i_5_n_0
     );
 fetch_error_seen_on_first_word_reg: unisim.vcomponents.FDRE
     generic map(
@@ -30294,50 +30252,52 @@ i_bs_fifo_i_1: unisim.vcomponents.LUT4
     );
 i_bs_fifo_i_2: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"FEEEEEEE"
+      INIT => X"FFFFABAA"
     )
         port map (
       I0 => i_bs_fifo_i_3_n_0,
-      I1 => i_bs_fifo_i_4_n_0,
-      I2 => dout(1),
-      I3 => dout(0),
+      I1 => cp_fsm_cs(3),
+      I2 => cp_fsm_cs(2),
+      I3 => i_bs_fifo_i_4_n_0,
       I4 => i_bs_fifo_i_5_n_0,
       O => cp_bs_read
     );
 i_bs_fifo_i_3: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"B000A000B0A0B0A0"
+      INIT => X"0001000000000000"
     )
         port map (
-      I0 => cp_fsm_cs(1),
-      I1 => \icap_o_preswap[29]_i_3_n_0\,
-      I2 => fetch_error_seen_on_first_word_i_5_n_0,
-      I3 => cp_fsm_cs(0),
-      I4 => dout(1),
-      I5 => icap_csib_i_i_5_n_0,
+      I0 => rd_rst_busy,
+      I1 => empty,
+      I2 => cp_fsm_cs(3),
+      I3 => cp_fsm_cs(2),
+      I4 => cp_fsm_cs(0),
+      I5 => dout(1),
       O => i_bs_fifo_i_3_n_0
     );
-i_bs_fifo_i_4: unisim.vcomponents.LUT6
+i_bs_fifo_i_4: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0010001000100111"
+      INIT => X"F1F0F000"
     )
         port map (
-      I0 => \icap_o_preswap[29]_i_3_n_0\,
-      I1 => icap_req_i_i_2_n_0,
-      I2 => dout(1),
-      I3 => dout(0),
-      I4 => cap_rel,
-      I5 => icap_csib_i_i_5_n_0,
+      I0 => rd_rst_busy,
+      I1 => empty,
+      I2 => cp_fsm_cs(1),
+      I3 => cp_fsm_cs(0),
+      I4 => icap_req_i_reg_n_0,
       O => i_bs_fifo_i_4_n_0
     );
-i_bs_fifo_i_5: unisim.vcomponents.LUT3
+i_bs_fifo_i_5: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"10"
+      INIT => X"AA000000AA303330"
     )
         port map (
-      I0 => cp_fsm_cs(3),
-      I1 => cp_fsm_cs(2),
-      I2 => cp_fsm_cs(0),
+      I0 => \icap_o_preswap[28]_i_3_n_0\,
+      I1 => icap_req_i_i_2_n_0,
+      I2 => icap_req_i_reg_n_0,
+      I3 => dout(1),
+      I4 => dout(0),
+      I5 => \cp_fsm_cs[1]_i_4_n_0\,
       O => i_bs_fifo_i_5_n_0
     );
 i_cdc_done: entity work.design_2_dfx_controller_0_0_cdc_sync
@@ -30361,7 +30321,7 @@ i_cdc_error: entity work.design_2_dfx_controller_0_0_cdc_sync_29
       Q(3 downto 0) => cp_fsm_cs(3 downto 0),
       cc_error_i => cc_error_i,
       clk => clk,
-      \cp_fsm_cs_reg[0]\ => i_cdc_error_n_1,
+      \cp_fsm_cs_reg[3]\ => i_cdc_error_n_1,
       icap_clk => icap_clk,
       icap_i(0) => icap_i(0)
     );
@@ -30373,19 +30333,78 @@ icap_csib_i_i_1: unisim.vcomponents.LUT1
       I0 => icap_reset,
       O => icap_reset_ah
     );
-icap_csib_i_i_10: unisim.vcomponents.LUT5
+icap_csib_i_i_2: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"00001333"
+      INIT => X"FFFFAAEF"
     )
         port map (
-      I0 => cp_fsm_cs(0),
-      I1 => cp_fsm_cs(1),
-      I2 => cap_gnt,
-      I3 => \^icap_req_i_reg_0\,
-      I4 => cp_fsm_cs(2),
-      O => icap_csib_i_i_10_n_0
+      I0 => icap_csib_i_i_3_n_0,
+      I1 => cp_fsm_cs(2),
+      I2 => desync_needed,
+      I3 => \icap_o_preswap[29]_i_4_n_0\,
+      I4 => icap_csib_i_i_4_n_0,
+      O => icap_csib_i_i_2_n_0
     );
-icap_csib_i_i_11: unisim.vcomponents.LUT6
+icap_csib_i_i_3: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"EEEEEEEFEEEFEFFF"
+    )
+        port map (
+      I0 => icap_csib_i_i_5_n_0,
+      I1 => cp_fsm_cs(3),
+      I2 => cp_fsm_cs(2),
+      I3 => cp_fsm_cs(1),
+      I4 => icap_req_i_reg_n_0,
+      I5 => cp_fsm_cs(0),
+      O => icap_csib_i_i_3_n_0
+    );
+icap_csib_i_i_4: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"000F0F0F0F0FEFEF"
+    )
+        port map (
+      I0 => icap_csib_i_i_6_n_0,
+      I1 => icap_i(0),
+      I2 => \icap_o_preswap[29]_i_4_n_0\,
+      I3 => dout(0),
+      I4 => cp_fsm_cs(1),
+      I5 => cp_fsm_cs(0),
+      O => icap_csib_i_i_4_n_0
+    );
+icap_csib_i_i_5: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FF00FFFFFF00FFA8"
+    )
+        port map (
+      I0 => icap_csib_i_i_7_n_0,
+      I1 => dout(1),
+      I2 => \icap_o_preswap[24]_i_17_n_0\,
+      I3 => icap_csib_i_i_8_n_0,
+      I4 => cp_fsm_cs(2),
+      I5 => \cp_fsm_cs[1]_i_4_n_0\,
+      O => icap_csib_i_i_5_n_0
+    );
+icap_csib_i_i_6: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"FE"
+    )
+        port map (
+      I0 => empty,
+      I1 => rd_rst_busy,
+      I2 => dout(1),
+      O => icap_csib_i_i_6_n_0
+    );
+icap_csib_i_i_7: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"7F"
+    )
+        port map (
+      I0 => dout(0),
+      I1 => cp_fsm_cs(1),
+      I2 => cp_fsm_cs(0),
+      O => icap_csib_i_i_7_n_0
+    );
+icap_csib_i_i_8: unisim.vcomponents.LUT6
     generic map(
       INIT => X"1110111111101010"
     )
@@ -30396,87 +30415,7 @@ icap_csib_i_i_11: unisim.vcomponents.LUT6
       I3 => fetch_error_seen_on_first_word_reg_n_0,
       I4 => dout(1),
       I5 => fetch_error_seen,
-      O => icap_csib_i_i_11_n_0
-    );
-icap_csib_i_i_2: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFFFFFFFF32"
-    )
-        port map (
-      I0 => icap_csib_i_i_3_n_0,
-      I1 => i_cdc_error_n_1,
-      I2 => icap_csib_i_i_5_n_0,
-      I3 => cp_fsm_cs(3),
-      I4 => icap_csib_i_i_6_n_0,
-      I5 => icap_csib_i_i_7_n_0,
-      O => icap_csib_i_i_2_n_0
-    );
-icap_csib_i_i_3: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"FFFFFFFE"
-    )
-        port map (
-      I0 => cap_rel,
-      I1 => empty,
-      I2 => rd_rst_busy,
-      I3 => dout(1),
-      I4 => icap_i(0),
-      O => icap_csib_i_i_3_n_0
-    );
-icap_csib_i_i_5: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"7"
-    )
-        port map (
-      I0 => \^icap_req_i_reg_0\,
-      I1 => cap_gnt,
-      O => icap_csib_i_i_5_n_0
-    );
-icap_csib_i_i_6: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000FFFF00008F88"
-    )
-        port map (
-      I0 => icap_csib_i_i_8_n_0,
-      I1 => icap_csib_i_i_9_n_0,
-      I2 => cp_fsm_cs(0),
-      I3 => icap_csib_i_i_5_n_0,
-      I4 => cp_fsm_cs(2),
-      I5 => \icap_o_preswap[29]_i_3_n_0\,
-      O => icap_csib_i_i_6_n_0
-    );
-icap_csib_i_i_7: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FAFAFFFFFAFAFFFB"
-    )
-        port map (
-      I0 => icap_csib_i_i_10_n_0,
-      I1 => desync_needed,
-      I2 => icap_csib_i_i_11_n_0,
-      I3 => cp_fsm_cs(2),
-      I4 => \icap_o_preswap[2]_i_2_n_0\,
-      I5 => icap_csib_i_i_8_n_0,
-      O => icap_csib_i_i_7_n_0
-    );
-icap_csib_i_i_8: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"7F"
-    )
-        port map (
-      I0 => dout(0),
-      I1 => cp_fsm_cs(1),
-      I2 => cp_fsm_cs(0),
       O => icap_csib_i_i_8_n_0
-    );
-icap_csib_i_i_9: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"FE"
-    )
-        port map (
-      I0 => cfg_error_seen_reg_n_0,
-      I1 => fetch_error_seen,
-      I2 => dout(1),
-      O => icap_csib_i_i_9_n_0
     );
 icap_csib_i_reg: unisim.vcomponents.FDSE
     generic map(
@@ -30496,74 +30435,35 @@ icap_csib_i_reg: unisim.vcomponents.FDSE
         port map (
       I0 => cp_fsm_cs(1),
       I1 => cp_fsm_cs(0),
-      I2 => \icap_o_preswap[0]_i_2_n_0\,
+      I2 => \icap_o_preswap[24]_i_5_n_0\,
       I3 => \icap_o_preswap[28]_i_2_n_0\,
       I4 => dout(2),
-      I5 => \icap_o_preswap[0]_i_3_n_0\,
+      I5 => \icap_o_preswap[0]_i_2_n_0\,
       O => \p_1_in__0\(0)
     );
-\icap_o_preswap[0]_i_2\: unisim.vcomponents.LUT5
+\icap_o_preswap[0]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0000EF00"
+      INIT => X"000022220000F000"
     )
         port map (
-      I0 => legacy_cfg_error,
-      I1 => icap_i(1),
-      I2 => icap_i(0),
-      I3 => cp_fsm_cs(2),
+      I0 => \icap_o_preswap[0]_i_3_n_0\,
+      I1 => \cp_fsm_cs[1]_i_4_n_0\,
+      I2 => \icap_o_preswap[24]_i_9_n_0\,
+      I3 => \icap_o_preswap[29]_i_4_n_0\,
       I4 => cp_fsm_cs(3),
+      I5 => cp_fsm_cs(2),
       O => \icap_o_preswap[0]_i_2_n_0\
     );
-\icap_o_preswap[0]_i_3\: unisim.vcomponents.LUT6
+\icap_o_preswap[0]_i_3\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFFFFFFF8008800"
+      INIT => X"0004"
     )
         port map (
-      I0 => \icap_o_preswap[24]_i_8_n_0\,
-      I1 => fetch_error_seen_on_first_word_i_5_n_0,
-      I2 => fetch_error_seen_on_first_word_i_6_n_0,
-      I3 => \icap_o_preswap[2]_i_2_n_0\,
-      I4 => \icap_o_preswap[0]_i_4_n_0\,
-      I5 => \icap_o_preswap[0]_i_5_n_0\,
-      O => \icap_o_preswap[0]_i_3_n_0\
-    );
-\icap_o_preswap[0]_i_4\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000000000001000"
-    )
-        port map (
-      I0 => cp_fsm_cs(2),
-      I1 => cp_fsm_cs(3),
-      I2 => cp_fsm_cs(1),
-      I3 => empty,
-      I4 => cfg_error_seen_reg_n_0,
-      I5 => fetch_error_seen,
-      O => \icap_o_preswap[0]_i_4_n_0\
-    );
-\icap_o_preswap[0]_i_5\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"00000002"
-    )
-        port map (
-      I0 => \icap_o_preswap[0]_i_6_n_0\,
-      I1 => icap_i(0),
+      I0 => cp_fsm_cs(1),
+      I1 => icap_req_i_reg_n_0,
       I2 => dout(1),
-      I3 => cp_fsm_cs(1),
-      I4 => cap_rel,
-      O => \icap_o_preswap[0]_i_5_n_0\
-    );
-\icap_o_preswap[0]_i_6\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0004000000000000"
-    )
-        port map (
-      I0 => cp_fsm_cs(3),
-      I1 => cp_fsm_cs(2),
-      I2 => rd_rst_busy,
-      I3 => empty,
-      I4 => cap_gnt,
-      I5 => \^icap_req_i_reg_0\,
-      O => \icap_o_preswap[0]_i_6_n_0\
+      I3 => icap_i(0),
+      O => \icap_o_preswap[0]_i_3_n_0\
     );
 \icap_o_preswap[15]_i_1\: unisim.vcomponents.LUT3
     generic map(
@@ -30586,69 +30486,42 @@ icap_csib_i_reg: unisim.vcomponents.FDSE
     );
 \icap_o_preswap[24]_i_10\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0000000000020000"
+      INIT => X"0000000000080000"
     )
         port map (
-      I0 => \icap_o_preswap[24]_i_21_n_0\,
-      I1 => cfg_error_seen_reg_n_0,
-      I2 => dout(1),
-      I3 => cp_fsm_cs(2),
+      I0 => fetch_error_seen_on_first_word_i_4_n_0,
+      I1 => \cp_fsm_cs[1]_i_4_n_0\,
+      I2 => fetch_error_seen,
+      I3 => cfg_error_seen_reg_n_0,
       I4 => cp_fsm_cs(1),
-      I5 => fetch_error_seen,
+      I5 => cp_fsm_cs(2),
       O => \icap_o_preswap[24]_i_10_n_0\
     );
 \icap_o_preswap[24]_i_11\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0002000000000000"
+      INIT => X"0000000001000000"
     )
         port map (
-      I0 => \icap_o_preswap[24]_i_21_n_0\,
-      I1 => fetch_error_seen,
-      I2 => cfg_error_seen_reg_n_0,
-      I3 => cp_fsm_cs(2),
-      I4 => empty,
+      I0 => \cp_fsm_cs[1]_i_4_n_0\,
+      I1 => icap_i(0),
+      I2 => dout(1),
+      I3 => legacy_cfg_error_i_4_n_0,
+      I4 => cp_fsm_cs(2),
       I5 => cp_fsm_cs(1),
       O => \icap_o_preswap[24]_i_11_n_0\
     );
-\icap_o_preswap[24]_i_12\: unisim.vcomponents.LUT5
+\icap_o_preswap[24]_i_12\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"00000200"
+      INIT => X"0001"
     )
         port map (
-      I0 => \icap_o_preswap[24]_i_22_n_0\,
-      I1 => empty,
-      I2 => cp_fsm_cs(0),
-      I3 => cp_fsm_cs(2),
-      I4 => cp_fsm_cs(1),
+      I0 => cp_fsm_cs(2),
+      I1 => fetch_error_seen,
+      I2 => dout(1),
+      I3 => cfg_error_seen_reg_n_0,
       O => \icap_o_preswap[24]_i_12_n_0\
     );
-\icap_o_preswap[24]_i_13\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0101010001010101"
-    )
-        port map (
-      I0 => fetch_error_seen,
-      I1 => cp_fsm_cs(2),
-      I2 => cfg_error_seen_reg_n_0,
-      I3 => legacy_cfg_error,
-      I4 => icap_i(1),
-      I5 => icap_i(0),
-      O => \icap_o_preswap[24]_i_13_n_0\
-    );
-\icap_o_preswap[24]_i_14\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"F0FF001000000010"
-    )
-        port map (
-      I0 => dout(1),
-      I1 => empty,
-      I2 => cp_fsm_cs(0),
-      I3 => icap_csib_i_i_5_n_0,
-      I4 => rd_rst_busy,
-      I5 => cp_fsm_cs(1),
-      O => \icap_o_preswap[24]_i_14_n_0\
-    );
-\icap_o_preswap[24]_i_15\: unisim.vcomponents.LUT5
+\icap_o_preswap[24]_i_13\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"00000002"
     )
@@ -30658,9 +30531,18 @@ icap_csib_i_reg: unisim.vcomponents.FDSE
       I2 => cp_fsm_cs(3),
       I3 => empty,
       I4 => rd_rst_busy,
-      O => \icap_o_preswap[24]_i_15_n_0\
+      O => \icap_o_preswap[24]_i_13_n_0\
     );
-\icap_o_preswap[24]_i_16\: unisim.vcomponents.LUT5
+\icap_o_preswap[24]_i_14\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"7"
+    )
+        port map (
+      I0 => cp_fsm_cs(1),
+      I1 => dout(0),
+      O => \icap_o_preswap[24]_i_14_n_0\
+    );
+\icap_o_preswap[24]_i_15\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"00000080"
     )
@@ -30670,9 +30552,9 @@ icap_csib_i_reg: unisim.vcomponents.FDSE
       I2 => dout(0),
       I3 => cfg_error_seen_reg_n_0,
       I4 => fetch_error_seen_on_first_word_reg_n_0,
-      O => \icap_o_preswap[24]_i_16_n_0\
+      O => \icap_o_preswap[24]_i_15_n_0\
     );
-\icap_o_preswap[24]_i_17\: unisim.vcomponents.LUT3
+\icap_o_preswap[24]_i_16\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"02"
     )
@@ -30680,31 +30562,20 @@ icap_csib_i_reg: unisim.vcomponents.FDSE
       I0 => dout(1),
       I1 => empty,
       I2 => rd_rst_busy,
-      O => \icap_o_preswap[24]_i_17_n_0\
+      O => \icap_o_preswap[24]_i_16_n_0\
     );
-\icap_o_preswap[24]_i_18\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"FFFE"
-    )
-        port map (
-      I0 => dout(1),
-      I1 => rd_rst_busy,
-      I2 => empty,
-      I3 => cap_rel,
-      O => \icap_o_preswap[24]_i_18_n_0\
-    );
-\icap_o_preswap[24]_i_19\: unisim.vcomponents.LUT2
+\icap_o_preswap[24]_i_17\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"E"
     )
         port map (
       I0 => fetch_error_seen,
       I1 => cfg_error_seen_reg_n_0,
-      O => \icap_o_preswap[24]_i_19_n_0\
+      O => \icap_o_preswap[24]_i_17_n_0\
     );
 \icap_o_preswap[24]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFEFFFEFFFEFEFE"
+      INIT => X"FFFFFFEAFFEAFFEA"
     )
         port map (
       I0 => \icap_o_preswap[24]_i_4_n_0\,
@@ -30715,55 +30586,16 @@ icap_csib_i_reg: unisim.vcomponents.FDSE
       I5 => \icap_o_preswap[24]_i_9_n_0\,
       O => \icap_o_preswap[24]_i_2_n_0\
     );
-\icap_o_preswap[24]_i_20\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000000000000080"
-    )
-        port map (
-      I0 => \^icap_req_i_reg_0\,
-      I1 => cap_gnt,
-      I2 => cp_fsm_cs(0),
-      I3 => rd_rst_busy,
-      I4 => empty,
-      I5 => dout(1),
-      O => \icap_o_preswap[24]_i_20_n_0\
-    );
-\icap_o_preswap[24]_i_21\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"EFEFEFEFEF000000"
-    )
-        port map (
-      I0 => legacy_cfg_error,
-      I1 => icap_i(1),
-      I2 => icap_i(0),
-      I3 => \^icap_req_i_reg_0\,
-      I4 => cap_gnt,
-      I5 => cp_fsm_cs(0),
-      O => \icap_o_preswap[24]_i_21_n_0\
-    );
-\icap_o_preswap[24]_i_22\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000000000000020"
-    )
-        port map (
-      I0 => \^icap_req_i_reg_0\,
-      I1 => cap_rel,
-      I2 => cap_gnt,
-      I3 => icap_i(0),
-      I4 => rd_rst_busy,
-      I5 => dout(1),
-      O => \icap_o_preswap[24]_i_22_n_0\
-    );
 \icap_o_preswap[24]_i_3\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00000000FFFEFEFE"
+      INIT => X"00000000FAF8F8F8"
     )
         port map (
-      I0 => \icap_o_preswap[24]_i_10_n_0\,
-      I1 => \icap_o_preswap[24]_i_11_n_0\,
-      I2 => \icap_o_preswap[24]_i_12_n_0\,
-      I3 => \icap_o_preswap[24]_i_13_n_0\,
-      I4 => \icap_o_preswap[24]_i_14_n_0\,
+      I0 => \icap_o_preswap[29]_i_4_n_0\,
+      I1 => \icap_o_preswap[24]_i_10_n_0\,
+      I2 => \icap_o_preswap[24]_i_11_n_0\,
+      I3 => \icap_o_preswap[24]_i_12_n_0\,
+      I4 => i_bs_fifo_i_4_n_0,
       I5 => cp_fsm_cs(3),
       O => \icap_o_preswap[24]_i_3_n_0\
     );
@@ -30773,39 +30605,48 @@ icap_csib_i_reg: unisim.vcomponents.FDSE
     )
         port map (
       I0 => desync_needed,
-      I1 => \icap_o_preswap[24]_i_15_n_0\,
-      I2 => fetch_error_seen_on_first_word_i_4_n_0,
-      I3 => \icap_o_preswap[24]_i_7_n_0\,
-      I4 => \icap_o_preswap[24]_i_16_n_0\,
-      I5 => \icap_o_preswap[24]_i_17_n_0\,
+      I1 => \icap_o_preswap[24]_i_13_n_0\,
+      I2 => \icap_o_preswap[24]_i_14_n_0\,
+      I3 => \icap_o_preswap[24]_i_8_n_0\,
+      I4 => \icap_o_preswap[24]_i_15_n_0\,
+      I5 => \icap_o_preswap[24]_i_16_n_0\,
       O => \icap_o_preswap[24]_i_4_n_0\
     );
 \icap_o_preswap[24]_i_5\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"40404000"
+      INIT => X"0000EF00"
     )
         port map (
-      I0 => cp_fsm_cs(3),
-      I1 => cp_fsm_cs(2),
-      I2 => \icap_o_preswap[2]_i_2_n_0\,
-      I3 => cp_fsm_cs(1),
-      I4 => cp_fsm_cs(0),
+      I0 => legacy_cfg_error,
+      I1 => icap_i(1),
+      I2 => icap_i(0),
+      I3 => cp_fsm_cs(2),
+      I4 => cp_fsm_cs(3),
       O => \icap_o_preswap[24]_i_5_n_0\
     );
-\icap_o_preswap[24]_i_6\: unisim.vcomponents.LUT6
+\icap_o_preswap[24]_i_6\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"0000000000000080"
+      INIT => X"E"
     )
         port map (
-      I0 => \^icap_req_i_reg_0\,
-      I1 => cap_gnt,
-      I2 => cp_fsm_cs(2),
-      I3 => cp_fsm_cs(3),
-      I4 => icap_i(0),
-      I5 => \icap_o_preswap[24]_i_18_n_0\,
+      I0 => cp_fsm_cs(0),
+      I1 => cp_fsm_cs(1),
       O => \icap_o_preswap[24]_i_6_n_0\
     );
-\icap_o_preswap[24]_i_7\: unisim.vcomponents.LUT4
+\icap_o_preswap[24]_i_7\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000000000200"
+    )
+        port map (
+      I0 => cp_fsm_cs(2),
+      I1 => cp_fsm_cs(3),
+      I2 => icap_i(0),
+      I3 => icap_req_i_reg_n_0,
+      I4 => dout(1),
+      I5 => \cp_fsm_cs[1]_i_4_n_0\,
+      O => \icap_o_preswap[24]_i_7_n_0\
+    );
+\icap_o_preswap[24]_i_8\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"00EF"
     )
@@ -30814,32 +30655,19 @@ icap_csib_i_reg: unisim.vcomponents.FDSE
       I1 => icap_i(1),
       I2 => icap_i(0),
       I3 => cp_fsm_cs(3),
-      O => \icap_o_preswap[24]_i_7_n_0\
-    );
-\icap_o_preswap[24]_i_8\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"3330313030303030"
-    )
-        port map (
-      I0 => dout(1),
-      I1 => \icap_o_preswap[24]_i_19_n_0\,
-      I2 => \icap_o_preswap[24]_i_20_n_0\,
-      I3 => fetch_error_seen_on_first_word_i_6_n_0,
-      I4 => rd_rst_busy,
-      I5 => cp_fsm_cs(1),
       O => \icap_o_preswap[24]_i_8_n_0\
     );
 \icap_o_preswap[24]_i_9\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"1000100000001000"
+      INIT => X"5101510051000000"
     )
         port map (
-      I0 => fetch_error_seen,
-      I1 => cfg_error_seen_reg_n_0,
-      I2 => cp_fsm_cs(1),
-      I3 => empty,
-      I4 => icap_csib_i_i_5_n_0,
-      I5 => cp_fsm_cs(0),
+      I0 => \icap_o_preswap[24]_i_17_n_0\,
+      I1 => dout(1),
+      I2 => \cp_fsm_cs[1]_i_4_n_0\,
+      I3 => cp_fsm_cs(1),
+      I4 => cp_fsm_cs(0),
+      I5 => icap_req_i_reg_n_0,
       O => \icap_o_preswap[24]_i_9_n_0\
     );
 \icap_o_preswap[28]_i_1\: unisim.vcomponents.LUT3
@@ -30859,71 +30687,82 @@ icap_csib_i_reg: unisim.vcomponents.FDSE
         port map (
       I0 => cp_fsm_cs(1),
       I1 => dout(0),
-      I2 => i_bs_fifo_i_5_n_0,
+      I2 => \icap_o_preswap[28]_i_3_n_0\,
       I3 => empty,
       I4 => rd_rst_busy,
-      I5 => \icap_o_preswap[28]_i_3_n_0\,
+      I5 => \icap_o_preswap[28]_i_4_n_0\,
       O => \icap_o_preswap[28]_i_2_n_0\
     );
-\icap_o_preswap[28]_i_3\: unisim.vcomponents.LUT6
+\icap_o_preswap[28]_i_3\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"10"
+    )
+        port map (
+      I0 => cp_fsm_cs(3),
+      I1 => cp_fsm_cs(2),
+      I2 => cp_fsm_cs(0),
+      O => \icap_o_preswap[28]_i_3_n_0\
+    );
+\icap_o_preswap[28]_i_4\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"CCCCCCCCCCFC8C8C"
     )
         port map (
       I0 => fetch_error_seen,
       I1 => desync_needed,
-      I2 => \icap_o_preswap[2]_i_2_n_0\,
+      I2 => \icap_o_preswap[29]_i_4_n_0\,
       I3 => fetch_error_seen_on_first_word_reg_n_0,
       I4 => dout(1),
       I5 => cfg_error_seen_reg_n_0,
-      O => \icap_o_preswap[28]_i_3_n_0\
+      O => \icap_o_preswap[28]_i_4_n_0\
     );
 \icap_o_preswap[29]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFFFFFFFDDDDFD"
+      INIT => X"FFFFFFEFFFEFFFEF"
     )
         port map (
-      I0 => \icap_o_preswap[24]_i_7_n_0\,
-      I1 => \icap_o_preswap[29]_i_2_n_0\,
-      I2 => \icap_o_preswap[29]_i_3_n_0\,
-      I3 => cp_fsm_cs(2),
+      I0 => \icap_o_preswap[29]_i_2_n_0\,
+      I1 => \icap_o_preswap[29]_i_3_n_0\,
+      I2 => \icap_o_preswap[29]_i_4_n_0\,
+      I3 => cp_fsm_cs(3),
       I4 => cp_fsm_cs(1),
-      I5 => \icap_o_preswap[29]_i_4_n_0\,
+      I5 => cp_fsm_cs(2),
       O => \p_1_in__0\(29)
     );
 \icap_o_preswap[29]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0F0F0C0CEFFFEEEF"
+      INIT => X"00005C5CFFFC5C5C"
     )
         port map (
-      I0 => \icap_o_preswap[24]_i_19_n_0\,
-      I1 => dout(31),
-      I2 => cp_fsm_cs(0),
-      I3 => cp_fsm_cs(1),
-      I4 => icap_csib_i_i_5_n_0,
-      I5 => cp_fsm_cs(2),
-      O => \icap_o_preswap[29]_i_2_n_0\
-    );
-\icap_o_preswap[29]_i_3\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"E"
-    )
-        port map (
-      I0 => rd_rst_busy,
-      I1 => empty,
-      O => \icap_o_preswap[29]_i_3_n_0\
-    );
-\icap_o_preswap[29]_i_4\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"00003030FFFE3030"
-    )
-        port map (
-      I0 => cap_rel,
-      I1 => \icap_o_preswap[29]_i_3_n_0\,
-      I2 => dout(1),
+      I0 => cp_fsm_cs(1),
+      I1 => dout(1),
+      I2 => \cp_fsm_cs[1]_i_4_n_0\,
       I3 => icap_i(0),
       I4 => cp_fsm_cs(2),
       I5 => cp_fsm_cs(0),
+      O => \icap_o_preswap[29]_i_2_n_0\
+    );
+\icap_o_preswap[29]_i_3\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"00F300F3FFFFF1F7"
+    )
+        port map (
+      I0 => cp_fsm_cs(1),
+      I1 => icap_req_i_reg_n_0,
+      I2 => dout(31),
+      I3 => cp_fsm_cs(0),
+      I4 => \icap_o_preswap[24]_i_17_n_0\,
+      I5 => cp_fsm_cs(2),
+      O => \icap_o_preswap[29]_i_3_n_0\
+    );
+\icap_o_preswap[29]_i_4\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"FD"
+    )
+        port map (
+      I0 => icap_i(0),
+      I1 => icap_i(1),
+      I2 => legacy_cfg_error,
       O => \icap_o_preswap[29]_i_4_n_0\
     );
 \icap_o_preswap[2]_i_1\: unisim.vcomponents.LUT6
@@ -30932,31 +30771,12 @@ icap_csib_i_reg: unisim.vcomponents.FDSE
     )
         port map (
       I0 => dout(4),
-      I1 => \icap_o_preswap[0]_i_3_n_0\,
-      I2 => \icap_o_preswap[2]_i_2_n_0\,
-      I3 => \icap_o_preswap[2]_i_3_n_0\,
+      I1 => \icap_o_preswap[0]_i_2_n_0\,
+      I2 => \icap_o_preswap[29]_i_4_n_0\,
+      I3 => i_cdc_error_n_1,
       I4 => cp_fsm_cs(0),
       I5 => cp_fsm_cs(1),
       O => \p_1_in__0\(2)
-    );
-\icap_o_preswap[2]_i_2\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"FD"
-    )
-        port map (
-      I0 => icap_i(0),
-      I1 => icap_i(1),
-      I2 => legacy_cfg_error,
-      O => \icap_o_preswap[2]_i_2_n_0\
-    );
-\icap_o_preswap[2]_i_3\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"B"
-    )
-        port map (
-      I0 => cp_fsm_cs(3),
-      I1 => cp_fsm_cs(2),
-      O => \icap_o_preswap[2]_i_3_n_0\
     );
 \icap_o_preswap[3]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -30964,9 +30784,9 @@ icap_csib_i_reg: unisim.vcomponents.FDSE
     )
         port map (
       I0 => dout(5),
-      I1 => \icap_o_preswap[0]_i_3_n_0\,
-      I2 => \icap_o_preswap[2]_i_2_n_0\,
-      I3 => \icap_o_preswap[2]_i_3_n_0\,
+      I1 => \icap_o_preswap[0]_i_2_n_0\,
+      I2 => \icap_o_preswap[29]_i_4_n_0\,
+      I3 => i_cdc_error_n_1,
       I4 => cp_fsm_cs(0),
       I5 => cp_fsm_cs(1),
       O => \p_1_in__0\(3)
@@ -31329,11 +31149,11 @@ icap_req_i_i_1: unisim.vcomponents.LUT6
     )
         port map (
       I0 => icap_req_i_i_2_n_0,
-      I1 => dout(1),
-      I2 => \icap_o_preswap[29]_i_3_n_0\,
-      I3 => cap_rel,
+      I1 => empty,
+      I2 => rd_rst_busy,
+      I3 => dout(1),
       I4 => icap_req_i02_out,
-      I5 => \^icap_req_i_reg_0\,
+      I5 => icap_req_i_reg_n_0,
       O => icap_req_i_i_1_n_0
     );
 icap_req_i_i_2: unisim.vcomponents.LUT5
@@ -31356,7 +31176,7 @@ icap_req_i_i_3: unisim.vcomponents.LUT6
       I0 => cp_fsm_cs(0),
       I1 => cp_fsm_cs(2),
       I2 => cp_fsm_cs(3),
-      I3 => \icap_o_preswap[29]_i_3_n_0\,
+      I3 => \cp_fsm_cs[1]_i_4_n_0\,
       I4 => cp_fsm_cs(1),
       I5 => dout(1),
       O => icap_req_i02_out
@@ -31369,7 +31189,7 @@ icap_req_i_reg: unisim.vcomponents.FDRE
       C => icap_clk,
       CE => '1',
       D => icap_req_i_i_1_n_0,
-      Q => \^icap_req_i_reg_0\,
+      Q => icap_req_i_reg_n_0,
       R => icap_reset_ah
     );
 id_fifo_read_d1_i_2: unisim.vcomponents.LUT5
@@ -31397,16 +31217,35 @@ legacy_cfg_error_i_1: unisim.vcomponents.LUT4
     );
 legacy_cfg_error_i_2: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFFFFF444F4444"
+      INIT => X"FF00000020202020"
     )
         port map (
-      I0 => icap_csib_i_i_5_n_0,
-      I1 => icap_req_i02_out,
-      I2 => dout(0),
-      I3 => cp_fsm_cs(1),
-      I4 => desync_needed_i_3_n_0,
-      I5 => i_bs_fifo_i_4_n_0,
+      I0 => \cp_fsm_cs[1]_i_3_n_0\,
+      I1 => \cp_fsm_cs[1]_i_4_n_0\,
+      I2 => legacy_cfg_error_i_3_n_0,
+      I3 => \cp_fsm_cs[0]_i_3_n_0\,
+      I4 => legacy_cfg_error_i_4_n_0,
+      I5 => cp_fsm_cs(1),
       O => legacy_cfg_error0
+    );
+legacy_cfg_error_i_3: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"74"
+    )
+        port map (
+      I0 => dout(0),
+      I1 => dout(1),
+      I2 => icap_req_i_reg_n_0,
+      O => legacy_cfg_error_i_3_n_0
+    );
+legacy_cfg_error_i_4: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"2"
+    )
+        port map (
+      I0 => icap_req_i_reg_n_0,
+      I1 => cp_fsm_cs(0),
+      O => legacy_cfg_error_i_4_n_0
     );
 legacy_cfg_error_reg: unisim.vcomponents.FDRE
     generic map(
@@ -35311,7 +35150,7 @@ begin
     );
 \b_rm_info.rm_ctrl_reg_table_reg_0_1_3_3\: unisim.vcomponents.RAM32X1S
     generic map(
-      INIT => X"00000001"
+      INIT => X"00000003"
     )
         port map (
       A0 => \access_address_del__0\,
@@ -35326,7 +35165,7 @@ begin
     );
 \b_rm_info.rm_ctrl_reg_table_reg_0_1_4_4\: unisim.vcomponents.RAM32X1S
     generic map(
-      INIT => X"00000001"
+      INIT => X"00000003"
     )
         port map (
       A0 => \access_address_del__0\,
@@ -40658,9 +40497,6 @@ entity design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0 is
     icap_o : out STD_LOGIC_VECTOR ( 31 downto 0 );
     icap_csib : out STD_LOGIC;
     icap_rdwrb : out STD_LOGIC;
-    cap_req : out STD_LOGIC;
-    cap_gnt : in STD_LOGIC;
-    cap_rel : in STD_LOGIC;
     s_axi_reg_awaddr : in STD_LOGIC_VECTOR ( 31 downto 0 );
     s_axi_reg_awvalid : in STD_LOGIC;
     s_axi_reg_awready : out STD_LOGIC;
@@ -40738,7 +40574,7 @@ architecture STRUCTURE of design_2_dfx_controller_0_0_dfx_controller_design_2_df
   signal i_axi_lite_if_n_76 : STD_LOGIC;
   signal i_axi_lite_if_n_9 : STD_LOGIC;
   signal i_cp0_n_10 : STD_LOGIC;
-  signal i_cp0_n_11 : STD_LOGIC;
+  signal i_cp0_n_8 : STD_LOGIC;
   signal i_cp0_n_9 : STD_LOGIC;
   signal \i_dma/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/ENABLE_AXIS_SKID.I_MM2S_SKID_BUF/p_0_in2_in\ : STD_LOGIC;
   signal \i_dma/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/ENABLE_AXIS_SKID.I_MM2S_SKID_BUF/sig_data_reg_out_en\ : STD_LOGIC;
@@ -40920,32 +40756,29 @@ i_axi_lite_if: entity work.design_2_dfx_controller_0_0_axi_lite_if
 i_cp0: entity work.design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_icap_if_0
      port map (
       E(0) => \i_dma/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/ENABLE_AXIS_SKID.I_MM2S_SKID_BUF/sig_data_reg_out_en\,
-      cap_gnt => cap_gnt,
-      cap_rel => cap_rel,
       clk => clk,
       cp0_vs_id => cp0_vs_id,
       din(33 downto 2) => fetch0_2_decompress0_axis_bs_tdata(31 downto 0),
       din(1) => p_1_in,
       din(0) => fetch0_2_decompress0_axis_bs_tlast,
       first_word_seen => first_word_seen,
-      first_word_seen_reg => i_cp0_n_11,
+      first_word_seen_reg => i_cp0_n_10,
       full => full,
       \gen_pntr_flags_cc.ngen_full_rst_val.ram_full_i_reg\ => xpm_fifo_full,
-      \gen_pntr_flags_cc.ngen_full_rst_val.ram_full_i_reg_0\ => i_cp0_n_10,
+      \gen_pntr_flags_cc.ngen_full_rst_val.ram_full_i_reg_0\ => i_cp0_n_9,
       \gen_pntr_flags_cc.wrp_eq_rdp_pf_cc.gpe_cc_sym.read_only_q_reg\ => fetch0_2_decompress0_axis_bs_tvalid,
       \gen_rd_b.doutb_reg_reg[1]\(0) => fetch0_rm_id_o,
       icap_clk => icap_clk,
       icap_csib => icap_csib,
       icap_i(1 downto 0) => icap_i(7 downto 6),
       icap_o(31 downto 0) => icap_o(31 downto 0),
-      icap_req_i_reg_0 => cap_req,
       icap_reset => icap_reset,
       \out\ => \i_dma/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/ENABLE_AXIS_SKID.I_MM2S_SKID_BUF/p_0_in2_in\,
       p_3_in => p_3_in,
       p_4_in => p_4_in,
       reset => reset,
       reset_ah => reset_ah,
-      sig_last_reg_out_reg => i_cp0_n_9,
+      sig_last_reg_out_reg => i_cp0_n_8,
       wr_rst_busy => wr_rst_busy
     );
 i_fetch0: entity work.design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_fetch
@@ -40958,7 +40791,7 @@ i_fetch0: entity work.design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_co
       first_word_seen => first_word_seen,
       first_word_seen_reg_0 => xpm_fifo_full,
       full => full,
-      id_fifo_read_d1_reg_0 => i_cp0_n_11,
+      id_fifo_read_d1_reg_0 => i_cp0_n_10,
       \in\(64) => vsm_shifter_fetch_rm_id,
       \in\(63 downto 32) => vsm_shifter_fetch_addr(31 downto 0),
       \in\(31 downto 0) => vsm_shifter_fetch_size(31 downto 0),
@@ -40975,12 +40808,12 @@ i_fetch0: entity work.design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_co
       m_axi_mem_rvalid => m_axi_mem_rvalid,
       \out\ => \i_dma/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/ENABLE_AXIS_SKID.I_MM2S_SKID_BUF/p_0_in2_in\,
       p_0_in => p_0_in,
-      recheck_id_reg_source_reg_0 => i_cp0_n_9,
+      recheck_id_reg_source_reg_0 => i_cp0_n_8,
       reset => reset,
       reset_ah => reset_ah,
       \rm_id_o_reg[0]_0\(0) => fetch0_rm_id_o,
       sig_m_valid_out_reg => fetch0_2_decompress0_axis_bs_tvalid,
-      sig_m_valid_out_reg_0 => i_cp0_n_10,
+      sig_m_valid_out_reg_0 => i_cp0_n_9,
       vsm_shifter_fetch_req => vsm_shifter_fetch_req,
       wr_rst_busy => wr_rst_busy
     );
@@ -41108,9 +40941,6 @@ entity design_2_dfx_controller_0_0 is
     vsm_shifter_event_error : out STD_LOGIC;
     vsm_shifter_sw_shutdown_req : out STD_LOGIC;
     vsm_shifter_sw_startup_req : out STD_LOGIC;
-    cap_req : out STD_LOGIC;
-    cap_gnt : in STD_LOGIC;
-    cap_rel : in STD_LOGIC;
     s_axi_reg_awaddr : in STD_LOGIC_VECTOR ( 31 downto 0 );
     s_axi_reg_awvalid : in STD_LOGIC;
     s_axi_reg_awready : out STD_LOGIC;
@@ -41149,9 +40979,6 @@ architecture STRUCTURE of design_2_dfx_controller_0_0 is
   attribute KEEP_HIERARCHY of U0 : label is "soft";
   attribute downgradeipidentifiedwarnings of U0 : label is "yes";
   attribute x_interface_info : string;
-  attribute x_interface_info of cap_gnt : signal is "xilinx.com:interface:cap:1.0 icap_arbiter GNT";
-  attribute x_interface_info of cap_rel : signal is "xilinx.com:interface:cap:1.0 icap_arbiter REL";
-  attribute x_interface_info of cap_req : signal is "xilinx.com:interface:cap:1.0 icap_arbiter REQ";
   attribute x_interface_info of clk : signal is "xilinx.com:signal:clock:1.0 CLK CLK";
   attribute x_interface_parameter : string;
   attribute x_interface_parameter of clk : signal is "XIL_INTERFACENAME CLK, ASSOCIATED_BUSIF M_AXI_MEM:s_axi_reg, ASSOCIATED_RESET reset, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, CLK_DOMAIN design_2_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0";
@@ -41200,9 +41027,6 @@ architecture STRUCTURE of design_2_dfx_controller_0_0 is
 begin
 U0: entity work.design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0
      port map (
-      cap_gnt => cap_gnt,
-      cap_rel => cap_rel,
-      cap_req => cap_req,
       clk => clk,
       icap_clk => icap_clk,
       icap_csib => icap_csib,

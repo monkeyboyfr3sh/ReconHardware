@@ -10,32 +10,20 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="1062fs"></ZoomEndTime>
+      <ZoomEndTime time="3616fs"></ZoomEndTime>
       <Cursor1Time time="512fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="304"></NameColumnWidth>
-      <ValueColumnWidth column_width="116"></ValueColumnWidth>
+      <ValueColumnWidth column_width="108"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="20" />
-   <wvobject fp_name="BD/design_2_i/axi_mem_intercon_M00_AXI_WVALID" type="logic">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">BD/design_2_i/axi_mem_intercon_M00_AXI_WVALID</obj_property>
-      <obj_property name="ObjectShortName">axi_mem_intercon_M00_AXI_WVALID</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
+   <WVObjectSize size="13" />
+   <wave_markers>
+   </wave_markers>
    <wvobject fp_name="BD/design_2_i/axi_mem_intercon_M00_AXI_WREADY" type="logic">
       <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">BD/design_2_i/axi_mem_intercon_M00_AXI_WREADY</obj_property>
       <obj_property name="ObjectShortName">axi_mem_intercon_M00_AXI_WREADY</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="BD/design_2_i/axi_mem_intercon_M00_AXI_WLAST" type="logic">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">BD/design_2_i/axi_mem_intercon_M00_AXI_WLAST</obj_property>
-      <obj_property name="ObjectShortName">axi_mem_intercon_M00_AXI_WLAST</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
@@ -67,48 +55,10 @@
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="BD/design_2_i/axi_mem_intercon_M00_AXI_BREADY" type="logic">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">BD/design_2_i/axi_mem_intercon_M00_AXI_BREADY</obj_property>
-      <obj_property name="ObjectShortName">axi_mem_intercon_M00_AXI_BREADY</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="BD/design_2_i/axi_mem_intercon_M00_AXI_AWVALID" type="logic">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">BD/design_2_i/axi_mem_intercon_M00_AXI_AWVALID</obj_property>
-      <obj_property name="ObjectShortName">axi_mem_intercon_M00_AXI_AWVALID</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="BD/design_2_i/axi_mem_intercon_M00_AXI_AWSIZE" type="array">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">BD/design_2_i/axi_mem_intercon_M00_AXI_AWSIZE[2:0]</obj_property>
-      <obj_property name="ObjectShortName">axi_mem_intercon_M00_AXI_AWSIZE[2:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
    <wvobject fp_name="BD/design_2_i/axi_mem_intercon_M00_AXI_AWREADY" type="logic">
       <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">BD/design_2_i/axi_mem_intercon_M00_AXI_AWREADY</obj_property>
       <obj_property name="ObjectShortName">axi_mem_intercon_M00_AXI_AWREADY</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="BD/design_2_i/axi_mem_intercon_M00_AXI_AWBURST" type="array">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">BD/design_2_i/axi_mem_intercon_M00_AXI_AWBURST[1:0]</obj_property>
-      <obj_property name="ObjectShortName">axi_mem_intercon_M00_AXI_AWBURST[1:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="BD/design_2_i/axi_mem_intercon_M00_AXI_AWADDR" type="array">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">BD/design_2_i/axi_mem_intercon_M00_AXI_AWADDR[31:0]</obj_property>
-      <obj_property name="ObjectShortName">axi_mem_intercon_M00_AXI_AWADDR[31:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>

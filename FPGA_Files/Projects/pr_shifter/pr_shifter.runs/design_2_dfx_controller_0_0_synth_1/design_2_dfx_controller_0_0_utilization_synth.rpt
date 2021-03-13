@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date         : Thu Mar 11 10:52:19 2021
+| Date         : Thu Mar 11 17:09:46 2021
 | Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 | Command      : report_utilization -file design_2_dfx_controller_0_0_utilization_synth.rpt -pb design_2_dfx_controller_0_0_utilization_synth.pb
 | Design       : design_2_dfx_controller_0_0
@@ -30,8 +30,8 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                | 1171 |     0 |     53200 |  2.20 |
-|   LUT as Logic             |  886 |     0 |     53200 |  1.67 |
+| Slice LUTs*                | 1160 |     0 |     53200 |  2.18 |
+|   LUT as Logic             |  875 |     0 |     53200 |  1.64 |
 |   LUT as Memory            |  285 |     0 |     17400 |  1.64 |
 |     LUT as Distributed RAM |  107 |     0 |           |       |
 |     LUT as Shift Register  |  178 |     0 |           |       |
@@ -149,11 +149,11 @@ Table of Contents
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
 | FDRE     | 1207 |        Flop & Latch |
-| LUT6     |  313 |                 LUT |
+| LUT6     |  301 |                 LUT |
 | LUT3     |  219 |                 LUT |
-| LUT5     |  185 |                 LUT |
+| LUT5     |  184 |                 LUT |
 | SRL16E   |  178 |  Distributed Memory |
-| LUT4     |  161 |                 LUT |
+| LUT4     |  163 |                 LUT |
 | LUT2     |  159 |                 LUT |
 | RAMS32   |   93 |  Distributed Memory |
 | CARRY4   |   51 |          CarryLogic |

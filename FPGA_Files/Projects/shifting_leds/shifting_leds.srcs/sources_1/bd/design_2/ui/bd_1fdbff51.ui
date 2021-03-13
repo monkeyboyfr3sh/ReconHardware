@@ -1,68 +1,89 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.316981",
-   "Default View_TopLeft":"-943,0",
+   "Default View_ScaleFactor":"0.187569",
+   "Default View_TopLeft":"-1770,-395",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:9.0 non-TLS
 #  -string -flagsOSRD
-preplace port COUNT_0 -pg 1 -lvl 6 -x 1840 -y 600 -defaultsOSRD
-preplace port DDR -pg 1 -lvl 6 -x 1840 -y 1250 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -lvl 6 -x 1840 -y 1270 -defaultsOSRD
-preplace port ICAP_0 -pg 1 -lvl 6 -x 1840 -y 580 -defaultsOSRD
-preplace port FCLK_CLK0_0 -pg 1 -lvl 6 -x 1840 -y 200 -defaultsOSRD
-preplace port FCLK_RESET0_N_0 -pg 1 -lvl 6 -x 1840 -y 1290 -defaultsOSRD
-preplace portBus vsm_shifter_hw_triggers_0 -pg 1 -lvl 0 -x 0 -y 1080 -defaultsOSRD
-preplace inst axi_gpio_0 -pg 1 -lvl 3 -x 980 -y 600 -defaultsOSRD
-preplace inst axi_mem_intercon -pg 1 -lvl 2 -x 550 -y 1470 -defaultsOSRD
-preplace inst dfx_controller_0 -pg 1 -lvl 3 -x 980 -y 1040 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 3 -x 980 -y 1300 -defaultsOSRD
-preplace inst ps7_0_axi_periph -pg 1 -lvl 2 -x 550 -y 840 -defaultsOSRD
-preplace inst rst_ps7_0_100M -pg 1 -lvl 1 -x 200 -y 1290 -defaultsOSRD
-preplace inst gpio_ila_0 -pg 1 -lvl 3 -x 980 -y 730 -defaultsOSRD
-preplace inst dfx_s_ila_0 -pg 1 -lvl 3 -x 980 -y 850 -defaultsOSRD
-preplace inst dfx_m_ila_0 -pg 1 -lvl 2 -x 550 -y 1300 -defaultsOSRD
-preplace inst hp_ila_0 -pg 1 -lvl 3 -x 980 -y 1480 -defaultsOSRD
-preplace inst dfx_bitstream_monitor_0 -pg 1 -lvl 4 -x 1430 -y 390 -defaultsOSRD
-preplace inst bs_monitor_gpio_1 -pg 1 -lvl 3 -x 980 -y 310 -defaultsOSRD
-preplace inst arm -pg 1 -lvl 3 -x 980 -y 60 -defaultsOSRD
-preplace inst one_shot_arm -pg 1 -lvl 3 -x 980 -y 460 -defaultsOSRD
-preplace inst protocol_abort -pg 1 -lvl 3 -x 980 -y 160 -defaultsOSRD
-preplace inst xlconcat_0 -pg 1 -lvl 5 -x 1720 -y 120 -defaultsOSRD
-preplace inst bs_monitor_ila_0 -pg 1 -lvl 5 -x 1720 -y 350 -defaultsOSRD
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 6 30 1390 380 670 730 1180 1250 200 1600 200 NJ
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 6 20 1190 370J 1200 710J 1410 1270 1290 NJ 1290 NJ
-preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 1 3 390 680 720 220 1240
-preplace netloc vsm_shifter_hw_triggers_0_1 1 0 3 NJ 1080 NJ 1080 NJ
-preplace netloc xlslice_0_Dout 1 3 1 1270J 60n
-preplace netloc xlslice_1_Dout 1 3 1 1270J 420n
-preplace netloc xlslice_2_Dout 1 3 1 1230J 160n
-preplace netloc axi_gpio_1_gpio_io_o 1 2 2 740 400 1210
-preplace netloc dfx_bitstream_monitor_0_armed 1 4 1 1590 110n
-preplace netloc dfx_bitstream_monitor_0_armed_oneshot 1 4 1 1610 130n
-preplace netloc xlconcat_0_dout 1 3 3 1220 50 NJ 50 1810
-preplace netloc dfx_bitstream_monitor_0_li_avail 1 4 1 N 280
-preplace netloc dfx_bitstream_monitor_0_li_bs_id 1 4 1 N 300
-preplace netloc dfx_bitstream_monitor_0_li_end 1 4 1 N 320
-preplace netloc dfx_bitstream_monitor_0_li_err_abort 1 4 1 N 340
-preplace netloc dfx_bitstream_monitor_0_li_err_sp_id_mismatch 1 4 1 N 360
-preplace netloc dfx_bitstream_monitor_0_li_err_unexpected 1 4 1 N 380
-preplace netloc dfx_bitstream_monitor_0_li_rm_id 1 4 1 N 400
-preplace netloc dfx_bitstream_monitor_0_li_rp_id 1 4 1 N 420
-preplace netloc dfx_bitstream_monitor_0_li_sp_id 1 4 1 N 440
-preplace netloc processing_system7_0_DDR 1 3 3 NJ 1250 NJ 1250 NJ
-preplace netloc dfx_controller_0_M_AXI_MEM 1 1 3 400 1190 NJ 1190 1210
-preplace netloc dfx_controller_0_ICAP 1 3 3 1260 580 NJ 580 NJ
-preplace netloc axi_mem_intercon_M00_AXI 1 2 1 740 1290n
-preplace netloc processing_system7_0_FIXED_IO 1 3 3 NJ 1270 NJ 1270 NJ
-preplace netloc ps7_0_axi_periph_M02_AXI 1 2 1 700 290n
-preplace netloc ps7_0_axi_periph_M01_AXI 1 2 1 710 580n
-preplace netloc axi_gpio_0_GPIO 1 3 3 NJ 600 NJ 600 NJ
-preplace netloc processing_system7_0_M_AXI_GP0 1 1 3 400 520 NJ 520 1230
-preplace netloc ps7_0_axi_periph_M00_AXI 1 2 1 710 840n
-levelinfo -pg 1 0 200 550 980 1430 1720 1840
-pagesize -pg 1 -db -bbox -sgen -250 0 2030 1590
+preplace port COUNT_0 -pg 1 -lvl 8 -x 2640 -y 500 -defaultsOSRD
+preplace port DDR -pg 1 -lvl 8 -x 2640 -y 1730 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 8 -x 2640 -y 1750 -defaultsOSRD
+preplace port ICAP_0 -pg 1 -lvl 8 -x 2640 -y 880 -defaultsOSRD
+preplace port FCLK_CLK0_0 -pg 1 -lvl 8 -x 2640 -y 200 -defaultsOSRD
+preplace port FCLK_RESET0_N_0 -pg 1 -lvl 8 -x 2640 -y 1830 -defaultsOSRD
+preplace port vsm_shifter_rm_reset_0 -pg 1 -lvl 8 -x 2640 -y 1340 -defaultsOSRD
+preplace portBus vsm_shifter_hw_triggers_0 -pg 1 -lvl 0 -x 0 -y 1450 -defaultsOSRD
+preplace inst axi_gpio_0 -pg 1 -lvl 5 -x 1730 -y 500 -defaultsOSRD
+preplace inst dfx_controller_0 -pg 1 -lvl 5 -x 1730 -y 1330 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 5 -x 1730 -y 1780 -defaultsOSRD
+preplace inst rst_ps7_0_100M -pg 1 -lvl 1 -x 190 -y 1580 -defaultsOSRD
+preplace inst gpio_ila_0 -pg 1 -lvl 5 -x 1730 -y 370 -defaultsOSRD
+preplace inst dfx_s_ila_0 -pg 1 -lvl 5 -x 1730 -y 1150 -defaultsOSRD
+preplace inst dfx_m_ila_0 -pg 1 -lvl 4 -x 1280 -y 1290 -defaultsOSRD
+preplace inst hp_ila_0 -pg 1 -lvl 5 -x 1730 -y 1600 -defaultsOSRD
+preplace inst dfx_bitstream_monitor_0 -pg 1 -lvl 6 -x 2190 -y 690 -defaultsOSRD
+preplace inst bs_monitor_gpio_1 -pg 1 -lvl 5 -x 1730 -y 690 -defaultsOSRD
+preplace inst arm -pg 1 -lvl 5 -x 1730 -y 60 -defaultsOSRD
+preplace inst one_shot_arm -pg 1 -lvl 5 -x 1730 -y 160 -defaultsOSRD
+preplace inst protocol_abort -pg 1 -lvl 5 -x 1730 -y 260 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 7 -x 2530 -y 790 -defaultsOSRD
+preplace inst bs_monitor_ila_0 -pg 1 -lvl 7 -x 2530 -y 350 -defaultsOSRD
+preplace inst shudown_ack_gpio_1 -pg 1 -lvl 5 -x 1730 -y 1000 -defaultsOSRD
+preplace inst smartconnect_0 -pg 1 -lvl 4 -x 1280 -y 1560 -defaultsOSRD
+preplace inst smartconnect_1 -pg 1 -lvl 4 -x 1280 -y 970 -defaultsOSRD
+preplace inst dfx_rst_gpio_2 -pg 1 -lvl 5 -x 1730 -y 840 -defaultsOSRD
+preplace inst util_vector_logic_1 -pg 1 -lvl 2 -x 510 -y 1670 -defaultsOSRD
+preplace inst util_vector_logic_2 -pg 1 -lvl 3 -x 870 -y 1530 -defaultsOSRD
+preplace inst util_vector_logic_3 -pg 1 -lvl 4 -x 1280 -y 1400 -defaultsOSRD
+preplace inst axi_dma_0 -pg 1 -lvl 3 -x 870 -y 1320 -defaultsOSRD
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 8 20 1480 NJ 1480 660 1460 1070 1660 1470 600 1990 490 2350 200 NJ
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 8 20 1890 NJ 1890 NJ 1890 NJ 1890 NJ 1890 2000 1830 NJ 1830 NJ
+preplace netloc vsm_shifter_hw_triggers_0_1 1 0 5 NJ 1450 NJ 1450 NJ 1450 1090J 1220 1440J
+preplace netloc xlslice_0_Dout 1 5 1 2030J 60n
+preplace netloc xlslice_1_Dout 1 5 1 2020J 160n
+preplace netloc xlslice_2_Dout 1 5 1 1980J 260n
+preplace netloc axi_gpio_1_gpio_io_o 1 4 2 1500 590 1970
+preplace netloc dfx_bitstream_monitor_0_armed 1 6 1 N 780
+preplace netloc dfx_bitstream_monitor_0_armed_oneshot 1 6 1 N 800
+preplace netloc xlconcat_0_dout 1 5 3 1970J 890 NJ 890 2620
+preplace netloc dfx_bitstream_monitor_0_li_avail 1 6 1 2360 280n
+preplace netloc dfx_bitstream_monitor_0_li_bs_id 1 6 1 2370 300n
+preplace netloc dfx_bitstream_monitor_0_li_end 1 6 1 2380 320n
+preplace netloc dfx_bitstream_monitor_0_li_err_abort 1 6 1 2390 340n
+preplace netloc dfx_bitstream_monitor_0_li_err_sp_id_mismatch 1 6 1 2400 360n
+preplace netloc dfx_bitstream_monitor_0_li_err_unexpected 1 6 1 2410 380n
+preplace netloc dfx_bitstream_monitor_0_li_rm_id 1 6 1 2420 400n
+preplace netloc dfx_bitstream_monitor_0_li_rp_id 1 6 1 2430 420n
+preplace netloc dfx_bitstream_monitor_0_li_sp_id 1 6 1 2440 440n
+preplace netloc axi_gpio_1_gpio_io_o1 1 4 2 1500 1080 1960
+preplace netloc dfx_controller_0_vsm_shifter_rm_reset 1 5 3 NJ 1340 NJ 1340 NJ
+preplace netloc rst_ps7_0_100M_interconnect_aresetn 1 1 3 NJ 1600 NJ 1600 1080
+preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 1 5 360 1610 670 1440 1050J 1210 1490 580 2010J
+preplace netloc util_vector_logic_1_Res 1 2 1 690 1540n
+preplace netloc dfx_rst_gpio_2_gpio_io_o 1 2 4 680 850 NJ 850 1480J 920 1960
+preplace netloc util_vector_logic_2_Res 1 3 1 1110J 1400n
+preplace netloc util_vector_logic_3_Res 1 4 1 1480 1310n
+preplace netloc axi_mem_intercon_M00_AXI 1 4 1 1440 1560n
+preplace netloc processing_system7_0_FIXED_IO 1 5 3 NJ 1750 NJ 1750 NJ
+preplace netloc axi_gpio_0_GPIO 1 5 3 NJ 500 NJ 500 NJ
+preplace netloc dfx_controller_0_ICAP 1 5 3 2000 880 NJ 880 NJ
+preplace netloc dfx_controller_0_M_AXI_MEM 1 3 3 1130 1460 NJ 1460 1960
+preplace netloc processing_system7_0_DDR 1 5 3 NJ 1730 NJ 1730 NJ
+preplace netloc smartconnect_1_M04_AXI 1 4 1 1440 820n
+preplace netloc smartconnect_1_M03_AXI 1 4 1 N 980
+preplace netloc smartconnect_1_M00_AXI 1 4 1 1450 360n
+preplace netloc smartconnect_1_M02_AXI 1 4 1 1460 670n
+preplace netloc smartconnect_1_M01_AXI 1 4 1 1480 940n
+preplace netloc processing_system7_0_M_AXI_GP0 1 3 3 1120 1670 NJ 1670 1960
+preplace netloc axi_dma_0_M_AXI_MM2S 1 3 1 1100 1260n
+preplace netloc axi_dma_0_M_AXI_S2MM 1 3 1 1060 1280n
+preplace netloc smartconnect_1_M05_AXI 1 2 3 690 860 NJ 860 1430
+preplace netloc axi_dma_0_M_AXIS_MM2S 1 2 2 700 1200 1040
+levelinfo -pg 1 0 190 510 870 1280 1730 2190 2530 2640
+pagesize -pg 1 -db -bbox -sgen -250 0 2850 1900
 "
 }
 {
-   "da_axi4_cnt":"1"
+   "da_axi4_cnt":"6",
+   "da_board_cnt":"1"
 }

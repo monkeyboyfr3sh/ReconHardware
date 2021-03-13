@@ -10,48 +10,48 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="8787fs"></ZoomEndTime>
+      <ZoomEndTime time="3836fs"></ZoomEndTime>
       <Cursor1Time time="512fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="256"></NameColumnWidth>
-      <ValueColumnWidth column_width="120"></ValueColumnWidth>
+      <ValueColumnWidth column_width="112"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="4" />
-   <wvobject fp_name="nolabel_line42/icap_ila_i/probe0_0_1" type="array">
+   <wave_markers>
+   </wave_markers>
+   <wvobject fp_name="nolabel_line43/icap_ila_i/probe0_0_1" type="array">
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">nolabel_line42/icap_ila_i/probe0_0_1[31:0]</obj_property>
+      <obj_property name="ElementShortName">nolabel_line43/icap_ila_i/probe0_0_1[31:0]</obj_property>
       <obj_property name="ObjectShortName">probe0_0_1[31:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="label">icap_o</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-      <obj_property name="label">icap_o</obj_property>
    </wvobject>
-   <wvobject fp_name="nolabel_line42/icap_ila_i/probe1_0_1" type="array">
+   <wvobject fp_name="nolabel_line43/icap_ila_i/probe1_0_1" type="array">
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">nolabel_line42/icap_ila_i/probe1_0_1[31:0]</obj_property>
+      <obj_property name="ElementShortName">nolabel_line43/icap_ila_i/probe1_0_1[31:0]</obj_property>
       <obj_property name="ObjectShortName">probe1_0_1[31:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
       <obj_property name="label">icap_i</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="nolabel_line42/icap_ila_i/probe2_0_1" type="logic">
+   <wvobject fp_name="nolabel_line43/icap_ila_i/probe2_0_1" type="logic">
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">nolabel_line42/icap_ila_i/probe2_0_1</obj_property>
+      <obj_property name="ElementShortName">nolabel_line43/icap_ila_i/probe2_0_1</obj_property>
       <obj_property name="ObjectShortName">probe2_0_1</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
       <obj_property name="label">csib</obj_property>
-   </wvobject>
-   <wvobject fp_name="nolabel_line42/icap_ila_i/probe3_0_1" type="logic">
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">nolabel_line42/icap_ila_i/probe3_0_1</obj_property>
-      <obj_property name="ObjectShortName">probe3_0_1</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="nolabel_line43/icap_ila_i/probe3_0_1" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">nolabel_line43/icap_ila_i/probe3_0_1</obj_property>
+      <obj_property name="ObjectShortName">probe3_0_1</obj_property>
       <obj_property name="label">rdwrb</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
 </wave_config>

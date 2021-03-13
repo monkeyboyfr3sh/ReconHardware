@@ -2,28 +2,35 @@
 # File locations
 set prjDir      "C:/GitHub/ReconHardware/FPGA_Files/Projects"
 set prjName     "pr_shifter"
-set bitDir      "./Bitstreams"
+set bitDir      "./generated_files"
 set static_top  "top"
-set genBit      0
-set genBin      0
+
+# Set script run config options
+set prjCmd      0
+set genBit      1
+set genBin      1
 set genXsa      1
 
 # Change to prjDir and open project
 cd $prjDir/$prjName
-# open_project $prjName.xpr
+
+# Open project
+if { $prjCmd == 1} {
+    open_project $prjName.xpr
+}
+
+if { ![file exists $bitDir]} {
+    exec mkdir "$bitDir"
+}
 
 # Copy full bitstream from vivado into $bitDir
-exec cp -f "$prjName.runs/impl_1/top.bit" $bitDir
+exec cp -f "$prjName.runs/impl_1/${static_top}.bit" $bitDir
 
 # Must set the partial configs in the same order as Vivado
 set partials {\
-    shifter_shift_left_partial\`
+    shifter_shift_left_partial\
     shifter_shift_right_partial\
     shifter_greybox_partial\
-}
-
-if { ![file exists "./Bitstreams"]} {
-    exec mkdir Bitstreams
 }
 
 # Loop through all runs and generate bitstream files
@@ -33,9 +40,9 @@ if { $genBit == 1 } {
         
         # Load checkpoint
         if { $i == -1 } {
-            open_checkpoint "$prjName.runs/impl_1/top_routed.dcp"
+            open_checkpoint $prjName.runs/impl_1/${static_top}_routed.dcp
         } else {
-            open_checkpoint "$prjName.runs/child_${i}_impl_1/top_routed.dcp"
+            open_checkpoint $prjName.runs/child_${i}_impl_1/${static_top}_routed.dcp
         }
 
         # Generate bitfile and debug probes
@@ -49,15 +56,19 @@ if { $genBit == 1 } {
     }
 }
 
+# Generate bin for each bitstream. 
+#   - ICAP has bitswap disabled
+#   - PCAP has bitswap enabled
 if { $genBit == 1 } {
-    # Generate bin for each bitstream
     foreach partial $partials {
-        write_cfgmem -force -interface SMAPx32 -format BIN -disablebitswap -loadbit "up 0x0 ./$bitDir/$partial.bit" "./$bitDir/${partial}.bin"
+        write_cfgmem -force -interface SMAPx32 -format BIN -disablebitswap -loadbit "up 0x0 $bitDir/$partial.bit" $bitDir/icap_${partial}.bin
+        write_cfgmem -force -interface SMAPx32 -format BIN -loadbit "up 0x0 $bitDir/$partial.bit" $bitDir/pcap_${partial}.bin
     }
-
-    # Don't need these atm
-    eval file delete [glob nocomplain $bitDir/*.prm]
 }
+
+# Don't need these atm
+eval file delete [glob nocomplain $bitDir/*.prm]
+eval file delete [glob nocomplain $bitDir/*.ltx]
 
 # Generate xsa for project
 if { $genXsa == 1 } {
@@ -66,4 +77,6 @@ if { $genXsa == 1 } {
 }
 
 # Close project
-close_project
+if { $prjCmd == 1} {
+    close_project
+}

@@ -1,7 +1,7 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-// Date        : Thu Mar 11 10:52:19 2021
+// Date        : Thu Mar 11 17:09:46 2021
 // Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_2/ip/design_2_dfx_controller_0_0/design_2_dfx_controller_0_0_sim_netlist.v
@@ -45,9 +45,6 @@ module design_2_dfx_controller_0_0
     vsm_shifter_event_error,
     vsm_shifter_sw_shutdown_req,
     vsm_shifter_sw_startup_req,
-    cap_req,
-    cap_gnt,
-    cap_rel,
     s_axi_reg_awaddr,
     s_axi_reg_awvalid,
     s_axi_reg_awready,
@@ -94,9 +91,6 @@ module design_2_dfx_controller_0_0
   output vsm_shifter_event_error;
   output vsm_shifter_sw_shutdown_req;
   output vsm_shifter_sw_startup_req;
-  (* x_interface_info = "xilinx.com:interface:cap:1.0 icap_arbiter REQ" *) output cap_req;
-  (* x_interface_info = "xilinx.com:interface:cap:1.0 icap_arbiter GNT" *) input cap_gnt;
-  (* x_interface_info = "xilinx.com:interface:cap:1.0 icap_arbiter REL" *) input cap_rel;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 s_axi_reg AWADDR" *) (* x_interface_parameter = "XIL_INTERFACENAME s_axi_reg, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 0, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN design_2_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) input [31:0]s_axi_reg_awaddr;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 s_axi_reg AWVALID" *) input s_axi_reg_awvalid;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 s_axi_reg AWREADY" *) output s_axi_reg_awready;
@@ -114,9 +108,6 @@ module design_2_dfx_controller_0_0
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 s_axi_reg RVALID" *) output s_axi_reg_rvalid;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 s_axi_reg RREADY" *) input s_axi_reg_rready;
 
-  wire cap_gnt;
-  wire cap_rel;
-  wire cap_req;
   wire clk;
   wire icap_clk;
   wire icap_csib;
@@ -170,10 +161,7 @@ module design_2_dfx_controller_0_0
   (* KEEP_HIERARCHY = "soft" *) 
   (* downgradeipidentifiedwarnings = "yes" *) 
   design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0 U0
-       (.cap_gnt(cap_gnt),
-        .cap_rel(cap_rel),
-        .cap_req(cap_req),
-        .clk(clk),
+       (.clk(clk),
         .icap_clk(icap_clk),
         .icap_csib(icap_csib),
         .icap_i(icap_i),
@@ -396,14 +384,14 @@ endmodule
 (* ORIG_REF_NAME = "cdc_sync" *) 
 module design_2_dfx_controller_0_0_cdc_sync_29
    (cc_error_i,
-    \cp_fsm_cs_reg[0] ,
+    \cp_fsm_cs_reg[3] ,
     icap_clk,
     clk,
     \GENERATE_PULSE_P_S_CDC_OPEN_ENDED.REG_P_IN_cdc_from_0 ,
     icap_i,
     Q);
   output cc_error_i;
-  output \cp_fsm_cs_reg[0] ;
+  output \cp_fsm_cs_reg[3] ;
   input icap_clk;
   input clk;
   input \GENERATE_PULSE_P_S_CDC_OPEN_ENDED.REG_P_IN_cdc_from_0 ;
@@ -414,7 +402,7 @@ module design_2_dfx_controller_0_0_cdc_sync_29
   wire [3:0]Q;
   wire cc_error_i;
   wire clk;
-  wire \cp_fsm_cs_reg[0] ;
+  wire \cp_fsm_cs_reg[3] ;
   wire icap_clk;
   wire [0:0]icap_i;
   wire p_in_d1_cdc_from;
@@ -481,13 +469,13 @@ module design_2_dfx_controller_0_0_cdc_sync_29
         .Q(p_in_d1_cdc_from),
         .R(1'b0));
   LUT6 #(
-    .INIT(64'hFFFFFDFF00000200)) 
+    .INIT(64'hFFFFFFFD00000002)) 
     \GENERATE_PULSE_P_S_CDC_OPEN_ENDED.REG_P_IN_cdc_from_i_1 
        (.I0(\GENERATE_PULSE_P_S_CDC_OPEN_ENDED.REG_P_IN_cdc_from_0 ),
         .I1(icap_i),
-        .I2(Q[3]),
-        .I3(Q[2]),
-        .I4(\cp_fsm_cs_reg[0] ),
+        .I2(\cp_fsm_cs_reg[3] ),
+        .I3(Q[1]),
+        .I4(Q[0]),
         .I5(p_in_d1_cdc_from),
         .O(prmry_in_xored));
   (* XILINX_LEGACY_PRIM = "FDR" *) 
@@ -521,11 +509,11 @@ module design_2_dfx_controller_0_0_cdc_sync_29
         .Q(srst_d3),
         .R(1'b0));
   LUT2 #(
-    .INIT(4'hE)) 
-    icap_csib_i_i_4
-       (.I0(Q[0]),
-        .I1(Q[1]),
-        .O(\cp_fsm_cs_reg[0] ));
+    .INIT(4'hB)) 
+    \icap_o_preswap[2]_i_2 
+       (.I0(Q[3]),
+        .I1(Q[2]),
+        .O(\cp_fsm_cs_reg[3] ));
   LUT3 #(
     .INIT(8'h60)) 
     s_out_re
@@ -11017,9 +11005,6 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0
     icap_o,
     icap_csib,
     icap_rdwrb,
-    cap_req,
-    cap_gnt,
-    cap_rel,
     s_axi_reg_awaddr,
     s_axi_reg_awvalid,
     s_axi_reg_awready,
@@ -11066,9 +11051,6 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0
   output [31:0]icap_o;
   output icap_csib;
   output icap_rdwrb;
-  output cap_req;
-  input cap_gnt;
-  input cap_rel;
   input [31:0]s_axi_reg_awaddr;
   input s_axi_reg_awvalid;
   output s_axi_reg_awready;
@@ -11107,9 +11089,6 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0
   wire axi_write_complete026_out;
   wire axi_write_complete030_out;
   wire bs_addr;
-  wire cap_gnt;
-  wire cap_rel;
-  wire cap_req;
   wire clk;
   wire cp0_vs_id;
   wire d1;
@@ -11137,7 +11116,7 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0
   wire i_axi_lite_if_n_76;
   wire i_axi_lite_if_n_9;
   wire i_cp0_n_10;
-  wire i_cp0_n_11;
+  wire i_cp0_n_8;
   wire i_cp0_n_9;
   wire \i_dma/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/ENABLE_AXIS_SKID.I_MM2S_SKID_BUF/p_0_in2_in ;
   wire \i_dma/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/ENABLE_AXIS_SKID.I_MM2S_SKID_BUF/sig_data_reg_out_en ;
@@ -11346,30 +11325,27 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0
         .write_to_trigger_registers_cmb(write_to_trigger_registers_cmb));
   design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_icap_if_0 i_cp0
        (.E(\i_dma/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/ENABLE_AXIS_SKID.I_MM2S_SKID_BUF/sig_data_reg_out_en ),
-        .cap_gnt(cap_gnt),
-        .cap_rel(cap_rel),
         .clk(clk),
         .cp0_vs_id(cp0_vs_id),
         .din({fetch0_2_decompress0_axis_bs_tdata,p_1_in,fetch0_2_decompress0_axis_bs_tlast}),
         .first_word_seen(first_word_seen),
-        .first_word_seen_reg(i_cp0_n_11),
+        .first_word_seen_reg(i_cp0_n_10),
         .full(full),
         .\gen_pntr_flags_cc.ngen_full_rst_val.ram_full_i_reg (xpm_fifo_full),
-        .\gen_pntr_flags_cc.ngen_full_rst_val.ram_full_i_reg_0 (i_cp0_n_10),
+        .\gen_pntr_flags_cc.ngen_full_rst_val.ram_full_i_reg_0 (i_cp0_n_9),
         .\gen_pntr_flags_cc.wrp_eq_rdp_pf_cc.gpe_cc_sym.read_only_q_reg (fetch0_2_decompress0_axis_bs_tvalid),
         .\gen_rd_b.doutb_reg_reg[1] (fetch0_rm_id_o),
         .icap_clk(icap_clk),
         .icap_csib(icap_csib),
         .icap_i(icap_i[7:6]),
         .icap_o(icap_o),
-        .icap_req_i_reg_0(cap_req),
         .icap_reset(icap_reset),
         .out(\i_dma/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/ENABLE_AXIS_SKID.I_MM2S_SKID_BUF/p_0_in2_in ),
         .p_3_in(p_3_in),
         .p_4_in(p_4_in),
         .reset(reset),
         .reset_ah(reset_ah),
-        .sig_last_reg_out_reg(i_cp0_n_9),
+        .sig_last_reg_out_reg(i_cp0_n_8),
         .wr_rst_busy(wr_rst_busy));
   design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_fetch i_fetch0
        (.E(\i_dma/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/ENABLE_AXIS_SKID.I_MM2S_SKID_BUF/sig_data_reg_out_en ),
@@ -11378,7 +11354,7 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0
         .first_word_seen(first_word_seen),
         .first_word_seen_reg_0(xpm_fifo_full),
         .full(full),
-        .id_fifo_read_d1_reg_0(i_cp0_n_11),
+        .id_fifo_read_d1_reg_0(i_cp0_n_10),
         .in({vsm_shifter_fetch_rm_id,vsm_shifter_fetch_addr,vsm_shifter_fetch_size}),
         .m_axi_mem_araddr(m_axi_mem_araddr),
         .m_axi_mem_arburst(\^m_axi_mem_arburst ),
@@ -11393,12 +11369,12 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0
         .m_axi_mem_rvalid(m_axi_mem_rvalid),
         .out(\i_dma/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/ENABLE_AXIS_SKID.I_MM2S_SKID_BUF/p_0_in2_in ),
         .p_0_in(p_0_in),
-        .recheck_id_reg_source_reg_0(i_cp0_n_9),
+        .recheck_id_reg_source_reg_0(i_cp0_n_8),
         .reset(reset),
         .reset_ah(reset_ah),
         .\rm_id_o_reg[0]_0 (fetch0_rm_id_o),
         .sig_m_valid_out_reg(fetch0_2_decompress0_axis_bs_tvalid),
-        .sig_m_valid_out_reg_0(i_cp0_n_10),
+        .sig_m_valid_out_reg_0(i_cp0_n_9),
         .vsm_shifter_fetch_req(vsm_shifter_fetch_req),
         .wr_rst_busy(wr_rst_busy));
   design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vsm_shifter i_vsm_shifter
@@ -12748,7 +12724,6 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_ic
     p_4_in,
     p_3_in,
     icap_csib,
-    icap_req_i_reg_0,
     E,
     sig_last_reg_out_reg,
     \gen_pntr_flags_cc.ngen_full_rst_val.ram_full_i_reg_0 ,
@@ -12762,9 +12737,7 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_ic
     out,
     \gen_pntr_flags_cc.wrp_eq_rdp_pf_cc.gpe_cc_sym.read_only_q_reg ,
     reset,
-    cap_rel,
     first_word_seen,
-    cap_gnt,
     icap_reset,
     icap_i);
   output full;
@@ -12774,7 +12747,6 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_ic
   output p_4_in;
   output p_3_in;
   output icap_csib;
-  output icap_req_i_reg_0;
   output [0:0]E;
   output sig_last_reg_out_reg;
   output \gen_pntr_flags_cc.ngen_full_rst_val.ram_full_i_reg_0 ;
@@ -12788,16 +12760,12 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_ic
   input out;
   input \gen_pntr_flags_cc.wrp_eq_rdp_pf_cc.gpe_cc_sym.read_only_q_reg ;
   input reset;
-  input cap_rel;
   input first_word_seen;
-  input cap_gnt;
   input icap_reset;
   input [1:0]icap_i;
 
   wire [0:0]E;
   wire \blk_id_fifo.xpm_fifo_sync_inst_i_1_n_0 ;
-  wire cap_gnt;
-  wire cap_rel;
   wire cc_done_i;
   wire cc_error_i;
   wire cfg_error_seen_i_1_n_0;
@@ -12818,6 +12786,7 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_ic
   wire \cp_fsm_cs[0]_i_4_n_0 ;
   wire \cp_fsm_cs[0]_i_5_n_0 ;
   wire \cp_fsm_cs[0]_i_6_n_0 ;
+  wire \cp_fsm_cs[0]_i_7_n_0 ;
   wire \cp_fsm_cs[1]_i_2_n_0 ;
   wire \cp_fsm_cs[1]_i_3_n_0 ;
   wire \cp_fsm_cs[1]_i_4_n_0 ;
@@ -12830,20 +12799,17 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_ic
   wire desync_needed_i_1_n_0;
   wire desync_needed_i_2_n_0;
   wire desync_needed_i_3_n_0;
-  wire desync_needed_i_4_n_0;
   wire [33:0]din;
   wire [33:0]dout;
   wire empty;
   wire fetch_error_seen;
   wire fetch_error_seen_i_1_n_0;
   wire fetch_error_seen_i_2_n_0;
-  wire fetch_error_seen_i_3_n_0;
+  wire fetch_error_seen_on_first_word;
+  wire fetch_error_seen_on_first_word_cmb;
   wire fetch_error_seen_on_first_word_i_1_n_0;
-  wire fetch_error_seen_on_first_word_i_2_n_0;
-  wire fetch_error_seen_on_first_word_i_3_n_0;
   wire fetch_error_seen_on_first_word_i_4_n_0;
   wire fetch_error_seen_on_first_word_i_5_n_0;
-  wire fetch_error_seen_on_first_word_i_6_n_0;
   wire fetch_error_seen_on_first_word_reg_n_0;
   wire fifo_read;
   wire first_word_seen;
@@ -12861,22 +12827,17 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_ic
   wire i_cdc_error_n_1;
   wire icap_clk;
   wire icap_csib;
-  wire icap_csib_i_i_10_n_0;
-  wire icap_csib_i_i_11_n_0;
   wire icap_csib_i_i_2_n_0;
   wire icap_csib_i_i_3_n_0;
+  wire icap_csib_i_i_4_n_0;
   wire icap_csib_i_i_5_n_0;
   wire icap_csib_i_i_6_n_0;
   wire icap_csib_i_i_7_n_0;
   wire icap_csib_i_i_8_n_0;
-  wire icap_csib_i_i_9_n_0;
   wire [1:0]icap_i;
   wire [31:0]icap_o;
   wire \icap_o_preswap[0]_i_2_n_0 ;
   wire \icap_o_preswap[0]_i_3_n_0 ;
-  wire \icap_o_preswap[0]_i_4_n_0 ;
-  wire \icap_o_preswap[0]_i_5_n_0 ;
-  wire \icap_o_preswap[0]_i_6_n_0 ;
   wire \icap_o_preswap[24]_i_10_n_0 ;
   wire \icap_o_preswap[24]_i_11_n_0 ;
   wire \icap_o_preswap[24]_i_12_n_0 ;
@@ -12885,12 +12846,7 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_ic
   wire \icap_o_preswap[24]_i_15_n_0 ;
   wire \icap_o_preswap[24]_i_16_n_0 ;
   wire \icap_o_preswap[24]_i_17_n_0 ;
-  wire \icap_o_preswap[24]_i_18_n_0 ;
-  wire \icap_o_preswap[24]_i_19_n_0 ;
   wire \icap_o_preswap[24]_i_1_n_0 ;
-  wire \icap_o_preswap[24]_i_20_n_0 ;
-  wire \icap_o_preswap[24]_i_21_n_0 ;
-  wire \icap_o_preswap[24]_i_22_n_0 ;
   wire \icap_o_preswap[24]_i_2_n_0 ;
   wire \icap_o_preswap[24]_i_3_n_0 ;
   wire \icap_o_preswap[24]_i_4_n_0 ;
@@ -12901,20 +12857,21 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_ic
   wire \icap_o_preswap[24]_i_9_n_0 ;
   wire \icap_o_preswap[28]_i_2_n_0 ;
   wire \icap_o_preswap[28]_i_3_n_0 ;
+  wire \icap_o_preswap[28]_i_4_n_0 ;
   wire \icap_o_preswap[29]_i_2_n_0 ;
   wire \icap_o_preswap[29]_i_3_n_0 ;
   wire \icap_o_preswap[29]_i_4_n_0 ;
-  wire \icap_o_preswap[2]_i_2_n_0 ;
-  wire \icap_o_preswap[2]_i_3_n_0 ;
   wire icap_req_i02_out;
   wire icap_req_i_i_1_n_0;
   wire icap_req_i_i_2_n_0;
-  wire icap_req_i_reg_0;
+  wire icap_req_i_reg_n_0;
   wire icap_reset;
   wire icap_reset_ah;
   wire legacy_cfg_error;
   wire legacy_cfg_error0;
   wire legacy_cfg_error_i_1_n_0;
+  wire legacy_cfg_error_i_3_n_0;
+  wire legacy_cfg_error_i_4_n_0;
   wire out;
   wire [29:0]p_1_in__0;
   wire p_3_in;
@@ -13032,44 +12989,44 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_ic
         .Q(p_3_in),
         .R(reset_ah));
   LUT6 #(
-    .INIT(64'hFEFFF0F0FEFCF0F0)) 
+    .INIT(64'hFFFFFFF0FFF2FFF0)) 
     cfg_error_seen_i_1
        (.I0(cfg_error_seen_i_2_n_0),
-        .I1(cfg_error_seen_i_3_n_0),
-        .I2(cfg_error_seen_i_4_n_0),
-        .I3(cp_fsm_cs[1]),
+        .I1(desync_needed),
+        .I2(cfg_error_seen_i_3_n_0),
+        .I3(cfg_error_seen_i_4_n_0),
         .I4(cfg_error_seen_i_5_n_0),
         .I5(cfg_error_seen_i_6_n_0),
         .O(cfg_error_seen_i_1_n_0));
   LUT6 #(
-    .INIT(64'hFFFFFFFFAAAAAA02)) 
+    .INIT(64'hFFFF002000200020)) 
     cfg_error_seen_i_2
-       (.I0(i_bs_fifo_i_5_n_0),
-        .I1(dout[1]),
-        .I2(desync_needed),
-        .I3(empty),
-        .I4(rd_rst_busy),
-        .I5(\cp_fsm_cs[0]_i_5_n_0 ),
+       (.I0(\icap_o_preswap[24]_i_16_n_0 ),
+        .I1(cp_fsm_cs[3]),
+        .I2(cp_fsm_cs[0]),
+        .I3(\icap_o_preswap[29]_i_4_n_0 ),
+        .I4(cfg_error_seen_i_7_n_0),
+        .I5(i_bs_fifo_i_3_n_0),
         .O(cfg_error_seen_i_2_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair67" *) 
-  LUT5 #(
-    .INIT(32'h000F1100)) 
+  LUT6 #(
+    .INIT(64'h000000A800000000)) 
     cfg_error_seen_i_3
-       (.I0(cp_fsm_cs[0]),
-        .I1(cp_fsm_cs[1]),
-        .I2(\icap_o_preswap[2]_i_2_n_0 ),
-        .I3(cp_fsm_cs[3]),
-        .I4(cp_fsm_cs[2]),
+       (.I0(cfg_error_seen_i_5_n_0),
+        .I1(dout[1]),
+        .I2(icap_req_i_reg_n_0),
+        .I3(cp_fsm_cs[1]),
+        .I4(\cp_fsm_cs[1]_i_4_n_0 ),
+        .I5(\icap_o_preswap[28]_i_3_n_0 ),
         .O(cfg_error_seen_i_3_n_0));
   LUT6 #(
-    .INIT(64'h2222000022F20000)) 
+    .INIT(64'hA0A00000A0AC0000)) 
     cfg_error_seen_i_4
-       (.I0(cfg_error_seen_i_7_n_0),
-        .I1(desync_needed),
-        .I2(icap_i[0]),
-        .I3(i_cdc_error_n_1),
+       (.I0(cfg_error_seen_i_8_n_0),
+        .I1(icap_i[0]),
+        .I2(cp_fsm_cs[1]),
+        .I3(cp_fsm_cs[0]),
         .I4(cfg_error_seen_i_5_n_0),
-        .I5(\icap_o_preswap[2]_i_3_n_0 ),
+        .I5(i_cdc_error_n_1),
         .O(cfg_error_seen_i_4_n_0));
   (* SOFT_HLUTNM = "soft_lutpair69" *) 
   LUT5 #(
@@ -13081,32 +13038,32 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_ic
         .I3(legacy_cfg_error),
         .I4(cfg_error_seen_reg_n_0),
         .O(cfg_error_seen_i_5_n_0));
-  LUT6 #(
-    .INIT(64'h000000000000F800)) 
+  (* SOFT_HLUTNM = "soft_lutpair68" *) 
+  LUT5 #(
+    .INIT(32'h000F1100)) 
     cfg_error_seen_i_6
-       (.I0(icap_req_i_reg_0),
-        .I1(cap_gnt),
-        .I2(dout[1]),
-        .I3(i_bs_fifo_i_5_n_0),
-        .I4(empty),
-        .I5(rd_rst_busy),
+       (.I0(cp_fsm_cs[0]),
+        .I1(cp_fsm_cs[1]),
+        .I2(\icap_o_preswap[29]_i_4_n_0 ),
+        .I3(cp_fsm_cs[3]),
+        .I4(cp_fsm_cs[2]),
         .O(cfg_error_seen_i_6_n_0));
-  LUT6 #(
-    .INIT(64'hFFFF002000200020)) 
-    cfg_error_seen_i_7
-       (.I0(\icap_o_preswap[24]_i_17_n_0 ),
-        .I1(cp_fsm_cs[3]),
-        .I2(cp_fsm_cs[0]),
-        .I3(\icap_o_preswap[2]_i_2_n_0 ),
-        .I4(desync_needed_i_3_n_0),
-        .I5(cfg_error_seen_i_8_n_0),
-        .O(cfg_error_seen_i_7_n_0));
   (* SOFT_HLUTNM = "soft_lutpair64" *) 
   LUT2 #(
     .INIT(4'hE)) 
-    cfg_error_seen_i_8
+    cfg_error_seen_i_7
        (.I0(fetch_error_seen_on_first_word_reg_n_0),
         .I1(cfg_error_seen_reg_n_0),
+        .O(cfg_error_seen_i_7_n_0));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFAAAAAA02)) 
+    cfg_error_seen_i_8
+       (.I0(\icap_o_preswap[28]_i_3_n_0 ),
+        .I1(dout[1]),
+        .I2(desync_needed),
+        .I3(empty),
+        .I4(rd_rst_busy),
+        .I5(\cp_fsm_cs[0]_i_7_n_0 ),
         .O(cfg_error_seen_i_8_n_0));
   FDRE #(
     .INIT(1'b0)) 
@@ -13116,151 +13073,158 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_ic
         .D(cfg_error_seen_i_1_n_0),
         .Q(cfg_error_seen_reg_n_0),
         .R(1'b0));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFBAAA)) 
+  LUT5 #(
+    .INIT(32'hFFFFFFAE)) 
     \cp_fsm_cs[0]_i_1 
        (.I0(\cp_fsm_cs[0]_i_2_n_0 ),
-        .I1(cp_fsm_cs[0]),
-        .I2(cp_fsm_cs[1]),
-        .I3(\icap_o_preswap[0]_i_2_n_0 ),
-        .I4(\cp_fsm_cs[0]_i_3_n_0 ),
-        .I5(\cp_fsm_cs[0]_i_4_n_0 ),
+        .I1(\cp_fsm_cs[0]_i_3_n_0 ),
+        .I2(\icap_o_preswap[24]_i_6_n_0 ),
+        .I3(\cp_fsm_cs[0]_i_4_n_0 ),
+        .I4(\cp_fsm_cs[0]_i_5_n_0 ),
         .O(cp_fsm_ns[0]));
   LUT6 #(
-    .INIT(64'hFFFFF8C8F8C8F8C8)) 
+    .INIT(64'hFFA00000E4E40000)) 
     \cp_fsm_cs[0]_i_2 
-       (.I0(i_bs_fifo_i_5_n_0),
-        .I1(\icap_o_preswap[29]_i_3_n_0 ),
-        .I2(\cp_fsm_cs[1]_i_3_n_0 ),
-        .I3(dout[1]),
-        .I4(cp_fsm_cs[1]),
-        .I5(\cp_fsm_cs[0]_i_5_n_0 ),
-        .O(\cp_fsm_cs[0]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFC00000D1D10000)) 
-    \cp_fsm_cs[0]_i_3 
-       (.I0(icap_csib_i_i_5_n_0),
-        .I1(cp_fsm_cs[1]),
+       (.I0(cp_fsm_cs[1]),
+        .I1(icap_req_i_reg_n_0),
         .I2(desync_needed),
         .I3(\cp_fsm_cs[0]_i_6_n_0 ),
-        .I4(i_bs_fifo_i_5_n_0),
+        .I4(\icap_o_preswap[28]_i_3_n_0 ),
         .I5(dout[1]),
+        .O(\cp_fsm_cs[0]_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair59" *) 
+  LUT2 #(
+    .INIT(4'h1)) 
+    \cp_fsm_cs[0]_i_3 
+       (.I0(cp_fsm_cs[2]),
+        .I1(cp_fsm_cs[3]),
         .O(\cp_fsm_cs[0]_i_3_n_0 ));
   LUT6 #(
-    .INIT(64'h080808080808FF08)) 
+    .INIT(64'h0000005400000000)) 
     \cp_fsm_cs[0]_i_4 
-       (.I0(fetch_error_seen_on_first_word_i_5_n_0),
-        .I1(icap_reset),
-        .I2(i_cdc_error_n_1),
-        .I3(\cp_fsm_cs[1]_i_3_n_0 ),
-        .I4(icap_csib_i_i_5_n_0),
-        .I5(cap_rel),
+       (.I0(cp_fsm_cs[0]),
+        .I1(icap_req_i_reg_n_0),
+        .I2(dout[1]),
+        .I3(icap_i[0]),
+        .I4(cp_fsm_cs[3]),
+        .I5(cp_fsm_cs[2]),
         .O(\cp_fsm_cs[0]_i_4_n_0 ));
   LUT6 #(
-    .INIT(64'h0000000F00000088)) 
+    .INIT(64'hFFFF88888F888888)) 
     \cp_fsm_cs[0]_i_5 
-       (.I0(icap_req_i_reg_0),
-        .I1(cap_gnt),
-        .I2(dout[0]),
-        .I3(cp_fsm_cs[3]),
-        .I4(cp_fsm_cs[2]),
-        .I5(cp_fsm_cs[0]),
+       (.I0(\cp_fsm_cs[1]_i_3_n_0 ),
+        .I1(\cp_fsm_cs[1]_i_4_n_0 ),
+        .I2(cp_fsm_cs[0]),
+        .I3(\icap_o_preswap[24]_i_5_n_0 ),
+        .I4(cp_fsm_cs[1]),
+        .I5(\cp_fsm_cs[0]_i_7_n_0 ),
         .O(\cp_fsm_cs[0]_i_5_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair64" *) 
   LUT5 #(
     .INIT(32'h0008FFFF)) 
     \cp_fsm_cs[0]_i_6 
-       (.I0(\icap_o_preswap[2]_i_2_n_0 ),
+       (.I0(\icap_o_preswap[29]_i_4_n_0 ),
         .I1(cp_fsm_cs[1]),
         .I2(cfg_error_seen_reg_n_0),
         .I3(fetch_error_seen_on_first_word_reg_n_0),
         .I4(dout[0]),
         .O(\cp_fsm_cs[0]_i_6_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair60" *) 
+  LUT5 #(
+    .INIT(32'h0003000A)) 
+    \cp_fsm_cs[0]_i_7 
+       (.I0(icap_req_i_reg_n_0),
+        .I1(dout[0]),
+        .I2(cp_fsm_cs[3]),
+        .I3(cp_fsm_cs[2]),
+        .I4(cp_fsm_cs[0]),
+        .O(\cp_fsm_cs[0]_i_7_n_0 ));
   LUT6 #(
-    .INIT(64'hFFAEAAAEFFEEAAEE)) 
+    .INIT(64'hFFFFFFFFFFFFAAAE)) 
     \cp_fsm_cs[1]_i_1 
        (.I0(\cp_fsm_cs[1]_i_2_n_0 ),
         .I1(\cp_fsm_cs[1]_i_3_n_0 ),
-        .I2(dout[1]),
-        .I3(\icap_o_preswap[29]_i_3_n_0 ),
-        .I4(\cp_fsm_cs[1]_i_4_n_0 ),
-        .I5(dout[0]),
-        .O(cp_fsm_ns[1]));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFF222)) 
-    \cp_fsm_cs[1]_i_2 
-       (.I0(\icap_o_preswap[24]_i_15_n_0 ),
-        .I1(dout[0]),
-        .I2(\icap_o_preswap[24]_i_7_n_0 ),
-        .I3(\cp_fsm_cs[1]_i_5_n_0 ),
-        .I4(icap_req_i02_out),
+        .I2(\cp_fsm_cs[1]_i_4_n_0 ),
+        .I3(dout[0]),
+        .I4(\cp_fsm_cs[1]_i_5_n_0 ),
         .I5(\cp_fsm_cs[1]_i_6_n_0 ),
-        .O(\cp_fsm_cs[1]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair61" *) 
-  LUT4 #(
-    .INIT(16'h0010)) 
-    \cp_fsm_cs[1]_i_3 
-       (.I0(icap_i[0]),
-        .I1(cp_fsm_cs[3]),
-        .I2(cp_fsm_cs[2]),
-        .I3(cp_fsm_cs[0]),
-        .O(\cp_fsm_cs[1]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair74" *) 
-  LUT3 #(
-    .INIT(8'h10)) 
-    \cp_fsm_cs[1]_i_4 
-       (.I0(cp_fsm_cs[3]),
-        .I1(cp_fsm_cs[2]),
-        .I2(cp_fsm_cs[1]),
-        .O(\cp_fsm_cs[1]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair59" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
-    \cp_fsm_cs[1]_i_5 
-       (.I0(cp_fsm_cs[1]),
-        .I1(cp_fsm_cs[0]),
-        .O(\cp_fsm_cs[1]_i_5_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair60" *) 
+        .O(cp_fsm_ns[1]));
+  (* SOFT_HLUTNM = "soft_lutpair68" *) 
   LUT5 #(
     .INIT(32'h04000000)) 
-    \cp_fsm_cs[1]_i_6 
+    \cp_fsm_cs[1]_i_2 
        (.I0(cp_fsm_cs[1]),
         .I1(cp_fsm_cs[0]),
         .I2(cp_fsm_cs[3]),
         .I3(cp_fsm_cs[2]),
-        .I4(\icap_o_preswap[2]_i_2_n_0 ),
+        .I4(\icap_o_preswap[29]_i_4_n_0 ),
+        .O(\cp_fsm_cs[1]_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair61" *) 
+  LUT4 #(
+    .INIT(16'h001C)) 
+    \cp_fsm_cs[1]_i_3 
+       (.I0(icap_i[0]),
+        .I1(cp_fsm_cs[0]),
+        .I2(cp_fsm_cs[2]),
+        .I3(cp_fsm_cs[3]),
+        .O(\cp_fsm_cs[1]_i_3_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair63" *) 
+  LUT2 #(
+    .INIT(4'hE)) 
+    \cp_fsm_cs[1]_i_4 
+       (.I0(rd_rst_busy),
+        .I1(empty),
+        .O(\cp_fsm_cs[1]_i_4_n_0 ));
+  LUT6 #(
+    .INIT(64'h0000000000000004)) 
+    \cp_fsm_cs[1]_i_5 
+       (.I0(cp_fsm_cs[0]),
+        .I1(cp_fsm_cs[2]),
+        .I2(cp_fsm_cs[3]),
+        .I3(icap_i[0]),
+        .I4(dout[1]),
+        .I5(\cp_fsm_cs[1]_i_4_n_0 ),
+        .O(\cp_fsm_cs[1]_i_5_n_0 ));
+  LUT6 #(
+    .INIT(64'h8802FF008802AA00)) 
+    \cp_fsm_cs[1]_i_6 
+       (.I0(\cp_fsm_cs[0]_i_3_n_0 ),
+        .I1(\cp_fsm_cs[1]_i_4_n_0 ),
+        .I2(dout[1]),
+        .I3(cp_fsm_cs[1]),
+        .I4(cp_fsm_cs[0]),
+        .I5(\icap_o_preswap[24]_i_8_n_0 ),
         .O(\cp_fsm_cs[1]_i_6_n_0 ));
   LUT6 #(
     .INIT(64'hEEEEEEFFEFEFEEEE)) 
     \cp_fsm_cs[2]_i_1 
        (.I0(\cp_fsm_cs[2]_i_2_n_0 ),
         .I1(\cp_fsm_cs[2]_i_3_n_0 ),
-        .I2(i_cdc_error_n_1),
-        .I3(\icap_o_preswap[2]_i_2_n_0 ),
+        .I2(\icap_o_preswap[24]_i_6_n_0 ),
+        .I3(\icap_o_preswap[29]_i_4_n_0 ),
         .I4(cp_fsm_cs[3]),
         .I5(cp_fsm_cs[2]),
         .O(cp_fsm_ns[2]));
   LUT6 #(
     .INIT(64'h888F888F88FF88F8)) 
     \cp_fsm_cs[2]_i_2 
-       (.I0(desync_needed_i_3_n_0),
+       (.I0(i_bs_fifo_i_3_n_0),
         .I1(dout[0]),
         .I2(cp_fsm_cs[1]),
-        .I3(\icap_o_preswap[2]_i_3_n_0 ),
+        .I3(i_cdc_error_n_1),
         .I4(icap_i[0]),
         .I5(cp_fsm_cs[0]),
         .O(\cp_fsm_cs[2]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'h0100000000000000)) 
     \cp_fsm_cs[2]_i_3 
-       (.I0(\icap_o_preswap[29]_i_3_n_0 ),
+       (.I0(\cp_fsm_cs[1]_i_4_n_0 ),
         .I1(cp_fsm_cs[3]),
         .I2(cp_fsm_cs[2]),
         .I3(cp_fsm_cs[0]),
         .I4(dout[0]),
         .I5(cp_fsm_cs[1]),
         .O(\cp_fsm_cs[2]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair67" *) 
   LUT5 #(
     .INIT(32'h08000000)) 
     \cp_fsm_cs[3]_i_1 
@@ -13268,7 +13232,7 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_ic
         .I1(cp_fsm_cs[0]),
         .I2(cp_fsm_cs[3]),
         .I3(cp_fsm_cs[2]),
-        .I4(\icap_o_preswap[2]_i_2_n_0 ),
+        .I4(\icap_o_preswap[29]_i_4_n_0 ),
         .O(cp_fsm_ns[3]));
   FDRE #(
     .INIT(1'b0)) 
@@ -13306,8 +13270,8 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_ic
     .INIT(32'h888F8880)) 
     desync_needed_i_1
        (.I0(desync_needed_i_2_n_0),
-        .I1(desync_needed_i_3_n_0),
-        .I2(desync_needed_i_4_n_0),
+        .I1(i_bs_fifo_i_3_n_0),
+        .I2(desync_needed_i_3_n_0),
         .I3(cfg_error_seen_reg_n_0),
         .I4(desync_needed),
         .O(desync_needed_i_1_n_0));
@@ -13322,25 +13286,15 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_ic
         .I5(icap_i[0]),
         .O(desync_needed_i_2_n_0));
   LUT6 #(
-    .INIT(64'h0001000000000000)) 
-    desync_needed_i_3
-       (.I0(rd_rst_busy),
-        .I1(empty),
-        .I2(cp_fsm_cs[3]),
-        .I3(cp_fsm_cs[2]),
-        .I4(cp_fsm_cs[0]),
-        .I5(dout[1]),
-        .O(desync_needed_i_3_n_0));
-  LUT6 #(
     .INIT(64'h57575555FF575555)) 
-    desync_needed_i_4
-       (.I0(\icap_o_preswap[2]_i_2_n_0 ),
+    desync_needed_i_3
+       (.I0(\icap_o_preswap[29]_i_4_n_0 ),
         .I1(cp_fsm_cs[0]),
-        .I2(\icap_o_preswap[2]_i_3_n_0 ),
-        .I3(desync_needed_i_3_n_0),
+        .I2(i_cdc_error_n_1),
+        .I3(i_bs_fifo_i_3_n_0),
         .I4(cp_fsm_cs[1]),
         .I5(fetch_error_seen_on_first_word_reg_n_0),
-        .O(desync_needed_i_4_n_0));
+        .O(desync_needed_i_3_n_0));
   FDRE #(
     .INIT(1'b0)) 
     desync_needed_reg
@@ -13349,87 +13303,68 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_ic
         .D(desync_needed_i_1_n_0),
         .Q(desync_needed),
         .R(icap_reset_ah));
-  LUT6 #(
-    .INIT(64'h000000FE00FE00FE)) 
+  LUT4 #(
+    .INIT(16'h00FE)) 
     fetch_error_seen_i_1
        (.I0(fetch_error_seen),
-        .I1(desync_needed_i_3_n_0),
+        .I1(i_bs_fifo_i_3_n_0),
         .I2(fetch_error_seen_i_2_n_0),
-        .I3(fetch_error_seen_on_first_word_i_3_n_0),
-        .I4(fetch_error_seen_i_3_n_0),
-        .I5(fetch_error_seen_on_first_word_i_6_n_0),
+        .I3(fetch_error_seen_on_first_word),
         .O(fetch_error_seen_i_1_n_0));
   LUT6 #(
-    .INIT(64'h10101010F0101010)) 
+    .INIT(64'hF010101010101010)) 
     fetch_error_seen_i_2
        (.I0(icap_req_i_i_2_n_0),
         .I1(dout[0]),
-        .I2(\icap_o_preswap[24]_i_17_n_0 ),
-        .I3(cp_fsm_cs[1]),
-        .I4(fetch_error_seen_on_first_word_i_5_n_0),
-        .I5(icap_csib_i_i_5_n_0),
+        .I2(\icap_o_preswap[24]_i_16_n_0 ),
+        .I3(icap_req_i_reg_n_0),
+        .I4(cp_fsm_cs[1]),
+        .I5(\cp_fsm_cs[0]_i_3_n_0 ),
         .O(fetch_error_seen_i_2_n_0));
-  LUT6 #(
-    .INIT(64'h0001000000000000)) 
-    fetch_error_seen_i_3
-       (.I0(rd_rst_busy),
-        .I1(empty),
-        .I2(cp_fsm_cs[2]),
-        .I3(cp_fsm_cs[3]),
-        .I4(dout[0]),
-        .I5(cp_fsm_cs[1]),
-        .O(fetch_error_seen_i_3_n_0));
-  LUT6 #(
-    .INIT(64'h2222202222222222)) 
+  LUT3 #(
+    .INIT(8'h0E)) 
     fetch_error_seen_on_first_word_i_1
-       (.I0(fetch_error_seen_on_first_word_i_2_n_0),
-        .I1(fetch_error_seen_on_first_word_i_3_n_0),
-        .I2(fetch_error_seen_on_first_word_i_4_n_0),
-        .I3(fetch_error_seen_on_first_word_i_5_n_0),
-        .I4(\icap_o_preswap[29]_i_3_n_0 ),
-        .I5(fetch_error_seen_on_first_word_i_6_n_0),
+       (.I0(fetch_error_seen_on_first_word_reg_n_0),
+        .I1(fetch_error_seen_on_first_word_cmb),
+        .I2(fetch_error_seen_on_first_word),
         .O(fetch_error_seen_on_first_word_i_1_n_0));
   LUT6 #(
-    .INIT(64'hFFFFFFFF22232222)) 
+    .INIT(64'h0001010000000000)) 
     fetch_error_seen_on_first_word_i_2
-       (.I0(desync_needed_i_3_n_0),
-        .I1(cp_fsm_cs[1]),
-        .I2(cp_fsm_cs[0]),
-        .I3(\icap_o_preswap[2]_i_3_n_0 ),
-        .I4(\icap_o_preswap[24]_i_17_n_0 ),
-        .I5(fetch_error_seen_on_first_word_reg_n_0),
-        .O(fetch_error_seen_on_first_word_i_2_n_0));
+       (.I0(cp_fsm_cs[1]),
+        .I1(\cp_fsm_cs[1]_i_4_n_0 ),
+        .I2(cp_fsm_cs[3]),
+        .I3(cp_fsm_cs[2]),
+        .I4(cp_fsm_cs[0]),
+        .I5(dout[1]),
+        .O(fetch_error_seen_on_first_word_cmb));
   LUT6 #(
-    .INIT(64'hFFFF555555575555)) 
+    .INIT(64'hFFFFFFFF55755555)) 
     fetch_error_seen_on_first_word_i_3
        (.I0(icap_reset),
-        .I1(icap_req_i_i_2_n_0),
-        .I2(icap_csib_i_i_5_n_0),
-        .I3(\icap_o_preswap[24]_i_18_n_0 ),
-        .I4(dout[0]),
-        .I5(cfg_error_seen_i_6_n_0),
-        .O(fetch_error_seen_on_first_word_i_3_n_0));
-  LUT2 #(
-    .INIT(4'h7)) 
-    fetch_error_seen_on_first_word_i_4
-       (.I0(cp_fsm_cs[1]),
-        .I1(dout[0]),
-        .O(fetch_error_seen_on_first_word_i_4_n_0));
+        .I1(\icap_o_preswap[24]_i_14_n_0 ),
+        .I2(fetch_error_seen_on_first_word_i_4_n_0),
+        .I3(\cp_fsm_cs[1]_i_4_n_0 ),
+        .I4(\cp_fsm_cs[0]_i_3_n_0 ),
+        .I5(fetch_error_seen_on_first_word_i_5_n_0),
+        .O(fetch_error_seen_on_first_word));
   (* SOFT_HLUTNM = "soft_lutpair74" *) 
   LUT2 #(
-    .INIT(4'h1)) 
-    fetch_error_seen_on_first_word_i_5
-       (.I0(cp_fsm_cs[2]),
-        .I1(cp_fsm_cs[3]),
-        .O(fetch_error_seen_on_first_word_i_5_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair68" *) 
-  LUT3 #(
-    .INIT(8'hEA)) 
-    fetch_error_seen_on_first_word_i_6
+    .INIT(4'hE)) 
+    fetch_error_seen_on_first_word_i_4
        (.I0(cp_fsm_cs[0]),
-        .I1(cap_gnt),
-        .I2(icap_req_i_reg_0),
-        .O(fetch_error_seen_on_first_word_i_6_n_0));
+        .I1(icap_req_i_reg_n_0),
+        .O(fetch_error_seen_on_first_word_i_4_n_0));
+  LUT6 #(
+    .INIT(64'h00000000AA00B000)) 
+    fetch_error_seen_on_first_word_i_5
+       (.I0(\icap_o_preswap[28]_i_3_n_0 ),
+        .I1(icap_req_i_i_2_n_0),
+        .I2(icap_req_i_reg_n_0),
+        .I3(dout[0]),
+        .I4(dout[1]),
+        .I5(\cp_fsm_cs[1]_i_4_n_0 ),
+        .O(fetch_error_seen_on_first_word_i_5_n_0));
   FDRE #(
     .INIT(1'b0)) 
     fetch_error_seen_on_first_word_reg
@@ -13508,42 +13443,45 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_ic
         .I2(\gen_pntr_flags_cc.ngen_full_rst_val.ram_full_i_reg ),
         .I3(full),
         .O(write_bs_fifo));
+  (* SOFT_HLUTNM = "soft_lutpair59" *) 
   LUT5 #(
-    .INIT(32'hFEEEEEEE)) 
+    .INIT(32'hFFFFABAA)) 
     i_bs_fifo_i_2
        (.I0(i_bs_fifo_i_3_n_0),
-        .I1(i_bs_fifo_i_4_n_0),
-        .I2(dout[1]),
-        .I3(dout[0]),
+        .I1(cp_fsm_cs[3]),
+        .I2(cp_fsm_cs[2]),
+        .I3(i_bs_fifo_i_4_n_0),
         .I4(i_bs_fifo_i_5_n_0),
         .O(cp_bs_read));
   LUT6 #(
-    .INIT(64'hB000A000B0A0B0A0)) 
+    .INIT(64'h0001000000000000)) 
     i_bs_fifo_i_3
-       (.I0(cp_fsm_cs[1]),
-        .I1(\icap_o_preswap[29]_i_3_n_0 ),
-        .I2(fetch_error_seen_on_first_word_i_5_n_0),
-        .I3(cp_fsm_cs[0]),
-        .I4(dout[1]),
-        .I5(icap_csib_i_i_5_n_0),
+       (.I0(rd_rst_busy),
+        .I1(empty),
+        .I2(cp_fsm_cs[3]),
+        .I3(cp_fsm_cs[2]),
+        .I4(cp_fsm_cs[0]),
+        .I5(dout[1]),
         .O(i_bs_fifo_i_3_n_0));
-  LUT6 #(
-    .INIT(64'h0010001000100111)) 
+  (* SOFT_HLUTNM = "soft_lutpair65" *) 
+  LUT5 #(
+    .INIT(32'hF1F0F000)) 
     i_bs_fifo_i_4
-       (.I0(\icap_o_preswap[29]_i_3_n_0 ),
-        .I1(icap_req_i_i_2_n_0),
-        .I2(dout[1]),
-        .I3(dout[0]),
-        .I4(cap_rel),
-        .I5(icap_csib_i_i_5_n_0),
+       (.I0(rd_rst_busy),
+        .I1(empty),
+        .I2(cp_fsm_cs[1]),
+        .I3(cp_fsm_cs[0]),
+        .I4(icap_req_i_reg_n_0),
         .O(i_bs_fifo_i_4_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair63" *) 
-  LUT3 #(
-    .INIT(8'h10)) 
+  LUT6 #(
+    .INIT(64'hAA000000AA303330)) 
     i_bs_fifo_i_5
-       (.I0(cp_fsm_cs[3]),
-        .I1(cp_fsm_cs[2]),
-        .I2(cp_fsm_cs[0]),
+       (.I0(\icap_o_preswap[28]_i_3_n_0 ),
+        .I1(icap_req_i_i_2_n_0),
+        .I2(icap_req_i_reg_n_0),
+        .I3(dout[1]),
+        .I4(dout[0]),
+        .I5(\cp_fsm_cs[1]_i_4_n_0 ),
         .O(i_bs_fifo_i_5_n_0));
   design_2_dfx_controller_0_0_cdc_sync i_cdc_done
        (.\GENERATE_PULSE_P_S_CDC_OPEN_ENDED.P_IN_CROSS2SCNDRY_scndry_out_0 (i_cdc_done_n_1),
@@ -13563,7 +13501,7 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_ic
         .Q(cp_fsm_cs),
         .cc_error_i(cc_error_i),
         .clk(clk),
-        .\cp_fsm_cs_reg[0] (i_cdc_error_n_1),
+        .\cp_fsm_cs_reg[3] (i_cdc_error_n_1),
         .icap_clk(icap_clk),
         .icap_i(icap_i[0]));
   LUT1 #(
@@ -13571,88 +13509,71 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_ic
     icap_csib_i_i_1
        (.I0(icap_reset),
         .O(icap_reset_ah));
-  (* SOFT_HLUTNM = "soft_lutpair68" *) 
   LUT5 #(
-    .INIT(32'h00001333)) 
-    icap_csib_i_i_10
-       (.I0(cp_fsm_cs[0]),
-        .I1(cp_fsm_cs[1]),
-        .I2(cap_gnt),
-        .I3(icap_req_i_reg_0),
+    .INIT(32'hFFFFAAEF)) 
+    icap_csib_i_i_2
+       (.I0(icap_csib_i_i_3_n_0),
+        .I1(cp_fsm_cs[2]),
+        .I2(desync_needed),
+        .I3(\icap_o_preswap[29]_i_4_n_0 ),
+        .I4(icap_csib_i_i_4_n_0),
+        .O(icap_csib_i_i_2_n_0));
+  LUT6 #(
+    .INIT(64'hEEEEEEEFEEEFEFFF)) 
+    icap_csib_i_i_3
+       (.I0(icap_csib_i_i_5_n_0),
+        .I1(cp_fsm_cs[3]),
+        .I2(cp_fsm_cs[2]),
+        .I3(cp_fsm_cs[1]),
+        .I4(icap_req_i_reg_n_0),
+        .I5(cp_fsm_cs[0]),
+        .O(icap_csib_i_i_3_n_0));
+  LUT6 #(
+    .INIT(64'h000F0F0F0F0FEFEF)) 
+    icap_csib_i_i_4
+       (.I0(icap_csib_i_i_6_n_0),
+        .I1(icap_i[0]),
+        .I2(\icap_o_preswap[29]_i_4_n_0 ),
+        .I3(dout[0]),
+        .I4(cp_fsm_cs[1]),
+        .I5(cp_fsm_cs[0]),
+        .O(icap_csib_i_i_4_n_0));
+  LUT6 #(
+    .INIT(64'hFF00FFFFFF00FFA8)) 
+    icap_csib_i_i_5
+       (.I0(icap_csib_i_i_7_n_0),
+        .I1(dout[1]),
+        .I2(\icap_o_preswap[24]_i_17_n_0 ),
+        .I3(icap_csib_i_i_8_n_0),
         .I4(cp_fsm_cs[2]),
-        .O(icap_csib_i_i_10_n_0));
+        .I5(\cp_fsm_cs[1]_i_4_n_0 ),
+        .O(icap_csib_i_i_5_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair72" *) 
+  LUT3 #(
+    .INIT(8'hFE)) 
+    icap_csib_i_i_6
+       (.I0(empty),
+        .I1(rd_rst_busy),
+        .I2(dout[1]),
+        .O(icap_csib_i_i_6_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair58" *) 
+  LUT3 #(
+    .INIT(8'h7F)) 
+    icap_csib_i_i_7
+       (.I0(dout[0]),
+        .I1(cp_fsm_cs[1]),
+        .I2(cp_fsm_cs[0]),
+        .O(icap_csib_i_i_7_n_0));
   LUT6 #(
     .INIT(64'h1110111111101010)) 
-    icap_csib_i_i_11
+    icap_csib_i_i_8
        (.I0(desync_needed),
         .I1(cp_fsm_cs[2]),
         .I2(cfg_error_seen_reg_n_0),
         .I3(fetch_error_seen_on_first_word_reg_n_0),
         .I4(dout[1]),
         .I5(fetch_error_seen),
-        .O(icap_csib_i_i_11_n_0));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFF32)) 
-    icap_csib_i_i_2
-       (.I0(icap_csib_i_i_3_n_0),
-        .I1(i_cdc_error_n_1),
-        .I2(icap_csib_i_i_5_n_0),
-        .I3(cp_fsm_cs[3]),
-        .I4(icap_csib_i_i_6_n_0),
-        .I5(icap_csib_i_i_7_n_0),
-        .O(icap_csib_i_i_2_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair66" *) 
-  LUT5 #(
-    .INIT(32'hFFFFFFFE)) 
-    icap_csib_i_i_3
-       (.I0(cap_rel),
-        .I1(empty),
-        .I2(rd_rst_busy),
-        .I3(dout[1]),
-        .I4(icap_i[0]),
-        .O(icap_csib_i_i_3_n_0));
-  LUT2 #(
-    .INIT(4'h7)) 
-    icap_csib_i_i_5
-       (.I0(icap_req_i_reg_0),
-        .I1(cap_gnt),
-        .O(icap_csib_i_i_5_n_0));
-  LUT6 #(
-    .INIT(64'h0000FFFF00008F88)) 
-    icap_csib_i_i_6
-       (.I0(icap_csib_i_i_8_n_0),
-        .I1(icap_csib_i_i_9_n_0),
-        .I2(cp_fsm_cs[0]),
-        .I3(icap_csib_i_i_5_n_0),
-        .I4(cp_fsm_cs[2]),
-        .I5(\icap_o_preswap[29]_i_3_n_0 ),
-        .O(icap_csib_i_i_6_n_0));
-  LUT6 #(
-    .INIT(64'hFAFAFFFFFAFAFFFB)) 
-    icap_csib_i_i_7
-       (.I0(icap_csib_i_i_10_n_0),
-        .I1(desync_needed),
-        .I2(icap_csib_i_i_11_n_0),
-        .I3(cp_fsm_cs[2]),
-        .I4(\icap_o_preswap[2]_i_2_n_0 ),
-        .I5(icap_csib_i_i_8_n_0),
-        .O(icap_csib_i_i_7_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair58" *) 
-  LUT3 #(
-    .INIT(8'h7F)) 
-    icap_csib_i_i_8
-       (.I0(dout[0]),
-        .I1(cp_fsm_cs[1]),
-        .I2(cp_fsm_cs[0]),
         .O(icap_csib_i_i_8_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair73" *) 
-  LUT3 #(
-    .INIT(8'hFE)) 
-    icap_csib_i_i_9
-       (.I0(cfg_error_seen_reg_n_0),
-        .I1(fetch_error_seen),
-        .I2(dout[1]),
-        .O(icap_csib_i_i_9_n_0));
   FDSE #(
     .INIT(1'b1)) 
     icap_csib_i_reg
@@ -13666,61 +13587,31 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_ic
     \icap_o_preswap[0]_i_1 
        (.I0(cp_fsm_cs[1]),
         .I1(cp_fsm_cs[0]),
-        .I2(\icap_o_preswap[0]_i_2_n_0 ),
+        .I2(\icap_o_preswap[24]_i_5_n_0 ),
         .I3(\icap_o_preswap[28]_i_2_n_0 ),
         .I4(dout[2]),
-        .I5(\icap_o_preswap[0]_i_3_n_0 ),
+        .I5(\icap_o_preswap[0]_i_2_n_0 ),
         .O(p_1_in__0[0]));
-  (* SOFT_HLUTNM = "soft_lutpair70" *) 
-  LUT5 #(
-    .INIT(32'h0000EF00)) 
+  LUT6 #(
+    .INIT(64'h000022220000F000)) 
     \icap_o_preswap[0]_i_2 
-       (.I0(legacy_cfg_error),
-        .I1(icap_i[1]),
-        .I2(icap_i[0]),
-        .I3(cp_fsm_cs[2]),
+       (.I0(\icap_o_preswap[0]_i_3_n_0 ),
+        .I1(\cp_fsm_cs[1]_i_4_n_0 ),
+        .I2(\icap_o_preswap[24]_i_9_n_0 ),
+        .I3(\icap_o_preswap[29]_i_4_n_0 ),
         .I4(cp_fsm_cs[3]),
+        .I5(cp_fsm_cs[2]),
         .O(\icap_o_preswap[0]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFF8008800)) 
+  (* SOFT_HLUTNM = "soft_lutpair71" *) 
+  LUT4 #(
+    .INIT(16'h0004)) 
     \icap_o_preswap[0]_i_3 
-       (.I0(\icap_o_preswap[24]_i_8_n_0 ),
-        .I1(fetch_error_seen_on_first_word_i_5_n_0),
-        .I2(fetch_error_seen_on_first_word_i_6_n_0),
-        .I3(\icap_o_preswap[2]_i_2_n_0 ),
-        .I4(\icap_o_preswap[0]_i_4_n_0 ),
-        .I5(\icap_o_preswap[0]_i_5_n_0 ),
-        .O(\icap_o_preswap[0]_i_3_n_0 ));
-  LUT6 #(
-    .INIT(64'h0000000000001000)) 
-    \icap_o_preswap[0]_i_4 
-       (.I0(cp_fsm_cs[2]),
-        .I1(cp_fsm_cs[3]),
-        .I2(cp_fsm_cs[1]),
-        .I3(empty),
-        .I4(cfg_error_seen_reg_n_0),
-        .I5(fetch_error_seen),
-        .O(\icap_o_preswap[0]_i_4_n_0 ));
-  LUT5 #(
-    .INIT(32'h00000002)) 
-    \icap_o_preswap[0]_i_5 
-       (.I0(\icap_o_preswap[0]_i_6_n_0 ),
-        .I1(icap_i[0]),
+       (.I0(cp_fsm_cs[1]),
+        .I1(icap_req_i_reg_n_0),
         .I2(dout[1]),
-        .I3(cp_fsm_cs[1]),
-        .I4(cap_rel),
-        .O(\icap_o_preswap[0]_i_5_n_0 ));
-  LUT6 #(
-    .INIT(64'h0004000000000000)) 
-    \icap_o_preswap[0]_i_6 
-       (.I0(cp_fsm_cs[3]),
-        .I1(cp_fsm_cs[2]),
-        .I2(rd_rst_busy),
-        .I3(empty),
-        .I4(cap_gnt),
-        .I5(icap_req_i_reg_0),
-        .O(\icap_o_preswap[0]_i_6_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair72" *) 
+        .I3(icap_i[0]),
+        .O(\icap_o_preswap[0]_i_3_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair73" *) 
   LUT3 #(
     .INIT(8'hF8)) 
     \icap_o_preswap[15]_i_1 
@@ -13735,101 +13626,77 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_ic
         .I1(\icap_o_preswap[24]_i_3_n_0 ),
         .O(\icap_o_preswap[24]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h0000000000020000)) 
+    .INIT(64'h0000000000080000)) 
     \icap_o_preswap[24]_i_10 
-       (.I0(\icap_o_preswap[24]_i_21_n_0 ),
-        .I1(cfg_error_seen_reg_n_0),
-        .I2(dout[1]),
-        .I3(cp_fsm_cs[2]),
+       (.I0(fetch_error_seen_on_first_word_i_4_n_0),
+        .I1(\cp_fsm_cs[1]_i_4_n_0 ),
+        .I2(fetch_error_seen),
+        .I3(cfg_error_seen_reg_n_0),
         .I4(cp_fsm_cs[1]),
-        .I5(fetch_error_seen),
+        .I5(cp_fsm_cs[2]),
         .O(\icap_o_preswap[24]_i_10_n_0 ));
   LUT6 #(
-    .INIT(64'h0002000000000000)) 
+    .INIT(64'h0000000001000000)) 
     \icap_o_preswap[24]_i_11 
-       (.I0(\icap_o_preswap[24]_i_21_n_0 ),
-        .I1(fetch_error_seen),
-        .I2(cfg_error_seen_reg_n_0),
-        .I3(cp_fsm_cs[2]),
-        .I4(empty),
+       (.I0(\cp_fsm_cs[1]_i_4_n_0 ),
+        .I1(icap_i[0]),
+        .I2(dout[1]),
+        .I3(legacy_cfg_error_i_4_n_0),
+        .I4(cp_fsm_cs[2]),
         .I5(cp_fsm_cs[1]),
         .O(\icap_o_preswap[24]_i_11_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair59" *) 
-  LUT5 #(
-    .INIT(32'h00000200)) 
+  (* SOFT_HLUTNM = "soft_lutpair70" *) 
+  LUT4 #(
+    .INIT(16'h0001)) 
     \icap_o_preswap[24]_i_12 
-       (.I0(\icap_o_preswap[24]_i_22_n_0 ),
-        .I1(empty),
-        .I2(cp_fsm_cs[0]),
-        .I3(cp_fsm_cs[2]),
-        .I4(cp_fsm_cs[1]),
+       (.I0(cp_fsm_cs[2]),
+        .I1(fetch_error_seen),
+        .I2(dout[1]),
+        .I3(cfg_error_seen_reg_n_0),
         .O(\icap_o_preswap[24]_i_12_n_0 ));
-  LUT6 #(
-    .INIT(64'h0101010001010101)) 
-    \icap_o_preswap[24]_i_13 
-       (.I0(fetch_error_seen),
-        .I1(cp_fsm_cs[2]),
-        .I2(cfg_error_seen_reg_n_0),
-        .I3(legacy_cfg_error),
-        .I4(icap_i[1]),
-        .I5(icap_i[0]),
-        .O(\icap_o_preswap[24]_i_13_n_0 ));
-  LUT6 #(
-    .INIT(64'hF0FF001000000010)) 
-    \icap_o_preswap[24]_i_14 
-       (.I0(dout[1]),
-        .I1(empty),
-        .I2(cp_fsm_cs[0]),
-        .I3(icap_csib_i_i_5_n_0),
-        .I4(rd_rst_busy),
-        .I5(cp_fsm_cs[1]),
-        .O(\icap_o_preswap[24]_i_14_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair63" *) 
   LUT5 #(
     .INIT(32'h00000002)) 
-    \icap_o_preswap[24]_i_15 
+    \icap_o_preswap[24]_i_13 
        (.I0(cp_fsm_cs[0]),
         .I1(cp_fsm_cs[2]),
         .I2(cp_fsm_cs[3]),
         .I3(empty),
         .I4(rd_rst_busy),
-        .O(\icap_o_preswap[24]_i_15_n_0 ));
+        .O(\icap_o_preswap[24]_i_13_n_0 ));
+  LUT2 #(
+    .INIT(4'h7)) 
+    \icap_o_preswap[24]_i_14 
+       (.I0(cp_fsm_cs[1]),
+        .I1(dout[0]),
+        .O(\icap_o_preswap[24]_i_14_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair58" *) 
   LUT5 #(
     .INIT(32'h00000080)) 
-    \icap_o_preswap[24]_i_16 
+    \icap_o_preswap[24]_i_15 
        (.I0(cp_fsm_cs[0]),
         .I1(cp_fsm_cs[1]),
         .I2(dout[0]),
         .I3(cfg_error_seen_reg_n_0),
         .I4(fetch_error_seen_on_first_word_reg_n_0),
-        .O(\icap_o_preswap[24]_i_16_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair71" *) 
+        .O(\icap_o_preswap[24]_i_15_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair72" *) 
   LUT3 #(
     .INIT(8'h02)) 
-    \icap_o_preswap[24]_i_17 
+    \icap_o_preswap[24]_i_16 
        (.I0(dout[1]),
         .I1(empty),
         .I2(rd_rst_busy),
-        .O(\icap_o_preswap[24]_i_17_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair66" *) 
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    \icap_o_preswap[24]_i_18 
-       (.I0(dout[1]),
-        .I1(rd_rst_busy),
-        .I2(empty),
-        .I3(cap_rel),
-        .O(\icap_o_preswap[24]_i_18_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair73" *) 
+        .O(\icap_o_preswap[24]_i_16_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair70" *) 
   LUT2 #(
     .INIT(4'hE)) 
-    \icap_o_preswap[24]_i_19 
+    \icap_o_preswap[24]_i_17 
        (.I0(fetch_error_seen),
         .I1(cfg_error_seen_reg_n_0),
-        .O(\icap_o_preswap[24]_i_19_n_0 ));
+        .O(\icap_o_preswap[24]_i_17_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFEFFFEFFFEFEFE)) 
+    .INIT(64'hFFFFFFEAFFEAFFEA)) 
     \icap_o_preswap[24]_i_2 
        (.I0(\icap_o_preswap[24]_i_4_n_0 ),
         .I1(\icap_o_preswap[24]_i_5_n_0 ),
@@ -13839,105 +13706,72 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_ic
         .I5(\icap_o_preswap[24]_i_9_n_0 ),
         .O(\icap_o_preswap[24]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'h0000000000000080)) 
-    \icap_o_preswap[24]_i_20 
-       (.I0(icap_req_i_reg_0),
-        .I1(cap_gnt),
-        .I2(cp_fsm_cs[0]),
-        .I3(rd_rst_busy),
-        .I4(empty),
-        .I5(dout[1]),
-        .O(\icap_o_preswap[24]_i_20_n_0 ));
-  LUT6 #(
-    .INIT(64'hEFEFEFEFEF000000)) 
-    \icap_o_preswap[24]_i_21 
-       (.I0(legacy_cfg_error),
-        .I1(icap_i[1]),
-        .I2(icap_i[0]),
-        .I3(icap_req_i_reg_0),
-        .I4(cap_gnt),
-        .I5(cp_fsm_cs[0]),
-        .O(\icap_o_preswap[24]_i_21_n_0 ));
-  LUT6 #(
-    .INIT(64'h0000000000000020)) 
-    \icap_o_preswap[24]_i_22 
-       (.I0(icap_req_i_reg_0),
-        .I1(cap_rel),
-        .I2(cap_gnt),
-        .I3(icap_i[0]),
-        .I4(rd_rst_busy),
-        .I5(dout[1]),
-        .O(\icap_o_preswap[24]_i_22_n_0 ));
-  LUT6 #(
-    .INIT(64'h00000000FFFEFEFE)) 
+    .INIT(64'h00000000FAF8F8F8)) 
     \icap_o_preswap[24]_i_3 
-       (.I0(\icap_o_preswap[24]_i_10_n_0 ),
-        .I1(\icap_o_preswap[24]_i_11_n_0 ),
-        .I2(\icap_o_preswap[24]_i_12_n_0 ),
-        .I3(\icap_o_preswap[24]_i_13_n_0 ),
-        .I4(\icap_o_preswap[24]_i_14_n_0 ),
+       (.I0(\icap_o_preswap[29]_i_4_n_0 ),
+        .I1(\icap_o_preswap[24]_i_10_n_0 ),
+        .I2(\icap_o_preswap[24]_i_11_n_0 ),
+        .I3(\icap_o_preswap[24]_i_12_n_0 ),
+        .I4(i_bs_fifo_i_4_n_0),
         .I5(cp_fsm_cs[3]),
         .O(\icap_o_preswap[24]_i_3_n_0 ));
   LUT6 #(
     .INIT(64'hFF08080808080808)) 
     \icap_o_preswap[24]_i_4 
        (.I0(desync_needed),
-        .I1(\icap_o_preswap[24]_i_15_n_0 ),
-        .I2(fetch_error_seen_on_first_word_i_4_n_0),
-        .I3(\icap_o_preswap[24]_i_7_n_0 ),
-        .I4(\icap_o_preswap[24]_i_16_n_0 ),
-        .I5(\icap_o_preswap[24]_i_17_n_0 ),
+        .I1(\icap_o_preswap[24]_i_13_n_0 ),
+        .I2(\icap_o_preswap[24]_i_14_n_0 ),
+        .I3(\icap_o_preswap[24]_i_8_n_0 ),
+        .I4(\icap_o_preswap[24]_i_15_n_0 ),
+        .I5(\icap_o_preswap[24]_i_16_n_0 ),
         .O(\icap_o_preswap[24]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair60" *) 
+  (* SOFT_HLUTNM = "soft_lutpair67" *) 
   LUT5 #(
-    .INIT(32'h40404000)) 
+    .INIT(32'h0000EF00)) 
     \icap_o_preswap[24]_i_5 
-       (.I0(cp_fsm_cs[3]),
-        .I1(cp_fsm_cs[2]),
-        .I2(\icap_o_preswap[2]_i_2_n_0 ),
-        .I3(cp_fsm_cs[1]),
-        .I4(cp_fsm_cs[0]),
+       (.I0(legacy_cfg_error),
+        .I1(icap_i[1]),
+        .I2(icap_i[0]),
+        .I3(cp_fsm_cs[2]),
+        .I4(cp_fsm_cs[3]),
         .O(\icap_o_preswap[24]_i_5_n_0 ));
-  LUT6 #(
-    .INIT(64'h0000000000000080)) 
+  (* SOFT_HLUTNM = "soft_lutpair65" *) 
+  LUT2 #(
+    .INIT(4'hE)) 
     \icap_o_preswap[24]_i_6 
-       (.I0(icap_req_i_reg_0),
-        .I1(cap_gnt),
-        .I2(cp_fsm_cs[2]),
-        .I3(cp_fsm_cs[3]),
-        .I4(icap_i[0]),
-        .I5(\icap_o_preswap[24]_i_18_n_0 ),
+       (.I0(cp_fsm_cs[0]),
+        .I1(cp_fsm_cs[1]),
         .O(\icap_o_preswap[24]_i_6_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair70" *) 
+  LUT6 #(
+    .INIT(64'h0000000000000200)) 
+    \icap_o_preswap[24]_i_7 
+       (.I0(cp_fsm_cs[2]),
+        .I1(cp_fsm_cs[3]),
+        .I2(icap_i[0]),
+        .I3(icap_req_i_reg_n_0),
+        .I4(dout[1]),
+        .I5(\cp_fsm_cs[1]_i_4_n_0 ),
+        .O(\icap_o_preswap[24]_i_7_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair67" *) 
   LUT4 #(
     .INIT(16'h00EF)) 
-    \icap_o_preswap[24]_i_7 
+    \icap_o_preswap[24]_i_8 
        (.I0(legacy_cfg_error),
         .I1(icap_i[1]),
         .I2(icap_i[0]),
         .I3(cp_fsm_cs[3]),
-        .O(\icap_o_preswap[24]_i_7_n_0 ));
-  LUT6 #(
-    .INIT(64'h3330313030303030)) 
-    \icap_o_preswap[24]_i_8 
-       (.I0(dout[1]),
-        .I1(\icap_o_preswap[24]_i_19_n_0 ),
-        .I2(\icap_o_preswap[24]_i_20_n_0 ),
-        .I3(fetch_error_seen_on_first_word_i_6_n_0),
-        .I4(rd_rst_busy),
-        .I5(cp_fsm_cs[1]),
         .O(\icap_o_preswap[24]_i_8_n_0 ));
   LUT6 #(
-    .INIT(64'h1000100000001000)) 
+    .INIT(64'h5101510051000000)) 
     \icap_o_preswap[24]_i_9 
-       (.I0(fetch_error_seen),
-        .I1(cfg_error_seen_reg_n_0),
-        .I2(cp_fsm_cs[1]),
-        .I3(empty),
-        .I4(icap_csib_i_i_5_n_0),
-        .I5(cp_fsm_cs[0]),
+       (.I0(\icap_o_preswap[24]_i_17_n_0 ),
+        .I1(dout[1]),
+        .I2(\cp_fsm_cs[1]_i_4_n_0 ),
+        .I3(cp_fsm_cs[1]),
+        .I4(cp_fsm_cs[0]),
+        .I5(icap_req_i_reg_n_0),
         .O(\icap_o_preswap[24]_i_9_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair72" *) 
+  (* SOFT_HLUTNM = "soft_lutpair73" *) 
   LUT3 #(
     .INIT(8'hF8)) 
     \icap_o_preswap[28]_i_1 
@@ -13950,89 +13784,84 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_ic
     \icap_o_preswap[28]_i_2 
        (.I0(cp_fsm_cs[1]),
         .I1(dout[0]),
-        .I2(i_bs_fifo_i_5_n_0),
+        .I2(\icap_o_preswap[28]_i_3_n_0 ),
         .I3(empty),
         .I4(rd_rst_busy),
-        .I5(\icap_o_preswap[28]_i_3_n_0 ),
+        .I5(\icap_o_preswap[28]_i_4_n_0 ),
         .O(\icap_o_preswap[28]_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair60" *) 
+  LUT3 #(
+    .INIT(8'h10)) 
+    \icap_o_preswap[28]_i_3 
+       (.I0(cp_fsm_cs[3]),
+        .I1(cp_fsm_cs[2]),
+        .I2(cp_fsm_cs[0]),
+        .O(\icap_o_preswap[28]_i_3_n_0 ));
   LUT6 #(
     .INIT(64'hCCCCCCCCCCFC8C8C)) 
-    \icap_o_preswap[28]_i_3 
+    \icap_o_preswap[28]_i_4 
        (.I0(fetch_error_seen),
         .I1(desync_needed),
-        .I2(\icap_o_preswap[2]_i_2_n_0 ),
+        .I2(\icap_o_preswap[29]_i_4_n_0 ),
         .I3(fetch_error_seen_on_first_word_reg_n_0),
         .I4(dout[1]),
         .I5(cfg_error_seen_reg_n_0),
-        .O(\icap_o_preswap[28]_i_3_n_0 ));
+        .O(\icap_o_preswap[28]_i_4_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFFFFFFDDDDFD)) 
+    .INIT(64'hFFFFFFEFFFEFFFEF)) 
     \icap_o_preswap[29]_i_1 
-       (.I0(\icap_o_preswap[24]_i_7_n_0 ),
-        .I1(\icap_o_preswap[29]_i_2_n_0 ),
-        .I2(\icap_o_preswap[29]_i_3_n_0 ),
-        .I3(cp_fsm_cs[2]),
+       (.I0(\icap_o_preswap[29]_i_2_n_0 ),
+        .I1(\icap_o_preswap[29]_i_3_n_0 ),
+        .I2(\icap_o_preswap[29]_i_4_n_0 ),
+        .I3(cp_fsm_cs[3]),
         .I4(cp_fsm_cs[1]),
-        .I5(\icap_o_preswap[29]_i_4_n_0 ),
+        .I5(cp_fsm_cs[2]),
         .O(p_1_in__0[29]));
   LUT6 #(
-    .INIT(64'h0F0F0C0CEFFFEEEF)) 
+    .INIT(64'h00005C5CFFFC5C5C)) 
     \icap_o_preswap[29]_i_2 
-       (.I0(\icap_o_preswap[24]_i_19_n_0 ),
-        .I1(dout[31]),
-        .I2(cp_fsm_cs[0]),
-        .I3(cp_fsm_cs[1]),
-        .I4(icap_csib_i_i_5_n_0),
-        .I5(cp_fsm_cs[2]),
-        .O(\icap_o_preswap[29]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair71" *) 
-  LUT2 #(
-    .INIT(4'hE)) 
-    \icap_o_preswap[29]_i_3 
-       (.I0(rd_rst_busy),
-        .I1(empty),
-        .O(\icap_o_preswap[29]_i_3_n_0 ));
-  LUT6 #(
-    .INIT(64'h00003030FFFE3030)) 
-    \icap_o_preswap[29]_i_4 
-       (.I0(cap_rel),
-        .I1(\icap_o_preswap[29]_i_3_n_0 ),
-        .I2(dout[1]),
+       (.I0(cp_fsm_cs[1]),
+        .I1(dout[1]),
+        .I2(\cp_fsm_cs[1]_i_4_n_0 ),
         .I3(icap_i[0]),
         .I4(cp_fsm_cs[2]),
         .I5(cp_fsm_cs[0]),
+        .O(\icap_o_preswap[29]_i_2_n_0 ));
+  LUT6 #(
+    .INIT(64'h00F300F3FFFFF1F7)) 
+    \icap_o_preswap[29]_i_3 
+       (.I0(cp_fsm_cs[1]),
+        .I1(icap_req_i_reg_n_0),
+        .I2(dout[31]),
+        .I3(cp_fsm_cs[0]),
+        .I4(\icap_o_preswap[24]_i_17_n_0 ),
+        .I5(cp_fsm_cs[2]),
+        .O(\icap_o_preswap[29]_i_3_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair69" *) 
+  LUT3 #(
+    .INIT(8'hFD)) 
+    \icap_o_preswap[29]_i_4 
+       (.I0(icap_i[0]),
+        .I1(icap_i[1]),
+        .I2(legacy_cfg_error),
         .O(\icap_o_preswap[29]_i_4_n_0 ));
   LUT6 #(
     .INIT(64'h8888888888F88888)) 
     \icap_o_preswap[2]_i_1 
        (.I0(dout[4]),
-        .I1(\icap_o_preswap[0]_i_3_n_0 ),
-        .I2(\icap_o_preswap[2]_i_2_n_0 ),
-        .I3(\icap_o_preswap[2]_i_3_n_0 ),
+        .I1(\icap_o_preswap[0]_i_2_n_0 ),
+        .I2(\icap_o_preswap[29]_i_4_n_0 ),
+        .I3(i_cdc_error_n_1),
         .I4(cp_fsm_cs[0]),
         .I5(cp_fsm_cs[1]),
         .O(p_1_in__0[2]));
-  (* SOFT_HLUTNM = "soft_lutpair69" *) 
-  LUT3 #(
-    .INIT(8'hFD)) 
-    \icap_o_preswap[2]_i_2 
-       (.I0(icap_i[0]),
-        .I1(icap_i[1]),
-        .I2(legacy_cfg_error),
-        .O(\icap_o_preswap[2]_i_2_n_0 ));
-  LUT2 #(
-    .INIT(4'hB)) 
-    \icap_o_preswap[2]_i_3 
-       (.I0(cp_fsm_cs[3]),
-        .I1(cp_fsm_cs[2]),
-        .O(\icap_o_preswap[2]_i_3_n_0 ));
   LUT6 #(
     .INIT(64'h8888888888F88888)) 
     \icap_o_preswap[3]_i_1 
        (.I0(dout[5]),
-        .I1(\icap_o_preswap[0]_i_3_n_0 ),
-        .I2(\icap_o_preswap[2]_i_2_n_0 ),
-        .I3(\icap_o_preswap[2]_i_3_n_0 ),
+        .I1(\icap_o_preswap[0]_i_2_n_0 ),
+        .I2(\icap_o_preswap[29]_i_4_n_0 ),
+        .I3(i_cdc_error_n_1),
         .I4(cp_fsm_cs[0]),
         .I5(cp_fsm_cs[1]),
         .O(p_1_in__0[3]));
@@ -14296,11 +14125,11 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_ic
     .INIT(64'hFFFFAAABFFFF0000)) 
     icap_req_i_i_1
        (.I0(icap_req_i_i_2_n_0),
-        .I1(dout[1]),
-        .I2(\icap_o_preswap[29]_i_3_n_0 ),
-        .I3(cap_rel),
+        .I1(empty),
+        .I2(rd_rst_busy),
+        .I3(dout[1]),
         .I4(icap_req_i02_out),
-        .I5(icap_req_i_reg_0),
+        .I5(icap_req_i_reg_n_0),
         .O(icap_req_i_i_1_n_0));
   (* SOFT_HLUTNM = "soft_lutpair61" *) 
   LUT5 #(
@@ -14318,7 +14147,7 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_ic
        (.I0(cp_fsm_cs[0]),
         .I1(cp_fsm_cs[2]),
         .I2(cp_fsm_cs[3]),
-        .I3(\icap_o_preswap[29]_i_3_n_0 ),
+        .I3(\cp_fsm_cs[1]_i_4_n_0 ),
         .I4(cp_fsm_cs[1]),
         .I5(dout[1]),
         .O(icap_req_i02_out));
@@ -14328,9 +14157,9 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_ic
        (.C(icap_clk),
         .CE(1'b1),
         .D(icap_req_i_i_1_n_0),
-        .Q(icap_req_i_reg_0),
+        .Q(icap_req_i_reg_n_0),
         .R(icap_reset_ah));
-  (* SOFT_HLUTNM = "soft_lutpair65" *) 
+  (* SOFT_HLUTNM = "soft_lutpair66" *) 
   LUT5 #(
     .INIT(32'h00000004)) 
     id_fifo_read_d1_i_2
@@ -14349,15 +14178,30 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_ic
         .I3(legacy_cfg_error0),
         .O(legacy_cfg_error_i_1_n_0));
   LUT6 #(
-    .INIT(64'hFFFFFFFF444F4444)) 
+    .INIT(64'hFF00000020202020)) 
     legacy_cfg_error_i_2
-       (.I0(icap_csib_i_i_5_n_0),
-        .I1(icap_req_i02_out),
-        .I2(dout[0]),
-        .I3(cp_fsm_cs[1]),
-        .I4(desync_needed_i_3_n_0),
-        .I5(i_bs_fifo_i_4_n_0),
+       (.I0(\cp_fsm_cs[1]_i_3_n_0 ),
+        .I1(\cp_fsm_cs[1]_i_4_n_0 ),
+        .I2(legacy_cfg_error_i_3_n_0),
+        .I3(\cp_fsm_cs[0]_i_3_n_0 ),
+        .I4(legacy_cfg_error_i_4_n_0),
+        .I5(cp_fsm_cs[1]),
         .O(legacy_cfg_error0));
+  (* SOFT_HLUTNM = "soft_lutpair71" *) 
+  LUT3 #(
+    .INIT(8'h74)) 
+    legacy_cfg_error_i_3
+       (.I0(dout[0]),
+        .I1(dout[1]),
+        .I2(icap_req_i_reg_n_0),
+        .O(legacy_cfg_error_i_3_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair74" *) 
+  LUT2 #(
+    .INIT(4'h2)) 
+    legacy_cfg_error_i_4
+       (.I0(icap_req_i_reg_n_0),
+        .I1(cp_fsm_cs[0]),
+        .O(legacy_cfg_error_i_4_n_0));
   FDRE #(
     .INIT(1'b0)) 
     legacy_cfg_error_reg
@@ -14384,7 +14228,7 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_ic
         .I2(\gen_pntr_flags_cc.ngen_full_rst_val.ram_full_i_reg ),
         .I3(wr_rst_busy),
         .O(E));
-  (* SOFT_HLUTNM = "soft_lutpair65" *) 
+  (* SOFT_HLUTNM = "soft_lutpair66" *) 
   LUT3 #(
     .INIT(8'hFE)) 
     sig_s_ready_dup_i_2
@@ -17618,7 +17462,7 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
   (* ram_slice_begin = "3" *) 
   (* ram_slice_end = "3" *) 
   RAM32X1S #(
-    .INIT(32'h00000001)) 
+    .INIT(32'h00000003)) 
     \b_rm_info.rm_ctrl_reg_table_reg_0_1_3_3 
        (.A0(access_address_del__0),
         .A1(1'b0),
@@ -17639,7 +17483,7 @@ module design_2_dfx_controller_0_0_dfx_controller_design_2_dfx_controller_0_0_vs
   (* ram_slice_begin = "4" *) 
   (* ram_slice_end = "4" *) 
   RAM32X1S #(
-    .INIT(32'h00000001)) 
+    .INIT(32'h00000003)) 
     \b_rm_info.rm_ctrl_reg_table_reg_0_1_4_4 
        (.A0(access_address_del__0),
         .A1(1'b0),

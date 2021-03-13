@@ -135,7 +135,7 @@ input [3 : 0] probe31;
 input [3 : 0] probe32;
 input [3 : 0] probe33;
 input [3 : 0] probe34;
-input [0 : 0] probe35;
+input [3 : 0] probe35;
 input [0 : 0] probe36;
 input [3 : 0] probe37;
 input [0 : 0] probe38;
