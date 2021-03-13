@@ -1,6 +1,411 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Wed Mar  3 13:47:23 2021
+| Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Convolution_Controller_Convolution_Controll_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of Convolution_Controller_Convolution_Controll_0_0 (xilinx.com:user:Convolution_Controller:1.0) from (Rev. 137) to (Rev. 3)
+
+After upgrade, an IP may have parameter differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'Convolution_Controller_Convolution_Controll_0_0'.
+
+
+-Upgrade has removed interface 'axi_reset_n'
+
+-Upgrade has removed interface 'm_axis_DATA_OUT'
+
+-Upgrade has removed interface 's_axi_CTRL'
+
+-Upgrade has removed interface 's_axis_DATA_IN'
+
+-Upgrade has added interface 'm_axis_data' (xilinx.com:interface:axis:1.0)
+
+-Upgrade has added interface 's_axi' (xilinx.com:interface:aximm:1.0)
+
+-Upgrade has added interface 's_axis_data' (xilinx.com:interface:axis:1.0)
+
+-Upgrade has removed address block 's_axi_CTRL/reg0'
+
+-Upgrade has added address block 's_axi/reg0'
+
+
+3. Customization warnings
+-------------------------
+
+Parameter 'DATA_WIDTH' is no longer present on the upgraded IP 'Convolution_Controller_Convolution_Controll_0_0', and cannot be set to '32'
+
+
+4. Debug Commands
+-----------------
+
+  The following debug information can be passed to Vivado as Tcl commands,
+in order to validate or debug the output of the upgrade flow.
+  You may consult any warnings from within this upgrade, and alter or remove
+the configuration parameter(s) which caused the warning; then execute the Tcl
+commands, and use the IP Customization GUI to verify the IP configuration.
+
+create_ip -vlnv xilinx.com:user:Convolution_Controller:1.0 -user_name Convolution_Controller_Convolution_Controll_0_0
+set_property -dict "\
+  CONFIG.AXI_ADDR_WIDTH {10} \
+  CONFIG.AXI_BUS_WIDTH {32} \
+  CONFIG.BRAM_WIDTH {1800} \
+  CONFIG.CHANNELS {3} \
+  CONFIG.CTRL_REG_ADDR_WIDTH {7} \
+  CONFIG.CTRL_REG_SIZE {96} \
+  CONFIG.Component_Name {Convolution_Controller_Convolution_Controll_0_0} \
+  CONFIG.DATA_BASE {60} \
+  CONFIG.FILTER_BASE {24} \
+  CONFIG.FINAL_CHANNEL {4} \
+  CONFIG.KERNEL_SIZE {3} \
+  CONFIG.K_SQUARED {9} \
+  CONFIG.STATE_MAC_ADDR_WIDTH {4} \
+  CONFIG.axi_clk.ASSOCIATED_BUSIF {s_axi_CTRL:s_axis_DATA_IN:m_axis_DATA_OUT} \
+  CONFIG.axi_clk.ASSOCIATED_RESET {axi_reset_n} \
+  CONFIG.axi_clk.CLK_DOMAIN {} \
+  CONFIG.axi_clk.FREQ_HZ {100000000} \
+  CONFIG.axi_clk.FREQ_TOLERANCE_HZ {0} \
+  CONFIG.axi_clk.INSERT_VIP {0} \
+  CONFIG.axi_clk.PHASE {0.000} " [get_ips Convolution_Controller_Convolution_Controll_0_0]
+
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
+| Date         : Wed Feb 24 18:17:56 2021
+| Host         : david-ThinkPad-L380-Yoga running 64-bit Ubuntu 18.04.5 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Convolution_Controller_Convolution_Controll_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of Convolution_Controller_Convolution_Controll_0_0 (xilinx.com:user:Convolution_Controller:1.0) from (Rev. 133) to (Rev. 137)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'Convolution_Controller_Convolution_Controll_0_0'. These changes may impact your design.
+
+
+-Upgraded port 'MULTIPLICAND_INPUT' width 864 differs from original width 288
+
+-Upgraded port 'MULTIPLIER_INPUT' width 864 differs from original width 288
+
+-Upgraded port 'cSum' width 96 differs from original width 32
+
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
+| Date         : Wed Feb 24 18:03:28 2021
+| Host         : david-ThinkPad-L380-Yoga running 64-bit Ubuntu 18.04.5 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Convolution_Controller_rst_ps7_0_100M_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of Convolution_Controller_rst_ps7_0_100M_0 (xilinx.com:ip:proc_sys_reset:5.0 (Rev. 13)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
+| Date         : Wed Feb 24 18:03:28 2021
+| Host         : david-ThinkPad-L380-Yoga running 64-bit Ubuntu 18.04.5 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Convolution_Controller_processing_system7_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of Convolution_Controller_processing_system7_0_0 (xilinx.com:ip:processing_system7:5.5 (Rev. 6)) to Vivado generation flows.
+
+2. Upgrade messages
+-------------------
+
+WARNING: upgrade cannot add parameter PCW_TRACE_INTERNAL_WIDTH with default value 32 : a parameter called PCW_TRACE_INTERNAL_WIDTH already exists in processing_system7_v5_5
+WARNING: upgrade cannot add parameter PCW_USE_AXI_NONSECURE with default value 0 : a parameter called PCW_USE_AXI_NONSECURE already exists in processing_system7_v5_5
+WARNING: upgrade cannot add parameter PCW_EN_PTP_ENET0 with default value 1 : a parameter called PCW_EN_PTP_ENET0 already exists in processing_system7_v5_5
+WARNING: upgrade cannot add parameter PCW_EN_PTP_ENET0 with default value 1 : a parameter called PCW_EN_PTP_ENET0 already exists in processing_system7_v5_5
+WARNING: upgrade cannot add parameter PCW_GP0_NUM_WRITE_THREADS with default value 4 : a parameter called PCW_GP0_NUM_WRITE_THREADS already exists in processing_system7_v5_5
+WARNING: upgrade cannot add parameter PCW_GP0_NUM_READ_THREADS with default value 4 : a parameter called PCW_GP0_NUM_READ_THREADS already exists in processing_system7_v5_5
+WARNING: upgrade cannot add parameter PCW_GP1_NUM_WRITE_THREADS with default value 4 : a parameter called PCW_GP1_NUM_WRITE_THREADS already exists in processing_system7_v5_5
+WARNING: upgrade cannot add parameter PCW_GP1_NUM_READ_THREADS with default value 4 : a parameter called PCW_GP1_NUM_READ_THREADS already exists in processing_system7_v5_5
+WARNING: upgrade cannot add parameter PCW_GP0_EN_MODIFIABLE_TXN with default value 0 : a parameter called PCW_GP0_EN_MODIFIABLE_TXN already exists in processing_system7_v5_5
+WARNING: upgrade cannot add parameter PCW_GP1_EN_MODIFIABLE_TXN with default value 0 : a parameter called PCW_GP1_EN_MODIFIABLE_TXN already exists in processing_system7_v5_5
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Tue Feb 23 10:56:36 2021
+| Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Convolution_Controller_Convolution_Controll_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Convolution_Controller_Convolution_Controll_0_0 (xilinx.com:user:Convolution_Controller:1.0) from (Rev. 132) to (Rev. 133)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Tue Feb 23 09:11:51 2021
+| Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Convolution_Controller_Convolution_Controll_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Convolution_Controller_Convolution_Controll_0_0 (xilinx.com:user:Convolution_Controller:1.0) from (Rev. 131) to (Rev. 132)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Sat Feb 20 19:42:37 2021
+| Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Convolution_Controller_Convolution_Controll_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Convolution_Controller_Convolution_Controll_0_0 (xilinx.com:user:Convolution_Controller:1.0) from (Rev. 130) to (Rev. 131)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Sat Feb 20 19:38:03 2021
+| Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Convolution_Controller_Convolution_Controll_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Convolution_Controller_Convolution_Controll_0_0 (xilinx.com:user:Convolution_Controller:1.0) from (Rev. 129) to (Rev. 130)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Sat Feb 20 19:31:42 2021
+| Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Convolution_Controller_Convolution_Controll_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of Convolution_Controller_Convolution_Controll_0_0 (xilinx.com:user:Convolution_Controller:1.0) from (Rev. 127) to (Rev. 129)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'Convolution_Controller_Convolution_Controll_0_0'.
+
+
+-Upgrade has removed interface 'BRAM_PORTA_1'
+
+-Upgrade has removed interface 'BRAM_PORTA_2'
+
+-Upgrade has removed interface 'BRAM_PORTA_3'
+
+-Upgrade has removed interface 'BRAM_PORTB_1'
+
+-Upgrade has removed interface 'BRAM_PORTB_2'
+
+-Upgrade has removed interface 'BRAM_PORTB_3'
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'Convolution_Controller_Convolution_Controll_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'addra_1'
+
+-Upgrade has removed port 'addra_2'
+
+-Upgrade has removed port 'addra_3'
+
+-Upgrade has removed port 'addrb_1'
+
+-Upgrade has removed port 'addrb_2'
+
+-Upgrade has removed port 'addrb_3'
+
+-Upgrade has removed port 'clka_1'
+
+-Upgrade has removed port 'clka_2'
+
+-Upgrade has removed port 'clka_3'
+
+-Upgrade has removed port 'clkb_1'
+
+-Upgrade has removed port 'clkb_2'
+
+-Upgrade has removed port 'clkb_3'
+
+-Upgrade has removed port 'dina_1'
+
+-Upgrade has removed port 'dina_2'
+
+-Upgrade has removed port 'dina_3'
+
+-Upgrade has removed port 'dinb_1'
+
+-Upgrade has removed port 'dinb_2'
+
+-Upgrade has removed port 'dinb_3'
+
+-Upgrade has removed port 'douta_1'
+
+-Upgrade has removed port 'douta_2'
+
+-Upgrade has removed port 'douta_3'
+
+-Upgrade has removed port 'doutb_1'
+
+-Upgrade has removed port 'doutb_2'
+
+-Upgrade has removed port 'doutb_3'
+
+-Upgrade has removed port 'ena_1'
+
+-Upgrade has removed port 'ena_2'
+
+-Upgrade has removed port 'ena_3'
+
+-Upgrade has removed port 'enb_1'
+
+-Upgrade has removed port 'enb_2'
+
+-Upgrade has removed port 'enb_3'
+
+-Upgrade has removed port 'wea_1'
+
+-Upgrade has removed port 'wea_2'
+
+-Upgrade has removed port 'wea_3'
+
+-Upgrade has removed port 'web_1'
+
+-Upgrade has removed port 'web_2'
+
+-Upgrade has removed port 'web_3'
+
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Sat Feb 20 17:03:55 2021
+| Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'Convolution_Controller_Convolution_Controll_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of Convolution_Controller_Convolution_Controll_0_0 (xilinx.com:user:Convolution_Controller:1.0) from (Rev. 126) to (Rev. 127)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
 | Date         : Wed Feb 10 20:56:36 2021
 | Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 | Command      : upgrade_ip

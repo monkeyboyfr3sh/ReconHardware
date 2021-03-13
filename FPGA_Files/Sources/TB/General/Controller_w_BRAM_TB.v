@@ -2,10 +2,10 @@
 `timescale `myTimeScale
 
 //Test stuff
-`define test_width 1080
-`define test_height 120
-
-`define data_width 8
+`define test_width 8
+`define test_height 8
+`define test_channels 1
+`define data_width 32
 `define addr_width 10
 `define kernel_size 3
 
@@ -15,10 +15,10 @@ reg rand_test = 0;//Set test bench to use random variables
 
 reg    axi_clk;
 reg    axi_reset_n;
-wire [31:0] cSum;
-wire    cReady;
-wire [`kernel_size*`kernel_size*32-1:0] MULTIPLIER_INPUT;   //Flat output for data set
-wire [`kernel_size*`kernel_size*32-1:0] MULTIPLICAND_INPUT; //Flat output for filter set
+wire [`test_channels*32-1:0] cSum;
+wire [`test_channels-1:0] cReady;
+wire [`test_channels*`kernel_size*`kernel_size*32-1:0] MULTIPLIER_INPUT;   //Flat output for data set
+wire [`test_channels*`kernel_size*`kernel_size*32-1:0] MULTIPLICAND_INPUT; //Flat output for filter set
 wire [`kernel_size*`kernel_size-1:0] MULTIPLY_START;
 
 //AXI4-S slave i/f - Data stream port
@@ -61,158 +61,19 @@ wire s_axi_rlast;
 wire s_axi_bvalid;
 reg s_axi_bready;
 
-// BRAM Port - 1
-// BRAM_A - Write Port
-wire [12:0] addra_1;
-wire clka_1;
-wire [31:0] dina_1;
-wire [31:0] douta_1;
-wire ena_1;
-wire wea_1;
-// BRAM_B - Read Port
-wire [12:0] addrb_1;
-wire clkb_1;
-wire [31:0] dinb_1;
-wire [31:0] doutb_1;
-wire enb_1;
-wire web_1;
-bram_wrapper bram1 (
-    .BRAM_PORTA_0_addr(addra_1),
-    .BRAM_PORTA_0_clk(clka_1),
-    .BRAM_PORTA_0_din(dina_1),
-    .BRAM_PORTA_0_dout(douta_1),
-    .BRAM_PORTA_0_en(ena_1),
-    .BRAM_PORTA_0_we(wea_1),
-    .BRAM_PORTB_0_addr(addrb_1),
-    .BRAM_PORTB_0_clk(clkb_1),
-    .BRAM_PORTB_0_din(dinb_1),
-    .BRAM_PORTB_0_dout(doutb_1),
-    .BRAM_PORTB_0_en(enb_1),
-    .BRAM_PORTB_0_we(web_1)
-);
-
-// BRAM Port - 2
-// BRAM_A - Write Port
-wire [12:0] addra_2;
-wire clka_2;
-wire [31:0] dina_2;
-wire [31:0] douta_2;
-wire ena_2;
-wire wea_2;
-// BRAM_B - Read Port
-wire [12:0] addrb_2;
-wire clkb_2;
-wire [31:0] dinb_2;
-wire [31:0] doutb_2;
-wire enb_2;
-wire web_2;
-bram_wrapper bram2 (
-    .BRAM_PORTA_0_addr(addra_2),
-    .BRAM_PORTA_0_clk(clka_2),
-    .BRAM_PORTA_0_din(dina_2),
-    .BRAM_PORTA_0_dout(douta_2),
-    .BRAM_PORTA_0_en(ena_2),
-    .BRAM_PORTA_0_we(wea_2),
-    .BRAM_PORTB_0_addr(addrb_2),
-    .BRAM_PORTB_0_clk(clkb_2),
-    .BRAM_PORTB_0_din(dinb_2),
-    .BRAM_PORTB_0_dout(doutb_2),
-    .BRAM_PORTB_0_en(enb_2),
-    .BRAM_PORTB_0_we(web_2)
-);
-
-// BRAM Port - 3
-// BRAM_A - Write Port
-wire [12:0] addra_3;
-wire clka_3;
-wire [31:0] dina_3;
-wire [31:0] douta_3;
-wire ena_3;
-wire wea_3;
-// BRAM_B - Read Port
-wire [12:0] addrb_3;
-wire clkb_3;
-wire [31:0] dinb_3;
-wire [31:0] doutb_3;
-wire enb_3;
-wire web_3;
-bram_wrapper bram3 (
-    .BRAM_PORTA_0_addr(addra_3),
-    .BRAM_PORTA_0_clk(clka_3),
-    .BRAM_PORTA_0_din(dina_3),
-    .BRAM_PORTA_0_dout(douta_3),
-    .BRAM_PORTA_0_en(ena_3),
-    .BRAM_PORTA_0_we(wea_3),
-    .BRAM_PORTB_0_addr(addrb_3),
-    .BRAM_PORTB_0_clk(clkb_3),
-    .BRAM_PORTB_0_din(dinb_3),
-    .BRAM_PORTB_0_dout(doutb_3),
-    .BRAM_PORTB_0_en(enb_3),
-    .BRAM_PORTB_0_we(web_3)
-);
-
 Convolution_Controller 
 #(
-    .DATA_WIDTH(`data_width),
     .KERNEL_SIZE(3),
-    .BRAM_WIDTH(1800)
+    .CHANNELS(`test_channels)
 )
 UUT (//IP Ports
     .axi_clk(axi_clk),
     .axi_reset_n(axi_reset_n),
     .cSum(cSum),
-    .cReady(cReady),
+    .cReady(&cReady),
     .MULTIPLIER_INPUT(MULTIPLIER_INPUT),   //Flat output for data set
     .MULTIPLICAND_INPUT(MULTIPLICAND_INPUT), //Flat output for filter set
     .MULTIPLY_START(MULTIPLY_START),
-    
-    // BRAM Port - 1
-    // BRAM_A - Write Port
-    .addra_1(addra_1),
-    .clka_1(clka_1),
-    .dina_1(dina_1),
-    .douta_1(douta_1),
-    .ena_1(ena_1),
-    .wea_1(wea_1),
-    // BRAM_B - Read Port
-    .addrb_1(addrb_1),
-    .clkb_1(clkb_1),
-    .dinb_1(dinb_1),
-    .doutb_1(doutb_1),
-    .enb_1(enb_1),
-    .web_1(web_1),
-    
-    // BRAM Port - 2
-    // BRAM_A - Write Port
-    .addra_2(addra_2),
-    .clka_2(clka_2),
-    .dina_2(dina_2),
-    .douta_2(douta_2),
-    .ena_2(ena_2),
-    .wea_2(wea_2),
-    // BRAM_B - Read Port
-    .addrb_2(addrb_2),
-    .clkb_2(clkb_2),
-    .dinb_2(dinb_2),
-    .doutb_2(doutb_2),
-    .enb_2(enb_2),
-    .web_2(web_2),
-    
-    // BRAM Port - 3
-    // BRAM_A - Write Port
-    .addra_3(addra_3),
-    .clka_3(clka_3),
-    .dina_3(dina_3),
-    .douta_3(douta_3),
-    .ena_3(ena_3),
-    .wea_3(wea_3),
-    // BRAM_B - Read Port
-    .addrb_3(addrb_3),
-    .clkb_3(clkb_3),
-    .dinb_3(dinb_3),
-    .doutb_3(doutb_3),
-    .enb_3(enb_3),
-    .web_3(web_3),
     
     //AXI4-S slave i/f - Data stream port
     .s_axis_valid(s_axis_valid),
@@ -256,6 +117,11 @@ UUT (//IP Ports
     .s_axi_rlast(s_axi_rlast)
 );//End of ports
 
+genvar n;
+
+generate
+
+for(n=0;n<`test_channels;n=n+1)begin
 matrixAccelerator
 #( // Parameters
     .DATA_WIDTH(`data_width),
@@ -263,14 +129,17 @@ matrixAccelerator
 ) matrixAccel(   
     .Clk(axi_clk),
     .Rst(~axi_reset_n),
-    .multiplier_input(MULTIPLIER_INPUT),        //Flat input connector. Has width of `bitLength*`inputPortcount
-    .multiplicand_input(MULTIPLICAND_INPUT),    //Flat input connector. Has width of `bitLength*`inputPortcount
+    .multiplier_input       (MULTIPLIER_INPUT[(n*`kernel_size*`kernel_size*32)+:`kernel_size*`kernel_size*32]),        //Flat input connector. Has width of `bitLength*`inputPortcount
+    .multiplicand_input     (MULTIPLICAND_INPUT[(n*`kernel_size*`kernel_size*32)+:`kernel_size*`kernel_size*32]),    //Flat input connector. Has width of `bitLength*`inputPortcount
     .AddressSelect(AddressSelect),                  //Controls addressSelect for internal XBar                          
     .mStart(MULTIPLY_START),                      //Starts multiplication for all three multipliers
     .direct(1),
-    .finalAccumulate(cSum),
-    .finalReady(cReady)
+    .finalAccumulate(cSum[(n*32)+:32]),
+    .finalReady(cReady[n])
 );
+end
+
+endgenerate
 
 integer i, linecnt, columncnt;
 
@@ -363,7 +232,7 @@ for(i = 0;i<`kernel_size*`kernel_size;i=i+1)begin
     s_axi_awvalid = 1;
     s_axi_awaddr = (i*4)+24;
     s_axi_wvalid = 1;
-    if(i==0) s_axi_wdata = 1;
+    if(i==8) s_axi_wdata = 1;
     else s_axi_wdata = 0;
 //    s_axi_wdata = i;//Data going into filter
     curr_filterSet[i] = s_axi_wdata; //Also put the data in the test array
@@ -380,6 +249,7 @@ setup = 1;
 end
 
 integer t, i;
+integer channel_cnt = 0;
 always#(`clkPeriod/2) axi_clk = ~axi_clk;
 //Begin data stream
 always @(posedge axi_clk)begin
@@ -403,52 +273,57 @@ always @(posedge axi_clk)begin
                 m_axis_ready = 0;
                 
                 //Data on the
-                for(i = 0; i<(32/`data_width);i = i+1 )begin
-                    s_axis_data[i*`data_width+:`data_width] = (rand_test) ? ($urandom) % (`data_width-2) : (columncnt+linecnt*`test_width)%(2**`data_width);
+                s_axis_data = (rand_test) ? ($urandom) % (`data_width-2) : (columncnt+linecnt*`test_width);
+//                s_axis_data = 1;
+
+                channel_cnt = channel_cnt + 1;
+                if(channel_cnt>=`test_channels)begin
+                    channel_cnt = 0;
                     columncnt = columncnt+1;
-                end
-                if(columncnt >= `test_width)begin
-                    columncnt = 0;
-                    linecnt = linecnt + 1;
-                    if(linecnt >= `test_height)begin
-                        s_axis_last = 1;
+                    if(columncnt >= `test_width)begin
+                        columncnt = 0;
+                        linecnt = linecnt + 1;
+                        if(linecnt >= `test_height)begin
+                            s_axis_last = 1;
+                        end
                     end
                 end
+                
             end
         end
     end    
 end
 
-integer count = 0;
-integer pass_cnt = 0;
-always @(posedge cReady)begin
-    $display("cSum = %d ; count = %d ; %s",cSum,count%(2**`data_width),count%(2**`data_width)!=cSum?"FAIL":"PASS");
-    if(count%(2**`data_width)!=cSum)begin
-        $display("Bad output");
-        $finish;
-    end
-    else begin
-        pass_cnt = pass_cnt+1;
-    end
-    if((count%`test_width)==`test_width-3) begin
-        count = count + 3;    
-    end
-    else begin
-        count = count + 1;
-    end
-end
+//integer count = 0;
+//integer pass_cnt = 0;
+//always @(posedge cReady)begin
+//    $display("cSum = %d ; count = %d ; %s",cSum,count%(2**`data_width),count%(2**`data_width)!=cSum?"FAIL":"PASS");
+//    if(count%(2**`data_width)!=cSum)begin
+//        $display("Bad output");
+//        $finish;
+//    end
+//    else begin
+//        pass_cnt = pass_cnt+1;
+//    end
+//    if((count%`test_width)==`test_width-3) begin
+//        count = count + 3;    
+//    end
+//    else begin
+//        count = count + 1;
+//    end
+//end
 
-integer tf;
-integer fake_trig_target = 1;
-integer fake_trig_count=0;
-always @(negedge m_axis_last)begin
-    tf = $time;
-    if(tf>0)begin
-        if(fake_trig_count>=fake_trig_target)begin
-            $display("pass_cnt=%d",pass_cnt);
-            $stop;
-        end
-        fake_trig_count = fake_trig_count+1;
-    end
-end
+//integer tf;
+//integer fake_trig_target = 1;
+//integer fake_trig_count=0;
+//always @(negedge m_axis_last)begin
+//    tf = $time;
+//    if(tf>0)begin
+//        if(fake_trig_count>=fake_trig_target)begin
+//            $display("pass_cnt=%d",pass_cnt);
+//            $stop;
+//        end
+//        fake_trig_count = fake_trig_count+1;
+//    end
+//end
 endmodule
