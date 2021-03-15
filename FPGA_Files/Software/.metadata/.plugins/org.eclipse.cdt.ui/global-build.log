@@ -1,6 +1,6 @@
-Nothing to build in platform 'pr_led'
+Nothing to build in platform 'simple_axis_dma_hw'
 
-22:02:29 **** Incremental Build of configuration Debug for project dma_test_w_dfx ****
+13:00:41 **** Build of configuration Debug for project simple_axis_dma_sw ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -8,24 +8,29 @@ a9-linaro-pre-build-step
 make --no-print-directory main-build
 'Building file: ../src/helloworld.c'
 'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/sw/pr_led/standalone_domain/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/export/simple_axis_dma_hw/sw/simple_axis_dma_hw/standalone_domain/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
 'Finished building: ../src/helloworld.c'
 ' '
-'Building target: dma_test_w_dfx.elf'
+'Building file: ../src/platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/export/simple_axis_dma_hw/sw/simple_axis_dma_hw/standalone_domain/bspinclude/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: simple_axis_dma_sw.elf'
 'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/sw/pr_led/standalone_domain/bsplib/lib -o "dma_test_w_dfx.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
-'Finished building target: dma_test_w_dfx.elf'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/export/simple_axis_dma_hw/sw/simple_axis_dma_hw/standalone_domain/bsplib/lib -o "simple_axis_dma_sw.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: simple_axis_dma_sw.elf'
 ' '
 'Invoking: ARM v7 Print Size'
-arm-none-eabi-size dma_test_w_dfx.elf  |tee "dma_test_w_dfx.elf.size"
+arm-none-eabi-size simple_axis_dma_sw.elf  |tee "simple_axis_dma_sw.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  33408	   2248	  24504	  60160	   eb00	dma_test_w_dfx.elf
-'Finished building: dma_test_w_dfx.elf.size'
+  19040	   1144	  22568	  42752	   a700	simple_axis_dma_sw.elf
+'Finished building: simple_axis_dma_sw.elf.size'
 ' '
-22:02:30 **** Incremental Build of configuration Debug for project dma_test_w_dfx_system ****
+13:00:42 **** Build of configuration Debug for project simple_axis_dma_sw_system ****
 make all 
 Generating bif file for the system project
-generate_system_bif.bat 51007 C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm standalone_domain C:/GitHub/ReconHardware/FPGA_Files/Software/dma_test_w_dfx_system/Debug/system.bif
-sdcard_gen --xpfm C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm --sys_config pr_led --bif C:/GitHub/ReconHardware/FPGA_Files/Software/dma_test_w_dfx_system/Debug/system.bif --bitstream C:/GitHub/ReconHardware/FPGA_Files/Software/dma_test_w_dfx/_ide/bitstream/top.bit --elf C:/GitHub/ReconHardware/FPGA_Files/Software/dma_test_w_dfx/Debug/dma_test_w_dfx.elf,ps7_cortexa9_0
-creating BOOT.BIN using C:/GitHub/ReconHardware/FPGA_Files/Software/dma_test_w_dfx/_ide/bitstream/top.bit
-Running C:/Xilinx/Vitis/2020.1/bin/bootgen  -image C:/GitHub/ReconHardware/FPGA_Files/Software/dma_test_w_dfx_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+generate_system_bif.bat 53128 C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/export/simple_axis_dma_hw/simple_axis_dma_hw.xpfm standalone_domain C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_sw_system/Debug/system.bif
+sdcard_gen --xpfm C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/export/simple_axis_dma_hw/simple_axis_dma_hw.xpfm --sys_config simple_axis_dma_hw --bif C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_sw_system/Debug/system.bif --bitstream C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_sw/_ide/bitstream/design_1_wrapper.bit --elf C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_sw/Debug/simple_axis_dma_sw.elf,ps7_cortexa9_0
+creating BOOT.BIN using C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_sw/_ide/bitstream/design_1_wrapper.bit
+Running C:/Xilinx/Vitis/2020.1/bin/bootgen  -image C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_sw_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN

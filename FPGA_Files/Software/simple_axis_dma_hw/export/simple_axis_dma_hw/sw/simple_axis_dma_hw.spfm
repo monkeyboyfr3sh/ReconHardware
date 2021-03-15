@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdx:platform sdx:vendor="xilinx.com"
+              sdx:library="sdx"
+              sdx:name="simple_axis_dma_hw"
+              sdx:version="1.0"
+              sdx:schemaVersion="1.0"
+              xmlns:sdx="http://www.xilinx.com/sdx">
+    <sdx:description>
+simple_axis_dma_hw
+    </sdx:description>
+    <sdx:systemConfigurations sdx:defaultConfiguration="simple_axis_dma_hw">
+        <sdx:configuration sdx:name="simple_axis_dma_hw"
+                           sdx:displayName="simple_axis_dma_hw"
+                           sdx:defaultProcessorGroup="standalone_domain"
+                           sdx:runtimes="cpp">
+            <sdx:description>simple_axis_dma_hw</sdx:description>
+            <sdx:bootImages sdx:default="standard">
+                <sdx:image sdx:name="standard"
+                            sdx:bif="simple_axis_dma_hw/boot/simple_axis_dma_hw.bif"
+                            sdx:readme="simple_axis_dma_hw/boot/generic.readme"
+                            sdx:qemuArguments="simple_axis_dma_hw/qemu/qemu_args.txt"
+                            />
+                <sdx:image sdx:name="standalone_domain"
+                            sdx:bif="simple_axis_dma_hw/boot/simple_axis_dma_hw.bif"
+                            sdx:readme="simple_axis_dma_hw/boot/generic.readme"
+                            sdx:qemuArguments="simple_axis_dma_hw/standalone_domain/qemu/qemu_args.txt"
+                            />
+            </sdx:bootImages>
+            <sdx:processorGroup sdx:name="standalone_domain"
+                                sdx:displayName="standalone on ps7_cortexa9_0"
+                                sdx:cpuType="cortex-a9"
+                                sdx:cpuInstance="ps7_cortexa9_0">
+                <sdx:os sdx:name="standalone"
+                        sdx:displayName="standalone"
+                        sdx:bspLibraryPaths="simple_axis_dma_hw/standalone_domain/bsplib/lib"
+                        sdx:bspIncludePaths="simple_axis_dma_hw/standalone_domain/bspinclude/include"
+                        sdx:bspConfig="simple_axis_dma_hw/standalone_domain/system.mss"
+                />
+            </sdx:processorGroup>
+        </sdx:configuration>
+    </sdx:systemConfigurations>
+</sdx:platform>
