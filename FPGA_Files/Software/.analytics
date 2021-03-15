@@ -73,3 +73,12 @@ timestamp=[2021-03-15 14:05:06], mode=BUILD, duration=0:00:00.632, duration_ms=6
 timestamp=[2021-03-15 14:05:12], mode=BUILD, duration=0:00:04.903, duration_ms=4903, data={name=simple_axis_dma_sw_system, configuration=Debug, clean_build=false}
 timestamp=[2021-03-15 14:05:50], mode=BUILD, duration=0:00:00.642, duration_ms=642, data={name=simple_axis_dma_sw, configuration=Debug, clean_build=false}
 timestamp=[2021-03-15 14:05:55], mode=BUILD, duration=0:00:04.851, duration_ms=4851, data={name=simple_axis_dma_sw_system, configuration=Debug, clean_build=false}
+timestamp=[2021-03-15 14:35:03], mode=WORKBENCH_START, duration=0:00:07.689, duration_ms=7689, data={}
+timestamp=[2021-03-15 14:35:04], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.071, duration_ms=71, data={}
+timestamp=[2021-03-15 14:35:05], mode=WORKBENCH_UI_INIT, duration=0:00:01.156, duration_ms=1156, data={editors_count=4, platform_editors_count=1, projects_count=13, platform_projects_count=2, active_platform_editor=false, projects=RemoteSystemsTempFiles,dma_test_w_dfx,dma_test_w_dfx_system,hello_world,hello_world_system,pr_led,pr_led_sw,pr_led_sw_system,sd_reading,sd_reading_system,simple_axis_dma_hw,simple_axis_dma_sw,simple_axis_dma_sw_system}
+timestamp=[2021-03-15 14:36:43], mode=BUILD, duration=0:00:00.714, duration_ms=714, data={name=simple_axis_dma_sw, configuration=Debug, clean_build=false}
+timestamp=[2021-03-15 14:36:50], mode=BUILD, duration=0:00:06.726, duration_ms=6726, data={name=simple_axis_dma_sw_system, configuration=Debug, clean_build=false}
+timestamp=[2021-03-15 14:37:51], mode=BUILD, duration=0:00:00.622, duration_ms=622, data={name=simple_axis_dma_sw, configuration=Debug, clean_build=false}
+timestamp=[2021-03-15 14:37:56], mode=BUILD, duration=0:00:04.803, duration_ms=4803, data={name=simple_axis_dma_sw_system, configuration=Debug, clean_build=false}
+timestamp=[2021-03-15 14:39:07], mode=BUILD, duration=0:00:00.634, duration_ms=634, data={name=simple_axis_dma_sw, configuration=Debug, clean_build=false}
+timestamp=[2021-03-15 14:39:12], mode=BUILD, duration=0:00:04.859, duration_ms=4859, data={name=simple_axis_dma_sw_system, configuration=Debug, clean_build=false}

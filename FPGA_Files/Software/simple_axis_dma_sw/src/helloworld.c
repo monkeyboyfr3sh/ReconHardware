@@ -90,6 +90,14 @@ int XAxiDma_SimplePollExample(u16 DeviceId)
 		return XST_FAILURE;
 	}
 
+	u32 val;
+	xil_printf("\nQuick AXI test...\r\n");
+	for(u32 i = 0;i<10;i++){
+		Xil_Out32(PIXEL_CTRL_BASE,i);
+		val = Xil_In32(PIXEL_CTRL_BASE);
+		xil_printf("val = %d\r\n",val);
+	}
+
 	/* Disable interrupts, we use polling mode
 	 */
 	XAxiDma_IntrDisable(&AxiDma, XAXIDMA_IRQ_ALL_MASK,
@@ -112,8 +120,6 @@ int XAxiDma_SimplePollExample(u16 DeviceId)
 
 	u32 ctrl_reg;
 	for(Index = 0; Index < Tries; Index ++) {
-
-
 		if( Index%2 ){
 			ctrl_reg = 1;
 		} else {
