@@ -15,6 +15,7 @@ INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/GitHub/ReconHardware/FPGA_
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.1/data/ip'.
 WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
 Current IP cache path is c:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.cache/ip 
+add_files: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1072.852 ; gain = 0.000
 Command: synth_design -top design_1_wrapper -part xc7z020clg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
@@ -22,67 +23,79 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 1108
+INFO: [Synth 8-7075] Helper process launched with PID 14932
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1106.547 ; gain = 32.934
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1138.758 ; gain = 65.906
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'design_1' [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/synth/design_1.v:13]
-INFO: [Synth 8-6157] synthesizing module 'design_1_Pixel_Controller_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.runs/synth_1/.Xil/Vivado-11204-DESKTOP-D9F9TPQ/realtime/design_1_Pixel_Controller_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_Pixel_Controller_0_0' (1#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.runs/synth_1/.Xil/Vivado-11204-DESKTOP-D9F9TPQ/realtime/design_1_Pixel_Controller_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 's_axi_rlast' of module 'design_1_Pixel_Controller_0_0' is unconnected for instance 'Pixel_Controller_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/synth/design_1.v:223]
-WARNING: [Synth 8-7023] instance 'Pixel_Controller_0' of module 'design_1_Pixel_Controller_0_0' has 27 connections declared, but only 26 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/synth/design_1.v:223]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_dma_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.runs/synth_1/.Xil/Vivado-11204-DESKTOP-D9F9TPQ/realtime/design_1_axi_dma_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_dma_0_0' (2#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.runs/synth_1/.Xil/Vivado-11204-DESKTOP-D9F9TPQ/realtime/design_1_axi_dma_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'mm2s_prmry_reset_out_n' of module 'design_1_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/synth/design_1.v:250]
-WARNING: [Synth 8-7071] port 's2mm_prmry_reset_out_n' of module 'design_1_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/synth/design_1.v:250]
-WARNING: [Synth 8-7071] port 'mm2s_introut' of module 'design_1_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/synth/design_1.v:250]
-WARNING: [Synth 8-7071] port 's2mm_introut' of module 'design_1_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/synth/design_1.v:250]
-WARNING: [Synth 8-7071] port 'axi_dma_tstvec' of module 'design_1_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/synth/design_1.v:250]
-WARNING: [Synth 8-7023] instance 'axi_dma_0' of module 'design_1_axi_dma_0_0' has 64 connections declared, but only 59 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/synth/design_1.v:250]
-INFO: [Synth 8-6157] synthesizing module 'design_1_processing_system7_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.runs/synth_1/.Xil/Vivado-11204-DESKTOP-D9F9TPQ/realtime/design_1_processing_system7_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_processing_system7_0_0' (3#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.runs/synth_1/.Xil/Vivado-11204-DESKTOP-D9F9TPQ/realtime/design_1_processing_system7_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'USB0_PORT_INDCTL' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/synth/design_1.v:310]
-WARNING: [Synth 8-7071] port 'USB0_VBUS_PWRSELECT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/synth/design_1.v:310]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_BID' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/synth/design_1.v:310]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_RID' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/synth/design_1.v:310]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_RCOUNT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/synth/design_1.v:310]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_WCOUNT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/synth/design_1.v:310]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_RACOUNT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/synth/design_1.v:310]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_WACOUNT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/synth/design_1.v:310]
-WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'design_1_processing_system7_0_0' has 110 connections declared, but only 102 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/synth/design_1.v:310]
-INFO: [Synth 8-6157] synthesizing module 'design_1_rst_ps7_0_100M_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.runs/synth_1/.Xil/Vivado-11204-DESKTOP-D9F9TPQ/realtime/design_1_rst_ps7_0_100M_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_rst_ps7_0_100M_0' (4#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.runs/synth_1/.Xil/Vivado-11204-DESKTOP-D9F9TPQ/realtime/design_1_rst_ps7_0_100M_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/synth/design_1.v:413]
-WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_1_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/synth/design_1.v:413]
-WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_1_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/synth/design_1.v:413]
-WARNING: [Synth 8-7023] instance 'rst_ps7_0_100M' of module 'design_1_rst_ps7_0_100M_0' has 10 connections declared, but only 7 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/synth/design_1.v:413]
-INFO: [Synth 8-6157] synthesizing module 'design_1_smartconnect_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.runs/synth_1/.Xil/Vivado-11204-DESKTOP-D9F9TPQ/realtime/design_1_smartconnect_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_smartconnect_0_0' (5#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.runs/synth_1/.Xil/Vivado-11204-DESKTOP-D9F9TPQ/realtime/design_1_smartconnect_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'M00_AXI_awprot' of module 'design_1_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/synth/design_1.v:421]
-WARNING: [Synth 8-7071] port 'M00_AXI_wstrb' of module 'design_1_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/synth/design_1.v:421]
-WARNING: [Synth 8-7071] port 'M00_AXI_arprot' of module 'design_1_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/synth/design_1.v:421]
-WARNING: [Synth 8-7071] port 'M01_AXI_awprot' of module 'design_1_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/synth/design_1.v:421]
-WARNING: [Synth 8-7071] port 'M01_AXI_wstrb' of module 'design_1_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/synth/design_1.v:421]
-WARNING: [Synth 8-7071] port 'M01_AXI_arprot' of module 'design_1_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/synth/design_1.v:421]
-WARNING: [Synth 8-7023] instance 'smartconnect_0' of module 'design_1_smartconnect_0_0' has 78 connections declared, but only 72 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/synth/design_1.v:421]
-INFO: [Synth 8-6157] synthesizing module 'design_1_smartconnect_0_1' [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.runs/synth_1/.Xil/Vivado-11204-DESKTOP-D9F9TPQ/realtime/design_1_smartconnect_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_smartconnect_0_1' (6#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.runs/synth_1/.Xil/Vivado-11204-DESKTOP-D9F9TPQ/realtime/design_1_smartconnect_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1' (7#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/synth/design_1.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (8#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'design_1_Pixel_Controller_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.runs/synth_1/.Xil/Vivado-17448-DESKTOP-D9F9TPQ/realtime/design_1_Pixel_Controller_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_Pixel_Controller_0_0' (1#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.runs/synth_1/.Xil/Vivado-17448-DESKTOP-D9F9TPQ/realtime/design_1_Pixel_Controller_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 's_axi_rlast' of module 'design_1_Pixel_Controller_0_0' is unconnected for instance 'Pixel_Controller_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/synth/design_1.v:226]
+WARNING: [Synth 8-7023] instance 'Pixel_Controller_0' of module 'design_1_Pixel_Controller_0_0' has 27 connections declared, but only 26 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/synth/design_1.v:226]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_dma_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.runs/synth_1/.Xil/Vivado-17448-DESKTOP-D9F9TPQ/realtime/design_1_axi_dma_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_dma_0_0' (2#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.runs/synth_1/.Xil/Vivado-17448-DESKTOP-D9F9TPQ/realtime/design_1_axi_dma_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mm2s_prmry_reset_out_n' of module 'design_1_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/synth/design_1.v:253]
+WARNING: [Synth 8-7071] port 's2mm_prmry_reset_out_n' of module 'design_1_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/synth/design_1.v:253]
+WARNING: [Synth 8-7071] port 'mm2s_introut' of module 'design_1_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/synth/design_1.v:253]
+WARNING: [Synth 8-7071] port 's2mm_introut' of module 'design_1_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/synth/design_1.v:253]
+WARNING: [Synth 8-7071] port 'axi_dma_tstvec' of module 'design_1_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/synth/design_1.v:253]
+WARNING: [Synth 8-7023] instance 'axi_dma_0' of module 'design_1_axi_dma_0_0' has 64 connections declared, but only 59 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/synth/design_1.v:253]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/synth/design_1.v:313]
+INFO: [Synth 8-6157] synthesizing module 'design_1_ila_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.runs/synth_1/.Xil/Vivado-17448-DESKTOP-D9F9TPQ/realtime/design_1_ila_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_ila_0_0' (3#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.runs/synth_1/.Xil/Vivado-17448-DESKTOP-D9F9TPQ/realtime/design_1_ila_0_0_stub.v:6]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/synth/design_1.v:334]
+INFO: [Synth 8-6157] synthesizing module 'design_1_ila_1_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.runs/synth_1/.Xil/Vivado-17448-DESKTOP-D9F9TPQ/realtime/design_1_ila_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_ila_1_0' (4#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.runs/synth_1/.Xil/Vivado-17448-DESKTOP-D9F9TPQ/realtime/design_1_ila_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_processing_system7_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.runs/synth_1/.Xil/Vivado-17448-DESKTOP-D9F9TPQ/realtime/design_1_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_processing_system7_0_0' (5#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.runs/synth_1/.Xil/Vivado-17448-DESKTOP-D9F9TPQ/realtime/design_1_processing_system7_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'USB0_PORT_INDCTL' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/synth/design_1.v:345]
+WARNING: [Synth 8-7071] port 'USB0_VBUS_PWRSELECT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/synth/design_1.v:345]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_BID' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/synth/design_1.v:345]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_RID' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/synth/design_1.v:345]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_RCOUNT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/synth/design_1.v:345]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_WCOUNT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/synth/design_1.v:345]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_RACOUNT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/synth/design_1.v:345]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_WACOUNT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/synth/design_1.v:345]
+WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'design_1_processing_system7_0_0' has 110 connections declared, but only 102 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/synth/design_1.v:345]
+INFO: [Synth 8-6157] synthesizing module 'design_1_rst_ps7_0_100M_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.runs/synth_1/.Xil/Vivado-17448-DESKTOP-D9F9TPQ/realtime/design_1_rst_ps7_0_100M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_rst_ps7_0_100M_0' (6#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.runs/synth_1/.Xil/Vivado-17448-DESKTOP-D9F9TPQ/realtime/design_1_rst_ps7_0_100M_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/synth/design_1.v:448]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_1_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/synth/design_1.v:448]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_1_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/synth/design_1.v:448]
+WARNING: [Synth 8-7023] instance 'rst_ps7_0_100M' of module 'design_1_rst_ps7_0_100M_0' has 10 connections declared, but only 7 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/synth/design_1.v:448]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/synth/design_1.v:456]
+INFO: [Synth 8-6157] synthesizing module 'design_1_ila_0_1' [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.runs/synth_1/.Xil/Vivado-17448-DESKTOP-D9F9TPQ/realtime/design_1_ila_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_ila_0_1' (7#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.runs/synth_1/.Xil/Vivado-17448-DESKTOP-D9F9TPQ/realtime/design_1_ila_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_smartconnect_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.runs/synth_1/.Xil/Vivado-17448-DESKTOP-D9F9TPQ/realtime/design_1_smartconnect_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_smartconnect_0_0' (8#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.runs/synth_1/.Xil/Vivado-17448-DESKTOP-D9F9TPQ/realtime/design_1_smartconnect_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'M00_AXI_awprot' of module 'design_1_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/synth/design_1.v:467]
+WARNING: [Synth 8-7071] port 'M00_AXI_wstrb' of module 'design_1_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/synth/design_1.v:467]
+WARNING: [Synth 8-7071] port 'M00_AXI_arprot' of module 'design_1_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/synth/design_1.v:467]
+WARNING: [Synth 8-7023] instance 'smartconnect_0' of module 'design_1_smartconnect_0_0' has 78 connections declared, but only 75 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/synth/design_1.v:467]
+INFO: [Synth 8-6157] synthesizing module 'design_1_smartconnect_0_1' [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.runs/synth_1/.Xil/Vivado-17448-DESKTOP-D9F9TPQ/realtime/design_1_smartconnect_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_smartconnect_0_1' (9#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.runs/synth_1/.Xil/Vivado-17448-DESKTOP-D9F9TPQ/realtime/design_1_smartconnect_0_1_stub.v:6]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'Pixel_Controller_0'. This will prevent further optimization [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/synth/design_1.v:226]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'smartconnect_0'. This will prevent further optimization [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/synth/design_1.v:467]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'axi_ila_0'. This will prevent further optimization [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/synth/design_1.v:313]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'axi_dma_0'. This will prevent further optimization [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/synth/design_1.v:253]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'm_axis_ila_0'. This will prevent further optimization [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/synth/design_1.v:334]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 's_axis_ila_0'. This will prevent further optimization [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/synth/design_1.v:456]
+INFO: [Synth 8-6155] done synthesizing module 'design_1' (10#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (11#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1161.695 ; gain = 88.082
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1195.234 ; gain = 122.383
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1161.695 ; gain = 88.082
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1213.168 ; gain = 140.316
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1161.695 ; gain = 88.082
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1213.168 ; gain = 140.316
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1161.695 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1213.168 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -100,24 +113,30 @@ Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/si
 Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/ip/design_1_smartconnect_0_1/design_1_smartconnect_0_1/design_1_smartconnect_0_1_in_context.xdc] for cell 'design_1_i/smartconnect_1'
 Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0_in_context.xdc] for cell 'design_1_i/rst_ps7_0_100M'
 Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0_in_context.xdc] for cell 'design_1_i/rst_ps7_0_100M'
+Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/ip/design_1_ila_0_0/design_1_ila_0_0/design_1_ila_0_0_in_context.xdc] for cell 'design_1_i/axi_ila_0'
+Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/ip/design_1_ila_0_0/design_1_ila_0_0/design_1_ila_0_0_in_context.xdc] for cell 'design_1_i/axi_ila_0'
+Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/ip/design_1_ila_0_1/design_1_ila_0_1/design_1_ila_0_1_in_context.xdc] for cell 'design_1_i/s_axis_ila_0'
+Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/ip/design_1_ila_0_1/design_1_ila_0_1/design_1_ila_0_1_in_context.xdc] for cell 'design_1_i/s_axis_ila_0'
+Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/ip/design_1_ila_1_0/design_1_ila_1_0/design_1_ila_0_1_in_context.xdc] for cell 'design_1_i/m_axis_ila_0'
+Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.srcs/sources_1/bd/design_1/ip/design_1_ila_1_0/design_1_ila_1_0/design_1_ila_0_1_in_context.xdc] for cell 'design_1_i/m_axis_ila_0'
 Parsing XDC File [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1216.770 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1261.816 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 1216.770 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 1261.816 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1216.770 ; gain = 143.156
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1261.816 ; gain = 188.965
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1216.770 ; gain = 143.156
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1261.816 ; gain = 188.965
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -389,11 +408,14 @@ Applied set_property DONT_TOUCH = true for design_1_i/smartconnect_0. (constrain
 Applied set_property DONT_TOUCH = true for design_1_i/Pixel_Controller_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/smartconnect_1. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/rst_ps7_0_100M. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/axi_ila_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/s_axis_ila_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/m_axis_ila_0. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1216.770 ; gain = 143.156
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1261.816 ; gain = 188.965
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1216.770 ; gain = 143.156
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1261.816 ; gain = 188.965
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -415,25 +437,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1216.770 ; gain = 143.156
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1261.816 ; gain = 188.965
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1251.867 ; gain = 178.254
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1283.711 ; gain = 210.859
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1252.016 ; gain = 178.402
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1283.934 ; gain = 211.082
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1272.117 ; gain = 198.504
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1303.469 ; gain = 230.617
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -451,37 +473,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1278.945 ; gain = 205.332
+Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1308.305 ; gain = 235.453
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1278.945 ; gain = 205.332
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1308.305 ; gain = 235.453
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1278.945 ; gain = 205.332
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1308.305 ; gain = 235.453
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1278.945 ; gain = 205.332
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1308.305 ; gain = 235.453
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1278.945 ; gain = 205.332
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1308.305 ; gain = 235.453
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1278.945 ; gain = 205.332
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1308.305 ; gain = 235.453
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -493,10 +515,13 @@ Report BlackBoxes:
 +------+--------------------------------+----------+
 |1     |design_1_Pixel_Controller_0_0   |         1|
 |2     |design_1_axi_dma_0_0            |         1|
-|3     |design_1_processing_system7_0_0 |         1|
-|4     |design_1_rst_ps7_0_100M_0       |         1|
-|5     |design_1_smartconnect_0_0       |         1|
-|6     |design_1_smartconnect_0_1       |         1|
+|3     |design_1_ila_0_0                |         1|
+|4     |design_1_ila_1_0                |         1|
+|5     |design_1_processing_system7_0_0 |         1|
+|6     |design_1_rst_ps7_0_100M_0       |         1|
+|7     |design_1_ila_0_1                |         1|
+|8     |design_1_smartconnect_0_0       |         1|
+|9     |design_1_smartconnect_0_1       |         1|
 +------+--------------------------------+----------+
 
 Report Cell Usage: 
@@ -505,28 +530,32 @@ Report Cell Usage:
 +------+------------------------------+------+
 |1     |design_1_Pixel_Controller_0   |     1|
 |2     |design_1_axi_dma_0            |     1|
-|3     |design_1_processing_system7_0 |     1|
-|4     |design_1_rst_ps7_0_100M       |     1|
-|5     |design_1_smartconnect_0       |     2|
+|3     |design_1_ila_0                |     2|
+|5     |design_1_ila_1                |     1|
+|6     |design_1_processing_system7_0 |     1|
+|7     |design_1_rst_ps7_0_100M       |     1|
+|8     |design_1_smartconnect_0       |     2|
 +------+------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1278.945 ; gain = 205.332
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1308.305 ; gain = 235.453
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:19 . Memory (MB): peak = 1278.945 ; gain = 150.258
-Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1278.945 ; gain = 205.332
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:18 . Memory (MB): peak = 1308.305 ; gain = 186.805
+Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1308.305 ; gain = 235.453
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1278.945 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1308.305 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1297.176 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1327.449 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-31 Infos, 30 Warnings, 0 Critical Warnings and 0 Errors encountered.
+43 Infos, 30 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1303.145 ; gain = 229.531
+synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1332.410 ; gain = 259.559
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.collectionResultDisplayLimit
 INFO: [Common 17-1381] The checkpoint 'C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.runs/synth_1/design_1_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Mar 15 12:52:08 2021...
+INFO: [Common 17-206] Exiting Vivado at Mon Mar 15 13:44:41 2021...

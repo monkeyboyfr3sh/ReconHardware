@@ -1,4 +1,4 @@
-13:00:41 **** Build of configuration Debug for project simple_axis_dma_sw ****
+14:05:49 **** Incremental Build of configuration Debug for project simple_axis_dma_sw ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -9,11 +9,6 @@ make --no-print-directory main-build
 arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/export/simple_axis_dma_hw/sw/simple_axis_dma_hw/standalone_domain/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
 'Finished building: ../src/helloworld.c'
 ' '
-'Building file: ../src/platform.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/export/simple_axis_dma_hw/sw/simple_axis_dma_hw/standalone_domain/bspinclude/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
-'Finished building: ../src/platform.c'
-' '
 'Building target: simple_axis_dma_sw.elf'
 'Invoking: ARM v7 gcc linker'
 arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/export/simple_axis_dma_hw/sw/simple_axis_dma_hw/standalone_domain/bsplib/lib -o "simple_axis_dma_sw.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
@@ -22,9 +17,9 @@ arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size simple_axis_dma_sw.elf  |tee "simple_axis_dma_sw.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  19040	   1144	  22568	  42752	   a700	simple_axis_dma_sw.elf
+  33784	   2248	  24504	  60536	   ec78	simple_axis_dma_sw.elf
 'Finished building: simple_axis_dma_sw.elf.size'
 ' '
 
-13:00:42 Build Finished (took 805ms)
+14:05:50 Build Finished (took 622ms)
 

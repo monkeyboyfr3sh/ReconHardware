@@ -173,6 +173,29 @@ proc create_root_design { parentCell } {
    CONFIG.c_sg_include_stscntrl_strm {0} \
  ] $axi_dma_0
 
+  # Create instance: axi_ila_0, and set properties
+  set axi_ila_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:ila:6.2 axi_ila_0 ]
+
+  # Create instance: m_axis_ila_0, and set properties
+  set m_axis_ila_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:ila:6.2 m_axis_ila_0 ]
+  set_property -dict [ list \
+   CONFIG.ALL_PROBE_SAME_MU_CNT {1} \
+   CONFIG.C_ENABLE_ILA_AXI_MON {true} \
+   CONFIG.C_INPUT_PIPE_STAGES {0} \
+   CONFIG.C_MONITOR_TYPE {AXI} \
+   CONFIG.C_NUM_OF_PROBES {9} \
+   CONFIG.C_PROBE0_MU_CNT {1} \
+   CONFIG.C_PROBE1_MU_CNT {1} \
+   CONFIG.C_PROBE2_MU_CNT {1} \
+   CONFIG.C_PROBE3_MU_CNT {1} \
+   CONFIG.C_PROBE4_MU_CNT {1} \
+   CONFIG.C_PROBE5_MU_CNT {1} \
+   CONFIG.C_PROBE6_MU_CNT {1} \
+   CONFIG.C_PROBE7_MU_CNT {1} \
+   CONFIG.C_PROBE8_MU_CNT {1} \
+   CONFIG.C_SLOT_0_AXI_PROTOCOL {AXI4S} \
+ ] $m_axis_ila_0
+
   # Create instance: processing_system7_0, and set properties
   set processing_system7_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0 ]
   set_property -dict [ list \
@@ -949,6 +972,26 @@ proc create_root_design { parentCell } {
   # Create instance: rst_ps7_0_100M, and set properties
   set rst_ps7_0_100M [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 rst_ps7_0_100M ]
 
+  # Create instance: s_axis_ila_0, and set properties
+  set s_axis_ila_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:ila:6.2 s_axis_ila_0 ]
+  set_property -dict [ list \
+   CONFIG.ALL_PROBE_SAME_MU_CNT {1} \
+   CONFIG.C_ENABLE_ILA_AXI_MON {true} \
+   CONFIG.C_INPUT_PIPE_STAGES {0} \
+   CONFIG.C_MONITOR_TYPE {AXI} \
+   CONFIG.C_NUM_OF_PROBES {9} \
+   CONFIG.C_PROBE0_MU_CNT {1} \
+   CONFIG.C_PROBE1_MU_CNT {1} \
+   CONFIG.C_PROBE2_MU_CNT {1} \
+   CONFIG.C_PROBE3_MU_CNT {1} \
+   CONFIG.C_PROBE4_MU_CNT {1} \
+   CONFIG.C_PROBE5_MU_CNT {1} \
+   CONFIG.C_PROBE6_MU_CNT {1} \
+   CONFIG.C_PROBE7_MU_CNT {1} \
+   CONFIG.C_PROBE8_MU_CNT {1} \
+   CONFIG.C_SLOT_0_AXI_PROTOCOL {AXI4S} \
+ ] $s_axis_ila_0
+
   # Create instance: smartconnect_0, and set properties
   set smartconnect_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:smartconnect:1.0 smartconnect_0 ]
   set_property -dict [ list \
@@ -965,7 +1008,9 @@ proc create_root_design { parentCell } {
 
   # Create interface connections
   connect_bd_intf_net -intf_net Pixel_Controller_0_m_axis [get_bd_intf_pins Pixel_Controller_0/m_axis] [get_bd_intf_pins axi_dma_0/S_AXIS_S2MM]
+connect_bd_intf_net -intf_net [get_bd_intf_nets Pixel_Controller_0_m_axis] [get_bd_intf_pins axi_dma_0/S_AXIS_S2MM] [get_bd_intf_pins m_axis_ila_0/SLOT_0_AXIS]
   connect_bd_intf_net -intf_net axi_dma_0_M_AXIS_MM2S [get_bd_intf_pins Pixel_Controller_0/s_axis] [get_bd_intf_pins axi_dma_0/M_AXIS_MM2S]
+connect_bd_intf_net -intf_net [get_bd_intf_nets axi_dma_0_M_AXIS_MM2S] [get_bd_intf_pins axi_dma_0/M_AXIS_MM2S] [get_bd_intf_pins s_axis_ila_0/SLOT_0_AXIS]
   connect_bd_intf_net -intf_net axi_dma_0_M_AXI_MM2S [get_bd_intf_pins axi_dma_0/M_AXI_MM2S] [get_bd_intf_pins smartconnect_1/S00_AXI]
   connect_bd_intf_net -intf_net axi_dma_0_M_AXI_S2MM [get_bd_intf_pins axi_dma_0/M_AXI_S2MM] [get_bd_intf_pins smartconnect_1/S01_AXI]
   connect_bd_intf_net -intf_net processing_system7_0_DDR [get_bd_intf_ports DDR] [get_bd_intf_pins processing_system7_0/DDR]
@@ -973,10 +1018,11 @@ proc create_root_design { parentCell } {
   connect_bd_intf_net -intf_net processing_system7_0_M_AXI_GP0 [get_bd_intf_pins processing_system7_0/M_AXI_GP0] [get_bd_intf_pins smartconnect_0/S00_AXI]
   connect_bd_intf_net -intf_net smartconnect_0_M00_AXI [get_bd_intf_pins axi_dma_0/S_AXI_LITE] [get_bd_intf_pins smartconnect_0/M00_AXI]
   connect_bd_intf_net -intf_net smartconnect_0_M01_AXI [get_bd_intf_pins Pixel_Controller_0/s_axi] [get_bd_intf_pins smartconnect_0/M01_AXI]
+connect_bd_intf_net -intf_net [get_bd_intf_nets smartconnect_0_M01_AXI] [get_bd_intf_pins axi_ila_0/SLOT_0_AXI] [get_bd_intf_pins smartconnect_0/M01_AXI]
   connect_bd_intf_net -intf_net smartconnect_1_M00_AXI [get_bd_intf_pins processing_system7_0/S_AXI_HP0] [get_bd_intf_pins smartconnect_1/M00_AXI]
 
   # Create port connections
-  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins Pixel_Controller_0/axi_clk] [get_bd_pins axi_dma_0/m_axi_mm2s_aclk] [get_bd_pins axi_dma_0/m_axi_s2mm_aclk] [get_bd_pins axi_dma_0/s_axi_lite_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins processing_system7_0/S_AXI_HP0_ACLK] [get_bd_pins rst_ps7_0_100M/slowest_sync_clk] [get_bd_pins smartconnect_0/aclk] [get_bd_pins smartconnect_1/aclk]
+  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins Pixel_Controller_0/axi_clk] [get_bd_pins axi_dma_0/m_axi_mm2s_aclk] [get_bd_pins axi_dma_0/m_axi_s2mm_aclk] [get_bd_pins axi_dma_0/s_axi_lite_aclk] [get_bd_pins axi_ila_0/clk] [get_bd_pins m_axis_ila_0/clk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins processing_system7_0/S_AXI_HP0_ACLK] [get_bd_pins rst_ps7_0_100M/slowest_sync_clk] [get_bd_pins s_axis_ila_0/clk] [get_bd_pins smartconnect_0/aclk] [get_bd_pins smartconnect_1/aclk]
   connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_ps7_0_100M/ext_reset_in]
   connect_bd_net -net rst_ps7_0_100M_interconnect_aresetn [get_bd_pins rst_ps7_0_100M/interconnect_aresetn] [get_bd_pins smartconnect_0/aresetn] [get_bd_pins smartconnect_1/aresetn]
   connect_bd_net -net rst_ps7_0_100M_peripheral_aresetn [get_bd_pins Pixel_Controller_0/axi_reset_n] [get_bd_pins axi_dma_0/axi_resetn] [get_bd_pins rst_ps7_0_100M/peripheral_aresetn]

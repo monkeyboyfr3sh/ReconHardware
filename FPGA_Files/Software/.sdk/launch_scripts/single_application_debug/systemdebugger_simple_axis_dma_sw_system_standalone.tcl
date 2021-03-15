@@ -14,4 +14,5 @@ ps7_post_config
 targets -set -nocase -filter {name =~ "*A9*#0"}
 dow C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_sw/Debug/simple_axis_dma_sw.elf
 configparams force-mem-access 0
-bpadd -addr &main
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con

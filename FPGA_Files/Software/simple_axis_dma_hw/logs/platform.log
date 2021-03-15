@@ -2521,3 +2521,1915 @@ TRACE::2021-03-15.12:59:34::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardwar
 C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
 
 TRACE::2021-03-15.12:59:34::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:09:15::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:09:15::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:09:15::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:09:15::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:09:15::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:09:15::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:09:15::SCWPlatform::Do not have an existing db opened. 
+TRACE::2021-03-15.13:09:17::SCWPlatform::Opened new HwDB with name design_1_wrapper_1
+TRACE::2021-03-15.13:09:17::SCWReader::Active system found as  simple_axis_dma_hw
+TRACE::2021-03-15.13:09:17::SCWReader::Handling sysconfig simple_axis_dma_hw
+TRACE::2021-03-15.13:09:17::SCWDomain::checking for install qemu data   : 
+TRACE::2021-03-15.13:09:17::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/
+TRACE::2021-03-15.13:09:17::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt
+TRACE::2021-03-15.13:09:17::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:09:17::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:09:17::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:09:17::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:09:17::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:09:17::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:09:17::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2021-03-15.13:09:17::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2021-03-15.13:09:17::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:09:17::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:09:17::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:09:17::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:09:17::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:09:17::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:09:17::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:09:17::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2021-03-15.13:09:17::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2021-03-15.13:09:17::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:09:17::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:09:17::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:09:17::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:09:17::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:09:17::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:09:17::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:09:17::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2021-03-15.13:09:17::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2021-03-15.13:09:17::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:09:17::SCWReader::Boot application domain added for zynq_fsbl
+TRACE::2021-03-15.13:09:17::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:09:17::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:09:17::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:09:17::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:09:17::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:09:17::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:09:17::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2021-03-15.13:09:17::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2021-03-15.13:09:17::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:09:17::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:09:17::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2021-03-15.13:09:17::SCWMssOS::No sw design opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:09:17::SCWMssOS::mss exists loading the mss file  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:09:17::SCWMssOS::Opened the sw design from mss  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:09:17::SCWMssOS::Adding the swdes entry C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss with des name system
+TRACE::2021-03-15.13:09:17::SCWMssOS::updating the scw layer about changes
+TRACE::2021-03-15.13:09:17::SCWMssOS::Opened the sw design.  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:09:17::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:09:17::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:09:17::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:09:17::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:09:17::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:09:17::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:09:17::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2021-03-15.13:09:17::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2021-03-15.13:09:17::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:09:17::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:09:17::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-15.13:09:17::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:09:17::SCWMssOS:: library already available in sw design:  xilffs:4.3
+TRACE::2021-03-15.13:09:17::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:09:17::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:09:17::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:09:17::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:09:17::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:09:17::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:09:17::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2021-03-15.13:09:17::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2021-03-15.13:09:17::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:09:17::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:09:17::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-15.13:09:17::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:09:17::SCWMssOS:: library already available in sw design:  xilrsa:1.6
+TRACE::2021-03-15.13:09:17::SCWMssOS::Saving the mss changes C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:09:17::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2021-03-15.13:09:17::SCWMssOS::Completed writemss as part of save.
+TRACE::2021-03-15.13:09:17::SCWMssOS::Commit changes completed.
+TRACE::2021-03-15.13:09:17::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2021-03-15.13:09:17::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2021-03-15.13:09:17::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:09:17::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:09:17::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:09:17::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:09:17::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:09:17::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:09:17::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2021-03-15.13:09:17::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2021-03-15.13:09:17::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:09:17::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:09:17::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-15.13:09:17::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:09:17::SCWReader::No isolation master present  
+TRACE::2021-03-15.13:09:17::SCWDomain::checking for install qemu data   : 
+TRACE::2021-03-15.13:09:18::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/
+TRACE::2021-03-15.13:09:18::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt
+TRACE::2021-03-15.13:09:18::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:09:18::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:09:18::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:09:18::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:09:18::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:09:18::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:09:18::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2021-03-15.13:09:18::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2021-03-15.13:09:18::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:09:18::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:09:18::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:09:18::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:09:18::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:09:18::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:09:18::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:09:18::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2021-03-15.13:09:18::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2021-03-15.13:09:18::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:09:18::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:09:18::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:09:18::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:09:18::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:09:18::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:09:18::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:09:18::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2021-03-15.13:09:18::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2021-03-15.13:09:18::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:09:18::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:09:18::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-15.13:09:18::SCWMssOS::No sw design opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:09:18::SCWMssOS::mss exists loading the mss file  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:09:18::SCWMssOS::Opened the sw design from mss  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:09:18::SCWMssOS::Adding the swdes entry C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss with des name system_0
+TRACE::2021-03-15.13:09:18::SCWMssOS::updating the scw layer about changes
+TRACE::2021-03-15.13:09:18::SCWMssOS::Opened the sw design.  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:09:18::SCWMssOS::Saving the mss changes C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:09:18::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2021-03-15.13:09:18::SCWMssOS::Completed writemss as part of save.
+TRACE::2021-03-15.13:09:18::SCWMssOS::Commit changes completed.
+TRACE::2021-03-15.13:09:18::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2021-03-15.13:09:18::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2021-03-15.13:09:18::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:09:18::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:09:18::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:09:18::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:09:18::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:09:18::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:09:18::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2021-03-15.13:09:18::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2021-03-15.13:09:18::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:09:18::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:09:18::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-15.13:09:18::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:09:18::SCWReader::No isolation master present  
+LOG::2021-03-15.13:09:41::SCWPlatform::Started generating the artifacts platform simple_axis_dma_hw
+TRACE::2021-03-15.13:09:41::SCWPlatform::Sanity checking of platform is completed
+LOG::2021-03-15.13:09:41::SCWPlatform::Started generating the artifacts for system configuration simple_axis_dma_hw
+LOG::2021-03-15.13:09:41::SCWSystem::Checking the domain zynq_fsbl
+LOG::2021-03-15.13:09:41::SCWSystem::Doing application build for :  zynq_fsbl
+TRACE::2021-03-15.13:09:41::SCWBDomain::Not a forced makefile updation, No changes are present. 
+TRACE::2021-03-15.13:09:41::SCWDomain::Skipping the build for domain :  zynq_fsbl
+LOG::2021-03-15.13:09:41::SCWSystem::Checking the domain standalone_domain
+LOG::2021-03-15.13:09:41::SCWSystem::Not a boot domain 
+LOG::2021-03-15.13:09:41::SCWSystem::Started Processing the domain standalone_domain
+TRACE::2021-03-15.13:09:41::SCWDomain::Generating domain artifcats
+TRACE::2021-03-15.13:09:41::SCWMssOS::Generating standalone artifcats
+TRACE::2021-03-15.13:09:41::SCWMssOS::Copying the qemu file from  C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt To C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/export/simple_axis_dma_hw/sw/simple_axis_dma_hw/qemu/
+TRACE::2021-03-15.13:09:41::SCWMssOS::Copying the qemu file from  C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt To C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/export/simple_axis_dma_hw/sw/simple_axis_dma_hw/standalone_domain/qemu/
+TRACE::2021-03-15.13:09:41::SCWMssOS:: Copying the user libraries. 
+TRACE::2021-03-15.13:09:41::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:09:41::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:09:41::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:09:41::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:09:41::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:09:41::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:09:41::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2021-03-15.13:09:41::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2021-03-15.13:09:41::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:09:41::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:09:41::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-15.13:09:41::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:09:41::SCWMssOS::Completed writing the mss file at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp
+TRACE::2021-03-15.13:09:41::SCWMssOS::Mss edits present, copying mssfile into export location C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:09:41::SCWMssOS::bsp generated is upto date with the mss file. Skipping bsp generation.
+TRACE::2021-03-15.13:09:41::SCWMssOS::BSP is already built. skipping the bsp build ... 
+TRACE::2021-03-15.13:09:41::SCWDomain::Skipping the build for domain :  standalone_domain
+TRACE::2021-03-15.13:09:41::SCWMssOS::skipping the bsp build ... 
+TRACE::2021-03-15.13:09:41::SCWMssOS::Copying to export directory.
+TRACE::2021-03-15.13:09:41::SCWMssOS:: Checking if to create the Supporting Applications
+TRACE::2021-03-15.13:09:41::SCWMssOS:: No Linux domain exists, trying to generate FSBL 
+LOG::2021-03-15.13:09:41::SCWSystem::Completed Processing the domain standalone_domain
+LOG::2021-03-15.13:09:41::SCWSystem::Completed Processing the sysconfig simple_axis_dma_hw
+LOG::2021-03-15.13:09:41::SCWPlatform::Completed generating the artifacts for system configuration simple_axis_dma_hw
+TRACE::2021-03-15.13:09:41::SCWPlatform::Started preparing the platform 
+TRACE::2021-03-15.13:09:41::SCWSystem::Writing the bif file for system config simple_axis_dma_hw
+TRACE::2021-03-15.13:09:41::SCWSystem::dir created 
+TRACE::2021-03-15.13:09:41::SCWSystem::Writing the bif 
+TRACE::2021-03-15.13:09:41::SCWPlatform::Started writing the spfm file 
+TRACE::2021-03-15.13:09:41::SCWPlatform::Started writing the xpfm file 
+TRACE::2021-03-15.13:09:41::SCWPlatform::Completed generating the platform
+TRACE::2021-03-15.13:09:41::SCWMssOS::Saving the mss changes C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:09:41::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2021-03-15.13:09:41::SCWMssOS::Completed writemss as part of save.
+TRACE::2021-03-15.13:09:41::SCWMssOS::Commit changes completed.
+TRACE::2021-03-15.13:09:41::SCWMssOS::Saving the mss changes C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:09:41::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2021-03-15.13:09:41::SCWMssOS::Completed writemss as part of save.
+TRACE::2021-03-15.13:09:41::SCWMssOS::Commit changes completed.
+TRACE::2021-03-15.13:09:41::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:09:41::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:09:41::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:09:41::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:09:41::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:09:41::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:09:41::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2021-03-15.13:09:41::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2021-03-15.13:09:41::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:09:41::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:09:41::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-15.13:09:41::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:09:41::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:09:41::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:09:41::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:09:41::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:09:41::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:09:41::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:09:41::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2021-03-15.13:09:41::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2021-03-15.13:09:41::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:09:41::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:09:41::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-15.13:09:41::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:09:41::SCWWriter::formatted JSON is {
+	"platformName":	"simple_axis_dma_hw",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"simple_axis_dma_hw",
+	"platHandOff":	"C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/design_1_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/design_1_wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"simple_axis_dma_hw",
+	"systems":	[{
+			"systemName":	"simple_axis_dma_hw",
+			"systemDesc":	"simple_axis_dma_hw",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"simple_axis_dma_hw",
+			"sysActiveDom":	"standalone_domain",
+			"sysDefaultDom":	"standalone_domain",
+			"domains":	[{
+					"domainName":	"zynq_fsbl",
+					"domainDispName":	"zynq_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"e01375d93c86d432ee7b4a4fd268cc84",
+					"compatibleApp":	"zynq_fsbl",
+					"domType":	"bootDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.3", "xilrsa:1.6"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"standalone_domain",
+					"domainDispName":	"standalone on ps7_cortexa9_0",
+					"domainDesc":	"standalone_domain",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt",
+					"qemuData":	"C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"43b48698cd794b84077e2caf0de1dd6f",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+KEYINFO::2021-03-15.13:09:41::SCWPlatform::updated the xpfm file.
+TRACE::2021-03-15.13:09:41::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:09:41::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:09:41::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:09:41::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:09:41::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:09:41::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:09:41::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_1
+TRACE::2021-03-15.13:09:41::SCWPlatform::Opened existing hwdb design_1_wrapper_1
+TRACE::2021-03-15.13:09:41::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:09:41::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:09:41::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-15.13:09:41::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:33:59::SCWPlatform::Clearing the existing platform
+TRACE::2021-03-15.13:33:59::SCWSystem::Clearing the existing sysconfig
+TRACE::2021-03-15.13:33:59::SCWBDomain::clearing the fsbl build
+TRACE::2021-03-15.13:33:59::SCWMssOS::Removing the swdes entry for  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:33:59::SCWMssOS::Removing the swdes entry for  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:33:59::SCWSystem::Clearing the domains completed.
+TRACE::2021-03-15.13:33:59::SCWPlatform::Clearing the opened hw db.
+TRACE::2021-03-15.13:33:59::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:33:59::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:33:59::SCWPlatform:: Platform location is C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:33:59::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:33:59::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:33:59::SCWPlatform::Removing the HwDB with name C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:33:59::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:33:59::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:33:59::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:33:59::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:33:59::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:33:59::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:33:59::SCWPlatform::Do not have an existing db opened. 
+TRACE::2021-03-15.13:34:01::SCWPlatform::Opened new HwDB with name design_1_wrapper_3
+TRACE::2021-03-15.13:34:01::SCWReader::Active system found as  simple_axis_dma_hw
+TRACE::2021-03-15.13:34:01::SCWReader::Handling sysconfig simple_axis_dma_hw
+TRACE::2021-03-15.13:34:01::SCWDomain::checking for install qemu data   : 
+TRACE::2021-03-15.13:34:01::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/
+TRACE::2021-03-15.13:34:01::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt
+TRACE::2021-03-15.13:34:01::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:01::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:01::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:01::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:34:01::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:01::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:34:01::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_3
+TRACE::2021-03-15.13:34:01::SCWPlatform::Opened existing hwdb design_1_wrapper_3
+TRACE::2021-03-15.13:34:01::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:34:01::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:01::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:01::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:01::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:34:01::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:01::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:34:01::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_3
+TRACE::2021-03-15.13:34:01::SCWPlatform::Opened existing hwdb design_1_wrapper_3
+TRACE::2021-03-15.13:34:01::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:34:01::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:01::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:01::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:01::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:34:01::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:01::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:34:01::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_3
+TRACE::2021-03-15.13:34:01::SCWPlatform::Opened existing hwdb design_1_wrapper_3
+TRACE::2021-03-15.13:34:01::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:34:01::SCWReader::Boot application domain added for zynq_fsbl
+TRACE::2021-03-15.13:34:01::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:01::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:01::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:01::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:34:01::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:01::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:34:01::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_3
+TRACE::2021-03-15.13:34:01::SCWPlatform::Opened existing hwdb design_1_wrapper_3
+TRACE::2021-03-15.13:34:01::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:34:01::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:34:01::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2021-03-15.13:34:01::SCWMssOS::No sw design opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:34:01::SCWMssOS::mss exists loading the mss file  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:34:01::SCWMssOS::Opened the sw design from mss  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:34:01::SCWMssOS::Adding the swdes entry C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss with des name system
+TRACE::2021-03-15.13:34:01::SCWMssOS::updating the scw layer about changes
+TRACE::2021-03-15.13:34:01::SCWMssOS::Opened the sw design.  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:34:01::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:01::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:01::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:01::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:34:01::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:01::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:34:01::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_3
+TRACE::2021-03-15.13:34:01::SCWPlatform::Opened existing hwdb design_1_wrapper_3
+TRACE::2021-03-15.13:34:01::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:34:01::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:34:01::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-15.13:34:01::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:34:01::SCWMssOS:: library already available in sw design:  xilffs:4.3
+TRACE::2021-03-15.13:34:01::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:01::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:01::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:01::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:34:01::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:01::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:34:01::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_3
+TRACE::2021-03-15.13:34:01::SCWPlatform::Opened existing hwdb design_1_wrapper_3
+TRACE::2021-03-15.13:34:01::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:34:01::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:34:01::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-15.13:34:01::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:34:01::SCWMssOS:: library already available in sw design:  xilrsa:1.6
+TRACE::2021-03-15.13:34:01::SCWMssOS::Saving the mss changes C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:34:01::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2021-03-15.13:34:01::SCWMssOS::Completed writemss as part of save.
+TRACE::2021-03-15.13:34:01::SCWMssOS::Commit changes completed.
+TRACE::2021-03-15.13:34:01::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2021-03-15.13:34:01::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2021-03-15.13:34:01::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:01::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:01::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:01::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:34:01::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:01::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:34:01::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_3
+TRACE::2021-03-15.13:34:01::SCWPlatform::Opened existing hwdb design_1_wrapper_3
+TRACE::2021-03-15.13:34:01::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:34:01::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:34:01::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-15.13:34:01::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:34:01::SCWReader::No isolation master present  
+TRACE::2021-03-15.13:34:01::SCWDomain::checking for install qemu data   : 
+TRACE::2021-03-15.13:34:01::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/
+TRACE::2021-03-15.13:34:01::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt
+TRACE::2021-03-15.13:34:01::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:01::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:01::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:01::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:34:01::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:01::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:34:01::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_3
+TRACE::2021-03-15.13:34:01::SCWPlatform::Opened existing hwdb design_1_wrapper_3
+TRACE::2021-03-15.13:34:01::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:34:01::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:01::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:01::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:01::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:34:01::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:02::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:34:02::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_3
+TRACE::2021-03-15.13:34:02::SCWPlatform::Opened existing hwdb design_1_wrapper_3
+TRACE::2021-03-15.13:34:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:34:02::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:02::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:02::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:02::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:34:02::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:02::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:34:02::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_3
+TRACE::2021-03-15.13:34:02::SCWPlatform::Opened existing hwdb design_1_wrapper_3
+TRACE::2021-03-15.13:34:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:34:02::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:34:02::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-15.13:34:02::SCWMssOS::No sw design opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:34:02::SCWMssOS::mss exists loading the mss file  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:34:02::SCWMssOS::Opened the sw design from mss  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:34:02::SCWMssOS::Adding the swdes entry C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss with des name system_0
+TRACE::2021-03-15.13:34:02::SCWMssOS::updating the scw layer about changes
+TRACE::2021-03-15.13:34:02::SCWMssOS::Opened the sw design.  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:34:02::SCWMssOS::Saving the mss changes C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:34:02::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2021-03-15.13:34:02::SCWMssOS::Completed writemss as part of save.
+TRACE::2021-03-15.13:34:02::SCWMssOS::Commit changes completed.
+TRACE::2021-03-15.13:34:02::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2021-03-15.13:34:02::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2021-03-15.13:34:02::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:02::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:02::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:02::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:34:02::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:02::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:34:02::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_3
+TRACE::2021-03-15.13:34:02::SCWPlatform::Opened existing hwdb design_1_wrapper_3
+TRACE::2021-03-15.13:34:02::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:34:02::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:34:02::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-15.13:34:02::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:34:02::SCWReader::No isolation master present  
+TRACE::2021-03-15.13:34:05::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:05::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:05::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:05::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:34:05::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:05::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:34:05::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_3
+TRACE::2021-03-15.13:34:05::SCWPlatform::Opened existing hwdb design_1_wrapper_3
+TRACE::2021-03-15.13:34:05::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:34:05::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/tempdsa/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:05::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/tempdsa/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:05::SCWPlatform:: Platform location is C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/tempdsa
+TRACE::2021-03-15.13:34:05::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/tempdsa/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:05::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:34:08::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:34:08::SCWMssOS::Doing hw sync for the mss in domain: zynq_fsbl
+TRACE::2021-03-15.13:34:08::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:08::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:08::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:08::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:34:08::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:08::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:34:08::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_3
+TRACE::2021-03-15.13:34:08::SCWPlatform::Opened existing hwdb design_1_wrapper_3
+TRACE::2021-03-15.13:34:08::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:34:08::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:08::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:08::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:08::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:34:08::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:08::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:34:08::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_3
+TRACE::2021-03-15.13:34:08::SCWPlatform::Opened existing hwdb design_1_wrapper_3
+TRACE::2021-03-15.13:34:08::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:34:08::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:34:08::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-15.13:34:08::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:34:08::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/tempdsa/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:08::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/tempdsa/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:08::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/tempdsa/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:08::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/tempdsa
+TRACE::2021-03-15.13:34:08::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/tempdsa/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:08::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:34:08::SCWPlatform::update - Opened existing hwdb design_1_wrapper_4
+TRACE::2021-03-15.13:34:08::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:34:08::SCWMssOS::Doing hw sync for the mss in domain: standalone_domain
+TRACE::2021-03-15.13:34:08::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:08::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:08::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:08::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:34:08::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:08::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:34:08::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_3
+TRACE::2021-03-15.13:34:08::SCWPlatform::Opened existing hwdb design_1_wrapper_3
+TRACE::2021-03-15.13:34:08::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:34:08::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:08::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:08::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:08::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:34:08::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:08::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:34:08::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_3
+TRACE::2021-03-15.13:34:08::SCWPlatform::Opened existing hwdb design_1_wrapper_3
+TRACE::2021-03-15.13:34:08::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:34:08::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:34:08::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-15.13:34:08::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:34:08::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/tempdsa/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:08::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/tempdsa/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:08::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/tempdsa/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:08::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/tempdsa
+TRACE::2021-03-15.13:34:08::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/tempdsa/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:08::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:34:08::SCWPlatform::update - Opened existing hwdb design_1_wrapper_4
+TRACE::2021-03-15.13:34:08::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:34:08::SCWMssOS::Saving the mss changes C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:34:08::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2021-03-15.13:34:08::SCWMssOS::Completed writemss as part of save.
+TRACE::2021-03-15.13:34:08::SCWMssOS::Commit changes completed.
+TRACE::2021-03-15.13:34:08::SCWMssOS::Completed hw sync for the mss in domain: zynq_fsbl
+TRACE::2021-03-15.13:34:08::SCWMssOS::Removing the swdes entry for  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:34:08::SCWMssOS::Saving the mss changes C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:34:08::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2021-03-15.13:34:08::SCWMssOS::Completed writemss as part of save.
+TRACE::2021-03-15.13:34:08::SCWMssOS::Commit changes completed.
+TRACE::2021-03-15.13:34:08::SCWMssOS::Completed hw sync for the mss in domain: standalone_domain
+TRACE::2021-03-15.13:34:08::SCWMssOS::Removing the swdes entry for  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:34:08::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:08::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:08::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:08::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:34:09::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:09::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:34:09::SCWPlatform::Do not have an existing db opened. 
+TRACE::2021-03-15.13:34:12::SCWPlatform::Opened new HwDB with name design_1_wrapper_5
+TRACE::2021-03-15.13:34:12::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:12::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:12::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:12::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:34:12::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:12::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:34:12::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_5
+TRACE::2021-03-15.13:34:12::SCWPlatform::Opened existing hwdb design_1_wrapper_5
+TRACE::2021-03-15.13:34:12::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:34:12::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:34:12::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2021-03-15.13:34:12::SCWMssOS::No sw design opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:34:12::SCWMssOS::mss exists loading the mss file  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:34:12::SCWMssOS::Opened the sw design from mss  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:34:12::SCWMssOS::Adding the swdes entry C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss with des name system
+TRACE::2021-03-15.13:34:12::SCWMssOS::updating the scw layer about changes
+TRACE::2021-03-15.13:34:12::SCWMssOS::Opened the sw design.  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:34:12::SCWMssOS::Saving the mss changes C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:34:12::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2021-03-15.13:34:12::SCWMssOS::Completed writemss as part of save.
+TRACE::2021-03-15.13:34:12::SCWMssOS::Commit changes completed.
+TRACE::2021-03-15.13:34:12::SCWMssOS::Saving the mss changes C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:34:12::SCWMssOS::Adding the swdes entry, mss present, able to open swdb C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss with des name system_0
+TRACE::2021-03-15.13:34:12::SCWMssOS::Writing the mss file completed C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:34:12::SCWMssOS::Commit changes completed.
+TRACE::2021-03-15.13:34:12::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:12::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:12::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:12::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:34:12::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:12::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:34:12::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_5
+TRACE::2021-03-15.13:34:12::SCWPlatform::Opened existing hwdb design_1_wrapper_5
+TRACE::2021-03-15.13:34:12::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:34:12::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:34:12::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-15.13:34:12::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:34:12::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:12::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:12::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:12::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:34:12::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:12::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:34:12::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_5
+TRACE::2021-03-15.13:34:12::SCWPlatform::Opened existing hwdb design_1_wrapper_5
+TRACE::2021-03-15.13:34:12::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:34:12::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:34:12::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-15.13:34:12::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:34:12::SCWWriter::formatted JSON is {
+	"platformName":	"simple_axis_dma_hw",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"simple_axis_dma_hw",
+	"platHandOff":	"C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/design_1_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/design_1_wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"simple_axis_dma_hw",
+	"systems":	[{
+			"systemName":	"simple_axis_dma_hw",
+			"systemDesc":	"simple_axis_dma_hw",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"simple_axis_dma_hw",
+			"sysActiveDom":	"standalone_domain",
+			"sysDefaultDom":	"standalone_domain",
+			"domains":	[{
+					"domainName":	"zynq_fsbl",
+					"domainDispName":	"zynq_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"e01375d93c86d432ee7b4a4fd268cc84",
+					"compatibleApp":	"zynq_fsbl",
+					"domType":	"bootDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.3", "xilrsa:1.6"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"standalone_domain",
+					"domainDispName":	"standalone on ps7_cortexa9_0",
+					"domainDesc":	"standalone_domain",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt",
+					"qemuData":	"C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"43b48698cd794b84077e2caf0de1dd6f",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+LOG::2021-03-15.13:34:18::SCWPlatform::Started generating the artifacts platform simple_axis_dma_hw
+TRACE::2021-03-15.13:34:18::SCWPlatform::Sanity checking of platform is completed
+LOG::2021-03-15.13:34:18::SCWPlatform::Started generating the artifacts for system configuration simple_axis_dma_hw
+LOG::2021-03-15.13:34:18::SCWSystem::Checking the domain zynq_fsbl
+LOG::2021-03-15.13:34:18::SCWSystem::Doing application build for :  zynq_fsbl
+TRACE::2021-03-15.13:34:18::SCWBDomain::Not a forced makefile updation, No changes are present. 
+TRACE::2021-03-15.13:34:18::SCWDomain::Skipping the build for domain :  zynq_fsbl
+LOG::2021-03-15.13:34:18::SCWSystem::Checking the domain standalone_domain
+LOG::2021-03-15.13:34:18::SCWSystem::Not a boot domain 
+LOG::2021-03-15.13:34:18::SCWSystem::Started Processing the domain standalone_domain
+TRACE::2021-03-15.13:34:18::SCWDomain::Generating domain artifcats
+TRACE::2021-03-15.13:34:18::SCWMssOS::Generating standalone artifcats
+TRACE::2021-03-15.13:34:18::SCWMssOS::Copying the qemu file from  C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt To C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/export/simple_axis_dma_hw/sw/simple_axis_dma_hw/qemu/
+TRACE::2021-03-15.13:34:18::SCWMssOS::Copying the qemu file from  C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt To C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/export/simple_axis_dma_hw/sw/simple_axis_dma_hw/standalone_domain/qemu/
+TRACE::2021-03-15.13:34:18::SCWMssOS:: Copying the user libraries. 
+TRACE::2021-03-15.13:34:18::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:18::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:18::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:18::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:34:18::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:18::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:34:18::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_5
+TRACE::2021-03-15.13:34:18::SCWPlatform::Opened existing hwdb design_1_wrapper_5
+TRACE::2021-03-15.13:34:18::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:34:18::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:34:18::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-15.13:34:18::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:34:18::SCWMssOS::Completed writing the mss file at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp
+TRACE::2021-03-15.13:34:18::SCWMssOS::Mss edits present, copying mssfile into export location C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:34:18::SCWMssOS::bsp generated is upto date with the mss file. Skipping bsp generation.
+TRACE::2021-03-15.13:34:18::SCWMssOS::BSP is already built. skipping the bsp build ... 
+TRACE::2021-03-15.13:34:18::SCWDomain::Skipping the build for domain :  standalone_domain
+TRACE::2021-03-15.13:34:18::SCWMssOS::skipping the bsp build ... 
+TRACE::2021-03-15.13:34:18::SCWMssOS::Copying to export directory.
+TRACE::2021-03-15.13:34:19::SCWMssOS:: Checking if to create the Supporting Applications
+TRACE::2021-03-15.13:34:19::SCWMssOS:: No Linux domain exists, trying to generate FSBL 
+LOG::2021-03-15.13:34:19::SCWSystem::Completed Processing the domain standalone_domain
+LOG::2021-03-15.13:34:19::SCWSystem::Completed Processing the sysconfig simple_axis_dma_hw
+LOG::2021-03-15.13:34:19::SCWPlatform::Completed generating the artifacts for system configuration simple_axis_dma_hw
+TRACE::2021-03-15.13:34:19::SCWPlatform::Started preparing the platform 
+TRACE::2021-03-15.13:34:19::SCWSystem::Writing the bif file for system config simple_axis_dma_hw
+TRACE::2021-03-15.13:34:19::SCWSystem::dir created 
+TRACE::2021-03-15.13:34:19::SCWSystem::Writing the bif 
+TRACE::2021-03-15.13:34:19::SCWPlatform::Started writing the spfm file 
+TRACE::2021-03-15.13:34:19::SCWPlatform::Started writing the xpfm file 
+TRACE::2021-03-15.13:34:19::SCWPlatform::Completed generating the platform
+TRACE::2021-03-15.13:34:19::SCWMssOS::Saving the mss changes C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:34:19::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2021-03-15.13:34:19::SCWMssOS::Completed writemss as part of save.
+TRACE::2021-03-15.13:34:19::SCWMssOS::Commit changes completed.
+TRACE::2021-03-15.13:34:19::SCWMssOS::Saving the mss changes C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:34:19::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2021-03-15.13:34:19::SCWMssOS::Completed writemss as part of save.
+TRACE::2021-03-15.13:34:19::SCWMssOS::Commit changes completed.
+TRACE::2021-03-15.13:34:19::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:19::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:19::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:19::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:34:19::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:19::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:34:19::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_5
+TRACE::2021-03-15.13:34:19::SCWPlatform::Opened existing hwdb design_1_wrapper_5
+TRACE::2021-03-15.13:34:19::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:34:19::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:34:19::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-15.13:34:19::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:34:19::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:19::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:19::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:19::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:34:19::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:19::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:34:19::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_5
+TRACE::2021-03-15.13:34:19::SCWPlatform::Opened existing hwdb design_1_wrapper_5
+TRACE::2021-03-15.13:34:19::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:34:19::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:34:19::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-15.13:34:19::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:34:19::SCWWriter::formatted JSON is {
+	"platformName":	"simple_axis_dma_hw",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"simple_axis_dma_hw",
+	"platHandOff":	"C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/design_1_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/design_1_wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"simple_axis_dma_hw",
+	"systems":	[{
+			"systemName":	"simple_axis_dma_hw",
+			"systemDesc":	"simple_axis_dma_hw",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"simple_axis_dma_hw",
+			"sysActiveDom":	"standalone_domain",
+			"sysDefaultDom":	"standalone_domain",
+			"domains":	[{
+					"domainName":	"zynq_fsbl",
+					"domainDispName":	"zynq_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"e01375d93c86d432ee7b4a4fd268cc84",
+					"compatibleApp":	"zynq_fsbl",
+					"domType":	"bootDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.3", "xilrsa:1.6"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"standalone_domain",
+					"domainDispName":	"standalone on ps7_cortexa9_0",
+					"domainDesc":	"standalone_domain",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt",
+					"qemuData":	"C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"43b48698cd794b84077e2caf0de1dd6f",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+KEYINFO::2021-03-15.13:34:19::SCWPlatform::updated the xpfm file.
+TRACE::2021-03-15.13:34:19::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:19::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:19::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:19::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:34:19::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:34:19::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:34:19::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_5
+TRACE::2021-03-15.13:34:19::SCWPlatform::Opened existing hwdb design_1_wrapper_5
+TRACE::2021-03-15.13:34:19::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:34:19::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:34:19::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-15.13:34:19::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:48:47::SCWPlatform::Clearing the existing platform
+TRACE::2021-03-15.13:48:47::SCWSystem::Clearing the existing sysconfig
+TRACE::2021-03-15.13:48:47::SCWBDomain::clearing the fsbl build
+TRACE::2021-03-15.13:48:47::SCWMssOS::Removing the swdes entry for  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:48:47::SCWMssOS::Removing the swdes entry for  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:48:47::SCWSystem::Clearing the domains completed.
+TRACE::2021-03-15.13:48:47::SCWPlatform::Clearing the opened hw db.
+TRACE::2021-03-15.13:48:47::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:48:47::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:48:47::SCWPlatform:: Platform location is C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:48:47::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:48:47::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:48:47::SCWPlatform::Removing the HwDB with name C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:48:47::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:48:47::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:48:47::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:48:47::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:48:47::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:48:47::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:48:47::SCWPlatform::Do not have an existing db opened. 
+TRACE::2021-03-15.13:48:50::SCWPlatform::Opened new HwDB with name design_1_wrapper_7
+TRACE::2021-03-15.13:48:50::SCWReader::Active system found as  simple_axis_dma_hw
+TRACE::2021-03-15.13:48:50::SCWReader::Handling sysconfig simple_axis_dma_hw
+TRACE::2021-03-15.13:48:51::SCWDomain::checking for install qemu data   : 
+TRACE::2021-03-15.13:48:51::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/
+TRACE::2021-03-15.13:48:51::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt
+TRACE::2021-03-15.13:48:51::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:48:51::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:48:51::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:48:51::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:48:51::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:48:51::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:48:51::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_7
+TRACE::2021-03-15.13:48:51::SCWPlatform::Opened existing hwdb design_1_wrapper_7
+TRACE::2021-03-15.13:48:51::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:48:51::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:48:51::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:48:51::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:48:51::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:48:51::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:48:51::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:48:51::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_7
+TRACE::2021-03-15.13:48:51::SCWPlatform::Opened existing hwdb design_1_wrapper_7
+TRACE::2021-03-15.13:48:51::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:48:51::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:48:51::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:48:51::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:48:51::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:48:51::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:48:51::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:48:51::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_7
+TRACE::2021-03-15.13:48:51::SCWPlatform::Opened existing hwdb design_1_wrapper_7
+TRACE::2021-03-15.13:48:51::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:48:51::SCWReader::Boot application domain added for zynq_fsbl
+TRACE::2021-03-15.13:48:51::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:48:51::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:48:51::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:48:51::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:48:51::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:48:51::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:48:51::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_7
+TRACE::2021-03-15.13:48:51::SCWPlatform::Opened existing hwdb design_1_wrapper_7
+TRACE::2021-03-15.13:48:51::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:48:51::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:48:51::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2021-03-15.13:48:51::SCWMssOS::No sw design opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:48:51::SCWMssOS::mss exists loading the mss file  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:48:51::SCWMssOS::Opened the sw design from mss  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:48:51::SCWMssOS::Adding the swdes entry C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss with des name system
+TRACE::2021-03-15.13:48:51::SCWMssOS::updating the scw layer about changes
+TRACE::2021-03-15.13:48:51::SCWMssOS::Opened the sw design.  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:48:51::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:48:51::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:48:51::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:48:51::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:48:51::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:48:51::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:48:51::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_7
+TRACE::2021-03-15.13:48:51::SCWPlatform::Opened existing hwdb design_1_wrapper_7
+TRACE::2021-03-15.13:48:51::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:48:51::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:48:51::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-15.13:48:51::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:48:51::SCWMssOS:: library already available in sw design:  xilffs:4.3
+TRACE::2021-03-15.13:48:51::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:48:51::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:48:51::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:48:51::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:48:51::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:48:51::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:48:51::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_7
+TRACE::2021-03-15.13:48:51::SCWPlatform::Opened existing hwdb design_1_wrapper_7
+TRACE::2021-03-15.13:48:51::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:48:51::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:48:51::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-15.13:48:51::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:48:51::SCWMssOS:: library already available in sw design:  xilrsa:1.6
+TRACE::2021-03-15.13:48:51::SCWMssOS::Saving the mss changes C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:48:51::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2021-03-15.13:48:51::SCWMssOS::Completed writemss as part of save.
+TRACE::2021-03-15.13:48:51::SCWMssOS::Commit changes completed.
+TRACE::2021-03-15.13:48:51::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2021-03-15.13:48:51::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2021-03-15.13:48:51::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:48:51::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:48:51::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:48:51::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:48:51::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:48:51::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:48:51::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_7
+TRACE::2021-03-15.13:48:51::SCWPlatform::Opened existing hwdb design_1_wrapper_7
+TRACE::2021-03-15.13:48:51::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:48:51::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:48:51::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-15.13:48:51::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:48:51::SCWReader::No isolation master present  
+TRACE::2021-03-15.13:48:51::SCWDomain::checking for install qemu data   : 
+TRACE::2021-03-15.13:48:51::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/
+TRACE::2021-03-15.13:48:51::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt
+TRACE::2021-03-15.13:48:51::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:48:51::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:48:51::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:48:51::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:48:51::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:48:51::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:48:51::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_7
+TRACE::2021-03-15.13:48:51::SCWPlatform::Opened existing hwdb design_1_wrapper_7
+TRACE::2021-03-15.13:48:51::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:48:51::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:48:51::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:48:51::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:48:51::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:48:51::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:48:51::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:48:51::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_7
+TRACE::2021-03-15.13:48:51::SCWPlatform::Opened existing hwdb design_1_wrapper_7
+TRACE::2021-03-15.13:48:51::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:48:51::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:48:51::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:48:51::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:48:51::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:48:51::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:48:51::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:48:51::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_7
+TRACE::2021-03-15.13:48:51::SCWPlatform::Opened existing hwdb design_1_wrapper_7
+TRACE::2021-03-15.13:48:51::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:48:51::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:48:51::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-15.13:48:51::SCWMssOS::No sw design opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:48:51::SCWMssOS::mss exists loading the mss file  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:48:51::SCWMssOS::Opened the sw design from mss  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:48:51::SCWMssOS::Adding the swdes entry C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss with des name system_0
+TRACE::2021-03-15.13:48:51::SCWMssOS::updating the scw layer about changes
+TRACE::2021-03-15.13:48:51::SCWMssOS::Opened the sw design.  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:48:51::SCWMssOS::Saving the mss changes C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:48:51::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2021-03-15.13:48:51::SCWMssOS::Completed writemss as part of save.
+TRACE::2021-03-15.13:48:51::SCWMssOS::Commit changes completed.
+TRACE::2021-03-15.13:48:51::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2021-03-15.13:48:51::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2021-03-15.13:48:51::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:48:51::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:48:51::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:48:51::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:48:51::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:48:51::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:48:51::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_7
+TRACE::2021-03-15.13:48:51::SCWPlatform::Opened existing hwdb design_1_wrapper_7
+TRACE::2021-03-15.13:48:51::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:48:51::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:48:51::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-15.13:48:51::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:48:51::SCWReader::No isolation master present  
+TRACE::2021-03-15.13:48:56::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:48:56::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:48:56::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:48:56::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:48:56::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:48:56::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:48:56::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_7
+TRACE::2021-03-15.13:48:56::SCWPlatform::Opened existing hwdb design_1_wrapper_7
+TRACE::2021-03-15.13:48:56::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:48:56::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/tempdsa/design_1_wrapper.xsa
+TRACE::2021-03-15.13:48:56::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/tempdsa/design_1_wrapper.xsa
+TRACE::2021-03-15.13:48:56::SCWPlatform:: Platform location is C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/tempdsa
+TRACE::2021-03-15.13:48:56::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/tempdsa/design_1_wrapper.xsa
+TRACE::2021-03-15.13:48:56::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:49:00::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:49:00::SCWMssOS::Doing hw sync for the mss in domain: zynq_fsbl
+TRACE::2021-03-15.13:49:00::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:49:00::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:49:00::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:49:00::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:49:00::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:49:00::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:49:00::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_7
+TRACE::2021-03-15.13:49:00::SCWPlatform::Opened existing hwdb design_1_wrapper_7
+TRACE::2021-03-15.13:49:00::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:49:00::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:49:00::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:49:00::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:49:00::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:49:00::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:49:00::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:49:00::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_7
+TRACE::2021-03-15.13:49:00::SCWPlatform::Opened existing hwdb design_1_wrapper_7
+TRACE::2021-03-15.13:49:00::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:49:00::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:49:00::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-15.13:49:00::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:49:00::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/tempdsa/design_1_wrapper.xsa
+TRACE::2021-03-15.13:49:00::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/tempdsa/design_1_wrapper.xsa
+TRACE::2021-03-15.13:49:00::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/tempdsa/design_1_wrapper.xsa
+TRACE::2021-03-15.13:49:00::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/tempdsa
+TRACE::2021-03-15.13:49:00::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/tempdsa/design_1_wrapper.xsa
+TRACE::2021-03-15.13:49:00::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:49:00::SCWPlatform::update - Opened existing hwdb design_1_wrapper_8
+TRACE::2021-03-15.13:49:00::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:49:00::SCWMssOS::Doing hw sync for the mss in domain: standalone_domain
+TRACE::2021-03-15.13:49:00::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:49:00::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:49:00::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:49:00::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:49:00::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:49:00::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:49:00::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_7
+TRACE::2021-03-15.13:49:00::SCWPlatform::Opened existing hwdb design_1_wrapper_7
+TRACE::2021-03-15.13:49:00::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:49:00::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:49:00::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:49:00::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:49:00::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:49:00::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:49:00::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:49:00::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_7
+TRACE::2021-03-15.13:49:00::SCWPlatform::Opened existing hwdb design_1_wrapper_7
+TRACE::2021-03-15.13:49:00::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:49:00::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:49:00::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-15.13:49:00::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:49:00::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/tempdsa/design_1_wrapper.xsa
+TRACE::2021-03-15.13:49:00::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/tempdsa/design_1_wrapper.xsa
+TRACE::2021-03-15.13:49:00::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/tempdsa/design_1_wrapper.xsa
+TRACE::2021-03-15.13:49:00::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/tempdsa
+TRACE::2021-03-15.13:49:00::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/tempdsa/design_1_wrapper.xsa
+TRACE::2021-03-15.13:49:00::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:49:00::SCWPlatform::update - Opened existing hwdb design_1_wrapper_8
+TRACE::2021-03-15.13:49:00::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:49:00::SCWMssOS::Saving the mss changes C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:49:00::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2021-03-15.13:49:00::SCWMssOS::Completed writemss as part of save.
+TRACE::2021-03-15.13:49:00::SCWMssOS::Commit changes completed.
+TRACE::2021-03-15.13:49:00::SCWMssOS::Completed hw sync for the mss in domain: zynq_fsbl
+TRACE::2021-03-15.13:49:00::SCWMssOS::Removing the swdes entry for  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:49:00::SCWMssOS::Saving the mss changes C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:49:00::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2021-03-15.13:49:00::SCWMssOS::Completed writemss as part of save.
+TRACE::2021-03-15.13:49:00::SCWMssOS::Commit changes completed.
+TRACE::2021-03-15.13:49:00::SCWMssOS::Completed hw sync for the mss in domain: standalone_domain
+TRACE::2021-03-15.13:49:00::SCWMssOS::Removing the swdes entry for  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:49:00::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:49:00::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:49:00::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:49:00::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:49:00::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:49:00::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:49:00::SCWPlatform::Do not have an existing db opened. 
+TRACE::2021-03-15.13:49:04::SCWPlatform::Opened new HwDB with name design_1_wrapper_9
+TRACE::2021-03-15.13:49:04::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:49:04::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:49:04::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:49:04::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:49:04::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:49:04::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:49:04::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_9
+TRACE::2021-03-15.13:49:04::SCWPlatform::Opened existing hwdb design_1_wrapper_9
+TRACE::2021-03-15.13:49:04::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:49:04::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:49:04::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2021-03-15.13:49:04::SCWMssOS::No sw design opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:49:04::SCWMssOS::mss exists loading the mss file  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:49:04::SCWMssOS::Opened the sw design from mss  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:49:04::SCWMssOS::Adding the swdes entry C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss with des name system
+TRACE::2021-03-15.13:49:04::SCWMssOS::updating the scw layer about changes
+TRACE::2021-03-15.13:49:04::SCWMssOS::Opened the sw design.  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:49:04::SCWMssOS::Saving the mss changes C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:49:04::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2021-03-15.13:49:04::SCWMssOS::Completed writemss as part of save.
+TRACE::2021-03-15.13:49:04::SCWMssOS::Commit changes completed.
+TRACE::2021-03-15.13:49:04::SCWMssOS::Saving the mss changes C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:49:04::SCWMssOS::Adding the swdes entry, mss present, able to open swdb C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss with des name system_0
+TRACE::2021-03-15.13:49:04::SCWMssOS::Writing the mss file completed C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:49:04::SCWMssOS::Commit changes completed.
+TRACE::2021-03-15.13:49:04::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:49:04::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:49:04::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:49:04::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:49:04::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:49:04::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:49:04::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_9
+TRACE::2021-03-15.13:49:04::SCWPlatform::Opened existing hwdb design_1_wrapper_9
+TRACE::2021-03-15.13:49:04::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:49:04::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:49:04::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-15.13:49:04::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:49:04::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:49:04::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:49:04::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:49:04::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:49:04::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:49:04::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:49:04::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_9
+TRACE::2021-03-15.13:49:04::SCWPlatform::Opened existing hwdb design_1_wrapper_9
+TRACE::2021-03-15.13:49:04::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:49:04::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:49:04::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-15.13:49:04::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:49:04::SCWWriter::formatted JSON is {
+	"platformName":	"simple_axis_dma_hw",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"simple_axis_dma_hw",
+	"platHandOff":	"C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/design_1_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/design_1_wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"simple_axis_dma_hw",
+	"systems":	[{
+			"systemName":	"simple_axis_dma_hw",
+			"systemDesc":	"simple_axis_dma_hw",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"simple_axis_dma_hw",
+			"sysActiveDom":	"standalone_domain",
+			"sysDefaultDom":	"standalone_domain",
+			"domains":	[{
+					"domainName":	"zynq_fsbl",
+					"domainDispName":	"zynq_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"e01375d93c86d432ee7b4a4fd268cc84",
+					"compatibleApp":	"zynq_fsbl",
+					"domType":	"bootDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.3", "xilrsa:1.6"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"standalone_domain",
+					"domainDispName":	"standalone on ps7_cortexa9_0",
+					"domainDesc":	"standalone_domain",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt",
+					"qemuData":	"C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"43b48698cd794b84077e2caf0de1dd6f",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+LOG::2021-03-15.13:49:10::SCWPlatform::Started generating the artifacts platform simple_axis_dma_hw
+TRACE::2021-03-15.13:49:10::SCWPlatform::Sanity checking of platform is completed
+LOG::2021-03-15.13:49:10::SCWPlatform::Started generating the artifacts for system configuration simple_axis_dma_hw
+LOG::2021-03-15.13:49:10::SCWSystem::Checking the domain zynq_fsbl
+LOG::2021-03-15.13:49:10::SCWSystem::Doing application build for :  zynq_fsbl
+TRACE::2021-03-15.13:49:10::SCWBDomain::Not a forced makefile updation, No changes are present. 
+TRACE::2021-03-15.13:49:10::SCWDomain::Skipping the build for domain :  zynq_fsbl
+LOG::2021-03-15.13:49:10::SCWSystem::Checking the domain standalone_domain
+LOG::2021-03-15.13:49:10::SCWSystem::Not a boot domain 
+LOG::2021-03-15.13:49:10::SCWSystem::Started Processing the domain standalone_domain
+TRACE::2021-03-15.13:49:10::SCWDomain::Generating domain artifcats
+TRACE::2021-03-15.13:49:10::SCWMssOS::Generating standalone artifcats
+TRACE::2021-03-15.13:49:10::SCWMssOS::Copying the qemu file from  C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt To C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/export/simple_axis_dma_hw/sw/simple_axis_dma_hw/qemu/
+TRACE::2021-03-15.13:49:10::SCWMssOS::Copying the qemu file from  C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt To C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/export/simple_axis_dma_hw/sw/simple_axis_dma_hw/standalone_domain/qemu/
+TRACE::2021-03-15.13:49:10::SCWMssOS:: Copying the user libraries. 
+TRACE::2021-03-15.13:49:10::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:49:10::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:49:10::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:49:10::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:49:10::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:49:10::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:49:10::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_9
+TRACE::2021-03-15.13:49:10::SCWPlatform::Opened existing hwdb design_1_wrapper_9
+TRACE::2021-03-15.13:49:10::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:49:10::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:49:10::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-15.13:49:10::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:49:10::SCWMssOS::Completed writing the mss file at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp
+TRACE::2021-03-15.13:49:10::SCWMssOS::Mss edits present, copying mssfile into export location C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:49:10::SCWMssOS::bsp generated is upto date with the mss file. Skipping bsp generation.
+TRACE::2021-03-15.13:49:10::SCWMssOS::BSP is already built. skipping the bsp build ... 
+TRACE::2021-03-15.13:49:10::SCWDomain::Skipping the build for domain :  standalone_domain
+TRACE::2021-03-15.13:49:10::SCWMssOS::skipping the bsp build ... 
+TRACE::2021-03-15.13:49:10::SCWMssOS::Copying to export directory.
+TRACE::2021-03-15.13:49:10::SCWMssOS:: Checking if to create the Supporting Applications
+TRACE::2021-03-15.13:49:10::SCWMssOS:: No Linux domain exists, trying to generate FSBL 
+LOG::2021-03-15.13:49:10::SCWSystem::Completed Processing the domain standalone_domain
+LOG::2021-03-15.13:49:10::SCWSystem::Completed Processing the sysconfig simple_axis_dma_hw
+LOG::2021-03-15.13:49:10::SCWPlatform::Completed generating the artifacts for system configuration simple_axis_dma_hw
+TRACE::2021-03-15.13:49:10::SCWPlatform::Started preparing the platform 
+TRACE::2021-03-15.13:49:10::SCWSystem::Writing the bif file for system config simple_axis_dma_hw
+TRACE::2021-03-15.13:49:10::SCWSystem::dir created 
+TRACE::2021-03-15.13:49:10::SCWSystem::Writing the bif 
+TRACE::2021-03-15.13:49:10::SCWPlatform::Started writing the spfm file 
+TRACE::2021-03-15.13:49:10::SCWPlatform::Started writing the xpfm file 
+TRACE::2021-03-15.13:49:10::SCWPlatform::Completed generating the platform
+TRACE::2021-03-15.13:49:11::SCWMssOS::Saving the mss changes C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:49:11::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2021-03-15.13:49:11::SCWMssOS::Completed writemss as part of save.
+TRACE::2021-03-15.13:49:11::SCWMssOS::Commit changes completed.
+TRACE::2021-03-15.13:49:11::SCWMssOS::Saving the mss changes C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:49:11::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2021-03-15.13:49:11::SCWMssOS::Completed writemss as part of save.
+TRACE::2021-03-15.13:49:11::SCWMssOS::Commit changes completed.
+TRACE::2021-03-15.13:49:11::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:49:11::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:49:11::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:49:11::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:49:11::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:49:11::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:49:11::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_9
+TRACE::2021-03-15.13:49:11::SCWPlatform::Opened existing hwdb design_1_wrapper_9
+TRACE::2021-03-15.13:49:11::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:49:11::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:49:11::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-15.13:49:11::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:49:11::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:49:11::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:49:11::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:49:11::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:49:11::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:49:11::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:49:11::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_9
+TRACE::2021-03-15.13:49:11::SCWPlatform::Opened existing hwdb design_1_wrapper_9
+TRACE::2021-03-15.13:49:11::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:49:11::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:49:11::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-15.13:49:11::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:49:11::SCWWriter::formatted JSON is {
+	"platformName":	"simple_axis_dma_hw",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"simple_axis_dma_hw",
+	"platHandOff":	"C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/design_1_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/design_1_wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"simple_axis_dma_hw",
+	"systems":	[{
+			"systemName":	"simple_axis_dma_hw",
+			"systemDesc":	"simple_axis_dma_hw",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"simple_axis_dma_hw",
+			"sysActiveDom":	"standalone_domain",
+			"sysDefaultDom":	"standalone_domain",
+			"domains":	[{
+					"domainName":	"zynq_fsbl",
+					"domainDispName":	"zynq_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"e01375d93c86d432ee7b4a4fd268cc84",
+					"compatibleApp":	"zynq_fsbl",
+					"domType":	"bootDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.3", "xilrsa:1.6"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"standalone_domain",
+					"domainDispName":	"standalone on ps7_cortexa9_0",
+					"domainDesc":	"standalone_domain",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt",
+					"qemuData":	"C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"43b48698cd794b84077e2caf0de1dd6f",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+KEYINFO::2021-03-15.13:49:11::SCWPlatform::updated the xpfm file.
+TRACE::2021-03-15.13:49:11::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:49:11::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:49:11::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:49:11::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:49:11::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:49:11::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:49:11::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_9
+TRACE::2021-03-15.13:49:11::SCWPlatform::Opened existing hwdb design_1_wrapper_9
+TRACE::2021-03-15.13:49:11::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:49:11::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:49:11::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-15.13:49:11::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:57:17::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:57:17::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:57:17::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:57:18::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:57:18::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:57:18::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:57:18::SCWPlatform::Do not have an existing db opened. 
+TRACE::2021-03-15.13:57:22::SCWPlatform::Opened new HwDB with name design_1_wrapper_0
+TRACE::2021-03-15.13:57:22::SCWReader::Active system found as  simple_axis_dma_hw
+TRACE::2021-03-15.13:57:22::SCWReader::Handling sysconfig simple_axis_dma_hw
+TRACE::2021-03-15.13:57:22::SCWDomain::checking for install qemu data   : 
+TRACE::2021-03-15.13:57:22::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/
+TRACE::2021-03-15.13:57:22::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt
+TRACE::2021-03-15.13:57:22::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:57:22::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:57:22::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:57:22::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:57:22::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:57:22::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:57:22::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2021-03-15.13:57:22::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2021-03-15.13:57:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:57:22::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:57:22::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:57:22::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:57:22::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:57:22::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:57:22::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:57:22::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2021-03-15.13:57:22::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2021-03-15.13:57:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:57:22::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:57:22::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:57:22::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:57:22::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:57:22::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:57:22::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:57:22::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2021-03-15.13:57:22::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2021-03-15.13:57:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:57:22::SCWReader::Boot application domain added for zynq_fsbl
+TRACE::2021-03-15.13:57:22::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:57:22::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:57:22::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:57:22::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:57:22::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:57:22::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:57:22::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2021-03-15.13:57:22::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2021-03-15.13:57:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:57:22::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:57:22::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2021-03-15.13:57:22::SCWMssOS::No sw design opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:57:22::SCWMssOS::mss exists loading the mss file  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:57:22::SCWMssOS::Opened the sw design from mss  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:57:22::SCWMssOS::Adding the swdes entry C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss with des name system
+TRACE::2021-03-15.13:57:22::SCWMssOS::updating the scw layer about changes
+TRACE::2021-03-15.13:57:22::SCWMssOS::Opened the sw design.  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:57:22::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:57:22::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:57:22::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:57:22::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:57:22::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:57:22::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:57:22::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2021-03-15.13:57:22::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2021-03-15.13:57:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:57:22::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:57:22::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-15.13:57:22::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:57:22::SCWMssOS:: library already available in sw design:  xilffs:4.3
+TRACE::2021-03-15.13:57:22::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:57:22::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:57:22::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:57:22::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:57:22::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:57:22::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:57:22::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2021-03-15.13:57:22::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2021-03-15.13:57:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:57:22::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:57:22::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-15.13:57:22::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:57:22::SCWMssOS:: library already available in sw design:  xilrsa:1.6
+TRACE::2021-03-15.13:57:22::SCWMssOS::Saving the mss changes C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:57:22::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2021-03-15.13:57:22::SCWMssOS::Completed writemss as part of save.
+TRACE::2021-03-15.13:57:22::SCWMssOS::Commit changes completed.
+TRACE::2021-03-15.13:57:22::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2021-03-15.13:57:22::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2021-03-15.13:57:22::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:57:22::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:57:22::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:57:22::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:57:22::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:57:22::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:57:22::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2021-03-15.13:57:22::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2021-03-15.13:57:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:57:22::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:57:22::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-15.13:57:22::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:57:22::SCWReader::No isolation master present  
+TRACE::2021-03-15.13:57:22::SCWDomain::checking for install qemu data   : 
+TRACE::2021-03-15.13:57:22::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/
+TRACE::2021-03-15.13:57:22::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt
+TRACE::2021-03-15.13:57:22::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:57:22::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:57:22::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:57:22::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:57:22::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:57:22::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:57:22::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2021-03-15.13:57:22::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2021-03-15.13:57:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:57:22::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:57:22::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:57:22::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:57:22::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:57:22::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:57:22::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:57:22::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2021-03-15.13:57:22::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2021-03-15.13:57:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:57:22::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:57:22::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:57:22::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:57:22::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:57:22::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:57:22::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:57:22::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2021-03-15.13:57:22::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2021-03-15.13:57:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:57:22::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:57:22::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-15.13:57:22::SCWMssOS::No sw design opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:57:22::SCWMssOS::mss exists loading the mss file  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:57:22::SCWMssOS::Opened the sw design from mss  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:57:22::SCWMssOS::Adding the swdes entry C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss with des name system_0
+TRACE::2021-03-15.13:57:22::SCWMssOS::updating the scw layer about changes
+TRACE::2021-03-15.13:57:22::SCWMssOS::Opened the sw design.  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:57:22::SCWMssOS::Saving the mss changes C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:57:22::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2021-03-15.13:57:22::SCWMssOS::Completed writemss as part of save.
+TRACE::2021-03-15.13:57:22::SCWMssOS::Commit changes completed.
+TRACE::2021-03-15.13:57:22::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2021-03-15.13:57:22::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2021-03-15.13:57:22::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:57:22::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:57:22::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:57:22::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:57:22::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:57:22::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:57:22::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2021-03-15.13:57:22::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2021-03-15.13:57:22::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:57:22::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:57:22::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-15.13:57:22::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:57:22::SCWReader::No isolation master present  
+LOG::2021-03-15.13:57:22::SCWPlatform::Started generating the artifacts platform simple_axis_dma_hw
+TRACE::2021-03-15.13:57:22::SCWPlatform::Sanity checking of platform is completed
+LOG::2021-03-15.13:57:22::SCWPlatform::Started generating the artifacts for system configuration simple_axis_dma_hw
+LOG::2021-03-15.13:57:22::SCWSystem::Checking the domain zynq_fsbl
+LOG::2021-03-15.13:57:22::SCWSystem::Doing application build for :  zynq_fsbl
+TRACE::2021-03-15.13:57:22::SCWBDomain::Not a forced makefile updation, No changes are present. 
+TRACE::2021-03-15.13:57:22::SCWDomain::Skipping the build for domain :  zynq_fsbl
+LOG::2021-03-15.13:57:22::SCWSystem::Checking the domain standalone_domain
+LOG::2021-03-15.13:57:22::SCWSystem::Not a boot domain 
+LOG::2021-03-15.13:57:22::SCWSystem::Started Processing the domain standalone_domain
+TRACE::2021-03-15.13:57:22::SCWDomain::Generating domain artifcats
+TRACE::2021-03-15.13:57:22::SCWMssOS::Generating standalone artifcats
+TRACE::2021-03-15.13:57:22::SCWMssOS::Copying the qemu file from  C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt To C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/export/simple_axis_dma_hw/sw/simple_axis_dma_hw/qemu/
+TRACE::2021-03-15.13:57:22::SCWMssOS::Copying the qemu file from  C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt To C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/export/simple_axis_dma_hw/sw/simple_axis_dma_hw/standalone_domain/qemu/
+TRACE::2021-03-15.13:57:22::SCWMssOS:: Copying the user libraries. 
+TRACE::2021-03-15.13:57:22::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:57:22::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:57:22::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:57:22::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:57:22::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:57:22::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:57:22::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2021-03-15.13:57:22::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2021-03-15.13:57:23::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:57:23::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:57:23::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-15.13:57:23::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:57:23::SCWMssOS::Completed writing the mss file at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp
+TRACE::2021-03-15.13:57:23::SCWMssOS::Mss edits present, copying mssfile into export location C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:57:23::SCWMssOS::bsp generated is upto date with the mss file. Skipping bsp generation.
+TRACE::2021-03-15.13:57:23::SCWMssOS::BSP is already built. skipping the bsp build ... 
+TRACE::2021-03-15.13:57:23::SCWDomain::Skipping the build for domain :  standalone_domain
+TRACE::2021-03-15.13:57:23::SCWMssOS::skipping the bsp build ... 
+TRACE::2021-03-15.13:57:23::SCWMssOS::Copying to export directory.
+TRACE::2021-03-15.13:57:23::SCWMssOS:: Checking if to create the Supporting Applications
+TRACE::2021-03-15.13:57:23::SCWMssOS:: No Linux domain exists, trying to generate FSBL 
+LOG::2021-03-15.13:57:23::SCWSystem::Completed Processing the domain standalone_domain
+LOG::2021-03-15.13:57:23::SCWSystem::Completed Processing the sysconfig simple_axis_dma_hw
+LOG::2021-03-15.13:57:23::SCWPlatform::Completed generating the artifacts for system configuration simple_axis_dma_hw
+TRACE::2021-03-15.13:57:23::SCWPlatform::Started preparing the platform 
+TRACE::2021-03-15.13:57:23::SCWSystem::Writing the bif file for system config simple_axis_dma_hw
+TRACE::2021-03-15.13:57:23::SCWSystem::dir created 
+TRACE::2021-03-15.13:57:23::SCWSystem::Writing the bif 
+TRACE::2021-03-15.13:57:23::SCWPlatform::Started writing the spfm file 
+TRACE::2021-03-15.13:57:23::SCWPlatform::Started writing the xpfm file 
+TRACE::2021-03-15.13:57:23::SCWPlatform::Completed generating the platform
+TRACE::2021-03-15.13:57:23::SCWMssOS::Saving the mss changes C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:57:23::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2021-03-15.13:57:23::SCWMssOS::Completed writemss as part of save.
+TRACE::2021-03-15.13:57:23::SCWMssOS::Commit changes completed.
+TRACE::2021-03-15.13:57:23::SCWMssOS::Saving the mss changes C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:57:23::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2021-03-15.13:57:23::SCWMssOS::Completed writemss as part of save.
+TRACE::2021-03-15.13:57:23::SCWMssOS::Commit changes completed.
+TRACE::2021-03-15.13:57:23::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:57:23::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:57:23::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:57:23::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:57:23::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:57:23::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:57:23::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2021-03-15.13:57:23::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2021-03-15.13:57:23::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:57:23::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:57:23::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-15.13:57:23::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-15.13:57:23::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:57:23::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:57:23::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:57:23::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:57:23::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:57:23::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:57:23::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2021-03-15.13:57:23::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2021-03-15.13:57:23::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:57:23::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:57:23::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-15.13:57:23::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:57:23::SCWWriter::formatted JSON is {
+	"platformName":	"simple_axis_dma_hw",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"simple_axis_dma_hw",
+	"platHandOff":	"C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/design_1_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/design_1_wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"simple_axis_dma_hw",
+	"systems":	[{
+			"systemName":	"simple_axis_dma_hw",
+			"systemDesc":	"simple_axis_dma_hw",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"simple_axis_dma_hw",
+			"sysActiveDom":	"standalone_domain",
+			"sysDefaultDom":	"standalone_domain",
+			"domains":	[{
+					"domainName":	"zynq_fsbl",
+					"domainDispName":	"zynq_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"e01375d93c86d432ee7b4a4fd268cc84",
+					"compatibleApp":	"zynq_fsbl",
+					"domType":	"bootDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.3", "xilrsa:1.6"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"standalone_domain",
+					"domainDispName":	"standalone on ps7_cortexa9_0",
+					"domainDesc":	"standalone_domain",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt",
+					"qemuData":	"C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"43b48698cd794b84077e2caf0de1dd6f",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+KEYINFO::2021-03-15.13:57:23::SCWPlatform::updated the xpfm file.
+TRACE::2021-03-15.13:57:23::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:57:23::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:57:23::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:57:23::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw
+TRACE::2021-03-15.13:57:23::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/hw/design_1_wrapper.xsa
+TRACE::2021-03-15.13:57:23::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-15.13:57:23::SCWPlatform::Trying to set the existing hwdb with name design_1_wrapper_0
+TRACE::2021-03-15.13:57:23::SCWPlatform::Opened existing hwdb design_1_wrapper_0
+TRACE::2021-03-15.13:57:23::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-15.13:57:23::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-15.13:57:23::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-15.13:57:23::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Software/simple_axis_dma_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss

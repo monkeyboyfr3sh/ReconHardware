@@ -2,8 +2,8 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Mon Mar 15 12:52:15 2021
-# Process ID: 11444
+# Start of session at: Mon Mar 15 13:44:48 2021
+# Process ID: 11240
 # Current directory: C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.runs/impl_1
 # Command line: vivado.exe -log design_1_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source design_1_wrapper.tcl -notrace
 # Log file: C:/GitHub/ReconHardware/FPGA_Files/Projects/simple_axis_dma/simple_axis_dma.runs/impl_1/design_1_wrapper.vdi

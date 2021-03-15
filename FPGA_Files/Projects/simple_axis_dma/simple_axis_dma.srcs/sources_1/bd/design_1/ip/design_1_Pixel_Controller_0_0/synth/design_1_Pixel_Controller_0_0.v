@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:user:Pixel_Controller:1.0
-// IP Revision: 12
+// IP Revision: 14
 
 (* X_CORE_INFO = "Pixel_Controller,Vivado 2020.1" *)
 (* CHECK_LICENSE_TYPE = "design_1_Pixel_Controller_0_0,Pixel_Controller,{}" *)
-(* CORE_GENERATION_INFO = "design_1_Pixel_Controller_0_0,Pixel_Controller,{x_ipProduct=Vivado 2020.1,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=Pixel_Controller,x_ipVersion=1.0,x_ipCoreRevision=12,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,DATA_WIDTH=32,ADDR_WIDTH=10}" *)
+(* CORE_GENERATION_INFO = "design_1_Pixel_Controller_0_0,Pixel_Controller,{x_ipProduct=Vivado 2020.1,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=Pixel_Controller,x_ipVersion=1.0,x_ipCoreRevision=14,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,DATA_WIDTH=32,ADDR_WIDTH=10}" *)
 (* IP_DEFINITION_SOURCE = "package_project" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_Pixel_Controller_0_0 (

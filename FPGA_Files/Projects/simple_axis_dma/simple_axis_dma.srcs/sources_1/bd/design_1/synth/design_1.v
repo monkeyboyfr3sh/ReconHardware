@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-//Date        : Mon Mar 15 12:48:51 2021
+//Date        : Mon Mar 15 13:43:07 2021
 //Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -9,7 +9,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=6,numReposBlks=6,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_clkrst_cnt=5,da_ps7_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
+(* CORE_GENERATION_INFO = "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=9,numReposBlks=9,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_clkrst_cnt=5,da_ps7_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_1.hwdef" *) 
 module design_1
    (DDR_addr,
     DDR_ba,
@@ -173,9 +173,11 @@ module design_1
   wire smartconnect_0_M00_AXI_WREADY;
   wire smartconnect_0_M00_AXI_WVALID;
   wire [9:0]smartconnect_0_M01_AXI_ARADDR;
+  wire [2:0]smartconnect_0_M01_AXI_ARPROT;
   wire smartconnect_0_M01_AXI_ARREADY;
   wire smartconnect_0_M01_AXI_ARVALID;
   wire [9:0]smartconnect_0_M01_AXI_AWADDR;
+  wire [2:0]smartconnect_0_M01_AXI_AWPROT;
   wire smartconnect_0_M01_AXI_AWREADY;
   wire smartconnect_0_M01_AXI_AWVALID;
   wire smartconnect_0_M01_AXI_BREADY;
@@ -185,6 +187,7 @@ module design_1
   wire smartconnect_0_M01_AXI_RVALID;
   wire [31:0]smartconnect_0_M01_AXI_WDATA;
   wire smartconnect_0_M01_AXI_WREADY;
+  wire [3:0]smartconnect_0_M01_AXI_WSTRB;
   wire smartconnect_0_M01_AXI_WVALID;
   wire [31:0]smartconnect_1_M00_AXI_ARADDR;
   wire [1:0]smartconnect_1_M00_AXI_ARBURST;
@@ -307,6 +310,38 @@ module design_1
         .s_axis_s2mm_tlast(Pixel_Controller_0_m_axis_TLAST),
         .s_axis_s2mm_tready(Pixel_Controller_0_m_axis_TREADY),
         .s_axis_s2mm_tvalid(Pixel_Controller_0_m_axis_TVALID));
+  design_1_ila_0_0 axi_ila_0
+       (.clk(processing_system7_0_FCLK_CLK0),
+        .probe0(smartconnect_0_M01_AXI_WREADY),
+        .probe1(smartconnect_0_M01_AXI_AWADDR),
+        .probe10(smartconnect_0_M01_AXI_RDATA),
+        .probe11(smartconnect_0_M01_AXI_AWVALID),
+        .probe12(smartconnect_0_M01_AXI_AWREADY),
+        .probe13({1'b0,1'b0}),
+        .probe14(smartconnect_0_M01_AXI_WDATA),
+        .probe15(smartconnect_0_M01_AXI_WSTRB),
+        .probe16(smartconnect_0_M01_AXI_RVALID),
+        .probe17(smartconnect_0_M01_AXI_ARPROT),
+        .probe18(smartconnect_0_M01_AXI_AWPROT),
+        .probe2({1'b0,1'b0}),
+        .probe3(smartconnect_0_M01_AXI_BVALID),
+        .probe4(smartconnect_0_M01_AXI_BREADY),
+        .probe5(smartconnect_0_M01_AXI_ARADDR),
+        .probe6(smartconnect_0_M01_AXI_RREADY),
+        .probe7(smartconnect_0_M01_AXI_WVALID),
+        .probe8(smartconnect_0_M01_AXI_ARVALID),
+        .probe9(smartconnect_0_M01_AXI_ARREADY));
+  design_1_ila_1_0 m_axis_ila_0
+       (.clk(processing_system7_0_FCLK_CLK0),
+        .probe0(Pixel_Controller_0_m_axis_TREADY),
+        .probe1(Pixel_Controller_0_m_axis_TDATA),
+        .probe2({1'b1,1'b1,1'b1,1'b1}),
+        .probe3(Pixel_Controller_0_m_axis_TVALID),
+        .probe4(Pixel_Controller_0_m_axis_TLAST),
+        .probe5(1'b0),
+        .probe6(Pixel_Controller_0_m_axis_TKEEP),
+        .probe7(1'b0),
+        .probe8(1'b0));
   design_1_processing_system7_0_0 processing_system7_0
        (.DDR_Addr(DDR_addr[14:0]),
         .DDR_BankAddr(DDR_ba[2:0]),
@@ -418,6 +453,17 @@ module design_1
         .mb_debug_sys_rst(1'b0),
         .peripheral_aresetn(rst_ps7_0_100M_peripheral_aresetn),
         .slowest_sync_clk(processing_system7_0_FCLK_CLK0));
+  design_1_ila_0_1 s_axis_ila_0
+       (.clk(processing_system7_0_FCLK_CLK0),
+        .probe0(axi_dma_0_M_AXIS_MM2S_TREADY),
+        .probe1(axi_dma_0_M_AXIS_MM2S_TDATA),
+        .probe2({1'b1,1'b1,1'b1,1'b1}),
+        .probe3(axi_dma_0_M_AXIS_MM2S_TVALID),
+        .probe4(axi_dma_0_M_AXIS_MM2S_TLAST),
+        .probe5(1'b0),
+        .probe6(axi_dma_0_M_AXIS_MM2S_TKEEP),
+        .probe7(1'b0),
+        .probe8(1'b0));
   design_1_smartconnect_0_0 smartconnect_0
        (.M00_AXI_araddr(smartconnect_0_M00_AXI_ARADDR),
         .M00_AXI_arready(smartconnect_0_M00_AXI_ARREADY),
@@ -436,9 +482,11 @@ module design_1
         .M00_AXI_wready(smartconnect_0_M00_AXI_WREADY),
         .M00_AXI_wvalid(smartconnect_0_M00_AXI_WVALID),
         .M01_AXI_araddr(smartconnect_0_M01_AXI_ARADDR),
+        .M01_AXI_arprot(smartconnect_0_M01_AXI_ARPROT),
         .M01_AXI_arready(smartconnect_0_M01_AXI_ARREADY),
         .M01_AXI_arvalid(smartconnect_0_M01_AXI_ARVALID),
         .M01_AXI_awaddr(smartconnect_0_M01_AXI_AWADDR),
+        .M01_AXI_awprot(smartconnect_0_M01_AXI_AWPROT),
         .M01_AXI_awready(smartconnect_0_M01_AXI_AWREADY),
         .M01_AXI_awvalid(smartconnect_0_M01_AXI_AWVALID),
         .M01_AXI_bready(smartconnect_0_M01_AXI_BREADY),
@@ -450,6 +498,7 @@ module design_1
         .M01_AXI_rvalid(smartconnect_0_M01_AXI_RVALID),
         .M01_AXI_wdata(smartconnect_0_M01_AXI_WDATA),
         .M01_AXI_wready(smartconnect_0_M01_AXI_WREADY),
+        .M01_AXI_wstrb(smartconnect_0_M01_AXI_WSTRB),
         .M01_AXI_wvalid(smartconnect_0_M01_AXI_WVALID),
         .S00_AXI_araddr(processing_system7_0_M_AXI_GP0_ARADDR),
         .S00_AXI_arburst(processing_system7_0_M_AXI_GP0_ARBURST),

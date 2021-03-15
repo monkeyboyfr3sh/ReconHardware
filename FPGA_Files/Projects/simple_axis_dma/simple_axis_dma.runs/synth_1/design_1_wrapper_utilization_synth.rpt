@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date         : Mon Mar 15 12:52:08 2021
+| Date         : Mon Mar 15 13:44:41 2021
 | Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 | Command      : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
 | Design       : design_1_wrapper
@@ -179,6 +179,9 @@ Table of Contents
 | design_1_smartconnect_0_0       |    1 |
 | design_1_rst_ps7_0_100M_0       |    1 |
 | design_1_processing_system7_0_0 |    1 |
+| design_1_ila_1_0                |    1 |
+| design_1_ila_0_1                |    1 |
+| design_1_ila_0_0                |    1 |
 | design_1_axi_dma_0_0            |    1 |
 | design_1_Pixel_Controller_0_0   |    1 |
 +---------------------------------+------+

@@ -1,0 +1,10 @@
+17:25:23 **** Incremental Build of configuration Debug for project dma_test_w_dfx ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+make[1]: Nothing to be done for 'main-build'.
+
+17:25:23 Build Finished (took 229ms)
+

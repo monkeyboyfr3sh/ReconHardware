@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:user:Pixel_Controller:1.0
-// IP Revision: 12
+// IP Revision: 14
 
 `timescale 1ns/1ps
 
