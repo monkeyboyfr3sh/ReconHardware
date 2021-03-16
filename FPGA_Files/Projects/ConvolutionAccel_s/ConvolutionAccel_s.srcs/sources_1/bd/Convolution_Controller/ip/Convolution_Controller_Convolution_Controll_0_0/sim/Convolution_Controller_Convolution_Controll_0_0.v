@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:user:Convolution_Controller:1.0
-// IP Revision: 3
+// IP Revision: 7
 
 `timescale 1ns/1ps
 

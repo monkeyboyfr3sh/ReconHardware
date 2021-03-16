@@ -843,9 +843,11 @@
 						"ACLK": { "actual": "M01_ACLK"},
 						"ARADDR": { "actual": "M01_AXI_araddr[63:32]"},
 						"ARESETN": { "actual": "ARESETN"},
+						"ARPROT": { "actual": "M01_AXI_arprot[5:3]"},
 						"ARREADY": { "actual": "M01_AXI_arready"},
 						"ARVALID": { "actual": "M01_AXI_arvalid"},
 						"AWADDR": { "actual": "M01_AXI_awaddr[63:32]"},
+						"AWPROT": { "actual": "M01_AXI_awprot[5:3]"},
 						"AWREADY": { "actual": "M01_AXI_awready"},
 						"AWVALID": { "actual": "M01_AXI_awvalid"},
 						"BREADY": { "actual": "M01_AXI_bready"},
@@ -855,6 +857,7 @@
 						"RVALID": { "actual": "M01_AXI_rvalid"},
 						"WDATA": { "actual": "M01_AXI_wdata[63:32]"},
 						"WREADY": { "actual": "M01_AXI_wready"},
+						"WSTRB": { "actual": "M01_AXI_wstrb[7:4]"},
 						"WVALID": { "actual": "M01_AXI_wvalid"}
 					}
 				},
@@ -955,9 +958,11 @@
 						"ACLK": { "actual": "M_ACLK"},
 						"ARADDR": { "actual": "M_AXI_araddr[63:32]"},
 						"ARESETN": { "actual": "M_ARESETN"},
+						"ARPROT": { "actual": "M_AXI_arprot[5:3]"},
 						"ARREADY": { "actual": "M_AXI_arready"},
 						"ARVALID": { "actual": "M_AXI_arvalid"},
 						"AWADDR": { "actual": "M_AXI_awaddr[63:32]"},
+						"AWPROT": { "actual": "M_AXI_awprot[5:3]"},
 						"AWREADY": { "actual": "M_AXI_awready"},
 						"AWVALID": { "actual": "M_AXI_awvalid"},
 						"BREADY": { "actual": "M_AXI_bready"},
@@ -967,6 +972,7 @@
 						"RVALID": { "actual": "M_AXI_rvalid"},
 						"WDATA": { "actual": "M_AXI_wdata[63:32]"},
 						"WREADY": { "actual": "M_AXI_wready"},
+						"WSTRB": { "actual": "M_AXI_wstrb[7:4]"},
 						"WVALID": { "actual": "M_AXI_wvalid"}
 					}
 				},
@@ -976,9 +982,11 @@
 						"ACLK": { "actual": "S_ACLK"},
 						"ARADDR": { "actual": "S_AXI_araddr[63:32]"},
 						"ARESETN": { "actual": "S_ARESETN"},
+						"ARPROT": { "actual": "S_AXI_arprot[5:3]"},
 						"ARREADY": { "actual": "S_AXI_arready"},
 						"ARVALID": { "actual": "S_AXI_arvalid"},
 						"AWADDR": { "actual": "S_AXI_awaddr[63:32]"},
+						"AWPROT": { "actual": "S_AXI_awprot[5:3]"},
 						"AWREADY": { "actual": "S_AXI_awready"},
 						"AWVALID": { "actual": "S_AXI_awvalid"},
 						"BREADY": { "actual": "S_AXI_bready"},
@@ -988,6 +996,7 @@
 						"RVALID": { "actual": "S_AXI_rvalid"},
 						"WDATA": { "actual": "S_AXI_wdata[63:32]"},
 						"WREADY": { "actual": "S_AXI_wready"},
+						"WSTRB": { "actual": "S_AXI_wstrb[7:4]"},
 						"WVALID": { "actual": "S_AXI_wvalid"}
 					}
 				},

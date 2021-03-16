@@ -1,6 +1,6 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/FPGA_Files/Projects/AXI_Convolution_Controller/AXI_Convolution_Controller.ip_user_files/bd/BRAM/ip/BRAM_blk_mem_gen_0_0/sim/BRAM_blk_mem_gen_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/FPGA_Files/Projects/AXI_Convolution_Controller/AXI_Convolution_Controller.ip_user_files/bd/bram/ip/bram_blk_mem_gen_0_0/sim/BRAM_blk_mem_gen_0_0.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module BRAM_blk_mem_gen_0_0
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/FPGA_Files/Projects/AXI_Convolution_Controller/AXI_Convolution_Controller.ip_user_files/bd/BRAM/sim/BRAM.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/FPGA_Files/Projects/AXI_Convolution_Controller/AXI_Convolution_Controller.ip_user_files/bd/bram/sim/BRAM.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module BRAM
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module Convolution_Controller
@@ -24,5 +24,5 @@ INFO: [VRFC 10-311] analyzing module param_int_adder
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/General/Controller_w_BRAM_TB.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module Controller_w_BRAM_TB
 INFO: [VRFC 10-2458] undeclared symbol AddressSelect, assumed default net type wire [C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/General/Controller_w_BRAM_TB.v:134]
-WARNING: [VRFC 10-3248] data object 'i' is already declared [C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/General/Controller_w_BRAM_TB.v:251]
-WARNING: [VRFC 10-3703] second declaration of 'i' ignored [C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/General/Controller_w_BRAM_TB.v:251]
+WARNING: [VRFC 10-3248] data object 'i' is already declared [C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/General/Controller_w_BRAM_TB.v:258]
+WARNING: [VRFC 10-3703] second declaration of 'i' ignored [C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/General/Controller_w_BRAM_TB.v:258]

@@ -1,6 +1,2 @@
 Vivado Simulator 2020.1
 Time resolution is 1 ps
-Block Memory Generator module Controller_w_BRAM_TB.UUT.\genblk1[0].br_coupler .\genblk1[0].BRAM .BRAM_i.blk_mem_gen_0.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
-Block Memory Generator module Controller_w_BRAM_TB.UUT.\genblk1[0].br_coupler .\genblk1[1].BRAM .BRAM_i.blk_mem_gen_0.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
-Block Memory Generator module Controller_w_BRAM_TB.UUT.\genblk1[0].br_coupler .\genblk1[2].BRAM .BRAM_i.blk_mem_gen_0.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
-Stopped at time : 835 ns : File "C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0/AXI_Convolution_Controller.v" Line 260

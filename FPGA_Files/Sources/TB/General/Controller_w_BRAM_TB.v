@@ -61,6 +61,26 @@ wire s_axi_rlast;
 wire s_axi_bvalid;
 reg s_axi_bready;
 
+//axi_vp_wrapper
+//axi_master
+//(
+//    .M_AXI_0_araddr(s_axi_araddr),
+//    .M_AXI_0_arready(s_axi_arready),
+//    .M_AXI_0_arvalid(s_axi_arvalid),
+//    .M_AXI_0_awaddr(s_axi_awaddr),
+//    .M_AXI_0_awready(s_axi_awready),
+//    .M_AXI_0_awvalid(s_axi_awvalid),
+//    .M_AXI_0_bready(s_axi_bready),
+//    .M_AXI_0_bvalid(s_axi_bvalid),
+//    .M_AXI_0_rdata(s_axi_rdata),
+//    .M_AXI_0_rready(s_axi_rready),
+//    .M_AXI_0_rvalid(s_axi_rvalid),
+//    .M_AXI_0_wdata(s_axi_wdata),
+//    .M_AXI_0_wready(s_axi_wready),
+//    .M_AXI_0_wvalid(s_axi_wvalid),
+//    .aclk_0(axi_clk),
+//    .aresetn_0(axi_reset_n)
+//);
 Convolution_Controller 
 #(
     .KERNEL_SIZE(3),
@@ -151,9 +171,9 @@ reg setup;
 initial begin
 setup = 0;
 axi_clk = 0;
-s_axi_bready = 1;
+s_axi_bready = 0;
 axi_reset_n = 1;
-#`clkPeriod;
+#(`clkPeriod/2);
 axi_reset_n = 0;
 #`clkPeriod;
 axi_reset_n = 1;
@@ -229,19 +249,26 @@ s_axi_wvalid = 0;
 
 //Load the filter values into IP
 for(i = 0;i<`kernel_size*`kernel_size;i=i+1)begin
+    #0.1;
     s_axi_awvalid = 1;
     s_axi_awaddr = (i*4)+24;
     s_axi_wvalid = 1;
     if(i==8) s_axi_wdata = 1;
     else s_axi_wdata = 0;
-//    s_axi_wdata = i;//Data going into filter
+//    else s_axi_wdata = i;//Data going into filter
     curr_filterSet[i] = s_axi_wdata; //Also put the data in the test array
-    
     #`clkPeriod;
+    
+    // Wait for awready
+    while (s_axi_awready == 0)#`clkPeriod;
+    // Wait for wready
+    while (s_axi_wready == 0)#`clkPeriod;
+    s_axi_bready = 1;
     s_axi_awvalid = 0;
     s_axi_wvalid = 0;
-    #`clkPeriod;
-    #`clkPeriod;
+    //Wait for bready
+    while (s_axi_bready == 0)#`clkPeriod;
+    s_axi_bready = 0;
 end
 linecnt = 0;
 columncnt = 0;

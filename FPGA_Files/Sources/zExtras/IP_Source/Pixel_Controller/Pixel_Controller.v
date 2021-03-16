@@ -100,12 +100,24 @@ module Pixel_Controller #(
     
     always @(posedge axi_clk)
     begin
-    
+        
+    if(!axi_reset_n)begin
+        s_axi_bvalid = 0;//Reset for write transactions
+        
+        s_axi_wready = 0;//Reset for write transactions
+        s_axi_rvalid = 0;//Reset for read transactions
+        s_axi_rlast = 0;//Reset for read transactions
+        
+        s_axi_awready = 1;//Set awready so a write transaction can be initiated
+        s_axi_arready = 1;//Set arready so a read transaction can be initiated
+    end
+
     // Need to service end of write or read transaction
     if (s_axi_bvalid) begin
         if(s_axi_bready)begin
             s_axi_bvalid = 0;//Reset for write transactions
             
+            s_axi_wready = 0;//Reset for write transactions
             s_axi_rvalid = 0;//Reset for read transactions
             s_axi_rlast = 0;//Reset for read transactions
             

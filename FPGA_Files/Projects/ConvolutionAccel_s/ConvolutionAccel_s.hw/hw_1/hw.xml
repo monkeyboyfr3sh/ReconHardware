@@ -50,8 +50,96 @@
     <Object name="BD_Wrapper/Convolution_Controller_i/axi_dma_0_M_AXIS_MM2S_TREADY" gui_info="Trigger Setup=1"/>
     <Object name="BD_Wrapper/Convolution_Controller_i/axi_dma_0_M_AXIS_MM2S_TVALID" gui_info="Trigger Setup=0"/>
     <Object name="BD_Wrapper/Convolution_Controller_i/cReady_0_1" gui_info="Trigger Setup=0"/>
+    <Object name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_ARREADY" gui_info="Trigger Setup=2"/>
+    <Object name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_ARVALID" gui_info="Trigger Setup=3"/>
+    <Object name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_AWREADY" gui_info="Trigger Setup=1"/>
+    <Object name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_AWVALID" gui_info="Trigger Setup=0"/>
   </ObjectList>
   <probeset name="hw project" active="false">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe13[1]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="BD_Wrapper/Convolution_Controller_i/&lt;const0>"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe2[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="BD_Wrapper/Convolution_Controller_i/&lt;const0>_1"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe2[1]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="BD_Wrapper/Convolution_Controller_i/&lt;const0>_2"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe13[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="BD_Wrapper/Convolution_Controller_i/&lt;const0>_3"/>
+      </nets>
+    </probe>
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq288&apos;hXXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX"/>
@@ -1041,7 +1129,7 @@
         <net name="BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TDATA[0]"/>
       </nets>
     </probe>
-    <probe type="ila_data" busType="bus" source="netlist" spec="ILA_DATA_V2_RT">
+    <probe type="ila_data" busType="net" source="netlist" spec="ILA_DATA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="DISPLAY_AS_ENUM" value="1"/>
         <Option Id="DISPLAY_HINT" value=""/>
@@ -1243,7 +1331,7 @@
         <net name="BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_valid"/>
       </nets>
     </probe>
-    <probe type="ila_data" busType="bus" source="netlist" spec="ILA_DATA_V2_RT">
+    <probe type="ila_data" busType="net" source="netlist" spec="ILA_DATA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="DISPLAY_AS_ENUM" value="1"/>
         <Option Id="DISPLAY_HINT" value=""/>
@@ -1292,7 +1380,7 @@
         <net name="BD_Wrapper/Convolution_Controller_i/axi_dma_0_M_AXIS_MM2S_TDATA[0]"/>
       </nets>
     </probe>
-    <probe type="ila_data" busType="bus" source="netlist" spec="ILA_DATA_V2_RT">
+    <probe type="ila_data" busType="net" source="netlist" spec="ILA_DATA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="DISPLAY_AS_ENUM" value="1"/>
         <Option Id="DISPLAY_HINT" value=""/>
@@ -1536,6 +1624,450 @@
         <net name="BD_Wrapper/Convolution_Controller_i/cSum_0_1[2]"/>
         <net name="BD_Wrapper/Convolution_Controller_i/cSum_0_1[1]"/>
         <net name="BD_Wrapper/Convolution_Controller_i/cSum_0_1[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq10&apos;hXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq10&apos;hXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe5[9:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq10&apos;hXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_ARADDR[9]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_ARADDR[8]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_ARADDR[7]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_ARADDR[6]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_ARADDR[5]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_ARADDR[4]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_ARADDR[3]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_ARADDR[2]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_ARADDR[1]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_ARADDR[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq3&apos;hX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq3&apos;hX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe17[2:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq3&apos;hX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_ARPROT[2]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_ARPROT[1]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_ARPROT[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe9[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_ARREADY"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe8[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_ARVALID"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq10&apos;hXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq10&apos;hXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe1[9:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq10&apos;hXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_AWADDR[9]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_AWADDR[8]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_AWADDR[7]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_AWADDR[6]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_AWADDR[5]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_AWADDR[4]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_AWADDR[3]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_AWADDR[2]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_AWADDR[1]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_AWADDR[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq3&apos;hX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq3&apos;hX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe18[2:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq3&apos;hX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_AWPROT[2]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_AWPROT[1]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_AWPROT[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe12[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_AWREADY"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe11[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_AWVALID"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe4[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_BREADY"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe3[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_BVALID"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe10[31:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_RDATA[31]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_RDATA[30]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_RDATA[29]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_RDATA[28]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_RDATA[27]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_RDATA[26]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_RDATA[25]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_RDATA[24]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_RDATA[23]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_RDATA[22]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_RDATA[21]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_RDATA[20]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_RDATA[19]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_RDATA[18]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_RDATA[17]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_RDATA[16]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_RDATA[15]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_RDATA[14]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_RDATA[13]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_RDATA[12]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_RDATA[11]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_RDATA[10]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_RDATA[9]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_RDATA[8]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_RDATA[7]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_RDATA[6]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_RDATA[5]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_RDATA[4]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_RDATA[3]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_RDATA[2]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_RDATA[1]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_RDATA[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe6[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_RREADY"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe16[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_RVALID"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe14[31:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_WDATA[31]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_WDATA[30]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_WDATA[29]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_WDATA[28]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_WDATA[27]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_WDATA[26]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_WDATA[25]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_WDATA[24]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_WDATA[23]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_WDATA[22]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_WDATA[21]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_WDATA[20]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_WDATA[19]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_WDATA[18]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_WDATA[17]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_WDATA[16]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_WDATA[15]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_WDATA[14]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_WDATA[13]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_WDATA[12]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_WDATA[11]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_WDATA[10]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_WDATA[9]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_WDATA[8]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_WDATA[7]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_WDATA[6]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_WDATA[5]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_WDATA[4]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_WDATA[3]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_WDATA[2]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_WDATA[1]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_WDATA[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe0[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_WREADY"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq4&apos;hX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq4&apos;hX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe15[3:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq4&apos;hX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_WSTRB[3]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_WSTRB[2]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_WSTRB[1]"/>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_WSTRB[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe7[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="BD_Wrapper/Convolution_Controller_i/ps7_0_axi_periph_M01_AXI_WVALID"/>
       </nets>
     </probe>
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
@@ -5035,7 +5567,7 @@
         <net name="user_probe_0[0]"/>
       </nets>
     </probe>
-    <probe type="ila_data" busType="bus" source="user" spec="ILA_DATA_V2_RT">
+    <probe type="ila_data" busType="net" source="user" spec="ILA_DATA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CELL_HINT" value="u_ila_0"/>
         <Option Id="DISPLAY_AS_ENUM" value="1"/>

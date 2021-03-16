@@ -30,6 +30,9 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Convolution_Con
 # IP: bd/Convolution_Controller/ip/Convolution_Controller_xbar_0/Convolution_Controller_xbar_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Convolution_Controller_xbar_0 || ORIG_REF_NAME==Convolution_Controller_xbar_0} -quiet] -quiet
 
+# IP: bd/Convolution_Controller/ip/Convolution_Controller_ila_0_0/Convolution_Controller_ila_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Convolution_Controller_ila_0_0 || ORIG_REF_NAME==Convolution_Controller_ila_0_0} -quiet] -quiet
+
 # IP: bd/Convolution_Controller/ip/Convolution_Controller_auto_pc_0/Convolution_Controller_auto_pc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Convolution_Controller_auto_pc_0 || ORIG_REF_NAME==Convolution_Controller_auto_pc_0} -quiet] -quiet
 
