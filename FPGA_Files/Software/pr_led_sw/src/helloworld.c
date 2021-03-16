@@ -161,7 +161,7 @@ int main()
 
 	print_BsInfo();
 
-	XPrc_SendSwTrigger (&Prc, XPRC_VS_SHIFT_ID, XPRC_VS_SHIFT_RM_SHIFT_LEFT_ID);
+	XPrc_SendSwTrigger (&Prc, XPRC_VS_SHIFT_ID, XPRC_VS_SHIFT_RM_SHIFT_RIGHT_ID);
 
 	PrintStatusReg(&Prc,XPRC_VS_SHIFT_ID);
 
@@ -173,7 +173,7 @@ int main()
 
 	print_BsInfo();
 
-	XPrc_SendSwTrigger (&Prc, XPRC_VS_SHIFT_ID, XPRC_VS_SHIFT_RM_SHIFT_LEFT_ID);
+//	XPrc_SendSwTrigger (&Prc, XPRC_VS_SHIFT_ID, XPRC_VS_SHIFT_RM_SHIFT_LEFT_ID);
 
 	cleanup_platform();
 	return 0;
@@ -313,51 +313,4 @@ u16 PrintStatusReg(XPrc* Prc, u16 VS_ID){
 int ReadStatusReg(XPrc* Prc, u16 VS_ID){
 	u32 prc_status = XPrc_ReadStatusReg(Prc, VS_ID);
 	return prc_status;
-}
-
-/* SD Card Stuff */
-int SD_Transfer(char *FileName, u32 distAddr, u32 size){
-    FIL fil;
-    UINT br;
-    FRESULT result;
-    xil_printf("Opening %s ", FileName );
-    result = f_open(&fil, FileName, FA_READ);
-    if ( result ){
-        xil_printf("Failed with ERROR: %d \n\r", result);
-        return XST_FAILURE;
-    }
-    xil_printf("... OK\n\r");
-    result = f_lseek(&fil, 0);
-    if ( result ){
-        xil_printf("Moving file pointer of the file object: Failed with ERROR: %d \n\r", result);
-        return XST_FAILURE;
-    }
-    xil_printf("Reading file %s of 0x%x Bytes to 0x%x ", FileName, size, distAddr);
-    result = f_read(&fil, (void*) distAddr, size, &br);
-    if ( result ){
-        xil_printf(": Failed with ERROR: %d \n\r", result);
-        return XST_FAILURE;
-    }
-    xil_printf("... OK\n\r");
-    xil_printf("Closing %s ", FileName);
-    result = f_close(&fil);
-    if ( result ){
-        xil_printf(": Failed with ERROR: %d \n\r", result);
-        return XST_FAILURE;
-    }
-    xil_printf("... OK\n\r");
-    return XST_SUCCESS;
-}
-
-int SD_Init(){
-    static FATFS fatfs;
-    FRESULT result;
-    xil_printf("Mounting SD ");
-    result = f_mount(&fatfs, "", 0);
-    if ( result != XST_SUCCESS){
-        xil_printf("Failed with ERROR: %d", result);
-        return XST_FAILURE;
-    }
-    xil_printf("... OK\n\r");
-    return XST_SUCCESS;
 }

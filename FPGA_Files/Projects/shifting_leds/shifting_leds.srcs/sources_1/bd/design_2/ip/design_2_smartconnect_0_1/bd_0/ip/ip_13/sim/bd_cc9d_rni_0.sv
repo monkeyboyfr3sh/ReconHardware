@@ -77,13 +77,13 @@ input wire s_sc_aclk;
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 aresetn RST" *)
 input wire s_sc_aresetn;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 S_SC REQ" *)
-input wire [5 : 0] s_sc_req;
+input wire [6 : 0] s_sc_req;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 S_SC INFO" *)
-input wire [5 : 0] s_sc_info;
+input wire [6 : 0] s_sc_info;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 S_SC SEND" *)
-input wire [5 : 0] s_sc_send;
+input wire [6 : 0] s_sc_send;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 S_SC RECV" *)
-output wire [5 : 0] s_sc_recv;
+output wire [6 : 0] s_sc_recv;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 S_SC PAYLD" *)
 input wire [55 : 0] s_sc_payld;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME m_sc_aclk, ASSOCIATED_BUSIF M_SC, ASSOCIATED_RESET m_sc_aresetn, ASSOCIATED_CLKEN m_sc_aclken, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, CLK_DOMAIN design_2_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
@@ -112,11 +112,11 @@ output wire [55 : 0] m_sc_payld;
     .C_FIFO_OUTPUT_REG(1),
     .C_ENABLE_PIPELINING(8'H01),
     .C_SYNCHRONIZATION_STAGES(3),
-    .C_NUM_SI(6),
+    .C_NUM_SI(7),
     .C_NUM_MI(1),
     .C_CHANNEL(0),
     .C_PAYLD_WIDTH(56),
-    .C_S_NUM_BYTES_ARRAY(192'H000000040000000400000004000000040000000400000004),
+    .C_S_NUM_BYTES_ARRAY(224'H00000004000000040000000400000004000000040000000400000004),
     .C_M_NUM_BYTES_ARRAY(64'H0000000400000004),
     .C_USER_BITS_PER_BYTE(0),
     .C_ARBITER_MODE(1),

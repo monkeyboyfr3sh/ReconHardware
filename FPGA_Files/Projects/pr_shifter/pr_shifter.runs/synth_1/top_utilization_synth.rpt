@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date         : Fri Mar 12 21:30:18 2021
+| Date         : Mon Mar 15 19:21:46 2021
 | Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 | Command      : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
 | Design       : top
@@ -179,6 +179,7 @@ Table of Contents
 | design_2_axi_gpio_0_1              |    1 |
 | design_2_axi_gpio_0_0              |    1 |
 | design_2_axi_dma_0_0               |    1 |
+| design_2_Pixel_Controller_0_0      |    1 |
 +------------------------------------+------+
 
 

@@ -78,8 +78,11 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_2_util_v
 # IP: C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_2/ip/design_2_util_vector_logic_1_2/design_2_util_vector_logic_1_2.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_2_util_vector_logic_1_2 || ORIG_REF_NAME==design_2_util_vector_logic_1_2} -quiet] -quiet
 
-# IP: c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_2/ip/design_2_axi_dma_0_0/design_2_axi_dma_0_0.xci
+# IP: C:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_2/ip/design_2_axi_dma_0_0/design_2_axi_dma_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_2_axi_dma_0_0 || ORIG_REF_NAME==design_2_axi_dma_0_0} -quiet] -quiet
+
+# IP: c:/GitHub/ReconHardware/FPGA_Files/Projects/shifting_leds/shifting_leds.srcs/sources_1/bd/design_2/ip/design_2_Pixel_Controller_0_0_1/design_2_Pixel_Controller_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_2_Pixel_Controller_0_0 || ORIG_REF_NAME==design_2_Pixel_Controller_0_0} -quiet] -quiet
 
 # XDC: bd/icap_ila/icap_ila_ooc.xdc
 

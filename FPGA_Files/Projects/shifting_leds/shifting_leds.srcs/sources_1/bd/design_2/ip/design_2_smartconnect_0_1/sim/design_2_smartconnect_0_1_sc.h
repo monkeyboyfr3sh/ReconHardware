@@ -90,6 +90,8 @@ public: // module socket-to-socket TLM interface
   xtlm::xtlm_aximm_initiator_socket* M04_AXI_tlm_aximm_write_socket;
   xtlm::xtlm_aximm_initiator_socket* M05_AXI_tlm_aximm_read_socket;
   xtlm::xtlm_aximm_initiator_socket* M05_AXI_tlm_aximm_write_socket;
+  xtlm::xtlm_aximm_initiator_socket* M06_AXI_tlm_aximm_read_socket;
+  xtlm::xtlm_aximm_initiator_socket* M06_AXI_tlm_aximm_write_socket;
 
 protected:
 

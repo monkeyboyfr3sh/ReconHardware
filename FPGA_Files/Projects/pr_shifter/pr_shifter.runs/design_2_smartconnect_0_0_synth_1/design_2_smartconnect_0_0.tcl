@@ -70,6 +70,8 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "design_2_smartconnect_0_0_synth_1" START { ROLLUP_AUTO }
+set_param tcl.collectionResultDisplayLimit 0
+set_param xicom.use_bs_reader 1
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 OPTRACE "Creating in-memory project" START { }
@@ -85,6 +87,11 @@ set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part tul.com.tw:pynq-z2:part0:1.0 [current_project]
+set_property ip_repo_paths {
+  c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source
+  c:/GitHub/ReconHardware/FPGA_Files/Sources/zExtras/IP_Source
+} [current_project]
+update_ip_catalog
 set_property ip_output_repo c:/GitHub/ReconHardware/FPGA_Files/Projects/pr_shifter/pr_shifter.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }

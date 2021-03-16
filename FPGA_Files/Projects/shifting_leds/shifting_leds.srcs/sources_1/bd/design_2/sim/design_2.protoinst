@@ -3,6 +3,49 @@
 	"modules": {
 		"design_2": {
 			"proto_instances": {
+				"/Pixel_Controller_0/m_axis": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "axi_clk"},
+						"TDATA": { "actual": "m_axis_data"},
+						"TKEEP": { "actual": "m_axis_keep"},
+						"TLAST": { "actual": "m_axis_last"},
+						"TREADY": { "actual": "m_axis_ready"},
+						"TVALID": { "actual": "m_axis_valid"}
+					}
+				},
+				"/Pixel_Controller_0/s_axi": {
+					"interface": "xilinx.com:interface:aximm:1.0",
+					"ports": {
+						"ACLK": { "actual": "axi_clk"},
+						"ARADDR": { "actual": "s_axi_araddr"},
+						"ARREADY": { "actual": "s_axi_arready"},
+						"ARVALID": { "actual": "s_axi_arvalid"},
+						"AWADDR": { "actual": "s_axi_awaddr"},
+						"AWREADY": { "actual": "s_axi_awready"},
+						"AWVALID": { "actual": "s_axi_awvalid"},
+						"BREADY": { "actual": "s_axi_bready"},
+						"BVALID": { "actual": "s_axi_bvalid"},
+						"RDATA": { "actual": "s_axi_rdata"},
+						"RLAST": { "actual": "s_axi_rlast"},
+						"RREADY": { "actual": "s_axi_rready"},
+						"RVALID": { "actual": "s_axi_rvalid"},
+						"WDATA": { "actual": "s_axi_wdata"},
+						"WREADY": { "actual": "s_axi_wready"},
+						"WVALID": { "actual": "s_axi_wvalid"}
+					}
+				},
+				"/Pixel_Controller_0/s_axis": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "axi_clk"},
+						"TDATA": { "actual": "s_axis_data"},
+						"TKEEP": { "actual": "s_axis_keep"},
+						"TLAST": { "actual": "s_axis_last"},
+						"TREADY": { "actual": "s_axis_ready"},
+						"TVALID": { "actual": "s_axis_valid"}
+					}
+				},
 				"/axi_dma_0/M_AXIS_MM2S": {
 					"interface": "xilinx.com:interface:axis:1.0",
 					"ports": {
@@ -576,6 +619,31 @@
 						"WREADY": { "actual": "M05_AXI_wready"},
 						"WSTRB": { "actual": "M05_AXI_wstrb"},
 						"WVALID": { "actual": "M05_AXI_wvalid"}
+					}
+				},
+				"/smartconnect_1/M06_AXI": {
+					"interface": "xilinx.com:interface:aximm:1.0",
+					"ports": {
+						"ACLK": { "actual": "aclk"},
+						"ARADDR": { "actual": "M06_AXI_araddr"},
+						"ARPROT": { "actual": "M06_AXI_arprot"},
+						"ARREADY": { "actual": "M06_AXI_arready"},
+						"ARVALID": { "actual": "M06_AXI_arvalid"},
+						"AWADDR": { "actual": "M06_AXI_awaddr"},
+						"AWPROT": { "actual": "M06_AXI_awprot"},
+						"AWREADY": { "actual": "M06_AXI_awready"},
+						"AWVALID": { "actual": "M06_AXI_awvalid"},
+						"BREADY": { "actual": "M06_AXI_bready"},
+						"BRESP": { "actual": "M06_AXI_bresp"},
+						"BVALID": { "actual": "M06_AXI_bvalid"},
+						"RDATA": { "actual": "M06_AXI_rdata"},
+						"RREADY": { "actual": "M06_AXI_rready"},
+						"RRESP": { "actual": "M06_AXI_rresp"},
+						"RVALID": { "actual": "M06_AXI_rvalid"},
+						"WDATA": { "actual": "M06_AXI_wdata"},
+						"WREADY": { "actual": "M06_AXI_wready"},
+						"WSTRB": { "actual": "M06_AXI_wstrb"},
+						"WVALID": { "actual": "M06_AXI_wvalid"}
 					}
 				},
 				"/smartconnect_1/S00_AXI": {

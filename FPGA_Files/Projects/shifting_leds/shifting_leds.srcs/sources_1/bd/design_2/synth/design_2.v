@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-//Date        : Fri Mar 12 21:26:41 2021
+//Date        : Mon Mar 15 19:17:44 2021
 //Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 //Command     : generate_target design_2.bd
 //Design      : design_2
@@ -9,7 +9,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "design_2,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_2,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=23,numReposBlks=23,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=6,da_board_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_2.hwdef" *) 
+(* CORE_GENERATION_INFO = "design_2,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_2,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=24,numReposBlks=24,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=6,da_board_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "design_2.hwdef" *) 
 module design_2
    (COUNT_0_tri_o,
     DDR_addr,
@@ -72,6 +72,11 @@ module design_2
   input [1:0]vsm_shifter_hw_triggers_0;
   output vsm_shifter_rm_reset_0;
 
+  wire [31:0]Pixel_Controller_0_m_axis_TDATA;
+  wire [3:0]Pixel_Controller_0_m_axis_TKEEP;
+  wire Pixel_Controller_0_m_axis_TLAST;
+  wire Pixel_Controller_0_m_axis_TREADY;
+  wire Pixel_Controller_0_m_axis_TVALID;
   wire [31:0]axi_dma_0_M_AXIS_MM2S_TDATA;
   wire [3:0]axi_dma_0_M_AXIS_MM2S_TKEEP;
   wire axi_dma_0_M_AXIS_MM2S_TLAST;
@@ -344,6 +349,20 @@ module design_2
   wire [31:0]smartconnect_1_M05_AXI_WDATA;
   wire smartconnect_1_M05_AXI_WREADY;
   wire smartconnect_1_M05_AXI_WVALID;
+  wire [9:0]smartconnect_1_M06_AXI_ARADDR;
+  wire smartconnect_1_M06_AXI_ARREADY;
+  wire smartconnect_1_M06_AXI_ARVALID;
+  wire [9:0]smartconnect_1_M06_AXI_AWADDR;
+  wire smartconnect_1_M06_AXI_AWREADY;
+  wire smartconnect_1_M06_AXI_AWVALID;
+  wire smartconnect_1_M06_AXI_BREADY;
+  wire smartconnect_1_M06_AXI_BVALID;
+  wire [31:0]smartconnect_1_M06_AXI_RDATA;
+  wire smartconnect_1_M06_AXI_RREADY;
+  wire smartconnect_1_M06_AXI_RVALID;
+  wire [31:0]smartconnect_1_M06_AXI_WDATA;
+  wire smartconnect_1_M06_AXI_WREADY;
+  wire smartconnect_1_M06_AXI_WVALID;
   wire [0:0]util_vector_logic_1_Res;
   wire [0:0]util_vector_logic_2_Res;
   wire [0:0]util_vector_logic_3_Res;
@@ -362,6 +381,33 @@ module design_2
   assign dfx_controller_0_ICAP_o = ICAP_0_o[31:0];
   assign vsm_shifter_hw_triggers_0_1 = vsm_shifter_hw_triggers_0[1:0];
   assign vsm_shifter_rm_reset_0 = dfx_controller_0_vsm_shifter_rm_reset;
+  design_2_Pixel_Controller_0_0 Pixel_Controller_0
+       (.axi_clk(processing_system7_0_FCLK_CLK0),
+        .axi_reset_n(rst_ps7_0_100M_peripheral_aresetn),
+        .m_axis_data(Pixel_Controller_0_m_axis_TDATA),
+        .m_axis_keep(Pixel_Controller_0_m_axis_TKEEP),
+        .m_axis_last(Pixel_Controller_0_m_axis_TLAST),
+        .m_axis_ready(Pixel_Controller_0_m_axis_TREADY),
+        .m_axis_valid(Pixel_Controller_0_m_axis_TVALID),
+        .s_axi_araddr(smartconnect_1_M06_AXI_ARADDR),
+        .s_axi_arready(smartconnect_1_M06_AXI_ARREADY),
+        .s_axi_arvalid(smartconnect_1_M06_AXI_ARVALID),
+        .s_axi_awaddr(smartconnect_1_M06_AXI_AWADDR),
+        .s_axi_awready(smartconnect_1_M06_AXI_AWREADY),
+        .s_axi_awvalid(smartconnect_1_M06_AXI_AWVALID),
+        .s_axi_bready(smartconnect_1_M06_AXI_BREADY),
+        .s_axi_bvalid(smartconnect_1_M06_AXI_BVALID),
+        .s_axi_rdata(smartconnect_1_M06_AXI_RDATA),
+        .s_axi_rready(smartconnect_1_M06_AXI_RREADY),
+        .s_axi_rvalid(smartconnect_1_M06_AXI_RVALID),
+        .s_axi_wdata(smartconnect_1_M06_AXI_WDATA),
+        .s_axi_wready(smartconnect_1_M06_AXI_WREADY),
+        .s_axi_wvalid(smartconnect_1_M06_AXI_WVALID),
+        .s_axis_data(axi_dma_0_M_AXIS_MM2S_TDATA),
+        .s_axis_keep(axi_dma_0_M_AXIS_MM2S_TKEEP),
+        .s_axis_last(axi_dma_0_M_AXIS_MM2S_TLAST),
+        .s_axis_ready(axi_dma_0_M_AXIS_MM2S_TREADY),
+        .s_axis_valid(axi_dma_0_M_AXIS_MM2S_TVALID));
   design_2_xlslice_0_0 arm
        (.Din(axi_gpio_1_gpio_io_o),
         .Dout(xlslice_0_Dout));
@@ -420,11 +466,11 @@ module design_2
         .s_axi_lite_wdata(smartconnect_1_M05_AXI_WDATA),
         .s_axi_lite_wready(smartconnect_1_M05_AXI_WREADY),
         .s_axi_lite_wvalid(smartconnect_1_M05_AXI_WVALID),
-        .s_axis_s2mm_tdata(axi_dma_0_M_AXIS_MM2S_TDATA),
-        .s_axis_s2mm_tkeep(axi_dma_0_M_AXIS_MM2S_TKEEP),
-        .s_axis_s2mm_tlast(axi_dma_0_M_AXIS_MM2S_TLAST),
-        .s_axis_s2mm_tready(axi_dma_0_M_AXIS_MM2S_TREADY),
-        .s_axis_s2mm_tvalid(axi_dma_0_M_AXIS_MM2S_TVALID));
+        .s_axis_s2mm_tdata(Pixel_Controller_0_m_axis_TDATA),
+        .s_axis_s2mm_tkeep(Pixel_Controller_0_m_axis_TKEEP),
+        .s_axis_s2mm_tlast(Pixel_Controller_0_m_axis_TLAST),
+        .s_axis_s2mm_tready(Pixel_Controller_0_m_axis_TREADY),
+        .s_axis_s2mm_tvalid(Pixel_Controller_0_m_axis_TVALID));
   design_2_axi_gpio_0_0 axi_gpio_0
        (.gpio_io_o(axi_gpio_0_GPIO_TRI_O),
         .s_axi_aclk(processing_system7_0_FCLK_CLK0),
@@ -1030,6 +1076,22 @@ module design_2
         .M05_AXI_wdata(smartconnect_1_M05_AXI_WDATA),
         .M05_AXI_wready(smartconnect_1_M05_AXI_WREADY),
         .M05_AXI_wvalid(smartconnect_1_M05_AXI_WVALID),
+        .M06_AXI_araddr(smartconnect_1_M06_AXI_ARADDR),
+        .M06_AXI_arready(smartconnect_1_M06_AXI_ARREADY),
+        .M06_AXI_arvalid(smartconnect_1_M06_AXI_ARVALID),
+        .M06_AXI_awaddr(smartconnect_1_M06_AXI_AWADDR),
+        .M06_AXI_awready(smartconnect_1_M06_AXI_AWREADY),
+        .M06_AXI_awvalid(smartconnect_1_M06_AXI_AWVALID),
+        .M06_AXI_bready(smartconnect_1_M06_AXI_BREADY),
+        .M06_AXI_bresp({1'b0,1'b0}),
+        .M06_AXI_bvalid(smartconnect_1_M06_AXI_BVALID),
+        .M06_AXI_rdata(smartconnect_1_M06_AXI_RDATA),
+        .M06_AXI_rready(smartconnect_1_M06_AXI_RREADY),
+        .M06_AXI_rresp({1'b0,1'b0}),
+        .M06_AXI_rvalid(smartconnect_1_M06_AXI_RVALID),
+        .M06_AXI_wdata(smartconnect_1_M06_AXI_WDATA),
+        .M06_AXI_wready(smartconnect_1_M06_AXI_WREADY),
+        .M06_AXI_wvalid(smartconnect_1_M06_AXI_WVALID),
         .S00_AXI_araddr(processing_system7_0_M_AXI_GP0_ARADDR),
         .S00_AXI_arburst(processing_system7_0_M_AXI_GP0_ARBURST),
         .S00_AXI_arcache(processing_system7_0_M_AXI_GP0_ARCACHE),

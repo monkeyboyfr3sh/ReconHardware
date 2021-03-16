@@ -9,13 +9,13 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="473fs"></ZoomStartTime>
-      <ZoomEndTime time="549fs"></ZoomEndTime>
-      <Cursor1Time time="516fs"></Cursor1Time>
+      <ZoomStartTime time="498fs"></ZoomStartTime>
+      <ZoomEndTime time="536fs"></ZoomEndTime>
+      <Cursor1Time time="512fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="324"></NameColumnWidth>
-      <ValueColumnWidth column_width="159"></ValueColumnWidth>
+      <ValueColumnWidth column_width="155"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="4" />
    <wave_markers>
@@ -23,26 +23,11 @@
    <wvobject fp_name="group28" type="group">
       <obj_property name="label">Write_Bus</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <wvobject fp_name="design_1_i/smartconnect_0_M01_AXI_WREADY" type="logic">
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="design_1_i/smartconnect_0_M01_AXI_AWADDR" type="array">
          <obj_property name="DisplayName">FullPathName</obj_property>
-         <obj_property name="ElementShortName">design_1_i/smartconnect_0_M01_AXI_WREADY</obj_property>
-         <obj_property name="ObjectShortName">smartconnect_0_M01_AXI_WREADY</obj_property>
-         <obj_property name="Radix">HEXRADIX</obj_property>
-         <obj_property name="LABELRADIX">true</obj_property>
-         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-      </wvobject>
-      <wvobject fp_name="design_1_i/smartconnect_0_M01_AXI_WVALID" type="logic">
-         <obj_property name="DisplayName">FullPathName</obj_property>
-         <obj_property name="ElementShortName">design_1_i/smartconnect_0_M01_AXI_WVALID</obj_property>
-         <obj_property name="ObjectShortName">smartconnect_0_M01_AXI_WVALID</obj_property>
-         <obj_property name="Radix">HEXRADIX</obj_property>
-         <obj_property name="LABELRADIX">true</obj_property>
-         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-      </wvobject>
-      <wvobject fp_name="design_1_i/smartconnect_0_M01_AXI_WDATA" type="array">
-         <obj_property name="DisplayName">FullPathName</obj_property>
-         <obj_property name="ElementShortName">design_1_i/smartconnect_0_M01_AXI_WDATA[31:0]</obj_property>
-         <obj_property name="ObjectShortName">smartconnect_0_M01_AXI_WDATA[31:0]</obj_property>
+         <obj_property name="ElementShortName">design_1_i/smartconnect_0_M01_AXI_AWADDR[9:0]</obj_property>
+         <obj_property name="ObjectShortName">smartconnect_0_M01_AXI_AWADDR[9:0]</obj_property>
          <obj_property name="Radix">HEXRADIX</obj_property>
          <obj_property name="LABELRADIX">true</obj_property>
          <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
@@ -63,10 +48,26 @@
          <obj_property name="LABELRADIX">true</obj_property>
          <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
       </wvobject>
-      <wvobject fp_name="design_1_i/smartconnect_0_M01_AXI_AWADDR" type="array">
+      <wvobject fp_name="design_1_i/smartconnect_0_M01_AXI_WDATA" type="array">
          <obj_property name="DisplayName">FullPathName</obj_property>
-         <obj_property name="ElementShortName">design_1_i/smartconnect_0_M01_AXI_AWADDR[9:0]</obj_property>
-         <obj_property name="ObjectShortName">smartconnect_0_M01_AXI_AWADDR[9:0]</obj_property>
+         <obj_property name="ElementShortName">design_1_i/smartconnect_0_M01_AXI_WDATA[31:0]</obj_property>
+         <obj_property name="ObjectShortName">smartconnect_0_M01_AXI_WDATA[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+         <obj_property name="LABELRADIX">true</obj_property>
+         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+      </wvobject>
+      <wvobject fp_name="design_1_i/smartconnect_0_M01_AXI_WVALID" type="logic">
+         <obj_property name="DisplayName">FullPathName</obj_property>
+         <obj_property name="ElementShortName">design_1_i/smartconnect_0_M01_AXI_WVALID</obj_property>
+         <obj_property name="ObjectShortName">smartconnect_0_M01_AXI_WVALID</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+         <obj_property name="LABELRADIX">true</obj_property>
+         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+      </wvobject>
+      <wvobject fp_name="design_1_i/smartconnect_0_M01_AXI_WREADY" type="logic">
+         <obj_property name="DisplayName">FullPathName</obj_property>
+         <obj_property name="ElementShortName">design_1_i/smartconnect_0_M01_AXI_WREADY</obj_property>
+         <obj_property name="ObjectShortName">smartconnect_0_M01_AXI_WREADY</obj_property>
          <obj_property name="Radix">HEXRADIX</obj_property>
          <obj_property name="LABELRADIX">true</obj_property>
          <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
@@ -75,7 +76,6 @@
    <wvobject fp_name="group30" type="group">
       <obj_property name="label">Read_Bus</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
       <wvobject fp_name="design_1_i/smartconnect_0_M01_AXI_ARADDR" type="array">
          <obj_property name="DisplayName">FullPathName</obj_property>
          <obj_property name="ElementShortName">design_1_i/smartconnect_0_M01_AXI_ARADDR[9:0]</obj_property>
@@ -128,6 +128,7 @@
    <wvobject fp_name="group32" type="group">
       <obj_property name="label">Ack_Bus</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
       <wvobject fp_name="design_1_i/smartconnect_0_M01_AXI_BVALID" type="logic">
          <obj_property name="DisplayName">FullPathName</obj_property>
          <obj_property name="ElementShortName">design_1_i/smartconnect_0_M01_AXI_BVALID</obj_property>

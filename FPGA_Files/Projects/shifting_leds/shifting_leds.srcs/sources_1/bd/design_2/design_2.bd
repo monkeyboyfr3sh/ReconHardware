@@ -32,7 +32,8 @@
       "util_vector_logic_1": "",
       "util_vector_logic_2": "",
       "util_vector_logic_3": "",
-      "axi_dma_0": ""
+      "axi_dma_0": "",
+      "Pixel_Controller_0": ""
     },
     "interface_ports": {
       "COUNT_0": {
@@ -2211,7 +2212,7 @@
         "xci_name": "design_2_smartconnect_0_1",
         "parameters": {
           "NUM_MI": {
-            "value": "6"
+            "value": "7"
           },
           "NUM_SI": {
             "value": "1"
@@ -2227,7 +2228,8 @@
               "M02_AXI",
               "M03_AXI",
               "M04_AXI",
-              "M05_AXI"
+              "M05_AXI",
+              "M06_AXI"
             ],
             "parameters": {
               "NUM_READ_OUTSTANDING": {
@@ -2381,6 +2383,30 @@
                 "value": "0"
               }
             }
+          },
+          "M06_AXI": {
+            "mode": "Master",
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "parameters": {
+              "MAX_BURST_LENGTH": {
+                "value": "1"
+              },
+              "NUM_READ_OUTSTANDING": {
+                "value": "8"
+              },
+              "NUM_WRITE_OUTSTANDING": {
+                "value": "8"
+              },
+              "RUSER_BITS_PER_BYTE": {
+                "value": "0"
+              },
+              "SUPPORTS_NARROW_BURST": {
+                "value": "0"
+              },
+              "WUSER_BITS_PER_BYTE": {
+                "value": "0"
+              }
+            }
           }
         },
         "addressing": {
@@ -2393,7 +2419,8 @@
                 "M02_AXI",
                 "M03_AXI",
                 "M04_AXI",
-                "M05_AXI"
+                "M05_AXI",
+                "M06_AXI"
               ]
             }
           }
@@ -2513,14 +2540,23 @@
             }
           }
         }
+      },
+      "Pixel_Controller_0": {
+        "vlnv": "xilinx.com:user:Pixel_Controller:1.0",
+        "xci_name": "design_2_Pixel_Controller_0_0"
       }
     },
     "interface_nets": {
-      "dfx_controller_0_M_AXI_MEM": {
+      "Pixel_Controller_0_m_axis": {
         "interface_ports": [
-          "dfx_controller_0/M_AXI_MEM",
-          "smartconnect_0/S00_AXI",
-          "dfx_m_ila_0/SLOT_0_AXI"
+          "Pixel_Controller_0/m_axis",
+          "axi_dma_0/S_AXIS_S2MM"
+        ]
+      },
+      "smartconnect_1_M06_AXI": {
+        "interface_ports": [
+          "smartconnect_1/M06_AXI",
+          "Pixel_Controller_0/s_axi"
         ]
       },
       "processing_system7_0_DDR": {
@@ -2529,49 +2565,23 @@
           "processing_system7_0/DDR"
         ]
       },
-      "smartconnect_1_M03_AXI": {
+      "dfx_controller_0_M_AXI_MEM": {
         "interface_ports": [
-          "shudown_ack_gpio_1/S_AXI",
-          "smartconnect_1/M03_AXI"
+          "dfx_controller_0/M_AXI_MEM",
+          "smartconnect_0/S00_AXI",
+          "dfx_m_ila_0/SLOT_0_AXI"
+        ]
+      },
+      "axi_dma_0_M_AXI_S2MM": {
+        "interface_ports": [
+          "axi_dma_0/M_AXI_S2MM",
+          "smartconnect_0/S02_AXI"
         ]
       },
       "smartconnect_1_M02_AXI": {
         "interface_ports": [
           "bs_monitor_gpio_1/S_AXI",
           "smartconnect_1/M02_AXI"
-        ]
-      },
-      "processing_system7_0_M_AXI_GP0": {
-        "interface_ports": [
-          "smartconnect_1/S00_AXI",
-          "processing_system7_0/M_AXI_GP0"
-        ]
-      },
-      "smartconnect_1_M00_AXI": {
-        "interface_ports": [
-          "smartconnect_1/M00_AXI",
-          "axi_gpio_0/S_AXI",
-          "gpio_ila_0/SLOT_0_AXI"
-        ]
-      },
-      "smartconnect_1_M01_AXI": {
-        "interface_ports": [
-          "dfx_controller_0/s_axi_reg",
-          "smartconnect_1/M01_AXI",
-          "dfx_s_ila_0/SLOT_0_AXI"
-        ]
-      },
-      "smartconnect_1_M04_AXI": {
-        "interface_ports": [
-          "smartconnect_1/M04_AXI",
-          "dfx_rst_gpio_2/S_AXI"
-        ]
-      },
-      "dfx_controller_0_ICAP": {
-        "interface_ports": [
-          "ICAP_0",
-          "dfx_controller_0/ICAP",
-          "dfx_bitstream_monitor_0/ICAP"
         ]
       },
       "axi_mem_intercon_M00_AXI": {
@@ -2581,16 +2591,37 @@
           "hp_ila_0/SLOT_0_AXI"
         ]
       },
-      "processing_system7_0_FIXED_IO": {
+      "smartconnect_1_M03_AXI": {
         "interface_ports": [
-          "FIXED_IO",
-          "processing_system7_0/FIXED_IO"
+          "shudown_ack_gpio_1/S_AXI",
+          "smartconnect_1/M03_AXI"
         ]
       },
-      "axi_gpio_0_GPIO": {
+      "dfx_controller_0_ICAP": {
         "interface_ports": [
-          "COUNT_0",
-          "axi_gpio_0/GPIO"
+          "ICAP_0",
+          "dfx_controller_0/ICAP",
+          "dfx_bitstream_monitor_0/ICAP"
+        ]
+      },
+      "smartconnect_1_M00_AXI": {
+        "interface_ports": [
+          "smartconnect_1/M00_AXI",
+          "axi_gpio_0/S_AXI",
+          "gpio_ila_0/SLOT_0_AXI"
+        ]
+      },
+      "processing_system7_0_M_AXI_GP0": {
+        "interface_ports": [
+          "smartconnect_1/S00_AXI",
+          "processing_system7_0/M_AXI_GP0"
+        ]
+      },
+      "smartconnect_1_M01_AXI": {
+        "interface_ports": [
+          "dfx_controller_0/s_axi_reg",
+          "smartconnect_1/M01_AXI",
+          "dfx_s_ila_0/SLOT_0_AXI"
         ]
       },
       "axi_dma_0_M_AXI_MM2S": {
@@ -2605,16 +2636,28 @@
           "axi_dma_0/S_AXI_LITE"
         ]
       },
+      "smartconnect_1_M04_AXI": {
+        "interface_ports": [
+          "smartconnect_1/M04_AXI",
+          "dfx_rst_gpio_2/S_AXI"
+        ]
+      },
+      "processing_system7_0_FIXED_IO": {
+        "interface_ports": [
+          "FIXED_IO",
+          "processing_system7_0/FIXED_IO"
+        ]
+      },
+      "axi_gpio_0_GPIO": {
+        "interface_ports": [
+          "COUNT_0",
+          "axi_gpio_0/GPIO"
+        ]
+      },
       "axi_dma_0_M_AXIS_MM2S": {
         "interface_ports": [
           "axi_dma_0/M_AXIS_MM2S",
-          "axi_dma_0/S_AXIS_S2MM"
-        ]
-      },
-      "axi_dma_0_M_AXI_S2MM": {
-        "interface_ports": [
-          "axi_dma_0/M_AXI_S2MM",
-          "smartconnect_0/S02_AXI"
+          "Pixel_Controller_0/s_axis"
         ]
       }
     },
@@ -2642,7 +2685,8 @@
           "dfx_rst_gpio_2/s_axi_aclk",
           "axi_dma_0/m_axi_mm2s_aclk",
           "axi_dma_0/m_axi_s2mm_aclk",
-          "axi_dma_0/s_axi_lite_aclk"
+          "axi_dma_0/s_axi_lite_aclk",
+          "Pixel_Controller_0/axi_clk"
         ]
       },
       "processing_system7_0_FCLK_RESET0_N": {
@@ -2785,7 +2829,8 @@
           "bs_monitor_gpio_1/s_axi_aresetn",
           "dfx_bitstream_monitor_0/resetn",
           "util_vector_logic_1/Op1",
-          "axi_dma_0/axi_resetn"
+          "axi_dma_0/axi_resetn",
+          "Pixel_Controller_0/axi_reset_n"
         ]
       },
       "util_vector_logic_1_Res": {
@@ -2835,6 +2880,11 @@
             "range": "4G",
             "width": "32",
             "segments": {
+              "SEG_Pixel_Controller_0_reg0": {
+                "address_block": "/Pixel_Controller_0/s_axi/reg0",
+                "offset": "0x43C00000",
+                "range": "64K"
+              },
               "SEG_axi_dma_0_Reg": {
                 "address_block": "/axi_dma_0/S_AXI_LITE/Reg",
                 "offset": "0x40400000",
@@ -2852,7 +2902,7 @@
               },
               "SEG_dfx_controller_0_Reg": {
                 "address_block": "/dfx_controller_0/s_axi_reg/Reg",
-                "offset": "0x43C00000",
+                "offset": "0x43C10000",
                 "range": "64K"
               },
               "SEG_dfx_rst_gpio_2_Reg": {

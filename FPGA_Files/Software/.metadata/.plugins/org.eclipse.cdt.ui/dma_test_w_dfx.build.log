@@ -1,10 +1,86 @@
-17:25:23 **** Incremental Build of configuration Debug for project dma_test_w_dfx ****
+20:31:00 **** Incremental Build of configuration Debug for project dma_test_w_dfx ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 make --no-print-directory main-build
-make[1]: Nothing to be done for 'main-build'.
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/sw/pr_led/standalone_domain/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:103:14: warning: implicit declaration of function 'initGPIO' [-Wimplicit-function-declaration]
+  103 |  gpio_init = initGPIO();
+      |              ^~~~~~~~
+../src/helloworld.c:117:41: warning: passing argument 2 of 'SD_Transfer' makes integer from pointer without a cast [-Wint-conversion]
+  117 |  copy_status = SD_Transfer("leftP.bin", addr1, PARTIAL_SHIFT_RM_SIZE);
+      |                                         ^~~~~
+      |                                         |
+      |                                         u8 * {aka unsigned char *}
+../src/helloworld.c:36:37: note: expected 'u32' {aka 'long unsigned int'} but argument is of type 'u8 *' {aka 'unsigned char *'}
+   36 | int SD_Transfer(char *FileName, u32 distAddr, u32 size);
+      |                                 ~~~~^~~~~~~~
+../src/helloworld.c:122:42: warning: passing argument 2 of 'SD_Transfer' makes integer from pointer without a cast [-Wint-conversion]
+  122 |  copy_status = SD_Transfer("rightP.bin", addr2, PARTIAL_SHIFT_RM_SIZE);
+      |                                          ^~~~~
+      |                                          |
+      |                                          u8 * {aka unsigned char *}
+../src/helloworld.c:36:37: note: expected 'u32' {aka 'long unsigned int'} but argument is of type 'u8 *' {aka 'unsigned char *'}
+   36 | int SD_Transfer(char *FileName, u32 distAddr, u32 size);
+      |                                 ~~~~^~~~~~~~
+../src/helloworld.c:155:77: warning: passing argument 4 of 'XPrc_SetBsAddress' makes integer from pointer without a cast [-Wint-conversion]
+  155 |  XPrc_SetBsAddress(&Prc, XPRC_VS_SHIFT_ID, XPRC_VS_SHIFT_RM_SHIFT_LEFT_ID,  addr1);
+      |                                                                             ^~~~~
+      |                                                                             |
+      |                                                                             u8 * {aka unsigned char *}
+In file included from ../src/helloworld.c:10:
+C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/sw/pr_led/standalone_domain/bspinclude/include/xprc.h:780:9: note: expected 'u32' {aka 'long unsigned int'} but argument is of type 'u8 *' {aka 'unsigned char *'}
+  780 |     u32 BsAddress);
+      |     ~~~~^~~~~~~~~
+../src/helloworld.c:156:77: warning: passing argument 4 of 'XPrc_SetBsAddress' makes integer from pointer without a cast [-Wint-conversion]
+  156 |  XPrc_SetBsAddress(&Prc, XPRC_VS_SHIFT_ID, XPRC_VS_SHIFT_RM_SHIFT_RIGHT_ID, addr2);
+      |                                                                             ^~~~~
+      |                                                                             |
+      |                                                                             u8 * {aka unsigned char *}
+In file included from ../src/helloworld.c:10:
+C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/sw/pr_led/standalone_domain/bspinclude/include/xprc.h:780:9: note: expected 'u32' {aka 'long unsigned int'} but argument is of type 'u8 *' {aka 'unsigned char *'}
+  780 |     u32 BsAddress);
+      |     ~~~~^~~~~~~~~
+../src/helloworld.c:99:6: warning: unused variable 'prc_status_err' [-Wunused-variable]
+   99 |  u32 prc_status_err;
+      |      ^~~~~~~~~~~~~~
+../src/helloworld.c:98:6: warning: unused variable 'prc_status_last_state' [-Wunused-variable]
+   98 |  u32 prc_status_last_state;
+      |      ^~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:97:6: warning: unused variable 'prc_status_state' [-Wunused-variable]
+   97 |  u32 prc_status_state;
+      |      ^~~~~~~~~~~~~~~~
+../src/helloworld.c:96:6: warning: unused variable 'prc_status' [-Wunused-variable]
+   96 |  u32 prc_status;
+      |      ^~~~~~~~~~
+../src/helloworld.c:94:6: warning: unused variable 'dcfg_init' [-Wunused-variable]
+   94 |  u32 dcfg_init;
+      |      ^~~~~~~~~
+../src/helloworld.c: In function 'XDcfg_Initialize':
+../src/helloworld.c:330:6: warning: unused variable 'CtrlReg' [-Wunused-variable]
+  330 |  u32 CtrlReg;
+      |      ^~~~~~~
+../src/helloworld.c: In function 'XAxiDma_SimplePollExample':
+../src/helloworld.c:222:3: warning: 'val' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  222 |   xil_printf("val = %d\r\n",val);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: dma_test_w_dfx.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/sw/pr_led/standalone_domain/bsplib/lib -o "dma_test_w_dfx.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: dma_test_w_dfx.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size dma_test_w_dfx.elf  |tee "dma_test_w_dfx.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  75116	   3008	67120720	67198844	4015f7c	dma_test_w_dfx.elf
+'Finished building: dma_test_w_dfx.elf.size'
+' '
 
-17:25:23 Build Finished (took 229ms)
+20:31:01 Build Finished (took 684ms)
 
