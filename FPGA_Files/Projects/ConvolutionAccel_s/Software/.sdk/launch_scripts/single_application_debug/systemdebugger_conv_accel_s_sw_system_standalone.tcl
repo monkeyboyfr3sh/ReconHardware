@@ -14,4 +14,5 @@ ps7_post_config
 targets -set -nocase -filter {name =~ "*A9*#0"}
 dow C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/Software/conv_accel_s_sw/Debug/conv_accel_s_sw.elf
 configparams force-mem-access 0
-bpadd -addr &main
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con

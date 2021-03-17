@@ -2,15 +2,21 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="CONV" key="selection"/>
+		<item value="CC_status_register" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="CC_status_register"/>
+			<item value="filter"/>
+			<item value="image"/>
+			<item value="kernel_size"/>
+			<item value="u8"/>
 			<item value="conv"/>
 		</list>
 		<list key="replacehistory">
+			<item value="u32"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

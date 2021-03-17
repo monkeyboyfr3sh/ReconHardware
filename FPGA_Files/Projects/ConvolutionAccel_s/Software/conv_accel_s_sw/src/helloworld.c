@@ -1,3 +1,4 @@
+#include "stdbool.h"
 #include "xaxidma.h"
 #include "xparameters.h"
 #include "xdebug.h"
@@ -21,20 +22,32 @@ static int CheckData(u32 type);
 XAxiDma AxiDma;
 
 
-/*****************************************************************************/
-/**
-* The entry point for this example. It invokes the example function,
-* and reports the execution status.
-*
-* @param	None.
-*
-* @return
-*		- XST_SUCCESS if example finishes successfully
-*		- XST_FAILURE if example fails.
-*
-* @note		None.
-*
-******************************************************************************/
+/* Image stuff */
+#define img_width 		5
+#define img_height		5
+#define kernel_size		3
+#define filter_base 	24
+#define data_base 		60
+
+#define TX_PCKT_LEN		(img_width*img_height)
+#define RX_PCKT_LEN		((img_width-2)*(img_height-2))
+#define TX_BYTE_CNT		4*TX_PCKT_LEN
+#define RX_BYTE_CNT		4*RX_PCKT_LEN
+
+u32 image[] = {
+		1,1,1,1,1,
+		0,0,0,0,0,
+		1,1,1,1,1,
+		0,0,0,0,0,
+		1,1,1,1,1
+};
+u32 filter[] = {
+		1,0,0,
+		0,0,0,
+		0,0,0
+};
+
+/* Main */
 int main()
 {
 	int Status;
@@ -63,12 +76,12 @@ int XAxiDma_SimplePollExample(u16 DeviceId)
 	int Status;
 	int Tries = NUMBER_OF_TRANSFERS;
 	int Index;
-	u8 *TxBufferPtr;
-	u8 *RxBufferPtr;
-	u8 Value;
+	u32 *TxBufferPtr;
+	u32 *RxBufferPtr;
+	u32 Value;
 
-	TxBufferPtr = (u8 *)TX_BUFFER_BASE ;
-	RxBufferPtr = (u8 *)RX_BUFFER_BASE;
+	TxBufferPtr = (u32 *)TX_BUFFER_BASE ;
+	RxBufferPtr = (u32 *)RX_BUFFER_BASE;
 
 	/* Initialize the XAxiDma device.
 	 */
@@ -89,69 +102,76 @@ int XAxiDma_SimplePollExample(u16 DeviceId)
 		return XST_FAILURE;
 	}
 
-	u8 val;
-	xil_printf("\nQuick AXI test...\r\n");
-	for(u8 i = 0;i<10;i++){
-		Xil_Out8(CONV_CONTROL_BASE,i);
-		val = Xil_In8(CONV_CONTROL_BASE);
-		xil_printf("val = %d\r\n",val);
+	CC_status_register();
+
+	u32 val;
+	bool pass = true;
+	xil_printf("\nQuick AXI test... ");
+	for(u32 i = 0;i<100;i++){
+		Xil_Out32(CONV_CONTROL_BASE,i);
+		val = Xil_In32(CONV_CONTROL_BASE);
+		if(val != i){
+			xil_printf("ERROR: val = %d... ",val);
+			pass = false;
+		}
 	}
-//
-//	/* Disable interrupts, we use polling mode
-//	 */
-//	XAxiDma_IntrDisable(&AxiDma, XAXIDMA_IRQ_ALL_MASK,
-//						XAXIDMA_DEVICE_TO_DMA);
-//	XAxiDma_IntrDisable(&AxiDma, XAXIDMA_IRQ_ALL_MASK,
-//						XAXIDMA_DMA_TO_DEVICE);
-//
-//	Value = TEST_START_VALUE;
-//
-//	xil_printf("Data going in {");
-//	for(Index = 0; Index < MAX_PKT_LEN; Index ++) {
-//		TxBufferPtr[Index] = Value;
-//		xil_printf("%x,",TxBufferPtr[Index]);
-//		Value = (Value + 1) & 0xFF;
-//	}
-//	xil_printf("}\r\n");
-//
-//	Xil_DCacheFlushRange((UINTPTR)TxBufferPtr, MAX_PKT_LEN);
-//	Xil_DCacheFlushRange((UINTPTR)RxBufferPtr, MAX_PKT_LEN);
-//
-//	u32 ctrl_reg;
-//	for(Index = 0; Index < Tries; Index ++) {
-//		if( Index%2 ){
-//			ctrl_reg = 1;
-//		} else {
-//			ctrl_reg = 0;
-//		}
-//
-//		Xil_Out32(PIXEL_CTRL_BASE,ctrl_reg);
-//		xil_printf("\nPixel controller register 0: %d\r\n",ctrl_reg);
-//
-//		Status = XAxiDma_SimpleTransfer(&AxiDma,(UINTPTR) RxBufferPtr,
-//					MAX_PKT_LEN, XAXIDMA_DEVICE_TO_DMA);
-//
-//		if (Status != XST_SUCCESS) {
-//			return XST_FAILURE;
-//		}
-//
-//		Status = XAxiDma_SimpleTransfer(&AxiDma,(UINTPTR) TxBufferPtr,
-//					MAX_PKT_LEN, XAXIDMA_DMA_TO_DEVICE);
-//
-//		if (Status != XST_SUCCESS) {
-//			return XST_FAILURE;
-//		}
-//
-//		while ((XAxiDma_Busy(&AxiDma,XAXIDMA_DEVICE_TO_DMA)) ||
-//			(XAxiDma_Busy(&AxiDma,XAXIDMA_DMA_TO_DEVICE))) {
-//				/* Wait */
-//		}
-//
-//		Status = CheckData(ctrl_reg);
-//		if (Status != XST_SUCCESS) {
-//			return XST_FAILURE;
-//		}
-//	}
+	Xil_Out32(CONV_CONTROL_BASE,0);
+	if(pass){
+		xil_printf("test PASS!\r\n");
+	} else {
+		xil_printf("test FAIL!\r\n");
+	}
+
+	xil_printf("Setting command register\r\n");
+	CC_comand_register();
+
+	CC_status_register();
+
+	/* Disable interrupts, we use polling mode
+	 */
+	XAxiDma_IntrDisable(&AxiDma, XAXIDMA_IRQ_ALL_MASK,
+						XAXIDMA_DEVICE_TO_DMA);
+	XAxiDma_IntrDisable(&AxiDma, XAXIDMA_IRQ_ALL_MASK,
+						XAXIDMA_DMA_TO_DEVICE);
+
+	Value = TEST_START_VALUE;
+	xil_printf("Data going in {");
+	for(Index = 0; Index < TX_PCKT_LEN; Index ++) {
+		TxBufferPtr[Index] = image[Index];
+		xil_printf("%x,",TxBufferPtr[Index]);
+	}
+	xil_printf("}\r\n");
+
+	Xil_DCacheFlushRange((UINTPTR)TxBufferPtr, TX_BYTE_CNT);
+	Xil_DCacheFlushRange((UINTPTR)RxBufferPtr, RX_BYTE_CNT);
+
+	// Run multiple transfers
+	for(Index = 0; Index < Tries; Index ++) {
+
+		Status = XAxiDma_SimpleTransfer(&AxiDma,(UINTPTR) RxBufferPtr,
+				RX_BYTE_CNT, XAXIDMA_DEVICE_TO_DMA);
+
+		if (Status != XST_SUCCESS) {
+			return XST_FAILURE;
+		}
+
+		Status = XAxiDma_SimpleTransfer(&AxiDma,(UINTPTR) TxBufferPtr,
+				TX_BYTE_CNT, XAXIDMA_DMA_TO_DEVICE);
+
+		if (Status != XST_SUCCESS) {
+			return XST_FAILURE;
+		}
+
+		while ((XAxiDma_Busy(&AxiDma,XAXIDMA_DEVICE_TO_DMA)) ||
+			(XAxiDma_Busy(&AxiDma,XAXIDMA_DMA_TO_DEVICE))) {
+				/* Wait */
+		}
+
+		xil_printf("\nRX_Buffer\r\n");
+		for(int i = 0;i<RX_PCKT_LEN;i++){
+			xil_printf("RX_Buffer[%x]=%x\r\n",i,RxBufferPtr[i]);
+		}
+	}
 
 	/* Test finishes successfully
 	 */
@@ -160,11 +180,11 @@ int XAxiDma_SimplePollExample(u16 DeviceId)
 
 static int CheckData(u32 type)
 {
-	u8 *RxPacket;
+	u32 *RxPacket;
 	int Index = 0;
-	u8 Value;
+	u32 Value;
 
-	RxPacket = (u8 *) RX_BUFFER_BASE;
+	RxPacket = (u32 *) RX_BUFFER_BASE;
 	Value = TEST_START_VALUE;
 
 	/* Invalidate the DestBuffer before receiving the data, in case the
@@ -198,4 +218,36 @@ static int CheckData(u32 type)
 	xil_printf("}\r\n");
 
 	return XST_SUCCESS;
+}
+
+int CC_status_register(){
+	xil_printf("\nConvolution Status Reg:\r\n");
+	xil_printf("Control Enable:				%x\r\n",Xil_In32(CONV_CONTROL_BASE+(0x00)));
+	xil_printf("Reset:					%x\r\n",Xil_In32(CONV_CONTROL_BASE+(0x04)));
+	xil_printf("State Machine Register:			%x\r\n",Xil_In32(CONV_CONTROL_BASE+(0x08)));
+	xil_printf("Last Calculated Value:			%x\r\n",Xil_In32(CONV_CONTROL_BASE+(0x0c)));
+	xil_printf("Image Width:				%x\r\n",Xil_In32(CONV_CONTROL_BASE+(0x10)));
+	xil_printf("Image Height:				%x\r\n",Xil_In32(CONV_CONTROL_BASE+(0x14)));
+
+	xil_printf("\nFilter Set = {");
+	for(int i = 0;i<kernel_size*kernel_size;i++){
+		xil_printf("%x,",Xil_In32(CONV_CONTROL_BASE+filter_base+(4*i)));
+	}
+	xil_printf("}\r\n");
+
+	xil_printf("Data Set = {");
+	for(int i = 0;i<kernel_size*kernel_size;i++){
+		xil_printf("%x,",Xil_In32(CONV_CONTROL_BASE+data_base+(4*i)));
+	}
+	xil_printf("}\r\n");
+
+	return XST_SUCCESS;
+}
+int CC_comand_register(){
+	Xil_Out32(CONV_CONTROL_BASE+(0x00),1); // Control Start
+	for(int i = 0;i<kernel_size*kernel_size;i++){// Filter set
+		Xil_Out32(CONV_CONTROL_BASE+filter_base+(4*i),filter[i]);
+	}
+	Xil_Out32(CONV_CONTROL_BASE+(0x10),img_width);// Image width
+	Xil_Out32(CONV_CONTROL_BASE+(0x14),img_height);// Image height
 }

@@ -10,7 +10,7 @@ module CPE_Wrapper
 
 wire [CHANNELS*32-1:0] cSum;
 wire [CHANNELS-1:0] cReady;
-wire clk,rst,ip_reset;
+wire clk,rst_n,ip_reset;
 wire finaladd_start;
 
 // Matrix Accelerator signals
@@ -25,7 +25,7 @@ wire    [CHANNELS*KERNEL_SIZE*KERNEL_SIZE*DATA_WIDTH-1:0]    multiplicand_connec
 Convolution_Controller_wrapper BD_Wrapper
 (
     .FCLK_CLK0_0            (clk),
-    .FCLK_RESET0_N_0        (rst),
+    .FCLK_RESET0_N_0        (rst_n),
     .MULTIPLIER_INPUT_0     (multiplier_connector),
     .MULTIPLICAND_INPUT_0   (multiplicand_connector),
     .MULTIPLY_START_0       (mStart_conncetor),
@@ -45,11 +45,11 @@ matrixAccelerator
     .KERNEL_SIZE(KERNEL_SIZE)
 ) matrixAccel(   
     .Clk(axi_clk),
-    .Rst(~axi_reset_n),
+    .Rst(~rst_n),
     .multiplier_input       (multiplier_connector[(n*KERNEL_SIZE*KERNEL_SIZE*32)+:KERNEL_SIZE*KERNEL_SIZE*32]),        //Flat input connector. Has width of `bitLength*`inputPortcount
     .multiplicand_input     (multiplicand_connector[(n*KERNEL_SIZE*KERNEL_SIZE*32)+:KERNEL_SIZE*KERNEL_SIZE*32]),    //Flat input connector. Has width of `bitLength*`inputPortcount
     .AddressSelect(AddressSelect),                  //Controls addressSelect for internal XBar                          
-    .mStart(MULTIPLY_START),                      //Starts multiplication for all three multipliers
+    .mStart(mStart_conncetor),                      //Starts multiplication for all three multipliers
     .direct(1),
     .finalAccumulate(cSum[(n*32)+:32]),
     .finalReady(cReady[n])

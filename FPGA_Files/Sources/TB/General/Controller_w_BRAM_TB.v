@@ -186,9 +186,12 @@ s_axi_awaddr = 0;//Select Control register
 s_axi_wvalid = 1;
 s_axi_wdata = 1;
 #`clkPeriod;
+s_axi_bready = 1;
 s_axi_awvalid = 0;
 s_axi_wvalid = 0;
 #`clkPeriod;
+#`clkPeriod;
+s_axi_bready = 0;
 #`clkPeriod;
 
 //Write the picture width info
@@ -197,9 +200,12 @@ s_axi_awaddr = 16;//Select Width register
 s_axi_wvalid = 1;
 s_axi_wdata = `test_width;
 #`clkPeriod;
+s_axi_bready = 1;
 s_axi_awvalid = 0;
 s_axi_wvalid = 0;
 #`clkPeriod;
+#`clkPeriod;
+s_axi_bready = 0;
 #`clkPeriod;
 
 //Test the reset register
@@ -208,9 +214,12 @@ s_axi_awaddr = 4;//Select reset register
 s_axi_wvalid = 1;
 s_axi_wdata = 1;
 #`clkPeriod;
+s_axi_bready = 1;
 s_axi_awvalid = 0;
 s_axi_wvalid = 0;
 #`clkPeriod;
+#`clkPeriod;
+s_axi_bready = 0;
 #`clkPeriod;
 
 //Enable the IP
@@ -219,9 +228,12 @@ s_axi_awaddr = 0;//Select Control register
 s_axi_wvalid = 1;
 s_axi_wdata = 1;
 #`clkPeriod;
+s_axi_bready = 1;
 s_axi_awvalid = 0;
 s_axi_wvalid = 0;
 #`clkPeriod;
+#`clkPeriod;
+s_axi_bready = 0;
 #`clkPeriod;
 
 //Write the picture width info
@@ -230,9 +242,12 @@ s_axi_awaddr = 16;//Select Width register
 s_axi_wvalid = 1;
 s_axi_wdata = `test_width;
 #`clkPeriod;
+s_axi_bready = 1;
 s_axi_awvalid = 0;
 s_axi_wvalid = 0;
 #`clkPeriod;
+#`clkPeriod;
+s_axi_bready = 0;
 #`clkPeriod;
 
 //Write the picture height info
@@ -241,9 +256,12 @@ s_axi_awaddr = 20;//Select Height register
 s_axi_wvalid = 1;
 s_axi_wdata = `test_height;
 #`clkPeriod;
+s_axi_bready = 1;
 s_axi_awvalid = 0;
 s_axi_wvalid = 0;
 #`clkPeriod;
+#`clkPeriod;
+s_axi_bready = 0;
 #`clkPeriod;
 //490 ns in sim
 
@@ -260,15 +278,13 @@ for(i = 0;i<`kernel_size*`kernel_size;i=i+1)begin
     #`clkPeriod;
     
     // Wait for awready
-    while (s_axi_awready == 0)#`clkPeriod;
-    // Wait for wready
-    while (s_axi_wready == 0)#`clkPeriod;
     s_axi_bready = 1;
     s_axi_awvalid = 0;
     s_axi_wvalid = 0;
-    //Wait for bready
-    while (s_axi_bready == 0)#`clkPeriod;
+    #`clkPeriod;
+    #`clkPeriod;
     s_axi_bready = 0;
+    #`clkPeriod;
 end
 linecnt = 0;
 columncnt = 0;

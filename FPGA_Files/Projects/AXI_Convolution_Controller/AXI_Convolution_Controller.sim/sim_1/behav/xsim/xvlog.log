@@ -23,6 +23,6 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/FPGA_Files/
 INFO: [VRFC 10-311] analyzing module param_int_adder
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/General/Controller_w_BRAM_TB.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module Controller_w_BRAM_TB
-INFO: [VRFC 10-2458] undeclared symbol AddressSelect, assumed default net type wire [C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/General/Controller_w_BRAM_TB.v:134]
-WARNING: [VRFC 10-3248] data object 'i' is already declared [C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/General/Controller_w_BRAM_TB.v:258]
-WARNING: [VRFC 10-3703] second declaration of 'i' ignored [C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/General/Controller_w_BRAM_TB.v:258]
+INFO: [VRFC 10-2458] undeclared symbol AddressSelect, assumed default net type wire [C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/General/Controller_w_BRAM_TB.v:154]
+WARNING: [VRFC 10-3248] data object 'i' is already declared [C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/General/Controller_w_BRAM_TB.v:294]
+WARNING: [VRFC 10-3703] second declaration of 'i' ignored [C:/GitHub/ReconHardware/FPGA_Files/Sources/TB/General/Controller_w_BRAM_TB.v:294]
