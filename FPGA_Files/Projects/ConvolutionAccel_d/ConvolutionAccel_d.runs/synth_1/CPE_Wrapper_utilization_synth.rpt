@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date         : Thu Feb  4 15:14:23 2021
+| Date         : Thu Mar 18 14:14:42 2021
 | Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 | Command      : report_utilization -file CPE_Wrapper_utilization_synth.rpt -pb CPE_Wrapper_utilization_synth.pb
 | Design       : CPE_Wrapper
@@ -30,11 +30,11 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |  224 |     0 |     53200 |  0.42 |
-|   LUT as Logic          |  224 |     0 |     53200 |  0.42 |
+| Slice LUTs*             |  276 |     0 |     53200 |  0.52 |
+|   LUT as Logic          |  276 |     0 |     53200 |  0.52 |
 |   LUT as Memory         |    0 |     0 |     17400 |  0.00 |
-| Slice Registers         |  144 |     0 |    106400 |  0.14 |
-|   Register as Flip Flop |  144 |     0 |    106400 |  0.14 |
+| Slice Registers         |  195 |     0 |    106400 |  0.18 |
+|   Register as Flip Flop |  195 |     0 |    106400 |  0.18 |
 |   Register as Latch     |    0 |     0 |    106400 |  0.00 |
 | F7 Muxes                |    0 |     0 |     26600 |  0.00 |
 | F8 Muxes                |    0 |     0 |     13300 |  0.00 |
@@ -57,7 +57,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 144   |          Yes |       Reset |            - |
+| 195   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -135,7 +135,7 @@ Table of Contents
 | DNA_PORT    |    0 |     0 |         1 |  0.00 |
 | EFUSE_USR   |    0 |     0 |         1 |  0.00 |
 | FRAME_ECCE2 |    0 |     0 |         1 |  0.00 |
-| ICAPE2      |    0 |     0 |         2 |  0.00 |
+| ICAPE2      |    1 |     0 |         2 | 50.00 |
 | STARTUPE2   |    0 |     0 |         1 |  0.00 |
 | XADC        |    0 |     0 |         1 |  0.00 |
 +-------------+------+-------+-----------+-------+
@@ -147,42 +147,34 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
+| FDRE     |  195 |        Flop & Latch |
 | LUT2     |  144 |                 LUT |
-| FDRE     |  144 |        Flop & Latch |
-| LUT3     |   76 |                 LUT |
-| LUT4     |   72 |                 LUT |
+| LUT3     |  124 |                 LUT |
+| LUT4     |  121 |                 LUT |
 | CARRY4   |   68 |          CarryLogic |
 | DSP48E1  |   27 |    Block Arithmetic |
-| LUT6     |    4 |                 LUT |
+| LUT6     |    6 |                 LUT |
+| LUT1     |    1 |                 LUT |
+| ICAPE2   |    1 |              Others |
 +----------+------+---------------------+
 
 
 8. Black Boxes
 --------------
 
-+------------------------------------------------------+------+
-|                       Ref Name                       | Used |
-+------------------------------------------------------+------+
-| ICAPE3                                               |    1 |
-| Convolution_Controller_xbar_1                        |    1 |
-| Convolution_Controller_xbar_0                        |    1 |
-| Convolution_Controller_util_vector_logic_0_0         |    1 |
-| Convolution_Controller_rst_ps7_0_100M_0              |    1 |
-| Convolution_Controller_processing_system7_0_0        |    1 |
-| Convolution_Controller_dfx_decoupler_0_1             |    1 |
-| Convolution_Controller_dfx_decoupler_0_0             |    1 |
-| Convolution_Controller_dfx_controller_0_0            |    1 |
-| Convolution_Controller_axi_dma_0_1                   |    1 |
-| Convolution_Controller_auto_us_2                     |    1 |
-| Convolution_Controller_auto_us_1                     |    1 |
-| Convolution_Controller_auto_us_0                     |    1 |
-| Convolution_Controller_auto_pc_1                     |    1 |
-| Convolution_Controller_auto_pc_0                     |    1 |
-| Convolution_Controller_Convolution_Controll_0_bram_4 |    1 |
-| Convolution_Controller_Convolution_Controll_0_bram_3 |    1 |
-| Convolution_Controller_Convolution_Controll_0_bram_2 |    1 |
-| Convolution_Controller_Convolution_Controll_0_1      |    1 |
-+------------------------------------------------------+------+
++-------------------------------------------------+------+
+|                     Ref Name                    | Used |
++-------------------------------------------------+------+
+| Convolution_Controller_util_vector_logic_0_1    |    1 |
+| Convolution_Controller_util_vector_logic_0_0    |    1 |
+| Convolution_Controller_smartconnect_0_1         |    1 |
+| Convolution_Controller_smartconnect_0_0         |    1 |
+| Convolution_Controller_rst_ps7_0_100M_0         |    1 |
+| Convolution_Controller_processing_system7_0_0   |    1 |
+| Convolution_Controller_dfx_controller_0_1       |    1 |
+| Convolution_Controller_axi_dma_0_0              |    1 |
+| Convolution_Controller_Convolution_Controll_0_0 |    1 |
++-------------------------------------------------+------+
 
 
 9. Instantiated Netlists

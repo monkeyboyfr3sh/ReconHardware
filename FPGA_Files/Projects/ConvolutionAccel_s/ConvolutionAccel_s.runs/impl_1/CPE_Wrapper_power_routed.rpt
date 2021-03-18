@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date             : Thu Mar 18 10:46:20 2021
+| Date             : Thu Mar 18 12:40:39 2021
 | Host             : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 | Command          : report_power -file CPE_Wrapper_power_routed.rpt -pb CPE_Wrapper_power_summary_routed.pb -rpx CPE_Wrapper_power_routed.rpx
 | Design           : CPE_Wrapper
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.566        |
+| Total On-Chip Power (W)  | 1.565        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.423        |
+| Dynamic (W)              | 1.422        |
 | Device Static (W)        | 0.142        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 66.9         |
-| Junction Temperature (C) | 43.1         |
+| Max Ambient (C)          | 67.0         |
+| Junction Temperature (C) | 43.0         |
 | Confidence Level         | Medium       |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -53,20 +53,20 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.072 |        4 |       --- |             --- |
-| Slice Logic              |     0.020 |    37114 |       --- |             --- |
-|   LUT as Logic           |     0.016 |    11668 |     53200 |           21.93 |
-|   Register               |     0.001 |    17453 |    106400 |           16.40 |
+| Slice Logic              |     0.020 |    37104 |       --- |             --- |
+|   LUT as Logic           |     0.016 |    11650 |     53200 |           21.90 |
+|   Register               |     0.001 |    17443 |    106400 |           16.39 |
 |   LUT as Shift Register  |     0.001 |     1028 |     17400 |            5.91 |
 |   CARRY4                 |    <0.001 |      274 |     13300 |            2.06 |
 |   LUT as Distributed RAM |    <0.001 |      486 |     17400 |            2.79 |
 |   F7/F8 Muxes            |    <0.001 |      524 |     53200 |            0.98 |
 |   Others                 |     0.000 |     1366 |       --- |             --- |
-| Signals                  |     0.028 |    27853 |       --- |             --- |
+| Signals                  |     0.027 |    27861 |       --- |             --- |
 | Block RAM                |     0.031 |     44.5 |       140 |           31.79 |
 | DSPs                     |     0.016 |       27 |       220 |           12.27 |
 | PS7                      |     1.256 |        1 |       --- |             --- |
 | Static Power             |     0.142 |          |           |                 |
-| Total                    |     1.566 |          |           |                 |
+| Total                    |     1.565 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -76,7 +76,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.180 |       0.165 |      0.015 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.179 |       0.164 |      0.015 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.015 |       0.000 |      0.015 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -153,7 +153,7 @@ Table of Contents
 +------------------------------+-----------+
 | Name                         | Power (W) |
 +------------------------------+-----------+
-| CPE_Wrapper                  |     1.423 |
+| CPE_Wrapper                  |     1.422 |
 |   BD_Wrapper                 |     1.368 |
 |     Convolution_Controller_i |     1.368 |
 |       Convolution_Controll_0 |     0.032 |
@@ -163,9 +163,9 @@ Table of Contents
 |       processing_system7_0   |     1.257 |
 |       smartconnect_0         |     0.007 |
 |       smartconnect_1         |     0.025 |
-|   Convolution_Processor      |     0.024 |
+|   Convolution_Processor      |     0.023 |
 |     adder                    |     0.002 |
-|     genblk1[0].inputMulti    |     0.003 |
+|     genblk1[0].inputMulti    |     0.002 |
 |     genblk1[1].inputMulti    |     0.003 |
 |     genblk1[2].inputMulti    |     0.002 |
 |     genblk1[3].inputMulti    |     0.002 |

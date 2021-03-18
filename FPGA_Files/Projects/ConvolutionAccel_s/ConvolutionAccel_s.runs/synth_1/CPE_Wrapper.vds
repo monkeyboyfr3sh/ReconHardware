@@ -2,8 +2,8 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Thu Mar 18 10:37:50 2021
-# Process ID: 3548
+# Start of session at: Thu Mar 18 12:35:18 2021
+# Process ID: 3848
 # Current directory: C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1
 # Command line: vivado.exe -log CPE_Wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source CPE_Wrapper.tcl
 # Log file: C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/CPE_Wrapper.vds
@@ -15,7 +15,7 @@ INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/GitHub/ReconHardware/FPGA_
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.1/data/ip'.
 WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
 Current IP cache path is c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.cache/ip 
-add_files: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1078.250 ; gain = 0.000
+add_files: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1073.191 ; gain = 0.000
 Command: synth_design -top CPE_Wrapper -part xc7z020clg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
@@ -23,9 +23,9 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 5532
+INFO: [Synth 8-7075] Helper process launched with PID 7568
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1132.785 ; gain = 54.535
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1131.875 ; gain = 58.684
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'CPE_Wrapper' [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/Convolution_Top_s.v:1]
 	Parameter DATA_TYPE bound to: INTEGER - type: string 
@@ -36,24 +36,24 @@ INFO: [Synth 8-6157] synthesizing module 'CPE_Wrapper' [C:/GitHub/ReconHardware/
 	Parameter ADDR_WIDTH bound to: 4 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'Convolution_Controller_wrapper' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/hdl/Convolution_Controller_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'Convolution_Controller' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:13]
-INFO: [Synth 8-6157] synthesizing module 'Convolution_Controller_Convolution_Controll_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-3548-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_Convolution_Controll_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Convolution_Controller_Convolution_Controll_0_0' (1#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-3548-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_Convolution_Controll_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Convolution_Controller_Convolution_Controll_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-3848-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_Convolution_Controll_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Convolution_Controller_Convolution_Controll_0_0' (1#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-3848-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_Convolution_Controll_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 's_axi_rlast' of module 'Convolution_Controller_Convolution_Controll_0_0' is unconnected for instance 'Convolution_Controll_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:251]
 WARNING: [Synth 8-7023] instance 'Convolution_Controll_0' of module 'Convolution_Controller_Convolution_Controll_0_0' has 32 connections declared, but only 31 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:251]
-INFO: [Synth 8-6157] synthesizing module 'Convolution_Controller_axi_dma_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-3548-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_axi_dma_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Convolution_Controller_axi_dma_0_0' (2#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-3548-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_axi_dma_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Convolution_Controller_axi_dma_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-3848-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_axi_dma_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Convolution_Controller_axi_dma_0_0' (2#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-3848-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_axi_dma_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'mm2s_prmry_reset_out_n' of module 'Convolution_Controller_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:283]
 WARNING: [Synth 8-7071] port 's2mm_prmry_reset_out_n' of module 'Convolution_Controller_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:283]
 WARNING: [Synth 8-7071] port 'mm2s_introut' of module 'Convolution_Controller_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:283]
 WARNING: [Synth 8-7071] port 's2mm_introut' of module 'Convolution_Controller_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:283]
 WARNING: [Synth 8-7071] port 'axi_dma_tstvec' of module 'Convolution_Controller_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:283]
 WARNING: [Synth 8-7023] instance 'axi_dma_0' of module 'Convolution_Controller_axi_dma_0_0' has 64 connections declared, but only 59 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:283]
-INFO: [Synth 8-6157] synthesizing module 'Convolution_Controller_ila_0_1' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-3548-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_ila_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Convolution_Controller_ila_0_1' (3#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-3548-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_ila_0_1_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'Convolution_Controller_m_axis_ila_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-3548-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_m_axis_ila_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Convolution_Controller_m_axis_ila_0_0' (4#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-3548-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_m_axis_ila_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'Convolution_Controller_processing_system7_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-3548-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_processing_system7_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Convolution_Controller_processing_system7_0_0' (5#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-3548-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Convolution_Controller_ila_0_1' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-3848-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_ila_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Convolution_Controller_ila_0_1' (3#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-3848-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_ila_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Convolution_Controller_m_axis_ila_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-3848-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_m_axis_ila_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Convolution_Controller_m_axis_ila_0_0' (4#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-3848-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_m_axis_ila_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Convolution_Controller_processing_system7_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-3848-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Convolution_Controller_processing_system7_0_0' (5#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-3848-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_processing_system7_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'USB0_PORT_INDCTL' of module 'Convolution_Controller_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:365]
 WARNING: [Synth 8-7071] port 'USB0_VBUS_PWRSELECT' of module 'Convolution_Controller_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:365]
 WARNING: [Synth 8-7071] port 'S_AXI_HP0_BID' of module 'Convolution_Controller_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:365]
@@ -63,14 +63,14 @@ WARNING: [Synth 8-7071] port 'S_AXI_HP0_WCOUNT' of module 'Convolution_Controlle
 WARNING: [Synth 8-7071] port 'S_AXI_HP0_RACOUNT' of module 'Convolution_Controller_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:365]
 WARNING: [Synth 8-7071] port 'S_AXI_HP0_WACOUNT' of module 'Convolution_Controller_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:365]
 WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'Convolution_Controller_processing_system7_0_0' has 110 connections declared, but only 102 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:365]
-INFO: [Synth 8-6157] synthesizing module 'Convolution_Controller_rst_ps7_0_100M_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-3548-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_rst_ps7_0_100M_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Convolution_Controller_rst_ps7_0_100M_0' (6#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-3548-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_rst_ps7_0_100M_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Convolution_Controller_rst_ps7_0_100M_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-3848-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_rst_ps7_0_100M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Convolution_Controller_rst_ps7_0_100M_0' (6#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-3848-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_rst_ps7_0_100M_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'mb_reset' of module 'Convolution_Controller_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:468]
 WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'Convolution_Controller_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:468]
 WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'Convolution_Controller_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:468]
 WARNING: [Synth 8-7023] instance 'rst_ps7_0_100M' of module 'Convolution_Controller_rst_ps7_0_100M_0' has 10 connections declared, but only 7 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:468]
-INFO: [Synth 8-6157] synthesizing module 'Convolution_Controller_smartconnect_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-3548-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_smartconnect_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Convolution_Controller_smartconnect_0_0' (7#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-3548-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_smartconnect_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Convolution_Controller_smartconnect_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-3848-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_smartconnect_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Convolution_Controller_smartconnect_0_0' (7#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-3848-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_smartconnect_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'M00_AXI_awprot' of module 'Convolution_Controller_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:476]
 WARNING: [Synth 8-7071] port 'M00_AXI_wstrb' of module 'Convolution_Controller_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:476]
 WARNING: [Synth 8-7071] port 'M00_AXI_arprot' of module 'Convolution_Controller_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:476]
@@ -78,8 +78,8 @@ WARNING: [Synth 8-7071] port 'M01_AXI_awprot' of module 'Convolution_Controller_
 WARNING: [Synth 8-7071] port 'M01_AXI_wstrb' of module 'Convolution_Controller_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:476]
 WARNING: [Synth 8-7071] port 'M01_AXI_arprot' of module 'Convolution_Controller_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:476]
 WARNING: [Synth 8-7023] instance 'smartconnect_0' of module 'Convolution_Controller_smartconnect_0_0' has 78 connections declared, but only 72 given [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:476]
-INFO: [Synth 8-6157] synthesizing module 'Convolution_Controller_smartconnect_0_1' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-3548-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_smartconnect_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'Convolution_Controller_smartconnect_0_1' (8#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-3548-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_smartconnect_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'Convolution_Controller_smartconnect_0_1' [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-3848-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_smartconnect_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Convolution_Controller_smartconnect_0_1' (8#1) [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/.Xil/Vivado-3848-DESKTOP-D9F9TPQ/realtime/Convolution_Controller_smartconnect_0_1_stub.v:6]
 INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'axi_dma_0'. This will prevent further optimization [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:283]
 INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'm_axis_ila_0'. This will prevent further optimization [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:343]
 INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'Convolution_Controll_0'. This will prevent further optimization [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/synth/Convolution_Controller.v:251]
@@ -125,18 +125,18 @@ INFO: [Synth 8-6155] done synthesizing module 'param_int_adder' (12#1) [C:/GitHu
 INFO: [Synth 8-6155] done synthesizing module 'matrixAccelerator' (13#1) [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/matrixAccelerator.v:9]
 INFO: [Synth 8-6155] done synthesizing module 'CPE_Wrapper' (14#1) [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/Convolution_Top_s.v:1]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1190.598 ; gain = 112.348
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1190.043 ; gain = 116.852
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1190.598 ; gain = 112.348
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1190.043 ; gain = 116.852
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1190.598 ; gain = 112.348
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1190.043 ; gain = 116.852
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 1190.598 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 1190.043 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -159,45 +159,45 @@ Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/Convoluti
 Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_smartconnect_0_1/Convolution_Controller_smartconnect_0_1/Convolution_Controller_smartconnect_0_1_in_context.xdc] for cell 'BD_Wrapper/Convolution_Controller_i/smartconnect_1'
 Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_smartconnect_0_1/Convolution_Controller_smartconnect_0_1/Convolution_Controller_smartconnect_0_1_in_context.xdc] for cell 'BD_Wrapper/Convolution_Controller_i/smartconnect_1'
 Parsing XDC File [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc]
-WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TVALID'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:40]
-WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TDATA[19]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:41]
-WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TKEEP[1]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:42]
-WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TDATA[30]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:43]
-WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TKEEP[2]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:44]
-WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TDATA[3]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:45]
-WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TDATA[9]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:46]
-WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TDATA[12]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:47]
-WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TDATA[17]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:48]
-WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TDATA[24]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:49]
-WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TDATA[27]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:50]
-WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TDATA[29]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:51]
-WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TDATA[4]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:52]
-WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TKEEP[0]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:53]
-WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TDATA[28]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:54]
-WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TDATA[0]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:55]
-WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TDATA[5]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:56]
-WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TDATA[6]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:57]
-WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TDATA[11]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:58]
-WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TDATA[13]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:59]
-WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TDATA[18]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:60]
-WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TDATA[22]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:61]
-WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TLAST'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:62]
-WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TREADY'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:63]
-WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TDATA[2]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:64]
-WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TDATA[8]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:65]
-WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TDATA[14]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:66]
-WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TDATA[20]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:67]
-WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TDATA[21]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:68]
-WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TDATA[25]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:69]
-WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TDATA[31]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:70]
-WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TKEEP[3]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:71]
-WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TDATA[1]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:72]
-WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TDATA[7]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:73]
-WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TDATA[10]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:74]
-WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TDATA[15]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:75]
-WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TDATA[16]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:76]
-WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TDATA[23]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:77]
-WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TDATA[26]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:78]
+WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TVALID'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:8]
+WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TDATA[19]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:9]
+WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TKEEP[1]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:10]
+WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TDATA[30]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:11]
+WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TKEEP[2]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:12]
+WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TDATA[3]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:13]
+WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TDATA[9]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:14]
+WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TDATA[12]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:15]
+WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TDATA[17]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:16]
+WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TDATA[24]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:17]
+WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TDATA[27]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:18]
+WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TDATA[29]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:19]
+WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TDATA[4]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:20]
+WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TKEEP[0]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:21]
+WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TDATA[28]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:22]
+WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TDATA[0]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:23]
+WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TDATA[5]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:24]
+WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TDATA[6]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:25]
+WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TDATA[11]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:26]
+WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TDATA[13]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:27]
+WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TDATA[18]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:28]
+WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TDATA[22]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:29]
+WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TLAST'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:30]
+WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TREADY'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:31]
+WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TDATA[2]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:32]
+WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TDATA[8]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:33]
+WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TDATA[14]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:34]
+WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TDATA[20]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:35]
+WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TDATA[21]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:36]
+WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TDATA[25]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:37]
+WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TDATA[31]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:38]
+WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TKEEP[3]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:39]
+WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TDATA[1]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:40]
+WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TDATA[7]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:41]
+WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TDATA[10]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:42]
+WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TDATA[15]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:43]
+WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TDATA[16]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:44]
+WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TDATA[23]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:45]
+WARNING: [Vivado 12-507] No nets matched 'BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_DATA_OUT_TDATA[26]'. [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc:46]
 Finished Parsing XDC File [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc]
 WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/CPE_Wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/CPE_Wrapper_propImpl.xdc].
@@ -206,34 +206,34 @@ Parsing XDC File [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s
 Finished Parsing XDC File [C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1311.316 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1309.777 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 1311.316 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 1309.777 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1311.316 ; gain = 233.066
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1309.777 ; gain = 236.586
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1311.316 ; gain = 233.066
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1309.777 ; gain = 236.586
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property MARK_DEBUG = true for BD_Wrapper/Convolution_Controller_i/axi_dma_0_M_AXIS_MM2S_TREADY. (constraint file  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc, line 1).
 Applied set_property MARK_DEBUG = true for BD_Wrapper/Convolution_Controller_i/axi_dma_0_M_AXIS_MM2S_TKEEP[0]. (constraint file  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc, line 2).
-Applied set_property MARK_DEBUG = true for BD_Wrapper/Convolution_Controller_i/axi_dma_0_M_AXIS_MM2S_TDATA[1]. (constraint file  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc, line 4).
-Applied set_property MARK_DEBUG = true for BD_Wrapper/Convolution_Controller_i/axi_dma_0_M_AXIS_MM2S_TLAST. (constraint file  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc, line 11).
-Applied set_property MARK_DEBUG = true for BD_Wrapper/Convolution_Controller_i/axi_dma_0_M_AXIS_MM2S_TVALID. (constraint file  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc, line 21).
-Applied set_property MARK_DEBUG = true for multiplicand_connector[25]. (constraint file  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc, line 82).
-Applied set_property MARK_DEBUG = true for multiplier_connector[44]. (constraint file  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc, line 86).
-Applied set_property MARK_DEBUG = true for mStart_conncetor[4]. (constraint file  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc, line 139).
-Applied set_property MARK_DEBUG = true for cSum[0]. (constraint file  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc, line 667).
-Applied set_property MARK_DEBUG = true for cReady. (constraint file  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc, line 682).
+Applied set_property MARK_DEBUG = true for BD_Wrapper/Convolution_Controller_i/axi_dma_0_M_AXIS_MM2S_TLAST. (constraint file  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc, line 4).
+Applied set_property MARK_DEBUG = true for BD_Wrapper/Convolution_Controller_i/axi_dma_0_M_AXIS_MM2S_TVALID. (constraint file  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc, line 6).
+Applied set_property MARK_DEBUG = false for multiplier_connector[45]. (constraint file  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc, line 51).
+Applied set_property MARK_DEBUG = false for cSum[5]. (constraint file  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc, line 55).
+Applied set_property MARK_DEBUG = false for multiplicand_connector[39]. (constraint file  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc, line 56).
+Applied set_property MARK_DEBUG = false for mStart_conncetor[5]. (constraint file  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc, line 151).
+Applied set_property MARK_DEBUG = false for cReady. (constraint file  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc, line 228).
+Applied set_property MARK_DEBUG = true for BD_Wrapper/Convolution_Controller_i/axi_dma_0_M_AXIS_MM2S_TDATA[0]. (constraint file  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.srcs/constrs_1/new/debug.xdc, line 699).
 Applied set_property DONT_TOUCH = true for BD_Wrapper/Convolution_Controller_i. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for BD_Wrapper/Convolution_Controller_i/processing_system7_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for BD_Wrapper/Convolution_Controller_i/axi_dma_0. (constraint file  auto generated constraint, line ).
@@ -244,12 +244,10 @@ Applied set_property DONT_TOUCH = true for BD_Wrapper/Convolution_Controller_i/m
 Applied set_property DONT_TOUCH = true for BD_Wrapper/Convolution_Controller_i/smartconnect_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for BD_Wrapper/Convolution_Controller_i/smartconnect_1. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1311.316 ; gain = 233.066
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1309.777 ; gain = 236.586
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'BD_Wrapper'. This will prevent further optimization [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/Convolution_Top_s.v:27]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'Convolution_Processor'. This will prevent further optimization [C:/GitHub/ReconHardware/FPGA_Files/Sources/General/Convolution_Top_s.v:46]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1311.316 ; gain = 233.066
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1309.777 ; gain = 236.586
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -279,180 +277,180 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-DSP Report: Generating DSP genblk1[1].inputMulti/product0, operation Mode is: A*B.
-DSP Report: operator genblk1[1].inputMulti/product0 is absorbed into DSP genblk1[1].inputMulti/product0.
-DSP Report: operator genblk1[1].inputMulti/product0 is absorbed into DSP genblk1[1].inputMulti/product0.
-DSP Report: Generating DSP genblk1[1].inputMulti/product_reg, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: register genblk1[1].inputMulti/product_reg is absorbed into DSP genblk1[1].inputMulti/product_reg.
-DSP Report: operator genblk1[1].inputMulti/product0 is absorbed into DSP genblk1[1].inputMulti/product_reg.
-DSP Report: operator genblk1[1].inputMulti/product0 is absorbed into DSP genblk1[1].inputMulti/product_reg.
-DSP Report: Generating DSP genblk1[1].inputMulti/product0, operation Mode is: A*B.
-DSP Report: operator genblk1[1].inputMulti/product0 is absorbed into DSP genblk1[1].inputMulti/product0.
-DSP Report: operator genblk1[1].inputMulti/product0 is absorbed into DSP genblk1[1].inputMulti/product0.
-DSP Report: Generating DSP genblk1[1].inputMulti/product_reg, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: register genblk1[1].inputMulti/product_reg is absorbed into DSP genblk1[1].inputMulti/product_reg.
-DSP Report: operator genblk1[1].inputMulti/product0 is absorbed into DSP genblk1[1].inputMulti/product_reg.
-DSP Report: operator genblk1[1].inputMulti/product0 is absorbed into DSP genblk1[1].inputMulti/product_reg.
-DSP Report: Generating DSP genblk1[2].inputMulti/product0, operation Mode is: A*B.
-DSP Report: operator genblk1[2].inputMulti/product0 is absorbed into DSP genblk1[2].inputMulti/product0.
-DSP Report: operator genblk1[2].inputMulti/product0 is absorbed into DSP genblk1[2].inputMulti/product0.
-DSP Report: Generating DSP genblk1[2].inputMulti/product_reg, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: register genblk1[2].inputMulti/product_reg is absorbed into DSP genblk1[2].inputMulti/product_reg.
-DSP Report: operator genblk1[2].inputMulti/product0 is absorbed into DSP genblk1[2].inputMulti/product_reg.
-DSP Report: operator genblk1[2].inputMulti/product0 is absorbed into DSP genblk1[2].inputMulti/product_reg.
-DSP Report: Generating DSP genblk1[2].inputMulti/product0, operation Mode is: A*B.
-DSP Report: operator genblk1[2].inputMulti/product0 is absorbed into DSP genblk1[2].inputMulti/product0.
-DSP Report: operator genblk1[2].inputMulti/product0 is absorbed into DSP genblk1[2].inputMulti/product0.
-DSP Report: Generating DSP genblk1[2].inputMulti/product_reg, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: register genblk1[2].inputMulti/product_reg is absorbed into DSP genblk1[2].inputMulti/product_reg.
-DSP Report: operator genblk1[2].inputMulti/product0 is absorbed into DSP genblk1[2].inputMulti/product_reg.
-DSP Report: operator genblk1[2].inputMulti/product0 is absorbed into DSP genblk1[2].inputMulti/product_reg.
-DSP Report: Generating DSP genblk1[3].inputMulti/product0, operation Mode is: A*B.
-DSP Report: operator genblk1[3].inputMulti/product0 is absorbed into DSP genblk1[3].inputMulti/product0.
-DSP Report: operator genblk1[3].inputMulti/product0 is absorbed into DSP genblk1[3].inputMulti/product0.
-DSP Report: Generating DSP genblk1[3].inputMulti/product_reg, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: register genblk1[3].inputMulti/product_reg is absorbed into DSP genblk1[3].inputMulti/product_reg.
-DSP Report: operator genblk1[3].inputMulti/product0 is absorbed into DSP genblk1[3].inputMulti/product_reg.
-DSP Report: operator genblk1[3].inputMulti/product0 is absorbed into DSP genblk1[3].inputMulti/product_reg.
-DSP Report: Generating DSP genblk1[3].inputMulti/product0, operation Mode is: A*B.
-DSP Report: operator genblk1[3].inputMulti/product0 is absorbed into DSP genblk1[3].inputMulti/product0.
-DSP Report: operator genblk1[3].inputMulti/product0 is absorbed into DSP genblk1[3].inputMulti/product0.
-DSP Report: Generating DSP genblk1[3].inputMulti/product_reg, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: register genblk1[3].inputMulti/product_reg is absorbed into DSP genblk1[3].inputMulti/product_reg.
-DSP Report: operator genblk1[3].inputMulti/product0 is absorbed into DSP genblk1[3].inputMulti/product_reg.
-DSP Report: operator genblk1[3].inputMulti/product0 is absorbed into DSP genblk1[3].inputMulti/product_reg.
-DSP Report: Generating DSP genblk1[4].inputMulti/product0, operation Mode is: A*B.
-DSP Report: operator genblk1[4].inputMulti/product0 is absorbed into DSP genblk1[4].inputMulti/product0.
-DSP Report: operator genblk1[4].inputMulti/product0 is absorbed into DSP genblk1[4].inputMulti/product0.
-DSP Report: Generating DSP genblk1[4].inputMulti/product_reg, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: register genblk1[4].inputMulti/product_reg is absorbed into DSP genblk1[4].inputMulti/product_reg.
-DSP Report: operator genblk1[4].inputMulti/product0 is absorbed into DSP genblk1[4].inputMulti/product_reg.
-DSP Report: operator genblk1[4].inputMulti/product0 is absorbed into DSP genblk1[4].inputMulti/product_reg.
-DSP Report: Generating DSP genblk1[4].inputMulti/product0, operation Mode is: A*B.
-DSP Report: operator genblk1[4].inputMulti/product0 is absorbed into DSP genblk1[4].inputMulti/product0.
-DSP Report: operator genblk1[4].inputMulti/product0 is absorbed into DSP genblk1[4].inputMulti/product0.
-DSP Report: Generating DSP genblk1[4].inputMulti/product_reg, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: register genblk1[4].inputMulti/product_reg is absorbed into DSP genblk1[4].inputMulti/product_reg.
-DSP Report: operator genblk1[4].inputMulti/product0 is absorbed into DSP genblk1[4].inputMulti/product_reg.
-DSP Report: operator genblk1[4].inputMulti/product0 is absorbed into DSP genblk1[4].inputMulti/product_reg.
-DSP Report: Generating DSP genblk1[5].inputMulti/product0, operation Mode is: A*B.
-DSP Report: operator genblk1[5].inputMulti/product0 is absorbed into DSP genblk1[5].inputMulti/product0.
-DSP Report: operator genblk1[5].inputMulti/product0 is absorbed into DSP genblk1[5].inputMulti/product0.
-DSP Report: Generating DSP genblk1[5].inputMulti/product_reg, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: register genblk1[5].inputMulti/product_reg is absorbed into DSP genblk1[5].inputMulti/product_reg.
-DSP Report: operator genblk1[5].inputMulti/product0 is absorbed into DSP genblk1[5].inputMulti/product_reg.
-DSP Report: operator genblk1[5].inputMulti/product0 is absorbed into DSP genblk1[5].inputMulti/product_reg.
-DSP Report: Generating DSP genblk1[5].inputMulti/product0, operation Mode is: A*B.
-DSP Report: operator genblk1[5].inputMulti/product0 is absorbed into DSP genblk1[5].inputMulti/product0.
-DSP Report: operator genblk1[5].inputMulti/product0 is absorbed into DSP genblk1[5].inputMulti/product0.
-DSP Report: Generating DSP genblk1[5].inputMulti/product_reg, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: register genblk1[5].inputMulti/product_reg is absorbed into DSP genblk1[5].inputMulti/product_reg.
-DSP Report: operator genblk1[5].inputMulti/product0 is absorbed into DSP genblk1[5].inputMulti/product_reg.
-DSP Report: operator genblk1[5].inputMulti/product0 is absorbed into DSP genblk1[5].inputMulti/product_reg.
-DSP Report: Generating DSP genblk1[6].inputMulti/product0, operation Mode is: A*B.
-DSP Report: operator genblk1[6].inputMulti/product0 is absorbed into DSP genblk1[6].inputMulti/product0.
-DSP Report: operator genblk1[6].inputMulti/product0 is absorbed into DSP genblk1[6].inputMulti/product0.
-DSP Report: Generating DSP genblk1[6].inputMulti/product_reg, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: register genblk1[6].inputMulti/product_reg is absorbed into DSP genblk1[6].inputMulti/product_reg.
-DSP Report: operator genblk1[6].inputMulti/product0 is absorbed into DSP genblk1[6].inputMulti/product_reg.
-DSP Report: operator genblk1[6].inputMulti/product0 is absorbed into DSP genblk1[6].inputMulti/product_reg.
-DSP Report: Generating DSP genblk1[6].inputMulti/product0, operation Mode is: A*B.
-DSP Report: operator genblk1[6].inputMulti/product0 is absorbed into DSP genblk1[6].inputMulti/product0.
-DSP Report: operator genblk1[6].inputMulti/product0 is absorbed into DSP genblk1[6].inputMulti/product0.
-DSP Report: Generating DSP genblk1[6].inputMulti/product_reg, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: register genblk1[6].inputMulti/product_reg is absorbed into DSP genblk1[6].inputMulti/product_reg.
-DSP Report: operator genblk1[6].inputMulti/product0 is absorbed into DSP genblk1[6].inputMulti/product_reg.
-DSP Report: operator genblk1[6].inputMulti/product0 is absorbed into DSP genblk1[6].inputMulti/product_reg.
-DSP Report: Generating DSP genblk1[7].inputMulti/product0, operation Mode is: A*B.
-DSP Report: operator genblk1[7].inputMulti/product0 is absorbed into DSP genblk1[7].inputMulti/product0.
-DSP Report: operator genblk1[7].inputMulti/product0 is absorbed into DSP genblk1[7].inputMulti/product0.
-DSP Report: Generating DSP genblk1[7].inputMulti/product_reg, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: register genblk1[7].inputMulti/product_reg is absorbed into DSP genblk1[7].inputMulti/product_reg.
-DSP Report: operator genblk1[7].inputMulti/product0 is absorbed into DSP genblk1[7].inputMulti/product_reg.
-DSP Report: operator genblk1[7].inputMulti/product0 is absorbed into DSP genblk1[7].inputMulti/product_reg.
-DSP Report: Generating DSP genblk1[7].inputMulti/product0, operation Mode is: A*B.
-DSP Report: operator genblk1[7].inputMulti/product0 is absorbed into DSP genblk1[7].inputMulti/product0.
-DSP Report: operator genblk1[7].inputMulti/product0 is absorbed into DSP genblk1[7].inputMulti/product0.
-DSP Report: Generating DSP genblk1[7].inputMulti/product_reg, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: register genblk1[7].inputMulti/product_reg is absorbed into DSP genblk1[7].inputMulti/product_reg.
-DSP Report: operator genblk1[7].inputMulti/product0 is absorbed into DSP genblk1[7].inputMulti/product_reg.
-DSP Report: operator genblk1[7].inputMulti/product0 is absorbed into DSP genblk1[7].inputMulti/product_reg.
-DSP Report: Generating DSP genblk1[8].inputMulti/product0, operation Mode is: A*B.
-DSP Report: operator genblk1[8].inputMulti/product0 is absorbed into DSP genblk1[8].inputMulti/product0.
-DSP Report: operator genblk1[8].inputMulti/product0 is absorbed into DSP genblk1[8].inputMulti/product0.
-DSP Report: Generating DSP genblk1[8].inputMulti/product_reg, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: register genblk1[8].inputMulti/product_reg is absorbed into DSP genblk1[8].inputMulti/product_reg.
-DSP Report: operator genblk1[8].inputMulti/product0 is absorbed into DSP genblk1[8].inputMulti/product_reg.
-DSP Report: operator genblk1[8].inputMulti/product0 is absorbed into DSP genblk1[8].inputMulti/product_reg.
-DSP Report: Generating DSP genblk1[8].inputMulti/product0, operation Mode is: A*B.
-DSP Report: operator genblk1[8].inputMulti/product0 is absorbed into DSP genblk1[8].inputMulti/product0.
-DSP Report: operator genblk1[8].inputMulti/product0 is absorbed into DSP genblk1[8].inputMulti/product0.
-DSP Report: Generating DSP genblk1[8].inputMulti/product_reg, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: register genblk1[8].inputMulti/product_reg is absorbed into DSP genblk1[8].inputMulti/product_reg.
-DSP Report: operator genblk1[8].inputMulti/product0 is absorbed into DSP genblk1[8].inputMulti/product_reg.
-DSP Report: operator genblk1[8].inputMulti/product0 is absorbed into DSP genblk1[8].inputMulti/product_reg.
-DSP Report: Generating DSP genblk1[0].inputMulti/product0, operation Mode is: A*B.
-DSP Report: operator genblk1[0].inputMulti/product0 is absorbed into DSP genblk1[0].inputMulti/product0.
-DSP Report: operator genblk1[0].inputMulti/product0 is absorbed into DSP genblk1[0].inputMulti/product0.
-DSP Report: Generating DSP genblk1[0].inputMulti/product_reg, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: register genblk1[0].inputMulti/product_reg is absorbed into DSP genblk1[0].inputMulti/product_reg.
-DSP Report: operator genblk1[0].inputMulti/product0 is absorbed into DSP genblk1[0].inputMulti/product_reg.
-DSP Report: operator genblk1[0].inputMulti/product0 is absorbed into DSP genblk1[0].inputMulti/product_reg.
-DSP Report: Generating DSP genblk1[0].inputMulti/product0, operation Mode is: A*B.
-DSP Report: operator genblk1[0].inputMulti/product0 is absorbed into DSP genblk1[0].inputMulti/product0.
-DSP Report: operator genblk1[0].inputMulti/product0 is absorbed into DSP genblk1[0].inputMulti/product0.
-DSP Report: Generating DSP genblk1[0].inputMulti/product_reg, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: register genblk1[0].inputMulti/product_reg is absorbed into DSP genblk1[0].inputMulti/product_reg.
-DSP Report: operator genblk1[0].inputMulti/product0 is absorbed into DSP genblk1[0].inputMulti/product_reg.
-DSP Report: operator genblk1[0].inputMulti/product0 is absorbed into DSP genblk1[0].inputMulti/product_reg.
+DSP Report: Generating DSP Convolution_Processor/genblk1[1].inputMulti/product0, operation Mode is: A*B.
+DSP Report: operator Convolution_Processor/genblk1[1].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[1].inputMulti/product0.
+DSP Report: operator Convolution_Processor/genblk1[1].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[1].inputMulti/product0.
+DSP Report: Generating DSP Convolution_Processor/genblk1[1].inputMulti/product_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register Convolution_Processor/genblk1[1].inputMulti/product_reg is absorbed into DSP Convolution_Processor/genblk1[1].inputMulti/product_reg.
+DSP Report: operator Convolution_Processor/genblk1[1].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[1].inputMulti/product_reg.
+DSP Report: operator Convolution_Processor/genblk1[1].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[1].inputMulti/product_reg.
+DSP Report: Generating DSP Convolution_Processor/genblk1[1].inputMulti/product0, operation Mode is: A*B.
+DSP Report: operator Convolution_Processor/genblk1[1].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[1].inputMulti/product0.
+DSP Report: operator Convolution_Processor/genblk1[1].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[1].inputMulti/product0.
+DSP Report: Generating DSP Convolution_Processor/genblk1[1].inputMulti/product_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register Convolution_Processor/genblk1[1].inputMulti/product_reg is absorbed into DSP Convolution_Processor/genblk1[1].inputMulti/product_reg.
+DSP Report: operator Convolution_Processor/genblk1[1].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[1].inputMulti/product_reg.
+DSP Report: operator Convolution_Processor/genblk1[1].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[1].inputMulti/product_reg.
+DSP Report: Generating DSP Convolution_Processor/genblk1[2].inputMulti/product0, operation Mode is: A*B.
+DSP Report: operator Convolution_Processor/genblk1[2].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[2].inputMulti/product0.
+DSP Report: operator Convolution_Processor/genblk1[2].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[2].inputMulti/product0.
+DSP Report: Generating DSP Convolution_Processor/genblk1[2].inputMulti/product_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register Convolution_Processor/genblk1[2].inputMulti/product_reg is absorbed into DSP Convolution_Processor/genblk1[2].inputMulti/product_reg.
+DSP Report: operator Convolution_Processor/genblk1[2].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[2].inputMulti/product_reg.
+DSP Report: operator Convolution_Processor/genblk1[2].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[2].inputMulti/product_reg.
+DSP Report: Generating DSP Convolution_Processor/genblk1[2].inputMulti/product0, operation Mode is: A*B.
+DSP Report: operator Convolution_Processor/genblk1[2].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[2].inputMulti/product0.
+DSP Report: operator Convolution_Processor/genblk1[2].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[2].inputMulti/product0.
+DSP Report: Generating DSP Convolution_Processor/genblk1[2].inputMulti/product_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register Convolution_Processor/genblk1[2].inputMulti/product_reg is absorbed into DSP Convolution_Processor/genblk1[2].inputMulti/product_reg.
+DSP Report: operator Convolution_Processor/genblk1[2].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[2].inputMulti/product_reg.
+DSP Report: operator Convolution_Processor/genblk1[2].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[2].inputMulti/product_reg.
+DSP Report: Generating DSP Convolution_Processor/genblk1[3].inputMulti/product0, operation Mode is: A*B.
+DSP Report: operator Convolution_Processor/genblk1[3].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[3].inputMulti/product0.
+DSP Report: operator Convolution_Processor/genblk1[3].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[3].inputMulti/product0.
+DSP Report: Generating DSP Convolution_Processor/genblk1[3].inputMulti/product_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register Convolution_Processor/genblk1[3].inputMulti/product_reg is absorbed into DSP Convolution_Processor/genblk1[3].inputMulti/product_reg.
+DSP Report: operator Convolution_Processor/genblk1[3].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[3].inputMulti/product_reg.
+DSP Report: operator Convolution_Processor/genblk1[3].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[3].inputMulti/product_reg.
+DSP Report: Generating DSP Convolution_Processor/genblk1[3].inputMulti/product0, operation Mode is: A*B.
+DSP Report: operator Convolution_Processor/genblk1[3].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[3].inputMulti/product0.
+DSP Report: operator Convolution_Processor/genblk1[3].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[3].inputMulti/product0.
+DSP Report: Generating DSP Convolution_Processor/genblk1[3].inputMulti/product_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register Convolution_Processor/genblk1[3].inputMulti/product_reg is absorbed into DSP Convolution_Processor/genblk1[3].inputMulti/product_reg.
+DSP Report: operator Convolution_Processor/genblk1[3].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[3].inputMulti/product_reg.
+DSP Report: operator Convolution_Processor/genblk1[3].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[3].inputMulti/product_reg.
+DSP Report: Generating DSP Convolution_Processor/genblk1[4].inputMulti/product0, operation Mode is: A*B.
+DSP Report: operator Convolution_Processor/genblk1[4].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[4].inputMulti/product0.
+DSP Report: operator Convolution_Processor/genblk1[4].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[4].inputMulti/product0.
+DSP Report: Generating DSP Convolution_Processor/genblk1[4].inputMulti/product_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register Convolution_Processor/genblk1[4].inputMulti/product_reg is absorbed into DSP Convolution_Processor/genblk1[4].inputMulti/product_reg.
+DSP Report: operator Convolution_Processor/genblk1[4].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[4].inputMulti/product_reg.
+DSP Report: operator Convolution_Processor/genblk1[4].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[4].inputMulti/product_reg.
+DSP Report: Generating DSP Convolution_Processor/genblk1[4].inputMulti/product0, operation Mode is: A*B.
+DSP Report: operator Convolution_Processor/genblk1[4].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[4].inputMulti/product0.
+DSP Report: operator Convolution_Processor/genblk1[4].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[4].inputMulti/product0.
+DSP Report: Generating DSP Convolution_Processor/genblk1[4].inputMulti/product_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register Convolution_Processor/genblk1[4].inputMulti/product_reg is absorbed into DSP Convolution_Processor/genblk1[4].inputMulti/product_reg.
+DSP Report: operator Convolution_Processor/genblk1[4].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[4].inputMulti/product_reg.
+DSP Report: operator Convolution_Processor/genblk1[4].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[4].inputMulti/product_reg.
+DSP Report: Generating DSP Convolution_Processor/genblk1[5].inputMulti/product0, operation Mode is: A*B.
+DSP Report: operator Convolution_Processor/genblk1[5].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[5].inputMulti/product0.
+DSP Report: operator Convolution_Processor/genblk1[5].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[5].inputMulti/product0.
+DSP Report: Generating DSP Convolution_Processor/genblk1[5].inputMulti/product_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register Convolution_Processor/genblk1[5].inputMulti/product_reg is absorbed into DSP Convolution_Processor/genblk1[5].inputMulti/product_reg.
+DSP Report: operator Convolution_Processor/genblk1[5].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[5].inputMulti/product_reg.
+DSP Report: operator Convolution_Processor/genblk1[5].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[5].inputMulti/product_reg.
+DSP Report: Generating DSP Convolution_Processor/genblk1[5].inputMulti/product0, operation Mode is: A*B.
+DSP Report: operator Convolution_Processor/genblk1[5].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[5].inputMulti/product0.
+DSP Report: operator Convolution_Processor/genblk1[5].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[5].inputMulti/product0.
+DSP Report: Generating DSP Convolution_Processor/genblk1[5].inputMulti/product_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register Convolution_Processor/genblk1[5].inputMulti/product_reg is absorbed into DSP Convolution_Processor/genblk1[5].inputMulti/product_reg.
+DSP Report: operator Convolution_Processor/genblk1[5].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[5].inputMulti/product_reg.
+DSP Report: operator Convolution_Processor/genblk1[5].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[5].inputMulti/product_reg.
+DSP Report: Generating DSP Convolution_Processor/genblk1[6].inputMulti/product0, operation Mode is: A*B.
+DSP Report: operator Convolution_Processor/genblk1[6].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[6].inputMulti/product0.
+DSP Report: operator Convolution_Processor/genblk1[6].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[6].inputMulti/product0.
+DSP Report: Generating DSP Convolution_Processor/genblk1[6].inputMulti/product_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register Convolution_Processor/genblk1[6].inputMulti/product_reg is absorbed into DSP Convolution_Processor/genblk1[6].inputMulti/product_reg.
+DSP Report: operator Convolution_Processor/genblk1[6].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[6].inputMulti/product_reg.
+DSP Report: operator Convolution_Processor/genblk1[6].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[6].inputMulti/product_reg.
+DSP Report: Generating DSP Convolution_Processor/genblk1[6].inputMulti/product0, operation Mode is: A*B.
+DSP Report: operator Convolution_Processor/genblk1[6].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[6].inputMulti/product0.
+DSP Report: operator Convolution_Processor/genblk1[6].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[6].inputMulti/product0.
+DSP Report: Generating DSP Convolution_Processor/genblk1[6].inputMulti/product_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register Convolution_Processor/genblk1[6].inputMulti/product_reg is absorbed into DSP Convolution_Processor/genblk1[6].inputMulti/product_reg.
+DSP Report: operator Convolution_Processor/genblk1[6].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[6].inputMulti/product_reg.
+DSP Report: operator Convolution_Processor/genblk1[6].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[6].inputMulti/product_reg.
+DSP Report: Generating DSP Convolution_Processor/genblk1[7].inputMulti/product0, operation Mode is: A*B.
+DSP Report: operator Convolution_Processor/genblk1[7].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[7].inputMulti/product0.
+DSP Report: operator Convolution_Processor/genblk1[7].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[7].inputMulti/product0.
+DSP Report: Generating DSP Convolution_Processor/genblk1[7].inputMulti/product_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register Convolution_Processor/genblk1[7].inputMulti/product_reg is absorbed into DSP Convolution_Processor/genblk1[7].inputMulti/product_reg.
+DSP Report: operator Convolution_Processor/genblk1[7].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[7].inputMulti/product_reg.
+DSP Report: operator Convolution_Processor/genblk1[7].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[7].inputMulti/product_reg.
+DSP Report: Generating DSP Convolution_Processor/genblk1[7].inputMulti/product0, operation Mode is: A*B.
+DSP Report: operator Convolution_Processor/genblk1[7].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[7].inputMulti/product0.
+DSP Report: operator Convolution_Processor/genblk1[7].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[7].inputMulti/product0.
+DSP Report: Generating DSP Convolution_Processor/genblk1[7].inputMulti/product_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register Convolution_Processor/genblk1[7].inputMulti/product_reg is absorbed into DSP Convolution_Processor/genblk1[7].inputMulti/product_reg.
+DSP Report: operator Convolution_Processor/genblk1[7].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[7].inputMulti/product_reg.
+DSP Report: operator Convolution_Processor/genblk1[7].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[7].inputMulti/product_reg.
+DSP Report: Generating DSP Convolution_Processor/genblk1[8].inputMulti/product0, operation Mode is: A*B.
+DSP Report: operator Convolution_Processor/genblk1[8].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[8].inputMulti/product0.
+DSP Report: operator Convolution_Processor/genblk1[8].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[8].inputMulti/product0.
+DSP Report: Generating DSP Convolution_Processor/genblk1[8].inputMulti/product_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register Convolution_Processor/genblk1[8].inputMulti/product_reg is absorbed into DSP Convolution_Processor/genblk1[8].inputMulti/product_reg.
+DSP Report: operator Convolution_Processor/genblk1[8].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[8].inputMulti/product_reg.
+DSP Report: operator Convolution_Processor/genblk1[8].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[8].inputMulti/product_reg.
+DSP Report: Generating DSP Convolution_Processor/genblk1[8].inputMulti/product0, operation Mode is: A*B.
+DSP Report: operator Convolution_Processor/genblk1[8].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[8].inputMulti/product0.
+DSP Report: operator Convolution_Processor/genblk1[8].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[8].inputMulti/product0.
+DSP Report: Generating DSP Convolution_Processor/genblk1[8].inputMulti/product_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register Convolution_Processor/genblk1[8].inputMulti/product_reg is absorbed into DSP Convolution_Processor/genblk1[8].inputMulti/product_reg.
+DSP Report: operator Convolution_Processor/genblk1[8].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[8].inputMulti/product_reg.
+DSP Report: operator Convolution_Processor/genblk1[8].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[8].inputMulti/product_reg.
+DSP Report: Generating DSP Convolution_Processor/genblk1[0].inputMulti/product0, operation Mode is: A*B.
+DSP Report: operator Convolution_Processor/genblk1[0].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[0].inputMulti/product0.
+DSP Report: operator Convolution_Processor/genblk1[0].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[0].inputMulti/product0.
+DSP Report: Generating DSP Convolution_Processor/genblk1[0].inputMulti/product_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register Convolution_Processor/genblk1[0].inputMulti/product_reg is absorbed into DSP Convolution_Processor/genblk1[0].inputMulti/product_reg.
+DSP Report: operator Convolution_Processor/genblk1[0].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[0].inputMulti/product_reg.
+DSP Report: operator Convolution_Processor/genblk1[0].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[0].inputMulti/product_reg.
+DSP Report: Generating DSP Convolution_Processor/genblk1[0].inputMulti/product0, operation Mode is: A*B.
+DSP Report: operator Convolution_Processor/genblk1[0].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[0].inputMulti/product0.
+DSP Report: operator Convolution_Processor/genblk1[0].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[0].inputMulti/product0.
+DSP Report: Generating DSP Convolution_Processor/genblk1[0].inputMulti/product_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register Convolution_Processor/genblk1[0].inputMulti/product_reg is absorbed into DSP Convolution_Processor/genblk1[0].inputMulti/product_reg.
+DSP Report: operator Convolution_Processor/genblk1[0].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[0].inputMulti/product_reg.
+DSP Report: operator Convolution_Processor/genblk1[0].inputMulti/product0 is absorbed into DSP Convolution_Processor/genblk1[0].inputMulti/product_reg.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1311.316 ; gain = 233.066
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1309.777 ; gain = 236.586
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 
 DSP: Preliminary Mapping	Report (see note below)
-+------------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|Module Name       | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
-+------------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|matrixAccelerator | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|matrixAccelerator | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
-|matrixAccelerator | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|matrixAccelerator | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
-|matrixAccelerator | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|matrixAccelerator | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
-|matrixAccelerator | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|matrixAccelerator | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
-|matrixAccelerator | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|matrixAccelerator | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
-|matrixAccelerator | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|matrixAccelerator | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
-|matrixAccelerator | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|matrixAccelerator | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
-|matrixAccelerator | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|matrixAccelerator | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
-|matrixAccelerator | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|matrixAccelerator | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
-|matrixAccelerator | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|matrixAccelerator | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
-|matrixAccelerator | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|matrixAccelerator | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
-|matrixAccelerator | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|matrixAccelerator | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
-|matrixAccelerator | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|matrixAccelerator | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
-|matrixAccelerator | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|matrixAccelerator | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
-|matrixAccelerator | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|matrixAccelerator | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
-|matrixAccelerator | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|matrixAccelerator | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
-|matrixAccelerator | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|matrixAccelerator | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
-|matrixAccelerator | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|matrixAccelerator | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
-+------------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|CPE_Wrapper | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|CPE_Wrapper | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|CPE_Wrapper | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|CPE_Wrapper | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|CPE_Wrapper | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|CPE_Wrapper | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|CPE_Wrapper | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|CPE_Wrapper | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|CPE_Wrapper | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|CPE_Wrapper | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|CPE_Wrapper | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|CPE_Wrapper | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|CPE_Wrapper | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|CPE_Wrapper | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|CPE_Wrapper | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|CPE_Wrapper | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|CPE_Wrapper | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|CPE_Wrapper | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|CPE_Wrapper | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|CPE_Wrapper | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|CPE_Wrapper | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|CPE_Wrapper | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|CPE_Wrapper | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|CPE_Wrapper | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|CPE_Wrapper | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|CPE_Wrapper | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|CPE_Wrapper | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|CPE_Wrapper | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|CPE_Wrapper | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|CPE_Wrapper | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|CPE_Wrapper | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|CPE_Wrapper | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|CPE_Wrapper | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|CPE_Wrapper | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|CPE_Wrapper | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|CPE_Wrapper | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 
 Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
 ---------------------------------------------------------------------------------
@@ -462,19 +460,19 @@ Finished ROM, RAM, DSP and Shift Register Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1335.277 ; gain = 257.027
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1339.535 ; gain = 266.344
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1348.949 ; gain = 270.699
+Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1353.215 ; gain = 280.023
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1362.156 ; gain = 283.906
+Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1365.961 ; gain = 292.770
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -492,37 +490,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1365.914 ; gain = 287.664
+Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1370.754 ; gain = 297.562
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1365.914 ; gain = 287.664
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1370.754 ; gain = 297.562
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1365.914 ; gain = 287.664
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1370.754 ; gain = 297.562
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1365.914 ; gain = 287.664
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1370.754 ; gain = 297.562
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1365.914 ; gain = 287.664
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1370.754 ; gain = 297.562
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1365.914 ; gain = 287.664
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1370.754 ; gain = 297.562
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -555,7 +553,7 @@ Report Cell Usage:
 |7     |Convolution_Controller_smartconnect_0         |     2|
 |9     |CARRY4                                        |    68|
 |10    |DSP48E1                                       |    27|
-|12    |LUT1                                          |     2|
+|12    |LUT1                                          |     1|
 |13    |LUT2                                          |   144|
 |14    |LUT3                                          |   124|
 |15    |LUT4                                          |   121|
@@ -563,25 +561,25 @@ Report Cell Usage:
 |17    |FDRE                                          |   195|
 +------+----------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1365.914 ; gain = 287.664
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1370.754 ; gain = 297.562
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 1365.914 ; gain = 166.945
-Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1365.914 ; gain = 287.664
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:26 . Memory (MB): peak = 1370.754 ; gain = 177.828
+Synthesis Optimization Complete : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1370.754 ; gain = 297.562
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.053 . Memory (MB): peak = 1377.953 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.059 . Memory (MB): peak = 1382.801 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 95 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1377.953 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1383.777 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-52 Infos, 92 Warnings, 0 Critical Warnings and 0 Errors encountered.
+50 Infos, 92 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 1377.953 ; gain = 299.703
+synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:40 . Memory (MB): peak = 1383.777 ; gain = 310.586
 INFO: [Common 17-1381] The checkpoint 'C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.runs/synth_1/CPE_Wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file CPE_Wrapper_utilization_synth.rpt -pb CPE_Wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Mar 18 10:38:32 2021...
+INFO: [Common 17-206] Exiting Vivado at Thu Mar 18 12:36:09 2021...

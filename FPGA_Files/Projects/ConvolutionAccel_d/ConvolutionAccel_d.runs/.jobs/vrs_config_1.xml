@@ -1,6 +1,19 @@
 <?xml version="1.0"?>
 <Runs Version="1" Minor="0">
-	<Run Id="multiply_int_32_Integer_Multipler_0_0_synth_1" LaunchDir="C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.runs/multiply_int_32_Integer_Multipler_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="Convolution_Controller_util_vector_logic_0_1_synth_1" LaunchDir="C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.runs/Convolution_Controller_util_vector_logic_0_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="Convolution_Controller_util_vector_logic_0_0_synth_1" LaunchDir="C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.runs/Convolution_Controller_util_vector_logic_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="Convolution_Controller_dfx_controller_0_1_synth_1" LaunchDir="C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.runs/Convolution_Controller_dfx_controller_0_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="Convolution_Controller_smartconnect_0_0_synth_1" LaunchDir="C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.runs/Convolution_Controller_smartconnect_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="Convolution_Controller_smartconnect_0_1_synth_1" LaunchDir="C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.runs/Convolution_Controller_smartconnect_0_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="Convolution_Controller_Convolution_Controll_0_0_synth_1" LaunchDir="C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.runs/Convolution_Controller_Convolution_Controll_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="Convolution_Controller_util_vector_logic_0_1_synth_1"/>
+		<Parent Id="Convolution_Controller_util_vector_logic_0_0_synth_1"/>
+		<Parent Id="Convolution_Controller_dfx_controller_0_1_synth_1"/>
+		<Parent Id="Convolution_Controller_smartconnect_0_0_synth_1"/>
+		<Parent Id="Convolution_Controller_smartconnect_0_1_synth_1"/>
+		<Parent Id="Convolution_Controller_Convolution_Controll_0_0_synth_1"/>
+	</Run>
 	<Parameters>
 		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
 		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
