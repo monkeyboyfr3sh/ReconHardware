@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Mar 17 18:26:34 2021
+# Process ID: 16792
+# Current directory: C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9020 C:\GitHub\ReconHardware\FPGA_Files\Projects\ConvolutionAccel_s\ConvolutionAccel_s.xpr
+# Log file: C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/vivado.log
+# Journal file: C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s\vivado.jou
+#-----------------------------------------------------------
+start_gui
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Mar 17 18:32:17 2021...

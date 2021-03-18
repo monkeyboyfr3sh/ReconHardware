@@ -1,0 +1,43 @@
+11:55:54 **** Incremental Build of configuration Debug for project conv_accel_sw ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.vitis/conv_accel_s_hw/export/conv_accel_s_hw/sw/conv_accel_s_hw/standalone_domain/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'XAxiDma_SimplePollExample':
+../src/helloworld.c:116:2: warning: implicit declaration of function 'CC_status_register' [-Wimplicit-function-declaration]
+  116 |  CC_status_register();
+      |  ^~~~~~~~~~~~~~~~~~
+../src/helloworld.c:137:2: warning: implicit declaration of function 'CC_comand_register' [-Wimplicit-function-declaration]
+  137 |  CC_comand_register();
+      |  ^~~~~~~~~~~~~~~~~~
+../src/helloworld.c:92:6: warning: variable 'Value' set but not used [-Wunused-but-set-variable]
+   92 |  u32 Value;
+      |      ^~~~~
+../src/helloworld.c: In function 'CC_comand_register':
+../src/helloworld.c:279:1: warning: control reaches end of non-void function [-Wreturn-type]
+  279 | }
+      | ^
+At top level:
+../src/helloworld.c:201:12: warning: 'CheckData' defined but not used [-Wunused-function]
+  201 | static int CheckData(u32 type)
+      |            ^~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: conv_accel_sw.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_s/ConvolutionAccel_s.vitis/conv_accel_s_hw/export/conv_accel_s_hw/sw/conv_accel_s_hw/standalone_domain/bsplib/lib -o "conv_accel_sw.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: conv_accel_sw.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size conv_accel_sw.elf  |tee "conv_accel_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35044	   3312	67116984	67155340	400b58c	conv_accel_sw.elf
+'Finished building: conv_accel_sw.elf.size'
+' '
+
+11:55:55 Build Finished (took 608ms)
+

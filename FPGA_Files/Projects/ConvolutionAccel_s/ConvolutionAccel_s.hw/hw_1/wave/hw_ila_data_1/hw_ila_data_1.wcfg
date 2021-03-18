@@ -10,50 +10,50 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="1025fs"></ZoomEndTime>
-      <Cursor1Time time="513fs"></Cursor1Time>
+      <ZoomEndTime time="7391fs"></ZoomEndTime>
+      <Cursor1Time time="672fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="498"></NameColumnWidth>
-      <ValueColumnWidth column_width="176"></ValueColumnWidth>
+      <NameColumnWidth column_width="325"></NameColumnWidth>
+      <ValueColumnWidth column_width="155"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="5" />
    <wave_markers>
    </wave_markers>
-   <wvobject fp_name="BD_Wrapper/Convolution_Controller_i/axi_dma_0_M_AXIS_MM2S_TKEEP" type="array">
+   <wvobject fp_name="BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_data_TDATA" type="array">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">BD_Wrapper/Convolution_Controller_i/axi_dma_0_M_AXIS_MM2S_TKEEP[3:0]</obj_property>
-      <obj_property name="ObjectShortName">axi_dma_0_M_AXIS_MM2S_TKEEP[3:0]</obj_property>
+      <obj_property name="ElementShortName">BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_data_TDATA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Convolution_Controll_0_m_axis_data_TDATA[31:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="BD_Wrapper/Convolution_Controller_i/axi_dma_0_M_AXIS_MM2S_TDATA" type="array">
+   <wvobject fp_name="BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_data_TKEEP" type="array">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">BD_Wrapper/Convolution_Controller_i/axi_dma_0_M_AXIS_MM2S_TDATA[31:0]</obj_property>
-      <obj_property name="ObjectShortName">axi_dma_0_M_AXIS_MM2S_TDATA[31:0]</obj_property>
+      <obj_property name="ElementShortName">BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_data_TKEEP[3:0]</obj_property>
+      <obj_property name="ObjectShortName">Convolution_Controll_0_m_axis_data_TKEEP[3:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="BD_Wrapper/Convolution_Controller_i/axi_dma_0_M_AXIS_MM2S_TLAST" type="logic">
+   <wvobject fp_name="BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_data_TLAST" type="logic">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">BD_Wrapper/Convolution_Controller_i/axi_dma_0_M_AXIS_MM2S_TLAST</obj_property>
-      <obj_property name="ObjectShortName">axi_dma_0_M_AXIS_MM2S_TLAST</obj_property>
+      <obj_property name="ElementShortName">BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_data_TLAST</obj_property>
+      <obj_property name="ObjectShortName">Convolution_Controll_0_m_axis_data_TLAST</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="BD_Wrapper/Convolution_Controller_i/axi_dma_0_M_AXIS_MM2S_TREADY" type="logic">
+   <wvobject fp_name="BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_data_TREADY" type="logic">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">BD_Wrapper/Convolution_Controller_i/axi_dma_0_M_AXIS_MM2S_TREADY</obj_property>
-      <obj_property name="ObjectShortName">axi_dma_0_M_AXIS_MM2S_TREADY</obj_property>
+      <obj_property name="ElementShortName">BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_data_TREADY</obj_property>
+      <obj_property name="ObjectShortName">Convolution_Controll_0_m_axis_data_TREADY</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="BD_Wrapper/Convolution_Controller_i/axi_dma_0_M_AXIS_MM2S_TVALID" type="logic">
+   <wvobject fp_name="BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_data_TVALID" type="logic">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">BD_Wrapper/Convolution_Controller_i/axi_dma_0_M_AXIS_MM2S_TVALID</obj_property>
-      <obj_property name="ObjectShortName">axi_dma_0_M_AXIS_MM2S_TVALID</obj_property>
+      <obj_property name="ElementShortName">BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_data_TVALID</obj_property>
+      <obj_property name="ObjectShortName">Convolution_Controll_0_m_axis_data_TVALID</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>

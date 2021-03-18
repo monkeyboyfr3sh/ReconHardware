@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1615959259">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1616082113">
   <File Type="PA-TCL" Name="CPE_Wrapper.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="CPE_Wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="CPE_Wrapper_reports.tcl"/>
@@ -60,6 +60,22 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PPRDIR/../../Sources/Adder/Wrappers/integer_adder_32.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Sources/Multiplier/Wrappers/integer_multiplier_32.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PPRDIR/../../Sources/General/XBar2.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
@@ -97,7 +113,8 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="Convolution_Controller_Convolution_Controll_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Convolution_Controller_processing_system7_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Convolution_Controller_ila_0_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="Convolution_Controller_ila_0_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="Convolution_Controller_m_axis_ila_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Convolution_Controller_Convolution_Controll_0_0"/>
 </GenRun>

@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:user:Convolution_Controller:1.0
-// IP Revision: 7
+// IP Revision: 14
 
 (* X_CORE_INFO = "Convolution_Controller,Vivado 2020.1" *)
 (* CHECK_LICENSE_TYPE = "Convolution_Controller_Convolution_Controll_0_0,Convolution_Controller,{}" *)
-(* CORE_GENERATION_INFO = "Convolution_Controller_Convolution_Controll_0_0,Convolution_Controller,{x_ipProduct=Vivado 2020.1,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=Convolution_Controller,x_ipVersion=1.0,x_ipCoreRevision=7,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,KERNEL_SIZE=3,K_SQUARED=9,FILTER_BASE=24,BRAM_WIDTH=1800,CHANNELS=1,FINAL_CHANNEL=4,DATA_BASE=60,CTRL_REG_SIZE=96,CTRL_REG_ADDR_WIDTH=7,STATE_MAC_ADDR_WIDTH=4,AXI_BUS_WIDTH=32,AXI_ADDR_WIDTH=10}" *)
+(* CORE_GENERATION_INFO = "Convolution_Controller_Convolution_Controll_0_0,Convolution_Controller,{x_ipProduct=Vivado 2020.1,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=Convolution_Controller,x_ipVersion=1.0,x_ipCoreRevision=14,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,KERNEL_SIZE=3,K_SQUARED=9,FILTER_BASE=24,BRAM_WIDTH=1800,CHANNELS=1,FINAL_CHANNEL=4,DATA_BASE=60,CTRL_REG_SIZE=96,CTRL_REG_ADDR_WIDTH=7,STATE_MAC_ADDR_WIDTH=4,AXI_BUS_WIDTH=32,AXI_ADDR_WIDTH=10}" *)
 (* IP_DEFINITION_SOURCE = "package_project" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module Convolution_Controller_Convolution_Controll_0_0 (
