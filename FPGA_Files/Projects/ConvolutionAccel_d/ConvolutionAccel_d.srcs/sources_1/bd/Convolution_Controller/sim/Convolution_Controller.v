@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-//Date        : Thu Mar 18 13:38:31 2021
+//Date        : Thu Mar 18 14:31:04 2021
 //Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 //Command     : generate_target Convolution_Controller.bd
 //Design      : Convolution_Controller
@@ -42,7 +42,8 @@ module Convolution_Controller
     MULTIPLIER_INPUT_0,
     MULTIPLY_START_0,
     cReady_0,
-    cSum_0);
+    cSum_0,
+    vsm_ma_rm_reset_0);
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR ADDR" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME DDR, AXI_ARBITRATION_SCHEME TDM, BURST_LENGTH 8, CAN_DEBUG false, CAS_LATENCY 11, CAS_WRITE_LATENCY 11, CS_ENABLED true, DATA_MASK_ENABLED true, DATA_WIDTH 8, MEMORY_TYPE COMPONENTS, MEM_ADDR_MAP ROW_COLUMN_BANK, SLOT Single, TIMEPERIOD_PS 1250" *) inout [14:0]DDR_addr;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR BA" *) inout [2:0]DDR_ba;
   (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 DDR CAS_N" *) inout DDR_cas_n;
@@ -75,6 +76,7 @@ module Convolution_Controller
   output [8:0]MULTIPLY_START_0;
   input cReady_0;
   input [31:0]cSum_0;
+  output vsm_ma_rm_reset_0;
 
   wire [287:0]Convolution_Controll_0_MULTIPLICAND_INPUT;
   wire [287:0]Convolution_Controll_0_MULTIPLIER_INPUT;
@@ -138,7 +140,8 @@ module Convolution_Controller
   wire dfx_controller_0_M_AXI_MEM_RREADY;
   wire [1:0]dfx_controller_0_M_AXI_MEM_RRESP;
   wire dfx_controller_0_M_AXI_MEM_RVALID;
-  wire dfx_controller_0_vsm_MatrixAccel_rm_decouple;
+  wire dfx_controller_0_vsm_ma_rm_decouple;
+  wire dfx_controller_0_vsm_ma_rm_reset;
   wire [14:0]processing_system7_0_DDR_ADDR;
   wire [2:0]processing_system7_0_DDR_BA;
   wire processing_system7_0_DDR_CAS_N;
@@ -295,6 +298,7 @@ module Convolution_Controller
   assign cReady_0_1 = cReady_0;
   assign cSum_0_1 = cSum_0[31:0];
   assign dfx_controller_0_ICAP_o = ICAP_0_o[31:0];
+  assign vsm_ma_rm_reset_0 = dfx_controller_0_vsm_ma_rm_reset;
   Convolution_Controller_Convolution_Controll_0_0 Convolution_Controll_0
        (.MULTIPLICAND_INPUT(Convolution_Controll_0_MULTIPLICAND_INPUT),
         .MULTIPLIER_INPUT(Convolution_Controll_0_MULTIPLIER_INPUT),
@@ -426,8 +430,9 @@ module Convolution_Controller
         .s_axi_reg_wdata(smartconnect_0_M02_AXI_WDATA),
         .s_axi_reg_wready(smartconnect_0_M02_AXI_WREADY),
         .s_axi_reg_wvalid(smartconnect_0_M02_AXI_WVALID),
-        .vsm_MatrixAccel_rm_decouple(dfx_controller_0_vsm_MatrixAccel_rm_decouple),
-        .vsm_MatrixAccel_rm_shutdown_ack(1'b1));
+        .vsm_ma_rm_decouple(dfx_controller_0_vsm_ma_rm_decouple),
+        .vsm_ma_rm_reset(dfx_controller_0_vsm_ma_rm_reset),
+        .vsm_ma_rm_shutdown_ack(1'b1));
   Convolution_Controller_processing_system7_0_0 processing_system7_0
        (.DDR_Addr(DDR_addr[14:0]),
         .DDR_BankAddr(DDR_ba[2:0]),
@@ -718,6 +723,6 @@ module Convolution_Controller
         .Op2(util_vector_logic_1_Res),
         .Res(util_vector_logic_0_Res));
   Convolution_Controller_util_vector_logic_0_1 util_vector_logic_1
-       (.Op1(dfx_controller_0_vsm_MatrixAccel_rm_decouple),
+       (.Op1(dfx_controller_0_vsm_ma_rm_decouple),
         .Res(util_vector_logic_1_Res));
 endmodule

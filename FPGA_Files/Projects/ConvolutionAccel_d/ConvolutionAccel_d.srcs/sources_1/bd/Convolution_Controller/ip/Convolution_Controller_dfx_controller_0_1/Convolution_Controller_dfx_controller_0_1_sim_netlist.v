@@ -1,7 +1,7 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-// Date        : Thu Mar 18 13:39:45 2021
+// Date        : Thu Mar 18 14:32:17 2021
 // Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_dfx_controller_0_1/Convolution_Controller_dfx_controller_0_1_sim_netlist.v
@@ -37,13 +37,13 @@ module Convolution_Controller_dfx_controller_0_1
     icap_rdwrb,
     icap_i,
     icap_o,
-    vsm_MatrixAccel_rm_shutdown_req,
-    vsm_MatrixAccel_rm_shutdown_ack,
-    vsm_MatrixAccel_rm_decouple,
-    vsm_MatrixAccel_rm_reset,
-    vsm_MatrixAccel_event_error,
-    vsm_MatrixAccel_sw_shutdown_req,
-    vsm_MatrixAccel_sw_startup_req,
+    vsm_ma_rm_shutdown_req,
+    vsm_ma_rm_shutdown_ack,
+    vsm_ma_rm_decouple,
+    vsm_ma_rm_reset,
+    vsm_ma_event_error,
+    vsm_ma_sw_shutdown_req,
+    vsm_ma_sw_startup_req,
     s_axi_reg_awaddr,
     s_axi_reg_awvalid,
     s_axi_reg_awready,
@@ -82,13 +82,13 @@ module Convolution_Controller_dfx_controller_0_1
   (* x_interface_info = "xilinx.com:interface:icap:1.0 ICAP rdwrb" *) output icap_rdwrb;
   (* x_interface_info = "xilinx.com:interface:icap:1.0 ICAP o" *) input [31:0]icap_i;
   (* x_interface_info = "xilinx.com:interface:icap:1.0 ICAP i" *) output [31:0]icap_o;
-  output vsm_MatrixAccel_rm_shutdown_req;
-  input vsm_MatrixAccel_rm_shutdown_ack;
-  output vsm_MatrixAccel_rm_decouple;
-  output vsm_MatrixAccel_rm_reset;
-  output vsm_MatrixAccel_event_error;
-  output vsm_MatrixAccel_sw_shutdown_req;
-  output vsm_MatrixAccel_sw_startup_req;
+  output vsm_ma_rm_shutdown_req;
+  input vsm_ma_rm_shutdown_ack;
+  output vsm_ma_rm_decouple;
+  output vsm_ma_rm_reset;
+  output vsm_ma_event_error;
+  output vsm_ma_sw_shutdown_req;
+  output vsm_ma_sw_startup_req;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 s_axi_reg AWADDR" *) (* x_interface_parameter = "XIL_INTERFACENAME s_axi_reg, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 0, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 8, NUM_WRITE_OUTSTANDING 8, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN Convolution_Controller_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *) input [31:0]s_axi_reg_awaddr;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 s_axi_reg AWVALID" *) input s_axi_reg_awvalid;
   (* x_interface_info = "xilinx.com:interface:aximm:1.0 s_axi_reg AWREADY" *) output s_axi_reg_awready;
@@ -144,13 +144,13 @@ module Convolution_Controller_dfx_controller_0_1
   wire [31:0]s_axi_reg_wdata;
   wire s_axi_reg_wready;
   wire s_axi_reg_wvalid;
-  wire vsm_MatrixAccel_event_error;
-  wire vsm_MatrixAccel_rm_decouple;
-  wire vsm_MatrixAccel_rm_reset;
-  wire vsm_MatrixAccel_rm_shutdown_ack;
-  wire vsm_MatrixAccel_rm_shutdown_req;
-  wire vsm_MatrixAccel_sw_shutdown_req;
-  wire vsm_MatrixAccel_sw_startup_req;
+  wire vsm_ma_event_error;
+  wire vsm_ma_rm_decouple;
+  wire vsm_ma_rm_reset;
+  wire vsm_ma_rm_shutdown_ack;
+  wire vsm_ma_rm_shutdown_req;
+  wire vsm_ma_sw_shutdown_req;
+  wire vsm_ma_sw_startup_req;
 
   (* C_NUM_VIRTUAL_SOCKETS = "1" *) 
   (* C_RESET_ACTIVE_LEVEL = "1'b0" *) 
@@ -196,13 +196,13 @@ module Convolution_Controller_dfx_controller_0_1
         .s_axi_reg_wdata(s_axi_reg_wdata),
         .s_axi_reg_wready(s_axi_reg_wready),
         .s_axi_reg_wvalid(s_axi_reg_wvalid),
-        .vsm_MatrixAccel_event_error(vsm_MatrixAccel_event_error),
-        .vsm_MatrixAccel_rm_decouple(vsm_MatrixAccel_rm_decouple),
-        .vsm_MatrixAccel_rm_reset(vsm_MatrixAccel_rm_reset),
-        .vsm_MatrixAccel_rm_shutdown_ack(vsm_MatrixAccel_rm_shutdown_ack),
-        .vsm_MatrixAccel_rm_shutdown_req(vsm_MatrixAccel_rm_shutdown_req),
-        .vsm_MatrixAccel_sw_shutdown_req(vsm_MatrixAccel_sw_shutdown_req),
-        .vsm_MatrixAccel_sw_startup_req(vsm_MatrixAccel_sw_startup_req));
+        .vsm_ma_event_error(vsm_ma_event_error),
+        .vsm_ma_rm_decouple(vsm_ma_rm_decouple),
+        .vsm_ma_rm_reset(vsm_ma_rm_reset),
+        .vsm_ma_rm_shutdown_ack(vsm_ma_rm_shutdown_ack),
+        .vsm_ma_rm_shutdown_req(vsm_ma_rm_shutdown_req),
+        .vsm_ma_sw_shutdown_req(vsm_ma_sw_shutdown_req),
+        .vsm_ma_sw_startup_req(vsm_ma_sw_startup_req));
 endmodule
 
 (* ORIG_REF_NAME = "cdc_sync" *) 
@@ -9300,10 +9300,10 @@ module Convolution_Controller_dfx_controller_0_1_axi_lite_if
     write_to_rm_info_registers_cmb,
     start_axi_read039_out,
     read_from_trigger_registers_cmb,
-    start_axi_read0,
-    read_from_bs_info_registers_cmb,
     start_axi_read035_out,
     read_from_rm_info_registers_cmb,
+    start_axi_read0,
+    read_from_bs_info_registers_cmb,
     \rm_id_reg[0] ,
     \b_rm_info.bs_addr_reg[0] ,
     \vsm_addr_reg[3]_0 ,
@@ -9340,9 +9340,9 @@ module Convolution_Controller_dfx_controller_0_1_axi_lite_if
     \b_rm_info.b_write_to_rm_info_registers_edge.axi_write_complete_reg ,
     \reg_rdata_reg[31] ,
     d1,
-    \b_bs_info.b_read_from_bs_info_registers_edge.start_axi_read_reg ,
     \b_rm_info.b_read_from_rm_info_registers_edge.start_axi_read_reg ,
-    vsm_MatrixAccel_fetch_rm_id,
+    \b_bs_info.b_read_from_bs_info_registers_edge.start_axi_read_reg ,
+    vsm_ma_fetch_rm_id,
     bs_addr,
     \b_bs_info.reg_rdata_bs_table_address_reg[31] ,
     \b_bs_info.reg_rdata_bs_table_address_reg[31]_0 ,
@@ -9392,10 +9392,10 @@ module Convolution_Controller_dfx_controller_0_1_axi_lite_if
   output write_to_rm_info_registers_cmb;
   output start_axi_read039_out;
   output read_from_trigger_registers_cmb;
-  output start_axi_read0;
-  output read_from_bs_info_registers_cmb;
   output start_axi_read035_out;
   output read_from_rm_info_registers_cmb;
+  output start_axi_read0;
+  output read_from_bs_info_registers_cmb;
   output \rm_id_reg[0] ;
   output \b_rm_info.bs_addr_reg[0] ;
   output [0:0]\vsm_addr_reg[3]_0 ;
@@ -9432,9 +9432,9 @@ module Convolution_Controller_dfx_controller_0_1_axi_lite_if
   input \b_rm_info.b_write_to_rm_info_registers_edge.axi_write_complete_reg ;
   input \reg_rdata_reg[31] ;
   input d1;
-  input \b_bs_info.b_read_from_bs_info_registers_edge.start_axi_read_reg ;
   input \b_rm_info.b_read_from_rm_info_registers_edge.start_axi_read_reg ;
-  input vsm_MatrixAccel_fetch_rm_id;
+  input \b_bs_info.b_read_from_bs_info_registers_edge.start_axi_read_reg ;
+  input vsm_ma_fetch_rm_id;
   input bs_addr;
   input \b_bs_info.reg_rdata_bs_table_address_reg[31] ;
   input \b_bs_info.reg_rdata_bs_table_address_reg[31]_0 ;
@@ -9564,7 +9564,6 @@ module Convolution_Controller_dfx_controller_0_1_axi_lite_if
   wire sw_trigger_id;
   wire sw_trigger_pending;
   wire user_restarted_with_status068_out;
-  wire vsm_MatrixAccel_fetch_rm_id;
   wire [6:2]vsm_addr_i;
   wire \vsm_addr_reg[2]_0 ;
   wire \vsm_addr_reg[2]_1 ;
@@ -9573,6 +9572,7 @@ module Convolution_Controller_dfx_controller_0_1_axi_lite_if
   wire [0:0]\vsm_addr_reg[3]_0 ;
   wire \vsm_addr_reg[5]_0 ;
   wire \vsm_addr_reg[6]_0 ;
+  wire vsm_ma_fetch_rm_id;
   wire [6:5]vsm_reg_addr;
   wire vsm_reg_error;
   wire vsm_reg_rnw;
@@ -9707,7 +9707,7 @@ module Convolution_Controller_dfx_controller_0_1_axi_lite_if
         .D(\FSM_onehot_current_state[4]_i_2_n_0 ),
         .Q(\FSM_onehot_current_state_reg_n_0_[4] ),
         .R(reset_ah));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT5 #(
     .INIT(32'h00008000)) 
     \b_bs_info.b_read_from_bs_info_registers_edge.start_axi_read_i_1 
@@ -9771,7 +9771,7 @@ module Convolution_Controller_dfx_controller_0_1_axi_lite_if
         .I2(\b_bs_info.reg_rdata_bs_table_address_reg[31] ),
         .I3(\b_bs_info.reg_rdata_bs_table_address_reg[31]_0 ),
         .O(\vsm_addr_reg[2]_2 ));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT5 #(
     .INIT(32'h00000080)) 
     \b_rm_info.b_read_from_rm_info_registers_edge.start_axi_read_i_1 
@@ -9803,7 +9803,7 @@ module Convolution_Controller_dfx_controller_0_1_axi_lite_if
   LUT6 #(
     .INIT(64'h22222222E2222222)) 
     \b_rm_info.gen_address_reg.access_address_del[0]_i_1 
-       (.I0(vsm_MatrixAccel_fetch_rm_id),
+       (.I0(vsm_ma_fetch_rm_id),
         .I1(in_shutdown),
         .I2(vsm_reg_tvalid),
         .I3(Q[1]),
@@ -9874,22 +9874,22 @@ module Convolution_Controller_dfx_controller_0_1_axi_lite_if
         .O(read_from_trigger_registers_cmb));
   (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT4 #(
-    .INIT(16'h8000)) 
+    .INIT(16'h4000)) 
     \opt_has_pipe.first_q[0]_i_1__3 
        (.I0(vsm_reg_addr[5]),
         .I1(vsm_reg_addr[6]),
         .I2(vsm_reg_tvalid),
         .I3(vsm_reg_rnw),
-        .O(read_from_bs_info_registers_cmb));
+        .O(read_from_rm_info_registers_cmb));
   (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT4 #(
-    .INIT(16'h4000)) 
+    .INIT(16'h8000)) 
     \opt_has_pipe.first_q[0]_i_1__4 
        (.I0(vsm_reg_addr[5]),
         .I1(vsm_reg_addr[6]),
         .I2(vsm_reg_tvalid),
         .I3(vsm_reg_rnw),
-        .O(read_from_rm_info_registers_cmb));
+        .O(read_from_bs_info_registers_cmb));
   (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT5 #(
     .INIT(32'hFFFE0002)) 
@@ -10811,7 +10811,7 @@ endmodule
 
 (* ORIG_REF_NAME = "delay" *) 
 module Convolution_Controller_dfx_controller_0_1_delay__parameterized1
-   (vsm_MatrixAccel_event_error,
+   (vsm_ma_event_error,
     cc_done_reg,
     \current_state_reg[0] ,
     reset_ah,
@@ -10823,7 +10823,7 @@ module Convolution_Controller_dfx_controller_0_1_delay__parameterized1
     \opt_has_pipe.first_q_reg[0]_0 ,
     p_4_in,
     Q);
-  output vsm_MatrixAccel_event_error;
+  output vsm_ma_event_error;
   output cc_done_reg;
   output \current_state_reg[0] ;
   input reset_ah;
@@ -10847,7 +10847,7 @@ module Convolution_Controller_dfx_controller_0_1_delay__parameterized1
   wire p_3_in;
   wire p_4_in;
   wire reset_ah;
-  wire vsm_MatrixAccel_event_error;
+  wire vsm_ma_event_error;
 
   Convolution_Controller_dfx_controller_0_1_xbip_pipe_v3_0_6_viv__parameterized3 i_pipe
        (.Q(Q),
@@ -10861,7 +10861,7 @@ module Convolution_Controller_dfx_controller_0_1_delay__parameterized1
         .p_3_in(p_3_in),
         .p_4_in(p_4_in),
         .reset_ah(reset_ah),
-        .vsm_MatrixAccel_event_error(vsm_MatrixAccel_event_error));
+        .vsm_ma_event_error(vsm_ma_event_error));
 endmodule
 
 (* ORIG_REF_NAME = "delay" *) 
@@ -11200,9 +11200,9 @@ module Convolution_Controller_dfx_controller_0_1_delay__parameterized2_2
     \b_bs_info.reg_rdata_bs_table_size_reg[5] ,
     \b_bs_info.reg_rdata_bs_table_size_reg[6] ,
     \b_bs_info.reg_rdata_bs_table_size_reg[7] ,
+    \b_bs_info.reg_rdata_bs_table_size_reg[8] ,
     \b_bs_info.reg_rdata_bs_table_size_reg[31] ,
     \opt_has_pipe.first_q_reg[0] ,
-    \b_rm_info.reg_rdata_rm_table_ctrl_reg[8] ,
     \b_bs_info.reg_rdata_bs_table_size_reg[13] ,
     \b_bs_info.reg_rdata_bs_table_size_reg[14] ,
     \b_bs_info.reg_rdata_bs_table_size_reg[15] ,
@@ -11228,13 +11228,10 @@ module Convolution_Controller_dfx_controller_0_1_delay__parameterized2_2
     Q,
     \reg_rdata_reg[31] ,
     \reg_rdata_reg[13] ,
-    \reg_rdata_reg[8] ,
+    \reg_rdata_reg[30] ,
     \s_axi_rresp_i_reg[1] ,
-    reg_rdata_rm_table_ctrl1_out,
-    in,
-    \reg_rdata_reg[8]_0 ,
     reset,
-    \reg_rdata_reg[30] );
+    \reg_rdata_reg[30]_0 );
   output out;
   output \b_bs_info.reg_rdata_bs_table_address_reg[0] ;
   output \b_bs_info.reg_rdata_bs_table_size_reg[1] ;
@@ -11244,9 +11241,9 @@ module Convolution_Controller_dfx_controller_0_1_delay__parameterized2_2
   output \b_bs_info.reg_rdata_bs_table_size_reg[5] ;
   output \b_bs_info.reg_rdata_bs_table_size_reg[6] ;
   output \b_bs_info.reg_rdata_bs_table_size_reg[7] ;
+  output \b_bs_info.reg_rdata_bs_table_size_reg[8] ;
   output \b_bs_info.reg_rdata_bs_table_size_reg[31] ;
   output \opt_has_pipe.first_q_reg[0] ;
-  output \b_rm_info.reg_rdata_rm_table_ctrl_reg[8] ;
   output \b_bs_info.reg_rdata_bs_table_size_reg[13] ;
   output \b_bs_info.reg_rdata_bs_table_size_reg[14] ;
   output \b_bs_info.reg_rdata_bs_table_size_reg[15] ;
@@ -11272,13 +11269,10 @@ module Convolution_Controller_dfx_controller_0_1_delay__parameterized2_2
   input [27:0]Q;
   input [27:0]\reg_rdata_reg[31] ;
   input [1:0]\reg_rdata_reg[13] ;
-  input \reg_rdata_reg[8] ;
-  input \s_axi_rresp_i_reg[1] ;
-  input [0:0]reg_rdata_rm_table_ctrl1_out;
-  input [0:0]in;
-  input \reg_rdata_reg[8]_0 ;
-  input reset;
   input \reg_rdata_reg[30] ;
+  input \s_axi_rresp_i_reg[1] ;
+  input reset;
+  input \reg_rdata_reg[30]_0 ;
 
   wire [27:0]Q;
   wire \b_bs_info.reg_rdata_bs_table_address_reg[0] ;
@@ -11308,18 +11302,15 @@ module Convolution_Controller_dfx_controller_0_1_delay__parameterized2_2
   wire \b_bs_info.reg_rdata_bs_table_size_reg[5] ;
   wire \b_bs_info.reg_rdata_bs_table_size_reg[6] ;
   wire \b_bs_info.reg_rdata_bs_table_size_reg[7] ;
-  wire \b_rm_info.reg_rdata_rm_table_ctrl_reg[8] ;
+  wire \b_bs_info.reg_rdata_bs_table_size_reg[8] ;
   wire clk;
-  wire [0:0]in;
   wire \opt_has_pipe.first_q_reg[0] ;
   wire \opt_has_pipe.first_q_reg[0]_0 ;
   wire out;
   wire [1:0]\reg_rdata_reg[13] ;
   wire \reg_rdata_reg[30] ;
+  wire \reg_rdata_reg[30]_0 ;
   wire [27:0]\reg_rdata_reg[31] ;
-  wire \reg_rdata_reg[8] ;
-  wire \reg_rdata_reg[8]_0 ;
-  wire [0:0]reg_rdata_rm_table_ctrl1_out;
   wire reset;
   wire reset_0;
   wire reset_ah;
@@ -11354,18 +11345,15 @@ module Convolution_Controller_dfx_controller_0_1_delay__parameterized2_2
         .\b_bs_info.reg_rdata_bs_table_size_reg[5] (\b_bs_info.reg_rdata_bs_table_size_reg[5] ),
         .\b_bs_info.reg_rdata_bs_table_size_reg[6] (\b_bs_info.reg_rdata_bs_table_size_reg[6] ),
         .\b_bs_info.reg_rdata_bs_table_size_reg[7] (\b_bs_info.reg_rdata_bs_table_size_reg[7] ),
-        .\b_rm_info.reg_rdata_rm_table_ctrl_reg[8] (\b_rm_info.reg_rdata_rm_table_ctrl_reg[8] ),
+        .\b_bs_info.reg_rdata_bs_table_size_reg[8] (\b_bs_info.reg_rdata_bs_table_size_reg[8] ),
         .clk(clk),
-        .in(in),
         .\opt_has_pipe.first_q_reg[0]_0 (\opt_has_pipe.first_q_reg[0] ),
         .\opt_has_pipe.first_q_reg[0]_1 (\opt_has_pipe.first_q_reg[0]_0 ),
         .out(out),
         .\reg_rdata_reg[13] (\reg_rdata_reg[13] ),
         .\reg_rdata_reg[30] (\reg_rdata_reg[30] ),
+        .\reg_rdata_reg[30]_0 (\reg_rdata_reg[30]_0 ),
         .\reg_rdata_reg[31] (\reg_rdata_reg[31] ),
-        .\reg_rdata_reg[8] (\reg_rdata_reg[8] ),
-        .\reg_rdata_reg[8]_0 (\reg_rdata_reg[8]_0 ),
-        .reg_rdata_rm_table_ctrl1_out(reg_rdata_rm_table_ctrl1_out),
         .reset(reset),
         .reset_0(reset_0),
         .reset_ah(reset_ah),
@@ -11552,6 +11540,7 @@ module Convolution_Controller_dfx_controller_0_1_delay__parameterized2_7
     \b_rm_info.reg_rdata_rm_table_ctrl_reg[5] ,
     \b_rm_info.reg_rdata_rm_table_ctrl_reg[6] ,
     \b_rm_info.reg_rdata_rm_table_ctrl_reg[7] ,
+    \b_rm_info.reg_rdata_rm_table_ctrl_reg[8] ,
     reset_ah,
     start_axi_read,
     clk,
@@ -11578,7 +11567,9 @@ module Convolution_Controller_dfx_controller_0_1_delay__parameterized2_7
     \reg_rdata_reg[6] ,
     \reg_rdata_reg[6]_0 ,
     \reg_rdata_reg[7] ,
-    \reg_rdata_reg[7]_0 );
+    \reg_rdata_reg[7]_0 ,
+    \reg_rdata_reg[8] ,
+    in);
   output out;
   output reg_write_complete_sw_trigger_reg_reg;
   output \b_rm_info.reg_rdata_rm_table_ctrl_reg[0] ;
@@ -11589,6 +11580,7 @@ module Convolution_Controller_dfx_controller_0_1_delay__parameterized2_7
   output \b_rm_info.reg_rdata_rm_table_ctrl_reg[5] ;
   output \b_rm_info.reg_rdata_rm_table_ctrl_reg[6] ;
   output \b_rm_info.reg_rdata_rm_table_ctrl_reg[7] ;
+  output \b_rm_info.reg_rdata_rm_table_ctrl_reg[8] ;
   input reset_ah;
   input start_axi_read;
   input clk;
@@ -11599,7 +11591,7 @@ module Convolution_Controller_dfx_controller_0_1_delay__parameterized2_7
   input reg_tready_d1_i_3;
   input axi_write_complete;
   input reg_tready_d1_i_3_0;
-  input [7:0]reg_rdata_rm_table_ctrl1_out;
+  input [8:0]reg_rdata_rm_table_ctrl1_out;
   input [0:0]Q;
   input \reg_rdata_reg[0] ;
   input \reg_rdata_reg[1] ;
@@ -11616,6 +11608,8 @@ module Convolution_Controller_dfx_controller_0_1_delay__parameterized2_7
   input \reg_rdata_reg[6]_0 ;
   input \reg_rdata_reg[7] ;
   input \reg_rdata_reg[7]_0 ;
+  input \reg_rdata_reg[8] ;
+  input [0:0]in;
 
   wire [0:0]Q;
   wire axi_write_complete;
@@ -11627,7 +11621,9 @@ module Convolution_Controller_dfx_controller_0_1_delay__parameterized2_7
   wire \b_rm_info.reg_rdata_rm_table_ctrl_reg[5] ;
   wire \b_rm_info.reg_rdata_rm_table_ctrl_reg[6] ;
   wire \b_rm_info.reg_rdata_rm_table_ctrl_reg[7] ;
+  wire \b_rm_info.reg_rdata_rm_table_ctrl_reg[8] ;
   wire clk;
+  wire [0:0]in;
   wire out;
   wire \reg_rdata_reg[0] ;
   wire \reg_rdata_reg[1] ;
@@ -11644,7 +11640,8 @@ module Convolution_Controller_dfx_controller_0_1_delay__parameterized2_7
   wire \reg_rdata_reg[6]_0 ;
   wire \reg_rdata_reg[7] ;
   wire \reg_rdata_reg[7]_0 ;
-  wire [7:0]reg_rdata_rm_table_ctrl1_out;
+  wire \reg_rdata_reg[8] ;
+  wire [8:0]reg_rdata_rm_table_ctrl1_out;
   wire reg_tready_d1_i_2;
   wire reg_tready_d1_i_2_0;
   wire reg_tready_d1_i_3;
@@ -11666,7 +11663,9 @@ module Convolution_Controller_dfx_controller_0_1_delay__parameterized2_7
         .\b_rm_info.reg_rdata_rm_table_ctrl_reg[5] (\b_rm_info.reg_rdata_rm_table_ctrl_reg[5] ),
         .\b_rm_info.reg_rdata_rm_table_ctrl_reg[6] (\b_rm_info.reg_rdata_rm_table_ctrl_reg[6] ),
         .\b_rm_info.reg_rdata_rm_table_ctrl_reg[7] (\b_rm_info.reg_rdata_rm_table_ctrl_reg[7] ),
+        .\b_rm_info.reg_rdata_rm_table_ctrl_reg[8] (\b_rm_info.reg_rdata_rm_table_ctrl_reg[8] ),
         .clk(clk),
+        .in(in),
         .out(out),
         .\reg_rdata_reg[0] (\reg_rdata_reg[0] ),
         .\reg_rdata_reg[1] (\reg_rdata_reg[1] ),
@@ -11683,6 +11682,7 @@ module Convolution_Controller_dfx_controller_0_1_delay__parameterized2_7
         .\reg_rdata_reg[6]_0 (\reg_rdata_reg[6]_0 ),
         .\reg_rdata_reg[7] (\reg_rdata_reg[7] ),
         .\reg_rdata_reg[7]_0 (\reg_rdata_reg[7]_0 ),
+        .\reg_rdata_reg[8] (\reg_rdata_reg[8] ),
         .reg_rdata_rm_table_ctrl1_out(reg_rdata_rm_table_ctrl1_out),
         .reg_tready_d1_i_2(reg_tready_d1_i_2),
         .reg_tready_d1_i_2_0(reg_tready_d1_i_2_0),
@@ -11862,7 +11862,7 @@ module Convolution_Controller_dfx_controller_0_1_delay__parameterized6_8
     rm_reset_i_reg,
     rm_reset_i_reg_0,
     rm_reset_i_reg_1,
-    vsm_MatrixAccel_rm_reset);
+    vsm_ma_rm_reset);
   output bs_info_valid_vec;
   output [3:0]D;
   output [2:0]\opt_has_pipe.i_pipe[2].pipe_reg[2][0] ;
@@ -11910,7 +11910,7 @@ module Convolution_Controller_dfx_controller_0_1_delay__parameterized6_8
   input rm_reset_i_reg;
   input rm_reset_i_reg_0;
   input rm_reset_i_reg_1;
-  input vsm_MatrixAccel_rm_reset;
+  input vsm_ma_rm_reset;
 
   wire [3:0]D;
   wire [2:0]Q;
@@ -11958,7 +11958,7 @@ module Convolution_Controller_dfx_controller_0_1_delay__parameterized6_8
   wire rm_reset_i_reg_1;
   wire sw_trigger_pending_reg;
   wire using_sw_trigger;
-  wire vsm_MatrixAccel_rm_reset;
+  wire vsm_ma_rm_reset;
   wire write_to_sw_trigger_reg_cmb;
 
   Convolution_Controller_dfx_controller_0_1_xbip_pipe_v3_0_6_viv__parameterized13 i_pipe
@@ -12008,7 +12008,7 @@ module Convolution_Controller_dfx_controller_0_1_delay__parameterized6_8
         .rm_reset_i_reg_1(rm_reset_i_reg_1),
         .sw_trigger_pending_reg(sw_trigger_pending_reg),
         .using_sw_trigger(using_sw_trigger),
-        .vsm_MatrixAccel_rm_reset(vsm_MatrixAccel_rm_reset),
+        .vsm_ma_rm_reset(vsm_ma_rm_reset),
         .write_to_sw_trigger_reg_cmb(write_to_sw_trigger_reg_cmb));
 endmodule
 
@@ -12017,13 +12017,13 @@ endmodule
 module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Controller_dfx_controller_0_1
    (clk,
     reset,
-    vsm_MatrixAccel_rm_shutdown_req,
-    vsm_MatrixAccel_rm_shutdown_ack,
-    vsm_MatrixAccel_rm_decouple,
-    vsm_MatrixAccel_rm_reset,
-    vsm_MatrixAccel_sw_shutdown_req,
-    vsm_MatrixAccel_sw_startup_req,
-    vsm_MatrixAccel_event_error,
+    vsm_ma_rm_shutdown_req,
+    vsm_ma_rm_shutdown_ack,
+    vsm_ma_rm_decouple,
+    vsm_ma_rm_reset,
+    vsm_ma_sw_shutdown_req,
+    vsm_ma_sw_startup_req,
+    vsm_ma_event_error,
     icap_clk,
     icap_reset,
     icap_i,
@@ -12062,13 +12062,13 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
     m_axi_mem_rready);
   input clk;
   input reset;
-  output vsm_MatrixAccel_rm_shutdown_req;
-  input vsm_MatrixAccel_rm_shutdown_ack;
-  output vsm_MatrixAccel_rm_decouple;
-  output vsm_MatrixAccel_rm_reset;
-  output vsm_MatrixAccel_sw_shutdown_req;
-  output vsm_MatrixAccel_sw_startup_req;
-  output vsm_MatrixAccel_event_error;
+  output vsm_ma_rm_shutdown_req;
+  input vsm_ma_rm_shutdown_ack;
+  output vsm_ma_rm_decouple;
+  output vsm_ma_rm_reset;
+  output vsm_ma_sw_shutdown_req;
+  output vsm_ma_sw_startup_req;
+  output vsm_ma_event_error;
   input icap_clk;
   input icap_reset;
   input [31:0]icap_i;
@@ -12149,23 +12149,23 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
   wire i_cp0_n_8;
   wire \i_dma/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/ENABLE_AXIS_SKID.I_MM2S_SKID_BUF/p_0_in2_in ;
   wire \i_dma/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/ENABLE_AXIS_SKID.I_MM2S_SKID_BUF/sig_data_reg_out_en ;
-  wire i_vsm_MatrixAccel_n_10;
-  wire i_vsm_MatrixAccel_n_104;
-  wire i_vsm_MatrixAccel_n_105;
-  wire i_vsm_MatrixAccel_n_11;
-  wire i_vsm_MatrixAccel_n_111;
-  wire i_vsm_MatrixAccel_n_13;
-  wire i_vsm_MatrixAccel_n_14;
-  wire i_vsm_MatrixAccel_n_16;
-  wire i_vsm_MatrixAccel_n_17;
-  wire i_vsm_MatrixAccel_n_19;
-  wire i_vsm_MatrixAccel_n_2;
-  wire i_vsm_MatrixAccel_n_20;
-  wire i_vsm_MatrixAccel_n_21;
-  wire i_vsm_MatrixAccel_n_23;
-  wire i_vsm_MatrixAccel_n_4;
-  wire i_vsm_MatrixAccel_n_94;
-  wire i_vsm_MatrixAccel_n_95;
+  wire i_vsm_ma_n_10;
+  wire i_vsm_ma_n_104;
+  wire i_vsm_ma_n_105;
+  wire i_vsm_ma_n_11;
+  wire i_vsm_ma_n_111;
+  wire i_vsm_ma_n_13;
+  wire i_vsm_ma_n_14;
+  wire i_vsm_ma_n_16;
+  wire i_vsm_ma_n_17;
+  wire i_vsm_ma_n_19;
+  wire i_vsm_ma_n_2;
+  wire i_vsm_ma_n_20;
+  wire i_vsm_ma_n_21;
+  wire i_vsm_ma_n_23;
+  wire i_vsm_ma_n_4;
+  wire i_vsm_ma_n_94;
+  wire i_vsm_ma_n_95;
   wire icap_clk;
   wire icap_csib;
   wire [31:0]icap_i;
@@ -12225,18 +12225,18 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
   wire sw_trigger_id;
   wire sw_trigger_pending;
   wire user_restarted_with_status068_out;
-  wire vsm_MatrixAccel_event_error;
-  wire [31:0]vsm_MatrixAccel_fetch_addr;
-  wire vsm_MatrixAccel_fetch_req;
-  wire vsm_MatrixAccel_fetch_rm_id;
-  wire [31:0]vsm_MatrixAccel_fetch_size;
-  wire [31:0]vsm_MatrixAccel_reg_rdata;
-  wire vsm_MatrixAccel_rm_decouple;
-  wire vsm_MatrixAccel_rm_reset;
-  wire vsm_MatrixAccel_rm_shutdown_ack;
-  wire vsm_MatrixAccel_rm_shutdown_req;
-  wire vsm_MatrixAccel_sw_shutdown_req;
-  wire vsm_MatrixAccel_sw_startup_req;
+  wire vsm_ma_event_error;
+  wire [31:0]vsm_ma_fetch_addr;
+  wire vsm_ma_fetch_req;
+  wire vsm_ma_fetch_rm_id;
+  wire [31:0]vsm_ma_fetch_size;
+  wire [31:0]vsm_ma_reg_rdata;
+  wire vsm_ma_rm_decouple;
+  wire vsm_ma_rm_reset;
+  wire vsm_ma_rm_shutdown_ack;
+  wire vsm_ma_rm_shutdown_req;
+  wire vsm_ma_sw_shutdown_req;
+  wire vsm_ma_sw_startup_req;
   wire [4:2]vsm_reg_addr;
   wire [0:0]vsm_reg_tready;
   wire [31:0]vsm_reg_wdata;
@@ -12274,45 +12274,45 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
   VCC VCC
        (.P(\<const1> ));
   Convolution_Controller_dfx_controller_0_1_axi_lite_if i_axi_lite_if
-       (.D(vsm_MatrixAccel_reg_rdata),
+       (.D(vsm_ma_reg_rdata),
         .E(s_axi_reg_arready),
         .Q(vsm_reg_addr),
         .axi_write_complete(axi_write_complete),
         .axi_write_complete0(axi_write_complete0),
         .axi_write_complete033_out(axi_write_complete033_out),
         .axi_write_complete037_out(axi_write_complete037_out),
-        .\b_bs_info.b_read_from_bs_info_registers_edge.start_axi_read_reg (i_vsm_MatrixAccel_n_17),
-        .\b_bs_info.b_write_to_bs_info_registers_edge.axi_write_complete_reg (i_vsm_MatrixAccel_n_13),
-        .\b_bs_info.reg_rdata_bs_table_address_reg[31] (i_vsm_MatrixAccel_n_2),
-        .\b_bs_info.reg_rdata_bs_table_address_reg[31]_0 (i_vsm_MatrixAccel_n_4),
+        .\b_bs_info.b_read_from_bs_info_registers_edge.start_axi_read_reg (i_vsm_ma_n_17),
+        .\b_bs_info.b_write_to_bs_info_registers_edge.axi_write_complete_reg (i_vsm_ma_n_13),
+        .\b_bs_info.reg_rdata_bs_table_address_reg[31] (i_vsm_ma_n_2),
+        .\b_bs_info.reg_rdata_bs_table_address_reg[31]_0 (i_vsm_ma_n_4),
         .\b_bs_info.reg_rdata_bs_table_size_reg[10] (i_axi_lite_if_n_77),
         .\b_bs_info.reg_rdata_bs_table_size_reg[11] (i_axi_lite_if_n_78),
         .\b_bs_info.reg_rdata_bs_table_size_reg[12] (i_axi_lite_if_n_79),
         .\b_bs_info.reg_rdata_bs_table_size_reg[9] (i_axi_lite_if_n_76),
-        .\b_rm_info.b_read_from_rm_info_registers_edge.start_axi_read_reg (i_vsm_MatrixAccel_n_16),
-        .\b_rm_info.b_write_to_rm_info_registers_edge.axi_write_complete_reg (i_vsm_MatrixAccel_n_10),
+        .\b_rm_info.b_read_from_rm_info_registers_edge.start_axi_read_reg (i_vsm_ma_n_16),
+        .\b_rm_info.b_write_to_rm_info_registers_edge.axi_write_complete_reg (i_vsm_ma_n_10),
         .\b_rm_info.bs_addr_reg[0] (i_axi_lite_if_n_65),
-        .\b_trigger_table.b_write_to_trigger_registers_edge.axi_write_complete_reg (i_vsm_MatrixAccel_n_14),
+        .\b_trigger_table.b_write_to_trigger_registers_edge.axi_write_complete_reg (i_vsm_ma_n_14),
         .bs_addr(bs_addr),
         .clk(clk),
         .d1(d1),
         .full_flag_reg(i_cp0_n_7),
         .full_flag_reg_0(i_cp0_n_12),
-        .full_flag_reg_1(i_vsm_MatrixAccel_n_23),
+        .full_flag_reg_1(i_vsm_ma_n_23),
         .in_shutdown(in_shutdown),
         .\opt_has_pipe.first_q_reg[0] (i_axi_lite_if_n_15),
         .out(reg_read_complete_rm_table_vec),
         .read_from_bs_info_registers_cmb(read_from_bs_info_registers_cmb),
         .read_from_rm_info_registers_cmb(read_from_rm_info_registers_cmb),
         .read_from_trigger_registers_cmb(read_from_trigger_registers_cmb),
-        .\reg_rdata_reg[0] (i_vsm_MatrixAccel_n_111),
+        .\reg_rdata_reg[0] (i_vsm_ma_n_111),
         .\reg_rdata_reg[12] (reg_rdata_bs_table_size0_out),
         .\reg_rdata_reg[12]_0 (reg_rdata_bs_table_address0_out),
         .\reg_rdata_reg[31] (reg_read_complete_bs_table_vec),
-        .\reg_rdata_reg[31]_0 (i_vsm_MatrixAccel_n_104),
+        .\reg_rdata_reg[31]_0 (i_vsm_ma_n_104),
         .reg_rdata_rm_table_ctrl1_out(reg_rdata_rm_table_ctrl1_out),
         .reg_tready_d0(reg_tready_d0),
-        .reg_tready_d1_reg(i_vsm_MatrixAccel_n_95),
+        .reg_tready_d1_reg(i_vsm_ma_n_95),
         .reg_write_complete_ctrl_reg(reg_write_complete_ctrl_reg),
         .reg_write_complete_ctrl_reg_reg(i_axi_lite_if_n_49),
         .reset(reset),
@@ -12333,14 +12333,14 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .s_axi_reg_rvalid(s_axi_reg_rvalid),
         .s_axi_reg_wdata(s_axi_reg_wdata),
         .s_axi_reg_wvalid(s_axi_reg_wvalid),
-        .\s_axi_rresp_i_reg[1]_0 (i_vsm_MatrixAccel_n_11),
-        .\s_axi_rresp_i_reg[1]_1 (i_vsm_MatrixAccel_n_105),
+        .\s_axi_rresp_i_reg[1]_0 (i_vsm_ma_n_11),
+        .\s_axi_rresp_i_reg[1]_1 (i_vsm_ma_n_105),
         .\s_axi_rresp_i_reg[1]_2 (reg_read_complete_trigger_table_vec),
         .s_axis_ctrl_tready_i1(s_axis_ctrl_tready_i1),
         .shutdown_bit_reg(i_axi_lite_if_n_71),
-        .shutdown_bit_reg_0(i_vsm_MatrixAccel_n_94),
+        .shutdown_bit_reg_0(i_vsm_ma_n_94),
         .shutdown_bit_reg_1(i_cp0_n_8),
-        .shutdown_bit_reg_2(i_vsm_MatrixAccel_n_21),
+        .shutdown_bit_reg_2(i_vsm_ma_n_21),
         .start_axi_read0(start_axi_read0),
         .start_axi_read035_out(start_axi_read035_out),
         .start_axi_read039_out(start_axi_read039_out),
@@ -12349,7 +12349,6 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .sw_trigger_id(sw_trigger_id),
         .sw_trigger_pending(sw_trigger_pending),
         .user_restarted_with_status068_out(user_restarted_with_status068_out),
-        .vsm_MatrixAccel_fetch_rm_id(vsm_MatrixAccel_fetch_rm_id),
         .\vsm_addr_reg[2]_0 (i_axi_lite_if_n_14),
         .\vsm_addr_reg[2]_1 (i_axi_lite_if_n_67),
         .\vsm_addr_reg[2]_2 (reg_rdata_bs_table_size),
@@ -12357,6 +12356,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .\vsm_addr_reg[3]_0 (reg_rdata_bs_table_address),
         .\vsm_addr_reg[5]_0 (i_axi_lite_if_n_11),
         .\vsm_addr_reg[6]_0 (i_axi_lite_if_n_69),
+        .vsm_ma_fetch_rm_id(vsm_ma_fetch_rm_id),
         .vsm_reg_tready(vsm_reg_tready),
         .\vsm_tvalid_i_reg[0]_0 (i_axi_lite_if_n_70),
         .\vsm_wdata_reg[0]_0 (i_axi_lite_if_n_73),
@@ -12376,8 +12376,8 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .first_word_seen(first_word_seen),
         .first_word_seen_reg(i_cp0_n_13),
         .full(full),
-        .full_flag_reg(i_vsm_MatrixAccel_n_19),
-        .full_flag_reg_0(i_vsm_MatrixAccel_n_20),
+        .full_flag_reg(i_vsm_ma_n_19),
+        .full_flag_reg_0(i_vsm_ma_n_20),
         .\gen_pntr_flags_cc.ngen_full_rst_val.ram_full_i_reg (xpm_fifo_full),
         .\gen_pntr_flags_cc.ngen_full_rst_val.ram_full_i_reg_0 (i_cp0_n_11),
         .\gen_pntr_flags_cc.wrp_eq_rdp_pf_cc.gpe_cc_sym.read_only_q_reg (fetch0_2_decompress0_axis_bs_tvalid),
@@ -12403,7 +12403,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .first_word_seen_reg_0(xpm_fifo_full),
         .full(full),
         .id_fifo_read_d1_reg_0(i_cp0_n_13),
-        .in({vsm_MatrixAccel_fetch_rm_id,vsm_MatrixAccel_fetch_addr,vsm_MatrixAccel_fetch_size}),
+        .in({vsm_ma_fetch_rm_id,vsm_ma_fetch_addr,vsm_ma_fetch_size}),
         .m_axi_mem_araddr(m_axi_mem_araddr),
         .m_axi_mem_arburst(\^m_axi_mem_arburst ),
         .m_axi_mem_arlen(m_axi_mem_arlen),
@@ -12423,53 +12423,53 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .\rm_id_o_reg[0]_0 (fetch0_rm_id_o),
         .sig_m_valid_out_reg(fetch0_2_decompress0_axis_bs_tvalid),
         .sig_m_valid_out_reg_0(i_cp0_n_11),
-        .vsm_MatrixAccel_fetch_req(vsm_MatrixAccel_fetch_req),
+        .vsm_ma_fetch_req(vsm_ma_fetch_req),
         .wr_rst_busy(wr_rst_busy));
-  Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Controller_dfx_controller_0_1_vsm_MatrixAccel i_vsm_MatrixAccel
-       (.D(vsm_MatrixAccel_reg_rdata),
+  Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Controller_dfx_controller_0_1_vsm_ma i_vsm_ma
+       (.D(vsm_ma_reg_rdata),
         .E(reg_rdata_bs_table_size),
         .Q(vsm_reg_addr),
         .axi_write_complete(axi_write_complete),
         .axi_write_complete0(axi_write_complete0),
         .axi_write_complete033_out(axi_write_complete033_out),
         .axi_write_complete037_out(axi_write_complete037_out),
-        .\b_bs_info.b_read_from_bs_info_registers_edge.d1_reg_0 (i_vsm_MatrixAccel_n_17),
-        .\b_bs_info.b_write_to_bs_info_registers_edge.d1_reg_0 (i_vsm_MatrixAccel_n_13),
+        .\b_bs_info.b_read_from_bs_info_registers_edge.d1_reg_0 (i_vsm_ma_n_17),
+        .\b_bs_info.b_write_to_bs_info_registers_edge.d1_reg_0 (i_vsm_ma_n_13),
         .\b_bs_info.gen_address_reg.access_address_del_reg[0]_0 (i_axi_lite_if_n_65),
         .\b_bs_info.reg_rdata_bs_table_address_reg[0]_0 (i_axi_lite_if_n_67),
         .\b_bs_info.reg_rdata_bs_table_address_reg[12]_0 (reg_rdata_bs_table_address0_out),
         .\b_bs_info.reg_rdata_bs_table_address_reg[31]_0 (reg_rdata_bs_table_address),
         .\b_bs_info.reg_rdata_bs_table_size_reg[12]_0 (reg_rdata_bs_table_size0_out),
-        .\b_bs_info.reg_rdata_bs_table_size_reg[31]_0 (i_vsm_MatrixAccel_n_104),
-        .\b_rm_info.b_read_from_rm_info_registers_edge.d1_reg_0 (i_vsm_MatrixAccel_n_16),
-        .\b_rm_info.b_write_to_rm_info_registers_edge.axi_write_complete_reg_0 (i_vsm_MatrixAccel_n_11),
-        .\b_rm_info.b_write_to_rm_info_registers_edge.d1_reg_0 (i_vsm_MatrixAccel_n_10),
+        .\b_bs_info.reg_rdata_bs_table_size_reg[31]_0 (i_vsm_ma_n_104),
+        .\b_rm_info.b_read_from_rm_info_registers_edge.d1_reg_0 (i_vsm_ma_n_16),
+        .\b_rm_info.b_write_to_rm_info_registers_edge.axi_write_complete_reg_0 (i_vsm_ma_n_11),
+        .\b_rm_info.b_write_to_rm_info_registers_edge.d1_reg_0 (i_vsm_ma_n_10),
         .\b_rm_info.gen_address_reg.access_address_del_reg[0]_0 (i_axi_lite_if_n_64),
         .\b_rm_info.reg_rdata_rm_table_ctrl_reg[12]_0 (reg_rdata_rm_table_ctrl1_out),
-        .\b_trigger_table.b_write_to_trigger_registers_edge.d1_reg_0 (i_vsm_MatrixAccel_n_14),
+        .\b_trigger_table.b_write_to_trigger_registers_edge.d1_reg_0 (i_vsm_ma_n_14),
         .\b_trigger_table.gen_address_reg.access_address_del_reg[0]_0 (i_axi_lite_if_n_69),
         .\b_trigger_table.gen_address_reg.access_address_del_reg[0]_1 (i_axi_lite_if_n_70),
-        .bad_config_error_flag_reg_0(i_vsm_MatrixAccel_n_20),
+        .bad_config_error_flag_reg_0(i_vsm_ma_n_20),
         .bs_addr(bs_addr),
         .clk(clk),
         .cp0_vs_id(cp0_vs_id),
         .cp_error_flag_reg_0(i_axi_lite_if_n_49),
-        .\current_state_reg[0]_0 (i_vsm_MatrixAccel_n_94),
+        .\current_state_reg[0]_0 (i_vsm_ma_n_94),
         .\current_state_reg[1]_0 (i_cp0_n_7),
         .\current_state_reg[3]_0 (i_cp0_n_12),
         .\current_state_reg[3]_1 (i_cp0_n_8),
         .d1(d1),
         .din(p_1_in),
-        .fetch_error_flag_reg_0(i_vsm_MatrixAccel_n_19),
-        .full_flag_reg_0(i_vsm_MatrixAccel_n_23),
+        .fetch_error_flag_reg_0(i_vsm_ma_n_19),
+        .full_flag_reg_0(i_vsm_ma_n_23),
         .full_flag_reg_1(i_axi_lite_if_n_72),
-        .in({vsm_MatrixAccel_fetch_rm_id,vsm_MatrixAccel_fetch_addr,vsm_MatrixAccel_fetch_size}),
+        .in({vsm_ma_fetch_rm_id,vsm_ma_fetch_addr,vsm_ma_fetch_size}),
         .in_shutdown(in_shutdown),
         .\opt_has_pipe.first_q_reg[0] (reg_read_complete_rm_table_vec),
-        .\opt_has_pipe.first_q_reg[0]_0 (i_vsm_MatrixAccel_n_2),
+        .\opt_has_pipe.first_q_reg[0]_0 (i_vsm_ma_n_2),
         .\opt_has_pipe.first_q_reg[0]_1 (reg_read_complete_bs_table_vec),
-        .\opt_has_pipe.first_q_reg[0]_2 (i_vsm_MatrixAccel_n_4),
-        .\opt_has_pipe.first_q_reg[0]_3 (i_vsm_MatrixAccel_n_105),
+        .\opt_has_pipe.first_q_reg[0]_2 (i_vsm_ma_n_4),
+        .\opt_has_pipe.first_q_reg[0]_3 (i_vsm_ma_n_105),
         .out(reg_read_complete_trigger_table_vec),
         .p_0_in(p_0_in),
         .p_3_in(p_3_in),
@@ -12489,30 +12489,30 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .reg_tready_i_reg_0(i_axi_lite_if_n_11),
         .reg_wdata(vsm_reg_wdata),
         .reg_write_complete_ctrl_reg(reg_write_complete_ctrl_reg),
-        .reg_write_complete_sw_trigger_reg_reg_0(i_vsm_MatrixAccel_n_95),
+        .reg_write_complete_sw_trigger_reg_reg_0(i_vsm_ma_n_95),
         .reset(reset),
         .reset_ah(reset_ah),
         .rm_reset_i_reg_0(i_axi_lite_if_n_75),
         .s_axis_ctrl_tready_i1(s_axis_ctrl_tready_i1),
-        .shutdown_bit_reg_0(i_vsm_MatrixAccel_n_21),
+        .shutdown_bit_reg_0(i_vsm_ma_n_21),
         .shutdown_bit_reg_1(i_axi_lite_if_n_71),
         .start_axi_read0(start_axi_read0),
         .start_axi_read035_out(start_axi_read035_out),
         .start_axi_read039_out(start_axi_read039_out),
-        .\status_encoded_field_reg[0]_0 (i_vsm_MatrixAccel_n_111),
+        .\status_encoded_field_reg[0]_0 (i_vsm_ma_n_111),
         .sw_ok_to_proceed_d00(sw_ok_to_proceed_d00),
         .sw_trigger_id(sw_trigger_id),
         .\sw_trigger_id_reg[0]_0 (i_axi_lite_if_n_73),
         .sw_trigger_pending(sw_trigger_pending),
         .user_restarted_with_status068_out(user_restarted_with_status068_out),
-        .vsm_MatrixAccel_event_error(vsm_MatrixAccel_event_error),
-        .vsm_MatrixAccel_fetch_req(vsm_MatrixAccel_fetch_req),
-        .vsm_MatrixAccel_rm_decouple(vsm_MatrixAccel_rm_decouple),
-        .vsm_MatrixAccel_rm_reset(vsm_MatrixAccel_rm_reset),
-        .vsm_MatrixAccel_rm_shutdown_ack(vsm_MatrixAccel_rm_shutdown_ack),
-        .vsm_MatrixAccel_rm_shutdown_req(vsm_MatrixAccel_rm_shutdown_req),
-        .vsm_MatrixAccel_sw_shutdown_req(vsm_MatrixAccel_sw_shutdown_req),
-        .vsm_MatrixAccel_sw_startup_req(vsm_MatrixAccel_sw_startup_req),
+        .vsm_ma_event_error(vsm_ma_event_error),
+        .vsm_ma_fetch_req(vsm_ma_fetch_req),
+        .vsm_ma_rm_decouple(vsm_ma_rm_decouple),
+        .vsm_ma_rm_reset(vsm_ma_rm_reset),
+        .vsm_ma_rm_shutdown_ack(vsm_ma_rm_shutdown_ack),
+        .vsm_ma_rm_shutdown_req(vsm_ma_rm_shutdown_req),
+        .vsm_ma_sw_shutdown_req(vsm_ma_sw_shutdown_req),
+        .vsm_ma_sw_startup_req(vsm_ma_sw_startup_req),
         .vsm_reg_tready(vsm_reg_tready),
         .write_to_bs_info_registers_cmb(write_to_bs_info_registers_cmb),
         .write_to_rm_info_registers_cmb(write_to_rm_info_registers_cmb),
@@ -12538,7 +12538,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
     reset_ah,
     reset,
     E,
-    vsm_MatrixAccel_fetch_req,
+    vsm_ma_fetch_req,
     recheck_id_reg_source_reg_0,
     sig_m_valid_out_reg_0,
     id_fifo_read_d1_reg_0,
@@ -12567,7 +12567,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
   input reset_ah;
   input reset;
   input [0:0]E;
-  input vsm_MatrixAccel_fetch_req;
+  input vsm_ma_fetch_req;
   input recheck_id_reg_source_reg_0;
   input sig_m_valid_out_reg_0;
   input id_fifo_read_d1_reg_0;
@@ -12848,7 +12848,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
   wire v_dma_size0_carry_n_3;
   wire [31:23]v_dma_size0_out;
   wire [31:0]v_dma_size_reg;
-  wire vsm_MatrixAccel_fetch_req;
+  wire vsm_ma_fetch_req;
   wire wr_rst_busy;
   wire [3:0]NLW_v_dma_size0_carry_O_UNCONNECTED;
   wire [3:0]NLW_v_dma_size0_carry__0_O_UNCONNECTED;
@@ -13339,7 +13339,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .rd_avail(rd_avail),
         .reqs_stored(reqs_stored),
         .reset_ah(reset_ah),
-        .vsm_MatrixAccel_fetch_req(vsm_MatrixAccel_fetch_req));
+        .vsm_ma_fetch_req(vsm_ma_fetch_req));
   FDRE #(
     .INIT(1'b0)) 
     id_fifo_almost_empty_d1_reg
@@ -15390,17 +15390,17 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .R(reset_ah));
 endmodule
 
-(* ORIG_REF_NAME = "dfx_controller_Convolution_Controller_dfx_controller_0_1_vsm_MatrixAccel" *) 
-module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Controller_dfx_controller_0_1_vsm_MatrixAccel
+(* ORIG_REF_NAME = "dfx_controller_Convolution_Controller_dfx_controller_0_1_vsm_ma" *) 
+module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Controller_dfx_controller_0_1_vsm_ma
    (out,
     \opt_has_pipe.first_q_reg[0] ,
     \opt_has_pipe.first_q_reg[0]_0 ,
     \opt_has_pipe.first_q_reg[0]_1 ,
     \opt_has_pipe.first_q_reg[0]_2 ,
     in_shutdown,
-    vsm_MatrixAccel_event_error,
+    vsm_ma_event_error,
     reg_write_complete_ctrl_reg,
-    vsm_MatrixAccel_fetch_req,
+    vsm_ma_fetch_req,
     vsm_reg_tready,
     \b_rm_info.b_write_to_rm_info_registers_edge.d1_reg_0 ,
     \b_rm_info.b_write_to_rm_info_registers_edge.axi_write_complete_reg_0 ,
@@ -15416,10 +15416,10 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
     shutdown_bit_reg_0,
     sw_trigger_pending,
     full_flag_reg_0,
-    vsm_MatrixAccel_rm_shutdown_req,
-    vsm_MatrixAccel_rm_reset,
-    vsm_MatrixAccel_sw_shutdown_req,
-    vsm_MatrixAccel_sw_startup_req,
+    vsm_ma_rm_shutdown_req,
+    vsm_ma_rm_reset,
+    vsm_ma_sw_shutdown_req,
+    vsm_ma_sw_startup_req,
     in,
     sw_trigger_id,
     \current_state_reg[0]_0 ,
@@ -15429,10 +15429,11 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
     \b_bs_info.reg_rdata_bs_table_size_reg[31]_0 ,
     \opt_has_pipe.first_q_reg[0]_3 ,
     \b_rm_info.reg_rdata_rm_table_ctrl_reg[12]_0 ,
-    vsm_MatrixAccel_rm_decouple,
+    vsm_ma_rm_decouple,
     \status_encoded_field_reg[0]_0 ,
     D,
     clk,
+    \b_rm_info.gen_address_reg.access_address_del_reg[0]_0 ,
     reset_ah,
     reset,
     start_axi_read039_out,
@@ -15442,7 +15443,6 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
     start_axi_read0,
     read_from_bs_info_registers_cmb,
     s_axis_ctrl_tready_i1,
-    \b_rm_info.gen_address_reg.access_address_del_reg[0]_0 ,
     write_to_sw_trigger_reg_cmb,
     sw_ok_to_proceed_d00,
     \b_bs_info.gen_address_reg.access_address_del_reg[0]_0 ,
@@ -15462,7 +15462,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
     \b_trigger_table.gen_address_reg.access_address_del_reg[0]_0 ,
     Q,
     \b_trigger_table.gen_address_reg.access_address_del_reg[0]_1 ,
-    vsm_MatrixAccel_rm_shutdown_ack,
+    vsm_ma_rm_shutdown_ack,
     reg_tready_i_reg_0,
     \reg_rdata_reg[0]_0 ,
     \reg_rdata_reg[0]_1 ,
@@ -15490,9 +15490,9 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
   output \opt_has_pipe.first_q_reg[0]_1 ;
   output \opt_has_pipe.first_q_reg[0]_2 ;
   output in_shutdown;
-  output vsm_MatrixAccel_event_error;
+  output vsm_ma_event_error;
   output reg_write_complete_ctrl_reg;
-  output vsm_MatrixAccel_fetch_req;
+  output vsm_ma_fetch_req;
   output [0:0]vsm_reg_tready;
   output \b_rm_info.b_write_to_rm_info_registers_edge.d1_reg_0 ;
   output \b_rm_info.b_write_to_rm_info_registers_edge.axi_write_complete_reg_0 ;
@@ -15508,10 +15508,10 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
   output shutdown_bit_reg_0;
   output sw_trigger_pending;
   output full_flag_reg_0;
-  output vsm_MatrixAccel_rm_shutdown_req;
-  output vsm_MatrixAccel_rm_reset;
-  output vsm_MatrixAccel_sw_shutdown_req;
-  output vsm_MatrixAccel_sw_startup_req;
+  output vsm_ma_rm_shutdown_req;
+  output vsm_ma_rm_reset;
+  output vsm_ma_sw_shutdown_req;
+  output vsm_ma_sw_startup_req;
   output [64:0]in;
   output sw_trigger_id;
   output \current_state_reg[0]_0 ;
@@ -15521,10 +15521,11 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
   output \b_bs_info.reg_rdata_bs_table_size_reg[31]_0 ;
   output \opt_has_pipe.first_q_reg[0]_3 ;
   output [3:0]\b_rm_info.reg_rdata_rm_table_ctrl_reg[12]_0 ;
-  output vsm_MatrixAccel_rm_decouple;
+  output vsm_ma_rm_decouple;
   output [0:0]\status_encoded_field_reg[0]_0 ;
   output [31:0]D;
   input clk;
+  input \b_rm_info.gen_address_reg.access_address_del_reg[0]_0 ;
   input reset_ah;
   input reset;
   input start_axi_read039_out;
@@ -15534,7 +15535,6 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
   input start_axi_read0;
   input read_from_bs_info_registers_cmb;
   input s_axis_ctrl_tready_i1;
-  input \b_rm_info.gen_address_reg.access_address_del_reg[0]_0 ;
   input write_to_sw_trigger_reg_cmb;
   input sw_ok_to_proceed_d00;
   input \b_bs_info.gen_address_reg.access_address_del_reg[0]_0 ;
@@ -15554,7 +15554,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
   input \b_trigger_table.gen_address_reg.access_address_del_reg[0]_0 ;
   input [2:0]Q;
   input \b_trigger_table.gen_address_reg.access_address_del_reg[0]_1 ;
-  input vsm_MatrixAccel_rm_shutdown_ack;
+  input vsm_ma_rm_shutdown_ack;
   input reg_tready_i_reg_0;
   input \reg_rdata_reg[0]_0 ;
   input \reg_rdata_reg[0]_1 ;
@@ -15582,6 +15582,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
   wire [2:0]Q;
   wire access_address;
   wire access_address_del;
+  wire access_address_del__0;
   wire [31:0]address_from_mem;
   wire axi_read_enable_vec;
   wire axi_write_complete;
@@ -15595,7 +15596,6 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
   wire \b_bs_info.b_read_from_bs_info_registers_edge.start_axi_read_reg_n_0 ;
   wire \b_bs_info.b_rm_info_valid_del.i_rm_info_valid_del_n_1 ;
   wire \b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_1 ;
-  wire \b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_11 ;
   wire \b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_12 ;
   wire \b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_13 ;
   wire \b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_14 ;
@@ -15622,6 +15622,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
   wire \b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_6 ;
   wire \b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_7 ;
   wire \b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_8 ;
+  wire \b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_9 ;
   wire \b_bs_info.b_write_to_bs_info_registers_edge.axi_write_complete_reg_n_0 ;
   wire \b_bs_info.b_write_to_bs_info_registers_edge.d1_reg_0 ;
   wire \b_bs_info.gen_address_reg.access_address_del_reg[0]_0 ;
@@ -15648,6 +15649,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
   wire \b_rm_info.b_read_from_rm_info_registers_del.i_read_from_rm_info_registers_del_n_2 ;
   wire \b_rm_info.b_read_from_rm_info_registers_edge.d1_reg_0 ;
   wire \b_rm_info.b_rm_id_valid_del.i_rm_id_valid_del_n_2 ;
+  wire \b_rm_info.b_start_axi_read_del.i_start_axi_read_del_n_10 ;
   wire \b_rm_info.b_start_axi_read_del.i_start_axi_read_del_n_2 ;
   wire \b_rm_info.b_start_axi_read_del.i_start_axi_read_del_n_3 ;
   wire \b_rm_info.b_start_axi_read_del.i_start_axi_read_del_n_4 ;
@@ -15691,7 +15693,6 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
   wire \b_trigger_table.b_write_to_trigger_registers_edge.d1_reg_0 ;
   wire \b_trigger_table.gen_address_reg.access_address_del_reg[0]_0 ;
   wire \b_trigger_table.gen_address_reg.access_address_del_reg[0]_1 ;
-  wire \b_trigger_table.gen_address_reg.access_address_del_reg_n_0_[0] ;
   wire bad_config_error_flag_reg_0;
   wire bs_addr;
   wire bs_addresses_from_mem;
@@ -15859,14 +15860,14 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
   wire using_sw_trigger;
   wire using_sw_trigger_i_1_n_0;
   wire using_sw_trigger_i_2_n_0;
-  wire vsm_MatrixAccel_event_error;
-  wire vsm_MatrixAccel_fetch_req;
-  wire vsm_MatrixAccel_rm_decouple;
-  wire vsm_MatrixAccel_rm_reset;
-  wire vsm_MatrixAccel_rm_shutdown_ack;
-  wire vsm_MatrixAccel_rm_shutdown_req;
-  wire vsm_MatrixAccel_sw_shutdown_req;
-  wire vsm_MatrixAccel_sw_startup_req;
+  wire vsm_ma_event_error;
+  wire vsm_ma_fetch_req;
+  wire vsm_ma_rm_decouple;
+  wire vsm_ma_rm_reset;
+  wire vsm_ma_rm_shutdown_ack;
+  wire vsm_ma_rm_shutdown_req;
+  wire vsm_ma_sw_shutdown_req;
+  wire vsm_ma_sw_startup_req;
   wire vsm_read_enable_vec;
   wire [0:0]vsm_reg_tready;
   wire write_to_bs_info_registers_cmb;
@@ -15948,18 +15949,15 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .\b_bs_info.reg_rdata_bs_table_size_reg[5] (\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_6 ),
         .\b_bs_info.reg_rdata_bs_table_size_reg[6] (\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_7 ),
         .\b_bs_info.reg_rdata_bs_table_size_reg[7] (\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_8 ),
-        .\b_rm_info.reg_rdata_rm_table_ctrl_reg[8] (\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_11 ),
+        .\b_bs_info.reg_rdata_bs_table_size_reg[8] (\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_9 ),
         .clk(clk),
-        .in(in[64]),
         .\opt_has_pipe.first_q_reg[0] (\opt_has_pipe.first_q_reg[0]_3 ),
         .\opt_has_pipe.first_q_reg[0]_0 (\b_bs_info.b_read_from_bs_info_registers_edge.start_axi_read_reg_n_0 ),
         .out(\opt_has_pipe.first_q_reg[0]_1 ),
         .\reg_rdata_reg[13] (Q[1:0]),
-        .\reg_rdata_reg[30] (out),
+        .\reg_rdata_reg[30] (\opt_has_pipe.first_q_reg[0] ),
+        .\reg_rdata_reg[30]_0 (out),
         .\reg_rdata_reg[31] ({reg_rdata_bs_table_size0_out[31:13],reg_rdata_bs_table_size0_out[8:0]}),
-        .\reg_rdata_reg[8] (\opt_has_pipe.first_q_reg[0] ),
-        .\reg_rdata_reg[8]_0 (\reg_rdata_reg[1]_0 ),
-        .reg_rdata_rm_table_ctrl1_out(reg_rdata_rm_table_ctrl1_out[8]),
         .reset(reset),
         .reset_0(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_30 ),
         .reset_ah(reset_ah),
@@ -15981,7 +15979,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .Q(\b_bs_info.b_write_to_bs_info_registers_edge.d1_reg_0 ),
         .R(reset_ah));
   (* RTL_RAM_BITS = "64" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_bs_info.bs_address_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_bs_info.bs_address_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -16002,7 +16000,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_bs_info.b_read_from_bs_info_registers_del.i_read_from_bs_info_registers_del_n_2 ));
   (* RTL_RAM_BITS = "64" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_bs_info.bs_address_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_bs_info.bs_address_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -16023,7 +16021,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_bs_info.b_read_from_bs_info_registers_del.i_read_from_bs_info_registers_del_n_2 ));
   (* RTL_RAM_BITS = "64" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_bs_info.bs_address_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_bs_info.bs_address_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -16044,7 +16042,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_bs_info.b_read_from_bs_info_registers_del.i_read_from_bs_info_registers_del_n_2 ));
   (* RTL_RAM_BITS = "64" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_bs_info.bs_address_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_bs_info.bs_address_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -16065,7 +16063,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_bs_info.b_read_from_bs_info_registers_del.i_read_from_bs_info_registers_del_n_2 ));
   (* RTL_RAM_BITS = "64" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_bs_info.bs_address_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_bs_info.bs_address_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -16086,7 +16084,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_bs_info.b_read_from_bs_info_registers_del.i_read_from_bs_info_registers_del_n_2 ));
   (* RTL_RAM_BITS = "64" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_bs_info.bs_address_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_bs_info.bs_address_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -16107,7 +16105,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_bs_info.b_read_from_bs_info_registers_del.i_read_from_bs_info_registers_del_n_2 ));
   (* RTL_RAM_BITS = "64" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_bs_info.bs_address_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_bs_info.bs_address_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -16128,7 +16126,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_bs_info.b_read_from_bs_info_registers_del.i_read_from_bs_info_registers_del_n_2 ));
   (* RTL_RAM_BITS = "64" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_bs_info.bs_address_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_bs_info.bs_address_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -16149,7 +16147,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_bs_info.b_read_from_bs_info_registers_del.i_read_from_bs_info_registers_del_n_2 ));
   (* RTL_RAM_BITS = "64" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_bs_info.bs_address_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_bs_info.bs_address_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -16170,7 +16168,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_bs_info.b_read_from_bs_info_registers_del.i_read_from_bs_info_registers_del_n_2 ));
   (* RTL_RAM_BITS = "64" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_bs_info.bs_address_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_bs_info.bs_address_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -16191,7 +16189,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_bs_info.b_read_from_bs_info_registers_del.i_read_from_bs_info_registers_del_n_2 ));
   (* RTL_RAM_BITS = "64" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_bs_info.bs_address_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_bs_info.bs_address_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -16212,7 +16210,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_bs_info.b_read_from_bs_info_registers_del.i_read_from_bs_info_registers_del_n_2 ));
   (* RTL_RAM_BITS = "64" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_bs_info.bs_address_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_bs_info.bs_address_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -16233,7 +16231,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_bs_info.b_read_from_bs_info_registers_del.i_read_from_bs_info_registers_del_n_2 ));
   (* RTL_RAM_BITS = "64" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_bs_info.bs_address_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_bs_info.bs_address_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -16254,7 +16252,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_bs_info.b_read_from_bs_info_registers_del.i_read_from_bs_info_registers_del_n_2 ));
   (* RTL_RAM_BITS = "64" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_bs_info.bs_address_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_bs_info.bs_address_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -16275,7 +16273,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_bs_info.b_read_from_bs_info_registers_del.i_read_from_bs_info_registers_del_n_2 ));
   (* RTL_RAM_BITS = "64" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_bs_info.bs_address_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_bs_info.bs_address_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -16296,7 +16294,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_bs_info.b_read_from_bs_info_registers_del.i_read_from_bs_info_registers_del_n_2 ));
   (* RTL_RAM_BITS = "64" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_bs_info.bs_address_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_bs_info.bs_address_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -16317,7 +16315,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_bs_info.b_read_from_bs_info_registers_del.i_read_from_bs_info_registers_del_n_2 ));
   (* RTL_RAM_BITS = "64" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_bs_info.bs_address_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_bs_info.bs_address_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -16338,7 +16336,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_bs_info.b_read_from_bs_info_registers_del.i_read_from_bs_info_registers_del_n_2 ));
   (* RTL_RAM_BITS = "64" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_bs_info.bs_address_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_bs_info.bs_address_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -16359,7 +16357,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_bs_info.b_read_from_bs_info_registers_del.i_read_from_bs_info_registers_del_n_2 ));
   (* RTL_RAM_BITS = "64" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_bs_info.bs_address_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_bs_info.bs_address_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -16380,7 +16378,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_bs_info.b_read_from_bs_info_registers_del.i_read_from_bs_info_registers_del_n_2 ));
   (* RTL_RAM_BITS = "64" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_bs_info.bs_address_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_bs_info.bs_address_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -16401,7 +16399,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_bs_info.b_read_from_bs_info_registers_del.i_read_from_bs_info_registers_del_n_2 ));
   (* RTL_RAM_BITS = "64" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_bs_info.bs_address_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_bs_info.bs_address_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -16422,7 +16420,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_bs_info.b_read_from_bs_info_registers_del.i_read_from_bs_info_registers_del_n_2 ));
   (* RTL_RAM_BITS = "64" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_bs_info.bs_address_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_bs_info.bs_address_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -16443,7 +16441,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_bs_info.b_read_from_bs_info_registers_del.i_read_from_bs_info_registers_del_n_2 ));
   (* RTL_RAM_BITS = "64" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_bs_info.bs_address_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_bs_info.bs_address_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -16464,7 +16462,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_bs_info.b_read_from_bs_info_registers_del.i_read_from_bs_info_registers_del_n_2 ));
   (* RTL_RAM_BITS = "64" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_bs_info.bs_address_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_bs_info.bs_address_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -16485,7 +16483,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_bs_info.b_read_from_bs_info_registers_del.i_read_from_bs_info_registers_del_n_2 ));
   (* RTL_RAM_BITS = "64" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_bs_info.bs_address_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_bs_info.bs_address_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -16506,7 +16504,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_bs_info.b_read_from_bs_info_registers_del.i_read_from_bs_info_registers_del_n_2 ));
   (* RTL_RAM_BITS = "64" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_bs_info.bs_address_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_bs_info.bs_address_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -16527,7 +16525,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_bs_info.b_read_from_bs_info_registers_del.i_read_from_bs_info_registers_del_n_2 ));
   (* RTL_RAM_BITS = "64" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_bs_info.bs_address_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_bs_info.bs_address_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -16548,7 +16546,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_bs_info.b_read_from_bs_info_registers_del.i_read_from_bs_info_registers_del_n_2 ));
   (* RTL_RAM_BITS = "64" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_bs_info.bs_address_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_bs_info.bs_address_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -16569,7 +16567,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_bs_info.b_read_from_bs_info_registers_del.i_read_from_bs_info_registers_del_n_2 ));
   (* RTL_RAM_BITS = "64" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_bs_info.bs_address_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_bs_info.bs_address_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -16590,7 +16588,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_bs_info.b_read_from_bs_info_registers_del.i_read_from_bs_info_registers_del_n_2 ));
   (* RTL_RAM_BITS = "64" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_bs_info.bs_address_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_bs_info.bs_address_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -16611,7 +16609,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_bs_info.b_read_from_bs_info_registers_del.i_read_from_bs_info_registers_del_n_2 ));
   (* RTL_RAM_BITS = "64" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_bs_info.bs_address_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_bs_info.bs_address_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -16632,7 +16630,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_bs_info.b_read_from_bs_info_registers_del.i_read_from_bs_info_registers_del_n_2 ));
   (* RTL_RAM_BITS = "64" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_bs_info.bs_address_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_bs_info.bs_address_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -16653,7 +16651,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_bs_info.b_read_from_bs_info_registers_del.i_read_from_bs_info_registers_del_n_2 ));
   (* RTL_RAM_BITS = "64" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_bs_info.bs_size_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_bs_info.bs_size_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -16674,7 +16672,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_bs_info.b_read_from_bs_info_registers_del.i_read_from_bs_info_registers_del_n_1 ));
   (* RTL_RAM_BITS = "64" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_bs_info.bs_size_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_bs_info.bs_size_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -16695,7 +16693,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_bs_info.b_read_from_bs_info_registers_del.i_read_from_bs_info_registers_del_n_1 ));
   (* RTL_RAM_BITS = "64" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_bs_info.bs_size_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_bs_info.bs_size_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -16716,7 +16714,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_bs_info.b_read_from_bs_info_registers_del.i_read_from_bs_info_registers_del_n_1 ));
   (* RTL_RAM_BITS = "64" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_bs_info.bs_size_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_bs_info.bs_size_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -16737,7 +16735,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_bs_info.b_read_from_bs_info_registers_del.i_read_from_bs_info_registers_del_n_1 ));
   (* RTL_RAM_BITS = "64" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_bs_info.bs_size_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_bs_info.bs_size_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -16758,7 +16756,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_bs_info.b_read_from_bs_info_registers_del.i_read_from_bs_info_registers_del_n_1 ));
   (* RTL_RAM_BITS = "64" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_bs_info.bs_size_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_bs_info.bs_size_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -16779,7 +16777,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_bs_info.b_read_from_bs_info_registers_del.i_read_from_bs_info_registers_del_n_1 ));
   (* RTL_RAM_BITS = "64" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_bs_info.bs_size_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_bs_info.bs_size_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -16800,7 +16798,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_bs_info.b_read_from_bs_info_registers_del.i_read_from_bs_info_registers_del_n_1 ));
   (* RTL_RAM_BITS = "64" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_bs_info.bs_size_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_bs_info.bs_size_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -16821,7 +16819,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_bs_info.b_read_from_bs_info_registers_del.i_read_from_bs_info_registers_del_n_1 ));
   (* RTL_RAM_BITS = "64" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_bs_info.bs_size_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_bs_info.bs_size_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -16842,7 +16840,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_bs_info.b_read_from_bs_info_registers_del.i_read_from_bs_info_registers_del_n_1 ));
   (* RTL_RAM_BITS = "64" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_bs_info.bs_size_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_bs_info.bs_size_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -16863,7 +16861,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_bs_info.b_read_from_bs_info_registers_del.i_read_from_bs_info_registers_del_n_1 ));
   (* RTL_RAM_BITS = "64" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_bs_info.bs_size_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_bs_info.bs_size_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -16884,7 +16882,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_bs_info.b_read_from_bs_info_registers_del.i_read_from_bs_info_registers_del_n_1 ));
   (* RTL_RAM_BITS = "64" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_bs_info.bs_size_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_bs_info.bs_size_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -16905,7 +16903,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_bs_info.b_read_from_bs_info_registers_del.i_read_from_bs_info_registers_del_n_1 ));
   (* RTL_RAM_BITS = "64" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_bs_info.bs_size_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_bs_info.bs_size_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -16926,7 +16924,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_bs_info.b_read_from_bs_info_registers_del.i_read_from_bs_info_registers_del_n_1 ));
   (* RTL_RAM_BITS = "64" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_bs_info.bs_size_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_bs_info.bs_size_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -16947,7 +16945,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_bs_info.b_read_from_bs_info_registers_del.i_read_from_bs_info_registers_del_n_1 ));
   (* RTL_RAM_BITS = "64" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_bs_info.bs_size_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_bs_info.bs_size_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -16968,7 +16966,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_bs_info.b_read_from_bs_info_registers_del.i_read_from_bs_info_registers_del_n_1 ));
   (* RTL_RAM_BITS = "64" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_bs_info.bs_size_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_bs_info.bs_size_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -16989,7 +16987,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_bs_info.b_read_from_bs_info_registers_del.i_read_from_bs_info_registers_del_n_1 ));
   (* RTL_RAM_BITS = "64" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_bs_info.bs_size_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_bs_info.bs_size_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -17010,7 +17008,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_bs_info.b_read_from_bs_info_registers_del.i_read_from_bs_info_registers_del_n_1 ));
   (* RTL_RAM_BITS = "64" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_bs_info.bs_size_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_bs_info.bs_size_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -17031,7 +17029,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_bs_info.b_read_from_bs_info_registers_del.i_read_from_bs_info_registers_del_n_1 ));
   (* RTL_RAM_BITS = "64" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_bs_info.bs_size_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_bs_info.bs_size_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -17052,7 +17050,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_bs_info.b_read_from_bs_info_registers_del.i_read_from_bs_info_registers_del_n_1 ));
   (* RTL_RAM_BITS = "64" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_bs_info.bs_size_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_bs_info.bs_size_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -17073,7 +17071,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_bs_info.b_read_from_bs_info_registers_del.i_read_from_bs_info_registers_del_n_1 ));
   (* RTL_RAM_BITS = "64" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_bs_info.bs_size_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_bs_info.bs_size_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -17094,7 +17092,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_bs_info.b_read_from_bs_info_registers_del.i_read_from_bs_info_registers_del_n_1 ));
   (* RTL_RAM_BITS = "64" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_bs_info.bs_size_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_bs_info.bs_size_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -17115,7 +17113,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_bs_info.b_read_from_bs_info_registers_del.i_read_from_bs_info_registers_del_n_1 ));
   (* RTL_RAM_BITS = "64" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_bs_info.bs_size_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_bs_info.bs_size_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -17136,7 +17134,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_bs_info.b_read_from_bs_info_registers_del.i_read_from_bs_info_registers_del_n_1 ));
   (* RTL_RAM_BITS = "64" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_bs_info.bs_size_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_bs_info.bs_size_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -17157,7 +17155,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_bs_info.b_read_from_bs_info_registers_del.i_read_from_bs_info_registers_del_n_1 ));
   (* RTL_RAM_BITS = "64" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_bs_info.bs_size_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_bs_info.bs_size_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -17178,7 +17176,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_bs_info.b_read_from_bs_info_registers_del.i_read_from_bs_info_registers_del_n_1 ));
   (* RTL_RAM_BITS = "64" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_bs_info.bs_size_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_bs_info.bs_size_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -17199,7 +17197,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_bs_info.b_read_from_bs_info_registers_del.i_read_from_bs_info_registers_del_n_1 ));
   (* RTL_RAM_BITS = "64" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_bs_info.bs_size_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_bs_info.bs_size_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -17220,7 +17218,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_bs_info.b_read_from_bs_info_registers_del.i_read_from_bs_info_registers_del_n_1 ));
   (* RTL_RAM_BITS = "64" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_bs_info.bs_size_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_bs_info.bs_size_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -17241,7 +17239,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_bs_info.b_read_from_bs_info_registers_del.i_read_from_bs_info_registers_del_n_1 ));
   (* RTL_RAM_BITS = "64" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_bs_info.bs_size_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_bs_info.bs_size_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -17262,7 +17260,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_bs_info.b_read_from_bs_info_registers_del.i_read_from_bs_info_registers_del_n_1 ));
   (* RTL_RAM_BITS = "64" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_bs_info.bs_size_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_bs_info.bs_size_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -17283,7 +17281,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_bs_info.b_read_from_bs_info_registers_del.i_read_from_bs_info_registers_del_n_1 ));
   (* RTL_RAM_BITS = "64" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_bs_info.bs_size_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_bs_info.bs_size_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -17304,7 +17302,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_bs_info.b_read_from_bs_info_registers_del.i_read_from_bs_info_registers_del_n_1 ));
   (* RTL_RAM_BITS = "64" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_bs_info.bs_size_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_bs_info.bs_size_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -18240,7 +18238,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .p_3_in(p_3_in),
         .p_4_in(p_4_in),
         .reset_ah(reset_ah),
-        .vsm_MatrixAccel_event_error(vsm_MatrixAccel_event_error));
+        .vsm_ma_event_error(vsm_ma_event_error));
   Convolution_Controller_dfx_controller_0_1_delay__parameterized6 \b_rm_id_valid_del.i_rm_id_valid_del 
        (.D({\b_rm_id_valid_del.i_rm_id_valid_del_n_2 ,\b_rm_id_valid_del.i_rm_id_valid_del_n_3 ,\b_rm_id_valid_del.i_rm_id_valid_del_n_4 ,\b_rm_id_valid_del.i_rm_id_valid_del_n_5 ,\b_rm_id_valid_del.i_rm_id_valid_del_n_6 }),
         .E(\b_rm_id_valid_del.i_rm_id_valid_del_n_1 ),
@@ -18325,7 +18323,9 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .\b_rm_info.reg_rdata_rm_table_ctrl_reg[5] (\b_rm_info.b_start_axi_read_del.i_start_axi_read_del_n_7 ),
         .\b_rm_info.reg_rdata_rm_table_ctrl_reg[6] (\b_rm_info.b_start_axi_read_del.i_start_axi_read_del_n_8 ),
         .\b_rm_info.reg_rdata_rm_table_ctrl_reg[7] (\b_rm_info.b_start_axi_read_del.i_start_axi_read_del_n_9 ),
+        .\b_rm_info.reg_rdata_rm_table_ctrl_reg[8] (\b_rm_info.b_start_axi_read_del.i_start_axi_read_del_n_10 ),
         .clk(clk),
+        .in(in[64]),
         .out(\opt_has_pipe.first_q_reg[0] ),
         .\reg_rdata_reg[0] (\b_rm_info.reg_rdata_rm_table_address_reg_n_0_[0] ),
         .\reg_rdata_reg[1] (\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_2 ),
@@ -18338,11 +18338,12 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .\reg_rdata_reg[4]_0 (\status_error_field_reg_n_0_[1] ),
         .\reg_rdata_reg[5] (\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_6 ),
         .\reg_rdata_reg[5]_0 (\status_error_field_reg_n_0_[2] ),
-        .\reg_rdata_reg[6] (\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_7 ),
-        .\reg_rdata_reg[6]_0 (\status_error_field_reg_n_0_[3] ),
+        .\reg_rdata_reg[6] (\status_error_field_reg_n_0_[3] ),
+        .\reg_rdata_reg[6]_0 (\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_7 ),
         .\reg_rdata_reg[7] (\status_reg_n_0_[7] ),
         .\reg_rdata_reg[7]_0 (\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_8 ),
-        .reg_rdata_rm_table_ctrl1_out(reg_rdata_rm_table_ctrl1_out[7:0]),
+        .\reg_rdata_reg[8] (\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_9 ),
+        .reg_rdata_rm_table_ctrl1_out(reg_rdata_rm_table_ctrl1_out),
         .reg_tready_d1_i_2(\b_bs_info.b_write_to_bs_info_registers_edge.axi_write_complete_reg_n_0 ),
         .reg_tready_d1_i_2_0(\b_rm_info.b_write_to_rm_info_registers_edge.axi_write_complete_reg_0 ),
         .reg_tready_d1_i_3(\opt_has_pipe.first_q_reg[0]_1 ),
@@ -18382,7 +18383,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
        (.C(clk),
         .CE(1'b1),
         .D(\b_rm_info.gen_address_reg.access_address_del_reg[0]_0 ),
-        .Q(access_address_del),
+        .Q(access_address_del__0),
         .R(1'b0));
   FDRE \b_rm_info.reg_rdata_rm_table_address_reg[0] 
        (.C(clk),
@@ -18469,7 +18470,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .Q(\b_rm_info.reg_rdata_rm_table_ctrl_reg[12]_0 [0]),
         .R(\b_rm_info.b_in_shutdown_del.i_in_shutdown_del_n_2 ));
   FDRE #(
-    .INIT(1'b0)) 
+    .INIT(1'b1)) 
     \b_rm_info.reset_required_reg[0] 
        (.C(clk),
         .CE(vsm_read_enable_vec),
@@ -18477,7 +18478,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .Q(reset_required),
         .R(1'b0));
   FDRE #(
-    .INIT(1'b0)) 
+    .INIT(1'b1)) 
     \b_rm_info.reset_required_reg[1] 
        (.C(clk),
         .CE(vsm_read_enable_vec),
@@ -18485,7 +18486,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .Q(reset_required__0),
         .R(1'b0));
   (* RTL_RAM_BITS = "2" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_rm_info.rm_address_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_rm_info.rm_address_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -18494,9 +18495,9 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
   (* ram_slice_begin = "0" *) 
   (* ram_slice_end = "0" *) 
   RAM32X1S #(
-    .INIT(32'h00000000)) 
+    .INIT(32'h00000002)) 
     \b_rm_info.rm_address_table_reg_0_1_0_0 
-       (.A0(access_address_del),
+       (.A0(access_address_del__0),
         .A1(1'b0),
         .A2(1'b0),
         .A3(1'b0),
@@ -18506,7 +18507,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_rm_info.b_read_from_rm_info_registers_del.i_read_from_rm_info_registers_del_n_2 ));
   (* RTL_RAM_BITS = "26" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_rm_info.rm_ctrl_reg_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_rm_info.rm_ctrl_reg_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -18517,7 +18518,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
   RAM32X1S #(
     .INIT(32'h00000000)) 
     \b_rm_info.rm_ctrl_reg_table_reg_0_1_0_0 
-       (.A0(access_address_del),
+       (.A0(access_address_del__0),
         .A1(1'b0),
         .A2(1'b0),
         .A3(1'b0),
@@ -18534,7 +18535,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .I1(in_shutdown_d1),
         .O(\b_rm_info.rm_ctrl_reg_table_reg_0_1_0_0_i_2_n_0 ));
   (* RTL_RAM_BITS = "26" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_rm_info.rm_ctrl_reg_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_rm_info.rm_ctrl_reg_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -18545,7 +18546,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
   RAM32X1S #(
     .INIT(32'h00000000)) 
     \b_rm_info.rm_ctrl_reg_table_reg_0_1_10_10 
-       (.A0(access_address_del),
+       (.A0(access_address_del__0),
         .A1(1'b0),
         .A2(1'b0),
         .A3(1'b0),
@@ -18555,7 +18556,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_rm_info.b_read_from_rm_info_registers_del.i_read_from_rm_info_registers_del_n_1 ));
   (* RTL_RAM_BITS = "26" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_rm_info.rm_ctrl_reg_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_rm_info.rm_ctrl_reg_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -18566,7 +18567,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
   RAM32X1S #(
     .INIT(32'h00000000)) 
     \b_rm_info.rm_ctrl_reg_table_reg_0_1_11_11 
-       (.A0(access_address_del),
+       (.A0(access_address_del__0),
         .A1(1'b0),
         .A2(1'b0),
         .A3(1'b0),
@@ -18576,7 +18577,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_rm_info.b_read_from_rm_info_registers_del.i_read_from_rm_info_registers_del_n_1 ));
   (* RTL_RAM_BITS = "26" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_rm_info.rm_ctrl_reg_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_rm_info.rm_ctrl_reg_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -18587,7 +18588,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
   RAM32X1S #(
     .INIT(32'h00000000)) 
     \b_rm_info.rm_ctrl_reg_table_reg_0_1_12_12 
-       (.A0(access_address_del),
+       (.A0(access_address_del__0),
         .A1(1'b0),
         .A2(1'b0),
         .A3(1'b0),
@@ -18597,7 +18598,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_rm_info.b_read_from_rm_info_registers_del.i_read_from_rm_info_registers_del_n_1 ));
   (* RTL_RAM_BITS = "26" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_rm_info.rm_ctrl_reg_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_rm_info.rm_ctrl_reg_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -18608,7 +18609,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
   RAM32X1S #(
     .INIT(32'h00000000)) 
     \b_rm_info.rm_ctrl_reg_table_reg_0_1_1_1 
-       (.A0(access_address_del),
+       (.A0(access_address_del__0),
         .A1(1'b0),
         .A2(1'b0),
         .A3(1'b0),
@@ -18618,7 +18619,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_rm_info.b_read_from_rm_info_registers_del.i_read_from_rm_info_registers_del_n_1 ));
   (* RTL_RAM_BITS = "26" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_rm_info.rm_ctrl_reg_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_rm_info.rm_ctrl_reg_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -18629,7 +18630,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
   RAM32X1S #(
     .INIT(32'h00000000)) 
     \b_rm_info.rm_ctrl_reg_table_reg_0_1_2_2 
-       (.A0(access_address_del),
+       (.A0(access_address_del__0),
         .A1(1'b0),
         .A2(1'b0),
         .A3(1'b0),
@@ -18639,7 +18640,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_rm_info.b_read_from_rm_info_registers_del.i_read_from_rm_info_registers_del_n_1 ));
   (* RTL_RAM_BITS = "26" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_rm_info.rm_ctrl_reg_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_rm_info.rm_ctrl_reg_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -18648,9 +18649,9 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
   (* ram_slice_begin = "3" *) 
   (* ram_slice_end = "3" *) 
   RAM32X1S #(
-    .INIT(32'h00000000)) 
+    .INIT(32'h00000001)) 
     \b_rm_info.rm_ctrl_reg_table_reg_0_1_3_3 
-       (.A0(access_address_del),
+       (.A0(access_address_del__0),
         .A1(1'b0),
         .A2(1'b0),
         .A3(1'b0),
@@ -18660,7 +18661,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_rm_info.b_read_from_rm_info_registers_del.i_read_from_rm_info_registers_del_n_1 ));
   (* RTL_RAM_BITS = "26" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_rm_info.rm_ctrl_reg_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_rm_info.rm_ctrl_reg_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -18669,9 +18670,9 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
   (* ram_slice_begin = "4" *) 
   (* ram_slice_end = "4" *) 
   RAM32X1S #(
-    .INIT(32'h00000000)) 
+    .INIT(32'h00000001)) 
     \b_rm_info.rm_ctrl_reg_table_reg_0_1_4_4 
-       (.A0(access_address_del),
+       (.A0(access_address_del__0),
         .A1(1'b0),
         .A2(1'b0),
         .A3(1'b0),
@@ -18681,7 +18682,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_rm_info.b_read_from_rm_info_registers_del.i_read_from_rm_info_registers_del_n_1 ));
   (* RTL_RAM_BITS = "26" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_rm_info.rm_ctrl_reg_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_rm_info.rm_ctrl_reg_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -18692,7 +18693,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
   RAM32X1S #(
     .INIT(32'h00000000)) 
     \b_rm_info.rm_ctrl_reg_table_reg_0_1_5_5 
-       (.A0(access_address_del),
+       (.A0(access_address_del__0),
         .A1(1'b0),
         .A2(1'b0),
         .A3(1'b0),
@@ -18702,7 +18703,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_rm_info.b_read_from_rm_info_registers_del.i_read_from_rm_info_registers_del_n_1 ));
   (* RTL_RAM_BITS = "26" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_rm_info.rm_ctrl_reg_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_rm_info.rm_ctrl_reg_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -18713,7 +18714,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
   RAM32X1S #(
     .INIT(32'h00000000)) 
     \b_rm_info.rm_ctrl_reg_table_reg_0_1_6_6 
-       (.A0(access_address_del),
+       (.A0(access_address_del__0),
         .A1(1'b0),
         .A2(1'b0),
         .A3(1'b0),
@@ -18723,7 +18724,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_rm_info.b_read_from_rm_info_registers_del.i_read_from_rm_info_registers_del_n_1 ));
   (* RTL_RAM_BITS = "26" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_rm_info.rm_ctrl_reg_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_rm_info.rm_ctrl_reg_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -18734,7 +18735,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
   RAM32X1S #(
     .INIT(32'h00000000)) 
     \b_rm_info.rm_ctrl_reg_table_reg_0_1_7_7 
-       (.A0(access_address_del),
+       (.A0(access_address_del__0),
         .A1(1'b0),
         .A2(1'b0),
         .A3(1'b0),
@@ -18744,7 +18745,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_rm_info.b_read_from_rm_info_registers_del.i_read_from_rm_info_registers_del_n_1 ));
   (* RTL_RAM_BITS = "26" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_rm_info.rm_ctrl_reg_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_rm_info.rm_ctrl_reg_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -18755,7 +18756,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
   RAM32X1S #(
     .INIT(32'h00000000)) 
     \b_rm_info.rm_ctrl_reg_table_reg_0_1_8_8 
-       (.A0(access_address_del),
+       (.A0(access_address_del__0),
         .A1(1'b0),
         .A2(1'b0),
         .A3(1'b0),
@@ -18765,7 +18766,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .WCLK(clk),
         .WE(\b_rm_info.b_read_from_rm_info_registers_del.i_read_from_rm_info_registers_del_n_1 ));
   (* RTL_RAM_BITS = "26" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_rm_info.rm_ctrl_reg_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_rm_info.rm_ctrl_reg_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -18776,7 +18777,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
   RAM32X1S #(
     .INIT(32'h00000000)) 
     \b_rm_info.rm_ctrl_reg_table_reg_0_1_9_9 
-       (.A0(access_address_del),
+       (.A0(access_address_del__0),
         .A1(1'b0),
         .A2(1'b0),
         .A3(1'b0),
@@ -18856,7 +18857,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .rm_reset_i_reg_1(in_shutdown),
         .sw_trigger_pending_reg(sw_trigger_pending),
         .using_sw_trigger(using_sw_trigger),
-        .vsm_MatrixAccel_rm_reset(vsm_MatrixAccel_rm_reset),
+        .vsm_ma_rm_reset(vsm_ma_rm_reset),
         .write_to_sw_trigger_reg_cmb(write_to_sw_trigger_reg_cmb));
   Convolution_Controller_dfx_controller_0_1_delay__parameterized2_9 \b_start_fetching_all_del.i_start_fetching_all_del 
        (.Q(current_state),
@@ -18966,7 +18967,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
        (.C(clk),
         .CE(1'b1),
         .D(access_address),
-        .Q(\b_trigger_table.gen_address_reg.access_address_del_reg_n_0_[0] ),
+        .Q(access_address_del),
         .R(1'b0));
   FDRE \b_trigger_table.reg_rdata_trigger_table_reg[0] 
        (.C(clk),
@@ -18975,7 +18976,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .Q(reg_rdata_trigger_table),
         .R(1'b0));
   (* RTL_RAM_BITS = "2" *) 
-  (* RTL_RAM_NAME = "i_vsm_MatrixAccel/b_trigger_table.trigger2rm_table" *) 
+  (* RTL_RAM_NAME = "i_vsm_ma/b_trigger_table.trigger2rm_table" *) 
   (* RTL_RAM_TYPE = "RAM_SP" *) 
   (* XILINX_LEGACY_PRIM = "RAM16X1S" *) 
   (* ram_addr_begin = "0" *) 
@@ -18984,9 +18985,9 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
   (* ram_slice_begin = "0" *) 
   (* ram_slice_end = "0" *) 
   RAM32X1S #(
-    .INIT(32'h00000000)) 
+    .INIT(32'h00000002)) 
     \b_trigger_table.trigger2rm_table_reg_0_1_0_0 
-       (.A0(\b_trigger_table.gen_address_reg.access_address_del_reg_n_0_[0] ),
+       (.A0(access_address_del),
         .A1(1'b0),
         .A2(1'b0),
         .A3(1'b0),
@@ -19024,7 +19025,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
   LUT6 #(
     .INIT(64'h1100000011000300)) 
     \current_state[0]_i_4 
-       (.I0(vsm_MatrixAccel_rm_shutdown_ack),
+       (.I0(vsm_ma_rm_shutdown_ack),
         .I1(current_state[2]),
         .I2(\current_state[0]_i_8_n_0 ),
         .I3(current_state[1]),
@@ -19179,7 +19180,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .I1(current_state[0]),
         .I2(shutdown_required[0]),
         .I3(shutdown_required[1]),
-        .I4(vsm_MatrixAccel_rm_shutdown_ack),
+        .I4(vsm_ma_rm_shutdown_ack),
         .O(\current_state[2]_i_7_n_0 ));
   LUT6 #(
     .INIT(64'h0000070000000000)) 
@@ -19308,7 +19309,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
        (.C(clk),
         .CE(1'b1),
         .D(rm_reset_i4),
-        .Q(vsm_MatrixAccel_fetch_req),
+        .Q(vsm_ma_fetch_req),
         .R(reset_ah));
   FDRE #(
     .INIT(1'b1)) 
@@ -19572,7 +19573,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
   FDRE \reg_rdata_reg[8] 
        (.C(clk),
         .CE(reset),
-        .D(\b_bs_info.b_start_axi_read_del.i_start_axi_read_del_n_11 ),
+        .D(\b_rm_info.b_start_axi_read_del.i_start_axi_read_del_n_10 ),
         .Q(D[8]),
         .R(\b_trigger_table.b_start_axi_read_del.i_start_axi_read_del_n_2 ));
   FDRE \reg_rdata_reg[9] 
@@ -19862,7 +19863,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
   LUT6 #(
     .INIT(64'hFE02FE020000FFFF)) 
     rm_decouple_i_i_1
-       (.I0(vsm_MatrixAccel_rm_decouple),
+       (.I0(vsm_ma_rm_decouple),
         .I1(rm_reset_i_reg_0),
         .I2(rm_decouple_i_i_2_n_0),
         .I3(rm_decouple_i_i_3_n_0),
@@ -19893,7 +19894,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
        (.C(clk),
         .CE(1'b1),
         .D(rm_decouple_i_i_1_n_0),
-        .Q(vsm_MatrixAccel_rm_decouple),
+        .Q(vsm_ma_rm_decouple),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
@@ -19929,17 +19930,17 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .I2(reset_duration[6]),
         .O(rm_reset_i_i_5_n_0));
   FDRE #(
-    .INIT(1'b1)) 
+    .INIT(1'b0)) 
     rm_reset_i_reg
        (.C(clk),
         .CE(1'b1),
         .D(\b_rm_info_valid_del.i_rm_info_valid_del_n_12 ),
-        .Q(vsm_MatrixAccel_rm_reset),
+        .Q(vsm_ma_rm_reset),
         .R(1'b0));
   LUT6 #(
     .INIT(64'hFFFFFFFFFFFE0002)) 
     rm_shutdown_req_i_i_1
-       (.I0(vsm_MatrixAccel_rm_shutdown_req),
+       (.I0(vsm_ma_rm_shutdown_req),
         .I1(user_restarted_with_status),
         .I2(rm_shutdown_req_i_i_2_n_0),
         .I3(rm_reset_i_reg_0),
@@ -19988,7 +19989,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
        (.C(clk),
         .CE(1'b1),
         .D(rm_shutdown_req_i_i_1_n_0),
-        .Q(vsm_MatrixAccel_rm_shutdown_req),
+        .Q(vsm_ma_rm_shutdown_req),
         .R(1'b0));
   FDRE #(
     .INIT(1'b0)) 
@@ -20002,7 +20003,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
   LUT3 #(
     .INIT(8'hB8)) 
     \status_encoded_field[0]_i_1 
-       (.I0(vsm_MatrixAccel_rm_shutdown_ack),
+       (.I0(vsm_ma_rm_shutdown_ack),
         .I1(in_shutdown),
         .I2(\status_encoded_field[0]_i_2_n_0 ),
         .O(\status_encoded_field[0]_i_1_n_0 ));
@@ -20164,7 +20165,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .I2(sw_shutdown_req_i_i_4_n_0),
         .I3(cp_error_flag_reg_0),
         .I4(in_shutdown),
-        .I5(vsm_MatrixAccel_sw_shutdown_req),
+        .I5(vsm_ma_sw_shutdown_req),
         .O(sw_shutdown_req_i_i_2_n_0));
   (* SOFT_HLUTNM = "soft_lutpair151" *) 
   LUT4 #(
@@ -20188,7 +20189,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
        (.C(clk),
         .CE(1'b1),
         .D(sw_shutdown_req_i_i_2_n_0),
-        .Q(vsm_MatrixAccel_sw_shutdown_req),
+        .Q(vsm_ma_sw_shutdown_req),
         .R(reset_ah));
   LUT5 #(
     .INIT(32'hAFACA0AC)) 
@@ -20197,7 +20198,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
         .I1(sw_startup_req_i_i_2_n_0),
         .I2(cp_error_flag_reg_0),
         .I3(in_shutdown),
-        .I4(vsm_MatrixAccel_sw_startup_req),
+        .I4(vsm_ma_sw_startup_req),
         .O(sw_startup_req_i_i_1_n_0));
   LUT6 #(
     .INIT(64'h4000400000004000)) 
@@ -20215,7 +20216,7 @@ module Convolution_Controller_dfx_controller_0_1_dfx_controller_Convolution_Cont
        (.C(clk),
         .CE(1'b1),
         .D(sw_startup_req_i_i_1_n_0),
-        .Q(vsm_MatrixAccel_sw_startup_req),
+        .Q(vsm_ma_sw_startup_req),
         .R(reset_ah));
   FDRE #(
     .INIT(1'b0)) 
@@ -27552,7 +27553,7 @@ module Convolution_Controller_dfx_controller_0_1_glb_srl_fifo
     reset_ah,
     clk,
     reqs_stored,
-    vsm_MatrixAccel_fetch_req,
+    vsm_ma_fetch_req,
     fsm_cs,
     \dma_addr_reg[4] ,
     id_fifo_not_full,
@@ -27572,7 +27573,7 @@ module Convolution_Controller_dfx_controller_0_1_glb_srl_fifo
   input reset_ah;
   input clk;
   input reqs_stored;
-  input vsm_MatrixAccel_fetch_req;
+  input vsm_ma_fetch_req;
   input [2:0]fsm_cs;
   input \dma_addr_reg[4] ;
   input id_fifo_not_full;
@@ -27705,7 +27706,7 @@ module Convolution_Controller_dfx_controller_0_1_glb_srl_fifo
   wire rd_avail;
   wire reqs_stored;
   wire reset_ah;
-  wire vsm_MatrixAccel_fetch_req;
+  wire vsm_ma_fetch_req;
 
   LUT4 #(
     .INIT(16'hFFFE)) 
@@ -27789,7 +27790,7 @@ module Convolution_Controller_dfx_controller_0_1_glb_srl_fifo
     \add_1[0]_i_1 
        (.I0(\add_1[2]_i_2_n_0 ),
         .I1(not_full),
-        .I2(vsm_MatrixAccel_fetch_req),
+        .I2(vsm_ma_fetch_req),
         .I3(reqs_stored),
         .I4(\add_1_reg_n_0_[0] ),
         .O(\add_1[0]_i_1_n_0 ));
@@ -27799,7 +27800,7 @@ module Convolution_Controller_dfx_controller_0_1_glb_srl_fifo
        (.I0(\add_1[2]_i_2_n_0 ),
         .I1(\add_1_reg_n_0_[0] ),
         .I2(reqs_stored),
-        .I3(vsm_MatrixAccel_fetch_req),
+        .I3(vsm_ma_fetch_req),
         .I4(not_full),
         .I5(\add_1_reg_n_0_[1] ),
         .O(\add_1[1]_i_1_n_0 ));
@@ -27861,7 +27862,7 @@ module Convolution_Controller_dfx_controller_0_1_glb_srl_fifo
   LUT3 #(
     .INIT(8'hC8)) 
     \b_find_req.gen_vsm_input_vectors[0].reqs_stored[0]_i_1 
-       (.I0(vsm_MatrixAccel_fetch_req),
+       (.I0(vsm_ma_fetch_req),
         .I1(full_0),
         .I2(reqs_stored),
         .O(fetch_req_reg));
@@ -28159,7 +28160,7 @@ module Convolution_Controller_dfx_controller_0_1_glb_srl_fifo
     .INIT(8'hA8)) 
     \fifo_1_reg[3][1]_srl4_i_1 
        (.I0(not_full),
-        .I1(vsm_MatrixAccel_fetch_req),
+        .I1(vsm_ma_fetch_req),
         .I2(reqs_stored),
         .O(fifo_write));
   (* srl_bus_name = "U0/\i_fetch0/i_req_fifo/fifo_1_reg[3] " *) 
@@ -29420,7 +29421,7 @@ module Convolution_Controller_dfx_controller_0_1_glb_srl_fifo
         .I1(\add_1_reg_n_0_[0] ),
         .I2(\add_1[2]_i_2_n_0 ),
         .I3(not_full),
-        .I4(vsm_MatrixAccel_fetch_req),
+        .I4(vsm_ma_fetch_req),
         .I5(reqs_stored),
         .O(not_full_1_i_1__1_n_0));
   (* register_duplication = "no" *) 
@@ -32452,7 +32453,7 @@ module Convolution_Controller_dfx_controller_0_1_xbip_pipe_v3_0_6_viv__parameter
     rm_reset_i_reg,
     rm_reset_i_reg_0,
     rm_reset_i_reg_1,
-    vsm_MatrixAccel_rm_reset);
+    vsm_ma_rm_reset);
   output \opt_has_pipe.i_pipe[2].pipe_reg[2][0]_0 ;
   output [3:0]D;
   output [2:0]\opt_has_pipe.i_pipe[2].pipe_reg[2][0]_1 ;
@@ -32500,7 +32501,7 @@ module Convolution_Controller_dfx_controller_0_1_xbip_pipe_v3_0_6_viv__parameter
   input rm_reset_i_reg;
   input rm_reset_i_reg_0;
   input rm_reset_i_reg_1;
-  input vsm_MatrixAccel_rm_reset;
+  input vsm_ma_rm_reset;
 
   wire [3:0]D;
   wire [2:0]Q;
@@ -32562,7 +32563,7 @@ module Convolution_Controller_dfx_controller_0_1_xbip_pipe_v3_0_6_viv__parameter
   wire rm_reset_i_reg_1;
   wire sw_trigger_pending_reg;
   wire using_sw_trigger;
-  wire vsm_MatrixAccel_rm_reset;
+  wire vsm_ma_rm_reset;
   wire write_to_sw_trigger_reg_cmb;
 
   LUT6 #(
@@ -32794,7 +32795,7 @@ module Convolution_Controller_dfx_controller_0_1_xbip_pipe_v3_0_6_viv__parameter
         .I1(rm_reset_i_reg_0),
         .I2(rm_reset_i_i_3_n_0),
         .I3(rm_reset_i_reg_1),
-        .I4(vsm_MatrixAccel_rm_reset),
+        .I4(vsm_ma_rm_reset),
         .O(in_shutdown_reg));
   LUT6 #(
     .INIT(64'h00000000FFFFFFF7)) 
@@ -32979,7 +32980,7 @@ endmodule
 
 (* ORIG_REF_NAME = "xbip_pipe_v3_0_6_viv" *) 
 module Convolution_Controller_dfx_controller_0_1_xbip_pipe_v3_0_6_viv__parameterized3
-   (vsm_MatrixAccel_event_error,
+   (vsm_ma_event_error,
     cc_done_reg,
     \current_state_reg[0] ,
     reset_ah,
@@ -32991,7 +32992,7 @@ module Convolution_Controller_dfx_controller_0_1_xbip_pipe_v3_0_6_viv__parameter
     \opt_has_pipe.first_q_reg[0]_1 ,
     p_4_in,
     Q);
-  output vsm_MatrixAccel_event_error;
+  output vsm_ma_event_error;
   output cc_done_reg;
   output \current_state_reg[0] ;
   input reset_ah;
@@ -33018,7 +33019,7 @@ module Convolution_Controller_dfx_controller_0_1_xbip_pipe_v3_0_6_viv__parameter
   wire p_3_in;
   wire p_4_in;
   wire reset_ah;
-  wire vsm_MatrixAccel_event_error;
+  wire vsm_ma_event_error;
 
   LUT4 #(
     .INIT(16'h1000)) 
@@ -33069,7 +33070,7 @@ module Convolution_Controller_dfx_controller_0_1_xbip_pipe_v3_0_6_viv__parameter
        (.C(clk),
         .CE(1'b1),
         .D(\opt_has_pipe.i_pipe[2].pipe_reg_n_0_[2][0] ),
-        .Q(vsm_MatrixAccel_event_error),
+        .Q(vsm_ma_event_error),
         .R(reset_ah));
 endmodule
 
@@ -33425,6 +33426,7 @@ module Convolution_Controller_dfx_controller_0_1_xbip_pipe_v3_0_6_viv__parameter
     \b_rm_info.reg_rdata_rm_table_ctrl_reg[5] ,
     \b_rm_info.reg_rdata_rm_table_ctrl_reg[6] ,
     \b_rm_info.reg_rdata_rm_table_ctrl_reg[7] ,
+    \b_rm_info.reg_rdata_rm_table_ctrl_reg[8] ,
     reset_ah,
     start_axi_read,
     clk,
@@ -33451,7 +33453,9 @@ module Convolution_Controller_dfx_controller_0_1_xbip_pipe_v3_0_6_viv__parameter
     \reg_rdata_reg[6] ,
     \reg_rdata_reg[6]_0 ,
     \reg_rdata_reg[7] ,
-    \reg_rdata_reg[7]_0 );
+    \reg_rdata_reg[7]_0 ,
+    \reg_rdata_reg[8] ,
+    in);
   output out;
   output reg_write_complete_sw_trigger_reg_reg;
   output \b_rm_info.reg_rdata_rm_table_ctrl_reg[0] ;
@@ -33462,6 +33466,7 @@ module Convolution_Controller_dfx_controller_0_1_xbip_pipe_v3_0_6_viv__parameter
   output \b_rm_info.reg_rdata_rm_table_ctrl_reg[5] ;
   output \b_rm_info.reg_rdata_rm_table_ctrl_reg[6] ;
   output \b_rm_info.reg_rdata_rm_table_ctrl_reg[7] ;
+  output \b_rm_info.reg_rdata_rm_table_ctrl_reg[8] ;
   input reset_ah;
   input start_axi_read;
   input clk;
@@ -33472,7 +33477,7 @@ module Convolution_Controller_dfx_controller_0_1_xbip_pipe_v3_0_6_viv__parameter
   input reg_tready_d1_i_3_0;
   input axi_write_complete;
   input reg_tready_d1_i_3_1;
-  input [7:0]reg_rdata_rm_table_ctrl1_out;
+  input [8:0]reg_rdata_rm_table_ctrl1_out;
   input [0:0]Q;
   input \reg_rdata_reg[0] ;
   input \reg_rdata_reg[1] ;
@@ -33489,6 +33494,8 @@ module Convolution_Controller_dfx_controller_0_1_xbip_pipe_v3_0_6_viv__parameter
   input \reg_rdata_reg[6]_0 ;
   input \reg_rdata_reg[7] ;
   input \reg_rdata_reg[7]_0 ;
+  input \reg_rdata_reg[8] ;
+  input [0:0]in;
 
   wire [0:0]Q;
   wire axi_write_complete;
@@ -33500,8 +33507,10 @@ module Convolution_Controller_dfx_controller_0_1_xbip_pipe_v3_0_6_viv__parameter
   wire \b_rm_info.reg_rdata_rm_table_ctrl_reg[5] ;
   wire \b_rm_info.reg_rdata_rm_table_ctrl_reg[6] ;
   wire \b_rm_info.reg_rdata_rm_table_ctrl_reg[7] ;
+  wire \b_rm_info.reg_rdata_rm_table_ctrl_reg[8] ;
   wire clk;
   (* RTL_KEEP = "true" *) wire first_q;
+  wire [0:0]in;
   wire \reg_rdata_reg[0] ;
   wire \reg_rdata_reg[1] ;
   wire \reg_rdata_reg[1]_0 ;
@@ -33517,7 +33526,8 @@ module Convolution_Controller_dfx_controller_0_1_xbip_pipe_v3_0_6_viv__parameter
   wire \reg_rdata_reg[6]_0 ;
   wire \reg_rdata_reg[7] ;
   wire \reg_rdata_reg[7]_0 ;
-  wire [7:0]reg_rdata_rm_table_ctrl1_out;
+  wire \reg_rdata_reg[8] ;
+  wire [8:0]reg_rdata_rm_table_ctrl1_out;
   wire reg_tready_d1_i_2;
   wire reg_tready_d1_i_2_0;
   wire reg_tready_d1_i_3_0;
@@ -33598,14 +33608,14 @@ module Convolution_Controller_dfx_controller_0_1_xbip_pipe_v3_0_6_viv__parameter
         .I5(\reg_rdata_reg[1]_0 ),
         .O(\b_rm_info.reg_rdata_rm_table_ctrl_reg[5] ));
   LUT6 #(
-    .INIT(64'hFF80FF80FFFFFF80)) 
+    .INIT(64'h8080FF80FFFFFFFF)) 
     \reg_rdata[6]_i_1 
        (.I0(reg_rdata_rm_table_ctrl1_out[6]),
         .I1(first_q),
         .I2(Q),
         .I3(\reg_rdata_reg[6] ),
-        .I4(\reg_rdata_reg[6]_0 ),
-        .I5(\reg_rdata_reg[1]_0 ),
+        .I4(\reg_rdata_reg[1]_0 ),
+        .I5(\reg_rdata_reg[6]_0 ),
         .O(\b_rm_info.reg_rdata_rm_table_ctrl_reg[6] ));
   LUT6 #(
     .INIT(64'h8080FF80FFFFFFFF)) 
@@ -33617,6 +33627,16 @@ module Convolution_Controller_dfx_controller_0_1_xbip_pipe_v3_0_6_viv__parameter
         .I4(\reg_rdata_reg[1]_0 ),
         .I5(\reg_rdata_reg[7]_0 ),
         .O(\b_rm_info.reg_rdata_rm_table_ctrl_reg[7] ));
+  LUT6 #(
+    .INIT(64'hFF80FF80FFFFFF80)) 
+    \reg_rdata[8]_i_1 
+       (.I0(reg_rdata_rm_table_ctrl1_out[8]),
+        .I1(first_q),
+        .I2(Q),
+        .I3(\reg_rdata_reg[8] ),
+        .I4(in),
+        .I5(\reg_rdata_reg[1]_0 ),
+        .O(\b_rm_info.reg_rdata_rm_table_ctrl_reg[8] ));
   LUT5 #(
     .INIT(32'hFFFFFFFE)) 
     reg_tready_d1_i_3
@@ -33869,9 +33889,9 @@ module Convolution_Controller_dfx_controller_0_1_xbip_pipe_v3_0_6_viv__parameter
     \b_bs_info.reg_rdata_bs_table_size_reg[5] ,
     \b_bs_info.reg_rdata_bs_table_size_reg[6] ,
     \b_bs_info.reg_rdata_bs_table_size_reg[7] ,
+    \b_bs_info.reg_rdata_bs_table_size_reg[8] ,
     \b_bs_info.reg_rdata_bs_table_size_reg[31] ,
     \opt_has_pipe.first_q_reg[0]_0 ,
-    \b_rm_info.reg_rdata_rm_table_ctrl_reg[8] ,
     \b_bs_info.reg_rdata_bs_table_size_reg[13] ,
     \b_bs_info.reg_rdata_bs_table_size_reg[14] ,
     \b_bs_info.reg_rdata_bs_table_size_reg[15] ,
@@ -33897,13 +33917,10 @@ module Convolution_Controller_dfx_controller_0_1_xbip_pipe_v3_0_6_viv__parameter
     Q,
     \reg_rdata_reg[31] ,
     \reg_rdata_reg[13] ,
-    \reg_rdata_reg[8] ,
+    \reg_rdata_reg[30] ,
     \s_axi_rresp_i_reg[1] ,
-    reg_rdata_rm_table_ctrl1_out,
-    in,
-    \reg_rdata_reg[8]_0 ,
     reset,
-    \reg_rdata_reg[30] );
+    \reg_rdata_reg[30]_0 );
   output out;
   output \b_bs_info.reg_rdata_bs_table_address_reg[0] ;
   output \b_bs_info.reg_rdata_bs_table_size_reg[1] ;
@@ -33913,9 +33930,9 @@ module Convolution_Controller_dfx_controller_0_1_xbip_pipe_v3_0_6_viv__parameter
   output \b_bs_info.reg_rdata_bs_table_size_reg[5] ;
   output \b_bs_info.reg_rdata_bs_table_size_reg[6] ;
   output \b_bs_info.reg_rdata_bs_table_size_reg[7] ;
+  output \b_bs_info.reg_rdata_bs_table_size_reg[8] ;
   output \b_bs_info.reg_rdata_bs_table_size_reg[31] ;
   output \opt_has_pipe.first_q_reg[0]_0 ;
-  output \b_rm_info.reg_rdata_rm_table_ctrl_reg[8] ;
   output \b_bs_info.reg_rdata_bs_table_size_reg[13] ;
   output \b_bs_info.reg_rdata_bs_table_size_reg[14] ;
   output \b_bs_info.reg_rdata_bs_table_size_reg[15] ;
@@ -33941,13 +33958,10 @@ module Convolution_Controller_dfx_controller_0_1_xbip_pipe_v3_0_6_viv__parameter
   input [27:0]Q;
   input [27:0]\reg_rdata_reg[31] ;
   input [1:0]\reg_rdata_reg[13] ;
-  input \reg_rdata_reg[8] ;
-  input \s_axi_rresp_i_reg[1] ;
-  input [0:0]reg_rdata_rm_table_ctrl1_out;
-  input [0:0]in;
-  input \reg_rdata_reg[8]_0 ;
-  input reset;
   input \reg_rdata_reg[30] ;
+  input \s_axi_rresp_i_reg[1] ;
+  input reset;
+  input \reg_rdata_reg[30]_0 ;
 
   wire [27:0]Q;
   wire \b_bs_info.reg_rdata_bs_table_address_reg[0] ;
@@ -33977,19 +33991,15 @@ module Convolution_Controller_dfx_controller_0_1_xbip_pipe_v3_0_6_viv__parameter
   wire \b_bs_info.reg_rdata_bs_table_size_reg[5] ;
   wire \b_bs_info.reg_rdata_bs_table_size_reg[6] ;
   wire \b_bs_info.reg_rdata_bs_table_size_reg[7] ;
-  wire \b_rm_info.reg_rdata_rm_table_ctrl_reg[8] ;
+  wire \b_bs_info.reg_rdata_bs_table_size_reg[8] ;
   wire clk;
   (* RTL_KEEP = "true" *) wire first_q;
-  wire [0:0]in;
   wire \opt_has_pipe.first_q_reg[0]_0 ;
   wire \opt_has_pipe.first_q_reg[0]_1 ;
-  wire \reg_rdata[8]_i_2_n_0 ;
   wire [1:0]\reg_rdata_reg[13] ;
   wire \reg_rdata_reg[30] ;
+  wire \reg_rdata_reg[30]_0 ;
   wire [27:0]\reg_rdata_reg[31] ;
-  wire \reg_rdata_reg[8] ;
-  wire \reg_rdata_reg[8]_0 ;
-  wire [0:0]reg_rdata_rm_table_ctrl1_out;
   wire reset;
   wire reset_0;
   wire reset_ah;
@@ -34013,7 +34023,7 @@ module Convolution_Controller_dfx_controller_0_1_xbip_pipe_v3_0_6_viv__parameter
         .I2(\reg_rdata_reg[13] [0]),
         .I3(\reg_rdata_reg[13] [1]),
         .I4(first_q),
-        .I5(\reg_rdata_reg[8] ),
+        .I5(\reg_rdata_reg[30] ),
         .O(\b_bs_info.reg_rdata_bs_table_address_reg[0] ));
   LUT5 #(
     .INIT(32'hAACAAAAA)) 
@@ -34086,7 +34096,7 @@ module Convolution_Controller_dfx_controller_0_1_xbip_pipe_v3_0_6_viv__parameter
         .I2(\reg_rdata_reg[13] [1]),
         .I3(first_q),
         .I4(Q[1]),
-        .I5(\reg_rdata_reg[8] ),
+        .I5(\reg_rdata_reg[30] ),
         .O(\b_bs_info.reg_rdata_bs_table_size_reg[1] ));
   LUT5 #(
     .INIT(32'hAACAAAAA)) 
@@ -34186,7 +34196,7 @@ module Convolution_Controller_dfx_controller_0_1_xbip_pipe_v3_0_6_viv__parameter
         .I2(\reg_rdata_reg[13] [1]),
         .I3(first_q),
         .I4(Q[2]),
-        .I5(\reg_rdata_reg[8] ),
+        .I5(\reg_rdata_reg[30] ),
         .O(\b_bs_info.reg_rdata_bs_table_size_reg[2] ));
   LUT6 #(
     .INIT(64'hAAAAAAAAAAAA02AA)) 
@@ -34195,8 +34205,8 @@ module Convolution_Controller_dfx_controller_0_1_xbip_pipe_v3_0_6_viv__parameter
         .I1(\reg_rdata_reg[13] [1]),
         .I2(\reg_rdata_reg[13] [0]),
         .I3(first_q),
-        .I4(\reg_rdata_reg[8] ),
-        .I5(\reg_rdata_reg[30] ),
+        .I4(\reg_rdata_reg[30] ),
+        .I5(\reg_rdata_reg[30]_0 ),
         .O(reset_0));
   LUT5 #(
     .INIT(32'hAACAAAAA)) 
@@ -34214,7 +34224,7 @@ module Convolution_Controller_dfx_controller_0_1_xbip_pipe_v3_0_6_viv__parameter
         .I1(\reg_rdata_reg[13] [1]),
         .I2(\reg_rdata_reg[13] [0]),
         .I3(first_q),
-        .I4(\reg_rdata_reg[8] ),
+        .I4(\reg_rdata_reg[30] ),
         .I5(Q[27]),
         .O(\b_bs_info.reg_rdata_bs_table_size_reg[31] ));
   LUT6 #(
@@ -34225,7 +34235,7 @@ module Convolution_Controller_dfx_controller_0_1_xbip_pipe_v3_0_6_viv__parameter
         .I2(\reg_rdata_reg[13] [1]),
         .I3(first_q),
         .I4(Q[3]),
-        .I5(\reg_rdata_reg[8] ),
+        .I5(\reg_rdata_reg[30] ),
         .O(\b_bs_info.reg_rdata_bs_table_size_reg[3] ));
   LUT6 #(
     .INIT(64'h00000000AC00A000)) 
@@ -34235,7 +34245,7 @@ module Convolution_Controller_dfx_controller_0_1_xbip_pipe_v3_0_6_viv__parameter
         .I2(\reg_rdata_reg[13] [1]),
         .I3(first_q),
         .I4(Q[4]),
-        .I5(\reg_rdata_reg[8] ),
+        .I5(\reg_rdata_reg[30] ),
         .O(\b_bs_info.reg_rdata_bs_table_size_reg[4] ));
   LUT6 #(
     .INIT(64'h00000000AC00A000)) 
@@ -34245,17 +34255,17 @@ module Convolution_Controller_dfx_controller_0_1_xbip_pipe_v3_0_6_viv__parameter
         .I2(\reg_rdata_reg[13] [1]),
         .I3(first_q),
         .I4(Q[5]),
-        .I5(\reg_rdata_reg[8] ),
+        .I5(\reg_rdata_reg[30] ),
         .O(\b_bs_info.reg_rdata_bs_table_size_reg[5] ));
   LUT6 #(
-    .INIT(64'h00000000AC00A000)) 
+    .INIT(64'hFFFFFFFF53FF5FFF)) 
     \reg_rdata[6]_i_2 
        (.I0(\reg_rdata_reg[31] [6]),
         .I1(\reg_rdata_reg[13] [0]),
         .I2(\reg_rdata_reg[13] [1]),
         .I3(first_q),
         .I4(Q[6]),
-        .I5(\reg_rdata_reg[8] ),
+        .I5(\reg_rdata_reg[30] ),
         .O(\b_bs_info.reg_rdata_bs_table_size_reg[6] ));
   LUT6 #(
     .INIT(64'hFFFFFFFF53FF5FFF)) 
@@ -34265,18 +34275,8 @@ module Convolution_Controller_dfx_controller_0_1_xbip_pipe_v3_0_6_viv__parameter
         .I2(\reg_rdata_reg[13] [1]),
         .I3(first_q),
         .I4(Q[7]),
-        .I5(\reg_rdata_reg[8] ),
+        .I5(\reg_rdata_reg[30] ),
         .O(\b_bs_info.reg_rdata_bs_table_size_reg[7] ));
-  LUT6 #(
-    .INIT(64'hEAAAEAAAFFFFEAAA)) 
-    \reg_rdata[8]_i_1 
-       (.I0(\reg_rdata[8]_i_2_n_0 ),
-        .I1(reg_rdata_rm_table_ctrl1_out),
-        .I2(\reg_rdata_reg[8] ),
-        .I3(\reg_rdata_reg[13] [0]),
-        .I4(in),
-        .I5(\reg_rdata_reg[8]_0 ),
-        .O(\b_rm_info.reg_rdata_rm_table_ctrl_reg[8] ));
   LUT6 #(
     .INIT(64'h00000000AC00A000)) 
     \reg_rdata[8]_i_2 
@@ -34285,8 +34285,8 @@ module Convolution_Controller_dfx_controller_0_1_xbip_pipe_v3_0_6_viv__parameter
         .I2(\reg_rdata_reg[13] [1]),
         .I3(first_q),
         .I4(Q[8]),
-        .I5(\reg_rdata_reg[8] ),
-        .O(\reg_rdata[8]_i_2_n_0 ));
+        .I5(\reg_rdata_reg[30] ),
+        .O(\b_bs_info.reg_rdata_bs_table_size_reg[8] ));
   LUT4 #(
     .INIT(16'hE000)) 
     \s_axi_rresp_i[1]_i_3 

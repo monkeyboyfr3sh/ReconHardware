@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
 // Date        : Thu Mar 18 13:39:25 2021
 // Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_util_vector_logic_0_1/Convolution_Controller_util_vector_logic_0_1_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top Convolution_Controller_util_vector_logic_0_1 -prefix
+//               Convolution_Controller_util_vector_logic_0_1_ Convolution_Controller_util_vector_logic_0_1_sim_netlist.v
 // Design      : Convolution_Controller_util_vector_logic_0_1
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.

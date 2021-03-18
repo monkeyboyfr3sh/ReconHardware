@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchTime="1616094840">
+<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchConfig="config_1" LaunchTime="1616097146">
+  <File Type="OPT-HWDEF" Name="CPE_Wrapper.hwdef"/>
+  <File Type="ROUTE-BUS-SKEW" Name="CPE_Wrapper_bus_skew_routed.rpt"/>
+  <File Type="PA-DCP" Name="CPE_Wrapper.dcp"/>
   <File Type="BITSTR-BMM" Name="CPE_Wrapper_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="CPE_Wrapper_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="CPE_Wrapper_timing_summary_init.rpt"/>
@@ -10,7 +13,6 @@
   <File Type="ROUTE-PWR-SUM" Name="CPE_Wrapper_power_summary_routed.pb"/>
   <File Type="REPORTS-TCL" Name="CPE_Wrapper_reports.tcl"/>
   <File Type="OPT-DRC" Name="CPE_Wrapper_drc_opted.rpt"/>
-  <File Type="OPT-HWDEF" Name="CPE_Wrapper.hwdef"/>
   <File Type="PWROPT-DCP" Name="CPE_Wrapper_pwropt.dcp"/>
   <File Type="PWROPT-DRC" Name="CPE_Wrapper_drc_pwropted.rpt"/>
   <File Type="PWROPT-TIMING" Name="CPE_Wrapper_timing_summary_pwropted.rpt"/>
@@ -48,7 +50,6 @@
   <File Type="ROUTE-TIMING-RPX" Name="CPE_Wrapper_timing_summary_routed.rpx"/>
   <File Type="ROUTE-SIMILARITY" Name="CPE_Wrapper_incremental_reuse_routed.rpt"/>
   <File Type="ROUTE-CLK" Name="CPE_Wrapper_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW" Name="CPE_Wrapper_bus_skew_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW-PB" Name="CPE_Wrapper_bus_skew_routed.pb"/>
   <File Type="ROUTE-BUS-SKEW-RPX" Name="CPE_Wrapper_bus_skew_routed.rpx"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="CPE_Wrapper_postroute_physopt.dcp"/>
@@ -75,6 +76,9 @@
   <File Type="BG-DRC" Name="CPE_Wrapper.drc"/>
   <File Type="RDI-RDI" Name="CPE_Wrapper.vdi"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="ROUTE-PARTITION-CELL-DCP" Name="ma_ma_int_32_routed.dcp"/>
+  <File Type="BG-PARTITION-CELL-BIT" Name="ma_ma_int_32_partial.bit"/>
+  <File Type="BG-PARTITION-LTX" Name="ma_ma_int_32.ltx"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/bd/Convolution_Controller/Convolution_Controller.bd">
@@ -85,34 +89,6 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/bd/Convolution_Controller/hdl/Convolution_Controller_wrapper.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/ma_int_32.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../../Sources/General/matrixAccelerator.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../../Sources/Multiplier/multiplyComputePynq.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../../Sources/Adder/param_int_adder.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -134,7 +110,14 @@
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
     <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/conv.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
     <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/conv.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>
@@ -145,9 +128,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
-      <Desc>Default settings for Implementation.</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>
@@ -158,10 +139,12 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="Convolution_Controller_util_vector_logic_0_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="Convolution_Controller_util_vector_logic_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Convolution_Controller_Convolution_Controll_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Convolution_Controller_dfx_controller_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="Convolution_Controller_rst_ps7_0_100M_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Convolution_Controller_smartconnect_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Convolution_Controller_smartconnect_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="Convolution_Controller_axi_dma_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="ma_int_32"/>
+  <BlockFileSet Type="BlockSrcs" Name="Convolution_Controller_processing_system7_0_0"/>
 </GenRun>

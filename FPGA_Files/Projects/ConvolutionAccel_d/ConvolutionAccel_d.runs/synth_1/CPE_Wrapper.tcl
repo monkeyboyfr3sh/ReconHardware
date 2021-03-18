@@ -71,9 +71,6 @@ proc create_report { reportName command } {
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 2
-set_param synth.incrementalSynthesisCache C:/Users/monke/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-3908-DESKTOP-D9F9TPQ/incrSyn
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg400-1
 
@@ -93,12 +90,12 @@ set_property ip_output_repo c:/GitHub/ReconHardware/FPGA_Files/Projects/Convolut
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
+add_files -quiet C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.runs/ma_int_32_synth_1/ma_int_32.dcp
+set_property used_in_implementation false [get_files C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.runs/ma_int_32_synth_1/ma_int_32.dcp]
+read_xdc hd_reconfig.xdc
+set_property used_in_implementation false [get_files hd_reconfig.xdc]
 read_verilog -library xil_defaultlib {
   C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.srcs/sources_1/bd/Convolution_Controller/hdl/Convolution_Controller_wrapper.v
-  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.srcs/sources_1/new/ma_int_32.v
-  C:/GitHub/ReconHardware/FPGA_Files/Sources/General/matrixAccelerator.v
-  C:/GitHub/ReconHardware/FPGA_Files/Sources/Multiplier/multiplyComputePynq.v
-  C:/GitHub/ReconHardware/FPGA_Files/Sources/Adder/param_int_adder.v
   C:/GitHub/ReconHardware/FPGA_Files/Sources/General/Convolution_Top_d.v
 }
 add_files C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.srcs/sources_1/bd/Convolution_Controller/Convolution_Controller.bd
@@ -190,6 +187,9 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
+read_xdc C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.srcs/constrs_1/new/conv.xdc
+set_property used_in_implementation false [get_files C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.srcs/constrs_1/new/conv.xdc]
+
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1

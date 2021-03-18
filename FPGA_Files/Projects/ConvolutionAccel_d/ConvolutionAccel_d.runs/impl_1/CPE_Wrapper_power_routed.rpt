@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date             : Thu Mar 18 14:18:04 2021
+| Date             : Thu Mar 18 14:55:46 2021
 | Host             : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 | Command          : report_power -file CPE_Wrapper_power_routed.rpt -pb CPE_Wrapper_power_summary_routed.pb -rpx CPE_Wrapper_power_routed.rpx
 | Design           : CPE_Wrapper
@@ -52,16 +52,16 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.048 |        3 |       --- |             --- |
-| Slice Logic              |     0.017 |    27470 |       --- |             --- |
-|   LUT as Logic           |     0.015 |    10246 |     53200 |           19.26 |
-|   Register               |    <0.001 |    11163 |    106400 |           10.49 |
+| Clocks                   |     0.047 |        3 |       --- |             --- |
+| Slice Logic              |     0.018 |    27483 |       --- |             --- |
+|   LUT as Logic           |     0.015 |    10256 |     53200 |           19.28 |
+|   Register               |    <0.001 |    11164 |    106400 |           10.49 |
 |   LUT as Distributed RAM |    <0.001 |      633 |     17400 |            3.64 |
 |   CARRY4                 |    <0.001 |      243 |     13300 |            1.83 |
 |   F7/F8 Muxes            |    <0.001 |      338 |     53200 |            0.64 |
 |   LUT as Shift Register  |    <0.001 |      260 |     17400 |            1.49 |
-|   Others                 |     0.000 |      898 |       --- |             --- |
-| Signals                  |     0.019 |    19305 |       --- |             --- |
+|   Others                 |     0.000 |      904 |       --- |             --- |
+| Signals                  |     0.019 |    19310 |       --- |             --- |
 | Block RAM                |     0.004 |        8 |       140 |            5.71 |
 | DSPs                     |     0.003 |       27 |       220 |           12.27 |
 | PS7                      |     1.256 |        1 |       --- |             --- |
@@ -161,8 +161,8 @@ Table of Contents
 |       processing_system7_0   |     1.257 |
 |       smartconnect_0         |     0.007 |
 |       smartconnect_1         |     0.032 |
-|   Convolution_Processor      |     0.006 |
-|     Convolution_Processor    |     0.006 |
+|   ma                         |     0.005 |
+|     Convolution_Processor    |     0.005 |
 +------------------------------+-----------+
 
 

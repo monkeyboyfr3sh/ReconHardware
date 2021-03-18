@@ -11,6 +11,7 @@ module CPE_Wrapper
 
 wire clk,rst_n,ip_reset;
 wire finaladd_start;
+wire vsm_ma_rst;
 
 // Matrix Accelerator signals
 wire    [ADDR_WIDTH-1:0]    AddressSelect;
@@ -40,6 +41,7 @@ Convolution_Controller_wrapper BD_Wrapper
     .MULTIPLY_START_0       (mStart_conncetor),
     .cReady_0               (cReady),
     .cSum_0                 (cSum),
+    .vsm_ma_rm_reset_0(vsm_ma_rst),
     .ICAP_0_csib(icap_csib),
     .ICAP_0_i(icap_i),
     .ICAP_0_o(icap_o),
@@ -68,10 +70,10 @@ ICAPE2_inst (
 // Convolution processor aka M.A.
 //*******************************
 ma_int_32
-Convolution_Processor
+ma
 ( // Ports    
     .Clk                    (clk),
-    .Rst                    (~rst_n),                     // This is expecting reset of active high
+    .Rst                    (~rst_n|vsm_ma_rst),                     // This is expecting reset of active high
     .multiplier_input       (multiplier_connector),     //Flat input connector. Has width of `bitLength*`inputPortcount
     .multiplicand_input     (multiplicand_connector),   //Flat input connector. Has width of `bitLength*`inputPortcount
     .AddressSelect          (AddressSelect),            //Controls addressSelect for internal XBar                          

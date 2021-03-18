@@ -77,13 +77,13 @@ ENTITY Convolution_Controller_dfx_controller_0_1 IS
     icap_rdwrb : OUT STD_LOGIC;
     icap_i : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     icap_o : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-    vsm_MatrixAccel_rm_shutdown_req : OUT STD_LOGIC;
-    vsm_MatrixAccel_rm_shutdown_ack : IN STD_LOGIC;
-    vsm_MatrixAccel_rm_decouple : OUT STD_LOGIC;
-    vsm_MatrixAccel_rm_reset : OUT STD_LOGIC;
-    vsm_MatrixAccel_event_error : OUT STD_LOGIC;
-    vsm_MatrixAccel_sw_shutdown_req : OUT STD_LOGIC;
-    vsm_MatrixAccel_sw_startup_req : OUT STD_LOGIC;
+    vsm_ma_rm_shutdown_req : OUT STD_LOGIC;
+    vsm_ma_rm_shutdown_ack : IN STD_LOGIC;
+    vsm_ma_rm_decouple : OUT STD_LOGIC;
+    vsm_ma_rm_reset : OUT STD_LOGIC;
+    vsm_ma_event_error : OUT STD_LOGIC;
+    vsm_ma_sw_shutdown_req : OUT STD_LOGIC;
+    vsm_ma_sw_startup_req : OUT STD_LOGIC;
     s_axi_reg_awaddr : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     s_axi_reg_awvalid : IN STD_LOGIC;
     s_axi_reg_awready : OUT STD_LOGIC;
@@ -133,13 +133,13 @@ ARCHITECTURE Convolution_Controller_dfx_controller_0_1_arch OF Convolution_Contr
       icap_rdwrb : OUT STD_LOGIC;
       icap_i : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
       icap_o : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-      vsm_MatrixAccel_rm_shutdown_req : OUT STD_LOGIC;
-      vsm_MatrixAccel_rm_shutdown_ack : IN STD_LOGIC;
-      vsm_MatrixAccel_rm_decouple : OUT STD_LOGIC;
-      vsm_MatrixAccel_rm_reset : OUT STD_LOGIC;
-      vsm_MatrixAccel_event_error : OUT STD_LOGIC;
-      vsm_MatrixAccel_sw_shutdown_req : OUT STD_LOGIC;
-      vsm_MatrixAccel_sw_startup_req : OUT STD_LOGIC;
+      vsm_ma_rm_shutdown_req : OUT STD_LOGIC;
+      vsm_ma_rm_shutdown_ack : IN STD_LOGIC;
+      vsm_ma_rm_decouple : OUT STD_LOGIC;
+      vsm_ma_rm_reset : OUT STD_LOGIC;
+      vsm_ma_event_error : OUT STD_LOGIC;
+      vsm_ma_sw_shutdown_req : OUT STD_LOGIC;
+      vsm_ma_sw_startup_req : OUT STD_LOGIC;
       s_axi_reg_awaddr : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
       s_axi_reg_awvalid : IN STD_LOGIC;
       s_axi_reg_awready : OUT STD_LOGIC;
@@ -240,13 +240,13 @@ BEGIN
       icap_rdwrb => icap_rdwrb,
       icap_i => icap_i,
       icap_o => icap_o,
-      vsm_MatrixAccel_rm_shutdown_req => vsm_MatrixAccel_rm_shutdown_req,
-      vsm_MatrixAccel_rm_shutdown_ack => vsm_MatrixAccel_rm_shutdown_ack,
-      vsm_MatrixAccel_rm_decouple => vsm_MatrixAccel_rm_decouple,
-      vsm_MatrixAccel_rm_reset => vsm_MatrixAccel_rm_reset,
-      vsm_MatrixAccel_event_error => vsm_MatrixAccel_event_error,
-      vsm_MatrixAccel_sw_shutdown_req => vsm_MatrixAccel_sw_shutdown_req,
-      vsm_MatrixAccel_sw_startup_req => vsm_MatrixAccel_sw_startup_req,
+      vsm_ma_rm_shutdown_req => vsm_ma_rm_shutdown_req,
+      vsm_ma_rm_shutdown_ack => vsm_ma_rm_shutdown_ack,
+      vsm_ma_rm_decouple => vsm_ma_rm_decouple,
+      vsm_ma_rm_reset => vsm_ma_rm_reset,
+      vsm_ma_event_error => vsm_ma_event_error,
+      vsm_ma_sw_shutdown_req => vsm_ma_sw_shutdown_req,
+      vsm_ma_sw_startup_req => vsm_ma_sw_startup_req,
       s_axi_reg_awaddr => s_axi_reg_awaddr,
       s_axi_reg_awvalid => s_axi_reg_awvalid,
       s_axi_reg_awready => s_axi_reg_awready,

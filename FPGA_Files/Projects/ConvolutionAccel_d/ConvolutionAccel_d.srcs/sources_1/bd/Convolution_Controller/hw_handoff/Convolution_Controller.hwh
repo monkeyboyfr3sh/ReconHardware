@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Mar 18 13:38:47 2021" VIVADOVERSION="2020.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Mar 18 14:31:19 2021" VIVADOVERSION="2020.1">
 
   <SYSTEMINFO ARCH="zynq" BOARD="tul.com.tw:pynq-z2:part0:1.0" DEVICE="7z020" NAME="Convolution_Controller" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -37,6 +37,26 @@
     <PORT DIR="O" LEFT="287" NAME="MULTIPLIER_INPUT_0" RIGHT="0" SIGIS="undef" SIGNAME="Convolution_Controll_0_MULTIPLIER_INPUT">
       <CONNECTIONS>
         <CONNECTION INSTANCE="Convolution_Controll_0" PORT="MULTIPLIER_INPUT"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="ICAP_0_csib" SIGIS="undef" SIGNAME="dfx_controller_0_icap_csib">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="dfx_controller_0" PORT="icap_csib"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="31" NAME="ICAP_0_i" RIGHT="0" SIGIS="undef" SIGNAME="dfx_controller_0_icap_o">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="dfx_controller_0" PORT="icap_o"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="31" NAME="ICAP_0_o" RIGHT="0" SIGIS="undef" SIGNAME="dfx_controller_0_icap_i">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="dfx_controller_0" PORT="icap_i"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="ICAP_0_rdwrb" SIGIS="undef" SIGNAME="dfx_controller_0_icap_rdwrb">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="dfx_controller_0" PORT="icap_rdwrb"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="IO" NAME="DDR_cas_n" SIGIS="undef" SIGNAME="processing_system7_0_DDR_CAS_n">
@@ -144,24 +164,9 @@
         <CONNECTION INSTANCE="processing_system7_0" PORT="PS_PORB"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" NAME="ICAP_0_csib" SIGIS="undef" SIGNAME="dfx_controller_0_icap_csib">
+    <PORT DIR="O" NAME="vsm_ma_rm_reset_0" SIGIS="undef" SIGNAME="dfx_controller_0_vsm_ma_rm_reset">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="dfx_controller_0" PORT="icap_csib"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" LEFT="31" NAME="ICAP_0_i" RIGHT="0" SIGIS="undef" SIGNAME="dfx_controller_0_icap_o">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="dfx_controller_0" PORT="icap_o"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" LEFT="31" NAME="ICAP_0_o" RIGHT="0" SIGIS="undef" SIGNAME="dfx_controller_0_icap_i">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="dfx_controller_0" PORT="icap_i"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="ICAP_0_rdwrb" SIGIS="undef" SIGNAME="dfx_controller_0_icap_rdwrb">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="dfx_controller_0" PORT="icap_rdwrb"/>
+        <CONNECTION INSTANCE="dfx_controller_0" PORT="vsm_ma_rm_reset"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -1896,7 +1901,7 @@
       </DOCUMENTS>
       <PARAMETERS>
         <PARAMETER NAME="C_XDEVICEFAMILY" VALUE="zynq"/>
-        <PARAMETER NAME="ALL_PARAMS" VALUE="HAS_AXI_LITE_IF 1 RESET_ACTIVE_LEVEL 0 CP_FIFO_DEPTH 32 CP_FIFO_TYPE lutram CDC_STAGES 6 VS {MatrixAccel {ID 0 NAME MatrixAccel RM {RM_0 {ID 0 NAME RM_0 BS {0 {ID 0 ADDR 0 SIZE 0 CLEAR 0}}}} POR_RM RM_0 SKIP_RM_STARTUP_AFTER_RESET 1 HAS_POR_RM 1}} CP_FAMILY 7series DIRTY 0"/>
+        <PARAMETER NAME="ALL_PARAMS" VALUE="HAS_AXI_LITE_IF 1 RESET_ACTIVE_LEVEL 0 CP_FIFO_DEPTH 32 CP_FIFO_TYPE lutram CDC_STAGES 6 VS {ma {ID 0 NAME ma RM {32 {ID 0 NAME 32 BS {0 {ID 0 ADDR 0 SIZE 0 CLEAR 0}} RESET_REQUIRED high} 16 {ID 1 NAME 16 BS {0 {ID 0 ADDR 0 SIZE 0 CLEAR 0}}}} POR_RM 32 SKIP_RM_STARTUP_AFTER_RESET 1 HAS_POR_RM 1}} CP_FAMILY 7series DIRTY 0"/>
         <PARAMETER NAME="Component_Name" VALUE="Convolution_Controller_dfx_controller_0_1"/>
         <PARAMETER NAME="GUI_HAS_AXI_LITE" VALUE="false"/>
         <PARAMETER NAME="GUI_RESET_ACTIVE_LEVEL" VALUE="0"/>
@@ -1908,7 +1913,7 @@
         <PARAMETER NAME="GUI_CP_COMPRESSION" VALUE="0"/>
         <PARAMETER NAME="GUI_SELECT_VS" VALUE="0"/>
         <PARAMETER NAME="GUI_VS_NAME" VALUE="Not Set"/>
-        <PARAMETER NAME="GUI_VS_NEW_NAME" VALUE="MatrixAccel"/>
+        <PARAMETER NAME="GUI_VS_NEW_NAME" VALUE="ma"/>
         <PARAMETER NAME="GUI_VS_START_IN_SHUTDOWN" VALUE="false"/>
         <PARAMETER NAME="GUI_VS_NUM_TRIGGERS_ALLOCATED" VALUE="2"/>
         <PARAMETER NAME="GUI_VS_NUM_RMS_ALLOCATED" VALUE="2"/>
@@ -1921,11 +1926,11 @@
         <PARAMETER NAME="GUI_VS_SKIP_RM_STARTUP_AFTER_RESET" VALUE="true"/>
         <PARAMETER NAME="GUI_SELECT_RM" VALUE="0"/>
         <PARAMETER NAME="GUI_RM_NAME" VALUE="Not Set"/>
-        <PARAMETER NAME="GUI_RM_NEW_NAME" VALUE="RM_0"/>
+        <PARAMETER NAME="GUI_RM_NEW_NAME" VALUE="32"/>
         <PARAMETER NAME="GUI_RM_ID" VALUE="0"/>
         <PARAMETER NAME="GUI_RM_SHUTDOWN_TYPE" VALUE="no"/>
         <PARAMETER NAME="GUI_RM_STARTUP_TYPE" VALUE="no"/>
-        <PARAMETER NAME="GUI_RM_RESET_REQUIRED" VALUE="no"/>
+        <PARAMETER NAME="GUI_RM_RESET_REQUIRED" VALUE="high"/>
         <PARAMETER NAME="GUI_RM_RESET_DURATION" VALUE="1"/>
         <PARAMETER NAME="GUI_BS_ADDRESS_0" VALUE="0x00000000"/>
         <PARAMETER NAME="GUI_BS_SIZE_0" VALUE="0"/>
@@ -1934,9 +1939,9 @@
         <PARAMETER NAME="GUI_BS_SIZE_1" VALUE="0"/>
         <PARAMETER NAME="GUI_BS_CLEAR_1" VALUE="true"/>
         <PARAMETER NAME="GUI_SELECT_TRIGGER_0" VALUE="0"/>
-        <PARAMETER NAME="GUI_SELECT_TRIGGER_1" VALUE="0"/>
+        <PARAMETER NAME="GUI_SELECT_TRIGGER_1" VALUE="1"/>
         <PARAMETER NAME="GUI_SELECT_TRIGGER_2" VALUE="0"/>
-        <PARAMETER NAME="GUI_SELECT_TRIGGER_3" VALUE="0"/>
+        <PARAMETER NAME="GUI_SELECT_TRIGGER_3" VALUE="1"/>
         <PARAMETER NAME="GUI_LOCK_TRIGGER_0" VALUE="false"/>
         <PARAMETER NAME="GUI_LOCK_TRIGGER_1" VALUE="false"/>
         <PARAMETER NAME="GUI_LOCK_TRIGGER_2" VALUE="false"/>
@@ -2137,17 +2142,21 @@
             <CONNECTION INSTANCE="smartconnect_0" PORT="M02_AXI_rready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="vsm_MatrixAccel_rm_shutdown_req" SIGIS="undef"/>
-        <PORT DIR="I" NAME="vsm_MatrixAccel_rm_shutdown_ack" SIGIS="undef"/>
-        <PORT DIR="O" NAME="vsm_MatrixAccel_rm_decouple" SIGIS="undef" SIGNAME="dfx_controller_0_vsm_MatrixAccel_rm_decouple">
+        <PORT DIR="O" NAME="vsm_ma_rm_shutdown_req" SIGIS="undef"/>
+        <PORT DIR="I" NAME="vsm_ma_rm_shutdown_ack" SIGIS="undef"/>
+        <PORT DIR="O" NAME="vsm_ma_rm_decouple" SIGIS="undef" SIGNAME="dfx_controller_0_vsm_ma_rm_decouple">
           <CONNECTIONS>
             <CONNECTION INSTANCE="util_vector_logic_1" PORT="Op1"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="vsm_MatrixAccel_rm_reset" SIGIS="undef"/>
-        <PORT DIR="O" NAME="vsm_MatrixAccel_event_error" SIGIS="undef"/>
-        <PORT DIR="O" NAME="vsm_MatrixAccel_sw_shutdown_req" SIGIS="undef"/>
-        <PORT DIR="O" NAME="vsm_MatrixAccel_sw_startup_req" SIGIS="undef"/>
+        <PORT DIR="O" NAME="vsm_ma_rm_reset" SIGIS="undef" SIGNAME="dfx_controller_0_vsm_ma_rm_reset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="vsm_ma_rm_reset_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="vsm_ma_event_error" SIGIS="undef"/>
+        <PORT DIR="O" NAME="vsm_ma_sw_shutdown_req" SIGIS="undef"/>
+        <PORT DIR="O" NAME="vsm_ma_sw_startup_req" SIGIS="undef"/>
       </PORTS>
       <BUSINTERFACES>
         <BUSINTERFACE BUSNAME="dfx_controller_0_ICAP" NAME="ICAP" TYPE="INITIATOR" VLNV="xilinx.com:interface:icap:1.0">
@@ -4864,6 +4873,78 @@
             <CONNECTION INSTANCE="axi_dma_0" PORT="m_axi_s2mm_bready"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="I" LEFT="31" NAME="S02_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="dfx_controller_0_m_axi_mem_araddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dfx_controller_0" PORT="m_axi_mem_araddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="S02_AXI_arlen" RIGHT="0" SIGIS="undef" SIGNAME="dfx_controller_0_m_axi_mem_arlen">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dfx_controller_0" PORT="m_axi_mem_arlen"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="S02_AXI_arsize" RIGHT="0" SIGIS="undef" SIGNAME="dfx_controller_0_m_axi_mem_arsize">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dfx_controller_0" PORT="m_axi_mem_arsize"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="S02_AXI_arburst" RIGHT="0" SIGIS="undef" SIGNAME="dfx_controller_0_m_axi_mem_arburst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dfx_controller_0" PORT="m_axi_mem_arburst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="S02_AXI_arlock" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="3" NAME="S02_AXI_arcache" RIGHT="0" SIGIS="undef" SIGNAME="dfx_controller_0_m_axi_mem_arcache">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dfx_controller_0" PORT="m_axi_mem_arcache"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="S02_AXI_arprot" RIGHT="0" SIGIS="undef" SIGNAME="dfx_controller_0_m_axi_mem_arprot">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dfx_controller_0" PORT="m_axi_mem_arprot"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="S02_AXI_arqos" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="3" NAME="S02_AXI_aruser" RIGHT="0" SIGIS="undef" SIGNAME="dfx_controller_0_m_axi_mem_aruser">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dfx_controller_0" PORT="m_axi_mem_aruser"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S02_AXI_arvalid" SIGIS="undef" SIGNAME="dfx_controller_0_m_axi_mem_arvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dfx_controller_0" PORT="m_axi_mem_arvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="S02_AXI_arready" SIGIS="undef" SIGNAME="dfx_controller_0_m_axi_mem_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dfx_controller_0" PORT="m_axi_mem_arready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="S02_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="dfx_controller_0_m_axi_mem_rdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dfx_controller_0" PORT="m_axi_mem_rdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="S02_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="dfx_controller_0_m_axi_mem_rresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dfx_controller_0" PORT="m_axi_mem_rresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="S02_AXI_rlast" SIGIS="undef" SIGNAME="dfx_controller_0_m_axi_mem_rlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dfx_controller_0" PORT="m_axi_mem_rlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="S02_AXI_rvalid" SIGIS="undef" SIGNAME="dfx_controller_0_m_axi_mem_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dfx_controller_0" PORT="m_axi_mem_rvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S02_AXI_rready" SIGIS="undef" SIGNAME="dfx_controller_0_m_axi_mem_rready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dfx_controller_0" PORT="m_axi_mem_rready"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="O" LEFT="31" NAME="M00_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_S_AXI_HP0_AWADDR">
           <CONNECTIONS>
             <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_AWADDR"/>
@@ -4994,6 +5075,7 @@
             <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_ARQOS"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="O" LEFT="3" NAME="M00_AXI_aruser" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="O" NAME="M00_AXI_arvalid" SIGIS="undef" SIGNAME="processing_system7_0_S_AXI_HP0_ARVALID">
           <CONNECTIONS>
             <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_ARVALID"/>
@@ -5029,79 +5111,6 @@
             <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_RREADY"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="S02_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="dfx_controller_0_m_axi_mem_araddr">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="dfx_controller_0" PORT="m_axi_mem_araddr"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="7" NAME="S02_AXI_arlen" RIGHT="0" SIGIS="undef" SIGNAME="dfx_controller_0_m_axi_mem_arlen">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="dfx_controller_0" PORT="m_axi_mem_arlen"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="2" NAME="S02_AXI_arsize" RIGHT="0" SIGIS="undef" SIGNAME="dfx_controller_0_m_axi_mem_arsize">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="dfx_controller_0" PORT="m_axi_mem_arsize"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="S02_AXI_arburst" RIGHT="0" SIGIS="undef" SIGNAME="dfx_controller_0_m_axi_mem_arburst">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="dfx_controller_0" PORT="m_axi_mem_arburst"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="0" NAME="S02_AXI_arlock" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="3" NAME="S02_AXI_arcache" RIGHT="0" SIGIS="undef" SIGNAME="dfx_controller_0_m_axi_mem_arcache">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="dfx_controller_0" PORT="m_axi_mem_arcache"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="2" NAME="S02_AXI_arprot" RIGHT="0" SIGIS="undef" SIGNAME="dfx_controller_0_m_axi_mem_arprot">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="dfx_controller_0" PORT="m_axi_mem_arprot"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="3" NAME="S02_AXI_arqos" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="3" NAME="S02_AXI_aruser" RIGHT="0" SIGIS="undef" SIGNAME="dfx_controller_0_m_axi_mem_aruser">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="dfx_controller_0" PORT="m_axi_mem_aruser"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="S02_AXI_arvalid" SIGIS="undef" SIGNAME="dfx_controller_0_m_axi_mem_arvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="dfx_controller_0" PORT="m_axi_mem_arvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="S02_AXI_arready" SIGIS="undef" SIGNAME="dfx_controller_0_m_axi_mem_arready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="dfx_controller_0" PORT="m_axi_mem_arready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="S02_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="dfx_controller_0_m_axi_mem_rdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="dfx_controller_0" PORT="m_axi_mem_rdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="1" NAME="S02_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="dfx_controller_0_m_axi_mem_rresp">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="dfx_controller_0" PORT="m_axi_mem_rresp"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="S02_AXI_rlast" SIGIS="undef" SIGNAME="dfx_controller_0_m_axi_mem_rlast">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="dfx_controller_0" PORT="m_axi_mem_rlast"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="S02_AXI_rvalid" SIGIS="undef" SIGNAME="dfx_controller_0_m_axi_mem_rvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="dfx_controller_0" PORT="m_axi_mem_rvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="S02_AXI_rready" SIGIS="undef" SIGNAME="dfx_controller_0_m_axi_mem_rready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="dfx_controller_0" PORT="m_axi_mem_rready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="3" NAME="M00_AXI_aruser" RIGHT="0" SIGIS="undef"/>
       </PORTS>
       <BUSINTERFACES>
         <BUSINTERFACE BUSNAME="axi_dma_0_M_AXI_MM2S" DATAWIDTH="32" NAME="S00_AXI" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
@@ -5367,9 +5376,9 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" LEFT="0" NAME="Op1" RIGHT="0" SIGIS="undef" SIGNAME="dfx_controller_0_vsm_MatrixAccel_rm_decouple">
+        <PORT DIR="I" LEFT="0" NAME="Op1" RIGHT="0" SIGIS="undef" SIGNAME="dfx_controller_0_vsm_ma_rm_decouple">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="dfx_controller_0" PORT="vsm_MatrixAccel_rm_decouple"/>
+            <CONNECTION INSTANCE="dfx_controller_0" PORT="vsm_ma_rm_decouple"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="Res" RIGHT="0" SIGIS="undef" SIGNAME="util_vector_logic_1_Res">
