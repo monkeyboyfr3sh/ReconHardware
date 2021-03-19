@@ -40,8 +40,6 @@ XDcfg_Config *XDcfgCfgPtr;
 #define XPRC_VS_MA_RM_32_ID 0
 #define XPRC_VS_MA_RM_16_ID 1
 
-
-
 /* Main */
 int main()
 {
@@ -67,16 +65,34 @@ int main()
 
 	// Copy SD data to DDR4
 	print("\r\nCopying SD content to DDR4...\r\n");
-	struct image_type im1;
-	u32 status = fill_image(&im1, 0, 0, "file.txt");
+
+	struct image_type image1;
+	u32 status = fill_image(&image1, 0, 0, "file.txt");
 	if (status != XST_SUCCESS) {
 		return XST_FAILURE;
 	}
 
 	xil_printf("\r\n");
-	for(int i = 0;i<im1.file_size;i++){
-		xil_printf("%c\r\n",im1.img_arrayPtr[i]);
+
+	/* Run the poll example for simple transfer */
+	xil_printf("################## DMA TEST 1 ##################\r\n");
+	Status = Process_Image(&image1);
+	if (Status != XST_SUCCESS) {
+		xil_printf("XAxiDma_SimplePoll Example Failed\r\n");
+		return XST_FAILURE;
 	}
+
+//	XPrc_SendSwTrigger (&Prc, XPRC_VS_MA_ID, XPRC_VS_MA_RM_32_ID);
+
+	xil_printf("################## DMA TEST 2 ##################\r\n");
+	Status = Process_Image(DMA_DEV_ID);
+	if (Status != XST_SUCCESS) {
+		xil_printf("XAxiDma_SimplePoll Example Failed\r\n");
+		return XST_FAILURE;
+	}
+
+	xil_printf("Successfully ran XAxiDma_SimplePoll Example\r\n");
+
 
 //	// Init DCFG device, disable PCAP, enable ICAP
 //	XDcfg_0 = XDcfg_Initialize(XPAR_XDCFG_0_DEVICE_ID);
@@ -114,24 +130,6 @@ int main()
 //
 //	print_BsInfo();
 //
-//	/* Run the poll example for simple transfer */
-//	xil_printf("################## DMA TEST 1 ##################\r\n");
-//	Status = Process_Image(DMA_DEV_ID);
-//	if (Status != XST_SUCCESS) {
-//		xil_printf("XAxiDma_SimplePoll Example Failed\r\n");
-//		return XST_FAILURE;
-//	}
-//
-////	XPrc_SendSwTrigger (&Prc, XPRC_VS_MA_ID, XPRC_VS_MA_RM_32_ID);
-//
-//	xil_printf("################## DMA TEST 2 ##################\r\n");
-//	Status = Process_Image(DMA_DEV_ID);
-//	if (Status != XST_SUCCESS) {
-//		xil_printf("XAxiDma_SimplePoll Example Failed\r\n");
-//		return XST_FAILURE;
-//	}
-//
-//	xil_printf("Successfully ran XAxiDma_SimplePoll Example\r\n");
 //
 //	xil_printf("--- Exiting main() --- \r\n");
 //

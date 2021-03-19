@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
+#include <string.h>
 #include "xparameters.h"
 #include "xil_printf.h"
 #include "xil_io.h"
@@ -48,11 +49,13 @@ typedef struct image_type {
 	u32 img_width;
 	u32 img_height;
 
+	u32* img_tx_ptr;
 	u32 img_tx_pckt_len;
 	u32 img_tx_byte_cnt;
+
+	u32* img_rx_ptr;
 	u32 img_rx_pckt_len;
 	u32 img_rx_byte_cnt;
-	u32* img_arrayPtr;
 };
 
 struct kernel_type {
