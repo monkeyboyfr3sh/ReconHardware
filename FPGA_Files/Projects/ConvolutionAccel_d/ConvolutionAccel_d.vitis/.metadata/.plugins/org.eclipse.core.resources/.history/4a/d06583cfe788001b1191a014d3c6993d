@@ -1,0 +1,332 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+
+#include "platform.h"
+#include "xparameters.h"
+#include "xil_printf.h"
+#include "xil_io.h"
+
+#include "xprc.h"
+#include "xdevcfg.h"
+#include "xaxidma.h"
+#include "CPE_driver.h"
+#include "SD.h"
+
+/* Function Prototypes */
+int Process_Image(u16 DeviceId);
+static int CheckData(u32 type);
+static XDcfg *XDcfg_Initialize(u16 DeviceId);
+void print_BsInfo();
+unsigned short extract_bits(unsigned short value, int begin, int end);
+u16 PrintStatusReg(XPrc* Prc, u16 VS_ID);
+int ReadStatusReg(XPrc* Prc, u16 VS_ID);
+
+
+/* Process Definitions */
+#define XDCFG_DEVICE_ID 	XPAR_PS7_DEV_CFG_0_DEVICE_ID
+
+/************ RM INFORMATION ************/
+XPrc Prc;
+XPrc_Config *XPrcCfgPtr;
+XDcfg *XDcfg_0;
+XDcfg Dcfg;
+XDcfg_Config *XDcfgCfgPtr;
+
+#define PARTIAL_SHIFT_RM_SIZE 	220872
+// VSM IDs
+#define XPRC_VS_MA_ID 0
+#define NUM_RMS 2
+// RM IDs
+#define XPRC_VS_MA_RM_32_ID 0
+#define XPRC_VS_MA_RM_16_ID 1
+
+
+
+/* Main */
+int main()
+{
+	int Status;
+	// Status vars
+	u32 copy_status;
+	u32 gpio_init;
+	u32 sd_init;
+	u32 dcfg_init;
+	u32 prc_init;
+	u32 prc_status;
+	u32 prc_status_state;
+	u32 prc_status_last_state;
+	u32 prc_status_err;
+
+	xil_printf("\r\n--- Entering main() --- \r\n");
+
+	// Initialize SD card
+	sd_init = SD_Init();
+	if(sd_init != XST_SUCCESS){
+	  return XST_FAILURE;
+	}
+
+	// Copy SD data to DDR4
+	print("\r\nCopying SD content to DDR4...\r\n");
+	u8* addr1 = malloc(PARTIAL_SHIFT_RM_SIZE);
+	copy_status = SD_Transfer("ma32P.bin", addr1, PARTIAL_SHIFT_RM_SIZE);
+	if (copy_status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+	u8* addr2 = malloc(PARTIAL_SHIFT_RM_SIZE);
+	copy_status = SD_Transfer("ma16P.bin", addr2, PARTIAL_SHIFT_RM_SIZE);
+	if (copy_status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	// Init DCFG device, disable PCAP, enable ICAP
+	XDcfg_0 = XDcfg_Initialize(XPAR_XDCFG_0_DEVICE_ID);
+
+	// Lookup DFX Config Pointer
+	XPrcCfgPtr = XPrc_LookupConfig(XPAR_DFX_CONTROLLER_0_DEVICE_ID);
+	if (NULL == XPrcCfgPtr) {
+	  xil_printf("DFX Config Pointer Initialization Failed\r\n");
+	  return XST_FAILURE;
+	}
+
+	// Init DFX controller
+	prc_init = XPrc_CfgInitialize(&Prc, XPrcCfgPtr, XPrcCfgPtr->BaseAddress);
+	if (prc_init != XST_SUCCESS) {
+	  xil_printf("DFX Controller Initialization Failed\r\n");
+	  return XST_FAILURE;
+	}
+
+	xil_printf("DFX Controller initialized.\r\n");
+	PrintStatusReg(&Prc,XPRC_VS_MA_ID);
+
+	xil_printf("Putting VS into shutdown.\r\n");
+	XPrc_SendShutdownCommand(&Prc, XPRC_VS_MA_ID);
+	while(XPrc_IsVsmInShutdown(&Prc, XPRC_VS_MA_ID)==XPRC_SR_SHUTDOWN_OFF);
+	PrintStatusReg(&Prc,XPRC_VS_MA_ID);
+
+	// Setting shift RMs
+	XPrc_SetBsSize   (&Prc, XPRC_VS_MA_ID, XPRC_VS_MA_RM_32_ID,  PARTIAL_SHIFT_RM_SIZE);
+	XPrc_SetBsSize   (&Prc, XPRC_VS_MA_ID, XPRC_VS_MA_RM_16_ID, PARTIAL_SHIFT_RM_SIZE);
+	XPrc_SetBsAddress(&Prc, XPRC_VS_MA_ID, XPRC_VS_MA_RM_32_ID,  addr1);
+	XPrc_SetBsAddress(&Prc, XPRC_VS_MA_ID, XPRC_VS_MA_RM_16_ID, addr2);
+
+	XPrc_SendRestartWithStatusCommand(&Prc, XPRC_VS_MA_ID,XPRC_CR_VS_FULL,XPRC_VS_MA_RM_32_ID);
+	while(XPrc_IsVsmInShutdown(&Prc, XPRC_VS_MA_ID)==XPRC_SR_SHUTDOWN_ON);
+
+	print_BsInfo();
+
+	/* Run the poll example for simple transfer */
+	xil_printf("################## DMA TEST 1 ##################\r\n");
+	Status = Process_Image(DMA_DEV_ID);
+	if (Status != XST_SUCCESS) {
+		xil_printf("XAxiDma_SimplePoll Example Failed\r\n");
+		return XST_FAILURE;
+	}
+
+//	XPrc_SendSwTrigger (&Prc, XPRC_VS_MA_ID, XPRC_VS_MA_RM_32_ID);
+
+	xil_printf("################## DMA TEST 2 ##################\r\n");
+	Status = Process_Image(DMA_DEV_ID);
+	if (Status != XST_SUCCESS) {
+		xil_printf("XAxiDma_SimplePoll Example Failed\r\n");
+		return XST_FAILURE;
+	}
+
+	xil_printf("Successfully ran XAxiDma_SimplePoll Example\r\n");
+
+	xil_printf("--- Exiting main() --- \r\n");
+
+	return XST_SUCCESS;
+
+}
+
+int Process_Image(u16 DeviceId)
+{
+	XAxiDma_Config *CfgPtr;
+	int Status;
+	int Tries = NUMBER_OF_TRANSFERS;
+	int Index;
+	u32 *TxBufferPtr;
+	u32 *RxBufferPtr;
+	u32 Value;
+
+	TxBufferPtr = (u32 *)TX_BUFFER_BASE ;
+	RxBufferPtr = (u32 *)RX_BUFFER_BASE;
+
+	/* Initialize the XAxiDma device.
+	 */
+	CfgPtr = XAxiDma_LookupConfig(DeviceId);
+	if (!CfgPtr) {
+		xil_printf("No config found for %d\r\n", DeviceId);
+		return XST_FAILURE;
+	}
+
+	Status = XAxiDma_CfgInitialize(&AxiDma, CfgPtr);
+	if (Status != XST_SUCCESS) {
+		xil_printf("Initialization failed %d\r\n", Status);
+		return XST_FAILURE;
+	}
+
+	if(XAxiDma_HasSg(&AxiDma)){
+		xil_printf("Device configured as SG mode \r\n");
+		return XST_FAILURE;
+	}
+
+	CC_status_register();
+
+	u32 val;
+	bool pass = true;
+	xil_printf("\nQuick AXI test... ");
+	for(u32 i = 0;i<100;i++){
+		Xil_Out32(CONV_CONTROL_BASE,i);
+		val = Xil_In32(CONV_CONTROL_BASE);
+		if(val != i){
+			xil_printf("ERROR: val = %d... ",val);
+			pass = false;
+		}
+	}
+	Xil_Out32(CONV_CONTROL_BASE,0);
+	if(pass){
+		xil_printf("test PASS!\r\n");
+	} else {
+		xil_printf("test FAIL!\r\n");
+	}
+
+	xil_printf("Setting command register\r\n");
+	CC_comand_register();
+
+	CC_status_register();
+
+	/* Disable interrupts, we use polling mode
+	 */
+	XAxiDma_IntrDisable(&AxiDma, XAXIDMA_IRQ_ALL_MASK,
+						XAXIDMA_DEVICE_TO_DMA);
+	XAxiDma_IntrDisable(&AxiDma, XAXIDMA_IRQ_ALL_MASK,
+						XAXIDMA_DMA_TO_DEVICE);
+
+	Value = TEST_START_VALUE;
+	xil_printf("TxBuffer = {");
+	for(Index = 0; Index < TX_PCKT_LEN; Index ++) {
+		if(Index%img_widthd==0){
+			xil_printf("\r\n	");
+		}
+		TxBufferPtr[Index] = image[Index]+10;
+		xil_printf("0x%2x,",TxBufferPtr[Index]);
+	}
+	xil_printf("\r\n}\r\n");
+
+	Xil_DCacheFlushRange((UINTPTR)TxBufferPtr, TX_BYTE_CNT);
+	Xil_DCacheFlushRange((UINTPTR)RxBufferPtr, RX_BYTE_CNT);
+
+	Status = XAxiDma_SimpleTransfer(&AxiDma,(UINTPTR) RxBufferPtr,
+			RX_BYTE_CNT, XAXIDMA_DEVICE_TO_DMA);
+
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	Status = XAxiDma_SimpleTransfer(&AxiDma,(UINTPTR) TxBufferPtr,
+			TX_BYTE_CNT, XAXIDMA_DMA_TO_DEVICE);
+
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	CC_status_register();
+
+	while ((XAxiDma_Busy(&AxiDma,XAXIDMA_DEVICE_TO_DMA)) ||
+		(XAxiDma_Busy(&AxiDma,XAXIDMA_DMA_TO_DEVICE))) {
+			/* Wait */
+	}
+
+	xil_printf("RxBuffer = {");
+	for(Index = 0; Index < RX_PCKT_LEN; Index ++) {
+		if(Index%(img_widthd-2)==0){
+			xil_printf("\r\n	");
+		}
+		xil_printf("0x%3x,",RxBufferPtr[Index]);
+	}
+	xil_printf("\r\n}\r\n");
+
+	/* Test finishes successfully
+	 */
+	return XST_SUCCESS;
+}
+
+
+/* DFX Controller Stuff */
+static XDcfg *XDcfg_Initialize(u16 DeviceId)
+{
+	u32 CtrlReg;
+	u32 Status;
+	XDcfg *Instance = malloc(sizeof *Instance);
+	XDcfg_Config *Config = XDcfg_LookupConfig(DeviceId);
+	Status = XDcfg_CfgInitialize(Instance, Config, Config->BaseAddr);
+	if(Status != XST_SUCCESS){
+		print("Device configuration initialisation failed\n\r");
+		exit(0);
+	}
+	XDcfg_SelectIcapInterface(Instance);
+	return Instance;
+}
+unsigned short extract_bits(unsigned short value, int begin, int end)
+{
+    unsigned short mask = (1 << (end - begin)) - 1;
+    return (value >> begin) & mask;
+}
+
+u16 PrintStatusReg(XPrc* Prc, u16 VS_ID){
+	u32 prc_status = XPrc_ReadStatusReg(Prc, VS_ID);
+
+	// Extracting bits from DFX status reg
+	u8 STATE = extract_bits(prc_status,0,3);
+	u8 ERROR = extract_bits(prc_status,3,7);
+	bool SHUTDOWN = extract_bits(prc_status,7,8);
+	u16 RM_ID = extract_bits(prc_status,8,24);
+
+	if(STATE == 4) {
+
+	}
+
+	xil_printf("\nVS %d, RM %d STATUS register:\r\n",VS_ID,RM_ID);
+	xil_printf("   -STATE = %x\r\n",STATE);
+	xil_printf("   -ERROR = %x\r\n",ERROR);
+	xil_printf("   -SHUTDOWN = %x\r\n",SHUTDOWN);
+
+	return RM_ID;
+}
+int ReadStatusReg(XPrc* Prc, u16 VS_ID){
+	u32 prc_status = XPrc_ReadStatusReg(Prc, VS_ID);
+	return prc_status;
+}
+void print_BsInfo(){
+	bool on = false;
+	xil_printf("Printing BS Info ...\r\n");
+	if(XPrc_IsVsmInShutdown(&Prc, XPRC_VS_MA_ID)==XPRC_SR_SHUTDOWN_OFF){
+		on = true;
+		XPrc_SendShutdownCommand(&Prc, XPRC_VS_MA_ID);
+		while(XPrc_IsVsmInShutdown(&Prc, XPRC_VS_MA_ID)==XPRC_SR_SHUTDOWN_OFF);
+	}
+	u16 current_rm = PrintStatusReg(&Prc,XPRC_VS_MA_ID);
+
+	xil_printf("VS 0, RM %d set to DDR address 0x%x with size 0x%x bytes.\r\n",
+													XPRC_VS_MA_RM_32_ID,
+			XPrc_GetBsAddress(&Prc, XPRC_VS_MA_ID, 	XPRC_VS_MA_RM_32_ID),
+			XPrc_GetBsSize(&Prc, XPRC_VS_MA_ID, 	XPRC_VS_MA_RM_32_ID)
+	);
+	xil_printf("VS 0, RM %d set to DDR address 0x%x with size 0x%x bytes.\r\n",
+													XPRC_VS_MA_RM_16_ID,
+		XPrc_GetBsAddress(&Prc, XPRC_VS_MA_ID, 		XPRC_VS_MA_RM_16_ID),
+		XPrc_GetBsSize(&Prc, XPRC_VS_MA_ID, 		XPRC_VS_MA_RM_16_ID)
+	);
+
+	if(on){
+		XPrc_SendRestartWithStatusCommand(&Prc, XPRC_VS_MA_ID,XPRC_CR_VS_FULL,current_rm);
+		while(XPrc_IsVsmInShutdown(&Prc, XPRC_VS_MA_ID)==XPRC_SR_SHUTDOWN_ON);
+	}
+	PrintStatusReg(&Prc,XPRC_VS_MA_ID);
+
+	xil_printf("BS Info done!\r\n");
+}
+
+/* SD Card Stuff */

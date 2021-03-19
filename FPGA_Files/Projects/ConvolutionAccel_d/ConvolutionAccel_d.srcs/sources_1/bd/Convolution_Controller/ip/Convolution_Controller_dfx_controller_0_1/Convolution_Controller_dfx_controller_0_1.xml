@@ -1090,7 +1090,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:3e4b8367</spirit:value>
+            <spirit:value>9:90a8c3d0</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1147,11 +1147,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Mar 18 19:31:19 UTC 2021</spirit:value>
+            <spirit:value>Fri Mar 19 14:58:16 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:fccb4e2c</spirit:value>
+            <spirit:value>9:8a5125c9</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1165,11 +1165,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Mar 18 19:31:19 UTC 2021</spirit:value>
+            <spirit:value>Fri Mar 19 14:58:16 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:fccb4e2c</spirit:value>
+            <spirit:value>9:8a5125c9</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1185,11 +1185,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Mar 18 19:31:19 UTC 2021</spirit:value>
+            <spirit:value>Fri Mar 19 14:58:16 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:fccb4e2c</spirit:value>
+            <spirit:value>9:8a5125c9</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1246,11 +1246,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Mar 18 19:31:19 UTC 2021</spirit:value>
+            <spirit:value>Fri Mar 19 14:58:16 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:9cb6e5f9</spirit:value>
+            <spirit:value>9:d0fd28bc</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1266,11 +1266,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Mar 18 19:31:19 UTC 2021</spirit:value>
+            <spirit:value>Fri Mar 19 14:58:16 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:9cb6e5f9</spirit:value>
+            <spirit:value>9:d0fd28bc</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1284,11 +1284,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Mar 18 19:32:17 UTC 2021</spirit:value>
+            <spirit:value>Fri Mar 19 18:39:53 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:fccb4e2c</spirit:value>
+            <spirit:value>9:8a5125c9</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1993,7 +1993,8 @@
   </spirit:model>
   <spirit:choices>
     <spirit:choice>
-      <spirit:name>choice_list_5065efb1</spirit:name>
+      <spirit:name>choice_list_bf1143fa</spirit:name>
+      <spirit:enumeration>16</spirit:enumeration>
       <spirit:enumeration>32</spirit:enumeration>
       <spirit:enumeration>64</spirit:enumeration>
       <spirit:enumeration>128</spirit:enumeration>
@@ -2020,9 +2021,10 @@
       <spirit:enumeration spirit:text="SW then HW">sw/hw</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
-      <spirit:name>choice_pairs_26035ba8</spirit:name>
+      <spirit:name>choice_pairs_1db0d2ce</spirit:name>
       <spirit:enumeration spirit:text="32">0</spirit:enumeration>
       <spirit:enumeration spirit:text="16">1</spirit:enumeration>
+      <spirit:enumeration spirit:text="8">2</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choice_pairs_3cd70878</spirit:name>
@@ -2659,7 +2661,8 @@
   <spirit:parameters>
     <spirit:parameter>
       <spirit:name>ALL_PARAMS</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.ALL_PARAMS" spirit:order="1">HAS_AXI_LITE_IF 1 RESET_ACTIVE_LEVEL 0 CP_FIFO_DEPTH 32 CP_FIFO_TYPE lutram CDC_STAGES 6 VS {ma {ID 0 NAME ma RM {32 {ID 0 NAME 32 BS {0 {ID 0 ADDR 0 SIZE 0 CLEAR 0}} RESET_REQUIRED high} 16 {ID 1 NAME 16 BS {0 {ID 0 ADDR 0 SIZE 0 CLEAR 0}}}} POR_RM 32 SKIP_RM_STARTUP_AFTER_RESET 1 HAS_POR_RM 1}} CP_FAMILY 7series DIRTY 0</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.ALL_PARAMS" spirit:order="1">HAS_AXI_LITE_IF 1 RESET_ACTIVE_LEVEL 0 CP_FIFO_DEPTH 32 CP_FIFO_TYPE lutram CDC_STAGES 2 VS {ma {ID 0 NAME ma RM {32 {ID 0 NAME 32 BS {0 {ID 0 ADDR 0 SIZE 0 CLEAR 0}} RESET_REQUIRED high RESET_DURATION 5} 16 {ID 1 NAME 16 BS {0 {ID 0 ADDR 0 SIZE 0 CLEAR 0}} RESET_REQUIRED high RESET_DURATION 5} 8 {ID 2 NAME 8 BS {0 {ID 0 ADDR 0 SIZE 0 CLEAR 0}} RESET_REQUIRED high RESET_DURATION 5}} POR_RM 32 SKIP_RM_STARTUP_AFTER_RESET 1 HAS_POR_RM 1 RMS_ALLOCATED 4 NUM_TRIGGERS_ALLOCATED 4 HAS_AXIS_STATUS 0 HA
+S_AXIS_CONTROL 0 SHUTDOWN_ON_ERROR 0}} CP_FAMILY 7series DIRTY 2</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Component_Name</spirit:name>
@@ -2675,7 +2678,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>GUI_CDC_STAGES</spirit:name>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.GUI_CDC_STAGES" spirit:order="5" spirit:minimum="2" spirit:maximum="6" spirit:rangeType="long">6</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.GUI_CDC_STAGES" spirit:order="5" spirit:minimum="2" spirit:maximum="6" spirit:rangeType="long">2</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>GUI_CP_FAMILY</spirit:name>
@@ -2683,7 +2686,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>GUI_CP_FIFO_DEPTH</spirit:name>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.GUI_CP_FIFO_DEPTH" spirit:choiceRef="choice_list_5065efb1" spirit:order="6">32</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.GUI_CP_FIFO_DEPTH" spirit:choiceRef="choice_list_bf1143fa" spirit:order="6">32</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>GUI_CP_FIFO_TYPE</spirit:name>
@@ -2715,11 +2718,11 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>GUI_VS_NUM_TRIGGERS_ALLOCATED</spirit:name>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.GUI_VS_NUM_TRIGGERS_ALLOCATED" spirit:order="5" spirit:minimum="2" spirit:maximum="512" spirit:rangeType="long">2</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.GUI_VS_NUM_TRIGGERS_ALLOCATED" spirit:order="5" spirit:minimum="2" spirit:maximum="512" spirit:rangeType="long">4</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>GUI_VS_NUM_RMS_ALLOCATED</spirit:name>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.GUI_VS_NUM_RMS_ALLOCATED" spirit:order="6" spirit:minimum="2" spirit:maximum="128" spirit:rangeType="long">2</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.GUI_VS_NUM_RMS_ALLOCATED" spirit:order="6" spirit:minimum="2" spirit:maximum="128" spirit:rangeType="long">4</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>GUI_VS_NUM_HW_TRIGGERS</spirit:name>
@@ -2727,7 +2730,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>GUI_VS_SHUTDOWN_ON_ERROR</spirit:name>
-      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.GUI_VS_SHUTDOWN_ON_ERROR" spirit:order="8">true</spirit:value>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.GUI_VS_SHUTDOWN_ON_ERROR" spirit:order="8">false</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>GUI_VS_HAS_AXIS_STATUS</spirit:name>
@@ -2743,7 +2746,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>GUI_VS_POR_RM</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.GUI_VS_POR_RM" spirit:choiceRef="choice_pairs_26035ba8" spirit:order="2">0</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.GUI_VS_POR_RM" spirit:choiceRef="choice_pairs_1db0d2ce" spirit:order="2">0</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>GUI_VS_SKIP_RM_STARTUP_AFTER_RESET</spirit:name>
@@ -2751,7 +2754,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>GUI_SELECT_RM</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.GUI_SELECT_RM" spirit:choiceRef="choice_pairs_26035ba8" spirit:order="2">0</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.GUI_SELECT_RM" spirit:choiceRef="choice_pairs_1db0d2ce" spirit:order="2">0</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>GUI_RM_NAME</spirit:name>
@@ -2793,7 +2796,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>GUI_RM_RESET_DURATION</spirit:name>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.GUI_RM_RESET_DURATION" spirit:order="4" spirit:minimum="1" spirit:maximum="256" spirit:rangeType="long">1</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.GUI_RM_RESET_DURATION" spirit:order="4" spirit:minimum="1" spirit:maximum="256" spirit:rangeType="long">5</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>GUI_BS_ADDRESS_0</spirit:name>
@@ -2842,19 +2845,19 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>GUI_SELECT_TRIGGER_0</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.GUI_SELECT_TRIGGER_0" spirit:choiceRef="choice_pairs_26035ba8" spirit:order="2">0</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.GUI_SELECT_TRIGGER_0" spirit:choiceRef="choice_pairs_1db0d2ce" spirit:order="2">0</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>GUI_SELECT_TRIGGER_1</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.GUI_SELECT_TRIGGER_1" spirit:choiceRef="choice_pairs_26035ba8" spirit:order="2">1</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.GUI_SELECT_TRIGGER_1" spirit:choiceRef="choice_pairs_1db0d2ce" spirit:order="2">1</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>GUI_SELECT_TRIGGER_2</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.GUI_SELECT_TRIGGER_2" spirit:choiceRef="choice_pairs_26035ba8" spirit:order="2">0</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.GUI_SELECT_TRIGGER_2" spirit:choiceRef="choice_pairs_1db0d2ce" spirit:order="2">2</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>GUI_SELECT_TRIGGER_3</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.GUI_SELECT_TRIGGER_3" spirit:choiceRef="choice_pairs_26035ba8" spirit:order="2">1</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.GUI_SELECT_TRIGGER_3" spirit:choiceRef="choice_pairs_1db0d2ce" spirit:order="2">0</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>GUI_LOCK_TRIGGER_0</spirit:name>
@@ -2960,13 +2963,21 @@
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_REG.WUSER_BITS_PER_BYTE" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXI_REG.WUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.ALL_PARAMS" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.GUI_CDC_STAGES" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.GUI_RM_NEW_NAME" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.GUI_RM_RESET_DURATION" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.GUI_RM_RESET_REQUIRED" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.GUI_SELECT_RM" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.GUI_SELECT_TRIGGER_1" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.GUI_SELECT_TRIGGER_2" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.GUI_SELECT_TRIGGER_3" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.GUI_VS_HAS_AXIS_CONTROL" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.GUI_VS_HAS_AXIS_STATUS" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.GUI_VS_HAS_POR_RM" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.GUI_VS_NEW_NAME" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.GUI_VS_NUM_RMS_ALLOCATED" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.GUI_VS_NUM_TRIGGERS_ALLOCATED" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.GUI_VS_SHUTDOWN_ON_ERROR" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.GUI_VS_SKIP_RM_STARTUP_AFTER_RESET" xilinx:valueSource="user"/>
       </xilinx:configElementInfos>
     </xilinx:coreExtensions>

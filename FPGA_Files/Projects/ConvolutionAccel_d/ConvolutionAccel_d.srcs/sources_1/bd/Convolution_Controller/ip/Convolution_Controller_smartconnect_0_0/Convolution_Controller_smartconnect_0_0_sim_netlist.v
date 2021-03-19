@@ -1,10 +1,10 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-// Date        : Thu Mar 18 14:32:57 2021
+// Date        : Thu Mar 18 14:32:55 2021
 // Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_smartconnect_0_0/Convolution_Controller_smartconnect_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top Convolution_Controller_smartconnect_0_0 -prefix
+//               Convolution_Controller_smartconnect_0_0_ Convolution_Controller_smartconnect_0_0_sim_netlist.v
 // Design      : Convolution_Controller_smartconnect_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -409,7 +409,7 @@ module Convolution_Controller_smartconnect_0_0
         .aresetn(aresetn));
 endmodule
 
-(* HW_HANDOFF = "Convolution_Controller_smartconnect_0_0.hwdef" *) (* ORIG_REF_NAME = "bd_550a" *) 
+(* HW_HANDOFF = "Convolution_Controller_smartconnect_0_0.hwdef" *) 
 module Convolution_Controller_smartconnect_0_0_bd_550a
    (M00_AXI_araddr,
     M00_AXI_arprot,
@@ -1293,7 +1293,6 @@ module Convolution_Controller_smartconnect_0_0_bd_550a
         .s_sc_send({m02_nodes_M_SC_B_SEND,m01_nodes_M_SC_B_SEND,m00_nodes_M_SC_B_SEND}));
 endmodule
 
-(* ORIG_REF_NAME = "bd_550a_arinsw_0" *) 
 module Convolution_Controller_smartconnect_0_0_bd_550a_arinsw_0
    (S_SC_AR_send,
     S_SC_AR_payld,
@@ -1342,7 +1341,6 @@ module Convolution_Controller_smartconnect_0_0_bd_550a_arinsw_0
         .s_sc_send(S00_SC_AR_send));
 endmodule
 
-(* ORIG_REF_NAME = "bd_550a_arni_0" *) 
 module Convolution_Controller_smartconnect_0_0_bd_550a_arni_0
    (S_SC_AR_recv,
     M_SC_AR_send,
@@ -1457,7 +1455,6 @@ module Convolution_Controller_smartconnect_0_0_bd_550a_arni_0
         .s_sc_send(S_SC_AR_send));
 endmodule
 
-(* ORIG_REF_NAME = "bd_550a_aroutsw_0" *) 
 module Convolution_Controller_smartconnect_0_0_bd_550a_aroutsw_0
    (M02_SC_AR_send,
     M02_SC_AR_payld,
@@ -1507,7 +1504,6 @@ module Convolution_Controller_smartconnect_0_0_bd_550a_aroutsw_0
         .s_sc_send({M_SC_AR_send,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "bd_550a_awinsw_0" *) 
 module Convolution_Controller_smartconnect_0_0_bd_550a_awinsw_0
    (S00_SC_AW_recv,
     S_SC_AW_recv);
@@ -1550,7 +1546,6 @@ module Convolution_Controller_smartconnect_0_0_bd_550a_awinsw_0
         .s_sc_send(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "bd_550a_awni_0" *) 
 module Convolution_Controller_smartconnect_0_0_bd_550a_awni_0
    (S_SC_AW_recv,
     M_SC_AW_send,
@@ -1665,7 +1660,6 @@ module Convolution_Controller_smartconnect_0_0_bd_550a_awni_0
         .s_sc_send(S_SC_AW_send));
 endmodule
 
-(* ORIG_REF_NAME = "bd_550a_awoutsw_0" *) 
 module Convolution_Controller_smartconnect_0_0_bd_550a_awoutsw_0
    (M02_SC_AW_send,
     M02_SC_AW_payld,
@@ -1715,7 +1709,6 @@ module Convolution_Controller_smartconnect_0_0_bd_550a_awoutsw_0
         .s_sc_send({M_SC_AW_send,1'b0,1'b0}));
 endmodule
 
-(* ORIG_REF_NAME = "bd_550a_binsw_0" *) 
 module Convolution_Controller_smartconnect_0_0_bd_550a_binsw_0
    (M_SC_B_recv,
     M00_SC_B_send,
@@ -1769,7 +1762,6 @@ module Convolution_Controller_smartconnect_0_0_bd_550a_binsw_0
         .s_sc_send(M_SC_B_send));
 endmodule
 
-(* ORIG_REF_NAME = "bd_550a_bni_0" *) 
 module Convolution_Controller_smartconnect_0_0_bd_550a_bni_0
    (S_SC_B_recv,
     M_SC_B_send,
@@ -1887,7 +1879,6 @@ module Convolution_Controller_smartconnect_0_0_bd_550a_bni_0
         .s_sc_send(S_SC_B_send));
 endmodule
 
-(* ORIG_REF_NAME = "bd_550a_boutsw_0" *) 
 module Convolution_Controller_smartconnect_0_0_bd_550a_boutsw_0
    (s_sc_recv,
     S_SC_B_send,
@@ -1946,7 +1937,6 @@ module Convolution_Controller_smartconnect_0_0_bd_550a_boutsw_0
         .s_sc_send(s_sc_send));
 endmodule
 
-(* ORIG_REF_NAME = "bd_550a_m00arn_0" *) 
 module Convolution_Controller_smartconnect_0_0_bd_550a_m00arn_0
    (M_SC_AR_send,
     M_SC_AR_payld,
@@ -2056,7 +2046,6 @@ module Convolution_Controller_smartconnect_0_0_bd_550a_m00arn_0
         .s_sc_send(M00_AXI_arvalid));
 endmodule
 
-(* ORIG_REF_NAME = "bd_550a_m00awn_0" *) 
 module Convolution_Controller_smartconnect_0_0_bd_550a_m00awn_0
    (M_SC_AW_send,
     M_SC_AW_payld,
@@ -2166,7 +2155,6 @@ module Convolution_Controller_smartconnect_0_0_bd_550a_m00awn_0
         .s_sc_send(M00_AXI_awvalid));
 endmodule
 
-(* ORIG_REF_NAME = "bd_550a_m00bn_0" *) 
 module Convolution_Controller_smartconnect_0_0_bd_550a_m00bn_0
    (S_SC_B_recv,
     M_SC_B_send,
@@ -2277,7 +2265,6 @@ module Convolution_Controller_smartconnect_0_0_bd_550a_m00bn_0
         .s_sc_send(M00_AXI_bvalid));
 endmodule
 
-(* ORIG_REF_NAME = "bd_550a_m00e_0" *) 
 module Convolution_Controller_smartconnect_0_0_bd_550a_m00e_0
    (M_SC_AW_recv,
     M00_SC_W_recv,
@@ -2530,7 +2517,6 @@ module Convolution_Controller_smartconnect_0_0_bd_550a_m00e_0
         .s_axi_wvalid(m_axi_wvalid));
 endmodule
 
-(* ORIG_REF_NAME = "bd_550a_m00rn_0" *) 
 module Convolution_Controller_smartconnect_0_0_bd_550a_m00rn_0
    (S_SC_R_recv,
     M_SC_R_send,
@@ -2641,7 +2627,6 @@ module Convolution_Controller_smartconnect_0_0_bd_550a_m00rn_0
         .s_sc_send(M00_AXI_rvalid));
 endmodule
 
-(* ORIG_REF_NAME = "bd_550a_m00s2a_0" *) 
 module Convolution_Controller_smartconnect_0_0_bd_550a_m00s2a_0
    (m_axi_awaddr,
     m_axi_awprot,
@@ -2831,7 +2816,6 @@ module Convolution_Controller_smartconnect_0_0_bd_550a_m00s2a_0
         .s_sc_w_send(M_SC_W_send));
 endmodule
 
-(* ORIG_REF_NAME = "bd_550a_m00wn_0" *) 
 module Convolution_Controller_smartconnect_0_0_bd_550a_m00wn_0
    (M_SC_W_send,
     M_SC_W_payld,
@@ -2941,7 +2925,6 @@ module Convolution_Controller_smartconnect_0_0_bd_550a_m00wn_0
         .s_sc_send(M00_SC_W_send));
 endmodule
 
-(* ORIG_REF_NAME = "bd_550a_m01arn_0" *) 
 module Convolution_Controller_smartconnect_0_0_bd_550a_m01arn_0
    (M_SC_AR_send,
     M_SC_AR_payld,
@@ -3051,7 +3034,6 @@ module Convolution_Controller_smartconnect_0_0_bd_550a_m01arn_0
         .s_sc_send(M01_AXI_arvalid));
 endmodule
 
-(* ORIG_REF_NAME = "bd_550a_m01awn_0" *) 
 module Convolution_Controller_smartconnect_0_0_bd_550a_m01awn_0
    (M_SC_AW_send,
     M_SC_AW_payld,
@@ -3161,7 +3143,6 @@ module Convolution_Controller_smartconnect_0_0_bd_550a_m01awn_0
         .s_sc_send(M01_AXI_awvalid));
 endmodule
 
-(* ORIG_REF_NAME = "bd_550a_m01bn_0" *) 
 module Convolution_Controller_smartconnect_0_0_bd_550a_m01bn_0
    (S_SC_B_recv,
     M_SC_B_send,
@@ -3272,7 +3253,6 @@ module Convolution_Controller_smartconnect_0_0_bd_550a_m01bn_0
         .s_sc_send(M01_AXI_bvalid));
 endmodule
 
-(* ORIG_REF_NAME = "bd_550a_m01e_0" *) 
 module Convolution_Controller_smartconnect_0_0_bd_550a_m01e_0
    (M_SC_AW_recv,
     M01_SC_W_recv,
@@ -3525,7 +3505,6 @@ module Convolution_Controller_smartconnect_0_0_bd_550a_m01e_0
         .s_axi_wvalid(m_axi_wvalid));
 endmodule
 
-(* ORIG_REF_NAME = "bd_550a_m01rn_0" *) 
 module Convolution_Controller_smartconnect_0_0_bd_550a_m01rn_0
    (S_SC_R_recv,
     M_SC_R_send,
@@ -3636,7 +3615,6 @@ module Convolution_Controller_smartconnect_0_0_bd_550a_m01rn_0
         .s_sc_send(M01_AXI_rvalid));
 endmodule
 
-(* ORIG_REF_NAME = "bd_550a_m01s2a_0" *) 
 module Convolution_Controller_smartconnect_0_0_bd_550a_m01s2a_0
    (m_axi_awaddr,
     m_axi_awprot,
@@ -3826,7 +3804,6 @@ module Convolution_Controller_smartconnect_0_0_bd_550a_m01s2a_0
         .s_sc_w_send(M_SC_W_send));
 endmodule
 
-(* ORIG_REF_NAME = "bd_550a_m01wn_0" *) 
 module Convolution_Controller_smartconnect_0_0_bd_550a_m01wn_0
    (M_SC_W_send,
     M_SC_W_payld,
@@ -3936,7 +3913,6 @@ module Convolution_Controller_smartconnect_0_0_bd_550a_m01wn_0
         .s_sc_send(M01_SC_W_send));
 endmodule
 
-(* ORIG_REF_NAME = "bd_550a_m02arn_0" *) 
 module Convolution_Controller_smartconnect_0_0_bd_550a_m02arn_0
    (M_SC_AR_send,
     M_SC_AR_payld,
@@ -4046,7 +4022,6 @@ module Convolution_Controller_smartconnect_0_0_bd_550a_m02arn_0
         .s_sc_send(M02_SC_AR_send));
 endmodule
 
-(* ORIG_REF_NAME = "bd_550a_m02awn_0" *) 
 module Convolution_Controller_smartconnect_0_0_bd_550a_m02awn_0
    (M_SC_AW_send,
     M_SC_AW_payld,
@@ -4156,7 +4131,6 @@ module Convolution_Controller_smartconnect_0_0_bd_550a_m02awn_0
         .s_sc_send(M02_SC_AW_send));
 endmodule
 
-(* ORIG_REF_NAME = "bd_550a_m02bn_0" *) 
 module Convolution_Controller_smartconnect_0_0_bd_550a_m02bn_0
    (S_SC_B_recv,
     M_SC_B_send,
@@ -4267,7 +4241,6 @@ module Convolution_Controller_smartconnect_0_0_bd_550a_m02bn_0
         .s_sc_send(S_SC_B_send));
 endmodule
 
-(* ORIG_REF_NAME = "bd_550a_m02e_0" *) 
 module Convolution_Controller_smartconnect_0_0_bd_550a_m02e_0
    (s_axi_awready,
     s_axi_wready,
@@ -4539,7 +4512,6 @@ module Convolution_Controller_smartconnect_0_0_bd_550a_m02e_0
         .s_axi_wvalid(m_axi_wvalid));
 endmodule
 
-(* ORIG_REF_NAME = "bd_550a_m02rn_0" *) 
 module Convolution_Controller_smartconnect_0_0_bd_550a_m02rn_0
    (S_SC_R_recv,
     M_SC_R_send,
@@ -4650,7 +4622,6 @@ module Convolution_Controller_smartconnect_0_0_bd_550a_m02rn_0
         .s_sc_send(S_SC_R_send));
 endmodule
 
-(* ORIG_REF_NAME = "bd_550a_m02s2a_0" *) 
 module Convolution_Controller_smartconnect_0_0_bd_550a_m02s2a_0
    (m_sc_r_send,
     S02_SC_R_payld,
@@ -4880,7 +4851,6 @@ module Convolution_Controller_smartconnect_0_0_bd_550a_m02s2a_0
         .s_sc_w_send(M_SC_W_send));
 endmodule
 
-(* ORIG_REF_NAME = "bd_550a_m02wn_0" *) 
 module Convolution_Controller_smartconnect_0_0_bd_550a_m02wn_0
    (M_SC_W_send,
     M_SC_W_payld,
@@ -4990,7 +4960,6 @@ module Convolution_Controller_smartconnect_0_0_bd_550a_m02wn_0
         .s_sc_send(M02_SC_W_send));
 endmodule
 
-(* ORIG_REF_NAME = "bd_550a_psr_aclk_0" *) 
 module Convolution_Controller_smartconnect_0_0_bd_550a_psr_aclk_0
    (interconnect_aresetn,
     aclk,
@@ -5009,7 +4978,6 @@ module Convolution_Controller_smartconnect_0_0_bd_550a_psr_aclk_0
         .interconnect_aresetn(interconnect_aresetn));
 endmodule
 
-(* ORIG_REF_NAME = "bd_550a_rinsw_0" *) 
 module Convolution_Controller_smartconnect_0_0_bd_550a_rinsw_0
    (M00_SC_R_send,
     M00_SC_R_payld,
@@ -5058,7 +5026,6 @@ module Convolution_Controller_smartconnect_0_0_bd_550a_rinsw_0
         .s_sc_send(M_SC_R_send));
 endmodule
 
-(* ORIG_REF_NAME = "bd_550a_rni_0" *) 
 module Convolution_Controller_smartconnect_0_0_bd_550a_rni_0
    (S_SC_R_recv,
     M_SC_R_send,
@@ -5176,7 +5143,6 @@ module Convolution_Controller_smartconnect_0_0_bd_550a_rni_0
         .s_sc_send(S_SC_R_send));
 endmodule
 
-(* ORIG_REF_NAME = "bd_550a_routsw_0" *) 
 module Convolution_Controller_smartconnect_0_0_bd_550a_routsw_0
    (allow_transfer_r_reg,
     m_sc_send,
@@ -5235,7 +5201,6 @@ module Convolution_Controller_smartconnect_0_0_bd_550a_routsw_0
         .s_sc_send(\count_r_reg[0] ));
 endmodule
 
-(* ORIG_REF_NAME = "bd_550a_s00a2s_0" *) 
 module Convolution_Controller_smartconnect_0_0_bd_550a_s00a2s_0
    (M_SC_R_recv,
     M_SC_B_recv,
@@ -5468,7 +5433,6 @@ module Convolution_Controller_smartconnect_0_0_bd_550a_s00a2s_0
         .s_sc_r_send(M_SC_R_send));
 endmodule
 
-(* ORIG_REF_NAME = "bd_550a_s00mmu_0" *) 
 module Convolution_Controller_smartconnect_0_0_bd_550a_s00mmu_0
    (S00_AXI_awready,
     S00_AXI_wready,
@@ -5824,7 +5788,6 @@ module Convolution_Controller_smartconnect_0_0_bd_550a_s00mmu_0
         .s_axi_wvalid(S00_AXI_wvalid));
 endmodule
 
-(* ORIG_REF_NAME = "bd_550a_s00sic_0" *) 
 module Convolution_Controller_smartconnect_0_0_bd_550a_s00sic_0
    (s_axi_awready,
     s_axi_wready,
@@ -6132,7 +6095,6 @@ module Convolution_Controller_smartconnect_0_0_bd_550a_s00sic_0
         .s_axi_wvalid(s_axi_wready_i_reg));
 endmodule
 
-(* ORIG_REF_NAME = "bd_550a_s00tr_0" *) 
 module Convolution_Controller_smartconnect_0_0_bd_550a_s00tr_0
    (s_axi_awready,
     s_axi_wready,
@@ -6456,7 +6418,6 @@ module Convolution_Controller_smartconnect_0_0_bd_550a_s00tr_0
         .s_axi_wvalid(s_axi_wready_i_reg));
 endmodule
 
-(* ORIG_REF_NAME = "bd_550a_sarn_0" *) 
 module Convolution_Controller_smartconnect_0_0_bd_550a_sarn_0
    (S_SC_AR_recv,
     M_SC_AR_send,
@@ -6571,7 +6532,6 @@ module Convolution_Controller_smartconnect_0_0_bd_550a_sarn_0
         .s_sc_send(S_SC_AR_send));
 endmodule
 
-(* ORIG_REF_NAME = "bd_550a_sawn_0" *) 
 module Convolution_Controller_smartconnect_0_0_bd_550a_sawn_0
    (S_SC_AW_recv,
     M_SC_AW_send,
@@ -6686,7 +6646,6 @@ module Convolution_Controller_smartconnect_0_0_bd_550a_sawn_0
         .s_sc_send(S_SC_AW_send));
 endmodule
 
-(* ORIG_REF_NAME = "bd_550a_sbn_0" *) 
 module Convolution_Controller_smartconnect_0_0_bd_550a_sbn_0
    (S_SC_B_recv,
     M_SC_B_send,
@@ -6801,7 +6760,6 @@ module Convolution_Controller_smartconnect_0_0_bd_550a_sbn_0
         .s_sc_send(M00_SC_B_send));
 endmodule
 
-(* ORIG_REF_NAME = "bd_550a_srn_0" *) 
 module Convolution_Controller_smartconnect_0_0_bd_550a_srn_0
    (S_SC_R_recv,
     M_SC_R_send,
@@ -6916,7 +6874,6 @@ module Convolution_Controller_smartconnect_0_0_bd_550a_srn_0
         .s_sc_send(M00_SC_R_send));
 endmodule
 
-(* ORIG_REF_NAME = "bd_550a_swn_0" *) 
 module Convolution_Controller_smartconnect_0_0_bd_550a_swn_0
    (S_SC_W_recv,
     M_SC_W_send,
@@ -7031,7 +6988,6 @@ module Convolution_Controller_smartconnect_0_0_bd_550a_swn_0
         .s_sc_send(S_SC_W_send));
 endmodule
 
-(* ORIG_REF_NAME = "bd_550a_winsw_0" *) 
 module Convolution_Controller_smartconnect_0_0_bd_550a_winsw_0
    (S00_SC_W_recv,
     m_sc_send,
@@ -7085,7 +7041,6 @@ module Convolution_Controller_smartconnect_0_0_bd_550a_winsw_0
         .s_sc_send(S00_SC_W_send));
 endmodule
 
-(* ORIG_REF_NAME = "bd_550a_wni_0" *) 
 module Convolution_Controller_smartconnect_0_0_bd_550a_wni_0
    (S_SC_W_recv,
     M_SC_W_send,
@@ -7200,7 +7155,6 @@ module Convolution_Controller_smartconnect_0_0_bd_550a_wni_0
         .s_sc_send(S_SC_W_send));
 endmodule
 
-(* ORIG_REF_NAME = "bd_550a_woutsw_0" *) 
 module Convolution_Controller_smartconnect_0_0_bd_550a_woutsw_0
    (s_sc_recv,
     m_sc_send,
@@ -7254,7 +7208,6 @@ module Convolution_Controller_smartconnect_0_0_bd_550a_woutsw_0
         .s_sc_send(M_SC_W_send));
 endmodule
 
-(* ORIG_REF_NAME = "cdc_sync" *) 
 module Convolution_Controller_smartconnect_0_0_cdc_sync
    (scndry_out,
     aresetn,
@@ -7322,7 +7275,6 @@ module Convolution_Controller_smartconnect_0_0_cdc_sync
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "clk_map_imp_BYCJVZ" *) 
 module Convolution_Controller_smartconnect_0_0_clk_map_imp_BYCJVZ
    (interconnect_aresetn,
     aclk,
@@ -7341,7 +7293,6 @@ module Convolution_Controller_smartconnect_0_0_clk_map_imp_BYCJVZ
         .interconnect_aresetn(interconnect_aresetn));
 endmodule
 
-(* ORIG_REF_NAME = "i_nodes_imp_1T76WCH" *) 
 module Convolution_Controller_smartconnect_0_0_i_nodes_imp_1T76WCH
    (S_SC_AR_recv,
     M_SC_AR_send,
@@ -7501,7 +7452,6 @@ module Convolution_Controller_smartconnect_0_0_i_nodes_imp_1T76WCH
         .interconnect_aresetn(interconnect_aresetn));
 endmodule
 
-(* ORIG_REF_NAME = "lpf" *) 
 module Convolution_Controller_smartconnect_0_0_lpf
    (lpf_int,
     aclk,
@@ -7560,7 +7510,6 @@ module Convolution_Controller_smartconnect_0_0_lpf
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "m00_exit_pipeline_imp_1MQW8S4" *) 
 module Convolution_Controller_smartconnect_0_0_m00_exit_pipeline_imp_1MQW8S4
    (M_SC_AW_recv,
     M00_SC_W_recv,
@@ -7696,7 +7645,6 @@ module Convolution_Controller_smartconnect_0_0_m00_exit_pipeline_imp_1MQW8S4
         .m_axi_wvalid(m_axi_wvalid));
 endmodule
 
-(* ORIG_REF_NAME = "m00_nodes_imp_10I3S60" *) 
 module Convolution_Controller_smartconnect_0_0_m00_nodes_imp_10I3S60
    (M_SC_AR_send,
     M_SC_AR_payld,
@@ -7816,7 +7764,6 @@ module Convolution_Controller_smartconnect_0_0_m00_nodes_imp_10I3S60
         .interconnect_aresetn(interconnect_aresetn));
 endmodule
 
-(* ORIG_REF_NAME = "m01_exit_pipeline_imp_1IJHLMC" *) 
 module Convolution_Controller_smartconnect_0_0_m01_exit_pipeline_imp_1IJHLMC
    (M_SC_AW_recv,
     M01_SC_W_recv,
@@ -7952,7 +7899,6 @@ module Convolution_Controller_smartconnect_0_0_m01_exit_pipeline_imp_1IJHLMC
         .m_axi_wvalid(m_axi_wvalid));
 endmodule
 
-(* ORIG_REF_NAME = "m01_nodes_imp_8GOY0E" *) 
 module Convolution_Controller_smartconnect_0_0_m01_nodes_imp_8GOY0E
    (M_SC_AR_send,
     M_SC_AR_payld,
@@ -8072,7 +8018,6 @@ module Convolution_Controller_smartconnect_0_0_m01_nodes_imp_8GOY0E
         .interconnect_aresetn(interconnect_aresetn));
 endmodule
 
-(* ORIG_REF_NAME = "m02_exit_pipeline_imp_1YGB0MS" *) 
 module Convolution_Controller_smartconnect_0_0_m02_exit_pipeline_imp_1YGB0MS
    (s_axi_awready,
     s_axi_wready,
@@ -8240,7 +8185,6 @@ module Convolution_Controller_smartconnect_0_0_m02_exit_pipeline_imp_1YGB0MS
         .s_axi_wready(s_axi_wready));
 endmodule
 
-(* ORIG_REF_NAME = "m02_nodes_imp_RFPFXX" *) 
 module Convolution_Controller_smartconnect_0_0_m02_nodes_imp_RFPFXX
    (M_SC_AR_send,
     M_SC_AR_payld,
@@ -8360,7 +8304,6 @@ module Convolution_Controller_smartconnect_0_0_m02_nodes_imp_RFPFXX
         .interconnect_aresetn(interconnect_aresetn));
 endmodule
 
-(* ORIG_REF_NAME = "proc_sys_reset" *) 
 module Convolution_Controller_smartconnect_0_0_proc_sys_reset
    (interconnect_aresetn,
     aclk,
@@ -8397,7 +8340,6 @@ module Convolution_Controller_smartconnect_0_0_proc_sys_reset
         .lpf_int(lpf_int));
 endmodule
 
-(* ORIG_REF_NAME = "s00_entry_pipeline_imp_MCUTTJ" *) 
 module Convolution_Controller_smartconnect_0_0_s00_entry_pipeline_imp_MCUTTJ
    (S00_AXI_awready,
     S00_AXI_wready,
@@ -8807,7 +8749,6 @@ module Convolution_Controller_smartconnect_0_0_s00_entry_pipeline_imp_MCUTTJ
         .\w_size_mask_reg[1] (s00_mmu_M_AXI_AWSIZE));
 endmodule
 
-(* ORIG_REF_NAME = "s00_nodes_imp_J6W6LP" *) 
 module Convolution_Controller_smartconnect_0_0_s00_nodes_imp_J6W6LP
    (S_SC_AR_recv,
     M_SC_AR_send,
@@ -8959,7 +8900,6 @@ module Convolution_Controller_smartconnect_0_0_s00_nodes_imp_J6W6LP
         .interconnect_aresetn(interconnect_aresetn));
 endmodule
 
-(* ORIG_REF_NAME = "sequence_psr" *) 
 module Convolution_Controller_smartconnect_0_0_sequence_psr
    (bsr_reg_0,
     lpf_int,
@@ -9135,7 +9075,6 @@ module Convolution_Controller_smartconnect_0_0_sequence_psr
         .R(lpf_int));
 endmodule
 
-(* ORIG_REF_NAME = "switchboards_imp_D0486X" *) 
 module Convolution_Controller_smartconnect_0_0_switchboards_imp_D0486X
    (M02_SC_AR_send,
     M02_SC_AR_payld,
@@ -9388,7 +9327,6 @@ module Convolution_Controller_smartconnect_0_0_switchboards_imp_D0486X
         .s_sc_recv(i_nodes_M_SC_W_RECV));
 endmodule
 
-(* ORIG_REF_NAME = "upcnt_n" *) 
 module Convolution_Controller_smartconnect_0_0_upcnt_n
    (Q,
     seq_clr,
@@ -9518,11 +9456,10 @@ endmodule
 (* C_SC_RUSER_BITS_PER_BYTE = "0" *) (* C_SC_WDATA_WIDTH = "32" *) (* C_SC_WUSER_BITS_PER_BYTE = "0" *) 
 (* C_SSC_ROUTE_WIDTH = "3" *) (* C_WPAYLD_WIDTH = "56" *) (* LP_NZ_AXI_ID_WIDTH = "2" *) 
 (* LP_NZ_RUBPB = "1" *) (* LP_NZ_WUBPB = "1" *) (* LP_RUSER_INDEX = "0" *) 
-(* LP_WUSER_INDEX = "0" *) (* ORIG_REF_NAME = "sc_axi2sc_v1_0_7_top" *) (* T_SC_ADDR_WIDTH = "32" *) 
-(* T_SC_ARUSER_WIDTH = "1" *) (* T_SC_AWUSER_WIDTH = "1" *) (* T_SC_BUSER_WIDTH = "1" *) 
-(* T_SC_ID_WIDTH = "2" *) (* T_SC_MSC_ROUTE_WIDTH = "5" *) (* T_SC_RDATA_WIDTH = "32" *) 
-(* T_SC_RUSER_BITS_PER_BYTE = "0" *) (* T_SC_SSC_ROUTE_WIDTH = "3" *) (* T_SC_WDATA_WIDTH = "32" *) 
-(* T_SC_WUSER_BITS_PER_BYTE = "0" *) 
+(* LP_WUSER_INDEX = "0" *) (* T_SC_ADDR_WIDTH = "32" *) (* T_SC_ARUSER_WIDTH = "1" *) 
+(* T_SC_AWUSER_WIDTH = "1" *) (* T_SC_BUSER_WIDTH = "1" *) (* T_SC_ID_WIDTH = "2" *) 
+(* T_SC_MSC_ROUTE_WIDTH = "5" *) (* T_SC_RDATA_WIDTH = "32" *) (* T_SC_RUSER_BITS_PER_BYTE = "0" *) 
+(* T_SC_SSC_ROUTE_WIDTH = "3" *) (* T_SC_WDATA_WIDTH = "32" *) (* T_SC_WUSER_BITS_PER_BYTE = "0" *) 
 module Convolution_Controller_smartconnect_0_0_sc_axi2sc_v1_0_7_top
    (aclk,
     s_sc_r_req,
@@ -11996,7 +11933,6 @@ module Convolution_Controller_smartconnect_0_0_sc_axi2sc_v1_0_7_top
        (.G(\<const0> ));
 endmodule
 
-(* ORIG_REF_NAME = "sc_exit_v1_0_10_exit" *) 
 module Convolution_Controller_smartconnect_0_0_sc_exit_v1_0_10_exit
    (m_axi_awvalid,
     m_axi_arvalid,
@@ -12531,9 +12467,8 @@ endmodule
 (* C_NUM_WRITE_OUTSTANDING = "8" *) (* C_RDATA_WIDTH = "32" *) (* C_READ_ACCEPTANCE = "32" *) 
 (* C_SINGLE_ISSUING = "1" *) (* C_SSC_ROUTE_ARRAY = "12'b101101101111" *) (* C_SSC_ROUTE_WIDTH = "3" *) 
 (* C_S_ID_WIDTH = "2" *) (* C_WDATA_WIDTH = "32" *) (* C_WRITE_ACCEPTANCE = "32" *) 
-(* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "sc_exit_v1_0_10_top" *) (* P_BYPASS = "0" *) 
-(* P_FULLY_PIPELINED = "2" *) (* P_NUM_READ_OUTSTANDING = "16" *) (* P_NUM_WRITE_OUTSTANDING = "16" *) 
-(* P_ZERO_LATENCY = "1" *) 
+(* DowngradeIPIdentifiedWarnings = "yes" *) (* P_BYPASS = "0" *) (* P_FULLY_PIPELINED = "2" *) 
+(* P_NUM_READ_OUTSTANDING = "16" *) (* P_NUM_WRITE_OUTSTANDING = "16" *) (* P_ZERO_LATENCY = "1" *) 
 module Convolution_Controller_smartconnect_0_0_sc_exit_v1_0_10_top
    (aclk,
     aclken,
@@ -19739,7 +19674,6 @@ module Convolution_Controller_smartconnect_0_0_sc_exit_v1_0_10_top__parameterize
         .O(s_axi_wready));
 endmodule
 
-(* ORIG_REF_NAME = "sc_mmu_v1_0_9_decerr_slave" *) 
 module Convolution_Controller_smartconnect_0_0_sc_mmu_v1_0_9_decerr_slave
    (\gen_endpoint.err_awready ,
     \gen_endpoint.err_rvalid ,
@@ -20829,13 +20763,13 @@ endmodule
 (* C_SUPPORTS_WRITE_DECERR = "1" *) (* C_S_ARUSER_WIDTH = "0" *) (* C_S_AWUSER_WIDTH = "0" *) 
 (* C_S_BUSER_WIDTH = "0" *) (* C_S_PROTOCOL = "1" *) (* C_S_RUSER_WIDTH = "0" *) 
 (* C_S_WUSER_WIDTH = "0" *) (* C_WDATA_WIDTH = "32" *) (* C_WRITE_ACCEPTANCE = "32" *) 
-(* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "sc_mmu_v1_0_9_top" *) (* P_AXI3 = "1" *) 
-(* P_AXI4 = "0" *) (* P_AXILITE = "2" *) (* P_BYPASS = "0" *) 
-(* P_DECERR = "2'b11" *) (* P_FIXED = "2'b00" *) (* P_FULLY_PIPELINED = "2" *) 
-(* P_INCR = "2'b01" *) (* P_NUM_MSC_LOG = "2" *) (* P_NUM_SEG_LOG = "2" *) 
-(* P_R_DWBYTES = "4" *) (* P_R_DWSIZE = "2" *) (* P_R_QUEUE_SIZE = "4" *) 
-(* P_WRAP = "2'b10" *) (* P_W_DWBYTES = "4" *) (* P_W_DWSIZE = "2" *) 
-(* P_W_QUEUE_SIZE = "4" *) (* P_ZERO_LATENCY = "1" *) 
+(* DowngradeIPIdentifiedWarnings = "yes" *) (* P_AXI3 = "1" *) (* P_AXI4 = "0" *) 
+(* P_AXILITE = "2" *) (* P_BYPASS = "0" *) (* P_DECERR = "2'b11" *) 
+(* P_FIXED = "2'b00" *) (* P_FULLY_PIPELINED = "2" *) (* P_INCR = "2'b01" *) 
+(* P_NUM_MSC_LOG = "2" *) (* P_NUM_SEG_LOG = "2" *) (* P_R_DWBYTES = "4" *) 
+(* P_R_DWSIZE = "2" *) (* P_R_QUEUE_SIZE = "4" *) (* P_WRAP = "2'b10" *) 
+(* P_W_DWBYTES = "4" *) (* P_W_DWSIZE = "2" *) (* P_W_QUEUE_SIZE = "4" *) 
+(* P_ZERO_LATENCY = "1" *) 
 module Convolution_Controller_smartconnect_0_0_sc_mmu_v1_0_9_top
    (aclk,
     aresetn,
@@ -24983,7 +24917,6 @@ module Convolution_Controller_smartconnect_0_0_sc_mmu_v1_0_9_top
         .O(s_axi_rresp[1]));
 endmodule
 
-(* ORIG_REF_NAME = "sc_node_v1_0_11_arb_alg_rr" *) 
 module Convolution_Controller_smartconnect_0_0_sc_node_v1_0_11_arb_alg_rr
    (\grant_i_reg[1]_0 ,
     \grant_i_reg[1]_1 ,
@@ -25369,7 +25302,6 @@ module Convolution_Controller_smartconnect_0_0_sc_node_v1_0_11_arb_alg_rr_3
         .S(areset_r));
 endmodule
 
-(* ORIG_REF_NAME = "sc_node_v1_0_11_fi_regulator" *) 
 module Convolution_Controller_smartconnect_0_0_sc_node_v1_0_11_fi_regulator
    (allow_transfer_r_reg_0,
     E,
@@ -25595,7 +25527,6 @@ module Convolution_Controller_smartconnect_0_0_sc_node_v1_0_11_fi_regulator_7
         .O(s_sc_recv[2]));
 endmodule
 
-(* ORIG_REF_NAME = "sc_node_v1_0_11_fifo" *) 
 module Convolution_Controller_smartconnect_0_0_sc_node_v1_0_11_fifo
    (m_sc_send,
     m_sc_payld,
@@ -25858,7 +25789,6 @@ module Convolution_Controller_smartconnect_0_0_sc_node_v1_0_11_fifo__parameteriz
         .s_sc_send(s_sc_send));
 endmodule
 
-(* ORIG_REF_NAME = "sc_node_v1_0_11_mi_handler" *) 
 module Convolution_Controller_smartconnect_0_0_sc_node_v1_0_11_mi_handler
    (m_sc_send,
     out,
@@ -27088,7 +27018,6 @@ module Convolution_Controller_smartconnect_0_0_sc_node_v1_0_11_mi_handler__param
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "sc_node_v1_0_11_reg_fifo" *) 
 module Convolution_Controller_smartconnect_0_0_sc_node_v1_0_11_reg_fifo
    (m_sc_send,
     m_sc_payld,
@@ -28657,7 +28586,7 @@ endmodule
 (* LP_NODE_ROUTE_WIDTH = "5" *) (* LP_NODE_USER_WIDTH = "0" *) (* LP_SYNCHRONIZATION_STAGES = "2" *) 
 (* LP_S_AXIS_REG_SLICE_CONFIG = "0" *) (* LP_S_MAX_NUM_BYTES = "4" *) (* LP_S_MIN_NUM_BYTES = "4" *) 
 (* LP_S_PIPELINE = "0" *) (* LP_S_STATIC_DWIDTH = "1" *) (* LP_ZERO_ROUTE_WIDTH = "0" *) 
-(* ORIG_REF_NAME = "sc_node_v1_0_11_top" *) (* P_NUM_OUTSTANDING = "16" *) 
+(* P_NUM_OUTSTANDING = "16" *) 
 module Convolution_Controller_smartconnect_0_0_sc_node_v1_0_11_top
    (s_sc_aclk,
     s_sc_aclken,
@@ -33623,11 +33552,10 @@ endmodule
 (* C_SC_RUSER_BITS_PER_BYTE = "0" *) (* C_SC_WDATA_WIDTH = "32" *) (* C_SC_WUSER_BITS_PER_BYTE = "0" *) 
 (* C_SSC_ROUTE_WIDTH = "3" *) (* C_WPAYLD_WIDTH = "56" *) (* LP_NZ_AXI_ID_WIDTH = "2" *) 
 (* LP_NZ_RUBPB = "1" *) (* LP_NZ_WUBPB = "1" *) (* LP_RUSER_INDEX = "0" *) 
-(* LP_WUSER_INDEX = "0" *) (* ORIG_REF_NAME = "sc_sc2axi_v1_0_7_top" *) (* T_SC_ADDR_WIDTH = "32" *) 
-(* T_SC_ARUSER_WIDTH = "1" *) (* T_SC_AWUSER_WIDTH = "1" *) (* T_SC_BUSER_WIDTH = "1" *) 
-(* T_SC_ID_WIDTH = "2" *) (* T_SC_MSC_ROUTE_WIDTH = "5" *) (* T_SC_RDATA_WIDTH = "32" *) 
-(* T_SC_RUSER_BITS_PER_BYTE = "0" *) (* T_SC_SSC_ROUTE_WIDTH = "3" *) (* T_SC_WDATA_WIDTH = "32" *) 
-(* T_SC_WUSER_BITS_PER_BYTE = "0" *) 
+(* LP_WUSER_INDEX = "0" *) (* T_SC_ADDR_WIDTH = "32" *) (* T_SC_ARUSER_WIDTH = "1" *) 
+(* T_SC_AWUSER_WIDTH = "1" *) (* T_SC_BUSER_WIDTH = "1" *) (* T_SC_ID_WIDTH = "2" *) 
+(* T_SC_MSC_ROUTE_WIDTH = "5" *) (* T_SC_RDATA_WIDTH = "32" *) (* T_SC_RUSER_BITS_PER_BYTE = "0" *) 
+(* T_SC_SSC_ROUTE_WIDTH = "3" *) (* T_SC_WDATA_WIDTH = "32" *) (* T_SC_WUSER_BITS_PER_BYTE = "0" *) 
 module Convolution_Controller_smartconnect_0_0_sc_sc2axi_v1_0_7_top
    (aclk,
     m_sc_r_req,
@@ -43658,7 +43586,6 @@ module Convolution_Controller_smartconnect_0_0_sc_sc2axi_v1_0_7_top__parameteriz
        (.G(\<const0> ));
 endmodule
 
-(* ORIG_REF_NAME = "sc_si_converter_v1_0_9_axilite_conv" *) 
 module Convolution_Controller_smartconnect_0_0_sc_si_converter_v1_0_9_axilite_conv
    (m_axi_bready_i_reg_0,
     s_axi_bvalid_i_reg_0,
@@ -47051,12 +46978,12 @@ endmodule
 (* C_READ_WATERMARK = "0" *) (* C_SEP_PROTOCOL_ARRAY = "96'b000000000000000000000000000000100000000000000000000000000000001000000000000000000000000000000010" *) (* C_SEP_RDATA_WIDTH_ARRAY = "96'b000000000000000000000000001000000000000000000000000000000010000000000000000000000000000000100000" *) 
 (* C_SEP_WDATA_WIDTH_ARRAY = "96'b000000000000000000000000001000000000000000000000000000000010000000000000000000000000000000100000" *) (* C_SINGLE_ISSUING = "1" *) (* C_SUPPORTS_NARROW = "0" *) 
 (* C_S_RUSER_BITS_PER_BYTE = "0" *) (* C_S_WUSER_BITS_PER_BYTE = "0" *) (* C_WDATA_WIDTH = "32" *) 
-(* C_WRITE_ACCEPTANCE = "32" *) (* C_WRITE_WATERMARK = "0" *) (* ORIG_REF_NAME = "sc_si_converter_v1_0_9_top" *) 
-(* P_EXOK = "2'b01" *) (* P_FULLY_PIPELINED = "2" *) (* P_ID_WIDTH = "2" *) 
-(* P_MAX_RUSER_BITS_PER_BYTE = "1" *) (* P_MAX_WUSER_BITS_PER_BYTE = "1" *) (* P_NUM_READ_OUTSTANDING = "16" *) 
-(* P_NUM_WRITE_OUTSTANDING = "16" *) (* P_R_DWBYTES = "4" *) (* P_R_DWSIZE = "2" *) 
-(* P_S_RUSER_BITS_PER_BYTE = "1" *) (* P_S_WUSER_BITS_PER_BYTE = "1" *) (* P_W_DWBYTES = "4" *) 
-(* P_W_DWSIZE = "2" *) (* P_ZERO_LATENCY = "1" *) 
+(* C_WRITE_ACCEPTANCE = "32" *) (* C_WRITE_WATERMARK = "0" *) (* P_EXOK = "2'b01" *) 
+(* P_FULLY_PIPELINED = "2" *) (* P_ID_WIDTH = "2" *) (* P_MAX_RUSER_BITS_PER_BYTE = "1" *) 
+(* P_MAX_WUSER_BITS_PER_BYTE = "1" *) (* P_NUM_READ_OUTSTANDING = "16" *) (* P_NUM_WRITE_OUTSTANDING = "16" *) 
+(* P_R_DWBYTES = "4" *) (* P_R_DWSIZE = "2" *) (* P_S_RUSER_BITS_PER_BYTE = "1" *) 
+(* P_S_WUSER_BITS_PER_BYTE = "1" *) (* P_W_DWBYTES = "4" *) (* P_W_DWSIZE = "2" *) 
+(* P_ZERO_LATENCY = "1" *) 
 module Convolution_Controller_smartconnect_0_0_sc_si_converter_v1_0_9_top
    (aclk,
     aclken,
@@ -52504,7 +52431,6 @@ endmodule
 (* C_NUM_SI = "1" *) (* C_PAYLD_WIDTH = "148" *) (* C_S_LATENCY = "32'b00000000000000000000000000000000" *) 
 (* C_S_PIPELINES = "32'b00000000000000000000000000000000" *) (* C_TESTING_MODE = "0" *) (* K_MAX_INFO_WIDTH = "1" *) 
 (* LP_LOG_NUM_SI = "32'b00000000000000000000000000000001" *) (* LP_MUX_IMPL = "32'b00000000000000000000000000000000" *) (* LP_M_SC_SEL_MI_PIPELINE_DEPTH = "32'b00000000000000000000000000000000" *) 
-(* ORIG_REF_NAME = "sc_switchboard_v1_0_6_top" *) 
 module Convolution_Controller_smartconnect_0_0_sc_switchboard_v1_0_6_top
    (aclk,
     aclken,
@@ -54223,7 +54149,6 @@ module Convolution_Controller_smartconnect_0_0_sc_switchboard_v1_0_6_top__parame
        (.G(\<const0> ));
 endmodule
 
-(* ORIG_REF_NAME = "sc_transaction_regulator_v1_0_8_singleorder" *) 
 module Convolution_Controller_smartconnect_0_0_sc_transaction_regulator_v1_0_8_singleorder
    (\gen_id_reg.aresetn_d_reg[0]_0 ,
     \gen_id_reg.aresetn_d_reg[0]_1 ,
@@ -54593,10 +54518,9 @@ endmodule
 (* C_READ_ACCEPTANCE = "32" *) (* C_SEP_ROUTE_WIDTH = "2" *) (* C_SINGLE_ISSUING = "1" *) 
 (* C_SUPPORTS_READ_DEADLOCK = "0" *) (* C_SUPPORTS_WRITE_DEADLOCK = "0" *) (* C_S_ID_WIDTH = "12" *) 
 (* C_WDATA_WIDTH = "32" *) (* C_WRITE_ACCEPTANCE = "32" *) (* DowngradeIPIdentifiedWarnings = "yes" *) 
-(* ORIG_REF_NAME = "sc_transaction_regulator_v1_0_8_top" *) (* P_FULLY_PIPELINED = "2" *) (* P_ID_BUFFER_WIDTH = "12" *) 
-(* P_M_THREAD_ID_WIDTH = "1" *) (* P_NUM_READ_OUTSTANDING = "16" *) (* P_NUM_WRITE_OUTSTANDING = "16" *) 
-(* P_R_QUEUE_SIZE = "4" *) (* P_S_ID_WIDTH = "12" *) (* P_W_QUEUE_SIZE = "4" *) 
-(* P_ZERO_LATENCY = "1" *) 
+(* P_FULLY_PIPELINED = "2" *) (* P_ID_BUFFER_WIDTH = "12" *) (* P_M_THREAD_ID_WIDTH = "1" *) 
+(* P_NUM_READ_OUTSTANDING = "16" *) (* P_NUM_WRITE_OUTSTANDING = "16" *) (* P_R_QUEUE_SIZE = "4" *) 
+(* P_S_ID_WIDTH = "12" *) (* P_W_QUEUE_SIZE = "4" *) (* P_ZERO_LATENCY = "1" *) 
 module Convolution_Controller_smartconnect_0_0_sc_transaction_regulator_v1_0_8_top
    (mep_identifier,
     aclk,
@@ -62444,7 +62368,6 @@ module Convolution_Controller_smartconnect_0_0_sc_util_v1_0_4_axi_reg_stall__par
         .R(areset));
 endmodule
 
-(* ORIG_REF_NAME = "sc_util_v1_0_4_axi_splitter" *) 
 module Convolution_Controller_smartconnect_0_0_sc_util_v1_0_4_axi_splitter
    (\gen_endpoint.w_state_reg[0] ,
     \gen_endpoint.w_state_reg[0]_0 ,

@@ -1,0 +1,47 @@
+/*
+ * CPE_driver.c
+ *
+ *  Created on: Mar 19, 2021
+ *      Author: monke
+ */
+
+#include "CPE_driver.h"
+
+int CC_status_register(){
+	xil_printf("\nConvolution Status Reg\r\n");
+	xil_printf("=========================\r\n");
+	xil_printf("Control Enable:				0x%x\r\n",Xil_In32(CONV_CONTROL_BASE+(0x00)));
+	xil_printf("Reset:					0x%x\r\n",Xil_In32(CONV_CONTROL_BASE+(0x04)));
+	xil_printf("State Machine Register:			0x%x\r\n",Xil_In32(CONV_CONTROL_BASE+(0x08)));
+	xil_printf("Last Calculated Value:			0x%x\r\n",Xil_In32(CONV_CONTROL_BASE+(0x0c)));
+	xil_printf("Image Width:				0x%x\r\n",Xil_In32(CONV_CONTROL_BASE+(0x10)));
+	xil_printf("Image Height:				0x%x\r\n",Xil_In32(CONV_CONTROL_BASE+(0x14)));
+
+	xil_printf("\nFilter Set = {");
+	for(int i = 0;i<kernel_size*kernel_size;i++){
+		if(i%kernel_size==0){
+			xil_printf("\r\n	");
+		}
+		xil_printf("%2d,",Xil_In32(CONV_CONTROL_BASE+filter_base+(4*i)));
+	}
+	xil_printf("\r\n}\r\n");
+
+//	xil_printf("Data Set = {");
+//	for(int i = 0;i<kernel_size*kernel_size;i++){
+//		xil_printf("%x,",Xil_In32(CONV_CONTROL_BASE+data_base+(4*i)));
+//	}
+//	xil_printf("}\r\n");
+
+	xil_printf("\r\n");
+
+	return XST_SUCCESS;
+}
+
+int CC_comand_register(){
+	Xil_Out32(CONV_CONTROL_BASE+(0x00),1); // Control Start
+	for(int i = 0;i<kernel_size*kernel_size;i++){// Filter set
+		Xil_Out32(CONV_CONTROL_BASE+filter_base+(4*i),filter[i]);
+	}
+	Xil_Out32(CONV_CONTROL_BASE+(0x10),img_width);// Image width
+	Xil_Out32(CONV_CONTROL_BASE+(0x14),img_height);// Image height
+}

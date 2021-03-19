@@ -1,10 +1,10 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
--- Date        : Thu Mar 18 14:32:58 2021
+-- Date        : Thu Mar 18 14:32:56 2021
 -- Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_smartconnect_0_0/Convolution_Controller_smartconnect_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top Convolution_Controller_smartconnect_0_0 -prefix
+--               Convolution_Controller_smartconnect_0_0_ Convolution_Controller_smartconnect_0_0_sim_netlist.vhdl
 -- Design      : Convolution_Controller_smartconnect_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -20,8 +20,6 @@ entity Convolution_Controller_smartconnect_0_0_cdc_sync is
     aresetn : in STD_LOGIC;
     aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_cdc_sync : entity is "cdc_sync";
 end Convolution_Controller_smartconnect_0_0_cdc_sync;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_cdc_sync is
@@ -109,8 +107,6 @@ entity Convolution_Controller_smartconnect_0_0_upcnt_n is
     seq_cnt_en : in STD_LOGIC;
     aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_upcnt_n : entity is "upcnt_n";
 end Convolution_Controller_smartconnect_0_0_upcnt_n;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_upcnt_n is
@@ -383,8 +379,6 @@ entity Convolution_Controller_smartconnect_0_0_sc_axi2sc_v1_0_7_top is
   attribute LP_RUSER_INDEX of Convolution_Controller_smartconnect_0_0_sc_axi2sc_v1_0_7_top : entity is 0;
   attribute LP_WUSER_INDEX : integer;
   attribute LP_WUSER_INDEX of Convolution_Controller_smartconnect_0_0_sc_axi2sc_v1_0_7_top : entity is 0;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_sc_axi2sc_v1_0_7_top : entity is "sc_axi2sc_v1_0_7_top";
   attribute T_SC_ADDR_WIDTH : integer;
   attribute T_SC_ADDR_WIDTH of Convolution_Controller_smartconnect_0_0_sc_axi2sc_v1_0_7_top : entity is 32;
   attribute T_SC_ARUSER_WIDTH : integer;
@@ -2797,8 +2791,6 @@ entity Convolution_Controller_smartconnect_0_0_sc_exit_v1_0_10_exit is
     s_axi_arvalid : in STD_LOGIC;
     m_axi_arready : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_sc_exit_v1_0_10_exit : entity is "sc_exit_v1_0_10_exit";
 end Convolution_Controller_smartconnect_0_0_sc_exit_v1_0_10_exit;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_sc_exit_v1_0_10_exit is
@@ -3433,8 +3425,6 @@ entity Convolution_Controller_smartconnect_0_0_sc_mmu_v1_0_9_decerr_slave is
     m_axi_awid : in STD_LOGIC_VECTOR ( 11 downto 0 );
     m_axi_arid : in STD_LOGIC_VECTOR ( 11 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_sc_mmu_v1_0_9_decerr_slave : entity is "sc_mmu_v1_0_9_decerr_slave";
 end Convolution_Controller_smartconnect_0_0_sc_mmu_v1_0_9_decerr_slave;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_sc_mmu_v1_0_9_decerr_slave is
@@ -4678,8 +4668,6 @@ entity Convolution_Controller_smartconnect_0_0_sc_node_v1_0_11_arb_alg_rr is
     s_sc_aclk : in STD_LOGIC;
     \grant_i_reg[2]_1\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_sc_node_v1_0_11_arb_alg_rr : entity is "sc_node_v1_0_11_arb_alg_rr";
 end Convolution_Controller_smartconnect_0_0_sc_node_v1_0_11_arb_alg_rr;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_sc_node_v1_0_11_arb_alg_rr is
@@ -5141,8 +5129,6 @@ entity Convolution_Controller_smartconnect_0_0_sc_node_v1_0_11_fi_regulator is
     \gen_normal_area.m_sc_handshake0__0\ : in STD_LOGIC;
     areset_r : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_sc_node_v1_0_11_fi_regulator : entity is "sc_node_v1_0_11_fi_regulator";
 end Convolution_Controller_smartconnect_0_0_sc_node_v1_0_11_fi_regulator;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_sc_node_v1_0_11_fi_regulator is
@@ -5389,8 +5375,6 @@ entity Convolution_Controller_smartconnect_0_0_sc_node_v1_0_11_mi_handler is
     s_sc_aclk : in STD_LOGIC;
     s_sc_send : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_sc_node_v1_0_11_mi_handler : entity is "sc_node_v1_0_11_mi_handler";
 end Convolution_Controller_smartconnect_0_0_sc_node_v1_0_11_mi_handler;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_sc_node_v1_0_11_mi_handler is
@@ -6507,8 +6491,6 @@ entity Convolution_Controller_smartconnect_0_0_sc_sc2axi_v1_0_7_top is
   attribute LP_RUSER_INDEX of Convolution_Controller_smartconnect_0_0_sc_sc2axi_v1_0_7_top : entity is 0;
   attribute LP_WUSER_INDEX : integer;
   attribute LP_WUSER_INDEX of Convolution_Controller_smartconnect_0_0_sc_sc2axi_v1_0_7_top : entity is 0;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_sc_sc2axi_v1_0_7_top : entity is "sc_sc2axi_v1_0_7_top";
   attribute T_SC_ADDR_WIDTH : integer;
   attribute T_SC_ADDR_WIDTH of Convolution_Controller_smartconnect_0_0_sc_sc2axi_v1_0_7_top : entity is 32;
   attribute T_SC_ARUSER_WIDTH : integer;
@@ -16537,8 +16519,6 @@ entity Convolution_Controller_smartconnect_0_0_sc_si_converter_v1_0_9_axilite_co
     m_axi_rdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 11 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_sc_si_converter_v1_0_9_axilite_conv : entity is "sc_si_converter_v1_0_9_axilite_conv";
 end Convolution_Controller_smartconnect_0_0_sc_si_converter_v1_0_9_axilite_conv;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_sc_si_converter_v1_0_9_axilite_conv is
@@ -20973,8 +20953,6 @@ entity Convolution_Controller_smartconnect_0_0_sc_switchboard_v1_0_6_top is
   attribute LP_MUX_IMPL of Convolution_Controller_smartconnect_0_0_sc_switchboard_v1_0_6_top : entity is "32'b00000000000000000000000000000000";
   attribute LP_M_SC_SEL_MI_PIPELINE_DEPTH : string;
   attribute LP_M_SC_SEL_MI_PIPELINE_DEPTH of Convolution_Controller_smartconnect_0_0_sc_switchboard_v1_0_6_top : entity is "32'b00000000000000000000000000000000";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_sc_switchboard_v1_0_6_top : entity is "sc_switchboard_v1_0_6_top";
 end Convolution_Controller_smartconnect_0_0_sc_switchboard_v1_0_6_top;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_sc_switchboard_v1_0_6_top is
@@ -22692,8 +22670,6 @@ entity Convolution_Controller_smartconnect_0_0_sc_transaction_regulator_v1_0_8_s
     areset : in STD_LOGIC;
     s_axi_arid : in STD_LOGIC_VECTOR ( 11 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_sc_transaction_regulator_v1_0_8_singleorder : entity is "sc_transaction_regulator_v1_0_8_singleorder";
 end Convolution_Controller_smartconnect_0_0_sc_transaction_regulator_v1_0_8_singleorder;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_sc_transaction_regulator_v1_0_8_singleorder is
@@ -26173,8 +26149,6 @@ entity Convolution_Controller_smartconnect_0_0_sc_util_v1_0_4_axi_splitter is
     \gen_wroute_reg.wroute_valid_i\ : in STD_LOGIC;
     aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_sc_util_v1_0_4_axi_splitter : entity is "sc_util_v1_0_4_axi_splitter";
 end Convolution_Controller_smartconnect_0_0_sc_util_v1_0_4_axi_splitter;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_sc_util_v1_0_4_axi_splitter is
@@ -28134,8 +28108,6 @@ entity Convolution_Controller_smartconnect_0_0_bd_550a_arinsw_0 is
     S00_SC_AR_send : in STD_LOGIC_VECTOR ( 0 to 0 );
     S00_SC_AR_payld : in STD_LOGIC_VECTOR ( 37 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_bd_550a_arinsw_0 : entity is "bd_550a_arinsw_0";
 end Convolution_Controller_smartconnect_0_0_bd_550a_arinsw_0;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_bd_550a_arinsw_0 is
@@ -28208,8 +28180,6 @@ entity Convolution_Controller_smartconnect_0_0_bd_550a_aroutsw_0 is
     M_SC_AR_send : in STD_LOGIC_VECTOR ( 0 to 0 );
     M_SC_AR_payld : in STD_LOGIC_VECTOR ( 34 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_bd_550a_aroutsw_0 : entity is "bd_550a_aroutsw_0";
 end Convolution_Controller_smartconnect_0_0_bd_550a_aroutsw_0;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_bd_550a_aroutsw_0 is
@@ -28281,8 +28251,6 @@ entity Convolution_Controller_smartconnect_0_0_bd_550a_awinsw_0 is
     S00_SC_AW_recv : out STD_LOGIC_VECTOR ( 0 to 0 );
     S_SC_AW_recv : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_bd_550a_awinsw_0 : entity is "bd_550a_awinsw_0";
 end Convolution_Controller_smartconnect_0_0_bd_550a_awinsw_0;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_bd_550a_awinsw_0 is
@@ -28345,8 +28313,6 @@ entity Convolution_Controller_smartconnect_0_0_bd_550a_awoutsw_0 is
     M_SC_AW_send : in STD_LOGIC_VECTOR ( 0 to 0 );
     M_SC_AW_payld : in STD_LOGIC_VECTOR ( 34 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_bd_550a_awoutsw_0 : entity is "bd_550a_awoutsw_0";
 end Convolution_Controller_smartconnect_0_0_bd_550a_awoutsw_0;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_bd_550a_awoutsw_0 is
@@ -28422,8 +28388,6 @@ entity Convolution_Controller_smartconnect_0_0_bd_550a_binsw_0 is
     M_SC_B_payld : in STD_LOGIC_VECTOR ( 1 downto 0 );
     M00_SC_B_recv : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_bd_550a_binsw_0 : entity is "bd_550a_binsw_0";
 end Convolution_Controller_smartconnect_0_0_bd_550a_binsw_0;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_bd_550a_binsw_0 is
@@ -28504,8 +28468,6 @@ entity Convolution_Controller_smartconnect_0_0_bd_550a_m00s2a_0 is
     M_SC_W_send : in STD_LOGIC_VECTOR ( 0 to 0 );
     M_SC_W_payld : in STD_LOGIC_VECTOR ( 35 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_bd_550a_m00s2a_0 : entity is "bd_550a_m00s2a_0";
 end Convolution_Controller_smartconnect_0_0_bd_550a_m00s2a_0;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_bd_550a_m00s2a_0 is
@@ -28712,8 +28674,6 @@ entity Convolution_Controller_smartconnect_0_0_bd_550a_m01s2a_0 is
     M_SC_W_send : in STD_LOGIC_VECTOR ( 0 to 0 );
     M_SC_W_payld : in STD_LOGIC_VECTOR ( 35 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_bd_550a_m01s2a_0 : entity is "bd_550a_m01s2a_0";
 end Convolution_Controller_smartconnect_0_0_bd_550a_m01s2a_0;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_bd_550a_m01s2a_0 is
@@ -28935,8 +28895,6 @@ entity Convolution_Controller_smartconnect_0_0_bd_550a_m02s2a_0 is
     s_axi_rresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
     s_axi_rvalid : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_bd_550a_m02s2a_0 : entity is "bd_550a_m02s2a_0";
 end Convolution_Controller_smartconnect_0_0_bd_550a_m02s2a_0;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_bd_550a_m02s2a_0 is
@@ -29127,8 +29085,6 @@ entity Convolution_Controller_smartconnect_0_0_bd_550a_rinsw_0 is
     M_SC_R_send : in STD_LOGIC_VECTOR ( 0 to 0 );
     M_SC_R_payld : in STD_LOGIC_VECTOR ( 33 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_bd_550a_rinsw_0 : entity is "bd_550a_rinsw_0";
 end Convolution_Controller_smartconnect_0_0_bd_550a_rinsw_0;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_bd_550a_rinsw_0 is
@@ -29232,8 +29188,6 @@ entity Convolution_Controller_smartconnect_0_0_bd_550a_s00a2s_0 is
     m_axi_arvalid : in STD_LOGIC;
     m_axi_rready : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_bd_550a_s00a2s_0 : entity is "bd_550a_s00a2s_0";
 end Convolution_Controller_smartconnect_0_0_bd_550a_s00a2s_0;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_bd_550a_s00a2s_0 is
@@ -29432,8 +29386,6 @@ entity Convolution_Controller_smartconnect_0_0_bd_550a_winsw_0 is
     M_SC_W_payld : in STD_LOGIC_VECTOR ( 36 downto 0 );
     S_SC_W_recv : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_bd_550a_winsw_0 : entity is "bd_550a_winsw_0";
 end Convolution_Controller_smartconnect_0_0_bd_550a_winsw_0;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_bd_550a_winsw_0 is
@@ -29503,8 +29455,6 @@ entity Convolution_Controller_smartconnect_0_0_bd_550a_woutsw_0 is
     M_SC_W_payld : in STD_LOGIC_VECTOR ( 35 downto 0 );
     m_sc_recv : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_bd_550a_woutsw_0 : entity is "bd_550a_woutsw_0";
 end Convolution_Controller_smartconnect_0_0_bd_550a_woutsw_0;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_bd_550a_woutsw_0 is
@@ -29571,8 +29521,6 @@ entity Convolution_Controller_smartconnect_0_0_lpf is
     aclk : in STD_LOGIC;
     aresetn : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_lpf : entity is "lpf";
 end Convolution_Controller_smartconnect_0_0_lpf;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_lpf is
@@ -29649,8 +29597,6 @@ entity Convolution_Controller_smartconnect_0_0_sequence_psr is
     lpf_int : in STD_LOGIC;
     aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_sequence_psr : entity is "sequence_psr";
 end Convolution_Controller_smartconnect_0_0_sequence_psr;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_sequence_psr is
@@ -30027,8 +29973,6 @@ entity Convolution_Controller_smartconnect_0_0_sc_exit_v1_0_10_top is
   attribute C_WRITE_ACCEPTANCE of Convolution_Controller_smartconnect_0_0_sc_exit_v1_0_10_top : entity is 32;
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of Convolution_Controller_smartconnect_0_0_sc_exit_v1_0_10_top : entity is "yes";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_sc_exit_v1_0_10_top : entity is "sc_exit_v1_0_10_top";
   attribute P_BYPASS : integer;
   attribute P_BYPASS of Convolution_Controller_smartconnect_0_0_sc_exit_v1_0_10_top : entity is 0;
   attribute P_FULLY_PIPELINED : integer;
@@ -37250,8 +37194,6 @@ entity Convolution_Controller_smartconnect_0_0_sc_mmu_v1_0_9_top is
   attribute C_WRITE_ACCEPTANCE of Convolution_Controller_smartconnect_0_0_sc_mmu_v1_0_9_top : entity is 32;
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of Convolution_Controller_smartconnect_0_0_sc_mmu_v1_0_9_top : entity is "yes";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_sc_mmu_v1_0_9_top : entity is "sc_mmu_v1_0_9_top";
   attribute P_AXI3 : integer;
   attribute P_AXI3 of Convolution_Controller_smartconnect_0_0_sc_mmu_v1_0_9_top : entity is 1;
   attribute P_AXI4 : integer;
@@ -41465,8 +41407,6 @@ entity Convolution_Controller_smartconnect_0_0_sc_node_v1_0_11_reg_fifo is
     s_sc_payld : in STD_LOGIC_VECTOR ( 37 downto 0 );
     m_sc_areset_r : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_sc_node_v1_0_11_reg_fifo : entity is "sc_node_v1_0_11_reg_fifo";
 end Convolution_Controller_smartconnect_0_0_sc_node_v1_0_11_reg_fifo;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_sc_node_v1_0_11_reg_fifo is
@@ -43465,8 +43405,6 @@ entity Convolution_Controller_smartconnect_0_0_sc_node_v1_0_11_top is
   attribute LP_S_STATIC_DWIDTH of Convolution_Controller_smartconnect_0_0_sc_node_v1_0_11_top : entity is 1;
   attribute LP_ZERO_ROUTE_WIDTH : integer;
   attribute LP_ZERO_ROUTE_WIDTH of Convolution_Controller_smartconnect_0_0_sc_node_v1_0_11_top : entity is 0;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_sc_node_v1_0_11_top : entity is "sc_node_v1_0_11_top";
   attribute P_NUM_OUTSTANDING : integer;
   attribute P_NUM_OUTSTANDING of Convolution_Controller_smartconnect_0_0_sc_node_v1_0_11_top : entity is 16;
 end Convolution_Controller_smartconnect_0_0_sc_node_v1_0_11_top;
@@ -49387,8 +49325,6 @@ entity Convolution_Controller_smartconnect_0_0_sc_si_converter_v1_0_9_top is
   attribute C_WRITE_ACCEPTANCE of Convolution_Controller_smartconnect_0_0_sc_si_converter_v1_0_9_top : entity is 32;
   attribute C_WRITE_WATERMARK : integer;
   attribute C_WRITE_WATERMARK of Convolution_Controller_smartconnect_0_0_sc_si_converter_v1_0_9_top : entity is 0;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_sc_si_converter_v1_0_9_top : entity is "sc_si_converter_v1_0_9_top";
   attribute P_EXOK : string;
   attribute P_EXOK of Convolution_Controller_smartconnect_0_0_sc_si_converter_v1_0_9_top : entity is "2'b01";
   attribute P_FULLY_PIPELINED : integer;
@@ -54994,8 +54930,6 @@ entity Convolution_Controller_smartconnect_0_0_sc_transaction_regulator_v1_0_8_t
   attribute C_WRITE_ACCEPTANCE of Convolution_Controller_smartconnect_0_0_sc_transaction_regulator_v1_0_8_top : entity is 32;
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of Convolution_Controller_smartconnect_0_0_sc_transaction_regulator_v1_0_8_top : entity is "yes";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_sc_transaction_regulator_v1_0_8_top : entity is "sc_transaction_regulator_v1_0_8_top";
   attribute P_FULLY_PIPELINED : integer;
   attribute P_FULLY_PIPELINED of Convolution_Controller_smartconnect_0_0_sc_transaction_regulator_v1_0_8_top : entity is 2;
   attribute P_ID_BUFFER_WIDTH : integer;
@@ -60314,8 +60248,6 @@ entity Convolution_Controller_smartconnect_0_0_bd_550a_boutsw_0 is
     s_sc_payld : in STD_LOGIC_VECTOR ( 5 downto 0 );
     S_SC_B_recv : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_bd_550a_boutsw_0 : entity is "bd_550a_boutsw_0";
 end Convolution_Controller_smartconnect_0_0_bd_550a_boutsw_0;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_bd_550a_boutsw_0 is
@@ -60386,8 +60318,6 @@ entity Convolution_Controller_smartconnect_0_0_bd_550a_m00arn_0 is
     M00_AXI_arvalid : in STD_LOGIC_VECTOR ( 0 to 0 );
     \M00_AXI_arprot[2]\ : in STD_LOGIC_VECTOR ( 12 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_bd_550a_m00arn_0 : entity is "bd_550a_m00arn_0";
 end Convolution_Controller_smartconnect_0_0_bd_550a_m00arn_0;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_bd_550a_m00arn_0 is
@@ -60558,8 +60488,6 @@ entity Convolution_Controller_smartconnect_0_0_bd_550a_m00awn_0 is
     M00_AXI_awvalid : in STD_LOGIC_VECTOR ( 0 to 0 );
     \M00_AXI_awprot[2]\ : in STD_LOGIC_VECTOR ( 12 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_bd_550a_m00awn_0 : entity is "bd_550a_m00awn_0";
 end Convolution_Controller_smartconnect_0_0_bd_550a_m00awn_0;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_bd_550a_m00awn_0 is
@@ -60731,8 +60659,6 @@ entity Convolution_Controller_smartconnect_0_0_bd_550a_m00bn_0 is
     M00_AXI_bvalid : in STD_LOGIC;
     S00_SC_B_recv : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_bd_550a_m00bn_0 : entity is "bd_550a_m00bn_0";
 end Convolution_Controller_smartconnect_0_0_bd_550a_m00bn_0;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_bd_550a_m00bn_0 is
@@ -60919,8 +60845,6 @@ entity Convolution_Controller_smartconnect_0_0_bd_550a_m00e_0 is
     M00_AXI_arready : in STD_LOGIC;
     M00_AXI_rvalid : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_bd_550a_m00e_0 : entity is "bd_550a_m00e_0";
 end Convolution_Controller_smartconnect_0_0_bd_550a_m00e_0;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_bd_550a_m00e_0 is
@@ -61130,8 +61054,6 @@ entity Convolution_Controller_smartconnect_0_0_bd_550a_m00rn_0 is
     M00_AXI_rvalid : in STD_LOGIC;
     S00_SC_R_recv : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_bd_550a_m00rn_0 : entity is "bd_550a_m00rn_0";
 end Convolution_Controller_smartconnect_0_0_bd_550a_m00rn_0;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_bd_550a_m00rn_0 is
@@ -61292,8 +61214,6 @@ entity Convolution_Controller_smartconnect_0_0_bd_550a_m00wn_0 is
     M00_SC_W_send : in STD_LOGIC_VECTOR ( 0 to 0 );
     M00_SC_W_payld : in STD_LOGIC_VECTOR ( 35 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_bd_550a_m00wn_0 : entity is "bd_550a_m00wn_0";
 end Convolution_Controller_smartconnect_0_0_bd_550a_m00wn_0;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_bd_550a_m00wn_0 is
@@ -61458,8 +61378,6 @@ entity Convolution_Controller_smartconnect_0_0_bd_550a_m01arn_0 is
     M01_AXI_arvalid : in STD_LOGIC_VECTOR ( 0 to 0 );
     \M01_AXI_arprot[2]\ : in STD_LOGIC_VECTOR ( 12 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_bd_550a_m01arn_0 : entity is "bd_550a_m01arn_0";
 end Convolution_Controller_smartconnect_0_0_bd_550a_m01arn_0;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_bd_550a_m01arn_0 is
@@ -61630,8 +61548,6 @@ entity Convolution_Controller_smartconnect_0_0_bd_550a_m01awn_0 is
     M01_AXI_awvalid : in STD_LOGIC_VECTOR ( 0 to 0 );
     \M01_AXI_awprot[2]\ : in STD_LOGIC_VECTOR ( 12 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_bd_550a_m01awn_0 : entity is "bd_550a_m01awn_0";
 end Convolution_Controller_smartconnect_0_0_bd_550a_m01awn_0;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_bd_550a_m01awn_0 is
@@ -61803,8 +61719,6 @@ entity Convolution_Controller_smartconnect_0_0_bd_550a_m01bn_0 is
     M01_AXI_bvalid : in STD_LOGIC;
     S01_SC_B_recv : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_bd_550a_m01bn_0 : entity is "bd_550a_m01bn_0";
 end Convolution_Controller_smartconnect_0_0_bd_550a_m01bn_0;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_bd_550a_m01bn_0 is
@@ -61991,8 +61905,6 @@ entity Convolution_Controller_smartconnect_0_0_bd_550a_m01e_0 is
     M01_AXI_arready : in STD_LOGIC;
     M01_AXI_rvalid : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_bd_550a_m01e_0 : entity is "bd_550a_m01e_0";
 end Convolution_Controller_smartconnect_0_0_bd_550a_m01e_0;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_bd_550a_m01e_0 is
@@ -62202,8 +62114,6 @@ entity Convolution_Controller_smartconnect_0_0_bd_550a_m01rn_0 is
     M01_AXI_rvalid : in STD_LOGIC;
     S01_SC_R_recv : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_bd_550a_m01rn_0 : entity is "bd_550a_m01rn_0";
 end Convolution_Controller_smartconnect_0_0_bd_550a_m01rn_0;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_bd_550a_m01rn_0 is
@@ -62364,8 +62274,6 @@ entity Convolution_Controller_smartconnect_0_0_bd_550a_m01wn_0 is
     M01_SC_W_send : in STD_LOGIC_VECTOR ( 0 to 0 );
     M01_SC_W_payld : in STD_LOGIC_VECTOR ( 35 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_bd_550a_m01wn_0 : entity is "bd_550a_m01wn_0";
 end Convolution_Controller_smartconnect_0_0_bd_550a_m01wn_0;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_bd_550a_m01wn_0 is
@@ -62530,8 +62438,6 @@ entity Convolution_Controller_smartconnect_0_0_bd_550a_m02arn_0 is
     M02_SC_AR_send : in STD_LOGIC_VECTOR ( 0 to 0 );
     M02_SC_AR_payld : in STD_LOGIC_VECTOR ( 34 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_bd_550a_m02arn_0 : entity is "bd_550a_m02arn_0";
 end Convolution_Controller_smartconnect_0_0_bd_550a_m02arn_0;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_bd_550a_m02arn_0 is
@@ -62702,8 +62608,6 @@ entity Convolution_Controller_smartconnect_0_0_bd_550a_m02awn_0 is
     M02_SC_AW_send : in STD_LOGIC_VECTOR ( 0 to 0 );
     M02_SC_AW_payld : in STD_LOGIC_VECTOR ( 34 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_bd_550a_m02awn_0 : entity is "bd_550a_m02awn_0";
 end Convolution_Controller_smartconnect_0_0_bd_550a_m02awn_0;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_bd_550a_m02awn_0 is
@@ -62875,8 +62779,6 @@ entity Convolution_Controller_smartconnect_0_0_bd_550a_m02bn_0 is
     S_SC_B_send : in STD_LOGIC_VECTOR ( 0 to 0 );
     S02_SC_B_recv : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_bd_550a_m02bn_0 : entity is "bd_550a_m02bn_0";
 end Convolution_Controller_smartconnect_0_0_bd_550a_m02bn_0;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_bd_550a_m02bn_0 is
@@ -63071,8 +62973,6 @@ entity Convolution_Controller_smartconnect_0_0_bd_550a_m02e_0 is
     M02_AXI_rresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
     M02_AXI_rvalid : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_bd_550a_m02e_0 : entity is "bd_550a_m02e_0";
 end Convolution_Controller_smartconnect_0_0_bd_550a_m02e_0;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_bd_550a_m02e_0 is
@@ -63277,8 +63177,6 @@ entity Convolution_Controller_smartconnect_0_0_bd_550a_m02rn_0 is
     S_SC_R_send : in STD_LOGIC_VECTOR ( 0 to 0 );
     S02_SC_R_recv : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_bd_550a_m02rn_0 : entity is "bd_550a_m02rn_0";
 end Convolution_Controller_smartconnect_0_0_bd_550a_m02rn_0;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_bd_550a_m02rn_0 is
@@ -63439,8 +63337,6 @@ entity Convolution_Controller_smartconnect_0_0_bd_550a_m02wn_0 is
     M02_SC_W_send : in STD_LOGIC_VECTOR ( 0 to 0 );
     M02_SC_W_payld : in STD_LOGIC_VECTOR ( 35 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_bd_550a_m02wn_0 : entity is "bd_550a_m02wn_0";
 end Convolution_Controller_smartconnect_0_0_bd_550a_m02wn_0;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_bd_550a_m02wn_0 is
@@ -63607,8 +63503,6 @@ entity Convolution_Controller_smartconnect_0_0_bd_550a_routsw_0 is
     \gen_single_rank.data_reg[53]\ : in STD_LOGIC_VECTOR ( 101 downto 0 );
     S_SC_R_recv : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_bd_550a_routsw_0 : entity is "bd_550a_routsw_0";
 end Convolution_Controller_smartconnect_0_0_bd_550a_routsw_0;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_bd_550a_routsw_0 is
@@ -63745,8 +63639,6 @@ entity Convolution_Controller_smartconnect_0_0_bd_550a_s00mmu_0 is
     s_axi_rlast : in STD_LOGIC;
     s_axi_rvalid : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_bd_550a_s00mmu_0 : entity is "bd_550a_s00mmu_0";
 end Convolution_Controller_smartconnect_0_0_bd_550a_s00mmu_0;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_bd_550a_s00mmu_0 is
@@ -64033,8 +63925,6 @@ entity Convolution_Controller_smartconnect_0_0_bd_550a_s00sic_0 is
     m_axi_rresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
     m_axi_rvalid : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_bd_550a_s00sic_0 : entity is "bd_550a_s00sic_0";
 end Convolution_Controller_smartconnect_0_0_bd_550a_s00sic_0;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_bd_550a_s00sic_0 is
@@ -64319,8 +64209,6 @@ entity Convolution_Controller_smartconnect_0_0_bd_550a_s00tr_0 is
     S00_AXI_rlast : in STD_LOGIC;
     S00_AXI_rvalid : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_bd_550a_s00tr_0 : entity is "bd_550a_s00tr_0";
 end Convolution_Controller_smartconnect_0_0_bd_550a_s00tr_0;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_bd_550a_s00tr_0 is
@@ -64528,8 +64416,6 @@ entity Convolution_Controller_smartconnect_0_0_bd_550a_sarn_0 is
     S_SC_AR_payld : in STD_LOGIC_VECTOR ( 37 downto 0 );
     m_axi_arvalid_i_reg : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_bd_550a_sarn_0 : entity is "bd_550a_sarn_0";
 end Convolution_Controller_smartconnect_0_0_bd_550a_sarn_0;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_bd_550a_sarn_0 is
@@ -64704,8 +64590,6 @@ entity Convolution_Controller_smartconnect_0_0_bd_550a_sawn_0 is
     S_SC_AW_payld : in STD_LOGIC_VECTOR ( 37 downto 0 );
     S00_SC_AW_recv : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_bd_550a_sawn_0 : entity is "bd_550a_sawn_0";
 end Convolution_Controller_smartconnect_0_0_bd_550a_sawn_0;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_bd_550a_sawn_0 is
@@ -64880,8 +64764,6 @@ entity Convolution_Controller_smartconnect_0_0_bd_550a_sbn_0 is
     M00_SC_B_payld : in STD_LOGIC_VECTOR ( 1 downto 0 );
     M_SC_B_recv : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_bd_550a_sbn_0 : entity is "bd_550a_sbn_0";
 end Convolution_Controller_smartconnect_0_0_bd_550a_sbn_0;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_bd_550a_sbn_0 is
@@ -65049,8 +64931,6 @@ entity Convolution_Controller_smartconnect_0_0_bd_550a_srn_0 is
     M00_SC_R_payld : in STD_LOGIC_VECTOR ( 33 downto 0 );
     M_SC_R_recv : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_bd_550a_srn_0 : entity is "bd_550a_srn_0";
 end Convolution_Controller_smartconnect_0_0_bd_550a_srn_0;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_bd_550a_srn_0 is
@@ -65222,8 +65102,6 @@ entity Convolution_Controller_smartconnect_0_0_bd_550a_swn_0 is
     S_SC_W_payld : in STD_LOGIC_VECTOR ( 38 downto 0 );
     S00_SC_W_recv : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_bd_550a_swn_0 : entity is "bd_550a_swn_0";
 end Convolution_Controller_smartconnect_0_0_bd_550a_swn_0;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_bd_550a_swn_0 is
@@ -65387,8 +65265,6 @@ entity Convolution_Controller_smartconnect_0_0_proc_sys_reset is
     aclk : in STD_LOGIC;
     aresetn : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_proc_sys_reset : entity is "proc_sys_reset";
 end Convolution_Controller_smartconnect_0_0_proc_sys_reset;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_proc_sys_reset is
@@ -65440,8 +65316,6 @@ entity Convolution_Controller_smartconnect_0_0_sc_node_v1_0_11_fifo is
     s_sc_payld : in STD_LOGIC_VECTOR ( 37 downto 0 );
     m_sc_areset_r : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_sc_node_v1_0_11_fifo : entity is "sc_node_v1_0_11_fifo";
 end Convolution_Controller_smartconnect_0_0_sc_node_v1_0_11_fifo;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_sc_node_v1_0_11_fifo is
@@ -65633,8 +65507,6 @@ entity Convolution_Controller_smartconnect_0_0_bd_550a_psr_aclk_0 is
     aclk : in STD_LOGIC;
     aresetn : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_bd_550a_psr_aclk_0 : entity is "bd_550a_psr_aclk_0";
 end Convolution_Controller_smartconnect_0_0_bd_550a_psr_aclk_0;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_bd_550a_psr_aclk_0 is
@@ -65685,8 +65557,6 @@ entity Convolution_Controller_smartconnect_0_0_m00_exit_pipeline_imp_1MQW8S4 is
     M00_AXI_arready : in STD_LOGIC;
     M00_AXI_rvalid : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_m00_exit_pipeline_imp_1MQW8S4 : entity is "m00_exit_pipeline_imp_1MQW8S4";
 end Convolution_Controller_smartconnect_0_0_m00_exit_pipeline_imp_1MQW8S4;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_m00_exit_pipeline_imp_1MQW8S4 is
@@ -65760,8 +65630,6 @@ entity Convolution_Controller_smartconnect_0_0_m00_nodes_imp_10I3S60 is
     M00_SC_W_send : in STD_LOGIC_VECTOR ( 0 to 0 );
     M00_SC_W_payld : in STD_LOGIC_VECTOR ( 35 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_m00_nodes_imp_10I3S60 : entity is "m00_nodes_imp_10I3S60";
 end Convolution_Controller_smartconnect_0_0_m00_nodes_imp_10I3S60;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_m00_nodes_imp_10I3S60 is
@@ -65859,8 +65727,6 @@ entity Convolution_Controller_smartconnect_0_0_m01_exit_pipeline_imp_1IJHLMC is
     M01_AXI_arready : in STD_LOGIC;
     M01_AXI_rvalid : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_m01_exit_pipeline_imp_1IJHLMC : entity is "m01_exit_pipeline_imp_1IJHLMC";
 end Convolution_Controller_smartconnect_0_0_m01_exit_pipeline_imp_1IJHLMC;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_m01_exit_pipeline_imp_1IJHLMC is
@@ -65934,8 +65800,6 @@ entity Convolution_Controller_smartconnect_0_0_m01_nodes_imp_8GOY0E is
     M01_SC_W_send : in STD_LOGIC_VECTOR ( 0 to 0 );
     M01_SC_W_payld : in STD_LOGIC_VECTOR ( 35 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_m01_nodes_imp_8GOY0E : entity is "m01_nodes_imp_8GOY0E";
 end Convolution_Controller_smartconnect_0_0_m01_nodes_imp_8GOY0E;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_m01_nodes_imp_8GOY0E is
@@ -66041,8 +65905,6 @@ entity Convolution_Controller_smartconnect_0_0_m02_exit_pipeline_imp_1YGB0MS is
     M02_AXI_rresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
     M02_AXI_rvalid : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_m02_exit_pipeline_imp_1YGB0MS : entity is "m02_exit_pipeline_imp_1YGB0MS";
 end Convolution_Controller_smartconnect_0_0_m02_exit_pipeline_imp_1YGB0MS;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_m02_exit_pipeline_imp_1YGB0MS is
@@ -66124,8 +65986,6 @@ entity Convolution_Controller_smartconnect_0_0_m02_nodes_imp_RFPFXX is
     M02_SC_W_send : in STD_LOGIC_VECTOR ( 0 to 0 );
     M02_SC_W_payld : in STD_LOGIC_VECTOR ( 35 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_m02_nodes_imp_RFPFXX : entity is "m02_nodes_imp_RFPFXX";
 end Convolution_Controller_smartconnect_0_0_m02_nodes_imp_RFPFXX;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_m02_nodes_imp_RFPFXX is
@@ -66246,8 +66106,6 @@ entity Convolution_Controller_smartconnect_0_0_s00_entry_pipeline_imp_MCUTTJ is
     m_axi_rresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
     m_axi_rvalid : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_s00_entry_pipeline_imp_MCUTTJ : entity is "s00_entry_pipeline_imp_MCUTTJ";
 end Convolution_Controller_smartconnect_0_0_s00_entry_pipeline_imp_MCUTTJ;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_s00_entry_pipeline_imp_MCUTTJ is
@@ -66538,8 +66396,6 @@ entity Convolution_Controller_smartconnect_0_0_s00_nodes_imp_J6W6LP is
     S_SC_W_payld : in STD_LOGIC_VECTOR ( 38 downto 0 );
     S00_SC_W_recv : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_s00_nodes_imp_J6W6LP : entity is "s00_nodes_imp_J6W6LP";
 end Convolution_Controller_smartconnect_0_0_s00_nodes_imp_J6W6LP;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_s00_nodes_imp_J6W6LP is
@@ -66980,8 +66836,6 @@ entity Convolution_Controller_smartconnect_0_0_clk_map_imp_BYCJVZ is
     aclk : in STD_LOGIC;
     aresetn : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_clk_map_imp_BYCJVZ : entity is "clk_map_imp_BYCJVZ";
 end Convolution_Controller_smartconnect_0_0_clk_map_imp_BYCJVZ;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_clk_map_imp_BYCJVZ is
@@ -68506,8 +68360,6 @@ entity Convolution_Controller_smartconnect_0_0_bd_550a_arni_0 is
     S_SC_AR_payld : in STD_LOGIC_VECTOR ( 37 downto 0 );
     M_SC_AR_recv : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_bd_550a_arni_0 : entity is "bd_550a_arni_0";
 end Convolution_Controller_smartconnect_0_0_bd_550a_arni_0;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_bd_550a_arni_0 is
@@ -68680,8 +68532,6 @@ entity Convolution_Controller_smartconnect_0_0_bd_550a_awni_0 is
     S_SC_AW_payld : in STD_LOGIC_VECTOR ( 37 downto 0 );
     M_SC_AW_recv : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_bd_550a_awni_0 : entity is "bd_550a_awni_0";
 end Convolution_Controller_smartconnect_0_0_bd_550a_awni_0;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_bd_550a_awni_0 is
@@ -68855,8 +68705,6 @@ entity Convolution_Controller_smartconnect_0_0_bd_550a_bni_0 is
     S_SC_B_payld : in STD_LOGIC_VECTOR ( 1 downto 0 );
     M_SC_B_recv : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_bd_550a_bni_0 : entity is "bd_550a_bni_0";
 end Convolution_Controller_smartconnect_0_0_bd_550a_bni_0;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_bd_550a_bni_0 is
@@ -69025,8 +68873,6 @@ entity Convolution_Controller_smartconnect_0_0_bd_550a_rni_0 is
     S_SC_R_payld : in STD_LOGIC_VECTOR ( 33 downto 0 );
     M_SC_R_recv : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_bd_550a_rni_0 : entity is "bd_550a_rni_0";
 end Convolution_Controller_smartconnect_0_0_bd_550a_rni_0;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_bd_550a_rni_0 is
@@ -69198,8 +69044,6 @@ entity Convolution_Controller_smartconnect_0_0_bd_550a_wni_0 is
     S_SC_W_payld : in STD_LOGIC_VECTOR ( 38 downto 0 );
     M_SC_W_recv : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_bd_550a_wni_0 : entity is "bd_550a_wni_0";
 end Convolution_Controller_smartconnect_0_0_bd_550a_wni_0;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_bd_550a_wni_0 is
@@ -69392,8 +69236,6 @@ entity Convolution_Controller_smartconnect_0_0_i_nodes_imp_1T76WCH is
     S_SC_W_payld : in STD_LOGIC_VECTOR ( 38 downto 0 );
     M_SC_W_recv : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_i_nodes_imp_1T76WCH : entity is "i_nodes_imp_1T76WCH";
 end Convolution_Controller_smartconnect_0_0_i_nodes_imp_1T76WCH;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_i_nodes_imp_1T76WCH is
@@ -69507,8 +69349,6 @@ entity Convolution_Controller_smartconnect_0_0_switchboards_imp_D0486X is
     S00_SC_W_send : in STD_LOGIC_VECTOR ( 0 to 0 );
     m_sc_recv : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_switchboards_imp_D0486X : entity is "switchboards_imp_D0486X";
 end Convolution_Controller_smartconnect_0_0_switchboards_imp_D0486X;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_switchboards_imp_D0486X is
@@ -69801,8 +69641,6 @@ entity Convolution_Controller_smartconnect_0_0_bd_550a is
   );
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of Convolution_Controller_smartconnect_0_0_bd_550a : entity is "Convolution_Controller_smartconnect_0_0.hwdef";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Convolution_Controller_smartconnect_0_0_bd_550a : entity is "bd_550a";
 end Convolution_Controller_smartconnect_0_0_bd_550a;
 
 architecture STRUCTURE of Convolution_Controller_smartconnect_0_0_bd_550a is

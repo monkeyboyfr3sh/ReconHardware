@@ -1,7 +1,7 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-// Date        : Thu Mar 18 14:33:08 2021
+// Date        : Fri Mar 19 14:51:52 2021
 // Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               c:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.srcs/sources_1/bd/Convolution_Controller/ip/Convolution_Controller_Convolution_Controll_0_0/Convolution_Controller_Convolution_Controll_0_0_sim_netlist.v
@@ -2396,7 +2396,6 @@ module Convolution_Controller_Convolution_Controll_0_0_Convolution_Controller
   wire MULTIst;
   wire RDst_i_2_n_0;
   wire RDst_reg_n_0;
-  wire RSTst0;
   wire RSTst3_out;
   wire RSTst_i_1_n_0;
   wire RSTst_reg_n_0;
@@ -2421,6 +2420,7 @@ module Convolution_Controller_Convolution_Controll_0_0_Convolution_Controller
   wire \cCount_reg[4]_i_1_n_7 ;
   wire cReady;
   wire [31:0]cSum;
+  wire channel_sel1;
   wire [31:0]control_registers;
   wire \control_registers[0][15]_i_1_n_0 ;
   wire \control_registers[0][18]_i_1_n_0 ;
@@ -13400,7 +13400,7 @@ module Convolution_Controller_Convolution_Controll_0_0_Convolution_Controller
         .I2(\control_registers_reg_n_0_[0][0] ),
         .I3(MULTIst),
         .I4(\MULTIPLY_START_reg[8]_rep_n_0 ),
-        .I5(RSTst0),
+        .I5(channel_sel1),
         .O(\MULTIPLY_START[8]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'h00000000EFFF1000)) 
@@ -13410,7 +13410,7 @@ module Convolution_Controller_Convolution_Controll_0_0_Convolution_Controller
         .I2(\control_registers_reg_n_0_[0][0] ),
         .I3(MULTIst),
         .I4(\MULTIPLY_START_reg[8]_rep_n_0 ),
-        .I5(RSTst0),
+        .I5(channel_sel1),
         .O(\MULTIPLY_START[8]_rep_i_1_n_0 ));
   (* ORIG_CELL_NAME = "MULTIPLY_START_reg[8]" *) 
   FDRE \MULTIPLY_START_reg[8] 
@@ -13431,7 +13431,7 @@ module Convolution_Controller_Convolution_Controll_0_0_Convolution_Controller
         .CE(1'b1),
         .D(\genblk1[0].br_coupler_n_97 ),
         .Q(MULTIst),
-        .R(RSTst0));
+        .R(channel_sel1));
   (* SOFT_HLUTNM = "soft_lutpair1156" *) 
   LUT3 #(
     .INIT(8'hB8)) 
@@ -13445,7 +13445,7 @@ module Convolution_Controller_Convolution_Controll_0_0_Convolution_Controller
         .CE(1'b1),
         .D(\genblk1[0].br_coupler_n_101 ),
         .Q(RDst_reg_n_0),
-        .S(RSTst0));
+        .S(channel_sel1));
   (* SOFT_HLUTNM = "soft_lutpair97" *) 
   LUT4 #(
     .INIT(16'hFF80)) 
@@ -13460,7 +13460,7 @@ module Convolution_Controller_Convolution_Controll_0_0_Convolution_Controller
         .CE(1'b1),
         .D(RSTst_i_1_n_0),
         .Q(RSTst_reg_n_0),
-        .R(RSTst0));
+        .R(channel_sel1));
   LUT1 #(
     .INIT(2'h1)) 
     \cCount[0]_i_2 
@@ -13471,7 +13471,7 @@ module Convolution_Controller_Convolution_Controll_0_0_Convolution_Controller
         .CE(cReady),
         .D(\cCount_reg[0]_i_1_n_7 ),
         .Q(cCount_reg[0]),
-        .R(RSTst0));
+        .R(channel_sel1));
   CARRY4 \cCount_reg[0]_i_1 
        (.CI(1'b0),
         .CO({\cCount_reg[0]_i_1_n_0 ,\cCount_reg[0]_i_1_n_1 ,\cCount_reg[0]_i_1_n_2 ,\cCount_reg[0]_i_1_n_3 }),
@@ -13484,25 +13484,25 @@ module Convolution_Controller_Convolution_Controll_0_0_Convolution_Controller
         .CE(cReady),
         .D(\cCount_reg[0]_i_1_n_6 ),
         .Q(cCount_reg[1]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \cCount_reg[2] 
        (.C(axi_clk),
         .CE(cReady),
         .D(\cCount_reg[0]_i_1_n_5 ),
         .Q(cCount_reg[2]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \cCount_reg[3] 
        (.C(axi_clk),
         .CE(cReady),
         .D(\cCount_reg[0]_i_1_n_4 ),
         .Q(cCount_reg[3]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \cCount_reg[4] 
        (.C(axi_clk),
         .CE(cReady),
         .D(\cCount_reg[4]_i_1_n_7 ),
         .Q(cCount_reg[4]),
-        .R(RSTst0));
+        .R(channel_sel1));
   CARRY4 \cCount_reg[4]_i_1 
        (.CI(\cCount_reg[0]_i_1_n_0 ),
         .CO({\NLW_cCount_reg[4]_i_1_CO_UNCONNECTED [3],\cCount_reg[4]_i_1_n_1 ,\cCount_reg[4]_i_1_n_2 ,\cCount_reg[4]_i_1_n_3 }),
@@ -13515,19 +13515,19 @@ module Convolution_Controller_Convolution_Controll_0_0_Convolution_Controller
         .CE(cReady),
         .D(\cCount_reg[4]_i_1_n_6 ),
         .Q(cCount_reg[5]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \cCount_reg[6] 
        (.C(axi_clk),
         .CE(cReady),
         .D(\cCount_reg[4]_i_1_n_5 ),
         .Q(cCount_reg[6]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \cCount_reg[7] 
        (.C(axi_clk),
         .CE(cReady),
         .D(\cCount_reg[4]_i_1_n_4 ),
         .Q(cCount_reg[7]),
-        .R(RSTst0));
+        .R(channel_sel1));
   LUT6 #(
     .INIT(64'hFFFFFFFB00000008)) 
     \control_registers[0][0]_i_1 
@@ -61429,7 +61429,7 @@ module Convolution_Controller_Convolution_Controll_0_0_Convolution_Controller
   LUT3 #(
     .INIT(8'hBA)) 
     \current_x[10]_i_1 
-       (.I0(RSTst0),
+       (.I0(channel_sel1),
         .I1(\current_x_reg[10]_i_4_n_0 ),
         .I2(\current_x[10]_i_2_n_0 ),
         .O(\current_x[10]_i_1_n_0 ));
@@ -61947,7 +61947,7 @@ module Convolution_Controller_Convolution_Controll_0_0_Convolution_Controller
   LUT4 #(
     .INIT(16'hAABA)) 
     \current_y[10]_i_1 
-       (.I0(RSTst0),
+       (.I0(channel_sel1),
         .I1(\current_y_reg[10]_i_4_n_0 ),
         .I2(\current_x[10]_i_2_n_0 ),
         .I3(\current_x_reg[10]_i_4_n_0 ),
@@ -62462,1729 +62462,1729 @@ module Convolution_Controller_Convolution_Controll_0_0_Convolution_Controller
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][3]_5 [0]),
         .Q(\dataSet_reg[0][0]_6 [0]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][0][10] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][3]_5 [10]),
         .Q(\dataSet_reg[0][0]_6 [10]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][0][11] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][3]_5 [11]),
         .Q(\dataSet_reg[0][0]_6 [11]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][0][12] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][3]_5 [12]),
         .Q(\dataSet_reg[0][0]_6 [12]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][0][13] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][3]_5 [13]),
         .Q(\dataSet_reg[0][0]_6 [13]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][0][14] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][3]_5 [14]),
         .Q(\dataSet_reg[0][0]_6 [14]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][0][15] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][3]_5 [15]),
         .Q(\dataSet_reg[0][0]_6 [15]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][0][16] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][3]_5 [16]),
         .Q(\dataSet_reg[0][0]_6 [16]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][0][17] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][3]_5 [17]),
         .Q(\dataSet_reg[0][0]_6 [17]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][0][18] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][3]_5 [18]),
         .Q(\dataSet_reg[0][0]_6 [18]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][0][19] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][3]_5 [19]),
         .Q(\dataSet_reg[0][0]_6 [19]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][0][1] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][3]_5 [1]),
         .Q(\dataSet_reg[0][0]_6 [1]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][0][20] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][3]_5 [20]),
         .Q(\dataSet_reg[0][0]_6 [20]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][0][21] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][3]_5 [21]),
         .Q(\dataSet_reg[0][0]_6 [21]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][0][22] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][3]_5 [22]),
         .Q(\dataSet_reg[0][0]_6 [22]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][0][23] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][3]_5 [23]),
         .Q(\dataSet_reg[0][0]_6 [23]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][0][24] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][3]_5 [24]),
         .Q(\dataSet_reg[0][0]_6 [24]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][0][25] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][3]_5 [25]),
         .Q(\dataSet_reg[0][0]_6 [25]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][0][26] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][3]_5 [26]),
         .Q(\dataSet_reg[0][0]_6 [26]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][0][27] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][3]_5 [27]),
         .Q(\dataSet_reg[0][0]_6 [27]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][0][28] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][3]_5 [28]),
         .Q(\dataSet_reg[0][0]_6 [28]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][0][29] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][3]_5 [29]),
         .Q(\dataSet_reg[0][0]_6 [29]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][0][2] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][3]_5 [2]),
         .Q(\dataSet_reg[0][0]_6 [2]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][0][30] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][3]_5 [30]),
         .Q(\dataSet_reg[0][0]_6 [30]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][0][31] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][3]_5 [31]),
         .Q(\dataSet_reg[0][0]_6 [31]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][0][3] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][3]_5 [3]),
         .Q(\dataSet_reg[0][0]_6 [3]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][0][4] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][3]_5 [4]),
         .Q(\dataSet_reg[0][0]_6 [4]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][0][5] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][3]_5 [5]),
         .Q(\dataSet_reg[0][0]_6 [5]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][0][6] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][3]_5 [6]),
         .Q(\dataSet_reg[0][0]_6 [6]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][0][7] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][3]_5 [7]),
         .Q(\dataSet_reg[0][0]_6 [7]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][0][8] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][3]_5 [8]),
         .Q(\dataSet_reg[0][0]_6 [8]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][0][9] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][3]_5 [9]),
         .Q(\dataSet_reg[0][0]_6 [9]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][1][0] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][4]_8 [0]),
         .Q(\dataSet_reg[0][1]_9 [0]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][1][10] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][4]_8 [10]),
         .Q(\dataSet_reg[0][1]_9 [10]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][1][11] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][4]_8 [11]),
         .Q(\dataSet_reg[0][1]_9 [11]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][1][12] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][4]_8 [12]),
         .Q(\dataSet_reg[0][1]_9 [12]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][1][13] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][4]_8 [13]),
         .Q(\dataSet_reg[0][1]_9 [13]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][1][14] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][4]_8 [14]),
         .Q(\dataSet_reg[0][1]_9 [14]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][1][15] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][4]_8 [15]),
         .Q(\dataSet_reg[0][1]_9 [15]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][1][16] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][4]_8 [16]),
         .Q(\dataSet_reg[0][1]_9 [16]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][1][17] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][4]_8 [17]),
         .Q(\dataSet_reg[0][1]_9 [17]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][1][18] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][4]_8 [18]),
         .Q(\dataSet_reg[0][1]_9 [18]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][1][19] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][4]_8 [19]),
         .Q(\dataSet_reg[0][1]_9 [19]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][1][1] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][4]_8 [1]),
         .Q(\dataSet_reg[0][1]_9 [1]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][1][20] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][4]_8 [20]),
         .Q(\dataSet_reg[0][1]_9 [20]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][1][21] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][4]_8 [21]),
         .Q(\dataSet_reg[0][1]_9 [21]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][1][22] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][4]_8 [22]),
         .Q(\dataSet_reg[0][1]_9 [22]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][1][23] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][4]_8 [23]),
         .Q(\dataSet_reg[0][1]_9 [23]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][1][24] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][4]_8 [24]),
         .Q(\dataSet_reg[0][1]_9 [24]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][1][25] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][4]_8 [25]),
         .Q(\dataSet_reg[0][1]_9 [25]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][1][26] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][4]_8 [26]),
         .Q(\dataSet_reg[0][1]_9 [26]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][1][27] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][4]_8 [27]),
         .Q(\dataSet_reg[0][1]_9 [27]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][1][28] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][4]_8 [28]),
         .Q(\dataSet_reg[0][1]_9 [28]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][1][29] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][4]_8 [29]),
         .Q(\dataSet_reg[0][1]_9 [29]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][1][2] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][4]_8 [2]),
         .Q(\dataSet_reg[0][1]_9 [2]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][1][30] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][4]_8 [30]),
         .Q(\dataSet_reg[0][1]_9 [30]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][1][31] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][4]_8 [31]),
         .Q(\dataSet_reg[0][1]_9 [31]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][1][3] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][4]_8 [3]),
         .Q(\dataSet_reg[0][1]_9 [3]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][1][4] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][4]_8 [4]),
         .Q(\dataSet_reg[0][1]_9 [4]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][1][5] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][4]_8 [5]),
         .Q(\dataSet_reg[0][1]_9 [5]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][1][6] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][4]_8 [6]),
         .Q(\dataSet_reg[0][1]_9 [6]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][1][7] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][4]_8 [7]),
         .Q(\dataSet_reg[0][1]_9 [7]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][1][8] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][4]_8 [8]),
         .Q(\dataSet_reg[0][1]_9 [8]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][1][9] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][4]_8 [9]),
         .Q(\dataSet_reg[0][1]_9 [9]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][2][0] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][5]_11 [0]),
         .Q(\dataSet_reg[0][2]_12 [0]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][2][10] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][5]_11 [10]),
         .Q(\dataSet_reg[0][2]_12 [10]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][2][11] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][5]_11 [11]),
         .Q(\dataSet_reg[0][2]_12 [11]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][2][12] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][5]_11 [12]),
         .Q(\dataSet_reg[0][2]_12 [12]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][2][13] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][5]_11 [13]),
         .Q(\dataSet_reg[0][2]_12 [13]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][2][14] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][5]_11 [14]),
         .Q(\dataSet_reg[0][2]_12 [14]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][2][15] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][5]_11 [15]),
         .Q(\dataSet_reg[0][2]_12 [15]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][2][16] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][5]_11 [16]),
         .Q(\dataSet_reg[0][2]_12 [16]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][2][17] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][5]_11 [17]),
         .Q(\dataSet_reg[0][2]_12 [17]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][2][18] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][5]_11 [18]),
         .Q(\dataSet_reg[0][2]_12 [18]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][2][19] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][5]_11 [19]),
         .Q(\dataSet_reg[0][2]_12 [19]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][2][1] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][5]_11 [1]),
         .Q(\dataSet_reg[0][2]_12 [1]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][2][20] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][5]_11 [20]),
         .Q(\dataSet_reg[0][2]_12 [20]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][2][21] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][5]_11 [21]),
         .Q(\dataSet_reg[0][2]_12 [21]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][2][22] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][5]_11 [22]),
         .Q(\dataSet_reg[0][2]_12 [22]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][2][23] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][5]_11 [23]),
         .Q(\dataSet_reg[0][2]_12 [23]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][2][24] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][5]_11 [24]),
         .Q(\dataSet_reg[0][2]_12 [24]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][2][25] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][5]_11 [25]),
         .Q(\dataSet_reg[0][2]_12 [25]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][2][26] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][5]_11 [26]),
         .Q(\dataSet_reg[0][2]_12 [26]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][2][27] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][5]_11 [27]),
         .Q(\dataSet_reg[0][2]_12 [27]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][2][28] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][5]_11 [28]),
         .Q(\dataSet_reg[0][2]_12 [28]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][2][29] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][5]_11 [29]),
         .Q(\dataSet_reg[0][2]_12 [29]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][2][2] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][5]_11 [2]),
         .Q(\dataSet_reg[0][2]_12 [2]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][2][30] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][5]_11 [30]),
         .Q(\dataSet_reg[0][2]_12 [30]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][2][31] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][5]_11 [31]),
         .Q(\dataSet_reg[0][2]_12 [31]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][2][3] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][5]_11 [3]),
         .Q(\dataSet_reg[0][2]_12 [3]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][2][4] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][5]_11 [4]),
         .Q(\dataSet_reg[0][2]_12 [4]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][2][5] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][5]_11 [5]),
         .Q(\dataSet_reg[0][2]_12 [5]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][2][6] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][5]_11 [6]),
         .Q(\dataSet_reg[0][2]_12 [6]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][2][7] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][5]_11 [7]),
         .Q(\dataSet_reg[0][2]_12 [7]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][2][8] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][5]_11 [8]),
         .Q(\dataSet_reg[0][2]_12 [8]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][2][9] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][5]_11 [9]),
         .Q(\dataSet_reg[0][2]_12 [9]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][3][0] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][6]_4 [0]),
         .Q(\dataSet_reg[0][3]_5 [0]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][3][10] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][6]_4 [10]),
         .Q(\dataSet_reg[0][3]_5 [10]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][3][11] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][6]_4 [11]),
         .Q(\dataSet_reg[0][3]_5 [11]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][3][12] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][6]_4 [12]),
         .Q(\dataSet_reg[0][3]_5 [12]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][3][13] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][6]_4 [13]),
         .Q(\dataSet_reg[0][3]_5 [13]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][3][14] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][6]_4 [14]),
         .Q(\dataSet_reg[0][3]_5 [14]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][3][15] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][6]_4 [15]),
         .Q(\dataSet_reg[0][3]_5 [15]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][3][16] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][6]_4 [16]),
         .Q(\dataSet_reg[0][3]_5 [16]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][3][17] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][6]_4 [17]),
         .Q(\dataSet_reg[0][3]_5 [17]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][3][18] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][6]_4 [18]),
         .Q(\dataSet_reg[0][3]_5 [18]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][3][19] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][6]_4 [19]),
         .Q(\dataSet_reg[0][3]_5 [19]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][3][1] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][6]_4 [1]),
         .Q(\dataSet_reg[0][3]_5 [1]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][3][20] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][6]_4 [20]),
         .Q(\dataSet_reg[0][3]_5 [20]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][3][21] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][6]_4 [21]),
         .Q(\dataSet_reg[0][3]_5 [21]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][3][22] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][6]_4 [22]),
         .Q(\dataSet_reg[0][3]_5 [22]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][3][23] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][6]_4 [23]),
         .Q(\dataSet_reg[0][3]_5 [23]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][3][24] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][6]_4 [24]),
         .Q(\dataSet_reg[0][3]_5 [24]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][3][25] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][6]_4 [25]),
         .Q(\dataSet_reg[0][3]_5 [25]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][3][26] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][6]_4 [26]),
         .Q(\dataSet_reg[0][3]_5 [26]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][3][27] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][6]_4 [27]),
         .Q(\dataSet_reg[0][3]_5 [27]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][3][28] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][6]_4 [28]),
         .Q(\dataSet_reg[0][3]_5 [28]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][3][29] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][6]_4 [29]),
         .Q(\dataSet_reg[0][3]_5 [29]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][3][2] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][6]_4 [2]),
         .Q(\dataSet_reg[0][3]_5 [2]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][3][30] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][6]_4 [30]),
         .Q(\dataSet_reg[0][3]_5 [30]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][3][31] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][6]_4 [31]),
         .Q(\dataSet_reg[0][3]_5 [31]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][3][3] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][6]_4 [3]),
         .Q(\dataSet_reg[0][3]_5 [3]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][3][4] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][6]_4 [4]),
         .Q(\dataSet_reg[0][3]_5 [4]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][3][5] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][6]_4 [5]),
         .Q(\dataSet_reg[0][3]_5 [5]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][3][6] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][6]_4 [6]),
         .Q(\dataSet_reg[0][3]_5 [6]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][3][7] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][6]_4 [7]),
         .Q(\dataSet_reg[0][3]_5 [7]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][3][8] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][6]_4 [8]),
         .Q(\dataSet_reg[0][3]_5 [8]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][3][9] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][6]_4 [9]),
         .Q(\dataSet_reg[0][3]_5 [9]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][4][0] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][7]_7 [0]),
         .Q(\dataSet_reg[0][4]_8 [0]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][4][10] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][7]_7 [10]),
         .Q(\dataSet_reg[0][4]_8 [10]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][4][11] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][7]_7 [11]),
         .Q(\dataSet_reg[0][4]_8 [11]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][4][12] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][7]_7 [12]),
         .Q(\dataSet_reg[0][4]_8 [12]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][4][13] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][7]_7 [13]),
         .Q(\dataSet_reg[0][4]_8 [13]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][4][14] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][7]_7 [14]),
         .Q(\dataSet_reg[0][4]_8 [14]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][4][15] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][7]_7 [15]),
         .Q(\dataSet_reg[0][4]_8 [15]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][4][16] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][7]_7 [16]),
         .Q(\dataSet_reg[0][4]_8 [16]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][4][17] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][7]_7 [17]),
         .Q(\dataSet_reg[0][4]_8 [17]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][4][18] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][7]_7 [18]),
         .Q(\dataSet_reg[0][4]_8 [18]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][4][19] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][7]_7 [19]),
         .Q(\dataSet_reg[0][4]_8 [19]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][4][1] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][7]_7 [1]),
         .Q(\dataSet_reg[0][4]_8 [1]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][4][20] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][7]_7 [20]),
         .Q(\dataSet_reg[0][4]_8 [20]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][4][21] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][7]_7 [21]),
         .Q(\dataSet_reg[0][4]_8 [21]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][4][22] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][7]_7 [22]),
         .Q(\dataSet_reg[0][4]_8 [22]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][4][23] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][7]_7 [23]),
         .Q(\dataSet_reg[0][4]_8 [23]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][4][24] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][7]_7 [24]),
         .Q(\dataSet_reg[0][4]_8 [24]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][4][25] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][7]_7 [25]),
         .Q(\dataSet_reg[0][4]_8 [25]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][4][26] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][7]_7 [26]),
         .Q(\dataSet_reg[0][4]_8 [26]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][4][27] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][7]_7 [27]),
         .Q(\dataSet_reg[0][4]_8 [27]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][4][28] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][7]_7 [28]),
         .Q(\dataSet_reg[0][4]_8 [28]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][4][29] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][7]_7 [29]),
         .Q(\dataSet_reg[0][4]_8 [29]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][4][2] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][7]_7 [2]),
         .Q(\dataSet_reg[0][4]_8 [2]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][4][30] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][7]_7 [30]),
         .Q(\dataSet_reg[0][4]_8 [30]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][4][31] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][7]_7 [31]),
         .Q(\dataSet_reg[0][4]_8 [31]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][4][3] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][7]_7 [3]),
         .Q(\dataSet_reg[0][4]_8 [3]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][4][4] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][7]_7 [4]),
         .Q(\dataSet_reg[0][4]_8 [4]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][4][5] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][7]_7 [5]),
         .Q(\dataSet_reg[0][4]_8 [5]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][4][6] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][7]_7 [6]),
         .Q(\dataSet_reg[0][4]_8 [6]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][4][7] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][7]_7 [7]),
         .Q(\dataSet_reg[0][4]_8 [7]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][4][8] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][7]_7 [8]),
         .Q(\dataSet_reg[0][4]_8 [8]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][4][9] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][7]_7 [9]),
         .Q(\dataSet_reg[0][4]_8 [9]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][5][0] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][8]_10 [0]),
         .Q(\dataSet_reg[0][5]_11 [0]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][5][10] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][8]_10 [10]),
         .Q(\dataSet_reg[0][5]_11 [10]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][5][11] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][8]_10 [11]),
         .Q(\dataSet_reg[0][5]_11 [11]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][5][12] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][8]_10 [12]),
         .Q(\dataSet_reg[0][5]_11 [12]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][5][13] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][8]_10 [13]),
         .Q(\dataSet_reg[0][5]_11 [13]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][5][14] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][8]_10 [14]),
         .Q(\dataSet_reg[0][5]_11 [14]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][5][15] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][8]_10 [15]),
         .Q(\dataSet_reg[0][5]_11 [15]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][5][16] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][8]_10 [16]),
         .Q(\dataSet_reg[0][5]_11 [16]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][5][17] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][8]_10 [17]),
         .Q(\dataSet_reg[0][5]_11 [17]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][5][18] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][8]_10 [18]),
         .Q(\dataSet_reg[0][5]_11 [18]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][5][19] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][8]_10 [19]),
         .Q(\dataSet_reg[0][5]_11 [19]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][5][1] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][8]_10 [1]),
         .Q(\dataSet_reg[0][5]_11 [1]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][5][20] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][8]_10 [20]),
         .Q(\dataSet_reg[0][5]_11 [20]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][5][21] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][8]_10 [21]),
         .Q(\dataSet_reg[0][5]_11 [21]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][5][22] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][8]_10 [22]),
         .Q(\dataSet_reg[0][5]_11 [22]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][5][23] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][8]_10 [23]),
         .Q(\dataSet_reg[0][5]_11 [23]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][5][24] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][8]_10 [24]),
         .Q(\dataSet_reg[0][5]_11 [24]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][5][25] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][8]_10 [25]),
         .Q(\dataSet_reg[0][5]_11 [25]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][5][26] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][8]_10 [26]),
         .Q(\dataSet_reg[0][5]_11 [26]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][5][27] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][8]_10 [27]),
         .Q(\dataSet_reg[0][5]_11 [27]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][5][28] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][8]_10 [28]),
         .Q(\dataSet_reg[0][5]_11 [28]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][5][29] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][8]_10 [29]),
         .Q(\dataSet_reg[0][5]_11 [29]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][5][2] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][8]_10 [2]),
         .Q(\dataSet_reg[0][5]_11 [2]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][5][30] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][8]_10 [30]),
         .Q(\dataSet_reg[0][5]_11 [30]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][5][31] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][8]_10 [31]),
         .Q(\dataSet_reg[0][5]_11 [31]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][5][3] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][8]_10 [3]),
         .Q(\dataSet_reg[0][5]_11 [3]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][5][4] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][8]_10 [4]),
         .Q(\dataSet_reg[0][5]_11 [4]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][5][5] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][8]_10 [5]),
         .Q(\dataSet_reg[0][5]_11 [5]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][5][6] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][8]_10 [6]),
         .Q(\dataSet_reg[0][5]_11 [6]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][5][7] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][8]_10 [7]),
         .Q(\dataSet_reg[0][5]_11 [7]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][5][8] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][8]_10 [8]),
         .Q(\dataSet_reg[0][5]_11 [8]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][5][9] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\dataSet_reg[0][8]_10 [9]),
         .Q(\dataSet_reg[0][5]_11 [9]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][6][0] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [0]),
         .Q(\dataSet_reg[0][6]_4 [0]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][6][10] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [10]),
         .Q(\dataSet_reg[0][6]_4 [10]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][6][11] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [11]),
         .Q(\dataSet_reg[0][6]_4 [11]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][6][12] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [12]),
         .Q(\dataSet_reg[0][6]_4 [12]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][6][13] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [13]),
         .Q(\dataSet_reg[0][6]_4 [13]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][6][14] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [14]),
         .Q(\dataSet_reg[0][6]_4 [14]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][6][15] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [15]),
         .Q(\dataSet_reg[0][6]_4 [15]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][6][16] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [16]),
         .Q(\dataSet_reg[0][6]_4 [16]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][6][17] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [17]),
         .Q(\dataSet_reg[0][6]_4 [17]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][6][18] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [18]),
         .Q(\dataSet_reg[0][6]_4 [18]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][6][19] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [19]),
         .Q(\dataSet_reg[0][6]_4 [19]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][6][1] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [1]),
         .Q(\dataSet_reg[0][6]_4 [1]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][6][20] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [20]),
         .Q(\dataSet_reg[0][6]_4 [20]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][6][21] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [21]),
         .Q(\dataSet_reg[0][6]_4 [21]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][6][22] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [22]),
         .Q(\dataSet_reg[0][6]_4 [22]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][6][23] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [23]),
         .Q(\dataSet_reg[0][6]_4 [23]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][6][24] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [24]),
         .Q(\dataSet_reg[0][6]_4 [24]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][6][25] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [25]),
         .Q(\dataSet_reg[0][6]_4 [25]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][6][26] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [26]),
         .Q(\dataSet_reg[0][6]_4 [26]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][6][27] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [27]),
         .Q(\dataSet_reg[0][6]_4 [27]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][6][28] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [28]),
         .Q(\dataSet_reg[0][6]_4 [28]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][6][29] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [29]),
         .Q(\dataSet_reg[0][6]_4 [29]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][6][2] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [2]),
         .Q(\dataSet_reg[0][6]_4 [2]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][6][30] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [30]),
         .Q(\dataSet_reg[0][6]_4 [30]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][6][31] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [31]),
         .Q(\dataSet_reg[0][6]_4 [31]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][6][3] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [3]),
         .Q(\dataSet_reg[0][6]_4 [3]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][6][4] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [4]),
         .Q(\dataSet_reg[0][6]_4 [4]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][6][5] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [5]),
         .Q(\dataSet_reg[0][6]_4 [5]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][6][6] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [6]),
         .Q(\dataSet_reg[0][6]_4 [6]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][6][7] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [7]),
         .Q(\dataSet_reg[0][6]_4 [7]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][6][8] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [8]),
         .Q(\dataSet_reg[0][6]_4 [8]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][6][9] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [9]),
         .Q(\dataSet_reg[0][6]_4 [9]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][7][0] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [32]),
         .Q(\dataSet_reg[0][7]_7 [0]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][7][10] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [42]),
         .Q(\dataSet_reg[0][7]_7 [10]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][7][11] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [43]),
         .Q(\dataSet_reg[0][7]_7 [11]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][7][12] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [44]),
         .Q(\dataSet_reg[0][7]_7 [12]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][7][13] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [45]),
         .Q(\dataSet_reg[0][7]_7 [13]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][7][14] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [46]),
         .Q(\dataSet_reg[0][7]_7 [14]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][7][15] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [47]),
         .Q(\dataSet_reg[0][7]_7 [15]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][7][16] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [48]),
         .Q(\dataSet_reg[0][7]_7 [16]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][7][17] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [49]),
         .Q(\dataSet_reg[0][7]_7 [17]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][7][18] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [50]),
         .Q(\dataSet_reg[0][7]_7 [18]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][7][19] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [51]),
         .Q(\dataSet_reg[0][7]_7 [19]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][7][1] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [33]),
         .Q(\dataSet_reg[0][7]_7 [1]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][7][20] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [52]),
         .Q(\dataSet_reg[0][7]_7 [20]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][7][21] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [53]),
         .Q(\dataSet_reg[0][7]_7 [21]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][7][22] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [54]),
         .Q(\dataSet_reg[0][7]_7 [22]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][7][23] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [55]),
         .Q(\dataSet_reg[0][7]_7 [23]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][7][24] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [56]),
         .Q(\dataSet_reg[0][7]_7 [24]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][7][25] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [57]),
         .Q(\dataSet_reg[0][7]_7 [25]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][7][26] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [58]),
         .Q(\dataSet_reg[0][7]_7 [26]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][7][27] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [59]),
         .Q(\dataSet_reg[0][7]_7 [27]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][7][28] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [60]),
         .Q(\dataSet_reg[0][7]_7 [28]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][7][29] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [61]),
         .Q(\dataSet_reg[0][7]_7 [29]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][7][2] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [34]),
         .Q(\dataSet_reg[0][7]_7 [2]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][7][30] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [62]),
         .Q(\dataSet_reg[0][7]_7 [30]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][7][31] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [63]),
         .Q(\dataSet_reg[0][7]_7 [31]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][7][3] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [35]),
         .Q(\dataSet_reg[0][7]_7 [3]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][7][4] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [36]),
         .Q(\dataSet_reg[0][7]_7 [4]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][7][5] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [37]),
         .Q(\dataSet_reg[0][7]_7 [5]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][7][6] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [38]),
         .Q(\dataSet_reg[0][7]_7 [6]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][7][7] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [39]),
         .Q(\dataSet_reg[0][7]_7 [7]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][7][8] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [40]),
         .Q(\dataSet_reg[0][7]_7 [8]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][7][9] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [41]),
         .Q(\dataSet_reg[0][7]_7 [9]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][8][0] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [64]),
         .Q(\dataSet_reg[0][8]_10 [0]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][8][10] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [74]),
         .Q(\dataSet_reg[0][8]_10 [10]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][8][11] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [75]),
         .Q(\dataSet_reg[0][8]_10 [11]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][8][12] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [76]),
         .Q(\dataSet_reg[0][8]_10 [12]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][8][13] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [77]),
         .Q(\dataSet_reg[0][8]_10 [13]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][8][14] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [78]),
         .Q(\dataSet_reg[0][8]_10 [14]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][8][15] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [79]),
         .Q(\dataSet_reg[0][8]_10 [15]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][8][16] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [80]),
         .Q(\dataSet_reg[0][8]_10 [16]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][8][17] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [81]),
         .Q(\dataSet_reg[0][8]_10 [17]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][8][18] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [82]),
         .Q(\dataSet_reg[0][8]_10 [18]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][8][19] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [83]),
         .Q(\dataSet_reg[0][8]_10 [19]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][8][1] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [65]),
         .Q(\dataSet_reg[0][8]_10 [1]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][8][20] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [84]),
         .Q(\dataSet_reg[0][8]_10 [20]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][8][21] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [85]),
         .Q(\dataSet_reg[0][8]_10 [21]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][8][22] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [86]),
         .Q(\dataSet_reg[0][8]_10 [22]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][8][23] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [87]),
         .Q(\dataSet_reg[0][8]_10 [23]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][8][24] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [88]),
         .Q(\dataSet_reg[0][8]_10 [24]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][8][25] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [89]),
         .Q(\dataSet_reg[0][8]_10 [25]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][8][26] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [90]),
         .Q(\dataSet_reg[0][8]_10 [26]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][8][27] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [91]),
         .Q(\dataSet_reg[0][8]_10 [27]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][8][28] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [92]),
         .Q(\dataSet_reg[0][8]_10 [28]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][8][29] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [93]),
         .Q(\dataSet_reg[0][8]_10 [29]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][8][2] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [66]),
         .Q(\dataSet_reg[0][8]_10 [2]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][8][30] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [94]),
         .Q(\dataSet_reg[0][8]_10 [30]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][8][31] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [95]),
         .Q(\dataSet_reg[0][8]_10 [31]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][8][3] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [67]),
         .Q(\dataSet_reg[0][8]_10 [3]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][8][4] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [68]),
         .Q(\dataSet_reg[0][8]_10 [4]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][8][5] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [69]),
         .Q(\dataSet_reg[0][8]_10 [5]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][8][6] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [70]),
         .Q(\dataSet_reg[0][8]_10 [6]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][8][7] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [71]),
         .Q(\dataSet_reg[0][8]_10 [7]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][8][8] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [72]),
         .Q(\dataSet_reg[0][8]_10 [8]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \dataSet_reg[0][8][9] 
        (.C(axi_clk),
         .CE(\genblk1[0].br_coupler_n_0 ),
         .D(\lb_data_out[0]_0 [73]),
         .Q(\dataSet_reg[0][8]_10 [9]),
-        .R(RSTst0));
+        .R(channel_sel1));
   Convolution_Controller_Convolution_Controll_0_0_bram_coupler \genblk1[0].br_coupler 
        (.CO(\current_x_reg[10]_i_4_n_0 ),
         .\DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram (lb_r_en_reg_n_0),
@@ -64197,10 +64197,10 @@ module Convolution_Controller_Convolution_Controll_0_0_Convolution_Controller
         .MULTIst_reg(RDst_reg_n_0),
         .MULTIst_reg_0(\MULTIPLY_START_reg[8]_rep_n_0 ),
         .Q(\control_registers_reg_n_0_[0][0] ),
-        .RSTst0(RSTst0),
         .axi_clk(axi_clk),
         .axi_reset_n(axi_reset_n),
         .cReady(cReady),
+        .channel_sel1(channel_sel1),
         .\control_registers_reg[0][0] (\genblk1[0].br_coupler_n_0 ),
         .\lb_data_out[0]_0 (\lb_data_out[0]_0 ),
         .\lb_r_cnt_reg[0] (\genblk1[0].br_coupler_n_103 ),
@@ -64233,7 +64233,7 @@ module Convolution_Controller_Convolution_Controll_0_0_Convolution_Controller
        (.I0(\current_x_reg[10]_i_4_n_0 ),
         .I1(\current_x[10]_i_2_n_0 ),
         .I2(\current_y_reg[10]_i_4_n_0 ),
-        .I3(RSTst0),
+        .I3(channel_sel1),
         .I4(RSTst3_out),
         .I5(lb_force_rst_reg_n_0),
         .O(lb_force_rst_i_1_n_0));
@@ -64249,7 +64249,7 @@ module Convolution_Controller_Convolution_Controll_0_0_Convolution_Controller
        (.I0(\lb_q_cnt_reg_n_0_[0] ),
         .I1(lb_q_cnt),
         .I2(\current_x[10]_i_2_n_0 ),
-        .I3(RSTst0),
+        .I3(channel_sel1),
         .O(\lb_q_cnt[0]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hBAAABAAABAAAAAAA)) 
@@ -64269,7 +64269,7 @@ module Convolution_Controller_Convolution_Controll_0_0_Convolution_Controller
         .I2(\lb_q_cnt_reg_n_0_[0] ),
         .I3(\current_x[10]_i_2_n_0 ),
         .I4(\current_x_reg[10]_i_4_n_0 ),
-        .I5(RSTst0),
+        .I5(channel_sel1),
         .O(\lb_q_cnt[1]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hFFFFFFFF2A2A2A26)) 
@@ -64346,7 +64346,7 @@ module Convolution_Controller_Convolution_Controll_0_0_Convolution_Controller
         .CE(1'b1),
         .D(\genblk1[0].br_coupler_n_102 ),
         .Q(lb_r_en_reg_n_0),
-        .R(RSTst0));
+        .R(channel_sel1));
   LUT6 #(
     .INIT(64'h0000000800000000)) 
     lb_wr_en_i_3
@@ -64592,193 +64592,193 @@ module Convolution_Controller_Convolution_Controll_0_0_Convolution_Controller
         .CE(m_axis_valid_i_2_n_0),
         .D(\m_axis_data[0]_i_1_n_0 ),
         .Q(m_axis_data[0]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \m_axis_data_reg[10] 
        (.C(axi_clk),
         .CE(m_axis_valid_i_2_n_0),
         .D(\m_axis_data[10]_i_1_n_0 ),
         .Q(m_axis_data[10]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \m_axis_data_reg[11] 
        (.C(axi_clk),
         .CE(m_axis_valid_i_2_n_0),
         .D(\m_axis_data[11]_i_1_n_0 ),
         .Q(m_axis_data[11]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \m_axis_data_reg[12] 
        (.C(axi_clk),
         .CE(m_axis_valid_i_2_n_0),
         .D(\m_axis_data[12]_i_1_n_0 ),
         .Q(m_axis_data[12]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \m_axis_data_reg[13] 
        (.C(axi_clk),
         .CE(m_axis_valid_i_2_n_0),
         .D(\m_axis_data[13]_i_1_n_0 ),
         .Q(m_axis_data[13]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \m_axis_data_reg[14] 
        (.C(axi_clk),
         .CE(m_axis_valid_i_2_n_0),
         .D(\m_axis_data[14]_i_1_n_0 ),
         .Q(m_axis_data[14]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \m_axis_data_reg[15] 
        (.C(axi_clk),
         .CE(m_axis_valid_i_2_n_0),
         .D(\m_axis_data[15]_i_1_n_0 ),
         .Q(m_axis_data[15]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \m_axis_data_reg[16] 
        (.C(axi_clk),
         .CE(m_axis_valid_i_2_n_0),
         .D(\m_axis_data[16]_i_1_n_0 ),
         .Q(m_axis_data[16]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \m_axis_data_reg[17] 
        (.C(axi_clk),
         .CE(m_axis_valid_i_2_n_0),
         .D(\m_axis_data[17]_i_1_n_0 ),
         .Q(m_axis_data[17]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \m_axis_data_reg[18] 
        (.C(axi_clk),
         .CE(m_axis_valid_i_2_n_0),
         .D(\m_axis_data[18]_i_1_n_0 ),
         .Q(m_axis_data[18]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \m_axis_data_reg[19] 
        (.C(axi_clk),
         .CE(m_axis_valid_i_2_n_0),
         .D(\m_axis_data[19]_i_1_n_0 ),
         .Q(m_axis_data[19]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \m_axis_data_reg[1] 
        (.C(axi_clk),
         .CE(m_axis_valid_i_2_n_0),
         .D(\m_axis_data[1]_i_1_n_0 ),
         .Q(m_axis_data[1]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \m_axis_data_reg[20] 
        (.C(axi_clk),
         .CE(m_axis_valid_i_2_n_0),
         .D(\m_axis_data[20]_i_1_n_0 ),
         .Q(m_axis_data[20]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \m_axis_data_reg[21] 
        (.C(axi_clk),
         .CE(m_axis_valid_i_2_n_0),
         .D(\m_axis_data[21]_i_1_n_0 ),
         .Q(m_axis_data[21]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \m_axis_data_reg[22] 
        (.C(axi_clk),
         .CE(m_axis_valid_i_2_n_0),
         .D(\m_axis_data[22]_i_1_n_0 ),
         .Q(m_axis_data[22]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \m_axis_data_reg[23] 
        (.C(axi_clk),
         .CE(m_axis_valid_i_2_n_0),
         .D(\m_axis_data[23]_i_1_n_0 ),
         .Q(m_axis_data[23]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \m_axis_data_reg[24] 
        (.C(axi_clk),
         .CE(m_axis_valid_i_2_n_0),
         .D(\m_axis_data[24]_i_1_n_0 ),
         .Q(m_axis_data[24]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \m_axis_data_reg[25] 
        (.C(axi_clk),
         .CE(m_axis_valid_i_2_n_0),
         .D(\m_axis_data[25]_i_1_n_0 ),
         .Q(m_axis_data[25]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \m_axis_data_reg[26] 
        (.C(axi_clk),
         .CE(m_axis_valid_i_2_n_0),
         .D(\m_axis_data[26]_i_1_n_0 ),
         .Q(m_axis_data[26]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \m_axis_data_reg[27] 
        (.C(axi_clk),
         .CE(m_axis_valid_i_2_n_0),
         .D(\m_axis_data[27]_i_1_n_0 ),
         .Q(m_axis_data[27]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \m_axis_data_reg[28] 
        (.C(axi_clk),
         .CE(m_axis_valid_i_2_n_0),
         .D(\m_axis_data[28]_i_1_n_0 ),
         .Q(m_axis_data[28]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \m_axis_data_reg[29] 
        (.C(axi_clk),
         .CE(m_axis_valid_i_2_n_0),
         .D(\m_axis_data[29]_i_1_n_0 ),
         .Q(m_axis_data[29]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \m_axis_data_reg[2] 
        (.C(axi_clk),
         .CE(m_axis_valid_i_2_n_0),
         .D(\m_axis_data[2]_i_1_n_0 ),
         .Q(m_axis_data[2]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \m_axis_data_reg[30] 
        (.C(axi_clk),
         .CE(m_axis_valid_i_2_n_0),
         .D(\m_axis_data[30]_i_1_n_0 ),
         .Q(m_axis_data[30]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \m_axis_data_reg[31] 
        (.C(axi_clk),
         .CE(m_axis_valid_i_2_n_0),
         .D(\m_axis_data[31]_i_1_n_0 ),
         .Q(m_axis_data[31]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \m_axis_data_reg[3] 
        (.C(axi_clk),
         .CE(m_axis_valid_i_2_n_0),
         .D(\m_axis_data[3]_i_1_n_0 ),
         .Q(m_axis_data[3]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \m_axis_data_reg[4] 
        (.C(axi_clk),
         .CE(m_axis_valid_i_2_n_0),
         .D(\m_axis_data[4]_i_1_n_0 ),
         .Q(m_axis_data[4]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \m_axis_data_reg[5] 
        (.C(axi_clk),
         .CE(m_axis_valid_i_2_n_0),
         .D(\m_axis_data[5]_i_1_n_0 ),
         .Q(m_axis_data[5]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \m_axis_data_reg[6] 
        (.C(axi_clk),
         .CE(m_axis_valid_i_2_n_0),
         .D(\m_axis_data[6]_i_1_n_0 ),
         .Q(m_axis_data[6]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \m_axis_data_reg[7] 
        (.C(axi_clk),
         .CE(m_axis_valid_i_2_n_0),
         .D(\m_axis_data[7]_i_1_n_0 ),
         .Q(m_axis_data[7]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \m_axis_data_reg[8] 
        (.C(axi_clk),
         .CE(m_axis_valid_i_2_n_0),
         .D(\m_axis_data[8]_i_1_n_0 ),
         .Q(m_axis_data[8]),
-        .R(RSTst0));
+        .R(channel_sel1));
   FDRE \m_axis_data_reg[9] 
        (.C(axi_clk),
         .CE(m_axis_valid_i_2_n_0),
         .D(\m_axis_data[9]_i_1_n_0 ),
         .Q(m_axis_data[9]),
-        .R(RSTst0));
+        .R(channel_sel1));
   LUT5 #(
     .INIT(32'hBFFFAAAA)) 
     \m_axis_keep[3]_i_1 
@@ -64793,7 +64793,7 @@ module Convolution_Controller_Convolution_Controll_0_0_Convolution_Controller
         .CE(1'b1),
         .D(\m_axis_keep[3]_i_1_n_0 ),
         .Q(m_axis_keep),
-        .R(RSTst0));
+        .R(channel_sel1));
   (* SOFT_HLUTNM = "soft_lutpair97" *) 
   LUT4 #(
     .INIT(16'hF7F0)) 
@@ -64864,13 +64864,13 @@ module Convolution_Controller_Convolution_Controll_0_0_Convolution_Controller
         .CE(1'b1),
         .D(m_axis_last_i_1_n_0),
         .Q(m_axis_last_reg_0),
-        .R(RSTst0));
+        .R(channel_sel1));
   LUT2 #(
     .INIT(4'hB)) 
     m_axis_valid_i_1
        (.I0(RSTst_reg_n_0),
         .I1(axi_reset_n),
-        .O(RSTst0));
+        .O(channel_sel1));
   LUT3 #(
     .INIT(8'hEA)) 
     m_axis_valid_i_2
@@ -64883,7 +64883,7 @@ module Convolution_Controller_Convolution_Controll_0_0_Convolution_Controller
         .CE(m_axis_valid_i_2_n_0),
         .D(cReady),
         .Q(m_axis_valid_reg_0),
-        .R(RSTst0));
+        .R(channel_sel1));
   LUT6 #(
     .INIT(64'h5555555155555555)) 
     memory_read_i_1
@@ -64915,7 +64915,7 @@ module Convolution_Controller_Convolution_Controll_0_0_Convolution_Controller
         .CE(1'b1),
         .D(memory_read_i_1_n_0),
         .Q(memory_read),
-        .S(RSTst0));
+        .S(channel_sel1));
   LUT6 #(
     .INIT(64'hAAAA2202AAAAAAAA)) 
     rd_st_i_1
@@ -88912,7 +88912,7 @@ module Convolution_Controller_Convolution_Controll_0_0_bram_coupler
     MULTIst_reg_0,
     MULTIst,
     lb_wr_en_reg_0,
-    RSTst0,
+    channel_sel1,
     lb_wr_en_reg_1,
     memory_read,
     \lb_r_cnt_reg[1]_0 ,
@@ -88953,7 +88953,7 @@ module Convolution_Controller_Convolution_Controll_0_0_bram_coupler
   input MULTIst_reg_0;
   input MULTIst;
   input lb_wr_en_reg_0;
-  input RSTst0;
+  input channel_sel1;
   input lb_wr_en_reg_1;
   input memory_read;
   input \lb_r_cnt_reg[1]_0 ;
@@ -88978,10 +88978,10 @@ module Convolution_Controller_Convolution_Controll_0_0_bram_coupler
   wire MULTIst_reg;
   wire MULTIst_reg_0;
   wire [0:0]Q;
-  wire RSTst0;
   wire axi_clk;
   wire axi_reset_n;
   wire cReady;
+  wire channel_sel1;
   wire \control_registers_reg[0][0] ;
   wire \genblk1[0].BRAM_n_32 ;
   wire \genblk1[2].BRAM_n_64 ;
@@ -89231,7 +89231,7 @@ module Convolution_Controller_Convolution_Controll_0_0_bram_coupler
        (.I0(\lb_r_cnt_reg[1]_1 ),
         .I1(\control_registers_reg[0][0] ),
         .I2(\lb_r_cnt_reg[1]_2 ),
-        .I3(RSTst0),
+        .I3(channel_sel1),
         .O(\lb_r_cnt_reg[0] ));
   LUT6 #(
     .INIT(64'h00000000FF6A006A)) 
@@ -89241,7 +89241,7 @@ module Convolution_Controller_Convolution_Controll_0_0_bram_coupler
         .I2(\lb_r_cnt_reg[1]_1 ),
         .I3(\lb_r_cnt_reg[1]_2 ),
         .I4(CO),
-        .I5(RSTst0),
+        .I5(channel_sel1),
         .O(\lb_r_cnt_reg[1] ));
   LUT6 #(
     .INIT(64'h0000000000002E22)) 
@@ -89251,7 +89251,7 @@ module Convolution_Controller_Convolution_Controll_0_0_bram_coupler
         .I2(\lb_r_cnt_reg[2]_3 ),
         .I3(\lb_r_cnt_reg[2]_2 ),
         .I4(\lb_r_cnt_reg[1]_2 ),
-        .I5(RSTst0),
+        .I5(channel_sel1),
         .O(\lb_r_cnt_reg[2]_0 ));
   LUT6 #(
     .INIT(64'h0FFF0000FEFFEE00)) 
@@ -89275,7 +89275,7 @@ module Convolution_Controller_Convolution_Controll_0_0_bram_coupler
     .INIT(64'h0000000000301130)) 
     lb_wr_en_i_1
        (.I0(lb_wr_en_reg_0),
-        .I1(RSTst0),
+        .I1(channel_sel1),
         .I2(lb_wr_en),
         .I3(lb_wr_en9_out),
         .I4(lb_full),

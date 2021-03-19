@@ -7,10 +7,10 @@ set static_top  "CPE_Wrapper"
 
 # Set script run config options
 set prjCmd      0
-set genBit      0
-set genBin      0
-set cleanDir    0
-set genXsa      1
+set genBit      1
+set genBin      1
+set cleanDir    1
+set genXsa      0
 
 # Change to prjDir and open project
 cd $prjDir/$prjName
@@ -30,6 +30,8 @@ exec cp -f "$prjName.runs/impl_1/${static_top}.bit" $bitDir
 # Must set the partial configs in the same order as Vivado
 set partials {\
     ma_32_partial\
+    ma_16_partial\
+    ma_8_partial\
 }
 
 # Loop through all runs and generate bitstream files
@@ -63,11 +65,11 @@ if { $genBin == 1 } {
         write_cfgmem -force -interface SMAPx32 -format BIN -disablebitswap -loadbit "up 0x0 $bitDir/$partial.bit" $bitDir/icap_${partial}.bin
         write_cfgmem -force -interface SMAPx32 -format BIN -loadbit "up 0x0 $bitDir/$partial.bit" $bitDir/pcap_${partial}.bin
     }
+    eval file delete [glob nocomplain $bitDir/*.prm]
 }
 
 # Don't need these atm
 if { $cleanDir == 1 } {
-    eval file delete [glob nocomplain $bitDir/*.prm]
     eval file delete [glob nocomplain $bitDir/*.ltx]
 }
 

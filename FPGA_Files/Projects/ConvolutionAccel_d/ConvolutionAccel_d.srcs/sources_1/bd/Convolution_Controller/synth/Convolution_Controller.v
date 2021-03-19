@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-//Date        : Thu Mar 18 14:31:04 2021
+//Date        : Fri Mar 19 14:49:40 2021
 //Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 //Command     : generate_target Convolution_Controller.bd
 //Design      : Convolution_Controller
@@ -9,7 +9,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "Convolution_Controller,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=Convolution_Controller,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=9,numReposBlks=9,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=4,da_board_cnt=5,da_bram_cntlr_cnt=6,da_clkrst_cnt=36,da_ps7_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "Convolution_Controller.hwdef" *) 
+(* CORE_GENERATION_INFO = "Convolution_Controller,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=Convolution_Controller,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=13,numReposBlks=13,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=4,da_board_cnt=5,da_bram_cntlr_cnt=6,da_clkrst_cnt=36,da_ps7_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "Convolution_Controller.hwdef" *) 
 module Convolution_Controller
    (DDR_addr,
     DDR_ba,
@@ -391,6 +391,28 @@ module Convolution_Controller
         .s_axis_s2mm_tlast(Convolution_Controll_0_m_axis_data_TLAST),
         .s_axis_s2mm_tready(Convolution_Controll_0_m_axis_data_TREADY),
         .s_axis_s2mm_tvalid(Convolution_Controll_0_m_axis_data_TVALID));
+  Convolution_Controller_cc_s_axis_ila_0_0 cc_m_axis_ila_0
+       (.clk(processing_system7_0_FCLK_CLK0),
+        .probe0(Convolution_Controll_0_m_axis_data_TREADY),
+        .probe1(Convolution_Controll_0_m_axis_data_TDATA),
+        .probe2({1'b1,1'b1,1'b1,1'b1}),
+        .probe3(Convolution_Controll_0_m_axis_data_TVALID),
+        .probe4(Convolution_Controll_0_m_axis_data_TLAST),
+        .probe5(1'b0),
+        .probe6(Convolution_Controll_0_m_axis_data_TKEEP),
+        .probe7(1'b0),
+        .probe8(1'b0));
+  Convolution_Controller_dfx_mem_ila_0_0 cc_s_axis_ila_0
+       (.clk(processing_system7_0_FCLK_CLK0),
+        .probe0(axi_dma_0_M_AXIS_MM2S_TREADY),
+        .probe1(axi_dma_0_M_AXIS_MM2S_TDATA),
+        .probe2({1'b1,1'b1,1'b1,1'b1}),
+        .probe3(axi_dma_0_M_AXIS_MM2S_TVALID),
+        .probe4(axi_dma_0_M_AXIS_MM2S_TLAST),
+        .probe5(1'b0),
+        .probe6(axi_dma_0_M_AXIS_MM2S_TKEEP),
+        .probe7(1'b0),
+        .probe8(1'b0));
   Convolution_Controller_dfx_controller_0_1 dfx_controller_0
        (.clk(processing_system7_0_FCLK_CLK0),
         .icap_clk(processing_system7_0_FCLK_CLK0),
@@ -433,6 +455,61 @@ module Convolution_Controller
         .vsm_ma_rm_decouple(dfx_controller_0_vsm_ma_rm_decouple),
         .vsm_ma_rm_reset(dfx_controller_0_vsm_ma_rm_reset),
         .vsm_ma_rm_shutdown_ack(1'b1));
+  Convolution_Controller_ila_1_0 dfx_mem_ila_0
+       (.clk(processing_system7_0_FCLK_CLK0),
+        .probe0(1'b0),
+        .probe1({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .probe10(dfx_controller_0_M_AXI_MEM_RDATA),
+        .probe11(1'b0),
+        .probe12(1'b0),
+        .probe13(dfx_controller_0_M_AXI_MEM_RRESP),
+        .probe14({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .probe15({1'b1,1'b1,1'b1,1'b1}),
+        .probe16(dfx_controller_0_M_AXI_MEM_RVALID),
+        .probe17(dfx_controller_0_M_AXI_MEM_ARPROT),
+        .probe18({1'b0,1'b0,1'b0}),
+        .probe19(1'b0),
+        .probe2({1'b0,1'b0}),
+        .probe20(1'b0),
+        .probe21({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .probe22(1'b0),
+        .probe23({1'b0,1'b1,1'b0}),
+        .probe24({1'b0,1'b1}),
+        .probe25(1'b0),
+        .probe26(1'b0),
+        .probe27(dfx_controller_0_M_AXI_MEM_ARLEN),
+        .probe28(dfx_controller_0_M_AXI_MEM_ARSIZE),
+        .probe29(dfx_controller_0_M_AXI_MEM_ARBURST),
+        .probe3(1'b0),
+        .probe30(1'b0),
+        .probe31(dfx_controller_0_M_AXI_MEM_ARCACHE),
+        .probe32({1'b0,1'b0,1'b1,1'b1}),
+        .probe33({1'b0,1'b0,1'b0,1'b0}),
+        .probe34({1'b0,1'b0,1'b0,1'b0}),
+        .probe35(dfx_controller_0_M_AXI_MEM_ARUSER),
+        .probe36({1'b0,1'b0,1'b0,1'b0}),
+        .probe37({1'b0,1'b0,1'b0,1'b0}),
+        .probe38(1'b0),
+        .probe39(1'b0),
+        .probe4(1'b0),
+        .probe40(dfx_controller_0_M_AXI_MEM_RLAST),
+        .probe41(1'b0),
+        .probe42(1'b0),
+        .probe43(1'b0),
+        .probe5(dfx_controller_0_M_AXI_MEM_ARADDR),
+        .probe6(dfx_controller_0_M_AXI_MEM_RREADY),
+        .probe7(1'b0),
+        .probe8(dfx_controller_0_M_AXI_MEM_ARVALID),
+        .probe9(dfx_controller_0_M_AXI_MEM_ARREADY));
+  Convolution_Controller_ila_0_0 ila_0
+       (.clk(processing_system7_0_FCLK_CLK0),
+        .probe0(Convolution_Controll_0_MULTIPLIER_INPUT),
+        .probe1(Convolution_Controll_0_MULTIPLICAND_INPUT),
+        .probe2(Convolution_Controll_0_MULTIPLY_START),
+        .probe3(cSum_0_1),
+        .probe4(util_vector_logic_0_Res),
+        .probe5(dfx_controller_0_vsm_ma_rm_decouple),
+        .probe6(dfx_controller_0_vsm_ma_rm_reset));
   Convolution_Controller_processing_system7_0_0 processing_system7_0
        (.DDR_Addr(DDR_addr[14:0]),
         .DDR_BankAddr(DDR_ba[2:0]),

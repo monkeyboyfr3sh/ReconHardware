@@ -7,12 +7,12 @@ CONFIG.CP_FIFO_TYPE                       lutram
 CONFIG.CP_ARBITRATION_PROTOCOL            0
 CONFIG.CP_COMPRESSION                     0
 CONFIG.CP_FAMILY                          7series
-CONFIG.CDC_STAGES                         6
+CONFIG.CDC_STAGES                         2
 CONFIG.VS.ma.START_IN_SHUTDOWN            0
-CONFIG.VS.ma.NUM_TRIGGERS_ALLOCATED       2
-CONFIG.VS.ma.NUM_RMS_ALLOCATED            2
+CONFIG.VS.ma.NUM_TRIGGERS_ALLOCATED       4
+CONFIG.VS.ma.NUM_RMS_ALLOCATED            4
 CONFIG.VS.ma.NUM_HW_TRIGGERS              0
-CONFIG.VS.ma.SHUTDOWN_ON_ERROR            1
+CONFIG.VS.ma.SHUTDOWN_ON_ERROR            0
 CONFIG.VS.ma.HAS_AXIS_STATUS              0
 CONFIG.VS.ma.HAS_AXIS_CONTROL             0
 CONFIG.VS.ma.HAS_POR_RM                   1
@@ -20,20 +20,29 @@ CONFIG.VS.ma.POR_RM                       32
 CONFIG.VS.ma.SKIP_RM_STARTUP_AFTER_RESET  1
 CONFIG.VS.ma.TRIGGER0_TO_RM               32
 CONFIG.VS.ma.TRIGGER1_TO_RM               16
+CONFIG.VS.ma.TRIGGER2_TO_RM               8
+CONFIG.VS.ma.TRIGGER3_TO_RM               32
 CONFIG.VS.ma.RM.32.SHUTDOWN_REQUIRED      no
 CONFIG.VS.ma.RM.32.STARTUP_REQUIRED       no
 CONFIG.VS.ma.RM.32.RESET_REQUIRED         high
-CONFIG.VS.ma.RM.32.RESET_DURATION         1
+CONFIG.VS.ma.RM.32.RESET_DURATION         5
 CONFIG.VS.ma.RM.32.BS.0.ADDRESS           0
 CONFIG.VS.ma.RM.32.BS.0.SIZE              0
 CONFIG.VS.ma.RM.32.BS.0.CLEAR             0
 CONFIG.VS.ma.RM.16.SHUTDOWN_REQUIRED      no
 CONFIG.VS.ma.RM.16.STARTUP_REQUIRED       no
-CONFIG.VS.ma.RM.16.RESET_REQUIRED         no
-CONFIG.VS.ma.RM.16.RESET_DURATION         1
+CONFIG.VS.ma.RM.16.RESET_REQUIRED         high
+CONFIG.VS.ma.RM.16.RESET_DURATION         5
 CONFIG.VS.ma.RM.16.BS.0.ADDRESS           0
 CONFIG.VS.ma.RM.16.BS.0.SIZE              0
 CONFIG.VS.ma.RM.16.BS.0.CLEAR             0
+CONFIG.VS.ma.RM.8.SHUTDOWN_REQUIRED       no
+CONFIG.VS.ma.RM.8.STARTUP_REQUIRED        no
+CONFIG.VS.ma.RM.8.RESET_REQUIRED          high
+CONFIG.VS.ma.RM.8.RESET_DURATION          5
+CONFIG.VS.ma.RM.8.BS.0.ADDRESS            0
+CONFIG.VS.ma.RM.8.BS.0.SIZE               0
+CONFIG.VS.ma.RM.8.BS.0.CLEAR              0
 
 
 dfx_controller_v1_0::set_property -dict [list \
@@ -44,12 +53,12 @@ dfx_controller_v1_0::set_property -dict [list \
                                CONFIG.CP_ARBITRATION_PROTOCOL            0 \
                                CONFIG.CP_COMPRESSION                     0 \
                                CONFIG.CP_FAMILY                          7series \
-                               CONFIG.CDC_STAGES                         6 \
+                               CONFIG.CDC_STAGES                         2 \
                                CONFIG.VS.ma.START_IN_SHUTDOWN            0 \
-                               CONFIG.VS.ma.NUM_TRIGGERS_ALLOCATED       2 \
-                               CONFIG.VS.ma.NUM_RMS_ALLOCATED            2 \
+                               CONFIG.VS.ma.NUM_TRIGGERS_ALLOCATED       4 \
+                               CONFIG.VS.ma.NUM_RMS_ALLOCATED            4 \
                                CONFIG.VS.ma.NUM_HW_TRIGGERS              0 \
-                               CONFIG.VS.ma.SHUTDOWN_ON_ERROR            1 \
+                               CONFIG.VS.ma.SHUTDOWN_ON_ERROR            0 \
                                CONFIG.VS.ma.HAS_AXIS_STATUS              0 \
                                CONFIG.VS.ma.HAS_AXIS_CONTROL             0 \
                                CONFIG.VS.ma.HAS_POR_RM                   1 \
@@ -57,20 +66,29 @@ dfx_controller_v1_0::set_property -dict [list \
                                CONFIG.VS.ma.SKIP_RM_STARTUP_AFTER_RESET  1 \
                                CONFIG.VS.ma.TRIGGER0_TO_RM               32 \
                                CONFIG.VS.ma.TRIGGER1_TO_RM               16 \
+                               CONFIG.VS.ma.TRIGGER2_TO_RM               8 \
+                               CONFIG.VS.ma.TRIGGER3_TO_RM               32 \
                                CONFIG.VS.ma.RM.32.SHUTDOWN_REQUIRED      no \
                                CONFIG.VS.ma.RM.32.STARTUP_REQUIRED       no \
                                CONFIG.VS.ma.RM.32.RESET_REQUIRED         high \
-                               CONFIG.VS.ma.RM.32.RESET_DURATION         1 \
+                               CONFIG.VS.ma.RM.32.RESET_DURATION         5 \
                                CONFIG.VS.ma.RM.32.BS.0.ADDRESS           0 \
                                CONFIG.VS.ma.RM.32.BS.0.SIZE              0 \
                                CONFIG.VS.ma.RM.32.BS.0.CLEAR             0 \
                                CONFIG.VS.ma.RM.16.SHUTDOWN_REQUIRED      no \
                                CONFIG.VS.ma.RM.16.STARTUP_REQUIRED       no \
-                               CONFIG.VS.ma.RM.16.RESET_REQUIRED         no \
-                               CONFIG.VS.ma.RM.16.RESET_DURATION         1 \
+                               CONFIG.VS.ma.RM.16.RESET_REQUIRED         high \
+                               CONFIG.VS.ma.RM.16.RESET_DURATION         5 \
                                CONFIG.VS.ma.RM.16.BS.0.ADDRESS           0 \
                                CONFIG.VS.ma.RM.16.BS.0.SIZE              0 \
                                CONFIG.VS.ma.RM.16.BS.0.CLEAR             0 \
+                               CONFIG.VS.ma.RM.8.SHUTDOWN_REQUIRED       no \
+                               CONFIG.VS.ma.RM.8.STARTUP_REQUIRED        no \
+                               CONFIG.VS.ma.RM.8.RESET_REQUIRED          high \
+                               CONFIG.VS.ma.RM.8.RESET_DURATION          5 \
+                               CONFIG.VS.ma.RM.8.BS.0.ADDRESS            0 \
+                               CONFIG.VS.ma.RM.8.BS.0.SIZE               0 \
+                               CONFIG.VS.ma.RM.8.BS.0.CLEAR              0 \
                              ] [get_ips Convolution_Controller_dfx_controller_0_1]
 
 ID Mapping
@@ -78,14 +96,15 @@ ID Mapping
 Virtual Socket Manager ma is assigned ID 0
   Reconfigurable Module 32 is assigned ID 0
   Reconfigurable Module 16 is assigned ID 1
+  Reconfigurable Module 8 is assigned ID 2
 
 
 Address Structure
 =============================
 The addresses are structured as follows:
   There is no VSM Select slice as there's only one VSM
-  address[ 6: 5]  : Selects the Register Bank
-  address[ 4: 2]  : Selects the Register within the bank
+  address[ 7: 6]  : Selects the Register Bank
+  address[ 5: 2]  : Selects the Register within the bank
 
 Address Map
 =============================
@@ -94,18 +113,30 @@ Address Map
 | ma                     | STATUS       | 0X00000 |
 | ma                     | CONTROL      | 0X00000 |
 | ma                     | SW_TRIGGER   | 0X00004 |
-| ma                     | TRIGGER0     | 0X00020 |
-| ma                     | TRIGGER1     | 0X00024 |
-| ma                     | RM_BS_INDEX0 | 0X00040 |
-| ma                     | RM_CONTROL0  | 0X00044 |
-| ma                     | RM_BS_INDEX1 | 0X00048 |
-| ma                     | RM_CONTROL1  | 0X0004C |
-| ma                     | BS_ID0       | 0X00060 |
-| ma                     | BS_ADDRESS0  | 0X00064 |
-| ma                     | BS_SIZE0     | 0X00068 |
-| ma                     | BS_ID1       | 0X00070 |
-| ma                     | BS_ADDRESS1  | 0X00074 |
-| ma                     | BS_SIZE1     | 0X00078 |
+| ma                     | TRIGGER0     | 0X00040 |
+| ma                     | TRIGGER1     | 0X00044 |
+| ma                     | TRIGGER2     | 0X00048 |
+| ma                     | TRIGGER3     | 0X0004C |
+| ma                     | RM_BS_INDEX0 | 0X00080 |
+| ma                     | RM_CONTROL0  | 0X00084 |
+| ma                     | RM_BS_INDEX1 | 0X00088 |
+| ma                     | RM_CONTROL1  | 0X0008C |
+| ma                     | RM_BS_INDEX2 | 0X00090 |
+| ma                     | RM_CONTROL2  | 0X00094 |
+| ma                     | RM_BS_INDEX3 | 0X00098 |
+| ma                     | RM_CONTROL3  | 0X0009C |
+| ma                     | BS_ID0       | 0X000C0 |
+| ma                     | BS_ADDRESS0  | 0X000C4 |
+| ma                     | BS_SIZE0     | 0X000C8 |
+| ma                     | BS_ID1       | 0X000D0 |
+| ma                     | BS_ADDRESS1  | 0X000D4 |
+| ma                     | BS_SIZE1     | 0X000D8 |
+| ma                     | BS_ID2       | 0X000E0 |
+| ma                     | BS_ADDRESS2  | 0X000E4 |
+| ma                     | BS_SIZE2     | 0X000E8 |
+| ma                     | BS_ID3       | 0X000F0 |
+| ma                     | BS_ADDRESS3  | 0X000F4 |
+| ma                     | BS_SIZE3     | 0X000F8 |
 
 
 

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;conv_accel_sw/src/SD&apos; to &apos;SD.h&apos;" description="Rename resource &apos;SD&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/SD" name="SD.h" stamp="1616179401914" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;conv_accel_sw/src/CPE_driver&apos; to &apos;CPE_driver.h&apos;" description="Rename resource &apos;CPE_driver&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/CPE_driver" name="CPE_driver.h" stamp="1616180008937" updateReferences="true"/>
+</session>

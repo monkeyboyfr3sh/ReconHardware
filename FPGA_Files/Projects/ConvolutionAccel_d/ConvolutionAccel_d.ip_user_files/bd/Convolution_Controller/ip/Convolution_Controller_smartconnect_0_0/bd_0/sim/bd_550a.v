@@ -6,7 +6,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "bd_550a,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=bd_550a,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=58,numReposBlks=47,numNonXlnxBlks=0,numHierBlks=11,maxHierDepth=2,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=SBD,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "Convolution_Controller_smartconnect_0_0.hwdef" *) 
+(* CORE_GENERATION_INFO = "bd_550a,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=bd_550a,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=58,numReposBlks=47,numNonXlnxBlks=0,numHierBlks=11,maxHierDepth=2,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=SBD,synth_mode=Global}" *) (* HW_HANDOFF = "Convolution_Controller_smartconnect_0_0.hwdef" *) 
 module bd_550a
    (M00_AXI_araddr,
     M00_AXI_arprot,

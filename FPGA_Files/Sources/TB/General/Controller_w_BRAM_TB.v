@@ -5,7 +5,7 @@
 `define test_width 8
 `define test_height 8
 `define test_channels 1
-`define data_width 32
+`define data_width 16
 `define addr_width 10
 `define kernel_size 3
 
@@ -142,11 +142,8 @@ genvar n;
 generate
 
 for(n=0;n<`test_channels;n=n+1)begin
-matrixAccelerator
-#( // Parameters
-    .DATA_WIDTH(`data_width),
-    .KERNEL_SIZE(`kernel_size)
-) matrixAccel(   
+ma_int_16
+matrixAccel(   
     .Clk(axi_clk),
     .Rst(~axi_reset_n),
     .multiplier_input       (MULTIPLIER_INPUT[(n*`kernel_size*`kernel_size*32)+:`kernel_size*`kernel_size*32]),        //Flat input connector. Has width of `bitLength*`inputPortcount

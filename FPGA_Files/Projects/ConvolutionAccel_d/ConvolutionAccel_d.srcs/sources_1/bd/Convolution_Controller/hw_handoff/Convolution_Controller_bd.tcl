@@ -188,19 +188,59 @@ proc create_root_design { parentCell } {
    CONFIG.c_sg_length_width {26} \
  ] $axi_dma_0
 
+  # Create instance: cc_m_axis_ila_0, and set properties
+  set cc_m_axis_ila_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:ila:6.2 cc_m_axis_ila_0 ]
+  set_property -dict [ list \
+   CONFIG.C_NUM_OF_PROBES {9} \
+   CONFIG.C_SLOT_0_AXI_PROTOCOL {AXI4S} \
+ ] $cc_m_axis_ila_0
+
+  # Create instance: cc_s_axis_ila_0, and set properties
+  set cc_s_axis_ila_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:ila:6.2 cc_s_axis_ila_0 ]
+  set_property -dict [ list \
+   CONFIG.C_NUM_OF_PROBES {9} \
+   CONFIG.C_SLOT_0_AXI_PROTOCOL {AXI4S} \
+ ] $cc_s_axis_ila_0
+
   # Create instance: dfx_controller_0, and set properties
   set dfx_controller_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:dfx_controller:1.0 dfx_controller_0 ]
   set_property -dict [ list \
-   CONFIG.ALL_PARAMS {HAS_AXI_LITE_IF 1 RESET_ACTIVE_LEVEL 0 CP_FIFO_DEPTH 32 CP_FIFO_TYPE lutram CDC_STAGES 6 VS {ma {ID 0 NAME ma RM {32 {ID 0 NAME 32 BS {0 {ID 0 ADDR 0 SIZE 0 CLEAR 0}} RESET_REQUIRED high} 16 {ID 1 NAME 16 BS {0 {ID 0 ADDR 0 SIZE 0 CLEAR 0}}}} POR_RM 32 SKIP_RM_STARTUP_AFTER_RESET 1 HAS_POR_RM 1}} CP_FAMILY 7series DIRTY 0} \
+   CONFIG.ALL_PARAMS {HAS_AXI_LITE_IF 1 RESET_ACTIVE_LEVEL 0 CP_FIFO_DEPTH 32 CP_FIFO_TYPE lutram CDC_STAGES 2 VS {ma {ID 0 NAME ma RM {32 {ID 0 NAME 32 BS {0 {ID 0 ADDR 0 SIZE 0 CLEAR 0}} RESET_REQUIRED high RESET_DURATION 5} 16 {ID 1 NAME 16 BS {0 {ID 0 ADDR 0 SIZE 0 CLEAR 0}} RESET_REQUIRED high RESET_DURATION 5} 8 {ID 2 NAME 8 BS {0 {ID 0 ADDR 0 SIZE 0 CLEAR 0}} RESET_REQUIRED high RESET_DURATION 5}} POR_RM 32 SKIP_RM_STARTUP_AFTER_RESET 1 HAS_POR_RM 1 RMS_ALLOCATED 4 NUM_TRIGGERS_ALLOCATED 4 HAS_AXIS_STATUS 0 HAS_AXIS_CONTROL 0 SHUTDOWN_ON_ERROR 0}} CP_FAMILY 7series DIRTY 2} \
+   CONFIG.GUI_CDC_STAGES {2} \
    CONFIG.GUI_RM_NEW_NAME {32} \
+   CONFIG.GUI_RM_RESET_DURATION {5} \
    CONFIG.GUI_RM_RESET_REQUIRED {high} \
    CONFIG.GUI_SELECT_RM {0} \
    CONFIG.GUI_SELECT_TRIGGER_1 {1} \
-   CONFIG.GUI_SELECT_TRIGGER_3 {1} \
+   CONFIG.GUI_SELECT_TRIGGER_2 {2} \
+   CONFIG.GUI_SELECT_TRIGGER_3 {0} \
+   CONFIG.GUI_VS_HAS_AXIS_CONTROL {false} \
+   CONFIG.GUI_VS_HAS_AXIS_STATUS {false} \
    CONFIG.GUI_VS_HAS_POR_RM {true} \
    CONFIG.GUI_VS_NEW_NAME {ma} \
+   CONFIG.GUI_VS_NUM_RMS_ALLOCATED {4} \
+   CONFIG.GUI_VS_NUM_TRIGGERS_ALLOCATED {4} \
+   CONFIG.GUI_VS_SHUTDOWN_ON_ERROR {false} \
    CONFIG.GUI_VS_SKIP_RM_STARTUP_AFTER_RESET {true} \
  ] $dfx_controller_0
+
+  # Create instance: dfx_mem_ila_0, and set properties
+  set dfx_mem_ila_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:ila:6.2 dfx_mem_ila_0 ]
+
+  # Create instance: ila_0, and set properties
+  set ila_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:ila:6.2 ila_0 ]
+  set_property -dict [ list \
+   CONFIG.C_ENABLE_ILA_AXI_MON {false} \
+   CONFIG.C_MONITOR_TYPE {Native} \
+   CONFIG.C_NUM_OF_PROBES {7} \
+   CONFIG.C_PROBE0_TYPE {1} \
+   CONFIG.C_PROBE0_WIDTH {288} \
+   CONFIG.C_PROBE1_TYPE {1} \
+   CONFIG.C_PROBE1_WIDTH {288} \
+   CONFIG.C_PROBE2_WIDTH {9} \
+   CONFIG.C_PROBE3_TYPE {1} \
+   CONFIG.C_PROBE3_WIDTH {32} \
+ ] $ila_0
 
   # Create instance: processing_system7_0, and set properties
   set processing_system7_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0 ]
@@ -1008,11 +1048,14 @@ proc create_root_design { parentCell } {
 
   # Create interface connections
   connect_bd_intf_net -intf_net Convolution_Controll_0_m_axis_data [get_bd_intf_pins Convolution_Controll_0/m_axis_data] [get_bd_intf_pins axi_dma_0/S_AXIS_S2MM]
+connect_bd_intf_net -intf_net [get_bd_intf_nets Convolution_Controll_0_m_axis_data] [get_bd_intf_pins axi_dma_0/S_AXIS_S2MM] [get_bd_intf_pins cc_m_axis_ila_0/SLOT_0_AXIS]
   connect_bd_intf_net -intf_net axi_dma_0_M_AXIS_MM2S [get_bd_intf_pins Convolution_Controll_0/s_axis_data] [get_bd_intf_pins axi_dma_0/M_AXIS_MM2S]
+connect_bd_intf_net -intf_net [get_bd_intf_nets axi_dma_0_M_AXIS_MM2S] [get_bd_intf_pins axi_dma_0/M_AXIS_MM2S] [get_bd_intf_pins cc_s_axis_ila_0/SLOT_0_AXIS]
   connect_bd_intf_net -intf_net axi_dma_0_M_AXI_MM2S [get_bd_intf_pins axi_dma_0/M_AXI_MM2S] [get_bd_intf_pins smartconnect_1/S00_AXI]
   connect_bd_intf_net -intf_net axi_dma_0_M_AXI_S2MM [get_bd_intf_pins axi_dma_0/M_AXI_S2MM] [get_bd_intf_pins smartconnect_1/S01_AXI]
   connect_bd_intf_net -intf_net dfx_controller_0_ICAP [get_bd_intf_ports ICAP_0] [get_bd_intf_pins dfx_controller_0/ICAP]
   connect_bd_intf_net -intf_net dfx_controller_0_M_AXI_MEM [get_bd_intf_pins dfx_controller_0/M_AXI_MEM] [get_bd_intf_pins smartconnect_1/S02_AXI]
+connect_bd_intf_net -intf_net [get_bd_intf_nets dfx_controller_0_M_AXI_MEM] [get_bd_intf_pins dfx_controller_0/M_AXI_MEM] [get_bd_intf_pins dfx_mem_ila_0/SLOT_0_AXI]
   connect_bd_intf_net -intf_net processing_system7_0_DDR [get_bd_intf_ports DDR] [get_bd_intf_pins processing_system7_0/DDR]
   connect_bd_intf_net -intf_net processing_system7_0_FIXED_IO [get_bd_intf_ports FIXED_IO] [get_bd_intf_pins processing_system7_0/FIXED_IO]
   connect_bd_intf_net -intf_net processing_system7_0_M_AXI_GP0 [get_bd_intf_pins processing_system7_0/M_AXI_GP0] [get_bd_intf_pins smartconnect_0/S00_AXI]
@@ -1022,18 +1065,18 @@ proc create_root_design { parentCell } {
   connect_bd_intf_net -intf_net smartconnect_1_M00_AXI [get_bd_intf_pins processing_system7_0/S_AXI_HP0] [get_bd_intf_pins smartconnect_1/M00_AXI]
 
   # Create port connections
-  connect_bd_net -net Convolution_Controll_0_MULTIPLICAND_INPUT [get_bd_ports MULTIPLICAND_INPUT_0] [get_bd_pins Convolution_Controll_0/MULTIPLICAND_INPUT]
-  connect_bd_net -net Convolution_Controll_0_MULTIPLIER_INPUT [get_bd_ports MULTIPLIER_INPUT_0] [get_bd_pins Convolution_Controll_0/MULTIPLIER_INPUT]
-  connect_bd_net -net Convolution_Controll_0_MULTIPLY_START [get_bd_ports MULTIPLY_START_0] [get_bd_pins Convolution_Controll_0/MULTIPLY_START]
+  connect_bd_net -net Convolution_Controll_0_MULTIPLICAND_INPUT [get_bd_ports MULTIPLICAND_INPUT_0] [get_bd_pins Convolution_Controll_0/MULTIPLICAND_INPUT] [get_bd_pins ila_0/probe1]
+  connect_bd_net -net Convolution_Controll_0_MULTIPLIER_INPUT [get_bd_ports MULTIPLIER_INPUT_0] [get_bd_pins Convolution_Controll_0/MULTIPLIER_INPUT] [get_bd_pins ila_0/probe0]
+  connect_bd_net -net Convolution_Controll_0_MULTIPLY_START [get_bd_ports MULTIPLY_START_0] [get_bd_pins Convolution_Controll_0/MULTIPLY_START] [get_bd_pins ila_0/probe2]
   connect_bd_net -net cReady_0_1 [get_bd_ports cReady_0] [get_bd_pins util_vector_logic_0/Op1]
-  connect_bd_net -net cSum_0_1 [get_bd_ports cSum_0] [get_bd_pins Convolution_Controll_0/cSum]
-  connect_bd_net -net dfx_controller_0_vsm_ma_rm_decouple [get_bd_pins dfx_controller_0/vsm_ma_rm_decouple] [get_bd_pins util_vector_logic_1/Op1]
-  connect_bd_net -net dfx_controller_0_vsm_ma_rm_reset [get_bd_ports vsm_ma_rm_reset_0] [get_bd_pins dfx_controller_0/vsm_ma_rm_reset]
-  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_ports FCLK_CLK0_0] [get_bd_pins Convolution_Controll_0/axi_clk] [get_bd_pins axi_dma_0/m_axi_mm2s_aclk] [get_bd_pins axi_dma_0/m_axi_s2mm_aclk] [get_bd_pins axi_dma_0/s_axi_lite_aclk] [get_bd_pins dfx_controller_0/clk] [get_bd_pins dfx_controller_0/icap_clk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins processing_system7_0/S_AXI_HP0_ACLK] [get_bd_pins rst_ps7_0_100M/slowest_sync_clk] [get_bd_pins smartconnect_0/aclk] [get_bd_pins smartconnect_1/aclk]
+  connect_bd_net -net cSum_0_1 [get_bd_ports cSum_0] [get_bd_pins Convolution_Controll_0/cSum] [get_bd_pins ila_0/probe3]
+  connect_bd_net -net dfx_controller_0_vsm_ma_rm_decouple [get_bd_pins dfx_controller_0/vsm_ma_rm_decouple] [get_bd_pins ila_0/probe5] [get_bd_pins util_vector_logic_1/Op1]
+  connect_bd_net -net dfx_controller_0_vsm_ma_rm_reset [get_bd_ports vsm_ma_rm_reset_0] [get_bd_pins dfx_controller_0/vsm_ma_rm_reset] [get_bd_pins ila_0/probe6]
+  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_ports FCLK_CLK0_0] [get_bd_pins Convolution_Controll_0/axi_clk] [get_bd_pins axi_dma_0/m_axi_mm2s_aclk] [get_bd_pins axi_dma_0/m_axi_s2mm_aclk] [get_bd_pins axi_dma_0/s_axi_lite_aclk] [get_bd_pins cc_m_axis_ila_0/clk] [get_bd_pins cc_s_axis_ila_0/clk] [get_bd_pins dfx_controller_0/clk] [get_bd_pins dfx_controller_0/icap_clk] [get_bd_pins dfx_mem_ila_0/clk] [get_bd_pins ila_0/clk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins processing_system7_0/S_AXI_HP0_ACLK] [get_bd_pins rst_ps7_0_100M/slowest_sync_clk] [get_bd_pins smartconnect_0/aclk] [get_bd_pins smartconnect_1/aclk]
   connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_ports FCLK_RESET0_N_0] [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_ps7_0_100M/ext_reset_in]
   connect_bd_net -net rst_ps7_0_100M_interconnect_aresetn [get_bd_pins rst_ps7_0_100M/interconnect_aresetn] [get_bd_pins smartconnect_0/aresetn] [get_bd_pins smartconnect_1/aresetn]
   connect_bd_net -net rst_ps7_0_100M_peripheral_aresetn [get_bd_pins Convolution_Controll_0/axi_reset_n] [get_bd_pins axi_dma_0/axi_resetn] [get_bd_pins dfx_controller_0/icap_reset] [get_bd_pins dfx_controller_0/reset] [get_bd_pins rst_ps7_0_100M/peripheral_aresetn]
-  connect_bd_net -net util_vector_logic_0_Res [get_bd_pins Convolution_Controll_0/cReady] [get_bd_pins util_vector_logic_0/Res]
+  connect_bd_net -net util_vector_logic_0_Res [get_bd_pins Convolution_Controll_0/cReady] [get_bd_pins ila_0/probe4] [get_bd_pins util_vector_logic_0/Res]
   connect_bd_net -net util_vector_logic_1_Res [get_bd_pins util_vector_logic_0/Op2] [get_bd_pins util_vector_logic_1/Res]
 
   # Create address segments

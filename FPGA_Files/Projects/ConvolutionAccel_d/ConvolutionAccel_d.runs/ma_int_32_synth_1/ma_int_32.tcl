@@ -70,6 +70,12 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "ma_int_32_synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 2
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
+set_msg_config  -id {Constraints 18-1056}  -suppress 
+set_msg_config  -id {XSIM 43-3322}  -string {{ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.}}  -suppress 
+set_msg_config  -id {Netlist 29-160}  -suppress 
 set_param project.vivado.isBlockSynthRun true
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg400-1
@@ -93,7 +99,7 @@ read_verilog -library xil_defaultlib {
   C:/GitHub/ReconHardware/FPGA_Files/Sources/General/matrixAccelerator.v
   C:/GitHub/ReconHardware/FPGA_Files/Sources/Multiplier/multiplyComputePynq.v
   C:/GitHub/ReconHardware/FPGA_Files/Sources/Adder/param_int_adder.v
-  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.srcs/sources_1/new/ma_int_32.v
+  C:/GitHub/ReconHardware/FPGA_Files/Sources/General/Wrappers/ma_int_32.v
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being

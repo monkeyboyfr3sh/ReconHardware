@@ -12,7 +12,7 @@ module CPE_Wrapper
 wire clk,rst_n,ip_reset;
 wire finaladd_start;
 wire vsm_ma_rst;
-
+ 
 // Matrix Accelerator signals
 wire    [ADDR_WIDTH-1:0]    AddressSelect;
 wire    [KERNEL_SIZE*KERNEL_SIZE-1:0]   mStart_conncetor;
@@ -66,9 +66,20 @@ ICAPE2_inst (
   .RDWRB(icap_rdwrb)    // 1-bit input: Read/Write Select input
 );
 
+icap_ila_wrapper
+(
+  .clk_0(clk),
+  .probe0_0(icap_o),
+  .probe1_0(icap_i),
+  .probe2_0(icap_csib),
+  .probe3_0(icap_rdwrb)
+);
+
 //*******************************
 // Convolution processor aka M.A.
 //*******************************
+//ma_int_8
+//ma_int_16
 ma_int_32
 ma
 ( // Ports    
