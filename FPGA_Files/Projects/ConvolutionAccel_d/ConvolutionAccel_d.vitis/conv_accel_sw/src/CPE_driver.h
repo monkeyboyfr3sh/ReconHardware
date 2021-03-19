@@ -44,14 +44,15 @@ XAxiDma AxiDma;
 #define RX_BYTE_CNT		4*RX_PCKT_LEN
 
 typedef struct image_type {
+	u32 file_size;
 	u32 img_width;
 	u32 img_height;
-	u32* img_arrayPtr;
 
 	u32 img_tx_pckt_len;
 	u32 img_tx_byte_cnt;
 	u32 img_rx_pckt_len;
 	u32 img_rx_byte_cnt;
+	u32* img_arrayPtr;
 };
 
 struct kernel_type {

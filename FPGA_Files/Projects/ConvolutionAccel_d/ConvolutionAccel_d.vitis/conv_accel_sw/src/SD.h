@@ -11,7 +11,11 @@
 #include "xil_io.h"
 #include "ff.h"
 
-u32 *SD_Transfer(char *FileName);
+struct file_info {
+	char *file_ptr;
+	u32 file_size;
+};
+struct file_info *SD_Transfer(char *FileName);
 
 int SD_Init();
 

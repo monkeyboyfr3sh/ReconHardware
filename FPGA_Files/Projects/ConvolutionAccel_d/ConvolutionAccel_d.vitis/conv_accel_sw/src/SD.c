@@ -8,28 +8,28 @@
 
 
 /* Transfers a file from SD card into memory */
-u32 *SD_Transfer(char *FileName){
+struct file_info *SD_Transfer(char *FileName){
     FIL fil;
     UINT br;
     FRESULT result;
-    u32 file_size;
+    struct file_info* return_fil = malloc(sizeof (struct file_info));
     u32 *return_addr=0;
 
     xil_printf("Opening %s ", FileName );
     result = f_open(&fil, FileName, FA_READ);
     if ( result ){
         xil_printf("Failed with ERROR: %d \n\r", result);
-        return return_addr;
+        return 0;
     }
-    file_size = f_size(&fil);
-    if(file_size<=0){
+    return_fil->file_size = f_size(&fil);
+    if(return_fil->file_size<=0){
     	xil_printf("AHH CANT USE THIS FILE\r\n");
-    	return return_addr;
+    	return 0;
     }
 
-    return_addr = malloc(file_size);
-    if(return_addr<=0){
-    	return return_addr;
+    return_fil->file_ptr = malloc(return_fil->file_size);
+    if(return_fil->file_ptr<=0){
+    	return 0;
     }
 
     xil_printf("... OK\n\r");
@@ -38,12 +38,20 @@ u32 *SD_Transfer(char *FileName){
         xil_printf("Moving file pointer of the file object: Failed with ERROR: %d \n\r", result);
         return 0;
     }
-    xil_printf("Reading file %s of 0x%x Bytes to 0x%x ", FileName, file_size, return_addr);
-    result = f_read(&fil, (void*) return_addr, file_size, &br);
+
+    xil_printf("Reading file %s of 0x%x Bytes to 0x%x ", FileName, return_fil->file_size, return_fil->file_ptr);
+    result = f_read(&fil, (void*) return_fil->file_ptr, return_fil->file_size, &br);
     if ( result ){
         xil_printf(": Failed with ERROR: %d \n\r", result);
         return 0;
     }
+//    char *ar;
+//    ar = return_fil->file_ptr;
+//    xil_printf("\r\n");
+//    for(int i=0; i<return_fil->file_size; i++)
+//    {
+//    	xil_printf("%c\r\n",ar[i]);
+//    }
     xil_printf("... OK\n\r");
     xil_printf("Closing %s ", FileName);
     result = f_close(&fil);
@@ -52,9 +60,8 @@ u32 *SD_Transfer(char *FileName){
         return 0;
     }
     xil_printf("... OK\n\r");
-    return return_addr;
+    return return_fil;
 }
-
 /* Mounts the SD card */
 int SD_Init(){
     static FATFS fatfs;

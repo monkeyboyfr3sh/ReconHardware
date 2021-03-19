@@ -32,12 +32,32 @@ u32 filter[] = {
 };
 
 int fill_image(struct image_type* image, u32 width, u32 height, char* fileName){
+	/* metadata */
 	image->img_width = width;
 	image->img_height = height;
+	image->img_tx_pckt_len = width*height;
+	image->img_rx_pckt_len = (width-2)*(height-2);
+	image->img_tx_byte_cnt = 4*image->img_tx_pckt_len;
+	image->img_rx_byte_cnt = 4*image->img_rx_pckt_len;
 
-	SD_Transfer(char *FileName, u32 distAddr, u32 size)
-	SD
-	image->img_arrayPtr =
+	/* Put CSV into memory */
+	struct file_info* Fil_info;
+
+	// Transfer file contents to memory
+	Fil_info = SD_Transfer(fileName);
+
+	// Create array in memory for file
+	image->file_size = Fil_info->file_size;
+	image->img_arrayPtr = malloc(Fil_info->file_size*(sizeof(u32)));
+
+	u32 size = Fil_info->file_size;
+	// Would use memcpy if I wasn't forcing it to change types here...
+	for(int i = 0;i<size;i++) image->img_arrayPtr[i] = Fil_info->file_ptr[i];
+
+	// Free memory
+	free(Fil_info->file_ptr);
+
+	return XST_SUCCESS;
 }
 
 int Process_Image(u16 DeviceId)

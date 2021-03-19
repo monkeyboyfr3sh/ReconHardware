@@ -2,18 +2,27 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="XPrc_SendSwTrigger" key="selection"/>
+		<item value="fill_image" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="fill_image"/>
+			<item value="SD_Transfer"/>
+			<item value="-&gt;"/>
+			<item value="return_addr"/>
+			<item value="file_size"/>
 			<item value="XPrc_SendSwTrigger"/>
 			<item value="PARTIAL_SHIFT_RM_SIZE"/>
 			<item value="XPRC_VS_MA_ID"/>
 			<item value="XPRC_VS_SHIFT_ID"/>
 		</list>
 		<list key="replacehistory">
+			<item value="."/>
+			<item value="return_fil-&gt;file_ptr"/>
+			<item value="return_fil-&gt;file_size"/>
+			<item value="return_fil-&gt;"/>
 			<item value="XPRC_VS_MA_ID"/>
 		</list>
 	</section>
@@ -21,7 +30,7 @@
 		<item value="284" key="DIALOG_WIDTH"/>
 		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 		<item value="391" key="DIALOG_HEIGHT"/>
-		<item value="1138" key="DIALOG_X_ORIGIN"/>
-		<item value="349" key="DIALOG_Y_ORIGIN"/>
+		<item value="1343" key="DIALOG_X_ORIGIN"/>
+		<item value="148" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>
