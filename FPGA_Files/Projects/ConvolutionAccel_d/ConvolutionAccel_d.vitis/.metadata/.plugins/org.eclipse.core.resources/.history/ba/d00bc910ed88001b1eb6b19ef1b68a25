@@ -1,7 +1,0 @@
-#ifndef SD_h
-#define SD_h
-
-
-#include "ff.h"
-
-#endif

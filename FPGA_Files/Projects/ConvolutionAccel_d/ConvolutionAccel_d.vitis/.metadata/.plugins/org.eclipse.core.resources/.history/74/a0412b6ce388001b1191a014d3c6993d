@@ -1,7 +1,0 @@
-#ifndef SD_H
-#define SD_H
-
-int SD_Transfer(char *FileName, u32 distAddr, u32 size);
-int SD_Init();
-
-#endif

@@ -73,10 +73,16 @@ int main()
 	}
 
 	xil_printf("\r\n");
+	u32 len = image1.img_tx_pckt_len;
+	xil_printf("Length:%d\r\n",len);
+
+	for(int i = 0;i<len;i++){
+		xil_printf("%d",image1.img_tx_ptr[i]);
+	}
 
 	/* Run the poll example for simple transfer */
 	xil_printf("################## DMA TEST 1 ##################\r\n");
-	Status = Process_Image(&image1);
+	Status = Process_Image(DMA_DEV_ID);
 	if (Status != XST_SUCCESS) {
 		xil_printf("XAxiDma_SimplePoll Example Failed\r\n");
 		return XST_FAILURE;

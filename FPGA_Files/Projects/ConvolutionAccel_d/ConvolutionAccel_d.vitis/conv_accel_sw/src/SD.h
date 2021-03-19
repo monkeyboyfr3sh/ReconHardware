@@ -1,5 +1,12 @@
-#ifndef SD_h
-#define SD_h
+/*
+ * SD.h
+ *
+ *  Created on: Mar 19, 2021
+ *      Author: monke
+ */
+
+#ifndef SRC_SD_H_
+#define SRC_SD_H_
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -20,4 +27,4 @@ struct file_info *SD_Transfer(char *FileName);
 
 int SD_Init();
 
-#endif
+#endif /* SRC_SD_H_ */

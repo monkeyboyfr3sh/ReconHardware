@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;conv_accel_sw_system&apos;" deleteContents="true" description="Delete resource &apos;conv_accel_sw_system&apos;" element1="/conv_accel_sw_system" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1616197025165"/>
+</session>

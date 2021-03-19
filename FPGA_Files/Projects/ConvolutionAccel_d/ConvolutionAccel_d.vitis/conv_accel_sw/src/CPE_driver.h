@@ -1,5 +1,12 @@
-#ifndef CPE
-#define CPE
+/*
+ * CPE_driver.h
+ *
+ *  Created on: Mar 19, 2021
+ *      Author: monke
+ */
+
+#ifndef SRC_CPE_DRIVER_H_
+#define SRC_CPE_DRIVER_H_
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -71,4 +78,4 @@ int Process_Image(u16 DeviceId);
 int CC_status_register();
 int CC_comand_register();
 
-#endif
+#endif /* SRC_CPE_DRIVER_H_ */

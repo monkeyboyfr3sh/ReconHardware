@@ -41,16 +41,20 @@ int fill_image(struct image_type* image, u32 width, u32 height, char* fileName){
 	image->img_tx_ptr = malloc(Fil_info->file_size*(sizeof(u32)));
 
 	u32 size = Fil_info->file_size;
-	u32 str_cnt,val_cnt;
+	u32 str_cnt=0;
+	u32 val_cnt=0;
 	char string[15]="";
 	// Would use memcpy if I wasn't forcing it to change types here...
 	for(int i = 0;i<size;i++){
 		char next_char = Fil_info->file_ptr[i];
+		xil_printf("next_char: %c\r\n",next_char);
+
 		if(next_char==','|next_char=='\n'){
 			u32 val = atoi(string);
-
+			xil_printf("string:%s\r\n",string);
+			xil_printf("decimal:%d\r\n",val);
+			image->img_tx_ptr[val_cnt] = val;
 			val_cnt++;
-			image->img_tx_ptr[i] = val;
 
 			str_cnt=0;
 			string[0] = 0;
@@ -59,6 +63,7 @@ int fill_image(struct image_type* image, u32 width, u32 height, char* fileName){
 		else {
 			string[str_cnt]=next_char;
 			str_cnt++;
+			string[str_cnt]=0;
 		}
 
 	}
@@ -67,7 +72,7 @@ int fill_image(struct image_type* image, u32 width, u32 height, char* fileName){
 	image->img_width = width;
 	image->img_height = height;
 
-	image->img_tx_pckt_len = width*height;
+	image->img_tx_pckt_len = val_cnt;
 	image->img_tx_byte_cnt = 4*image->img_tx_pckt_len;
 	if(val_cnt!=width*height) xil_printf("Dimension mismatch!\r\n");
 
