@@ -84,12 +84,12 @@ ma_int_32
 ma
 ( // Ports    
     .Clk                    (clk),
-    .Rst                    (~rst_n|vsm_ma_rst),                     // This is expecting reset of active high
-    .multiplier_input       (multiplier_connector),     //Flat input connector. Has width of `bitLength*`inputPortcount
-    .multiplicand_input     (multiplicand_connector),   //Flat input connector. Has width of `bitLength*`inputPortcount
-    .AddressSelect          (AddressSelect),            //Controls addressSelect for internal XBar                          
-    .mStart                 (mStart_conncetor),         //Starts multiplication for all three multipliers
-    .direct                 (1),                        //Controll bit to direct connect XBar IO
+    .Rst                    (~rst_n|vsm_ma_rst),        // This is expecting reset of active high
+    .multiplier_input       (multiplier_connector),     // Flat input connector. Has width of `bitLength*`inputPortcount
+    .multiplicand_input     (multiplicand_connector),   // Flat input connector. Has width of `bitLength*`inputPortcount
+    .AddressSelect          (0),                        // Controls addressSelect for internal XBar                          
+    .mStart                 (mStart_conncetor),         // Starts multiplication for all three multipliers
+    .direct                 (1),                        // Controll bit to direct connect XBar IO
     .finalAccumulate        (cSum),
     .finalReady             (cReady)
 );

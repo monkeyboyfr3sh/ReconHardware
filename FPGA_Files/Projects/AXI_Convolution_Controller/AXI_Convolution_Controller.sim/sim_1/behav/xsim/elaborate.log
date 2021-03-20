@@ -24,7 +24,7 @@ Compiling module xil_defaultlib.BRAM_blk_mem_gen_0_0
 Compiling module xil_defaultlib.BRAM
 Compiling module xil_defaultlib.BRAM_wrapper
 Compiling module xil_defaultlib.bram_coupler(MAX_ROW_WIDTH=1800)
-Compiling module xil_defaultlib.Convolution_Controller(CHANNELS=...
+Compiling module xil_defaultlib.Convolution_Controller_default
 Compiling module xil_defaultlib.param_int_adder(DATA_WIDTH=16)
 Compiling module xil_defaultlib.multiplyComputePynq(DATA_WIDTH=1...
 Compiling module xil_defaultlib.matrixAccelerator(DATA_WIDTH=16)

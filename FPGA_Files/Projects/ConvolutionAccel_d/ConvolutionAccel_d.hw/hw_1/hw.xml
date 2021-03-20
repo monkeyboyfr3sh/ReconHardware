@@ -7,17 +7,13 @@
   <device name="xc7z020_1" gui_info="dashboard1=hw_ila_1[xc7z020_1/hw_ila_1/Waveform=ILA_WAVE_1;xc7z020_1/hw_ila_1/Capture Setup=ILA_CAPTURE_1;xc7z020_1/hw_ila_1/Status=ILA_STATUS_1;xc7z020_1/hw_ila_1/Trigger Setup=ILA_TRIGGER_1;xc7z020_1/hw_ila_1/Settings=ILA_SETTINGS_1;],dashboard2=hw_ila_2[xc7z020_1/hw_ila_2/Capture Setup=ILA_CAPTURE_1;xc7z020_1/hw_ila_2/Settings=ILA_SETTINGS_1;xc7z020_1/hw_ila_2/Waveform=ILA_WAVE_1;xc7z020_1/hw_ila_2/Status=ILA_STATUS_1;xc7z020_1/hw_ila_2/Trigger Setup=ILA_TRIGGER_1;],dashboard3=hw_ila_3[xc7z020_1/hw_ila_3/Trigger Setup=ILA_TRIGGER_1;xc7z020_1/hw_ila_3/Waveform=ILA_WAVE_1;xc7z020_1/hw_ila_3/Status=ILA_STATUS_1;xc7z020_1/hw_ila_3/Settings=ILA_SETTINGS_1;xc7z020_1/hw_ila_3/Capture Setup=ILA_CAPTURE_1;],dashboard4=hw_ila_4[xc7z020_1/hw_ila_4/Waveform=ILA_WAVE_1;xc7z020_1/hw_ila_4/Trigger Setup=ILA_TRIGGER_1;xc7z020_1/hw_ila_4/Settings=ILA_SETTINGS_1;xc7z020_1/hw_ila_4/Status=ILA_STATUS_1;xc7z020_1/hw_ila_4/Capture Setup=ILA_CAPTURE_1;],dashboard5=hw_ila_5[xc7z020_1/hw_ila_5/Settings=ILA_SETTINGS_1;xc7z020_1/hw_ila_5/Capture Setup=ILA_CAPTURE_1;xc7z020_1/hw_ila_5/Waveform=ILA_WAVE_1;xc7z020_1/hw_ila_5/Trigger Setup=ILA_TRIGGER_1;xc7z020_1/hw_ila_5/Status=ILA_STATUS_1;]"/>
   <ObjectList object_type="hw_device" gui_info="">
     <Object name="xc7z020_1" gui_info="">
-      <Properties Property="FULL_PROBES.FILE" value=""/>
-      <Properties Property="PROBES.FILE" value=""/>
+      <Properties Property="FULL_PROBES.FILE" value="$_project_name_.runs/impl_1/CPE_Wrapper.ltx"/>
+      <Properties Property="PROBES.FILE" value="$_project_name_.runs/impl_1/CPE_Wrapper.ltx"/>
       <Properties Property="PROGRAM.HW_BITSTREAM" value="generated_files/CPE_Wrapper.bit"/>
       <Properties Property="SLR.COUNT" value="1"/>
     </Object>
   </ObjectList>
   <ObjectList object_type="hw_ila" gui_info="">
-    <Object name="" gui_info="">
-      <Properties Property="CONTROL.TRIGGER_CONDITION" value="AND"/>
-      <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
-    </Object>
     <Object name="BD_Wrapper/Convolution_Controller_i/cc_m_axis_ila_0" gui_info="">
       <Properties Property="CONTROL.TRIGGER_CONDITION" value="AND"/>
       <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
@@ -31,7 +27,7 @@
       <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
     </Object>
     <Object name="BD_Wrapper/Convolution_Controller_i/ila_0" gui_info="">
-      <Properties Property="CONTROL.TRIGGER_CONDITION" value="OR"/>
+      <Properties Property="CONTROL.TRIGGER_CONDITION" value="AND"/>
       <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
     </Object>
     <Object name="nolabel_line70/icap_ila_i/ila_0" gui_info="">
@@ -40,16 +36,14 @@
     </Object>
   </ObjectList>
   <ObjectList object_type="hw_probe" gui_info="">
-    <Object name="BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_data_TREADY" gui_info="Trigger Setup=1"/>
-    <Object name="BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_data_TVALID" gui_info="Trigger Setup=0"/>
-    <Object name="BD_Wrapper/Convolution_Controller_i/axi_dma_0_M_AXIS_MM2S_TREADY" gui_info="Trigger Setup=1"/>
-    <Object name="BD_Wrapper/Convolution_Controller_i/axi_dma_0_M_AXIS_MM2S_TVALID" gui_info="Trigger Setup=0"/>
+    <Object name="BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_data_TREADY" gui_info="Trigger Setup=0"/>
+    <Object name="BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_data_TVALID" gui_info="Trigger Setup=1"/>
+    <Object name="BD_Wrapper/Convolution_Controller_i/axi_dma_0_M_AXIS_MM2S_TREADY" gui_info="Trigger Setup=0"/>
+    <Object name="BD_Wrapper/Convolution_Controller_i/axi_dma_0_M_AXIS_MM2S_TVALID" gui_info="Trigger Setup=1"/>
     <Object name="BD_Wrapper/Convolution_Controller_i/dfx_controller_0_M_AXI_MEM_ARREADY" gui_info="Trigger Setup=0"/>
     <Object name="BD_Wrapper/Convolution_Controller_i/dfx_controller_0_M_AXI_MEM_ARVALID" gui_info="Trigger Setup=1"/>
-    <Object name="BD_Wrapper/Convolution_Controller_i/dfx_controller_0_vsm_ma_rm_decouple" gui_info="Trigger Setup=0"/>
-    <Object name="BD_Wrapper/Convolution_Controller_i/util_vector_logic_0_Res" gui_info="Trigger Setup=1"/>
+    <Object name="BD_Wrapper/Convolution_Controller_i/util_vector_logic_0_Res" gui_info="Trigger Setup=0"/>
     <Object name="nolabel_line70/icap_ila_i/probe2_0_1" gui_info="Trigger Setup=0"/>
-    <Object name="nolabel_line70/icap_ila_i/probe3_0_1" gui_info=""/>
   </ObjectList>
   <probeset name="hw project" active="false">
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
@@ -2929,7 +2923,7 @@
         <net name="BD_Wrapper/Convolution_Controller_i/&lt;const1>_9"/>
       </nets>
     </probe>
-    <probe type="ila_data" busType="net" source="netlist" spec="ILA_DATA_V2_RT">
+    <probe type="ila_data" busType="bus" source="netlist" spec="ILA_DATA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="DISPLAY_AS_ENUM" value="1"/>
         <Option Id="DISPLAY_HINT" value=""/>
@@ -3234,7 +3228,7 @@
         <net name="BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_MULTIPLICAND_INPUT[0]"/>
       </nets>
     </probe>
-    <probe type="ila_data" busType="net" source="netlist" spec="ILA_DATA_V2_RT">
+    <probe type="ila_data" busType="bus" source="netlist" spec="ILA_DATA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="DISPLAY_AS_ENUM" value="1"/>
         <Option Id="DISPLAY_HINT" value=""/>
@@ -3539,7 +3533,7 @@
         <net name="BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_MULTIPLIER_INPUT[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq9&apos;hXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq9&apos;hXXX"/>
@@ -3568,7 +3562,7 @@
         <net name="BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_MULTIPLY_START[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
@@ -3620,7 +3614,7 @@
         <net name="BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_data_TDATA[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq4&apos;hX"/>
         <Option Id="COMPARE_VALUE.0" value="eq4&apos;hX"/>
@@ -3707,7 +3701,7 @@
         <net name="BD_Wrapper/Convolution_Controller_i/Convolution_Controll_0_m_axis_data_TVALID"/>
       </nets>
     </probe>
-    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
@@ -3759,7 +3753,7 @@
         <net name="BD_Wrapper/Convolution_Controller_i/axi_dma_0_M_AXIS_MM2S_TDATA[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq4&apos;hX"/>
         <Option Id="COMPARE_VALUE.0" value="eq4&apos;hX"/>
@@ -3846,7 +3840,7 @@
         <net name="BD_Wrapper/Convolution_Controller_i/axi_dma_0_M_AXIS_MM2S_TVALID"/>
       </nets>
     </probe>
-    <probe type="ila_data" busType="net" source="netlist" spec="ILA_DATA_V2_RT">
+    <probe type="ila_data" busType="bus" source="netlist" spec="ILA_DATA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="DISPLAY_AS_ENUM" value="1"/>
         <Option Id="DISPLAY_HINT" value=""/>
@@ -3895,7 +3889,7 @@
         <net name="BD_Wrapper/Convolution_Controller_i/cSum_0_1[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
@@ -3947,7 +3941,7 @@
         <net name="BD_Wrapper/Convolution_Controller_i/dfx_controller_0_M_AXI_MEM_ARADDR[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq2&apos;hX"/>
         <Option Id="COMPARE_VALUE.0" value="eq2&apos;hX"/>
@@ -3969,7 +3963,7 @@
         <net name="BD_Wrapper/Convolution_Controller_i/dfx_controller_0_M_AXI_MEM_ARBURST[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq4&apos;hX"/>
         <Option Id="COMPARE_VALUE.0" value="eq4&apos;hX"/>
@@ -3993,7 +3987,7 @@
         <net name="BD_Wrapper/Convolution_Controller_i/dfx_controller_0_M_AXI_MEM_ARCACHE[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq8&apos;hXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq8&apos;hXX"/>
@@ -4021,7 +4015,7 @@
         <net name="BD_Wrapper/Convolution_Controller_i/dfx_controller_0_M_AXI_MEM_ARLEN[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq3&apos;hX"/>
         <Option Id="COMPARE_VALUE.0" value="eq3&apos;hX"/>
@@ -4065,7 +4059,7 @@
         <net name="BD_Wrapper/Convolution_Controller_i/dfx_controller_0_M_AXI_MEM_ARREADY"/>
       </nets>
     </probe>
-    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq3&apos;hX"/>
         <Option Id="COMPARE_VALUE.0" value="eq3&apos;hX"/>
@@ -4088,7 +4082,7 @@
         <net name="BD_Wrapper/Convolution_Controller_i/dfx_controller_0_M_AXI_MEM_ARSIZE[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq4&apos;hX"/>
         <Option Id="COMPARE_VALUE.0" value="eq4&apos;hX"/>
@@ -4133,7 +4127,7 @@
         <net name="BD_Wrapper/Convolution_Controller_i/dfx_controller_0_M_AXI_MEM_ARVALID"/>
       </nets>
     </probe>
-    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
@@ -4227,7 +4221,7 @@
         <net name="BD_Wrapper/Convolution_Controller_i/dfx_controller_0_M_AXI_MEM_RREADY"/>
       </nets>
     </probe>
-    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq2&apos;hX"/>
         <Option Id="COMPARE_VALUE.0" value="eq2&apos;hX"/>
@@ -4273,7 +4267,7 @@
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
-        <Option Id="COMPARE_VALUE.0" value="eq1&apos;b1"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
         <Option Id="DISPLAY_AS_ENUM" value="1"/>
         <Option Id="DISPLAY_HINT" value=""/>
         <Option Id="DISPLAY_RADIX" value="HEX"/>
@@ -4284,7 +4278,7 @@
         <Option Id="NAME.CUSTOM" value=""/>
         <Option Id="NAME.SELECT" value="Long"/>
         <Option Id="SOURCE" value="netlist"/>
-        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;b1"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
         <Option Id="WAVEFORM_STYLE" value="Digital"/>
       </probeOptions>
       <nets>
@@ -4333,7 +4327,7 @@
         <net name="BD_Wrapper/Convolution_Controller_i/util_vector_logic_0_Res"/>
       </nets>
     </probe>
-    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
@@ -4385,7 +4379,7 @@
         <net name="nolabel_line70/icap_ila_i/probe0_0_1[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>

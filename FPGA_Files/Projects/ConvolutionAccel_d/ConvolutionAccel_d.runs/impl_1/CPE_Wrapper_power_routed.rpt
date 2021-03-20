@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date             : Fri Mar 19 17:56:43 2021
+| Date             : Fri Mar 19 23:13:20 2021
 | Host             : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 | Command          : report_power -file CPE_Wrapper_power_routed.rpt -pb CPE_Wrapper_power_summary_routed.pb -rpx CPE_Wrapper_power_routed.rpx
 | Design           : CPE_Wrapper
@@ -53,14 +53,14 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.089 |        4 |       --- |             --- |
-| Slice Logic              |     0.021 |    50678 |       --- |             --- |
+| Slice Logic              |     0.021 |    50674 |       --- |             --- |
 |   LUT as Logic           |     0.018 |    15920 |     53200 |           29.92 |
 |   Register               |     0.001 |    23490 |    106400 |           22.08 |
 |   LUT as Distributed RAM |    <0.001 |      683 |     17400 |            3.93 |
 |   CARRY4                 |    <0.001 |      482 |     13300 |            3.62 |
 |   LUT as Shift Register  |    <0.001 |     1542 |     17400 |            8.86 |
 |   F7/F8 Muxes            |    <0.001 |      638 |     53200 |            1.20 |
-|   Others                 |     0.000 |     2327 |       --- |             --- |
+|   Others                 |     0.000 |     2323 |       --- |             --- |
 | Signals                  |     0.026 |    36733 |       --- |             --- |
 | Block RAM                |     0.024 |     37.5 |       140 |           26.79 |
 | DSPs                     |     0.003 |       27 |       220 |           12.27 |

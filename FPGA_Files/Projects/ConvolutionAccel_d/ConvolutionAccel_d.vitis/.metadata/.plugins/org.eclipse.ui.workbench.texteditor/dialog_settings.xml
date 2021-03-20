@@ -2,18 +2,27 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="img_height" key="selection"/>
+		<item value="dcfg_init" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="dcfg_init"/>
+			<item value="copy_status"/>
+			<item value="CC_comand_image"/>
+			<item value="Status"/>
+			<item value="CC_comand_register"/>
+			<item value="-&gt;"/>
+			<item value="AxiDma"/>
 			<item value="SD_Transfer"/>
 			<item value="img_height"/>
 			<item value="byte_cnt"/>
 			<item value="Fil_info"/>
 		</list>
 		<list key="replacehistory">
+			<item value="CC_comand_image"/>
+			<item value="."/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

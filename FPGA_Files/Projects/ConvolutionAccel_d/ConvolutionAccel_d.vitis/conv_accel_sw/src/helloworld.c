@@ -66,8 +66,8 @@ int main()
 	kernel.kernel_arrayPtr = malloc(kernel.kenerl_size*kernel.kenerl_size*(sizeof (u32)));
 	for(int i = 0;i<kernel.kenerl_size*kernel.kenerl_size;i++){
 		kernel.kernel_arrayPtr[i] = 0;
-		if(i==0){
-			kernel.kernel_arrayPtr[i] = 1;
+		if(i==0|i==2|i==4|i==8){
+			kernel.kernel_arrayPtr[i] = 2;
 		}
 	}
 
@@ -95,7 +95,56 @@ int main()
 		return XST_FAILURE;
 	}
 
-//	XPrc_SendSwTrigger (&Prc, XPRC_VS_MA_ID, XPRC_VS_MA_RM_32_ID);
+	xil_printf("Successfully ran CPE Demo Example\r\n");
+
+
+	struct file_info* file1;
+	struct file_info* file2;
+	struct file_info* file3;
+
+	file1 = SD_Transfer("ma32P.bin");
+	file2 = SD_Transfer("ma16P.bin");
+	file3 = SD_Transfer("ma8P.bin");
+
+	// Init DCFG device, disable PCAP, enable ICAP
+	XDcfg_0 = XDcfg_Initialize(XPAR_XDCFG_0_DEVICE_ID);
+
+	// Lookup DFX Config Pointer
+	XPrcCfgPtr = XPrc_LookupConfig(XPAR_DFX_CONTROLLER_0_DEVICE_ID);
+	if (NULL == XPrcCfgPtr) {
+	  xil_printf("DFX Config Pointer Initialization Failed\r\n");
+	  return XST_FAILURE;
+	}
+
+	// Init DFX controller
+	prc_init = XPrc_CfgInitialize(&Prc, XPrcCfgPtr, XPrcCfgPtr->BaseAddress);
+	if (prc_init != XST_SUCCESS) {
+	  xil_printf("DFX Controller Initialization Failed\r\n");
+	  return XST_FAILURE;
+	}
+
+	xil_printf("DFX Controller initialized.\r\n");
+	PrintStatusReg(&Prc,XPRC_VS_MA_ID);
+
+	xil_printf("Putting VS into shutdown.\r\n");
+	XPrc_SendShutdownCommand(&Prc, XPRC_VS_MA_ID);
+	while(XPrc_IsVsmInShutdown(&Prc, XPRC_VS_MA_ID)==XPRC_SR_SHUTDOWN_OFF);
+	PrintStatusReg(&Prc,XPRC_VS_MA_ID);
+
+	// Setting shift RMs
+	XPrc_SetBsSize   (&Prc, XPRC_VS_MA_ID, XPRC_VS_MA_RM_32_ID,  PARTIAL_SHIFT_RM_SIZE);
+	XPrc_SetBsSize   (&Prc, XPRC_VS_MA_ID, XPRC_VS_MA_RM_16_ID, PARTIAL_SHIFT_RM_SIZE);
+	XPrc_SetBsAddress(&Prc, XPRC_VS_MA_ID, XPRC_VS_MA_RM_32_ID,  file1->file_ptr);
+	XPrc_SetBsAddress(&Prc, XPRC_VS_MA_ID, XPRC_VS_MA_RM_16_ID, file2->file_ptr);
+
+	XPrc_SendRestartWithStatusCommand(&Prc, XPRC_VS_MA_ID,XPRC_CR_VS_FULL,XPRC_VS_MA_RM_32_ID);
+	while(XPrc_IsVsmInShutdown(&Prc, XPRC_VS_MA_ID)==XPRC_SR_SHUTDOWN_ON);
+
+	print_BsInfo();
+
+	XPrc_SendSwTrigger (&Prc, XPRC_VS_MA_ID, XPRC_VS_MA_RM_16_ID);
+
+	print_BsInfo();
 
 	xil_printf("################## DMA TEST 2 ##################\r\n");
 	Status = Process_Image(&image1);
@@ -104,49 +153,10 @@ int main()
 		return XST_FAILURE;
 	}
 
-	xil_printf("Successfully ran CPE Demo Example\r\n");
 
+	xil_printf("--- Exiting main() --- \r\n");
 
-//	// Init DCFG device, disable PCAP, enable ICAP
-//	XDcfg_0 = XDcfg_Initialize(XPAR_XDCFG_0_DEVICE_ID);
-//
-//	// Lookup DFX Config Pointer
-//	XPrcCfgPtr = XPrc_LookupConfig(XPAR_DFX_CONTROLLER_0_DEVICE_ID);
-//	if (NULL == XPrcCfgPtr) {
-//	  xil_printf("DFX Config Pointer Initialization Failed\r\n");
-//	  return XST_FAILURE;
-//	}
-//
-//	// Init DFX controller
-//	prc_init = XPrc_CfgInitialize(&Prc, XPrcCfgPtr, XPrcCfgPtr->BaseAddress);
-//	if (prc_init != XST_SUCCESS) {
-//	  xil_printf("DFX Controller Initialization Failed\r\n");
-//	  return XST_FAILURE;
-//	}
-//
-//	xil_printf("DFX Controller initialized.\r\n");
-//	PrintStatusReg(&Prc,XPRC_VS_MA_ID);
-//
-//	xil_printf("Putting VS into shutdown.\r\n");
-//	XPrc_SendShutdownCommand(&Prc, XPRC_VS_MA_ID);
-//	while(XPrc_IsVsmInShutdown(&Prc, XPRC_VS_MA_ID)==XPRC_SR_SHUTDOWN_OFF);
-//	PrintStatusReg(&Prc,XPRC_VS_MA_ID);
-//
-//	// Setting shift RMs
-//	XPrc_SetBsSize   (&Prc, XPRC_VS_MA_ID, XPRC_VS_MA_RM_32_ID,  PARTIAL_SHIFT_RM_SIZE);
-//	XPrc_SetBsSize   (&Prc, XPRC_VS_MA_ID, XPRC_VS_MA_RM_16_ID, PARTIAL_SHIFT_RM_SIZE);
-//	XPrc_SetBsAddress(&Prc, XPRC_VS_MA_ID, XPRC_VS_MA_RM_32_ID,  addr1);
-//	XPrc_SetBsAddress(&Prc, XPRC_VS_MA_ID, XPRC_VS_MA_RM_16_ID, addr2);
-//
-//	XPrc_SendRestartWithStatusCommand(&Prc, XPRC_VS_MA_ID,XPRC_CR_VS_FULL,XPRC_VS_MA_RM_32_ID);
-//	while(XPrc_IsVsmInShutdown(&Prc, XPRC_VS_MA_ID)==XPRC_SR_SHUTDOWN_ON);
-//
-//	print_BsInfo();
-//
-//
-//	xil_printf("--- Exiting main() --- \r\n");
-//
-//	return XST_SUCCESS;
+	return XST_SUCCESS;
 
 }
 

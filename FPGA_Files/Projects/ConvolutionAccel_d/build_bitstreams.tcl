@@ -10,7 +10,7 @@ set prjCmd      0
 set genBit      1
 set genBin      1
 set cleanDir    1
-set genXsa      0
+set genXsa      1
 
 # Change to prjDir and open project
 cd $prjDir/$prjName

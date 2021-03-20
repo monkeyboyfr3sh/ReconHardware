@@ -4,7 +4,7 @@
 //Test stuff
 `define test_width 8
 `define test_height 8
-`define test_channels 1
+`define test_channels 3
 `define data_width 16
 `define addr_width 10
 `define kernel_size 3
