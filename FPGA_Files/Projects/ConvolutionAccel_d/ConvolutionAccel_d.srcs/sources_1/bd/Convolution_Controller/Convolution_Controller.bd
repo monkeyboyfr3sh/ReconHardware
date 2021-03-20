@@ -2259,6 +2259,26 @@
       }
     },
     "interface_nets": {
+      "Convolution_Controll_0_m_axis_data": {
+        "interface_ports": [
+          "axi_dma_0/S_AXIS_S2MM",
+          "Convolution_Controll_0/m_axis_data",
+          "cc_m_axis_ila_0/SLOT_0_AXIS"
+        ]
+      },
+      "dfx_controller_0_M_AXI_MEM": {
+        "interface_ports": [
+          "dfx_controller_0/M_AXI_MEM",
+          "smartconnect_1/S02_AXI",
+          "dfx_mem_ila_0/SLOT_0_AXI"
+        ]
+      },
+      "dfx_controller_0_ICAP": {
+        "interface_ports": [
+          "ICAP_0",
+          "dfx_controller_0/ICAP"
+        ]
+      },
       "processing_system7_0_M_AXI_GP0": {
         "interface_ports": [
           "smartconnect_0/S00_AXI",
@@ -2269,6 +2289,12 @@
         "interface_ports": [
           "smartconnect_1/S01_AXI",
           "axi_dma_0/M_AXI_S2MM"
+        ]
+      },
+      "smartconnect_1_M00_AXI": {
+        "interface_ports": [
+          "smartconnect_1/M00_AXI",
+          "processing_system7_0/S_AXI_HP0"
         ]
       },
       "axi_dma_0_M_AXI_MM2S": {
@@ -2284,36 +2310,6 @@
           "cc_s_axis_ila_0/SLOT_0_AXIS"
         ]
       },
-      "smartconnect_1_M00_AXI": {
-        "interface_ports": [
-          "smartconnect_1/M00_AXI",
-          "processing_system7_0/S_AXI_HP0"
-        ]
-      },
-      "dfx_controller_0_ICAP": {
-        "interface_ports": [
-          "ICAP_0",
-          "dfx_controller_0/ICAP"
-        ]
-      },
-      "smartconnect_0_M00_AXI": {
-        "interface_ports": [
-          "smartconnect_0/M00_AXI",
-          "axi_dma_0/S_AXI_LITE"
-        ]
-      },
-      "smartconnect_0_M01_AXI": {
-        "interface_ports": [
-          "smartconnect_0/M01_AXI",
-          "Convolution_Controll_0/s_axi"
-        ]
-      },
-      "smartconnect_0_M02_AXI": {
-        "interface_ports": [
-          "dfx_controller_0/s_axi_reg",
-          "smartconnect_0/M02_AXI"
-        ]
-      },
       "processing_system7_0_FIXED_IO": {
         "interface_ports": [
           "FIXED_IO",
@@ -2326,18 +2322,22 @@
           "processing_system7_0/DDR"
         ]
       },
-      "dfx_controller_0_M_AXI_MEM": {
+      "smartconnect_0_M02_AXI": {
         "interface_ports": [
-          "dfx_controller_0/M_AXI_MEM",
-          "smartconnect_1/S02_AXI",
-          "dfx_mem_ila_0/SLOT_0_AXI"
+          "dfx_controller_0/s_axi_reg",
+          "smartconnect_0/M02_AXI"
         ]
       },
-      "Convolution_Controll_0_m_axis_data": {
+      "smartconnect_0_M01_AXI": {
         "interface_ports": [
-          "axi_dma_0/S_AXIS_S2MM",
-          "Convolution_Controll_0/m_axis_data",
-          "cc_m_axis_ila_0/SLOT_0_AXIS"
+          "smartconnect_0/M01_AXI",
+          "Convolution_Controll_0/s_axi"
+        ]
+      },
+      "smartconnect_0_M00_AXI": {
+        "interface_ports": [
+          "smartconnect_0/M00_AXI",
+          "axi_dma_0/S_AXI_LITE"
         ]
       }
     },

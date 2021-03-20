@@ -6,11 +6,12 @@ create_clock -period 10.000 [get_ports {}]
 current_instance
 set_property src_info {type:XDC file:2 line:4 export:INPUT save:INPUT read:READ} [current_design]
 create_pblock pblock_ma
-add_cells_to_pblock [get_pblocks pblock_ma] [get_cells -quiet [list ma]]
 resize_pblock [get_pblocks pblock_ma] -add {SLICE_X10Y0:SLICE_X21Y49}
 resize_pblock [get_pblocks pblock_ma] -add {DSP48_X0Y0:DSP48_X1Y19}
 set_property SNAPPING_MODE ON [get_pblocks pblock_ma]
 set_property IS_SOFT FALSE [get_pblocks pblock_ma]
+set_property src_info {type:XDC file:2 line:5 export:INPUT save:INPUT read:READ} [current_design]
+add_cells_to_pblock [get_pblocks pblock_ma] [get_cells -quiet [list ma]]
 set_property src_info {type:XDC file:2 line:10 export:INPUT save:INPUT read:READ} [current_design]
 set_property C_CLK_INPUT_FREQ_HZ 300000000 [get_debug_cores dbg_hub]
 set_property src_info {type:XDC file:2 line:11 export:INPUT save:INPUT read:READ} [current_design]

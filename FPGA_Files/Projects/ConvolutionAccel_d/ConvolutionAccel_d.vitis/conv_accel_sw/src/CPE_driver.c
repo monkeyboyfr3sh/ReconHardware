@@ -126,6 +126,8 @@ int Process_Image(struct image_type *image)
 	u32 *TxBufferPtr;
 	u32 *RxBufferPtr;
 	u32 Value;
+	FRESULT result;
+	UINT bw;			/* Number of bytes written */
 
 	TxBufferPtr = image->img_tx_ptr;
 	RxBufferPtr = image->img_rx_ptr;
@@ -167,13 +169,32 @@ int Process_Image(struct image_type *image)
 			/* Wait */
 	}
 
+
+	FIL new_fil;
+	char* new_file_name = concat_str("conv_",image->filename);
+    result = f_open(&new_fil, new_file_name, FA_WRITE | FA_OPEN_ALWAYS);
+    if ( result ){
+        xil_printf("Failed with ERROR: %d \n\r", result);
+        return 0;
+    }
 	xil_printf("RxBuffer = {");
 	for(Index = 0; Index <  image->img_rx_pckt_len; Index ++) {
 		if(Index%(image->img_width-2)==0){
 			xil_printf("\r\n	");
 		}
 		xil_printf("0x%3x,",RxBufferPtr[Index]);
+		char buff[15];
+		char *str = buff;
+		itoa(RxBufferPtr[Index],str,10);
+		if(Index<image->img_rx_pckt_len-1){
+			str = concat_str(&buff,",");
+		}
+		f_write(&new_fil,str,strlen(str),&bw);
+		free(str);
 	}
+	f_write(&new_fil,'\n',sizeof(char),&bw);
+	f_close(&new_fil);
+	free(new_file_name);
 	xil_printf("\r\n}\r\n");
 
 	/* Test finishes successfully

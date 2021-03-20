@@ -7,20 +7,28 @@
 #include "SD.h"
 
 
+char* concat_str(const char *s1, const char *s2)
+{
+    char *result = malloc(strlen(s1) + strlen(s2) + 1); // +1 for the null-terminator
+    // in real code you would check for errors in malloc here
+    strcpy(result, s1);
+    strcat(result, s2);
+    return result;
+}
+
 /* Transfers a file from SD card into memory */
 struct file_info *SD_Transfer(char *FileName){
     FIL fil;
     UINT br;
     FRESULT result;
-    struct file_info* return_fil = malloc(sizeof (struct file_info));
-    u32 *return_addr=0;
-
     xil_printf("Opening %s ", FileName );
     result = f_open(&fil, FileName, FA_READ);
     if ( result ){
         xil_printf("Failed with ERROR: %d \n\r", result);
         return 0;
     }
+    struct file_info* return_fil = malloc(sizeof (struct file_info));
+    u32 *return_addr=0;
     return_fil->file_size = f_size(&fil);
     if(return_fil->file_size<=0){
     	xil_printf("AHH CANT USE THIS FILE\r\n");

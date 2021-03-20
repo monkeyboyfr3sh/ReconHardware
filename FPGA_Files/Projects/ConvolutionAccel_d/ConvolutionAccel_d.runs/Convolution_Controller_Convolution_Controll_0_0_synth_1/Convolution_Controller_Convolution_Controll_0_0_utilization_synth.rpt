@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date         : Fri Mar 19 14:51:52 2021
+| Date         : Sat Mar 20 11:34:15 2021
 | Host         : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 | Command      : report_utilization -file Convolution_Controller_Convolution_Controll_0_0_utilization_synth.rpt -pb Convolution_Controller_Convolution_Controll_0_0_utilization_synth.pb
 | Design       : Convolution_Controller_Convolution_Controll_0_0
@@ -30,13 +30,13 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             | 5126 |     0 |     53200 |  9.64 |
-|   LUT as Logic          | 5126 |     0 |     53200 |  9.64 |
+| Slice LUTs*             | 5036 |     0 |     53200 |  9.47 |
+|   LUT as Logic          | 5036 |     0 |     53200 |  9.47 |
 |   LUT as Memory         |    0 |     0 |     17400 |  0.00 |
-| Slice Registers         | 3496 |     0 |    106400 |  3.29 |
-|   Register as Flip Flop | 3496 |     0 |    106400 |  3.29 |
+| Slice Registers         | 3567 |     0 |    106400 |  3.35 |
+|   Register as Flip Flop | 3567 |     0 |    106400 |  3.35 |
 |   Register as Latch     |    0 |     0 |    106400 |  0.00 |
-| F7 Muxes                |  248 |     0 |     26600 |  0.93 |
+| F7 Muxes                |  514 |     0 |     26600 |  1.93 |
 | F8 Muxes                |   89 |     0 |     13300 |  0.67 |
 +-------------------------+------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
@@ -57,7 +57,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 2     |          Yes |         Set |            - |
-| 3494  |          Yes |       Reset |            - |
+| 3565  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -147,16 +147,16 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     | 3494 |        Flop & Latch |
-| LUT6     | 3182 |                 LUT |
-| LUT3     | 2112 |                 LUT |
-| LUT2     |  672 |                 LUT |
-| LUT5     |  359 |                 LUT |
-| MUXF7    |  248 |               MuxFx |
-| LUT4     |  165 |                 LUT |
+| FDRE     | 3565 |        Flop & Latch |
+| LUT3     | 2681 |                 LUT |
+| LUT6     | 2463 |                 LUT |
+| LUT2     |  764 |                 LUT |
+| MUXF7    |  514 |               MuxFx |
+| LUT4     |  477 |                 LUT |
+| LUT5     |  369 |                 LUT |
 | MUXF8    |   89 |               MuxFx |
-| LUT1     |   75 |                 LUT |
-| CARRY4   |   36 |          CarryLogic |
+| LUT1     |   73 |                 LUT |
+| CARRY4   |   48 |          CarryLogic |
 | RAMB36E1 |    6 |        Block Memory |
 | FDSE     |    2 |        Flop & Latch |
 +----------+------+---------------------+

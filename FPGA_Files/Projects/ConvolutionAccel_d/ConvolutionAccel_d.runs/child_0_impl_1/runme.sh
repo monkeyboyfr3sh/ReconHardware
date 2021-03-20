@@ -41,7 +41,7 @@ EAStep()
 }
 
 # pre-commands:
-/bin/touch .route_design.begin.rst
+/bin/touch .init_design.begin.rst
 EAStep vivado -log CPE_Wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source CPE_Wrapper.tcl -notrace
 
 

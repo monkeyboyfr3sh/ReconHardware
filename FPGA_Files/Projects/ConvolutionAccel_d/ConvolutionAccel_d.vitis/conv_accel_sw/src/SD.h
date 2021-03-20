@@ -24,8 +24,9 @@ struct file_info {
 	char *filename;
 	u32 file_size;
 };
-struct file_info *SD_Transfer(char *FileName);
 
+char* concat_str(const char *s1, const char *s2);
+struct file_info *SD_Transfer(char *FileName);
 int SD_Init();
 
 #endif /* SRC_SD_H_ */

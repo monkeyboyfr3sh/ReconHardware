@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Mar 19 14:50:01 2021" VIVADOVERSION="2020.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Mar 20 11:32:21 2021" VIVADOVERSION="2020.1">
 
   <SYSTEMINFO ARCH="zynq" BOARD="tul.com.tw:pynq-z2:part0:1.0" DEVICE="7z020" NAME="Convolution_Controller" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -43,6 +43,56 @@
     <PORT DIR="O" NAME="vsm_ma_rm_reset_0" SIGIS="undef" SIGNAME="dfx_controller_0_vsm_ma_rm_reset">
       <CONNECTIONS>
         <CONNECTION INSTANCE="dfx_controller_0" PORT="vsm_ma_rm_reset"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="ICAP_0_csib" SIGIS="undef" SIGNAME="dfx_controller_0_icap_csib">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="dfx_controller_0" PORT="icap_csib"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="31" NAME="ICAP_0_i" RIGHT="0" SIGIS="undef" SIGNAME="dfx_controller_0_icap_o">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="dfx_controller_0" PORT="icap_o"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="31" NAME="ICAP_0_o" RIGHT="0" SIGIS="undef" SIGNAME="dfx_controller_0_icap_i">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="dfx_controller_0" PORT="icap_i"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="ICAP_0_rdwrb" SIGIS="undef" SIGNAME="dfx_controller_0_icap_rdwrb">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="dfx_controller_0" PORT="icap_rdwrb"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="IO" LEFT="53" NAME="FIXED_IO_mio" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_MIO">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="processing_system7_0" PORT="MIO"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="IO" NAME="FIXED_IO_ddr_vrn" SIGIS="undef" SIGNAME="processing_system7_0_DDR_VRN">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="processing_system7_0" PORT="DDR_VRN"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="IO" NAME="FIXED_IO_ddr_vrp" SIGIS="undef" SIGNAME="processing_system7_0_DDR_VRP">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="processing_system7_0" PORT="DDR_VRP"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="IO" NAME="FIXED_IO_ps_srstb" SIGIS="undef" SIGNAME="processing_system7_0_PS_SRSTB">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="processing_system7_0" PORT="PS_SRSTB"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="IO" NAME="FIXED_IO_ps_clk" SIGIS="undef" SIGNAME="processing_system7_0_PS_CLK">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="processing_system7_0" PORT="PS_CLK"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="IO" NAME="FIXED_IO_ps_porb" SIGIS="undef" SIGNAME="processing_system7_0_PS_PORB">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="processing_system7_0" PORT="PS_PORB"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="IO" NAME="DDR_cas_n" SIGIS="undef" SIGNAME="processing_system7_0_DDR_CAS_n">
@@ -120,56 +170,6 @@
         <CONNECTION INSTANCE="processing_system7_0" PORT="DDR_DQS"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="IO" LEFT="53" NAME="FIXED_IO_mio" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_MIO">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="processing_system7_0" PORT="MIO"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="IO" NAME="FIXED_IO_ddr_vrn" SIGIS="undef" SIGNAME="processing_system7_0_DDR_VRN">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="processing_system7_0" PORT="DDR_VRN"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="IO" NAME="FIXED_IO_ddr_vrp" SIGIS="undef" SIGNAME="processing_system7_0_DDR_VRP">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="processing_system7_0" PORT="DDR_VRP"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="IO" NAME="FIXED_IO_ps_srstb" SIGIS="undef" SIGNAME="processing_system7_0_PS_SRSTB">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="processing_system7_0" PORT="PS_SRSTB"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="IO" NAME="FIXED_IO_ps_clk" SIGIS="undef" SIGNAME="processing_system7_0_PS_CLK">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="processing_system7_0" PORT="PS_CLK"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="IO" NAME="FIXED_IO_ps_porb" SIGIS="undef" SIGNAME="processing_system7_0_PS_PORB">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="processing_system7_0" PORT="PS_PORB"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="ICAP_0_csib" SIGIS="undef" SIGNAME="dfx_controller_0_icap_csib">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="dfx_controller_0" PORT="icap_csib"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" LEFT="31" NAME="ICAP_0_i" RIGHT="0" SIGIS="undef" SIGNAME="dfx_controller_0_icap_o">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="dfx_controller_0" PORT="icap_o"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" LEFT="31" NAME="ICAP_0_o" RIGHT="0" SIGIS="undef" SIGNAME="dfx_controller_0_icap_i">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="dfx_controller_0" PORT="icap_i"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="ICAP_0_rdwrb" SIGIS="undef" SIGNAME="dfx_controller_0_icap_rdwrb">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="dfx_controller_0" PORT="icap_rdwrb"/>
-      </CONNECTIONS>
-    </PORT>
   </EXTERNALPORTS>
 
   <EXTERNALINTERFACES>
@@ -228,7 +228,7 @@
   </EXTERNALINTERFACES>
 
   <MODULES>
-    <MODULE COREREVISION="16" FULLNAME="/Convolution_Controll_0" HWVERSION="1.0" INSTANCE="Convolution_Controll_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Convolution_Controller" VLNV="xilinx.com:user:Convolution_Controller:1.0">
+    <MODULE COREREVISION="17" FULLNAME="/Convolution_Controll_0" HWVERSION="1.0" INSTANCE="Convolution_Controll_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Convolution_Controller" VLNV="xilinx.com:user:Convolution_Controller:1.0">
       <DOCUMENTS/>
       <ADDRESSBLOCKS>
         <ADDRESSBLOCK ACCESS="" INTERFACE="s_axi" NAME="reg0" RANGE="4096" USAGE="register"/>

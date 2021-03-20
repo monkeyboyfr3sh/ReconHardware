@@ -66,8 +66,8 @@ int main()
 	kernel.kernel_arrayPtr = malloc(kernel.kenerl_size*kernel.kenerl_size*(sizeof (u32)));
 	for(int i = 0;i<kernel.kenerl_size*kernel.kenerl_size;i++){
 		kernel.kernel_arrayPtr[i] = 0;
-		if(i==0|i==2|i==4|i==8){
-			kernel.kernel_arrayPtr[i] = 2;
+		if(i==0){
+			kernel.kernel_arrayPtr[i] = 1;
 		}
 	}
 
@@ -86,6 +86,13 @@ int main()
 		return XST_FAILURE;
 	}
 	print_image_info(&image1);
+
+	struct image_type image2;
+	status = fill_image(&image2,"im2.txt");
+	if (status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+	print_image_info(&image2);
 
 	/* Run the poll example for simple transfer */
 	xil_printf("################## DMA TEST 1 ##################\r\n");
@@ -147,7 +154,7 @@ int main()
 	print_BsInfo();
 
 	xil_printf("################## DMA TEST 2 ##################\r\n");
-	Status = Process_Image(&image1);
+	Status = Process_Image(&image2);
 	if (Status != XST_SUCCESS) {
 		xil_printf("CPE Demo Failed Example\r\n");
 		return XST_FAILURE;
