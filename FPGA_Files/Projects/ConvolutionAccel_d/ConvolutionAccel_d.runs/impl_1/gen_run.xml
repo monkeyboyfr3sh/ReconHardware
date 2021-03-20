@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchConfig="config_1" LaunchTime="1616261041">
+<GenRun Id="impl_1" LaunchPart="xc7z020clg400-1" LaunchConfig="config_1" LaunchTime="1616270256">
+  <File Type="OPT-HWDEF" Name="CPE_Wrapper.hwdef"/>
+  <File Type="ROUTE-BUS-SKEW" Name="CPE_Wrapper_bus_skew_routed.rpt"/>
+  <File Type="PA-DCP" Name="CPE_Wrapper.dcp"/>
   <File Type="BITSTR-BMM" Name="CPE_Wrapper_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="CPE_Wrapper_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="CPE_Wrapper_timing_summary_init.rpt"/>
@@ -10,7 +13,6 @@
   <File Type="ROUTE-PWR-SUM" Name="CPE_Wrapper_power_summary_routed.pb"/>
   <File Type="REPORTS-TCL" Name="CPE_Wrapper_reports.tcl"/>
   <File Type="OPT-DRC" Name="CPE_Wrapper_drc_opted.rpt"/>
-  <File Type="OPT-HWDEF" Name="CPE_Wrapper.hwdef"/>
   <File Type="PWROPT-DCP" Name="CPE_Wrapper_pwropt.dcp"/>
   <File Type="PWROPT-DRC" Name="CPE_Wrapper_drc_pwropted.rpt"/>
   <File Type="PWROPT-TIMING" Name="CPE_Wrapper_timing_summary_pwropted.rpt"/>
@@ -48,7 +50,6 @@
   <File Type="ROUTE-TIMING-RPX" Name="CPE_Wrapper_timing_summary_routed.rpx"/>
   <File Type="ROUTE-SIMILARITY" Name="CPE_Wrapper_incremental_reuse_routed.rpt"/>
   <File Type="ROUTE-CLK" Name="CPE_Wrapper_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW" Name="CPE_Wrapper_bus_skew_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW-PB" Name="CPE_Wrapper_bus_skew_routed.pb"/>
   <File Type="ROUTE-BUS-SKEW-RPX" Name="CPE_Wrapper_bus_skew_routed.rpx"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="CPE_Wrapper_postroute_physopt.dcp"/>
@@ -76,8 +77,14 @@
   <File Type="RDI-RDI" Name="CPE_Wrapper.vdi"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="ROUTE-PARTITION-CELL-DCP" Name="genblk1_0_.ma_ma_int_32_routed.dcp"/>
+  <File Type="ROUTE-PARTITION-CELL-DCP" Name="genblk1_1_.ma_ma_int_32_routed.dcp"/>
+  <File Type="ROUTE-PARTITION-CELL-DCP" Name="genblk1_2_.ma_ma_int_32_routed.dcp"/>
   <File Type="BG-PARTITION-CELL-BIT" Name="genblk1_0_.ma_ma_int_32_partial.bit"/>
+  <File Type="BG-PARTITION-CELL-BIT" Name="genblk1_1_.ma_ma_int_32_partial.bit"/>
+  <File Type="BG-PARTITION-CELL-BIT" Name="genblk1_2_.ma_ma_int_32_partial.bit"/>
   <File Type="BG-PARTITION-LTX" Name="genblk1_0_.ma_ma_int_32.ltx"/>
+  <File Type="BG-PARTITION-LTX" Name="genblk1_1_.ma_ma_int_32.ltx"/>
+  <File Type="BG-PARTITION-LTX" Name="genblk1_2_.ma_ma_int_32.ltx"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/bd/Convolution_Controller/Convolution_Controller.bd">
@@ -190,7 +197,6 @@
       <Option Id="BinFile">1</Option>
     </Step>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="Convolution_Controller_ila_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Convolution_Controller_dfx_controller_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="Convolution_Controller_axi_dma_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Convolution_Controller_dfx_mem_ila_0_0"/>
@@ -201,7 +207,5 @@
   <BlockFileSet Type="BlockSrcs" Name="Convolution_Controller_ila_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Convolution_Controller_util_vector_logic_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Convolution_Controller_util_vector_logic_0_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="Convolution_Controller_smartconnect_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="Convolution_Controller_Convolution_Controll_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="Convolution_Controller_smartconnect_0_0"/>
 </GenRun>

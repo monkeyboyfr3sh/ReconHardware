@@ -3,6 +3,7 @@
 set prjDir      "C:/GitHub/ReconHardware/FPGA_Files/Projects"
 set prjName     "ConvolutionAccel_d"
 set bitDir      "./generated_files"
+set cell_name   genblk1[0].ma
 set static_top  "CPE_Wrapper"
 
 # Set script run config options
@@ -49,7 +50,7 @@ if { $genBit == 1 } {
         # Generate bitfile and debug probes
         set_property bitstream.general.compress false [current_design]
         set_property CONFIG_MODE "B_SCAN" [current_design]
-        write_bitstream -force -bin_file -cell ma $bitDir/$partial.bit
+        write_bitstream -force -bin_file -cell $cell_name $bitDir/$partial.bit
         write_debug_probes -force $bitDir/$partial.ltx
         close_project
 

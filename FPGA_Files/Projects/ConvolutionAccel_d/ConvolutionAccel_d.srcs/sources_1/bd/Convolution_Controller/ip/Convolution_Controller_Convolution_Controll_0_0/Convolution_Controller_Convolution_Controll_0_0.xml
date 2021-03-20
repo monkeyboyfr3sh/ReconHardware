@@ -856,7 +856,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:454cbb2e</spirit:value>
+            <spirit:value>9:978a954e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -867,7 +867,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:454cbb2e</spirit:value>
+            <spirit:value>9:978a954e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -883,11 +883,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Mar 20 16:32:03 UTC 2021</spirit:value>
+            <spirit:value>Sat Mar 20 19:48:17 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:454cbb2e</spirit:value>
+            <spirit:value>9:978a954e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -906,7 +906,7 @@
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:7b083e19</spirit:value>
+            <spirit:value>9:4aa16690</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -922,11 +922,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Mar 20 16:32:03 UTC 2021</spirit:value>
+            <spirit:value>Sat Mar 20 19:48:17 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:7b083e19</spirit:value>
+            <spirit:value>9:4aa16690</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -940,11 +940,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Mar 20 16:34:17 UTC 2021</spirit:value>
+            <spirit:value>Sat Mar 20 19:50:43 UTC 2021</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:454cbb2e</spirit:value>
+            <spirit:value>9:978a954e</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -981,7 +981,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.CHANNELS&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.AXI_BUS_WIDTH&apos;))) - 1)">31</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.CHANNELS&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.AXI_BUS_WIDTH&apos;))) - 1)">95</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -1011,7 +1011,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.CHANNELS&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.K_SQUARED&apos;))) * spirit:decode(id(&apos;MODELPARAM_VALUE.AXI_BUS_WIDTH&apos;))) - 1)">287</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.CHANNELS&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.K_SQUARED&apos;))) * spirit:decode(id(&apos;MODELPARAM_VALUE.AXI_BUS_WIDTH&apos;))) - 1)">863</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -1028,7 +1028,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.CHANNELS&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.K_SQUARED&apos;))) * spirit:decode(id(&apos;MODELPARAM_VALUE.AXI_BUS_WIDTH&apos;))) - 1)">287</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.CHANNELS&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.K_SQUARED&apos;))) * spirit:decode(id(&apos;MODELPARAM_VALUE.AXI_BUS_WIDTH&apos;))) - 1)">863</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -1463,7 +1463,7 @@
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>CHANNELS</spirit:name>
         <spirit:displayName>Channels</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.CHANNELS">1</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.CHANNELS">3</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>FINAL_CHANNEL</spirit:name>
@@ -1653,7 +1653,7 @@
     <spirit:parameter>
       <spirit:name>CHANNELS</spirit:name>
       <spirit:displayName>Channels</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.CHANNELS">1</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.CHANNELS">3</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>FINAL_CHANNEL</spirit:name>

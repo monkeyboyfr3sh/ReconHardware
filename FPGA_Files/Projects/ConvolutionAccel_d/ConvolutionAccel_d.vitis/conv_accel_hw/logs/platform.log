@@ -6796,3 +6796,609 @@ TRACE::2021-03-20.13:36:30::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardwar
 C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
 
 TRACE::2021-03-20.13:36:30::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-20.14:32:54::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:32:54::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:32:54::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:32:56::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw
+TRACE::2021-03-20.14:32:56::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:32:56::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-20.14:32:56::SCWPlatform::Do not have an existing db opened. 
+TRACE::2021-03-20.14:32:59::SCWPlatform::Opened new HwDB with name CPE_Wrapper
+TRACE::2021-03-20.14:32:59::SCWReader::Active system found as  conv_accel_hw
+TRACE::2021-03-20.14:32:59::SCWReader::Handling sysconfig conv_accel_hw
+TRACE::2021-03-20.14:32:59::SCWDomain::checking for install qemu data   : 
+TRACE::2021-03-20.14:32:59::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/
+TRACE::2021-03-20.14:32:59::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt
+TRACE::2021-03-20.14:32:59::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:32:59::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:32:59::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:32:59::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw
+TRACE::2021-03-20.14:32:59::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:32:59::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-20.14:32:59::SCWPlatform::Trying to set the existing hwdb with name CPE_Wrapper
+TRACE::2021-03-20.14:32:59::SCWPlatform::Opened existing hwdb CPE_Wrapper
+TRACE::2021-03-20.14:32:59::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-20.14:32:59::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:32:59::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:32:59::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:32:59::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw
+TRACE::2021-03-20.14:32:59::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:32:59::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-20.14:32:59::SCWPlatform::Trying to set the existing hwdb with name CPE_Wrapper
+TRACE::2021-03-20.14:32:59::SCWPlatform::Opened existing hwdb CPE_Wrapper
+TRACE::2021-03-20.14:32:59::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-20.14:32:59::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:32:59::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:32:59::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:32:59::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw
+TRACE::2021-03-20.14:32:59::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:32:59::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-20.14:32:59::SCWPlatform::Trying to set the existing hwdb with name CPE_Wrapper
+TRACE::2021-03-20.14:32:59::SCWPlatform::Opened existing hwdb CPE_Wrapper
+TRACE::2021-03-20.14:32:59::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-20.14:32:59::SCWReader::Boot application domain added for zynq_fsbl
+TRACE::2021-03-20.14:32:59::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:32:59::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:32:59::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:32:59::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw
+TRACE::2021-03-20.14:32:59::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:32:59::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-20.14:32:59::SCWPlatform::Trying to set the existing hwdb with name CPE_Wrapper
+TRACE::2021-03-20.14:32:59::SCWPlatform::Opened existing hwdb CPE_Wrapper
+TRACE::2021-03-20.14:32:59::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-20.14:32:59::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-20.14:32:59::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2021-03-20.14:32:59::SCWMssOS::No sw design opened at  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-20.14:32:59::SCWMssOS::mss exists loading the mss file  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-20.14:32:59::SCWMssOS::Opened the sw design from mss  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-20.14:32:59::SCWMssOS::Adding the swdes entry C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss with des name system
+TRACE::2021-03-20.14:32:59::SCWMssOS::updating the scw layer about changes
+TRACE::2021-03-20.14:32:59::SCWMssOS::Opened the sw design.  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-20.14:32:59::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:32:59::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:32:59::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:32:59::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw
+TRACE::2021-03-20.14:32:59::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:32:59::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-20.14:32:59::SCWPlatform::Trying to set the existing hwdb with name CPE_Wrapper
+TRACE::2021-03-20.14:32:59::SCWPlatform::Opened existing hwdb CPE_Wrapper
+TRACE::2021-03-20.14:32:59::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-20.14:32:59::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-20.14:32:59::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-20.14:32:59::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-20.14:32:59::SCWMssOS:: library already available in sw design:  xilffs:4.3
+TRACE::2021-03-20.14:32:59::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:32:59::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:32:59::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:32:59::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw
+TRACE::2021-03-20.14:32:59::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:32:59::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-20.14:32:59::SCWPlatform::Trying to set the existing hwdb with name CPE_Wrapper
+TRACE::2021-03-20.14:32:59::SCWPlatform::Opened existing hwdb CPE_Wrapper
+TRACE::2021-03-20.14:32:59::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-20.14:32:59::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-20.14:32:59::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-20.14:32:59::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-20.14:32:59::SCWMssOS:: library already available in sw design:  xilrsa:1.6
+TRACE::2021-03-20.14:32:59::SCWMssOS::Saving the mss changes C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-20.14:32:59::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2021-03-20.14:32:59::SCWMssOS::Completed writemss as part of save.
+TRACE::2021-03-20.14:32:59::SCWMssOS::Commit changes completed.
+TRACE::2021-03-20.14:32:59::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2021-03-20.14:32:59::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2021-03-20.14:32:59::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:32:59::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:32:59::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:32:59::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw
+TRACE::2021-03-20.14:32:59::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:32:59::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-20.14:32:59::SCWPlatform::Trying to set the existing hwdb with name CPE_Wrapper
+TRACE::2021-03-20.14:32:59::SCWPlatform::Opened existing hwdb CPE_Wrapper
+TRACE::2021-03-20.14:32:59::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-20.14:32:59::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-20.14:32:59::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-20.14:32:59::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-20.14:32:59::SCWReader::No isolation master present  
+TRACE::2021-03-20.14:32:59::SCWDomain::checking for install qemu data   : 
+TRACE::2021-03-20.14:32:59::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/
+TRACE::2021-03-20.14:32:59::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt
+TRACE::2021-03-20.14:32:59::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:32:59::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:32:59::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:32:59::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw
+TRACE::2021-03-20.14:32:59::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:32:59::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-20.14:32:59::SCWPlatform::Trying to set the existing hwdb with name CPE_Wrapper
+TRACE::2021-03-20.14:32:59::SCWPlatform::Opened existing hwdb CPE_Wrapper
+TRACE::2021-03-20.14:32:59::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-20.14:32:59::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:32:59::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:32:59::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:32:59::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw
+TRACE::2021-03-20.14:32:59::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:32:59::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-20.14:32:59::SCWPlatform::Trying to set the existing hwdb with name CPE_Wrapper
+TRACE::2021-03-20.14:32:59::SCWPlatform::Opened existing hwdb CPE_Wrapper
+TRACE::2021-03-20.14:32:59::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-20.14:32:59::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:32:59::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:32:59::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:32:59::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw
+TRACE::2021-03-20.14:32:59::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:32:59::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-20.14:32:59::SCWPlatform::Trying to set the existing hwdb with name CPE_Wrapper
+TRACE::2021-03-20.14:32:59::SCWPlatform::Opened existing hwdb CPE_Wrapper
+TRACE::2021-03-20.14:32:59::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-20.14:32:59::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-20.14:32:59::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-20.14:32:59::SCWMssOS::No sw design opened at  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-20.14:32:59::SCWMssOS::mss exists loading the mss file  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-20.14:32:59::SCWMssOS::Opened the sw design from mss  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-20.14:32:59::SCWMssOS::Adding the swdes entry C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss with des name system_0
+TRACE::2021-03-20.14:32:59::SCWMssOS::updating the scw layer about changes
+TRACE::2021-03-20.14:32:59::SCWMssOS::Opened the sw design.  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-20.14:32:59::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:32:59::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:32:59::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:32:59::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw
+TRACE::2021-03-20.14:32:59::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:32:59::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-20.14:32:59::SCWPlatform::Trying to set the existing hwdb with name CPE_Wrapper
+TRACE::2021-03-20.14:32:59::SCWPlatform::Opened existing hwdb CPE_Wrapper
+TRACE::2021-03-20.14:32:59::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-20.14:32:59::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-20.14:32:59::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-20.14:32:59::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-20.14:32:59::SCWMssOS:: library already available in sw design:  xilffs:4.3
+TRACE::2021-03-20.14:32:59::SCWMssOS::Saving the mss changes C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-20.14:32:59::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2021-03-20.14:32:59::SCWMssOS::Completed writemss as part of save.
+TRACE::2021-03-20.14:32:59::SCWMssOS::Commit changes completed.
+TRACE::2021-03-20.14:32:59::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2021-03-20.14:32:59::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2021-03-20.14:32:59::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:32:59::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:32:59::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:32:59::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw
+TRACE::2021-03-20.14:32:59::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:32:59::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-20.14:32:59::SCWPlatform::Trying to set the existing hwdb with name CPE_Wrapper
+TRACE::2021-03-20.14:32:59::SCWPlatform::Opened existing hwdb CPE_Wrapper
+TRACE::2021-03-20.14:32:59::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-20.14:32:59::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-20.14:32:59::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-20.14:32:59::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-20.14:32:59::SCWReader::No isolation master present  
+TRACE::2021-03-20.14:33:11::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:33:11::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:33:11::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:33:11::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw
+TRACE::2021-03-20.14:33:11::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:33:11::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-20.14:33:11::SCWPlatform::Trying to set the existing hwdb with name CPE_Wrapper
+TRACE::2021-03-20.14:33:11::SCWPlatform::Opened existing hwdb CPE_Wrapper
+TRACE::2021-03-20.14:33:11::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-20.14:33:11::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/tempdsa/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:33:11::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/tempdsa/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:33:11::SCWPlatform:: Platform location is C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/tempdsa
+TRACE::2021-03-20.14:33:11::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/tempdsa/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:33:11::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-20.14:33:16::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-20.14:33:16::SCWMssOS::Doing hw sync for the mss in domain: zynq_fsbl
+TRACE::2021-03-20.14:33:16::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:33:16::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:33:16::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:33:16::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw
+TRACE::2021-03-20.14:33:16::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:33:16::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-20.14:33:16::SCWPlatform::Trying to set the existing hwdb with name CPE_Wrapper
+TRACE::2021-03-20.14:33:16::SCWPlatform::Opened existing hwdb CPE_Wrapper
+TRACE::2021-03-20.14:33:16::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-20.14:33:16::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:33:16::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:33:16::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:33:16::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw
+TRACE::2021-03-20.14:33:16::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:33:16::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-20.14:33:16::SCWPlatform::Trying to set the existing hwdb with name CPE_Wrapper
+TRACE::2021-03-20.14:33:16::SCWPlatform::Opened existing hwdb CPE_Wrapper
+TRACE::2021-03-20.14:33:16::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-20.14:33:16::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-20.14:33:16::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-20.14:33:16::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-20.14:33:16::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/tempdsa/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:33:16::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/tempdsa/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:33:16::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/tempdsa/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:33:16::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/tempdsa
+TRACE::2021-03-20.14:33:16::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/tempdsa/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:33:16::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-20.14:33:16::SCWPlatform::update - Opened existing hwdb CPE_Wrapper_0
+TRACE::2021-03-20.14:33:16::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-20.14:33:16::SCWMssOS::Doing hw sync for the mss in domain: standalone_domain
+TRACE::2021-03-20.14:33:16::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:33:16::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:33:16::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:33:16::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw
+TRACE::2021-03-20.14:33:16::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:33:16::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-20.14:33:16::SCWPlatform::Trying to set the existing hwdb with name CPE_Wrapper
+TRACE::2021-03-20.14:33:16::SCWPlatform::Opened existing hwdb CPE_Wrapper
+TRACE::2021-03-20.14:33:16::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-20.14:33:16::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:33:16::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:33:16::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:33:16::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw
+TRACE::2021-03-20.14:33:16::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:33:16::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-20.14:33:16::SCWPlatform::Trying to set the existing hwdb with name CPE_Wrapper
+TRACE::2021-03-20.14:33:16::SCWPlatform::Opened existing hwdb CPE_Wrapper
+TRACE::2021-03-20.14:33:16::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-20.14:33:16::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-20.14:33:16::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-20.14:33:16::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-20.14:33:16::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/tempdsa/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:33:16::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/tempdsa/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:33:16::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/tempdsa/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:33:16::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/tempdsa
+TRACE::2021-03-20.14:33:16::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/tempdsa/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:33:16::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-20.14:33:16::SCWPlatform::update - Opened existing hwdb CPE_Wrapper_0
+TRACE::2021-03-20.14:33:16::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-20.14:33:16::SCWMssOS::Saving the mss changes C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-20.14:33:16::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2021-03-20.14:33:16::SCWMssOS::Completed writemss as part of save.
+TRACE::2021-03-20.14:33:16::SCWMssOS::Commit changes completed.
+TRACE::2021-03-20.14:33:16::SCWMssOS::Completed hw sync for the mss in domain: zynq_fsbl
+TRACE::2021-03-20.14:33:16::SCWMssOS::Removing the swdes entry for  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-20.14:33:16::SCWMssOS::Saving the mss changes C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-20.14:33:16::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2021-03-20.14:33:16::SCWMssOS::Completed writemss as part of save.
+TRACE::2021-03-20.14:33:16::SCWMssOS::Commit changes completed.
+TRACE::2021-03-20.14:33:16::SCWMssOS::Completed hw sync for the mss in domain: standalone_domain
+TRACE::2021-03-20.14:33:16::SCWMssOS::Removing the swdes entry for  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-20.14:33:16::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:33:16::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:33:16::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:33:16::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw
+TRACE::2021-03-20.14:33:16::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:33:16::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-20.14:33:16::SCWPlatform::Do not have an existing db opened. 
+TRACE::2021-03-20.14:33:20::SCWPlatform::Opened new HwDB with name CPE_Wrapper_1
+TRACE::2021-03-20.14:33:20::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:33:20::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:33:20::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:33:20::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw
+TRACE::2021-03-20.14:33:20::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:33:20::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-20.14:33:20::SCWPlatform::Trying to set the existing hwdb with name CPE_Wrapper_1
+TRACE::2021-03-20.14:33:20::SCWPlatform::Opened existing hwdb CPE_Wrapper_1
+TRACE::2021-03-20.14:33:20::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-20.14:33:20::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-20.14:33:20::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2021-03-20.14:33:20::SCWMssOS::No sw design opened at  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-20.14:33:20::SCWMssOS::mss exists loading the mss file  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-20.14:33:20::SCWMssOS::Opened the sw design from mss  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-20.14:33:20::SCWMssOS::Adding the swdes entry C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss with des name system
+TRACE::2021-03-20.14:33:20::SCWMssOS::updating the scw layer about changes
+TRACE::2021-03-20.14:33:20::SCWMssOS::Opened the sw design.  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-20.14:33:20::SCWMssOS::Saving the mss changes C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-20.14:33:20::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2021-03-20.14:33:20::SCWMssOS::Completed writemss as part of save.
+TRACE::2021-03-20.14:33:20::SCWMssOS::Commit changes completed.
+TRACE::2021-03-20.14:33:20::SCWMssOS::Saving the mss changes C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-20.14:33:20::SCWMssOS::Adding the swdes entry, mss present, able to open swdb C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss with des name system_0
+TRACE::2021-03-20.14:33:20::SCWMssOS::Writing the mss file completed C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-20.14:33:20::SCWMssOS::Commit changes completed.
+TRACE::2021-03-20.14:33:20::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:33:20::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:33:20::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:33:20::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw
+TRACE::2021-03-20.14:33:20::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:33:20::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-20.14:33:20::SCWPlatform::Trying to set the existing hwdb with name CPE_Wrapper_1
+TRACE::2021-03-20.14:33:20::SCWPlatform::Opened existing hwdb CPE_Wrapper_1
+TRACE::2021-03-20.14:33:20::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-20.14:33:20::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-20.14:33:20::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-20.14:33:20::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-20.14:33:20::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:33:20::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:33:20::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:33:21::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw
+TRACE::2021-03-20.14:33:21::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:33:21::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-20.14:33:21::SCWPlatform::Trying to set the existing hwdb with name CPE_Wrapper_1
+TRACE::2021-03-20.14:33:21::SCWPlatform::Opened existing hwdb CPE_Wrapper_1
+TRACE::2021-03-20.14:33:21::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-20.14:33:21::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-20.14:33:21::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-20.14:33:21::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-20.14:33:21::SCWWriter::formatted JSON is {
+	"platformName":	"conv_accel_hw",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"conv_accel_hw",
+	"platHandOff":	"C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/generated_files/CPE_Wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/CPE_Wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"conv_accel_hw",
+	"systems":	[{
+			"systemName":	"conv_accel_hw",
+			"systemDesc":	"conv_accel_hw",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"conv_accel_hw",
+			"sysActiveDom":	"standalone_domain",
+			"sysDefaultDom":	"standalone_domain",
+			"domains":	[{
+					"domainName":	"zynq_fsbl",
+					"domainDispName":	"zynq_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"576d0ef7df823cff88e1271769c4b15d",
+					"compatibleApp":	"zynq_fsbl",
+					"domType":	"bootDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.3", "xilrsa:1.6"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"standalone_domain",
+					"domainDispName":	"standalone on ps7_cortexa9_0",
+					"domainDesc":	"standalone_domain",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt",
+					"qemuData":	"C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"925b4a0b09ab8a0d304fea380227ab27",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.3"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+LOG::2021-03-20.14:33:27::SCWPlatform::Started generating the artifacts platform conv_accel_hw
+TRACE::2021-03-20.14:33:27::SCWPlatform::Sanity checking of platform is completed
+LOG::2021-03-20.14:33:27::SCWPlatform::Started generating the artifacts for system configuration conv_accel_hw
+LOG::2021-03-20.14:33:27::SCWSystem::Checking the domain zynq_fsbl
+LOG::2021-03-20.14:33:27::SCWSystem::Doing application build for :  zynq_fsbl
+TRACE::2021-03-20.14:33:27::SCWBDomain::Not a forced makefile updation, No changes are present. 
+TRACE::2021-03-20.14:33:27::SCWDomain::Skipping the build for domain :  zynq_fsbl
+LOG::2021-03-20.14:33:27::SCWSystem::Checking the domain standalone_domain
+LOG::2021-03-20.14:33:27::SCWSystem::Not a boot domain 
+LOG::2021-03-20.14:33:27::SCWSystem::Started Processing the domain standalone_domain
+TRACE::2021-03-20.14:33:27::SCWDomain::Generating domain artifcats
+TRACE::2021-03-20.14:33:27::SCWMssOS::Generating standalone artifcats
+TRACE::2021-03-20.14:33:27::SCWMssOS::Copying the qemu file from  C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt To C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/export/conv_accel_hw/sw/conv_accel_hw/qemu/
+TRACE::2021-03-20.14:33:27::SCWMssOS::Copying the qemu file from  C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt To C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/export/conv_accel_hw/sw/conv_accel_hw/standalone_domain/qemu/
+TRACE::2021-03-20.14:33:27::SCWMssOS:: Copying the user libraries. 
+TRACE::2021-03-20.14:33:27::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:33:27::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:33:27::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:33:27::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw
+TRACE::2021-03-20.14:33:27::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:33:27::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-20.14:33:27::SCWPlatform::Trying to set the existing hwdb with name CPE_Wrapper_1
+TRACE::2021-03-20.14:33:27::SCWPlatform::Opened existing hwdb CPE_Wrapper_1
+TRACE::2021-03-20.14:33:27::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-20.14:33:27::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-20.14:33:27::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-20.14:33:27::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-20.14:33:27::SCWMssOS::Completed writing the mss file at C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/ps7_cortexa9_0/standalone_domain/bsp
+TRACE::2021-03-20.14:33:27::SCWMssOS::Mss edits present, copying mssfile into export location C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-20.14:33:27::SCWMssOS::bsp generated is upto date with the mss file. Skipping bsp generation.
+TRACE::2021-03-20.14:33:27::SCWMssOS::BSP is already built. skipping the bsp build ... 
+TRACE::2021-03-20.14:33:27::SCWDomain::Skipping the build for domain :  standalone_domain
+TRACE::2021-03-20.14:33:27::SCWMssOS::skipping the bsp build ... 
+TRACE::2021-03-20.14:33:27::SCWMssOS::Copying to export directory.
+TRACE::2021-03-20.14:33:27::SCWMssOS:: Checking if to create the Supporting Applications
+TRACE::2021-03-20.14:33:27::SCWMssOS:: No Linux domain exists, trying to generate FSBL 
+LOG::2021-03-20.14:33:27::SCWSystem::Completed Processing the domain standalone_domain
+LOG::2021-03-20.14:33:27::SCWSystem::Completed Processing the sysconfig conv_accel_hw
+LOG::2021-03-20.14:33:27::SCWPlatform::Completed generating the artifacts for system configuration conv_accel_hw
+TRACE::2021-03-20.14:33:27::SCWPlatform::Started preparing the platform 
+TRACE::2021-03-20.14:33:27::SCWSystem::Writing the bif file for system config conv_accel_hw
+TRACE::2021-03-20.14:33:27::SCWSystem::dir created 
+TRACE::2021-03-20.14:33:27::SCWSystem::Writing the bif 
+TRACE::2021-03-20.14:33:27::SCWPlatform::Started writing the spfm file 
+TRACE::2021-03-20.14:33:27::SCWPlatform::Started writing the xpfm file 
+TRACE::2021-03-20.14:33:27::SCWPlatform::Completed generating the platform
+TRACE::2021-03-20.14:33:27::SCWMssOS::Saving the mss changes C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-20.14:33:28::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2021-03-20.14:33:28::SCWMssOS::Completed writemss as part of save.
+TRACE::2021-03-20.14:33:28::SCWMssOS::Commit changes completed.
+TRACE::2021-03-20.14:33:28::SCWMssOS::Saving the mss changes C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-20.14:33:28::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2021-03-20.14:33:28::SCWMssOS::Completed writemss as part of save.
+TRACE::2021-03-20.14:33:28::SCWMssOS::Commit changes completed.
+TRACE::2021-03-20.14:33:28::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:33:28::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:33:28::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:33:28::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw
+TRACE::2021-03-20.14:33:28::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:33:28::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-20.14:33:28::SCWPlatform::Trying to set the existing hwdb with name CPE_Wrapper_1
+TRACE::2021-03-20.14:33:28::SCWPlatform::Opened existing hwdb CPE_Wrapper_1
+TRACE::2021-03-20.14:33:28::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-20.14:33:28::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-20.14:33:28::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-20.14:33:28::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-03-20.14:33:28::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:33:28::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:33:28::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:33:28::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw
+TRACE::2021-03-20.14:33:28::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:33:28::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-20.14:33:28::SCWPlatform::Trying to set the existing hwdb with name CPE_Wrapper_1
+TRACE::2021-03-20.14:33:28::SCWPlatform::Opened existing hwdb CPE_Wrapper_1
+TRACE::2021-03-20.14:33:28::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-20.14:33:28::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-20.14:33:28::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-20.14:33:28::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-20.14:33:28::SCWWriter::formatted JSON is {
+	"platformName":	"conv_accel_hw",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"conv_accel_hw",
+	"platHandOff":	"C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/generated_files/CPE_Wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/CPE_Wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"conv_accel_hw",
+	"systems":	[{
+			"systemName":	"conv_accel_hw",
+			"systemDesc":	"conv_accel_hw",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"conv_accel_hw",
+			"sysActiveDom":	"standalone_domain",
+			"sysDefaultDom":	"standalone_domain",
+			"domains":	[{
+					"domainName":	"zynq_fsbl",
+					"domainDispName":	"zynq_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"576d0ef7df823cff88e1271769c4b15d",
+					"compatibleApp":	"zynq_fsbl",
+					"domType":	"bootDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.3", "xilrsa:1.6"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"standalone_domain",
+					"domainDispName":	"standalone on ps7_cortexa9_0",
+					"domainDesc":	"standalone_domain",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt",
+					"qemuData":	"C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"925b4a0b09ab8a0d304fea380227ab27",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.3"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+KEYINFO::2021-03-20.14:33:28::SCWPlatform::updated the xpfm file.
+TRACE::2021-03-20.14:33:28::SCWPlatform::Trying to open the hw design at C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:33:28::SCWPlatform::DSA given C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:33:28::SCWPlatform::DSA absoulate path C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:33:28::SCWPlatform::DSA directory C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw
+TRACE::2021-03-20.14:33:28::SCWPlatform:: Platform Path C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/hw/CPE_Wrapper.xsa
+TRACE::2021-03-20.14:33:28::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-03-20.14:33:28::SCWPlatform::Trying to set the existing hwdb with name CPE_Wrapper_1
+TRACE::2021-03-20.14:33:28::SCWPlatform::Opened existing hwdb CPE_Wrapper_1
+TRACE::2021-03-20.14:33:28::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-03-20.14:33:28::SCWMssOS::Checking the sw design at  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-03-20.14:33:28::SCWMssOS::DEBUG:  swdes dump  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-03-20.14:33:28::SCWMssOS::Sw design exists and opened at  C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss

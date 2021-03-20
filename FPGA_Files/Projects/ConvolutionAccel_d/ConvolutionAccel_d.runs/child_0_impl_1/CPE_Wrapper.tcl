@@ -114,7 +114,6 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {HDL-1065} -limit 10000
 set_msg_config  -id {Constraints 18-1056}  -suppress 
 set_msg_config  -id {XSIM 43-3322}  -string {{ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.}}  -suppress 
 set_msg_config  -id {Netlist 29-160}  -suppress 
@@ -143,10 +142,10 @@ OPTRACE "set parameters" START { }
 OPTRACE "set parameters" END { }
   add_files -quiet C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.runs/impl_1/CPE_Wrapper_routed_bb.dcp
   add_files -quiet C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.runs/ma_int_16_synth_1/ma_int_16.dcp
-  set_property SCOPED_TO_CELLS {genblk1[0].ma} [get_files C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.runs/ma_int_16_synth_1/ma_int_16.dcp]
+  set_property SCOPED_TO_CELLS {{genblk1[0].ma} {genblk1[1].ma} {genblk1[2].ma}} [get_files C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.runs/ma_int_16_synth_1/ma_int_16.dcp]
   set_property netlist_only true [get_files C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.runs/ma_int_16_synth_1/ma_int_16.dcp]
   set_param project.isImplRun true
-  link_design -top CPE_Wrapper -part xc7z020clg400-1 -reconfig_partitions {genblk1[0].ma}
+  link_design -top CPE_Wrapper -part xc7z020clg400-1 -reconfig_partitions {{genblk1[0].ma} {genblk1[1].ma} {genblk1[2].ma}}
   set_param project.isImplRun false
 OPTRACE "init_design_reports" START { REPORT }
 OPTRACE "init_design_reports" END { }
@@ -284,6 +283,8 @@ OPTRACE "route_design reports" START { REPORT }
 OPTRACE "route_design reports" END { }
 OPTRACE "route_design misc" START { }
   write_checkpoint -force -cell genblk1[0].ma genblk1_0_.ma_ma_int_16_routed.dcp
+  write_checkpoint -force -cell genblk1[1].ma genblk1_1_.ma_ma_int_16_routed.dcp
+  write_checkpoint -force -cell genblk1[2].ma genblk1_2_.ma_ma_int_16_routed.dcp
   close_msg_db -file route_design.pb
 OPTRACE "route_design write_checkpoint" START { CHECKPOINT }
 OPTRACE "route_design write_checkpoint" END { }

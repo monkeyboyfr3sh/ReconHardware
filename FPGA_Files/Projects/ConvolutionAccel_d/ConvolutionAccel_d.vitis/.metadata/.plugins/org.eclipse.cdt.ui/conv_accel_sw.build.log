@@ -1,74 +1,10 @@
-13:40:34 **** Incremental Build of configuration Debug for project conv_accel_sw ****
+14:33:40 **** Incremental Build of configuration Debug for project conv_accel_sw ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 make --no-print-directory main-build
-'Building file: ../src/helloworld.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/export/conv_accel_hw/sw/conv_accel_hw/standalone_domain/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
-In file included from ../src/helloworld.c:13:
-../src/CPE_driver.h:68:1: warning: useless storage class specifier in empty declaration
-   68 | };
-      | ^
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:144:68: warning: passing argument 4 of 'XPrc_SetBsAddress' makes integer from pointer without a cast [-Wint-conversion]
-  144 |  XPrc_SetBsAddress(&Prc, XPRC_VS_MA_ID, XPRC_VS_MA_RM_32_ID,  file1->file_ptr);
-      |                                                               ~~~~~^~~~~~~~~~
-      |                                                                    |
-      |                                                                    char *
-In file included from ../src/helloworld.c:10:
-C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/export/conv_accel_hw/sw/conv_accel_hw/standalone_domain/bspinclude/include/xprc.h:780:9: note: expected 'u32' {aka 'long unsigned int'} but argument is of type 'char *'
-  780 |     u32 BsAddress);
-      |     ~~~~^~~~~~~~~
-../src/helloworld.c:145:67: warning: passing argument 4 of 'XPrc_SetBsAddress' makes integer from pointer without a cast [-Wint-conversion]
-  145 |  XPrc_SetBsAddress(&Prc, XPRC_VS_MA_ID, XPRC_VS_MA_RM_16_ID, file2->file_ptr);
-      |                                                              ~~~~~^~~~~~~~~~
-      |                                                                   |
-      |                                                                   char *
-In file included from ../src/helloworld.c:10:
-C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/export/conv_accel_hw/sw/conv_accel_hw/standalone_domain/bspinclude/include/xprc.h:780:9: note: expected 'u32' {aka 'long unsigned int'} but argument is of type 'char *'
-  780 |     u32 BsAddress);
-      |     ~~~~^~~~~~~~~
-../src/helloworld.c:110:20: warning: variable 'file3' set but not used [-Wunused-but-set-variable]
-  110 |  struct file_info* file3;
-      |                    ^~~~~
-../src/helloworld.c:54:6: warning: unused variable 'prc_status_err' [-Wunused-variable]
-   54 |  u32 prc_status_err;
-      |      ^~~~~~~~~~~~~~
-../src/helloworld.c:53:6: warning: unused variable 'prc_status_last_state' [-Wunused-variable]
-   53 |  u32 prc_status_last_state;
-      |      ^~~~~~~~~~~~~~~~~~~~~
-../src/helloworld.c:52:6: warning: unused variable 'prc_status_state' [-Wunused-variable]
-   52 |  u32 prc_status_state;
-      |      ^~~~~~~~~~~~~~~~
-../src/helloworld.c:51:6: warning: unused variable 'prc_status' [-Wunused-variable]
-   51 |  u32 prc_status;
-      |      ^~~~~~~~~~
-../src/helloworld.c:49:6: warning: unused variable 'dcfg_init' [-Wunused-variable]
-   49 |  u32 dcfg_init;
-      |      ^~~~~~~~~
-../src/helloworld.c: In function 'XDcfg_Initialize':
-../src/helloworld.c:174:6: warning: unused variable 'CtrlReg' [-Wunused-variable]
-  174 |  u32 CtrlReg;
-      |      ^~~~~~~
-../src/helloworld.c: At top level:
-../src/helloworld.c:17:12: warning: 'CheckData' declared 'static' but never defined [-Wunused-function]
-   17 | static int CheckData(u32 type);
-      |            ^~~~~~~~~
-'Finished building: ../src/helloworld.c'
-' '
-'Building target: conv_accel_sw.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/export/conv_accel_hw/sw/conv_accel_hw/standalone_domain/bsplib/lib -o "conv_accel_sw.elf"  ./src/CPE_driver.o ./src/SD.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
-'Finished building target: conv_accel_sw.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size conv_accel_sw.elf  |tee "conv_accel_sw.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  77012	   4008	33574432	33655452	2018a9c	conv_accel_sw.elf
-'Finished building: conv_accel_sw.elf.size'
-' '
+make[1]: Nothing to be done for 'main-build'.
 
-13:40:35 Build Finished (took 688ms)
+14:33:41 Build Finished (took 306ms)
 

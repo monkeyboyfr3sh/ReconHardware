@@ -4,7 +4,7 @@ module CPE_Wrapper
 #(  // Parameters, these must also be set in the BD
     parameter DATA_WIDTH = 32,
     parameter KERNEL_SIZE = 3,
-    parameter CHANNELS = 1,
+    parameter CHANNELS = 3,
     parameter REST_ADDR = KERNEL_SIZE*KERNEL_SIZE,
     parameter ADDR_WIDTH = $clog2(REST_ADDR)
 );
@@ -39,7 +39,7 @@ Convolution_Controller_wrapper BD_Wrapper
     .MULTIPLIER_INPUT_0     (multiplier_connector),
     .MULTIPLICAND_INPUT_0   (multiplicand_connector),
     .MULTIPLY_START_0       (mStart_conncetor),
-    .cReady_0               (cReady),
+    .cReady_0               (&cReady),
     .cSum_0                 (cSum),
     .vsm_ma_rm_reset_0(vsm_ma_rst),
     .ICAP_0_csib(icap_csib),

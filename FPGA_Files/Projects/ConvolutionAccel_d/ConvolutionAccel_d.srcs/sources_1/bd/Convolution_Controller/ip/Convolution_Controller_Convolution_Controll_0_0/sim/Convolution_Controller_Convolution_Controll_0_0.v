@@ -93,10 +93,10 @@ module Convolution_Controller_Convolution_Controll_0_0 (
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 axi_clk CLK" *)
 input wire axi_clk;
 input wire axi_reset_n;
-input wire [31 : 0] cSum;
+input wire [95 : 0] cSum;
 input wire cReady;
-output wire [287 : 0] MULTIPLIER_INPUT;
-output wire [287 : 0] MULTIPLICAND_INPUT;
+output wire [863 : 0] MULTIPLIER_INPUT;
+output wire [863 : 0] MULTIPLICAND_INPUT;
 output wire [8 : 0] MULTIPLY_START;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 s_axis_data TVALID" *)
 input wire s_axis_valid;
@@ -158,7 +158,7 @@ output wire s_axi_rlast;
     .K_SQUARED(9),
     .FILTER_BASE(24),
     .BRAM_WIDTH(1800),
-    .CHANNELS(1),
+    .CHANNELS(3),
     .FINAL_CHANNEL(4),
     .DATA_BASE(60),
     .CTRL_REG_SIZE(96),

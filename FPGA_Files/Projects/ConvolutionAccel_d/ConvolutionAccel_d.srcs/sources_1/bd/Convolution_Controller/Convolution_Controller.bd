@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x64A60AED8AA3958E",
+      "boundary_crc": "0xDA1FC04307A707AD",
       "device": "xc7z020clg400-1",
       "name": "Convolution_Controller",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
@@ -18,7 +18,6 @@
       "dfx_controller_0": "",
       "util_vector_logic_0": "",
       "util_vector_logic_1": "",
-      "ila_0": "",
       "dfx_mem_ila_0": "",
       "cc_s_axis_ila_0": "",
       "cc_m_axis_ila_0": "",
@@ -109,14 +108,6 @@
           }
         }
       },
-      "cReady_0": {
-        "direction": "I"
-      },
-      "cSum_0": {
-        "direction": "I",
-        "left": "31",
-        "right": "0"
-      },
       "MULTIPLY_START_0": {
         "direction": "O",
         "left": "8",
@@ -148,18 +139,28 @@
           }
         }
       },
+      "vsm_ma_rm_reset_0": {
+        "direction": "O"
+      },
       "MULTIPLICAND_INPUT_0": {
         "direction": "O",
-        "left": "287",
+        "left": "863",
         "right": "0"
       },
       "MULTIPLIER_INPUT_0": {
         "direction": "O",
-        "left": "287",
+        "left": "863",
         "right": "0"
       },
-      "vsm_ma_rm_reset_0": {
-        "direction": "O"
+      "cReady_0": {
+        "direction": "I",
+        "left": "0",
+        "right": "0"
+      },
+      "cSum_0": {
+        "direction": "I",
+        "left": "95",
+        "right": "0"
       }
     },
     "components": {
@@ -2181,42 +2182,6 @@
           }
         }
       },
-      "ila_0": {
-        "vlnv": "xilinx.com:ip:ila:6.2",
-        "xci_name": "Convolution_Controller_ila_0_0",
-        "parameters": {
-          "C_ENABLE_ILA_AXI_MON": {
-            "value": "false"
-          },
-          "C_MONITOR_TYPE": {
-            "value": "Native"
-          },
-          "C_NUM_OF_PROBES": {
-            "value": "7"
-          },
-          "C_PROBE0_TYPE": {
-            "value": "1"
-          },
-          "C_PROBE0_WIDTH": {
-            "value": "288"
-          },
-          "C_PROBE1_TYPE": {
-            "value": "1"
-          },
-          "C_PROBE1_WIDTH": {
-            "value": "288"
-          },
-          "C_PROBE2_WIDTH": {
-            "value": "9"
-          },
-          "C_PROBE3_TYPE": {
-            "value": "1"
-          },
-          "C_PROBE3_WIDTH": {
-            "value": "32"
-          }
-        }
-      },
       "dfx_mem_ila_0": {
         "vlnv": "xilinx.com:ip:ila:6.2",
         "xci_name": "Convolution_Controller_ila_1_0"
@@ -2253,17 +2218,34 @@
             "value": "1800"
           },
           "CHANNELS": {
-            "value": "1"
+            "value": "3"
           }
         }
       }
     },
     "interface_nets": {
-      "Convolution_Controll_0_m_axis_data": {
+      "smartconnect_0_M02_AXI": {
         "interface_ports": [
-          "axi_dma_0/S_AXIS_S2MM",
-          "Convolution_Controll_0/m_axis_data",
-          "cc_m_axis_ila_0/SLOT_0_AXIS"
+          "dfx_controller_0/s_axi_reg",
+          "smartconnect_0/M02_AXI"
+        ]
+      },
+      "smartconnect_0_M00_AXI": {
+        "interface_ports": [
+          "smartconnect_0/M00_AXI",
+          "axi_dma_0/S_AXI_LITE"
+        ]
+      },
+      "smartconnect_0_M01_AXI": {
+        "interface_ports": [
+          "smartconnect_0/M01_AXI",
+          "Convolution_Controll_0/s_axi"
+        ]
+      },
+      "processing_system7_0_DDR": {
+        "interface_ports": [
+          "DDR",
+          "processing_system7_0/DDR"
         ]
       },
       "dfx_controller_0_M_AXI_MEM": {
@@ -2273,16 +2255,11 @@
           "dfx_mem_ila_0/SLOT_0_AXI"
         ]
       },
-      "dfx_controller_0_ICAP": {
+      "Convolution_Controll_0_m_axis_data": {
         "interface_ports": [
-          "ICAP_0",
-          "dfx_controller_0/ICAP"
-        ]
-      },
-      "processing_system7_0_M_AXI_GP0": {
-        "interface_ports": [
-          "smartconnect_0/S00_AXI",
-          "processing_system7_0/M_AXI_GP0"
+          "axi_dma_0/S_AXIS_S2MM",
+          "Convolution_Controll_0/m_axis_data",
+          "cc_m_axis_ila_0/SLOT_0_AXIS"
         ]
       },
       "axi_dma_0_M_AXI_S2MM": {
@@ -2291,16 +2268,22 @@
           "axi_dma_0/M_AXI_S2MM"
         ]
       },
-      "smartconnect_1_M00_AXI": {
+      "processing_system7_0_M_AXI_GP0": {
         "interface_ports": [
-          "smartconnect_1/M00_AXI",
-          "processing_system7_0/S_AXI_HP0"
+          "smartconnect_0/S00_AXI",
+          "processing_system7_0/M_AXI_GP0"
         ]
       },
       "axi_dma_0_M_AXI_MM2S": {
         "interface_ports": [
           "smartconnect_1/S00_AXI",
           "axi_dma_0/M_AXI_MM2S"
+        ]
+      },
+      "smartconnect_1_M00_AXI": {
+        "interface_ports": [
+          "smartconnect_1/M00_AXI",
+          "processing_system7_0/S_AXI_HP0"
         ]
       },
       "axi_dma_0_M_AXIS_MM2S": {
@@ -2310,34 +2293,16 @@
           "cc_s_axis_ila_0/SLOT_0_AXIS"
         ]
       },
+      "dfx_controller_0_ICAP": {
+        "interface_ports": [
+          "ICAP_0",
+          "dfx_controller_0/ICAP"
+        ]
+      },
       "processing_system7_0_FIXED_IO": {
         "interface_ports": [
           "FIXED_IO",
           "processing_system7_0/FIXED_IO"
-        ]
-      },
-      "processing_system7_0_DDR": {
-        "interface_ports": [
-          "DDR",
-          "processing_system7_0/DDR"
-        ]
-      },
-      "smartconnect_0_M02_AXI": {
-        "interface_ports": [
-          "dfx_controller_0/s_axi_reg",
-          "smartconnect_0/M02_AXI"
-        ]
-      },
-      "smartconnect_0_M01_AXI": {
-        "interface_ports": [
-          "smartconnect_0/M01_AXI",
-          "Convolution_Controll_0/s_axi"
-        ]
-      },
-      "smartconnect_0_M00_AXI": {
-        "interface_ports": [
-          "smartconnect_0/M00_AXI",
-          "axi_dma_0/S_AXI_LITE"
         ]
       }
     },
@@ -2358,18 +2323,10 @@
           "rst_ps7_0_100M/ext_reset_in"
         ]
       },
-      "cSum_0_1": {
-        "ports": [
-          "cSum_0",
-          "ila_0/probe3",
-          "Convolution_Controll_0/cSum"
-        ]
-      },
       "Convolution_Controll_0_MULTIPLY_START": {
         "ports": [
           "Convolution_Controll_0/MULTIPLY_START",
-          "MULTIPLY_START_0",
-          "ila_0/probe2"
+          "MULTIPLY_START_0"
         ]
       },
       "processing_system7_0_FCLK_CLK0": {
@@ -2386,25 +2343,10 @@
           "smartconnect_1/aclk",
           "dfx_controller_0/clk",
           "dfx_controller_0/icap_clk",
-          "ila_0/clk",
           "dfx_mem_ila_0/clk",
           "cc_s_axis_ila_0/clk",
           "cc_m_axis_ila_0/clk",
           "Convolution_Controll_0/axi_clk"
-        ]
-      },
-      "Convolution_Controll_0_MULTIPLICAND_INPUT": {
-        "ports": [
-          "Convolution_Controll_0/MULTIPLICAND_INPUT",
-          "MULTIPLICAND_INPUT_0",
-          "ila_0/probe1"
-        ]
-      },
-      "Convolution_Controll_0_MULTIPLIER_INPUT": {
-        "ports": [
-          "Convolution_Controll_0/MULTIPLIER_INPUT",
-          "MULTIPLIER_INPUT_0",
-          "ila_0/probe0"
         ]
       },
       "rst_ps7_0_100M_interconnect_aresetn": {
@@ -2423,28 +2365,43 @@
       "util_vector_logic_0_Res": {
         "ports": [
           "util_vector_logic_0/Res",
-          "ila_0/probe4",
           "Convolution_Controll_0/cReady"
-        ]
-      },
-      "cReady_0_1": {
-        "ports": [
-          "cReady_0",
-          "util_vector_logic_0/Op1"
         ]
       },
       "dfx_controller_0_vsm_ma_rm_decouple": {
         "ports": [
           "dfx_controller_0/vsm_ma_rm_decouple",
-          "util_vector_logic_1/Op1",
-          "ila_0/probe5"
+          "util_vector_logic_1/Op1"
         ]
       },
       "dfx_controller_0_vsm_ma_rm_reset": {
         "ports": [
           "dfx_controller_0/vsm_ma_rm_reset",
-          "vsm_ma_rm_reset_0",
-          "ila_0/probe6"
+          "vsm_ma_rm_reset_0"
+        ]
+      },
+      "Convolution_Controll_0_MULTIPLICAND_INPUT": {
+        "ports": [
+          "Convolution_Controll_0/MULTIPLICAND_INPUT",
+          "MULTIPLICAND_INPUT_0"
+        ]
+      },
+      "Convolution_Controll_0_MULTIPLIER_INPUT": {
+        "ports": [
+          "Convolution_Controll_0/MULTIPLIER_INPUT",
+          "MULTIPLIER_INPUT_0"
+        ]
+      },
+      "Op1_0_1": {
+        "ports": [
+          "cReady_0",
+          "util_vector_logic_0/Op1"
+        ]
+      },
+      "cSum_0_1": {
+        "ports": [
+          "cSum_0",
+          "Convolution_Controll_0/cSum"
         ]
       }
     },

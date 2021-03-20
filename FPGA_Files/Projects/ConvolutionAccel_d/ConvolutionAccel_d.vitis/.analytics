@@ -224,3 +224,9 @@ timestamp=[2021-03-20 13:38:22], mode=BUILD, duration=0:00:00.699, duration_ms=6
 timestamp=[2021-03-20 13:38:27], mode=BUILD, duration=0:00:05.073, duration_ms=5073, data={name=conv_accel_sw_system, configuration=Debug, clean_build=false}
 timestamp=[2021-03-20 13:40:35], mode=BUILD, duration=0:00:00.702, duration_ms=702, data={name=conv_accel_sw, configuration=Debug, clean_build=false}
 timestamp=[2021-03-20 13:40:40], mode=BUILD, duration=0:00:05.081, duration_ms=5081, data={name=conv_accel_sw_system, configuration=Debug, clean_build=false}
+timestamp=[2021-03-20 14:32:46], mode=WORKBENCH_START, duration=0:00:08.732, duration_ms=8732, data={}
+timestamp=[2021-03-20 14:32:47], mode=WORKBENCH_UI_INIT, duration=0:00:00.739, duration_ms=739, data={editors_count=4, platform_editors_count=0, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,conv_accel_hw,conv_accel_sw,conv_accel_sw_system}
+timestamp=[2021-03-20 14:32:47], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.051, duration_ms=51, data={}
+timestamp=[2021-03-20 14:33:28], mode=PLATFORM_GENERATION, duration=0:00:02.257, duration_ms=2257, data={name=conv_accel_hw}
+timestamp=[2021-03-20 14:33:41], mode=BUILD, duration=0:00:00.327, duration_ms=327, data={name=conv_accel_sw, configuration=Debug, clean_build=false}
+timestamp=[2021-03-20 14:33:52], mode=BUILD, duration=0:00:05.422, duration_ms=5422, data={name=conv_accel_sw_system, configuration=Debug, clean_build=false}

@@ -1,7 +1,7 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
--- Date        : Sat Mar 20 11:34:12 2021
+-- Date        : Sat Mar 20 14:50:37 2021
 -- Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 --               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ Convolution_Controller_Convolution_Controll_0_0_stub.vhdl
@@ -16,10 +16,10 @@ entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
   Port ( 
     axi_clk : in STD_LOGIC;
     axi_reset_n : in STD_LOGIC;
-    cSum : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    cSum : in STD_LOGIC_VECTOR ( 95 downto 0 );
     cReady : in STD_LOGIC;
-    MULTIPLIER_INPUT : out STD_LOGIC_VECTOR ( 287 downto 0 );
-    MULTIPLICAND_INPUT : out STD_LOGIC_VECTOR ( 287 downto 0 );
+    MULTIPLIER_INPUT : out STD_LOGIC_VECTOR ( 863 downto 0 );
+    MULTIPLICAND_INPUT : out STD_LOGIC_VECTOR ( 863 downto 0 );
     MULTIPLY_START : out STD_LOGIC_VECTOR ( 8 downto 0 );
     s_axis_valid : in STD_LOGIC;
     s_axis_data : in STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -54,7 +54,7 @@ architecture stub of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
-attribute black_box_pad_pin of stub : architecture is "axi_clk,axi_reset_n,cSum[31:0],cReady,MULTIPLIER_INPUT[287:0],MULTIPLICAND_INPUT[287:0],MULTIPLY_START[8:0],s_axis_valid,s_axis_data[31:0],s_axis_ready,s_axis_last,s_axis_keep[3:0],m_axis_valid,m_axis_data[31:0],m_axis_ready,m_axis_last,m_axis_keep[3:0],s_axi_awaddr[9:0],s_axi_awready,s_axi_awvalid,s_axi_wdata[31:0],s_axi_wready,s_axi_wvalid,s_axi_araddr[9:0],s_axi_arready,s_axi_arvalid,s_axi_rdata[31:0],s_axi_rready,s_axi_rvalid,s_axi_bvalid,s_axi_bready,s_axi_rlast";
+attribute black_box_pad_pin of stub : architecture is "axi_clk,axi_reset_n,cSum[95:0],cReady,MULTIPLIER_INPUT[863:0],MULTIPLICAND_INPUT[863:0],MULTIPLY_START[8:0],s_axis_valid,s_axis_data[31:0],s_axis_ready,s_axis_last,s_axis_keep[3:0],m_axis_valid,m_axis_data[31:0],m_axis_ready,m_axis_last,m_axis_keep[3:0],s_axi_awaddr[9:0],s_axi_awready,s_axi_awvalid,s_axi_wdata[31:0],s_axi_wready,s_axi_wvalid,s_axi_araddr[9:0],s_axi_arready,s_axi_arvalid,s_axi_rdata[31:0],s_axi_rready,s_axi_rvalid,s_axi_bvalid,s_axi_bready,s_axi_rlast";
 attribute X_CORE_INFO : string;
 attribute X_CORE_INFO of stub : architecture is "Convolution_Controller,Vivado 2020.1";
 begin
