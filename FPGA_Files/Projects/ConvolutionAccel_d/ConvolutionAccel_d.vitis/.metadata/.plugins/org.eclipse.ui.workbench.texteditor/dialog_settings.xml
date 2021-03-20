@@ -2,12 +2,15 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="Fil_info" key="selection"/>
+		<item value="img_height" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="SD_Transfer"/>
+			<item value="img_height"/>
+			<item value="byte_cnt"/>
 			<item value="Fil_info"/>
 		</list>
 		<list key="replacehistory">

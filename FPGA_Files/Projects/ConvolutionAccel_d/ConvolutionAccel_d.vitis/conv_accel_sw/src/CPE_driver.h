@@ -75,7 +75,7 @@ extern u32 image[];
 extern u32 filter[];
 
 void print_image_info(struct image_type *image);
-int fill_image(struct image_type* image, u32 width, u32 height, char* fileName);
+int fill_image(struct image_type* image, char* fileName);
 int Process_Image(struct image_type *image);
 int CC_status_register();
 int CC_comand_register(struct image_type *image);

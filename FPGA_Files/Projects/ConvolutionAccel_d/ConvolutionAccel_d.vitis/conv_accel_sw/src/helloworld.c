@@ -67,15 +67,15 @@ int main()
 	print("\r\nCopying SD content to DDR4...\r\n");
 
 	struct image_type image1;
-	u32 status = fill_image(&image1, 8, 8, "im1.txt");
+	u32 status = fill_image(&image1,"im1.txt");
 	if (status != XST_SUCCESS) {
 		return XST_FAILURE;
 	}
 
 	print_image_info(&image1);
 
-//	for(int i = 0;i<len;i++){
-//		xil_printf("%d",image1.img_tx_ptr[i]);
+//	for(int i = 0;i<image1.img_tx_pckt_len;i++){
+//		xil_printf("%d\r\n",image1.img_tx_ptr[i]);
 //	}
 
 	/* Run the poll example for simple transfer */

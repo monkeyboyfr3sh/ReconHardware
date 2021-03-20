@@ -26,9 +26,9 @@ u32 image[] = {
 		0xf0,0xf1,0xf2,0xf3,0xf4,0xf5,0xf6,0xf7,0xf8,0xf9,0xfa,0xfb,0xfc,0xfd,0xfe,0xff
 };
 u32 filter[] = {
+		1,0,0,
 		0,0,0,
-		0,0,0,
-		0,0,1
+		0,0,0
 };
 
 void print_image_info(struct image_type *image){
@@ -49,7 +49,7 @@ void print_image_info(struct image_type *image){
 	xil_printf("RX packet len = %d\r\n",image->img_rx_pckt_len);
 	xil_printf("RX byte cnt = %d\r\n",image->img_rx_byte_cnt);
 }
-int fill_image(struct image_type* image, u32 width, u32 height, char* fileName){
+int fill_image(struct image_type* image, char* fileName){
 	/* Put CSV into memory */
 	struct file_info* Fil_info;
 	Fil_info = SD_Transfer(fileName);
@@ -65,17 +65,27 @@ int fill_image(struct image_type* image, u32 width, u32 height, char* fileName){
 	u32 str_cnt=0;
 	u32 val_cnt=0;
 	char string[15]="";
-	// Would use memcpy if I wasn't forcing it to change types here...
+
+	image->img_width=0;
+	image->img_height=0;
 	for(int i = 0;i<size;i++){
 		char next_char = Fil_info->file_ptr[i];
 //		xil_printf("next_char: %c\r\n",next_char);
 
 		if(next_char==','|next_char=='\n'){
 			u32 val = atoi(string);
-//			xil_printf("string:%s\r\n",string);
-//			xil_printf("decimal:%d\r\n",val);
-			image->img_tx_ptr[val_cnt] = val;
-			val_cnt++;
+
+			// Collect width
+			if(image->img_width==0){
+				image->img_width=val;
+			}
+			else if (image->img_height==0){
+				image->img_height=val;
+			}
+			else {
+				image->img_tx_ptr[val_cnt] = val;
+				val_cnt++;
+			}
 
 			str_cnt=0;
 			string[0] = 0;
@@ -90,14 +100,10 @@ int fill_image(struct image_type* image, u32 width, u32 height, char* fileName){
 	}
 
 	/* metadata */
-	image->img_width = width;
-	image->img_height = height;
-
 	/* update tx buffer */
-	image->img_tx_pckt_len = val_cnt+1;
+	image->img_tx_pckt_len = val_cnt;
 	image->img_tx_byte_cnt = 4*image->img_tx_pckt_len;
 	if(image->img_tx_pckt_len!=width*height) xil_printf("Dimension mismatch!\r\n");
-
 	/* update rx buffer */
 	image->img_rx_pckt_len = (width-2)*(height-2);
 	image->img_rx_ptr = malloc(image->img_rx_pckt_len*(sizeof (u32)));
@@ -165,7 +171,7 @@ int Process_Image(struct image_type *image)
 	}
 
 	xil_printf("Setting command register\r\n");
-	CC_comand_register(&image);
+	CC_comand_register(image);
 
 	CC_status_register();
 
@@ -210,7 +216,7 @@ int Process_Image(struct image_type *image)
 	}
 
 	xil_printf("RxBuffer = {");
-	for(Index = 0; Index <  image->img_rx_byte_cnt; Index ++) {
+	for(Index = 0; Index <  image->img_rx_pckt_len; Index ++) {
 		if(Index%(image->img_width-2)==0){
 			xil_printf("\r\n	");
 		}
@@ -258,6 +264,7 @@ int CC_comand_register(struct image_type *image){
 	for(int i = 0;i<kernel_size*kernel_size;i++){// Filter set
 		Xil_Out32(CONV_CONTROL_BASE+filter_base+(4*i),filter[i]);
 	}
+	print_image_info(image);
 	Xil_Out32(CONV_CONTROL_BASE+(0x10),image->img_width);// Image width
 	Xil_Out32(CONV_CONTROL_BASE+(0x14),image->img_height);// Image height
 }
