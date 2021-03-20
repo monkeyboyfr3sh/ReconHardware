@@ -67,22 +67,20 @@ int main()
 	print("\r\nCopying SD content to DDR4...\r\n");
 
 	struct image_type image1;
-	u32 status = fill_image(&image1, 0, 0, "file.txt");
+	u32 status = fill_image(&image1, 8, 8, "im1.txt");
 	if (status != XST_SUCCESS) {
 		return XST_FAILURE;
 	}
 
-	xil_printf("\r\n");
-	u32 len = image1.img_tx_pckt_len;
-	xil_printf("Length:%d\r\n",len);
+	print_image_info(&image1);
 
-	for(int i = 0;i<len;i++){
-		xil_printf("%d",image1.img_tx_ptr[i]);
-	}
+//	for(int i = 0;i<len;i++){
+//		xil_printf("%d",image1.img_tx_ptr[i]);
+//	}
 
 	/* Run the poll example for simple transfer */
 	xil_printf("################## DMA TEST 1 ##################\r\n");
-	Status = Process_Image(DMA_DEV_ID);
+	Status = Process_Image(&image1);
 	if (Status != XST_SUCCESS) {
 		xil_printf("XAxiDma_SimplePoll Example Failed\r\n");
 		return XST_FAILURE;
@@ -91,7 +89,7 @@ int main()
 //	XPrc_SendSwTrigger (&Prc, XPRC_VS_MA_ID, XPRC_VS_MA_RM_32_ID);
 
 	xil_printf("################## DMA TEST 2 ##################\r\n");
-	Status = Process_Image(DMA_DEV_ID);
+	Status = Process_Image(&image1);
 	if (Status != XST_SUCCESS) {
 		xil_printf("XAxiDma_SimplePoll Example Failed\r\n");
 		return XST_FAILURE;

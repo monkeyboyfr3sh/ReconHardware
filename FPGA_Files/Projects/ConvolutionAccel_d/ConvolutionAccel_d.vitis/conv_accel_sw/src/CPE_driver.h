@@ -53,6 +53,7 @@ XAxiDma AxiDma;
 
 typedef struct image_type {
 	u32 file_size;
+	char *filename;
 	u32 img_width;
 	u32 img_height;
 
@@ -73,9 +74,10 @@ struct kernel_type {
 extern u32 image[];
 extern u32 filter[];
 
+void print_image_info(struct image_type *image);
 int fill_image(struct image_type* image, u32 width, u32 height, char* fileName);
-int Process_Image(u16 DeviceId);
+int Process_Image(struct image_type *image);
 int CC_status_register();
-int CC_comand_register();
+int CC_comand_register(struct image_type *image);
 
 #endif /* SRC_CPE_DRIVER_H_ */

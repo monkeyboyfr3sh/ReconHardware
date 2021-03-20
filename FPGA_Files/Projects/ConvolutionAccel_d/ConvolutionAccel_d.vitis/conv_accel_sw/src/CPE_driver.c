@@ -31,11 +31,32 @@ u32 filter[] = {
 		0,0,1
 };
 
+void print_image_info(struct image_type *image){
+	xil_printf("\r\nPrinting %s info\r\n",image->filename);
+
+	u32* img_tx_ptr;
+	u32 img_tx_pckt_len;
+	u32 img_tx_byte_cnt;
+
+	u32* img_rx_ptr;
+	u32 img_rx_pckt_len;
+	u32 img_rx_byte_cnt;
+
+	xil_printf("Width = %d; ",image->img_width);
+	xil_printf("Height = %d\r\n",image->img_height);
+	xil_printf("TX packet len = %d\r\n",image->img_tx_pckt_len);
+	xil_printf("TX byte cnt = %d\r\n",image->img_tx_byte_cnt);
+	xil_printf("RX packet len = %d\r\n",image->img_rx_pckt_len);
+	xil_printf("RX byte cnt = %d\r\n",image->img_rx_byte_cnt);
+}
 int fill_image(struct image_type* image, u32 width, u32 height, char* fileName){
 	/* Put CSV into memory */
 	struct file_info* Fil_info;
 	Fil_info = SD_Transfer(fileName);
-
+	if(Fil_info->file_ptr<=0){
+		return XST_FAILURE;
+	}
+	image->filename=Fil_info->filename;
 	// Create array in memory for file
 	image->file_size = Fil_info->file_size;
 	image->img_tx_ptr = malloc(Fil_info->file_size*(sizeof(u32)));
@@ -47,12 +68,12 @@ int fill_image(struct image_type* image, u32 width, u32 height, char* fileName){
 	// Would use memcpy if I wasn't forcing it to change types here...
 	for(int i = 0;i<size;i++){
 		char next_char = Fil_info->file_ptr[i];
-		xil_printf("next_char: %c\r\n",next_char);
+//		xil_printf("next_char: %c\r\n",next_char);
 
 		if(next_char==','|next_char=='\n'){
 			u32 val = atoi(string);
-			xil_printf("string:%s\r\n",string);
-			xil_printf("decimal:%d\r\n",val);
+//			xil_printf("string:%s\r\n",string);
+//			xil_printf("decimal:%d\r\n",val);
 			image->img_tx_ptr[val_cnt] = val;
 			val_cnt++;
 
@@ -72,11 +93,17 @@ int fill_image(struct image_type* image, u32 width, u32 height, char* fileName){
 	image->img_width = width;
 	image->img_height = height;
 
-	image->img_tx_pckt_len = val_cnt;
+	/* update tx buffer */
+	image->img_tx_pckt_len = val_cnt+1;
 	image->img_tx_byte_cnt = 4*image->img_tx_pckt_len;
-	if(val_cnt!=width*height) xil_printf("Dimension mismatch!\r\n");
+	if(image->img_tx_pckt_len!=width*height) xil_printf("Dimension mismatch!\r\n");
 
+	/* update rx buffer */
 	image->img_rx_pckt_len = (width-2)*(height-2);
+	image->img_rx_ptr = malloc(image->img_rx_pckt_len*(sizeof (u32)));
+	if(image->img_rx_ptr<=0){
+		return XST_FAILURE;
+	}
 	image->img_rx_byte_cnt = 4*image->img_rx_pckt_len;
 
 	// Free memory
@@ -85,7 +112,7 @@ int fill_image(struct image_type* image, u32 width, u32 height, char* fileName){
 	return XST_SUCCESS;
 }
 
-int Process_Image(u16 DeviceId)
+int Process_Image(struct image_type *image)
 {
 	XAxiDma_Config *CfgPtr;
 	int Status;
@@ -95,14 +122,14 @@ int Process_Image(u16 DeviceId)
 	u32 *RxBufferPtr;
 	u32 Value;
 
-	TxBufferPtr = (u32 *)TX_BUFFER_BASE ;
-	RxBufferPtr = (u32 *)RX_BUFFER_BASE;
+	TxBufferPtr = image->img_tx_ptr;
+	RxBufferPtr = image->img_rx_ptr;
 
 	/* Initialize the XAxiDma device.
 	 */
-	CfgPtr = XAxiDma_LookupConfig(DeviceId);
+	CfgPtr = XAxiDma_LookupConfig(DMA_DEV_ID);
 	if (!CfgPtr) {
-		xil_printf("No config found for %d\r\n", DeviceId);
+		xil_printf("No config found for %d\r\n", DMA_DEV_ID);
 		return XST_FAILURE;
 	}
 
@@ -138,7 +165,7 @@ int Process_Image(u16 DeviceId)
 	}
 
 	xil_printf("Setting command register\r\n");
-	CC_comand_register();
+	CC_comand_register(&image);
 
 	CC_status_register();
 
@@ -149,29 +176,27 @@ int Process_Image(u16 DeviceId)
 	XAxiDma_IntrDisable(&AxiDma, XAXIDMA_IRQ_ALL_MASK,
 						XAXIDMA_DMA_TO_DEVICE);
 
-	Value = TEST_START_VALUE;
 	xil_printf("TxBuffer = {");
-	for(Index = 0; Index < TX_PCKT_LEN; Index ++) {
-		if(Index%img_widthd==0){
+	for(Index = 0; Index < image->img_tx_pckt_len; Index ++) {
+		if(Index%image->img_width==0){
 			xil_printf("\r\n	");
 		}
-		TxBufferPtr[Index] = image[Index]+10;
 		xil_printf("0x%2x,",TxBufferPtr[Index]);
 	}
 	xil_printf("\r\n}\r\n");
 
-	Xil_DCacheFlushRange((UINTPTR)TxBufferPtr, TX_BYTE_CNT);
-	Xil_DCacheFlushRange((UINTPTR)RxBufferPtr, RX_BYTE_CNT);
+	Xil_DCacheFlushRange((UINTPTR)TxBufferPtr, image->img_tx_byte_cnt);
+	Xil_DCacheFlushRange((UINTPTR)RxBufferPtr, image->img_rx_byte_cnt);
 
 	Status = XAxiDma_SimpleTransfer(&AxiDma,(UINTPTR) RxBufferPtr,
-			RX_BYTE_CNT, XAXIDMA_DEVICE_TO_DMA);
+			image->img_rx_byte_cnt, XAXIDMA_DEVICE_TO_DMA);
 
 	if (Status != XST_SUCCESS) {
 		return XST_FAILURE;
 	}
 
 	Status = XAxiDma_SimpleTransfer(&AxiDma,(UINTPTR) TxBufferPtr,
-			TX_BYTE_CNT, XAXIDMA_DMA_TO_DEVICE);
+			image->img_tx_byte_cnt, XAXIDMA_DMA_TO_DEVICE);
 
 	if (Status != XST_SUCCESS) {
 		return XST_FAILURE;
@@ -185,8 +210,8 @@ int Process_Image(u16 DeviceId)
 	}
 
 	xil_printf("RxBuffer = {");
-	for(Index = 0; Index < RX_PCKT_LEN; Index ++) {
-		if(Index%(img_widthd-2)==0){
+	for(Index = 0; Index <  image->img_rx_byte_cnt; Index ++) {
+		if(Index%(image->img_width-2)==0){
 			xil_printf("\r\n	");
 		}
 		xil_printf("0x%3x,",RxBufferPtr[Index]);
@@ -228,11 +253,11 @@ int CC_status_register(){
 	return XST_SUCCESS;
 }
 
-int CC_comand_register(){
+int CC_comand_register(struct image_type *image){
 	Xil_Out32(CONV_CONTROL_BASE+(0x00),1); // Control Start
 	for(int i = 0;i<kernel_size*kernel_size;i++){// Filter set
 		Xil_Out32(CONV_CONTROL_BASE+filter_base+(4*i),filter[i]);
 	}
-	Xil_Out32(CONV_CONTROL_BASE+(0x10),img_widthd);// Image width
-	Xil_Out32(CONV_CONTROL_BASE+(0x14),img_heightd);// Image height
+	Xil_Out32(CONV_CONTROL_BASE+(0x10),image->img_width);// Image width
+	Xil_Out32(CONV_CONTROL_BASE+(0x14),image->img_height);// Image height
 }

@@ -21,6 +21,7 @@
 
 struct file_info {
 	char *file_ptr;
+	char *filename;
 	u32 file_size;
 };
 struct file_info *SD_Transfer(char *FileName);

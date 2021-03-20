@@ -33,6 +33,8 @@ struct file_info *SD_Transfer(char *FileName){
     }
 
     xil_printf("... OK\n\r");
+    return_fil->filename = FileName;
+
     result = f_lseek(&fil, 0);
     if ( result ){
         xil_printf("Moving file pointer of the file object: Failed with ERROR: %d \n\r", result);

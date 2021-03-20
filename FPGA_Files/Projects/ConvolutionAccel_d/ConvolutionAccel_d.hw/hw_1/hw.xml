@@ -4,7 +4,7 @@
 <!-- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.        -->
 
 <hwsession version="1" minor="2">
-  <device name="xc7z020_1" gui_info=""/>
+  <device name="xc7z020_1" gui_info="dashboard1=hw_ila_1[xc7z020_1/hw_ila_1/Waveform=ILA_WAVE_1;xc7z020_1/hw_ila_1/Capture Setup=ILA_CAPTURE_1;xc7z020_1/hw_ila_1/Status=ILA_STATUS_1;xc7z020_1/hw_ila_1/Trigger Setup=ILA_TRIGGER_1;xc7z020_1/hw_ila_1/Settings=ILA_SETTINGS_1;],dashboard2=hw_ila_2[xc7z020_1/hw_ila_2/Capture Setup=ILA_CAPTURE_1;xc7z020_1/hw_ila_2/Settings=ILA_SETTINGS_1;xc7z020_1/hw_ila_2/Waveform=ILA_WAVE_1;xc7z020_1/hw_ila_2/Status=ILA_STATUS_1;xc7z020_1/hw_ila_2/Trigger Setup=ILA_TRIGGER_1;],dashboard3=hw_ila_3[xc7z020_1/hw_ila_3/Trigger Setup=ILA_TRIGGER_1;xc7z020_1/hw_ila_3/Waveform=ILA_WAVE_1;xc7z020_1/hw_ila_3/Status=ILA_STATUS_1;xc7z020_1/hw_ila_3/Settings=ILA_SETTINGS_1;xc7z020_1/hw_ila_3/Capture Setup=ILA_CAPTURE_1;],dashboard4=hw_ila_4[xc7z020_1/hw_ila_4/Waveform=ILA_WAVE_1;xc7z020_1/hw_ila_4/Trigger Setup=ILA_TRIGGER_1;xc7z020_1/hw_ila_4/Settings=ILA_SETTINGS_1;xc7z020_1/hw_ila_4/Status=ILA_STATUS_1;xc7z020_1/hw_ila_4/Capture Setup=ILA_CAPTURE_1;],dashboard5=hw_ila_5[xc7z020_1/hw_ila_5/Settings=ILA_SETTINGS_1;xc7z020_1/hw_ila_5/Capture Setup=ILA_CAPTURE_1;xc7z020_1/hw_ila_5/Waveform=ILA_WAVE_1;xc7z020_1/hw_ila_5/Trigger Setup=ILA_TRIGGER_1;xc7z020_1/hw_ila_5/Status=ILA_STATUS_1;]"/>
   <ObjectList object_type="hw_device" gui_info="">
     <Object name="xc7z020_1" gui_info="">
       <Properties Property="FULL_PROBES.FILE" value=""/>
@@ -14,6 +14,10 @@
     </Object>
   </ObjectList>
   <ObjectList object_type="hw_ila" gui_info="">
+    <Object name="" gui_info="">
+      <Properties Property="CONTROL.TRIGGER_CONDITION" value="AND"/>
+      <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
+    </Object>
     <Object name="BD_Wrapper/Convolution_Controller_i/cc_m_axis_ila_0" gui_info="">
       <Properties Property="CONTROL.TRIGGER_CONDITION" value="AND"/>
       <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
