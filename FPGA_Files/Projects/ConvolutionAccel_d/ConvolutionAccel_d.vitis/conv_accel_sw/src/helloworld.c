@@ -45,8 +45,6 @@ int main()
 {
 	int Status;
 	// Status vars
-	u32 copy_status;
-	u32 gpio_init;
 	u32 sd_init;
 	u32 dcfg_init;
 	u32 prc_init;
@@ -63,26 +61,37 @@ int main()
 	  return XST_FAILURE;
 	}
 
+	struct kernel_type kernel;
+	kernel.kenerl_size=3;
+	kernel.kernel_arrayPtr = malloc(kernel.kenerl_size*kernel.kenerl_size*(sizeof (u32)));
+	for(int i = 0;i<kernel.kenerl_size*kernel.kenerl_size;i++){
+		kernel.kernel_arrayPtr[i] = 0;
+		if(i==0){
+			kernel.kernel_arrayPtr[i] = 1;
+		}
+	}
+
+	// Init CPE with kenel info
+	u32 cpe_status = init_CPE(&kernel);
+	if(cpe_status!=XST_SUCCESS){
+		xil_printf("CPE setup FAIL\r\n");
+	}
+	free(kernel.kernel_arrayPtr);
+
 	// Copy SD data to DDR4
 	print("\r\nCopying SD content to DDR4...\r\n");
-
 	struct image_type image1;
 	u32 status = fill_image(&image1,"im1.txt");
 	if (status != XST_SUCCESS) {
 		return XST_FAILURE;
 	}
-
 	print_image_info(&image1);
-
-//	for(int i = 0;i<image1.img_tx_pckt_len;i++){
-//		xil_printf("%d\r\n",image1.img_tx_ptr[i]);
-//	}
 
 	/* Run the poll example for simple transfer */
 	xil_printf("################## DMA TEST 1 ##################\r\n");
 	Status = Process_Image(&image1);
 	if (Status != XST_SUCCESS) {
-		xil_printf("XAxiDma_SimplePoll Example Failed\r\n");
+		xil_printf("CPE Demo Failed Example\r\n");
 		return XST_FAILURE;
 	}
 
@@ -91,11 +100,11 @@ int main()
 	xil_printf("################## DMA TEST 2 ##################\r\n");
 	Status = Process_Image(&image1);
 	if (Status != XST_SUCCESS) {
-		xil_printf("XAxiDma_SimplePoll Example Failed\r\n");
+		xil_printf("CPE Demo Failed Example\r\n");
 		return XST_FAILURE;
 	}
 
-	xil_printf("Successfully ran XAxiDma_SimplePoll Example\r\n");
+	xil_printf("Successfully ran CPE Demo Example\r\n");
 
 
 //	// Init DCFG device, disable PCAP, enable ICAP

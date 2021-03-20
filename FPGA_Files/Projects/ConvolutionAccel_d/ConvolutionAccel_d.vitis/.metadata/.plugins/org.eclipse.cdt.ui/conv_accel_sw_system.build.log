@@ -1,10 +1,10 @@
-20:05:12 **** Incremental Build of configuration Debug for project conv_accel_sw_system ****
+21:04:20 **** Incremental Build of configuration Debug for project conv_accel_sw_system ****
 make all 
 Generating bif file for the system project
-generate_system_bif.bat 50362 C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/export/conv_accel_hw/conv_accel_hw.xpfm standalone_domain C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_sw_system/Debug/system.bif
+generate_system_bif.bat 50981 C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/export/conv_accel_hw/conv_accel_hw.xpfm standalone_domain C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_sw_system/Debug/system.bif
 sdcard_gen --xpfm C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/export/conv_accel_hw/conv_accel_hw.xpfm --sys_config conv_accel_hw --bif C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_sw_system/Debug/system.bif --bitstream C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_sw/_ide/bitstream/CPE_Wrapper.bit --elf C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_sw/Debug/conv_accel_sw.elf,ps7_cortexa9_0
 creating BOOT.BIN using C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_sw/_ide/bitstream/CPE_Wrapper.bit
 Running C:/Xilinx/Vitis/2020.1/bin/bootgen  -image C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_sw_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
 
-20:05:17 Build Finished (took 4s.752ms)
+21:04:25 Build Finished (took 5s.329ms)
 

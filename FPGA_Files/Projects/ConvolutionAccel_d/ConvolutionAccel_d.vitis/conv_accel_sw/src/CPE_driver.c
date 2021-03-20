@@ -103,9 +103,9 @@ int fill_image(struct image_type* image, char* fileName){
 	/* update tx buffer */
 	image->img_tx_pckt_len = val_cnt;
 	image->img_tx_byte_cnt = 4*image->img_tx_pckt_len;
-	if(image->img_tx_pckt_len!=width*height) xil_printf("Dimension mismatch!\r\n");
+	if(image->img_tx_pckt_len!=(image->img_width*image->img_height)) xil_printf("Dimension mismatch!\r\n");
 	/* update rx buffer */
-	image->img_rx_pckt_len = (width-2)*(height-2);
+	image->img_rx_pckt_len = (image->img_width-2)*(image->img_height-2);
 	image->img_rx_ptr = malloc(image->img_rx_pckt_len*(sizeof (u32)));
 	if(image->img_rx_ptr<=0){
 		return XST_FAILURE;
@@ -120,7 +120,6 @@ int fill_image(struct image_type* image, char* fileName){
 
 int Process_Image(struct image_type *image)
 {
-	XAxiDma_Config *CfgPtr;
 	int Status;
 	int Tries = NUMBER_OF_TRANSFERS;
 	int Index;
@@ -131,56 +130,9 @@ int Process_Image(struct image_type *image)
 	TxBufferPtr = image->img_tx_ptr;
 	RxBufferPtr = image->img_rx_ptr;
 
-	/* Initialize the XAxiDma device.
-	 */
-	CfgPtr = XAxiDma_LookupConfig(DMA_DEV_ID);
-	if (!CfgPtr) {
-		xil_printf("No config found for %d\r\n", DMA_DEV_ID);
-		return XST_FAILURE;
-	}
-
-	Status = XAxiDma_CfgInitialize(&AxiDma, CfgPtr);
-	if (Status != XST_SUCCESS) {
-		xil_printf("Initialization failed %d\r\n", Status);
-		return XST_FAILURE;
-	}
-
-	if(XAxiDma_HasSg(&AxiDma)){
-		xil_printf("Device configured as SG mode \r\n");
-		return XST_FAILURE;
-	}
-
 	CC_status_register();
-
-	u32 val;
-	bool pass = true;
-	xil_printf("\nQuick AXI test... ");
-	for(u32 i = 0;i<100;i++){
-		Xil_Out32(CONV_CONTROL_BASE,i);
-		val = Xil_In32(CONV_CONTROL_BASE);
-		if(val != i){
-			xil_printf("ERROR: val = %d... ",val);
-			pass = false;
-		}
-	}
-	Xil_Out32(CONV_CONTROL_BASE,0);
-	if(pass){
-		xil_printf("test PASS!\r\n");
-	} else {
-		xil_printf("test FAIL!\r\n");
-	}
-
-	xil_printf("Setting command register\r\n");
-	CC_comand_register(image);
-
+	CC_comand_image(image);
 	CC_status_register();
-
-	/* Disable interrupts, we use polling mode
-	 */
-	XAxiDma_IntrDisable(&AxiDma, XAXIDMA_IRQ_ALL_MASK,
-						XAXIDMA_DEVICE_TO_DMA);
-	XAxiDma_IntrDisable(&AxiDma, XAXIDMA_IRQ_ALL_MASK,
-						XAXIDMA_DMA_TO_DEVICE);
 
 	xil_printf("TxBuffer = {");
 	for(Index = 0; Index < image->img_tx_pckt_len; Index ++) {
@@ -228,6 +180,68 @@ int Process_Image(struct image_type *image)
 	 */
 	return XST_SUCCESS;
 }
+int init_CPE(struct kernel_type *kernel){
+
+	u32 dma_status;
+	u32 val;
+
+	bool pass = true;
+	xil_printf("\nQuick AXI test... ");
+	for(u32 i = 0;i<100;i++){
+		Xil_Out32(CONV_CONTROL_BASE,i);
+		val = Xil_In32(CONV_CONTROL_BASE);
+		if(val != i){
+			xil_printf("ERROR: val = %d... ",val);
+			pass = false;
+		}
+	}
+	if(!pass){
+		xil_printf("test FAIL!\r\n");
+		return XST_FAILURE;
+	}
+	xil_printf("test PASS!\r\n");
+
+	Xil_Out32(CONV_CONTROL_BASE,0);
+	xil_printf("Setting command register for kernel\r\n");
+	CC_comand_kernel(kernel);
+
+	dma_status = init_dma();
+	if(dma_status!=XST_SUCCESS){
+		xil_printf("DMA Setup failure!\r\n");
+		return XST_FAILURE;
+	}
+
+	return XST_SUCCESS;
+}
+int init_dma(){
+	u32 Status;
+	/* Initialize the XAxiDma device.
+	 */
+	CfgPtr = XAxiDma_LookupConfig(DMA_DEV_ID);
+	if (!CfgPtr) {
+		xil_printf("No config found for %d\r\n", DMA_DEV_ID);
+		return XST_FAILURE;
+	}
+
+	Status = XAxiDma_CfgInitialize(&AxiDma, CfgPtr);
+	if (Status != XST_SUCCESS) {
+		xil_printf("Initialization failed %d\r\n", Status);
+		return XST_FAILURE;
+	}
+
+	if(XAxiDma_HasSg(&AxiDma)){
+		xil_printf("Device configured as SG mode \r\n");
+		return XST_FAILURE;
+	}
+
+	/* Disable interrupts, we use polling mode
+	 */
+	XAxiDma_IntrDisable(&AxiDma, XAXIDMA_IRQ_ALL_MASK,
+						XAXIDMA_DEVICE_TO_DMA);
+	XAxiDma_IntrDisable(&AxiDma, XAXIDMA_IRQ_ALL_MASK,
+						XAXIDMA_DMA_TO_DEVICE);
+	return XST_SUCCESS;
+}
 
 int CC_status_register(){
 	xil_printf("\nConvolution Status Reg\r\n");
@@ -259,12 +273,14 @@ int CC_status_register(){
 	return XST_SUCCESS;
 }
 
-int CC_comand_register(struct image_type *image){
-	Xil_Out32(CONV_CONTROL_BASE+(0x00),1); // Control Start
-	for(int i = 0;i<kernel_size*kernel_size;i++){// Filter set
-		Xil_Out32(CONV_CONTROL_BASE+filter_base+(4*i),filter[i]);
-	}
+int CC_comand_image(struct image_type *image){
 	print_image_info(image);
 	Xil_Out32(CONV_CONTROL_BASE+(0x10),image->img_width);// Image width
 	Xil_Out32(CONV_CONTROL_BASE+(0x14),image->img_height);// Image height
+}
+int CC_comand_kernel(struct kernel_type *kernel){
+	Xil_Out32(CONV_CONTROL_BASE+(0x00),1); // Control Start
+	for(int i = 0;i<kernel->kenerl_size*kernel->kenerl_size;i++){// Filter set
+		Xil_Out32(CONV_CONTROL_BASE+filter_base+(4*i),kernel->kernel_arrayPtr[i]);
+	}
 }

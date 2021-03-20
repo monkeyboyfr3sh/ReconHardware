@@ -1,4 +1,4 @@
-20:05:12 **** Incremental Build of configuration Debug for project conv_accel_sw ****
+21:04:19 **** Incremental Build of configuration Debug for project conv_accel_sw ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -8,8 +8,8 @@ make --no-print-directory main-build
 'Invoking: ARM v7 gcc compiler'
 arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/CPE_driver.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/export/conv_accel_hw/sw/conv_accel_hw/standalone_domain/bspinclude/include -MMD -MP -MF"src/CPE_driver.d" -MT"src/CPE_driver.o" -o "src/CPE_driver.o" "../src/CPE_driver.c"
 In file included from ../src/CPE_driver.c:8:
-../src/CPE_driver.h:67:1: warning: useless storage class specifier in empty declaration
-   67 | };
+../src/CPE_driver.h:68:1: warning: useless storage class specifier in empty declaration
+   68 | };
       | ^
 ../src/CPE_driver.c: In function 'print_image_info':
 ../src/CPE_driver.c:43:6: warning: unused variable 'img_rx_byte_cnt' [-Wunused-variable]
@@ -34,70 +34,30 @@ In file included from ../src/CPE_driver.c:8:
 ../src/CPE_driver.c:75:15: warning: suggest parentheses around comparison in operand of '|' [-Wparentheses]
    75 |   if(next_char==','|next_char=='\n'){
       |      ~~~~~~~~~^~~~~
-../src/CPE_driver.c:103:21: error: 'width' undeclared (first use in this function)
-  103 |  image->img_width = width;
-      |                     ^~~~~
-../src/CPE_driver.c:103:21: note: each undeclared identifier is reported only once for each function it appears in
-../src/CPE_driver.c:104:22: error: 'height' undeclared (first use in this function)
-  104 |  image->img_height = height;
-      |                      ^~~~~~
 ../src/CPE_driver.c: In function 'Process_Image':
-../src/CPE_driver.c:133:6: warning: unused variable 'Value' [-Wunused-variable]
-  133 |  u32 Value;
+../src/CPE_driver.c:134:2: warning: implicit declaration of function 'CC_comand_image' [-Wimplicit-function-declaration]
+  134 |  CC_comand_image(image);
+      |  ^~~~~~~~~~~~~~~
+../src/CPE_driver.c:128:6: warning: unused variable 'Value' [-Wunused-variable]
+  128 |  u32 Value;
       |      ^~~~~
-../src/CPE_driver.c:129:6: warning: unused variable 'Tries' [-Wunused-variable]
-  129 |  int Tries = NUMBER_OF_TRANSFERS;
+../src/CPE_driver.c:124:6: warning: unused variable 'Tries' [-Wunused-variable]
+  124 |  int Tries = NUMBER_OF_TRANSFERS;
       |      ^~~~~
-../src/CPE_driver.c: In function 'CC_comand_register':
-../src/CPE_driver.c:274:1: warning: control reaches end of non-void function [-Wreturn-type]
-  274 | }
+../src/CPE_driver.c: In function 'init_CPE':
+../src/CPE_driver.c:206:2: warning: implicit declaration of function 'CC_comand_kernel'; did you mean 'CC_comand_register'? [-Wimplicit-function-declaration]
+  206 |  CC_comand_kernel(kernel);
+      |  ^~~~~~~~~~~~~~~~
+      |  CC_comand_register
+../src/CPE_driver.c: In function 'CC_comand_image':
+../src/CPE_driver.c:280:1: warning: control reaches end of non-void function [-Wreturn-type]
+  280 | }
+      | ^
+../src/CPE_driver.c: In function 'CC_comand_kernel':
+../src/CPE_driver.c:286:1: warning: control reaches end of non-void function [-Wreturn-type]
+  286 | }
       | ^
 'Finished building: ../src/CPE_driver.c'
-' '
-'Building file: ../src/helloworld.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/export/conv_accel_hw/sw/conv_accel_hw/standalone_domain/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
-In file included from ../src/helloworld.c:13:
-../src/CPE_driver.h:67:1: warning: useless storage class specifier in empty declaration
-   67 | };
-      | ^
-../src/helloworld.c: In function 'main':
-../src/helloworld.c:56:6: warning: unused variable 'prc_status_err' [-Wunused-variable]
-   56 |  u32 prc_status_err;
-      |      ^~~~~~~~~~~~~~
-../src/helloworld.c:55:6: warning: unused variable 'prc_status_last_state' [-Wunused-variable]
-   55 |  u32 prc_status_last_state;
-      |      ^~~~~~~~~~~~~~~~~~~~~
-../src/helloworld.c:54:6: warning: unused variable 'prc_status_state' [-Wunused-variable]
-   54 |  u32 prc_status_state;
-      |      ^~~~~~~~~~~~~~~~
-../src/helloworld.c:53:6: warning: unused variable 'prc_status' [-Wunused-variable]
-   53 |  u32 prc_status;
-      |      ^~~~~~~~~~
-../src/helloworld.c:52:6: warning: unused variable 'prc_init' [-Wunused-variable]
-   52 |  u32 prc_init;
-      |      ^~~~~~~~
-../src/helloworld.c:51:6: warning: unused variable 'dcfg_init' [-Wunused-variable]
-   51 |  u32 dcfg_init;
-      |      ^~~~~~~~~
-../src/helloworld.c:49:6: warning: unused variable 'gpio_init' [-Wunused-variable]
-   49 |  u32 gpio_init;
-      |      ^~~~~~~~~
-../src/helloworld.c:48:6: warning: unused variable 'copy_status' [-Wunused-variable]
-   48 |  u32 copy_status;
-      |      ^~~~~~~~~~~
-../src/helloworld.c: In function 'XDcfg_Initialize':
-../src/helloworld.c:148:6: warning: unused variable 'CtrlReg' [-Wunused-variable]
-  148 |  u32 CtrlReg;
-      |      ^~~~~~~
-../src/helloworld.c: At top level:
-../src/helloworld.c:17:12: warning: 'CheckData' declared 'static' but never defined [-Wunused-function]
-   17 | static int CheckData(u32 type);
-      |            ^~~~~~~~~
-../src/helloworld.c:146:15: warning: 'XDcfg_Initialize' defined but not used [-Wunused-function]
-  146 | static XDcfg *XDcfg_Initialize(u16 DeviceId)
-      |               ^~~~~~~~~~~~~~~~
-'Finished building: ../src/helloworld.c'
 ' '
 'Building target: conv_accel_sw.elf'
 'Invoking: ARM v7 gcc linker'
@@ -107,9 +67,9 @@ arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size conv_accel_sw.elf  |tee "conv_accel_sw.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  74940	   3360	33574416	33652716	2017fec	conv_accel_sw.elf
+  75492	   3360	33574432	33653284	2018224	conv_accel_sw.elf
 'Finished building: conv_accel_sw.elf.size'
 ' '
 
-20:05:12 Build Finished (took 609ms)
+21:04:19 Build Finished (took 681ms)
 

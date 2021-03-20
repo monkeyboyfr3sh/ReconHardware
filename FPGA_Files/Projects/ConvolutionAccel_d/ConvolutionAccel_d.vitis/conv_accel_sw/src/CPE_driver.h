@@ -33,6 +33,7 @@
 #define DMA_DEV_ID			XPAR_AXIDMA_0_DEVICE_ID
 
 /* Image stuff */
+XAxiDma_Config *CfgPtr;
 XAxiDma AxiDma;
 #define MAX_PKT_LEN		0x20
 #define TEST_START_VALUE	0xC
@@ -77,6 +78,8 @@ extern u32 filter[];
 void print_image_info(struct image_type *image);
 int fill_image(struct image_type* image, char* fileName);
 int Process_Image(struct image_type *image);
+int init_CPE(struct kernel_type *kernel);
+int init_dma();
 int CC_status_register();
 int CC_comand_register(struct image_type *image);
 

@@ -1594,3 +1594,163 @@ con
 20:00:22 INFO  : Launch script is exported to file 'C:\GitHub\ReconHardware\FPGA_Files\Projects\ConvolutionAccel_d\ConvolutionAccel_d.vitis\.sdk\launch_scripts\single_application_debug\systemdebugger_conv_accel_sw_system_standalone.tcl'
 20:05:11 INFO  : Checking for BSP changes to sync application flags for project 'conv_accel_sw'...
 20:05:48 INFO  : Disconnected from the channel tcfchan#60.
+20:07:31 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\GitHub\ReconHardware\FPGA_Files\Projects\ConvolutionAccel_d\ConvolutionAccel_d.vitis\temp_xsdb_launch_script.tcl
+20:07:34 INFO  : XSCT server has started successfully.
+20:07:34 INFO  : Successfully done setting XSCT server connection channel  
+20:07:34 INFO  : plnx-install-location is set to ''
+20:07:34 INFO  : Successfully done setting workspace for the tool. 
+20:07:36 INFO  : Platform repository initialization has completed.
+20:07:36 INFO  : Successfully done query RDI_DATADIR 
+20:07:36 INFO  : Registering command handlers for Vitis TCF services
+20:08:23 INFO  : Checking for BSP changes to sync application flags for project 'conv_accel_sw'...
+20:08:28 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/export/conv_accel_hw/hw/CPE_Wrapper.xsa is already opened
+
+20:09:07 INFO  : Checking for BSP changes to sync application flags for project 'conv_accel_sw'...
+20:09:09 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/export/conv_accel_hw/hw/CPE_Wrapper.xsa is already opened
+
+20:09:44 INFO  : Checking for BSP changes to sync application flags for project 'conv_accel_sw'...
+20:09:46 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/export/conv_accel_hw/hw/CPE_Wrapper.xsa is already opened
+
+20:09:56 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}' command is executed.
+20:09:56 INFO  : 'fpga -state' command is executed.
+20:09:56 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:09:56 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+20:09:56 INFO  : 'jtag frequency' command is executed.
+20:09:56 INFO  : Context for 'APU' is selected.
+20:09:56 INFO  : Hardware design and registers information is loaded from 'C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/export/conv_accel_hw/hw/CPE_Wrapper.xsa'.
+20:09:56 INFO  : 'configparams force-mem-access 1' command is executed.
+20:09:56 INFO  : Context for 'APU' is selected.
+20:09:56 INFO  : 'stop' command is executed.
+20:09:56 INFO  : Sourcing of 'C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_sw/_ide/psinit/ps7_init.tcl' is done.
+20:09:57 INFO  : 'ps7_init' command is executed.
+20:09:57 INFO  : 'ps7_post_config' command is executed.
+20:09:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:09:57 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+20:09:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:09:57 INFO  : The application 'C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_sw/Debug/conv_accel_sw.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:09:57 INFO  : 'configparams force-mem-access 0' command is executed.
+20:09:57 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/export/conv_accel_hw/hw/CPE_Wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+stop
+source C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_sw/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+rst -processor
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_sw/Debug/conv_accel_sw.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:09:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:09:57 INFO  : 'con' command is executed.
+20:09:57 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+20:09:57 INFO  : Launch script is exported to file 'C:\GitHub\ReconHardware\FPGA_Files\Projects\ConvolutionAccel_d\ConvolutionAccel_d.vitis\.sdk\launch_scripts\single_application_debug\systemdebugger_conv_accel_sw_system_standalone.tcl'
+20:34:31 INFO  : Disconnected from the channel tcfchan#4.
+20:55:51 INFO  : Checking for BSP changes to sync application flags for project 'conv_accel_sw'...
+20:55:56 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/export/conv_accel_hw/hw/CPE_Wrapper.xsa is already opened
+
+20:56:10 INFO  : Checking for BSP changes to sync application flags for project 'conv_accel_sw'...
+20:56:13 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/export/conv_accel_hw/hw/CPE_Wrapper.xsa is already opened
+
+20:57:12 INFO  : Checking for BSP changes to sync application flags for project 'conv_accel_sw'...
+20:57:14 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/export/conv_accel_hw/hw/CPE_Wrapper.xsa is already opened
+
+20:57:24 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}' command is executed.
+20:57:24 INFO  : 'fpga -state' command is executed.
+20:57:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:57:24 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+20:57:24 INFO  : 'jtag frequency' command is executed.
+20:57:24 INFO  : Context for 'APU' is selected.
+20:57:24 INFO  : Hardware design and registers information is loaded from 'C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/export/conv_accel_hw/hw/CPE_Wrapper.xsa'.
+20:57:24 INFO  : 'configparams force-mem-access 1' command is executed.
+20:57:24 INFO  : Context for 'APU' is selected.
+20:57:24 INFO  : 'stop' command is executed.
+20:57:24 INFO  : Sourcing of 'C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_sw/_ide/psinit/ps7_init.tcl' is done.
+20:57:25 INFO  : 'ps7_init' command is executed.
+20:57:25 INFO  : 'ps7_post_config' command is executed.
+20:57:25 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:57:25 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+20:57:25 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:57:25 INFO  : The application 'C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_sw/Debug/conv_accel_sw.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:57:25 INFO  : 'configparams force-mem-access 0' command is executed.
+20:57:25 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/export/conv_accel_hw/hw/CPE_Wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+stop
+source C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_sw/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+rst -processor
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_sw/Debug/conv_accel_sw.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+20:57:25 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:57:25 INFO  : 'con' command is executed.
+20:57:25 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+20:57:25 INFO  : Launch script is exported to file 'C:\GitHub\ReconHardware\FPGA_Files\Projects\ConvolutionAccel_d\ConvolutionAccel_d.vitis\.sdk\launch_scripts\single_application_debug\systemdebugger_conv_accel_sw_system_standalone.tcl'
+21:04:19 INFO  : Checking for BSP changes to sync application flags for project 'conv_accel_sw'...
+21:04:21 ERROR : (XSDB Server)ERROR: [Hsi 55-1571] The design file C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/export/conv_accel_hw/hw/CPE_Wrapper.xsa is already opened
+
+21:04:28 INFO  : Disconnected from the channel tcfchan#8.
+21:04:29 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0 && jtag_device_ctx=="jsn-TUL-1234-tulA-23727093-0"}' command is executed.
+21:04:29 INFO  : 'fpga -state' command is executed.
+21:04:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:04:29 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+21:04:29 INFO  : 'jtag frequency' command is executed.
+21:04:29 INFO  : Context for 'APU' is selected.
+21:04:31 INFO  : Hardware design and registers information is loaded from 'C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/export/conv_accel_hw/hw/CPE_Wrapper.xsa'.
+21:04:31 INFO  : 'configparams force-mem-access 1' command is executed.
+21:04:31 INFO  : Context for 'APU' is selected.
+21:04:31 INFO  : 'stop' command is executed.
+21:04:31 INFO  : Sourcing of 'C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_sw/_ide/psinit/ps7_init.tcl' is done.
+21:04:31 INFO  : 'ps7_init' command is executed.
+21:04:31 INFO  : 'ps7_post_config' command is executed.
+21:04:31 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:04:31 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+21:04:31 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:04:31 INFO  : The application 'C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_sw/Debug/conv_accel_sw.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:04:31 INFO  : 'configparams force-mem-access 0' command is executed.
+21:04:31 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/export/conv_accel_hw/hw/CPE_Wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+stop
+source C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_sw/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+rst -processor
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_sw/Debug/conv_accel_sw.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:04:32 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:04:32 INFO  : 'con' command is executed.
+21:04:32 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+21:04:32 INFO  : Launch script is exported to file 'C:\GitHub\ReconHardware\FPGA_Files\Projects\ConvolutionAccel_d\ConvolutionAccel_d.vitis\.sdk\launch_scripts\single_application_debug\systemdebugger_conv_accel_sw_system_standalone.tcl'
