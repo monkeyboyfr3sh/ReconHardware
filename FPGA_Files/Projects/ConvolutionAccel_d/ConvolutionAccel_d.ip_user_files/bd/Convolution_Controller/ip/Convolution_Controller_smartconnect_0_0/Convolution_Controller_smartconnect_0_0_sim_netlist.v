@@ -1,7 +1,7 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-// Date        : Thu Mar 18 14:32:55 2021
+// Date        : Sat Mar 20 11:34:03 2021
 // Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim -rename_top Convolution_Controller_smartconnect_0_0 -prefix
 //               Convolution_Controller_smartconnect_0_0_ Convolution_Controller_smartconnect_0_0_sim_netlist.v

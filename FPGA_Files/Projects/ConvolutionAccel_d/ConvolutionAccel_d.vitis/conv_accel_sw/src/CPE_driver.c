@@ -175,7 +175,7 @@ int Process_Image(struct image_type *image)
     result = f_open(&new_fil, new_file_name, FA_WRITE | FA_OPEN_ALWAYS);
     if ( result ){
         xil_printf("Failed with ERROR: %d \n\r", result);
-        return 0;
+//        return 0;
     }
 	xil_printf("RxBuffer = {");
 	for(Index = 0; Index <  image->img_rx_pckt_len; Index ++) {

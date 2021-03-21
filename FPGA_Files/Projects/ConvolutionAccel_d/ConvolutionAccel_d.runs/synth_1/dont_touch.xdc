@@ -42,6 +42,15 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Convolution_Con
 # IP: bd/Convolution_Controller/ip/Convolution_Controller_cc_s_axis_ila_0_0/Convolution_Controller_cc_s_axis_ila_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Convolution_Controller_cc_s_axis_ila_0_0 || ORIG_REF_NAME==Convolution_Controller_cc_s_axis_ila_0_0} -quiet] -quiet
 
+# IP: bd/Convolution_Controller/ip/Convolution_Controller_ila_0_0/Convolution_Controller_ila_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Convolution_Controller_ila_0_0 || ORIG_REF_NAME==Convolution_Controller_ila_0_0} -quiet] -quiet
+
+# IP: bd/Convolution_Controller/ip/Convolution_Controller_axi_gpio_0_0/Convolution_Controller_axi_gpio_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Convolution_Controller_axi_gpio_0_0 || ORIG_REF_NAME==Convolution_Controller_axi_gpio_0_0} -quiet] -quiet
+
+# IP: bd/Convolution_Controller/ip/Convolution_Controller_snooper_0_1/Convolution_Controller_snooper_0_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==Convolution_Controller_snooper_0_1 || ORIG_REF_NAME==Convolution_Controller_snooper_0_1} -quiet] -quiet
+
 # Block Designs: bd/icap_ila/icap_ila.bd
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==icap_ila || ORIG_REF_NAME==icap_ila} -quiet] -quiet
 

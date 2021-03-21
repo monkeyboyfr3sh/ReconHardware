@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="39">
   <CompositeFile CompositeFileTopName="bd_550a" CanBeSetAsTop="true" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1616269706"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1616269706"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1616269706"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1616269706"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1616286056"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1616286056"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1616286056"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1616286056"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="synth\bd_550a.v" Type="Verilog">
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
@@ -14,6 +14,11 @@
         <UsedIn Val="IMPLEMENTATION"/>
       </File>
       <File Name="sim\bd_550a.v" Type="Verilog">
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="sim\bd_550a.protoinst">
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SIMULATION"/>
@@ -388,6 +393,62 @@
       </File>
       <File Name="ip\ip_46\bd_550a_m02e_0.xci" Type="IP">
         <Instance HierarchyPath="m02_exit_pipeline/m02_exit"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\ip_47\bd_550a_m03s2a_0.xci" Type="IP">
+        <Instance HierarchyPath="m03_sc2axi"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\ip_48\bd_550a_m03arn_0.xci" Type="IP">
+        <Instance HierarchyPath="m03_nodes/m03_ar_node"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\ip_49\bd_550a_m03rn_0.xci" Type="IP">
+        <Instance HierarchyPath="m03_nodes/m03_r_node"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\ip_50\bd_550a_m03awn_0.xci" Type="IP">
+        <Instance HierarchyPath="m03_nodes/m03_aw_node"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\ip_51\bd_550a_m03wn_0.xci" Type="IP">
+        <Instance HierarchyPath="m03_nodes/m03_w_node"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\ip_52\bd_550a_m03bn_0.xci" Type="IP">
+        <Instance HierarchyPath="m03_nodes/m03_b_node"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\ip_53\bd_550a_m03e_0.xci" Type="IP">
+        <Instance HierarchyPath="m03_exit_pipeline/m03_exit"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

@@ -1,10 +1,59 @@
-14:33:40 **** Incremental Build of configuration Debug for project conv_accel_sw ****
+19:29:45 **** Incremental Build of configuration Debug for project conv_accel_sw ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 make --no-print-directory main-build
-make[1]: Nothing to be done for 'main-build'.
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/export/conv_accel_hw/sw/conv_accel_hw/standalone_domain/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:14:
+../src/CPE_driver.h:68:1: warning: useless storage class specifier in empty declaration
+   68 | };
+      | ^
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:58:6: warning: unused variable 'prc_status_err' [-Wunused-variable]
+   58 |  u32 prc_status_err;
+      |      ^~~~~~~~~~~~~~
+../src/helloworld.c:57:6: warning: unused variable 'prc_status_last_state' [-Wunused-variable]
+   57 |  u32 prc_status_last_state;
+      |      ^~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:56:6: warning: unused variable 'prc_status_state' [-Wunused-variable]
+   56 |  u32 prc_status_state;
+      |      ^~~~~~~~~~~~~~~~
+../src/helloworld.c:55:6: warning: unused variable 'prc_status' [-Wunused-variable]
+   55 |  u32 prc_status;
+      |      ^~~~~~~~~~
+../src/helloworld.c:54:6: warning: unused variable 'prc_init' [-Wunused-variable]
+   54 |  u32 prc_init;
+      |      ^~~~~~~~
+../src/helloworld.c:53:6: warning: unused variable 'dcfg_init' [-Wunused-variable]
+   53 |  u32 dcfg_init;
+      |      ^~~~~~~~~
+../src/helloworld.c: In function 'XDcfg_Initialize':
+../src/helloworld.c:202:6: warning: unused variable 'CtrlReg' [-Wunused-variable]
+  202 |  u32 CtrlReg;
+      |      ^~~~~~~
+../src/helloworld.c: At top level:
+../src/helloworld.c:18:12: warning: 'CheckData' declared 'static' but never defined [-Wunused-function]
+   18 | static int CheckData(u32 type);
+      |            ^~~~~~~~~
+../src/helloworld.c:200:15: warning: 'XDcfg_Initialize' defined but not used [-Wunused-function]
+  200 | static XDcfg *XDcfg_Initialize(u16 DeviceId)
+      |               ^~~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: conv_accel_sw.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.vitis/conv_accel_hw/export/conv_accel_hw/sw/conv_accel_hw/standalone_domain/bsplib/lib -o "conv_accel_sw.elf"  ./src/CPE_driver.o ./src/SD.o ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: conv_accel_sw.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size conv_accel_sw.elf  |tee "conv_accel_sw.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  77404	   3376	33574448	33655228	20189bc	conv_accel_sw.elf
+'Finished building: conv_accel_sw.elf.size'
+' '
 
-14:33:41 Build Finished (took 306ms)
+19:29:46 Build Finished (took 871ms)
 

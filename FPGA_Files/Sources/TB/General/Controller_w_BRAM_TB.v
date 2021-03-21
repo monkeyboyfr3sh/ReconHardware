@@ -2,8 +2,8 @@
 `timescale `myTimeScale
 
 //Test stuff
-`define test_width 8
-`define test_height 8
+`define test_width 64
+`define test_height 64
 `define test_channels 3
 `define data_width 16
 `define addr_width 10
@@ -294,6 +294,9 @@ always#(`clkPeriod/2) axi_clk = ~axi_clk;
 //Begin data stream
 always @(posedge axi_clk)begin
     if(setup)begin
+        if(m_axis_last)begin
+            $display("Fin\n");
+        end
         if(s_axis_last&&s_axis_ready)begin
             s_axis_valid = 0;
             m_axis_ready = 1;

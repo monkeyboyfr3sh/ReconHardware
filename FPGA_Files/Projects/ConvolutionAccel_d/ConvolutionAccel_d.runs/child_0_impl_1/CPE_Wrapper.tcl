@@ -114,190 +114,52 @@ proc step_failed { step } {
   close $ch
 }
 
+set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config  -id {Constraints 18-1056}  -suppress 
 set_msg_config  -id {XSIM 43-3322}  -string {{ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.}}  -suppress 
 set_msg_config  -id {Netlist 29-160}  -suppress 
 
 OPTRACE "Implementation" START { ROLLUP_1 }
-OPTRACE "Phase: Init Design" START { ROLLUP_AUTO }
-start_step init_design
-set ACTIVE_STEP init_design
+OPTRACE "Phase: Write Bitstream" START { ROLLUP_AUTO }
+OPTRACE "write_bitstream setup" START { }
+start_step write_bitstream
+set ACTIVE_STEP write_bitstream
 set rc [catch {
-  create_msg_db init_design.pb
+  create_msg_db write_bitstream.pb
   set_param chipscope.maxJobs 2
-OPTRACE "create in-memory project" START { }
-  create_project -in_memory -part xc7z020clg400-1
-  set_property board_part tul.com.tw:pynq-z2:part0:1.0 [current_project]
-  set_property design_mode GateLvl [current_fileset]
-  set_param project.singleFileAddWarning.threshold 0
-OPTRACE "create in-memory project" END { }
-OPTRACE "set parameters" START { }
+  pr_verify -full_check -initial C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.runs/impl_1/CPE_Wrapper_routed.dcp -additional C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.runs/child_0_impl_1/CPE_Wrapper_routed.dcp -file child_0_impl_1_pr_verify.log
+  open_checkpoint CPE_Wrapper_routed.dcp
   set_property webtalk.parent_dir C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.cache/wt [current_project]
-  set_property parent.project_path C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.xpr [current_project]
-  set_property ip_repo_paths C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0 [current_project]
-  update_ip_catalog
-  set_property ip_output_repo C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.cache/ip [current_project]
-  set_property ip_cache_permissions {read write} [current_project]
+set_property TOP CPE_Wrapper [current_fileset]
+OPTRACE "read constraints: write_bitstream" START { }
+OPTRACE "read constraints: write_bitstream" END { }
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
-OPTRACE "set parameters" END { }
-  add_files -quiet C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.runs/impl_1/CPE_Wrapper_routed_bb.dcp
-  add_files -quiet C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.runs/ma_int_16_synth_1/ma_int_16.dcp
-  set_property SCOPED_TO_CELLS {{genblk1[0].ma} {genblk1[1].ma} {genblk1[2].ma}} [get_files C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.runs/ma_int_16_synth_1/ma_int_16.dcp]
-  set_property netlist_only true [get_files C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.runs/ma_int_16_synth_1/ma_int_16.dcp]
-  set_param project.isImplRun true
-  link_design -top CPE_Wrapper -part xc7z020clg400-1 -reconfig_partitions {{genblk1[0].ma} {genblk1[1].ma} {genblk1[2].ma}}
-  set_param project.isImplRun false
-OPTRACE "init_design_reports" START { REPORT }
-OPTRACE "init_design_reports" END { }
-OPTRACE "init_design_write_hwdef" START { }
-  write_hwdef -force -file CPE_Wrapper.hwdef
-OPTRACE "init_design_write_hwdef" END { }
-  close_msg_db -file init_design.pb
+  catch { write_mem_info -force CPE_Wrapper.mmi }
+OPTRACE "write_bitstream setup" END { }
+OPTRACE "write_bitstream" START { }
+  write_bitstream -force -no_partial_bitfile CPE_Wrapper.bit -bin_file
+  write_bitstream -force -cell genblk1[0].ma genblk1_0_.ma_ma_int_16_partial.bit -bin_file
+  write_bitstream -force -cell genblk1[1].ma genblk1_1_.ma_ma_int_16_partial.bit -bin_file
+  write_bitstream -force -cell genblk1[2].ma genblk1_2_.ma_ma_int_16_partial.bit -bin_file
+OPTRACE "write_bitstream" END { }
+OPTRACE "write_bitstream misc" START { }
+OPTRACE "read constraints: write_bitstream_post" START { }
+OPTRACE "read constraints: write_bitstream_post" END { }
+  catch {write_debug_probes -no_partial_ltxfile -quiet -force CPE_Wrapper}
+  catch {file copy -force CPE_Wrapper.ltx debug_nets.ltx}
+  catch {write_debug_probes -quiet -force -cell genblk1[0].ma -file genblk1_0_.ma_ma_int_16_partial.ltx}
+  catch {write_debug_probes -quiet -force -cell genblk1[1].ma -file genblk1_1_.ma_ma_int_16_partial.ltx}
+  catch {write_debug_probes -quiet -force -cell genblk1[2].ma -file genblk1_2_.ma_ma_int_16_partial.ltx}
+  close_msg_db -file write_bitstream.pb
 } RESULT]
 if {$rc} {
-  step_failed init_design
+  step_failed write_bitstream
   return -code error $RESULT
 } else {
-  end_step init_design
+  end_step write_bitstream
   unset ACTIVE_STEP 
 }
 
-OPTRACE "Phase: Init Design" END { }
-OPTRACE "Phase: Opt Design" START { ROLLUP_AUTO }
-start_step opt_design
-set ACTIVE_STEP opt_design
-set rc [catch {
-  create_msg_db opt_design.pb
-OPTRACE "read constraints: opt_design" START { }
-OPTRACE "read constraints: opt_design" END { }
-OPTRACE "opt_design" START { }
-  opt_design 
-OPTRACE "opt_design" END { }
-OPTRACE "read constraints: opt_design_post" START { }
-OPTRACE "read constraints: opt_design_post" END { }
-OPTRACE "Opt Design: write_checkpoint" START { CHECKPOINT }
-  write_checkpoint -force CPE_Wrapper_opt.dcp
-OPTRACE "Opt Design: write_checkpoint" END { }
-OPTRACE "opt_design reports" START { REPORT }
-  create_report "child_0_impl_1_opt_report_drc_0" "report_drc -file CPE_Wrapper_drc_opted.rpt -pb CPE_Wrapper_drc_opted.pb -rpx CPE_Wrapper_drc_opted.rpx"
-OPTRACE "opt_design reports" END { }
-  close_msg_db -file opt_design.pb
-} RESULT]
-if {$rc} {
-  step_failed opt_design
-  return -code error $RESULT
-} else {
-  end_step opt_design
-  unset ACTIVE_STEP 
-}
-
-OPTRACE "Phase: Opt Design" END { }
-OPTRACE "Phase: Place Design" START { ROLLUP_AUTO }
-start_step place_design
-set ACTIVE_STEP place_design
-set rc [catch {
-  create_msg_db place_design.pb
-OPTRACE "read constraints: place_design" START { }
-OPTRACE "read constraints: place_design" END { }
-  if { [llength [get_debug_cores -quiet] ] > 0 }  { 
-OPTRACE "implement_debug_core" START { }
-    implement_debug_core 
-OPTRACE "implement_debug_core" END { }
-  } 
-OPTRACE "place_design" START { }
-  place_design 
-OPTRACE "place_design" END { }
-OPTRACE "read constraints: place_design_post" START { }
-OPTRACE "read constraints: place_design_post" END { }
-OPTRACE "Place Design: write_checkpoint" START { CHECKPOINT }
-  write_checkpoint -force CPE_Wrapper_placed.dcp
-OPTRACE "Place Design: write_checkpoint" END { }
-OPTRACE "place_design reports" START { REPORT }
-  create_report "child_0_impl_1_place_report_io_0" "report_io -file CPE_Wrapper_io_placed.rpt"
-  create_report "child_0_impl_1_place_report_utilization_0" "report_utilization -file CPE_Wrapper_utilization_placed.rpt -pb CPE_Wrapper_utilization_placed.pb"
-  create_report "child_0_impl_1_place_report_control_sets_0" "report_control_sets -verbose -file CPE_Wrapper_control_sets_placed.rpt"
-OPTRACE "place_design reports" END { }
-  close_msg_db -file place_design.pb
-} RESULT]
-if {$rc} {
-  step_failed place_design
-  return -code error $RESULT
-} else {
-  end_step place_design
-  unset ACTIVE_STEP 
-}
-
-OPTRACE "Phase: Place Design" END { }
-OPTRACE "Phase: Physical Opt Design" START { ROLLUP_AUTO }
-start_step phys_opt_design
-set ACTIVE_STEP phys_opt_design
-set rc [catch {
-  create_msg_db phys_opt_design.pb
-OPTRACE "read constraints: phys_opt_design" START { }
-OPTRACE "read constraints: phys_opt_design" END { }
-OPTRACE "phys_opt_design" START { }
-  phys_opt_design 
-OPTRACE "phys_opt_design" END { }
-OPTRACE "read constraints: phys_opt_design_post" START { }
-OPTRACE "read constraints: phys_opt_design_post" END { }
-OPTRACE "Post-Place Phys Opt Design: write_checkpoint" START { CHECKPOINT }
-  write_checkpoint -force CPE_Wrapper_physopt.dcp
-OPTRACE "Post-Place Phys Opt Design: write_checkpoint" END { }
-OPTRACE "phys_opt_design report" START { REPORT }
-OPTRACE "phys_opt_design report" END { }
-  close_msg_db -file phys_opt_design.pb
-} RESULT]
-if {$rc} {
-  step_failed phys_opt_design
-  return -code error $RESULT
-} else {
-  end_step phys_opt_design
-  unset ACTIVE_STEP 
-}
-
-OPTRACE "Phase: Physical Opt Design" END { }
-OPTRACE "Phase: Route Design" START { ROLLUP_AUTO }
-start_step route_design
-set ACTIVE_STEP route_design
-set rc [catch {
-  create_msg_db route_design.pb
-OPTRACE "read constraints: route_design" START { }
-OPTRACE "read constraints: route_design" END { }
-OPTRACE "route_design" START { }
-  route_design 
-OPTRACE "route_design" END { }
-OPTRACE "read constraints: route_design_post" START { }
-OPTRACE "read constraints: route_design_post" END { }
-OPTRACE "Route Design: write_checkpoint" START { CHECKPOINT }
-  write_checkpoint -force CPE_Wrapper_routed.dcp
-OPTRACE "Route Design: write_checkpoint" END { }
-OPTRACE "route_design reports" START { REPORT }
-  create_report "child_0_impl_1_route_report_drc_0" "report_drc -file CPE_Wrapper_drc_routed.rpt -pb CPE_Wrapper_drc_routed.pb -rpx CPE_Wrapper_drc_routed.rpx"
-  create_report "child_0_impl_1_route_report_methodology_0" "report_methodology -file CPE_Wrapper_methodology_drc_routed.rpt -pb CPE_Wrapper_methodology_drc_routed.pb -rpx CPE_Wrapper_methodology_drc_routed.rpx"
-  create_report "child_0_impl_1_route_report_power_0" "report_power -file CPE_Wrapper_power_routed.rpt -pb CPE_Wrapper_power_summary_routed.pb -rpx CPE_Wrapper_power_routed.rpx"
-  create_report "child_0_impl_1_route_report_route_status_0" "report_route_status -file CPE_Wrapper_route_status.rpt -pb CPE_Wrapper_route_status.pb"
-  create_report "child_0_impl_1_route_report_timing_summary_0" "report_timing_summary -max_paths 10 -file CPE_Wrapper_timing_summary_routed.rpt -pb CPE_Wrapper_timing_summary_routed.pb -rpx CPE_Wrapper_timing_summary_routed.rpx -warn_on_violation "
-  create_report "child_0_impl_1_route_report_incremental_reuse_0" "report_incremental_reuse -file CPE_Wrapper_incremental_reuse_routed.rpt"
-  create_report "child_0_impl_1_route_report_clock_utilization_0" "report_clock_utilization -file CPE_Wrapper_clock_utilization_routed.rpt"
-  create_report "child_0_impl_1_route_report_bus_skew_0" "report_bus_skew -warn_on_violation -file CPE_Wrapper_bus_skew_routed.rpt -pb CPE_Wrapper_bus_skew_routed.pb -rpx CPE_Wrapper_bus_skew_routed.rpx"
-OPTRACE "route_design reports" END { }
-OPTRACE "route_design misc" START { }
-  write_checkpoint -force -cell genblk1[0].ma genblk1_0_.ma_ma_int_16_routed.dcp
-  write_checkpoint -force -cell genblk1[1].ma genblk1_1_.ma_ma_int_16_routed.dcp
-  write_checkpoint -force -cell genblk1[2].ma genblk1_2_.ma_ma_int_16_routed.dcp
-  close_msg_db -file route_design.pb
-OPTRACE "route_design write_checkpoint" START { CHECKPOINT }
-OPTRACE "route_design write_checkpoint" END { }
-} RESULT]
-if {$rc} {
-  write_checkpoint -force CPE_Wrapper_routed_error.dcp
-  step_failed route_design
-  return -code error $RESULT
-} else {
-  end_step route_design
-  unset ACTIVE_STEP 
-}
-
-OPTRACE "route_design misc" END { }
-OPTRACE "Phase: Route Design" END { }
+OPTRACE "write_bitstream misc" END { }
+OPTRACE "Phase: Write Bitstream" END { }
 OPTRACE "Implementation" END { }

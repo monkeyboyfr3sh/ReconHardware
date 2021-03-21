@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-//Date        : Sat Mar 20 14:48:16 2021
+//Date        : Sat Mar 20 19:20:46 2021
 //Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 //Command     : generate_target Convolution_Controller.bd
 //Design      : Convolution_Controller
@@ -9,7 +9,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "Convolution_Controller,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=Convolution_Controller,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=12,numReposBlks=12,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=4,da_board_cnt=5,da_bram_cntlr_cnt=6,da_clkrst_cnt=36,da_ps7_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "Convolution_Controller.hwdef" *) 
+(* CORE_GENERATION_INFO = "Convolution_Controller,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=Convolution_Controller,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=15,numReposBlks=15,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=6,da_board_cnt=5,da_bram_cntlr_cnt=6,da_clkrst_cnt=36,da_ps7_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "Convolution_Controller.hwdef" *) 
 module Convolution_Controller
    (DDR_addr,
     DDR_ba,
@@ -75,7 +75,7 @@ module Convolution_Controller
   output [863:0]MULTIPLIER_INPUT_0;
   output [8:0]MULTIPLY_START_0;
   input [0:0]cReady_0;
-  input [95:0]cSum_0;
+  input [31:0]cSum_0;
   output vsm_ma_rm_reset_0;
 
   wire [863:0]Convolution_Controll_0_MULTIPLICAND_INPUT;
@@ -121,7 +121,8 @@ module Convolution_Controller
   wire axi_dma_0_M_AXI_S2MM_WREADY;
   wire [3:0]axi_dma_0_M_AXI_S2MM_WSTRB;
   wire axi_dma_0_M_AXI_S2MM_WVALID;
-  wire [95:0]cSum_0_1;
+  wire [0:0]axi_gpio_0_gpio_io_o;
+  wire [31:0]cSum_0_1;
   wire dfx_controller_0_ICAP_csib;
   wire [31:0]dfx_controller_0_ICAP_i;
   wire [31:0]dfx_controller_0_ICAP_o;
@@ -251,6 +252,23 @@ module Convolution_Controller
   wire [31:0]smartconnect_0_M02_AXI_WDATA;
   wire smartconnect_0_M02_AXI_WREADY;
   wire smartconnect_0_M02_AXI_WVALID;
+  wire [8:0]smartconnect_0_M03_AXI_ARADDR;
+  wire smartconnect_0_M03_AXI_ARREADY;
+  wire smartconnect_0_M03_AXI_ARVALID;
+  wire [8:0]smartconnect_0_M03_AXI_AWADDR;
+  wire smartconnect_0_M03_AXI_AWREADY;
+  wire smartconnect_0_M03_AXI_AWVALID;
+  wire smartconnect_0_M03_AXI_BREADY;
+  wire [1:0]smartconnect_0_M03_AXI_BRESP;
+  wire smartconnect_0_M03_AXI_BVALID;
+  wire [31:0]smartconnect_0_M03_AXI_RDATA;
+  wire smartconnect_0_M03_AXI_RREADY;
+  wire [1:0]smartconnect_0_M03_AXI_RRESP;
+  wire smartconnect_0_M03_AXI_RVALID;
+  wire [31:0]smartconnect_0_M03_AXI_WDATA;
+  wire smartconnect_0_M03_AXI_WREADY;
+  wire [3:0]smartconnect_0_M03_AXI_WSTRB;
+  wire smartconnect_0_M03_AXI_WVALID;
   wire [31:0]smartconnect_1_M00_AXI_ARADDR;
   wire [1:0]smartconnect_1_M00_AXI_ARBURST;
   wire [3:0]smartconnect_1_M00_AXI_ARCACHE;
@@ -284,6 +302,8 @@ module Convolution_Controller
   wire smartconnect_1_M00_AXI_WREADY;
   wire [7:0]smartconnect_1_M00_AXI_WSTRB;
   wire smartconnect_1_M00_AXI_WVALID;
+  wire [63:0]snooper_0_count;
+  wire snooper_0_fin;
   wire [0:0]util_vector_logic_0_Res;
   wire [0:0]util_vector_logic_1_Res;
 
@@ -296,7 +316,7 @@ module Convolution_Controller
   assign MULTIPLIER_INPUT_0[863:0] = Convolution_Controll_0_MULTIPLIER_INPUT;
   assign MULTIPLY_START_0[8:0] = Convolution_Controll_0_MULTIPLY_START;
   assign Op1_0_1 = cReady_0[0];
-  assign cSum_0_1 = cSum_0[95:0];
+  assign cSum_0_1 = cSum_0[31:0];
   assign dfx_controller_0_ICAP_o = ICAP_0_o[31:0];
   assign vsm_ma_rm_reset_0 = dfx_controller_0_vsm_ma_rm_reset;
   Convolution_Controller_Convolution_Controll_0_0 Convolution_Controll_0
@@ -306,7 +326,7 @@ module Convolution_Controller
         .axi_clk(processing_system7_0_FCLK_CLK0),
         .axi_reset_n(rst_ps7_0_100M_peripheral_aresetn),
         .cReady(util_vector_logic_0_Res),
-        .cSum(cSum_0_1),
+        .cSum({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,cSum_0_1}),
         .m_axis_data(Convolution_Controll_0_m_axis_data_TDATA),
         .m_axis_keep(Convolution_Controll_0_m_axis_data_TKEEP),
         .m_axis_last(Convolution_Controll_0_m_axis_data_TLAST),
@@ -391,26 +411,47 @@ module Convolution_Controller
         .s_axis_s2mm_tlast(Convolution_Controll_0_m_axis_data_TLAST),
         .s_axis_s2mm_tready(Convolution_Controll_0_m_axis_data_TREADY),
         .s_axis_s2mm_tvalid(Convolution_Controll_0_m_axis_data_TVALID));
+  Convolution_Controller_axi_gpio_0_0 axi_gpio_0
+       (.gpio_io_o(axi_gpio_0_gpio_io_o),
+        .s_axi_aclk(processing_system7_0_FCLK_CLK0),
+        .s_axi_araddr(smartconnect_0_M03_AXI_ARADDR),
+        .s_axi_aresetn(rst_ps7_0_100M_peripheral_aresetn),
+        .s_axi_arready(smartconnect_0_M03_AXI_ARREADY),
+        .s_axi_arvalid(smartconnect_0_M03_AXI_ARVALID),
+        .s_axi_awaddr(smartconnect_0_M03_AXI_AWADDR),
+        .s_axi_awready(smartconnect_0_M03_AXI_AWREADY),
+        .s_axi_awvalid(smartconnect_0_M03_AXI_AWVALID),
+        .s_axi_bready(smartconnect_0_M03_AXI_BREADY),
+        .s_axi_bresp(smartconnect_0_M03_AXI_BRESP),
+        .s_axi_bvalid(smartconnect_0_M03_AXI_BVALID),
+        .s_axi_rdata(smartconnect_0_M03_AXI_RDATA),
+        .s_axi_rready(smartconnect_0_M03_AXI_RREADY),
+        .s_axi_rresp(smartconnect_0_M03_AXI_RRESP),
+        .s_axi_rvalid(smartconnect_0_M03_AXI_RVALID),
+        .s_axi_wdata(smartconnect_0_M03_AXI_WDATA),
+        .s_axi_wready(smartconnect_0_M03_AXI_WREADY),
+        .s_axi_wstrb(smartconnect_0_M03_AXI_WSTRB),
+        .s_axi_wvalid(smartconnect_0_M03_AXI_WVALID));
   Convolution_Controller_cc_s_axis_ila_0_0 cc_m_axis_ila_0
        (.clk(processing_system7_0_FCLK_CLK0),
-        .probe0(Convolution_Controll_0_m_axis_data_TREADY),
-        .probe1(Convolution_Controll_0_m_axis_data_TDATA),
+        .probe0(1'b1),
+        .probe1({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .probe2({1'b1,1'b1,1'b1,1'b1}),
-        .probe3(Convolution_Controll_0_m_axis_data_TVALID),
-        .probe4(Convolution_Controll_0_m_axis_data_TLAST),
+        .probe3(1'b0),
+        .probe4(1'b0),
         .probe5(1'b0),
-        .probe6(Convolution_Controll_0_m_axis_data_TKEEP),
+        .probe6({1'b1,1'b1,1'b1,1'b1}),
         .probe7(1'b0),
         .probe8(1'b0));
   Convolution_Controller_dfx_mem_ila_0_0 cc_s_axis_ila_0
        (.clk(processing_system7_0_FCLK_CLK0),
-        .probe0(axi_dma_0_M_AXIS_MM2S_TREADY),
-        .probe1(axi_dma_0_M_AXIS_MM2S_TDATA),
+        .probe0(1'b1),
+        .probe1({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .probe2({1'b1,1'b1,1'b1,1'b1}),
-        .probe3(axi_dma_0_M_AXIS_MM2S_TVALID),
-        .probe4(axi_dma_0_M_AXIS_MM2S_TLAST),
+        .probe3(1'b0),
+        .probe4(1'b0),
         .probe5(1'b0),
-        .probe6(axi_dma_0_M_AXIS_MM2S_TKEEP),
+        .probe6({1'b1,1'b1,1'b1,1'b1}),
         .probe7(1'b0),
         .probe8(1'b0));
   Convolution_Controller_dfx_controller_0_1 dfx_controller_0
@@ -501,6 +542,10 @@ module Convolution_Controller
         .probe7(1'b0),
         .probe8(dfx_controller_0_M_AXI_MEM_ARVALID),
         .probe9(dfx_controller_0_M_AXI_MEM_ARREADY));
+  Convolution_Controller_ila_0_0 ila_0
+       (.clk(processing_system7_0_FCLK_CLK0),
+        .probe0(snooper_0_fin),
+        .probe1(snooper_0_count));
   Convolution_Controller_processing_system7_0_0 processing_system7_0
        (.DDR_Addr(DDR_addr[14:0]),
         .DDR_BankAddr(DDR_ba[2:0]),
@@ -661,6 +706,23 @@ module Convolution_Controller
         .M02_AXI_wdata(smartconnect_0_M02_AXI_WDATA),
         .M02_AXI_wready(smartconnect_0_M02_AXI_WREADY),
         .M02_AXI_wvalid(smartconnect_0_M02_AXI_WVALID),
+        .M03_AXI_araddr(smartconnect_0_M03_AXI_ARADDR),
+        .M03_AXI_arready(smartconnect_0_M03_AXI_ARREADY),
+        .M03_AXI_arvalid(smartconnect_0_M03_AXI_ARVALID),
+        .M03_AXI_awaddr(smartconnect_0_M03_AXI_AWADDR),
+        .M03_AXI_awready(smartconnect_0_M03_AXI_AWREADY),
+        .M03_AXI_awvalid(smartconnect_0_M03_AXI_AWVALID),
+        .M03_AXI_bready(smartconnect_0_M03_AXI_BREADY),
+        .M03_AXI_bresp(smartconnect_0_M03_AXI_BRESP),
+        .M03_AXI_bvalid(smartconnect_0_M03_AXI_BVALID),
+        .M03_AXI_rdata(smartconnect_0_M03_AXI_RDATA),
+        .M03_AXI_rready(smartconnect_0_M03_AXI_RREADY),
+        .M03_AXI_rresp(smartconnect_0_M03_AXI_RRESP),
+        .M03_AXI_rvalid(smartconnect_0_M03_AXI_RVALID),
+        .M03_AXI_wdata(smartconnect_0_M03_AXI_WDATA),
+        .M03_AXI_wready(smartconnect_0_M03_AXI_WREADY),
+        .M03_AXI_wstrb(smartconnect_0_M03_AXI_WSTRB),
+        .M03_AXI_wvalid(smartconnect_0_M03_AXI_WVALID),
         .S00_AXI_araddr(processing_system7_0_M_AXI_GP0_ARADDR),
         .S00_AXI_arburst(processing_system7_0_M_AXI_GP0_ARBURST),
         .S00_AXI_arcache(processing_system7_0_M_AXI_GP0_ARCACHE),
@@ -786,6 +848,21 @@ module Convolution_Controller
         .S02_AXI_rvalid(dfx_controller_0_M_AXI_MEM_RVALID),
         .aclk(processing_system7_0_FCLK_CLK0),
         .aresetn(rst_ps7_0_100M_interconnect_aresetn));
+  Convolution_Controller_snooper_0_1 snooper_0
+       (.axi_clk(processing_system7_0_FCLK_CLK0),
+        .axi_reset_n(axi_gpio_0_gpio_io_o),
+        .count(snooper_0_count),
+        .fin(snooper_0_fin),
+        .s_axis_data_0(axi_dma_0_M_AXIS_MM2S_TDATA),
+        .s_axis_data_1(Convolution_Controll_0_m_axis_data_TDATA),
+        .s_axis_keep_0(axi_dma_0_M_AXIS_MM2S_TKEEP),
+        .s_axis_keep_1(Convolution_Controll_0_m_axis_data_TKEEP),
+        .s_axis_last_0(axi_dma_0_M_AXIS_MM2S_TLAST),
+        .s_axis_last_1(Convolution_Controll_0_m_axis_data_TLAST),
+        .s_axis_ready_0(axi_dma_0_M_AXIS_MM2S_TREADY),
+        .s_axis_ready_1(Convolution_Controll_0_m_axis_data_TREADY),
+        .s_axis_valid_0(axi_dma_0_M_AXIS_MM2S_TVALID),
+        .s_axis_valid_1(Convolution_Controll_0_m_axis_data_TVALID));
   Convolution_Controller_util_vector_logic_0_0 util_vector_logic_0
        (.Op1(Op1_0_1),
         .Op2(util_vector_logic_1_Res),

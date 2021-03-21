@@ -134,7 +134,10 @@ OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
   set_property webtalk.parent_dir C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.cache/wt [current_project]
   set_property parent.project_path C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.xpr [current_project]
-  set_property ip_repo_paths C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0 [current_project]
+  set_property ip_repo_paths {
+  C:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Convolution_Controller_v1.0
+  C:/GitHub/ReconHardware/FPGA_Files/Projects/axis_snooper/axis_snooper.srcs/sources_1/new
+} [current_project]
   update_ip_catalog
   set_property ip_output_repo C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]

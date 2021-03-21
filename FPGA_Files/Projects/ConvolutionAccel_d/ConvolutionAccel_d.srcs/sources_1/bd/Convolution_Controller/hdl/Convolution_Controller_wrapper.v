@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-//Date        : Sat Mar 20 14:48:16 2021
+//Date        : Sat Mar 20 19:20:46 2021
 //Host        : DESKTOP-D9F9TPQ running 64-bit major release  (build 9200)
 //Command     : generate_target Convolution_Controller_wrapper.bd
 //Design      : Convolution_Controller_wrapper
@@ -74,7 +74,7 @@ module Convolution_Controller_wrapper
   output [863:0]MULTIPLIER_INPUT_0;
   output [8:0]MULTIPLY_START_0;
   input [0:0]cReady_0;
-  input [95:0]cSum_0;
+  input [31:0]cSum_0;
   output vsm_ma_rm_reset_0;
 
   wire [14:0]DDR_addr;
@@ -108,7 +108,7 @@ module Convolution_Controller_wrapper
   wire [863:0]MULTIPLIER_INPUT_0;
   wire [8:0]MULTIPLY_START_0;
   wire [0:0]cReady_0;
-  wire [95:0]cSum_0;
+  wire [31:0]cSum_0;
   wire vsm_ma_rm_reset_0;
 
   Convolution_Controller Convolution_Controller_i
