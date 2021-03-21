@@ -80,17 +80,14 @@
         <CompFileExtendedInfo CompFileName="Convolution_Controller.bd" FileRelPathName="ip/Convolution_Controller_processing_system7_0_0/Convolution_Controller_processing_system7_0_0.xci">
           <Proxy FileSetName="Convolution_Controller_processing_system7_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="Convolution_Controller.bd" FileRelPathName="ip/Convolution_Controller_ila_0_0/Convolution_Controller_ila_0_0.xci">
-          <Proxy FileSetName="Convolution_Controller_ila_0_0"/>
+        <CompFileExtendedInfo CompFileName="Convolution_Controller.bd" FileRelPathName="ip/Convolution_Controller_Convolution_Controll_0_0/Convolution_Controller_Convolution_Controll_0_0.xci">
+          <Proxy FileSetName="Convolution_Controller_Convolution_Controll_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="Convolution_Controller.bd" FileRelPathName="ip/Convolution_Controller_axi_gpio_0_0/Convolution_Controller_axi_gpio_0_0.xci">
-          <Proxy FileSetName="Convolution_Controller_axi_gpio_0_0"/>
+        <CompFileExtendedInfo CompFileName="Convolution_Controller.bd" FileRelPathName="ip/Convolution_Controller_rst_ps7_0_100M_0/Convolution_Controller_rst_ps7_0_100M_0.xci">
+          <Proxy FileSetName="Convolution_Controller_rst_ps7_0_100M_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="Convolution_Controller.bd" FileRelPathName="ip/Convolution_Controller_snooper_0_1/Convolution_Controller_snooper_0_1.xci">
-          <Proxy FileSetName="Convolution_Controller_snooper_0_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="Convolution_Controller.bd" FileRelPathName="ip/Convolution_Controller_cc_s_axis_ila_0_0/Convolution_Controller_cc_s_axis_ila_0_0.xci">
-          <Proxy FileSetName="Convolution_Controller_cc_s_axis_ila_0_0"/>
+        <CompFileExtendedInfo CompFileName="Convolution_Controller.bd" FileRelPathName="ip/Convolution_Controller_smartconnect_0_0/Convolution_Controller_smartconnect_0_0.xci">
+          <Proxy FileSetName="Convolution_Controller_smartconnect_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="Convolution_Controller.bd" FileRelPathName="ip/Convolution_Controller_dfx_mem_ila_0_0/Convolution_Controller_dfx_mem_ila_0_0.xci">
           <Proxy FileSetName="Convolution_Controller_dfx_mem_ila_0_0"/>
@@ -98,20 +95,23 @@
         <CompFileExtendedInfo CompFileName="Convolution_Controller.bd" FileRelPathName="ip/Convolution_Controller_util_vector_logic_0_1/Convolution_Controller_util_vector_logic_0_1.xci">
           <Proxy FileSetName="Convolution_Controller_util_vector_logic_0_1"/>
         </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="Convolution_Controller.bd" FileRelPathName="ip/Convolution_Controller_cc_s_axis_ila_0_0/Convolution_Controller_cc_s_axis_ila_0_0.xci">
+          <Proxy FileSetName="Convolution_Controller_cc_s_axis_ila_0_0"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="Convolution_Controller.bd" FileRelPathName="ip/Convolution_Controller_ila_1_0/Convolution_Controller_ila_1_0.xci">
           <Proxy FileSetName="Convolution_Controller_ila_1_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="Convolution_Controller.bd" FileRelPathName="ip/Convolution_Controller_rst_ps7_0_100M_0/Convolution_Controller_rst_ps7_0_100M_0.xci">
-          <Proxy FileSetName="Convolution_Controller_rst_ps7_0_100M_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="Convolution_Controller.bd" FileRelPathName="ip/Convolution_Controller_Convolution_Controll_0_0/Convolution_Controller_Convolution_Controll_0_0.xci">
-          <Proxy FileSetName="Convolution_Controller_Convolution_Controll_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="Convolution_Controller.bd" FileRelPathName="ip/Convolution_Controller_smartconnect_0_0/Convolution_Controller_smartconnect_0_0.xci">
-          <Proxy FileSetName="Convolution_Controller_smartconnect_0_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="Convolution_Controller.bd" FileRelPathName="ip/Convolution_Controller_axi_dma_0_0/Convolution_Controller_axi_dma_0_0.xci">
           <Proxy FileSetName="Convolution_Controller_axi_dma_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="Convolution_Controller.bd" FileRelPathName="ip/Convolution_Controller_axi_gpio_0_0/Convolution_Controller_axi_gpio_0_0.xci">
+          <Proxy FileSetName="Convolution_Controller_axi_gpio_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="Convolution_Controller.bd" FileRelPathName="ip/Convolution_Controller_snooper_0_1/Convolution_Controller_snooper_0_1.xci">
+          <Proxy FileSetName="Convolution_Controller_snooper_0_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="Convolution_Controller.bd" FileRelPathName="ip/Convolution_Controller_ila_0_0/Convolution_Controller_ila_0_0.xci">
+          <Proxy FileSetName="Convolution_Controller_ila_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="Convolution_Controller.bd" FileRelPathName="ip/Convolution_Controller_dfx_controller_0_1/Convolution_Controller_dfx_controller_0_1.xci">
           <Proxy FileSetName="Convolution_Controller_dfx_controller_0_1"/>
@@ -897,9 +897,7 @@
         <Step Id="phys_opt_design"/>
         <Step Id="route_design"/>
         <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream">
-          <Option Id="BinFile">1</Option>
-        </Step>
+        <Step Id="write_bitstream"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>

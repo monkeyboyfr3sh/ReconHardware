@@ -269,3 +269,15 @@ timestamp=[2021-03-20 19:11:16], mode=BUILD, duration=0:00:05.174, duration_ms=5
 timestamp=[2021-03-20 19:29:24], mode=PLATFORM_GENERATION, duration=0:00:02.288, duration_ms=2288, data={name=conv_accel_hw}
 timestamp=[2021-03-20 19:29:46], mode=BUILD, duration=0:00:00.886, duration_ms=886, data={name=conv_accel_sw, configuration=Debug, clean_build=false}
 timestamp=[2021-03-20 19:29:52], mode=BUILD, duration=0:00:05.449, duration_ms=5449, data={name=conv_accel_sw_system, configuration=Debug, clean_build=false}
+timestamp=[2021-03-20 20:51:38], mode=WORKBENCH_START, duration=0:00:08.540, duration_ms=8540, data={}
+timestamp=[2021-03-20 20:51:39], mode=WORKBENCH_UI_INIT, duration=0:00:00.686, duration_ms=686, data={editors_count=5, platform_editors_count=3, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,conv_accel_hw,conv_accel_sw,conv_accel_sw_system}
+timestamp=[2021-03-20 20:51:39], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.064, duration_ms=64, data={}
+timestamp=[2021-03-20 20:53:36], mode=PLATFORM_CREATION, duration=0:00:20.542, duration_ms=20542, data={platform_source=dsa, os=standalone, processor=ps7_cortexa9, platform=null}
+timestamp=[2021-03-20 20:54:34], mode=PLATFORM_GENERATION, duration=0:00:35.698, duration_ms=35698, data={name=conv_accel_3_hw}
+timestamp=[2021-03-20 20:55:21], mode=APP_CREATION, duration=0:00:06.206, duration_ms=6206, data={name=conv_accel_3_sw, project_type=sdk, os=standalone, processor=cortex-a9, runtime=C/C++, platform=conv_accel_3_hw, application_type=application}
+timestamp=[2021-03-20 20:56:54], mode=BUILD, duration=0:00:01.273, duration_ms=1273, data={name=conv_accel_3_sw, configuration=Debug, clean_build=false}
+timestamp=[2021-03-20 20:57:00], mode=BUILD, duration=0:00:04.955, duration_ms=4955, data={name=conv_accel_3_sw_system, configuration=Debug, clean_build=false}
+timestamp=[2021-03-20 20:59:34], mode=BUILD, duration=0:00:00.395, duration_ms=395, data={name=conv_accel_3_sw, configuration=Debug, clean_build=false}
+timestamp=[2021-03-20 20:59:39], mode=BUILD, duration=0:00:05.009, duration_ms=5009, data={name=conv_accel_3_sw_system, configuration=Debug, clean_build=false}
+timestamp=[2021-03-20 21:00:15], mode=BUILD, duration=0:00:00.692, duration_ms=692, data={name=conv_accel_3_sw, configuration=Debug, clean_build=false}
+timestamp=[2021-03-20 21:00:20], mode=BUILD, duration=0:00:04.805, duration_ms=4805, data={name=conv_accel_3_sw_system, configuration=Debug, clean_build=false}

@@ -114,7 +114,6 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config  -id {Constraints 18-1056}  -suppress 
 set_msg_config  -id {XSIM 43-3322}  -string {{ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.}}  -suppress 
 set_msg_config  -id {Netlist 29-160}  -suppress 
@@ -137,10 +136,10 @@ OPTRACE "read constraints: write_bitstream" END { }
   catch { write_mem_info -force CPE_Wrapper.mmi }
 OPTRACE "write_bitstream setup" END { }
 OPTRACE "write_bitstream" START { }
-  write_bitstream -force -no_partial_bitfile CPE_Wrapper.bit -bin_file
-  write_bitstream -force -cell genblk1[0].ma genblk1_0_.ma_ma_int_16_partial.bit -bin_file
-  write_bitstream -force -cell genblk1[1].ma genblk1_1_.ma_ma_int_16_partial.bit -bin_file
-  write_bitstream -force -cell genblk1[2].ma genblk1_2_.ma_ma_int_16_partial.bit -bin_file
+  write_bitstream -force -no_partial_bitfile CPE_Wrapper.bit 
+  write_bitstream -force -cell genblk1[0].ma genblk1_0_.ma_ma_int_16_partial.bit 
+  write_bitstream -force -cell genblk1[1].ma genblk1_1_.ma_ma_int_16_partial.bit 
+  write_bitstream -force -cell genblk1[2].ma genblk1_2_.ma_ma_int_16_partial.bit 
 OPTRACE "write_bitstream" END { }
 OPTRACE "write_bitstream misc" START { }
 OPTRACE "read constraints: write_bitstream_post" START { }
