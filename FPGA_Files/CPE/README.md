@@ -1,3 +1,7 @@
+# Convolution Processing Element
+
+![Image](Convolution-Processing-Element.jpg)
+
 ### Projects
 
 These are any projects I created that are relevant to the CPE design.
