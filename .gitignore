@@ -1,3 +1,6 @@
+# VSCode
+*.vscode
+
 # Dump locations
 *.Depreciate
 *.Projects_Online_original
