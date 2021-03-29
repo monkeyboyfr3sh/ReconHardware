@@ -11,4 +11,4 @@ This is a repo for my research on reconfigureable hardware computing. Branching 
 
   - ***Convolution Processor Files*** - Design files for a custom convolution processor. A static and dynamic design are shown.
   - ***PYNQ Files*** - PYNQ FPGA image for Pynq-Z2 and corresponding jupyter-notebooks that were tested. These are likely outdated as software was mostly moved to Vitis development.
-  - ***Testing*** - This is basically just test files for myself. Feel free to view
+  - ***Testing*** - This is basically just test files enviroment for myself. Feel free to view
