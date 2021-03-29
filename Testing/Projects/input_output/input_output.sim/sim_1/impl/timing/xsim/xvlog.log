@@ -1,5 +1,0 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/input_output/input_output.sim/sim_1/impl/timing/xsim/IO_tb_time_impl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module inputOutput
-INFO: [VRFC 10-311] analyzing module glbl
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/monke/Documents/GitHub/ReconHardware/PynqSoftware/input_output/input_output.srcs/sim_1/new/IO_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module IO_tb

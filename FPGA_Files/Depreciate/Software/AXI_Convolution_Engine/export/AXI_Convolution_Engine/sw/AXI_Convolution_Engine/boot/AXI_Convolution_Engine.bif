@@ -1,7 +1,0 @@
-/*AXI_Convolution_Engine*/
-the_ROM_image:
-{
-  [bootloader]<AXI_Convolution_Engine/boot/fsbl.elf>
-   <bitstream> 
-  <elf,ps7_cortexa9_0>
-}

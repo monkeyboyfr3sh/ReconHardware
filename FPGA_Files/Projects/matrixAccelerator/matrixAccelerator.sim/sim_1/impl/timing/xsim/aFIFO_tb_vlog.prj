@@ -1,8 +1,0 @@
-# compile verilog/system verilog design source files
-verilog xil_defaultlib  --include "../../../../../../../Sources" --include "../../../../../matrixAccelerator.srcs/sources_1/bd/fifo/ipshared/ec67/hdl" --include "../../../../../matrixAccelerator.srcs/sources_1/bd/fifo/ipshared/2d50/hdl" --include "../../../../../matrixAccelerator.srcs/sources_1/bd/Convolution_Accel/ipshared/ec67/hdl" --include "../../../../../matrixAccelerator.srcs/sources_1/bd/Convolution_Accel/ipshared/2d50/hdl" --include "C:/Xilinx/Vivado/2019.2/data/xilinx_vip/include" \
-"aFIFO_tb_time_impl.v" \
-"../../../../../../../Sources/General/aFIFO.v" \
-"../../../../../../../Sources/TB/aFIFO_tb.v" \
-
-# Do not sort compile order
-nosort

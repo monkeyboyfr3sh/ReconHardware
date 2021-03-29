@@ -1,0 +1,20 @@
+# Dump locations
+*.Depreciate
+*.Projects_Online_original
+
+# Uneeded Vivado project subdir stuff
+# Use !<file_dir> to exclude these if you'd like
+*.cache
+*.hw
+*.ip_user_files
+*.sim
+*.tmp
+*.Xil
+*hd_visual
+
+# Uneeded Vitis project stuff
+*.metadata
+*.sdk
+*.analytics
+*IDE.log
+*RemoteSystemsTempFiles

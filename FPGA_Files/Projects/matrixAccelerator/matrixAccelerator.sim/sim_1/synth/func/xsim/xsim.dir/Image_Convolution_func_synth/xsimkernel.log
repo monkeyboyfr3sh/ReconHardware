@@ -1,7 +1,0 @@
-Running: xsim.dir/Image_Convolution_func_synth/xsimk.exe -simmode gui -wdb Image_Convolution_func_synth.wdb -simrunnum 0 -socket 50557
-Design successfully loaded
-Design Loading Memory Usage: 6340 KB (Peak: 6340 KB)
-Design Loading CPU Usage: 15 ms
-Simulation completed
-Simulation Memory Usage: 7256 KB (Peak: 7256 KB)
-Simulation CPU Usage: 46 ms

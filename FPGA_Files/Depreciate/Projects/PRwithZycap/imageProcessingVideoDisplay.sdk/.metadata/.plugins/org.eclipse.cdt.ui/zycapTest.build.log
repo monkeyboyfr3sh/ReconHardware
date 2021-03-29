@@ -1,8 +1,0 @@
-10:41:56 **** Incremental Build of configuration Debug for project zycapTest ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-make: Nothing to be done for `main-build'.
-
-10:41:56 Build Finished (took 169ms)
-

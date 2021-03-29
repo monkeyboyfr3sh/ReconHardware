@@ -1,9 +1,0 @@
-file mkdir ./Synth
-file delete -force ./Synth/Static
-file mkdir ./Synth/Static
-puts "#HD: Running synthesis for block Static"
-create_project -in_memory -part xc7k325tffg900-2 > ./Synth/Static/create_project.log
-set_property source_mgmt_mode All [current_project]
-add_files ./Sources/hdl/top/clocks.v
-add_files ./Sources/hdl/top/top.v
-synth_design -mode default -flatten_hierarchy rebuilt -top top -part xc7k325tffg900-2 > ./Synth/Static/top_synth_design.rds

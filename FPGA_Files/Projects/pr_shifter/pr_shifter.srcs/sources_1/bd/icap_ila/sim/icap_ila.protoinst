@@ -1,9 +1,0 @@
-{
-	"version": "1.0",
-	"modules": {
-		"icap_ila": {
-			"proto_instances": {
-			}
-		}
-	}
-}
