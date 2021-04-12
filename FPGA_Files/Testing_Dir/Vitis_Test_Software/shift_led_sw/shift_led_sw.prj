@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="shift_led_sw" location="C:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Vitis_Test_Software/shift_led_sw" platform="C:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Vitis_Test_Software/shift_led_hw/export/shift_led_hw/shift_led_hw.xpfm" platformUID="xilinx:pynq-z2::0.0(custom)" systemProject="shift_led_sw_system" sysConfig="shift_led_hw" runtime="C/C++" cpu="standalone_domain" cpuInstance="ps7_cortexa9_0" os="standalone" mssSignature="d78dc22e90db7759e2a67eea56a2d9ef">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.262792765">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.214163380" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="hello_world"/>
+</sdkproject:SdkProject>

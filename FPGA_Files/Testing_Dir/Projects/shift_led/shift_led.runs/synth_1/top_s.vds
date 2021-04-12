@@ -1,0 +1,314 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Sun Apr  4 13:36:46 2021
+# Process ID: 8484
+# Current directory: C:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/shift_led/shift_led.runs/synth_1
+# Command line: vivado.exe -log top_s.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_s.tcl
+# Log file: C:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/shift_led/shift_led.runs/synth_1/top_s.vds
+# Journal file: C:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/shift_led/shift_led.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source top_s.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.1/data/ip'.
+WARNING: [IP_Flow 19-3664] IP 'design_1_axi_gpio_0_0' generated file not found 'c:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_axi_gpio_0_0' generated file not found 'c:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_axi_gpio_0_0' generated file not found 'c:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/bd/design_1/ipshared/a040/hdl/interrupt_control_v3_1_vh_rfs.vhd'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_axi_gpio_0_0' generated file not found 'c:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/bd/design_1/ipshared/bb35/hdl/axi_gpio_v2_0_vh_rfs.vhd'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_axi_gpio_0_0' generated file not found 'c:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/bd/design_1/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_axi_gpio_0_0' generated file not found 'c:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_axi_gpio_0_0' generated file not found 'c:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/bd/design_1/ipshared/a040/hdl/interrupt_control_v3_1_vh_rfs.vhd'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_axi_gpio_0_0' generated file not found 'c:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/bd/design_1/ipshared/bb35/hdl/axi_gpio_v2_0_vh_rfs.vhd'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_rst_ps7_0_100M_0' generated file not found 'c:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_rst_ps7_0_100M_0' generated file not found 'c:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_rst_ps7_0_100M_0' generated file not found 'c:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'design_1_rst_ps7_0_100M_0' generated file not found 'c:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd'. Please regenerate to continue.
+Command: synth_design -top top_s -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 4988
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1073.418 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top_s' [C:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/new/top_s.v:1]
+INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [C:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'design_1' [C:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_gpio_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/shift_led/shift_led.runs/synth_1/.Xil/Vivado-8484-DESKTOP-D9F9TPQ/realtime/design_1_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_gpio_0_0' (1#1) [C:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/shift_led/shift_led.runs/synth_1/.Xil/Vivado-8484-DESKTOP-D9F9TPQ/realtime/design_1_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_processing_system7_0_0' [C:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/shift_led/shift_led.runs/synth_1/.Xil/Vivado-8484-DESKTOP-D9F9TPQ/realtime/design_1_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_processing_system7_0_0' (2#1) [C:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/shift_led/shift_led.runs/synth_1/.Xil/Vivado-8484-DESKTOP-D9F9TPQ/realtime/design_1_processing_system7_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'USB0_PORT_INDCTL' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [C:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/bd/design_1/synth/design_1.v:168]
+WARNING: [Synth 8-7071] port 'USB0_VBUS_PWRSELECT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [C:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/bd/design_1/synth/design_1.v:168]
+WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'design_1_processing_system7_0_0' has 65 connections declared, but only 63 given [C:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/bd/design_1/synth/design_1.v:168]
+INFO: [Synth 8-6157] synthesizing module 'design_1_ps7_0_axi_periph_0' [C:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/bd/design_1/synth/design_1.v:303]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_UYSKKA' [C:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/bd/design_1/synth/design_1.v:608]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_0' [C:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/shift_led/shift_led.runs/synth_1/.Xil/Vivado-8484-DESKTOP-D9F9TPQ/realtime/design_1_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_0' (3#1) [C:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/shift_led/shift_led.runs/synth_1/.Xil/Vivado-8484-DESKTOP-D9F9TPQ/realtime/design_1_auto_pc_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'design_1_auto_pc_0' is unconnected for instance 'auto_pc' [C:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/bd/design_1/synth/design_1.v:843]
+WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'design_1_auto_pc_0' is unconnected for instance 'auto_pc' [C:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/bd/design_1/synth/design_1.v:843]
+WARNING: [Synth 8-7023] instance 'auto_pc' of module 'design_1_auto_pc_0' has 59 connections declared, but only 57 given [C:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/bd/design_1/synth/design_1.v:843]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_UYSKKA' (4#1) [C:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/bd/design_1/synth/design_1.v:608]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_ps7_0_axi_periph_0' (5#1) [C:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/bd/design_1/synth/design_1.v:303]
+INFO: [Synth 8-6157] synthesizing module 'design_1_rst_ps7_0_100M_0' [C:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/shift_led/shift_led.runs/synth_1/.Xil/Vivado-8484-DESKTOP-D9F9TPQ/realtime/design_1_rst_ps7_0_100M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_rst_ps7_0_100M_0' (6#1) [C:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/shift_led/shift_led.runs/synth_1/.Xil/Vivado-8484-DESKTOP-D9F9TPQ/realtime/design_1_rst_ps7_0_100M_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [C:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/bd/design_1/synth/design_1.v:294]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_1_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [C:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/bd/design_1/synth/design_1.v:294]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_1_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [C:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/bd/design_1/synth/design_1.v:294]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'design_1_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [C:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/bd/design_1/synth/design_1.v:294]
+WARNING: [Synth 8-7023] instance 'rst_ps7_0_100M' of module 'design_1_rst_ps7_0_100M_0' has 10 connections declared, but only 6 given [C:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/bd/design_1/synth/design_1.v:294]
+INFO: [Synth 8-6155] done synthesizing module 'design_1' (7#1) [C:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (8#1) [C:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+WARNING: [Synth 8-7071] port 'DDR_addr' of module 'design_1_wrapper' is unconnected for instance 'nolabel_line12' [C:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/new/top_s.v:12]
+WARNING: [Synth 8-7071] port 'DDR_ba' of module 'design_1_wrapper' is unconnected for instance 'nolabel_line12' [C:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/new/top_s.v:12]
+WARNING: [Synth 8-7071] port 'DDR_cas_n' of module 'design_1_wrapper' is unconnected for instance 'nolabel_line12' [C:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/new/top_s.v:12]
+WARNING: [Synth 8-7071] port 'DDR_ck_n' of module 'design_1_wrapper' is unconnected for instance 'nolabel_line12' [C:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/new/top_s.v:12]
+WARNING: [Synth 8-7071] port 'DDR_ck_p' of module 'design_1_wrapper' is unconnected for instance 'nolabel_line12' [C:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/new/top_s.v:12]
+WARNING: [Synth 8-7071] port 'DDR_cke' of module 'design_1_wrapper' is unconnected for instance 'nolabel_line12' [C:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/new/top_s.v:12]
+WARNING: [Synth 8-7071] port 'DDR_cs_n' of module 'design_1_wrapper' is unconnected for instance 'nolabel_line12' [C:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/new/top_s.v:12]
+WARNING: [Synth 8-7071] port 'DDR_dm' of module 'design_1_wrapper' is unconnected for instance 'nolabel_line12' [C:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/new/top_s.v:12]
+WARNING: [Synth 8-7071] port 'DDR_dq' of module 'design_1_wrapper' is unconnected for instance 'nolabel_line12' [C:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/new/top_s.v:12]
+WARNING: [Synth 8-7071] port 'DDR_dqs_n' of module 'design_1_wrapper' is unconnected for instance 'nolabel_line12' [C:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/new/top_s.v:12]
+WARNING: [Synth 8-7071] port 'DDR_dqs_p' of module 'design_1_wrapper' is unconnected for instance 'nolabel_line12' [C:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/new/top_s.v:12]
+WARNING: [Synth 8-7071] port 'DDR_odt' of module 'design_1_wrapper' is unconnected for instance 'nolabel_line12' [C:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/new/top_s.v:12]
+WARNING: [Synth 8-7071] port 'DDR_ras_n' of module 'design_1_wrapper' is unconnected for instance 'nolabel_line12' [C:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/new/top_s.v:12]
+WARNING: [Synth 8-7071] port 'DDR_reset_n' of module 'design_1_wrapper' is unconnected for instance 'nolabel_line12' [C:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/new/top_s.v:12]
+WARNING: [Synth 8-7071] port 'DDR_we_n' of module 'design_1_wrapper' is unconnected for instance 'nolabel_line12' [C:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/new/top_s.v:12]
+WARNING: [Synth 8-7071] port 'FIXED_IO_ddr_vrn' of module 'design_1_wrapper' is unconnected for instance 'nolabel_line12' [C:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/new/top_s.v:12]
+WARNING: [Synth 8-7071] port 'FIXED_IO_ddr_vrp' of module 'design_1_wrapper' is unconnected for instance 'nolabel_line12' [C:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/new/top_s.v:12]
+WARNING: [Synth 8-7071] port 'FIXED_IO_mio' of module 'design_1_wrapper' is unconnected for instance 'nolabel_line12' [C:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/new/top_s.v:12]
+WARNING: [Synth 8-7071] port 'FIXED_IO_ps_clk' of module 'design_1_wrapper' is unconnected for instance 'nolabel_line12' [C:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/new/top_s.v:12]
+WARNING: [Synth 8-7071] port 'FIXED_IO_ps_porb' of module 'design_1_wrapper' is unconnected for instance 'nolabel_line12' [C:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/new/top_s.v:12]
+WARNING: [Synth 8-7071] port 'FIXED_IO_ps_srstb' of module 'design_1_wrapper' is unconnected for instance 'nolabel_line12' [C:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/new/top_s.v:12]
+WARNING: [Synth 8-7023] instance 'nolabel_line12' of module 'design_1_wrapper' has 24 connections declared, but only 3 given [C:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/new/top_s.v:12]
+INFO: [Synth 8-6157] synthesizing module 'clock_divider' [C:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/new/clock_divider.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'clock_divider' (9#1) [C:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/new/clock_divider.v:1]
+INFO: [Synth 8-6157] synthesizing module 'shift_left' [C:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/new/shift_left.v:1]
+	Parameter BITS bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'shift_left' (10#1) [C:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/new/shift_left.v:1]
+INFO: [Synth 8-6157] synthesizing module 'shift_left__parameterized0' [C:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/new/shift_left.v:1]
+	Parameter BITS bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'shift_left__parameterized0' (10#1) [C:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/new/shift_left.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'top_s' (11#1) [C:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/new/top_s.v:1]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1126.184 ; gain = 52.766
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1126.184 ; gain = 52.766
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1126.184 ; gain = 52.766
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 1126.184 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc] for cell 'nolabel_line12/design_1_i/processing_system7_0'
+WARNING: [Vivado 12-584] No ports matched ''. [c:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc:2]
+Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc] for cell 'nolabel_line12/design_1_i/processing_system7_0'
+Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0_1/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0_in_context.xdc] for cell 'nolabel_line12/design_1_i/axi_gpio_0'
+Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0_1/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0_in_context.xdc] for cell 'nolabel_line12/design_1_i/axi_gpio_0'
+Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0_1/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0_in_context.xdc] for cell 'nolabel_line12/design_1_i/rst_ps7_0_100M'
+Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0_1/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0_in_context.xdc] for cell 'nolabel_line12/design_1_i/rst_ps7_0_100M'
+Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0/design_1_auto_pc_0_in_context.xdc] for cell 'nolabel_line12/design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc'
+Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/pr_led/pr_led.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0/design_1_auto_pc_0_in_context.xdc] for cell 'nolabel_line12/design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc'
+Parsing XDC File [C:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/shift_led/shift_led.srcs/constrs_1/imports/new/leds.xdc]
+Finished Parsing XDC File [C:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/shift_led/shift_led.srcs/constrs_1/imports/new/leds.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/shift_led/shift_led.srcs/constrs_1/imports/new/leds.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_s_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_s_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/shift_led/shift_led.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/shift_led/shift_led.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1219.668 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1219.668 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1219.668 ; gain = 146.250
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1219.668 ; gain = 146.250
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for nolabel_line12/design_1_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for nolabel_line12/design_1_i/processing_system7_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for nolabel_line12/design_1_i/axi_gpio_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for nolabel_line12/design_1_i/ps7_0_axi_periph. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for nolabel_line12/design_1_i/rst_ps7_0_100M. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for nolabel_line12/design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1219.668 ; gain = 146.250
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1219.668 ; gain = 146.250
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'left' (shift_left__parameterized0) to 'right'
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1219.668 ; gain = 146.250
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1225.352 ; gain = 151.934
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1235.246 ; gain = 161.828
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1245.395 ; gain = 171.977
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1250.195 ; gain = 176.777
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1250.195 ; gain = 176.777
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1250.195 ; gain = 176.777
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1250.195 ; gain = 176.777
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1250.195 ; gain = 176.777
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1250.195 ; gain = 176.777
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------------------------+----------+
+|      |BlackBox name                   |Instances |
++------+--------------------------------+----------+
+|1     |design_1_auto_pc_0              |         1|
+|2     |design_1_axi_gpio_0_0           |         1|
+|3     |design_1_processing_system7_0_0 |         1|
+|4     |design_1_rst_ps7_0_100M_0       |         1|
++------+--------------------------------+----------+
+
+Report Cell Usage: 
++------+------------------------------+------+
+|      |Cell                          |Count |
++------+------------------------------+------+
+|1     |design_1_auto_pc              |     1|
+|2     |design_1_axi_gpio_0           |     1|
+|3     |design_1_processing_system7_0 |     1|
+|4     |design_1_rst_ps7_0_100M       |     1|
+|5     |CARRY4                        |    20|
+|6     |LUT1                          |    33|
+|7     |LUT2                          |     1|
+|8     |LUT3                          |     2|
+|9     |LUT4                          |    33|
+|10    |FDRE                          |    38|
+|11    |FDSE                          |     2|
+|12    |OBUF                          |    10|
++------+------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1250.195 ; gain = 176.777
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:22 . Memory (MB): peak = 1250.195 ; gain = 83.293
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1250.195 ; gain = 176.777
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 1262.246 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 20 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1273.434 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+43 Infos, 46 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1273.434 ; gain = 200.016
+INFO: [Common 17-1381] The checkpoint 'C:/GitHub/ReconHardware/FPGA_Files/Testing_Dir/Projects/shift_led/shift_led.runs/synth_1/top_s.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_s_utilization_synth.rpt -pb top_s_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Apr  4 13:37:24 2021...

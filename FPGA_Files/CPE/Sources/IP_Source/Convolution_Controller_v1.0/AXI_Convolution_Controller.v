@@ -78,7 +78,8 @@ integer control_registers[CTRL_REG_SIZE-1:0];//Array of registers for controllin
 integer i,j;
     
 // State flags
-reg RDst, MULTIst,RSTst;
+reg RDst,MULTIst,RSTst,IDst;
+wire BUSY;
 reg [$clog2(KERNEL_SIZE):0] lb_q_cnt,lb_r_cnt;
 reg lb_wr_en, lb_r_en;
 reg memory_read;
@@ -102,8 +103,6 @@ assign cStart = control_registers[0][0];
 assign image_width = control_registers[16];
 assign image_height = control_registers[20];
 
-// Assign filter set to the corresponding control registers
-/* LINE BUFFER BEGIN ************************************************************************************************/
 reg [$clog2(CHANNELS)-1:0] channel_sel;
 wire [CHANNELS-1:0] lb_valid;
 wire lb_wr_en_comb;
@@ -112,12 +111,16 @@ reg lb_force_rst;
 wire bram_full;
 wire m_axis_rx_stat;
 
+// Logic Signals
 assign bram_full        = &lb_full;
-assign s_axis_ready     = !bram_full & lb_wr_en & memory_read;
-assign lb_wr_en_comb    = lb_wr_en & s_axis_valid & !bram_full;
-assign lb_rst           = ~axi_reset_n||lb_force_rst;
-assign r_add            = 1+current_x+KERNEL_SIZE-lb_q_cnt; 
-assign m_axis_rx_stat   = m_axis_ready & m_axis_valid;
+assign s_axis_ready     = (!bram_full)  &lb_wr_en;
+assign lb_wr_en_comb    = lb_wr_en      &s_axis_valid  &(!bram_full);
+assign m_axis_rx_stat   = m_axis_ready  &m_axis_valid;
+assign lb_rst           = ~axi_reset_n  |lb_force_rst;
+assign BUSY             = RDst|MULTIst|IDst;
+
+// Read Address
+assign r_add = current_x+KERNEL_SIZE-lb_q_cnt; 
 
 genvar gi,gj;
 generate
@@ -151,7 +154,6 @@ for(gi=0;gi<CHANNELS;gi=gi+1)begin
 end
 
 endgenerate
-/* LINE BUFFER END ************************************************************************************************/
 
 /* AXI READ/WRITE TRANSACTIONS BEGIN ************************************************************************************************/
 always @(posedge axi_clk)
@@ -247,7 +249,6 @@ begin
 end//End of block
 /* AXI READ/WRITE TRANSACTIONS END ************************************************************************************************/
 
-
 /* CONTROLLER STATE MACHINE BEGIN ************************************************************************************************/
 
 // Update channel select after writing
@@ -270,87 +271,103 @@ always @(posedge axi_clk) begin
     
     //Reset
     if(!axi_reset_n||RSTst)begin
-        RSTst = 0;
-        lb_force_rst = 0;
+        RSTst <= 0;
+        lb_force_rst <= 0;
         for (i=0;i<CHANNELS;i=i+1)begin
-            for (j = 0;j<K_SQUARED;j=j+1) dataSet[i][j] = 0;
+            for (j = 0;j<K_SQUARED;j=j+1) dataSet[i][j] <= 0;
         end
-        cCount = 0;
-        RDst = 1;
-        MULTIst = 0;
-        current_x = 0;
-        current_y = 0;
-        lb_q_cnt = KERNEL_SIZE+1;
-        lb_r_cnt = 0;
-        MULTIPLY_START = 0;
-        RDi = 0;
-        lb_r_en = 0;
-        lb_wr_en = 0;
-        memory_read = 1;
+        cCount <= 0;
+        MULTIst <= 0;
+        current_x <= 0;
+        current_y <= 0;
+        lb_q_cnt <= KERNEL_SIZE;
+        lb_r_cnt <= 0;
+        MULTIPLY_START <= 0;
+        RDi <= 0;
+        lb_r_en <= 0;
+        lb_wr_en <= 0;
+        memory_read <= 1;
         
-        m_axis_last = 0;
-        m_axis_keep = 0;
-        m_axis_valid = 0;
-        m_axis_data = 0;
-        cSum_buff = 0;
+        RDst<=0;
+        MULTIst<=0;
+        IDst<=0;
         
-        cSum_buff_cnt = 0;
+        m_axis_last <= 0;
+        m_axis_keep <= 0;
+        m_axis_valid <= 0;
+        m_axis_data <= 0;
+        cSum_buff <= 0;
+        
+        cSum_buff_cnt <= 0;
     end
     
-    // Have put data on the bus and it was recieved
-    if(m_axis_rx_stat)begin
-        m_axis_valid = 0;
-        m_axis_data = 0;
-        if(m_axis_last) begin
-            m_axis_keep = 0; // Will set keep low when last data was sent
-            RSTst = 1;
+    else if(IDst)begin
+        // Have put data on the bus and it was recieved
+        if(m_axis_rx_stat)begin
+            RDst <= 0; MULTIst <= 0; IDst <= !(cSum_buff_cnt==0);
+            m_axis_valid <= 0;
+            m_axis_data <= 0;
+            if(m_axis_last) begin
+                m_axis_keep <= 0; // Will set keep low when last data was sent
+                RSTst <= 1;
+            end
+            m_axis_last <= 0;
         end
-        m_axis_last = 0;
-    end
-    
-    // Data is recieved from matrix accelerators and none is waiting to be recieved
-    if(cReady)begin
-        cCount = cCount + CHANNELS;//Track the number of convolutions completed
-        cSum_buff_cnt = CHANNELS;
-        cSum_buff = cSum;     
-    end//End of m_axis_valid
-    
-    if(cSum_buff_cnt>0)begin
-        m_axis_valid = 1;
-        m_axis_keep = 1023;
-        m_axis_data = cSum_buff[AXI_BUS_WIDTH-1:0];
-        cSum_buff=cSum_buff>>AXI_BUS_WIDTH;
-        cSum_buff_cnt=cSum_buff_cnt-1;
         
-        if(cSum_buff_cnt==0)begin
-            memory_read = (current_x==0) ? 1 : 0;
-            RDst = cStart; // Enter read state if machine is still running
+        // Data is recieved from matrix accelerators and none is waiting to be recieved
+        if(cReady)begin
+            cCount <= cCount + CHANNELS;//Track the number of convolutions completed
+            cSum_buff_cnt <= CHANNELS;
+            cSum_buff <= cSum;
             
-            if(current_x==0&current_y==0)begin
-                m_axis_last = 1;
-                lb_force_rst = 0;
-                RSTst = 1;
+            current_x <= current_x+1;// Update position on image map
+            if(current_x+KERNEL_SIZE >= image_width)begin// End of row
+                lb_q_cnt <= KERNEL_SIZE;
+                lb_r_cnt <= 0;
+                current_x <= 0;
+                current_y <= current_y+1;
+                if(current_y+KERNEL_SIZE >= image_height)begin
+                    lb_force_rst <= 1;
+                    current_y <= 0;
+                end
+            end
+            
+            else begin
+                lb_q_cnt <= 1;
+                lb_r_cnt <= KERNEL_SIZE - 1; 
             end
         end
-    end   
-    
+        
+        if(cSum_buff_cnt>0)begin
+            m_axis_valid <= 1;
+            m_axis_keep <= 1023;
+            m_axis_data <= cSum_buff[AXI_BUS_WIDTH-1:0];
+            cSum_buff<=cSum_buff>>AXI_BUS_WIDTH;
+            cSum_buff_cnt<=cSum_buff_cnt-1;
+            
+            if(cSum_buff_cnt==1)begin
+                if(current_x==0&current_y==0)begin
+                    m_axis_last <= 1;
+                    lb_force_rst <= 0;
+                    RSTst <= 1;
+                end
+            end
+        end   
+    end
     // cStart triggers matrixcontroller to start
-    if(cStart)begin
+    else if(cStart)begin
+        RDst <= !BUSY;
         // In a read state (data still needs to be input) 
         if(RDst)begin
-        
             // Queue data to read from the BRAM
             if(lb_r_en)begin
                 // Queued enough data, now wait for valid
-                if(lb_q_cnt==0)begin
-                    lb_r_en = 0;
-                    lb_wr_en = 0;
-                    memory_read = 0;
+                if(lb_q_cnt==1)begin
+                    lb_r_en <= 0;
+                    lb_wr_en <= 0;
                 end
-                else begin
-                    // Update read address
-                    lb_q_cnt = lb_q_cnt-1;
-                end
+                // Update read address
+                lb_q_cnt <= lb_q_cnt-1;
             end
             
             // Data is ready from BRAM
@@ -358,59 +375,37 @@ always @(posedge axi_clk) begin
                 // Shift and then load data
                 for(RDi=0;RDi<CHANNELS;RDi = RDi + 1)begin
                     for(RDj=0;RDj<K_SQUARED;RDj = RDj + 1)begin
-                        if(RDj<K_SQUARED-KERNEL_SIZE) dataSet[RDi][RDj] = dataSet[RDi][RDj+KERNEL_SIZE];
-                        else dataSet[RDi][RDj] = lb_data_out[RDi][(RDj-(K_SQUARED-KERNEL_SIZE))*AXI_BUS_WIDTH+:AXI_BUS_WIDTH];
+                        if(RDj<K_SQUARED-KERNEL_SIZE) dataSet[RDi][RDj] <= dataSet[RDi][RDj+KERNEL_SIZE];
+                        else dataSet[RDi][RDj] <= lb_data_out[RDi][(RDj-(K_SQUARED-KERNEL_SIZE))*AXI_BUS_WIDTH+:AXI_BUS_WIDTH];
                     end
                 end
                 
-                lb_r_cnt = lb_r_cnt + 1;                
+                lb_r_cnt <= lb_r_cnt + 1;
                 
                 // Retrieved enough pixel data to start convolution
-                if(lb_r_cnt>=KERNEL_SIZE) begin
-                    RDst = 0; MULTIst = 1;
+                if(lb_r_cnt>=KERNEL_SIZE-1) begin
+                    RDst <= 0; MULTIst <= 1; IDst <= 0;
                 end
-            end            
+            end       
             
             // Need to write or read some data
             else begin
-                // Continue writing data into line buffers until full
-                lb_wr_en = memory_read ? !bram_full : 0;
-                lb_r_en = memory_read ? bram_full : 1;
+                lb_r_en <= bram_full;
+                lb_wr_en <= !bram_full;
             end
         end// End of RDst
-    
         //In a multiply state, dataSet and filterSet should be filled with needed values
-        else if(MULTIst) begin
+        if(MULTIst) begin
             if(MULTIPLY_START)begin
-                MULTIPLY_START=0;
-                MULTIst = 0;
+                MULTIPLY_START<=0;
+                RDst <= 0; MULTIst <= 0; IDst <= 1;
             end
-            
             else begin
-                MULTIPLY_START = (2**K_SQUARED)-1;
-                // MULTIst = 0;
-            
-                current_x = current_x+1;// Update position on image map
-                if(current_x+KERNEL_SIZE > image_width)begin// End of row
-                    lb_q_cnt = KERNEL_SIZE+1;
-                    lb_r_cnt = 0;
-                    current_x = 0;
-                    current_y = current_y+1;
-                    if(current_y+KERNEL_SIZE > image_height)begin
-                        lb_force_rst = 1;
-                        current_y = 0;
-                    end
-                end
-                else begin
-                    lb_q_cnt = 2;
-                    lb_r_cnt = KERNEL_SIZE - 1; 
-                end
+                MULTIPLY_START <= (2**K_SQUARED)-1;
             end
-
         end// End of MULTIst
-        
     end// End of cStart
-end// End of block
+    end// End of !rst
 /* CONTROLLER STATE MACHINE END ************************************************************************************************/
     
 endmodule
