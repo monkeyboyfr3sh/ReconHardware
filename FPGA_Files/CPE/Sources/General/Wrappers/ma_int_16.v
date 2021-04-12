@@ -29,6 +29,7 @@ matrixAccelerator
     .AddressSelect          (AddressSelect),            //Controls addressSelect for internal XBar                          
     .mStart                 (mStart),                   //Starts multiplication for all three multipliers
     .direct                 (direct),                   //Controll bit to direct connect XBar IO
+    .lin_mux                (0),
     .finalAccumulate        (finalAccumulate),
     .finalReady             (finalReady)
 );

@@ -6,7 +6,7 @@ module matrixAccelerator_tb;
 `define data_width 32
 `define kernel_size 3
 `define test_cnt 100
-reg rand_test = 1; // Set test bench to use random variables
+reg rand_test = 0; // Set test bench to use random variables
 
 //Inputs
 reg     Clk,Rst,direct;
@@ -34,20 +34,21 @@ matrixAccelerator
     .KERNEL_SIZE(`kernel_size)
 )
 UUT (   
-    Clk,
-    Rst,
-    multiplier_input,        //Flat input connector. Has width of `bitLength*`inputPortcount
-    multiplicand_input,    //Flat input connector. Has width of `bitLength*`inputPortcount
-    AddressSelect,                  //Controls addressSelect for internal XBar                          
-    mStart,                      //Starts multiplication for all three multipliers
-    1,                                     //Controll bit to direct connect XBar IO
-    finalAccumulate,
-    finalReady
+    .Clk(Clk),
+    .Rst(Rst),
+    .multiplier_input(multiplier_input),        //Flat input connector. Has width of `bitLength*`inputPortcount
+    .multiplicand_input(multiplicand_input),    //Flat input connector. Has width of `bitLength*`inputPortcount
+    .AddressSelect(AddressSelect),                  //Controls addressSelect for internal XBar                          
+    .mStart(mStart),                      //Starts multiplication for all three multipliers
+    .direct(1),           
+    .lin_mux(0),                          //Controll bit to direct connect XBar IO
+    .finalAccumulate(finalAccumulate),
+    .finalReady(finalReady)
 );
             
 integer i;
 integer pass_cnt,test_cnt;
-reg [(2*`data_width)-1:0]   temp;
+integer temp;
 
 initial begin
 Clk = 0;
@@ -68,8 +69,8 @@ always@(posedge Clk)begin
     temp=0;
     for(i = 0; i < `kernel_size*`kernel_size; i = i + 1)begin
         temp = temp + multiplicand_reg[i] * multiplier_reg[i];
-        multiplier_reg[i] = (rand_test) ? ($urandom) % 2**(`data_width-1) : i;
-        multiplicand_reg[i] = (rand_test) ? ($urandom) % 2**(`data_width-1) : i;
+        multiplier_reg[i] = (rand_test) ? ($urandom) % 2**(`data_width-1) : -(i+test_cnt);
+        multiplicand_reg[i] = (rand_test) ? ($urandom) % 2**(`data_width-1) : (i+test_cnt);
     end
     mStart = 2**(`kernel_size*`kernel_size)-1;
     
@@ -91,7 +92,7 @@ always@(posedge Clk)begin
     
     // Evaluate answer
     if(finalReady)begin
-        if(temp==finalAccumulate)begin
+        if(temp[`data_width-1:0]==finalAccumulate)begin
             pass_cnt = pass_cnt + 1;
         end
         test_cnt = test_cnt + 1;

@@ -22,12 +22,13 @@ module matrixAccelerator
     AddressSelect,
     mStart,
     direct,
+    lin_mux,
     finalAccumulate,
     finalReady
 );
 
 //Inputs
-input   Clk,Rst,direct;
+input   Clk,Rst,direct,lin_mux;
 input   [KERNEL_SIZE*KERNEL_SIZE-1:0]  mStart;
 input   [ADDR_WIDTH-1:0] AddressSelect;
 input   [KERNEL_SIZE*KERNEL_SIZE*AXI_BUS_WIDTH-1:0]   multiplier_input;
@@ -43,8 +44,11 @@ wire [KERNEL_SIZE*KERNEL_SIZE*DATA_WIDTH-1:0]    xbar_output;
 wire [KERNEL_SIZE*KERNEL_SIZE-1:0] mReady;
 wire signed [DATA_WIDTH-1:0] product_output [KERNEL_SIZE*KERNEL_SIZE-1:0];  // Bus for product outputs
 
+wire signed [AXI_BUS_WIDTH-1:0] adder_out,non_linear_out;
+
 wire add_start;
 assign add_start = & mReady;
+assign finalAccumulate = lin_mux ? adder_out : non_linear_out;
 //XBar2 
 //#(
 //    .DATA_WIDTH(DATA_WIDTH),
@@ -70,8 +74,17 @@ adder(
     .clk(Clk),
     .add(add_start),
     .in_data(xbar_input),   // Skipping xbar, wiring output into adder
-    .out_data(finalAccumulate),
+    .out_data(adder_out),
     .valid(finalReady)
+);
+
+ReLU
+#(
+    .DATA_WIDTH(DATA_WIDTH)
+)
+NON_LIN (
+    .in_data(adder_out),
+    .out_data(non_linear_out)
 );
 
 // Making Xbar connections
