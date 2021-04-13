@@ -77,13 +77,6 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../bram_lb/bram_lb.srcs/sources_1/new/bram_wrapper.v">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PPRDIR/../../Sources/Multiplier/fixedmultiplyCompute.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -134,6 +127,13 @@
         </FileInfo>
       </File>
       <File Path="$PPRDIR/../../Sources/General/Non_Linear/ReLU.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../Sources/General/Wrappers/bram_wrapper.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>

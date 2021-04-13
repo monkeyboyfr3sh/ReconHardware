@@ -1,5 +1,4 @@
-`include "definitions.h"
-`timescale `myTimeScale
+`timescale 1ns / 1ps
 
 //Test stuff
 `define test_width 8
@@ -9,17 +8,12 @@
 `define addr_width 10
 `define kernel_size 3
 
-module Controller_w_BRAM_TB;
+module Pooling_Controller_TB;
 
 reg rand_test = 0;//Set test bench to use random variables
 
 reg    axi_clk;
 reg    axi_reset_n;
-wire [`test_channels*32-1:0] cSum;
-wire [`test_channels-1:0] cReady;
-wire [`test_channels*`kernel_size*`kernel_size*32-1:0] MULTIPLIER_INPUT;   //Flat output for data set
-wire [`test_channels*`kernel_size*`kernel_size*32-1:0] MULTIPLICAND_INPUT; //Flat output for filter set
-wire [`kernel_size*`kernel_size-1:0] MULTIPLY_START;
 
 //AXI4-S slave i/f - Data stream port
 reg    s_axis_valid;
@@ -61,7 +55,7 @@ wire s_axi_rlast;
 wire s_axi_bvalid;
 reg s_axi_bready;
 
-Convolution_Controller 
+Pooling_Controller 
 #(
     .KERNEL_SIZE(3),
     .CHANNELS(`test_channels)
@@ -69,11 +63,6 @@ Convolution_Controller
 UUT (//IP Ports
     .axi_clk(axi_clk),
     .axi_reset_n(axi_reset_n),
-    .cSum(cSum),
-    .cReady(&cReady),
-    .MULTIPLIER_INPUT(MULTIPLIER_INPUT),   //Flat output for data set
-    .MULTIPLICAND_INPUT(MULTIPLICAND_INPUT), //Flat output for filter set
-    .MULTIPLY_START(MULTIPLY_START),
     
     //AXI4-S slave i/f - Data stream port
     .s_axis_valid(s_axis_valid),
@@ -117,27 +106,6 @@ UUT (//IP Ports
     .s_axi_rlast(s_axi_rlast)
 );//End of ports
 
-genvar n;
-
-generate
-
-for(n=0;n<`test_channels;n=n+1)begin
-ma_int_16
-matrixAccel(   
-    .Clk(axi_clk),
-    .Rst(~axi_reset_n),
-    .multiplier_input       (MULTIPLIER_INPUT[(n*`kernel_size*`kernel_size*32)+:`kernel_size*`kernel_size*32]),        //Flat input connector. Has width of `bitLength*`inputPortcount
-    .multiplicand_input     (MULTIPLICAND_INPUT[(n*`kernel_size*`kernel_size*32)+:`kernel_size*`kernel_size*32]),    //Flat input connector. Has width of `bitLength*`inputPortcount
-    .AddressSelect(AddressSelect),                  //Controls addressSelect for internal XBar                          
-    .mStart(MULTIPLY_START),                      //Starts multiplication for all three multipliers
-    .direct(1),
-    .finalAccumulate(cSum[(n*32)+:32]),
-    .finalReady(cReady[n])
-);
-end
-
-endgenerate
-
 integer i, linecnt, columncnt;
 
 integer curr_dataSet [`kernel_size*`kernel_size-1:0];
@@ -150,96 +118,96 @@ setup = 0;
 axi_clk = 0;
 s_axi_bready = 0;
 axi_reset_n = 1;
-#(`clkPeriod/2);
+#(10/2);
 axi_reset_n = 0;
-#`clkPeriod;
+#10;
 axi_reset_n = 1;
-#`clkPeriod;
-#`clkPeriod;
+#10;
+#10;
 
 //Enable the IP
 s_axi_awvalid = 1;
 s_axi_awaddr = 0;//Select Control register
 s_axi_wvalid = 1;
 s_axi_wdata = 1;
-#`clkPeriod;
+#10;
 s_axi_bready = 1;
 s_axi_awvalid = 0;
 s_axi_wvalid = 0;
-#`clkPeriod;
-#`clkPeriod;
+#10;
+#10;
 s_axi_bready = 0;
-#`clkPeriod;
+#10;
 
 //Write the picture width info
 s_axi_awvalid = 1;
 s_axi_awaddr = 16;//Select Width register
 s_axi_wvalid = 1;
 s_axi_wdata = `test_width;
-#`clkPeriod;
+#10;
 s_axi_bready = 1;
 s_axi_awvalid = 0;
 s_axi_wvalid = 0;
-#`clkPeriod;
-#`clkPeriod;
+#10;
+#10;
 s_axi_bready = 0;
-#`clkPeriod;
+#10;
 
 //Test the reset register
 s_axi_awvalid = 1;
 s_axi_awaddr = 4;//Select reset register
 s_axi_wvalid = 1;
 s_axi_wdata = 1;
-#`clkPeriod;
+#10;
 s_axi_bready = 1;
 s_axi_awvalid = 0;
 s_axi_wvalid = 0;
-#`clkPeriod;
-#`clkPeriod;
+#10;
+#10;
 s_axi_bready = 0;
-#`clkPeriod;
+#10;
 
 //Enable the IP
 s_axi_awvalid = 1;
 s_axi_awaddr = 0;//Select Control register
 s_axi_wvalid = 1;
 s_axi_wdata = 1;
-#`clkPeriod;
+#10;
 s_axi_bready = 1;
 s_axi_awvalid = 0;
 s_axi_wvalid = 0;
-#`clkPeriod;
-#`clkPeriod;
+#10;
+#10;
 s_axi_bready = 0;
-#`clkPeriod;
+#10;
 
 //Write the picture width info
 s_axi_awvalid = 1;
 s_axi_awaddr = 16;//Select Width register
 s_axi_wvalid = 1;
 s_axi_wdata = `test_width;
-#`clkPeriod;
+#10;
 s_axi_bready = 1;
 s_axi_awvalid = 0;
 s_axi_wvalid = 0;
-#`clkPeriod;
-#`clkPeriod;
+#10;
+#10;
 s_axi_bready = 0;
-#`clkPeriod;
+#10;
 
 //Write the picture height info
 s_axi_awvalid = 1;
 s_axi_awaddr = 20;//Select Height register
 s_axi_wvalid = 1;
 s_axi_wdata = `test_height;
-#`clkPeriod;
+#10;
 s_axi_bready = 1;
 s_axi_awvalid = 0;
 s_axi_wvalid = 0;
-#`clkPeriod;
-#`clkPeriod;
+#10;
+#10;
 s_axi_bready = 0;
-#`clkPeriod;
+#10;
 //490 ns in sim
 
 //Load the filter values into IP
@@ -251,16 +219,16 @@ for(i = 0;i<`kernel_size*`kernel_size;i=i+1)begin
     else s_axi_wdata = 0;
 //    else s_axi_wdata = i;//Data going into filter
     curr_filterSet[i] = s_axi_wdata; //Also put the data in the test array
-    #`clkPeriod;
+    #10;
     
     // Wait for awready
     s_axi_bready = 1;
     s_axi_awvalid = 0;
     s_axi_wvalid = 0;
-    #`clkPeriod;
-    #`clkPeriod;
+    #10;
+    #10;
     s_axi_bready = 0;
-    #`clkPeriod;
+    #10;
 end
 linecnt = 0;
 columncnt = 0;
@@ -269,7 +237,7 @@ end
 
 integer t, i;
 integer channel_cnt = 0;
-always#(`clkPeriod/2) axi_clk = ~axi_clk;
+always#(10/2) axi_clk = ~axi_clk;
 //Begin data stream
 always @(negedge axi_clk)begin
     if(setup)begin
