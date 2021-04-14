@@ -1,0 +1,1652 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Tue Apr 13 14:20:31 2021
+# Process ID: 3988
+# Current directory: C:/GitHub/ReconHardware/FPGA_Files/CPE/Projects/pooling_layer/pooling_layer.runs/impl_1
+# Command line: vivado.exe -log design_1_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source design_1_wrapper.tcl -notrace
+# Log file: C:/GitHub/ReconHardware/FPGA_Files/CPE/Projects/pooling_layer/pooling_layer.runs/impl_1/design_1_wrapper.vdi
+# Journal file: C:/GitHub/ReconHardware/FPGA_Files/CPE/Projects/pooling_layer/pooling_layer.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source design_1_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/GitHub/ReconHardware/FPGA_Files/CPE/Sources/IP_Source'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.1/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is C:/GitHub/ReconHardware/FPGA_Files/CPE/Projects/pooling_layer/pooling_layer.cache/ip 
+add_files: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1080.617 ; gain = 0.000
+Command: link_design -top design_1_wrapper -part xc7z020clg400-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-454] Reading design checkpoint 'c:/GitHub/ReconHardware/FPGA_Files/CPE/Projects/pooling_layer/pooling_layer.srcs/sources_1/bd/design_1/ip/design_1_Pooling_Controller_0_0/design_1_Pooling_Controller_0_0.dcp' for cell 'design_1_i/Pooling_Controller_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/GitHub/ReconHardware/FPGA_Files/CPE/Projects/pooling_layer/pooling_layer.srcs/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0.dcp' for cell 'design_1_i/axi_dma_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/GitHub/ReconHardware/FPGA_Files/CPE/Projects/pooling_layer/pooling_layer.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.dcp' for cell 'design_1_i/processing_system7_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/GitHub/ReconHardware/FPGA_Files/CPE/Projects/pooling_layer/pooling_layer.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0.dcp' for cell 'design_1_i/rst_ps7_0_100M'
+INFO: [Project 1-454] Reading design checkpoint 'c:/GitHub/ReconHardware/FPGA_Files/CPE/Projects/pooling_layer/pooling_layer.srcs/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/design_1_smartconnect_0_0.dcp' for cell 'design_1_i/smartconnect_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/GitHub/ReconHardware/FPGA_Files/CPE/Projects/pooling_layer/pooling_layer.srcs/sources_1/bd/design_1/ip/design_1_smartconnect_0_1/design_1_smartconnect_0_1.dcp' for cell 'design_1_i/smartconnect_1'
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.911 . Memory (MB): peak = 1080.617 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1432 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/CPE/Projects/pooling_layer/pooling_layer.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc] for cell 'design_1_i/processing_system7_0/inst'
+Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/CPE/Projects/pooling_layer/pooling_layer.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc] for cell 'design_1_i/processing_system7_0/inst'
+Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/CPE/Projects/pooling_layer/pooling_layer.srcs/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0.xdc] for cell 'design_1_i/axi_dma_0/U0'
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [c:/GitHub/ReconHardware/FPGA_Files/CPE/Projects/pooling_layer/pooling_layer.srcs/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0.xdc:52]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [c:/GitHub/ReconHardware/FPGA_Files/CPE/Projects/pooling_layer/pooling_layer.srcs/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0.xdc:56]
+WARNING: [Vivado_Tcl 4-919] Waiver ID 'CDC-1' -from list should not be empty. [c:/GitHub/ReconHardware/FPGA_Files/CPE/Projects/pooling_layer/pooling_layer.srcs/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0.xdc:61]
+Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/CPE/Projects/pooling_layer/pooling_layer.srcs/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0.xdc] for cell 'design_1_i/axi_dma_0/U0'
+Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/CPE/Projects/pooling_layer/pooling_layer.srcs/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_1/bd_48ac_psr_aclk_0_board.xdc] for cell 'design_1_i/smartconnect_0/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/CPE/Projects/pooling_layer/pooling_layer.srcs/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_1/bd_48ac_psr_aclk_0_board.xdc] for cell 'design_1_i/smartconnect_0/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/CPE/Projects/pooling_layer/pooling_layer.srcs/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_1/bd_48ac_psr_aclk_0.xdc] for cell 'design_1_i/smartconnect_0/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/CPE/Projects/pooling_layer/pooling_layer.srcs/sources_1/bd/design_1/ip/design_1_smartconnect_0_0/bd_0/ip/ip_1/bd_48ac_psr_aclk_0.xdc] for cell 'design_1_i/smartconnect_0/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/CPE/Projects/pooling_layer/pooling_layer.srcs/sources_1/bd/design_1/ip/design_1_smartconnect_0_1/bd_0/ip/ip_1/bd_886d_psr_aclk_0_board.xdc] for cell 'design_1_i/smartconnect_1/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/CPE/Projects/pooling_layer/pooling_layer.srcs/sources_1/bd/design_1/ip/design_1_smartconnect_0_1/bd_0/ip/ip_1/bd_886d_psr_aclk_0_board.xdc] for cell 'design_1_i/smartconnect_1/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/CPE/Projects/pooling_layer/pooling_layer.srcs/sources_1/bd/design_1/ip/design_1_smartconnect_0_1/bd_0/ip/ip_1/bd_886d_psr_aclk_0.xdc] for cell 'design_1_i/smartconnect_1/inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/CPE/Projects/pooling_layer/pooling_layer.srcs/sources_1/bd/design_1/ip/design_1_smartconnect_0_1/bd_0/ip/ip_1/bd_886d_psr_aclk_0.xdc] for cell 'design_1_i/smartconnect_1/inst/clk_map/psr_aclk/U0'
+Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/CPE/Projects/pooling_layer/pooling_layer.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0_board.xdc] for cell 'design_1_i/rst_ps7_0_100M/U0'
+Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/CPE/Projects/pooling_layer/pooling_layer.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0_board.xdc] for cell 'design_1_i/rst_ps7_0_100M/U0'
+Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/CPE/Projects/pooling_layer/pooling_layer.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0.xdc] for cell 'design_1_i/rst_ps7_0_100M/U0'
+Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/CPE/Projects/pooling_layer/pooling_layer.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0.xdc] for cell 'design_1_i/rst_ps7_0_100M/U0'
+Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/CPE/Projects/pooling_layer/pooling_layer.srcs/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0_clocks.xdc] for cell 'design_1_i/axi_dma_0/U0'
+Finished Parsing XDC File [c:/GitHub/ReconHardware/FPGA_Files/CPE/Projects/pooling_layer/pooling_layer.srcs/sources_1/bd/design_1/ip/design_1_axi_dma_0_0/design_1_axi_dma_0_0_clocks.xdc] for cell 'design_1_i/axi_dma_0/U0'
+Sourcing Tcl File [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'design_1_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'design_1_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'design_1_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_XD_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'design_1_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_XD_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'design_1_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'design_1_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst'
+Sourcing Tcl File [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/smartconnect_0/inst/m00_nodes/m00_ar_node/inst/inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/smartconnect_0/inst/m00_nodes/m00_ar_node/inst/inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/smartconnect_0/inst/s01_nodes/s01_b_node/inst/inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/smartconnect_0/inst/s01_nodes/s01_b_node/inst/inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/smartconnect_0/inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/smartconnect_0/inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/smartconnect_0/inst/m00_nodes/m00_w_node/inst/inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/smartconnect_0/inst/m00_nodes/m00_w_node/inst/inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/smartconnect_0/inst/m00_nodes/m00_aw_node/inst/inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/smartconnect_0/inst/m00_nodes/m00_aw_node/inst/inst_mi_handler/gen_normal_area.gen_node_prog_full.inst_node_prog_full/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/smartconnect_0/inst/m00_nodes/m00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/smartconnect_0/inst/m00_nodes/m00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/smartconnect_0/inst/m00_nodes/m00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/smartconnect_0/inst/m00_nodes/m00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/smartconnect_0/inst/m00_nodes/m00_b_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/smartconnect_0/inst/m00_nodes/m00_b_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/smartconnect_0/inst/s01_nodes/s01_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/smartconnect_0/inst/s01_nodes/s01_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/smartconnect_0/inst/m00_nodes/m00_r_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/smartconnect_0/inst/m00_nodes/m00_r_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/smartconnect_0/inst/m00_nodes/m00_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/smartconnect_0/inst/m00_nodes/m00_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/smartconnect_0/inst/m00_nodes/m00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/smartconnect_0/inst/m00_nodes/m00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/smartconnect_0/inst/m00_nodes/m00_w_node/inst/inst_si_handler/gen_si_handler.gen_request_fifos.gen_req_fifo[0].inst_req_fifo/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/smartconnect_0/inst/m00_nodes/m00_w_node/inst/inst_si_handler/gen_si_handler.gen_request_fifos.gen_req_fifo[0].inst_req_fifo/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/smartconnect_0/inst/m00_nodes/m00_w_node/inst/inst_si_handler/gen_si_handler.gen_request_fifos.gen_req_fifo[1].inst_req_fifo/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/smartconnect_0/inst/m00_nodes/m00_w_node/inst/inst_si_handler/gen_si_handler.gen_request_fifos.gen_req_fifo[1].inst_req_fifo/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/smartconnect_0/inst/m00_nodes/m00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/smartconnect_0/inst/m00_nodes/m00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/smartconnect_0/inst/s00_nodes/s00_ar_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/smartconnect_0/inst/s00_nodes/s00_ar_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/smartconnect_0/inst/s01_nodes/s01_w_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/smartconnect_0/inst/s01_nodes/s01_w_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/smartconnect_0/inst/s01_nodes/s01_aw_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/smartconnect_0/inst/s01_nodes/s01_aw_node/inst/inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/smartconnect_0/inst/s00_nodes/s00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/smartconnect_0/inst/s00_nodes/s00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/smartconnect_0/inst/s01_nodes/s01_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/smartconnect_0/inst/s01_nodes/s01_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/smartconnect_0/inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/smartconnect_0/inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Sourcing Tcl File [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/smartconnect_0/inst/s01_nodes/s01_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+Finished Sourcing Tcl File [C:/Xilinx/Vivado/2020.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'design_1_i/smartconnect_0/inst/s01_nodes/s01_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1153.664 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 201 instances were transformed.
+  RAM16X1D => RAM32X1D (RAMD32(x2)): 2 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 194 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 5 instances
+
+16 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1153.664 ; gain = 73.047
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1177.680 ; gain = 24.016
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 21bdb4e2a
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1734.988 ; gain = 557.309
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 19 inverter(s) to 111 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 11f6919e8
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1948.773 ; gain = 0.082
+INFO: [Opt 31-389] Phase Retarget created 55 cells and removed 166 cells
+INFO: [Opt 31-1021] In phase Retarget, 90 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: a55ec1e4
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1948.773 ; gain = 0.082
+INFO: [Opt 31-389] Phase Constant propagation created 39 cells and removed 253 cells
+INFO: [Opt 31-1021] In phase Constant propagation, 120 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 15063dea3
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1948.773 ; gain = 0.082
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 1328 cells
+INFO: [Opt 31-1021] In phase Sweep, 150 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: 15063dea3
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1948.773 ; gain = 0.082
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 5 Shift Register Optimization | Checksum: 15063dea3
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1948.773 ; gain = 0.082
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 101ccc508
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1948.773 ; gain = 0.082
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 2 cells
+INFO: [Opt 31-1021] In phase Post Processing Netlist, 105 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |              55  |             166  |                                             90  |
+|  Constant propagation         |              39  |             253  |                                            120  |
+|  Sweep                        |               0  |            1328  |                                            150  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               2  |                                            105  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.066 . Memory (MB): peak = 1948.773 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 23a5422a5
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 1948.773 ; gain = 0.082
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 20 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+Number of BRAM Ports augmented: 21 newly gated: 0 Total Ports: 40
+Ending PowerOpt Patch Enables Task | Checksum: 19bacf676
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.175 . Memory (MB): peak = 2087.996 ; gain = 0.000
+Ending Power Optimization Task | Checksum: 19bacf676
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:08 . Memory (MB): peak = 2087.996 ; gain = 139.223
+
+Starting Final Cleanup Task
+
+Starting Logic Optimization Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Logic Optimization Task | Checksum: 1edeeec40
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2087.996 ; gain = 0.000
+Ending Final Cleanup Task | Checksum: 1edeeec40
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 2087.996 ; gain = 0.000
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 2087.996 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 1edeeec40
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 2087.996 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+43 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:42 ; elapsed = 00:00:32 . Memory (MB): peak = 2087.996 ; gain = 934.332
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.058 . Memory (MB): peak = 2087.996 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/GitHub/ReconHardware/FPGA_Files/CPE/Projects/pooling_layer/pooling_layer.runs/impl_1/design_1_wrapper_opt.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file design_1_wrapper_drc_opted.rpt -pb design_1_wrapper_drc_opted.pb -rpx design_1_wrapper_drc_opted.rpx
+Command: report_drc -file design_1_wrapper_drc_opted.rpt -pb design_1_wrapper_drc_opted.pb -rpx design_1_wrapper_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file C:/GitHub/ReconHardware/FPGA_Files/CPE/Projects/pooling_layer/pooling_layer.runs/impl_1/design_1_wrapper_drc_opted.rpt.
+report_drc completed successfully
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 2087.996 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 113a46881
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 2087.996 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 2087.996 ; gain = 0.000
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 2ce52dc8
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2087.996 ; gain = 0.000
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 103f3cabd
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:09 . Memory (MB): peak = 2087.996 ; gain = 0.000
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 103f3cabd
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:09 . Memory (MB): peak = 2087.996 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 103f3cabd
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:09 . Memory (MB): peak = 2087.996 ; gain = 0.000
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 101bd9a97
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:11 . Memory (MB): peak = 2087.996 ; gain = 0.000
+
+Phase 2.2 Global Placement Core
+
+Phase 2.2.1 Physical Synthesis In Placer
+INFO: [Physopt 32-1035] Found 10 LUTNM shape to break, 528 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1044] Break lutnm for timing: one critical 6, two critical 4, total 10, new lutff created 0
+INFO: [Physopt 32-775] End 1 Pass. Optimized 194 nets or cells. Created 10 new cells, deleted 184 existing cells and moved 0 existing cell
+INFO: [Physopt 32-76] Pass 1. Identified 1 candidate net for fanout optimization.
+INFO: [Physopt 32-81] Processed net design_1_i/smartconnect_1/inst/switchboards/i_nodes/i_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_reg_fifo.inst_reg_fifo/m_sc_payld[0]. Replicated 8 times.
+INFO: [Physopt 32-232] Optimized 1 net. Created 8 new instances.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 1 net or cell. Created 8 new cells, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.123 . Memory (MB): peak = 2087.996 ; gain = 0.000
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-1123] No candidate cells found for Shift Register to Pipeline optimization
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-677] No candidate cells for Shift Register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-526] No candidate cells for BRAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-846] No candidate cells for URAM register optimization found in the design
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-949] No candidate nets found for HD net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 2087.996 ; gain = 0.000
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  LUT Combining                                    |           10  |            184  |                   194  |           0  |           1  |  00:00:01  |
+|  Very High Fanout                                 |            8  |              0  |                     1  |           0  |           1  |  00:00:01  |
+|  DSP Register                                     |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register                                   |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  BRAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  URAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                                            |           18  |            184  |                   195  |           0  |           8  |  00:00:01  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.2.1 Physical Synthesis In Placer | Checksum: 178ce75c8
+
+Time (s): cpu = 00:00:58 ; elapsed = 00:00:34 . Memory (MB): peak = 2087.996 ; gain = 0.000
+Phase 2.2 Global Placement Core | Checksum: 1bfbaaab1
+
+Time (s): cpu = 00:00:59 ; elapsed = 00:00:35 . Memory (MB): peak = 2087.996 ; gain = 0.000
+Phase 2 Global Placement | Checksum: 1bfbaaab1
+
+Time (s): cpu = 00:00:59 ; elapsed = 00:00:35 . Memory (MB): peak = 2087.996 ; gain = 0.000
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 1cca535c2
+
+Time (s): cpu = 00:01:03 ; elapsed = 00:00:37 . Memory (MB): peak = 2087.996 ; gain = 0.000
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 20bce886a
+
+Time (s): cpu = 00:01:11 ; elapsed = 00:00:43 . Memory (MB): peak = 2087.996 ; gain = 0.000
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 17d52c591
+
+Time (s): cpu = 00:01:12 ; elapsed = 00:00:44 . Memory (MB): peak = 2087.996 ; gain = 0.000
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 1ae74d7f6
+
+Time (s): cpu = 00:01:12 ; elapsed = 00:00:44 . Memory (MB): peak = 2087.996 ; gain = 0.000
+
+Phase 3.5 Fast Optimization
+Phase 3.5 Fast Optimization | Checksum: 1e90a153b
+
+Time (s): cpu = 00:01:20 ; elapsed = 00:00:50 . Memory (MB): peak = 2087.996 ; gain = 0.000
+
+Phase 3.6 Small Shape Detail Placement
+Phase 3.6 Small Shape Detail Placement | Checksum: 1a2540cf6
+
+Time (s): cpu = 00:01:27 ; elapsed = 00:00:57 . Memory (MB): peak = 2087.996 ; gain = 0.000
+
+Phase 3.7 Re-assign LUT pins
+Phase 3.7 Re-assign LUT pins | Checksum: 10fb0f045
+
+Time (s): cpu = 00:01:28 ; elapsed = 00:00:59 . Memory (MB): peak = 2087.996 ; gain = 0.000
+
+Phase 3.8 Pipeline Register Optimization
+Phase 3.8 Pipeline Register Optimization | Checksum: 9ee75a20
+
+Time (s): cpu = 00:01:28 ; elapsed = 00:00:59 . Memory (MB): peak = 2087.996 ; gain = 0.000
+
+Phase 3.9 Fast Optimization
+Phase 3.9 Fast Optimization | Checksum: 196f02233
+
+Time (s): cpu = 00:01:40 ; elapsed = 00:01:08 . Memory (MB): peak = 2087.996 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 196f02233
+
+Time (s): cpu = 00:01:40 ; elapsed = 00:01:08 . Memory (MB): peak = 2087.996 ; gain = 0.000
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 1a90057a8
+
+Phase 4.1.1.1 BUFG Insertion
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-22.514 | TNS=-3897.047 |
+Phase 1 Physical Synthesis Initialization | Checksum: 17e9ca3d4
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.985 . Memory (MB): peak = 2090.379 ; gain = 0.000
+INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
+Ending Physical Synthesis Task | Checksum: 1b2e3f499
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2090.379 ; gain = 0.000
+Phase 4.1.1.1 BUFG Insertion | Checksum: 1a90057a8
+
+Time (s): cpu = 00:01:50 ; elapsed = 00:01:15 . Memory (MB): peak = 2090.379 ; gain = 2.383
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-21.556. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 133be34a9
+
+Time (s): cpu = 00:02:20 ; elapsed = 00:01:37 . Memory (MB): peak = 2090.379 ; gain = 2.383
+Phase 4.1 Post Commit Optimization | Checksum: 133be34a9
+
+Time (s): cpu = 00:02:20 ; elapsed = 00:01:37 . Memory (MB): peak = 2090.379 ; gain = 2.383
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 133be34a9
+
+Time (s): cpu = 00:02:20 ; elapsed = 00:01:38 . Memory (MB): peak = 2090.379 ; gain = 2.383
+
+Phase 4.3 Placer Reporting
+Phase 4.3 Placer Reporting | Checksum: 133be34a9
+
+Time (s): cpu = 00:02:20 ; elapsed = 00:01:38 . Memory (MB): peak = 2090.379 ; gain = 2.383
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 2090.379 ; gain = 0.000
+Phase 4.4 Final Placement Cleanup | Checksum: 11ede3613
+
+Time (s): cpu = 00:02:20 ; elapsed = 00:01:38 . Memory (MB): peak = 2090.379 ; gain = 2.383
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 11ede3613
+
+Time (s): cpu = 00:02:21 ; elapsed = 00:01:38 . Memory (MB): peak = 2090.379 ; gain = 2.383
+Ending Placer Task | Checksum: 5139afe7
+
+Time (s): cpu = 00:02:21 ; elapsed = 00:01:38 . Memory (MB): peak = 2090.379 ; gain = 2.383
+INFO: [Common 17-83] Releasing license: Implementation
+83 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:02:24 ; elapsed = 00:01:40 . Memory (MB): peak = 2090.379 ; gain = 2.383
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:05 ; elapsed = 00:00:02 . Memory (MB): peak = 2090.379 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/GitHub/ReconHardware/FPGA_Files/CPE/Projects/pooling_layer/pooling_layer.runs/impl_1/design_1_wrapper_placed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_io -file design_1_wrapper_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.045 . Memory (MB): peak = 2090.379 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_placed.rpt -pb design_1_wrapper_utilization_placed.pb
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file design_1_wrapper_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.055 . Memory (MB): peak = 2090.379 ; gain = 0.000
+Command: phys_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 2103.715 ; gain = 0.000
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-21.556 | TNS=-3813.996 |
+Phase 1 Physical Synthesis Initialization | Checksum: 185f12c59
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:04 . Memory (MB): peak = 2109.676 ; gain = 5.961
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-21.556 | TNS=-3813.996 |
+
+Phase 2 DSP Register Optimization
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Phase 2 DSP Register Optimization | Checksum: 185f12c59
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:04 . Memory (MB): peak = 2109.676 ; gain = 5.961
+
+Phase 3 Critical Path Optimization
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-21.556 | TNS=-3813.996 |
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg_n_0_[3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-572] Net design_1_i/Pooling_Controller_0/inst/avg_buff[92]_i_3_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[92]_i_3_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[92]_i_3
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[92]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[92]_i_12_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[92]_i_37_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[92]_i_40_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[92]_i_90_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[92]_i_127_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[88]_i_2_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[84]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[80]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[76]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[72]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[72]_i_9_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-21.550 | TNS=-3813.437 |
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[68]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[64]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[60]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[56]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[52]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[48]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[44]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[40]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[36]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_9_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-21.537 | TNS=-3812.229 |
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[44]_i_8_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[44]_i_4_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[44]_i_4
+INFO: [Physopt 32-710] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[44]_i_8_n_0. Critical path length was reduced through logic transformation on cell design_1_i/Pooling_Controller_0/inst/avg_buff[44]_i_8_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[44]_i_4_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-21.521 | TNS=-3810.741 |
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[48]_i_9_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[48]_i_5_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[48]_i_5
+INFO: [Physopt 32-710] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[48]_i_9_n_0. Critical path length was reduced through logic transformation on cell design_1_i/Pooling_Controller_0/inst/avg_buff[48]_i_9_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[48]_i_5_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-21.515 | TNS=-3810.183 |
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[56]_i_9_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-21.482 | TNS=-3807.114 |
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[76]_i_8_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[76]_i_4_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[76]_i_4
+INFO: [Physopt 32-572] Net design_1_i/Pooling_Controller_0/inst/avg_buff[76]_i_4_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[76]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[76]_i_14_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[76]_i_14
+INFO: [Physopt 32-710] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[76]_i_4_n_0. Critical path length was reduced through logic transformation on cell design_1_i/Pooling_Controller_0/inst/avg_buff[76]_i_4_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[76]_i_14_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-21.482 | TNS=-3807.114 |
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[44]_i_4_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[44]_i_4
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[44]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[44]_i_14_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[44]_i_14
+INFO: [Physopt 32-710] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[44]_i_4_n_0. Critical path length was reduced through logic transformation on cell design_1_i/Pooling_Controller_0/inst/avg_buff[44]_i_4_comp_2.
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[44]_i_14_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-21.470 | TNS=-3805.998 |
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[44]_i_9_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[44]_i_5_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[44]_i_5
+INFO: [Physopt 32-710] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[44]_i_9_n_0. Critical path length was reduced through logic transformation on cell design_1_i/Pooling_Controller_0/inst/avg_buff[44]_i_9_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[44]_i_5_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-21.465 | TNS=-3805.533 |
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[40]_i_9_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[40]_i_5_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[40]_i_5
+INFO: [Physopt 32-710] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[40]_i_9_n_0. Critical path length was reduced through logic transformation on cell design_1_i/Pooling_Controller_0/inst/avg_buff[40]_i_9_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[40]_i_5_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-21.464 | TNS=-3805.440 |
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[44]_i_7_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[44]_i_3_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[44]_i_3
+INFO: [Physopt 32-710] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[44]_i_7_n_0. Critical path length was reduced through logic transformation on cell design_1_i/Pooling_Controller_0/inst/avg_buff[44]_i_7_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[44]_i_3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-21.462 | TNS=-3805.254 |
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[56]_i_7_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[56]_i_3_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[56]_i_3
+INFO: [Physopt 32-572] Net design_1_i/Pooling_Controller_0/inst/avg_buff[56]_i_3_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[56]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[56]_i_11_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[56]_i_11
+INFO: [Physopt 32-134] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[56]_i_11_n_0. Rewiring did not optimize the net.
+INFO: [Physopt 32-572] Net design_1_i/Pooling_Controller_0/inst/avg_buff[56]_i_11_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[56]_i_11_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff_reg[60]_i_15_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff_reg[56]_i_15_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff_reg[52]_i_15_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff_reg[48]_i_15_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff_reg[44]_i_15_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff[44]_i_41_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/avg_buff[44]_i_37_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/avg_buff[44]_i_37
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff[44]_i_37_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[44]_i_85_0[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[40]_i_57_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[40]_i_90_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-21.458 | TNS=-3804.881 |
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[40]_i_10_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[40]_i_6_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[40]_i_6
+INFO: [Physopt 32-710] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[40]_i_10_n_0. Critical path length was reduced through logic transformation on cell design_1_i/Pooling_Controller_0/inst/avg_buff[40]_i_10_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[40]_i_6_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-21.458 | TNS=-3804.881 |
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_9_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_5_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_5
+INFO: [Physopt 32-710] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_9_n_0. Critical path length was reduced through logic transformation on cell design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_9_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_5_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-21.455 | TNS=-3804.602 |
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_10_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_6_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_6
+INFO: [Physopt 32-710] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_10_n_0. Critical path length was reduced through logic transformation on cell design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_10_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_6_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-21.397 | TNS=-3799.208 |
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[40]_i_7_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[40]_i_3_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[40]_i_3
+INFO: [Physopt 32-572] Net design_1_i/Pooling_Controller_0/inst/avg_buff[40]_i_3_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[40]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[40]_i_11_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[40]_i_11
+INFO: [Physopt 32-710] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[40]_i_3_n_0. Critical path length was reduced through logic transformation on cell design_1_i/Pooling_Controller_0/inst/avg_buff[40]_i_3_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[40]_i_11_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-21.392 | TNS=-3798.743 |
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[92]_i_34_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[92]_i_14_n_7. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[92]_i_40_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[92]_i_2_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[88]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[88]_i_9_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-21.390 | TNS=-3798.557 |
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[92]_i_123_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[92]_i_199_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[92]_i_221_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[92]_i_254_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[92]_i_268_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[92]_i_282_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[92]_i_296_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[92]_i_310_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[92]_i_324_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[92]_i_338_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[92]_i_352_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[92]_i_366_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[92]_i_380_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[92]_i_398_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[36]_i_2_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[32]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[28]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[28]_i_10_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[28]_i_6_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[28]_i_6
+INFO: [Physopt 32-710] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[28]_i_10_n_0. Critical path length was reduced through logic transformation on cell design_1_i/Pooling_Controller_0/inst/avg_buff[28]_i_10_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[28]_i_6_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-21.383 | TNS=-3797.906 |
+INFO: [Physopt 32-663] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[44]_i_5_n_0_repN_1.  Re-placed instance design_1_i/Pooling_Controller_0/inst/avg_buff[44]_i_5_comp_1
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[44]_i_5_n_0_repN_1. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-21.379 | TNS=-3797.534 |
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[40]_i_14_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[40]_i_14
+INFO: [Physopt 32-242] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[40]_i_14_n_0. Rewired (signal push) design_1_i/Pooling_Controller_0/inst/avg_buff_reg[44]_i_2_1[0] to 2 loads. Replicated 0 times.
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[40]_i_14_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-21.376 | TNS=-3797.255 |
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_14_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_14
+INFO: [Physopt 32-710] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_9_n_0. Critical path length was reduced through logic transformation on cell design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_9_comp_1.
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_14_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-21.355 | TNS=-3795.302 |
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[40]_i_6_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[40]_i_6
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[40]_i_6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[40]_i_18_n_0.  Re-placed instance design_1_i/Pooling_Controller_0/inst/avg_buff[40]_i_18
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[40]_i_18_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-21.354 | TNS=-3795.209 |
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_4_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_4
+INFO: [Physopt 32-572] Net design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_4_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_14_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_14
+INFO: [Physopt 32-710] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_4_n_0. Critical path length was reduced through logic transformation on cell design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_4_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_14_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-21.352 | TNS=-3795.023 |
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_6_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_6
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_18_n_0.  Re-placed instance design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_18
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_18_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-21.345 | TNS=-3794.372 |
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff[56]_i_36_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/avg_buff[56]_i_32_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/avg_buff[56]_i_32
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff[56]_i_32_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[60]_i_75_0[2]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[56]_i_52_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[52]_i_56_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[48]_i_56_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[44]_i_57_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[40]_i_58_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[36]_i_58_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[32]_i_58_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[28]_i_58_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[28]_i_97_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-21.333 | TNS=-3793.256 |
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[28]_i_98_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-21.311 | TNS=-3791.211 |
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[40]_i_89_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-21.298 | TNS=-3790.002 |
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff[48]_i_41_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/avg_buff[48]_i_37_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/avg_buff[48]_i_37
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff[48]_i_37_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[48]_i_80_0[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[44]_i_56_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[44]_i_84_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-21.281 | TNS=-3788.422 |
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[44]_i_85_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-21.227 | TNS=-3783.400 |
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff[52]_i_41_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/avg_buff[52]_i_37_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/avg_buff[52]_i_37
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff[52]_i_37_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[52]_i_80_0[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[48]_i_55_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[48]_i_79_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-21.210 | TNS=-3781.819 |
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[48]_i_80_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-21.209 | TNS=-3781.699 |
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[24]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[20]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[16]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[12]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[8]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[4]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[0]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[0]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[0]_i_12_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[0]_i_29_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[0]_i_78_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[0]_i_139_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[0]_i_259_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[0]_i_391_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[0]_i_547_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[0]_i_676_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-21.182 | TNS=-3779.213 |
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[28]_i_6_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[28]_i_6
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[28]_i_6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[28]_i_18_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[28]_i_18
+INFO: [Physopt 32-710] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[28]_i_6_n_0. Critical path length was reduced through logic transformation on cell design_1_i/Pooling_Controller_0/inst/avg_buff[28]_i_6_comp_2.
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[28]_i_18_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-21.176 | TNS=-3778.656 |
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[44]_i_82_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-21.170 | TNS=-3778.097 |
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[24]_i_58_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[24]_i_98_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-21.147 | TNS=-3775.959 |
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[44]_i_83_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-21.119 | TNS=-3773.354 |
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[32]_i_97_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-21.110 | TNS=-3772.518 |
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff[56]_i_38_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/avg_buff[56]_i_34_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/avg_buff[56]_i_34
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff[56]_i_34_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[56]_i_72_0[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[52]_i_55_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[52]_i_79_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-21.101 | TNS=-3771.680 |
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[32]_i_98_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-21.093 | TNS=-3770.937 |
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[52]_i_80_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-21.048 | TNS=-3766.751 |
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[24]_i_97_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-21.024 | TNS=-3764.520 |
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[40]_i_90_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-81] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[92]_i_155_n_0. Replicated 3 times.
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[92]_i_155_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-20.930 | TNS=-3755.777 |
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[28]_i_96_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-20.917 | TNS=-3754.568 |
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[28]_i_95_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-20.899 | TNS=-3752.894 |
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_97_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-20.881 | TNS=-3751.221 |
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_98_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-20.864 | TNS=-3749.640 |
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[40]_i_95_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-20.839 | TNS=-3747.290 |
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[0]_i_9_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[0]_i_5_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[0]_i_5
+INFO: [Physopt 32-710] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[0]_i_9_n_0. Critical path length was reduced through logic transformation on cell design_1_i/Pooling_Controller_0/inst/avg_buff[0]_i_9_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[0]_i_5_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-20.821 | TNS=-3745.632 |
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[12]_i_8_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[12]_i_4_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[12]_i_4
+INFO: [Physopt 32-710] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[12]_i_8_n_0. Critical path length was reduced through logic transformation on cell design_1_i/Pooling_Controller_0/inst/avg_buff[12]_i_8_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[12]_i_4_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-20.817 | TNS=-3745.268 |
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[32]_i_95_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-20.806 | TNS=-3744.231 |
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[0]_i_5_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[0]_i_5
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[0]_i_5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[0]_i_24_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[0]_i_24
+INFO: [Physopt 32-710] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[0]_i_5_n_0. Critical path length was reduced through logic transformation on cell design_1_i/Pooling_Controller_0/inst/avg_buff[0]_i_5_comp_2.
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[0]_i_24_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-20.799 | TNS=-3743.594 |
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[32]_i_96_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-20.786 | TNS=-3742.379 |
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[4]_i_10_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[4]_i_6_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[4]_i_6
+INFO: [Physopt 32-710] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[4]_i_10_n_0. Critical path length was reduced through logic transformation on cell design_1_i/Pooling_Controller_0/inst/avg_buff[4]_i_10_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[4]_i_6_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-20.783 | TNS=-3742.106 |
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[28]_i_97_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-81] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[92]_i_160_n_0. Replicated 4 times.
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[92]_i_160_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-20.778 | TNS=-3741.617 |
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[8]_i_9_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-20.721 | TNS=-3736.317 |
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_9_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-20.718 | TNS=-3736.037 |
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[0]_i_10_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-20.715 | TNS=-3735.759 |
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[12]_i_9_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-20.706 | TNS=-3734.922 |
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[8]_i_10_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[8]_i_6_n_0.  Re-placed instance design_1_i/Pooling_Controller_0/inst/avg_buff[8]_i_6
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[8]_i_6_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-20.692 | TNS=-3733.618 |
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[0]_i_676_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[0]_i_672_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[0]_i_672
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[0]_i_672_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-20.687 | TNS=-3733.154 |
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[4]_i_6_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[4]_i_6
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[4]_i_6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[4]_i_18_n_0.  Re-placed instance design_1_i/Pooling_Controller_0/inst/avg_buff[4]_i_18
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[4]_i_18_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-20.681 | TNS=-3732.596 |
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[8]_i_6_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[8]_i_6
+INFO: [Physopt 32-572] Net design_1_i/Pooling_Controller_0/inst/avg_buff[8]_i_6_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[8]_i_6_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-20.681 | TNS=-3732.596 |
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[4]_i_9_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-20.673 | TNS=-3731.853 |
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_9_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_5_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_5
+INFO: [Physopt 32-710] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_9_n_0. Critical path length was reduced through logic transformation on cell design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_9_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_5_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-20.667 | TNS=-3731.295 |
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[12]_i_9_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[12]_i_5_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[12]_i_5
+INFO: [Physopt 32-710] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[12]_i_9_n_0. Critical path length was reduced through logic transformation on cell design_1_i/Pooling_Controller_0/inst/avg_buff[12]_i_9_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[12]_i_5_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-20.667 | TNS=-3731.294 |
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[12]_i_4_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[12]_i_4
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[12]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[12]_i_14_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[12]_i_14
+INFO: [Physopt 32-710] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[12]_i_4_n_0. Critical path length was reduced through logic transformation on cell design_1_i/Pooling_Controller_0/inst/avg_buff[12]_i_4_comp_1.
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[12]_i_14_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-20.654 | TNS=-3730.085 |
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[8]_i_6_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[8]_i_6
+INFO: [Physopt 32-572] Net design_1_i/Pooling_Controller_0/inst/avg_buff[8]_i_6_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[8]_i_6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[8]_i_18_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[8]_i_18
+INFO: [Physopt 32-710] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[8]_i_6_n_0. Critical path length was reduced through logic transformation on cell design_1_i/Pooling_Controller_0/inst/avg_buff[8]_i_6_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[8]_i_18_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-20.646 | TNS=-3729.340 |
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[0]_i_85_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-20.621 | TNS=-3727.016 |
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[20]_i_9_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[20]_i_5_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[20]_i_5
+INFO: [Physopt 32-572] Net design_1_i/Pooling_Controller_0/inst/avg_buff[20]_i_5_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[20]_i_5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[20]_i_16_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[20]_i_16
+INFO: [Physopt 32-710] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[20]_i_5_n_0. Critical path length was reduced through logic transformation on cell design_1_i/Pooling_Controller_0/inst/avg_buff[20]_i_5_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[20]_i_16_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-20.599 | TNS=-3724.970 |
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[4]_i_18_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[4]_i_18
+INFO: [Physopt 32-710] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[4]_i_6_n_0. Critical path length was reduced through logic transformation on cell design_1_i/Pooling_Controller_0/inst/avg_buff[4]_i_6_comp_1.
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[4]_i_18_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-20.596 | TNS=-3724.691 |
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[4]_i_7_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[4]_i_3_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[4]_i_3
+INFO: [Physopt 32-710] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[4]_i_7_n_0. Critical path length was reduced through logic transformation on cell design_1_i/Pooling_Controller_0/inst/avg_buff[4]_i_7_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[4]_i_3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-20.587 | TNS=-3723.853 |
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[0]_i_85_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[0]_i_81_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[0]_i_81
+INFO: [Physopt 32-572] Net design_1_i/Pooling_Controller_0/inst/avg_buff[0]_i_81_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[0]_i_81_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[0]_i_153_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[0]_i_153
+INFO: [Physopt 32-710] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[0]_i_81_n_0. Critical path length was reduced through logic transformation on cell design_1_i/Pooling_Controller_0/inst/avg_buff[0]_i_81_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[0]_i_153_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-20.582 | TNS=-3723.389 |
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[0]_i_10_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[0]_i_6_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[0]_i_6
+INFO: [Physopt 32-710] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[0]_i_10_n_0. Critical path length was reduced through logic transformation on cell design_1_i/Pooling_Controller_0/inst/avg_buff[0]_i_10_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[0]_i_6_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-20.569 | TNS=-3722.180 |
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_5_n_0_repN.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_5_comp
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_5_n_0_repN. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_14_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_14
+INFO: [Physopt 32-134] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_14_n_0. Rewiring did not optimize the net.
+INFO: [Physopt 32-572] Net design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_14_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_14_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff_reg[20]_i_15_n_7. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff_reg[16]_i_15_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff_reg[12]_i_15_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff_reg[8]_i_15_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff_reg[4]_i_15_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff_reg[0]_i_25_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff[0]_i_68_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/avg_buff[0]_i_64_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/avg_buff[0]_i_64
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff[0]_i_64_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff_reg[0]_i_133_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff_reg[0]_i_194_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff_reg[0]_i_317_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff_reg[0]_i_440_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff[0]_i_611_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/avg_buff[0]_i_607_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/avg_buff[0]_i_607
+INFO: [Physopt 32-571] Net design_1_i/Pooling_Controller_0/avg_buff[0]_i_607_n_0 was not replicated.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff[0]_i_607_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff_reg[0]_i_755_n_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff_reg[0]_i_925_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff_reg[0]_i_1030_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff_reg[0]_i_1127_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff_reg[0]_i_1220_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff_reg[0]_i_1310_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff_reg[0]_i_1399_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff_reg[0]_i_1472_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/avg_buff[0]_i_1544_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-20.566 | TNS=-3721.900 |
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[0]_i_19_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-20.556 | TNS=-3720.971 |
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff[0]_i_1544_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[92]_i_39_0[16]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[20]_i_103_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[16]_i_103_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_131_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_127_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_127
+INFO: [Physopt 32-710] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_131_n_0. Critical path length was reduced through logic transformation on cell design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_131_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_127_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-20.546 | TNS=-3720.031 |
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[20]_i_130_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[20]_i_126_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[20]_i_126
+INFO: [Physopt 32-572] Net design_1_i/Pooling_Controller_0/inst/avg_buff[20]_i_126_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[20]_i_126_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[20]_i_150_n_0.  Re-placed instance design_1_i/Pooling_Controller_0/inst/avg_buff[20]_i_150
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[20]_i_150_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-20.532 | TNS=-3718.737 |
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[20]_i_129_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[20]_i_125_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[20]_i_125
+INFO: [Physopt 32-572] Net design_1_i/Pooling_Controller_0/inst/avg_buff[20]_i_125_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[20]_i_125_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[20]_i_149_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[20]_i_149
+INFO: [Physopt 32-710] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[20]_i_125_n_0. Critical path length was reduced through logic transformation on cell design_1_i/Pooling_Controller_0/inst/avg_buff[20]_i_125_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[20]_i_149_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-20.504 | TNS=-3716.190 |
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff[0]_i_1041_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[92]_i_39_0[41]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[44]_i_90_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[40]_i_96_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[36]_i_99_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[32]_i_99_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[28]_i_99_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[24]_i_101_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[24]_i_128_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-20.499 | TNS=-3715.734 |
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_127_n_0_repN.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_127_comp
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_127_n_0_repN. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-20.484 | TNS=-3714.340 |
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[28]_i_125_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-20.470 | TNS=-3712.974 |
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_127_n_0_repN_1.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_127_comp_1
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_127_n_0_repN_1. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-20.454 | TNS=-3711.489 |
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_126_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_126
+INFO: [Physopt 32-572] Net design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_126_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_126_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_154_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_154
+INFO: [Physopt 32-710] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_126_n_0. Critical path length was reduced through logic transformation on cell design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_126_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_154_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-20.424 | TNS=-3708.738 |
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[40]_i_114_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[40]_i_114
+INFO: [Physopt 32-572] Net design_1_i/Pooling_Controller_0/inst/avg_buff[40]_i_114_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[40]_i_114_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[40]_i_122_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[40]_i_122
+INFO: [Physopt 32-710] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[40]_i_114_n_0. Critical path length was reduced through logic transformation on cell design_1_i/Pooling_Controller_0/inst/avg_buff[40]_i_114_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[40]_i_122_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-20.423 | TNS=-3708.656 |
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[32]_i_124_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[32]_i_120_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[32]_i_120
+INFO: [Physopt 32-710] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[32]_i_124_n_0. Critical path length was reduced through logic transformation on cell design_1_i/Pooling_Controller_0/inst/avg_buff[32]_i_124_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[32]_i_120_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-20.423 | TNS=-3708.656 |
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_127_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_127
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_127_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_155_n_0.  Re-placed instance design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_155
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_155_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-20.420 | TNS=-3708.383 |
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[32]_i_120_n_0_repN.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[32]_i_120_comp
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[32]_i_120_n_0_repN. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[32]_i_131_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[32]_i_131
+INFO: [Physopt 32-134] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[32]_i_131_n_0. Rewiring did not optimize the net.
+INFO: [Physopt 32-572] Net design_1_i/Pooling_Controller_0/inst/avg_buff[32]_i_131_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[32]_i_131_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-20.418 | TNS=-3708.188 |
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[0]_i_672_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[0]_i_672
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[0]_i_672_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[0]_i_850_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[0]_i_850
+INFO: [Physopt 32-572] Net design_1_i/Pooling_Controller_0/inst/avg_buff[0]_i_850_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[0]_i_850_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-20.406 | TNS=-3707.047 |
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[20]_i_150_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[20]_i_150
+INFO: [Physopt 32-710] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[20]_i_126_n_0. Critical path length was reduced through logic transformation on cell design_1_i/Pooling_Controller_0/inst/avg_buff[20]_i_126_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[20]_i_150_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-20.405 | TNS=-3706.957 |
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_127_n_0_repN_1.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_127_comp_1
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_127_n_0_repN_1. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[20]_i_151_n_7. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[16]_i_156_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_167_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_163_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_163
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_163_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[20]_i_188_n_7. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[0]_i_662_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[0]_i_789_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[0]_i_786_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[0]_i_786
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[0]_i_786_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/dataSet_reg[2][4]_22[0].  Did not re-place instance design_1_i/Pooling_Controller_0/inst/dataSet_reg[2][4][0]
+INFO: [Physopt 32-572] Net design_1_i/Pooling_Controller_0/inst/dataSet_reg[2][4]_22[0] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/dataSet_reg[2][4]_22[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg_n_0_[3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[92]_i_3_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[92]_i_3
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[92]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[92]_i_12_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[92]_i_37_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[92]_i_40_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[92]_i_398_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[36]_i_2_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_9_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_5_n_0_repN.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_5_comp
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_5_n_0_repN. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_14_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_14
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_14_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff_reg[20]_i_15_n_7. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff[0]_i_68_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/avg_buff[0]_i_64_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/avg_buff[0]_i_64
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff[0]_i_64_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff_reg[0]_i_133_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff[0]_i_611_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/avg_buff[0]_i_607_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/avg_buff[0]_i_607
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff[0]_i_607_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff_reg[0]_i_755_n_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff[0]_i_1544_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[92]_i_39_0[16]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_131_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-20.398 | TNS=-3706.320 |
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff[0]_i_1041_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[92]_i_39_0[41]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[24]_i_128_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[24]_i_124_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[24]_i_124
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[24]_i_124_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[24]_i_148_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[24]_i_148
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[24]_i_148_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-20.387 | TNS=-3705.318 |
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[32]_i_122_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[32]_i_118_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[32]_i_118
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[32]_i_118_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[32]_i_130_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[32]_i_130
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[32]_i_130_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-20.386 | TNS=-3705.203 |
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_121_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_117_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_117
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_117_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_129_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_129
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_129_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[40]_i_124_n_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_144_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_140_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_140
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_140_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[36]_i_169_n_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[20]_i_203_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[20]_i_199_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[20]_i_199
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[20]_i_199_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/dataSet_reg[2][4]_22[3].  Did not re-place instance design_1_i/Pooling_Controller_0/inst/dataSet_reg[2][4][3]
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/dataSet_reg[2][4]_22[3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-20.386 | TNS=-3705.203 |
+Phase 3 Critical Path Optimization | Checksum: 185f12c59
+
+Time (s): cpu = 00:01:19 ; elapsed = 00:00:43 . Memory (MB): peak = 2119.215 ; gain = 15.500
+
+Phase 4 Critical Path Optimization
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-20.386 | TNS=-3705.203 |
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg_n_0_[3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-572] Net design_1_i/Pooling_Controller_0/inst/avg_buff[92]_i_3_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[92]_i_3_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[92]_i_3
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[92]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[92]_i_12_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[92]_i_37_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[92]_i_40_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[92]_i_90_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[92]_i_123_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[92]_i_199_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[92]_i_221_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[92]_i_254_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[92]_i_268_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[92]_i_282_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[92]_i_296_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[92]_i_310_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[92]_i_324_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[92]_i_338_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[92]_i_352_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[92]_i_366_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[92]_i_380_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[92]_i_398_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[36]_i_2_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[32]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[28]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[24]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[20]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[16]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_9_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_5_n_0_repN.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_5_comp
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_5_n_0_repN. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_14_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_14
+INFO: [Physopt 32-134] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_14_n_0. Rewiring did not optimize the net.
+INFO: [Physopt 32-572] Net design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_14_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_14_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff_reg[20]_i_15_n_7. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff_reg[16]_i_15_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff_reg[12]_i_15_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff_reg[8]_i_15_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff_reg[4]_i_15_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff_reg[0]_i_25_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff[0]_i_68_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/avg_buff[0]_i_64_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/avg_buff[0]_i_64
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff[0]_i_64_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff_reg[0]_i_133_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff_reg[0]_i_194_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff_reg[0]_i_317_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff_reg[0]_i_440_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff[0]_i_611_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/avg_buff[0]_i_607_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/avg_buff[0]_i_607
+INFO: [Physopt 32-571] Net design_1_i/Pooling_Controller_0/avg_buff[0]_i_607_n_0 was not replicated.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff[0]_i_607_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff_reg[0]_i_755_n_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff_reg[0]_i_925_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff[0]_i_1041_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[92]_i_39_0[41]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[44]_i_90_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[40]_i_96_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[36]_i_99_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_121_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_117_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_117
+INFO: [Physopt 32-572] Net design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_117_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_117_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_129_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_129
+INFO: [Physopt 32-710] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_117_n_0. Critical path length was reduced through logic transformation on cell design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_117_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_129_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-20.382 | TNS=-3704.812 |
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_129_n_0_repN.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_129_comp
+INFO: [Physopt 32-710] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_117_n_0. Critical path length was reduced through logic transformation on cell design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_117_comp_1.
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_129_n_0_repN. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-20.380 | TNS=-3704.642 |
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff_reg[0]_i_1030_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff_reg[0]_i_1127_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff_reg[0]_i_1220_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff_reg[0]_i_1310_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff_reg[0]_i_1399_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff_reg[0]_i_1472_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/avg_buff[0]_i_1544_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-20.379 | TNS=-3704.550 |
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[32]_i_99_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[28]_i_99_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[24]_i_101_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[24]_i_122_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[24]_i_122
+INFO: [Physopt 32-572] Net design_1_i/Pooling_Controller_0/inst/avg_buff[24]_i_122_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[24]_i_122_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[24]_i_142_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[24]_i_142
+INFO: [Physopt 32-134] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[24]_i_142_n_0. Rewiring did not optimize the net.
+INFO: [Physopt 32-572] Net design_1_i/Pooling_Controller_0/inst/avg_buff[24]_i_142_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[24]_i_142_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-20.367 | TNS=-3703.458 |
+INFO: [Common 17-14] Message 'Physopt 32-619' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[40]_i_126_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[36]_i_134_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_157_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_153_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_153
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_153_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[40]_i_169_n_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[36]_i_174_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[32]_i_174_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[28]_i_179_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[24]_i_186_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[20]_i_193_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[20]_i_243_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[20]_i_239_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[20]_i_239
+INFO: [Physopt 32-571] Net design_1_i/Pooling_Controller_0/inst/avg_buff[20]_i_239_n_0 was not replicated.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[20]_i_239_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/dataSet_reg[0][4]_4[3].  Did not re-place instance design_1_i/Pooling_Controller_0/inst/dataSet_reg[0][4][3]
+INFO: [Physopt 32-572] Net design_1_i/Pooling_Controller_0/inst/dataSet_reg[0][4]_4[3] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/dataSet_reg[0][4]_4[3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg_n_0_[3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[92]_i_3_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[92]_i_3
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[92]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[92]_i_12_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[92]_i_37_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[92]_i_40_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[92]_i_398_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[36]_i_2_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_9_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_5_n_0_repN.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_5_comp
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_5_n_0_repN. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_14_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_14
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[16]_i_14_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff_reg[20]_i_15_n_7. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff[0]_i_68_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/avg_buff[0]_i_64_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/avg_buff[0]_i_64
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff[0]_i_64_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff_reg[0]_i_133_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff[0]_i_611_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/avg_buff[0]_i_607_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/avg_buff[0]_i_607
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff[0]_i_607_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff_reg[0]_i_755_n_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/avg_buff[0]_i_1041_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[92]_i_39_0[41]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_121_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_117_n_0.  Re-placed instance design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_117_comp_1
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_117_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[32]_i_121_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[32]_i_117_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[32]_i_117
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[32]_i_117_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[32]_i_129_n_0.  Re-placed instance design_1_i/Pooling_Controller_0/inst/avg_buff[32]_i_129
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[32]_i_129_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[40]_i_120_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[32]_i_122_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[32]_i_118_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[32]_i_118
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[32]_i_118_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[32]_i_130_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[32]_i_130
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[32]_i_130_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[36]_i_133_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[28]_i_154_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[28]_i_150_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[28]_i_150
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[28]_i_150_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[32]_i_172_n_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[28]_i_212_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[28]_i_208_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[28]_i_208
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[28]_i_208_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net design_1_i/Pooling_Controller_0/inst/dataSet_reg[1][7]_12[12].  Re-placed instance design_1_i/Pooling_Controller_0/inst/dataSet_reg[1][7][12]
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/dataSet_reg[1][7]_12[12]. Optimization improves timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_117_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_117_comp_1
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_117_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_129_n_0_repN.  Re-placed instance design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_129_comp_1
+INFO: [Physopt 32-735] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[36]_i_129_n_0_repN. Optimization improves timing on the net.
+INFO: [Common 17-14] Message 'Physopt 32-735' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[32]_i_148_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[32]_i_148
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[32]_i_148_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff_reg[32]_i_171_n_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[0]_i_801_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[0]_i_798_n_0.  Did not re-place instance design_1_i/Pooling_Controller_0/inst/avg_buff[0]_i_798
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/avg_buff[0]_i_798_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_1_i/Pooling_Controller_0/inst/dataSet_reg[1][4]_13[2].  Did not re-place instance design_1_i/Pooling_Controller_0/inst/dataSet_reg[1][4][2]
+INFO: [Physopt 32-702] Processed net design_1_i/Pooling_Controller_0/inst/dataSet_reg[1][4]_13[2]. Optimizations did not improve timing on the net.
+Phase 4 Critical Path Optimization | Checksum: 185f12c59
+
+Time (s): cpu = 00:01:46 ; elapsed = 00:00:57 . Memory (MB): peak = 2119.223 ; gain = 15.508
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.096 . Memory (MB): peak = 2119.223 ; gain = 0.000
+INFO: [Physopt 32-603] Post Physical Optimization Timing Summary | WNS=-20.339 | TNS=-3700.854 |
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization   |  WNS Gain (ns)  |  TNS Gain (ns)  |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  DSP Register   |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Critical Path  |          1.217  |        113.142  |            7  |              0  |                   100  |           0  |           2  |  00:00:53  |
+|  Total          |          1.217  |        113.142  |            7  |              0  |                   100  |           0  |           3  |  00:00:53  |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 2119.223 ; gain = 0.000
+Ending Physical Synthesis Task | Checksum: 11ee3975a
+
+Time (s): cpu = 00:01:47 ; elapsed = 00:00:57 . Memory (MB): peak = 2119.223 ; gain = 15.508
+INFO: [Common 17-83] Releasing license: Implementation
+839 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+phys_opt_design: Time (s): cpu = 00:01:56 ; elapsed = 00:01:02 . Memory (MB): peak = 2119.223 ; gain = 28.844
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:05 ; elapsed = 00:00:01 . Memory (MB): peak = 2121.367 ; gain = 2.145
+INFO: [Common 17-1381] The checkpoint 'C:/GitHub/ReconHardware/FPGA_Files/CPE/Projects/pooling_layer/pooling_layer.runs/impl_1/design_1_wrapper_physopt.dcp' has been generated.
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
+Checksum: PlaceDB: 30253ef3 ConstDB: 0 ShapeSum: 8af5f90a RouteDB: 0
+
+Phase 1 Build RT Design
+Phase 1 Build RT Design | Checksum: 111e5a9ac
+
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:21 . Memory (MB): peak = 2228.109 ; gain = 94.137
+Post Restoration Checksum: NetGraph: f0615fd0 NumContArr: 218449dc Constraints: 0 Timing: 0
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: 111e5a9ac
+
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:22 . Memory (MB): peak = 2228.109 ; gain = 94.137
+
+Phase 2.2 Fix Topology Constraints
+Phase 2.2 Fix Topology Constraints | Checksum: 111e5a9ac
+
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:22 . Memory (MB): peak = 2230.090 ; gain = 96.117
+
+Phase 2.3 Pre Route Cleanup
+Phase 2.3 Pre Route Cleanup | Checksum: 111e5a9ac
+
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:22 . Memory (MB): peak = 2230.090 ; gain = 96.117
+
+Phase 2.4 Update Timing
+Phase 2.4 Update Timing | Checksum: 11d66980c
+
+Time (s): cpu = 00:00:56 ; elapsed = 00:00:30 . Memory (MB): peak = 2261.855 ; gain = 127.883
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-20.330| TNS=-3541.223| WHS=-0.456 | THS=-283.555|
+
+Phase 2 Router Initialization | Checksum: 1dcff57ee
+
+Time (s): cpu = 00:01:05 ; elapsed = 00:00:35 . Memory (MB): peak = 2284.184 ; gain = 150.211
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0 %
+  Global Horizontal Routing Utilization  = 0 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 21184
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 21183
+  Number of Partially Routed Nets     = 1
+  Number of Node Overlaps             = 12
+
+
+Phase 3 Initial Routing
+Phase 3 Initial Routing | Checksum: 14263fe88
+
+Time (s): cpu = 00:01:12 ; elapsed = 00:00:39 . Memory (MB): peak = 2310.301 ; gain = 176.328
+INFO: [Route 35-580] Design has 214 pins with tight setup and hold constraints.
+
+The top 5 pins with tight setup and hold constraints:
+
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+|       Launch Clock       |      Capture Clock       |                                                 Pin                                                      |
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+|               clk_fpga_0 |               clk_fpga_0 |                                                   design_1_i/Pooling_Controller_0/inst/avg_buff_reg[56]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                                                   design_1_i/Pooling_Controller_0/inst/avg_buff_reg[35]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                                                   design_1_i/Pooling_Controller_0/inst/avg_buff_reg[40]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                                                   design_1_i/Pooling_Controller_0/inst/avg_buff_reg[43]/D|
+|               clk_fpga_0 |               clk_fpga_0 |                                                   design_1_i/Pooling_Controller_0/inst/avg_buff_reg[46]/D|
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+
+File with complete list of pins: tight_setup_hold_pins.txt
+
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 4078
+ Number of Nodes with overlaps = 936
+ Number of Nodes with overlaps = 280
+ Number of Nodes with overlaps = 113
+ Number of Nodes with overlaps = 31
+ Number of Nodes with overlaps = 17
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-23.658| TNS=-20803.023| WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: b54e7f13
+
+Time (s): cpu = 00:01:50 ; elapsed = 00:01:03 . Memory (MB): peak = 2310.301 ; gain = 176.328
+
+Phase 4.2 Global Iteration 1
+ Number of Nodes with overlaps = 3692
+ Number of Nodes with overlaps = 1871
+ Number of Nodes with overlaps = 830
+ Number of Nodes with overlaps = 456
+ Number of Nodes with overlaps = 116
+ Number of Nodes with overlaps = 45
+ Number of Nodes with overlaps = 20
+ Number of Nodes with overlaps = 11
+ Number of Nodes with overlaps = 5
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-23.388| TNS=-20615.456| WHS=N/A    | THS=N/A    |
+
+Phase 4.2 Global Iteration 1 | Checksum: 142ed4852
+
+Time (s): cpu = 00:02:43 ; elapsed = 00:01:36 . Memory (MB): peak = 2310.301 ; gain = 176.328
+
+Phase 4.3 Global Iteration 2
+ Number of Nodes with overlaps = 555
+ Number of Nodes with overlaps = 646
+Phase 4.3 Global Iteration 2 | Checksum: 14fb14a23
+
+Time (s): cpu = 00:02:59 ; elapsed = 00:01:46 . Memory (MB): peak = 2310.301 ; gain = 176.328
+Phase 4 Rip-up And Reroute | Checksum: 14fb14a23
+
+Time (s): cpu = 00:02:59 ; elapsed = 00:01:46 . Memory (MB): peak = 2310.301 ; gain = 176.328
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+
+Phase 5.1.1 Update Timing
+Phase 5.1.1 Update Timing | Checksum: 183850fca
+
+Time (s): cpu = 00:03:03 ; elapsed = 00:01:48 . Memory (MB): peak = 2310.301 ; gain = 176.328
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-23.273| TNS=-20597.021| WHS=N/A    | THS=N/A    |
+
+ Number of Nodes with overlaps = 0
+Phase 5.1 Delay CleanUp | Checksum: 2099be282
+
+Time (s): cpu = 00:03:05 ; elapsed = 00:01:49 . Memory (MB): peak = 2310.301 ; gain = 176.328
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 2099be282
+
+Time (s): cpu = 00:03:05 ; elapsed = 00:01:49 . Memory (MB): peak = 2310.301 ; gain = 176.328
+Phase 5 Delay and Skew Optimization | Checksum: 2099be282
+
+Time (s): cpu = 00:03:05 ; elapsed = 00:01:49 . Memory (MB): peak = 2310.301 ; gain = 176.328
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 1b49ff392
+
+Time (s): cpu = 00:03:08 ; elapsed = 00:01:52 . Memory (MB): peak = 2310.301 ; gain = 176.328
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-23.090| TNS=-19513.327| WHS=-0.533 | THS=-6.620 |
+
+
+Phase 6.1.2 Lut RouteThru Assignment for hold
+Phase 6.1.2 Lut RouteThru Assignment for hold | Checksum: 15a1d3ce0
+
+Time (s): cpu = 00:03:09 ; elapsed = 00:01:52 . Memory (MB): peak = 2310.301 ; gain = 176.328
+Phase 6.1 Hold Fix Iter | Checksum: 15a1d3ce0
+
+Time (s): cpu = 00:03:09 ; elapsed = 00:01:52 . Memory (MB): peak = 2310.301 ; gain = 176.328
+
+Phase 6.2 Additional Hold Fix
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-23.090| TNS=-19513.327| WHS=-0.533 | THS=-6.620 |
+
+Phase 6.2 Additional Hold Fix | Checksum: 1c37c8d08
+
+Time (s): cpu = 00:03:13 ; elapsed = 00:01:55 . Memory (MB): peak = 2310.301 ; gain = 176.328
+Phase 6 Post Hold Fix | Checksum: 1e7b58d83
+
+Time (s): cpu = 00:03:14 ; elapsed = 00:01:56 . Memory (MB): peak = 2310.301 ; gain = 176.328
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 5.81091 %
+  Global Horizontal Routing Utilization  = 6.79082 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Congestion Report
+North Dir 1x1 Area, Max Cong = 83.7838%, No Congested Regions.
+South Dir 1x1 Area, Max Cong = 91.8919%, Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+   INT_L_X24Y24 -> INT_L_X24Y24
+   INT_L_X24Y20 -> INT_L_X24Y20
+East Dir 1x1 Area, Max Cong = 92.6471%, Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+   INT_L_X24Y21 -> INT_L_X24Y21
+   INT_L_X24Y19 -> INT_L_X24Y19
+   INT_L_X26Y17 -> INT_L_X26Y17
+   INT_L_X24Y9 -> INT_L_X24Y9
+   INT_R_X25Y8 -> INT_R_X25Y8
+West Dir 1x1 Area, Max Cong = 85.2941%, Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+   INT_L_X24Y13 -> INT_L_X24Y13
+
+------------------------------
+Reporting congestion hotspots
+------------------------------
+Direction: North
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: South
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 1 Aspect Ratio: 0.5 Sparse Ratio: 0.5
+Direction: East
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 1 Aspect Ratio: 1 Sparse Ratio: 0.75
+Direction: West
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 1
+
+Phase 7 Route finalize | Checksum: 1a63e1cd5
+
+Time (s): cpu = 00:03:15 ; elapsed = 00:01:56 . Memory (MB): peak = 2310.301 ; gain = 176.328
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 1a63e1cd5
+
+Time (s): cpu = 00:03:15 ; elapsed = 00:01:56 . Memory (MB): peak = 2310.301 ; gain = 176.328
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 1bfa37368
+
+Time (s): cpu = 00:03:17 ; elapsed = 00:01:59 . Memory (MB): peak = 2310.301 ; gain = 176.328
+WARNING: [Route 35-419] Router was unable to fix hold violation on pin design_1_i/Pooling_Controller_0/inst/genblk1[2].br_coupler/row_full[0]_i_1/I4 driven by global clock buffer BUFGCTRL_X0Y16.
+Resolution: Run report_timing_summary to analyze the hold violations.
+WARNING: [Route 35-419] Router was unable to fix hold violation on pin design_1_i/Pooling_Controller_0/inst/s_axi_bvalid_i_1/I3 driven by global clock buffer BUFGCTRL_X0Y16.
+Resolution: Run report_timing_summary to analyze the hold violations.
+WARNING: [Route 35-419] Router was unable to fix hold violation on pin design_1_i/Pooling_Controller_0/inst/genblk1[1].br_coupler/row_full[1]_i_1/I4 driven by global clock buffer BUFGCTRL_X0Y16.
+Resolution: Run report_timing_summary to analyze the hold violations.
+WARNING: [Route 35-419] Router was unable to fix hold violation on pin design_1_i/Pooling_Controller_0/inst/genblk1[1].br_coupler/row_full[2]_i_1/I4 driven by global clock buffer BUFGCTRL_X0Y16.
+Resolution: Run report_timing_summary to analyze the hold violations.
+WARNING: [Route 35-419] Router was unable to fix hold violation on pin design_1_i/Pooling_Controller_0/inst/genblk1[2].br_coupler/row_full[1]_i_1/I4 driven by global clock buffer BUFGCTRL_X0Y16.
+Resolution: Run report_timing_summary to analyze the hold violations.
+WARNING: [Route 35-419] Router was unable to fix hold violation on pin design_1_i/Pooling_Controller_0/inst/genblk1[1].br_coupler/row_full[0]_i_1/I4 driven by global clock buffer BUFGCTRL_X0Y16.
+Resolution: Run report_timing_summary to analyze the hold violations.
+WARNING: [Route 35-419] Router was unable to fix hold violation on pin design_1_i/Pooling_Controller_0/inst/genblk1[0].br_coupler/row_full[0]_i_1/I4 driven by global clock buffer BUFGCTRL_X0Y16.
+Resolution: Run report_timing_summary to analyze the hold violations.
+WARNING: [Route 35-419] Router was unable to fix hold violation on pin design_1_i/Pooling_Controller_0/inst/genblk1[0].br_coupler/row_full[1]_i_1/I4 driven by global clock buffer BUFGCTRL_X0Y16.
+Resolution: Run report_timing_summary to analyze the hold violations.
+WARNING: [Route 35-419] Router was unable to fix hold violation on pin design_1_i/Pooling_Controller_0/inst/genblk1[0].br_coupler/row_full[2]_i_1/I4 driven by global clock buffer BUFGCTRL_X0Y16.
+Resolution: Run report_timing_summary to analyze the hold violations.
+WARNING: [Route 35-419] Router was unable to fix hold violation on pin design_1_i/Pooling_Controller_0/inst/genblk1[2].br_coupler/row_full[2]_i_1/I4 driven by global clock buffer BUFGCTRL_X0Y16.
+Resolution: Run report_timing_summary to analyze the hold violations.
+WARNING: [Route 35-419] Router was unable to fix hold violation on pin design_1_i/Pooling_Controller_0/inst/genblk1[0].br_coupler/wr_order[0]_i_1/I3 driven by global clock buffer BUFGCTRL_X0Y16.
+Resolution: Run report_timing_summary to analyze the hold violations.
+WARNING: [Route 35-419] Router was unable to fix hold violation on pin design_1_i/Pooling_Controller_0/inst/control_registers[0][30]_i_5/I1 driven by global clock buffer BUFGCTRL_X0Y16.
+Resolution: Run report_timing_summary to analyze the hold violations.
+WARNING: [Route 35-419] Router was unable to fix hold violation on pin design_1_i/Pooling_Controller_0/inst/wr_st_i_1/I3 driven by global clock buffer BUFGCTRL_X0Y16.
+Resolution: Run report_timing_summary to analyze the hold violations.
+WARNING: [Route 35-419] Router was unable to fix hold violation on pin design_1_i/Pooling_Controller_0/inst/genblk1[2].br_coupler/valid_i_1/I1 driven by global clock buffer BUFGCTRL_X0Y16.
+Resolution: Run report_timing_summary to analyze the hold violations.
+WARNING: [Route 35-419] Router was unable to fix hold violation on pin design_1_i/Pooling_Controller_0/inst/genblk1[1].br_coupler/wr_order[0]_i_1/I3 driven by global clock buffer BUFGCTRL_X0Y16.
+Resolution: Run report_timing_summary to analyze the hold violations.
+WARNING: [Route 35-419] Router was unable to fix hold violation on pin design_1_i/Pooling_Controller_0/inst/s_axi_awready_i_1/I3 driven by global clock buffer BUFGCTRL_X0Y16.
+Resolution: Run report_timing_summary to analyze the hold violations.
+WARNING: [Route 35-419] Router was unable to fix hold violation on pin design_1_i/Pooling_Controller_0/inst/s_axi_rvalid_i_1/I0 driven by global clock buffer BUFGCTRL_X0Y16.
+Resolution: Run report_timing_summary to analyze the hold violations.
+
+Phase 10 Post Router Timing
+
+Phase 10.1 Update Timing
+Phase 10.1 Update Timing | Checksum: 17b1e3a3f
+
+Time (s): cpu = 00:03:20 ; elapsed = 00:02:01 . Memory (MB): peak = 2310.301 ; gain = 176.328
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-23.090| TNS=-19513.327| WHS=-0.533 | THS=-6.620 |
+
+WARNING: [Route 35-328] Router estimated timing not met.
+Resolution: For a complete and accurate timing signoff, report_timing_summary must be run after route_design. Alternatively, route_design can be run with the -timing_summary option to enable a complete timing signoff at the end of route_design.
+Phase 10 Post Router Timing | Checksum: 17b1e3a3f
+
+Time (s): cpu = 00:03:20 ; elapsed = 00:02:01 . Memory (MB): peak = 2310.301 ; gain = 176.328
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:03:20 ; elapsed = 00:02:01 . Memory (MB): peak = 2310.301 ; gain = 176.328
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+859 Infos, 22 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:03:23 ; elapsed = 00:02:02 . Memory (MB): peak = 2310.301 ; gain = 188.934
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:05 ; elapsed = 00:00:02 . Memory (MB): peak = 2310.301 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/GitHub/ReconHardware/FPGA_Files/CPE/Projects/pooling_layer/pooling_layer.runs/impl_1/design_1_wrapper_routed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file design_1_wrapper_drc_routed.rpt -pb design_1_wrapper_drc_routed.pb -rpx design_1_wrapper_drc_routed.rpx
+Command: report_drc -file design_1_wrapper_drc_routed.rpt -pb design_1_wrapper_drc_routed.pb -rpx design_1_wrapper_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file C:/GitHub/ReconHardware/FPGA_Files/CPE/Projects/pooling_layer/pooling_layer.runs/impl_1/design_1_wrapper_drc_routed.rpt.
+report_drc completed successfully
+INFO: [runtcl-4] Executing : report_methodology -file design_1_wrapper_methodology_drc_routed.rpt -pb design_1_wrapper_methodology_drc_routed.pb -rpx design_1_wrapper_methodology_drc_routed.rpx
+Command: report_methodology -file design_1_wrapper_methodology_drc_routed.rpt -pb design_1_wrapper_methodology_drc_routed.pb -rpx design_1_wrapper_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 2 threads
+INFO: [Coretcl 2-1520] The results of Report Methodology are in file C:/GitHub/ReconHardware/FPGA_Files/CPE/Projects/pooling_layer/pooling_layer.runs/impl_1/design_1_wrapper_methodology_drc_routed.rpt.
+report_methodology completed successfully
+report_methodology: Time (s): cpu = 00:00:20 ; elapsed = 00:00:13 . Memory (MB): peak = 2399.609 ; gain = 89.309
+INFO: [runtcl-4] Executing : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
+Command: report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+WARNING: [Power 33-332] Found switching activity that implies high-fanout reset nets being asserted for excessive periods of time which may result in inaccurate power analysis.
+Resolution: To review and fix problems, please run Power Constraints Advisor in the GUI from Tools > Power Constraints Advisor or run report_power with the -advisory option to generate a text report.
+871 Infos, 23 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+report_power: Time (s): cpu = 00:00:14 ; elapsed = 00:00:08 . Memory (MB): peak = 2410.699 ; gain = 11.090
+INFO: [runtcl-4] Executing : report_route_status -file design_1_wrapper_route_status.rpt -pb design_1_wrapper_route_status.pb
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file design_1_wrapper_timing_summary_routed.rpt -pb design_1_wrapper_timing_summary_routed.pb -rpx design_1_wrapper_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+INFO: [runtcl-4] Executing : report_incremental_reuse -file design_1_wrapper_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [runtcl-4] Executing : report_clock_utilization -file design_1_wrapper_clock_utilization_routed.rpt
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file design_1_wrapper_bus_skew_routed.rpt -pb design_1_wrapper_bus_skew_routed.pb -rpx design_1_wrapper_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 13 14:27:06 2021...

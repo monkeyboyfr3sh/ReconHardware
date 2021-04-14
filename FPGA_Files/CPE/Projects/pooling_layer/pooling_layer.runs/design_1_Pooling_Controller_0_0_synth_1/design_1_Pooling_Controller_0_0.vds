@@ -1,0 +1,333 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Tue Apr 13 14:17:50 2021
+# Process ID: 7112
+# Current directory: C:/GitHub/ReconHardware/FPGA_Files/CPE/Projects/pooling_layer/pooling_layer.runs/design_1_Pooling_Controller_0_0_synth_1
+# Command line: vivado.exe -log design_1_Pooling_Controller_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_Pooling_Controller_0_0.tcl
+# Log file: C:/GitHub/ReconHardware/FPGA_Files/CPE/Projects/pooling_layer/pooling_layer.runs/design_1_Pooling_Controller_0_0_synth_1/design_1_Pooling_Controller_0_0.vds
+# Journal file: C:/GitHub/ReconHardware/FPGA_Files/CPE/Projects/pooling_layer/pooling_layer.runs/design_1_Pooling_Controller_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source design_1_Pooling_Controller_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/GitHub/ReconHardware/FPGA_Files/CPE/Sources/IP_Source'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.1/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is c:/GitHub/ReconHardware/FPGA_Files/CPE/Projects/pooling_layer/pooling_layer.cache/ip 
+Command: synth_design -top design_1_Pooling_Controller_0_0 -part xc7z020clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 7844
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1079.773 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_Pooling_Controller_0_0' [c:/GitHub/ReconHardware/FPGA_Files/CPE/Projects/pooling_layer/pooling_layer.srcs/sources_1/bd/design_1/ip/design_1_Pooling_Controller_0_0/synth/design_1_Pooling_Controller_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'Pooling_Controller' [c:/GitHub/ReconHardware/FPGA_Files/CPE/Projects/pooling_layer/pooling_layer.srcs/sources_1/bd/design_1/ipshared/756d/AXI_Pooling_Controller.v:7]
+	Parameter KERNEL_SIZE bound to: 3 - type: integer 
+	Parameter CHANNELS bound to: 3 - type: integer 
+	Parameter BRAM_WIDTH bound to: 1800 - type: integer 
+	Parameter K_SQUARED bound to: 9 - type: integer 
+	Parameter FILTER_BASE bound to: 24 - type: integer 
+	Parameter FINAL_CHANNEL bound to: 4 - type: integer 
+	Parameter DATA_BASE bound to: 60 - type: integer 
+	Parameter CTRL_REG_SIZE bound to: 96 - type: integer 
+	Parameter CTRL_REG_ADDR_WIDTH bound to: 7 - type: string 
+	Parameter STATE_MAC_ADDR_WIDTH bound to: 4 - type: string 
+	Parameter AXI_BUS_WIDTH bound to: 32 - type: integer 
+	Parameter AXI_ADDR_WIDTH bound to: 10 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'bram_coupler' [c:/GitHub/ReconHardware/FPGA_Files/CPE/Projects/pooling_layer/pooling_layer.srcs/sources_1/bd/design_1/ipshared/756d/src/bram_coupler.v:1]
+	Parameter BUS_WIDTH bound to: 32 - type: integer 
+	Parameter ROWS bound to: 3 - type: integer 
+	Parameter MAX_ROW_WIDTH bound to: 1800 - type: integer 
+	Parameter MUXS_WIDTH bound to: 2 - type: integer 
+	Parameter ADDR_WIDTH bound to: 11 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'bram_wrapper' [c:/GitHub/ReconHardware/FPGA_Files/CPE/Projects/pooling_layer/pooling_layer.srcs/sources_1/bd/design_1/ipshared/756d/src/bram_wrapper.v:1]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter BRAM_WIDTH bound to: 1800 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'bram_wrapper' (1#1) [c:/GitHub/ReconHardware/FPGA_Files/CPE/Projects/pooling_layer/pooling_layer.srcs/sources_1/bd/design_1/ipshared/756d/src/bram_wrapper.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'bram_coupler' (2#1) [c:/GitHub/ReconHardware/FPGA_Files/CPE/Projects/pooling_layer/pooling_layer.srcs/sources_1/bd/design_1/ipshared/756d/src/bram_coupler.v:1]
+WARNING: [Synth 8-689] width (32) of port connection 'r_add' does not match port width (11) of module 'bram_coupler' [c:/GitHub/ReconHardware/FPGA_Files/CPE/Projects/pooling_layer/pooling_layer.srcs/sources_1/bd/design_1/ipshared/756d/AXI_Pooling_Controller.v:136]
+WARNING: [Synth 8-689] width (32) of port connection 'r_add' does not match port width (11) of module 'bram_coupler' [c:/GitHub/ReconHardware/FPGA_Files/CPE/Projects/pooling_layer/pooling_layer.srcs/sources_1/bd/design_1/ipshared/756d/AXI_Pooling_Controller.v:136]
+WARNING: [Synth 8-689] width (32) of port connection 'r_add' does not match port width (11) of module 'bram_coupler' [c:/GitHub/ReconHardware/FPGA_Files/CPE/Projects/pooling_layer/pooling_layer.srcs/sources_1/bd/design_1/ipshared/756d/AXI_Pooling_Controller.v:136]
+INFO: [Synth 8-6155] done synthesizing module 'Pooling_Controller' (3#1) [c:/GitHub/ReconHardware/FPGA_Files/CPE/Projects/pooling_layer/pooling_layer.srcs/sources_1/bd/design_1/ipshared/756d/AXI_Pooling_Controller.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_Pooling_Controller_0_0' (4#1) [c:/GitHub/ReconHardware/FPGA_Files/CPE/Projects/pooling_layer/pooling_layer.srcs/sources_1/bd/design_1/ip/design_1_Pooling_Controller_0_0/synth/design_1_Pooling_Controller_0_0.v:58]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1236.645 ; gain = 156.871
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1236.645 ; gain = 156.871
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1236.645 ; gain = 156.871
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.166 . Memory (MB): peak = 1236.645 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+CRITICAL WARNING: [Designutils 20-1281] Could not find module 'BRAM'. The XDC file c:/GitHub/ReconHardware/FPGA_Files/CPE/Projects/pooling_layer/pooling_layer.srcs/sources_1/bd/design_1/ip/design_1_Pooling_Controller_0_0/src/BRAM/BRAM_ooc.xdc will not be read for this module.
+Parsing XDC File [C:/GitHub/ReconHardware/FPGA_Files/CPE/Projects/pooling_layer/pooling_layer.runs/design_1_Pooling_Controller_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/GitHub/ReconHardware/FPGA_Files/CPE/Projects/pooling_layer/pooling_layer.runs/design_1_Pooling_Controller_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1277.617 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.272 . Memory (MB): peak = 1282.766 ; gain = 5.148
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1282.766 ; gain = 202.992
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1282.766 ; gain = 202.992
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1282.766 ; gain = 202.992
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1282.766 ; gain = 202.992
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	  28 Input   96 Bit       Adders := 1     
+	   2 Input   32 Bit       Adders := 4     
+	   3 Input   32 Bit       Adders := 1     
+	   2 Input   12 Bit       Adders := 2     
+	   2 Input   11 Bit       Adders := 5     
+	   2 Input    3 Bit       Adders := 2     
+	   2 Input    2 Bit       Adders := 4     
++---Registers : 
+	               96 Bit    Registers := 1     
+	               32 Bit    Registers := 135   
+	               11 Bit    Registers := 5     
+	                3 Bit    Registers := 5     
+	                2 Bit    Registers := 4     
+	                1 Bit    Registers := 21    
++---RAMs : 
+	              56K Bit	(1800 X 32 bit)          RAMs := 9     
++---Muxes : 
+	   2 Input   96 Bit        Muxes := 2     
+	   2 Input   32 Bit        Muxes := 860   
+	   4 Input   32 Bit        Muxes := 9     
+	   2 Input   11 Bit        Muxes := 12    
+	   2 Input    3 Bit        Muxes := 26    
+	   2 Input    2 Bit        Muxes := 14    
+	   3 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 69    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:01 ; elapsed = 00:01:03 . Memory (MB): peak = 1350.504 ; gain = 270.730
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping	Report (see note below)
++--------------------------------+-----------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                     | RTL Object                                    | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++--------------------------------+-----------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|design_1_Pooling_Controller_0_0 | genblk1[2].br_coupler/genblk1[0].BRAM/mem_reg | 1 K x 32(READ_FIRST)   | W |   | 1 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 2      | 
+|design_1_Pooling_Controller_0_0 | genblk1[2].br_coupler/genblk1[1].BRAM/mem_reg | 1 K x 32(READ_FIRST)   | W |   | 1 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 2      | 
+|design_1_Pooling_Controller_0_0 | genblk1[2].br_coupler/genblk1[2].BRAM/mem_reg | 1 K x 32(READ_FIRST)   | W |   | 1 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 2      | 
+|design_1_Pooling_Controller_0_0 | genblk1[1].br_coupler/genblk1[0].BRAM/mem_reg | 1 K x 32(READ_FIRST)   | W |   | 1 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 2      | 
+|design_1_Pooling_Controller_0_0 | genblk1[1].br_coupler/genblk1[1].BRAM/mem_reg | 1 K x 32(READ_FIRST)   | W |   | 1 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 2      | 
+|design_1_Pooling_Controller_0_0 | genblk1[1].br_coupler/genblk1[2].BRAM/mem_reg | 1 K x 32(READ_FIRST)   | W |   | 1 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 2      | 
+|design_1_Pooling_Controller_0_0 | genblk1[0].br_coupler/genblk1[0].BRAM/mem_reg | 1 K x 32(READ_FIRST)   | W |   | 1 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 2      | 
+|design_1_Pooling_Controller_0_0 | genblk1[0].br_coupler/genblk1[1].BRAM/mem_reg | 1 K x 32(READ_FIRST)   | W |   | 1 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 2      | 
+|design_1_Pooling_Controller_0_0 | genblk1[0].br_coupler/genblk1[2].BRAM/mem_reg | 1 K x 32(READ_FIRST)   | W |   | 1 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 2      | 
++--------------------------------+-----------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:08 ; elapsed = 00:01:09 . Memory (MB): peak = 1350.504 ; gain = 270.730
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:08 ; elapsed = 00:01:09 . Memory (MB): peak = 1350.504 ; gain = 270.730
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping	Report
++--------------------------------+-----------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                     | RTL Object                                    | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++--------------------------------+-----------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|design_1_Pooling_Controller_0_0 | genblk1[2].br_coupler/genblk1[0].BRAM/mem_reg | 1 K x 32(READ_FIRST)   | W |   | 1 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 2      | 
+|design_1_Pooling_Controller_0_0 | genblk1[2].br_coupler/genblk1[1].BRAM/mem_reg | 1 K x 32(READ_FIRST)   | W |   | 1 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 2      | 
+|design_1_Pooling_Controller_0_0 | genblk1[2].br_coupler/genblk1[2].BRAM/mem_reg | 1 K x 32(READ_FIRST)   | W |   | 1 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 2      | 
+|design_1_Pooling_Controller_0_0 | genblk1[1].br_coupler/genblk1[0].BRAM/mem_reg | 1 K x 32(READ_FIRST)   | W |   | 1 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 2      | 
+|design_1_Pooling_Controller_0_0 | genblk1[1].br_coupler/genblk1[1].BRAM/mem_reg | 1 K x 32(READ_FIRST)   | W |   | 1 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 2      | 
+|design_1_Pooling_Controller_0_0 | genblk1[1].br_coupler/genblk1[2].BRAM/mem_reg | 1 K x 32(READ_FIRST)   | W |   | 1 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 2      | 
+|design_1_Pooling_Controller_0_0 | genblk1[0].br_coupler/genblk1[0].BRAM/mem_reg | 1 K x 32(READ_FIRST)   | W |   | 1 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 2      | 
+|design_1_Pooling_Controller_0_0 | genblk1[0].br_coupler/genblk1[1].BRAM/mem_reg | 1 K x 32(READ_FIRST)   | W |   | 1 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 2      | 
+|design_1_Pooling_Controller_0_0 | genblk1[0].br_coupler/genblk1[2].BRAM/mem_reg | 1 K x 32(READ_FIRST)   | W |   | 1 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 2      | 
++--------------------------------+-----------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance inst/genblk1[2].br_coupler/genblk1[0].BRAM/mem_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/genblk1[2].br_coupler/genblk1[0].BRAM/mem_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/genblk1[2].br_coupler/genblk1[1].BRAM/mem_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/genblk1[2].br_coupler/genblk1[1].BRAM/mem_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/genblk1[2].br_coupler/genblk1[2].BRAM/mem_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/genblk1[2].br_coupler/genblk1[2].BRAM/mem_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/genblk1[1].br_coupler/genblk1[0].BRAM/mem_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/genblk1[1].br_coupler/genblk1[0].BRAM/mem_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/genblk1[1].br_coupler/genblk1[1].BRAM/mem_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/genblk1[1].br_coupler/genblk1[1].BRAM/mem_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/genblk1[1].br_coupler/genblk1[2].BRAM/mem_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/genblk1[1].br_coupler/genblk1[2].BRAM/mem_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/genblk1[0].br_coupler/genblk1[0].BRAM/mem_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/genblk1[0].br_coupler/genblk1[0].BRAM/mem_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/genblk1[0].br_coupler/genblk1[1].BRAM/mem_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/genblk1[0].br_coupler/genblk1[1].BRAM/mem_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/genblk1[0].br_coupler/genblk1[2].BRAM/mem_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/genblk1[0].br_coupler/genblk1[2].BRAM/mem_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:11 ; elapsed = 00:01:12 . Memory (MB): peak = 1387.023 ; gain = 307.250
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:14 ; elapsed = 00:01:16 . Memory (MB): peak = 1392.855 ; gain = 313.082
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:15 ; elapsed = 00:01:16 . Memory (MB): peak = 1392.855 ; gain = 313.082
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:15 ; elapsed = 00:01:16 . Memory (MB): peak = 1392.855 ; gain = 313.082
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:15 ; elapsed = 00:01:16 . Memory (MB): peak = 1392.855 ; gain = 313.082
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:16 ; elapsed = 00:01:18 . Memory (MB): peak = 1392.867 ; gain = 313.094
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:16 ; elapsed = 00:01:18 . Memory (MB): peak = 1392.867 ; gain = 313.094
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |   945|
+|2     |LUT1     |   158|
+|3     |LUT2     |  1948|
+|4     |LUT3     |  3102|
+|5     |LUT4     |  1542|
+|6     |LUT5     |   949|
+|7     |LUT6     |  3184|
+|8     |MUXF7    |   147|
+|9     |MUXF8    |    16|
+|10    |RAMB36E1 |    18|
+|11    |FDRE     |  4219|
+|12    |FDSE     |     1|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:16 ; elapsed = 00:01:18 . Memory (MB): peak = 1392.867 ; gain = 313.094
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:01 ; elapsed = 00:01:14 . Memory (MB): peak = 1392.867 ; gain = 266.973
+Synthesis Optimization Complete : Time (s): cpu = 00:01:16 ; elapsed = 00:01:18 . Memory (MB): peak = 1392.867 ; gain = 313.094
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.186 . Memory (MB): peak = 1392.867 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1126 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1392.867 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+43 Infos, 4 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:23 ; elapsed = 00:01:26 . Memory (MB): peak = 1392.867 ; gain = 313.094
+INFO: [Common 17-1381] The checkpoint 'C:/GitHub/ReconHardware/FPGA_Files/CPE/Projects/pooling_layer/pooling_layer.runs/design_1_Pooling_Controller_0_0_synth_1/design_1_Pooling_Controller_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1174] Renamed 13 cell refs.
+INFO: [Common 17-1381] The checkpoint 'C:/GitHub/ReconHardware/FPGA_Files/CPE/Projects/pooling_layer/pooling_layer.runs/design_1_Pooling_Controller_0_0_synth_1/design_1_Pooling_Controller_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_Pooling_Controller_0_0_utilization_synth.rpt -pb design_1_Pooling_Controller_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 13 14:19:30 2021...

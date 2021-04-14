@@ -55,7 +55,7 @@ wire s_axi_rlast;
 wire s_axi_bvalid;
 reg s_axi_bready;
 
-Pooling_Controller 
+Pooling_Control 
 #(
     .KERNEL_SIZE(3),
     .CHANNELS(`test_channels)

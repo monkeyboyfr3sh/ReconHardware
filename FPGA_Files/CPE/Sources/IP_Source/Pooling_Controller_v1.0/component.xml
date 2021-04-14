@@ -283,7 +283,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>ea186905</spirit:value>
+            <spirit:value>195c6e3b</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -302,7 +302,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>240fc7a3</spirit:value>
+            <spirit:value>8d906885</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -342,87 +342,6 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
-            </spirit:wireTypeDef>
-          </spirit:wireTypeDefs>
-        </spirit:wire>
-      </spirit:port>
-      <spirit:port>
-        <spirit:name>cSum</spirit:name>
-        <spirit:wire>
-          <spirit:direction>in</spirit:direction>
-          <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.CHANNELS&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.AXI_BUS_WIDTH&apos;))) - 1)">95</spirit:left>
-            <spirit:right spirit:format="long">0</spirit:right>
-          </spirit:vector>
-          <spirit:wireTypeDefs>
-            <spirit:wireTypeDef>
-              <spirit:typeName>std_logic_vector</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
-            </spirit:wireTypeDef>
-          </spirit:wireTypeDefs>
-        </spirit:wire>
-      </spirit:port>
-      <spirit:port>
-        <spirit:name>cReady</spirit:name>
-        <spirit:wire>
-          <spirit:direction>in</spirit:direction>
-          <spirit:wireTypeDefs>
-            <spirit:wireTypeDef>
-              <spirit:typeName>std_logic</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
-            </spirit:wireTypeDef>
-          </spirit:wireTypeDefs>
-        </spirit:wire>
-      </spirit:port>
-      <spirit:port>
-        <spirit:name>MULTIPLIER_INPUT</spirit:name>
-        <spirit:wire>
-          <spirit:direction>out</spirit:direction>
-          <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.CHANNELS&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.K_SQUARED&apos;))) * spirit:decode(id(&apos;MODELPARAM_VALUE.AXI_BUS_WIDTH&apos;))) - 1)">863</spirit:left>
-            <spirit:right spirit:format="long">0</spirit:right>
-          </spirit:vector>
-          <spirit:wireTypeDefs>
-            <spirit:wireTypeDef>
-              <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
-            </spirit:wireTypeDef>
-          </spirit:wireTypeDefs>
-        </spirit:wire>
-      </spirit:port>
-      <spirit:port>
-        <spirit:name>MULTIPLICAND_INPUT</spirit:name>
-        <spirit:wire>
-          <spirit:direction>out</spirit:direction>
-          <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.CHANNELS&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.K_SQUARED&apos;))) * spirit:decode(id(&apos;MODELPARAM_VALUE.AXI_BUS_WIDTH&apos;))) - 1)">863</spirit:left>
-            <spirit:right spirit:format="long">0</spirit:right>
-          </spirit:vector>
-          <spirit:wireTypeDefs>
-            <spirit:wireTypeDef>
-              <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
-            </spirit:wireTypeDef>
-          </spirit:wireTypeDefs>
-        </spirit:wire>
-      </spirit:port>
-      <spirit:port>
-        <spirit:name>MULTIPLY_START</spirit:name>
-        <spirit:wire>
-          <spirit:direction>out</spirit:direction>
-          <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.K_SQUARED&apos;)) - 1)">8</spirit:left>
-            <spirit:right spirit:format="long">0</spirit:right>
-          </spirit:vector>
-          <spirit:wireTypeDefs>
-            <spirit:wireTypeDef>
-              <spirit:typeName>reg</spirit:typeName>
               <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
               <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
@@ -904,17 +823,17 @@
         </spirit:define>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/BRAM/hdl/BRAM_wrapper.v</spirit:name>
+        <spirit:name>src/bram_coupler.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/bram_coupler.v</spirit:name>
+        <spirit:name>src/bram_wrapper.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>AXI_Pooling_Controller.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_fc801eb0</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_4aaabf06</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -938,11 +857,11 @@
         </spirit:define>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/BRAM/hdl/BRAM_wrapper.v</spirit:name>
+        <spirit:name>src/bram_coupler.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>src/bram_coupler.v</spirit:name>
+        <spirit:name>src/bram_wrapper.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1058,8 +977,8 @@
       <xilinx:xpmLibraries>
         <xilinx:xpmLibrary>XPM_MEMORY</xilinx:xpmLibrary>
       </xilinx:xpmLibraries>
-      <xilinx:coreRevision>17</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2021-03-20T16:26:40Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>19</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2021-04-13T19:16:17Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@59c3621_ARCHIVE_LOCATION">c:/github/reconhardware/fpga_files/sources/ip_source/Pooling_Controller_v1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@71af84d_ARCHIVE_LOCATION">c:/github/reconhardware/fpga_files/sources/ip_source/Pooling_Controller_v1.0</xilinx:tag>
@@ -1347,16 +1266,39 @@
         <xilinx:tag xilinx:name="ui.data.coregen.dd@6fbb469b_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Pooling_Controller_v1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@3b60bda6_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Pooling_Controller_v1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@3557ad77_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/Sources/IP_Source/Pooling_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ec678cb_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/CPE/Sources/IP_Source/Pooling_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7bf82e30_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/CPE/Sources/IP_Source/Pooling_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@62c4a021_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/CPE/Sources/IP_Source/Pooling_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15ceece_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/CPE/Sources/IP_Source/Pooling_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b26f71e_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/CPE/Sources/IP_Source/Pooling_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7286a883_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/CPE/Sources/IP_Source/Pooling_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@46f56714_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/CPE/Sources/IP_Source/Pooling_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e409735_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/CPE/Sources/IP_Source/Pooling_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4476b0e2_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/CPE/Sources/IP_Source/Pooling_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5660de7c_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/CPE/Sources/IP_Source/Pooling_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2fb327c0_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/CPE/Sources/IP_Source/Pooling_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@ff3438_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/CPE/Sources/IP_Source/Pooling_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2214659_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/CPE/Sources/IP_Source/Pooling_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1992f0ab_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/CPE/Sources/IP_Source/Pooling_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44d2dc8a_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/CPE/Sources/IP_Source/Pooling_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e6912f0_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/CPE/Sources/IP_Source/Pooling_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b951ca6_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/CPE/Sources/IP_Source/Pooling_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73361604_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/CPE/Sources/IP_Source/Pooling_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32ec2ec6_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/CPE/Sources/IP_Source/Pooling_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73206d5f_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/CPE/Sources/IP_Source/Pooling_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@63dbfcb7_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/CPE/Sources/IP_Source/Pooling_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@125128e_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/CPE/Sources/IP_Source/Pooling_Controller_v1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4dcd2156_ARCHIVE_LOCATION">c:/GitHub/ReconHardware/FPGA_Files/CPE/Sources/IP_Source/Pooling_Controller_v1.0</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2020.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="43e32b8a"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="fb248dee"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="014c75a1"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="7ce2ee82"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="f51a33b1"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="1e02ffdc"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="0c86ab26"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="f9003075"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="99aa9737"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>
