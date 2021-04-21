@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Wed Apr  7 14:43:10 2021
+# Process ID: 12172
+# Current directory: C:/GitHub/ReconHardware/FPGA_Files/CPE/Projects/bram_lb/bram_lb.runs/synth_1
+# Command line: vivado.exe -log bram_coupler.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source bram_coupler.tcl
+# Log file: C:/GitHub/ReconHardware/FPGA_Files/CPE/Projects/bram_lb/bram_lb.runs/synth_1/bram_coupler.vds
+# Journal file: C:/GitHub/ReconHardware/FPGA_Files/CPE/Projects/bram_lb/bram_lb.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source bram_coupler.tcl -notrace

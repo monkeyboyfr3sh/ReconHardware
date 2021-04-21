@@ -1,0 +1,22 @@
+Command: pr_verify -full_check -initial C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.runs/impl_1/CPE_Wrapper_routed.dcp -additional C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.runs/child_0_impl_1/CPE_Wrapper_routed.dcp -file child_0_impl_1_pr_verify.log
+Sat Mar 20 20:43:02 2021
+
+INFO: [Constraints 18-1020] PR Verify Summary:
+DCP1: C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.runs/impl_1/CPE_Wrapper_routed.dcp
+  Number of reconfigurable modules compared = 3
+  Number of partition pins compared         = 1797
+  Number of static tiles compared           = 3742
+  Number of static sites compared           = 7523
+  Number of static cells compared           = 47609
+  Number of static routed nodes compared    = 525915
+  Number of static routed pips compared     = 487546
+
+DCP2: C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.runs/child_0_impl_1/CPE_Wrapper_routed.dcp
+  Number of reconfigurable modules compared = 3
+  Number of partition pins compared         = 1797
+  Number of static tiles compared           = 3742
+  Number of static sites compared           = 7523
+  Number of static cells compared           = 47609
+  Number of static routed nodes compared    = 525915
+  Number of static routed pips compared     = 487546
+INFO: [Vivado 12-3253] PR_VERIFY: check points C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.runs/impl_1/CPE_Wrapper_routed.dcp and C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.runs/child_0_impl_1/CPE_Wrapper_routed.dcp are compatible

@@ -1,0 +1,14 @@
+
+*** Running vivado
+    with args -log  -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source 
+
+
+
+****** Vivado v2020.1 (64-bit)
+  **** SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+  **** IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+open_project Vivado
+ERROR: [Coretcl 2-155] Invalid project file name 'Vivado'. File must have a valid Vivado project extension (.xpr/.ppr).
+INFO: [Common 17-206] Exiting Vivado at Tue Jan 26 13:11:39 2021...
