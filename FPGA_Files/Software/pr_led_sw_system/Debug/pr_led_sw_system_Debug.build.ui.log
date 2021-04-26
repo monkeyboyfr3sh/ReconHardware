@@ -1,0 +1,10 @@
+2021-03-11T11:45:16.78957100255-11:45:16 **** Incremental Build of configuration Debug for project pr_led_sw_system ****
+000-make all 
+000-Generating bif file for the system project
+000-Executing command '::scw::generate_bif -xpfm /media/david/8c28c226-49fc-48fe-8ea0-9d8a16d4b685/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm -domains standalone_domain -bifpath /media/david/8c28c226-49fc-48fe-8ea0-9d8a16d4b685/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif' on XSCT
+000-sdcard_gen --xpfm /media/david/8c28c226-49fc-48fe-8ea0-9d8a16d4b685/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm --sys_config pr_led --bif /media/david/8c28c226-49fc-48fe-8ea0-9d8a16d4b685/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif --bitstream /media/david/8c28c226-49fc-48fe-8ea0-9d8a16d4b685/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw/_ide/bitstream/top.bit --elf /media/david/8c28c226-49fc-48fe-8ea0-9d8a16d4b685/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw/Debug/pr_led_sw.elf,ps7_cortexa9_0
+000-creating BOOT.BIN using /media/david/8c28c226-49fc-48fe-8ea0-9d8a16d4b685/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw/_ide/bitstream/top.bit
+000-Running /opt/Xilinx/Vitis/2020.1/bin/bootgen  -image /media/david/8c28c226-49fc-48fe-8ea0-9d8a16d4b685/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+00255-
+11:45:24 Build Finished (took 7s.411ms)
+

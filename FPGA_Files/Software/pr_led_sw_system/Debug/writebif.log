@@ -1,0 +1,585 @@
+TRACE::2021-03-05.17:55:55::SCWBifWriter::Found the complete platform C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+TRACE::2021-03-05.17:55:55::SCWBifWriter::hardware databse : top_3
+TRACE::2021-03-05.17:55:55::SCWBifWriter::bitstream found in the design
+TRACE::2021-03-05.17:55:55::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-03-05.17:55:55::SCWBifWriter::proc type : 
+TRACE::2021-03-05.17:55:55::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-03-05.17:55:55::SCWBifWriter::Device type is : zynq
+TRACE::2021-03-05.17:55:55::SCWBifWriter::Writing BIF to file : C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
+TRACE::2021-03-05.17:55:55::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-03-05.17:56:08::SCWBifWriter::Found the complete platform C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+TRACE::2021-03-05.17:56:08::SCWBifWriter::hardware databse : top_3
+TRACE::2021-03-05.17:56:08::SCWBifWriter::bitstream found in the design
+TRACE::2021-03-05.17:56:08::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-03-05.17:56:08::SCWBifWriter::proc type : 
+TRACE::2021-03-05.17:56:08::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-03-05.17:56:08::SCWBifWriter::Device type is : zynq
+TRACE::2021-03-05.17:56:08::SCWBifWriter::Writing BIF to file : C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
+TRACE::2021-03-05.17:56:08::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-03-05.18:06:56::SCWBifWriter::Found the complete platform C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+TRACE::2021-03-05.18:06:57::SCWBifWriter::hardware databse : top_3
+TRACE::2021-03-05.18:06:57::SCWBifWriter::bitstream found in the design
+TRACE::2021-03-05.18:06:57::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-03-05.18:06:57::SCWBifWriter::proc type : 
+TRACE::2021-03-05.18:06:57::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-03-05.18:06:57::SCWBifWriter::Device type is : zynq
+TRACE::2021-03-05.18:06:57::SCWBifWriter::Writing BIF to file : C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
+TRACE::2021-03-05.18:06:57::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-03-05.18:14:56::SCWBifWriter::Found the complete platform C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+TRACE::2021-03-05.18:14:56::SCWBifWriter::hardware databse : top_3
+TRACE::2021-03-05.18:14:56::SCWBifWriter::bitstream found in the design
+TRACE::2021-03-05.18:14:56::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-03-05.18:14:56::SCWBifWriter::proc type : 
+TRACE::2021-03-05.18:14:56::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-03-05.18:14:56::SCWBifWriter::Device type is : zynq
+TRACE::2021-03-05.18:14:56::SCWBifWriter::Writing BIF to file : C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
+TRACE::2021-03-05.18:14:56::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-03-05.18:16:54::SCWBifWriter::Found the complete platform C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+TRACE::2021-03-05.18:16:54::SCWBifWriter::hardware databse : top_3
+TRACE::2021-03-05.18:16:54::SCWBifWriter::bitstream found in the design
+TRACE::2021-03-05.18:16:54::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-03-05.18:16:54::SCWBifWriter::proc type : 
+TRACE::2021-03-05.18:16:54::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-03-05.18:16:54::SCWBifWriter::Device type is : zynq
+TRACE::2021-03-05.18:16:54::SCWBifWriter::Writing BIF to file : C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
+TRACE::2021-03-05.18:16:54::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-03-05.18:18:06::SCWBifWriter::Found the complete platform C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+TRACE::2021-03-05.18:18:07::SCWBifWriter::hardware databse : top_3
+TRACE::2021-03-05.18:18:07::SCWBifWriter::bitstream found in the design
+TRACE::2021-03-05.18:18:07::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-03-05.18:18:07::SCWBifWriter::proc type : 
+TRACE::2021-03-05.18:18:07::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-03-05.18:18:07::SCWBifWriter::Device type is : zynq
+TRACE::2021-03-05.18:18:07::SCWBifWriter::Writing BIF to file : C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
+TRACE::2021-03-05.18:18:07::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-03-05.18:18:28::SCWBifWriter::Found the complete platform C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+TRACE::2021-03-05.18:18:28::SCWBifWriter::hardware databse : top_3
+TRACE::2021-03-05.18:18:28::SCWBifWriter::bitstream found in the design
+TRACE::2021-03-05.18:18:28::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-03-05.18:18:28::SCWBifWriter::proc type : 
+TRACE::2021-03-05.18:18:28::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-03-05.18:18:28::SCWBifWriter::Device type is : zynq
+TRACE::2021-03-05.18:18:28::SCWBifWriter::Writing BIF to file : C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
+TRACE::2021-03-05.18:18:28::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-03-06.13:01:37::SCWBifWriter::Found the complete platform C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+TRACE::2021-03-06.13:01:37::SCWBifWriter::hardware databse : top
+TRACE::2021-03-06.13:01:37::SCWBifWriter::bitstream found in the design
+TRACE::2021-03-06.13:01:37::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-03-06.13:01:37::SCWBifWriter::proc type : 
+TRACE::2021-03-06.13:01:37::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-03-06.13:01:37::SCWBifWriter::Device type is : zynq
+TRACE::2021-03-06.13:01:37::SCWBifWriter::Writing BIF to file : C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
+TRACE::2021-03-06.13:01:37::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-03-06.13:07:22::SCWBifWriter::Found the complete platform C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+TRACE::2021-03-06.13:07:22::SCWBifWriter::hardware databse : top_0
+TRACE::2021-03-06.13:07:22::SCWBifWriter::bitstream found in the design
+TRACE::2021-03-06.13:07:22::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-03-06.13:07:22::SCWBifWriter::proc type : 
+TRACE::2021-03-06.13:07:22::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-03-06.13:07:22::SCWBifWriter::Device type is : zynq
+TRACE::2021-03-06.13:07:22::SCWBifWriter::Writing BIF to file : C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
+TRACE::2021-03-06.13:07:22::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-03-06.13:07:45::SCWBifWriter::Found the complete platform C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+TRACE::2021-03-06.13:07:45::SCWBifWriter::hardware databse : top_1
+TRACE::2021-03-06.13:07:45::SCWBifWriter::bitstream found in the design
+TRACE::2021-03-06.13:07:45::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-03-06.13:07:45::SCWBifWriter::proc type : 
+TRACE::2021-03-06.13:07:45::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-03-06.13:07:45::SCWBifWriter::Device type is : zynq
+TRACE::2021-03-06.13:07:45::SCWBifWriter::Writing BIF to file : C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
+TRACE::2021-03-06.13:07:45::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-03-06.13:08:41::SCWBifWriter::Found the complete platform C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+TRACE::2021-03-06.13:08:42::SCWBifWriter::hardware databse : top_1
+TRACE::2021-03-06.13:08:42::SCWBifWriter::bitstream found in the design
+TRACE::2021-03-06.13:08:42::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-03-06.13:08:42::SCWBifWriter::proc type : 
+TRACE::2021-03-06.13:08:42::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-03-06.13:08:42::SCWBifWriter::Device type is : zynq
+TRACE::2021-03-06.13:08:42::SCWBifWriter::Writing BIF to file : C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
+TRACE::2021-03-06.13:08:42::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-03-06.13:22:17::SCWBifWriter::Found the complete platform C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+TRACE::2021-03-06.13:22:17::SCWBifWriter::hardware databse : top_1
+TRACE::2021-03-06.13:22:17::SCWBifWriter::bitstream found in the design
+TRACE::2021-03-06.13:22:17::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-03-06.13:22:17::SCWBifWriter::proc type : 
+TRACE::2021-03-06.13:22:17::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-03-06.13:22:17::SCWBifWriter::Device type is : zynq
+TRACE::2021-03-06.13:22:17::SCWBifWriter::Writing BIF to file : C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
+TRACE::2021-03-06.13:22:17::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-03-06.15:22:52::SCWBifWriter::Found the complete platform C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+TRACE::2021-03-06.15:22:52::SCWBifWriter::hardware databse : top_4
+TRACE::2021-03-06.15:22:52::SCWBifWriter::bitstream found in the design
+TRACE::2021-03-06.15:22:52::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-03-06.15:22:52::SCWBifWriter::proc type : 
+TRACE::2021-03-06.15:22:52::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-03-06.15:22:52::SCWBifWriter::Device type is : zynq
+TRACE::2021-03-06.15:22:52::SCWBifWriter::Writing BIF to file : C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
+TRACE::2021-03-06.15:22:52::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-03-06.15:23:08::SCWBifWriter::Found the complete platform C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+TRACE::2021-03-06.15:23:08::SCWBifWriter::hardware databse : top_4
+TRACE::2021-03-06.15:23:08::SCWBifWriter::bitstream found in the design
+TRACE::2021-03-06.15:23:08::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-03-06.15:23:08::SCWBifWriter::proc type : 
+TRACE::2021-03-06.15:23:08::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-03-06.15:23:08::SCWBifWriter::Device type is : zynq
+TRACE::2021-03-06.15:23:08::SCWBifWriter::Writing BIF to file : C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
+TRACE::2021-03-06.15:23:08::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-03-06.15:23:19::SCWBifWriter::Found the complete platform C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+TRACE::2021-03-06.15:23:19::SCWBifWriter::hardware databse : top_4
+TRACE::2021-03-06.15:23:19::SCWBifWriter::bitstream found in the design
+TRACE::2021-03-06.15:23:19::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-03-06.15:23:19::SCWBifWriter::proc type : 
+TRACE::2021-03-06.15:23:19::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-03-06.15:23:19::SCWBifWriter::Device type is : zynq
+TRACE::2021-03-06.15:23:19::SCWBifWriter::Writing BIF to file : C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
+TRACE::2021-03-06.15:23:19::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-03-06.15:23:48::SCWBifWriter::Found the complete platform C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+TRACE::2021-03-06.15:23:48::SCWBifWriter::hardware databse : top_4
+TRACE::2021-03-06.15:23:48::SCWBifWriter::bitstream found in the design
+TRACE::2021-03-06.15:23:48::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-03-06.15:23:48::SCWBifWriter::proc type : 
+TRACE::2021-03-06.15:23:48::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-03-06.15:23:48::SCWBifWriter::Device type is : zynq
+TRACE::2021-03-06.15:23:48::SCWBifWriter::Writing BIF to file : C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
+TRACE::2021-03-06.15:23:48::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-03-06.15:24:23::SCWBifWriter::Found the complete platform C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+TRACE::2021-03-06.15:24:23::SCWBifWriter::hardware databse : top_4
+TRACE::2021-03-06.15:24:23::SCWBifWriter::bitstream found in the design
+TRACE::2021-03-06.15:24:23::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-03-06.15:24:23::SCWBifWriter::proc type : 
+TRACE::2021-03-06.15:24:23::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-03-06.15:24:23::SCWBifWriter::Device type is : zynq
+TRACE::2021-03-06.15:24:23::SCWBifWriter::Writing BIF to file : C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
+TRACE::2021-03-06.15:24:23::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-03-06.15:33:00::SCWBifWriter::Found the complete platform C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+TRACE::2021-03-06.15:33:00::SCWBifWriter::hardware databse : top_4
+TRACE::2021-03-06.15:33:00::SCWBifWriter::bitstream found in the design
+TRACE::2021-03-06.15:33:00::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-03-06.15:33:00::SCWBifWriter::proc type : 
+TRACE::2021-03-06.15:33:00::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-03-06.15:33:00::SCWBifWriter::Device type is : zynq
+TRACE::2021-03-06.15:33:00::SCWBifWriter::Writing BIF to file : C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
+TRACE::2021-03-06.15:33:00::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-03-06.15:35:39::SCWBifWriter::Found the complete platform C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+TRACE::2021-03-06.15:35:39::SCWBifWriter::hardware databse : top_4
+TRACE::2021-03-06.15:35:39::SCWBifWriter::bitstream found in the design
+TRACE::2021-03-06.15:35:39::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-03-06.15:35:39::SCWBifWriter::proc type : 
+TRACE::2021-03-06.15:35:39::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-03-06.15:35:39::SCWBifWriter::Device type is : zynq
+TRACE::2021-03-06.15:35:39::SCWBifWriter::Writing BIF to file : C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
+TRACE::2021-03-06.15:35:39::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-03-06.15:41:54::SCWBifWriter::Found the complete platform C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+TRACE::2021-03-06.15:41:54::SCWBifWriter::hardware databse : top_4
+TRACE::2021-03-06.15:41:54::SCWBifWriter::bitstream found in the design
+TRACE::2021-03-06.15:41:54::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-03-06.15:41:54::SCWBifWriter::proc type : 
+TRACE::2021-03-06.15:41:54::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-03-06.15:41:54::SCWBifWriter::Device type is : zynq
+TRACE::2021-03-06.15:41:54::SCWBifWriter::Writing BIF to file : C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
+TRACE::2021-03-06.15:41:54::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-03-06.15:42:18::SCWBifWriter::Found the complete platform C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+TRACE::2021-03-06.15:42:18::SCWBifWriter::hardware databse : top_4
+TRACE::2021-03-06.15:42:18::SCWBifWriter::bitstream found in the design
+TRACE::2021-03-06.15:42:18::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-03-06.15:42:18::SCWBifWriter::proc type : 
+TRACE::2021-03-06.15:42:18::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-03-06.15:42:18::SCWBifWriter::Device type is : zynq
+TRACE::2021-03-06.15:42:18::SCWBifWriter::Writing BIF to file : C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
+TRACE::2021-03-06.15:42:18::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-03-06.15:42:40::SCWBifWriter::Found the complete platform C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+TRACE::2021-03-06.15:42:40::SCWBifWriter::hardware databse : top_4
+TRACE::2021-03-06.15:42:40::SCWBifWriter::bitstream found in the design
+TRACE::2021-03-06.15:42:40::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-03-06.15:42:40::SCWBifWriter::proc type : 
+TRACE::2021-03-06.15:42:40::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-03-06.15:42:40::SCWBifWriter::Device type is : zynq
+TRACE::2021-03-06.15:42:40::SCWBifWriter::Writing BIF to file : C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
+TRACE::2021-03-06.15:42:40::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-03-06.16:52:14::SCWBifWriter::Found the complete platform C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+TRACE::2021-03-06.16:52:15::SCWBifWriter::hardware databse : top
+TRACE::2021-03-06.16:52:15::SCWBifWriter::bitstream found in the design
+TRACE::2021-03-06.16:52:15::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-03-06.16:52:15::SCWBifWriter::proc type : 
+TRACE::2021-03-06.16:52:15::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-03-06.16:52:15::SCWBifWriter::Device type is : zynq
+TRACE::2021-03-06.16:52:15::SCWBifWriter::Writing BIF to file : C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
+TRACE::2021-03-06.16:52:15::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-03-06.16:52:49::SCWBifWriter::Found the complete platform C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+TRACE::2021-03-06.16:52:49::SCWBifWriter::hardware databse : top
+TRACE::2021-03-06.16:52:49::SCWBifWriter::bitstream found in the design
+TRACE::2021-03-06.16:52:49::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-03-06.16:52:49::SCWBifWriter::proc type : 
+TRACE::2021-03-06.16:52:49::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-03-06.16:52:49::SCWBifWriter::Device type is : zynq
+TRACE::2021-03-06.16:52:49::SCWBifWriter::Writing BIF to file : C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
+TRACE::2021-03-06.16:52:49::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-03-06.16:54:43::SCWBifWriter::Found the complete platform C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+TRACE::2021-03-06.16:54:44::SCWBifWriter::hardware databse : top
+TRACE::2021-03-06.16:54:44::SCWBifWriter::bitstream found in the design
+TRACE::2021-03-06.16:54:44::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-03-06.16:54:44::SCWBifWriter::proc type : 
+TRACE::2021-03-06.16:54:44::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-03-06.16:54:44::SCWBifWriter::Device type is : zynq
+TRACE::2021-03-06.16:54:44::SCWBifWriter::Writing BIF to file : C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
+TRACE::2021-03-06.16:54:44::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-03-06.16:56:08::SCWBifWriter::Found the complete platform C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+TRACE::2021-03-06.16:56:08::SCWBifWriter::hardware databse : top_1
+TRACE::2021-03-06.16:56:08::SCWBifWriter::bitstream found in the design
+TRACE::2021-03-06.16:56:08::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-03-06.16:56:08::SCWBifWriter::proc type : 
+TRACE::2021-03-06.16:56:08::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-03-06.16:56:08::SCWBifWriter::Device type is : zynq
+TRACE::2021-03-06.16:56:08::SCWBifWriter::Writing BIF to file : C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
+TRACE::2021-03-06.16:56:08::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-03-06.16:56:50::SCWBifWriter::Found the complete platform C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+TRACE::2021-03-06.16:56:50::SCWBifWriter::hardware databse : top_1
+TRACE::2021-03-06.16:56:50::SCWBifWriter::bitstream found in the design
+TRACE::2021-03-06.16:56:50::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-03-06.16:56:50::SCWBifWriter::proc type : 
+TRACE::2021-03-06.16:56:50::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-03-06.16:56:50::SCWBifWriter::Device type is : zynq
+TRACE::2021-03-06.16:56:50::SCWBifWriter::Writing BIF to file : C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
+TRACE::2021-03-06.16:56:50::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-03-06.16:57:42::SCWBifWriter::Found the complete platform C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+TRACE::2021-03-06.16:57:42::SCWBifWriter::hardware databse : top_1
+TRACE::2021-03-06.16:57:42::SCWBifWriter::bitstream found in the design
+TRACE::2021-03-06.16:57:42::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-03-06.16:57:42::SCWBifWriter::proc type : 
+TRACE::2021-03-06.16:57:42::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-03-06.16:57:42::SCWBifWriter::Device type is : zynq
+TRACE::2021-03-06.16:57:42::SCWBifWriter::Writing BIF to file : C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
+TRACE::2021-03-06.16:57:42::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-03-06.17:21:26::SCWBifWriter::Found the complete platform C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+TRACE::2021-03-06.17:21:26::SCWBifWriter::hardware databse : top_1
+TRACE::2021-03-06.17:21:26::SCWBifWriter::bitstream found in the design
+TRACE::2021-03-06.17:21:26::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-03-06.17:21:26::SCWBifWriter::proc type : 
+TRACE::2021-03-06.17:21:26::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-03-06.17:21:26::SCWBifWriter::Device type is : zynq
+TRACE::2021-03-06.17:21:26::SCWBifWriter::Writing BIF to file : C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
+TRACE::2021-03-06.17:21:26::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-03-06.17:22:49::SCWBifWriter::Found the complete platform C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+TRACE::2021-03-06.17:22:49::SCWBifWriter::hardware databse : top_1
+TRACE::2021-03-06.17:22:49::SCWBifWriter::bitstream found in the design
+TRACE::2021-03-06.17:22:49::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-03-06.17:22:49::SCWBifWriter::proc type : 
+TRACE::2021-03-06.17:22:49::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-03-06.17:22:49::SCWBifWriter::Device type is : zynq
+TRACE::2021-03-06.17:22:49::SCWBifWriter::Writing BIF to file : C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
+TRACE::2021-03-06.17:22:49::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-03-06.17:24:12::SCWBifWriter::Found the complete platform C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+TRACE::2021-03-06.17:24:12::SCWBifWriter::hardware databse : top_1
+TRACE::2021-03-06.17:24:12::SCWBifWriter::bitstream found in the design
+TRACE::2021-03-06.17:24:12::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-03-06.17:24:12::SCWBifWriter::proc type : 
+TRACE::2021-03-06.17:24:12::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-03-06.17:24:12::SCWBifWriter::Device type is : zynq
+TRACE::2021-03-06.17:24:12::SCWBifWriter::Writing BIF to file : C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
+TRACE::2021-03-06.17:24:12::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-03-06.17:25:29::SCWBifWriter::Found the complete platform C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+TRACE::2021-03-06.17:25:29::SCWBifWriter::hardware databse : top_1
+TRACE::2021-03-06.17:25:29::SCWBifWriter::bitstream found in the design
+TRACE::2021-03-06.17:25:29::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-03-06.17:25:29::SCWBifWriter::proc type : 
+TRACE::2021-03-06.17:25:29::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-03-06.17:25:29::SCWBifWriter::Device type is : zynq
+TRACE::2021-03-06.17:25:29::SCWBifWriter::Writing BIF to file : C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
+TRACE::2021-03-06.17:25:29::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-03-06.17:26:32::SCWBifWriter::Found the complete platform C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+TRACE::2021-03-06.17:26:33::SCWBifWriter::hardware databse : top_1
+TRACE::2021-03-06.17:26:33::SCWBifWriter::bitstream found in the design
+TRACE::2021-03-06.17:26:33::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-03-06.17:26:33::SCWBifWriter::proc type : 
+TRACE::2021-03-06.17:26:33::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-03-06.17:26:33::SCWBifWriter::Device type is : zynq
+TRACE::2021-03-06.17:26:33::SCWBifWriter::Writing BIF to file : C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
+TRACE::2021-03-06.17:26:33::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-03-06.17:30:12::SCWBifWriter::Found the complete platform C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+TRACE::2021-03-06.17:30:12::SCWBifWriter::hardware databse : top_1
+TRACE::2021-03-06.17:30:12::SCWBifWriter::bitstream found in the design
+TRACE::2021-03-06.17:30:12::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-03-06.17:30:12::SCWBifWriter::proc type : 
+TRACE::2021-03-06.17:30:12::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-03-06.17:30:12::SCWBifWriter::Device type is : zynq
+TRACE::2021-03-06.17:30:12::SCWBifWriter::Writing BIF to file : C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
+TRACE::2021-03-06.17:30:12::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-03-06.17:34:56::SCWBifWriter::Found the complete platform C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+TRACE::2021-03-06.17:34:56::SCWBifWriter::hardware databse : top_1
+TRACE::2021-03-06.17:34:56::SCWBifWriter::bitstream found in the design
+TRACE::2021-03-06.17:34:56::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-03-06.17:34:56::SCWBifWriter::proc type : 
+TRACE::2021-03-06.17:34:56::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-03-06.17:34:56::SCWBifWriter::Device type is : zynq
+TRACE::2021-03-06.17:34:56::SCWBifWriter::Writing BIF to file : C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
+TRACE::2021-03-06.17:34:56::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-03-06.17:45:36::SCWBifWriter::Found the complete platform C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+TRACE::2021-03-06.17:45:36::SCWBifWriter::hardware databse : top_1
+TRACE::2021-03-06.17:45:36::SCWBifWriter::bitstream found in the design
+TRACE::2021-03-06.17:45:36::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-03-06.17:45:36::SCWBifWriter::proc type : 
+TRACE::2021-03-06.17:45:36::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-03-06.17:45:36::SCWBifWriter::Device type is : zynq
+TRACE::2021-03-06.17:45:36::SCWBifWriter::Writing BIF to file : C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
+TRACE::2021-03-06.17:45:36::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-03-06.17:46:16::SCWBifWriter::Found the complete platform C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+TRACE::2021-03-06.17:46:16::SCWBifWriter::hardware databse : top_1
+TRACE::2021-03-06.17:46:16::SCWBifWriter::bitstream found in the design
+TRACE::2021-03-06.17:46:16::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-03-06.17:46:16::SCWBifWriter::proc type : 
+TRACE::2021-03-06.17:46:16::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-03-06.17:46:16::SCWBifWriter::Device type is : zynq
+TRACE::2021-03-06.17:46:16::SCWBifWriter::Writing BIF to file : C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
+TRACE::2021-03-06.17:46:16::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-03-06.17:47:42::SCWBifWriter::Found the complete platform C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+TRACE::2021-03-06.17:47:42::SCWBifWriter::hardware databse : top_1
+TRACE::2021-03-06.17:47:42::SCWBifWriter::bitstream found in the design
+TRACE::2021-03-06.17:47:42::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-03-06.17:47:42::SCWBifWriter::proc type : 
+TRACE::2021-03-06.17:47:42::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-03-06.17:47:42::SCWBifWriter::Device type is : zynq
+TRACE::2021-03-06.17:47:42::SCWBifWriter::Writing BIF to file : C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
+TRACE::2021-03-06.17:47:42::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-03-06.17:55:04::SCWBifWriter::Found the complete platform C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+TRACE::2021-03-06.17:55:04::SCWBifWriter::hardware databse : top_1
+TRACE::2021-03-06.17:55:04::SCWBifWriter::bitstream found in the design
+TRACE::2021-03-06.17:55:04::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-03-06.17:55:04::SCWBifWriter::proc type : 
+TRACE::2021-03-06.17:55:04::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-03-06.17:55:04::SCWBifWriter::Device type is : zynq
+TRACE::2021-03-06.17:55:04::SCWBifWriter::Writing BIF to file : C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
+TRACE::2021-03-06.17:55:04::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-03-06.17:56:12::SCWBifWriter::Found the complete platform C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+TRACE::2021-03-06.17:56:12::SCWBifWriter::hardware databse : top_1
+TRACE::2021-03-06.17:56:12::SCWBifWriter::bitstream found in the design
+TRACE::2021-03-06.17:56:12::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-03-06.17:56:12::SCWBifWriter::proc type : 
+TRACE::2021-03-06.17:56:12::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-03-06.17:56:12::SCWBifWriter::Device type is : zynq
+TRACE::2021-03-06.17:56:12::SCWBifWriter::Writing BIF to file : C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
+TRACE::2021-03-06.17:56:12::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-03-06.17:57:05::SCWBifWriter::Found the complete platform C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+TRACE::2021-03-06.17:57:05::SCWBifWriter::hardware databse : top_1
+TRACE::2021-03-06.17:57:05::SCWBifWriter::bitstream found in the design
+TRACE::2021-03-06.17:57:05::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-03-06.17:57:05::SCWBifWriter::proc type : 
+TRACE::2021-03-06.17:57:05::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-03-06.17:57:05::SCWBifWriter::Device type is : zynq
+TRACE::2021-03-06.17:57:05::SCWBifWriter::Writing BIF to file : C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
+TRACE::2021-03-06.17:57:05::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-03-06.17:59:24::SCWBifWriter::Found the complete platform C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+TRACE::2021-03-06.17:59:24::SCWBifWriter::hardware databse : top_1
+TRACE::2021-03-06.17:59:24::SCWBifWriter::bitstream found in the design
+TRACE::2021-03-06.17:59:24::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-03-06.17:59:24::SCWBifWriter::proc type : 
+TRACE::2021-03-06.17:59:24::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-03-06.17:59:24::SCWBifWriter::Device type is : zynq
+TRACE::2021-03-06.17:59:24::SCWBifWriter::Writing BIF to file : C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
+TRACE::2021-03-06.17:59:24::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-03-06.19:24:34::SCWBifWriter::Found the complete platform C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+TRACE::2021-03-06.19:24:34::SCWBifWriter::hardware databse : top_1
+TRACE::2021-03-06.19:24:34::SCWBifWriter::bitstream found in the design
+TRACE::2021-03-06.19:24:34::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-03-06.19:24:34::SCWBifWriter::proc type : 
+TRACE::2021-03-06.19:24:34::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-03-06.19:24:34::SCWBifWriter::Device type is : zynq
+TRACE::2021-03-06.19:24:34::SCWBifWriter::Writing BIF to file : C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
+TRACE::2021-03-06.19:24:34::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-03-06.19:25:09::SCWBifWriter::Found the complete platform C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+TRACE::2021-03-06.19:25:09::SCWBifWriter::hardware databse : top_1
+TRACE::2021-03-06.19:25:09::SCWBifWriter::bitstream found in the design
+TRACE::2021-03-06.19:25:09::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-03-06.19:25:09::SCWBifWriter::proc type : 
+TRACE::2021-03-06.19:25:09::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-03-06.19:25:09::SCWBifWriter::Device type is : zynq
+TRACE::2021-03-06.19:25:09::SCWBifWriter::Writing BIF to file : C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
+TRACE::2021-03-06.19:25:09::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-03-06.19:26:49::SCWBifWriter::Found the complete platform C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+TRACE::2021-03-06.19:26:49::SCWBifWriter::hardware databse : top_1
+TRACE::2021-03-06.19:26:49::SCWBifWriter::bitstream found in the design
+TRACE::2021-03-06.19:26:49::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-03-06.19:26:49::SCWBifWriter::proc type : 
+TRACE::2021-03-06.19:26:49::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-03-06.19:26:49::SCWBifWriter::Device type is : zynq
+TRACE::2021-03-06.19:26:49::SCWBifWriter::Writing BIF to file : C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
+TRACE::2021-03-06.19:26:49::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-03-06.19:28:03::SCWBifWriter::Found the complete platform C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+TRACE::2021-03-06.19:28:03::SCWBifWriter::hardware databse : top
+TRACE::2021-03-06.19:28:03::SCWBifWriter::bitstream found in the design
+TRACE::2021-03-06.19:28:03::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-03-06.19:28:03::SCWBifWriter::proc type : 
+TRACE::2021-03-06.19:28:03::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-03-06.19:28:03::SCWBifWriter::Device type is : zynq
+TRACE::2021-03-06.19:28:03::SCWBifWriter::Writing BIF to file : C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
+TRACE::2021-03-06.19:28:03::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-03-06.19:29:02::SCWBifWriter::Found the complete platform C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+TRACE::2021-03-06.19:29:02::SCWBifWriter::hardware databse : top
+TRACE::2021-03-06.19:29:02::SCWBifWriter::bitstream found in the design
+TRACE::2021-03-06.19:29:02::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-03-06.19:29:02::SCWBifWriter::proc type : 
+TRACE::2021-03-06.19:29:02::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-03-06.19:29:02::SCWBifWriter::Device type is : zynq
+TRACE::2021-03-06.19:29:02::SCWBifWriter::Writing BIF to file : C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
+TRACE::2021-03-06.19:29:02::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-03-06.19:30:06::SCWBifWriter::Found the complete platform C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+TRACE::2021-03-06.19:30:06::SCWBifWriter::hardware databse : top
+TRACE::2021-03-06.19:30:06::SCWBifWriter::bitstream found in the design
+TRACE::2021-03-06.19:30:06::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-03-06.19:30:06::SCWBifWriter::proc type : 
+TRACE::2021-03-06.19:30:06::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-03-06.19:30:06::SCWBifWriter::Device type is : zynq
+TRACE::2021-03-06.19:30:06::SCWBifWriter::Writing BIF to file : C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
+TRACE::2021-03-06.19:30:06::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-03-06.19:40:55::SCWBifWriter::Found the complete platform C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+TRACE::2021-03-06.19:40:55::SCWBifWriter::hardware databse : top_4
+TRACE::2021-03-06.19:40:55::SCWBifWriter::bitstream found in the design
+TRACE::2021-03-06.19:40:55::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-03-06.19:40:55::SCWBifWriter::proc type : 
+TRACE::2021-03-06.19:40:55::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-03-06.19:40:55::SCWBifWriter::Device type is : zynq
+TRACE::2021-03-06.19:40:55::SCWBifWriter::Writing BIF to file : C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
+TRACE::2021-03-06.19:40:55::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-03-07.12:56:43::SCWBifWriter::Found the complete platform C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+TRACE::2021-03-07.12:56:43::SCWBifWriter::hardware databse : top_3
+TRACE::2021-03-07.12:56:43::SCWBifWriter::bitstream found in the design
+TRACE::2021-03-07.12:56:43::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-03-07.12:56:43::SCWBifWriter::proc type : 
+TRACE::2021-03-07.12:56:43::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-03-07.12:56:43::SCWBifWriter::Device type is : zynq
+TRACE::2021-03-07.12:56:43::SCWBifWriter::Writing BIF to file : C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
+TRACE::2021-03-07.12:56:43::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-03-08.11:39:05::SCWBifWriter::Found the complete platform C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+TRACE::2021-03-08.11:39:05::SCWBifWriter::hardware databse : top_3
+TRACE::2021-03-08.11:39:05::SCWBifWriter::bitstream found in the design
+TRACE::2021-03-08.11:39:05::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-03-08.11:39:05::SCWBifWriter::proc type : 
+TRACE::2021-03-08.11:39:05::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-03-08.11:39:05::SCWBifWriter::Device type is : zynq
+TRACE::2021-03-08.11:39:05::SCWBifWriter::Writing BIF to file : C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
+TRACE::2021-03-08.11:39:05::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-03-08.11:41:23::SCWBifWriter::Found the complete platform C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+TRACE::2021-03-08.11:41:23::SCWBifWriter::hardware databse : top_3
+TRACE::2021-03-08.11:41:23::SCWBifWriter::bitstream found in the design
+TRACE::2021-03-08.11:41:23::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-03-08.11:41:23::SCWBifWriter::proc type : 
+TRACE::2021-03-08.11:41:23::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-03-08.11:41:23::SCWBifWriter::Device type is : zynq
+TRACE::2021-03-08.11:41:23::SCWBifWriter::Writing BIF to file : C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
+TRACE::2021-03-08.11:41:23::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-03-08.11:41:46::SCWBifWriter::Found the complete platform C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+TRACE::2021-03-08.11:41:46::SCWBifWriter::hardware databse : top_3
+TRACE::2021-03-08.11:41:46::SCWBifWriter::bitstream found in the design
+TRACE::2021-03-08.11:41:46::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-03-08.11:41:46::SCWBifWriter::proc type : 
+TRACE::2021-03-08.11:41:46::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-03-08.11:41:46::SCWBifWriter::Device type is : zynq
+TRACE::2021-03-08.11:41:46::SCWBifWriter::Writing BIF to file : C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
+TRACE::2021-03-08.11:41:46::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-03-08.11:42:01::SCWBifWriter::Found the complete platform C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+TRACE::2021-03-08.11:42:01::SCWBifWriter::hardware databse : top_3
+TRACE::2021-03-08.11:42:01::SCWBifWriter::bitstream found in the design
+TRACE::2021-03-08.11:42:01::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-03-08.11:42:01::SCWBifWriter::proc type : 
+TRACE::2021-03-08.11:42:01::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-03-08.11:42:01::SCWBifWriter::Device type is : zynq
+TRACE::2021-03-08.11:42:01::SCWBifWriter::Writing BIF to file : C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
+TRACE::2021-03-08.11:42:01::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-03-08.11:42:15::SCWBifWriter::Found the complete platform C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+TRACE::2021-03-08.11:42:15::SCWBifWriter::hardware databse : top_3
+TRACE::2021-03-08.11:42:15::SCWBifWriter::bitstream found in the design
+TRACE::2021-03-08.11:42:15::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-03-08.11:42:15::SCWBifWriter::proc type : 
+TRACE::2021-03-08.11:42:15::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-03-08.11:42:15::SCWBifWriter::Device type is : zynq
+TRACE::2021-03-08.11:42:15::SCWBifWriter::Writing BIF to file : C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
+TRACE::2021-03-08.11:42:15::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-03-08.11:45:16::SCWBifWriter::Found the complete platform C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+TRACE::2021-03-08.11:45:17::SCWBifWriter::hardware databse : top_3
+TRACE::2021-03-08.11:45:17::SCWBifWriter::bitstream found in the design
+TRACE::2021-03-08.11:45:17::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-03-08.11:45:17::SCWBifWriter::proc type : 
+TRACE::2021-03-08.11:45:17::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-03-08.11:45:17::SCWBifWriter::Device type is : zynq
+TRACE::2021-03-08.11:45:17::SCWBifWriter::Writing BIF to file : C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
+TRACE::2021-03-08.11:45:17::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-03-08.11:46:13::SCWBifWriter::Found the complete platform C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+TRACE::2021-03-08.11:46:14::SCWBifWriter::hardware databse : top_3
+TRACE::2021-03-08.11:46:14::SCWBifWriter::bitstream found in the design
+TRACE::2021-03-08.11:46:14::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-03-08.11:46:14::SCWBifWriter::proc type : 
+TRACE::2021-03-08.11:46:14::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-03-08.11:46:14::SCWBifWriter::Device type is : zynq
+TRACE::2021-03-08.11:46:14::SCWBifWriter::Writing BIF to file : C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
+TRACE::2021-03-08.11:46:14::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-03-08.11:47:14::SCWBifWriter::Found the complete platform C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+TRACE::2021-03-08.11:47:14::SCWBifWriter::hardware databse : top_3
+TRACE::2021-03-08.11:47:14::SCWBifWriter::bitstream found in the design
+TRACE::2021-03-08.11:47:14::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-03-08.11:47:14::SCWBifWriter::proc type : 
+TRACE::2021-03-08.11:47:14::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-03-08.11:47:14::SCWBifWriter::Device type is : zynq
+TRACE::2021-03-08.11:47:14::SCWBifWriter::Writing BIF to file : C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
+TRACE::2021-03-08.11:47:14::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-03-08.11:48:12::SCWBifWriter::Found the complete platform C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+TRACE::2021-03-08.11:48:12::SCWBifWriter::hardware databse : top_3
+TRACE::2021-03-08.11:48:12::SCWBifWriter::bitstream found in the design
+TRACE::2021-03-08.11:48:12::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-03-08.11:48:12::SCWBifWriter::proc type : 
+TRACE::2021-03-08.11:48:12::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-03-08.11:48:12::SCWBifWriter::Device type is : zynq
+TRACE::2021-03-08.11:48:12::SCWBifWriter::Writing BIF to file : C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
+TRACE::2021-03-08.11:48:12::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-03-08.11:50:34::SCWBifWriter::Found the complete platform C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+TRACE::2021-03-08.11:50:34::SCWBifWriter::hardware databse : top_3
+TRACE::2021-03-08.11:50:34::SCWBifWriter::bitstream found in the design
+TRACE::2021-03-08.11:50:34::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-03-08.11:50:34::SCWBifWriter::proc type : 
+TRACE::2021-03-08.11:50:34::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-03-08.11:50:34::SCWBifWriter::Device type is : zynq
+TRACE::2021-03-08.11:50:34::SCWBifWriter::Writing BIF to file : C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
+TRACE::2021-03-08.11:50:34::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-03-08.12:13:07::SCWBifWriter::Found the complete platform C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+TRACE::2021-03-08.12:13:07::SCWBifWriter::hardware databse : top_3
+TRACE::2021-03-08.12:13:07::SCWBifWriter::bitstream found in the design
+TRACE::2021-03-08.12:13:07::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-03-08.12:13:07::SCWBifWriter::proc type : 
+TRACE::2021-03-08.12:13:07::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-03-08.12:13:07::SCWBifWriter::Device type is : zynq
+TRACE::2021-03-08.12:13:07::SCWBifWriter::Writing BIF to file : C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
+TRACE::2021-03-08.12:13:07::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-03-08.12:22:02::SCWBifWriter::Found the complete platform C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+TRACE::2021-03-08.12:22:02::SCWBifWriter::hardware databse : top_3
+TRACE::2021-03-08.12:22:02::SCWBifWriter::bitstream found in the design
+TRACE::2021-03-08.12:22:02::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-03-08.12:22:02::SCWBifWriter::proc type : 
+TRACE::2021-03-08.12:22:02::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-03-08.12:22:02::SCWBifWriter::Device type is : zynq
+TRACE::2021-03-08.12:22:02::SCWBifWriter::Writing BIF to file : C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
+TRACE::2021-03-08.12:22:02::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-03-08.12:27:15::SCWBifWriter::Found the complete platform C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+TRACE::2021-03-08.12:27:15::SCWBifWriter::hardware databse : top_3
+TRACE::2021-03-08.12:27:15::SCWBifWriter::bitstream found in the design
+TRACE::2021-03-08.12:27:15::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-03-08.12:27:15::SCWBifWriter::proc type : 
+TRACE::2021-03-08.12:27:15::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-03-08.12:27:15::SCWBifWriter::Device type is : zynq
+TRACE::2021-03-08.12:27:15::SCWBifWriter::Writing BIF to file : C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
+TRACE::2021-03-08.12:27:15::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-03-08.12:27:42::SCWBifWriter::Found the complete platform C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+TRACE::2021-03-08.12:27:42::SCWBifWriter::hardware databse : top_3
+TRACE::2021-03-08.12:27:42::SCWBifWriter::bitstream found in the design
+TRACE::2021-03-08.12:27:42::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-03-08.12:27:42::SCWBifWriter::proc type : 
+TRACE::2021-03-08.12:27:42::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-03-08.12:27:42::SCWBifWriter::Device type is : zynq
+TRACE::2021-03-08.12:27:42::SCWBifWriter::Writing BIF to file : C:/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
+TRACE::2021-03-08.12:27:42::SCWBifWriter::Writing the Zynq Baremetal bif 
+TRACE::2021-03-11.11:45:19::SCWBifWriter::Found the complete platform /media/david/8c28c226-49fc-48fe-8ea0-9d8a16d4b685/GitHub/ReconHardware/FPGA_Files/Software/pr_led/export/pr_led/pr_led.xpfm
+TRACE::2021-03-11.11:45:19::SCWBifWriter::hardware databse : top_0
+TRACE::2021-03-11.11:45:19::SCWBifWriter::bitstream found in the design
+TRACE::2021-03-11.11:45:19::SCWBifWriter::Found a baremetal domain, proc: ps7_cortexa9_0
+TRACE::2021-03-11.11:45:19::SCWBifWriter::proc type : 
+TRACE::2021-03-11.11:45:19::SCWBifWriter::proc[0] : ps7_cortexa9_0
+TRACE::2021-03-11.11:45:19::SCWBifWriter::Device type is : zynq
+TRACE::2021-03-11.11:45:19::SCWBifWriter::Writing BIF to file : /media/david/8c28c226-49fc-48fe-8ea0-9d8a16d4b685/GitHub/ReconHardware/FPGA_Files/Software/pr_led_sw_system/Debug/system.bif
+TRACE::2021-03-11.11:45:19::SCWBifWriter::Writing the Zynq Baremetal bif 
