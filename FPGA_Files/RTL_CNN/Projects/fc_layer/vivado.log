@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Sat May  1 12:37:46 2021
+# Process ID: 16000
+# Current directory: D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/fc_layer
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16048 D:\GitHub\ReconHardware\FPGA_Files\RTL_CNN\Projects\fc_layer\fc_layer.xpr
+# Log file: D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/fc_layer/vivado.log
+# Journal file: D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/fc_layer\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/fc_layer/fc_layer.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2020.1/data/ip'.
+open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 1079.473 ; gain = 0.000
+add_files -norecurse D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Non_Linear/ReLU.v
+set_property is_enabled false [get_files  D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/fc/AXI_FC_Controller.v]
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/TB/Non_Linear/FC_Module_tb.v w ]
+add_files -fileset sim_1 D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/TB/Non_Linear/FC_Module_tb.v

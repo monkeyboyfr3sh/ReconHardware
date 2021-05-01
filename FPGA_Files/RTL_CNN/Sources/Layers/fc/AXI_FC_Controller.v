@@ -1,6 +1,7 @@
 module AXI_FC_Controller
 #(
-    parameter
+    parameter INPUT_NODES 4
+    parameter OUPUT_NODES
 )
 (
     // ----------------------------------------------------------------------

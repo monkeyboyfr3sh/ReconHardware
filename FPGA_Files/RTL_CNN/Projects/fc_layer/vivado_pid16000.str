@@ -1,0 +1,640 @@
+/*
+
+Xilinx Vivado v2020.1 (64-bit) [Major: 2020, Minor: 1]
+SW Build: 2902540 on Wed May 27 19:54:49 MDT 2020
+IP Build: 2902112 on Wed May 27 22:43:36 MDT 2020
+
+Process ID (PID): 16000
+License: Customer
+
+Current time: 	Sat May 01 12:37:56 CDT 2021
+Time zone: 	Central Standard Time (America/Chicago)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1920x1080
+Screen resolution (DPI): 100
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	9.0.4 64-bit
+Java home: 	D:/Xilinx/Vivado/2020.1/tps/win64/jre9.0.4
+Java executable location: 	D:/Xilinx/Vivado/2020.1/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	monke
+User home directory: C:/Users/monke
+User working directory: D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/fc_layer
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: D:/Xilinx/Vivado
+HDI_APPROOT: D:/Xilinx/Vivado/2020.1
+RDI_DATADIR: D:/Xilinx/Vivado/2020.1/data
+RDI_BINDIR: D:/Xilinx/Vivado/2020.1/bin
+
+Vivado preferences file location: C:/Users/monke/AppData/Roaming/Xilinx/Vivado/2020.1/vivado.xml
+Vivado preferences directory: C:/Users/monke/AppData/Roaming/Xilinx/Vivado/2020.1/
+Vivado layouts directory: C:/Users/monke/AppData/Roaming/Xilinx/Vivado/2020.1/data/layouts
+PlanAhead jar file location: 	D:/Xilinx/Vivado/2020.1/lib/classes/planAhead.jar
+Vivado log file location: 	D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/fc_layer/vivado.log
+Vivado journal file location: 	D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/fc_layer/vivado.jou
+Engine tmp dir: 	D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/fc_layer/.Xil/Vivado-16000-DESKTOP-RPQ2DOT
+
+Xilinx Environment Variables
+----------------------------
+XILINX: D:/Xilinx/Vivado/2020.1/ids_lite/ISE
+XILINX_DSP: D:/Xilinx/Vivado/2020.1/ids_lite/ISE
+XILINX_PLANAHEAD: D:/Xilinx/Vivado/2020.1
+XILINX_SDK: D:/Xilinx/Vitis/2020.1
+XILINX_VITIS: D:/Xilinx/Vitis/2020.1
+XILINX_VIVADO: D:/Xilinx/Vivado/2020.1
+XILINX_VIVADO_HLS: D:/Xilinx/Vivado/2020.1
+
+
+GUI allocated memory:	154 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,063 MB
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 76 MB (+76736kb) [00:00:03]
+// [Engine Memory]: 1,063 MB (+963021kb) [00:00:03]
+// bz (cs):  Open Project : addNotify
+// Opening Vivado Project: D:\GitHub\ReconHardware\FPGA_Files\RTL_CNN\Projects\fc_layer\fc_layer.xpr. Version: Vivado v2020.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/fc_layer/fc_layer.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/fc_layer/fc_layer.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,063 MB. GUI used memory: 52 MB. Current time: 5/1/21, 12:37:57 PM CDT
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 90 MB (+11283kb) [00:00:16]
+// [GUI Memory]: 111 MB (+16662kb) [00:00:16]
+// WARNING: HEventQueue.dispatchEvent() is taking  2891 ms.
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2020.1/data/ip'. 
+// Project name: fc_layer; location: D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/fc_layer; part: xc7z020clg400-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 1079.473 ; gain = 0.000 
+dismissDialog("Open Project"); // bz (cs)
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// [GUI Memory]: 121 MB (+5597kb) [00:00:21]
+// Elapsed time: 12 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 1); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, AXI_FC_Controller.v]", 2, false); // B (F, cs)
+// [GUI Memory]: 132 MB (+4487kb) [00:00:32]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, AXI_FC_Controller.v]", 2, false, false, false, false, false, true); // B (F, cs) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, AXI_FC_Controller.v]", 2, false); // B (F, cs)
+selectCodeEditor("AXI_FC_Controller.v", 160, 8); // bP (w, cs)
+selectCodeEditor("AXI_FC_Controller.v", 157, 32); // bP (w, cs)
+selectCodeEditor("AXI_FC_Controller.v", 154, 31); // bP (w, cs)
+selectCodeEditor("AXI_FC_Controller.v", 143, 40); // bP (w, cs)
+// [GUI Memory]: 141 MB (+3193kb) [00:00:37]
+// Elapsed time: 33 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files]", 3); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, FC_Module (FC_Module.v)]", 5, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, FC_Module (FC_Module.v)]", 5, false, false, false, false, false, true); // B (F, cs) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, FC_Module (FC_Module.v)]", 5, false); // B (F, cs)
+selectCodeEditor("FC_Module.v", 191, 78); // bP (w, cs)
+selectCodeEditor("FC_Module.v", 271, 118); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 80 seconds
+selectCodeEditor("FC_Module.v", 145, 128); // bP (w, cs)
+selectCodeEditor("FC_Module.v", 224, 124); // bP (w, cs)
+selectCodeEditor("FC_Module.v", 132, 119); // bP (w, cs)
+selectCodeEditor("FC_Module.v", 519, 247); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("FC_Module.v", 140, 128); // bP (w, cs)
+selectCodeEditor("FC_Module.v", 140, 128, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey((HResource) null, "FC_Module.v", 'c'); // bP (w, cs)
+selectCodeEditor("FC_Module.v", 76, 488); // bP (w, cs)
+typeControlKey((HResource) null, "FC_Module.v", 'v'); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 79 seconds
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // E (g, cs)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cs): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a (E, c)
+// Elapsed time: 12 seconds
+setFileChooser("D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Non_Linear/ReLU.v");
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 16 seconds
+dismissDialog("Add Sources"); // c (cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -norecurse D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Non_Linear/ReLU.v 
+selectCodeEditor("FC_Module.v", 268, 483); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 14 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, AXI_FC_Controller.v]", 2, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, AXI_FC_Controller.v]", 2, false, false, false, false, false, true); // B (F, cs) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ReLU (ReLU.v)]", 7, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ReLU (ReLU.v)]", 7, false, false, false, false, false, true); // B (F, cs) - Double Click
+selectCodeEditor("ReLU.v", 152, 13); // bP (w, cs)
+typeControlKey((HResource) null, "ReLU.v", 'c'); // bP (w, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "FC_Module.v", 2); // m (l, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 14 seconds
+typeControlKey((HResource) null, "FC_Module.v", 'v'); // bP (w, cs)
+// Elapsed time: 21 seconds
+selectCodeEditor("FC_Module.v", 341, 162); // bP (w, cs)
+selectCodeEditor("FC_Module.v", 341, 161, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("FC_Module.v", 316, 180); // bP (w, cs)
+// Elapsed time: 13 seconds
+typeControlKey((HResource) null, "FC_Module.v", 'c'); // bP (w, cs)
+typeControlKey((HResource) null, "FC_Module.v", 'v'); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Elapsed time: 22 seconds
+selectCodeEditor("FC_Module.v", 340, 228); // bP (w, cs)
+selectCodeEditor("FC_Module.v", 340, 228, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey((HResource) null, "FC_Module.v", 'c'); // bP (w, cs)
+selectCodeEditor("FC_Module.v", 147, 382); // bP (w, cs)
+selectCodeEditor("FC_Module.v", 147, 382, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey((HResource) null, "FC_Module.v", 'v'); // bP (w, cs)
+selectCodeEditor("FC_Module.v", 82, 278); // bP (w, cs)
+selectCodeEditor("FC_Module.v", 82, 278, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey((HResource) null, "FC_Module.v", 'v'); // bP (w, cs)
+selectCodeEditor("FC_Module.v", 442, 385); // bP (w, cs)
+selectCodeEditor("FC_Module.v", 442, 385, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey((HResource) null, "FC_Module.v", 'v'); // bP (w, cs)
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("FC_Module.v", 587, 443); // bP (w, cs)
+// Elapsed time: 15 seconds
+selectCodeEditor("FC_Module.v", 429, 229); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("FC_Module.v", 111, 431); // bP (w, cs)
+// Elapsed time: 13 seconds
+selectCodeEditor("FC_Module.v", 185, 413); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 23 seconds
+selectCodeEditor("FC_Module.v", 72, 464); // bP (w, cs)
+typeControlKey((HResource) null, "FC_Module.v", 'v'); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 26 seconds
+typeControlKey((HResource) null, "FC_Module.v", 'c'); // bP (w, cs)
+typeControlKey((HResource) null, "FC_Module.v", 'v'); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, FC_Module (FC_Module.v)]", 5, false); // B (F, cs)
+// Elapsed time: 28 seconds
+selectCodeEditor("FC_Module.v", 129, 226); // bP (w, cs)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 24 seconds
+selectCodeEditor("FC_Module.v", 607, 285); // bP (w, cs)
+// Elapsed time: 88 seconds
+selectCodeEditor("FC_Module.v", 214, 125); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files]", 3); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, AXI_FC_Controller.v]", 2, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, AXI_FC_Controller.v]", 2, false, false, false, false, true, false); // B (F, cs) - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // af (ao, cs)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // af (ao, cs)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // af (ao, cs)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // af (ao, cs)
+selectMenuItem(PAResourceCommand.PACommandNames_SRC_DISABLE, "Disable File"); // ai (ao, cs)
+// Run Command: PAResourceCommand.PACommandNames_SRC_DISABLE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: set_property is_enabled false [get_files  D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/fc/AXI_FC_Controller.v] 
+selectCodeEditor("FC_Module.v", 88, 256); // bP (w, cs)
+selectCodeEditor("FC_Module.v", 88, 256, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 14 seconds
+selectCodeEditor("FC_Module.v", 515, 298); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 17 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ReLU.v", 3); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "FC_Module.v", 2); // m (l, cs)
+selectCodeEditor("FC_Module.v", 143, 337); // bP (w, cs)
+// Elapsed time: 10 seconds
+selectCodeEditor("FC_Module.v", 109, 7); // bP (w, cs)
+selectCodeEditor("FC_Module.v", 109, 7, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey((HResource) null, "FC_Module.v", 'c'); // bP (w, cs)
+selectCodeEditor("FC_Module.v", 166, 347); // bP (w, cs)
+typeControlKey((HResource) null, "FC_Module.v", 'v'); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ReLU.v", 3); // m (l, cs)
+selectCodeEditor("ReLU.v", 264, 96); // bP (w, cs)
+selectCodeEditor("ReLU.v", 264, 96, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey((HResource) null, "ReLU.v", 'c'); // bP (w, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "FC_Module.v", 2); // m (l, cs)
+typeControlKey((HResource) null, "FC_Module.v", 'v'); // bP (w, cs)
+// Elapsed time: 10 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ReLU.v", 3); // m (l, cs)
+selectCodeEditor("ReLU.v", 205, 110); // bP (w, cs)
+selectCodeEditor("ReLU.v", 205, 110, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey((HResource) null, "ReLU.v", 'c'); // bP (w, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "FC_Module.v", 2); // m (l, cs)
+typeControlKey((HResource) null, "FC_Module.v", 'v'); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 17 seconds
+selectCodeEditor("FC_Module.v", 265, 169); // bP (w, cs)
+selectCodeEditor("FC_Module.v", 265, 169, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("FC_Module.v", 265, 189); // bP (w, cs)
+selectCodeEditor("FC_Module.v", 265, 189, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("FC_Module.v", 274, 177); // bP (w, cs)
+selectCodeEditor("FC_Module.v", 274, 177, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey((HResource) null, "FC_Module.v", 'c'); // bP (w, cs)
+selectCodeEditor("FC_Module.v", 200, 368); // bP (w, cs)
+typeControlKey((HResource) null, "FC_Module.v", 'v'); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("FC_Module.v", 217, 241); // bP (w, cs)
+selectCodeEditor("FC_Module.v", 217, 241, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey((HResource) null, "FC_Module.v", 'c'); // bP (w, cs)
+selectCodeEditor("FC_Module.v", 198, 381); // bP (w, cs)
+selectCodeEditor("FC_Module.v", 205, 380); // bP (w, cs)
+typeControlKey((HResource) null, "FC_Module.v", 'v'); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("FC_Module.v", 388, 423); // bP (w, cs)
+selectCodeEditor("FC_Module.v", 378, 414); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 30 seconds
+selectCodeEditor("FC_Module.v", 219, 178); // bP (w, cs)
+selectCodeEditor("FC_Module.v", 221, 177); // bP (w, cs)
+selectCodeEditor("FC_Module.v", 144, 104); // bP (w, cs)
+selectCodeEditor("FC_Module.v", 144, 104, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 30 seconds
+selectCodeEditor("FC_Module.v", 178, 223); // bP (w, cs)
+selectCodeEditor("FC_Module.v", 181, 218); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 16 seconds
+selectCodeEditor("FC_Module.v", 224, 95); // bP (w, cs)
+selectCodeEditor("FC_Module.v", 224, 95, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey((HResource) null, "FC_Module.v", 'c'); // bP (w, cs)
+selectCodeEditor("FC_Module.v", 123, 254); // bP (w, cs)
+typeControlKey((HResource) null, "FC_Module.v", 'v'); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [GUI Memory]: 150 MB (+1529kb) [00:14:04]
+selectCodeEditor("FC_Module.v", 122, 434); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("FC_Module.v", 355, 408); // bP (w, cs)
+selectCodeEditor("FC_Module.v", 86, 442); // bP (w, cs)
+selectCodeEditor("FC_Module.v", 76, 433); // bP (w, cs)
+selectCodeEditor("FC_Module.v", 421, 271); // bP (w, cs)
+typeControlKey((HResource) null, "FC_Module.v", 'v'); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("FC_Module.v", 549, 156); // bP (w, cs)
+selectCodeEditor("FC_Module.v", 304, 166); // bP (w, cs)
+selectCodeEditor("FC_Module.v", 304, 166, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("FC_Module.v", 224, 164); // bP (w, cs)
+typeControlKey((HResource) null, "FC_Module.v", 'c'); // bP (w, cs)
+selectCodeEditor("FC_Module.v", 91, 244); // bP (w, cs)
+typeControlKey((HResource) null, "FC_Module.v", 'v'); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("FC_Module.v", 484, 247); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 13 seconds
+selectCodeEditor("FC_Module.v", 80, 214); // bP (w, cs)
+selectCodeEditor("FC_Module.v", 80, 214, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("FC_Module.v", 207, 142); // bP (w, cs)
+selectCodeEditor("FC_Module.v", 207, 142, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("FC_Module.v", 76, 265); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("FC_Module.v", 86, 312); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("FC_Module.v", 243, 298); // bP (w, cs)
+selectCodeEditor("FC_Module.v", 443, 415); // bP (w, cs)
+// Elapsed time: 13 seconds
+selectCodeEditor("FC_Module.v", 267, 349); // bP (w, cs)
+selectCodeEditor("FC_Module.v", 267, 349, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("FC_Module.v", 104, 456); // bP (w, cs)
+selectCodeEditor("FC_Module.v", 104, 456, false, false, false, false, true); // bP (w, cs) - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("FC_Module.v", 260, 443); // bP (w, cs)
+selectCodeEditor("FC_Module.v", 260, 443, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("FC_Module.v", 134, 456); // bP (w, cs)
+selectCodeEditor("FC_Module.v", 134, 456, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("FC_Module.v", 165, 383); // bP (w, cs)
+selectCodeEditor("FC_Module.v", 165, 383, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("FC_Module.v", 406, 381); // bP (w, cs)
+typeControlKey((HResource) null, "FC_Module.v", 'c'); // bP (w, cs)
+selectCodeEditor("FC_Module.v", 306, 236); // bP (w, cs)
+typeControlKey((HResource) null, "FC_Module.v", 'v'); // bP (w, cs)
+typeControlKey((HResource) null, "FC_Module.v", 'v'); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 12 seconds
+typeControlKey((HResource) null, "FC_Module.v", 'v'); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 10 seconds
+typeControlKey((HResource) null, "FC_Module.v", 'c'); // bP (w, cs)
+typeControlKey((HResource) null, "FC_Module.v", 'v'); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("FC_Module.v", 234, 438); // bP (w, cs)
+selectCodeEditor("FC_Module.v", 220, 417); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("FC_Module.v", 679, 454); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+selectCodeEditor("FC_Module.v", 290, 398); // bP (w, cs)
+selectCodeEditor("FC_Module.v", 290, 398, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("FC_Module.v", 138, 285); // bP (w, cs)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 38 seconds
+selectCodeEditor("FC_Module.v", 302, 262); // bP (w, cs)
+selectCodeEditor("FC_Module.v", 302, 262, false, false, false, false, true); // bP (w, cs) - Double Click
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, FC_Module (FC_Module.v)]", 1); // B (F, cs)
+selectCodeEditor("FC_Module.v", 196, 105); // bP (w, cs)
+// Elapsed time: 11 seconds
+selectCodeEditor("FC_Module.v", 82, 168); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 31 seconds
+selectCodeEditor("FC_Module.v", 199, 75); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("FC_Module.v", 172, 86); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 20 seconds
+typeControlKey((HResource) null, "FC_Module.v", 'c'); // bP (w, cs)
+typeControlKey((HResource) null, "FC_Module.v", 'v'); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 10 seconds
+selectCodeEditor("FC_Module.v", 303, 417); // bP (w, cs)
+selectCodeEditor("FC_Module.v", 303, 417, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 11 seconds
+selectCodeEditor("FC_Module.v", 339, 280); // bP (w, cs)
+selectCodeEditor("FC_Module.v", 248, 275); // bP (w, cs)
+selectCodeEditor("FC_Module.v", 248, 275, false, false, false, false, true); // bP (w, cs) - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("FC_Module.v", 386, 271); // bP (w, cs)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 6); // B (F, cs)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 7); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 7, true); // B (F, cs) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 7, true, false, false, false, true, false); // B (F, cs) - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_SIMULATION_RUN, "Run Simulation"); // af (ao, cs)
+selectMenu(PAResourceCommand.PACommandNames_SIMULATION_RESET, "Reset Simulation"); // af (ao, cs)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // af (ao, cs)
+selectMenu(PAResourceCommand.PACommandNames_SIMULATION_RESET, "Reset Simulation"); // af (ao, cs)
+selectMenu(PAResourceCommand.PACommandNames_SIMULATION_RUN, "Run Simulation"); // af (ao, cs)
+selectMenu(PAResourceCommand.PACommandNames_SIMULATION_RUN, "Run Simulation"); // af (ao, cs)
+selectMenu(PAResourceCommand.PACommandNames_SIMULATION_RESET, "Reset Simulation"); // af (ao, cs)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // af (ao, cs)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // af (ao, cs)
+selectMenuItem(PAResourceCommand.PACommandNames_ADD_SOURCES, "Add Sources..."); // ai (ao, cs)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cs): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (E, c)
+// F (c): Create Source File: addNotify
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "FC_Module_tb"); // ac (Q, F)
+selectComboBox(PAResourceAtoD.CreateSrcFileDialog_FILE_LOCATION, "Choose Location...", 1); // e (Q, F)
+// Elapsed time: 15 seconds
+setFolderChooser("D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/TB/Non_Linear");
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+dismissDialog("Create Source File"); // F (c)
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 34 seconds
+dismissDialog("Add Sources"); // c (cs)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: set_property SOURCE_SET sources_1 [get_filesets sim_1] 
+// Tcl Message: close [ open D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/TB/Non_Linear/FC_Module_tb.v w ] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -fileset sim_1 D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/TB/Non_Linear/FC_Module_tb.v 
+// I (cs): Define Module: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (I)
+// TclEventType: FILE_SET_CHANGE
+selectButton("OptionPane.button", "Yes"); // JButton (v, C)
+dismissDialog("Define Module"); // I (cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, FC_Module_tb (FC_Module_tb.v)]", 10, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, FC_Module_tb (FC_Module_tb.v)]", 10, false, false, false, false, false, true); // B (F, cs) - Double Click
+selectCodeEditor("FC_Module_tb.v", 708, 359); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+typeControlKey(null, null, 'z');
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 80 seconds
+selectCodeEditor("FC_Module_tb.v", 144, 35); // bP (w, cs)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("FC_Module_tb.v", 496, 351); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 17 seconds
+selectCodeEditor("FC_Module_tb.v", 76, 61); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 20 seconds
+selectCodeEditor("FC_Module_tb.v", 133, 144); // bP (w, cs)
+typeControlKey((HResource) null, "FC_Module_tb.v", 'v'); // bP (w, cs)
+selectCodeEditor("FC_Module_tb.v", 84, 225); // bP (w, cs)
+typeControlKey((HResource) null, "FC_Module_tb.v", 'v'); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("FC_Module_tb.v", 158, 31); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 344 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "AXI_FC_Controller.v", 1); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "FC_Module.v", 2); // m (l, cs)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0); // B (F, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "AXI_FC_Controller.v", 1); // m (l, cs)
+// k (cs): Text Changed: addNotify
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // F (m, cs)
+selectButton(RDIResource.ConfirmSaveTextEditsDialog_YES, "Yes"); // a (k)
+// TclEventType: DG_GRAPH_STALE
+dismissDialog("Text Changed"); // k (cs)
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("FC_Module.v", 423, 229); // bP (w, cs)
+typeControlKey((HResource) null, "FC_Module.v", 'c'); // bP (w, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ReLU.v", 2); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "FC_Module_tb.v", 3); // m (l, cs)
+selectCodeEditor("FC_Module_tb.v", 77, 89); // bP (w, cs)
+selectCodeEditor("FC_Module_tb.v", 66, 152); // bP (w, cs)
+typeControlKey((HResource) null, "FC_Module_tb.v", 'v'); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+typeControlKey(null, null, 'z');
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 12 seconds
+typeControlKey(null, null, 'z');
+typeControlKey((HResource) null, "FC_Module_tb.v", 'v'); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 11 seconds
+typeControlKey((HResource) null, "FC_Module_tb.v", 'c'); // bP (w, cs)
+typeControlKey((HResource) null, "FC_Module_tb.v", 'v'); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 31 seconds
+typeControlKey((HResource) null, "FC_Module_tb.v", 'c'); // bP (w, cs)
+typeControlKey((HResource) null, "FC_Module_tb.v", 'v'); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 29 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ReLU.v", 2); // m (l, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "FC_Module.v", 1); // m (l, cs)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,063 MB. GUI used memory: 83 MB. Current time: 5/1/21, 1:07:58 PM CDT
+// Elapsed time: 22 seconds
+selectCodeEditor("FC_Module.v", 355, 56); // bP (w, cs)
+// Elapsed time: 14 seconds
+typeControlKey((HResource) null, "FC_Module.v", 'c'); // bP (w, cs)
+typeControlKey((HResource) null, "FC_Module.v", 'v'); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 18 seconds
+typeControlKey((HResource) null, "FC_Module.v", 'c'); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 36 seconds
+typeControlKey((HResource) null, "FC_Module.v", 'c'); // bP (w, cs)
+selectCodeEditor("FC_Module.v", 120, 224); // bP (w, cs)
+typeControlKey((HResource) null, "FC_Module.v", 'v'); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+typeControlKey((HResource) null, "FC_Module.v", 'v'); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 14 seconds
+typeControlKey((HResource) null, "FC_Module.v", 'c'); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 64 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, FC_Module_tb (FC_Module_tb.v)]", 8, true); // B (F, cs) - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Syntax Error Files]", 7); // B (F, cs)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Disabled Sources]", 11); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Disabled Sources, AXI_FC_Controller.v]", 12, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Disabled Sources, AXI_FC_Controller.v]", 12, false, false, false, false, false, true); // B (F, cs) - Double Click
+selectCodeEditor("AXI_FC_Controller.v", 839, 154); // bP (w, cs)
+// Elapsed time: 105 seconds
+selectCodeEditor("AXI_FC_Controller.v", 289, 103); // bP (w, cs)
