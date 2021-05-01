@@ -15,7 +15,7 @@ module FC_Module
     output  wire [DATA_WIDTH*OUT_LAYER_WIDTH-1:0] output_vector
 ); 
 
-reg [$clog2(DATA_WIDTH)-1:0] i,j;
+reg [$clog2(IN_LAYER_WIDTH+OUT_LAYER_WIDTH)-1:0] i,j;
 reg [DATA_WIDTH*OUT_LAYER_WIDTH-1:0] linear_output_vector;
 
 generate
@@ -48,9 +48,8 @@ always @(posedge clk) begin
     for(i = 0;i<OUT_LAYER_WIDTH;i=i+1)begin
         // For each input node
         for(j = 0;j<IN_LAYER_WIDTH;j=j+1)begin
-            // Multiply input vector times corresponding weight and accumulate
-            linear_output_vector[j*DATA_WIDTH+:DATA_WIDTH] = linear_output_vector[j*DATA_WIDTH+:DATA_WIDTH] + 
-                input_vector[i*DATA_WIDTH+:DATA_WIDTH] * weight_vector[(i*LAYER_WIDTH+j)*DATA_WIDTH+:DATA_WIDTH];
+            linear_output_vector[i*DATA_WIDTH+:DATA_WIDTH] = linear_output_vector[i*DATA_WIDTH+:DATA_WIDTH] +
+                input_vector[j*DATA_WIDTH+:DATA_WIDTH] * weight_vector[((i*OUT_LAYER_WIDTH)+j)*DATA_WIDTH+:DATA_WIDTH];
         end
     end
 end

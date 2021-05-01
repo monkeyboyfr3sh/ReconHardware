@@ -22,3 +22,5 @@ set_property is_enabled false [get_files  D:/GitHub/ReconHardware/FPGA_Files/RTL
 set_property SOURCE_SET sources_1 [get_filesets sim_1]
 close [ open D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/TB/Non_Linear/FC_Module_tb.v w ]
 add_files -fileset sim_1 D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/TB/Non_Linear/FC_Module_tb.v
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat May  1 13:13:52 2021...

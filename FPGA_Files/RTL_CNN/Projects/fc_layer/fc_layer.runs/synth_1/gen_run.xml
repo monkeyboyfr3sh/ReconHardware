@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1618849947">
   <File Type="PA-TCL" Name="FC_Module.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="FC_Module_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="FC_Module_reports.tcl"/>
   <File Type="RDS-RDS" Name="FC_Module.vds"/>
   <File Type="RDS-UTIL" Name="FC_Module_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="FC_Module_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="FC_Module.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="FC_Module_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="FC_Module_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/../../Sources/Layers/fc/FC_Module.v">
