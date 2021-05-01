@@ -2,10 +2,14 @@
 
 module FC_Module_tb;
 
+`data_width 4
+`LAYER
+
 reg clk;
 reg [DATA_WIDTH*LAYER_WIDTH*LAYER_WIDTH-1:0] weight_vector;
 reg [DATA_WIDTH*LAYER_WIDTH-1:0] input_vector;
 wire [DATA_WIDTH*LAYER_WIDTH-1:0] output_vector;
+
 FC_module
 #(
     parameter DATA_WIDTH = 4,
