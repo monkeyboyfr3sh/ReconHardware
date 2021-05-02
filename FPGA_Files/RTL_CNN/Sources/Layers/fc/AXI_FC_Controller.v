@@ -2,7 +2,7 @@ module AXI_FC_Controller
 #(
     parameter DATA_WIDTH = 4,
     parameter IN_LAYER_WIDTH = 4,
-    parameter HIDDEN_LAYER_CNT = 3,
+    parameter HIDDEN_LAYER_CNT = 1,
     parameter OUT_LAYER_WIDTH = 4
 )
 (
@@ -12,6 +12,7 @@ module AXI_FC_Controller
     input   axi_clk,
     input   axi_reset_n,
     output  wire fc_fin_valid,
+    output  wire [DATA_WIDTH*OUT_LAYER_WIDTH-1:0] fc_out,
     // ----------------------------------------------------------------------
     // AXI4-S slave i/f - Data stream port
     // ----------------------------------------------------------------------
@@ -81,7 +82,7 @@ wire [DATA_WIDTH*`lay_1_output_width-1:0] lay_1_out;
 
 assign lay_1_in = parallel_out;
 //assign lay_1_w = ; Need to map the weights to something. Likely an AXI register map
-assign lay_1_w = 0; // Temp make all weights 1
+assign lay_1_w = 64'h1111000011110000; // Temp
 
 FC_Module
 #(
@@ -96,4 +97,66 @@ fc_lay_1 (
     .weight_vector  (lay_1_w),
     .output_vector  (lay_1_out)
 );
+
+// ----------------------------------------------------------------------
+// FC Layer 2
+// ----------------------------------------------------------------------
+`define lay_2_input_width   `lay_1_output_width
+`define lay_2_output_width  4
+`define lay_2_nonlinear     0
+
+wire [DATA_WIDTH*`lay_2_input_width-1:0] lay_2_in;
+wire [DATA_WIDTH*`lay_2_input_width*`lay_2_output_width-1:0] lay_2_w;
+wire [DATA_WIDTH*`lay_2_output_width-1:0] lay_2_out;
+
+assign lay_2_in = lay_1_out;
+//assign lay_2_w = ; Need to map the weights to something. Likely an AXI register map
+assign lay_2_w = 64'h0000111100001111; // Temp
+
+FC_Module
+#(
+    .DATA_WIDTH         (DATA_WIDTH),
+    .IN_LAYER_WIDTH     (`lay_2_input_width),
+    .OUT_LAYER_WIDTH    (`lay_2_output_width),
+    .NON_LINEAR         (`lay_2_nonlinear)
+)
+fc_lay_2 (
+    .clk            (axi_clk),
+    .input_vector   (lay_2_in),
+    .weight_vector  (lay_2_w),
+    .output_vector  (lay_2_out)
+);
+
+// ----------------------------------------------------------------------
+// FC Layer 3
+// ----------------------------------------------------------------------
+`define lay_3_input_width   `lay_2_output_width
+`define lay_3_output_width  OUT_LAYER_WIDTH
+`define lay_3_nonlinear     0
+
+wire [DATA_WIDTH*`lay_3_input_width-1:0] lay_3_in;
+wire [DATA_WIDTH*`lay_3_input_width*`lay_3_output_width-1:0] lay_3_w;
+wire [DATA_WIDTH*`lay_3_output_width-1:0] lay_3_out;
+
+assign lay_3_in = lay_2_out;
+//assign lay_3_w = ; Need to map the weights to something. Likely an AXI register map
+assign lay_3_w = 64'h0011110000111100; // Temp
+
+FC_Module
+#(
+    .DATA_WIDTH         (DATA_WIDTH),
+    .IN_LAYER_WIDTH     (`lay_3_input_width),
+    .OUT_LAYER_WIDTH    (`lay_3_output_width),
+    .NON_LINEAR         (`lay_3_nonlinear)
+)
+fc_lay_3 (
+    .clk            (axi_clk),
+    .input_vector   (lay_3_in),
+    .weight_vector  (lay_3_w),
+    .output_vector  (lay_3_out)
+);
+
+// Assign final layer output to module output.
+assign fc_out = lay_3_out;
+
 endmodule

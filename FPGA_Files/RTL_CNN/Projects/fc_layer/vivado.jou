@@ -2,17 +2,138 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Sat May  1 12:37:46 2021
-# Process ID: 16000
+# Start of session at: Sun May  2 10:11:29 2021
+# Process ID: 14948
 # Current directory: D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/fc_layer
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16048 D:\GitHub\ReconHardware\FPGA_Files\RTL_CNN\Projects\fc_layer\fc_layer.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5432 D:\GitHub\ReconHardware\FPGA_Files\RTL_CNN\Projects\fc_layer\fc_layer.xpr
 # Log file: D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/fc_layer/vivado.log
 # Journal file: D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/fc_layer\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/fc_layer/fc_layer.xpr
-add_files -norecurse D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Non_Linear/ReLU.v
-set_property is_enabled false [get_files  D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/fc/AXI_FC_Controller.v]
-set_property SOURCE_SET sources_1 [get_filesets sim_1]
-close [ open D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/TB/Non_Linear/FC_Module_tb.v w ]
-add_files -fileset sim_1 D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/TB/Non_Linear/FC_Module_tb.v
+launch_simulation
+source FC_Controller_tb.tcl
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+add_force {/FC_Controller_tb/s_axis_valid} -radix hex {1 0ns}
+run 5 ns
+add_force {/FC_Controller_tb/s_axis_data} -radix hex {1 0ns}
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+add_force {/FC_Controller_tb/s_axis_valid} -radix hex {0 0ns}
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+close_sim
+launch_simulation
+source FC_Controller_tb.tcl
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+current_wave_config {Untitled 2}
+add_wave {{/FC_Controller_tb/DUT/S2P_unit/count}} 
+run 5 ns
+run 5 ns
+run 5 ns
+current_wave_config {Untitled 2}
+add_wave {{/FC_Controller_tb/DUT/S2P_unit/parallel_port}} 
+run 5 ns
+current_wave_config {Untitled 2}
+add_wave {{/FC_Controller_tb/DUT/S2P_unit/valid}} 
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+add_force {/FC_Controller_tb/DUT/fc_lay_1/weight_vector} -radix hex {1111000022220000 0ns}
+run 5 ns
+close_sim
+launch_simulation
+source FC_Controller_tb.tcl
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+current_wave_config {Untitled 3}
+add_wave {{/FC_Controller_tb/DUT/S2P_unit/parallel_port}} 
+current_wave_config {Untitled 3}
+add_wave {{/FC_Controller_tb/DUT/S2P_unit/valid}} 
+current_wave_config {Untitled 3}
+add_wave {{/FC_Controller_tb/DUT/valid_prop}} 
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+close_sim
+launch_simulation
+source FC_Controller_tb.tcl
+add_wave {{/FC_Controller_tb/DUT/valid_prop}}
+add_wave {{/FC_Controller_tb/DUT/S2P_unit/valid}}
+add_wave {{/FC_Controller_tb/DUT/S2P_unit/parallel_port}}
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+close_sim
+launch_simulation
+source FC_Controller_tb.tcl
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+run 5 ns
+close_sim

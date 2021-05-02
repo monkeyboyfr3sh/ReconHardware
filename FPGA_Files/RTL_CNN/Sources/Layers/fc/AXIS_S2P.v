@@ -48,6 +48,10 @@ always @(posedge axi_clk)begin
             valid <= 0;
         end
     end
+    
+    else begin
+        valid <= 0;
+    end
 
 end
 
