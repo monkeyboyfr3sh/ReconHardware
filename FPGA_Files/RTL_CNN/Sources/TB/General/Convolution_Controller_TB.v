@@ -57,9 +57,9 @@ reg s_axi_bready;
 
 conv_wrap
 #(
-    .KERNEL_SIZE(3),
+    .KERNEL_SIZE(`kernel_size),
     .CHANNELS(`test_channels),
-    .DATA_WIDTH(32),
+    .DATA_WIDTH(`data_width),
     .BRAM_WIDTH(1024)
 )
 UUT (//IP Ports

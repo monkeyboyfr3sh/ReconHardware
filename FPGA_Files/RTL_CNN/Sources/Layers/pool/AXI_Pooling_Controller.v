@@ -1,3 +1,7 @@
+`define cstart_off      0
+`define im_width_off    16
+`define im_height_off   20
+
 // ----------------------------------------------------------------------
 // Pooling Controller
 // ----------------------------------------------------------------------
@@ -116,9 +120,9 @@ reg     [$clog2(BRAM_WIDTH)-1:0] current_x, current_y;
 // Global Logic Signals
 // ----------------------------------------------------------------------
 assign r_add            = current_x+read_offset;
-assign cStart           = control_registers[0][0];
-assign image_width      = control_registers[16];
-assign image_height     = control_registers[20];
+assign cStart           = control_registers[`cstart_off][0];
+assign image_width      = control_registers[`im_width_off];
+assign image_height     = control_registers[`im_height_off];
 assign bram_full        = &lb_full;
 assign s_axis_ready     = (!bram_full)  &lb_wr_en;
 assign lb_wr_en_comb    = lb_wr_en      &s_axis_valid  &(!bram_full);
@@ -411,12 +415,6 @@ always @(posedge axi_clk)begin
     end
     
     /* CONTROL REGISTERS *********************/
-    if(control_registers[4][0]) for(j = 0;j<CTRL_REG_SIZE;j = j+1) control_registers[j] = 0; // A register that will clear the control registers
-//    control_registers[8][0] = RDst;
-//    control_registers[8][1] = POOLst;
-    
-    /* Registers for debugging ******************/
-    /* End of registers for debugging ***********/
 end
 
 endmodule

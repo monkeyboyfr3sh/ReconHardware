@@ -145,6 +145,19 @@ for(gi=0;gi<CHANNELS;gi=gi+1)begin
         .full       (lb_full[gi])
     );
     
+    bram_ila_wrapper bram_ila
+    (
+        .clk_0      (axi_clk),
+        .probe0_0    (image_width),
+        .probe1_0    (s_axis_data),
+        .probe2_0    (r_add),
+        .probe3_0    (lb_wr_en_comb & (channel_sel==gi)),
+        .probe4_0    (lb_r_en),
+        .probe5_0    (lb_data_out[gi]),
+        .probe6_0    (lb_valid[gi]),
+        .probe7_0    (lb_full[gi])
+    );
+    
     // Attatch multiplier inputs for each channel
     for (gj = 0;gj<K_SQUARED;gj=gj+1)begin
         assign filterSet[gj] = control_registers[(gj*4)+FILTER_BASE];
@@ -242,10 +255,9 @@ begin
     if(control_registers[4][0]) for(j = 0;j<CTRL_REG_SIZE;j = j+1) control_registers[j] = 0; // A register that will clear the control registers
     control_registers[8][0] = RDst;
     control_registers[8][1] = MULTIst;
-    control_registers[8][9:2] = cCount[7:0];
-    if(cReady) control_registers[12] = cSum;// A debugging register to see what the last value was
-    /* Registers for debugging ******************/
-    /* End of registers for debugging ***********/
+    control_registers[8][2] = IDst;
+    control_registers[8][10:3] = cCount[7:0];
+    if(cReady) control_registers[12] = cSum;
 end//End of block
 /* AXI READ/WRITE TRANSACTIONS END ************************************************************************************************/
 

@@ -119,16 +119,19 @@ conv_controller (
     .MULTIPLIER_INPUT       (MULTIPLIER_INPUT),
     .MULTIPLICAND_INPUT     (MULTIPLICAND_INPUT),
     .MULTIPLY_START         (MULTIPLY_START),
+    
     .s_axis_valid           (s_axis_valid),
     .s_axis_data            (s_axis_data),
     .s_axis_ready           (s_axis_ready),
     .s_axis_last            (s_axis_last),
     .s_axis_keep            (s_axis_keep),
+    
     .m_axis_valid           (m_axis_valid),
     .m_axis_data            (m_axis_data),
     .m_axis_ready           (m_axis_ready),
     .m_axis_last            (m_axis_last),
     .m_axis_keep            (m_axis_keep),
+    
     .s_axi_awaddr           (s_axi_awaddr),
     .s_axi_awready          (s_axi_awready),
     .s_axi_awvalid          (s_axi_awvalid),

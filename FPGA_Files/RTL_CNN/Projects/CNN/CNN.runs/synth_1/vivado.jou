@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Tue May  4 17:05:52 2021
+# Process ID: 18964
+# Current directory: D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.runs/synth_1
+# Command line: vivado.exe -log top_simple.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_simple.tcl
+# Log file: D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.runs/synth_1/top_simple.vds
+# Journal file: D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source top_simple.tcl -notrace
