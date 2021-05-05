@@ -4,6 +4,18 @@
 *       for control settings and AXIS for data port.
 *
 */
+
+// ---------------------------------------
+// LUT for control register offsets
+// ---------------------------------------
+`define cstart_off      0
+`define rst_off         4
+`define state_mach_off  8
+`define lcv_off         12
+`define im_width_off    16
+`define im_height_off   20
+`define filter_off      24
+
 module Convolution_Controller
 #( // User Parameters
     parameter KERNEL_SIZE = 3,
@@ -11,7 +23,7 @@ module Convolution_Controller
     parameter BRAM_WIDTH = 1800,
     // Fixed Parameters
     parameter K_SQUARED = KERNEL_SIZE*KERNEL_SIZE,
-    parameter FILTER_BASE = 24,
+    parameter FILTER_BASE = `filter_off,
     parameter FINAL_CHANNEL = 2**(CHANNELS-1),
     parameter DATA_BASE = FILTER_BASE + (K_SQUARED*4),
     parameter CTRL_REG_SIZE = DATA_BASE + (K_SQUARED*4),
@@ -252,12 +264,14 @@ begin
     end
     
     /* CONTROL REGISTERS *********************/
-    if(control_registers[4][0]) for(j = 0;j<CTRL_REG_SIZE;j = j+1) control_registers[j] = 0; // A register that will clear the control registers
-    control_registers[8][0] = RDst;
-    control_registers[8][1] = MULTIst;
-    control_registers[8][2] = IDst;
-    control_registers[8][10:3] = cCount[7:0];
-    if(cReady) control_registers[12] = cSum;
+    if(control_registers[`rst_off][0]) for(j = 0;j<CTRL_REG_SIZE;j = j+1) control_registers[j] <= 0; // A register that will clear the control registers
+    control_registers[`state_mach_off][0] <= RDst;
+    control_registers[`state_mach_off][1] <= MULTIst;
+    control_registers[`state_mach_off][2] <= IDst;
+    control_registers[`state_mach_off][10:3] <= cCount[7:0];
+    control_registers[`state_mach_off][14:11] <= KERNEL_SIZE;
+    control_registers[`state_mach_off][18:15] <= CHANNELS;
+    if(cReady) control_registers[`lcv_off] <= cSum;
 end//End of block
 /* AXI READ/WRITE TRANSACTIONS END ************************************************************************************************/
 

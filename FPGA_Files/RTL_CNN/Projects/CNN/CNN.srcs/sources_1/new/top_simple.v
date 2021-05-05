@@ -1,8 +1,8 @@
 module top_simple
 #(
     parameter DATA_WIDTH = 16,
-    parameter AXI4LITE_CHANNELS = 1,
-    parameter AXIS_CHANNELS = 2
+    parameter AXI4LITE_CHANNELS = 2,
+    parameter AXIS_CHANNELS = 3
 );
 
 // ----------------------------------------------------------------------
@@ -66,21 +66,21 @@ design_2_wrapper
     .M01_AXI_0_wready       (axi_wready[0]),
     .M01_AXI_0_wvalid       (axi_wvalid[0]),
     
-//    .M02_AXI_0_araddr       (axi_araddr[1]),
-//    .M02_AXI_0_arready      (axi_arready[1]),
-//    .M02_AXI_0_arvalid      (axi_arvalid[1]),
-//    .M02_AXI_0_awaddr       (axi_awaddr[1]),
-//    .M02_AXI_0_awready      (axi_awready[1]),
-//    .M02_AXI_0_awvalid      (axi_awvalid[1]),
-//    .M02_AXI_0_bready       (axi_bready[1]),
-//    .M02_AXI_0_bvalid       (axi_bvalid[1]),
-//    .M02_AXI_0_rdata        (axi_rdata[1]),
-//    .M02_AXI_0_rready       (axi_rready[1]),
-//    .M02_AXI_0_rvalid       (axi_rvalid[1]),
-//    .M02_AXI_0_rlast       (axi_rlast[1]),
-//    .M02_AXI_0_wdata        (axi_wdata[1]),
-//    .M02_AXI_0_wready       (axi_wready[1]),
-//    .M02_AXI_0_wvalid       (axi_wvalid[1]),
+    .M02_AXI_0_araddr       (axi_araddr[1]),
+    .M02_AXI_0_arready      (axi_arready[1]),
+    .M02_AXI_0_arvalid      (axi_arvalid[1]),
+    .M02_AXI_0_awaddr       (axi_awaddr[1]),
+    .M02_AXI_0_awready      (axi_awready[1]),
+    .M02_AXI_0_awvalid      (axi_awvalid[1]),
+    .M02_AXI_0_bready       (axi_bready[1]),
+    .M02_AXI_0_bvalid       (axi_bvalid[1]),
+    .M02_AXI_0_rdata        (axi_rdata[1]),
+    .M02_AXI_0_rready       (axi_rready[1]),
+    .M02_AXI_0_rvalid       (axi_rvalid[1]),
+    .M02_AXI_0_rlast       (axi_rlast[1]),
+    .M02_AXI_0_wdata        (axi_wdata[1]),
+    .M02_AXI_0_wready       (axi_wready[1]),
+    .M02_AXI_0_wvalid       (axi_wvalid[1]),
 
     // ----------------------------------------------------------------------
     // AXIS Busses
@@ -91,24 +91,24 @@ design_2_wrapper
     .M_AXIS_MM2S_0_tready   (axis_ready[0]),
     .M_AXIS_MM2S_0_tvalid   (axis_valid[0]),
     
-    .S_AXIS_S2MM_0_tdata    (axis_data[1]),
-    .S_AXIS_S2MM_0_tkeep    (axis_keep[1]),
-    .S_AXIS_S2MM_0_tlast    (axis_last[1]),
-    .S_AXIS_S2MM_0_tready   (axis_ready[1]),
-    .S_AXIS_S2MM_0_tvalid   (axis_valid[1])
+    .S_AXIS_S2MM_0_tdata    (axis_data[2]),
+    .S_AXIS_S2MM_0_tkeep    (axis_keep[2]),
+    .S_AXIS_S2MM_0_tlast    (axis_last[2]),
+    .S_AXIS_S2MM_0_tready   (axis_ready[2]),
+    .S_AXIS_S2MM_0_tvalid   (axis_valid[2])
 );
 
 // ----------------------------------------------------------------------
 // Convolution Layer                                                     
 // ----------------------------------------------------------------------
-pool_wrap
+conv_wrap
 #(
     .DATA_WIDTH     (DATA_WIDTH),
     .KERNEL_SIZE    (3),
     .CHANNELS       (1),
     .BRAM_WIDTH     (1024)
 )
-pool_layer1 (
+conv_layer1 (
     .axi_clk            (clk),
     .axi_reset_n        (rst_n),
     .s_axis_data        (axis_data[0]), 
@@ -140,46 +140,46 @@ pool_layer1 (
     .s_axi_bready       (axi_bready[0])
 );
 
-//// ----------------------------------------------------------------------
-//// Convolution Layer                                                     
-//// ----------------------------------------------------------------------
-//conv_wrap
-//#(
-//    .DATA_WIDTH     (DATA_WIDTH),
-//    .KERNEL_SIZE    (3),
-//    .CHANNELS       (1),
-//    .BRAM_WIDTH     (1024)
-//)
-//conv_layer2 (
-//    .axi_clk            (clk),
-//    .axi_reset_n        (rst_n),
-//    .s_axis_data        (axis_data[1]), 
-//    .s_axis_keep        (axis_keep[1]), 
-//    .s_axis_last        (axis_last[1]), 
-//    .s_axis_ready       (axis_ready[1]),
-//    .s_axis_valid       (axis_valid[1]),
+// ----------------------------------------------------------------------
+// Pooling Layer                                                     
+// ----------------------------------------------------------------------
+pool_wrap
+#(
+    .DATA_WIDTH     (DATA_WIDTH),
+    .KERNEL_SIZE    (3),
+    .CHANNELS       (1),
+    .BRAM_WIDTH     (1024)
+)
+pool_layer1 (
+    .axi_clk            (clk),
+    .axi_reset_n        (rst_n),
+    .s_axis_data        (axis_data[1]), 
+    .s_axis_keep        (axis_keep[1]), 
+    .s_axis_last        (axis_last[1]), 
+    .s_axis_ready       (axis_ready[1]),
+    .s_axis_valid       (axis_valid[1]),
     
-//    .m_axis_data        (axis_data[2]), 
-//    .m_axis_keep        (axis_keep[2]), 
-//    .m_axis_last        (axis_last[2]), 
-//    .m_axis_ready       (axis_ready[2]),
-//    .m_axis_valid       (axis_valid[2]),
+    .m_axis_data        (axis_data[2]), 
+    .m_axis_keep        (axis_keep[2]), 
+    .m_axis_last        (axis_last[2]), 
+    .m_axis_ready       (axis_ready[2]),
+    .m_axis_valid       (axis_valid[2]),
     
-//    .s_axi_awaddr       (axi_awaddr[1]),
-//    .s_axi_awready      (axi_awready[1]),
-//    .s_axi_awvalid      (axi_awvalid[1]),
-//    .s_axi_araddr       (axi_araddr[1]),
-//    .s_axi_arready      (axi_arready[1]),
-//    .s_axi_arvalid      (axi_arvalid[1]),
-//    .s_axi_wdata        (axi_wdata[1]),
-//    .s_axi_wready       (axi_wready[1]),
-//    .s_axi_wvalid       (axi_wvalid[1]),
-//    .s_axi_rdata        (axi_rdata[1]),
-//    .s_axi_rready       (axi_rready[1]),
-//    .s_axi_rvalid       (axi_rvalid[1]),
-//    .s_axi_rlast        (axi_rlast[1]),
-//    .s_axi_bvalid       (axi_bvalid[1]),
-//    .s_axi_bready       (axi_bready[1])
-//);
+    .s_axi_awaddr       (axi_awaddr[1]),
+    .s_axi_awready      (axi_awready[1]),
+    .s_axi_awvalid      (axi_awvalid[1]),
+    .s_axi_araddr       (axi_araddr[1]),
+    .s_axi_arready      (axi_arready[1]),
+    .s_axi_arvalid      (axi_arvalid[1]),
+    .s_axi_wdata        (axi_wdata[1]),
+    .s_axi_wready       (axi_wready[1]),
+    .s_axi_wvalid       (axi_wvalid[1]),
+    .s_axi_rdata        (axi_rdata[1]),
+    .s_axi_rready       (axi_rready[1]),
+    .s_axi_rvalid       (axi_rvalid[1]),
+    .s_axi_rlast        (axi_rlast[1]),
+    .s_axi_bvalid       (axi_bvalid[1]),
+    .s_axi_bready       (axi_bready[1])
+);
 
 endmodule
