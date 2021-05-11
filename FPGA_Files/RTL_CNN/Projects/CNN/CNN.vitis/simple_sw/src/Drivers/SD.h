@@ -26,6 +26,6 @@ struct file_info {
 
 char* concat_str(const char *s1, const char *s2);
 struct file_info *SD_Transfer(char *FileName);
-int SD_Init();
+int init_sd();
 
 #endif /* SRC_DRIVERS_SD_H_ */

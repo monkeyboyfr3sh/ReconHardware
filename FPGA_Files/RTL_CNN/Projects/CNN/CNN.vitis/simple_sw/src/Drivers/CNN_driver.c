@@ -6,6 +6,93 @@
  */
 #include "CNN_driver.h"
 
+int init_cnn()
+{
+	struct dma_packet dma_packet;
+	struct image_info image1;
+	u32 status;
+
+	status = init_dma();
+	if(status != XST_SUCCESS){
+		return XST_FAILURE;
+	}
+
+	// Initialize SD card
+	status = init_sd();
+	if(status != XST_SUCCESS){
+	  return XST_FAILURE;
+	}
+
+	// Copy SD data to DDR4
+	print("\r\nCopying SD content to DDR4...\r\n");
+//	status = image_sd_to_mem(&image1,"im1.txt"); // Simple image
+	status = image_sd_to_mem(&image1,"im2.txt"); // Simple image
+	if (status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+	print_image_info(&image1);
+
+	struct layer_info *lay_1 = malloc(sizeof(struct layer_info));
+	struct layer_info *lay_2 = malloc(sizeof(struct layer_info));
+	struct layer_info *lay_3 = malloc(sizeof(struct layer_info));
+	struct layer_info *lay_4 = malloc(sizeof(struct layer_info));
+
+  	status = init_CPE(lay_1,lay_1_base,3);
+	if(status != XST_SUCCESS){
+		return XST_FAILURE;
+	}
+
+	status = init_POOL(lay_2,lay_2_base,3);
+	if(status != XST_SUCCESS){
+		return XST_FAILURE;
+	}
+
+  	status = init_CPE(lay_3,lay_3_base,3);
+	if(status != XST_SUCCESS){
+		return XST_FAILURE;
+	}
+
+	status = init_POOL(lay_4,lay_4_base,3);
+	if(status != XST_SUCCESS){
+		return XST_FAILURE;
+	}
+
+	xil_printf("\r\n\n----All layers INITIALIZED successfully----\r\n\n");
+
+	lay_1->next_layer = lay_2;
+	lay_2->next_layer = lay_3;
+	lay_3->next_layer = lay_4;
+	lay_4->next_layer = LAST_LAYER;
+
+	int k_size = lay_1->layer_kernel.kernel_size;
+	for(int i = 0;i<k_size*k_size;i++){
+		lay_1->layer_kernel.kernel_arrayPtr[i] = 0;
+		lay_3->layer_kernel.kernel_arrayPtr[i] = 0;
+		if(i==0){
+			lay_1->layer_kernel.kernel_arrayPtr[i] = 1;
+			lay_3->layer_kernel.kernel_arrayPtr[i] = 1;
+		}
+	}
+
+	status = set_all_layer_config(lay_1, &image1);
+	if(status != XST_SUCCESS){
+		return XST_FAILURE;
+	}
+
+	xil_printf("\r\n\n----All layers CONFIGURED successfully----\r\n\n");
+
+	status = init_dma_packet(&dma_packet,lay_1,&image1);
+	if(status != XST_SUCCESS){
+		return XST_FAILURE;
+	}
+
+	print_dma_packet_info(&dma_packet);
+
+	process_packet(&dma_packet);
+
+	return XST_SUCCESS;
+}
+
 int init_dma()
 {
 	u32 Status;
@@ -34,14 +121,148 @@ int init_dma()
 	return XST_SUCCESS;
 }
 
-int extract_kernel(struct kernel_type dest, struct kernel_type source){
-	u32 size = source->kenerl_size;
-	dest->kenerl_size = size;
-	for(int i = 0;i<size*size;i++){
-		dest->kernel_arrayPtr[i] = source->kernel_arrayPtr[i];
+int init_dma_packet(struct dma_packet *packet,struct layer_info *input_layer,struct image_info *image)
+{
+	struct layer_info *curr_layer = input_layer;
+
+	packet->fileName = image->filename;
+	packet->in_width = image->img_width;
+	packet->in_height = image->img_height;
+	packet->tx_ptr = image->img_mem_ptr;
+	packet->tx_pckt_len = image->pix_cnt;
+	packet->tx_byte_cnt = 4*image->pix_cnt;
+	if(packet->in_width*packet->in_height!=packet->tx_pckt_len){
+		xil_printf("Image dimension mismatch!\r\n");
+		return XST_FAILURE;
+	}
+
+	while(curr_layer->next_layer!=LAST_LAYER)
+	{
+		curr_layer = curr_layer->next_layer;
+	}
+
+	packet->out_width = curr_layer->width-curr_layer->layer_kernel.kernel_size+1;
+	packet->out_height = curr_layer->height-curr_layer->layer_kernel.kernel_size+1;
+	packet->rx_pckt_len = packet->out_height*packet->out_width;
+	packet->rx_byte_cnt = packet->rx_pckt_len*4;
+	packet->rx_ptr = malloc(packet->rx_pckt_len*sizeof(u32));
+	if(packet->rx_ptr<=0){
+		return XST_FAILURE;
+	}
+
+	return XST_SUCCESS;
+}
+
+int process_packet(struct dma_packet *packet)
+{
+	int status;
+
+	xil_printf("TxBuffer = {");
+	for(int Index = 0; Index < packet->tx_pckt_len; Index ++) {
+		if(Index%packet->in_width==0){
+			xil_printf("\r\n	");
+		}
+		xil_printf("0x%2x,",packet->tx_ptr[Index]);
+	}
+	xil_printf("\r\n}\r\n");
+
+	Xil_DCacheFlushRange((UINTPTR)packet->tx_ptr, packet->tx_byte_cnt);
+	Xil_DCacheFlushRange((UINTPTR)packet->rx_ptr, packet->rx_byte_cnt);
+
+	/* Queue the DMA read then write */
+	status = XAxiDma_SimpleTransfer(&AxiDma,(UINTPTR) packet->rx_ptr,packet->rx_byte_cnt, XAXIDMA_DEVICE_TO_DMA);
+	if (status != XST_SUCCESS) return XST_FAILURE;
+	status = XAxiDma_SimpleTransfer(&AxiDma,(UINTPTR) packet->tx_ptr,packet->tx_byte_cnt, XAXIDMA_DMA_TO_DEVICE);
+	if (status != XST_SUCCESS) return XST_FAILURE;
+
+	/* Stall program for processing to finish. */
+	while ((XAxiDma_Busy(&AxiDma,XAXIDMA_DEVICE_TO_DMA)) ||
+		(XAxiDma_Busy(&AxiDma,XAXIDMA_DMA_TO_DEVICE))) {
+			/* Wait */
+	}
+
+	xil_printf("RxBuffer = {");
+	for(int Index = 0; Index < packet->rx_pckt_len; Index ++) {
+		if(Index%packet->out_width==0){
+			xil_printf("\r\n	");
+		}
+		xil_printf("0x%2x,",packet->rx_ptr[Index]);
+	}
+	xil_printf("\r\n}\r\n");
+
+	status = image_mem_to_sd(packet);
+	if(status !=XST_SUCCESS){
+		return XST_FAILURE;
+	}
+
+	return XST_SUCCESS;
+}
+
+void print_layer_info(struct layer_info *layer)
+{
+	switch (layer->layer_type)
+	{
+		case CONV_LAYER:
+			CPE_print_control_register(layer);
+			break;
+		case POOL_LAYER:
+			POOL_print_control_register(layer);
+			break;
+	}
+}
+
+void print_dma_packet_info(struct dma_packet *packet)
+{
+	xil_printf("\r\nPrinting dma packet info:\r\n\n");
+
+	xil_printf("PACKET INPUT:\r\n");
+	xil_printf("-------------------------------------\r\n");
+	xil_printf("w = %d; h = %d\r\n",packet->in_width,packet->in_height);
+	xil_printf("pckt_len = %d; byte_cnt = %d\r\n\n",packet->tx_pckt_len,packet->tx_byte_cnt);
+
+	xil_printf("PACKET OUTPUT:\r\n");
+	xil_printf("-------------------------------------\r\n");
+	xil_printf("w = %d; h = %d\r\n",packet->out_width,packet->out_height);
+	xil_printf("pckt_len = %d; byte_cnt = %d\r\n\n",packet->rx_pckt_len,packet->rx_byte_cnt);
+}
+
+int set_all_layer_config(struct layer_info *layer, struct image_info *image)
+{
+	struct layer_info *curr_layer = layer;
+	struct image_info *out_image;
+	u32 kernel_size;
+
+	out_image->img_height = image->img_height;
+	out_image->img_width = image->img_width;
+
+	while(curr_layer!=LAST_LAYER)
+	{
+		set_layer_config(curr_layer,out_image);
+		print_layer_info(curr_layer);
+
+		kernel_size = curr_layer->layer_kernel.kernel_size;
+		out_image->img_height -= kernel_size-1;
+		out_image->img_width -= kernel_size-1;
+
+		curr_layer = curr_layer->next_layer;
 	}
 	return XST_SUCCESS;
 }
+
+int set_layer_config(struct layer_info *layer, struct image_info *image)
+{
+	switch (layer->layer_type)
+	{
+		case CONV_LAYER:
+			CPE_set_kernel_register(layer);
+			CPE_set_space_register(layer,image);
+			break;
+		case POOL_LAYER:
+			POOL_set_space_register(layer,image);
+			break;
+	}
+}
+
 int test_AXI(struct layer_info *layer)
 {
 	u32 val;
@@ -62,104 +283,6 @@ int test_AXI(struct layer_info *layer)
 	}
 	xil_printf("test PASS!\r\n");
 	Xil_Out32(layer->base_axi_addr,0);
-
-	return XST_SUCCESS;
-}
-
-struct dma_packet* Set_Layer_Info(struct layer_info *init_layer, struct image_info *in_image)
-{
-	struct dma_packet* packet = malloc(sizeof(struct dma_packet));
-	if(packet<=0){
-		return packet;
-	}
-	struct image_info* out_image = malloc(sizeof(struct image_info));
-	if(out_image<=0){
-		return out_image;
-	}
-
-	struct layer_info* curr_layer = init_layer;
-	out_image->img_height = in_image->img_height;
-	out_image->img_width = in_image->img_width;
-
-	/* update tx buffer */
-	packet->tx_ptr = in_image->img_mem_ptr;
-	packet->tx_pckt_len = in_image->pix_cnt;
-	if(packet->tx_pckt_len!=(in_image->img_width*in_image->img_height)){
-		xil_printf("Dimension mismatch!\r\n");
-		return XST_FAILURE;
-	}
-	packet->tx_byte_cnt = 4*in_image->pix_cnt;
-
-	while(curr_layer!=0){
-		out_image->img_height-=ceil(curr_layer->layer_kernel->kenerl_size/2);
-		out_image->img_width-=ceil(curr_layer->layer_kernel->kenerl_size/2);
-
-		switch(curr_layer->layer_type) {
-			case CONV_LAYER:
-				CPE_print_control_register(curr_layer);
-				CPE_set_space_register(curr_layer,out_image);
-				CPE_print_control_register(curr_layer);
-
-			case POOL_LAYER:
-				POOL_print_control_register(curr_layer);
-				POOL_set_space_register(curr_layer,out_image);
-				POOL_print_control_register(curr_layer);
-
-			default:
-				xil_printf("yay\r\n");
-		}
-
-		curr_layer = curr_layer->next_layer;
-	}
-	out_image->pix_cnt = out_image->img_width*out_image->img_height;
-
-	/* update rx buffer */
-	packet->rx_ptr = malloc(out_image->pix_cnt*sizeof(u32));
-	packet->rx_pckt_len = out_image->pix_cnt;
-	if(packet->rx_pckt_len!=(out_image->img_width*out_image->img_height)){
-		xil_printf("Dimension mismatch!\r\n");
-		return XST_FAILURE;
-	}
-	packet->rx_byte_cnt = 4*out_image->pix_cnt;
-
-	return packet;
-}
-
-int Process_Image(struct layer_info *init_layer, struct image_info *image)
-{
-	int dma_status;
-
-	struct dma_packet* packet = Set_Layer_Info(init_layer,image);
-	if(packet<=0){
-		return XST_FAILURE;
-	}
-
-	xil_printf("TxBuffer = {");
-	for(int Index = 0; Index < packet->tx_pckt_len; Index ++) {
-		if(Index%packet->in_width==0){
-			xil_printf("\r\n	");
-		}
-		xil_printf("0x%2x,",packet->tx_ptr[Index]);
-	}
-	xil_printf("\r\n}\r\n");
-
-	Xil_DCacheFlushRange((UINTPTR)packet->tx_ptr, packet->tx_byte_cnt);
-	Xil_DCacheFlushRange((UINTPTR)packet->rx_ptr, packet->rx_byte_cnt);
-
-	/* Queue the DMA read then write */
-	dma_status = XAxiDma_SimpleTransfer(&AxiDma,(UINTPTR) packet->rx_ptr,packet->rx_byte_cnt, XAXIDMA_DEVICE_TO_DMA);
-	if (dma_status != XST_SUCCESS) return XST_FAILURE;
-	dma_status = XAxiDma_SimpleTransfer(&AxiDma,(UINTPTR) packet->tx_ptr,packet->tx_byte_cnt, XAXIDMA_DMA_TO_DEVICE);
-	if (dma_status != XST_SUCCESS) return XST_FAILURE;
-
-	/* Stall program for processing to finish. */
-	while ((XAxiDma_Busy(&AxiDma,XAXIDMA_DEVICE_TO_DMA)) ||
-		(XAxiDma_Busy(&AxiDma,XAXIDMA_DMA_TO_DEVICE))) {
-			/* Wait */
-	}
-
-	image_mem_to_sd(packet,image->filename);
-	free(packet);
 
 	return XST_SUCCESS;
 }
@@ -214,7 +337,7 @@ int image_sd_to_mem(struct image_info* image, char* fileName){
 			}
 			// Special char
 			else {
-				image->img_tx_ptr[val_cnt] = val;
+				image->img_mem_ptr[val_cnt] = val;
 				val_cnt++;
 			}
 
@@ -239,34 +362,42 @@ int image_sd_to_mem(struct image_info* image, char* fileName){
 	return XST_SUCCESS;
 }
 
-int image_mem_to_sd(struct dma_packet* image, char* fileName)
+int image_mem_to_sd(struct dma_packet* dma_packet)
 {
 	FRESULT result;
 	UINT bw;			/* Number of bytes written */
 	FIL new_fil;
 
-	char* new_file_name = concat_str("CNN_",fileName);
+	xil_printf("Writing CNN_%s to the SD card... ",dma_packet->fileName);
+	char* new_file_name = concat_str("CNN_",dma_packet->fileName);
     result = f_open(&new_fil, new_file_name, FA_WRITE | FA_OPEN_ALWAYS);
     if ( result ){
         xil_printf("Failed with ERROR: %d \n\r", result);
     }
-	xil_printf("RxBuffer = {");
-	for(int Index = 0; Index <  image->rx_pckt_len; Index ++) {
-		if(Index%(image->out_width)==0){
-			xil_printf("\r\n	");
-		}
-		xil_printf("0x%3x,",image->rx_ptr[Index]);
+    char in_buff[15];
+    char *in_str = in_buff;
+
+    itoa(dma_packet->out_width,in_str,10);
+    in_str = concat_str(&in_buff,",");
+    f_write(&new_fil,in_str,strlen(in_str),&bw);
+
+    itoa(dma_packet->out_height,in_str,10);
+    in_str = concat_str(&in_buff,",");
+    f_write(&new_fil,in_str,strlen(in_str),&bw);
+
+    for(int Index = 0; Index <  dma_packet->rx_pckt_len; Index ++) {
 		char buff[15];
 		char *str = buff;
-		itoa(image->rx_ptr[Index],str,10);
-		if(Index<image->rx_pckt_len-1){
+		itoa(dma_packet->rx_ptr[Index],str,10);
+		if(Index<dma_packet->rx_pckt_len-1){
 			str = concat_str(&buff,",");
 		}
 		f_write(&new_fil,str,strlen(str),&bw);
-		free(str);
 	}
-	f_write(&new_fil,'\n',sizeof(char),&bw);
+    f_write(&new_fil,"\n",strlen("\n"),&bw);
 	f_close(&new_fil);
 	free(new_file_name);
-	xil_printf("\r\n}\r\n");
+	xil_printf("SUCCESS\r\n");
+
+	return XST_SUCCESS;
 }

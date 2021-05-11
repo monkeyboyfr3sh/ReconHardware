@@ -7,28 +7,30 @@
 
 #include "POOL_driver.h"
 
-int init_POOL(struct layer_info *POOL,u32 BASE_ADDR)
+int init_POOL(struct layer_info *POOL,u32 BASE_ADDR, int kernel_size)
 {
+	u32 status;
+
 	POOL->base_axi_addr = BASE_ADDR;
 	POOL->layer_type = POOL_LAYER;
 
-	// Run a test on the AXI bus of CPE
-	u32 axitest = test_POOL_AXI(POOL);
-	if(axitest!=XST_SUCCESS) {
+	status = test_AXI(POOL);
+	if(status!=XST_SUCCESS) {
 		return XST_FAILURE;
 	}
 
-	POOL->layer_kernel = malloc(sizeof(struct kernel_type));
-	if(POOL->layer_kernel<=0){
-		return XST_FAILURE;
-	}
-	POOL->layer_kernel->kenerl_size = 3;
+	POOL->layer_kernel.kernel_size = kernel_size;
+	POOL->layer_kernel.kernel_arrayPtr = malloc(kernel_size*kernel_size*sizeof(u32));
 
+	xil_printf("POOLING layer initialized\r\n");
 	return XST_SUCCESS;
 }
 
-int POOL_set_space_register(struct layer_info *POOL)
+int POOL_set_space_register(struct layer_info *POOL,struct image_info *image)
 {
+	xil_printf("Setting pooling layer space registers...\r\n");
+	POOL->width = image->img_width;
+	POOL->height = image->img_height;
 	Xil_Out32(POOL->base_axi_addr+image_w_off,POOL->width);// Image width
 	Xil_Out32(POOL->base_axi_addr+image_h_off,POOL->height);// Image height
 	Xil_Out32(POOL->base_axi_addr+control_s_off,1);

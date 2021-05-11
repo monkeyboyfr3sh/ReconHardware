@@ -73,7 +73,7 @@ struct file_info *SD_Transfer(char *FileName){
     return return_fil;
 }
 /* Mounts the SD card */
-int SD_Init(){
+int init_sd(){
     static FATFS fatfs;
     FRESULT result;
     xil_printf("Mounting SD ");

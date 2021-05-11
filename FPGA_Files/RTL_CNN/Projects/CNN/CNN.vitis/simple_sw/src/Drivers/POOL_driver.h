@@ -17,8 +17,8 @@
 // --------------------------------------------
 // Pooling Processor Prototypes
 // --------------------------------------------
-int init_POOL(struct layer_info *POOL,u32 BASE_ADDR)
-int POOL_set_space_register(struct layer_info *POOL);
+int init_POOL(struct layer_info *POOL,u32 BASE_ADDR, int kernel_size);
+int POOL_set_space_register(struct layer_info *POOL,struct image_info *image);
 int POOL_print_control_register(struct layer_info *POOL);
 
 #endif

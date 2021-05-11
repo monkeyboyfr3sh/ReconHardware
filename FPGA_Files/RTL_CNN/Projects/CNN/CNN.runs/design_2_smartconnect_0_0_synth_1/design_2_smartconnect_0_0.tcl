@@ -70,13 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "design_2_smartconnect_0_0_synth_1" START { ROLLUP_AUTO }
-set_param tcl.collectionResultDisplayLimit 0
-set_param chipscope.maxJobs 2
-set_param synth.incrementalSynthesisCache C:/Users/monke/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-4272-DESKTOP-RPQ2DOT/incrSyn
-set_param xicom.use_bs_reader 1
-set_msg_config -id {Common 17-41} -limit 10000000
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 OPTRACE "Creating in-memory project" START { }
@@ -122,6 +115,24 @@ set_property used_in_implementation false [get_files -all d:/GitHub/ReconHardwar
 set_property used_in_implementation false [get_files -all d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_smartconnect_0_0/bd_0/ip/ip_26/bd_0c5c_m01awn_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_smartconnect_0_0/bd_0/ip/ip_27/bd_0c5c_m01wn_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_smartconnect_0_0/bd_0/ip/ip_28/bd_0c5c_m01bn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_smartconnect_0_0/bd_0/ip/ip_30/bd_0c5c_m02s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_smartconnect_0_0/bd_0/ip/ip_31/bd_0c5c_m02arn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_smartconnect_0_0/bd_0/ip/ip_32/bd_0c5c_m02rn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_smartconnect_0_0/bd_0/ip/ip_33/bd_0c5c_m02awn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_smartconnect_0_0/bd_0/ip/ip_34/bd_0c5c_m02wn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_smartconnect_0_0/bd_0/ip/ip_35/bd_0c5c_m02bn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_smartconnect_0_0/bd_0/ip/ip_37/bd_0c5c_m03s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_smartconnect_0_0/bd_0/ip/ip_38/bd_0c5c_m03arn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_smartconnect_0_0/bd_0/ip/ip_39/bd_0c5c_m03rn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_smartconnect_0_0/bd_0/ip/ip_40/bd_0c5c_m03awn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_smartconnect_0_0/bd_0/ip/ip_41/bd_0c5c_m03wn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_smartconnect_0_0/bd_0/ip/ip_42/bd_0c5c_m03bn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_smartconnect_0_0/bd_0/ip/ip_44/bd_0c5c_m04s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_smartconnect_0_0/bd_0/ip/ip_45/bd_0c5c_m04arn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_smartconnect_0_0/bd_0/ip/ip_46/bd_0c5c_m04rn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_smartconnect_0_0/bd_0/ip/ip_47/bd_0c5c_m04awn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_smartconnect_0_0/bd_0/ip/ip_48/bd_0c5c_m04wn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_smartconnect_0_0/bd_0/ip/ip_49/bd_0c5c_m04bn_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_smartconnect_0_0/ooc.xdc]
 
 OPTRACE "Adding files" END { }

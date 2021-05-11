@@ -22,8 +22,8 @@
 // --------------------------------------------
 // Convolution Processor Prototypes
 // --------------------------------------------
-int init_CPE(struct layer_info *CPE,u32 BASE_ADDR,struct kernel_type *kernel);
-int CPE_set_space_register(struct layer_info *CPE);
+int init_CPE(struct layer_info *CPE,u32 BASE_ADDR, int kernel_size);
+int CPE_set_space_register(struct layer_info *CPE,struct image_info *image);
 int CPE_set_kernel_register(struct layer_info *CPE);
 int CPE_print_control_register(struct layer_info *CPE);
 
