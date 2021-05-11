@@ -70,6 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_msg_config -id {Common 17-41} -limit 10000000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg400-1
 
@@ -92,7 +93,6 @@ read_verilog -library xil_defaultlib {
   D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/pool/AXI_Pooling_Controller.v
   D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Non_Linear/ReLU.v
   D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/BRAM/bram_coupler.v
-  D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/bram_ila/hdl/bram_ila_wrapper.v
   D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/BRAM/bram_wrapper.v
   D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/Wrappers/conv_wrap.v
   D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/hdl/design_2_wrapper.v
@@ -103,13 +103,6 @@ read_verilog -library xil_defaultlib {
   D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/pool/Wrappers/pool_wrap.v
   D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v
 }
-add_files D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/bram_ila/bram_ila.bd
-set_property used_in_synthesis false [get_files -all d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/bram_ila/ip/bram_ila_ila_0_0/ila_v6_2/constraints/ila_impl.xdc]
-set_property used_in_implementation false [get_files -all d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/bram_ila/ip/bram_ila_ila_0_0/ila_v6_2/constraints/ila_impl.xdc]
-set_property used_in_implementation false [get_files -all d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/bram_ila/ip/bram_ila_ila_0_0/ila_v6_2/constraints/ila.xdc]
-set_property used_in_implementation false [get_files -all d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/bram_ila/ip/bram_ila_ila_0_0/bram_ila_ila_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/bram_ila/bram_ila_ooc.xdc]
-
 add_files D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/design_2.bd
 set_property used_in_implementation false [get_files -all d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_axi_dma_0_0/design_2_axi_dma_0_0.xdc]
 set_property used_in_implementation false [get_files -all d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_axi_dma_0_0/design_2_axi_dma_0_0_clocks.xdc]
@@ -183,30 +176,6 @@ set_property used_in_implementation false [get_files -all d:/GitHub/ReconHardwar
 set_property used_in_implementation false [get_files -all d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_smartconnect_0_1/bd_0/ip/ip_25/bd_cc9d_m00bn_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_smartconnect_0_1/ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_processing_system7_0_1/design_2_processing_system7_0_1.xdc]
-set_property used_in_synthesis false [get_files -all d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_ila_0_0/ila_v6_2/constraints/ila_impl.xdc]
-set_property used_in_implementation false [get_files -all d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_ila_0_0/ila_v6_2/constraints/ila_impl.xdc]
-set_property used_in_implementation false [get_files -all d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_ila_0_0/ila_v6_2/constraints/ila.xdc]
-set_property used_in_implementation false [get_files -all d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_ila_0_0/design_2_ila_0_0_ooc.xdc]
-set_property used_in_synthesis false [get_files -all d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_ila_0_1/ila_v6_2/constraints/ila_impl.xdc]
-set_property used_in_implementation false [get_files -all d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_ila_0_1/ila_v6_2/constraints/ila_impl.xdc]
-set_property used_in_implementation false [get_files -all d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_ila_0_1/ila_v6_2/constraints/ila.xdc]
-set_property used_in_implementation false [get_files -all d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_ila_0_1/design_2_ila_0_1_ooc.xdc]
-set_property used_in_synthesis false [get_files -all d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_ila_1_0/ila_v6_2/constraints/ila_impl.xdc]
-set_property used_in_implementation false [get_files -all d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_ila_1_0/ila_v6_2/constraints/ila_impl.xdc]
-set_property used_in_implementation false [get_files -all d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_ila_1_0/ila_v6_2/constraints/ila.xdc]
-set_property used_in_implementation false [get_files -all d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_ila_1_0/design_2_ila_1_0_ooc.xdc]
-set_property used_in_synthesis false [get_files -all d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_ila_0_2/ila_v6_2/constraints/ila_impl.xdc]
-set_property used_in_implementation false [get_files -all d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_ila_0_2/ila_v6_2/constraints/ila_impl.xdc]
-set_property used_in_implementation false [get_files -all d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_ila_0_2/ila_v6_2/constraints/ila.xdc]
-set_property used_in_implementation false [get_files -all d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_ila_0_2/design_2_ila_0_2_ooc.xdc]
-set_property used_in_synthesis false [get_files -all d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_ila_0_3/ila_v6_2/constraints/ila_impl.xdc]
-set_property used_in_implementation false [get_files -all d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_ila_0_3/ila_v6_2/constraints/ila_impl.xdc]
-set_property used_in_implementation false [get_files -all d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_ila_0_3/ila_v6_2/constraints/ila.xdc]
-set_property used_in_implementation false [get_files -all d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_ila_0_3/design_2_ila_0_3_ooc.xdc]
-set_property used_in_synthesis false [get_files -all d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_ila_0_4/ila_v6_2/constraints/ila_impl.xdc]
-set_property used_in_implementation false [get_files -all d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_ila_0_4/ila_v6_2/constraints/ila_impl.xdc]
-set_property used_in_implementation false [get_files -all d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_ila_0_4/ila_v6_2/constraints/ila.xdc]
-set_property used_in_implementation false [get_files -all d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_ila_0_4/design_2_ila_0_4_ooc.xdc]
 set_property used_in_implementation false [get_files -all D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/design_2_ooc.xdc]
 
 OPTRACE "Adding files" END { }

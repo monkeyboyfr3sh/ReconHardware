@@ -114,8 +114,7 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
+set_msg_config -id {Common 17-41} -limit 10000000
 
 OPTRACE "Implementation" START { ROLLUP_1 }
 OPTRACE "Phase: Init Design" START { ROLLUP_AUTO }
@@ -124,7 +123,6 @@ set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
   set_param chipscope.maxJobs 2
-  set_param synth.incrementalSynthesisCache C:/Users/monke/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-7232-DESKTOP-RPQ2DOT/incrSyn
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7z020clg400-1
   set_property board_part tul.com.tw:pynq-z2:part0:1.0 [current_project]
@@ -142,7 +140,6 @@ OPTRACE "add files" START { }
   add_files -quiet D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.runs/synth_1/top_simple.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/bram_ila/bram_ila.bd
   add_files D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/design_2.bd
   set_param project.isImplRun false
 OPTRACE "read constraints: implementation" START { }

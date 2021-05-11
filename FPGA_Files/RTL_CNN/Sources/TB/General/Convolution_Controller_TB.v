@@ -24,7 +24,7 @@ reg [3:0] s_axis_keep;
 
 //AXI4-S master i/f - Output Data port
 wire  m_axis_valid;
-wire [31:0] m_axis_data;
+wire [`data_width-1:0] m_axis_data;
 reg    m_axis_ready = 1;
 wire m_axis_last;
 wire [3:0] m_axis_keep;

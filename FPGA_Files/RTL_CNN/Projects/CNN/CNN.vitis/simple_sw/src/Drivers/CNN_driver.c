@@ -37,22 +37,22 @@ int init_cnn()
 	struct layer_info *lay_3 = malloc(sizeof(struct layer_info));
 	struct layer_info *lay_4 = malloc(sizeof(struct layer_info));
 
-  	status = init_CPE(lay_1,lay_1_base,3);
+  	status = init_layer(lay_1,lay_1_base,3,CONV_LAYER);
 	if(status != XST_SUCCESS){
 		return XST_FAILURE;
 	}
 
-	status = init_POOL(lay_2,lay_2_base,3);
+	status = init_layer(lay_2,lay_2_base,3,POOL_LAYER);
 	if(status != XST_SUCCESS){
 		return XST_FAILURE;
 	}
 
-  	status = init_CPE(lay_3,lay_3_base,3);
+  	status = init_layer(lay_3,lay_3_base,3,CONV_LAYER);
 	if(status != XST_SUCCESS){
 		return XST_FAILURE;
 	}
 
-	status = init_POOL(lay_4,lay_4_base,3);
+	status = init_layer(lay_4,lay_4_base,3,POOL_LAYER);
 	if(status != XST_SUCCESS){
 		return XST_FAILURE;
 	}
@@ -92,7 +92,41 @@ int init_cnn()
 
 	return XST_SUCCESS;
 }
+int init_layer(struct layer_info *layer,u32 BASE_ADDR, int kernel_size, enum layers layer_type)
+{
+	u32 status;
+	status = test_AXI(layer);
+	if(status!=XST_SUCCESS) {
+		return XST_FAILURE;
+	}
 
+	layer->base_axi_addr = BASE_ADDR;
+	layer->layer_kernel.kernel_size = kernel_size;
+	layer->layer_kernel.kernel_arrayPtr = malloc(kernel_size*kernel_size*sizeof(u32));
+
+	switch(layer_type)
+	{
+		case CONV_LAYER:
+			xil_printf("COVOLUTION layer initialized\r\n");
+			layer->layer_type = CONV_LAYER;
+			break;
+		case POOL_LAYER:
+			xil_printf("POOLING layer initialized\r\n");
+			layer->layer_type = POOL_LAYER;
+			break;
+		case FC_LAYER:
+			xil_printf("FULLY CONNECTED layer initialized\r\n");
+			layer->layer_type = FC_LAYER;
+			break;
+		default:
+			xil_printf("Invalid layer type");
+			status = XST_FAILURE;
+	}
+	if(status!=XST_SUCCESS){
+		return XST_FAILURE;
+	}
+	return XST_SUCCESS;
+}
 int init_dma()
 {
 	u32 Status;

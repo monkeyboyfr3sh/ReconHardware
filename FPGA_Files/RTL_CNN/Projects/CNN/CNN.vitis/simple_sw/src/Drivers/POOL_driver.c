@@ -7,25 +7,6 @@
 
 #include "POOL_driver.h"
 
-int init_POOL(struct layer_info *POOL,u32 BASE_ADDR, int kernel_size)
-{
-	u32 status;
-
-	POOL->base_axi_addr = BASE_ADDR;
-	POOL->layer_type = POOL_LAYER;
-
-	status = test_AXI(POOL);
-	if(status!=XST_SUCCESS) {
-		return XST_FAILURE;
-	}
-
-	POOL->layer_kernel.kernel_size = kernel_size;
-	POOL->layer_kernel.kernel_arrayPtr = malloc(kernel_size*kernel_size*sizeof(u32));
-
-	xil_printf("POOLING layer initialized\r\n");
-	return XST_SUCCESS;
-}
-
 int POOL_set_space_register(struct layer_info *POOL,struct image_info *image)
 {
 	xil_printf("Setting pooling layer space registers...\r\n");

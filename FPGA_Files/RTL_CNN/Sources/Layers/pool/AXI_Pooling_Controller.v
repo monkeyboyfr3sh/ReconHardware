@@ -1,4 +1,10 @@
+// ---------------------------------------
+// LUT for control register offsets
+// ---------------------------------------
+`define pool_lay_key    1
 `define cstart_off      0
+`define rst_off         4
+`define state_mach_off  8
 `define im_width_off    16
 `define im_height_off   20
 
@@ -415,6 +421,10 @@ always @(posedge axi_clk)begin
     end
     
     /* CONTROL REGISTERS *********************/
+    if(control_registers[`rst_off][0]) for(j = 0;j<CTRL_REG_SIZE;j = j+1) control_registers[j] <= 0; // A register that will clear the control registers
+    control_registers[`state_mach_off][3:0] <= `pool_lay_key;
+    control_registers[`state_mach_off][7:4] <= KERNEL_SIZE;
+    control_registers[`state_mach_off][11:8] <= CHANNELS;
 end
 
 endmodule

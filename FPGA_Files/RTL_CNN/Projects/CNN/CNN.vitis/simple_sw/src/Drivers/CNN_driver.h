@@ -18,7 +18,8 @@
 #include "CPE_driver.h"
 #include "POOL_driver.h"
 
-#define LAST_LAYER	0xffff
+#define STATE_MACHINE_OFF	8
+#define LAST_LAYER			0xffff
 
 enum layers {
 	CONV_LAYER,
@@ -89,6 +90,7 @@ typedef struct dma_packet {
 // CNN Model Prototypes
 // --------------------------------------------
 int init_cnn();
+int init_layer(struct layer_info *layer,u32 BASE_ADDR, int kernel_size, enum layers layer_type);
 int init_dma();
 int init_dma_packet(struct dma_packet *packet,struct layer_info *input_layer,struct image_info *image);
 int process_packet(struct dma_packet *packet);
@@ -101,6 +103,8 @@ int set_all_layer_config(struct layer_info *layer, struct image_info *image);
 int set_layer_config(struct layer_info *layer, struct image_info *image);
 
 int test_AXI(struct layer_info *layer);
+int get_layer_type(struct layer_info *layer);
+unsigned short extract(unsigned short value, int begin, int end);
 
 // --------------------------------------------
 // Image Data Prototypes

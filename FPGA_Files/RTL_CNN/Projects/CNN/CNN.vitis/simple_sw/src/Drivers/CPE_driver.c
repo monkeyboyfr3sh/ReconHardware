@@ -7,25 +7,6 @@
 
 #include "CPE_driver.h"
 
-int init_CPE(struct layer_info *CPE,u32 BASE_ADDR, int kernel_size)
-{
-	u32 status;
-
-	CPE->base_axi_addr = BASE_ADDR;
-	CPE->layer_type = CONV_LAYER;
-
-	status = test_AXI(CPE);
-	if(status!=XST_SUCCESS) {
-		return XST_FAILURE;
-	}
-
-	CPE->layer_kernel.kernel_size = kernel_size;
-	CPE->layer_kernel.kernel_arrayPtr = malloc(kernel_size*kernel_size*sizeof(u32));
-
-	xil_printf("COVOLUTION layer initialized\r\n");
-	return XST_SUCCESS;
-}
-
 int CPE_set_space_register(struct layer_info *CPE,struct image_info *image)
 {
 	xil_printf("Setting convolution layer space registers...\r\n");

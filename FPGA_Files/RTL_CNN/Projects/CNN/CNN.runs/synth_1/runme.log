@@ -13,7 +13,6 @@ source top_simple.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2020.1/data/ip'.
-add_files: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1074.586 ; gain = 0.000
 Command: synth_design -top top_simple -part xc7z020clg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
@@ -21,11 +20,11 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 12596
-WARNING: [Synth 8-1849] concatenation with unsized literal; will interpret as 32 bits [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:176]
+INFO: [Synth 8-7075] Helper process launched with PID 15520
 WARNING: [Synth 8-1849] concatenation with unsized literal; will interpret as 32 bits [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:177]
+WARNING: [Synth 8-1849] concatenation with unsized literal; will interpret as 32 bits [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:178]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1167.672 ; gain = 93.086
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1107.684 ; gain = 34.129
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'top_simple' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:1]
 	Parameter DATA_WIDTH bound to: 16 - type: integer 
@@ -33,67 +32,41 @@ INFO: [Synth 8-6157] synthesizing module 'top_simple' [D:/GitHub/ReconHardware/F
 	Parameter AXIS_CHANNELS bound to: 5 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'design_2_wrapper' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/hdl/design_2_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'design_2' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:13]
-INFO: [Synth 8-6157] synthesizing module 'design_2_axi_dma_0_0' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.runs/synth_1/.Xil/Vivado-10504-DESKTOP-RPQ2DOT/realtime/design_2_axi_dma_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_2_axi_dma_0_0' (1#1) [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.runs/synth_1/.Xil/Vivado-10504-DESKTOP-RPQ2DOT/realtime/design_2_axi_dma_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'mm2s_prmry_reset_out_n' of module 'design_2_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:857]
-WARNING: [Synth 8-7071] port 's2mm_prmry_reset_out_n' of module 'design_2_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:857]
-WARNING: [Synth 8-7071] port 'mm2s_introut' of module 'design_2_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:857]
-WARNING: [Synth 8-7071] port 's2mm_introut' of module 'design_2_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:857]
-WARNING: [Synth 8-7071] port 'axi_dma_tstvec' of module 'design_2_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:857]
-WARNING: [Synth 8-7023] instance 'axi_dma_0' of module 'design_2_axi_dma_0_0' has 64 connections declared, but only 59 given [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:857]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:917]
-INFO: [Synth 8-6157] synthesizing module 'design_2_ila_0_0' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.runs/synth_1/.Xil/Vivado-10504-DESKTOP-RPQ2DOT/realtime/design_2_ila_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_2_ila_0_0' (2#1) [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.runs/synth_1/.Xil/Vivado-10504-DESKTOP-RPQ2DOT/realtime/design_2_ila_0_0_stub.v:6]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:963]
-INFO: [Synth 8-6157] synthesizing module 'design_2_ila_0_1' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.runs/synth_1/.Xil/Vivado-10504-DESKTOP-RPQ2DOT/realtime/design_2_ila_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_2_ila_0_1' (3#1) [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.runs/synth_1/.Xil/Vivado-10504-DESKTOP-RPQ2DOT/realtime/design_2_ila_0_1_stub.v:6]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:974]
-INFO: [Synth 8-6157] synthesizing module 'design_2_ila_1_0' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.runs/synth_1/.Xil/Vivado-10504-DESKTOP-RPQ2DOT/realtime/design_2_ila_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_2_ila_1_0' (4#1) [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.runs/synth_1/.Xil/Vivado-10504-DESKTOP-RPQ2DOT/realtime/design_2_ila_1_0_stub.v:6]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:985]
-INFO: [Synth 8-6157] synthesizing module 'design_2_ila_0_2' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.runs/synth_1/.Xil/Vivado-10504-DESKTOP-RPQ2DOT/realtime/design_2_ila_0_2_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_2_ila_0_2' (5#1) [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.runs/synth_1/.Xil/Vivado-10504-DESKTOP-RPQ2DOT/realtime/design_2_ila_0_2_stub.v:6]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:1031]
-INFO: [Synth 8-6157] synthesizing module 'design_2_ila_0_3' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.runs/synth_1/.Xil/Vivado-10504-DESKTOP-RPQ2DOT/realtime/design_2_ila_0_3_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_2_ila_0_3' (6#1) [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.runs/synth_1/.Xil/Vivado-10504-DESKTOP-RPQ2DOT/realtime/design_2_ila_0_3_stub.v:6]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:1077]
-INFO: [Synth 8-6157] synthesizing module 'design_2_ila_0_4' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.runs/synth_1/.Xil/Vivado-10504-DESKTOP-RPQ2DOT/realtime/design_2_ila_0_4_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_2_ila_0_4' (7#1) [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.runs/synth_1/.Xil/Vivado-10504-DESKTOP-RPQ2DOT/realtime/design_2_ila_0_4_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_2_processing_system7_0_1' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.runs/synth_1/.Xil/Vivado-10504-DESKTOP-RPQ2DOT/realtime/design_2_processing_system7_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_2_processing_system7_0_1' (8#1) [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.runs/synth_1/.Xil/Vivado-10504-DESKTOP-RPQ2DOT/realtime/design_2_processing_system7_0_1_stub.v:6]
-WARNING: [Synth 8-7071] port 'USB0_PORT_INDCTL' of module 'design_2_processing_system7_0_1' is unconnected for instance 'processing_system7_0' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:1123]
-WARNING: [Synth 8-7071] port 'USB0_VBUS_PWRSELECT' of module 'design_2_processing_system7_0_1' is unconnected for instance 'processing_system7_0' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:1123]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_BID' of module 'design_2_processing_system7_0_1' is unconnected for instance 'processing_system7_0' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:1123]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_RID' of module 'design_2_processing_system7_0_1' is unconnected for instance 'processing_system7_0' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:1123]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_RCOUNT' of module 'design_2_processing_system7_0_1' is unconnected for instance 'processing_system7_0' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:1123]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_WCOUNT' of module 'design_2_processing_system7_0_1' is unconnected for instance 'processing_system7_0' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:1123]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_RACOUNT' of module 'design_2_processing_system7_0_1' is unconnected for instance 'processing_system7_0' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:1123]
-WARNING: [Synth 8-7071] port 'S_AXI_HP0_WACOUNT' of module 'design_2_processing_system7_0_1' is unconnected for instance 'processing_system7_0' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:1123]
-WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'design_2_processing_system7_0_1' has 110 connections declared, but only 102 given [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:1123]
-INFO: [Synth 8-6157] synthesizing module 'design_2_rst_ps7_0_100M_0' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.runs/synth_1/.Xil/Vivado-10504-DESKTOP-RPQ2DOT/realtime/design_2_rst_ps7_0_100M_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_2_rst_ps7_0_100M_0' (9#1) [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.runs/synth_1/.Xil/Vivado-10504-DESKTOP-RPQ2DOT/realtime/design_2_rst_ps7_0_100M_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_2_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:1226]
-WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_2_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:1226]
-WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_2_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:1226]
-WARNING: [Synth 8-7023] instance 'rst_ps7_0_100M' of module 'design_2_rst_ps7_0_100M_0' has 10 connections declared, but only 7 given [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:1226]
-INFO: [Synth 8-6157] synthesizing module 'design_2_smartconnect_0_0' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.runs/synth_1/.Xil/Vivado-10504-DESKTOP-RPQ2DOT/realtime/design_2_smartconnect_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_2_smartconnect_0_0' (10#1) [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.runs/synth_1/.Xil/Vivado-10504-DESKTOP-RPQ2DOT/realtime/design_2_smartconnect_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'M00_AXI_awprot' of module 'design_2_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:1234]
-WARNING: [Synth 8-7071] port 'M00_AXI_wstrb' of module 'design_2_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:1234]
-WARNING: [Synth 8-7071] port 'M00_AXI_arprot' of module 'design_2_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:1234]
-WARNING: [Synth 8-7023] instance 'smartconnect_0' of module 'design_2_smartconnect_0_0' has 191 connections declared, but only 188 given [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:1234]
-INFO: [Synth 8-6157] synthesizing module 'design_2_smartconnect_0_1' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.runs/synth_1/.Xil/Vivado-10504-DESKTOP-RPQ2DOT/realtime/design_2_smartconnect_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_2_smartconnect_0_1' (11#1) [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.runs/synth_1/.Xil/Vivado-10504-DESKTOP-RPQ2DOT/realtime/design_2_smartconnect_0_1_stub.v:6]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'smartconnect_0'. This will prevent further optimization [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:1234]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_0'. This will prevent further optimization [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:917]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_1'. This will prevent further optimization [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:963]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'axi_dma_0'. This will prevent further optimization [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:857]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_2'. This will prevent further optimization [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:974]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_3'. This will prevent further optimization [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:985]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_5'. This will prevent further optimization [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:1077]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_4'. This will prevent further optimization [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:1031]
-INFO: [Synth 8-6155] done synthesizing module 'design_2' (12#1) [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'design_2_wrapper' (13#1) [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/hdl/design_2_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'design_2_axi_dma_0_0' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.runs/synth_1/.Xil/Vivado-10572-DESKTOP-RPQ2DOT/realtime/design_2_axi_dma_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_2_axi_dma_0_0' (1#1) [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.runs/synth_1/.Xil/Vivado-10572-DESKTOP-RPQ2DOT/realtime/design_2_axi_dma_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mm2s_prmry_reset_out_n' of module 'design_2_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:773]
+WARNING: [Synth 8-7071] port 's2mm_prmry_reset_out_n' of module 'design_2_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:773]
+WARNING: [Synth 8-7071] port 'mm2s_introut' of module 'design_2_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:773]
+WARNING: [Synth 8-7071] port 's2mm_introut' of module 'design_2_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:773]
+WARNING: [Synth 8-7071] port 'axi_dma_tstvec' of module 'design_2_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:773]
+WARNING: [Synth 8-7023] instance 'axi_dma_0' of module 'design_2_axi_dma_0_0' has 64 connections declared, but only 59 given [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:773]
+INFO: [Synth 8-6157] synthesizing module 'design_2_processing_system7_0_1' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.runs/synth_1/.Xil/Vivado-10572-DESKTOP-RPQ2DOT/realtime/design_2_processing_system7_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_2_processing_system7_0_1' (2#1) [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.runs/synth_1/.Xil/Vivado-10572-DESKTOP-RPQ2DOT/realtime/design_2_processing_system7_0_1_stub.v:6]
+WARNING: [Synth 8-7071] port 'USB0_PORT_INDCTL' of module 'design_2_processing_system7_0_1' is unconnected for instance 'processing_system7_0' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:833]
+WARNING: [Synth 8-7071] port 'USB0_VBUS_PWRSELECT' of module 'design_2_processing_system7_0_1' is unconnected for instance 'processing_system7_0' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:833]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_BID' of module 'design_2_processing_system7_0_1' is unconnected for instance 'processing_system7_0' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:833]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_RID' of module 'design_2_processing_system7_0_1' is unconnected for instance 'processing_system7_0' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:833]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_RCOUNT' of module 'design_2_processing_system7_0_1' is unconnected for instance 'processing_system7_0' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:833]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_WCOUNT' of module 'design_2_processing_system7_0_1' is unconnected for instance 'processing_system7_0' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:833]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_RACOUNT' of module 'design_2_processing_system7_0_1' is unconnected for instance 'processing_system7_0' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:833]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_WACOUNT' of module 'design_2_processing_system7_0_1' is unconnected for instance 'processing_system7_0' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:833]
+WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'design_2_processing_system7_0_1' has 110 connections declared, but only 102 given [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:833]
+INFO: [Synth 8-6157] synthesizing module 'design_2_rst_ps7_0_100M_0' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.runs/synth_1/.Xil/Vivado-10572-DESKTOP-RPQ2DOT/realtime/design_2_rst_ps7_0_100M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_2_rst_ps7_0_100M_0' (3#1) [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.runs/synth_1/.Xil/Vivado-10572-DESKTOP-RPQ2DOT/realtime/design_2_rst_ps7_0_100M_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_2_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:936]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_2_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:936]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_2_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:936]
+WARNING: [Synth 8-7023] instance 'rst_ps7_0_100M' of module 'design_2_rst_ps7_0_100M_0' has 10 connections declared, but only 7 given [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:936]
+INFO: [Synth 8-6157] synthesizing module 'design_2_smartconnect_0_0' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.runs/synth_1/.Xil/Vivado-10572-DESKTOP-RPQ2DOT/realtime/design_2_smartconnect_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_2_smartconnect_0_0' (4#1) [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.runs/synth_1/.Xil/Vivado-10572-DESKTOP-RPQ2DOT/realtime/design_2_smartconnect_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'M00_AXI_awprot' of module 'design_2_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:944]
+WARNING: [Synth 8-7071] port 'M00_AXI_wstrb' of module 'design_2_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:944]
+WARNING: [Synth 8-7071] port 'M00_AXI_arprot' of module 'design_2_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:944]
+WARNING: [Synth 8-7023] instance 'smartconnect_0' of module 'design_2_smartconnect_0_0' has 191 connections declared, but only 188 given [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:944]
+INFO: [Synth 8-6157] synthesizing module 'design_2_smartconnect_0_1' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.runs/synth_1/.Xil/Vivado-10572-DESKTOP-RPQ2DOT/realtime/design_2_smartconnect_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_2_smartconnect_0_1' (5#1) [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.runs/synth_1/.Xil/Vivado-10572-DESKTOP-RPQ2DOT/realtime/design_2_smartconnect_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_2' (6#1) [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_2_wrapper' (7#1) [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/hdl/design_2_wrapper.v:12]
 WARNING: [Synth 8-689] width (10) of port connection 'M01_AXI_0_araddr' does not match port width (32) of module 'design_2_wrapper' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:53]
 WARNING: [Synth 8-689] width (10) of port connection 'M01_AXI_0_awaddr' does not match port width (32) of module 'design_2_wrapper' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:56]
 WARNING: [Synth 8-689] width (10) of port connection 'M02_AXI_0_araddr' does not match port width (32) of module 'design_2_wrapper' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:69]
@@ -125,66 +98,66 @@ WARNING: [Synth 8-7071] port 'FIXED_IO_ps_porb' of module 'design_2_wrapper' is 
 WARNING: [Synth 8-7071] port 'FIXED_IO_ps_srstb' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
 WARNING: [Synth 8-7071] port 'M01_AXI_0_arburst' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
 WARNING: [Synth 8-7071] port 'M01_AXI_0_arcache' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
-WARNING: [Synth 8-7071] port 'M01_AXI_0_arid' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
 WARNING: [Synth 8-7071] port 'M01_AXI_0_arlen' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
 WARNING: [Synth 8-7071] port 'M01_AXI_0_arlock' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
 WARNING: [Synth 8-7071] port 'M01_AXI_0_arprot' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
 WARNING: [Synth 8-7071] port 'M01_AXI_0_arqos' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
-WARNING: [Synth 8-7071] port 'M01_AXI_0_arregion' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
 WARNING: [Synth 8-7071] port 'M01_AXI_0_arsize' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
-WARNING: [Synth 8-7071] port 'M01_AXI_0_aruser' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
 WARNING: [Synth 8-7071] port 'M01_AXI_0_awburst' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
 WARNING: [Synth 8-7071] port 'M01_AXI_0_awcache' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
-WARNING: [Synth 8-7071] port 'M01_AXI_0_awid' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
 WARNING: [Synth 8-7071] port 'M01_AXI_0_awlen' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
 WARNING: [Synth 8-7071] port 'M01_AXI_0_awlock' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
 WARNING: [Synth 8-7071] port 'M01_AXI_0_awprot' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
 WARNING: [Synth 8-7071] port 'M01_AXI_0_awqos' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
-WARNING: [Synth 8-7071] port 'M01_AXI_0_awregion' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
 WARNING: [Synth 8-7071] port 'M01_AXI_0_awsize' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
-WARNING: [Synth 8-7071] port 'M01_AXI_0_awuser' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
 WARNING: [Synth 8-7071] port 'M01_AXI_0_bresp' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
 WARNING: [Synth 8-7071] port 'M01_AXI_0_rresp' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
 WARNING: [Synth 8-7071] port 'M01_AXI_0_wlast' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
 WARNING: [Synth 8-7071] port 'M01_AXI_0_wstrb' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
-WARNING: [Synth 8-7071] port 'M01_AXI_0_wuser' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
 WARNING: [Synth 8-7071] port 'M02_AXI_0_arburst' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
 WARNING: [Synth 8-7071] port 'M02_AXI_0_arcache' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
-WARNING: [Synth 8-7071] port 'M02_AXI_0_arid' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
 WARNING: [Synth 8-7071] port 'M02_AXI_0_arlen' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
 WARNING: [Synth 8-7071] port 'M02_AXI_0_arlock' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
 WARNING: [Synth 8-7071] port 'M02_AXI_0_arprot' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
 WARNING: [Synth 8-7071] port 'M02_AXI_0_arqos' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
-WARNING: [Synth 8-7071] port 'M02_AXI_0_arregion' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
 WARNING: [Synth 8-7071] port 'M02_AXI_0_arsize' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
-WARNING: [Synth 8-7071] port 'M02_AXI_0_aruser' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
 WARNING: [Synth 8-7071] port 'M02_AXI_0_awburst' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
 WARNING: [Synth 8-7071] port 'M02_AXI_0_awcache' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
-WARNING: [Synth 8-7071] port 'M02_AXI_0_awid' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
 WARNING: [Synth 8-7071] port 'M02_AXI_0_awlen' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
 WARNING: [Synth 8-7071] port 'M02_AXI_0_awlock' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
 WARNING: [Synth 8-7071] port 'M02_AXI_0_awprot' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
 WARNING: [Synth 8-7071] port 'M02_AXI_0_awqos' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
-WARNING: [Synth 8-7071] port 'M02_AXI_0_awregion' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
 WARNING: [Synth 8-7071] port 'M02_AXI_0_awsize' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
-WARNING: [Synth 8-7071] port 'M02_AXI_0_awuser' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
 WARNING: [Synth 8-7071] port 'M02_AXI_0_bresp' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
 WARNING: [Synth 8-7071] port 'M02_AXI_0_rresp' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
 WARNING: [Synth 8-7071] port 'M02_AXI_0_wlast' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
 WARNING: [Synth 8-7071] port 'M02_AXI_0_wstrb' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
-WARNING: [Synth 8-7071] port 'M02_AXI_0_wuser' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
 WARNING: [Synth 8-7071] port 'M03_AXI_0_arburst' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
 WARNING: [Synth 8-7071] port 'M03_AXI_0_arcache' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
-WARNING: [Synth 8-7071] port 'M03_AXI_0_arid' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
 WARNING: [Synth 8-7071] port 'M03_AXI_0_arlen' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
 WARNING: [Synth 8-7071] port 'M03_AXI_0_arlock' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
 WARNING: [Synth 8-7071] port 'M03_AXI_0_arprot' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
 WARNING: [Synth 8-7071] port 'M03_AXI_0_arqos' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
-WARNING: [Synth 8-7071] port 'M03_AXI_0_arregion' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
 WARNING: [Synth 8-7071] port 'M03_AXI_0_arsize' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
-WARNING: [Synth 8-7071] port 'M03_AXI_0_aruser' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
+WARNING: [Synth 8-7071] port 'M03_AXI_0_awburst' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
+WARNING: [Synth 8-7071] port 'M03_AXI_0_awcache' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
+WARNING: [Synth 8-7071] port 'M03_AXI_0_awlen' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
+WARNING: [Synth 8-7071] port 'M03_AXI_0_awlock' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
+WARNING: [Synth 8-7071] port 'M03_AXI_0_awprot' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
+WARNING: [Synth 8-7071] port 'M03_AXI_0_awqos' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
+WARNING: [Synth 8-7071] port 'M03_AXI_0_awsize' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
+WARNING: [Synth 8-7071] port 'M03_AXI_0_bresp' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
+WARNING: [Synth 8-7071] port 'M03_AXI_0_rresp' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
+WARNING: [Synth 8-7071] port 'M03_AXI_0_wlast' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
+WARNING: [Synth 8-7071] port 'M03_AXI_0_wstrb' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
+WARNING: [Synth 8-7071] port 'M04_AXI_0_arburst' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
+WARNING: [Synth 8-7071] port 'M04_AXI_0_arcache' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
+WARNING: [Synth 8-7071] port 'M04_AXI_0_arlen' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
+WARNING: [Synth 8-7071] port 'M04_AXI_0_arlock' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
+WARNING: [Synth 8-7071] port 'M04_AXI_0_arprot' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
+WARNING: [Synth 8-7071] port 'M04_AXI_0_arqos' of module 'design_2_wrapper' is unconnected for instance 'nolabel_line46' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
 INFO: [Common 17-14] Message 'Synth 8-7071' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-WARNING: [Synth 8-7023] instance 'nolabel_line46' of module 'design_2_wrapper' has 186 connections declared, but only 72 given [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
+WARNING: [Synth 8-7023] instance 'nolabel_line46' of module 'design_2_wrapper' has 165 connections declared, but only 72 given [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:46]
 INFO: [Synth 8-6157] synthesizing module 'conv_wrap' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/Wrappers/conv_wrap.v:4]
 	Parameter DATA_TYPE bound to: INTEGER - type: string 
 	Parameter DATA_WIDTH bound to: 16 - type: integer 
@@ -203,22 +176,28 @@ INFO: [Synth 8-6157] synthesizing module 'matrixAccelerator' [D:/GitHub/ReconHar
 	Parameter AXI_BUS_WIDTH bound to: 32 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'multiplyComputePynq' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/Multiplier/multiplyComputePynq.v:10]
 	Parameter DATA_WIDTH bound to: 16 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'multiplyComputePynq' (14#1) [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/Multiplier/multiplyComputePynq.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'multiplyComputePynq' (8#1) [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/Multiplier/multiplyComputePynq.v:10]
 INFO: [Synth 8-6157] synthesizing module 'param_int_adder' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/Adder/param_int_adder.v:1]
 	Parameter DATA_WIDTH bound to: 16 - type: integer 
 	Parameter NUM_INPUTS bound to: 9 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'param_int_adder' (15#1) [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/Adder/param_int_adder.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'param_int_adder' (9#1) [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/Adder/param_int_adder.v:1]
 INFO: [Synth 8-6157] synthesizing module 'ReLU' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Non_Linear/ReLU.v:1]
 	Parameter DATA_WIDTH bound to: 16 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'ReLU' (16#1) [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Non_Linear/ReLU.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'ReLU' (10#1) [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Non_Linear/ReLU.v:1]
 WARNING: [Synth 8-689] width (32) of port connection 'in_data' does not match port width (16) of module 'ReLU' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/matrixAccelerator.v:86]
 WARNING: [Synth 8-689] width (32) of port connection 'out_data' does not match port width (16) of module 'ReLU' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/matrixAccelerator.v:87]
-INFO: [Synth 8-6155] done synthesizing module 'matrixAccelerator' (17#1) [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/matrixAccelerator.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'matrixAccelerator' (11#1) [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/matrixAccelerator.v:9]
 WARNING: [Synth 8-689] width (16) of port connection 'finalAccumulate' does not match port width (32) of module 'matrixAccelerator' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/Wrappers/conv_wrap.v:100]
-INFO: [Synth 8-6157] synthesizing module 'Convolution_Controller' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:19]
+INFO: [Synth 8-6157] synthesizing module 'Convolution_Controller' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:20]
 	Parameter KERNEL_SIZE bound to: 3 - type: integer 
 	Parameter CHANNELS bound to: 1 - type: integer 
 	Parameter BRAM_WIDTH bound to: 1024 - type: integer 
+	Parameter STATE_COUNT bound to: 5 - type: integer 
+	Parameter STATE_IDLE bound to: 0 - type: integer 
+	Parameter STATE_LB_WRITE bound to: 1 - type: integer 
+	Parameter STATE_LB_READ bound to: 2 - type: integer 
+	Parameter STATE_CONV bound to: 3 - type: integer 
+	Parameter STATE_SERV_DATA bound to: 4 - type: integer 
 	Parameter K_SQUARED bound to: 9 - type: integer 
 	Parameter FILTER_BASE bound to: 24 - type: integer 
 	Parameter FINAL_CHANNEL bound to: 1 - type: integer 
@@ -237,124 +216,112 @@ INFO: [Synth 8-6157] synthesizing module 'bram_coupler' [D:/GitHub/ReconHardware
 INFO: [Synth 8-6157] synthesizing module 'bram_wrapper' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/BRAM/bram_wrapper.v:1]
 	Parameter DATA_WIDTH bound to: 32 - type: integer 
 	Parameter BRAM_WIDTH bound to: 1024 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'bram_wrapper' (18#1) [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/BRAM/bram_wrapper.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'bram_coupler' (19#1) [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/BRAM/bram_coupler.v:1]
-WARNING: [Synth 8-689] width (32) of port connection 'r_add' does not match port width (10) of module 'bram_coupler' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:152]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:160]
-INFO: [Synth 8-6157] synthesizing module 'bram_ila_wrapper' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/bram_ila/hdl/bram_ila_wrapper.v:12]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/bram_ila/hdl/bram_ila_wrapper.v:42]
-INFO: [Synth 8-6157] synthesizing module 'bram_ila' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/bram_ila/synth/bram_ila.v:13]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/bram_ila/synth/bram_ila.v:52]
-INFO: [Synth 8-6157] synthesizing module 'bram_ila_ila_0_0' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.runs/synth_1/.Xil/Vivado-10504-DESKTOP-RPQ2DOT/realtime/bram_ila_ila_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'bram_ila_ila_0_0' (20#1) [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.runs/synth_1/.Xil/Vivado-10504-DESKTOP-RPQ2DOT/realtime/bram_ila_ila_0_0_stub.v:6]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_0'. This will prevent further optimization [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/bram_ila/synth/bram_ila.v:52]
-INFO: [Synth 8-6155] done synthesizing module 'bram_ila' (21#1) [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/bram_ila/synth/bram_ila.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'bram_ila_wrapper' (22#1) [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/bram_ila/hdl/bram_ila_wrapper.v:12]
-WARNING: [Synth 8-689] width (32) of port connection 'probe2_0' does not match port width (10) of module 'bram_ila_wrapper' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:165]
-WARNING: [Synth 8-689] width (96) of port connection 'probe5_0' does not match port width (36) of module 'bram_ila_wrapper' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:168]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:267]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:268]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:269]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:270]
-WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:271]
+INFO: [Synth 8-6155] done synthesizing module 'bram_wrapper' (12#1) [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/BRAM/bram_wrapper.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'bram_coupler' (13#1) [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/BRAM/bram_coupler.v:1]
+WARNING: [Synth 8-689] width (32) of port connection 'r_add' does not match port width (10) of module 'bram_coupler' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:166]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:450]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:451]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:452]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:453]
+WARNING: [Synth 8-6090] variable 'control_registers' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:454]
 INFO: [Common 17-14] Message 'Synth 8-6090' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-6155] done synthesizing module 'Convolution_Controller' (23#1) [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:19]
-INFO: [Synth 8-6155] done synthesizing module 'conv_wrap' (24#1) [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/Wrappers/conv_wrap.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'Convolution_Controller' (14#1) [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:20]
+INFO: [Synth 8-6155] done synthesizing module 'conv_wrap' (15#1) [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/Wrappers/conv_wrap.v:4]
 INFO: [Synth 8-6157] synthesizing module 'pool_wrap' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/pool/Wrappers/pool_wrap.v:4]
 	Parameter DATA_WIDTH bound to: 16 - type: integer 
 	Parameter KERNEL_SIZE bound to: 3 - type: integer 
@@ -363,7 +330,7 @@ INFO: [Synth 8-6157] synthesizing module 'pool_wrap' [D:/GitHub/ReconHardware/FP
 	Parameter K_SQUARED bound to: 9 - type: integer 
 	Parameter AXI_BUS_WIDTH bound to: 32 - type: integer 
 	Parameter AXI_ADDR_WIDTH bound to: 10 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'Pooling_Controller' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/pool/AXI_Pooling_Controller.v:8]
+INFO: [Synth 8-6157] synthesizing module 'Pooling_Controller' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/pool/AXI_Pooling_Controller.v:14]
 	Parameter KERNEL_SIZE bound to: 3 - type: integer 
 	Parameter CHANNELS bound to: 1 - type: integer 
 	Parameter BRAM_WIDTH bound to: 1024 - type: integer 
@@ -381,31 +348,27 @@ INFO: [Synth 8-6157] synthesizing module 'Pooling_Controller' [D:/GitHub/ReconHa
 	Parameter CTRL_REG_ADDR_WIDTH bound to: 7 - type: integer 
 	Parameter AXI_BUS_WIDTH bound to: 32 - type: integer 
 	Parameter AXI_ADDR_WIDTH bound to: 10 - type: integer 
-WARNING: [Synth 8-689] width (32) of port connection 'r_add' does not match port width (10) of module 'bram_coupler' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/pool/AXI_Pooling_Controller.v:150]
-INFO: [Synth 8-6155] done synthesizing module 'Pooling_Controller' (25#1) [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/pool/AXI_Pooling_Controller.v:8]
-INFO: [Synth 8-6155] done synthesizing module 'pool_wrap' (26#1) [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/pool/Wrappers/pool_wrap.v:4]
-INFO: [Synth 8-6155] done synthesizing module 'top_simple' (27#1) [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:1]
+WARNING: [Synth 8-689] width (32) of port connection 'r_add' does not match port width (10) of module 'bram_coupler' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/pool/AXI_Pooling_Controller.v:156]
+INFO: [Synth 8-6155] done synthesizing module 'Pooling_Controller' (16#1) [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/pool/AXI_Pooling_Controller.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'pool_wrap' (17#1) [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/pool/Wrappers/pool_wrap.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'top_simple' (18#1) [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:1]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1282.457 ; gain = 207.871
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1218.246 ; gain = 144.691
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1282.457 ; gain = 207.871
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1218.246 ; gain = 144.691
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1282.457 ; gain = 207.871
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1218.246 ; gain = 144.691
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.472 . Memory (MB): peak = 1282.457 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.447 . Memory (MB): peak = 1218.246 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/bram_ila/ip/bram_ila_ila_0_0/bram_ila_ila_0_0/bram_ila_ila_0_0_in_context.xdc] for cell 'conv_layer1/conv_controller/genblk1[0].bram_ila/bram_ila_i/ila_0'
-Finished Parsing XDC File [d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/bram_ila/ip/bram_ila_ila_0_0/bram_ila_ila_0_0/bram_ila_ila_0_0_in_context.xdc] for cell 'conv_layer1/conv_controller/genblk1[0].bram_ila/bram_ila_i/ila_0'
-Parsing XDC File [d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/bram_ila/ip/bram_ila_ila_0_0/bram_ila_ila_0_0/bram_ila_ila_0_0_in_context.xdc] for cell 'conv_layer3/conv_controller/genblk1[0].bram_ila/bram_ila_i/ila_0'
-Finished Parsing XDC File [d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/bram_ila/ip/bram_ila_ila_0_0/bram_ila_ila_0_0/bram_ila_ila_0_0_in_context.xdc] for cell 'conv_layer3/conv_controller/genblk1[0].bram_ila/bram_ila_i/ila_0'
 Parsing XDC File [d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_axi_dma_0_0/design_2_axi_dma_0_0/design_2_axi_dma_0_0_in_context.xdc] for cell 'nolabel_line46/design_2_i/axi_dma_0'
 Finished Parsing XDC File [d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_axi_dma_0_0/design_2_axi_dma_0_0/design_2_axi_dma_0_0_in_context.xdc] for cell 'nolabel_line46/design_2_i/axi_dma_0'
 Parsing XDC File [d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_rst_ps7_0_100M_0/design_2_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0_in_context.xdc] for cell 'nolabel_line46/design_2_i/rst_ps7_0_100M'
@@ -417,75 +380,52 @@ Finished Parsing XDC File [d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/C
 Parsing XDC File [d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_processing_system7_0_1/design_2_processing_system7_0_1/design_2_processing_system7_0_1_in_context.xdc] for cell 'nolabel_line46/design_2_i/processing_system7_0'
 WARNING: [Vivado 12-584] No ports matched ''. [d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_processing_system7_0_1/design_2_processing_system7_0_1/design_2_processing_system7_0_1_in_context.xdc:2]
 Finished Parsing XDC File [d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_processing_system7_0_1/design_2_processing_system7_0_1/design_2_processing_system7_0_1_in_context.xdc] for cell 'nolabel_line46/design_2_i/processing_system7_0'
-Parsing XDC File [d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_ila_0_0/design_2_ila_0_0/design_2_ila_0_0_in_context.xdc] for cell 'nolabel_line46/design_2_i/ila_0'
-Finished Parsing XDC File [d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_ila_0_0/design_2_ila_0_0/design_2_ila_0_0_in_context.xdc] for cell 'nolabel_line46/design_2_i/ila_0'
-Parsing XDC File [d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_ila_0_1/design_2_ila_0_1/design_2_ila_1_0_in_context.xdc] for cell 'nolabel_line46/design_2_i/ila_1'
-Finished Parsing XDC File [d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_ila_0_1/design_2_ila_0_1/design_2_ila_1_0_in_context.xdc] for cell 'nolabel_line46/design_2_i/ila_1'
-Parsing XDC File [d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_ila_1_0/design_2_ila_1_0/design_2_ila_1_0_in_context.xdc] for cell 'nolabel_line46/design_2_i/ila_2'
-Finished Parsing XDC File [d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_ila_1_0/design_2_ila_1_0/design_2_ila_1_0_in_context.xdc] for cell 'nolabel_line46/design_2_i/ila_2'
-Parsing XDC File [d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_ila_0_2/design_2_ila_0_2/design_2_ila_0_0_in_context.xdc] for cell 'nolabel_line46/design_2_i/ila_3'
-Finished Parsing XDC File [d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_ila_0_2/design_2_ila_0_2/design_2_ila_0_0_in_context.xdc] for cell 'nolabel_line46/design_2_i/ila_3'
-Parsing XDC File [d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_ila_0_3/design_2_ila_0_3/design_2_ila_0_0_in_context.xdc] for cell 'nolabel_line46/design_2_i/ila_4'
-Finished Parsing XDC File [d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_ila_0_3/design_2_ila_0_3/design_2_ila_0_0_in_context.xdc] for cell 'nolabel_line46/design_2_i/ila_4'
-Parsing XDC File [d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_ila_0_4/design_2_ila_0_4/design_2_ila_0_0_in_context.xdc] for cell 'nolabel_line46/design_2_i/ila_5'
-Finished Parsing XDC File [d:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/ip/design_2_ila_0_4/design_2_ila_0_4/design_2_ila_0_0_in_context.xdc] for cell 'nolabel_line46/design_2_i/ila_5'
 Parsing XDC File [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1461.082 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1397.727 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1464.191 ; gain = 3.109
+Constraint Validation Runtime : Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1400.426 ; gain = 2.699
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:18 . Memory (MB): peak = 1464.516 ; gain = 389.930
+Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1400.426 ; gain = 326.871
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:18 . Memory (MB): peak = 1464.516 ; gain = 389.930
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1400.426 ; gain = 326.871
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for conv_layer1/conv_controller/\genblk1[0].bram_ila /bram_ila_i. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for conv_layer3/conv_controller/\genblk1[0].bram_ila /bram_ila_i. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for conv_layer1/conv_controller/\genblk1[0].bram_ila /bram_ila_i/ila_0. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for conv_layer3/conv_controller/\genblk1[0].bram_ila /bram_ila_i/ila_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for nolabel_line46/design_2_i. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for nolabel_line46/design_2_i/axi_dma_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for nolabel_line46/design_2_i/rst_ps7_0_100M. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for nolabel_line46/design_2_i/smartconnect_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for nolabel_line46/design_2_i/smartconnect_1. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for nolabel_line46/design_2_i/processing_system7_0. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for nolabel_line46/design_2_i/ila_0. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for nolabel_line46/design_2_i/ila_1. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for nolabel_line46/design_2_i/ila_2. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for nolabel_line46/design_2_i/ila_3. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for nolabel_line46/design_2_i/ila_4. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for nolabel_line46/design_2_i/ila_5. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:18 . Memory (MB): peak = 1464.516 ; gain = 389.930
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1400.426 ; gain = 326.871
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:32 ; elapsed = 00:00:30 . Memory (MB): peak = 1464.516 ; gain = 389.930
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1400.426 ; gain = 326.871
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   3 Input   33 Bit       Adders := 2     
+	   3 Input   33 Bit       Adders := 4     
 	   2 Input   32 Bit       Adders := 8     
-	   3 Input   32 Bit       Adders := 2     
 	  10 Input   32 Bit       Adders := 2     
 	   9 Input   20 Bit       Adders := 2     
 	   2 Input   11 Bit       Adders := 8     
 	   2 Input   10 Bit       Adders := 12    
-	   2 Input    3 Bit       Adders := 6     
+	   2 Input    3 Bit       Adders := 4     
 	   2 Input    2 Bit       Adders := 8     
 +---Registers : 
 	               32 Bit    Registers := 448   
@@ -494,26 +434,25 @@ Detailed RTL Component Info :
 	                9 Bit    Registers := 2     
 	                3 Bit    Registers := 12    
 	                2 Bit    Registers := 8     
-	                1 Bit    Registers := 84    
+	                1 Bit    Registers := 76    
 +---RAMs : 
 	              32K Bit	(1024 X 32 bit)          RAMs := 12    
 +---Muxes : 
-	   2 Input   32 Bit        Muxes := 3486  
-	   5 Input   32 Bit        Muxes := 2     
+	   2 Input   32 Bit        Muxes := 3474  
+	   6 Input   32 Bit        Muxes := 8     
 	   4 Input   32 Bit        Muxes := 12    
-	   6 Input   32 Bit        Muxes := 4     
 	   2 Input   16 Bit        Muxes := 2     
-	   2 Input   10 Bit        Muxes := 18    
-	   6 Input   10 Bit        Muxes := 2     
-	   2 Input    4 Bit        Muxes := 2     
+	   6 Input   10 Bit        Muxes := 4     
+	   2 Input   10 Bit        Muxes := 20    
+	   2 Input    9 Bit        Muxes := 2     
+	   6 Input    3 Bit        Muxes := 4     
 	   2 Input    3 Bit        Muxes := 50    
-	   6 Input    3 Bit        Muxes := 2     
+	   2 Input    2 Bit        Muxes := 20    
 	   3 Input    2 Bit        Muxes := 4     
-	   2 Input    2 Bit        Muxes := 24    
-	   2 Input    1 Bit        Muxes := 206   
-	   6 Input    1 Bit        Muxes := 26    
-	   7 Input    1 Bit        Muxes := 2     
-	   8 Input    1 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 178   
+	   6 Input    1 Bit        Muxes := 54    
+	   7 Input    1 Bit        Muxes := 4     
+	   8 Input    1 Bit        Muxes := 4     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -556,35 +495,8 @@ DSP Report: operator genblk1[0].MA/genblk1[8].inputMulti/product0 is absorbed in
 DSP Report: Generating DSP genblk1[0].MA/genblk1[0].inputMulti/product_reg, operation Mode is: (A*B)'.
 DSP Report: register genblk1[0].MA/genblk1[0].inputMulti/product_reg is absorbed into DSP genblk1[0].MA/genblk1[0].inputMulti/product_reg.
 DSP Report: operator genblk1[0].MA/genblk1[0].inputMulti/product0 is absorbed into DSP genblk1[0].MA/genblk1[0].inputMulti/product_reg.
-DSP Report: Generating DSP genblk1[0].MA/genblk1[1].inputMulti/product_reg, operation Mode is: (A*B)'.
-DSP Report: register genblk1[0].MA/genblk1[1].inputMulti/product_reg is absorbed into DSP genblk1[0].MA/genblk1[1].inputMulti/product_reg.
-DSP Report: operator genblk1[0].MA/genblk1[1].inputMulti/product0 is absorbed into DSP genblk1[0].MA/genblk1[1].inputMulti/product_reg.
-DSP Report: Generating DSP genblk1[0].MA/genblk1[2].inputMulti/product_reg, operation Mode is: (A*B)'.
-DSP Report: register genblk1[0].MA/genblk1[2].inputMulti/product_reg is absorbed into DSP genblk1[0].MA/genblk1[2].inputMulti/product_reg.
-DSP Report: operator genblk1[0].MA/genblk1[2].inputMulti/product0 is absorbed into DSP genblk1[0].MA/genblk1[2].inputMulti/product_reg.
-DSP Report: Generating DSP genblk1[0].MA/genblk1[3].inputMulti/product_reg, operation Mode is: (A*B)'.
-DSP Report: register genblk1[0].MA/genblk1[3].inputMulti/product_reg is absorbed into DSP genblk1[0].MA/genblk1[3].inputMulti/product_reg.
-DSP Report: operator genblk1[0].MA/genblk1[3].inputMulti/product0 is absorbed into DSP genblk1[0].MA/genblk1[3].inputMulti/product_reg.
-DSP Report: Generating DSP genblk1[0].MA/genblk1[4].inputMulti/product_reg, operation Mode is: (A*B)'.
-DSP Report: register genblk1[0].MA/genblk1[4].inputMulti/product_reg is absorbed into DSP genblk1[0].MA/genblk1[4].inputMulti/product_reg.
-DSP Report: operator genblk1[0].MA/genblk1[4].inputMulti/product0 is absorbed into DSP genblk1[0].MA/genblk1[4].inputMulti/product_reg.
-DSP Report: Generating DSP genblk1[0].MA/genblk1[5].inputMulti/product_reg, operation Mode is: (A*B)'.
-DSP Report: register genblk1[0].MA/genblk1[5].inputMulti/product_reg is absorbed into DSP genblk1[0].MA/genblk1[5].inputMulti/product_reg.
-DSP Report: operator genblk1[0].MA/genblk1[5].inputMulti/product0 is absorbed into DSP genblk1[0].MA/genblk1[5].inputMulti/product_reg.
-DSP Report: Generating DSP genblk1[0].MA/genblk1[6].inputMulti/product_reg, operation Mode is: (A*B)'.
-DSP Report: register genblk1[0].MA/genblk1[6].inputMulti/product_reg is absorbed into DSP genblk1[0].MA/genblk1[6].inputMulti/product_reg.
-DSP Report: operator genblk1[0].MA/genblk1[6].inputMulti/product0 is absorbed into DSP genblk1[0].MA/genblk1[6].inputMulti/product_reg.
-DSP Report: Generating DSP genblk1[0].MA/genblk1[7].inputMulti/product_reg, operation Mode is: (A*B)'.
-DSP Report: register genblk1[0].MA/genblk1[7].inputMulti/product_reg is absorbed into DSP genblk1[0].MA/genblk1[7].inputMulti/product_reg.
-DSP Report: operator genblk1[0].MA/genblk1[7].inputMulti/product0 is absorbed into DSP genblk1[0].MA/genblk1[7].inputMulti/product_reg.
-DSP Report: Generating DSP genblk1[0].MA/genblk1[8].inputMulti/product_reg, operation Mode is: (A*B)'.
-DSP Report: register genblk1[0].MA/genblk1[8].inputMulti/product_reg is absorbed into DSP genblk1[0].MA/genblk1[8].inputMulti/product_reg.
-DSP Report: operator genblk1[0].MA/genblk1[8].inputMulti/product0 is absorbed into DSP genblk1[0].MA/genblk1[8].inputMulti/product_reg.
-DSP Report: Generating DSP genblk1[0].MA/genblk1[0].inputMulti/product_reg, operation Mode is: (A*B)'.
-DSP Report: register genblk1[0].MA/genblk1[0].inputMulti/product_reg is absorbed into DSP genblk1[0].MA/genblk1[0].inputMulti/product_reg.
-DSP Report: operator genblk1[0].MA/genblk1[0].inputMulti/product0 is absorbed into DSP genblk1[0].MA/genblk1[0].inputMulti/product_reg.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:06 ; elapsed = 00:02:05 . Memory (MB): peak = 1684.914 ; gain = 610.328
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:23 ; elapsed = 00:01:24 . Memory (MB): peak = 1492.094 ; gain = 418.539
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -600,9 +512,6 @@ Block RAM: Preliminary Mapping	Report (see note below)
 |Pooling_Controller__GB1:/\genblk1[0].br_coupler  | genblk1[0].BRAM/mem_reg                       | 1 K x 32(READ_FIRST)   | W |   | 1 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
 |Pooling_Controller__GB1:/\genblk1[0].br_coupler  | genblk1[1].BRAM/mem_reg                       | 1 K x 32(READ_FIRST)   | W |   | 1 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
 |Pooling_Controller__GB1:/\genblk1[0].br_coupler  | genblk1[2].BRAM/mem_reg                       | 1 K x 32(READ_FIRST)   | W |   | 1 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
-|top_simple                                       | genblk1[0].br_coupler/genblk1[0].BRAM/mem_reg | 1 K x 32(READ_FIRST)   | W |   | 1 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
-|top_simple                                       | genblk1[0].br_coupler/genblk1[1].BRAM/mem_reg | 1 K x 32(READ_FIRST)   | W |   | 1 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
-|top_simple                                       | genblk1[0].br_coupler/genblk1[2].BRAM/mem_reg | 1 K x 32(READ_FIRST)   | W |   | 1 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
 |Pooling_Controller__GB1:/\genblk1[0].br_coupler  | genblk1[0].BRAM/mem_reg                       | 1 K x 32(READ_FIRST)   | W |   | 1 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
 |Pooling_Controller__GB1:/\genblk1[0].br_coupler  | genblk1[1].BRAM/mem_reg                       | 1 K x 32(READ_FIRST)   | W |   | 1 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
 |Pooling_Controller__GB1:/\genblk1[0].br_coupler  | genblk1[2].BRAM/mem_reg                       | 1 K x 32(READ_FIRST)   | W |   | 1 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
@@ -623,15 +532,6 @@ DSP: Preliminary Mapping	Report (see note below)
 |multiplyComputePynq | (A*B)'      | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |multiplyComputePynq | (A*B)'      | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 0    | 
 |multiplyComputePynq | (A*B)'      | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 0    | 
-|multiplyComputePynq | (A*B)'      | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 0    | 
-|multiplyComputePynq | (A*B)'      | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 0    | 
-|multiplyComputePynq | (A*B)'      | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 0    | 
-|multiplyComputePynq | (A*B)'      | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 0    | 
-|multiplyComputePynq | (A*B)'      | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 0    | 
-|multiplyComputePynq | (A*B)'      | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 0    | 
-|multiplyComputePynq | (A*B)'      | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 0    | 
-|multiplyComputePynq | (A*B)'      | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 0    | 
-|multiplyComputePynq | (A*B)'      | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 1    | 0    | 
 +--------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 
 Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
@@ -642,13 +542,13 @@ Finished ROM, RAM, DSP and Shift Register Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:16 ; elapsed = 00:02:15 . Memory (MB): peak = 1684.914 ; gain = 610.328
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:32 ; elapsed = 00:01:34 . Memory (MB): peak = 1492.094 ; gain = 418.539
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:02:23 ; elapsed = 00:02:23 . Memory (MB): peak = 1684.914 ; gain = 610.328
+Finished Timing Optimization : Time (s): cpu = 00:01:38 ; elapsed = 00:01:39 . Memory (MB): peak = 1507.191 ; gain = 433.637
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -664,9 +564,6 @@ Block RAM: Final Mapping	Report
 |Pooling_Controller__GB1:/\genblk1[0].br_coupler  | genblk1[0].BRAM/mem_reg                       | 1 K x 32(READ_FIRST)   | W |   | 1 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
 |Pooling_Controller__GB1:/\genblk1[0].br_coupler  | genblk1[1].BRAM/mem_reg                       | 1 K x 32(READ_FIRST)   | W |   | 1 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
 |Pooling_Controller__GB1:/\genblk1[0].br_coupler  | genblk1[2].BRAM/mem_reg                       | 1 K x 32(READ_FIRST)   | W |   | 1 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
-|top_simple                                       | genblk1[0].br_coupler/genblk1[0].BRAM/mem_reg | 1 K x 32(READ_FIRST)   | W |   | 1 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
-|top_simple                                       | genblk1[0].br_coupler/genblk1[1].BRAM/mem_reg | 1 K x 32(READ_FIRST)   | W |   | 1 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
-|top_simple                                       | genblk1[0].br_coupler/genblk1[2].BRAM/mem_reg | 1 K x 32(READ_FIRST)   | W |   | 1 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
 |Pooling_Controller__GB1:/\genblk1[0].br_coupler  | genblk1[0].BRAM/mem_reg                       | 1 K x 32(READ_FIRST)   | W |   | 1 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
 |Pooling_Controller__GB1:/\genblk1[0].br_coupler  | genblk1[1].BRAM/mem_reg                       | 1 K x 32(READ_FIRST)   | W |   | 1 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
 |Pooling_Controller__GB1:/\genblk1[0].br_coupler  | genblk1[2].BRAM/mem_reg                       | 1 K x 32(READ_FIRST)   | W |   | 1 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
@@ -691,7 +588,7 @@ INFO: [Synth 8-7052] The timing for the instance pool_layer4/pool_controller/gen
 INFO: [Synth 8-7052] The timing for the instance pool_layer4/pool_controller/genblk1[0].br_coupler/genblk1[1].BRAM/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance pool_layer4/pool_controller/genblk1[0].br_coupler/genblk1[2].BRAM/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:02:38 ; elapsed = 00:02:37 . Memory (MB): peak = 1714.098 ; gain = 639.512
+Finished Technology Mapping : Time (s): cpu = 00:01:48 ; elapsed = 00:01:49 . Memory (MB): peak = 1590.602 ; gain = 517.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -708,77 +605,38 @@ Start Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3295] tying undriven pin smartconnect_0_M01_AXI_ARID_inferred:in0 to constant 0
-WARNING: [Synth 8-3295] tying undriven pin smartconnect_0_M01_AXI_ARREGION_inferred:in0[3] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin smartconnect_0_M01_AXI_ARREGION_inferred:in0[2] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin smartconnect_0_M01_AXI_ARREGION_inferred:in0[1] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin smartconnect_0_M01_AXI_ARREGION_inferred:in0[0] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin smartconnect_0_M01_AXI_ARUSER_inferred:in0 to constant 0
-WARNING: [Synth 8-3295] tying undriven pin smartconnect_0_M01_AXI_AWID_inferred:in0 to constant 0
-WARNING: [Synth 8-3295] tying undriven pin smartconnect_0_M01_AXI_AWREGION_inferred:in0[3] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin smartconnect_0_M01_AXI_AWREGION_inferred:in0[2] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin smartconnect_0_M01_AXI_AWREGION_inferred:in0[1] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin smartconnect_0_M01_AXI_AWREGION_inferred:in0[0] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin smartconnect_0_M01_AXI_AWUSER_inferred:in0 to constant 0
-WARNING: [Synth 8-3295] tying undriven pin smartconnect_0_M01_AXI_WUSER_inferred:in0 to constant 0
-WARNING: [Synth 8-3295] tying undriven pin smartconnect_0_M02_AXI_ARID_inferred:in0 to constant 0
-WARNING: [Synth 8-3295] tying undriven pin smartconnect_0_M02_AXI_ARREGION_inferred:in0[3] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin smartconnect_0_M02_AXI_ARREGION_inferred:in0[2] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin smartconnect_0_M02_AXI_ARREGION_inferred:in0[1] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin smartconnect_0_M02_AXI_ARREGION_inferred:in0[0] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin smartconnect_0_M02_AXI_ARUSER_inferred:in0 to constant 0
-WARNING: [Synth 8-3295] tying undriven pin smartconnect_0_M02_AXI_AWID_inferred:in0 to constant 0
-WARNING: [Synth 8-3295] tying undriven pin smartconnect_0_M02_AXI_AWREGION_inferred:in0[3] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin smartconnect_0_M02_AXI_AWREGION_inferred:in0[2] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin smartconnect_0_M02_AXI_AWREGION_inferred:in0[1] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin smartconnect_0_M02_AXI_AWREGION_inferred:in0[0] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin smartconnect_0_M02_AXI_AWUSER_inferred:in0 to constant 0
-WARNING: [Synth 8-3295] tying undriven pin smartconnect_0_M02_AXI_WUSER_inferred:in0 to constant 0
-WARNING: [Synth 8-3295] tying undriven pin smartconnect_0_M03_AXI_ARID_inferred:in0 to constant 0
-WARNING: [Synth 8-3295] tying undriven pin smartconnect_0_M03_AXI_ARREGION_inferred:in0[3] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin smartconnect_0_M03_AXI_ARREGION_inferred:in0[2] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin smartconnect_0_M03_AXI_ARREGION_inferred:in0[1] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin smartconnect_0_M03_AXI_ARREGION_inferred:in0[0] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin smartconnect_0_M03_AXI_ARUSER_inferred:in0 to constant 0
-WARNING: [Synth 8-3295] tying undriven pin smartconnect_0_M03_AXI_AWID_inferred:in0 to constant 0
-WARNING: [Synth 8-3295] tying undriven pin smartconnect_0_M03_AXI_AWREGION_inferred:in0[3] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin smartconnect_0_M03_AXI_AWREGION_inferred:in0[2] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin smartconnect_0_M03_AXI_AWREGION_inferred:in0[1] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin smartconnect_0_M03_AXI_AWREGION_inferred:in0[0] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin smartconnect_0_M03_AXI_AWUSER_inferred:in0 to constant 0
-WARNING: [Synth 8-3295] tying undriven pin smartconnect_0_M03_AXI_WUSER_inferred:in0 to constant 0
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:02:46 ; elapsed = 00:02:45 . Memory (MB): peak = 1717.621 ; gain = 643.035
+Finished IO Insertion : Time (s): cpu = 00:01:52 ; elapsed = 00:01:54 . Memory (MB): peak = 1592.039 ; gain = 518.484
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:46 ; elapsed = 00:02:45 . Memory (MB): peak = 1717.621 ; gain = 643.035
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:52 ; elapsed = 00:01:54 . Memory (MB): peak = 1592.039 ; gain = 518.484
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:49 ; elapsed = 00:02:49 . Memory (MB): peak = 1717.621 ; gain = 643.035
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:56 ; elapsed = 00:01:57 . Memory (MB): peak = 1592.039 ; gain = 518.484
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:50 ; elapsed = 00:02:49 . Memory (MB): peak = 1717.621 ; gain = 643.035
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:56 ; elapsed = 00:01:57 . Memory (MB): peak = 1592.039 ; gain = 518.484
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:52 ; elapsed = 00:02:52 . Memory (MB): peak = 1720.176 ; gain = 645.590
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:59 ; elapsed = 00:02:00 . Memory (MB): peak = 1595.559 ; gain = 522.004
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:02:52 ; elapsed = 00:02:52 . Memory (MB): peak = 1720.176 ; gain = 645.590
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:59 ; elapsed = 00:02:00 . Memory (MB): peak = 1595.559 ; gain = 522.004
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -788,66 +646,55 @@ Report BlackBoxes:
 +------+--------------------------------+----------+
 |      |BlackBox name                   |Instances |
 +------+--------------------------------+----------+
-|1     |bram_ila_ila_0_0                |         2|
-|2     |design_2_axi_dma_0_0            |         1|
-|3     |design_2_ila_0_0                |         1|
-|4     |design_2_ila_0_1                |         1|
-|5     |design_2_ila_1_0                |         1|
-|6     |design_2_ila_0_2                |         1|
-|7     |design_2_ila_0_3                |         1|
-|8     |design_2_ila_0_4                |         1|
-|9     |design_2_processing_system7_0_1 |         1|
-|10    |design_2_rst_ps7_0_100M_0       |         1|
-|11    |design_2_smartconnect_0_0       |         1|
-|12    |design_2_smartconnect_0_1       |         1|
+|1     |design_2_axi_dma_0_0            |         1|
+|2     |design_2_processing_system7_0_1 |         1|
+|3     |design_2_rst_ps7_0_100M_0       |         1|
+|4     |design_2_smartconnect_0_0       |         1|
+|5     |design_2_smartconnect_0_1       |         1|
 +------+--------------------------------+----------+
 
 Report Cell Usage: 
 +------+------------------------------+------+
 |      |Cell                          |Count |
 +------+------------------------------+------+
-|1     |bram_ila_ila_0                |     1|
-|2     |bram_ila_ila_0_0_             |     1|
-|3     |design_2_axi_dma_0            |     1|
-|4     |design_2_ila_0                |     5|
-|9     |design_2_ila_1                |     1|
-|10    |design_2_processing_system7_0 |     1|
-|11    |design_2_rst_ps7_0_100M       |     1|
-|12    |design_2_smartconnect_0       |     2|
-|14    |CARRY4                        |   448|
-|15    |DSP48E1                       |    18|
-|16    |LUT1                          |   416|
-|17    |LUT2                          |  1622|
-|18    |LUT3                          |  6169|
-|19    |LUT4                          |   729|
-|20    |LUT5                          |  2449|
-|21    |LUT6                          | 13087|
-|22    |MUXF7                         |  1353|
-|23    |MUXF8                         |   436|
-|24    |RAMB36E1                      |    12|
-|25    |FDRE                          | 13871|
-|26    |FDSE                          |     2|
+|1     |design_2_axi_dma_0            |     1|
+|2     |design_2_processing_system7_0 |     1|
+|3     |design_2_rst_ps7_0_100M       |     1|
+|4     |design_2_smartconnect_0       |     2|
+|6     |CARRY4                        |   452|
+|7     |DSP48E1                       |    18|
+|8     |LUT1                          |   435|
+|9     |LUT2                          |  1694|
+|10    |LUT3                          | 10181|
+|11    |LUT4                          |   952|
+|12    |LUT5                          |  1903|
+|13    |LUT6                          | 10466|
+|14    |MUXF7                         |   968|
+|15    |MUXF8                         |   104|
+|16    |RAMB36E1                      |    12|
+|17    |FDRE                          | 13812|
 +------+------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:52 ; elapsed = 00:02:52 . Memory (MB): peak = 1720.176 ; gain = 645.590
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:59 ; elapsed = 00:02:00 . Memory (MB): peak = 1595.559 ; gain = 522.004
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 39 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:02:36 ; elapsed = 00:02:44 . Memory (MB): peak = 1720.176 ; gain = 463.531
-Synthesis Optimization Complete : Time (s): cpu = 00:02:53 ; elapsed = 00:02:52 . Memory (MB): peak = 1720.176 ; gain = 645.590
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:43 ; elapsed = 00:01:52 . Memory (MB): peak = 1595.559 ; gain = 339.824
+Synthesis Optimization Complete : Time (s): cpu = 00:01:59 ; elapsed = 00:02:00 . Memory (MB): peak = 1595.559 ; gain = 522.004
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.846 . Memory (MB): peak = 1732.133 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 2267 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.929 . Memory (MB): peak = 1609.328 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1554 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1733.320 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1610.363 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-94 Infos, 271 Warnings, 0 Critical Warnings and 0 Errors encountered.
+67 Infos, 221 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:03:05 ; elapsed = 00:03:05 . Memory (MB): peak = 1733.320 ; gain = 658.734
+synth_design: Time (s): cpu = 00:02:12 ; elapsed = 00:02:15 . Memory (MB): peak = 1610.363 ; gain = 536.809
 INFO: [Common 17-1381] The checkpoint 'D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.runs/synth_1/top_simple.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 1610.363 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_utilization -file top_simple_utilization_synth.rpt -pb top_simple_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue May 11 16:06:32 2021...
+INFO: [Common 17-206] Exiting Vivado at Tue May 11 13:53:34 2021...

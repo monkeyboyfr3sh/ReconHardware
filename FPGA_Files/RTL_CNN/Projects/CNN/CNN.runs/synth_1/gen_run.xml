@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1620766781">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1620759064">
   <File Type="PA-TCL" Name="top_simple.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="top_simple_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="top_simple_reports.tcl"/>
@@ -11,13 +11,6 @@
   <File Type="VDS-TIMING-PB" Name="top_simple_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/bd/bram_ila/bram_ila.bd">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/bd/design_2/design_2.bd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -47,13 +40,6 @@
       </FileInfo>
     </File>
     <File Path="$PPRDIR/../../Sources/BRAM/bram_coupler.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/bd/bram_ila/hdl/bram_ila_wrapper.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -196,6 +182,5 @@
   <BlockFileSet Type="BlockSrcs" Name="design_1_rst_ps7_0_100M_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_dma_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_processing_system7_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="bram_ila_ila_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_2_smartconnect_0_0"/>
 </GenRun>
