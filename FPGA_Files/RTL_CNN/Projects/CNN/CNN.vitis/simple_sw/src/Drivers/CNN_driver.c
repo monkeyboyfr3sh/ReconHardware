@@ -8,8 +8,8 @@
 
 int init_cnn()
 {
-	struct dma_packet dma_packet;
-	struct image_info image1;
+	dma_packet dma_packet;
+	image_info image1;
 	u32 status;
 
 	status = init_dma();
@@ -32,27 +32,27 @@ int init_cnn()
 	}
 	print_image_info(&image1);
 
-	struct layer_info *lay_1 = malloc(sizeof(struct layer_info));
-	struct layer_info *lay_2 = malloc(sizeof(struct layer_info));
-	struct layer_info *lay_3 = malloc(sizeof(struct layer_info));
-	struct layer_info *lay_4 = malloc(sizeof(struct layer_info));
+	layer_info *lay_1 = malloc(sizeof(layer_info));
+	layer_info *lay_2 = malloc(sizeof(layer_info));
+	layer_info *lay_3 = malloc(sizeof(layer_info));
+	layer_info *lay_4 = malloc(sizeof(layer_info));
 
-  	status = init_layer(lay_1,lay_1_base,3,CONV_LAYER);
+  	status = init_layer(lay_1,lay_1_base,3);
 	if(status != XST_SUCCESS){
 		return XST_FAILURE;
 	}
 
-	status = init_layer(lay_2,lay_2_base,3,POOL_LAYER);
+	status = init_layer(lay_2,lay_2_base,3);
 	if(status != XST_SUCCESS){
 		return XST_FAILURE;
 	}
 
-  	status = init_layer(lay_3,lay_3_base,3,CONV_LAYER);
+  	status = init_layer(lay_3,lay_3_base,3);
 	if(status != XST_SUCCESS){
 		return XST_FAILURE;
 	}
 
-	status = init_layer(lay_4,lay_4_base,3,POOL_LAYER);
+	status = init_layer(lay_4,lay_4_base,3);
 	if(status != XST_SUCCESS){
 		return XST_FAILURE;
 	}
@@ -90,9 +90,11 @@ int init_cnn()
 
 	process_packet(&dma_packet);
 
+	process_packet(&dma_packet);
+
 	return XST_SUCCESS;
 }
-int init_layer(struct layer_info *layer,u32 BASE_ADDR, int kernel_size, enum layers layer_type)
+int init_layer(layer_info *layer,u32 BASE_ADDR, int kernel_size)
 {
 	u32 status;
 	status = test_AXI(layer);
@@ -104,7 +106,7 @@ int init_layer(struct layer_info *layer,u32 BASE_ADDR, int kernel_size, enum lay
 	layer->layer_kernel.kernel_size = kernel_size;
 	layer->layer_kernel.kernel_arrayPtr = malloc(kernel_size*kernel_size*sizeof(u32));
 
-	switch(layer_type)
+	switch(get_layer_type(layer))
 	{
 		case CONV_LAYER:
 			xil_printf("COVOLUTION layer initialized\r\n");
@@ -155,9 +157,9 @@ int init_dma()
 	return XST_SUCCESS;
 }
 
-int init_dma_packet(struct dma_packet *packet,struct layer_info *input_layer,struct image_info *image)
+int init_dma_packet(dma_packet *packet,layer_info *input_layer,image_info *image)
 {
-	struct layer_info *curr_layer = input_layer;
+	layer_info *curr_layer = input_layer;
 
 	packet->fileName = image->filename;
 	packet->in_width = image->img_width;
@@ -187,10 +189,10 @@ int init_dma_packet(struct dma_packet *packet,struct layer_info *input_layer,str
 	return XST_SUCCESS;
 }
 
-int process_packet(struct dma_packet *packet)
+int process_packet(dma_packet *packet)
 {
 	int status;
-
+	xil_printf("\r\nProcessing dma packet for file: %s\r\n",packet->fileName);
 	xil_printf("TxBuffer = {");
 	for(int Index = 0; Index < packet->tx_pckt_len; Index ++) {
 		if(Index%packet->in_width==0){
@@ -232,7 +234,7 @@ int process_packet(struct dma_packet *packet)
 	return XST_SUCCESS;
 }
 
-void print_layer_info(struct layer_info *layer)
+void print_layer_info(layer_info *layer)
 {
 	switch (layer->layer_type)
 	{
@@ -245,7 +247,7 @@ void print_layer_info(struct layer_info *layer)
 	}
 }
 
-void print_dma_packet_info(struct dma_packet *packet)
+void print_dma_packet_info(dma_packet *packet)
 {
 	xil_printf("\r\nPrinting dma packet info:\r\n\n");
 
@@ -260,10 +262,10 @@ void print_dma_packet_info(struct dma_packet *packet)
 	xil_printf("pckt_len = %d; byte_cnt = %d\r\n\n",packet->rx_pckt_len,packet->rx_byte_cnt);
 }
 
-int set_all_layer_config(struct layer_info *layer, struct image_info *image)
+int set_all_layer_config(layer_info *layer, image_info *image)
 {
-	struct layer_info *curr_layer = layer;
-	struct image_info *out_image;
+	layer_info *curr_layer = layer;
+	image_info *out_image;
 	u32 kernel_size;
 
 	out_image->img_height = image->img_height;
@@ -283,7 +285,7 @@ int set_all_layer_config(struct layer_info *layer, struct image_info *image)
 	return XST_SUCCESS;
 }
 
-int set_layer_config(struct layer_info *layer, struct image_info *image)
+int set_layer_config(layer_info *layer, image_info *image)
 {
 	switch (layer->layer_type)
 	{
@@ -297,7 +299,7 @@ int set_layer_config(struct layer_info *layer, struct image_info *image)
 	}
 }
 
-int test_AXI(struct layer_info *layer)
+int test_AXI(layer_info *layer)
 {
 	u32 val;
 	bool pass = true;
@@ -321,7 +323,28 @@ int test_AXI(struct layer_info *layer)
 	return XST_SUCCESS;
 }
 
-void print_image_info(struct image_info *image){
+int get_layer_type(layer_info *layer)
+{
+	u32 state_mach_reg = Xil_In32(layer->base_axi_addr+STATE_MACHINE_OFF);
+	return extract(state_mach_reg,0,4);
+}
+int get_layer_kernel_size(layer_info *layer)
+{
+	u32 state_mach_reg = Xil_In32(layer->base_axi_addr+STATE_MACHINE_OFF);
+	return extract(state_mach_reg,4,8);
+}
+int get_layer_channel_count(layer_info *layer)
+{
+	u32 state_mach_reg = Xil_In32(layer->base_axi_addr+STATE_MACHINE_OFF);
+	return extract(state_mach_reg,8,12);
+}
+unsigned short extract(unsigned short value, int begin, int end)
+{
+    unsigned short mask = (1 << (end - begin)) - 1;
+    return (value >> begin) & mask;
+}
+
+void print_image_info(image_info *image){
 	xil_printf("\r\nPrinting %s info:\r\n",image->filename);
 
 	xil_printf("    File Size = %d\r\n",image->file_size);
@@ -329,9 +352,9 @@ void print_image_info(struct image_info *image){
 	xil_printf("    Pixel Count = %d\r\n",image->pix_cnt);
 }
 
-int image_sd_to_mem(struct image_info* image, char* fileName){
+int image_sd_to_mem(image_info* image, char* fileName){
 	/* Put CSV into memory */
-	struct file_info* Fil_info;
+	file_info* Fil_info;
 	Fil_info = SD_Transfer(fileName);
 	if(Fil_info->file_ptr<=0){
 		return XST_FAILURE;
@@ -369,7 +392,7 @@ int image_sd_to_mem(struct image_info* image, char* fileName){
 			else if (image->img_height==0){
 				image->img_height=val;
 			}
-			// Special char
+			// Other char
 			else {
 				image->img_mem_ptr[val_cnt] = val;
 				val_cnt++;
@@ -396,7 +419,7 @@ int image_sd_to_mem(struct image_info* image, char* fileName){
 	return XST_SUCCESS;
 }
 
-int image_mem_to_sd(struct dma_packet* dma_packet)
+int image_mem_to_sd(dma_packet* dma_packet)
 {
 	FRESULT result;
 	UINT bw;			/* Number of bytes written */

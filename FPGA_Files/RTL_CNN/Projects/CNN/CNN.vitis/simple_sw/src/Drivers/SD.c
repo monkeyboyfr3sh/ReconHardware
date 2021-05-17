@@ -17,7 +17,7 @@ char* concat_str(const char *s1, const char *s2)
 }
 
 /* Transfers a file from SD card into memory */
-struct file_info *SD_Transfer(char *FileName){
+file_info *SD_Transfer(char *FileName){
     FIL fil;
     UINT br;
     FRESULT result;
@@ -27,7 +27,7 @@ struct file_info *SD_Transfer(char *FileName){
         xil_printf("Failed with ERROR: %d \n\r", result);
         return 0;
     }
-    struct file_info* return_fil = malloc(sizeof (struct file_info));
+    file_info* return_fil = malloc(sizeof (file_info));
     u32 *return_addr=0;
     return_fil->file_size = f_size(&fil);
     if(return_fil->file_size<=0){

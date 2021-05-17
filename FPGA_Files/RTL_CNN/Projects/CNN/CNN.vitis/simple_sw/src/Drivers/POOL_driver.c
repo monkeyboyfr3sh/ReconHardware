@@ -24,6 +24,8 @@ int POOL_print_control_register(struct layer_info *POOL)
 	xil_printf("\nPooling Status Reg\r\n");
 	xil_printf("=========================\r\n");
 	xil_printf("Control Enable:				0x%x\r\n",Xil_In32(POOL->base_axi_addr+control_s_off));
+	xil_printf("Reset:					0x%x\r\n",Xil_In32(POOL->base_axi_addr+reset_off));
+	xil_printf("State Machine Register:			0x%x\r\n",Xil_In32(POOL->base_axi_addr+state_mach_off));
 	xil_printf("Image Width:				0x%x\r\n",Xil_In32(POOL->base_axi_addr+image_w_off));
 	xil_printf("Image Height:				0x%x\r\n",Xil_In32(POOL->base_axi_addr+image_h_off));
 	xil_printf("\r\n");

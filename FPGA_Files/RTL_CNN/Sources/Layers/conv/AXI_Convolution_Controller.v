@@ -230,6 +230,7 @@ always @(posedge axi_clk)begin
             // ----------------------------------------------------------------------
             STATE_IDLE: begin
                 lb_wr_en <= 1; lb_rd_en <= 0;
+                lb_force_rst <= 0;
                 case (lb_wr_en_comb)
                     1: begin
                         CurrentState <= STATE_LB_WRITE;

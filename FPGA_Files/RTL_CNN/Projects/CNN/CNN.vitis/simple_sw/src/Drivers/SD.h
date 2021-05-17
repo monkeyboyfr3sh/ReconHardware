@@ -18,14 +18,14 @@
 #include "xil_io.h"
 #include "ff.h"
 
-struct file_info {
+typedef struct file_info {
 	char *file_ptr;
 	char *filename;
 	u32 file_size;
-};
+} file_info;
 
 char* concat_str(const char *s1, const char *s2);
-struct file_info *SD_Transfer(char *FileName);
+file_info *SD_Transfer(char *FileName);
 int init_sd();
 
 #endif /* SRC_DRIVERS_SD_H_ */

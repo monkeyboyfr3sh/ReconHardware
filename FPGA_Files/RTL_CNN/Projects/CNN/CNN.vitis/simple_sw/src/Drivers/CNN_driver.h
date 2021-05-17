@@ -30,10 +30,10 @@ enum layers {
 // --------------------------------------------
 // Model address definitions
 // --------------------------------------------
-#define lay_1_base			XPAR_NOLABEL_LINE46_DESIGN_2_I_M01_AXI_0_BASEADDR
-#define lay_2_base			XPAR_NOLABEL_LINE46_DESIGN_2_I_M02_AXI_0_BASEADDR
-#define lay_3_base			XPAR_NOLABEL_LINE46_DESIGN_2_I_M03_AXI_0_BASEADDR
-#define lay_4_base			XPAR_NOLABEL_LINE46_DESIGN_2_I_M04_AXI_0_BASEADDR
+#define lay_1_base			XPAR_M01_AXI_0_BASEADDR
+#define lay_2_base			XPAR_M02_AXI_0_BASEADDR
+#define lay_3_base			XPAR_M03_AXI_0_BASEADDR
+#define lay_4_base			XPAR_M04_AXI_0_BASEADDR
 
 #define DMA_DEV_ID			XPAR_AXIDMA_0_DEVICE_ID
 
@@ -46,7 +46,7 @@ XAxiDma AxiDma;
 typedef struct kernel_type {
 	u32 kernel_size;
 	u32* kernel_arrayPtr;
-};
+} kernel_type;
 
 typedef struct layer_info {
 	enum layers layer_type;
@@ -60,7 +60,7 @@ typedef struct layer_info {
 //	u32 precision;
 //	u32 channels;
 //	u32 max_bram;
-};
+} layer_info;
 
 typedef struct image_info {
 	char *filename;
@@ -69,7 +69,7 @@ typedef struct image_info {
 	u32 img_height;
 	u32 pix_cnt;
 	u32* img_mem_ptr;
-};
+} image_info;
 
 typedef struct dma_packet {
 	char *fileName;
@@ -84,34 +84,36 @@ typedef struct dma_packet {
 	u32* rx_ptr;
 	u32 rx_pckt_len;
 	u32 rx_byte_cnt;
-};
+} dma_packet;
 
 // --------------------------------------------
 // CNN Model Prototypes
 // --------------------------------------------
 int init_cnn();
-int init_layer(struct layer_info *layer,u32 BASE_ADDR, int kernel_size, enum layers layer_type);
+int init_layer(layer_info *layer,u32 BASE_ADDR, int kernel_size);
 int init_dma();
-int init_dma_packet(struct dma_packet *packet,struct layer_info *input_layer,struct image_info *image);
-int process_packet(struct dma_packet *packet);
+int init_dma_packet(dma_packet *packet,layer_info *input_layer,image_info *image);
+int process_packet(dma_packet *packet);
 
-void print_layer_info(struct layer_info *layer);
-void print_dma_packet_info(struct dma_packet *packet);
+void print_layer_info(layer_info *layer);
+void print_dma_packet_info(dma_packet *packet);
 
 // Set
-int set_all_layer_config(struct layer_info *layer, struct image_info *image);
-int set_layer_config(struct layer_info *layer, struct image_info *image);
+int set_all_layer_config(layer_info *layer, image_info *image);
+int set_layer_config(layer_info *layer, image_info *image);
 
-int test_AXI(struct layer_info *layer);
-int get_layer_type(struct layer_info *layer);
+int test_AXI(layer_info *layer);
+int get_layer_type(layer_info *layer);
+int get_layer_kernel_size(layer_info *layer);
 unsigned short extract(unsigned short value, int begin, int end);
+
 
 // --------------------------------------------
 // Image Data Prototypes
 // --------------------------------------------
-void print_image_info(struct image_info *image);
-int image_sd_to_mem(struct image_info* image, char* fileName);
-int image_mem_to_sd(struct dma_packet* dma_packet);
+void print_image_info(image_info *image);
+int image_sd_to_mem(image_info* image, char* fileName);
+int image_mem_to_sd(dma_packet* dma_packet);
 
 
 #endif /* SRC_DRIVERS_CNN_DRIVER_H_ */
