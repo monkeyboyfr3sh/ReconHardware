@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="49" Path="C:/GitHub/ReconHardware/FPGA_Files/Projects/ConvolutionAccel_d/ConvolutionAccel_d.xpr">
+<Project Version="7" Minor="49" Path="D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/ConvolutionAccel_d/ConvolutionAccel_d.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="0e0bffec04d5435fa7acad349e60a56d"/>
@@ -80,29 +80,26 @@
         <CompFileExtendedInfo CompFileName="Convolution_Controller.bd" FileRelPathName="ip/Convolution_Controller_processing_system7_0_0/Convolution_Controller_processing_system7_0_0.xci">
           <Proxy FileSetName="Convolution_Controller_processing_system7_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="Convolution_Controller.bd" FileRelPathName="ip/Convolution_Controller_Convolution_Controll_0_0/Convolution_Controller_Convolution_Controll_0_0.xci">
-          <Proxy FileSetName="Convolution_Controller_Convolution_Controll_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="Convolution_Controller.bd" FileRelPathName="ip/Convolution_Controller_rst_ps7_0_100M_0/Convolution_Controller_rst_ps7_0_100M_0.xci">
-          <Proxy FileSetName="Convolution_Controller_rst_ps7_0_100M_0"/>
+        <CompFileExtendedInfo CompFileName="Convolution_Controller.bd" FileRelPathName="ip/Convolution_Controller_axi_dma_0_0/Convolution_Controller_axi_dma_0_0.xci">
+          <Proxy FileSetName="Convolution_Controller_axi_dma_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="Convolution_Controller.bd" FileRelPathName="ip/Convolution_Controller_smartconnect_0_0/Convolution_Controller_smartconnect_0_0.xci">
           <Proxy FileSetName="Convolution_Controller_smartconnect_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="Convolution_Controller.bd" FileRelPathName="ip/Convolution_Controller_dfx_mem_ila_0_0/Convolution_Controller_dfx_mem_ila_0_0.xci">
-          <Proxy FileSetName="Convolution_Controller_dfx_mem_ila_0_0"/>
+        <CompFileExtendedInfo CompFileName="Convolution_Controller.bd" FileRelPathName="ip/Convolution_Controller_dfx_controller_0_1/Convolution_Controller_dfx_controller_0_1.xci">
+          <Proxy FileSetName="Convolution_Controller_dfx_controller_0_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="Convolution_Controller.bd" FileRelPathName="ip/Convolution_Controller_rst_ps7_0_100M_0/Convolution_Controller_rst_ps7_0_100M_0.xci">
+          <Proxy FileSetName="Convolution_Controller_rst_ps7_0_100M_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="Convolution_Controller.bd" FileRelPathName="ip/Convolution_Controller_util_vector_logic_0_1/Convolution_Controller_util_vector_logic_0_1.xci">
           <Proxy FileSetName="Convolution_Controller_util_vector_logic_0_1"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="Convolution_Controller.bd" FileRelPathName="ip/Convolution_Controller_cc_s_axis_ila_0_0/Convolution_Controller_cc_s_axis_ila_0_0.xci">
-          <Proxy FileSetName="Convolution_Controller_cc_s_axis_ila_0_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="Convolution_Controller.bd" FileRelPathName="ip/Convolution_Controller_ila_1_0/Convolution_Controller_ila_1_0.xci">
           <Proxy FileSetName="Convolution_Controller_ila_1_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="Convolution_Controller.bd" FileRelPathName="ip/Convolution_Controller_axi_dma_0_0/Convolution_Controller_axi_dma_0_0.xci">
-          <Proxy FileSetName="Convolution_Controller_axi_dma_0_0"/>
+        <CompFileExtendedInfo CompFileName="Convolution_Controller.bd" FileRelPathName="ip/Convolution_Controller_Convolution_Controll_0_0/Convolution_Controller_Convolution_Controll_0_0.xci">
+          <Proxy FileSetName="Convolution_Controller_Convolution_Controll_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="Convolution_Controller.bd" FileRelPathName="ip/Convolution_Controller_axi_gpio_0_0/Convolution_Controller_axi_gpio_0_0.xci">
           <Proxy FileSetName="Convolution_Controller_axi_gpio_0_0"/>
@@ -113,53 +110,14 @@
         <CompFileExtendedInfo CompFileName="Convolution_Controller.bd" FileRelPathName="ip/Convolution_Controller_ila_0_0/Convolution_Controller_ila_0_0.xci">
           <Proxy FileSetName="Convolution_Controller_ila_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="Convolution_Controller.bd" FileRelPathName="ip/Convolution_Controller_dfx_controller_0_1/Convolution_Controller_dfx_controller_0_1.xci">
-          <Proxy FileSetName="Convolution_Controller_dfx_controller_0_1"/>
+        <CompFileExtendedInfo CompFileName="Convolution_Controller.bd" FileRelPathName="ip/Convolution_Controller_dfx_mem_ila_0_0/Convolution_Controller_dfx_mem_ila_0_0.xci">
+          <Proxy FileSetName="Convolution_Controller_dfx_mem_ila_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="Convolution_Controller.bd" FileRelPathName="ip/Convolution_Controller_cc_s_axis_ila_0_0/Convolution_Controller_cc_s_axis_ila_0_0.xci">
+          <Proxy FileSetName="Convolution_Controller_cc_s_axis_ila_0_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/Convolution_Controller/hdl/Convolution_Controller_wrapper.v">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../Sources/General/Convolution_Top_d.v">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../Sources/Adder/param_int_adder.v">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../Sources/Multiplier/multiplyComputePynq.v">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../Sources/General/matrixAccelerator.v">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../Sources/General/Wrappers/ma_int_16.v">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../Sources/General/Wrappers/ma_int_8.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -176,6 +134,48 @@
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/icap_ila/hdl/icap_ila_wrapper.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../Sources/Layers/conv/top_d.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../Sources/Layers/conv/Wrappers/ma_int_8.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../Sources/Layers/conv/Wrappers/ma_int_16.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../Sources/Layers/conv/matrixAccelerator.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../Sources/Layers/conv/Adder/param_int_adder.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../Sources/Layers/conv/Multiplier/multiplyComputePynq.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>

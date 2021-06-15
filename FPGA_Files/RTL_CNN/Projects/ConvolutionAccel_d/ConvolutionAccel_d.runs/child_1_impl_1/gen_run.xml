@@ -20,10 +20,14 @@
   <File Type="BITSTR-RBT" Name="CPE_Wrapper.rbt"/>
   <File Type="BITSTR-NKY" Name="CPE_Wrapper.nky"/>
   <File Type="BITSTR-BMM" Name="CPE_Wrapper_bd.bmm"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="CPE_Wrapper_methodology_drc_routed.rpt"/>
   <File Type="BITSTR-MMI" Name="CPE_Wrapper.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="CPE_Wrapper_methodology_drc_routed.pb"/>
   <File Type="BITSTR-SYSDEF" Name="CPE_Wrapper.sysdef"/>
+  <File Type="ROUTE-DRC-RPX" Name="CPE_Wrapper_drc_routed.rpx"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
   <File Type="BITSTR-LTX" Name="CPE_Wrapper.ltx"/>
+  <File Type="RCFI_FILE" Name="CPE_Wrapper.rcfi"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="OPT-DRC" Name="CPE_Wrapper_drc_opted.rpt"/>
   <File Type="OPT-HWDEF" Name="CPE_Wrapper.hwdef"/>
@@ -56,12 +60,8 @@
   <File Type="PHYSOPT-DCP" Name="CPE_Wrapper_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="CPE_Wrapper_postroute_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="CPE_Wrapper_postroute_physopt_bb.dcp"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="CPE_Wrapper_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="CPE_Wrapper_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-DRC-RPX" Name="CPE_Wrapper_drc_routed.rpx"/>
   <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="CPE_Wrapper_methodology_drc_routed.rpx"/>
   <File Type="PDI-FILE" Name="CPE_Wrapper.pdi"/>
-  <File Type="RCFI_FILE" Name="CPE_Wrapper.rcfi"/>
   <File Type="CFI_FILE" Name="CPE_Wrapper.cfi"/>
   <File Type="RNPI_FILE" Name="CPE_Wrapper.rnpi"/>
   <File Type="NPI_FILE" Name="CPE_Wrapper.npi"/>
@@ -177,11 +177,11 @@
     <Step Id="write_bitstream"/>
     <Step Id="write_device_image"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="Convolution_Controller_dfx_controller_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="Convolution_Controller_Convolution_Controll_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="Convolution_Controller_cc_s_axis_ila_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Convolution_Controller_dfx_controller_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="Convolution_Controller_axi_dma_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Convolution_Controller_dfx_mem_ila_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="Convolution_Controller_cc_s_axis_ila_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Convolution_Controller_processing_system7_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Convolution_Controller_rst_ps7_0_100M_0"/>
   <BlockFileSet Type="BlockSrcs" Name="Convolution_Controller_ila_1_0"/>

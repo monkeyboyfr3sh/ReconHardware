@@ -1,0 +1,25 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Tue Jun 15 13:37:12 2021
+# Process ID: 5248
+# Current directory: D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/ConvolutionAccel_d
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12876 D:\GitHub\ReconHardware\FPGA_Files\RTL_CNN\Projects\ConvolutionAccel_d\ConvolutionAccel_d.xpr
+# Log file: D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/ConvolutionAccel_d/vivado.log
+# Journal file: D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/ConvolutionAccel_d\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/ConvolutionAccel_d/ConvolutionAccel_d.xpr
+add_files -norecurse D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/top_d.v
+add_files -norecurse {D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/Wrappers/ma_int_8.v D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/Wrappers/ma_int_16.v D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/matrixAccelerator.v D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/Adder/param_int_adder.v D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/Multiplier/multiplyComputePynq.v}
+export_ip_user_files -of_objects  [get_files D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/General/Wrappers/ma_int_16.v] -no_script -reset -force -quiet
+remove_files  D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/General/Wrappers/ma_int_16.v
+export_ip_user_files -of_objects  [get_files D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/General/Wrappers/ma_int_8.v] -no_script -reset -force -quiet
+remove_files  D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/General/Wrappers/ma_int_8.v
+export_ip_user_files -of_objects  [get_files D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/General/matrixAccelerator.v] -no_script -reset -force -quiet
+remove_files  D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/General/matrixAccelerator.v
+export_ip_user_files -of_objects  [get_files D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Multiplier/multiplyComputePynq.v] -no_script -reset -force -quiet
+remove_files  D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Multiplier/multiplyComputePynq.v
+export_ip_user_files -of_objects  [get_files D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Adder/param_int_adder.v] -no_script -reset -force -quiet
+remove_files  D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Adder/param_int_adder.v

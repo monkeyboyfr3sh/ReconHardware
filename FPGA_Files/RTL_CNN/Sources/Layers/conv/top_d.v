@@ -4,7 +4,7 @@ module CPE_Wrapper
 #(  // Parameters, these must also be set in the BD
     parameter DATA_WIDTH = 32,
     parameter KERNEL_SIZE = 3,
-    parameter CHANNELS = 3,
+    parameter CHANNELS = 1,
     parameter REST_ADDR = KERNEL_SIZE*KERNEL_SIZE,
     parameter ADDR_WIDTH = $clog2(REST_ADDR)
 );
