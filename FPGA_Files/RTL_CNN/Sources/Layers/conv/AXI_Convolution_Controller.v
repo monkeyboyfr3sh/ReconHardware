@@ -15,7 +15,8 @@
 `define lcv_off         12
 `define im_width_off    16
 `define im_height_off   20
-`define filter_off      24
+`define stride_off      24
+`define filter_off      28
 
 module Convolution_Controller
 #( 
@@ -28,20 +29,20 @@ module Convolution_Controller
     // ----------------------------------------------------------------------
     // State Encoding
     // ----------------------------------------------------------------------
-    parameter STATE_COUNT     = 5,
-    parameter STATE_IDLE      = 0,
-    parameter STATE_LB_WRITE  = 1,
-    parameter STATE_LB_READ   = 2,
-    parameter STATE_CONV      = 3,
-    parameter STATE_SERV_DATA = 4,
+    parameter STATE_COUNT       = 6,
+    parameter STATE_IDLE        = 0,       
+    parameter STATE_LB_WRITE    = 1,
+    parameter STATE_LB_READ     = 2,
+    parameter STATE_CONV        = 3,
+    parameter STATE_SERV_DATA   = 4,
+    parameter STATE_SHIFT_DATA  = 5,
     // ----------------------------------------------------------------------
     // Fixed Params (i.e. dont't touch)
     // ----------------------------------------------------------------------
     parameter K_SQUARED = KERNEL_SIZE*KERNEL_SIZE,
     parameter FILTER_BASE = `filter_off,
     parameter FINAL_CHANNEL = 2**(CHANNELS-1),
-    parameter DATA_BASE = FILTER_BASE + (K_SQUARED*4),
-    parameter CTRL_REG_SIZE = DATA_BASE + (K_SQUARED*4),
+    parameter CTRL_REG_SIZE = FILTER_BASE + (K_SQUARED*CHANNELS*4),
     parameter CTRL_REG_ADDR_WIDTH = $clog2(CTRL_REG_SIZE),
     parameter STATE_MAC_ADDR_WIDTH = $clog2(K_SQUARED),
     parameter AXI_BUS_WIDTH = 32,
@@ -109,6 +110,7 @@ reg [$clog2(STATE_COUNT)-1:0]   CurrentState, NextState;
 reg [$clog2(CHANNELS)-1:0] channel_sel;
 wire [31:0] image_width;
 wire [31:0] image_height;
+wire [31:0] stride;
 reg [$clog2(KERNEL_SIZE):0] read_offset;
 
 integer RDi,RDj,POOLi,POOLj;
@@ -128,8 +130,8 @@ wire [31:0] r_add;
 integer cSum_buff_cnt;
 reg [CHANNELS*AXI_BUS_WIDTH-1:0] cSum_buff;
 integer control_registers[CTRL_REG_SIZE-1:0];//Array of registers for controlling ip
-reg     [AXI_BUS_WIDTH-1:0]    dataSet     [CHANNELS-1:0][(K_SQUARED)-1:0];
-wire    [AXI_BUS_WIDTH-1:0]    filterSet   [(K_SQUARED)-1:0];
+reg     [AXI_BUS_WIDTH*K_SQUARED-1:0]    dataSet     [CHANNELS-1:0];
+wire    [AXI_BUS_WIDTH*K_SQUARED-1:0]    filterSet   [CHANNELS-1:0];
 reg     [$clog2(BRAM_WIDTH)-1:0] current_x, current_y;
 
 // ----------------------------------------------------------------------
@@ -139,6 +141,7 @@ assign r_add            = current_x+read_offset;
 assign cStart           = control_registers[`cstart_off][0];
 assign image_width      = control_registers[`im_width_off];
 assign image_height     = control_registers[`im_height_off];
+assign stride           = control_registers[`stride_off];
 assign bram_full        = &lb_full;
 assign s_axis_ready     = (!bram_full)  &lb_wr_en;
 assign lb_wr_en_comb    = lb_wr_en      &s_axis_valid  &(!bram_full);
@@ -174,8 +177,8 @@ for(gi=0;gi<CHANNELS;gi=gi+1)begin
     // Attatch multiplier inputs for each channel
     for (gj = 0;gj<K_SQUARED;gj=gj+1)begin
         assign filterSet[gj] = control_registers[(gj*4)+FILTER_BASE];
-        assign MULTIPLIER_INPUT[(gi*AXI_BUS_WIDTH*K_SQUARED)    +(gj*AXI_BUS_WIDTH)+:AXI_BUS_WIDTH] = MULTIPLY_START[gj] ? {0,dataSet[gi][gj]} : 0;
-        assign MULTIPLICAND_INPUT[(gi*AXI_BUS_WIDTH*K_SQUARED)  +(gj*AXI_BUS_WIDTH)+:AXI_BUS_WIDTH] = MULTIPLY_START[gj] ? {0,filterSet[gj]} : 0;
+        assign MULTIPLIER_INPUT[(gi*AXI_BUS_WIDTH*K_SQUARED)    +(gj*AXI_BUS_WIDTH)+:AXI_BUS_WIDTH] = {0,dataSet[gi][gj]};
+        assign MULTIPLICAND_INPUT[(gi*AXI_BUS_WIDTH*K_SQUARED)  +(gj*AXI_BUS_WIDTH)+:AXI_BUS_WIDTH] = {0,filterSet[gj]};
     end
 end
 
@@ -263,12 +266,7 @@ always @(posedge axi_clk)begin
             // ----------------------------------------------------------------------
             STATE_LB_READ: begin
                 if(lb_valid)begin
-                    for(RDi=0;RDi<CHANNELS;RDi = RDi + 1)begin
-                        for(RDj=0;RDj<K_SQUARED;RDj = RDj + 1)begin
-                            if(RDj<K_SQUARED-KERNEL_SIZE) dataSet[RDi][RDj] <= dataSet[RDi][RDj+KERNEL_SIZE];
-                            else dataSet[RDi][RDj] <= lb_data_out[RDi][(RDj-(K_SQUARED-KERNEL_SIZE))*AXI_BUS_WIDTH+:AXI_BUS_WIDTH];
-                        end
-                    end
+                
                 end
                 read_offset <= read_offset + 1;
                 if(read_offset>=KERNEL_SIZE)begin
@@ -324,15 +322,14 @@ always @(posedge axi_clk)begin
                                 CurrentState <= STATE_IDLE;        
                             end
                             0: begin
+                                CurrentState <= STATE_SHIFT_DATA;
                                 case (current_x==0)
                                     1: begin
                                         lb_wr_en <= 1; lb_rd_en <= 0;
                                         CurrentState <= STATE_LB_WRITE;
                                     end
                                     0: begin
-                                        lb_wr_en <= 0; lb_rd_en <= 1;
-                                        read_offset <= 2;
-                                        CurrentState <= STATE_LB_READ;
+                                        CurrentState <= STATE_SHIFT_DATA;
                                     end
                                 endcase
                             end
@@ -355,6 +352,16 @@ always @(posedge axi_clk)begin
                     end
                 end
             end
+            
+            // ----------------------------------------------------------------------
+            // Shifting data in window buffer
+            // ----------------------------------------------------------------------
+            STATE_SHIFT_DATA:begin
+                
+                lb_wr_en <= 0; lb_rd_en <= 1;
+                
+                read_offset <= 2;
+            end               
             default:
                 CurrentState <= STATE_IDLE;
         endcase
