@@ -1,7 +1,0 @@
-/*pr_led*/
-the_ROM_image:
-{
- [bootloader] <pr_led/boot/fsbl.elf>
- <bitstream>
- <elf,ps7_cortexa9_0>
-}
