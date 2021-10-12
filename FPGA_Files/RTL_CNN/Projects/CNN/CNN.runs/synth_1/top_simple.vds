@@ -2,8 +2,8 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Wed May 12 14:18:42 2021
-# Process ID: 2704
+# Start of session at: Tue Oct 12 08:54:59 2021
+# Process ID: 5996
 # Current directory: D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.runs/synth_1
 # Command line: vivado.exe -log top_simple.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_simple.tcl
 # Log file: D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.runs/synth_1/top_simple.vds
@@ -12,7 +12,8 @@
 source top_simple.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2020.1/data/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.1/data/ip'.
+add_files: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1062.387 ; gain = 0.000
 Command: synth_design -top top_simple -part xc7z020clg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
@@ -20,11 +21,11 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 15780
+INFO: [Synth 8-7075] Helper process launched with PID 21976
 WARNING: [Synth 8-1849] concatenation with unsized literal; will interpret as 32 bits [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:177]
 WARNING: [Synth 8-1849] concatenation with unsized literal; will interpret as 32 bits [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/conv/AXI_Convolution_Controller.v:178]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1107.863 ; gain = 35.062
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1062.387 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'top_simple' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:1]
 	Parameter DATA_WIDTH bound to: 16 - type: integer 
@@ -32,16 +33,16 @@ INFO: [Synth 8-6157] synthesizing module 'top_simple' [D:/GitHub/ReconHardware/F
 	Parameter AXIS_CHANNELS bound to: 5 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'design_2_wrapper' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/hdl/design_2_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'design_2' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:13]
-INFO: [Synth 8-6157] synthesizing module 'design_2_axi_dma_0_0' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.runs/synth_1/.Xil/Vivado-2704-DESKTOP-RPQ2DOT/realtime/design_2_axi_dma_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_2_axi_dma_0_0' (1#1) [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.runs/synth_1/.Xil/Vivado-2704-DESKTOP-RPQ2DOT/realtime/design_2_axi_dma_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_2_axi_dma_0_0' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.runs/synth_1/.Xil/Vivado-5996-DESKTOP-585PJMN/realtime/design_2_axi_dma_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_2_axi_dma_0_0' (1#1) [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.runs/synth_1/.Xil/Vivado-5996-DESKTOP-585PJMN/realtime/design_2_axi_dma_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'mm2s_prmry_reset_out_n' of module 'design_2_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:773]
 WARNING: [Synth 8-7071] port 's2mm_prmry_reset_out_n' of module 'design_2_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:773]
 WARNING: [Synth 8-7071] port 'mm2s_introut' of module 'design_2_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:773]
 WARNING: [Synth 8-7071] port 's2mm_introut' of module 'design_2_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:773]
 WARNING: [Synth 8-7071] port 'axi_dma_tstvec' of module 'design_2_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:773]
 WARNING: [Synth 8-7023] instance 'axi_dma_0' of module 'design_2_axi_dma_0_0' has 64 connections declared, but only 59 given [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:773]
-INFO: [Synth 8-6157] synthesizing module 'design_2_processing_system7_0_1' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.runs/synth_1/.Xil/Vivado-2704-DESKTOP-RPQ2DOT/realtime/design_2_processing_system7_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_2_processing_system7_0_1' (2#1) [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.runs/synth_1/.Xil/Vivado-2704-DESKTOP-RPQ2DOT/realtime/design_2_processing_system7_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_2_processing_system7_0_1' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.runs/synth_1/.Xil/Vivado-5996-DESKTOP-585PJMN/realtime/design_2_processing_system7_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_2_processing_system7_0_1' (2#1) [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.runs/synth_1/.Xil/Vivado-5996-DESKTOP-585PJMN/realtime/design_2_processing_system7_0_1_stub.v:6]
 WARNING: [Synth 8-7071] port 'USB0_PORT_INDCTL' of module 'design_2_processing_system7_0_1' is unconnected for instance 'processing_system7_0' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:833]
 WARNING: [Synth 8-7071] port 'USB0_VBUS_PWRSELECT' of module 'design_2_processing_system7_0_1' is unconnected for instance 'processing_system7_0' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:833]
 WARNING: [Synth 8-7071] port 'S_AXI_HP0_BID' of module 'design_2_processing_system7_0_1' is unconnected for instance 'processing_system7_0' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:833]
@@ -51,20 +52,20 @@ WARNING: [Synth 8-7071] port 'S_AXI_HP0_WCOUNT' of module 'design_2_processing_s
 WARNING: [Synth 8-7071] port 'S_AXI_HP0_RACOUNT' of module 'design_2_processing_system7_0_1' is unconnected for instance 'processing_system7_0' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:833]
 WARNING: [Synth 8-7071] port 'S_AXI_HP0_WACOUNT' of module 'design_2_processing_system7_0_1' is unconnected for instance 'processing_system7_0' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:833]
 WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'design_2_processing_system7_0_1' has 110 connections declared, but only 102 given [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:833]
-INFO: [Synth 8-6157] synthesizing module 'design_2_rst_ps7_0_100M_0' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.runs/synth_1/.Xil/Vivado-2704-DESKTOP-RPQ2DOT/realtime/design_2_rst_ps7_0_100M_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_2_rst_ps7_0_100M_0' (3#1) [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.runs/synth_1/.Xil/Vivado-2704-DESKTOP-RPQ2DOT/realtime/design_2_rst_ps7_0_100M_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_2_rst_ps7_0_100M_0' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.runs/synth_1/.Xil/Vivado-5996-DESKTOP-585PJMN/realtime/design_2_rst_ps7_0_100M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_2_rst_ps7_0_100M_0' (3#1) [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.runs/synth_1/.Xil/Vivado-5996-DESKTOP-585PJMN/realtime/design_2_rst_ps7_0_100M_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_2_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:936]
 WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_2_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:936]
 WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_2_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:936]
 WARNING: [Synth 8-7023] instance 'rst_ps7_0_100M' of module 'design_2_rst_ps7_0_100M_0' has 10 connections declared, but only 7 given [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:936]
-INFO: [Synth 8-6157] synthesizing module 'design_2_smartconnect_0_0' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.runs/synth_1/.Xil/Vivado-2704-DESKTOP-RPQ2DOT/realtime/design_2_smartconnect_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_2_smartconnect_0_0' (4#1) [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.runs/synth_1/.Xil/Vivado-2704-DESKTOP-RPQ2DOT/realtime/design_2_smartconnect_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_2_smartconnect_0_0' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.runs/synth_1/.Xil/Vivado-5996-DESKTOP-585PJMN/realtime/design_2_smartconnect_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_2_smartconnect_0_0' (4#1) [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.runs/synth_1/.Xil/Vivado-5996-DESKTOP-585PJMN/realtime/design_2_smartconnect_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'M00_AXI_awprot' of module 'design_2_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:944]
 WARNING: [Synth 8-7071] port 'M00_AXI_wstrb' of module 'design_2_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:944]
 WARNING: [Synth 8-7071] port 'M00_AXI_arprot' of module 'design_2_smartconnect_0_0' is unconnected for instance 'smartconnect_0' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:944]
 WARNING: [Synth 8-7023] instance 'smartconnect_0' of module 'design_2_smartconnect_0_0' has 191 connections declared, but only 188 given [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:944]
-INFO: [Synth 8-6157] synthesizing module 'design_2_smartconnect_0_1' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.runs/synth_1/.Xil/Vivado-2704-DESKTOP-RPQ2DOT/realtime/design_2_smartconnect_0_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_2_smartconnect_0_1' (5#1) [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.runs/synth_1/.Xil/Vivado-2704-DESKTOP-RPQ2DOT/realtime/design_2_smartconnect_0_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_2_smartconnect_0_1' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.runs/synth_1/.Xil/Vivado-5996-DESKTOP-585PJMN/realtime/design_2_smartconnect_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_2_smartconnect_0_1' (5#1) [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.runs/synth_1/.Xil/Vivado-5996-DESKTOP-585PJMN/realtime/design_2_smartconnect_0_1_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 'design_2' (6#1) [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/synth/design_2.v:13]
 INFO: [Synth 8-6155] done synthesizing module 'design_2_wrapper' (7#1) [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/bd/design_2/hdl/design_2_wrapper.v:12]
 WARNING: [Synth 8-689] width (10) of port connection 'M01_AXI_0_araddr' does not match port width (32) of module 'design_2_wrapper' [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:53]
@@ -353,18 +354,18 @@ INFO: [Synth 8-6155] done synthesizing module 'Pooling_Controller' (16#1) [D:/Gi
 INFO: [Synth 8-6155] done synthesizing module 'pool_wrap' (17#1) [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Sources/Layers/pool/Wrappers/pool_wrap.v:4]
 INFO: [Synth 8-6155] done synthesizing module 'top_simple' (18#1) [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.srcs/sources_1/new/top_simple.v:1]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1218.598 ; gain = 145.797
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1127.469 ; gain = 65.082
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1218.598 ; gain = 145.797
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1127.469 ; gain = 65.082
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1218.598 ; gain = 145.797
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1127.469 ; gain = 65.082
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.458 . Memory (MB): peak = 1218.598 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.680 . Memory (MB): peak = 1127.469 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -384,20 +385,20 @@ Parsing XDC File [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.ru
 Finished Parsing XDC File [D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1400.305 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1308.215 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1404.809 ; gain = 4.504
+Constraint Validation Runtime : Time (s): cpu = 00:00:05 ; elapsed = 00:00:02 . Memory (MB): peak = 1312.922 ; gain = 4.707
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:18 . Memory (MB): peak = 1404.852 ; gain = 332.051
+Finished Constraint Validation : Time (s): cpu = 00:00:30 ; elapsed = 00:00:27 . Memory (MB): peak = 1312.949 ; gain = 250.563
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:18 . Memory (MB): peak = 1404.852 ; gain = 332.051
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:30 ; elapsed = 00:00:27 . Memory (MB): peak = 1312.949 ; gain = 250.563
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -409,10 +410,10 @@ Applied set_property DONT_TOUCH = true for nolabel_line46/design_2_i/smartconnec
 Applied set_property DONT_TOUCH = true for nolabel_line46/design_2_i/smartconnect_1. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for nolabel_line46/design_2_i/processing_system7_0. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:18 . Memory (MB): peak = 1404.852 ; gain = 332.051
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:27 . Memory (MB): peak = 1312.949 ; gain = 250.563
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:28 ; elapsed = 00:00:26 . Memory (MB): peak = 1404.852 ; gain = 332.051
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:41 ; elapsed = 00:00:39 . Memory (MB): peak = 1312.949 ; gain = 250.563
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -496,7 +497,7 @@ DSP Report: Generating DSP genblk1[0].MA/genblk1[0].inputMulti/product_reg, oper
 DSP Report: register genblk1[0].MA/genblk1[0].inputMulti/product_reg is absorbed into DSP genblk1[0].MA/genblk1[0].inputMulti/product_reg.
 DSP Report: operator genblk1[0].MA/genblk1[0].inputMulti/product0 is absorbed into DSP genblk1[0].MA/genblk1[0].inputMulti/product_reg.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:25 ; elapsed = 00:01:24 . Memory (MB): peak = 1517.520 ; gain = 444.719
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:07 ; elapsed = 00:02:06 . Memory (MB): peak = 1390.613 ; gain = 328.227
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -542,13 +543,13 @@ Finished ROM, RAM, DSP and Shift Register Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:35 ; elapsed = 00:01:33 . Memory (MB): peak = 1517.520 ; gain = 444.719
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:22 ; elapsed = 00:02:21 . Memory (MB): peak = 1390.613 ; gain = 328.227
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:40 ; elapsed = 00:01:39 . Memory (MB): peak = 1517.520 ; gain = 444.719
+Finished Timing Optimization : Time (s): cpu = 00:02:29 ; elapsed = 00:02:28 . Memory (MB): peak = 1412.656 ; gain = 350.270
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -588,7 +589,7 @@ INFO: [Synth 8-7052] The timing for the instance pool_layer4/pool_controller/gen
 INFO: [Synth 8-7052] The timing for the instance pool_layer4/pool_controller/genblk1[0].br_coupler/genblk1[1].BRAM/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance pool_layer4/pool_controller/genblk1[0].br_coupler/genblk1[2].BRAM/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:49 ; elapsed = 00:01:48 . Memory (MB): peak = 1587.430 ; gain = 514.629
+Finished Technology Mapping : Time (s): cpu = 00:02:42 ; elapsed = 00:02:41 . Memory (MB): peak = 1501.031 ; gain = 438.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -606,37 +607,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:54 ; elapsed = 00:01:53 . Memory (MB): peak = 1587.430 ; gain = 514.629
+Finished IO Insertion : Time (s): cpu = 00:02:48 ; elapsed = 00:02:48 . Memory (MB): peak = 1501.031 ; gain = 438.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:54 ; elapsed = 00:01:53 . Memory (MB): peak = 1587.430 ; gain = 514.629
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:48 ; elapsed = 00:02:48 . Memory (MB): peak = 1501.031 ; gain = 438.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:58 ; elapsed = 00:01:57 . Memory (MB): peak = 1587.430 ; gain = 514.629
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:53 ; elapsed = 00:02:53 . Memory (MB): peak = 1501.031 ; gain = 438.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:58 ; elapsed = 00:01:57 . Memory (MB): peak = 1587.430 ; gain = 514.629
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:53 ; elapsed = 00:02:53 . Memory (MB): peak = 1501.031 ; gain = 438.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:02 ; elapsed = 00:02:00 . Memory (MB): peak = 1590.914 ; gain = 518.113
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:58 ; elapsed = 00:02:58 . Memory (MB): peak = 1503.520 ; gain = 441.133
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:02:02 ; elapsed = 00:02:01 . Memory (MB): peak = 1590.914 ; gain = 518.113
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:59 ; elapsed = 00:02:58 . Memory (MB): peak = 1503.520 ; gain = 441.133
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -675,26 +676,26 @@ Report Cell Usage:
 |17    |FDRE                          | 13809|
 +------+------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:02 ; elapsed = 00:02:01 . Memory (MB): peak = 1590.914 ; gain = 518.113
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:59 ; elapsed = 00:02:58 . Memory (MB): peak = 1503.520 ; gain = 441.133
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:45 ; elapsed = 00:01:53 . Memory (MB): peak = 1590.914 ; gain = 331.859
-Synthesis Optimization Complete : Time (s): cpu = 00:02:02 ; elapsed = 00:02:01 . Memory (MB): peak = 1590.914 ; gain = 518.113
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:34 ; elapsed = 00:02:46 . Memory (MB): peak = 1503.520 ; gain = 255.652
+Synthesis Optimization Complete : Time (s): cpu = 00:02:59 ; elapsed = 00:02:58 . Memory (MB): peak = 1503.520 ; gain = 441.133
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.905 . Memory (MB): peak = 1604.582 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1510.688 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 1380 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1605.676 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1510.688 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
 67 Infos, 221 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:15 ; elapsed = 00:02:14 . Memory (MB): peak = 1605.676 ; gain = 532.875
+synth_design: Time (s): cpu = 00:03:17 ; elapsed = 00:03:23 . Memory (MB): peak = 1510.688 ; gain = 448.301
 INFO: [Common 17-1381] The checkpoint 'D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.runs/synth_1/top_simple.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 1605.676 ; gain = 0.000
+write_checkpoint: Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 1510.688 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_utilization -file top_simple_utilization_synth.rpt -pb top_simple_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed May 12 14:21:10 2021...
+INFO: [Common 17-206] Exiting Vivado at Tue Oct 12 08:58:42 2021...

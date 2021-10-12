@@ -31766,3 +31766,672 @@ TRACE::2021-05-12.17:58:50::SCWMssOS::DEBUG:  swdes dump  D:/GitHub/ReconHardwar
 D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
 
 TRACE::2021-05-12.17:58:50::SCWMssOS::Sw design exists and opened at  D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-10-12.09:14:08::SCWPlatform::Trying to open the hw design at D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:08::SCWPlatform::DSA given D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:08::SCWPlatform::DSA absoulate path D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:11::SCWPlatform::DSA directory D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw
+TRACE::2021-10-12.09:14:11::SCWPlatform:: Platform Path D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:11::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-10-12.09:14:11::SCWPlatform::Do not have an existing db opened. 
+TRACE::2021-10-12.09:14:13::SCWPlatform::Opened new HwDB with name top_simple
+TRACE::2021-10-12.09:14:13::SCWReader::Active system found as  simple_hw
+TRACE::2021-10-12.09:14:13::SCWReader::Handling sysconfig simple_hw
+TRACE::2021-10-12.09:14:13::SCWDomain::checking for install qemu data   : 
+TRACE::2021-10-12.09:14:13::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/
+TRACE::2021-10-12.09:14:13::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt
+TRACE::2021-10-12.09:14:13::SCWPlatform::Trying to open the hw design at D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:13::SCWPlatform::DSA given D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:13::SCWPlatform::DSA absoulate path D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:13::SCWPlatform::DSA directory D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw
+TRACE::2021-10-12.09:14:13::SCWPlatform:: Platform Path D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:13::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-10-12.09:14:13::SCWPlatform::Trying to set the existing hwdb with name top_simple
+TRACE::2021-10-12.09:14:13::SCWPlatform::Opened existing hwdb top_simple
+TRACE::2021-10-12.09:14:13::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-10-12.09:14:13::SCWPlatform::Trying to open the hw design at D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:13::SCWPlatform::DSA given D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:13::SCWPlatform::DSA absoulate path D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:13::SCWPlatform::DSA directory D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw
+TRACE::2021-10-12.09:14:13::SCWPlatform:: Platform Path D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:13::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-10-12.09:14:13::SCWPlatform::Trying to set the existing hwdb with name top_simple
+TRACE::2021-10-12.09:14:13::SCWPlatform::Opened existing hwdb top_simple
+TRACE::2021-10-12.09:14:13::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-10-12.09:14:13::SCWPlatform::Trying to open the hw design at D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:13::SCWPlatform::DSA given D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:13::SCWPlatform::DSA absoulate path D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:13::SCWPlatform::DSA directory D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw
+TRACE::2021-10-12.09:14:13::SCWPlatform:: Platform Path D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:13::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-10-12.09:14:13::SCWPlatform::Trying to set the existing hwdb with name top_simple
+TRACE::2021-10-12.09:14:13::SCWPlatform::Opened existing hwdb top_simple
+TRACE::2021-10-12.09:14:13::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-10-12.09:14:13::SCWReader::Boot application domain added for zynq_fsbl
+TRACE::2021-10-12.09:14:13::SCWPlatform::Trying to open the hw design at D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:13::SCWPlatform::DSA given D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:13::SCWPlatform::DSA absoulate path D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:13::SCWPlatform::DSA directory D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw
+TRACE::2021-10-12.09:14:14::SCWPlatform:: Platform Path D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:14::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-10-12.09:14:14::SCWPlatform::Trying to set the existing hwdb with name top_simple
+TRACE::2021-10-12.09:14:14::SCWPlatform::Opened existing hwdb top_simple
+TRACE::2021-10-12.09:14:14::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-10-12.09:14:14::SCWMssOS::Checking the sw design at  D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-10-12.09:14:14::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2021-10-12.09:14:14::SCWMssOS::No sw design opened at  D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-10-12.09:14:14::SCWMssOS::mss exists loading the mss file  D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-10-12.09:14:14::SCWMssOS::Opened the sw design from mss  D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-10-12.09:14:14::SCWMssOS::Adding the swdes entry D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss with des name system
+TRACE::2021-10-12.09:14:14::SCWMssOS::updating the scw layer about changes
+TRACE::2021-10-12.09:14:14::SCWMssOS::Opened the sw design.  D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-10-12.09:14:14::SCWPlatform::Trying to open the hw design at D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:14::SCWPlatform::DSA given D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:14::SCWPlatform::DSA absoulate path D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:14::SCWPlatform::DSA directory D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw
+TRACE::2021-10-12.09:14:14::SCWPlatform:: Platform Path D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:14::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-10-12.09:14:14::SCWPlatform::Trying to set the existing hwdb with name top_simple
+TRACE::2021-10-12.09:14:14::SCWPlatform::Opened existing hwdb top_simple
+TRACE::2021-10-12.09:14:14::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-10-12.09:14:14::SCWMssOS::Checking the sw design at  D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-10-12.09:14:14::SCWMssOS::DEBUG:  swdes dump  D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-10-12.09:14:14::SCWMssOS::Sw design exists and opened at  D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-10-12.09:14:14::SCWMssOS:: library already available in sw design:  xilffs:4.3
+TRACE::2021-10-12.09:14:14::SCWPlatform::Trying to open the hw design at D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:14::SCWPlatform::DSA given D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:14::SCWPlatform::DSA absoulate path D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:14::SCWPlatform::DSA directory D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw
+TRACE::2021-10-12.09:14:14::SCWPlatform:: Platform Path D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:14::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-10-12.09:14:14::SCWPlatform::Trying to set the existing hwdb with name top_simple
+TRACE::2021-10-12.09:14:14::SCWPlatform::Opened existing hwdb top_simple
+TRACE::2021-10-12.09:14:14::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-10-12.09:14:14::SCWMssOS::Checking the sw design at  D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-10-12.09:14:14::SCWMssOS::DEBUG:  swdes dump  D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-10-12.09:14:14::SCWMssOS::Sw design exists and opened at  D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-10-12.09:14:14::SCWMssOS:: library already available in sw design:  xilrsa:1.6
+TRACE::2021-10-12.09:14:14::SCWMssOS::Saving the mss changes D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-10-12.09:14:14::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2021-10-12.09:14:14::SCWMssOS::Completed writemss as part of save.
+TRACE::2021-10-12.09:14:14::SCWMssOS::Commit changes completed.
+TRACE::2021-10-12.09:14:14::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2021-10-12.09:14:14::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2021-10-12.09:14:14::SCWPlatform::Trying to open the hw design at D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:14::SCWPlatform::DSA given D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:14::SCWPlatform::DSA absoulate path D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:14::SCWPlatform::DSA directory D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw
+TRACE::2021-10-12.09:14:14::SCWPlatform:: Platform Path D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:14::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-10-12.09:14:14::SCWPlatform::Trying to set the existing hwdb with name top_simple
+TRACE::2021-10-12.09:14:14::SCWPlatform::Opened existing hwdb top_simple
+TRACE::2021-10-12.09:14:14::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-10-12.09:14:14::SCWMssOS::Checking the sw design at  D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-10-12.09:14:14::SCWMssOS::DEBUG:  swdes dump  D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-10-12.09:14:14::SCWMssOS::Sw design exists and opened at  D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-10-12.09:14:14::SCWReader::No isolation master present  
+TRACE::2021-10-12.09:14:14::SCWDomain::checking for install qemu data   : 
+TRACE::2021-10-12.09:14:14::SCWDomain:: Using the QEMU Data from install at  : C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/
+TRACE::2021-10-12.09:14:14::SCWDomain:: Using the QEMU args  from install at  : C:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt
+TRACE::2021-10-12.09:14:14::SCWPlatform::Trying to open the hw design at D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:14::SCWPlatform::DSA given D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:14::SCWPlatform::DSA absoulate path D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:14::SCWPlatform::DSA directory D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw
+TRACE::2021-10-12.09:14:14::SCWPlatform:: Platform Path D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:14::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-10-12.09:14:14::SCWPlatform::Trying to set the existing hwdb with name top_simple
+TRACE::2021-10-12.09:14:14::SCWPlatform::Opened existing hwdb top_simple
+TRACE::2021-10-12.09:14:14::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-10-12.09:14:14::SCWPlatform::Trying to open the hw design at D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:14::SCWPlatform::DSA given D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:14::SCWPlatform::DSA absoulate path D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:14::SCWPlatform::DSA directory D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw
+TRACE::2021-10-12.09:14:14::SCWPlatform:: Platform Path D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:14::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-10-12.09:14:14::SCWPlatform::Trying to set the existing hwdb with name top_simple
+TRACE::2021-10-12.09:14:14::SCWPlatform::Opened existing hwdb top_simple
+TRACE::2021-10-12.09:14:14::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-10-12.09:14:14::SCWPlatform::Trying to open the hw design at D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:14::SCWPlatform::DSA given D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:14::SCWPlatform::DSA absoulate path D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:14::SCWPlatform::DSA directory D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw
+TRACE::2021-10-12.09:14:14::SCWPlatform:: Platform Path D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:14::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-10-12.09:14:14::SCWPlatform::Trying to set the existing hwdb with name top_simple
+TRACE::2021-10-12.09:14:14::SCWPlatform::Opened existing hwdb top_simple
+TRACE::2021-10-12.09:14:14::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-10-12.09:14:14::SCWMssOS::Checking the sw design at  D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-10-12.09:14:14::SCWMssOS::DEBUG:  swdes dump  D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-10-12.09:14:14::SCWMssOS::No sw design opened at  D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-10-12.09:14:14::SCWMssOS::mss exists loading the mss file  D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-10-12.09:14:14::SCWMssOS::Opened the sw design from mss  D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-10-12.09:14:14::SCWMssOS::Adding the swdes entry D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss with des name system_0
+TRACE::2021-10-12.09:14:14::SCWMssOS::updating the scw layer about changes
+TRACE::2021-10-12.09:14:14::SCWMssOS::Opened the sw design.  D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-10-12.09:14:14::SCWPlatform::Trying to open the hw design at D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:14::SCWPlatform::DSA given D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:14::SCWPlatform::DSA absoulate path D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:14::SCWPlatform::DSA directory D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw
+TRACE::2021-10-12.09:14:14::SCWPlatform:: Platform Path D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:14::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-10-12.09:14:14::SCWPlatform::Trying to set the existing hwdb with name top_simple
+TRACE::2021-10-12.09:14:14::SCWPlatform::Opened existing hwdb top_simple
+TRACE::2021-10-12.09:14:14::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-10-12.09:14:14::SCWMssOS::Checking the sw design at  D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-10-12.09:14:14::SCWMssOS::DEBUG:  swdes dump  D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-10-12.09:14:14::SCWMssOS::Sw design exists and opened at  D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-10-12.09:14:14::SCWMssOS:: library already available in sw design:  xilffs:4.3
+TRACE::2021-10-12.09:14:14::SCWPlatform::Trying to open the hw design at D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:14::SCWPlatform::DSA given D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:14::SCWPlatform::DSA absoulate path D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:14::SCWPlatform::DSA directory D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw
+TRACE::2021-10-12.09:14:14::SCWPlatform:: Platform Path D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:14::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-10-12.09:14:14::SCWPlatform::Trying to set the existing hwdb with name top_simple
+TRACE::2021-10-12.09:14:14::SCWPlatform::Opened existing hwdb top_simple
+TRACE::2021-10-12.09:14:14::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-10-12.09:14:14::SCWMssOS::Checking the sw design at  D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-10-12.09:14:14::SCWMssOS::DEBUG:  swdes dump  D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-10-12.09:14:14::SCWMssOS::Sw design exists and opened at  D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-10-12.09:14:14::SCWMssOS:: library already available in sw design:  xilrsa:1.6
+TRACE::2021-10-12.09:14:14::SCWMssOS::Saving the mss changes D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-10-12.09:14:14::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2021-10-12.09:14:14::SCWMssOS::Completed writemss as part of save.
+TRACE::2021-10-12.09:14:14::SCWMssOS::Commit changes completed.
+TRACE::2021-10-12.09:14:14::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2021-10-12.09:14:14::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2021-10-12.09:14:14::SCWPlatform::Trying to open the hw design at D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:14::SCWPlatform::DSA given D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:14::SCWPlatform::DSA absoulate path D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:14::SCWPlatform::DSA directory D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw
+TRACE::2021-10-12.09:14:14::SCWPlatform:: Platform Path D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:14::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-10-12.09:14:14::SCWPlatform::Trying to set the existing hwdb with name top_simple
+TRACE::2021-10-12.09:14:14::SCWPlatform::Opened existing hwdb top_simple
+TRACE::2021-10-12.09:14:14::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-10-12.09:14:14::SCWMssOS::Checking the sw design at  D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-10-12.09:14:14::SCWMssOS::DEBUG:  swdes dump  D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-10-12.09:14:14::SCWMssOS::Sw design exists and opened at  D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-10-12.09:14:14::SCWReader::No isolation master present  
+LOG::2021-10-12.09:14:14::SCWPlatform::Started generating the artifacts platform simple_hw
+TRACE::2021-10-12.09:14:14::SCWPlatform::Sanity checking of platform is completed
+LOG::2021-10-12.09:14:14::SCWPlatform::Started generating the artifacts for system configuration simple_hw
+LOG::2021-10-12.09:14:14::SCWSystem::Checking the domain zynq_fsbl
+LOG::2021-10-12.09:14:14::SCWSystem::Doing application build for :  zynq_fsbl
+TRACE::2021-10-12.09:14:14::SCWBDomain::Not a forced makefile updation, No changes are present. 
+TRACE::2021-10-12.09:14:14::SCWDomain::Building the domain :  zynq_fsbl
+TRACE::2021-10-12.09:14:14::SCWPlatform::Trying to open the hw design at D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:14::SCWPlatform::DSA given D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:14::SCWPlatform::DSA absoulate path D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:14::SCWPlatform::DSA directory D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw
+TRACE::2021-10-12.09:14:14::SCWPlatform:: Platform Path D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:14::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-10-12.09:14:14::SCWPlatform::Trying to set the existing hwdb with name top_simple
+TRACE::2021-10-12.09:14:14::SCWPlatform::Opened existing hwdb top_simple
+TRACE::2021-10-12.09:14:14::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-10-12.09:14:14::SCWMssOS::Checking the sw design at  D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-10-12.09:14:14::SCWMssOS::DEBUG:  swdes dump  D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-10-12.09:14:14::SCWMssOS::Sw design exists and opened at  D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-10-12.09:14:14::SCWBDomain::Completed writing the mss file at D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/zynq_fsbl/zynq_fsbl_bsp
+TRACE::2021-10-12.09:14:14::SCWBDomain::bsp generated is upto date with the mss file. Skipping bsp generation.
+TRACE::2021-10-12.09:14:14::SCWBDomain::Not a forced makefile updation, No changes are present. 
+TRACE::2021-10-12.09:14:14::SCWBDomain::System Command Ran  D:&  cd  D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/zynq_fsbl & make 
+TRACE::2021-10-12.09:14:14::SCWBDomain::make: Nothing to be done for 'all'.
+
+LOG::2021-10-12.09:14:14::SCWSystem::Checking the domain standalone_domain
+LOG::2021-10-12.09:14:14::SCWSystem::Not a boot domain 
+LOG::2021-10-12.09:14:14::SCWSystem::Started Processing the domain standalone_domain
+TRACE::2021-10-12.09:14:14::SCWDomain::Generating domain artifcats
+TRACE::2021-10-12.09:14:14::SCWMssOS::Generating standalone artifcats
+TRACE::2021-10-12.09:14:14::SCWMssOS::Copying the qemu file from  D:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt To D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/export/simple_hw/sw/simple_hw/qemu/
+TRACE::2021-10-12.09:14:14::SCWMssOS::Copying the qemu file from  D:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt To D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/export/simple_hw/sw/simple_hw/standalone_domain/qemu/
+TRACE::2021-10-12.09:14:14::SCWMssOS:: Copying the user libraries. 
+TRACE::2021-10-12.09:14:14::SCWPlatform::Trying to open the hw design at D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:14::SCWPlatform::DSA given D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:14::SCWPlatform::DSA absoulate path D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:14::SCWPlatform::DSA directory D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw
+TRACE::2021-10-12.09:14:14::SCWPlatform:: Platform Path D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:14::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-10-12.09:14:14::SCWPlatform::Trying to set the existing hwdb with name top_simple
+TRACE::2021-10-12.09:14:14::SCWPlatform::Opened existing hwdb top_simple
+TRACE::2021-10-12.09:14:14::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-10-12.09:14:14::SCWMssOS::Checking the sw design at  D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-10-12.09:14:14::SCWMssOS::DEBUG:  swdes dump  D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-10-12.09:14:14::SCWMssOS::Sw design exists and opened at  D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-10-12.09:14:14::SCWMssOS::Completed writing the mss file at D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/ps7_cortexa9_0/standalone_domain/bsp
+TRACE::2021-10-12.09:14:14::SCWMssOS::Mss edits present, copying mssfile into export location D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-10-12.09:14:14::SCWMssOS::bsp generated is upto date with the mss file. Skipping bsp generation.
+TRACE::2021-10-12.09:14:14::SCWMssOS::BSP is already built. skipping the bsp build ... 
+TRACE::2021-10-12.09:14:14::SCWDomain::Building the domain :  standalone_domain
+TRACE::2021-10-12.09:14:14::SCWMssOS::doing bsp build ... 
+TRACE::2021-10-12.09:14:14::SCWMssOS::System Command Ran  D: & cd  D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/ps7_cortexa9_0/standalone_domain/bsp & make 
+TRACE::2021-10-12.09:14:14::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/axidma_v9_11/src"
+
+TRACE::2021-10-12.09:14:14::SCWMssOS::make -C ps7_cortexa9_0/libsrc/axidma_v9_11/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as
+TRACE::2021-10-12.09:14:14::SCWMssOS::" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nos
+TRACE::2021-10-12.09:14:14::SCWMssOS::tartfiles -g -Wall -Wextra"
+
+TRACE::2021-10-12.09:14:14::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_7/src"
+
+TRACE::2021-10-12.09:14:14::SCWMssOS::make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none
+TRACE::2021-10-12.09:14:14::SCWMssOS::-eabi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=h
+TRACE::2021-10-12.09:14:14::SCWMssOS::ard -nostartfiles -g -Wall -Wextra"
+
+TRACE::2021-10-12.09:14:14::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_9/src"
+
+TRACE::2021-10-12.09:14:14::SCWMssOS::make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-ea
+TRACE::2021-10-12.09:14:14::SCWMssOS::bi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard
+TRACE::2021-10-12.09:14:14::SCWMssOS:: -nostartfiles -g -Wall -Wextra"
+
+TRACE::2021-10-12.09:14:14::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_1/src"
+
+TRACE::2021-10-12.09:14:14::SCWMssOS::make -C ps7_cortexa9_0/libsrc/ddrps_v1_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+TRACE::2021-10-12.09:14:14::SCWMssOS::"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+TRACE::2021-10-12.09:14:14::SCWMssOS::rtfiles -g -Wall -Wextra"
+
+TRACE::2021-10-12.09:14:14::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_6/src"
+
+TRACE::2021-10-12.09:14:14::SCWMssOS::make -C ps7_cortexa9_0/libsrc/devcfg_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2021-10-12.09:14:14::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2021-10-12.09:14:14::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2021-10-12.09:14:15::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_6/src"
+
+TRACE::2021-10-12.09:14:15::SCWMssOS::make -C ps7_cortexa9_0/libsrc/dmaps_v2_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+TRACE::2021-10-12.09:14:15::SCWMssOS::"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+TRACE::2021-10-12.09:14:15::SCWMssOS::rtfiles -g -Wall -Wextra"
+
+TRACE::2021-10-12.09:14:15::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_11/src"
+
+TRACE::2021-10-12.09:14:15::SCWMssOS::make -C ps7_cortexa9_0/libsrc/emacps_v3_11/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as
+TRACE::2021-10-12.09:14:15::SCWMssOS::" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nos
+TRACE::2021-10-12.09:14:15::SCWMssOS::tartfiles -g -Wall -Wextra"
+
+TRACE::2021-10-12.09:14:15::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_7/src"
+
+TRACE::2021-10-12.09:14:15::SCWMssOS::make -C ps7_cortexa9_0/libsrc/gpiops_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2021-10-12.09:14:15::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2021-10-12.09:14:15::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2021-10-12.09:14:15::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_7/src"
+
+TRACE::2021-10-12.09:14:15::SCWMssOS::make -C ps7_cortexa9_0/libsrc/qspips_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2021-10-12.09:14:15::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2021-10-12.09:14:15::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2021-10-12.09:14:15::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/scugic_v4_2/src"
+
+TRACE::2021-10-12.09:14:15::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scugic_v4_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2021-10-12.09:14:15::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2021-10-12.09:14:15::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2021-10-12.09:14:15::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_2/src"
+
+TRACE::2021-10-12.09:14:15::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scutimer_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-a
+TRACE::2021-10-12.09:14:15::SCWMssOS::s" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -no
+TRACE::2021-10-12.09:14:15::SCWMssOS::startfiles -g -Wall -Wextra"
+
+TRACE::2021-10-12.09:14:15::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_2/src"
+
+TRACE::2021-10-12.09:14:15::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scuwdt_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2021-10-12.09:14:15::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2021-10-12.09:14:15::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2021-10-12.09:14:15::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_9/src"
+
+TRACE::2021-10-12.09:14:15::SCWMssOS::make -C ps7_cortexa9_0/libsrc/sdps_v3_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "
+TRACE::2021-10-12.09:14:15::SCWMssOS::ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostar
+TRACE::2021-10-12.09:14:15::SCWMssOS::tfiles -g -Wall -Wextra"
+
+TRACE::2021-10-12.09:14:15::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/standalone_v7_2/src"
+
+TRACE::2021-10-12.09:14:15::SCWMssOS::make -C ps7_cortexa9_0/libsrc/standalone_v7_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi
+TRACE::2021-10-12.09:14:15::SCWMssOS::-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -
+TRACE::2021-10-12.09:14:15::SCWMssOS::nostartfiles -g -Wall -Wextra"
+
+TRACE::2021-10-12.09:14:16::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_9/src"
+
+TRACE::2021-10-12.09:14:16::SCWMssOS::make -C ps7_cortexa9_0/libsrc/uartps_v3_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2021-10-12.09:14:16::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2021-10-12.09:14:16::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2021-10-12.09:14:16::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_5/src"
+
+TRACE::2021-10-12.09:14:16::SCWMssOS::make -C ps7_cortexa9_0/libsrc/usbps_v2_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+TRACE::2021-10-12.09:14:16::SCWMssOS::"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+TRACE::2021-10-12.09:14:16::SCWMssOS::rtfiles -g -Wall -Wextra"
+
+TRACE::2021-10-12.09:14:16::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_4/src"
+
+TRACE::2021-10-12.09:14:16::SCWMssOS::make -C ps7_cortexa9_0/libsrc/xadcps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2021-10-12.09:14:16::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2021-10-12.09:14:16::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2021-10-12.09:14:16::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/xilffs_v4_3/src"
+
+TRACE::2021-10-12.09:14:16::SCWMssOS::make -C ps7_cortexa9_0/libsrc/xilffs_v4_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2021-10-12.09:14:16::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2021-10-12.09:14:16::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2021-10-12.09:14:16::SCWMssOS::"Running Make include in ps7_cortexa9_0/libsrc/xilrsa_v1_6/src"
+
+TRACE::2021-10-12.09:14:16::SCWMssOS::make -C ps7_cortexa9_0/libsrc/xilrsa_v1_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as"
+TRACE::2021-10-12.09:14:16::SCWMssOS:: "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nost
+TRACE::2021-10-12.09:14:16::SCWMssOS::artfiles -g -Wall -Wextra"
+
+TRACE::2021-10-12.09:14:16::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/axidma_v9_11/src"
+
+TRACE::2021-10-12.09:14:16::SCWMssOS::make -C ps7_cortexa9_0/libsrc/axidma_v9_11/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "
+TRACE::2021-10-12.09:14:16::SCWMssOS::ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostar
+TRACE::2021-10-12.09:14:16::SCWMssOS::tfiles -g -Wall -Wextra"
+
+TRACE::2021-10-12.09:14:16::SCWMssOS::"Compiling axidma"
+
+TRACE::2021-10-12.09:14:18::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_7/src"
+
+TRACE::2021-10-12.09:14:18::SCWMssOS::make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-ea
+TRACE::2021-10-12.09:14:18::SCWMssOS::bi-as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard
+TRACE::2021-10-12.09:14:18::SCWMssOS:: -nostartfiles -g -Wall -Wextra"
+
+TRACE::2021-10-12.09:14:18::SCWMssOS::"Compiling coresightps_dcc"
+
+TRACE::2021-10-12.09:14:18::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_9/src"
+
+TRACE::2021-10-12.09:14:18::SCWMssOS::make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-
+TRACE::2021-10-12.09:14:18::SCWMssOS::as" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -n
+TRACE::2021-10-12.09:14:18::SCWMssOS::ostartfiles -g -Wall -Wextra"
+
+TRACE::2021-10-12.09:14:18::SCWMssOS::"Compiling cpu_cortexa9"
+
+TRACE::2021-10-12.09:14:18::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_1/src"
+
+TRACE::2021-10-12.09:14:18::SCWMssOS::make -C ps7_cortexa9_0/libsrc/ddrps_v1_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "AR
+TRACE::2021-10-12.09:14:18::SCWMssOS::CHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartf
+TRACE::2021-10-12.09:14:18::SCWMssOS::iles -g -Wall -Wextra"
+
+TRACE::2021-10-12.09:14:18::SCWMssOS::"Compiling ddrps"
+
+TRACE::2021-10-12.09:14:18::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_6/src"
+
+TRACE::2021-10-12.09:14:18::SCWMssOS::make -C ps7_cortexa9_0/libsrc/devcfg_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2021-10-12.09:14:18::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2021-10-12.09:14:18::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2021-10-12.09:14:18::SCWMssOS::"Compiling devcfg"
+
+TRACE::2021-10-12.09:14:19::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_6/src"
+
+TRACE::2021-10-12.09:14:19::SCWMssOS::make -C ps7_cortexa9_0/libsrc/dmaps_v2_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "AR
+TRACE::2021-10-12.09:14:19::SCWMssOS::CHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartf
+TRACE::2021-10-12.09:14:19::SCWMssOS::iles -g -Wall -Wextra"
+
+TRACE::2021-10-12.09:14:19::SCWMssOS::"Compiling dmaps"
+
+TRACE::2021-10-12.09:14:21::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_11/src"
+
+TRACE::2021-10-12.09:14:21::SCWMssOS::make -C ps7_cortexa9_0/libsrc/emacps_v3_11/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "
+TRACE::2021-10-12.09:14:21::SCWMssOS::ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostar
+TRACE::2021-10-12.09:14:21::SCWMssOS::tfiles -g -Wall -Wextra"
+
+TRACE::2021-10-12.09:14:21::SCWMssOS::"Compiling emacps"
+
+TRACE::2021-10-12.09:14:22::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_7/src"
+
+TRACE::2021-10-12.09:14:22::SCWMssOS::make -C ps7_cortexa9_0/libsrc/gpiops_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2021-10-12.09:14:22::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2021-10-12.09:14:22::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2021-10-12.09:14:22::SCWMssOS::"Compiling gpiops"
+
+TRACE::2021-10-12.09:14:23::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_7/src"
+
+TRACE::2021-10-12.09:14:23::SCWMssOS::make -C ps7_cortexa9_0/libsrc/qspips_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2021-10-12.09:14:23::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2021-10-12.09:14:23::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2021-10-12.09:14:23::SCWMssOS::"Compiling qspips"
+
+TRACE::2021-10-12.09:14:25::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v4_2/src"
+
+TRACE::2021-10-12.09:14:25::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scugic_v4_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2021-10-12.09:14:25::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2021-10-12.09:14:25::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2021-10-12.09:14:25::SCWMssOS::"Compiling scugic"
+
+TRACE::2021-10-12.09:14:26::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_2/src"
+
+TRACE::2021-10-12.09:14:26::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scutimer_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" 
+TRACE::2021-10-12.09:14:26::SCWMssOS::"ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nosta
+TRACE::2021-10-12.09:14:26::SCWMssOS::rtfiles -g -Wall -Wextra"
+
+TRACE::2021-10-12.09:14:26::SCWMssOS::"Compiling scutimer"
+
+TRACE::2021-10-12.09:14:27::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_2/src"
+
+TRACE::2021-10-12.09:14:27::SCWMssOS::make -C ps7_cortexa9_0/libsrc/scuwdt_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2021-10-12.09:14:27::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2021-10-12.09:14:27::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2021-10-12.09:14:27::SCWMssOS::"Compiling scuwdt"
+
+TRACE::2021-10-12.09:14:27::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_9/src"
+
+TRACE::2021-10-12.09:14:27::SCWMssOS::make -C ps7_cortexa9_0/libsrc/sdps_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "ARC
+TRACE::2021-10-12.09:14:27::SCWMssOS::HIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfi
+TRACE::2021-10-12.09:14:27::SCWMssOS::les -g -Wall -Wextra"
+
+TRACE::2021-10-12.09:14:27::SCWMssOS::"Compiling sdps"
+
+TRACE::2021-10-12.09:14:29::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v7_2/src"
+
+TRACE::2021-10-12.09:14:29::SCWMssOS::make -C ps7_cortexa9_0/libsrc/standalone_v7_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as
+TRACE::2021-10-12.09:14:29::SCWMssOS::" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nos
+TRACE::2021-10-12.09:14:29::SCWMssOS::tartfiles -g -Wall -Wextra"
+
+TRACE::2021-10-12.09:14:29::SCWMssOS::"Compiling standalone"
+
+TRACE::2021-10-12.09:14:32::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_9/src"
+
+TRACE::2021-10-12.09:14:32::SCWMssOS::make -C ps7_cortexa9_0/libsrc/uartps_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2021-10-12.09:14:32::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2021-10-12.09:14:32::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2021-10-12.09:14:32::SCWMssOS::"Compiling uartps"
+
+TRACE::2021-10-12.09:14:34::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_5/src"
+
+TRACE::2021-10-12.09:14:34::SCWMssOS::make -C ps7_cortexa9_0/libsrc/usbps_v2_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "AR
+TRACE::2021-10-12.09:14:34::SCWMssOS::CHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartf
+TRACE::2021-10-12.09:14:34::SCWMssOS::iles -g -Wall -Wextra"
+
+TRACE::2021-10-12.09:14:34::SCWMssOS::"Compiling usbps"
+
+TRACE::2021-10-12.09:14:35::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_4/src"
+
+TRACE::2021-10-12.09:14:35::SCWMssOS::make -C ps7_cortexa9_0/libsrc/xadcps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2021-10-12.09:14:35::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2021-10-12.09:14:35::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2021-10-12.09:14:35::SCWMssOS::"Compiling xadcps"
+
+TRACE::2021-10-12.09:14:36::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/xilffs_v4_3/src"
+
+TRACE::2021-10-12.09:14:36::SCWMssOS::make -C ps7_cortexa9_0/libsrc/xilffs_v4_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2021-10-12.09:14:36::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2021-10-12.09:14:36::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2021-10-12.09:14:36::SCWMssOS::"Compiling XilFFs Library"
+
+TRACE::2021-10-12.09:14:36::SCWMssOS::"Running Make libs in ps7_cortexa9_0/libsrc/xilrsa_v1_6/src"
+
+TRACE::2021-10-12.09:14:36::SCWMssOS::make -C ps7_cortexa9_0/libsrc/xilrsa_v1_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ASSEMBLER=arm-none-eabi-as" "A
+TRACE::2021-10-12.09:14:36::SCWMssOS::RCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostart
+TRACE::2021-10-12.09:14:36::SCWMssOS::files -g -Wall -Wextra"
+
+TRACE::2021-10-12.09:14:36::SCWMssOS::'Finished building libraries'
+
+TRACE::2021-10-12.09:14:37::SCWMssOS::Copying to export directory.
+TRACE::2021-10-12.09:14:37::SCWMssOS:: Checking if to create the Supporting Applications
+TRACE::2021-10-12.09:14:37::SCWMssOS:: No Linux domain exists, trying to generate FSBL 
+LOG::2021-10-12.09:14:37::SCWSystem::Completed Processing the domain standalone_domain
+LOG::2021-10-12.09:14:37::SCWSystem::Completed Processing the sysconfig simple_hw
+LOG::2021-10-12.09:14:37::SCWPlatform::Completed generating the artifacts for system configuration simple_hw
+TRACE::2021-10-12.09:14:37::SCWPlatform::Started preparing the platform 
+TRACE::2021-10-12.09:14:37::SCWSystem::Writing the bif file for system config simple_hw
+TRACE::2021-10-12.09:14:37::SCWSystem::dir created 
+TRACE::2021-10-12.09:14:37::SCWSystem::Writing the bif 
+TRACE::2021-10-12.09:14:37::SCWPlatform::Started writing the spfm file 
+TRACE::2021-10-12.09:14:37::SCWPlatform::Started writing the xpfm file 
+TRACE::2021-10-12.09:14:37::SCWPlatform::Completed generating the platform
+TRACE::2021-10-12.09:14:37::SCWMssOS::Saving the mss changes D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-10-12.09:14:37::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2021-10-12.09:14:37::SCWMssOS::Completed writemss as part of save.
+TRACE::2021-10-12.09:14:37::SCWMssOS::Commit changes completed.
+TRACE::2021-10-12.09:14:37::SCWMssOS::Saving the mss changes D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-10-12.09:14:37::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2021-10-12.09:14:37::SCWMssOS::Completed writemss as part of save.
+TRACE::2021-10-12.09:14:37::SCWMssOS::Commit changes completed.
+TRACE::2021-10-12.09:14:37::SCWPlatform::Trying to open the hw design at D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:37::SCWPlatform::DSA given D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:37::SCWPlatform::DSA absoulate path D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:37::SCWPlatform::DSA directory D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw
+TRACE::2021-10-12.09:14:37::SCWPlatform:: Platform Path D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:37::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-10-12.09:14:37::SCWPlatform::Trying to set the existing hwdb with name top_simple
+TRACE::2021-10-12.09:14:37::SCWPlatform::Opened existing hwdb top_simple
+TRACE::2021-10-12.09:14:37::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-10-12.09:14:37::SCWMssOS::Checking the sw design at  D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-10-12.09:14:37::SCWMssOS::DEBUG:  swdes dump  D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-10-12.09:14:37::SCWMssOS::Sw design exists and opened at  D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2021-10-12.09:14:37::SCWPlatform::Trying to open the hw design at D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:37::SCWPlatform::DSA given D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:37::SCWPlatform::DSA absoulate path D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:37::SCWPlatform::DSA directory D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw
+TRACE::2021-10-12.09:14:37::SCWPlatform:: Platform Path D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:37::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-10-12.09:14:37::SCWPlatform::Trying to set the existing hwdb with name top_simple
+TRACE::2021-10-12.09:14:37::SCWPlatform::Opened existing hwdb top_simple
+TRACE::2021-10-12.09:14:37::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-10-12.09:14:37::SCWMssOS::Checking the sw design at  D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-10-12.09:14:37::SCWMssOS::DEBUG:  swdes dump  D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-10-12.09:14:37::SCWMssOS::Sw design exists and opened at  D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-10-12.09:14:37::SCWWriter::formatted JSON is {
+	"platformName":	"simple_hw",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"simple_hw",
+	"platHandOff":	"D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/top_simple.xsa",
+	"platIntHandOff":	"<platformDir>/hw/top_simple.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"simple_hw",
+	"systems":	[{
+			"systemName":	"simple_hw",
+			"systemDesc":	"simple_hw",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"simple_hw",
+			"sysActiveDom":	"standalone_domain",
+			"sysDefaultDom":	"standalone_domain",
+			"domains":	[{
+					"domainName":	"zynq_fsbl",
+					"domainDispName":	"zynq_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"3c0a30bf8dd8567f6f4993dd134ea95a",
+					"compatibleApp":	"zynq_fsbl",
+					"domType":	"bootDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.3", "xilrsa:1.6"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"standalone_domain",
+					"domainDispName":	"standalone on ps7_cortexa9_0",
+					"domainDesc":	"standalone_domain",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"D:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/qemu_args.txt",
+					"qemuData":	"D:/Xilinx/Vitis/2020.1/data/emulation/platforms/zynq/qemu/",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"3c0a30bf8dd8567f6f4993dd134ea95a",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.3", "xilrsa:1.6"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+KEYINFO::2021-10-12.09:14:37::SCWPlatform::updated the xpfm file.
+TRACE::2021-10-12.09:14:37::SCWPlatform::Trying to open the hw design at D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:37::SCWPlatform::DSA given D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:37::SCWPlatform::DSA absoulate path D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:37::SCWPlatform::DSA directory D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw
+TRACE::2021-10-12.09:14:37::SCWPlatform:: Platform Path D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/hw/top_simple.xsa
+TRACE::2021-10-12.09:14:37::SCWPlatform:: Unique name xilinx:pynq-z2::0.0
+TRACE::2021-10-12.09:14:37::SCWPlatform::Trying to set the existing hwdb with name top_simple
+TRACE::2021-10-12.09:14:37::SCWPlatform::Opened existing hwdb top_simple
+TRACE::2021-10-12.09:14:37::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2021-10-12.09:14:37::SCWMssOS::Checking the sw design at  D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
+TRACE::2021-10-12.09:14:37::SCWMssOS::DEBUG:  swdes dump  D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss|system_0||
+D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2021-10-12.09:14:37::SCWMssOS::Sw design exists and opened at  D:/GitHub/ReconHardware/FPGA_Files/RTL_CNN/Projects/CNN/CNN.vitis/simple_hw/ps7_cortexa9_0/standalone_domain/bsp/system.mss
